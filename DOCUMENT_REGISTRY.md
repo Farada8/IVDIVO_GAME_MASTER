@@ -1,7 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.0
+Версия: v1.1
 Дата создания: 2026-07-09
+Дата обновления: 2026-07-09 (добавлена запись COMP-001)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -33,7 +34,7 @@
 | MECH-001 | GAME_MECHANICS_v0.1_DRAFT | docs/03_MECHANICS/ | DRAFT | v0.1 | механика | GCORE-001 | MATH-001, WORLD-001 |
 | MATH-001 | GAME_MATH_v0.1_DRAFT | docs/03_MECHANICS/ | DRAFT (числа = HYPOTHESIS) | v0.1 | механика | MECH-001 | GCORE-001, WORLD-001, ENT-001 |
 | WORLD-001 | WORLD_ARCHITECTURE_v0.1_DRAFT | docs/05_WORLDS/ | DRAFT | v0.1 | мир | CORE-001 | GCORE-001, MECH-001, ENT-001, NARR-002 |
-| ENT-001 | ENTITIES_AND_CHARACTERS_v0.1_DRAFT | docs/06_CHARACTERS_AND_ARCHETYPES/ | DRAFT (P25 частично зависит от канона — не Draft, а BLOCKED) | v0.1 | персонажи | GCORE-001, WORLD-001 | NARR-002, MATH-001 |
+| ENT-001 | ENTITIES_AND_CHARACTERS_v0.1_DRAFT | docs/06_CHARACTERS_AND_ARCHETYPES/ | DRAFT (P25 частично зависит от канона — не Draft, а BLOCKED) | v0.1 | персонажи | GCORE-001, WORLD-001 | NARR-002, MATH-001, COMP-001 (коллизия имени "Кут Хуми") |
 | STORY-001 | STORY_SYSTEM_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | MIGRATION-PARTIAL / DRAFT | v0.1 | персонажи, мир | CORE-001 | NARR-002 |
 | NARR-002 | NARRATIVE_SYSTEM_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT (P53 — BLOCKED, зависит от канона) | v0.1 | персонажи, мир | STORY-001, WORLD-001, ENT-001 | — |
 | VBC-001 | VISUAL_BRAND_CODE_v0.1_DRAFT | docs/08_VISUAL_BRAND/ | MIGRATION-PARTIAL / DRAFT | v0.1 | франшиза | CORE-001 | PROD-001 |
@@ -41,7 +42,8 @@
 | PROD-001 | PRODUCT_AND_FRANCHISE_v0.1_DRAFT | docs/09_BUSINESS_MODEL/ | DRAFT (P64 = аудит, не проект) | v0.1 | Kickstarter, франшиза, цифровая версия, бизнес | COMM-001, WORLD-001 | FRAN-001, COMM-001 |
 | FRAN-001 | COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT | docs/12_FRANCHISE/ | DRAFT | v0.1 | франшиза | CORE-001 | PROD-001, VBC-001 |
 | PSY-001 | PSYCHOLOGICAL_METHODOLOGY_v0.1_DRAFT | docs/15_EDUCATION_AND_PSYCHOLOGY/ | MIGRATION-PARTIAL / DRAFT | v0.1 | не покрыто текущими категориями (требуется добавить "образование/психология") | CORE-001 | PROD-001 (P57) |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.0 | техническое | — | все документы выше |
+| COMP-001 | COMPARATIVE_TRADITIONS_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный, не первичный) | CORE-001 | ENT-001 (P25, коллизия "Кут Хуми"), WORLD-001 (P18, параллель с шаманской космологией), PROD-001 (P57, референс Ошо) |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.1 | техническое | — | все документы выше |
 
 ---
 
@@ -49,7 +51,7 @@
 
 | Категория | Покрытие | Комментарий |
 |---|---|---|
-| канон | 0 документов | Заблокировано отсутствием первоисточников ИВДИВО (см. CHANGELOG 2026-07-09) |
+| канон | 1 документ (сравнительный) | COMP-001 — только сравнительные традиции и веб-источники; первичный канонический индекс (P01, прямое чтение "Синтезов" ИВДИВО) по-прежнему не выполнен |
 | механика | 3 документа | Хорошее покрытие |
 | мир | 1 документ | WORLD-001 — единственный, требует расширения по мере роста дополнений |
 | персонажи | 2 документа | ENT-001, STORY-001/NARR-002 частично |
