@@ -14,6 +14,7 @@
 - `docs/14_TESTING_AND_BALANCE/PLAYTEST_PROTOCOL_v0.1_DRAFT.md` (TEST-001) — протокол трёх волн тестирования, метрики и коридоры, гейт ≥40 слепых партий.
 - `docs/10_KICKSTARTER/KICKSTARTER_PLAN_v0.1_DRAFT.md` (KS-001) — гейты запуска, скелет pledge-структуры, вопрос платформы.
 - `docs/11_DIGITAL_PRODUCT/DIGITAL_COMPANION_v0.1_DRAFT.md` (DIG-001) — MVP-компаньон (3 функции), этапность, принцип необязательности.
+- `references/SHMAKOV_ASCENT_PATH_v0.1_DRAFT.md` (COMP-002) — источник «путь восхождения духа» (внутренний контур): резонанс с механикой Разрыв/Преобразование, 4 варианта игровой абстракции, файрвол терминов, предложение DEC-010. По запросу основателя.
 
 ### Changed
 
