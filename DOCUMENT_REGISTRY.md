@@ -2,7 +2,7 @@
 
 Версия: v1.1
 Дата создания: 2026-07-09
-Дата обновления: 2026-07-09 (добавлена запись COMP-001)
+Дата обновления: 2026-07-11 (добавлены RES-001, CONC-001, CARD-001, TEST-001, KS-001, DIG-001)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -43,6 +43,12 @@
 | FRAN-001 | COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT | docs/12_FRANCHISE/ | DRAFT | v0.1 | франшиза | CORE-001 | PROD-001, VBC-001 |
 | PSY-001 | PSYCHOLOGICAL_METHODOLOGY_v0.1_DRAFT | docs/15_EDUCATION_AND_PSYCHOLOGY/ | MIGRATION-PARTIAL / DRAFT | v0.1 | не покрыто текущими категориями (требуется добавить "образование/психология") | CORE-001 | PROD-001 (P57) |
 | COMP-001 | COMPARATIVE_TRADITIONS_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный, не первичный) | CORE-001 | ENT-001 (P25, коллизия "Кут Хуми"), WORLD-001 (P18, параллель с шаманской космологией), PROD-001 (P57, референс Ошо) |
+| RES-001 | MARKET_RESEARCH_2026_v0.1_DRAFT | docs/01_RESEARCH/ | DRAFT (входные данные основателя + структурирование) | v0.1 | бизнес | CORE-001 | PROD-001, KS-001, CARD-001 |
+| CONC-001 | GAME_CONCEPT_ONE_PAGER_v0.1_DRAFT | docs/02_GAME_CONCEPT/ | DRAFT | v0.1 | мир, механика, бизнес | CORE-001 | GCORE-001, RES-001 |
+| CARD-001 | PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT | docs/04_CARDS_AND_COMPONENTS/ | DRAFT (все числа HYPOTHESIS) | v0.1 | механика | GCORE-001, MECH-001, MATH-001 | ENT-001, TEST-001 |
+| TEST-001 | PLAYTEST_PROTOCOL_v0.1_DRAFT | docs/14_TESTING_AND_BALANCE/ | DRAFT | v0.1 | механика | MATH-001 | CARD-001, KS-001 |
+| KS-001 | KICKSTARTER_PLAN_v0.1_DRAFT | docs/10_KICKSTARTER/ | DRAFT | v0.1 | Kickstarter | PROD-001 | RES-001, TEST-001 |
+| DIG-001 | DIGITAL_COMPANION_v0.1_DRAFT | docs/11_DIGITAL_PRODUCT/ | DRAFT | v0.1 | цифровая версия | PROD-001 | WORLD-001 |
 | REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.1 | техническое | — | все документы выше |
 
 ---
@@ -60,6 +66,8 @@
 | цифровая версия | 0 отдельных документов | Тема покрыта частично внутри WORLD-001 (P17) и PROD-001 (P59), отдельного `docs/11_DIGITAL_PRODUCT/` нет |
 | франшиза | 2 документа | FRAN-001, VBC-001 частично |
 | бизнес | 2 документа | COMM-001, PROD-001 частично |
+
+Обновление 2026-07-11: пробелы «Kickstarter» и «цифровая версия» закрыты отдельными документами (KS-001, DIG-001); добавлено покрытие разделов 01, 02, 04, 14 (RES-001, CONC-001, CARD-001, TEST-001).
 
 ## Протокол для новых документов (обязателен для Claude/ассистента)
 
