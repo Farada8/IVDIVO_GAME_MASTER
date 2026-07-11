@@ -32,7 +32,7 @@
 | MIGRATION-PARTIAL | PSYCHOLOGICAL_METHODOLOGY_v0.1_DRAFT | docs/15_EDUCATION_AND_PSYCHOLOGY/PSYCHOLOGICAL_METHODOLOGY_v0.1_DRAFT.md | https://docs.google.com/document/d/1qjGdK5w0MkwxBuvC9R2IItPA6TByieTXxnN0IPp-vJM |
 | QUEUED — найден в ZIP-архиве (2026-07-08) | GAME_DEVELOPMENT_ROADMAP_v0.1 | ROADMAP.md / docs/00_PROJECT_CORE/ | https://docs.google.com/document/d/1QO9tEZXOLJWrUz40_MXR8NwgEGtvOuEv8zWFr0CP0SU |
 | QUEUED — найден в ZIP-архиве | IVDIVO_AI_GAME_FACTORY_MASTER_v0.1 | docs/13_AI_RESULTS/ | https://docs.google.com/document/d/1YGCGOUZJfEJ3iIVdoKCXPGmZWshik-s8y8Bx_yH5nmg |
-| QUEUED — найден в ZIP-архиве | IVDIVO_PROMPT_LIBRARY_64_v0.1 | docs/13_AI_RESULTS/ | https://docs.google.com/document/d/1TND6gCOEK-YDfdi92CQLh-E1HlonljOPMfvQ8knE2wE |
+| MIGRATION-PARTIAL — реконструкция v0.2 в GitHub 2026-07-11 (`docs/13_AI_RESULTS/PROMPT_LIBRARY_64_v0.2_DRAFT.md`); оригинал .docx ожидает переноса и diff | IVDIVO_PROMPT_LIBRARY_64_v0.1 | docs/13_AI_RESULTS/ | https://docs.google.com/document/d/1TND6gCOEK-YDfdi92CQLh-E1HlonljOPMfvQ8knE2wE |
 | QUEUED — найден в ZIP-архиве | IVDIVO_AI_SKILLS_LIBRARY_v0.1 | docs/13_AI_RESULTS/ | https://docs.google.com/document/d/15nAFoYv1qJH53S4Bc7RJDaV4Gq9GAGfdrj6BjM1PNSg |
 | QUEUED — найден в ZIP-архиве | WEB_SOURCE_LIBRARY_INDEX_v0.1 | references/ | https://docs.google.com/document/d/1r42Prk2XjmlIt0DVMMmyfhqRfZ-XHMxGTP5XwBuLb3A |
 | QUEUED — найден в ZIP-архиве | ALICE_BAILEY_SOURCE_INDEX_v0.1 | references/ | https://docs.google.com/document/d/1IMe76wizfMKN0C1-pRXrPfgrbAw57UhQ-foaMvcXUkU |
@@ -45,7 +45,7 @@
 
 | Приоритет | Документ | Путь в ZIP | Почему важно |
 |---|---|---|---|
-| КРИТИЧЕСКИЙ | ОБЯЗАТЕЛЬНЫЙ_ПРОТОКОЛ_РАБОТЫ_С_ПРОЕКТОМ_v1.0_ACTIVE.docx | 00_AI_PROJECT_CORE/01_СТРАТЕГИЯ_И_РАМКИ/ | Цитируется как APPROVED входной материал в GAME_CORE_v0.1_DRAFT.md; сам текст решения (DEC-008) уже в DECISIONS.md, но протокольный документ ещё не перенесён |
+| КРИТИЧЕСКИЙ | ОБЯЗАТЕЛЬНЫЙ_ПРОТОКОЛ_РАБОТЫ_С_ПРОЕКТОМ_v1.0_ACTIVE.docx | 00_AI_PROJECT_CORE/01_СТРАТЕГИЯ_И_РАМКИ/ | Цитируется как APPROVED входной материал в GAME_CORE_v0.1_DRAFT.md; сам текст решения (DEC-008) уже в DECISIONS.md, но протокольный документ ещё не перенесён. 2026-07-11: частичный перенос выполнен → `docs/00_PROJECT_CORE/MANDATORY_WORK_PROTOCOL_v1.0_ACTIVE.md` (MIGRATION-PARTIAL, полный текст оригинала ожидает выгрузки) |
 | ВЫСОКИЙ | 00_MASTER_INDEX_v0.2_ACTIVE.xlsx | 00_AI_PROJECT_CORE/ | Главный навигационный индекс всех управляемых документов проекта с кодами (CORE-001, PASS-001, PROT-001 и т.д.) — основа для будущего docs/00_PROJECT_CORE/ |
 | ВЫСОКИЙ | RESEARCH_ANALOGS_REGISTER_v0.1.xlsx | 11_ИССЛЕДОВАНИЯ_И_АНАЛОГИ/00_ИНДЕКС_ИССЛЕДОВАНИЙ/ | Напрямую нужен для Этапа 1 ROADMAP.md ("Исследования и аналоги") |
 | СРЕДНИЙ | CONTEXT_KNOWLEDGE_REGISTER_v0.1.xlsx | 12_КОНТЕКСТНАЯ_БАЗА_ЗНАНИЙ/00_КАТАЛОГ/ | Каталог контекстной базы знаний |
