@@ -2,7 +2,7 @@
 
 Версия: v1.1
 Дата создания: 2026-07-09
-Дата обновления: 2026-07-11 (добавлены RES-001, CONC-001, CARD-001, TEST-001, KS-001, DIG-001)
+Дата обновления: 2026-07-11 (добавлены RES-001, CONC-001, CARD-001, TEST-001, KS-001, DIG-001, COMP-002)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -49,6 +49,7 @@
 | TEST-001 | PLAYTEST_PROTOCOL_v0.1_DRAFT | docs/14_TESTING_AND_BALANCE/ | DRAFT | v0.1 | механика | MATH-001 | CARD-001, KS-001 |
 | KS-001 | KICKSTARTER_PLAN_v0.1_DRAFT | docs/10_KICKSTARTER/ | DRAFT | v0.1 | Kickstarter | PROD-001 | RES-001, TEST-001 |
 | DIG-001 | DIGITAL_COMPANION_v0.1_DRAFT | docs/11_DIGITAL_PRODUCT/ | DRAFT | v0.1 | цифровая версия | PROD-001 | WORLD-001 |
+| COMP-002 | SHMAKOV_ASCENT_PATH_v0.1_DRAFT | references/ | DRAFT (внутренний контур; факты источника TO-VERIFY) | v0.1 | канон (сравнительный) | COMP-001 | WORLD-001 (P18), MECH-001 (P45), PSY-001, NARR-002 (P50) |
 | REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.1 | техническое | — | все документы выше |
 
 ---
