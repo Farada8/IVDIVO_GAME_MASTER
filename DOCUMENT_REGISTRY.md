@@ -2,7 +2,7 @@
 
 Версия: v1.1
 Дата создания: 2026-07-09
-Дата обновления: 2026-07-12 (добавлен COMP-003; MECH-001 дополнен P49.3, статус пирамиды — см. DEC-012 PROPOSED)
+Дата обновления: 2026-07-12 (добавлены COMP-003, COMP-004; MECH-001 P49.3; TEST-001 §7; templates/practical_templates; архив 6 документов до-пирамидной гипотезы)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -46,11 +46,12 @@
 | RES-001 | MARKET_RESEARCH_2026_v0.1_DRAFT | docs/01_RESEARCH/ | DRAFT (входные данные основателя + структурирование) | v0.1 | бизнес | CORE-001 | PROD-001, KS-001, CARD-001 |
 | CONC-001 | GAME_CONCEPT_ONE_PAGER_v0.1_DRAFT | docs/02_GAME_CONCEPT/ | DRAFT | v0.1 | мир, механика, бизнес | CORE-001 | GCORE-001, RES-001 |
 | CARD-001 | PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT | docs/04_CARDS_AND_COMPONENTS/ | DRAFT (все числа HYPOTHESIS) | v0.1 | механика | GCORE-001, MECH-001, MATH-001 | ENT-001, TEST-001 |
-| TEST-001 | PLAYTEST_PROTOCOL_v0.1_DRAFT | docs/14_TESTING_AND_BALANCE/ | DRAFT | v0.1 | механика | MATH-001 | CARD-001, KS-001 |
+| TEST-001 | PLAYTEST_PROTOCOL_v0.1_DRAFT | docs/14_TESTING_AND_BALANCE/ | DRAFT (§7 добавлен 2026-07-12 — качественный слой) | v0.1 | механика | MATH-001 | CARD-001, KS-001, COMP-003 |
 | KS-001 | KICKSTARTER_PLAN_v0.1_DRAFT | docs/10_KICKSTARTER/ | DRAFT | v0.1 | Kickstarter | PROD-001 | RES-001, TEST-001 |
 | DIG-001 | DIGITAL_COMPANION_v0.1_DRAFT | docs/11_DIGITAL_PRODUCT/ | DRAFT | v0.1 | цифровая версия | PROD-001 | WORLD-001 |
 | COMP-002 | SHMAKOV_ASCENT_PATH_v0.1_DRAFT | references/ | DRAFT (внутренний контур; факты источника TO-VERIFY) | v0.1 | канон (сравнительный) | COMP-001 | WORLD-001 (P18), MECH-001 (P45), PSY-001, NARR-002 (P50) |
 | COMP-003 | SVET_DUH_KUMARY_MAGNIT_v0.1_DRAFT | references/ | DRAFT (базовая практика, DEC-011 этап 3; не завершено основателем) | v0.1 | канон (сравнительный) | CORE-001 | MECH-001 (P49.3), COMP-001, COMP-002 |
+| COMP-004 | MARKET_COMPARATIVE_ANALYSIS_v0.1_DRAFT | references/ | DRAFT (методология + частичный реальный прогон) | v0.1 | канон (сравнительный), бизнес | CORE-001 | RES-001, TEST-001 |
 | REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.1 | техническое | — | все документы выше |
 
 ---
@@ -70,6 +71,11 @@
 | бизнес | 2 документа | COMM-001, PROD-001 частично |
 
 Обновление 2026-07-11: пробелы «Kickstarter» и «цифровая версия» закрыты отдельными документами (KS-001, DIG-001); добавлено покрытие разделов 01, 02, 04, 14 (RES-001, CONC-001, CARD-001, TEST-001).
+
+
+## Архив: до-пирамидная гипотеза (2026-07-12)
+
+`31_IDEAS/archive_pre_pyramid_2026-07-12/` — шесть документов (кампания на 14 сценариев, листы персонажей, антигерой, реестр пробелов, предложение структуры GitHub, 100 продакшн-промптов), созданных в сессии 2026-07-12 до выяснения, что актуальная топология — пирамида ярусов (DEC-012), а не линейная восьмимировая иерархия. Структурные принципы валидны, привязка к конкретным названиям миров/уровней — нет. Не считать текущим каноном. Кандидаты на перенос после утверждения DEC-012.
 
 ## Протокол для новых документов (обязателен для Claude/ассистента)
 
