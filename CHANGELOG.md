@@ -2,6 +2,39 @@
 
 Журнал изменений базы знаний GitHub.
 
+## 2026-07-12
+
+### Added
+
+- `docs/03_MECHANICS/ASCENSION_UNLOCK_SYSTEM_v0.1_APPROVED.md` (MECH-004) — утверждённая система прогрессии через физическое раскрытие новых колод, полей, Инструментов, условий и функций старых карт.
+- `docs/04_CARDS_AND_COMPONENTS/ASCENSION_UNLOCK_MODULES_v0.1_APPROVED.md` (CARD-002) — типы и гипотетический состав пакетов открытий.
+- `docs/14_TESTING_AND_BALANCE/ASCENSION_REWARD_PLAYTEST_v0.1_DRAFT.md` (TEST-003) — тест различия между числовым усилением и ощущением восхождения.
+- `docs/13_AI_RESULTS/PROMPT_EXECUTION_MASTER_100_v0.1_DRAFT.md` (AI-100) — мастер-реестр выполнения 100 производственных промтов.
+- `docs/13_AI_RESULTS/blocks/BLOCK_01_PROJECT_AND_GITHUB_v0.1_DRAFT.md` — архитектура проекта, источники истины, гейты и дорожная карта.
+- `docs/13_AI_RESULTS/blocks/BLOCK_02_BASE_GAME_v0.1_DRAFT.md` — scope, core loop, роли, экономика, кампания и состав базовой коробки.
+- `docs/13_AI_RESULTS/blocks/BLOCK_03_WORLD_EXPANSIONS_v0.1_DRAFT.md` — вертикальные уровни и параллельные миры как дополнения.
+- `docs/13_AI_RESULTS/blocks/BLOCK_04_STORY_AND_CAMPAIGNS_v0.1_DRAFT.md` — сюжетная грамматика, сценарии, ветвления, диалоги и финалы.
+- `docs/13_AI_RESULTS/blocks/BLOCK_05_CHARACTERS_AND_FACTIONS_v0.1_DRAFT.md` — герои, антигерой, союзник, фракции и отношения.
+- `docs/13_AI_RESULTS/blocks/BLOCK_06_CARDS_TOOLS_ECONOMY_v0.1_DRAFT.md` — карты, Инструменты, законы, условия, угрозы и награды.
+- `docs/13_AI_RESULTS/blocks/BLOCK_07_BOARDS_COMPONENTS_UI_v0.1_DRAFT.md` — поля, кольца, портал, планшеты, Убежище и PnP.
+- `docs/13_AI_RESULTS/blocks/BLOCK_08_RULES_BALANCE_TESTING_v0.1_DRAFT.md` — правила, обучение, доступность, соло и тестовая инфраструктура.
+- `docs/13_AI_RESULTS/blocks/BLOCK_09_EMOTION_RISK_SOCIAL_v0.1_DRAFT.md` — эмоции, азарт, победы, поражения и разговоры за столом.
+- `docs/13_AI_RESULTS/blocks/BLOCK_10_VISUAL_PRODUCTION_MARKET_v0.1_DRAFT.md` — визуал, производство, Kickstarter, линейка и цифровой продукт.
+- `docs/16_EXPANSIONS/BASE_GAME_AND_WORLD_EXPANSION_STRATEGY_v0.1_REVIEW.md` (EXP-001) — базовая коробка как законченная игра и миры как модульные дополнения.
+- Пакет из десяти форм в `docs/00_PROJECT_CORE/templates/`: механика, мир, дополнение, персонаж, фракция, карта, сценарий, плейтест, art brief и production spec.
+
+### Changed
+
+- `PROJECT_CORE_CONTEXT.md` обновлён до v1.4: добавлена прогрессия через открытия и восхождение.
+- `DECISIONS.md` дополнен DEC-014.
+- Создана ветка `agent/execute-100-game-workstreams` для системного выполнения библиотеки из 100 промтов.
+
+### Notes
+
+- Блоки 1–100 являются INITIAL DRAFT, а не доказанным финальным дизайном.
+- Числа, стоимость, UX, эмоциональный эффект и баланс требуют бумажных и слепых тестов.
+- Стратегия «миры как дополнения» сохраняет статус REVIEW / FOUNDER DIRECTION до явного утверждения.
+
 ## 2026-07-11
 
 ### Added
