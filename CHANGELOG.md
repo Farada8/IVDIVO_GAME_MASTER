@@ -2,6 +2,17 @@
 
 Журнал изменений базы знаний GitHub.
 
+## 2026-07-12 (продолжение)
+
+### Added
+- `references/MARKET_COMPARATIVE_ANALYSIS_v0.1_DRAFT.md` (COMP-004) — методология сравнительного аудита (30 критериев) + реальные находки по Etherfields, Oath, Kingdom Death: Monster, Gloomhaven, Pandemic Legacy, Too Many Bones.
+- `docs/14_TESTING_AND_BALANCE/PLAYTEST_PROTOCOL_v0.1_DRAFT.md` (TEST-001) — §7: качественный слой философского/эмоционального восприятия, дополняет количественные коридоры §2.
+- `templates/practical_templates_v0.1_draft.md` — 10 практических форм (лист персонажа, отчёт плейтеста, карточка антигероя, DEC, сценарий, экономический узел, файрвол, немой прогон, улика, статус документа).
+- `31_IDEAS/archive_pre_pyramid_2026-07-12/` — 6 документов, созданных до выяснения актуальной топологии (пирамида, DEC-012), явно помечены как архив, не текущий канон.
+
+### Changed
+- `DOCUMENT_REGISTRY.md` — добавлен COMP-004, обновлена запись TEST-001, зафиксирован архивный раздел.
+
 ## 2026-07-12
 
 ### Added
