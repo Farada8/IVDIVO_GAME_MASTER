@@ -22,6 +22,13 @@
 - `15_EDUCATION_AND_PSYCHOLOGY/` — образовательные и психологические версии после доказательства игры.
 - `99_ARCHIVE/` — устаревшие и заменённые материалы.
 
+## Активные документы, синхронизированные из Google Drive
+
+- [`source-architecture/SOURCE_BASED_WORLD_ARCHITECTURE_v0.1_DRAFT.md`](source-architecture/SOURCE_BASED_WORLD_ARCHITECTURE_v0.1_DRAFT.md) — матрица источники → принципы → игровые миры → жители → инструменты → механики.
+- [`worldbuilding/WORLD_INHABITANTS_AND_TOOLS_v0.1_DRAFT.md`](worldbuilding/WORLD_INHABITANTS_AND_TOOLS_v0.1_DRAFT.md) — жители миров, инструменты, возможности, ограничения; первый блок: Житель Синтезного мира.
+
 ## Правило
 
 В `docs/` попадает только материал с самостоятельной ценностью. Сырые мысли сначала помещаются в `inbox/` или `ideas/`.
+
+Google Drive остаётся рабочей базой и местом первичного редактирования. GitHub используется как Markdown-копия для версионирования, структуры, Codex/Claude и дальнейшей разработки.
