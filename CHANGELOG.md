@@ -2,6 +2,22 @@
 
 Журнал изменений базы знаний GitHub.
 
+## 2026-07-20
+
+### Added
+
+- `docs/07_CAMPAIGNS_AND_STORIES/CHOSEN_VERTICAL_SLICE_PLOT_v0.1_DRAFT.md` (PLOT-001) — выбранный рабочий сюжет первого vertical slice: **«Убежище, которое дышит» / The Breathing Shelter**.
+
+### Changed
+
+- `DOCUMENT_REGISTRY.md` — добавлена запись PLOT-001, связанная со STORY-001, NARR-002, CARD-001 и TEST-001.
+
+### Notes
+
+- Новое APPROVED-решение не создавалось. PLOT-001 остаётся DRAFT / FOUNDER-CHOICE-PROPOSED до прямого подтверждения основателя.
+- Выбранный сюжет объединяет survival, portal expedition и root threat investigation в одном тестовом сценарии.
+- Сохраняется известный конфликт синхронизации: GitHub `PROJECT_CORE_CONTEXT.md` отстаёт от Google Drive `PROJECT_CORE_CONTEXT_2026 v1.6` по архитектуре миров. PLOT-001 написан так, чтобы не зависеть от спорного числа миров.
+
 ## 2026-07-12 (архивация разговора, полный протокол)
 
 ### Added
