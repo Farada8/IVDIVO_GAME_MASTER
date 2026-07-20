@@ -2,6 +2,15 @@
 
 Журнал изменений базы знаний GitHub.
 
+## 2026-07-20 — archive: сессия LIMINAL/ИСТОК и ирландское финансирование
+
+- Добавлен архив разговора `98_CONVERSATION_ARCHIVE/2026-07-20_LIMINAL-ISTOK-koncepty-i-finansirovanie.md`.
+- В банк идей (НЕ канон) добавлена альтернативная концепт-линия: `31_IDEAS/alt_concepts_liminal_istok/` — 4 документа (LIMINAL v1.0, LIMINAL: Сдвиг v2.0, MVP Луча Формы, ИСТОК v1.0).
+- В `docs/09_BUSINESS_MODEL/` добавлен `FUNDING_ROADMAP_IRELAND_v1.0_WORKING.md` (LEO → Kickstarter → Priming/MFI → EI → 481A + таблица культурного теста).
+- `DECISIONS.md`: 2 решения основателя (культурные мотивы IE/UK/US; грантово-кредитная траектория).
+- `OPEN_QUESTIONS.md`: 6 новых вопросов, включая блокирующий о статусе линии LIMINAL/ИСТОК.
+- Канонические документы не изменялись.
+
 ## 2026-07-12 (архивация разговора, полный протокол)
 
 ### Added
