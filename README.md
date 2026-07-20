@@ -10,14 +10,19 @@ Google Drive остаётся хранилищем для Word/PDF, изобра
 
 ## Главные файлы
 
+- [MASTER_INDEX.md](MASTER_INDEX.md) — краткий навигационный индекс актуальных документов.
 - [PROJECT_CORE_CONTEXT.md](PROJECT_CORE_CONTEXT.md) — обязательный контекст проекта.
 - [DECISIONS.md](DECISIONS.md) — журнал утверждённых решений основателя.
 - [CHANGELOG.md](CHANGELOG.md) — журнал изменений базы знаний.
+- [DOCUMENT_REGISTRY.md](DOCUMENT_REGISTRY.md) — реестр документов.
+- [MIGRATION_INDEX.md](MIGRATION_INDEX.md) — перенос из Google Drive.
+- [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) — открытые вопросы.
 - [ROADMAP.md](ROADMAP.md) — дорожная карта разработки.
 
 ## Рабочие разделы
 
 - [docs/](docs/) — утверждаемые и рабочие документы проекта.
+- [98_CONVERSATION_ARCHIVE/](98_CONVERSATION_ARCHIVE/) — архивы значимых разговоров.
 - [ideas/](ideas/) — новые идеи, гипотезы и наброски до утверждения.
 - [inbox/](inbox/) — входящие заметки, ссылки, сырой материал.
 - [templates/](templates/) — шаблоны документов.
@@ -25,6 +30,12 @@ Google Drive остаётся хранилищем для Word/PDF, изобра
 - [playtests/](playtests/) — тесты, метрики, отчёты балансировки.
 - [assets/](assets/) — лёгкие вспомогательные материалы; тяжёлые файлы хранить в Google Drive.
 
+## Действующая архитектура мира
+
+Текущий канон архитектуры: [WORLD_ARCHITECTURE_v0.2_APPROVED](docs/05_WORLDS/WORLD_ARCHITECTURE_v0.2_APPROVED.md).
+
+Старая восьмимировая вертикаль имеет статус OLD MODEL / SUPERSEDED BY DEC-015 и не используется как текущий канон без отдельной сверки.
+
 ## Правило проекта
 
-Новая гипотеза не заменяет утверждённое решение. Все значимые изменения должны фиксироваться в `DECISIONS.md` или `CHANGELOG.md`.
+Новая гипотеза не заменяет утверждённое решение. Все значимые изменения должны фиксироваться в `DECISIONS.md` или `CHANGELOG.md`. Содержательные разговоры архивируются по DEC-018.
