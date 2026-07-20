@@ -27,6 +27,11 @@
 - [`source-architecture/SOURCE_BASED_WORLD_ARCHITECTURE_v0.1_DRAFT.md`](source-architecture/SOURCE_BASED_WORLD_ARCHITECTURE_v0.1_DRAFT.md) — матрица источники → принципы → игровые миры → жители → инструменты → механики.
 - [`worldbuilding/WORLD_INHABITANTS_AND_TOOLS_v0.1_DRAFT.md`](worldbuilding/WORLD_INHABITANTS_AND_TOOLS_v0.1_DRAFT.md) — жители миров, инструменты, возможности, ограничения; первый блок: Житель Синтезного мира.
 - [`13_AI_RESULTS/2026-07-18/PROMPT_RESPONSES_10_CORE_GDD_BLOCKS_v0.1_DRAFT.md`](13_AI_RESULTS/2026-07-18/PROMPT_RESPONSES_10_CORE_GDD_BLOCKS_v0.1_DRAFT.md) — ответы на 10 ключевых промтов: источники, структура миров, жители, инструменты, фракции, угрозы, core loop, ресурсы, типы карт и первый vertical slice.
+- [`08_VISUAL_BRAND/VISUAL_BRAND_CODE_v0.1_DRAFT.md`](08_VISUAL_BRAND/VISUAL_BRAND_CODE_v0.1_DRAFT.md) — визуальный код бренда: horror-вход, разлом-порог, матрица восьми миров, карты, упаковка, ограничения и открытые вопросы.
+
+## Архивы разговоров
+
+- [`../98_CONVERSATION_ARCHIVE/2026-07-20_ВИЗУАЛЬНЫЙ-КОД-БРЕНДА.md`](../98_CONVERSATION_ARCHIVE/2026-07-20_ВИЗУАЛЬНЫЙ-КОД-БРЕНДА.md) — архив разговора о визуальном коде бренда и его синхронизации в Drive/GitHub.
 
 ## Правило
 
