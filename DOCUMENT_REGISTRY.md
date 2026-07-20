@@ -94,3 +94,12 @@
 6. После публикации — обновить этот реестр (новая строка) и `MIGRATION_INDEX.md` при необходимости.
 
 Статус APPROVED никогда не присваивается ассистентом — максимум REVIEW, если документ предлагается основателю к утверждению явно.
+
+## Добавлено 2026-07-20 (ветка archive/2026-07-20-liminal-istok-funding)
+
+- `98_CONVERSATION_ARCHIVE/2026-07-20_LIMINAL-ISTOK-koncepty-i-finansirovanie.md` — ARCHIVE — архив сессии — родитель: PROJECT_CORE_CONTEXT.md
+- `31_IDEAS/alt_concepts_liminal_istok/LIMINAL_GDD_v1.0.md` — IDEA (superseded внутри линии) — альтернативный концепт
+- `31_IDEAS/alt_concepts_liminal_istok/LIMINAL_Shift_Commercial_GDD_v2.0.md` — WORKING/IDEA — альтернативный концепт — родитель: LIMINAL_GDD_v1.0
+- `31_IDEAS/alt_concepts_liminal_istok/LIMINAL_Ray1_MVP_Cards_v0.1.md` — WORKING/IDEA — карточный лист — родитель: LIMINAL_Shift v2.0
+- `31_IDEAS/alt_concepts_liminal_istok/ISTOK_Flagship_GDD_v1.0.md` — WORKING/IDEA — альтернативный флагман — родитель: LIMINAL_Shift v2.0
+- `docs/09_BUSINESS_MODEL/FUNDING_ROADMAP_IRELAND_v1.0_WORKING.md` — WORKING — финансирование — родители: DEC-013, DEC-014, KS-001
