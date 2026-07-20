@@ -2,7 +2,7 @@
 
 Версия: v1.1
 Дата создания: 2026-07-09
-Дата обновления: 2026-07-12 (добавлены COMP-003, COMP-004; MECH-001 P49.3; TEST-001 §7; templates/practical_templates; архив 6 документов до-пирамидной гипотезы)
+Дата обновления: 2026-07-12 (архивация разговора: 98_CONVERSATION_ARCHIVE, NARR-003, MECH-001 P49.4, 13_AI_RESULTS/CROSS_MODEL_AUDIT_PROTOCOL, OPEN_QUESTIONS.md; плюс ранее в сессии COMP-003, COMP-004, MECH-001 P49.3, TEST-001 §7, templates, архив 6 документов)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -31,7 +31,7 @@
 |---|---|---|---|---|---|---|---|
 | CORE-001 | PROJECT_CORE_CONTEXT | /PROJECT_CORE_CONTEXT.md | ACTIVE (не Draft/Review/Approved — корневой документ, статус вне обычной шкалы) | v1.1 | бизнес, мир, канон (родитель для всех) | — | все документы ниже |
 | GCORE-001 | GAME_CORE_v0.1_DRAFT | docs/03_MECHANICS/ | MIGRATION-PARTIAL / DRAFT | v0.1 | механика | CORE-001 | MECH-001, MATH-001, WORLD-001, ENT-001 |
-| MECH-001 | GAME_MECHANICS_v0.1_DRAFT | docs/03_MECHANICS/ | DRAFT (P49.3 добавлен 2026-07-12, PROPOSED — см. DEC-012) | v0.1 | механика | GCORE-001 | MATH-001, WORLD-001, COMP-003 |
+| MECH-001 | GAME_MECHANICS_v0.1_DRAFT | docs/03_MECHANICS/ | DRAFT (P49.3, P49.4 добавлены 2026-07-12 — см. DEC-012, OPEN_QUESTIONS) | v0.1 | механика | GCORE-001 | MATH-001, WORLD-001, COMP-003 |
 | MATH-001 | GAME_MATH_v0.1_DRAFT | docs/03_MECHANICS/ | DRAFT (числа = HYPOTHESIS) | v0.1 | механика | MECH-001 | GCORE-001, WORLD-001, ENT-001 |
 | WORLD-001 | WORLD_ARCHITECTURE_v0.1_DRAFT | docs/05_WORLDS/ | DRAFT | v0.1 | мир | CORE-001 | GCORE-001, MECH-001, ENT-001, NARR-002 |
 | ENT-001 | ENTITIES_AND_CHARACTERS_v0.1_DRAFT | docs/06_CHARACTERS_AND_ARCHETYPES/ | DRAFT (P25 частично зависит от канона — не Draft, а BLOCKED) | v0.1 | персонажи | GCORE-001, WORLD-001 | NARR-002, MATH-001, COMP-001 (коллизия имени "Кут Хуми") |
@@ -52,6 +52,7 @@
 | COMP-002 | SHMAKOV_ASCENT_PATH_v0.1_DRAFT | references/ | DRAFT (внутренний контур; факты источника TO-VERIFY) | v0.1 | канон (сравнительный) | COMP-001 | WORLD-001 (P18), MECH-001 (P45), PSY-001, NARR-002 (P50) |
 | COMP-003 | SVET_DUH_KUMARY_MAGNIT_v0.1_DRAFT | references/ | DRAFT (базовая практика, DEC-011 этап 3; не завершено основателем) | v0.1 | канон (сравнительный) | CORE-001 | MECH-001 (P49.3), COMP-001, COMP-002 |
 | COMP-004 | MARKET_COMPARATIVE_ANALYSIS_v0.1_DRAFT | references/ | DRAFT (методология + частичный реальный прогон) | v0.1 | канон (сравнительный), бизнес | CORE-001 | RES-001, TEST-001 |
+| NARR-003 | NARRATIVE_DESIGN_FRAMEWORKS_v0.1_DRAFT | references/ | DRAFT (методология, не зависит от исхода DEC-012) | v0.1 | нарратив (методология) | GCORE-001 | ENT-001 |
 | REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.1 | техническое | — | все документы выше |
 
 ---
@@ -76,6 +77,11 @@
 ## Архив: до-пирамидная гипотеза (2026-07-12)
 
 `31_IDEAS/archive_pre_pyramid_2026-07-12/` — шесть документов (кампания на 14 сценариев, листы персонажей, антигерой, реестр пробелов, предложение структуры GitHub, 100 продакшн-промптов), созданных в сессии 2026-07-12 до выяснения, что актуальная топология — пирамида ярусов (DEC-012), а не линейная восьмимировая иерархия. Структурные принципы валидны, привязка к конкретным названиям миров/уровней — нет. Не считать текущим каноном. Кандидаты на перенос после утверждения DEC-012.
+
+
+## Архивация разговора 2026-07-12 (второй проход, полный протокол)
+
+`98_CONVERSATION_ARCHIVE/2026-07-12_topologiya-piramida-sintez-razrabotok.md` — полный архив по стандартной структуре (резюме/утверждённые решения/рабочие разработки/новые идеи/отклонённые варианты/открытые вопросы/связи/рекомендации/следующие действия/формулировки основателя). `OPEN_QUESTIONS.md` (корень) — сводка нерешённых вопросов. `docs/13_AI_RESULTS/CROSS_MODEL_AUDIT_PROTOCOL_v0.1_DRAFT.md` — методология AI-инструментов проекта.
 
 ## Протокол для новых документов (обязателен для Claude/ассистента)
 
