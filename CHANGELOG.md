@@ -2,6 +2,32 @@
 
 Журнал изменений базы знаний GitHub.
 
+## 2026-07-20
+
+### Added
+
+- `98_CONVERSATION_ARCHIVE/2026-07-20_PROJECT-FORMULA-WORK-PROTOCOL-FRANCHISE.md` — архив разговора о формуле проекта, обязательном протоколе работы и коммерческой модели франшизы.
+- `OPEN_QUESTIONS.md` — сводный файл открытых вопросов после синхронизации с Drive v1.6.
+- `MASTER_INDEX.md` — навигационный индекс верхнего уровня; не заменяет `DOCUMENT_REGISTRY.md`, а даёт быстрые ссылки на ключевые документы.
+
+### Changed
+
+- `PROJECT_CORE_CONTEXT.md` — синхронизирован с `PROJECT_CORE_CONTEXT_2026 v1.6`: ранняя восьмимировая вертикаль заменена на актуальную архитектуру `пять вертикальных миров + орбитали параллельных миров`.
+- `DECISIONS.md` — добавлен DEC-015; DEC-003 помечен как `SUPERSEDED BY DEC-015`; DEC-012 помечен как reworked/superseded в части архитектуры миров.
+- `ROADMAP.md` — этап «Восемь миров» заменён на этап актуальной архитектуры миров; добавлен отдельный франшизно-цифровой этап после доказательства игрового ядра.
+- `DOCUMENT_REGISTRY.md` — обновлены статусы CORE/ROADMAP/FRAN, добавлены ARCH-001, OQ-001 и INDEX-001.
+- `docs/12_FRANCHISE/COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT.md` — добавлена связь с Drive-документом и архивом разговора.
+
+### Google Drive
+
+- Создан архив разговора `2026-07-20_PROJECT-FORMULA-WORK-PROTOCOL-FRANCHISE` в Drive-папке `98_CONVERSATION_ARCHIVE`.
+- Создан тематический Drive-документ `COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT` в папке `19_ФРАНШИЗА_И_ЛИЦЕНЗИРОВАНИЕ/00_МОДЕЛЬ_ФРАНШИЗЫ`.
+
+### Conflicts handled
+
+- GitHub `PROJECT_CORE_CONTEXT.md` отставал от Drive: в GitHub была восьмимировая вертикаль как APPROVED, а Drive v1.6 уже фиксирует пять вертикальных миров + орбитали. Ветка `archive/2026-07-20-project-formula-protocol-franchise` приводит GitHub к Drive v1.6.
+- Коммерческая модель франшизы остаётся DRAFT: она не утверждает финальные финансовые параметры и требует пилотной проверки.
+
 ## 2026-07-12 (продолжение)
 
 ### Added
