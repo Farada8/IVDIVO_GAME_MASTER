@@ -2,6 +2,23 @@
 
 Журнал изменений базы знаний GitHub.
 
+## 2026-07-20
+
+### Added
+
+- `98_CONVERSATION_ARCHIVE/2026-07-20_COMMERCIAL-FRANCHISE-MODEL.md` — архив текущего разговора о коммерческой модели франшизы.
+- `docs/12_FRANCHISE/COMMERCIAL_FRANCHISE_MODEL_v0.2_DRAFT.md` — новая game-first версия модели франшизы, заменяющая v0.1 как рабочий черновик.
+- `OPEN_QUESTIONS.md` — открытые вопросы по франшизе и синхронизации контекста.
+
+### Changed
+
+- `DOCUMENT_REGISTRY.md` — FRAN-001 обновлён до v0.2; добавлен архив разговора ARCH-2026-07-20-FRAN.
+- `CHANGELOG.md` — добавлена запись архивации.
+
+### Conflict noted
+
+- Google Drive `PROJECT_CORE_CONTEXT_2026 v1.6` содержит действующую архитектуру пяти вертикальных миров и орбиталей параллельных миров, а GitHub `PROJECT_CORE_CONTEXT.md v1.1` всё ещё содержит старую восьмимировую вертикаль. Требуется отдельная синхронизация GitHub-контекста с Drive v1.6.
+
 ## 2026-07-12 (продолжение)
 
 ### Added
