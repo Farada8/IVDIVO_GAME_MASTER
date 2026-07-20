@@ -10,9 +10,12 @@ Google Drive остаётся хранилищем для Word/PDF, изобра
 
 ## Главные файлы
 
+- [MASTER_INDEX.md](MASTER_INDEX.md) — главный навигационный индекс репозитория.
 - [PROJECT_CORE_CONTEXT.md](PROJECT_CORE_CONTEXT.md) — обязательный контекст проекта.
 - [DECISIONS.md](DECISIONS.md) — журнал утверждённых решений основателя.
 - [CHANGELOG.md](CHANGELOG.md) — журнал изменений базы знаний.
+- [DOCUMENT_REGISTRY.md](DOCUMENT_REGISTRY.md) — реестр документов.
+- [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) — открытые вопросы проекта.
 - [ROADMAP.md](ROADMAP.md) — дорожная карта разработки.
 
 ## Рабочие разделы
@@ -24,6 +27,7 @@ Google Drive остаётся хранилищем для Word/PDF, изобра
 - [references/](references/) — внешние источники, аналоги, книги, ссылки.
 - [playtests/](playtests/) — тесты, метрики, отчёты балансировки.
 - [assets/](assets/) — лёгкие вспомогательные материалы; тяжёлые файлы хранить в Google Drive.
+- [98_CONVERSATION_ARCHIVE/](98_CONVERSATION_ARCHIVE/) — архивы содержательных разговоров.
 
 ## Правило проекта
 
