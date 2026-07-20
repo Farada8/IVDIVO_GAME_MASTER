@@ -2,6 +2,23 @@
 
 Журнал изменений базы знаний GitHub.
 
+## 2026-07-20
+
+### Added
+
+- `98_CONVERSATION_ARCHIVE/2026-07-20_СИСТЕМА-СООБЩЕСТВА.md` — архив текущего разговора о системе сообщества, протоколе работы и протоколе архивации разработок.
+- `OPEN_QUESTIONS.md` — активный список открытых вопросов, начатый с блока community-system и процесса архивирования.
+
+### Changed
+
+- `docs/09_BUSINESS_MODEL/COMMUNITY_SYSTEM_v0.1_DRAFT.md` — расширена GitHub-копия community-system: три контура сообщества, путь участника, Discord MVP, сезоны, локальные клубы, ведущие, пользовательский контент, цифровой профиль, безопасность, монетизация и открытые вопросы.
+- `DECISIONS.md` — добавлен DEC-017 о протоколе архивации разговоров и распределении результатов по Drive/GitHub.
+
+### Open
+
+- В репозитории нет отдельного `MASTER_INDEX.md`; текущую функцию индекса выполняет `DOCUMENT_REGISTRY.md`.
+- Коллизия нумерации Drive-DEC/GitHub-DEC остаётся известным миграционным риском.
+
 ## 2026-07-12 (продолжение)
 
 ### Added
@@ -36,15 +53,15 @@
 
 ### Added
 
-- `docs/13_AI_RESULTS/PROMPT_LIBRARY_64_v0.2_DRAFT.md` — библиотека 64 промптов: реконструкция и развитие v0.1 (8 блоков P01–P64, владельцы блоков, экспертные гейты, правила исполнения 0.1–0.7, статусы исполнения блоков, маршрутизация ROADMAP → промпты). Оригинал v0.1 (.docx) ожидает переноса и diff.
-- `docs/00_PROJECT_CORE/MANDATORY_WORK_PROTOCOL_v1.0_ACTIVE.md` — частичный перенос Обязательного протокола работы с проектом (ядро по DEC-008; полный текст оригинала ожидает выгрузки из ZIP/Drive).
-- `docs/01_RESEARCH/MARKET_RESEARCH_2026_v0.1_DRAFT.md` (RES-001) — рыночное исследование: входной материал основателя (BGG-топ, направления 2026–2030, параметры первой коробки, антирекомендации, оценка), дельта-анализ с ядром, предложение DEC-009.
+- `docs/13_AI_RESULTS/PROMPT_LIBRARY_64_v0.2_DRAFT.md` — библиотека 64 промптов: реконструкция и развитие v0.1.
+- `docs/00_PROJECT_CORE/MANDATORY_WORK_PROTOCOL_v1.0_ACTIVE.md` — частичный перенос Обязательного протокола работы с проектом.
+- `docs/01_RESEARCH/MARKET_RESEARCH_2026_v0.1_DRAFT.md` (RES-001) — рыночное исследование: входной материал основателя, дельта-анализ с ядром, предложение DEC-009.
 - `docs/02_GAME_CONCEPT/GAME_CONCEPT_ONE_PAGER_v0.1_DRAFT.md` (CONC-001) — одностраничник концепта и публичный словарь IP.
-- `docs/04_CARDS_AND_COMPONENTS/PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT.md` (CARD-001) — полный карточный состав прототипа «2 Диска + 1 Вихрь» (~100 карт, PnP-план).
-- `docs/14_TESTING_AND_BALANCE/PLAYTEST_PROTOCOL_v0.1_DRAFT.md` (TEST-001) — протокол трёх волн тестирования, метрики и коридоры, гейт ≥40 слепых партий.
-- `docs/10_KICKSTARTER/KICKSTARTER_PLAN_v0.1_DRAFT.md` (KS-001) — гейты запуска, скелет pledge-структуры, вопрос платформы.
-- `docs/11_DIGITAL_PRODUCT/DIGITAL_COMPANION_v0.1_DRAFT.md` (DIG-001) — MVP-компаньон (3 функции), этапность, принцип необязательности.
-- `references/SHMAKOV_ASCENT_PATH_v0.1_DRAFT.md` (COMP-002) — источник «путь восхождения духа» (внутренний контур): резонанс с механикой Разрыв/Преобразование, 4 варианта игровой абстракции, файрвол терминов, предложение DEC-010. По запросу основателя.
+- `docs/04_CARDS_AND_COMPONENTS/PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT.md` (CARD-001) — полный карточный состав прототипа «2 Диска + 1 Вихрь».
+- `docs/14_TESTING_AND_BALANCE/PLAYTEST_PROTOCOL_v0.1_DRAFT.md` (TEST-001) — протокол трёх волн тестирования.
+- `docs/10_KICKSTARTER/KICKSTARTER_PLAN_v0.1_DRAFT.md` (KS-001) — гейты запуска, скелет pledge-структуры.
+- `docs/11_DIGITAL_PRODUCT/DIGITAL_COMPANION_v0.1_DRAFT.md` (DIG-001) — MVP-компаньон.
+- `references/SHMAKOV_ASCENT_PATH_v0.1_DRAFT.md` (COMP-002) — источник «путь восхождения духа».
 
 ### Changed
 
