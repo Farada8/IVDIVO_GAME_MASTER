@@ -9,7 +9,7 @@
 - `02_GAME_CONCEPT/` — продуктовая концепция, аудитория, позиционирование.
 - `03_MECHANICS/` — core loop, действия, ресурсы, экономика, порталы, баланс.
 - `04_CARDS_AND_COMPONENTS/` — карты, жетоны, поля, планшеты, предметы, здания.
-- `05_WORLDS/` — восемь миров, законы миров, угрозы, слои реальности.
+- `05_WORLDS/` — пять вертикальных миров, орбитали, законы миров, угрозы, слои реальности.
 - `06_CHARACTERS_AND_ARCHETYPES/` — персонажи, роли, архетипы, фракции.
 - `07_CAMPAIGNS_AND_STORIES/` — сценарии, кампании, ветвления, последствия.
 - `08_VISUAL_BRAND/` — визуальный код, арт-дирекшн, упаковка.
@@ -24,9 +24,15 @@
 
 ## Активные документы, синхронизированные из Google Drive
 
+- [`05_WORLDS/WORLD_ARCHITECTURE_v0.2_APPROVED.md`](05_WORLDS/WORLD_ARCHITECTURE_v0.2_APPROVED.md) — действующая архитектура мира: пять вертикальных миров + орбитали параллельных миров; заменяет старую восьмимировую вертикаль.
+- [`12_FRANCHISE/COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT.md`](12_FRANCHISE/COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT.md) — рабочая коммерческая модель франшизы игровой вселенной.
 - [`source-architecture/SOURCE_BASED_WORLD_ARCHITECTURE_v0.1_DRAFT.md`](source-architecture/SOURCE_BASED_WORLD_ARCHITECTURE_v0.1_DRAFT.md) — матрица источники → принципы → игровые миры → жители → инструменты → механики.
 - [`worldbuilding/WORLD_INHABITANTS_AND_TOOLS_v0.1_DRAFT.md`](worldbuilding/WORLD_INHABITANTS_AND_TOOLS_v0.1_DRAFT.md) — жители миров, инструменты, возможности, ограничения; первый блок: Житель Синтезного мира.
-- [`13_AI_RESULTS/2026-07-18/PROMPT_RESPONSES_10_CORE_GDD_BLOCKS_v0.1_DRAFT.md`](13_AI_RESULTS/2026-07-18/PROMPT_RESPONSES_10_CORE_GDD_BLOCKS_v0.1_DRAFT.md) — ответы на 10 ключевых промтов: источники, структура миров, жители, инструменты, фракции, угрозы, core loop, ресурсы, типы карт и первый vertical slice.
+- [`13_AI_RESULTS/2026-07-18/PROMPT_RESPONSES_10_CORE_GDD_BLOCKS_v0.1_DRAFT.md`](13_AI_RESULTS/2026-07-18/PROMPT_RESPONSES_10_CORE_GDD_BLOCKS_v0.1_DRAFT.md) — ответы на 10 ключевых промтов.
+
+## Архивы разговоров
+
+- [`../98_CONVERSATION_ARCHIVE/2026-07-20_main-goal-protocol-franchise.md`](../98_CONVERSATION_ARCHIVE/2026-07-20_main-goal-protocol-franchise.md) — главная цель проекта, архивный протокол и франшизная модель.
 
 ## Правило
 
