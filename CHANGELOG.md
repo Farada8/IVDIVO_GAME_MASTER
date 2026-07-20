@@ -2,49 +2,71 @@
 
 Журнал изменений базы знаний GitHub.
 
+## 2026-07-20
+
+### Added
+
+- `98_CONVERSATION_ARCHIVE/2026-07-20_STRATEGIC-GAME-FRANCHISE.md` — архив текущего разговора: стратегическое определение, статусы CANON/WORKING/IDEAS/REJECTED/OPEN QUESTIONS, конфликт Drive/GitHub по архитектуре миров.
+- `docs/02_GAME_CONCEPT/STRATEGIC_GAME_DEFINITION_v0.1_DRAFT.md` (CONC-002) — стратегическое определение игры как многоуровневой приключенческой системы.
+- `docs/05_WORLDS/WORLD_ARCHITECTURE_v0.2_APPROVED.md` (WORLD-002) — синхронизация с Google Drive PROJECT_CORE_CONTEXT_2026 v1.6 / DEC-015: пять вертикальных миров + орбитали параллельных миров.
+- `OPEN_QUESTIONS.md` — активный реестр нерешённых вопросов, включая публичный pitch и migration старой восьмимировой модели.
+
+### Changed
+
+- `PROJECT_CORE_CONTEXT.md` — обновлён до GitHub-сводки v1.6-sync; старая восьмимировая вертикаль заменена актуальной архитектурой DEC-015.
+- `DECISIONS.md` — DEC-003 помечен как `SUPERSEDED BY DEC-015`, добавлен DEC-015, DEC-012 помечен как absorbed/superseded by DEC-015.
+- `DOCUMENT_REGISTRY.md` — обновлён до v1.2: добавлены CONC-002, WORLD-002, ARCH-2026-07-20, OPENQ; помечены документы, требующие DEC-015 review.
+
+### Open
+
+- Выполнить отдельный migration pass старых документов CONC-001, WORLD-001, MECH-001, ENT-001 и NARR-002 под DEC-015.
+- Подготовить 3 варианта внешнего pitch: horror-facing, adventure strategy и franchise/IP deck.
+
 ## 2026-07-12 (продолжение)
 
 ### Added
+
 - `references/MARKET_COMPARATIVE_ANALYSIS_v0.1_DRAFT.md` (COMP-004) — методология сравнительного аудита (30 критериев) + реальные находки по Etherfields, Oath, Kingdom Death: Monster, Gloomhaven, Pandemic Legacy, Too Many Bones.
 - `docs/14_TESTING_AND_BALANCE/PLAYTEST_PROTOCOL_v0.1_DRAFT.md` (TEST-001) — §7: качественный слой философского/эмоционального восприятия, дополняет количественные коридоры §2.
-- `templates/practical_templates_v0.1_draft.md` — 10 практических форм (лист персонажа, отчёт плейтеста, карточка антигероя, DEC, сценарий, экономический узел, файрвол, немой прогон, улика, статус документа).
-- `31_IDEAS/archive_pre_pyramid_2026-07-12/` — 6 документов, созданных до выяснения актуальной топологии (пирамида, DEC-012), явно помечены как архив, не текущий канон.
+- `templates/practical_templates_v0.1_draft.md` — 10 практических форм.
+- `31_IDEAS/archive_pre_pyramid_2026-07-12/` — 6 документов, созданных до выяснения актуальной топологии.
 
 ### Changed
+
 - `DOCUMENT_REGISTRY.md` — добавлен COMP-004, обновлена запись TEST-001, зафиксирован архивный раздел.
 
 ## 2026-07-12
 
 ### Added
 
-- `references/SVET_DUH_KUMARY_MAGNIT_v0.1_DRAFT.md` (COMP-003) — базовая практика (DEC-011, этап 3): различение Свет-вещества и Дух-вещества, Магнит Отца-Матери (не завершено основателем), пять ярусов пирамиды, сравнительное исследование (Кумары, Дэвы, Агнишватта, Семь Лучей).
-- В `docs/03_MECHANICS/GAME_MECHANICS_v0.1_DRAFT.md` (MECH-001) — раздел P49.3: вертикальный переход как сужающаяся пирамида колец (PROPOSED), отвечает на открытый вопрос P49.1.
-- В `DECISIONS.md` — DEC-012 (PROPOSED): пирамида с орбиталями как амендмент к DEC-003; НЕ заменяет DEC-003 автоматически, требует утверждения основателем по открытым пунктам (согласование с 8 мирами, коллективная/индивидуальная вершина).
+- `references/SVET_DUH_KUMARY_MAGNIT_v0.1_DRAFT.md` (COMP-003) — базовая практика DEC-011, пять ярусов пирамиды, сравнительное исследование.
+- В `docs/03_MECHANICS/GAME_MECHANICS_v0.1_DRAFT.md` (MECH-001) — раздел P49.3: вертикальный переход как сужающаяся пирамида колец (PROPOSED).
+- В `DECISIONS.md` — DEC-012 (PROPOSED на момент фиксации): пирамида с орбиталями как амендмент к DEC-003.
 
 ### Changed
 
 - `DOCUMENT_REGISTRY.md` — v1.1: добавлена строка COMP-003, обновлена запись MECH-001.
 
-### Open (не решено, зафиксировано явно, не потеряно)
+### Open
 
-- Согласование пятиярусной пирамиды с восемью мирами DEC-003 (гипотеза А: пирамида внутри Инфернального мира / гипотеза Б: отдельная ортогональная ось).
+- Согласование пятиярусной пирамиды с восемью мирами DEC-003.
 - Коллективная vs индивидуальная вершина пирамиды.
-- Завершение описания практики Магнита Отца-Матери — основатель начал, не закончил.
-- Кумара — одна фигура или несколько (вопрос задан основателю, ответ не получен).
+- Завершение описания практики Магнита Отца-Матери.
+- Кумара — одна фигура или несколько.
 
 ## 2026-07-11
 
 ### Added
 
-- `docs/13_AI_RESULTS/PROMPT_LIBRARY_64_v0.2_DRAFT.md` — библиотека 64 промптов: реконструкция и развитие v0.1 (8 блоков P01–P64, владельцы блоков, экспертные гейты, правила исполнения 0.1–0.7, статусы исполнения блоков, маршрутизация ROADMAP → промпты). Оригинал v0.1 (.docx) ожидает переноса и diff.
-- `docs/00_PROJECT_CORE/MANDATORY_WORK_PROTOCOL_v1.0_ACTIVE.md` — частичный перенос Обязательного протокола работы с проектом (ядро по DEC-008; полный текст оригинала ожидает выгрузки из ZIP/Drive).
-- `docs/01_RESEARCH/MARKET_RESEARCH_2026_v0.1_DRAFT.md` (RES-001) — рыночное исследование: входной материал основателя (BGG-топ, направления 2026–2030, параметры первой коробки, антирекомендации, оценка), дельта-анализ с ядром, предложение DEC-009.
+- `docs/13_AI_RESULTS/PROMPT_LIBRARY_64_v0.2_DRAFT.md` — библиотека 64 промптов.
+- `docs/00_PROJECT_CORE/MANDATORY_WORK_PROTOCOL_v1.0_ACTIVE.md` — частичный перенос обязательного протокола работы.
+- `docs/01_RESEARCH/MARKET_RESEARCH_2026_v0.1_DRAFT.md` (RES-001) — рыночное исследование.
 - `docs/02_GAME_CONCEPT/GAME_CONCEPT_ONE_PAGER_v0.1_DRAFT.md` (CONC-001) — одностраничник концепта и публичный словарь IP.
-- `docs/04_CARDS_AND_COMPONENTS/PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT.md` (CARD-001) — полный карточный состав прототипа «2 Диска + 1 Вихрь» (~100 карт, PnP-план).
-- `docs/14_TESTING_AND_BALANCE/PLAYTEST_PROTOCOL_v0.1_DRAFT.md` (TEST-001) — протокол трёх волн тестирования, метрики и коридоры, гейт ≥40 слепых партий.
-- `docs/10_KICKSTARTER/KICKSTARTER_PLAN_v0.1_DRAFT.md` (KS-001) — гейты запуска, скелет pledge-структуры, вопрос платформы.
-- `docs/11_DIGITAL_PRODUCT/DIGITAL_COMPANION_v0.1_DRAFT.md` (DIG-001) — MVP-компаньон (3 функции), этапность, принцип необязательности.
-- `references/SHMAKOV_ASCENT_PATH_v0.1_DRAFT.md` (COMP-002) — источник «путь восхождения духа» (внутренний контур): резонанс с механикой Разрыв/Преобразование, 4 варианта игровой абстракции, файрвол терминов, предложение DEC-010. По запросу основателя.
+- `docs/04_CARDS_AND_COMPONENTS/PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT.md` (CARD-001) — карточный состав прототипа.
+- `docs/14_TESTING_AND_BALANCE/PLAYTEST_PROTOCOL_v0.1_DRAFT.md` (TEST-001) — протокол тестирования.
+- `docs/10_KICKSTARTER/KICKSTARTER_PLAN_v0.1_DRAFT.md` (KS-001) — гейты запуска и pledge-структура.
+- `docs/11_DIGITAL_PRODUCT/DIGITAL_COMPANION_v0.1_DRAFT.md` (DIG-001) — MVP-компаньон.
+- `references/SHMAKOV_ASCENT_PATH_v0.1_DRAFT.md` (COMP-002) — источник «путь восхождения духа».
 
 ### Changed
 
