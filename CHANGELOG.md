@@ -2,6 +2,25 @@
 
 Журнал изменений базы знаний GitHub.
 
+## 2026-07-20
+
+### Added
+
+- `98_CONVERSATION_ARCHIVE/2026-07-20_ПСИХОЛОГИЧЕСКАЯ-МЕТОДОЛОГИЯ.md` — архив разговора о психологической методологии: CANON/WORKING/IDEAS/REJECTED/OPEN QUESTIONS, связи с GAME CORE, восемью мирами, архетипами, франшизой и цифровой версией.
+- `OPEN_QUESTIONS.md` — единый реестр открытых вопросов проекта, включая вопросы психологической методологии, синхронизации Drive/GitHub и DEC-012.
+- `MASTER_INDEX.md` — рабочий индекс GitHub, не заменяющий полный Google Drive `00_MASTER_INDEX_v0.2_ACTIVE.xlsx`.
+
+### Changed
+
+- `docs/15_EDUCATION_AND_PSYCHOLOGY/PSYCHOLOGICAL_METHODOLOGY_v0.1_DRAFT.md` — синхронизирован с полной Google Drive-версией; добавлены альтернативы, причины отказа, риски, критерии принятия психологической механики, открытые вопросы и источники.
+- `DOCUMENT_REGISTRY.md` — добавлены `ARCH-001`, `OQ-001`, `MINDEX-001`; обновлён статус `PSY-001` до `MIGRATION-SYNCED-2026-07-20`.
+
+### Open
+
+- Новых APPROVED-решений нет; `DECISIONS.md` не изменялся.
+- Требуется решение основателя по правилам синхронизации Google Drive ↔ GitHub ↔ NotebookLM.
+- Психологическая методология остаётся DRAFT до завершения `GAME_CORE_v0.1_DRAFT` и плейтестов.
+
 ## 2026-07-12 (продолжение)
 
 ### Added

@@ -10,10 +10,14 @@ Google Drive остаётся хранилищем для Word/PDF, изобра
 
 ## Главные файлы
 
+- [MASTER_INDEX.md](MASTER_INDEX.md) — рабочий индекс GitHub.
 - [PROJECT_CORE_CONTEXT.md](PROJECT_CORE_CONTEXT.md) — обязательный контекст проекта.
 - [DECISIONS.md](DECISIONS.md) — журнал утверждённых решений основателя.
 - [CHANGELOG.md](CHANGELOG.md) — журнал изменений базы знаний.
 - [ROADMAP.md](ROADMAP.md) — дорожная карта разработки.
+- [DOCUMENT_REGISTRY.md](DOCUMENT_REGISTRY.md) — реестр документов.
+- [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) — открытые вопросы.
+- [MIGRATION_INDEX.md](MIGRATION_INDEX.md) — перенос из Google Drive.
 
 ## Рабочие разделы
 
@@ -24,6 +28,11 @@ Google Drive остаётся хранилищем для Word/PDF, изобра
 - [references/](references/) — внешние источники, аналоги, книги, ссылки.
 - [playtests/](playtests/) — тесты, метрики, отчёты балансировки.
 - [assets/](assets/) — лёгкие вспомогательные материалы; тяжёлые файлы хранить в Google Drive.
+- [98_CONVERSATION_ARCHIVE/](98_CONVERSATION_ARCHIVE/) — архивы содержательных разговоров.
+
+## Последний архив
+
+- [2026-07-20_ПСИХОЛОГИЧЕСКАЯ-МЕТОДОЛОГИЯ.md](98_CONVERSATION_ARCHIVE/2026-07-20_ПСИХОЛОГИЧЕСКАЯ-МЕТОДОЛОГИЯ.md)
 
 ## Правило проекта
 
