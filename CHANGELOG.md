@@ -2,6 +2,24 @@
 
 Журнал изменений базы знаний GitHub.
 
+## 2026-07-20
+
+### Added
+
+- `98_CONVERSATION_ARCHIVE/2026-07-20_система-сюжетов-и-архивация.md` — архив текущего разговора: система сюжетов, сюжетный движок, ветвление кампании, протокол сохранения.
+- `OPEN_QUESTIONS.md` — первичная сводка открытых вопросов по сюжетам, GAME_CORE, порталам, восьми мирам, DEC-012 и цифровому companion.
+
+### Changed
+
+- `docs/07_CAMPAIGNS_AND_STORIES/STORY_SYSTEM_v0.1_DRAFT.md` — добавлен апдейт архивации 2026-07-20: CANON/WORKING/REJECTED/OPEN, уточнение resettable-кампании и vertical slice после GAME_CORE.
+- `DOCUMENT_REGISTRY.md` — добавлены записи ARCH-20260720-03 и OQ-001; STORY-001 отмечен как archive-synced.
+
+### Open
+
+- Согласовать пятиузловую грамматику P49 из `NARRATIVE_SYSTEM_v0.1_DRAFT.md` с семиэлементной формулой `STORY_SYSTEM_v0.1_DRAFT.md`.
+- Согласовать DEC-012 (пирамида с орбиталями, PROPOSED) с DEC-003 (восемь миров, APPROVED).
+- Не обновлять `PROJECT_CORE_CONTEXT.md` до утверждения GAME_CORE и проверки первого vertical slice.
+
 ## 2026-07-12 (продолжение)
 
 ### Added
