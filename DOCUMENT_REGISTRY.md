@@ -1,77 +1,96 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.2
-Дата создания: 2026-07-09
-Дата обновления: 2026-07-22 (добавлен MECH-002 / CARD-SYSTEM-001: REALITY_FRACTURES_SYSTEM_v0.1_DRAFT)
-Код документа: REG-002
-Тип: [TECHNICAL]
+Версия: v2.0-cleanup  
+Дата обновления: 2026-07-22  
+Код документа: REG-002  
+Тип: [TECHNICAL] [ACTIVE REGISTRY]
 
 ## Назначение
 
-Единый реестр всех документов `docs/`. Обязателен к обновлению при создании, изменении или устаревании любого документа. Реализует протокол архитектора репозитория (зафиксирован в CHANGELOG.md, запись 2026-07-09).
+Единый реестр активных и устаревших документов GitHub-репозитория. После cleanup этот файл должен отражать реальное состояние проекта, а не старую миграционную структуру.
 
 ## Легенда статусов
 
-- **DRAFT** — рабочая гипотеза, автор — Claude/ассистент, не проверена
-- **REVIEW** — предложена основателю на утверждение
-- **APPROVED** — утверждено основателем (единственный, кто может присвоить)
-- **DEPRECATED** — заменено более новой версией, хранится для истории
+- **ACTIVE** — действующий управляющий документ.
+- **APPROVED** — утверждено основателем.
+- **FOUNDER-DECISION** — прямое решение основателя, зафиксировано в DECISIONS.
+- **FOUNDER-INPUT** — прямой ввод основателя, ещё требует механики / баланса.
+- **DRAFT** — рабочий документ, не финальный rulebook.
+- **TO-PLAYTEST / TO-BALANCE** — требуется бумажный тест / расчёт.
+- **SUPERSEDED / OLD MODEL** — заменено новой моделью, не использовать как активный дизайн.
+- **ARCHIVE** — исторический материал / архив разговора.
 
-## Легенда категорий
+## Активные корневые документы
 
-канон · механика · мир · персонажи · дополнения · Kickstarter · цифровая версия · франшиза · бизнес · карты · компоненты
+| Код | Документ | Путь | Статус | Версия | Что фиксирует |
+|---|---|---|---|---|---|
+| CORE-001 | PROJECT_CORE_CONTEXT | `/PROJECT_CORE_CONTEXT.md` | ACTIVE | v2.0-cleanup | Текущий активный контекст: Dark Cosmic Adventure, 5 ярусов + орбитали, тройка ресурсов, Экополис |
+| DEC-REG | DECISIONS | `/DECISIONS.md` | ACTIVE | 2026-07-22 | Решения DEC-001..022; старые DEC-002/003 помечены SUPERSEDED |
+| REG-002 | DOCUMENT_REGISTRY | `/DOCUMENT_REGISTRY.md` | ACTIVE | v2.0-cleanup | Реестр документов |
+| CHG-001 | CHANGELOG | `/CHANGELOG.md` | ACTIVE | 2026-07-22 | Журнал изменений |
+| ROAD-001 | ROADMAP | `/ROADMAP.md` | ACTIVE | 2026-07-22 | Дорожная карта новой модели |
+| OQ-001 | OPEN_QUESTIONS | `/OPEN_QUESTIONS.md` | ACTIVE | 2026-07-22 | Открытые вопросы после cleanup |
+| CLEAN-001 | REPOSITORY_CLEANUP_2026-07-22 | `docs/00_PROJECT_CORE/REPOSITORY_CLEANUP_2026-07-22.md` | ACTIVE CLEANUP NOTE | v0.1 | Почему старый слой убран из активной модели |
 
----
+## Активный механический слой — docs/06_MECHANICS
 
-## Реестр
+Эта папка является текущим основным рабочим слоем механики после миграционного конфликта со старыми `docs/03_MECHANICS`.
 
-| Код | Документ | Путь | Статус | Версия | Категория | Родитель | Связанные |
-|---|---|---|---|---|---|---|---|
-| CORE-001 | PROJECT_CORE_CONTEXT | /PROJECT_CORE_CONTEXT.md | ACTIVE (корневой документ) | v1.1 | бизнес, мир, канон | — | все документы ниже |
-| GCORE-001 | GAME_CORE_v0.1_DRAFT | docs/03_MECHANICS/ | MIGRATION-PARTIAL / DRAFT | v0.1 | механика | CORE-001 | MECH-001, MATH-001, WORLD-001, ENT-001 |
-| MECH-001 | GAME_MECHANICS_v0.1_DRAFT | docs/03_MECHANICS/ | DRAFT (P49.3, P49.4 добавлены 2026-07-12) | v0.1 | механика | GCORE-001 | MATH-001, WORLD-001, COMP-003 |
-| MECH-002 / CARD-SYSTEM-001 | REALITY_FRACTURES_SYSTEM_v0.1_DRAFT | docs/03_MECHANICS/ | DRAFT | v0.1 | механика, карты, компоненты, сценарии | GCORE-001, MECH-001 | DEC-005, DEC-006, DEC-015, DEC-016, DEC-017, TEST-001 |
-| MATH-001 | GAME_MATH_v0.1_DRAFT | docs/03_MECHANICS/ | DRAFT (числа = HYPOTHESIS) | v0.1 | механика | MECH-001 | GCORE-001, WORLD-001, ENT-001 |
-| WORLD-001 | WORLD_ARCHITECTURE_v0.1_DRAFT | docs/05_WORLDS/ | DRAFT | v0.1 | мир | CORE-001 | GCORE-001, MECH-001, ENT-001, NARR-002 |
-| ENT-001 | ENTITIES_AND_CHARACTERS_v0.1_DRAFT | docs/06_CHARACTERS_AND_ARCHETYPES/ | DRAFT (P25 частично зависит от канона — BLOCKED) | v0.1 | персонажи | GCORE-001, WORLD-001 | NARR-002, MATH-001, COMP-001 |
-| STORY-001 | STORY_SYSTEM_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | MIGRATION-PARTIAL / DRAFT | v0.1 | персонажи, мир | CORE-001 | NARR-002 |
-| NARR-002 | NARRATIVE_SYSTEM_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT (P53 — BLOCKED, зависит от канона) | v0.1 | персонажи, мир | STORY-001, WORLD-001, ENT-001 | — |
-| VBC-001 | VISUAL_BRAND_CODE_v0.1_DRAFT | docs/08_VISUAL_BRAND/ | MIGRATION-PARTIAL / DRAFT | v0.1 | франшиза | CORE-001 | PROD-001 |
-| COMM-001 | COMMUNITY_SYSTEM_v0.1_DRAFT | docs/09_BUSINESS_MODEL/ | MIGRATION-PARTIAL / DRAFT | v0.1 | бизнес | CORE-001 | PROD-001 |
-| PROD-001 | PRODUCT_AND_FRANCHISE_v0.1_DRAFT | docs/09_BUSINESS_MODEL/ | DRAFT (P64 = аудит, не проект) | v0.1 | Kickstarter, франшиза, цифровая версия, бизнес | COMM-001, WORLD-001 | FRAN-001, COMM-001 |
-| FRAN-001 | COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT | docs/12_FRANCHISE/ | DRAFT | v0.1 | франшиза | CORE-001 | PROD-001, VBC-001 |
-| PSY-001 | PSYCHOLOGICAL_METHODOLOGY_v0.1_DRAFT | docs/15_EDUCATION_AND_PSYCHOLOGY/ | MIGRATION-PARTIAL / DRAFT | v0.1 | образование/психология | CORE-001 | PROD-001 |
-| COMP-001 | COMPARATIVE_TRADITIONS_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный) | CORE-001 | ENT-001, WORLD-001, PROD-001 |
-| RES-001 | MARKET_RESEARCH_2026_v0.1_DRAFT | docs/01_RESEARCH/ | DRAFT | v0.1 | бизнес | CORE-001 | PROD-001, KS-001, CARD-001 |
-| CONC-001 | GAME_CONCEPT_ONE_PAGER_v0.1_DRAFT | docs/02_GAME_CONCEPT/ | DRAFT | v0.1 | мир, механика, бизнес | CORE-001 | GCORE-001, RES-001 |
-| CARD-001 | PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT | docs/04_CARDS_AND_COMPONENTS/ | DRAFT | v0.1 | механика | GCORE-001, MECH-001, MATH-001 | ENT-001, TEST-001 |
-| TEST-001 | PLAYTEST_PROTOCOL_v0.1_DRAFT | docs/14_TESTING_AND_BALANCE/ | DRAFT (§7 добавлен 2026-07-12) | v0.1 | механика | MATH-001 | CARD-001, KS-001, COMP-003, MECH-002 |
-| KS-001 | KICKSTARTER_PLAN_v0.1_DRAFT | docs/10_KICKSTARTER/ | DRAFT | v0.1 | Kickstarter | PROD-001 | RES-001, TEST-001 |
-| DIG-001 | DIGITAL_COMPANION_v0.1_DRAFT | docs/11_DIGITAL_PRODUCT/ | DRAFT | v0.1 | цифровая версия | PROD-001 | WORLD-001 |
-| COMP-002 | SHMAKOV_ASCENT_PATH_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный) | COMP-001 | WORLD-001, MECH-001, PSY-001, NARR-002 |
-| COMP-003 | SVET_DUH_KUMARY_MAGNIT_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный) | CORE-001 | MECH-001, COMP-001, COMP-002 |
-| COMP-004 | MARKET_COMPARATIVE_ANALYSIS_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный), бизнес | CORE-001 | RES-001, TEST-001 |
-| NARR-003 | NARRATIVE_DESIGN_FRAMEWORKS_v0.1_DRAFT | references/ | DRAFT | v0.1 | нарратив (методология) | GCORE-001 | ENT-001 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.2 | техническое | — | все документы выше |
+| Код | Документ | Путь | Статус | Категория | Примечание |
+|---|---|---|---|---|---|
+| STUDIO-001 | STUDIO_BRAIN v0.1 | `docs/06_MECHANICS/` | DRAFT / AUDIT / ACTIVE REFERENCE | студия, жанр, аудит | Зафиксировал Dark Cosmic Adventure и 4 конфликтные зоны |
+| CORELOOP-001 | GAME_CORE_LOOP_v0.1 | `docs/06_MECHANICS/GAME_CORE_LOOP_v0.1.md` | DRAFT / TO-PLAYTEST | core loop | Активная механическая опора прототипа |
+| PROTO-001 | PROTOTYPE_v0.1_PLAYABLE | `docs/06_MECHANICS/PROTOTYPE_v0.1_PLAYABLE.md` | DRAFT / TO-PLAYTEST | прототип | Старый/новый статус требует проверки под DEC-018..021 |
+| MOVE-001 | MOVEMENT_MODEL_v0.1_DRAFT | `docs/06_MECHANICS/MOVEMENT_MODEL_v0.1_DRAFT.md` | DRAFT / FOUNDER-DECISION PARTS / TO-PLAYTEST | движение | Кольца, кубик, секторы, аттестации |
+| RES-002 | RESOURCE_MODEL_v0.2_DRAFT | `docs/06_MECHANICS/RESOURCE_MODEL_v0.2_DRAFT.md` | DRAFT / FOUNDER-DECISION PARTS / TO-BALANCE | ресурсы | Дух / Свет / Огонь; три исхода Суда Огня; виды Огня; пути добычи |
+| HERO-001 | HEROES_16_v0.1 | `docs/06_MECHANICS/HEROES_16_v0.1.md` | DRAFT / ACTIVE STRUCTURE | роли | 16 ролей заменяют старую 4-role рамку |
+| ROLE-001 | ROLES_ARCHITECTURE_v0.1 | `docs/06_MECHANICS/ROLES_ARCHITECTURE_v0.1.md` | DRAFT / ACTIVE STRUCTURE | роли | Архитектура ролей и ограничений |
+| FACTION-001 | FACTIONS_OF_WORLDS_v0.1 | `docs/06_MECHANICS/FACTIONS_OF_WORLDS_v0.1.md` | DRAFT | фракции | Требует сверки с 5 ярусами + орбитали |
+| INH-001 | INHABITANTS_TEMPLATE_v0.1 | `docs/06_MECHANICS/INHABITANTS_TEMPLATE_v0.1.md` | DRAFT | жители | Шаблон жителей |
+| INH-002 | INHABITANTS_PHYSICAL_v0.1 | `docs/06_MECHANICS/INHABITANTS_PHYSICAL_v0.1.md` | DRAFT | жители | Физический ярус |
+| INH-003 | INHABITANTS_SUBTLE_v0.1 | `docs/06_MECHANICS/INHABITANTS_SUBTLE_v0.1.md` | DRAFT | жители | Тонкий ярус |
+| INH-004 | INHABITANTS_FIRE_v0.1 | `docs/06_MECHANICS/INHABITANTS_FIRE_v0.1.md` | DRAFT | жители | Огненный ярус / переход |
+| INH-005 | INHABITANT_TYPES_BY_WORLD_v0.1 | `docs/06_MECHANICS/INHABITANT_TYPES_BY_WORLD_v0.1.md` | DRAFT | жители | Типы жителей по мирам |
+| WORLDMECH-001 | MULTIWORLD_ARCHITECTURE_v0.1 | `docs/06_MECHANICS/MULTIWORLD_ARCHITECTURE_v0.1.md` | DRAFT / REVIEW REQUIRED | миры | Проверить против DEC-019; не использовать старую 8-world модель |
+| TOOLS-001 | WORLD_TOOLS_MATRIX_v0.1 | `docs/06_MECHANICS/WORLD_TOOLS_MATRIX_v0.1.md` | DRAFT | инструменты | Матрица инструментов по ярусам |
+| TOOLS-002 | WORLD_INHABITANTS_AND_TOOLS_v0.2 | `docs/06_MECHANICS/WORLD_INHABITANTS_AND_TOOLS_v0.2.md` | DRAFT | жители, инструменты | Требует сверки с DEC-019 |
+| CARDTYPE-001 | CARD_TYPE_SYSTEM_v0.1 | `docs/06_MECHANICS/CARD_TYPE_SYSTEM_v0.1.md` | DRAFT | карты | Типы карт |
+| ANALOG-001 | ANALOG_ANALYSIS_v0.1 | `docs/06_MECHANICS/ANALOG_ANALYSIS_v0.1.md` | DRAFT | аналоги | Использовать как дизайн-референсы, не канон |
+| SLICE-001 | FIRST_VERTICAL_SLICE_SCENARIO_v0.1 | `docs/06_MECHANICS/FIRST_VERTICAL_SLICE_SCENARIO_v0.1.md` | DRAFT / REVIEW REQUIRED | сценарий | Требует обновления под Dark Cosmic Adventure и Экополис |
+| FRACTURE-001 | REALITY_FRACTURES_SYSTEM_v0.1_DRAFT | `docs/03_MECHANICS/REALITY_FRACTURES_SYSTEM_v0.1_DRAFT.md` | DRAFT / TO-PLAYTEST | разломы, карты | Находится в старой папке, но содержательно актуален; позже перенести/зеркалировать в `docs/06_MECHANICS` |
 
----
+## Активный карточный слой — docs/04_CARDS
 
-## Обновление 2026-07-22
+| Код | Документ | Путь | Статус | Кол-во | Примечание |
+|---|---|---|---|---:|---|
+| CARDIDX-001 | CARD_TABLES_IMPORT_INDEX_v0.1 | `docs/04_CARDS/CARD_TABLES_IMPORT_INDEX_v0.1.md` | DRAFT / CARD-DATA-INDEX | — | Индекс карточных таблиц |
+| CARD-START-001 | Starter cards | `docs/04_CARDS/data/IVDIVO_144_starter_cards_v0_1_DRAFT.csv` | DRAFT / TO-PLAYTEST | 144 | Если CSV ещё не зеркалирован, добавить отдельным PR |
+| CARD-DEV-001 | Deckbuilding development | `docs/04_CARDS/data/IVDIVO_90_deckbuilding_development_cards_v0_1_DRAFT.csv` | DRAFT / TO-PLAYTEST | 90 | Если CSV ещё не зеркалирован, добавить отдельным PR |
+| CARD-INST-001 | Instruments | `docs/04_CARDS/data/IVDIVO_100_instrument_cards_v0_1_DRAFT.csv` | DRAFT / TO-PLAYTEST | 100 | Если CSV ещё не зеркалирован, добавить отдельным PR |
+| CARD-FORM-001 | Form cards | `docs/04_CARDS/data/IVDIVO_50_form_cards_v0_1_DRAFT.csv` | DRAFT / TO-PLAYTEST | 50 | Формы меняют состояние зоны/портала/Корня/закона |
+| CARD-ECO-001 | Ecopolis buildings | `docs/04_CARDS/data/IVDIVO_32_ecopolis_organization_buildings_v0_1_DRAFT.csv` | DRAFT / GAME-ADAPTATION | 32 | Активная замена Убежища |
+| CARD-LAW-001 | World Laws | `docs/04_CARDS/data/IVDIVO_36_world_law_cards_v0_1_DRAFT.csv` | DRAFT / TO-PLAYTEST | 36 | Закон меняет правило, не просто бонус |
+| CARD-PORT-001 | Portals + Vortex Modes | `docs/04_CARDS/PORTALS_AND_VORTEX_MODES_v0.1_DRAFT.md` | DRAFT / TO-PLAYTEST | 48 | 36 порталов + 12 режимов Вихря |
+| CARD-EVR-001 | Round Events | `docs/04_CARDS/data/IVDIVO_60_round_event_cards_v0_1_DRAFT.csv` | DRAFT / TO-PLAYTEST | 60 | События раунда двигают мир |
+| CARD-TRL-001 | Trials | `docs/04_CARDS/data/IVDIVO_40_trial_cards_v0_1_DRAFT.csv` | DRAFT / TO-PLAYTEST | 40 | Испытания дают развилку |
+| CARD-EVRTRL-INDEX | Round Events and Trials index | `docs/04_CARDS/ROUND_EVENTS_AND_TRIALS_v0.1_DRAFT.md` | DRAFT / TO-PLAYTEST | 100 | Индекс двух колод |
 
-`docs/03_MECHANICS/REALITY_FRACTURES_SYSTEM_v0.1_DRAFT.md` добавляет полный рабочий набор: 36 Разломов, 60 Проявлений, 50 Искажений, 36 Корней. Статус DRAFT. Числовые параметры, ресурсы и эффекты требуют тестирования.
+## Старый слой / не использовать как активную модель
 
-## Архив: до-пирамидная гипотеза (2026-07-12)
+| Код | Документ / слой | Путь | Новый статус | Причина |
+|---|---|---|---|---|
+| OLD-MECH-03 | Старые механики `docs/03_MECHANICS` | `docs/03_MECHANICS/` | SUPERSEDED / PARTIAL MIGRATION | Registry старой версии ссылался сюда как на активную структуру; активная работа сейчас в `docs/06_MECHANICS` |
+| OLD-WORLD-001 | WORLD_ARCHITECTURE_v0.1_DRAFT | `docs/05_WORLDS/` | SUPERSEDED BY DEC-019 | Восьмимировая/переходная модель заменена 5 ярусами + орбитали |
+| OLD-CONC-001 | GAME_CONCEPT_ONE_PAGER_v0.1_DRAFT | `docs/02_GAME_CONCEPT/` | REVIEW REQUIRED / OLD FRAMING | Может содержать horror / old-world framing |
+| OLD-VISUAL-001 | VISUAL_BRAND_CODE_v0.1_DRAFT | `docs/08_VISUAL_BRAND/` | SUPERSEDED / REWRITE REQUIRED | Старый horror-визуал заменить на Dark Cosmic Adventure |
+| OLD-ROLE-004 | 4-role framing | разные ранние документы | SUPERSEDED BY HERO-001 | Активно 16 ролей |
+| OLD-RESOURCE-RAY | Луч как центральная валюта | разные ранние документы | SUPERSEDED BY DEC-020 | Активно Дух / Свет / Огонь |
+| OLD-SHELTER | Убежище как primary base term | разные ранние документы | SUPERSEDED BY DEC-022 | Активно Экополис IVDIVO |
 
-`31_IDEAS/archive_pre_pyramid_2026-07-12/` — шесть документов, созданных до выяснения актуальной топологии. Структурные принципы валидны, привязка к конкретным названиям миров/уровней — нет. Не считать текущим каноном.
+## Правило для будущей работы
 
-## Протокол для новых документов
-
-Перед созданием любого документа:
-1. Сканировать этот реестр и релевантные разделы `docs/`.
-2. Найти связанные документы через колонку "Связанные" / "Родитель".
-3. Определить целевой раздел по категории.
-4. Проверить, нет ли уже существующего документа по теме.
-5. Присвоить код.
-6. После публикации — обновить этот реестр.
-
-Статус APPROVED никогда не присваивается ассистентом.
+1. Если задача касается архитектуры миров — сверяться с DEC-019 и `docs/06_MECHANICS/MULTIWORLD_ARCHITECTURE_v0.1.md` только после проверки на старые 8-world элементы.
+2. Если задача касается ресурсов — использовать DEC-020 и `RESOURCE_MODEL_v0.2_DRAFT`.
+3. Если задача касается движения — использовать DEC-021 и `MOVEMENT_MODEL_v0.1_DRAFT`.
+4. Если задача касается базы игроков — использовать DEC-022 и карточки Экополиса.
+5. Если документ содержит horror-primary, 8 worlds, Луч-as-currency, Убежище-primary или 4 roles, он требует пометки `SUPERSEDED / OLD MODEL` перед использованием.
