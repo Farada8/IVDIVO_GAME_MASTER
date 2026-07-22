@@ -2,7 +2,7 @@
 
 Версия: v1.2
 Дата создания: 2026-07-09
-Дата обновления: 2026-07-22 (добавлен MECH-002 / CARD-SYSTEM-001: REALITY_FRACTURES_SYSTEM_v0.1_DRAFT)
+Дата обновления: 2026-07-22 (FRAN-001 полностью мигрирован из исходного файла; ранее MIGRATION-PARTIAL)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -39,7 +39,7 @@
 | VBC-001 | VISUAL_BRAND_CODE_v0.1_DRAFT | docs/08_VISUAL_BRAND/ | MIGRATION-PARTIAL / DRAFT | v0.1 | франшиза | CORE-001 | PROD-001 |
 | COMM-001 | COMMUNITY_SYSTEM_v0.1_DRAFT | docs/09_BUSINESS_MODEL/ | MIGRATION-PARTIAL / DRAFT | v0.1 | бизнес | CORE-001 | PROD-001 |
 | PROD-001 | PRODUCT_AND_FRANCHISE_v0.1_DRAFT | docs/09_BUSINESS_MODEL/ | DRAFT (P64 = аудит, не проект) | v0.1 | Kickstarter, франшиза, цифровая версия, бизнес | COMM-001, WORLD-001 | FRAN-001, COMM-001 |
-| FRAN-001 | COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT | docs/12_FRANCHISE/ | DRAFT | v0.1 | франшиза | CORE-001 | PROD-001, VBC-001 |
+| FRAN-001 | COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT | docs/12_FRANCHISE/ | DRAFT / MIGRATION-COMPLETE (2026-07-22) | v0.1 | франшиза, бизнес | CORE-001 | PROD-001, VBC-001, COMM-001 |
 | PSY-001 | PSYCHOLOGICAL_METHODOLOGY_v0.1_DRAFT | docs/15_EDUCATION_AND_PSYCHOLOGY/ | MIGRATION-PARTIAL / DRAFT | v0.1 | образование/психология | CORE-001 | PROD-001 |
 | COMP-001 | COMPARATIVE_TRADITIONS_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный) | CORE-001 | ENT-001, WORLD-001, PROD-001 |
 | RES-001 | MARKET_RESEARCH_2026_v0.1_DRAFT | docs/01_RESEARCH/ | DRAFT | v0.1 | бизнес | CORE-001 | PROD-001, KS-001, CARD-001 |
@@ -56,7 +56,11 @@
 
 ---
 
-## Обновление 2026-07-22
+## Обновление 2026-07-22 — FRAN-001
+
+`docs/12_FRANCHISE/COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT.md` полностью синхронизирован с загруженным исходником `Коммерческая модель франшизы.txt`. Удалён статус частичной миграции. Документ остаётся DRAFT; финансовые параметры и юридическая конструкция требуют отдельной проверки.
+
+## Обновление 2026-07-22 — MECH-002
 
 `docs/03_MECHANICS/REALITY_FRACTURES_SYSTEM_v0.1_DRAFT.md` добавляет полный рабочий набор: 36 Разломов, 60 Проявлений, 50 Искажений, 36 Корней. Статус DRAFT. Числовые параметры, ресурсы и эффекты требуют тестирования.
 
