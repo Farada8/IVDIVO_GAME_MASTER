@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.1
+Версия: v1.2
 Дата создания: 2026-07-09
-Дата обновления: 2026-07-12 (архивация разговора: 98_CONVERSATION_ARCHIVE, NARR-003, MECH-001 P49.4, 13_AI_RESULTS/CROSS_MODEL_AUDIT_PROTOCOL, OPEN_QUESTIONS.md; плюс ранее в сессии COMP-003, COMP-004, MECH-001 P49.3, TEST-001 §7, templates, архив 6 документов)
+Дата обновления: 2026-07-20 (добавлен PLOT-001 — выбранный сюжет первого vertical slice; сохранены прежние записи 2026-07-12)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -19,9 +19,9 @@
 
 ## Легенда категорий
 
-канон · механика · мир · персонажи · дополнения · Kickstarter · цифровая версия · франшиза · бизнес
+канон · механика · мир · персонажи · дополнения · Kickstarter · цифровая версия · франшиза · бизнес · нарратив · сюжет
 
-Категории не покрытые ни одним документом на дату реестра: **дополнения, Kickstarter (отдельный документ), цифровая версия (отдельный документ)** — см. раздел "Пробелы" внизу.
+Категории не покрытые ни одним документом на дату реестра: **дополнения** — рано, ядро не подтверждено.
 
 ---
 
@@ -29,55 +29,55 @@
 
 | Код | Документ | Путь | Статус | Версия | Категория | Родитель | Связанные |
 |---|---|---|---|---|---|---|---|
-| CORE-001 | PROJECT_CORE_CONTEXT | /PROJECT_CORE_CONTEXT.md | ACTIVE (не Draft/Review/Approved — корневой документ, статус вне обычной шкалы) | v1.1 | бизнес, мир, канон (родитель для всех) | — | все документы ниже |
+| CORE-001 | PROJECT_CORE_CONTEXT | /PROJECT_CORE_CONTEXT.md | ACTIVE (не Draft/Review/Approved — корневой документ, статус вне обычной шкалы; требует синхронизации с Google Drive v1.6) | v1.1 | бизнес, мир, канон | — | все документы ниже |
 | GCORE-001 | GAME_CORE_v0.1_DRAFT | docs/03_MECHANICS/ | MIGRATION-PARTIAL / DRAFT | v0.1 | механика | CORE-001 | MECH-001, MATH-001, WORLD-001, ENT-001 |
 | MECH-001 | GAME_MECHANICS_v0.1_DRAFT | docs/03_MECHANICS/ | DRAFT (P49.3, P49.4 добавлены 2026-07-12 — см. DEC-012, OPEN_QUESTIONS) | v0.1 | механика | GCORE-001 | MATH-001, WORLD-001, COMP-003 |
 | MATH-001 | GAME_MATH_v0.1_DRAFT | docs/03_MECHANICS/ | DRAFT (числа = HYPOTHESIS) | v0.1 | механика | MECH-001 | GCORE-001, WORLD-001, ENT-001 |
-| WORLD-001 | WORLD_ARCHITECTURE_v0.1_DRAFT | docs/05_WORLDS/ | DRAFT | v0.1 | мир | CORE-001 | GCORE-001, MECH-001, ENT-001, NARR-002 |
+| WORLD-001 | WORLD_ARCHITECTURE_v0.1_DRAFT | docs/05_WORLDS/ | DRAFT / NEEDS-SYNC WITH DRIVE v1.6 | v0.1 | мир | CORE-001 | GCORE-001, MECH-001, ENT-001, NARR-002 |
 | ENT-001 | ENTITIES_AND_CHARACTERS_v0.1_DRAFT | docs/06_CHARACTERS_AND_ARCHETYPES/ | DRAFT (P25 частично зависит от канона — не Draft, а BLOCKED) | v0.1 | персонажи | GCORE-001, WORLD-001 | NARR-002, MATH-001, COMP-001 (коллизия имени "Кут Хуми") |
-| STORY-001 | STORY_SYSTEM_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | MIGRATION-PARTIAL / DRAFT | v0.1 | персонажи, мир | CORE-001 | NARR-002 |
-| NARR-002 | NARRATIVE_SYSTEM_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT (P53 — BLOCKED, зависит от канона) | v0.1 | персонажи, мир | STORY-001, WORLD-001, ENT-001 | — |
+| STORY-001 | STORY_SYSTEM_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | MIGRATION-PARTIAL / DRAFT | v0.1 | персонажи, мир, сюжет | CORE-001 | NARR-002, PLOT-001 |
+| NARR-002 | NARRATIVE_SYSTEM_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT (P53 — BLOCKED, зависит от канона) | v0.1 | персонажи, мир, нарратив | STORY-001, WORLD-001, ENT-001 | PLOT-001 |
+| PLOT-001 | CHOSEN_VERTICAL_SLICE_PLOT_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/CHOSEN_VERTICAL_SLICE_PLOT_v0.1_DRAFT.md | DRAFT / FOUNDER-CHOICE-PROPOSED | v0.1 | сюжет, vertical slice, механика | STORY-001, NARR-002 | GCORE-001, MECH-001, CARD-001, TEST-001 |
 | VBC-001 | VISUAL_BRAND_CODE_v0.1_DRAFT | docs/08_VISUAL_BRAND/ | MIGRATION-PARTIAL / DRAFT | v0.1 | франшиза | CORE-001 | PROD-001 |
 | COMM-001 | COMMUNITY_SYSTEM_v0.1_DRAFT | docs/09_BUSINESS_MODEL/ | MIGRATION-PARTIAL / DRAFT | v0.1 | бизнес | CORE-001 | PROD-001 |
 | PROD-001 | PRODUCT_AND_FRANCHISE_v0.1_DRAFT | docs/09_BUSINESS_MODEL/ | DRAFT (P64 = аудит, не проект) | v0.1 | Kickstarter, франшиза, цифровая версия, бизнес | COMM-001, WORLD-001 | FRAN-001, COMM-001 |
 | FRAN-001 | COMMERCIAL_FRANCHISE_MODEL_v0.1_DRAFT | docs/12_FRANCHISE/ | DRAFT | v0.1 | франшиза | CORE-001 | PROD-001, VBC-001 |
-| PSY-001 | PSYCHOLOGICAL_METHODOLOGY_v0.1_DRAFT | docs/15_EDUCATION_AND_PSYCHOLOGY/ | MIGRATION-PARTIAL / DRAFT | v0.1 | не покрыто текущими категориями (требуется добавить "образование/психология") | CORE-001 | PROD-001 (P57) |
+| PSY-001 | PSYCHOLOGICAL_METHODOLOGY_v0.1_DRAFT | docs/15_EDUCATION_AND_PSYCHOLOGY/ | MIGRATION-PARTIAL / DRAFT | v0.1 | образование/психология | CORE-001 | PROD-001 (P57) |
 | COMP-001 | COMPARATIVE_TRADITIONS_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный, не первичный) | CORE-001 | ENT-001 (P25, коллизия "Кут Хуми"), WORLD-001 (P18, параллель с шаманской космологией), PROD-001 (P57, референс Ошо) |
 | RES-001 | MARKET_RESEARCH_2026_v0.1_DRAFT | docs/01_RESEARCH/ | DRAFT (входные данные основателя + структурирование) | v0.1 | бизнес | CORE-001 | PROD-001, KS-001, CARD-001 |
 | CONC-001 | GAME_CONCEPT_ONE_PAGER_v0.1_DRAFT | docs/02_GAME_CONCEPT/ | DRAFT | v0.1 | мир, механика, бизнес | CORE-001 | GCORE-001, RES-001 |
-| CARD-001 | PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT | docs/04_CARDS_AND_COMPONENTS/ | DRAFT (все числа HYPOTHESIS) | v0.1 | механика | GCORE-001, MECH-001, MATH-001 | ENT-001, TEST-001 |
-| TEST-001 | PLAYTEST_PROTOCOL_v0.1_DRAFT | docs/14_TESTING_AND_BALANCE/ | DRAFT (§7 добавлен 2026-07-12 — качественный слой) | v0.1 | механика | MATH-001 | CARD-001, KS-001, COMP-003 |
+| CARD-001 | PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT | docs/04_CARDS_AND_COMPONENTS/ | DRAFT (все числа HYPOTHESIS) | v0.1 | механика | GCORE-001, MECH-001, MATH-001 | ENT-001, TEST-001, PLOT-001 |
+| TEST-001 | PLAYTEST_PROTOCOL_v0.1_DRAFT | docs/14_TESTING_AND_BALANCE/ | DRAFT (§7 добавлен 2026-07-12 — качественный слой) | v0.1 | механика | MATH-001 | CARD-001, KS-001, COMP-003, PLOT-001 |
 | KS-001 | KICKSTARTER_PLAN_v0.1_DRAFT | docs/10_KICKSTARTER/ | DRAFT | v0.1 | Kickstarter | PROD-001 | RES-001, TEST-001 |
 | DIG-001 | DIGITAL_COMPANION_v0.1_DRAFT | docs/11_DIGITAL_PRODUCT/ | DRAFT | v0.1 | цифровая версия | PROD-001 | WORLD-001 |
 | COMP-002 | SHMAKOV_ASCENT_PATH_v0.1_DRAFT | references/ | DRAFT (внутренний контур; факты источника TO-VERIFY) | v0.1 | канон (сравнительный) | COMP-001 | WORLD-001 (P18), MECH-001 (P45), PSY-001, NARR-002 (P50) |
 | COMP-003 | SVET_DUH_KUMARY_MAGNIT_v0.1_DRAFT | references/ | DRAFT (базовая практика, DEC-011 этап 3; не завершено основателем) | v0.1 | канон (сравнительный) | CORE-001 | MECH-001 (P49.3), COMP-001, COMP-002 |
 | COMP-004 | MARKET_COMPARATIVE_ANALYSIS_v0.1_DRAFT | references/ | DRAFT (методология + частичный реальный прогон) | v0.1 | канон (сравнительный), бизнес | CORE-001 | RES-001, TEST-001 |
 | NARR-003 | NARRATIVE_DESIGN_FRAMEWORKS_v0.1_DRAFT | references/ | DRAFT (методология, не зависит от исхода DEC-012) | v0.1 | нарратив (методология) | GCORE-001 | ENT-001 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.1 | техническое | — | все документы выше |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.2 | техническое | — | все документы выше |
 
 ---
 
-## Пробелы по категориям (на 2026-07-09)
+## Пробелы по категориям
 
 | Категория | Покрытие | Комментарий |
 |---|---|---|
-| канон | 1 документ (сравнительный) | COMP-001 — только сравнительные традиции и веб-источники; первичный канонический индекс (P01, прямое чтение "Синтезов" ИВДИВО) по-прежнему не выполнен |
-| механика | 3 документа | Хорошее покрытие |
-| мир | 1 документ | WORLD-001 — единственный, требует расширения по мере роста дополнений |
+| канон | 1 документ (сравнительный) | COMP-001 — только сравнительные традиции и веб-источники; первичный канонический индекс ИВДИВО по-прежнему не выполнен |
+| механика | 3 документа | Хорошее покрытие, но часть зависит от устаревшей GitHub-копии мировой архитектуры |
+| мир | 1 документ | WORLD-001 требует синхронизации с Google Drive PROJECT_CORE_CONTEXT_2026 v1.6 |
 | персонажи | 2 документа | ENT-001, STORY-001/NARR-002 частично |
+| сюжет | 3 документа + PLOT-001 | Выбран первый vertical slice: «Убежище, которое дышит» |
 | дополнения | 0 документов | Нет ни одного дополнения после базовой коробки — рано, ядро не подтверждено |
-| Kickstarter | 0 отдельных документов | Тема покрыта частично внутри PROD-001 (P61), отдельного документа `docs/10_KICKSTARTER/` нет |
-| цифровая версия | 0 отдельных документов | Тема покрыта частично внутри WORLD-001 (P17) и PROD-001 (P59), отдельного `docs/11_DIGITAL_PRODUCT/` нет |
+| Kickstarter | 1 документ | KS-001 создан 2026-07-11 |
+| цифровая версия | 1 документ | DIG-001 создан 2026-07-11 |
 | франшиза | 2 документа | FRAN-001, VBC-001 частично |
 | бизнес | 2 документа | COMM-001, PROD-001 частично |
 
 Обновление 2026-07-11: пробелы «Kickstarter» и «цифровая версия» закрыты отдельными документами (KS-001, DIG-001); добавлено покрытие разделов 01, 02, 04, 14 (RES-001, CONC-001, CARD-001, TEST-001).
 
-
 ## Архив: до-пирамидная гипотеза (2026-07-12)
 
 `31_IDEAS/archive_pre_pyramid_2026-07-12/` — шесть документов (кампания на 14 сценариев, листы персонажей, антигерой, реестр пробелов, предложение структуры GitHub, 100 продакшн-промптов), созданных в сессии 2026-07-12 до выяснения, что актуальная топология — пирамида ярусов (DEC-012), а не линейная восьмимировая иерархия. Структурные принципы валидны, привязка к конкретным названиям миров/уровней — нет. Не считать текущим каноном. Кандидаты на перенос после утверждения DEC-012.
-
 
 ## Архивация разговора 2026-07-12 (второй проход, полный протокол)
 
