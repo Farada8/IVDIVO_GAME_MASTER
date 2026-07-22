@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.2
+Версия: v1.3
 Дата создания: 2026-07-09
-Дата обновления: 2026-07-22 (добавлен MECH-002 / CARD-SYSTEM-001: REALITY_FRACTURES_SYSTEM_v0.1_DRAFT)
+Дата обновления: 2026-07-22 (добавлен ROAD-001: DEVELOPMENT_ROADMAP_TO_KICKSTARTER_v0.1_DRAFT)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -47,16 +47,21 @@
 | CARD-001 | PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT | docs/04_CARDS_AND_COMPONENTS/ | DRAFT | v0.1 | механика | GCORE-001, MECH-001, MATH-001 | ENT-001, TEST-001 |
 | TEST-001 | PLAYTEST_PROTOCOL_v0.1_DRAFT | docs/14_TESTING_AND_BALANCE/ | DRAFT (§7 добавлен 2026-07-12) | v0.1 | механика | MATH-001 | CARD-001, KS-001, COMP-003, MECH-002 |
 | KS-001 | KICKSTARTER_PLAN_v0.1_DRAFT | docs/10_KICKSTARTER/ | DRAFT | v0.1 | Kickstarter | PROD-001 | RES-001, TEST-001 |
+| ROAD-001 | DEVELOPMENT_ROADMAP_TO_KICKSTARTER_v0.1_DRAFT | docs/10_KICKSTARTER/ | DRAFT / WORKING ROADMAP | v0.1 | Kickstarter, бизнес, механика, карты, компоненты | CORE-001, KS-001 | GCORE-001, MECH-001, MATH-001, CARD-001, TEST-001, RES-001, PROD-001, VBC-001 |
 | DIG-001 | DIGITAL_COMPANION_v0.1_DRAFT | docs/11_DIGITAL_PRODUCT/ | DRAFT | v0.1 | цифровая версия | PROD-001 | WORLD-001 |
 | COMP-002 | SHMAKOV_ASCENT_PATH_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный) | COMP-001 | WORLD-001, MECH-001, PSY-001, NARR-002 |
 | COMP-003 | SVET_DUH_KUMARY_MAGNIT_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный) | CORE-001 | MECH-001, COMP-001, COMP-002 |
 | COMP-004 | MARKET_COMPARATIVE_ANALYSIS_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный), бизнес | CORE-001 | RES-001, TEST-001 |
 | NARR-003 | NARRATIVE_DESIGN_FRAMEWORKS_v0.1_DRAFT | references/ | DRAFT | v0.1 | нарратив (методология) | GCORE-001 | ENT-001 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.2 | техническое | — | все документы выше |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.3 | техническое | — | все документы выше |
 
 ---
 
-## Обновление 2026-07-22
+## Обновление 2026-07-22 — ROAD-001
+
+`docs/10_KICKSTARTER/DEVELOPMENT_ROADMAP_TO_KICKSTARTER_v0.1_DRAFT.md` связывает текущие разработки IVDIVO в 15 последовательных этапов: от фиксации продукта и механического ядра до blind-test, производства, prelaunch и запуска Kickstarter. Для каждого этапа определены результат, срок, исполнители, документы, критерий готовности, риск и запреты. Статус DRAFT / WORKING ROADMAP; утверждение основателя требуется отдельно.
+
+## Обновление 2026-07-22 — MECH-002
 
 `docs/03_MECHANICS/REALITY_FRACTURES_SYSTEM_v0.1_DRAFT.md` добавляет полный рабочий набор: 36 Разломов, 60 Проявлений, 50 Искажений, 36 Корней. Статус DRAFT. Числовые параметры, ресурсы и эффекты требуют тестирования.
 
