@@ -27,6 +27,7 @@
 - [`source-architecture/SOURCE_BASED_WORLD_ARCHITECTURE_v0.1_DRAFT.md`](source-architecture/SOURCE_BASED_WORLD_ARCHITECTURE_v0.1_DRAFT.md) — матрица источники → принципы → игровые миры → жители → инструменты → механики.
 - [`worldbuilding/WORLD_INHABITANTS_AND_TOOLS_v0.1_DRAFT.md`](worldbuilding/WORLD_INHABITANTS_AND_TOOLS_v0.1_DRAFT.md) — жители миров, инструменты, возможности, ограничения; первый блок: Житель Синтезного мира.
 - [`13_AI_RESULTS/2026-07-18/PROMPT_RESPONSES_10_CORE_GDD_BLOCKS_v0.1_DRAFT.md`](13_AI_RESULTS/2026-07-18/PROMPT_RESPONSES_10_CORE_GDD_BLOCKS_v0.1_DRAFT.md) — ответы на 10 ключевых промтов: источники, структура миров, жители, инструменты, фракции, угрозы, core loop, ресурсы, типы карт и первый vertical slice.
+- [`07_CAMPAIGNS_AND_STORIES/CORE_BOX_CAMPAIGN_v0.1_DRAFT.md`](07_CAMPAIGNS_AND_STORIES/CORE_BOX_CAMPAIGN_v0.1_DRAFT.md) — кампания Core Box: банк 16 сценариев, рекомендуемый путь 12 сценариев, 40 карт кампании, non-legacy модель и открытые вопросы для плейтеста.
 
 ## Правило
 
