@@ -1,6 +1,6 @@
 # ENTITY_INTERACTION_CARDS_v0.1_DRAFT — note
 
-Status: DRAFT / TO-PLAYTEST / LOCAL-FULL-TABLE-GENERATED
+Status: DRAFT / TO-PLAYTEST / FULL-DATA-MIRRORED-AS-CSV-PARTS
 Date: 2026-07-22
 Section: docs/04_CARDS
 
@@ -10,13 +10,8 @@ This note records the generated entity-interaction card package requested by the
 
 - 50 World Inhabitant cards;
 - 36 Ally cards;
-- 24 Mediator cards.
-
-The full table was generated in the working environment as:
-
-- `ENTITY_INTERACTION_CARDS_v0.1_DRAFT.xlsx`
-- `ENTITY_INTERACTION_CARDS_v0.1_DRAFT.csv`
-- `ENTITY_INTERACTION_CARDS_v0.1_DRAFT.md`
+- 24 Mediator cards;
+- 110 total cards.
 
 ## Required columns
 
@@ -61,23 +56,40 @@ Allies are recruitable helpers tied to Ecopolis, routes, Forms, Portals, World L
 
 Mediators are forces between worlds. They may help, obstruct, trade, redirect routes, sell permission, demand memory, alter orbital timing, or reveal hidden transition laws. They are especially linked to the earlier founder idea of mediators between sleeping and awakened states.
 
-## Current storage status
+## Google Drive storage
 
-A full `.xlsx` and `.csv` table exists in the current GPT runtime, and a Google Drive note was created in `04_КАРТЫ_И_КОМПОНЕНТЫ`:
+The full package has been imported into Google Drive as a native Google Sheet and moved to `04_КАРТЫ_И_КОМПОНЕНТЫ`:
+
+```text
+ENTITY_INTERACTION_CARDS_v0.1_DRAFT
+https://docs.google.com/spreadsheets/d/1Y14rkCOPWCcVUNeiCkMyMAqACFXGHyhJF-qMRzTPOtk/edit
+```
+
+A previous Drive note also exists:
 
 ```text
 ENTITY_INTERACTION_CARDS_v0.1_DRAFT__DRIVE_NOTE
 https://docs.google.com/document/d/1rcUex-4LzjZHO4ZJW877Pvz1l7VrTZe4zuE6qYKOBpE/edit
 ```
 
-However, the full raw CSV has not yet been mirrored into GitHub through the connector because this runtime connector does not accept local sandbox file paths as GitHub/Drive upload file references.
+## GitHub raw-data mirror
 
-## Next required completion
+The full raw card data is mirrored in this PR as CSV parts under `docs/04_CARDS/data/`:
 
-1. Import `ENTITY_INTERACTION_CARDS_v0.1_DRAFT.xlsx` into Google Drive as a native Google Sheet.
-2. Commit `ENTITY_INTERACTION_CARDS_v0.1_DRAFT.csv` under `docs/04_CARDS/data/`.
-3. Replace this note with a full raw-data mirror once connector/file upload is available.
-4. Link the final table from `CARD_TABLES_IMPORT_INDEX_v0.1.md`, `DOCUMENT_REGISTRY.md`, and `CHANGELOG.md`.
+```text
+docs/04_CARDS/data/ENTITY_INTERACTION_CARDS_v0.1_DRAFT_part01_inhabitants_001_030.csv
+docs/04_CARDS/data/ENTITY_INTERACTION_CARDS_v0.1_DRAFT_part02_inhabitants_031_050_allies_001_010.csv
+docs/04_CARDS/data/ENTITY_INTERACTION_CARDS_v0.1_DRAFT_part03_allies_011_036.csv
+docs/04_CARDS/data/ENTITY_INTERACTION_CARDS_v0.1_DRAFT_part04_mediators_001_024.csv
+```
+
+Why split: the connector accepts UTF-8 text writes reliably; binary XLSX and large single-file local uploads are not available through the current GitHub connector. The four CSV parts together contain all 110 cards and preserve the required columns.
+
+## Next integration tasks
+
+1. Optionally concatenate the four CSV parts into one raw CSV when a direct file-upload path is available.
+2. Link the package from `CARD_TABLES_IMPORT_INDEX_v0.1.md`, `DOCUMENT_REGISTRY.md`, and `CHANGELOG.md` in the next cards-index PR.
+3. Run paper playtest and mark weak/overpowered cards.
 
 ## Non-final status
 
