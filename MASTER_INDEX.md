@@ -16,6 +16,7 @@
 ## Актуальные карты и компоненты
 
 - `docs/04_CARDS_AND_COMPONENTS/OBJECTIVE_CARDS_v0.1_DRAFT.md` — 24 общие цели + 30 личных целей; полная таблица в Google Drive: https://docs.google.com/spreadsheets/d/1b1wTzRAfhsjjexfhSNI4XibNYXLPrqlMjODNj2QoP38/edit
+- `docs/04_CARDS_AND_COMPONENTS/OBJECTIVE_CARDS_EXPORTS_MANIFEST_v0.1.md` — manifest локальных экспортов XLSX / CSV / MD / PNG с SHA-256.
 - `docs/04_CARDS_AND_COMPONENTS/PROTOTYPE_V01_COMPONENTS_v0.1_DRAFT.md` — ранний прототип компонентов.
 
 ## Ключевое предупреждение
