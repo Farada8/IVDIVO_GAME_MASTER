@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Порталы Звёзд — плейтест-прототип</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 900px; margin: 20px auto; padding: 0 12px; background:#f4f1ea; color:#222; }
+  h1 { font-size: 20px; margin-bottom: 4px; }
+  .sub { color:#666; font-size:13px; margin-bottom:16px; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  .panel { border:1px solid #ccc; border-radius:8px; padding:10px 12px; background:#fff; }
+  .bank-pill, .spark-pill { display:inline-block; padding:3px 8px; border-radius:12px; font-size:13px; margin:2px; border:1px solid #999; }
+  .earth{background:#eaf3de;} .water{background:#e6f1fb;} .fire{background:#faece7;} .star{background:#eeedfe;} .synth{background:#faeeda;}
+  .market { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
+  .card { border:1px solid #999; border-radius:8px; padding:8px; font-size:12px; background:#fffef9; cursor:pointer; }
+  .card:hover { border-color:#333; }
+  .card.disabled { opacity:0.45; cursor:not-allowed; }
+  .card b { font-size:13px; }
+  .players { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:10px; }
+  .player { border:2px solid #ccc; border-radius:8px; padding:8px; }
+  .player.active { border-color:#333; background:#fffdf5; }
+  button { padding:6px 12px; border-radius:6px; border:1px solid #333; background:#fff; cursor:pointer; font-size:13px; }
+  button:hover { background:#eee; }
+  button:disabled { opacity:0.4; cursor:not-allowed; }
+  #log { height:140px; overflow-y:auto; font-size:12px; background:#fff; border:1px solid #ccc; border-radius:8px; padding:8px; }
+  #log div { margin-bottom:2px; }
+  .vp { font-weight:bold; }
+  #setup { margin-bottom:16px; }
+</style>
+</head>
+<body>
+
+<h1>Порталы Звёзд — прототип механики</h1>
+<div class="sub">Hot-seat тест ядра игры. Не финальный визуал — только правила. Экспортируйте лог после партии.</div>
+
+<div id="setup" class="panel">
+  <label>Игроков: </label>
+  <select id="playerCount">
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4" selected>4</option>
+  </select>
+  <button onclick="startGame()">Начать партию</button>
+</div>
+
+<div id="gameArea" style="display:none;">
+  <div class="panel" style="margin-bottom:10px;">
+    <b>Банк:</b> <span id="bankDisplay"></span><br>
+    <b>Мешок:</b> <span id="bagDisplay"></span>
+    <b style="margin-left:12px;">Порталов открыто:</b> <span id="portalsOpened"></span> / <span id="portalsTarget"></span>
+  </div>
+
+  <div class="panel" style="margin-bottom:10px;">
+    <b>Открытый ряд порталов:</b>
+    <div class="market" id="market"></div>
+  </div>
+
+  <div class="row" style="margin-bottom:10px;">
+    <button id="btnCollect" onclick="actionCollect()">Собрать (+2 Искры)</button>
+    <button id="btnAdvSafe" onclick="actionAdventureSafe()">Приключение: надёжно (+1 Искра нужного цвета)</button>
+    <button id="btnAdvRisk" onclick="actionAdventureRisky()">Приключение: рискнуть (тяни из мешка)</button>
+    <button id="btnPass" onclick="endTurn()">Передать ход без действия</button>
+  </div>
+
+  <div class="players" id="players"></div>
+
+  <div class="panel" style="margin-top:10px;">
+    <b>Лог партии:</b>
+    <div id="log"></div>
+    <button onclick="exportLog()" style="margin-top:6px;">Экспорт лога партии (JSON)</button>
+  </div>
+</div>
+
+<script>
+const ELEMENTS = ["earth","water","fire","star"];
+const ELNAME = {earth:"🌿 Земля", water:"💧 Вода", fire:"🔥 Огонь", star:"✨ Звезда", synth:"⬥ Синтез"};
+
+const PORTALS = [
+ {id:"P01",name:"Каменный круг",element:"earth",tier:1,cost:{earth:2},vp:0,effect:""},
+ {id:"P02",name:"Тихая заводь",element:"water",tier:1,cost:{water:2},vp:0,effect:""},
+ {id:"P03",name:"Уголья очага",element:"fire",tier:1,cost:{fire:2},vp:0,effect:""},
+ {id:"P04",name:"Осколок неба",element:"star",tier:1,cost:{star:2},vp:1,effect:""},
+ {id:"P05",name:"Пещера-тайник",element:"earth",tier:1,cost:{earth:1,water:1},vp:1,effect:"discount_earth"},
+ {id:"P06",name:"Разбитый пирс",element:"water",tier:1,cost:{water:1},vp:0,effect:""},
+ {id:"P07",name:"Кузница углей",element:"fire",tier:1,cost:{earth:1,fire:1},vp:1,effect:""},
+ {id:"P08",name:"Дерево фей",element:"star",tier:1,cost:{earth:1,star:1},vp:1,effect:""},
+ {id:"P09",name:"Тёплый источник",element:"water",tier:1,cost:{water:1,fire:1},vp:1,effect:""},
+ {id:"P10",name:"Маячный камень",element:"earth",tier:1,cost:{star:1},vp:0,effect:""},
+ {id:"P11",name:"Ракушечный грот",element:"water",tier:1,cost:{water:1,star:1},vp:1,effect:""},
+ {id:"P12",name:"Разбившийся корабль",element:"water",tier:2,cost:{earth:1,water:2},vp:2,effect:"discount_water"},
+ {id:"P13",name:"Драконья скала",element:"fire",tier:2,cost:{fire:2,star:1},vp:3,effect:""},
+ {id:"P14",name:"Древняя башня",element:"star",tier:2,cost:{earth:1,star:2},vp:2,effect:""},
+ {id:"P15",name:"Священный колодец",element:"star",tier:2,cost:{water:2,star:1},vp:3,effect:""},
+ {id:"P16",name:"Руины",element:"fire",tier:2,cost:{earth:2,fire:1},vp:2,effect:"discount_fire"},
+ {id:"P17",name:"Механизм времени",element:"fire",tier:2,cost:{fire:1,star:2},vp:3,effect:""},
+ {id:"P18",name:"Каменные врата рассвета",element:"earth",tier:2,cost:{earth:2,star:1},vp:2,effect:""},
+ {id:"P19",name:"Штормовой маяк",element:"water",tier:2,cost:{water:1,fire:1,star:1},vp:3,effect:""},
+ {id:"P20",name:"Летающий осколок",element:"star",tier:3,cost:{earth:1,water:1,fire:1,star:1},vp:5,effect:"discount_any"},
+ {id:"P21",name:"Тара, холм королей",element:"earth",tier:3,cost:{star:1,synth:1},vp:5,effect:""},
+ {id:"P22",name:"Мохер, обрыв ветров",element:"water",tier:3,cost:{water:1,star:1,synth:1},vp:5,effect:""},
+ {id:"P23",name:"Айлви, пещера эха",element:"fire",tier:3,cost:{earth:1,fire:1,synth:1},vp:6,effect:""},
+ {id:"P24",name:"Великий Синтез",element:"synth",tier:3,cost:{earth:1,water:1,fire:1,star:1,synth:1},vp:6,effect:"final"},
+];
+
+const BANK_BY_PLAYERS = {
+  2:{earth:5,water:5,fire:5,star:4,synth:3},
+  3:{earth:6,water:6,fire:6,star:5,synth:4},
+  4:{earth:7,water:7,fire:7,star:6,synth:5},
+  5:{earth:8,water:8,fire:8,star:7,synth:6},
+};
+const END_TRIGGER = {2:6,3:7,4:8,5:9};
+
+let state = null;
+
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+function startGame(){
+  const n = parseInt(document.getElementById("playerCount").value);
+  const deck = shuffle([...PORTALS]);
+  const market = deck.splice(0,5);
+  const bag = {earth:5,water:5,fire:5,star:3,synth:1,trap:5};
+  const players = [];
+  for(let i=0;i<n;i++){
+    players.push({name:"Игрок "+(i+1), sparks:{earth:0,water:0,fire:0,star:0,synth:0}, discount:{earth:0,water:0,fire:0}, vp:0, portals:[]});
+  }
+  state = {n, deck, market, bag, players, current:0, portalsOpened:0, log:[], tier2esc:false, tier3esc:false, turnCount:0};
+  document.getElementById("setup").style.display="none";
+  document.getElementById("gameArea").style.display="block";
+  logMsg("Партия началась: "+n+" игрок(ов).");
+  render();
+}
+
+function logMsg(m){ state.log.push({turn:state.turnCount, text:m}); }
+
+function bagTotal(){ return Object.values(state.bag).reduce((a,b)=>a+b,0); }
+
+function effectiveCost(player, portal){
+  const cost = {...portal.cost};
+  for(const el of ["earth","water","fire"]){
+    if(cost[el]>0) cost[el] = Math.max(0, cost[el]-(player.discount[el]||0));
+  }
+  return cost;
+}
+function canAfford(player, portal){
+  const cost = effectiveCost(player,portal);
+  for(const el in cost){ if((player.sparks[el]||0) < cost[el]) return false; }
+  return true;
+}
+
+function actionCollect(){
+  const p = state.players[state.current];
+  const picks = pickTwoColors();
+  for(const c of picks){ if(state.bank[c]>0){ state.bank[c]--; p.sparks[c]++; } }
+  logMsg(p.name+" собрал: "+picks.map(c=>ELNAME[c]).join(", "));
+  endTurn();
+}
+function pickTwoColors(){
+  // простая UI-логика: спросить через prompt два цвета по одной букве
+  const choice = prompt("Выберите 2 стихии через запятую (earth,water,fire,star):", "earth,water");
+  const picks = choice.split(",").map(s=>s.trim()).filter(c=>ELEMENTS.includes(c));
+  if(picks.length!==2){ alert("Нужно ровно 2 стихии из списка. Беру earth,water по умолчанию."); return ["earth","water"]; }
+  if(picks[0]===picks[1] && state.bank[picks[0]]<4){ alert("Банк слишком мал для 2 одинаковых — беру разные."); return [picks[0], ELEMENTS.find(e=>e!==picks[0])]; }
+  return picks;
+}
+
+function actionAdventureSafe(){
+  const p = state.players[state.current];
+  const target = ELEMENTS.reduce((a,b)=> p.sparks[a]<=p.sparks[b]?a:b);
+  p.sparks[target]++;
+  logMsg(p.name+" взял надёжно: "+ELNAME[target]);
+  endTurn();
+}
+function actionAdventureRisky(){
+  const p = state.players[state.current];
+  const result = drawBag();
+  if(result==="empty"){ logMsg("Мешок пуст."); endTurn(); return; }
+  if(result==="trap"){ logMsg(p.name+" вытянул Ловушку — ход сгорел."); endTurn(); return; }
+  p.sparks[result]++;
+  logMsg(p.name+" рискнул и получил: "+ELNAME[result]);
+  endTurn();
+}
+function drawBag(){
+  const total = bagTotal();
+  if(total===0) return "empty";
+  let pick = Math.floor(Math.random()*total)+1, cum=0;
+  for(const k in state.bag){ cum+=state.bag[k]; if(pick<=cum){ state.bag[k]--; return k; } }
+  return "empty";
+}
+
+function buyPortal(idx){
+  const p = state.players[state.current];
+  const portal = state.market[idx];
+  if(!canAfford(p,portal)) return;
+  const cost = effectiveCost(p,portal);
+  for(const el in cost){ p.sparks[el]-=cost[el]; }
+  p.vp += portal.vp;
+  p.portals.push(portal.id);
+  if(portal.effect==="discount_earth") p.discount.earth++;
+  if(portal.effect==="discount_water") p.discount.water++;
+  if(portal.effect==="discount_fire") p.discount.fire++;
+  state.market.splice(idx,1);
+  if(state.deck.length) state.market.push(state.deck.pop());
+  state.portalsOpened++;
+  if(portal.tier===2 && !state.tier2esc){ state.bag.trap++; state.tier2esc=true; logMsg("Открыт первый портал Тира II — в мешок добавлена Ловушка."); }
+  if(portal.tier===3 && !state.tier3esc){ state.bag.trap++; state.tier3esc=true; logMsg("Открыт первый портал Тира III — в мешок добавлена Ловушка."); }
+  logMsg(p.name+" открыл портал: "+portal.name+" (+"+portal.vp+" Света)");
+  endTurn();
+}
+
+function endTurn(){
+  state.turnCount++;
+  if(state.portalsOpened >= END_TRIGGER[state.n] || state.players.some(p=>p.vp>=20)){
+    render();
+    setTimeout(()=>{ finishGame(); }, 50);
+    return;
+  }
+  state.current = (state.current+1) % state.n;
+  render();
+}
+
+function finishGame(){
+  const ranked = [...state.players].sort((a,b)=> b.vp - a.vp || b.portals.length - a.portals.length);
+  logMsg("=== ПАРТИЯ ОКОНЧЕНА === Победитель: "+ranked[0].name+" с "+ranked[0].vp+" очками Света.");
+  render();
+  alert("Партия окончена!\nПобедитель: "+ranked[0].name+" — "+ranked[0].vp+" Света.");
+}
+
+function render(){
+  document.getElementById("bankDisplay").innerHTML = ELEMENTS.concat(["synth"]).map(e=>
+    `<span class="bank-pill ${e}">${ELNAME[e]}: ${state.bank[e]}</span>`).join(" ");
+  document.getElementById("bagDisplay").innerText = bagTotal()+" жетонов (из них Ловушек: "+state.bag.trap+")";
+  document.getElementById("portalsOpened").innerText = state.portalsOpened;
+  document.getElementById("portalsTarget").innerText = END_TRIGGER[state.n];
+
+  const p = state.players[state.current];
+  document.getElementById("market").innerHTML = state.market.map((portal,idx)=>{
+    const afford = canAfford(p,portal);
+    const cost = effectiveCost(p,portal);
+    const costStr = Object.entries(cost).filter(([k,v])=>v>0).map(([k,v])=>ELNAME[k]+"×"+v).join(", ");
+    return `<div class="card ${afford?'':'disabled'}" onclick="${afford?'buyPortal('+idx+')':''}">
+      <b>${portal.name}</b><br>Тир ${portal.tier} · ${portal.vp} Света<br>${costStr}
+    </div>`;
+  }).join("");
+
+  document.getElementById("players").innerHTML = state.players.map((pl,i)=>{
+    const sparks = ELEMENTS.concat(["synth"]).map(e=> pl.sparks[e]>0 ? `<span class="spark-pill ${e}">${ELNAME[e]}:${pl.sparks[e]}</span>` : "").join("");
+    return `<div class="player ${i===state.current?'active':''}">
+      <b>${pl.name}</b> ${i===state.current?"◀ ходит":""}<br>
+      <span class="vp">${pl.vp} Света</span> · ${pl.portals.length} порталов<br>
+      ${sparks}
+    </div>`;
+  }).join("");
+
+  document.getElementById("log").innerHTML = state.log.slice(-40).map(l=>`<div>[${l.turn}] ${l.text}</div>`).join("");
+  document.getElementById("log").scrollTop = 999999;
+}
+
+function exportLog(){
+  const data = JSON.stringify({players:state.players, log:state.log, turnCount:state.turnCount}, null, 2);
+  const blob = new Blob([data], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "portals_playtest_log_"+Date.now()+".json";
+  a.click();
+}
+</script>
+</body>
+</html>
