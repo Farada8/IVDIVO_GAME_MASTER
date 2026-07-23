@@ -1,0 +1,28 @@
+bank_by_players:
+  2: {earth: 5, water: 5, fire: 5, star: 4, synth: 3}
+  3: {earth: 6, water: 6, fire: 6, star: 5, synth: 4}
+  4: {earth: 7, water: 7, fire: 7, star: 6, synth: 5}
+  5: {earth: 8, water: 8, fire: 8, star: 7, synth: 6}
+
+collect_amount: 2
+same_color_requires_bank_min: 4
+market_size: 5
+
+end_trigger_portals_by_players:
+  2: 6
+  3: 7
+  4: 8
+  5: 9
+end_trigger_vp: 20
+
+bag_base:
+  earth: 5
+  water: 5
+  fire: 5
+  star: 3
+  synth: 1
+  trap: 5
+bag_escalation_trap_add: 1
+bag_escalation_triggers: [tier2_opened, tier3_opened]
+
+max_turns_safety: 400
