@@ -2,31 +2,6 @@
 
 Журнал изменений базы знаний GitHub.
 
-## 2026-07-25
-
-### Added
-
-- `docs/design/FIVE_GAMES_ONE_MAP/README.md` — общий индекс продуктовой архитектуры «Пять игр на одной карте».
-- `docs/design/FIVE_GAMES_ONE_MAP/01_TRAVEL_AND_ROUTE_STRATEGY_RULEBOOK_v0.1_DRAFT.md` — туристическая маршрутная стратегия.
-- `docs/design/FIVE_GAMES_ONE_MAP/02_TOURISM_ECONOMY_AND_NETWORKS_RULEBOOK_v0.1_DRAFT.md` — экономическая игра о туристических компаниях и сетях.
-- `docs/design/FIVE_GAMES_ONE_MAP/03_LEGENDS_ADVENTURE_AND_COMBAT_RULEBOOK_v0.1_DRAFT.md` — приключенческо-боевая игра.
-- `docs/design/FIVE_GAMES_ONE_MAP/04_MYSTERY_PORTAL_QUEST_RULEBOOK_v0.1_DRAFT.md` — детективно-квестовая игра с осколками, Ключами и шевронами.
-- `docs/design/FIVE_GAMES_ONE_MAP/05_ALTERNATIVE_HISTORY_TIME_WEAVE_RULEBOOK_v0.1_DRAFT.md` — универсальные правила альтернативной истории.
-- `docs/design/FIVE_GAMES_ONE_MAP/05_ALTERNATIVE_HISTORY/SCENARIO_001_CLONTARF_BROKEN_SUCCESSION_v0.1_DRAFT.md` — первый сценарий альтернативной истории о Клонтарфе и сохранении преемственности.
-- В `DECISIONS.md` добавлено решение `DEC-019` — пять самостоятельных игр используют одну карту и единый реестр локаций.
-
-### Google Drive
-
-- Создана папка `GAME_01_PORTALS_OF_STARS/04_FIVE_GAMES_ONE_MAP_5_IN_1`.
-- Созданы общий индекс, пять папок игровых моделей и пять Google Docs с черновиками правил.
-- Сценарий Клонтарфа перенесён в раздел `05_ALTERNATIVE_HISTORY_TIME_WEAVE`.
-
-### Status
-
-- Структура «5 игр в 1» имеет статус `FOUNDER-DECISION / ACTIVE STRUCTURE`.
-- Конкретные тексты правил, баланс и названия остаются `DRAFT / TO-PLAYTEST`.
-- Главный коммерческий продукт не изменён: семейная туристическая игра остаётся базовым ядром.
-
 ## 2026-07-22
 
 ### Added
