@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "episode_passport": {
+    "required": ["episode_id","hook","hero","human_want_today","obstacle","inciting_event","central_question","ivdivo_rule_tested","start_belief","false_interpretation","first_reframe","midpoint_redefinition","irreversible_choice","measurable_cost","climax_mechanism","local_resolution","relationship_delta","institution_delta","season_clue","final_open_question","mechanism_ids","forbidden_exposition","source_distance_check"]
+  },
+  "scene_card": {
+    "required": ["scene_id","estimated_minutes","pov","location","goal","obstacle","action","new_actionable_information","turn","relationship_delta","institution_delta","price","exit_question","mechanism_ids","canon_needed","previous_scene_exit_state","state_delta"]
+  },
+  "scene_draft_handoff": {
+    "required": ["scene_id","draft_text","self_audit_goal","self_audit_turn","self_audit_new_info","self_audit_price","exit_state","canon_assertions","new_synthesis"]
+  },
+  "mechanism_card": {
+    "required": ["mechanism_id","status_label","category","function","emotion","trigger_input","mechanism","output_state_change","abstract_formula","structural_position","why_it_works","failure_mode","cliche_risk","do_not_copy","possible_ivdivo_use","supporting_sources"]
+  },
+  "canon_card": {
+    "required": ["canon_id","status_label","term","type","supported_meaning","source_file","source_location","undefined_points","related_cards","canon_tension"]
+  },
+  "audit_report": {
+    "required": ["artifact_id","audit_type","pass_fail","issues","unsupported_claims","canon_conflicts","source_distance_risks","minimal_fixes","structural_fixes","gate_decision"]
+  }
+}
