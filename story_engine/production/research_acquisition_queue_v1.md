@@ -15,12 +15,13 @@
 - Ninth House: already likely full.
 - Red Rising: already likely full.
 - Storm Front: already likely full.
+- Sergey Lukyanenko — Night Watch / Ночной Дозор: ACQUIRED 2026-08-13. Uploaded FB2 ZIP verified as structurally complete enough for full-arc analysis: ~96.9k words, three stories, 41 structural sections, ending present. Status: LIKELY_FULL.
 
 ## Purchase / obtain full-text priorities
 
 ### P0 — buy/obtain first
-1. Sergey Lukyanenko — Night Watch / Ночной Дозор — FULL.
-   Reason: current corpus has only an explicit opening fragment, blocking midpoint, climax, ending, and full serial-arc analysis.
+1. ~~Sergey Lukyanenko — Night Watch / Ночной Дозор — FULL.~~ ACQUIRED.
+   Research use: hidden-service case engine, legal/jurisdiction conflict, three-story internal architecture, escalation from local case to service-level manipulation, character/institution relationship, serial-world expansion.
 2. Kazuo Ishiguro — The Remains of the Day / Остаток дня — FULL.
    Reason: current corpus has only opening sample; this source is core for service identity, self-deception, and character arc.
 3. John Truby — The Anatomy of Story — SEARCHABLE DIGITAL TEXT.
@@ -36,7 +37,7 @@
 
 ### P2 — only after P0/P1 analysis
 7. Sergey Lukyanenko — Day Watch / Дневной Дозор — FULL.
-   Reason: opposing-service POV and how one successful hidden-world premise expands into a series.
+   Reason: opposing-service POV and how one successful hidden-world premise expands into a series. Do not buy before the full Night Watch scene map is completed unless bundled cheaply.
 8. Rebecca Yarros — Iron Flame — only if Fourth Wing proves uniquely useful for series-transition mechanics.
 9. Additional current horror / climate / AI-tech crossover title — select after S07 market segmentation, not before.
 
