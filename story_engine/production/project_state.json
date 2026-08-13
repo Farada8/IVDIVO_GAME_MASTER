@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "updated": "2026-08-13",
   "project": "IVDIVO long-form audio fiction / book series",
   "repo": "Farada8/IVDIVO_GAME_MASTER",
@@ -17,7 +17,8 @@
     "professional_prompt_pack": 35,
     "production_workflow_initialized": true,
     "github_persistence_initialized": true,
-    "drive_persistence_initialized": true
+    "drive_persistence_initialized": true,
+    "sudowrite_integration_defined": true
   },
   "canonical_files": {
     "library_audit": "Google Drive / 03_IVDIVO_STORY_ENGINE / IVDIVO_STORY_ENGINE_Library_Audit_v1",
@@ -37,16 +38,37 @@
       "name": "02_IVDIVO_SOURCE_ROUTING_WORKFLOW_STATE_v1",
       "drive_file_id": "1r075HNeMSgyCXR4lIz2VLhDIo5mVay519rYlkurdvyQ"
     },
-    "repo_production_root": "story_engine/production/"
+    "repo_production_root": "story_engine/production/",
+    "sudowrite_integration": "story_engine/production/sudowrite_integration.md"
   },
-  "current_status": "PRODUCTION_SYSTEM_PERSISTED_AND_RESUMABLE",
+  "drafting_stack": {
+    "persistent_source_of_truth": ["GitHub", "Google Drive"],
+    "research_and_architecture": ["ChatGPT", "reference corpus", "current web research where required"],
+    "fiction_drafting_workstation": "Sudowrite",
+    "sudowrite_role": "Story Bible mirror + approved Scene/Draft/Guided Write/Rewrite/Expand workflow",
+    "sudowrite_authority": "DRAFT_ONLY",
+    "mandatory_return_audits": [
+      "structure_delta_check",
+      "ivdivo_canon_audit",
+      "institutional_realism_pass",
+      "anti_gpt_red_team",
+      "source_distance_check",
+      "audio_first_pass",
+      "showrunner_approval"
+    ]
+  },
+  "current_status": "PRODUCTION_SYSTEM_PERSISTED_RESUMABLE_AND_SUDOWRITE_READY",
   "next_action": {
     "stage_id": "S07",
     "name": "market_audience_research",
-    "reason": "Audience research must be current before locking franchise engine and episode length/retention specification.",
+    "reason": "Audience research must be current before locking franchise engine and episode length/retention specification. Sudowrite is now configured as the downstream fiction-drafting workstation once episode/scene structure is approved.",
     "after": [
       "S03 deep reference scene maps for Project Hail Mary, Tinker Tailor Soldier Spy, Recursion, Murderbot, Dark Matter",
-      "S08 franchise_engine"
+      "S08 franchise_engine",
+      "S14-S16 episode passport + scene map + stress test",
+      "Sudowrite Story Bible/Scenes setup",
+      "S17 scene drafting in Sudowrite",
+      "S18-S21 mandatory audit/edit pipeline"
     ]
   },
   "approved_source_routing": "story_engine/production/source_routing.md",
@@ -54,15 +76,19 @@
     "Primary English-language audience segment has not yet been validated with current market evidence.",
     "Franchise engine has candidates but is not yet formally selected.",
     "Miss Gallagher is a development seed, not yet the sole franchise template.",
-    "Exact canonical definitions of several higher IVDIVO coordinates still require source extraction before story use."
+    "Exact canonical definitions of several higher IVDIVO coordinates still require source extraction before story use.",
+    "Sudowrite automation/API integration is not assumed; until verified, use it as a human-in-the-loop drafting workstation."
   ],
   "resume_protocol": [
     "Read this file first.",
     "Read workflow.yaml.",
     "Read source_routing.md.",
+    "Read sudowrite_integration.md before any prose-drafting stage.",
     "Open Drive READ_ME_FIRST if human-readable context is needed.",
     "Open current stage inputs from Drive/GitHub.",
     "Run only next_action unless user changes priority.",
+    "Before prose: require approved episode passport and scene map.",
+    "Use Sudowrite as draft layer, then return text to mandatory audits.",
     "After work, update artifacts, gates, unresolved questions and next_action in this file."
   ]
 }
