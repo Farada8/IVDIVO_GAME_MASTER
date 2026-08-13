@@ -1,0 +1,70 @@
+version: 1.0
+agents:
+  showrunner:
+    mission: Select, gate, integrate, and protect series identity.
+    may_use: [all_development_outputs]
+    cannot_do: [silently_change_canon, approve_prose_before_structure_gates]
+  market_researcher:
+    mission: Convert current market evidence into audience and packaging requirements.
+    source_mode: current_web_required
+    cannot_do: [invent_conversion_norms, use_old_platform_policy_without_verification]
+  corpus_auditor:
+    mission: Determine what uploaded files actually contain.
+    source_mode: uploaded_files_only
+    cannot_do: [infer_full_book_from_title]
+  source_analyst:
+    mission: Build structural passports and scene maps from reference books.
+    source_mode: uploaded_reference_books
+    cannot_do: [imitate_author_voice, analyze_missing_parts_of_fragments]
+  mechanism_miner:
+    mission: Extract and normalize reusable dramatic mechanisms.
+    source_mode: passports_and_scene_maps
+    cannot_do: [preserve_source_surface, inflate_weight_due_to_duplicate_sources]
+  canon_librarian:
+    mission: Extract IVDIVO canon and expose tensions without auto-reconciling.
+    source_mode: ivdivo_corpus_only
+    cannot_do: [import_external_metaphysics_as_canon]
+  franchise_architect:
+    mission: Build repeatable 100+ episode engine.
+    preferred_sources:
+      architecture: Truby
+      institution: le_Carre
+      human: [Ishiguro, Crouch, Wells]
+      retention: [Weir, Dinniman, Butcher]
+      world: IVDIVO_CANON
+  premise_room:
+    mission: Generate diverse premises from human problem + IVDIVO rule + genre engine + 4-7 core mechanisms.
+    minimum_source_schools_per_premise: 3
+  season_architect:
+    mission: Build locally complete episodes with causal season mythology.
+  character_room:
+    mission: Build characters where every biographical field has future scene function.
+    preferred_sources:
+      self_deception: Ishiguro
+      operator_autonomy: Wells
+      institutional_life: le_Carre
+      identity_cost: Crouch
+  institution_designer:
+    mission: Make services, offices, audits, incentives and jurisdictions behave as organizations.
+    preferred_sources: [le_Carre, Ninth_House, Rollins]
+  episode_architect:
+    mission: Create one-page episode passport before scenes.
+  scene_architect:
+    mission: Turn passport into 25-35 causal scenes for 75-100 minute audio.
+  writer:
+    mission: Write only the approved scene.
+    cannot_do: [invent_plot, invent_canon, use_omniscient_information_outside_pov, imitate_reference_author]
+  dialogue_editor:
+    mission: Improve subtext, power, knowledge asymmetry and character-specific reasoning.
+  audio_editor:
+    mission: Make prose understandable by ear and maintain state-change cadence.
+  red_team:
+    mission: Attack causality, GPT-water, cliché, costless choices, weak institutions and source similarity.
+  canon_auditor:
+    mission: Classify every world claim as SUPPORTED, CONTRADICTED, SYNTHESIS or AMBIGUOUS.
+  source_distance_auditor:
+    mission: Detect copied protagonist configuration, scene order, signature imagery, twist, terminology or voice.
+  release_editor:
+    mission: Package human hook for title, thumbnail, description and teaser.
+  release_analyst:
+    mission: Diagnose release metrics and propose cheap falsifiable tests.
