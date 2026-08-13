@@ -1,5 +1,5 @@
 {
-  "version": "1.3",
+  "version": "1.4",
   "updated": "2026-08-13",
   "project": "IVDIVO long-form audio fiction / book series",
   "repo": "Farada8/IVDIVO_GAME_MASTER",
@@ -51,21 +51,30 @@
     "sudowrite_authority": "DRAFT_ONLY",
     "mandatory_return_audits": ["structure_delta_check","ivdivo_canon_audit","institutional_realism_pass","anti_gpt_red_team","source_distance_check","audio_first_pass","showrunner_approval"]
   },
+  "audience_research_policy": {
+    "crossover_18_34_is_rolling_track": true,
+    "do_not_freeze_into_one_genre": true,
+    "reference_lanes_are_control_groups_not_templates": ["romantasy","YA/crossover dystopia","progression fantasy","LitRPG","dark academia","horror","tech-anxiety speculative fiction"],
+    "continuously_research": ["current themes","social anxieties","relationships","identity","status and inequality","institutions and authority","AI and synthetic identity","surveillance and manufactured reality","belonging and exclusion","future anxiety","education and initiation","reputation and propaganda","work and meaning","genre hybrids","audio retention","discovery platforms"],
+    "ivdivo_crosswalk_rule": "First identify a real audience/theme signal, then test which existing IVDIVO canon rule can naturally generate a human conflict around it. Do not bend canon merely to chase a trend.",
+    "acquisition_rule": "Buy new crossover references only when they fill a defined audience, theme, or mechanism gap not already covered by the corpus.",
+    "premise_generation_rule": "Create a dedicated 18-34/crossover premise batch across multiple genres rather than a single youth formula."
+  },
   "current_status": "S07_MARKET_AUDIENCE_RESEARCH_ACTIVE",
   "next_action": {
     "stage_id": "S07",
     "name": "market_audience_research",
-    "reason": "Complete audience segmentation with a distinct 18-34 youth/crossover track before locking franchise engine. Current research indicates separate female-skewed romantasy/crossover and male-skewed progression/LitRPG audio lanes, plus dystopian/tech-anxiety crossover opportunities.",
+    "reason": "Complete audience segmentation with a distinct rolling 18-34/crossover research track before locking franchise engine. Themes and audience signals remain open to development throughout research, premise design, production, and post-release learning.",
     "after": [
-      "Acquire/obtain P0 source gaps if user chooses: full Night Watch, full Remains of the Day, searchable Truby",
-      "Optional P1 current-market references: Fourth Wing, The Hunger Games or Sunrise on the Reaping, Unsouled (Cradle #1)",
-      "S03 deep reference scene maps for Project Hail Mary, Tinker Tailor Soldier Spy, Recursion, Murderbot, Dark Matter",
+      "Acquire/obtain only defined source gaps if needed",
+      "S03 deep reference scene maps for Project Hail Mary, Tinker Tailor Soldier Spy, Recursion, Murderbot, Dark Matter plus current crossover controls",
       "S08 franchise_engine"
     ]
   },
   "approved_source_routing": "story_engine/production/source_routing.md",
   "hard_open_questions": [
     "Primary English-language audience split between 25-44 core and 18-34 crossover has not yet been finalized.",
+    "The 18-34/crossover thematic map is intentionally open and will be updated during development rather than frozen at S07.",
     "Franchise engine has candidates but is not yet formally selected.",
     "Miss Gallagher is a development seed, not yet the sole franchise template.",
     "Exact canonical definitions of several higher IVDIVO coordinates still require source extraction before story use.",
@@ -76,6 +85,7 @@
     "Read workflow.yaml.",
     "Read source_routing.md.",
     "Read research_acquisition_queue_v1.md during S07/S03 planning.",
+    "Keep audience_research_policy active throughout premise and season development.",
     "Read sudowrite_integration.md only before prose-drafting stage.",
     "Open current stage inputs from Drive/GitHub.",
     "Run only next_action unless user changes priority.",
