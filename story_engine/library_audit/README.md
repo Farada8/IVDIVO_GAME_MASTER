@@ -20,7 +20,7 @@ Initial source audit for the IVDIVO fiction/audio story engine.
 - `UNKNOWN_MEDIUM` / `SHORT_OR_FRAGMENT_UNKNOWN` — insufficient evidence to infer completeness.
 - `PROJECT_TEXT` — original IVDIVO story/project material.
 
-## Evidence labels for future mechanism cards
+## Evidence labels
 
 - `[SOURCE BOOK]` — directly extracted from an uploaded literary source.
 - `[IVDIVO CANON]` — explicitly present in IVDIVO canon.
@@ -32,14 +32,28 @@ Initial source audit for the IVDIVO fiction/audio story engine.
 2. A fragment cannot support claims about midpoint, climax, ending, or full character arc.
 3. One author must not dominate simply because many files were uploaded.
 4. Store abstract mechanisms and metadata, not copyrighted book text.
-5. Each mechanism card should contain: function → emotion → mechanism → abstract formula → IVDIVO use → cliché risk → copying prohibition.
+5. Each full mechanism card contains function → emotion → mechanism → abstract formula → IVDIVO use → cliché risk → copying prohibition.
+
+## Batch 1 completed — 2026-08-13
+
+Deep extraction completed for seven sources: Project Hail Mary, Dark Matter, Recursion, Tinker Tailor Soldier Spy / «Шпион, выйди вон!», Storm Front, The Da Vinci Code, and Red Rising.
+
+- **280** passport parameter rows: 7 sources × 40 parameters.
+- **105** reusable source-derived mechanism cards: 15 per source.
+- **35** initial crosswalk cards mapping mechanisms into IVDIVO / Miss Gallagher.
+- Full human-readable workbook is stored in the project Google Drive as `IVDIVO_STORY_ENGINE_v2_Batch1`.
+- GitHub keeps compact machine-readable indexes:
+  - `story_engine/passports/source_passport_index_batch1.csv`
+  - `story_engine/mechanisms/mechanism_index_batch1.csv`
+  - `story_engine/crosswalk/crosswalk_index_batch1.csv`
 
 ## Next production stage
 
-1. Build 40-parameter passports for A-tier sources.
-2. Extract 500–1000 reusable story-mechanism cards.
-3. Cross them with IVDIVO canon/world rules.
-4. Generate 30–50 distinct plot architectures.
-5. Red-team for repetition, exposition, cliché, continuity, and unauthorized copying.
+1. Batch 2: Murderbot, Dungeon Crawler Carl, Ishiguro fragments, Lukyanenko fragments, Prokofiev, Ninth House and Rollins.
+2. Deduplicate semantically equivalent mechanisms across authors.
+3. Expand the bank toward **500–1000** high-value mechanism cards.
+4. Cross with IVDIVO canon/world rules.
+5. Generate and score the first **30–50** distinct IVDIVO plot architectures.
+6. Red-team for repetition, exposition, cliché, continuity and unauthorized copying.
 
-The Google Drive workbook is the primary human-readable audit; this repository keeps the machine-friendly audit and workflow rules.
+The Google Drive workbook is the primary human-readable analysis; this repository keeps compact machine-friendly indexes and workflow rules.
