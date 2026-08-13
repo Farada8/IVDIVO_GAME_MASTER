@@ -1,0 +1,78 @@
+version: 1.0
+project: IVDIVO_LONGFORM_AUDIO_FICTION
+language:
+  development: ru
+  target_release: en
+evidence_labels:
+  source_book: "[SOURCE BOOK]"
+  canon: "[IVDIVO CANON]"
+  synthesis: "[OUR SYNTHESIS]"
+hard_rules:
+  - Never infer full-book structure from a fragment.
+  - Only IVDIVO corpus defines IVDIVO canon.
+  - Reference books provide mechanisms, not copied plot surface or author voice.
+  - No prose before episode passport and episode scene map pass their gates.
+  - Every scene changes position, information, relationship, danger, decision, or price.
+  - Every major revelation changes the next action, allowed option, or mission definition.
+  - Every important moral choice has a measurable cost.
+  - Every episode closes a real local human problem.
+  - New IVDIVO terminology appears only when a character needs it in action.
+  - Synthesis must never be silently promoted to canon.
+
+cadence:
+  market_refresh_days: 90
+  source_audit: per_upload_batch
+  deep_source_analysis: per_A_tier_full_source
+  franchise_review: per_season
+  episode_pipeline: per_episode
+  scene_pipeline: per_scene
+
+stages:
+  - {id: S00, name: corpus_integrity, owner: corpus_auditor, frequency: per_source, inputs: [uploaded_source], outputs: [source_integrity_record]}
+  - {id: S01, name: source_role_assignment, owner: source_analyst, frequency: per_source, inputs: [source_integrity_record, source_routing], outputs: [source_role_record]}
+  - {id: S02, name: source_passport, owner: source_analyst, frequency: per_selected_source, inputs: [source_role_record, source_text], outputs: [source_passport_40]}
+  - {id: S03, name: reference_scene_map, owner: source_analyst, frequency: per_A_tier_full_source, inputs: [source_passport_40, source_text], outputs: [reference_scene_map]}
+  - {id: S04, name: mechanism_extraction, owner: mechanism_miner, frequency: per_deep_source, inputs: [source_passport_40, reference_scene_map], outputs: [mechanism_cards]}
+  - {id: S05, name: semantic_dedupe, owner: mechanism_miner, frequency: per_mechanism_batch, inputs: [mechanism_cards, core_mechanisms], outputs: [core_mechanism_update]}
+  - {id: S06, name: canon_extraction, owner: canon_librarian, frequency: per_canon_batch, inputs: [ivdivo_corpus_only], outputs: [canon_cards, canon_tensions]}
+  - {id: S07, name: market_audience_research, owner: market_researcher, frequency: quarterly_and_before_launch, inputs: [current_web_market, platform_policies, audience_discussions], outputs: [market_brief, audience_spec]}
+  - {id: S08, name: franchise_engine, owner: franchise_architect, frequency: once_then_review_per_season, inputs: [audience_spec, canon_cards, core_mechanisms], outputs: [franchise_engine_candidates, approved_franchise_engine]}
+  - {id: S09, name: premise_generation, owner: premise_room, frequency: per_season, inputs: [approved_franchise_engine, audience_spec, canon_cards, core_mechanisms], outputs: [premise_bank_100]}
+  - {id: S10, name: premise_hard_gate, owner: showrunner, frequency: per_premise_batch, inputs: [premise_bank_100], outputs: [top_20, top_10, top_5, top_2]}
+  - {id: S11, name: season_architecture, owner: season_architect, frequency: per_season, inputs: [approved_franchise_engine, top_10, canon_cards], outputs: [season_bible]}
+  - {id: S12, name: character_room, owner: character_room, frequency: per_recurring_character, inputs: [season_bible, canon_cards], outputs: [character_bibles, relationship_graph]}
+  - {id: S13, name: world_reveal_plan, owner: canon_librarian, frequency: per_season, inputs: [season_bible, canon_cards], outputs: [world_reveal_plan]}
+  - {id: S14, name: episode_passport, owner: episode_architect, frequency: per_episode, inputs: [season_bible, character_bibles, world_reveal_plan, core_mechanisms], outputs: [episode_passport]}
+  - {id: S15, name: episode_scene_map, owner: scene_architect, frequency: per_episode, inputs: [episode_passport], outputs: [scene_cards_25_35]}
+  - {id: S16, name: scene_stress_test, owner: red_team, frequency: per_episode, inputs: [scene_cards_25_35], outputs: [scene_map_audit, approved_scene_cards]}
+  - {id: S17, name: scene_draft, owner: writer, frequency: per_scene, inputs: [approved_scene_card, character_bibles, previous_scene_exit_state, canon_needed], outputs: [scene_draft, scene_self_audit]}
+  - {id: S18, name: specialist_edit_passes, owner: specialist_editors, frequency: per_episode, inputs: [assembled_episode_draft], outputs: [dialogue_pass, institution_pass, rule_in_action_pass]}
+  - {id: S19, name: audio_retention_pass, owner: audio_editor, frequency: per_episode, inputs: [edited_episode], outputs: [retention_map, audio_first_draft]}
+  - {id: S20, name: final_audits, owner: red_team, frequency: per_episode, inputs: [audio_first_draft, canon_cards, source_routing], outputs: [anti_gpt_report, canon_report, source_distance_report]}
+  - {id: S21, name: final_episode_edit, owner: showrunner, frequency: per_episode, inputs: [audio_first_draft, final_audits], outputs: [final_episode, synopsis, teaser_moments, unresolved_threads]}
+  - {id: S22, name: packaging, owner: release_editor, frequency: per_release, inputs: [final_episode, audience_spec], outputs: [titles, thumbnail_text, description, teasers, chapters]}
+  - {id: S23, name: release_analytics, owner: release_analyst, frequency: post_release, inputs: [retention, ctr, completion, next_episode_conversion, comments, paid_conversion], outputs: [diagnostic_report, next_experiment]}
+  - {id: S24, name: learning_loop, owner: showrunner, frequency: after_each_release_batch, inputs: [diagnostic_report], outputs: [audience_spec_delta, production_rule_delta, project_state_update]}
+
+gates:
+  no_prose_before: [S14, S15, S16]
+  fragment_block: [midpoint, climax, ending, full_character_arc]
+  episode_required:
+    - human_want
+    - central_question
+    - ivdivo_rule_tested
+    - midpoint_redefinition
+    - irreversible_choice
+    - measurable_cost
+    - local_resolution
+  scene_required:
+    - goal
+    - obstacle
+    - action
+    - new_actionable_information_or_choice
+    - state_delta
+  final_required:
+    - canon_audit_pass
+    - source_distance_pass
+    - no_zero_delta_scene
+    - local_human_resolution
