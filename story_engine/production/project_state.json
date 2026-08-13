@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-13",
+  "project": "IVDIVO long-form audio fiction / book series",
+  "repo": "Farada8/IVDIVO_GAME_MASTER",
+  "drive_root_folder_id": "1XQSIvJqnmHQzABoRmkTCf0l-JGjUCLDo",
+  "completed": {
+    "library_files_audited": 171,
+    "explicit_fragments_detected": 40,
+    "deep_source_passports": 14,
+    "passport_parameter_rows": 560,
+    "raw_mechanism_cards": 210,
+    "ivdivo_crosswalk_cards": 70,
+    "semantic_dedupe_clusters": 24,
+    "core_mechanisms_normalized": 48,
+    "professional_prompt_pack": 35,
+    "production_workflow_initialized": true
+  },
+  "canonical_files": {
+    "library_audit": "Google Drive / 03_IVDIVO_STORY_ENGINE / IVDIVO_STORY_ENGINE_Library_Audit_v1",
+    "professional_framework": "IVDIVO_STORY_ENGINE_v4_1_Professional_Framework.xlsx",
+    "prompt_pack": "Google Drive / 03_IVDIVO_STORY_ENGINE / 04_PRODUCTION_PIPELINE / IVDIVO_PROFESSIONAL_AUDIO_SERIAL_PROMPT_PACK_v1",
+    "repo_production_root": "story_engine/production/"
+  },
+  "current_status": "PRODUCTION_SYSTEM_INITIALIZED",
+  "next_action": {
+    "stage_id": "S07",
+    "name": "market_audience_research",
+    "reason": "Audience research must be current before locking franchise engine and episode length/retention specification.",
+    "after": [
+      "S03 deep reference scene maps for Project Hail Mary, Tinker Tailor Soldier Spy, Recursion, Murderbot, Dark Matter",
+      "S08 franchise_engine"
+    ]
+  },
+  "approved_source_routing": "story_engine/production/source_routing.md",
+  "hard_open_questions": [
+    "Primary English-language audience segment has not yet been validated with current market evidence.",
+    "Franchise engine has candidates but is not yet formally selected.",
+    "Miss Gallagher is a development seed, not yet the sole franchise template.",
+    "Exact canonical definitions of several higher IVDIVO coordinates still require source extraction before story use."
+  ],
+  "resume_protocol": [
+    "Read this file first.",
+    "Read workflow.yaml.",
+    "Read source_routing.md.",
+    "Open current stage inputs from Drive/GitHub.",
+    "Run only next_action unless user changes priority.",
+    "After work, update artifacts, gates, unresolved questions and next_action in this file."
+  ]
+}
