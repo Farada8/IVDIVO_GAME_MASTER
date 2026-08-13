@@ -1,9 +1,10 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "updated": "2026-08-13",
   "project": "IVDIVO long-form audio fiction / book series",
   "repo": "Farada8/IVDIVO_GAME_MASTER",
   "drive_root_folder_id": "1XQSIvJqnmHQzABoRmkTCf0l-JGjUCLDo",
+  "drive_pipeline_folder_id": "10IUURhNi0My_2qRcdgYGEjJycok7db_T",
   "completed": {
     "library_files_audited": 171,
     "explicit_fragments_detected": 40,
@@ -14,15 +15,31 @@
     "semantic_dedupe_clusters": 24,
     "core_mechanisms_normalized": 48,
     "professional_prompt_pack": 35,
-    "production_workflow_initialized": true
+    "production_workflow_initialized": true,
+    "github_persistence_initialized": true,
+    "drive_persistence_initialized": true
   },
   "canonical_files": {
     "library_audit": "Google Drive / 03_IVDIVO_STORY_ENGINE / IVDIVO_STORY_ENGINE_Library_Audit_v1",
-    "professional_framework": "IVDIVO_STORY_ENGINE_v4_1_Professional_Framework.xlsx",
-    "prompt_pack": "Google Drive / 03_IVDIVO_STORY_ENGINE / 04_PRODUCTION_PIPELINE / IVDIVO_PROFESSIONAL_AUDIO_SERIAL_PROMPT_PACK_v1",
+    "professional_framework": {
+      "name": "03_IVDIVO_STORY_ENGINE_v4_1_Professional_Framework",
+      "drive_file_id": "1c8xihz6cLGAWpTBVnLOdriVWwSDqaa3LXXEeEK3a7wI"
+    },
+    "read_me_first": {
+      "name": "00_READ_ME_FIRST_IVDIVO_PRODUCTION_SYSTEM",
+      "drive_file_id": "1twqce2P3pPUzVciAEMufmHqvuxcqnjaVRn_6AUV-nUc"
+    },
+    "prompt_pack": {
+      "name": "01_IVDIVO_PROFESSIONAL_AUDIO_SERIAL_PROMPT_PACK_v1",
+      "drive_file_id": "1kR-Qqwp-gpp79m8ZFbA67C1yP_hMCoFhdjQ2Ozn821c"
+    },
+    "routing_workflow_state": {
+      "name": "02_IVDIVO_SOURCE_ROUTING_WORKFLOW_STATE_v1",
+      "drive_file_id": "1r075HNeMSgyCXR4lIz2VLhDIo5mVay519rYlkurdvyQ"
+    },
     "repo_production_root": "story_engine/production/"
   },
-  "current_status": "PRODUCTION_SYSTEM_INITIALIZED",
+  "current_status": "PRODUCTION_SYSTEM_PERSISTED_AND_RESUMABLE",
   "next_action": {
     "stage_id": "S07",
     "name": "market_audience_research",
@@ -43,6 +60,7 @@
     "Read this file first.",
     "Read workflow.yaml.",
     "Read source_routing.md.",
+    "Open Drive READ_ME_FIRST if human-readable context is needed.",
     "Open current stage inputs from Drive/GitHub.",
     "Run only next_action unless user changes priority.",
     "After work, update artifacts, gates, unresolved questions and next_action in this file."
