@@ -1,0 +1,25 @@
+Cluster,Batch 1 IDs,Batch 2 IDs,Decision,Unified note
+Control/authority separation,SF-015,MB-002,"KEEP BOTH, MERGE CORE",B1: ability vs lawful use; B2: technical control vs agency. Unified engine should track capability / control / status / office / lawful right separately.
+Human anchor for ontology,DM-005,MB-005,MERGE,Both insist relationship/behavior makes metaphysics emotionally legible. Keep one core mechanism with variants.
+Rules through use,PHM-006 / SF-003,WAT-005 / DCC-006,MERGE CORE,"One core: rule appears at decision point, has observable consequence, constrains options."
+Operational institution realism,TTSS-003 / PHM-008,MB-008 / NH-003,MERGE + EXTEND,B1 gives procedure/jargon; B2 adds control logs and imperfect oversight.
+Case-of-week serial,SF-002,NH-006 / SD-005,MERGE + EXTEND,Core repeatable case engine; variants: specialized jurisdictions and fixed professional team.
+Finite cost / resource,PHM-010 / PHM-014,DCC-002 / DCC-008,MERGE,Core resource-pressure mechanism. DCC adds explicit deadline/feedback cadence.
+Mission changes after discovery,PHM-011,DCC-007,"RELATED, KEEP DISTINCT",PHM = redefinition of success; DCC = immediate next-goal refresh.
+Autonomy / final agency,DM-014,MB-011,MERGE CORE,Affected subject must choose own identity/restoration; benevolent control is still control.
+Experience before explanation,DM-009,WAT-001,MERGE,"Concrete ordinary scene first, hidden layer/rule second."
+Institution self-audit,TTSS-005,NH-003,MERGE + EXTEND,Core oversight paradox; NH adds regulator dependency and conflict of interest.
+Career incentives / normalized harm,TTSS-008/009,NH-013,MERGE,"Institutions resist correction because stability, prestige and benefits are at stake."
+Status embodied in everyday life,RR-001/RR-005,ZK-006 / NH-004,MERGE + EXTEND,Core: status is access/duty/social consequence; variants add obligations and privilege.
+Multiple valid jurisdictions,RR-010,WAT-007 / ZK-013,MERGE + EXTEND,Core multi-axis authority conflict; avoid one-dimensional rank ladder.
+Old record as active evidence,DVC-003 / TTSS-011,SD-001 / NH-007,MERGE,"Physical/archive evidence must change action, custody or permissions."
+Clue chain / movement,DVC-002,SD-008 / DCC-007,RELATED,DVC is information chain; SD adds geographic hazard; DCC adds state/goal refresh.
+Outsider competence vs authority,RR-006,NH-002/NH-012,KEEP NH CORE,NH is more directly reusable for competence/status/office distinction.
+Scale expansion,PHM-003,ZK-005,MERGE WITH GUARDRAIL,"Scale may expand only if it adds new kind of constraint/duty, not just bigger threat."
+Information outranks strength,TTSS-010,ZK-003,MERGE,"Power map should privilege authorization/information edges, not combat score."
+Human cause under system anomaly,REC-001/003,WAT-006,RELATED,REC: symptom→mechanism; WAT: supernatural/system symptom traced to human choice. Keep variants.
+Coherent antagonist doctrine,REC-007,WAT-004,RELATED,One is ideology; one is technically effective but unlawful intervention. Both improve non-cartoon conflict.
+Same scene reinterpreted,REC-014,ROD-003/010,RELATED,REC = literal revisit; Ishiguro = narrator evidence contradiction. Keep distinct variants.
+Team specialization,PHM-012,SD-006,KEEP DISTINCT,Expert disagreement vs differentiated ensemble roles.
+Modular transitions,DM-007,DCC-004,MERGE + EXTEND,Abstract transition architecture plus bounded fresh rule arena.
+Moral choice costs optimization,REC-009,DCC-005,MERGE,"Hard ethics requires measurable sacrificed option/resource, not speech."
