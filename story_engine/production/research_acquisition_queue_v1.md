@@ -16,6 +16,7 @@
 - Red Rising: already likely full.
 - Storm Front: already likely full.
 - Sergey Lukyanenko — Night Watch / Ночной Дозор: ACQUIRED 2026-08-13. Uploaded FB2 ZIP verified as structurally complete enough for full-arc analysis: ~96.9k words, three stories, 41 structural sections, ending present. Status: LIKELY_FULL.
+- Rebecca Yarros — Fourth Wing / Четвёртое крыло: ACQUIRED 2026-08-13. Uploaded FB2 ZIP verified as structurally complete enough for full-arc analysis: ~160.7k words, 39 numbered chapters plus acknowledgements, series metadata Эмпирей #1, ending and acknowledgements present, no explicit demo/sample markers. Status: LIKELY_FULL.
 
 ## Purchase / obtain full-text priorities
 
@@ -28,8 +29,8 @@
    Reason: current copy is a scanned PDF with unusable text layer; architecture source should be searchable.
 
 ### P1 — current market comparison
-4. Rebecca Yarros — Fourth Wing — FULL.
-   Reason: current romantasy / BookTok / audio-series reference; study relationship intensity, training institution, serial hook, and accessibility.
+4. ~~Rebecca Yarros — Fourth Wing — FULL.~~ ACQUIRED.
+   Research use: current young/crossover commercial fantasy control source; study accessibility, high-pressure training institution, relationship intensity, progression, character-group dynamics, chapter exits, revelation cadence, and transition into a continuing series. Do not copy dragons, academy surface, romance beats, or signature set-pieces.
 5. Suzanne Collins — The Hunger Games OR Sunrise on the Reaping — FULL.
    Prefer The Hunger Games first for clean franchise-engine analysis; add Sunrise later for current-franchise revival/young-audience comparison.
 6. Will Wight — Unsouled (Cradle #1) — FULL.
