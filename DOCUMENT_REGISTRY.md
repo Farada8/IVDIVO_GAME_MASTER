@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.2
+Версия: v1.3
 Дата создания: 2026-07-09
-Дата обновления: 2026-07-22 (FRAN-001 полностью мигрирован из исходного файла; ранее MIGRATION-PARTIAL)
+Дата обновления: 2026-08-14 (добавлен NARR-004 — IVDIVO Professional Writing Studio v2.0 DRAFT)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -19,7 +19,7 @@
 
 ## Легенда категорий
 
-канон · механика · мир · персонажи · дополнения · Kickstarter · цифровая версия · франшиза · бизнес · карты · компоненты
+канон · механика · мир · персонажи · дополнения · Kickstarter · цифровая версия · франшиза · бизнес · карты · компоненты · нарратив · production
 
 ---
 
@@ -52,9 +52,14 @@
 | COMP-003 | SVET_DUH_KUMARY_MAGNIT_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный) | CORE-001 | MECH-001, COMP-001, COMP-002 |
 | COMP-004 | MARKET_COMPARATIVE_ANALYSIS_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный), бизнес | CORE-001 | RES-001, TEST-001 |
 | NARR-003 | NARRATIVE_DESIGN_FRAMEWORKS_v0.1_DRAFT | references/ | DRAFT | v0.1 | нарратив (методология) | GCORE-001 | ENT-001 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.2 | техническое | — | все документы выше |
+| NARR-004 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v2.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v2.0 | нарратив, production | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-003, STORY-001, NARR-002 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.3 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-14 — NARR-004
+
+`docs/00_PROJECT_CORE/IVDIVO_PROFESSIONAL_WRITING_STUDIO_v2.0_DRAFT.md` расширяет писательскую студию до исполняемой системы из 37 специализированных ролей. Для каждой роли определены линза, защищаемые активы, границы полномочий, критерий эскалации и acceptance test. Документ также фиксирует voice engines, Anti-GPT prose lock и Full-Studio gate. Статус DRAFT; канонический `IVDIVO_WRITING_PRODUCTION_CANON.md` остаётся вышестоящим производственным стандартом.
 
 ## Обновление 2026-07-22 — FRAN-001
 
