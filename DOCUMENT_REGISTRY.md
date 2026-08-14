@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.3
+Версия: v1.4
 Дата создания: 2026-07-09
-Дата обновления: 2026-08-14 (добавлен NARR-004 — IVDIVO Professional Writing Studio v2.0 DRAFT)
+Дата обновления: 2026-08-14 (добавлен NARR-005 — IVDIVO Professional Writing Studio v3.0 DRAFT)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -53,9 +53,14 @@
 | COMP-004 | MARKET_COMPARATIVE_ANALYSIS_v0.1_DRAFT | references/ | DRAFT | v0.1 | канон (сравнительный), бизнес | CORE-001 | RES-001, TEST-001 |
 | NARR-003 | NARRATIVE_DESIGN_FRAMEWORKS_v0.1_DRAFT | references/ | DRAFT | v0.1 | нарратив (методология) | GCORE-001 | ENT-001 |
 | NARR-004 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v2.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v2.0 | нарратив, production | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-003, STORY-001, NARR-002 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.3 | техническое | — | все документы выше |
+| NARR-005 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v3.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v3.0 | нарратив, production, социология, психология, worldbuilding, market | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-004, NARR-003, STORY-001, NARR-002, PSY-001, FRAN-001 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.4 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-14 — NARR-005
+
+`docs/00_PROJECT_CORE/IVDIVO_PROFESSIONAL_WRITING_STUDIO_v3.0_DRAFT.md` расширяет v2.0 до 64-ролевой operating system. Добавлены самостоятельные вертикали социологии, социальной антропологии, этнографии, политики, экономики, права, безопасности, криминологии, переговоров, когнитивистики, нейронауки, AI/robotics/synthetic life, переноса сознания, системной инженерии, технологической диффузии, биологии/xenophysiology, лингвистики, семиотики, педагогики, этики, онтологии ИВДИВО, media sociology, book/series production, screen/streaming production, line production и consumer/market/franchise/transmedia analysis. Зафиксированы три уровня подключения специалистов, Scene Routing Card, BLOCKER/MAJOR/WATCH/NOTE, Conflict Board, 12 specialist ledgers и полный production pipeline. Статус DRAFT; `IVDIVO_WRITING_PRODUCTION_CANON.md` остаётся вышестоящим стандартом.
 
 ## Обновление 2026-08-14 — NARR-004
 
