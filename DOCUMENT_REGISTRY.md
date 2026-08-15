@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.9
+Версия: v1.10
 Дата создания: 2026-07-09
-Дата обновления: 2026-08-15 (добавлен NARR-011 — Book 2 Voice Test 01)
+Дата обновления: 2026-08-15 (добавлен NARR-012 — Youth Everyday-Life Recognition Engine)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -56,13 +56,18 @@
 | NARR-005 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v3.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v3.0 | нарратив, production, социология, психология, worldbuilding, market | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-004, NARR-003, STORY-001, NARR-002, PSY-001, FRAN-001 |
 | NARR-006 | IVDIVO_SERIES_EMBODIMENT_DIMENSIONAL_WORLDS_ANGEL_GAIA_CYCLE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
 | NARR-007 | IVDIVO_THREE_LINE_SERIES_ARCHITECTURE_ORBITAL_YOUTH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
-| NARR-008 | IVDIVO_EARTH_MATRIX_SMITH_DAUGHTER_YOUTH_SAGA_BOOK2_MASTER_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, NARR-007, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-010, NARR-011, NARR-005, STORY-001, WORLD-001, ENT-001 |
-| NARR-009 | IVDIVO_70_BOOK_YOUTH_STORY_ENGINE_MULTILINE_SAGA_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, production, франшиза, персонажи | NARR-008, NARR-007, NARR-006, IVDIVO_WRITING_PRODUCTION_CANON | NARR-010, NARR-011, NARR-005, STORY-001, PSY-001, FRAN-001 |
-| NARR-010 | IVDIVO_BOOK2_DEVELOPMENT_PACK_CHARACTER_MYSTERY_BACKGROUND_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION | v0.1 | нарратив, персонажи, production, mystery | NARR-008, NARR-009, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-007, NARR-005, STORY-001, PSY-001, WORLD-001 |
-| NARR-011 | IVDIVO_BOOK2_VOICE_TEST_01_BREAKFAST_WITH_SMITH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT PROTOTYPE | v0.1 | нарратив, персонажи, prose calibration | NARR-008, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-007, NARR-005 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.9 | техническое | — | все документы выше |
+| NARR-008 | IVDIVO_EARTH_MATRIX_SMITH_DAUGHTER_YOUTH_SAGA_BOOK2_MASTER_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, NARR-007, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-010, NARR-011, NARR-012, NARR-005, STORY-001, WORLD-001, ENT-001 |
+| NARR-009 | IVDIVO_70_BOOK_YOUTH_STORY_ENGINE_MULTILINE_SAGA_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, production, франшиза, персонажи | NARR-008, NARR-007, NARR-006, IVDIVO_WRITING_PRODUCTION_CANON | NARR-010, NARR-011, NARR-012, NARR-005, STORY-001, PSY-001, FRAN-001 |
+| NARR-010 | IVDIVO_BOOK2_DEVELOPMENT_PACK_CHARACTER_MYSTERY_BACKGROUND_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION | v0.1 | нарратив, персонажи, production, mystery | NARR-008, NARR-009, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-012, NARR-007, NARR-005, STORY-001, PSY-001, WORLD-001 |
+| NARR-011 | IVDIVO_BOOK2_VOICE_TEST_01_BREAKFAST_WITH_SMITH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT PROTOTYPE | v0.1 | нарратив, персонажи, prose calibration | NARR-008, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-012, NARR-007, NARR-005 |
+| NARR-012 | IVDIVO_YOUTH_EVERYDAY_LIFE_RECOGNITION_ENGINE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION RULE | v0.1 | нарратив, youth, production, empathy | NARR-008, NARR-009, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-007, PSY-001, STORY-001 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.10 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-15 — NARR-012
+
+`docs/07_CAMPAIGNS_AND_STORIES/IVDIVO_YOUTH_EVERYDAY_LIFE_RECOGNITION_ENGINE_v0.1_DRAFT.md` фиксирует обязательный Recognition-First принцип молодёжной саги: подросток должен узнавать себя в героях до раскрытия космологии. Введены everyday arenas (школа, подработка, спортзал, площадка/двор, дорога домой, дом/кухня, кафе/магазин, вечеринка), micro-pain empathy rule, Fantastic Amplification Rule, Scene Acceptance Test, recognition rhythm, no-fake-youth rules и обязательная daily-life braid для Core Six Book 2. Перед 40-главным outline необходимо определить их школу/район, работу, спорт, транспорт, деньги, место встреч, orbital opportunity и обычное событие недели, которое существовало до supernatural incident. Статус DRAFT / ACTIVE PRODUCTION RULE; не канон до Founder approval.
 
 ## Обновление 2026-08-15 — NARR-011
 
