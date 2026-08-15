@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.12
+Версия: v1.13
 Дата создания: 2026-07-09
-Дата обновления: 2026-08-15 (добавлены CRAFT-001 и CRAFT-002 — Writing Library Study Ledger + Professional Fiction Craft Body of Knowledge)
+Дата обновления: 2026-08-15 (зарегистрированы CRAFT-003, CRAFT-004 и CRAFT-005 — три source-based study batch по писательскому мастерству)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -62,11 +62,18 @@
 | NARR-011 | IVDIVO_BOOK2_VOICE_TEST_01_BREAKFAST_WITH_SMITH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT PROTOTYPE | v0.1 | нарратив, персонажи, prose calibration | NARR-008, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-012, NARR-013, NARR-007, NARR-005 |
 | NARR-012 | IVDIVO_YOUTH_EVERYDAY_LIFE_RECOGNITION_ENGINE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION RULE | v0.1 | нарратив, youth, production, empathy | NARR-008, NARR-009, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-013, NARR-007, PSY-001, STORY-001 |
 | NARR-013 | IVDIVO_2035_SYNCHRONIZED_THREE_ZONE_TECH_ASYMMETRY_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE WORLD RULE | v0.1 | нарратив, мир, технологии, экономика, youth | NARR-007, NARR-008, NARR-009, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-012, NARR-011, WORLD-001, PSY-001, FRAN-001 |
-| CRAFT-001 | IVDIVO_WRITING_LIBRARY_STUDY_LEDGER_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT EXECUTION / FOUNDER DIRECTIVE RECORDED | v0.1 | craft, research, production | IVDIVO_WRITING_PRODUCTION_CANON, NARR-005 | CRAFT-002, NARR-003, NARR-009 |
-| CRAFT-002 | IVDIVO_PROFESSIONAL_FICTION_CRAFT_BODY_OF_KNOWLEDGE_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / EVIDENCE-BACKED INITIAL SYNTHESIS | v0.1 | craft, research, нарратив, production | CRAFT-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, NARR-003, NARR-009, NARR-010, NARR-012 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.12 | техническое | — | все документы выше |
+| CRAFT-001 | IVDIVO_WRITING_LIBRARY_STUDY_LEDGER_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT EXECUTION / FOUNDER DIRECTIVE RECORDED | v0.1 | craft, research, production | IVDIVO_WRITING_PRODUCTION_CANON, NARR-005 | CRAFT-002, CRAFT-003, CRAFT-004, CRAFT-005, NARR-003, NARR-009 |
+| CRAFT-002 | IVDIVO_PROFESSIONAL_FICTION_CRAFT_BODY_OF_KNOWLEDGE_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / EVIDENCE-BACKED INITIAL SYNTHESIS | v0.1 | craft, research, нарратив, production | CRAFT-001, IVDIVO_WRITING_PRODUCTION_CANON | CRAFT-003, CRAFT-004, CRAFT-005, NARR-005, NARR-003, NARR-009, NARR-010, NARR-012 |
+| CRAFT-003 | IVDIVO_CRAFT_STUDY_BATCH_01_SCENE_YA_DIALOGUE_READER_PSYCHOLOGY_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, scene, YA, dialogue, reader psychology | CRAFT-001, CRAFT-002 | CRAFT-004, CRAFT-005, NARR-005, NARR-010, NARR-012 |
+| CRAFT-004 | IVDIVO_CRAFT_STUDY_BATCH_02_STORY_ARCHITECTURE_CHARACTER_ACTION_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, story, character, action | CRAFT-001, CRAFT-002 | CRAFT-003, CRAFT-005, NARR-005, NARR-009, NARR-010 |
+| CRAFT-005 | IVDIVO_CRAFT_STUDY_BATCH_03_PLOT_SCENE_PROSE_VOICE_REVISION_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, plot, scene, prose, voice, revision | CRAFT-001, CRAFT-002 | CRAFT-003, CRAFT-004, NARR-005, NARR-010, NARR-011 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.13 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-15 — CRAFT-003 / CRAFT-004 / CRAFT-005
+
+Три source-based study batch фиксируют последовательное содержательное освоение писательского корпуса, а не только наличие файлов. `CRAFT-003` концентрируется на scene mechanics, YA, dialogue/subtext и reader psychology; `CRAFT-004` — на one-main-action story architecture, character causality, action, revelation→decision и character arcs; `CRAFT-005` — на plot/scene causality, value shifts, crisis/climax/resolution, scene→sequel bridge, setting-as-action, prose hierarchy, POV, voice через syntax/lexicon/rhythm и revision hierarchy. В batches явно сохраняется completion truth: частичный/тематический read-pass не даёт источнику автоматический статус `STUDIED + INTEGRATED`; этот статус определяется только CRAFT-001 после полного цикла.
 
 ## Обновление 2026-08-15 — CRAFT-001 / CRAFT-002
 
