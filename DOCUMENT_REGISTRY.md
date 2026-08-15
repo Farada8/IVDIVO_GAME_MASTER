@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.8
+Версия: v1.9
 Дата создания: 2026-07-09
-Дата обновления: 2026-08-15 (добавлен NARR-010 — Book 2 active development pack)
+Дата обновления: 2026-08-15 (добавлен NARR-011 — Book 2 Voice Test 01)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -56,12 +56,17 @@
 | NARR-005 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v3.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v3.0 | нарратив, production, социология, психология, worldbuilding, market | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-004, NARR-003, STORY-001, NARR-002, PSY-001, FRAN-001 |
 | NARR-006 | IVDIVO_SERIES_EMBODIMENT_DIMENSIONAL_WORLDS_ANGEL_GAIA_CYCLE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
 | NARR-007 | IVDIVO_THREE_LINE_SERIES_ARCHITECTURE_ORBITAL_YOUTH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
-| NARR-008 | IVDIVO_EARTH_MATRIX_SMITH_DAUGHTER_YOUTH_SAGA_BOOK2_MASTER_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, NARR-007, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-010, NARR-005, STORY-001, WORLD-001, ENT-001 |
-| NARR-009 | IVDIVO_70_BOOK_YOUTH_STORY_ENGINE_MULTILINE_SAGA_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, production, франшиза, персонажи | NARR-008, NARR-007, NARR-006, IVDIVO_WRITING_PRODUCTION_CANON | NARR-010, NARR-005, STORY-001, PSY-001, FRAN-001 |
-| NARR-010 | IVDIVO_BOOK2_DEVELOPMENT_PACK_CHARACTER_MYSTERY_BACKGROUND_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION | v0.1 | нарратив, персонажи, production, mystery | NARR-008, NARR-009, IVDIVO_WRITING_PRODUCTION_CANON | NARR-007, NARR-005, STORY-001, PSY-001, WORLD-001 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.8 | техническое | — | все документы выше |
+| NARR-008 | IVDIVO_EARTH_MATRIX_SMITH_DAUGHTER_YOUTH_SAGA_BOOK2_MASTER_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, NARR-007, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-010, NARR-011, NARR-005, STORY-001, WORLD-001, ENT-001 |
+| NARR-009 | IVDIVO_70_BOOK_YOUTH_STORY_ENGINE_MULTILINE_SAGA_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, production, франшиза, персонажи | NARR-008, NARR-007, NARR-006, IVDIVO_WRITING_PRODUCTION_CANON | NARR-010, NARR-011, NARR-005, STORY-001, PSY-001, FRAN-001 |
+| NARR-010 | IVDIVO_BOOK2_DEVELOPMENT_PACK_CHARACTER_MYSTERY_BACKGROUND_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION | v0.1 | нарратив, персонажи, production, mystery | NARR-008, NARR-009, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-007, NARR-005, STORY-001, PSY-001, WORLD-001 |
+| NARR-011 | IVDIVO_BOOK2_VOICE_TEST_01_BREAKFAST_WITH_SMITH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT PROTOTYPE | v0.1 | нарратив, персонажи, prose calibration | NARR-008, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-007, NARR-005 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.9 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-15 — NARR-011
+
+`docs/07_CAMPAIGNS_AND_STORIES/IVDIVO_BOOK2_VOICE_TEST_01_BREAKFAST_WITH_SMITH_v0.1_DRAFT.md` — первый prose/voice prototype активной разработки Book 2. Сцена тестирует 16–17-летнюю дочь Смита (временное имя Mara Keene), текущую публичную личность Смита Daniel Keene, живую мать Elise Ward и подругу Sloane Mercer как provisional names only. Сцена сознательно остаётся бытовой: завтрак, вечеринка, контроль отца, предложение матери переехать в ранний orbital habitat, Contact-news как фон. Вводится первая минимальная, отрицаемая аномалия — задержка/искажение отражения Смита — и его слишком быстрая профессиональная реакция на возможное visual disturbance. Никакого объяснения Matrix/Hierarchy/Lucifer. Статус DRAFT PROTOTYPE; не manuscript и не канон.
 
 ## Обновление 2026-08-15 — NARR-010
 
