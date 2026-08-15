@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.10
+Версия: v1.11
 Дата создания: 2026-07-09
-Дата обновления: 2026-08-15 (добавлен NARR-012 — Youth Everyday-Life Recognition Engine)
+Дата обновления: 2026-08-15 (добавлен NARR-013 — Synchronized 2035 Three-Zone Technology Asymmetry)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -56,14 +56,19 @@
 | NARR-005 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v3.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v3.0 | нарратив, production, социология, психология, worldbuilding, market | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-004, NARR-003, STORY-001, NARR-002, PSY-001, FRAN-001 |
 | NARR-006 | IVDIVO_SERIES_EMBODIMENT_DIMENSIONAL_WORLDS_ANGEL_GAIA_CYCLE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
 | NARR-007 | IVDIVO_THREE_LINE_SERIES_ARCHITECTURE_ORBITAL_YOUTH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
-| NARR-008 | IVDIVO_EARTH_MATRIX_SMITH_DAUGHTER_YOUTH_SAGA_BOOK2_MASTER_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, NARR-007, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-010, NARR-011, NARR-012, NARR-005, STORY-001, WORLD-001, ENT-001 |
-| NARR-009 | IVDIVO_70_BOOK_YOUTH_STORY_ENGINE_MULTILINE_SAGA_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, production, франшиза, персонажи | NARR-008, NARR-007, NARR-006, IVDIVO_WRITING_PRODUCTION_CANON | NARR-010, NARR-011, NARR-012, NARR-005, STORY-001, PSY-001, FRAN-001 |
-| NARR-010 | IVDIVO_BOOK2_DEVELOPMENT_PACK_CHARACTER_MYSTERY_BACKGROUND_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION | v0.1 | нарратив, персонажи, production, mystery | NARR-008, NARR-009, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-012, NARR-007, NARR-005, STORY-001, PSY-001, WORLD-001 |
-| NARR-011 | IVDIVO_BOOK2_VOICE_TEST_01_BREAKFAST_WITH_SMITH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT PROTOTYPE | v0.1 | нарратив, персонажи, prose calibration | NARR-008, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-012, NARR-007, NARR-005 |
-| NARR-012 | IVDIVO_YOUTH_EVERYDAY_LIFE_RECOGNITION_ENGINE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION RULE | v0.1 | нарратив, youth, production, empathy | NARR-008, NARR-009, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-007, PSY-001, STORY-001 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.10 | техническое | — | все документы выше |
+| NARR-008 | IVDIVO_EARTH_MATRIX_SMITH_DAUGHTER_YOUTH_SAGA_BOOK2_MASTER_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, NARR-007, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-010, NARR-011, NARR-012, NARR-013, NARR-005, STORY-001, WORLD-001, ENT-001 |
+| NARR-009 | IVDIVO_70_BOOK_YOUTH_STORY_ENGINE_MULTILINE_SAGA_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, production, франшиза, персонажи | NARR-008, NARR-007, NARR-006, IVDIVO_WRITING_PRODUCTION_CANON | NARR-010, NARR-011, NARR-012, NARR-013, NARR-005, STORY-001, PSY-001, FRAN-001 |
+| NARR-010 | IVDIVO_BOOK2_DEVELOPMENT_PACK_CHARACTER_MYSTERY_BACKGROUND_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION | v0.1 | нарратив, персонажи, production, mystery | NARR-008, NARR-009, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-012, NARR-013, NARR-007, NARR-005, STORY-001, PSY-001, WORLD-001 |
+| NARR-011 | IVDIVO_BOOK2_VOICE_TEST_01_BREAKFAST_WITH_SMITH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT PROTOTYPE | v0.1 | нарратив, персонажи, prose calibration | NARR-008, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-012, NARR-013, NARR-007, NARR-005 |
+| NARR-012 | IVDIVO_YOUTH_EVERYDAY_LIFE_RECOGNITION_ENGINE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION RULE | v0.1 | нарратив, youth, production, empathy | NARR-008, NARR-009, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-013, NARR-007, PSY-001, STORY-001 |
+| NARR-013 | IVDIVO_2035_SYNCHRONIZED_THREE_ZONE_TECH_ASYMMETRY_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE WORLD RULE | v0.1 | нарратив, мир, технологии, экономика, youth | NARR-007, NARR-008, NARR-009, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-012, NARR-011, WORLD-001, PSY-001, FRAN-001 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.11 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-15 — NARR-013
+
+`docs/07_CAMPAIGNS_AND_STORIES/IVDIVO_2035_SYNCHRONIZED_THREE_ZONE_TECH_ASYMMETRY_v0.1_DRAFT.md` фиксирует рабочую синхронизацию основных молодёжных линий в 2035: Earth Youth, Orbital Youth и Confederation Human Training Youth существуют одновременно, а не в разных исторических эпохах. Разница технологий объясняется не временем, а неравномерной диффузией Contact-технологий, миграцией капитала и талантов, новой инфраструктурой Orbit, ограниченным доступом к Confederation training systems и политико-экономическим интересом части orbital elites сохранять технологическую асимметрию с Землёй. Земля продолжает развиваться, но новые технологии появляются там выборочно — сначала в premium/institutional секторах. Зафиксирован производственный принцип: каждая технологическая разница должна создавать узнаваемую человеческую/подростковую проблему, а не служить декорацией. Статус DRAFT / ACTIVE WORLD RULE; не канон до Founder approval.
 
 ## Обновление 2026-08-15 — NARR-012
 
