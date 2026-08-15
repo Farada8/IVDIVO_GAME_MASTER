@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.5
+Версия: v1.6
 Дата создания: 2026-07-09
-Дата обновления: 2026-08-15 (добавлен NARR-006 — Embodiment / Dimensional Worlds / Angel–Gaia / Ouroboros cycle)
+Дата обновления: 2026-08-15 (добавлен NARR-007 — Three-Line Series Architecture / Orbital Youth)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -55,9 +55,14 @@
 | NARR-004 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v2.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v2.0 | нарратив, production | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-003, STORY-001, NARR-002 |
 | NARR-005 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v3.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v3.0 | нарратив, production, социология, психология, worldbuilding, market | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-004, NARR-003, STORY-001, NARR-002, PSY-001, FRAN-001 |
 | NARR-006 | IVDIVO_SERIES_EMBODIMENT_DIMENSIONAL_WORLDS_ANGEL_GAIA_CYCLE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.5 | техническое | — | все документы выше |
+| NARR-007 | IVDIVO_THREE_LINE_SERIES_ARCHITECTURE_ORBITAL_YOUTH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.6 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-15 — NARR-007
+
+`docs/07_CAMPAIGNS_AND_STORIES/IVDIVO_THREE_LINE_SERIES_ARCHITECTURE_ORBITAL_YOUTH_v0.1_DRAFT.md` фиксирует трёхконтурную архитектуру будущих книг: (A) Embodiment/Youth Cohort frontier, (B) Earth/Ouroboros/Custodian detective-horror line, (C) Orbital Youth — coming-of-age/romance/social ensemble в Contact-accelerated орбитальном городе. В документе закреплены continuity lock для 2032, технологический быт на основе future-tech palette (Personal AI, Second Brain, Digital Twin, Spatial Computing, Neurorights, Synthetic Persons, AI-run enterprises, post-scarcity, longevity, programmable materials), точки пересечения трёх линий, character rotation и development ledgers. Статус DRAFT; не канон до Founder approval.
 
 ## Обновление 2026-08-15 — NARR-006
 
