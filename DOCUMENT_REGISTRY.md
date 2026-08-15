@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.4
+Версия: v1.5
 Дата создания: 2026-07-09
-Дата обновления: 2026-08-14 (добавлен NARR-005 — IVDIVO Professional Writing Studio v3.0 DRAFT)
+Дата обновления: 2026-08-15 (добавлен NARR-006 — Embodiment / Dimensional Worlds / Angel–Gaia / Ouroboros cycle)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -54,9 +54,14 @@
 | NARR-003 | NARRATIVE_DESIGN_FRAMEWORKS_v0.1_DRAFT | references/ | DRAFT | v0.1 | нарратив (методология) | GCORE-001 | ENT-001 |
 | NARR-004 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v2.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v2.0 | нарратив, production | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-003, STORY-001, NARR-002 |
 | NARR-005 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v3.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v3.0 | нарратив, production, социология, психология, worldbuilding, market | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-004, NARR-003, STORY-001, NARR-002, PSY-001, FRAN-001 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.4 | техническое | — | все документы выше |
+| NARR-006 | IVDIVO_SERIES_EMBODIMENT_DIMENSIONAL_WORLDS_ANGEL_GAIA_CYCLE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.5 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-15 — NARR-006
+
+`docs/07_CAMPAIGNS_AND_STORIES/IVDIVO_SERIES_EMBODIMENT_DIMENSIONAL_WORLDS_ANGEL_GAIA_CYCLE_v0.1_DRAFT.md` фиксирует Founder-driven развитие серии после `LESSON ZERO`: embodiment и специализированные тела, влияние материи носителя на личность, кислотные/океанические/звёздные/сверхплотные/квантово-мерностные тела, distributed subjectivity, plasmoid/stellar life, dimensional inversion through sleep, ontological spectrum, fractal universes, zero-distance/co-local layer, ancient Traveler/Angel/Gaia historical cycle, Earth-born descendants, character rotation, Books 2–6 macro-architecture и параллельную Earth/Ouroboros thriller line с оригинальным Custodian mechanism. Статус DRAFT; не канон до Founder approval. Book 1 continuity explicitly locked.
 
 ## Обновление 2026-08-14 — NARR-005
 
