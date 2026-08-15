@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.11
+Версия: v1.12
 Дата создания: 2026-07-09
-Дата обновления: 2026-08-15 (добавлен NARR-013 — Synchronized 2035 Three-Zone Technology Asymmetry)
+Дата обновления: 2026-08-15 (добавлены CRAFT-001 и CRAFT-002 — Writing Library Study Ledger + Professional Fiction Craft Body of Knowledge)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -19,7 +19,7 @@
 
 ## Легенда категорий
 
-канон · механика · мир · персонажи · дополнения · Kickstarter · цифровая версия · франшиза · бизнес · карты · компоненты · нарратив · production
+канон · механика · мир · персонажи · дополнения · Kickstarter · цифровая версия · франшиза · бизнес · карты · компоненты · нарратив · production · craft · research
 
 ---
 
@@ -62,9 +62,17 @@
 | NARR-011 | IVDIVO_BOOK2_VOICE_TEST_01_BREAKFAST_WITH_SMITH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT PROTOTYPE | v0.1 | нарратив, персонажи, prose calibration | NARR-008, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-012, NARR-013, NARR-007, NARR-005 |
 | NARR-012 | IVDIVO_YOUTH_EVERYDAY_LIFE_RECOGNITION_ENGINE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION RULE | v0.1 | нарратив, youth, production, empathy | NARR-008, NARR-009, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-013, NARR-007, PSY-001, STORY-001 |
 | NARR-013 | IVDIVO_2035_SYNCHRONIZED_THREE_ZONE_TECH_ASYMMETRY_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE WORLD RULE | v0.1 | нарратив, мир, технологии, экономика, youth | NARR-007, NARR-008, NARR-009, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-012, NARR-011, WORLD-001, PSY-001, FRAN-001 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.11 | техническое | — | все документы выше |
+| CRAFT-001 | IVDIVO_WRITING_LIBRARY_STUDY_LEDGER_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT EXECUTION / FOUNDER DIRECTIVE RECORDED | v0.1 | craft, research, production | IVDIVO_WRITING_PRODUCTION_CANON, NARR-005 | CRAFT-002, NARR-003, NARR-009 |
+| CRAFT-002 | IVDIVO_PROFESSIONAL_FICTION_CRAFT_BODY_OF_KNOWLEDGE_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / EVIDENCE-BACKED INITIAL SYNTHESIS | v0.1 | craft, research, нарратив, production | CRAFT-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, NARR-003, NARR-009, NARR-010, NARR-012 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.12 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-15 — CRAFT-001 / CRAFT-002
+
+`docs/01_RESEARCH/WRITING_CRAFT/IVDIVO_WRITING_LIBRARY_STUDY_LEDGER_v0.1_DRAFT.md` фиксирует прямое указание основателя: каждая загруженная книга должна быть реально изучена и её знания должны быть внесены в проект. Введена строгая шкала `REGISTERED → INTEGRITY VERIFIED → READ PASS 1 → STRUCTURE/PASSPORT → MECHANISM EXTRACTION → CROSS-SOURCE SYNTHESIS → OPERATIONALIZED`; запрещено приравнивать наличие файла/оглавления/фрагмента к изучению. Baseline library audit: 171 файл, 100 `LIKELY_FULL`, 40 explicit fragments, 12 collections, 2 scanned/text-unavailable; новые загрузки после baseline требуют дальнейшего ingestion. Статус DRAFT execution document; сама Founder Directive является прямым указанием владельца.
+
+`docs/01_RESEARCH/WRITING_CRAFT/IVDIVO_PROFESSIONAL_FICTION_CRAFT_BODY_OF_KNOWLEDGE_v0.1_DRAFT.md` создаёт первый единый evidence-backed слой профессионального писательского знания: main story, plot causality, scene engine, character, relationships, dialogue/subtext, POV, reader psychology, YA, genre, SF/worldbuilding, prose/voice/sound, show/tell, mystery, suspense, endings и developmental editing. Каждый принцип должен быть связан с source support, механизмом и operational test. Документ не заявляет, что весь ~100-book corpus уже прочитан; completion truth хранится в CRAFT-001.
 
 ## Обновление 2026-08-15 — NARR-013
 
