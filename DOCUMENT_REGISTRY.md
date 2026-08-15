@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.6
+Версия: v1.7
 Дата создания: 2026-07-09
-Дата обновления: 2026-08-15 (добавлен NARR-007 — Three-Line Series Architecture / Orbital Youth)
+Дата обновления: 2026-08-15 (добавлены NARR-008 и NARR-009 — Earth/Matrix/Smith Book 2 + 70-Book Youth Story Engine)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -56,9 +56,19 @@
 | NARR-005 | IVDIVO_PROFESSIONAL_WRITING_STUDIO_v3.0_DRAFT | docs/00_PROJECT_CORE/ | DRAFT | v3.0 | нарратив, production, социология, психология, worldbuilding, market | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-004, NARR-003, STORY-001, NARR-002, PSY-001, FRAN-001 |
 | NARR-006 | IVDIVO_SERIES_EMBODIMENT_DIMENSIONAL_WORLDS_ANGEL_GAIA_CYCLE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
 | NARR-007 | IVDIVO_THREE_LINE_SERIES_ARCHITECTURE_ORBITAL_YOUTH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, CORE-001, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, NARR-002, WORLD-001, ENT-001 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.6 | техническое | — | все документы выше |
+| NARR-008 | IVDIVO_EARTH_MATRIX_SMITH_DAUGHTER_YOUTH_SAGA_BOOK2_MASTER_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, мир, персонажи, production | NARR-006, NARR-007, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-005, STORY-001, WORLD-001, ENT-001 |
+| NARR-009 | IVDIVO_70_BOOK_YOUTH_STORY_ENGINE_MULTILINE_SAGA_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT | v0.1 | нарратив, production, франшиза, персонажи | NARR-008, NARR-007, NARR-006, IVDIVO_WRITING_PRODUCTION_CANON | NARR-005, STORY-001, PSY-001, FRAN-001 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.7 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-15 — NARR-009
+
+`docs/07_CAMPAIGNS_AND_STORIES/IVDIVO_70_BOOK_YOUTH_STORY_ENGINE_MULTILINE_SAGA_v0.1_DRAFT.md` фиксирует производственный принцип долгой саги: ориентир около 70 самостоятельных человеческих романов на каждую большую линию Earth / Orbit / Frontier, но без padding и без превращения lore в сюжет. Введены Human-Problem-First gate, обязательная Story Card, 7 development waves, no-repetition matrix, relationship graph как межлинейная инфраструктура, source-learning protocol для загруженных книг и стартовые 12 book seeds для каждой из трёх линий. Статус DRAFT; не канон до Founder approval.
+
+## Обновление 2026-08-15 — NARR-008
+
+`docs/07_CAMPAIGNS_AND_STORIES/IVDIVO_EARTH_MATRIX_SMITH_DAUGHTER_YOUTH_SAGA_BOOK2_MASTER_v0.1_DRAFT.md` фиксирует Founder-driven планетарную линию Earth/Matrix/Smith и запускает Book 2 вокруг 16–17-летней дочери Смита. Зафиксированы: YA social ensemble, оригинальная Constantine-function без копирования персонажа, case-of-book с подростковой «нормализацией», исторический mystery Смита, body-transfer, false-light / искусственная психическая субстанция любви, ontological camouflage, иерархический ликвидатор, пробуждения 15–18, типология необычных субъектов, сильные Посвящённые/Иерархи, футуристический Кутхуми, поздняя гипотеза Lucifer, тёмные внешние воплощения, Смит как двойной агент в школе Синтеза, пробуждение Смита, кармическая разгрузка/просветление Матрицы, ранний orbital exodus из-за кризиса психической безопасности, Contact/Confederation background braid, временная лестница до ~2200 и дальние Frontier/galactic limits. Статус DRAFT; не канон до Founder approval.
 
 ## Обновление 2026-08-15 — NARR-007
 
