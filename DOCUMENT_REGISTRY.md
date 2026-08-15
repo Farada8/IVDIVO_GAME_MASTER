@@ -1,8 +1,8 @@
 # DOCUMENT_REGISTRY
 
-Версия: v1.15
+Версия: v1.16
 Дата создания: 2026-07-09
-Дата обновления: 2026-08-15 (зарегистрированы CRAFT-008, CRAFT-009, CRAFT-010)
+Дата обновления: 2026-08-15 (зарегистрированы CRAFT-011, CRAFT-012, CRAFT-013)
 Код документа: REG-002
 Тип: [TECHNICAL]
 
@@ -62,9 +62,9 @@
 | NARR-011 | IVDIVO_BOOK2_VOICE_TEST_01_BREAKFAST_WITH_SMITH_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT PROTOTYPE | v0.1 | нарратив, персонажи, prose calibration | NARR-008, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-009, NARR-012, NARR-013, NARR-007, NARR-005 |
 | NARR-012 | IVDIVO_YOUTH_EVERYDAY_LIFE_RECOGNITION_ENGINE_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE PRODUCTION RULE | v0.1 | нарратив, youth, production, empathy | NARR-008, NARR-009, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-011, NARR-013, NARR-007, PSY-001, STORY-001 |
 | NARR-013 | IVDIVO_2035_SYNCHRONIZED_THREE_ZONE_TECH_ASYMMETRY_v0.1_DRAFT | docs/07_CAMPAIGNS_AND_STORIES/ | DRAFT / ACTIVE WORLD RULE | v0.1 | нарратив, мир, технологии, экономика, youth | NARR-007, NARR-008, NARR-009, NARR-010, IVDIVO_WRITING_PRODUCTION_CANON | NARR-012, NARR-011, WORLD-001, PSY-001, FRAN-001 |
-| CRAFT-001 | IVDIVO_WRITING_LIBRARY_STUDY_LEDGER_v0.2_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT EXECUTION / FOUNDER DIRECTIVE RECORDED | v0.2 | craft, research, production | IVDIVO_WRITING_PRODUCTION_CANON, NARR-005 | CRAFT-002, CRAFT-003, CRAFT-004, CRAFT-005, CRAFT-006, CRAFT-007, CRAFT-008, CRAFT-009, CRAFT-010, NARR-003, NARR-009 |
+| CRAFT-001 | IVDIVO_WRITING_LIBRARY_STUDY_LEDGER_v0.2_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT EXECUTION / FOUNDER DIRECTIVE RECORDED | v0.2 | craft, research, production | IVDIVO_WRITING_PRODUCTION_CANON, NARR-005 | CRAFT-002, CRAFT-003, CRAFT-004, CRAFT-005, CRAFT-006, CRAFT-007, CRAFT-008, CRAFT-009, CRAFT-010, CRAFT-011, CRAFT-012, CRAFT-013, NARR-003, NARR-009 |
 | CRAFT-001-ARCHIVE | IVDIVO_WRITING_LIBRARY_STUDY_LEDGER_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DEPRECATED / SUPERSEDED BY v0.2 | v0.1 | craft, research, production | CRAFT-001 | — |
-| CRAFT-002 | IVDIVO_PROFESSIONAL_FICTION_CRAFT_BODY_OF_KNOWLEDGE_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / EVIDENCE-BACKED INITIAL SYNTHESIS | v0.1 | craft, research, нарратив, production | CRAFT-001, IVDIVO_WRITING_PRODUCTION_CANON | CRAFT-003, CRAFT-004, CRAFT-005, CRAFT-006, CRAFT-007, CRAFT-008, CRAFT-009, CRAFT-010, NARR-005, NARR-003, NARR-009, NARR-010, NARR-012 |
+| CRAFT-002 | IVDIVO_PROFESSIONAL_FICTION_CRAFT_BODY_OF_KNOWLEDGE_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / EVIDENCE-BACKED INITIAL SYNTHESIS | v0.1 | craft, research, нарратив, production | CRAFT-001, IVDIVO_WRITING_PRODUCTION_CANON | CRAFT-003, CRAFT-004, CRAFT-005, CRAFT-006, CRAFT-007, CRAFT-008, CRAFT-009, CRAFT-010, CRAFT-011, CRAFT-012, CRAFT-013, NARR-005, NARR-003, NARR-009, NARR-010, NARR-012 |
 | CRAFT-003 | IVDIVO_CRAFT_STUDY_BATCH_01_SCENE_YA_DIALOGUE_READER_PSYCHOLOGY_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, scene, YA, dialogue, reader psychology | CRAFT-001, CRAFT-002 | CRAFT-004, CRAFT-005, CRAFT-006, CRAFT-007, CRAFT-008, CRAFT-009, CRAFT-010, NARR-005, NARR-010, NARR-012 |
 | CRAFT-004 | IVDIVO_CRAFT_STUDY_BATCH_02_STORY_ARCHITECTURE_CHARACTER_ACTION_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, story, character, action | CRAFT-001, CRAFT-002 | CRAFT-003, CRAFT-005, CRAFT-006, CRAFT-007, CRAFT-008, CRAFT-009, CRAFT-010, NARR-005, NARR-009, NARR-010 |
 | CRAFT-005 | IVDIVO_CRAFT_STUDY_BATCH_03_PLOT_SCENE_PROSE_VOICE_REVISION_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, plot, scene, prose, voice, revision | CRAFT-001, CRAFT-002 | CRAFT-003, CRAFT-004, CRAFT-006, CRAFT-007, CRAFT-008, CRAFT-009, CRAFT-010, NARR-005, NARR-010, NARR-011 |
@@ -73,9 +73,20 @@
 | CRAFT-008 | IVDIVO_CRAFT_STUDY_BATCH_06_CONFLICT_SUSPENSE_EMOTION_PROSE_COMPRESSION_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, conflict, suspense, emotion, prose, compression | CRAFT-001, CRAFT-002 | CRAFT-005, CRAFT-006, CRAFT-009, CRAFT-010, NARR-005, NARR-010, NARR-011 |
 | CRAFT-009 | IVDIVO_CRAFT_STUDY_BATCH_07_DETAIL_POV_NARRATOLOGY_SYMBOL_REVISION_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, detail, POV, narratology, symbol, revision | CRAFT-001, CRAFT-002 | CRAFT-005, CRAFT-007, CRAFT-008, CRAFT-010, NARR-005, NARR-010, NARR-011 |
 | CRAFT-010 | IVDIVO_CRAFT_STUDY_BATCH_08_CLOSE_READING_PROSE_RHYTHM_SUBTEXT_SELECTION_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, close reading, prose, rhythm, subtext, dialogue, selection | CRAFT-001, CRAFT-002 | CRAFT-005, CRAFT-007, CRAFT-008, CRAFT-009, NARR-005, NARR-010, NARR-011, NARR-012 |
-| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.15 | техническое | — | все документы выше |
+| CRAFT-011 | IVDIVO_CRAFT_STUDY_BATCH_09_DIALOGUE_CHARACTER_CAST_REWRITE_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, dialogue, character, cast, rewrite | CRAFT-001, CRAFT-002 | CRAFT-008, CRAFT-010, CRAFT-012, NARR-005, NARR-010, NARR-011 |
+| CRAFT-012 | IVDIVO_CRAFT_STUDY_BATCH_10_MYSTERY_SUSPENSE_SCENE_SELECTION_CAUSAL_REVISION_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, mystery, suspense, scene, causality, revision | CRAFT-001, CRAFT-002 | CRAFT-006, CRAFT-008, CRAFT-010, CRAFT-011, NARR-008, NARR-010, NARR-012 |
+| CRAFT-013 | IVDIVO_CRAFT_STUDY_BATCH_11_POV_INTIMACY_EMOTION_RHYTHM_SETTING_MANUSCRIPT_VALIDATION_v0.1_DRAFT | docs/01_RESEARCH/WRITING_CRAFT/ | DRAFT / SOURCE-BASED STUDY BATCH | v0.1 | craft, research, POV, emotion, rhythm, setting, manuscript validation | CRAFT-001, CRAFT-002 | CRAFT-007, CRAFT-009, CRAFT-010, CRAFT-011, CRAFT-012, NARR-011, NARR-012 |
+| REG-002 | DOCUMENT_REGISTRY (этот файл) | / | ACTIVE | v1.16 | техническое | — | все документы выше |
 
 ---
+
+## Обновление 2026-08-15 — CRAFT-011 / CRAFT-012 / CRAFT-013
+
+`CRAFT-011` добавляет source-based синтез по Robert McKee (*Dialogue*, *Character*) и Linda Seger: dialogue-as-verbal-action, exposition-as-leverage, said/unsaid/unsayable, tactic progression, character-specific speech, cast counterpoint, subplot causal collision и `MOTIVATION → GOAL → ACTION`. Введены Gates BI–BU.
+
+`CRAFT-012` добавляет source-based синтез по Jack Hodgins, Ursula K. Le Guin, Jordan Rosenfeld, James Scott Bell, Robert McKee и Jessica Brody: causal plot chain, `CAUSALITY / CURIOSITY / SUSPENSE` как разные двигатели, macro suspense, pressure transfer, audience-information modes, YA investigator connection, secret depth и dark-turn cost. Fair-play / clue-fairness пока отмечен как PROVISIONAL до отдельного specialist corpus. Введены Gates BV–CI.
+
+`CRAFT-013` добавляет source-based синтез по Jordan Rosenfeld (*Writing the Intimate Character*), Ursula K. Le Guin (*The Wave in the Mind*, *Steering the Craft*) и Jack Hodgins, а также узкую manuscript-validation проверку `LESSON ZERO BOOK1 v0.5`: POV intimacy/knowledge/attention filters, surface/subset emotion, thought/action braid, voice fingerprint, physical+social setting, stress-rhythm/bar analysis, sentence-length contrast, paragraph coherence и whole-integrity revision. Введены Gates CJ–CW. В Book 1 выявлен sample-level риск повторяющейся короткой emphatic cadence; одновременно translator/Taal/Aoife fragment отмечен как сильный пример `prior experience → attention bias → cue → interpretation → decision`. Полный whole-book verdict не заявляется.
 
 ## Обновление 2026-08-15 — CRAFT-008 / CRAFT-009 / CRAFT-010
 
