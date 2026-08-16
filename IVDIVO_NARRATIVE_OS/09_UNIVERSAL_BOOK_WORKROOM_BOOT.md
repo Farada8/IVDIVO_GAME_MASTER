@@ -37,14 +37,15 @@ For book-writing work, use this order unless a newer Founder instruction explici
 3. Locked previous-book canon/manuscripts.
 4. `IVDIVO_MASTER_SAGA_BIBLE_v1.0.md`.
 5. `IVDIVO_NARRATIVE_OS/00_NARRATIVE_OS_CANON.md`.
-6. This Universal Book Workroom Boot.
-7. `08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`.
-8. `02_AGENT_PROMPTS_MASTER.md`.
-9. Applicable book-specific overlay from `10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md`.
-10. Current book architecture / Character Bible / World Bible / Timeline / decision logs.
-11. Current manuscript.
-12. Reference mechanisms and source books.
-13. Archive / superseded material.
+6. `IVDIVO_NARRATIVE_OS/01_NARRATIVE_OS_CONFIG.yaml`.
+7. This Universal Book Workroom Boot.
+8. `08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`.
+9. `02_AGENT_PROMPTS_MASTER.md`.
+10. Applicable book-specific overlay from `10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md`.
+11. Current book architecture / Character Bible / World Bible / Timeline / decision logs.
+12. Current manuscript.
+13. Reference mechanisms and source books.
+14. Archive / superseded material.
 
 Never silently allow a lower source to override a higher source.
 
