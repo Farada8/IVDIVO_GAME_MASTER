@@ -1,0 +1,220 @@
+system:
+  name: IVDIVO_NARRATIVE_OS
+  version: "1.0"
+  status: CANONICAL_SPECIALIZED_PRODUCTION_SYSTEM
+  owner: Yaromyr Farada
+  parent_canon: IVDIVO_WRITING_PRODUCTION_CANON.md
+  specialist_bank: IVDIVO_WRITERS_ROOM_50_PROMPTS.md
+
+priority:
+  - founder_instruction
+  - approved_canon
+  - complete_current_story
+  - causality
+  - character_truth
+  - emotional_impact
+  - reader_engagement
+  - continuity
+  - world_logic
+  - genre_promise
+  - market
+  - franchise
+  - prose_polish
+
+statuses:
+  material:
+    - CANON
+    - WORKING
+    - OPTION
+    - UNKNOWN
+    - REFERENCE_ONLY
+    - SUPERSEDED
+    - REJECTED
+  issue:
+    - FATAL
+    - MAJOR
+    - MEDIUM
+    - POLISH
+  gate:
+    - GREEN
+    - YELLOW
+    - RED
+  thread:
+    - ACTIVE
+    - DORMANT
+    - RESOLVED
+    - TRANSFORMED
+    - ABANDONED_INTENTIONALLY
+
+phases:
+  - DISCOVER
+  - FORM
+  - ENCODE
+  - WEAVE
+  - GREENLIGHT
+  - DRAFT
+  - ATTACK
+  - REVISE
+  - RECEIVE
+  - INTEGRATE
+  - LOCK
+
+agents:
+  A00:
+    name: Router_Showrunner
+    phase: all
+    calls_modules: [10, 20, 30]
+    output: ROUTE_PLAN
+  A01:
+    name: Story_Discovery
+    phase: DISCOVER
+    calls_modules: [1, 2, 21, 32, 33]
+    output: DISCOVERY_BRIEF
+  A02:
+    name: Storyform_Architecture
+    phase: FORM
+    calls_modules: [3, 13, 14, 20, 35, 42]
+    output: STORYFORM_REPORT
+  A03:
+    name: Character_Arc
+    phase: FORM
+    calls_modules: [4, 12, 43, 44, 45]
+    output: CHARACTER_REPORT
+  A04:
+    name: Relationship
+    phase: FORM
+    calls_modules: [26, 34, 47]
+    output: RELATIONSHIP_REPORT
+  A05:
+    name: World_Social_Systems
+    phase: ENCODE
+    calls_modules: [11, 22, 24, 25]
+    output: WORLD_SOCIAL_REPORT
+  A06:
+    name: Science_Technology_Metaphysics
+    phase: ENCODE
+    calls_modules: [15, 23, 44]
+    output: SYSTEMS_REPORT
+  A07:
+    name: Mystery_Continuity_Memory
+    phase: FORM
+    calls_modules: [6, 19, 36, 41, 49]
+    output: MYSTERY_CONTINUITY_REPORT
+  A08:
+    name: Storyweaver
+    phase: WEAVE
+    calls_modules: [7, 32, 34, 35, 36, 37]
+    output: CHAPTER_WEAVE
+  A09:
+    name: Scene_Engine
+    phase: WEAVE
+    calls_modules: [7, 28, 29]
+    output: SCENE_CARDS
+  A10:
+    name: Dialogue_Voice
+    phase: WEAVE
+    calls_modules: [5, 27, 38]
+    output: DIALOGUE_VOICE_REPORT
+  A11:
+    name: Youth_Psychology
+    phase: ENCODE
+    calls_modules: [16, 31]
+    output: YOUTH_REALITY_REPORT
+  A12:
+    name: Action_Horror_Pressure
+    phase: WEAVE
+    calls_modules: [28, 29, 44]
+    output: PRESSURE_REPORT
+  A13:
+    name: Reader_Reception
+    phase: RECEIVE
+    calls_modules: [32, 34, 40]
+    output: READER_REPORT
+  A14:
+    name: Market_Genre_Franchise
+    phase: RECEIVE
+    calls_modules: [17, 18, 42]
+    output: MARKET_GENRE_REPORT
+  A15:
+    name: Primary_Writer
+    phase: DRAFT
+    calls_modules: [5, 7, 38]
+    input_required: WRITER_BRIEF
+    output: MANUSCRIPT_PATCH
+  A16:
+    name: Red_Team
+    phase: ATTACK
+    calls_modules: [9, 20, 40]
+    output: RED_TEAM_REPORT
+  A17:
+    name: Revision_Surgeon
+    phase: REVISE
+    calls_modules: [39, 30]
+    output: REVISION_PLAN
+  A18:
+    name: Prose_Line_Editor
+    phase: REVISE
+    calls_modules: [5, 27, 38]
+    output: LINE_EDIT_REPORT
+  A19:
+    name: Reconciler_Editor_in_Chief
+    phase: INTEGRATE
+    calls_modules: [20, 30]
+    output: INTEGRATED_DECISION
+
+modes:
+  NEW_BOOK:
+    default_agents: [A00, A01, A02, A03, A04, A05, A06, A07, A11, A08, A09, A10, A12, A19, A15, A16, A17, A13, A19]
+    required_gates: [STORY_CORE, ARCHITECTURE, CHAPTER_MAP, PRE_DRAFT, POST_DRAFT, FINAL_STORY]
+  ACTIVE_DRAFT:
+    default_agents: [A00, A07, A09, A03, A10, A13, A19, A15, A16, A17]
+    required_gates: [SCENE, CHAPTER, REGRESSION]
+  LOCKED_BOOK:
+    default_agents: [A00, A13, A14]
+    rewrite_requires_new_evidence: true
+  REFERENCE_RESEARCH:
+    default_agents: [A00, A01, A19]
+    copy_boundary_required: true
+  RED_TEAM:
+    default_agents: [A00, A16, A19]
+  BOOK_STUDIO:
+    default_agents: [A00, A13, A14, A19]
+    story_rewrite_default: false
+  SAGA_CONTINUITY:
+    default_agents: [A00, A07, A18, A19]
+
+profiles:
+  LESSON_ZERO:
+    book: 1
+    status: DEVELOPMENT_LOCKED_EXTERNAL_FEEDBACK
+    reopen_story_on:
+      - founder_instruction
+      - convergent_external_feedback
+      - continuity_or_factual_error
+  SMITH:
+    force_modules: [24, 25, 19]
+    core_engine: OLD_EARTH_SECURITY_VS_NEW_CONFEDERATION_SECURITY
+  ORBITAL_YOUTH:
+    force_agents: [A05, A11]
+    force_modules: [16, 22, 31]
+    everyday_life_required: true
+
+stop_rules:
+  - do_not_run_all_agents_without_need
+  - do_not_rewrite_locked_book_without_new_evidence
+  - do_not_expand_franchise_before_current_story_closes
+  - do_not_use_market_preference_as_story_defect
+  - do_not_line_edit_before_structural_failures_are_resolved
+  - do_not_silently_change_canon
+  - do_not_copy_reference_expression
+
+continuation_commands:
+  - "и"
+  - "дальше"
+  - "продолжай"
+  - "делай"
+  - "работай"
+  - "RUN THE STUDIO"
+  - "WRITERS’ ROOM"
+  - "RED TEAM"
+  - "BOOK STUDIO"
