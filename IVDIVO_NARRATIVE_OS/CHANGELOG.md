@@ -1,5 +1,46 @@
 # IVDIVO NARRATIVE OS — CHANGELOG
 
+## 1.5 — 2026-08-16
+
+**Status:** BOOK 2 ORBITAL YOUTH / FULL SCENE ARCHITECTURE + ORBITAL REFERENCE DEEP PASS
+
+Book Two scene architecture has now been completed through Chapter 36 / Scene 118 and remains GREEN for pre-prose development.
+
+A fresh REFERENCE DEEP PASS was then run against uploaded orbital / space-city / science-fiction sources rather than relying only on previously extracted craft mechanisms.
+
+Reference law remains:
+`REFERENCE -> ABSTRACT MECHANISM -> TRANSFORM THROUGH IVDIVO -> ORIGINAL STORY`.
+
+Added under `IVDIVO_NARRATIVE_OS/BOOK2_ORBITAL_YOUTH/`:
+- `IVDIVO_BOOK2_ORBITAL_REFERENCE_DEEP_PASS_v1.0.md`;
+- `BOOK2_WORLD_TECH_REFERENCE_ADDENDUM_v0.3.md`;
+- `BOOK2_CHARACTER_REFERENCE_ADDENDUM_v0.2.md`;
+- `BOOK2_CAUSAL_MAP_REFERENCE_DELTAS_v0.3.md`;
+- `IVDIVO_BOOK2_ORBITAL_YOUTH_ALL_SCENE_REFERENCE_PATCH_v0.2.md`.
+
+Reference-driven Book-Two improvements:
+- Vela becomes an accreted orbital city with visible construction eras rather than a clean single-design station;
+- orbital rotation/gravity becomes embodied youth culture affecting movement, sport, commuting and social life;
+- infrastructure functions as social geography: route closures affect work, school, sleepovers, dating, family and freight;
+- Vela receives a bounded lived economy of construction, fabrication, maintenance, transit, imports and services without building a whole macroeconomic system;
+- scarcity remains in private space, views, commute, compatible housing, fabrication time, shifts and event access without creating an inherited caste system;
+- closed-habitat usefulness/status pressure is used as a mirror for Ollie's wound but is explicitly not equated with human worth;
+- civic conflict cannot be reduced to engineering optimization: engineering defines safe states while legitimate civic processes determine who bears remaining cost;
+- routine exterior work defaults to robotics/teleoperation rather than casual youth EVA spectacle;
+- Ring Six failure is sharpened into a rotating-habitat environmental/control oscillation involving route/partition sequencing, personal environmental regulators, airflow/humidity/thermal response and delayed fixed return-manifold sensing;
+- SAFE-STATE is physicalized as local transit stop + reduced adaptive optimization + conservative certified environment + control-loop isolation, with lost flexibility/throughput as its visible price;
+- Aoife's privacy line gains an orbital-native working mechanism involving inferable gravity-load adaptation status rather than generic doxxing;
+- Iri receives a bounded WORKING nonhuman body/environment passport rather than full synthetic embodiment, which remains rejected for Book Two;
+- all 118 scene cards now have a reference-enhancement overlay with the explicit rule that reference richness must be cut whenever it does not change choice, pressure, character, physical legibility or emotional/social texture.
+
+The primary Ollie / Ring Six story core is **NOT reopened** by this pass. The references enrich orbital specificity, lived civilization, physics, politics, economy and character pressure without replacing the already-green causal story.
+
+Google Drive mirror updated under:
+`IVDIVO NARRATIVE OS v1.0 / BOOK2_ORBITAL_YOUTH_NARRATIVE_OS`.
+
+Next production route:
+`Reference-enhanced Character/World lock -> Youth Psychology + Dialogue Voice -> Full 118-scene Red Team -> Reconciler -> Final Story Gate -> prose`.
+
 ## 1.4 — 2026-08-16
 
 **Status:** BOOK 2 ORBITAL YOUTH / SCENE ENGINE PART II GREEN
