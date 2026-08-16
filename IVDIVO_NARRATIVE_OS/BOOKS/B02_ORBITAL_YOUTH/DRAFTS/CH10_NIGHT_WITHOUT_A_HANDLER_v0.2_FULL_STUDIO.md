@@ -438,7 +438,7 @@ The message was almost offensively reasonable.
 
 Maya typed:
 
-Still with Lea. Staying inside approved Zone Four. No route or environment change.
+Still with Lea. Staying inside approved Zone Four. No zone or environment change.
 
 Her thumb hovered over send.
 
@@ -448,9 +448,9 @@ She was with Lea.
 
 Arel’s was in Zone Four.
 
-The service adjustment did not create a hazard.
+No environmental restriction had appeared.
 
-What she had not written was where she intended to sleep.
+What she had not written was that the agreed sleep location had changed.
 
 She sent it.
 
