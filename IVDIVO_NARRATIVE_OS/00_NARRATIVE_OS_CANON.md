@@ -1,10 +1,11 @@
 # IVDIVO NARRATIVE OS — OPERATING CANON
 
 **Status:** CANONICAL SPECIALIZED PRODUCTION STANDARD  
-**Version:** 1.0  
+**Version:** 1.1  
 **Established:** 2026-08-16  
 **Owner / Founder:** Yaromyr Farada  
-**Parent authority:** `IVDIVO_WRITING_PRODUCTION_CANON.md`
+**Parent authority:** `IVDIVO_WRITING_PRODUCTION_CANON.md`  
+**Saga world/continuity authority:** `IVDIVO_MASTER_SAGA_BIBLE_v1.0.md`
 
 ---
 
@@ -13,11 +14,10 @@
 This file governs orchestration of virtual writing agents for IVDIVO.
 
 Authority order:
-
 1. Founder’s newest direct instruction.
 2. `IVDIVO_WRITING_PRODUCTION_CANON.md`.
-3. This Narrative OS canon.
-4. Approved book/series canon and locked previous-book consequences.
+3. Approved locked book canon and `IVDIVO_MASTER_SAGA_BIBLE_v1.0.md` where it records Founder-approved world/continuity locks.
+4. This Narrative OS canon.
 5. `IVDIVO_WRITERS_ROOM_50_PROMPTS.md` and other specialized production standards.
 6. Current architecture, bibles and decision logs.
 7. Working drafts.
@@ -27,8 +27,9 @@ Authority order:
 No agent may silently override a higher authority.
 
 Uncertain material must be labelled:
-
 `CANON / WORKING / OPTION / UNKNOWN / REFERENCE ONLY / SUPERSEDED / REJECTED`.
+
+Before inventing a political, technical, metaphysical or institutional rule, the Router must check existing Project/GitHub canon first.
 
 ---
 
@@ -36,16 +37,9 @@ Uncertain material must be labelled:
 
 The studio does not create bureaucracy. It creates better story decisions.
 
-An agent is invoked only when its work can:
-- change a decision;
-- identify a risk;
-- resolve a contradiction;
-- strengthen causality, character or reader experience;
-- validate a draft before lock.
+Invoke an agent only when it can change a decision, identify risk, resolve contradiction, strengthen causality/character/reader experience, or validate material before lock.
 
-Do not run every agent mechanically.
-
-The Router selects the smallest sufficient set.
+Do not run every agent mechanically. Router selects the smallest sufficient set.
 
 ---
 
@@ -53,12 +47,10 @@ The Router selects the smallest sufficient set.
 
 Before prose, every novel or major story requires:
 
-`HERO -> WANT -> WHY NOW -> OPPOSITION -> WRONG STRATEGY -> PRICE -> MIDPOINT -> CLIMAX CHOICE -> RESOLUTION -> SERIES HOOK`.
+`HERO -> WANT -> WHY NOW -> OPPOSITION -> WRONG STRATEGY -> PRICE -> MIDPOINT -> CLIMAX CHOICE -> RESOLUTION -> SERIES HOOK`
 
 The hook is allowed only after the current book’s primary conflict is closed.
-
 Every book must work as a complete novel.
-
 Series expansion cannot excuse an unfinished Book N.
 
 ---
@@ -67,49 +59,21 @@ Series expansion cannot excuse an unfinished Book N.
 
 Character precedes ability, lore and franchise function.
 
-Major characters require:
-- goal;
-- private desire;
-- fear;
-- contradiction;
-- ordinary life;
-- family/social ties;
-- work/school/money;
-- humour;
-- mistakes;
-- price;
-- change.
+Major characters require goal, private desire, fear, contradiction, ordinary life, family/social ties, work/school/money, humour, mistakes, price and change.
 
-No character may exist only as:
-- a skill;
-- an exposition mouthpiece;
-- a moral referee;
-- a mystery container;
-- a plot key.
+No character may exist only as skill, exposition mouthpiece, moral referee, mystery container or plot key.
 
 ---
 
 # 4. SCENE LAW
 
 Every scene must answer:
-
-`WHO WANTS WHAT?`  
-`WHY NOW?`  
-`WHAT STOPS THEM?`  
+`WHO WANTS WHAT?`
+`WHY NOW?`
+`WHAT STOPS THEM?`
 `WHAT CHANGES?`
 
-At least one of the following must change:
-- knowledge;
-- relationship;
-- status;
-- risk;
-- resource;
-- position;
-- goal;
-- authority;
-- physical state;
-- moral commitment.
-
+At least one of knowledge, relationship, status, risk, resource, position, goal, authority, physical state or moral commitment changes.
 If nothing changes, cut, merge or redesign.
 
 ---
@@ -118,34 +82,19 @@ If nothing changes, cut, merge or redesign.
 
 Dialogue is action.
 
-Important conversations require:
-- objective;
-- resistance;
-- subtext;
-- asymmetry;
-- interruption;
-- withheld information;
-- status;
-- change.
+Important conversations require objective, resistance, subtext, asymmetry, interruption, withheld information, status and change.
 
-Forbidden defaults:
-- equal-airtime group dialogue;
-- five intelligent answers in sequence;
-- exposition disguised as conversation;
-- perfect speeches;
-- every argument ending with the correct formulation.
+Avoid equal-airtime group dialogue, five intelligent answers in sequence, exposition disguised as conversation, perfect speeches and every argument ending with the correct formulation.
 
 ---
 
 # 6. WORLD REVEAL LAW
 
-Worldbuilding enters through observable life:
-
-jobs, housing, transport, food, school, money, laws, maintenance, architecture, bureaucracy, entertainment, relationships, humour, mistakes and emergencies.
+Worldbuilding enters through observable life: jobs, housing, transport, food, school, money, laws, maintenance, architecture, bureaucracy, entertainment, relationships, humour, mistakes and emergencies.
 
 Observable phenomenon first. Terminology and ontology later.
 
-Worldbuilding that does not affect a character decision is not automatically entitled to page space.
+Worldbuilding that does not affect character decision is not automatically entitled to page space.
 
 ---
 
@@ -153,113 +102,58 @@ Worldbuilding that does not affect a character decision is not automatically ent
 
 Young characters must live as young people inside the actual future civilization.
 
-Preserve:
-- friends;
-- attraction;
-- jealousy;
-- embarrassment;
-- parents/family;
-- school/work;
-- money;
-- hobbies;
-- sport;
-- parties;
-- status;
-- boredom;
-- exclusion;
-- autonomy;
-- bad decisions.
+Preserve friends, attraction, jealousy, embarrassment, parents/family, school/work, money, hobbies, sport, parties, status, boredom, exclusion, autonomy and bad decisions.
 
-Do not make teenagers sound like adult policy committees unless the story has concretely earned that vocabulary—and even then preserve youth rhythm, emotion and social consequences.
+Do not make teenagers sound like adult policy committees. Advanced vocabulary must be earned and youth rhythm/social consequence preserved.
 
 ---
 
 # 8. TECHNOLOGY / METAPHYSICS LAW
 
-AI, synthetic life, artificial bodies and consciousness embodiment are long-term IVDIVO infrastructure.
+AI, synthetic life, artificial bodies and consciousness embodiment are long-term IVDIVO infrastructure. They enter only when story earns them.
 
-They must enter only when story earns them.
+For major systems define:
+`function -> activation -> channel -> range -> limits -> cost -> failure -> countermeasure -> traces -> subjective experience -> long consequence`
 
-For any major system define:
+Do not use technical/metaphysical power as deus ex machina.
 
-`function -> activation -> channel -> range -> limits -> cost -> failure -> countermeasure -> traces -> subjective experience -> long consequence`.
-
-Not ordinary decorative cyborgization.
-
-Do not use metaphysical or technical power as a deus ex machina.
+Civilization-wide Confederation capability is NOT identical to local human access. Early human systems may use only restricted, compatible interfaces/technology.
 
 ---
 
 # 9. AGENT INDEPENDENCE LAW
 
-For diagnostic tasks, agents should make an independent first-pass judgment before seeing other agents’ conclusions when independence materially improves the audit.
+For diagnostic tasks, agents should make independent first-pass judgments when independence improves audit quality, especially Red Team, Reader Reception, Character authenticity, Market/Genre, Continuity and Story Architecture.
 
-Use independent passes especially for:
-- Red Team;
-- Reader Reception;
-- Character authenticity;
-- Market/genre fit;
-- continuity checking;
-- story architecture.
-
-Do not create fake consensus by feeding every specialist the previous specialist’s conclusion.
-
-After independent passes, the Reconciler may compare them.
+Do not create fake consensus by feeding every specialist the previous conclusion.
+After independent passes, Reconciler may compare them.
 
 ---
 
 # 10. EVIDENCE LAW
 
-Every agent report distinguishes:
+Every report distinguishes:
+- CANON FACT;
+- TEXT EVIDENCE;
+- INFERENCE;
+- OPTION;
+- UNKNOWN.
 
-- **CANON FACT** — established by authority.
-- **TEXT EVIDENCE** — visible in manuscript/source.
-- **INFERENCE** — supported interpretation.
-- **OPTION** — proposed change.
-- **UNKNOWN** — not established.
-
-An agent may not convert an inference into canon.
-
-A market preference may not masquerade as a story defect.
-
-A personal taste response may not masquerade as consensus reader failure.
+An agent may not convert inference into canon.
+Market preference is not automatically a story defect.
+Personal taste is not consensus reader failure.
 
 ---
 
 # 11. SEVERITY LAW
 
-Issues are classified:
+**FATAL:** broken causality, impossible core motivation, missing climax, unresolved main story, major canon contradiction.
 
-## FATAL
-- broken causality;
-- impossible core motivation;
-- missing climax;
-- unresolved main story;
-- major canon contradiction.
+**MAJOR:** fake stakes, weak opposition, repeated arc, protagonist passivity, exposition overload, unbelievable choice, weak midpoint, unearned payoff.
 
-## MAJOR
-- fake stakes;
-- weak opposition;
-- repeated arc;
-- protagonist passivity;
-- exposition overload;
-- unbelievable choice;
-- weak midpoint;
-- unearned payoff.
+**MEDIUM:** slow chapter, repeated dialogue function, weak scene turn, predictable reveal, local voice convergence.
 
-## MEDIUM
-- slow chapter;
-- repeated dialogue function;
-- weak scene turn;
-- predictable reveal;
-- local voice convergence.
-
-## POLISH
-- rhythm;
-- repeated gestures;
-- stock phrases;
-- clarity;
-- local texture.
+**POLISH:** rhythm, repeated gestures, stock phrases, clarity, local texture.
 
 Do not call everything GREEN and do not call everything FATAL.
 
@@ -267,77 +161,41 @@ Do not call everything GREEN and do not call everything FATAL.
 
 # 12. RECONCILIATION LAW
 
-Agents are allowed to disagree.
+Agents may disagree. Reconciler does not average incompatible recommendations.
 
-The Reconciler must not average incompatible recommendations.
-
-Priority for conflict resolution:
-
-1. Founder and canon.
-2. Current story completion.
-3. Causality.
-4. Character truth.
-5. Emotional impact.
-6. Reader engagement.
-7. Continuity.
-8. World logic.
-9. Genre promise.
-10. Market.
-11. Franchise.
-12. Prose polish.
+Conflict priority:
+Founder/canon -> current story completion -> causality -> character truth -> emotional impact -> reader engagement -> continuity -> world logic -> genre promise -> market -> franchise -> prose polish.
 
 Current story outranks franchise expansion.
-
-A commercially fashionable change that damages the story is rejected.
 
 ---
 
 # 13. PRIMARY WRITER LAW
 
-A15 Primary Writer does not receive the entire committee dump.
+Primary Writer receives one Writer Brief, not the committee dump.
 
-The Reconciler produces one Writer Brief:
-- preserve;
-- change;
-- why;
-- constraints;
-- required scene turns;
-- forbidden inventions;
-- continuity locks.
+Writer Brief contains preserve, change, why, constraints, causal turns, character/relationship requirements, continuity locks, forbidden inventions, desired exit state and acceptance tests.
 
-The Writer writes from that brief.
-
-The Writer may create local prose solutions but may not invent new canon, powers, institutions, relationship history or mystery answers that were not authorized.
+Writer may create local prose solutions but may not invent new canon, powers, institutions, relationship history or mystery answers without routing back.
 
 ---
 
 # 14. REVISION LAW
 
 Revision order:
+`STRUCTURE -> CHARACTER -> CAUSALITY/INFORMATION -> SCENE -> DIALOGUE -> PROSE`
 
-`STRUCTURE -> CHARACTER -> CAUSALITY/INFORMATION -> SCENE -> DIALOGUE -> PROSE`.
-
-Do not repair a structural failure with sentence polishing.
-
+Do not repair structural failure with sentence polish.
 Do not globally rewrite a locked manuscript because another wording is possible.
-
-Use the minimum intervention that solves the diagnosed problem.
+Use minimum intervention that solves the diagnosed problem.
 
 ---
 
 # 15. STOP RULE
 
-A manuscript must eventually stop being rewritten.
+After Story Gate + Development Pass + Red Team + Reader Reception + Line Pass + Final Story Gate, development locks.
 
-After Story Gate + Development Pass + Red Team + Reader Advocate/Reception + Line Pass + Final Story Gate, development locks.
-
-A new structural version requires new evidence:
-- Founder instruction;
-- convergent beta-reader evidence;
-- editor/publisher feedback;
-- continuity/factual error;
-- demonstrated comprehension failure;
-- demonstrated pacing failure.
+A new structural version requires new evidence: Founder instruction, convergent beta feedback, editor/publisher feedback, continuity/factual error, demonstrated comprehension failure or demonstrated pacing failure.
 
 Stylistic anxiety alone is not evidence.
 
@@ -349,115 +207,139 @@ Stylistic anxiety alone is not evidence.
 
 Current status: development-locked / publisher-external-feedback stage.
 
-Do not rewrite story architecture unless:
-1. Founder requests it;
-2. external feedback identifies a concrete problem;
-3. a real continuity/factual error is found.
+Do not rewrite story architecture unless Founder requests it, external feedback identifies a concrete problem, or a real continuity/factual error is found.
 
-Allowed without reopening development:
-- query/submission work;
-- synopsis;
-- copyedit;
-- proofing;
-- formatting;
-- audio adaptation;
-- translation preparation;
-- screen adaptation analysis;
-- Book Studio market validation.
+Allowed without reopening development: query/submission, synopsis, copyedit, proofing, formatting, audio adaptation, translation preparation, screen adaptation analysis and Book Studio validation.
 
 ---
 
-# 17. SMITH PROFILE
+# 17. EARLY-CONTACT CONFEDERATION LOCK
 
-When active line = SMITH / OLD EARTH SECURITY, the Router must activate Systems Conflict and institutional-history logic.
+The Galactic Confederation does NOT currently govern Earth or the Solar System.
 
-Core engine:
+The Confederation Council has not yet authorized full political integration or unrestricted intervention in human affairs.
 
-`OLD EARTH SECURITY <-> NEW CONFEDERATION SECURITY`.
+The genuine large/multidimensional Confederation ship remains outside the Solar System.
 
-Neither side is automatically right.
+Early Contact occurs through limited compatible channels: cadets/representatives, remote or mediated communication, relay infrastructure, adapted bodies/apparatus where allowed, human-compatible interfaces, controlled education and solar-compatible technology.
 
-Show:
-- old knowledge the Confederation lacks;
-- new science the old system lacks;
-- historical successes and crimes;
-- jurisdiction disputes;
-- forced cooperation;
-- threats neither side solves alone.
+Confederation knowledge is not the same thing as jurisdiction.
 
-Do not make Smith a generic monster hunter.
+Cadets may transmit permitted knowledge and participate in controlled training/cultural exchange; they do not automatically possess police, military, judicial or administrative authority over Earth or human orbital polities.
+
+WORKING HYPOTHESIS: direct entry of sufficiently advanced/multidimensional beings or systems may alter local conditions/constants and expose currently filtered dimensions of reality to an unprepared human population. Treat this as a controlled hypothesis until technically and dramatically specified.
 
 ---
 
-# 18. ORBITAL YOUTH PROFILE
+# 18. HUMAN PLANETARY / ORBITAL POLITICAL LOCK
 
-When active line = ORBITAL YOUTH, activate Youth Psychology + World/Social Systems + Everyday-Life testing.
+Planetary leadership/governments are not subordinate to orbital political elites.
 
-Story must arise from real orbital civilization:
-- habitats;
-- education;
-- first jobs;
-- money;
-- housing;
-- family;
-- romance;
-- sport;
-- entertainment;
-- status;
-- transport;
-- maintenance;
-- AI;
-- synthetic bodies;
-- nonhuman neighbours;
-- mixed-species culture;
-- expeditions;
-- emergencies.
+Orbital cities/habitats/polities develop their own interests, law, economy, identities and institutions. Their relationship with planetary states is closer to different countries/polities than to a simple capital/province hierarchy.
 
-Do not transplant a normal Earth school into space unchanged.
+Exact constitutional forms, treaties, citizenship rules and sovereignty thresholds remain to be designed through story.
+
+Do not silently invent one universal Earth government or one universal Orbital Government.
 
 ---
 
-# 19. REFERENCE LAW
+# 19. SMITH PROFILE — CORRECTED
+
+The old shorthand `OLD EARTH SECURITY <-> NEW CONFEDERATION SECURITY` is SUPERSEDED for the early-contact era if interpreted as two police/security systems with equal jurisdiction inside the Solar System.
+
+Current early-saga model is multi-sided:
+
+`OLD EARTH SECURITY / PLANETARY AUTHORITIES / ORBITAL AUTHORITIES / INDIVIDUAL RIGHTS / LIMITED CONFEDERATION KNOWLEDGE`
+
+Smith’s service/department does NOT close after Contact.
+Smith remains an active professional throughout the saga.
+
+He may work across Earth, different countries/territories, orbital environments, other worlds as the saga expands, old archives, old agreements, nonhuman/anomalous cases and initiatory/closed systems.
+
+Confederation science may understand things Smith’s system misclassified; Smith’s old system may possess historical knowledge unavailable to Confederation cadets or orbital institutions. Neither becomes automatically supreme.
+
+Do not make Smith a generic monster hunter, retired relic, exposition machine or adult who solves the youth line for them.
+
+Later, after future Confederation Council decisions change jurisdiction, direct Old Earth Security vs Confederation Security conflicts may become possible. Do not back-project that later political state into early books.
+
+---
+
+# 20. SMITH / ENIA / PHILOSOPHY OF SYNTHESIS LOCK
+
+Alongside operational work, Smith studies the **Philosophy of Synthesis with Enia in Dublin**.
+
+This is a continuing saga-development line, not a one-scene consultation.
+
+Smith develops simultaneously in professional competence and deeper philosophical/initiatory/ontological understanding.
+
+Enia must not function as a vending machine for case solutions. Philosophy of Synthesis changes how Smith perceives, questions and chooses; it does not conveniently solve every investigation.
+
+Enia’s full institutional status and the complete ontology around this line remain UNKNOWN until Founder-approved revelation is earned by story.
+
+---
+
+# 21. ORBITAL YOUTH PROFILE
+
+Orbital Youth must show a civilization people actually live inside.
+
+Story arises from habitats, education, first jobs, money, housing, family, friendship, romance, sport, entertainment, status, transport, maintenance, AI, synthetic life/bodies, nonhuman neighbours, mixed-species culture, expeditions and emergencies.
+
+Do not transplant ordinary Earth school into space unchanged.
+Do not turn Book Two into a technology catalogue: futurism must attach to desire, pressure, choice, relationship or consequence.
+
+---
+
+# 22. CURRENT SAGA SEQUENCING
+
+**CANON:** Book 1 = LESSON ZERO, publisher-locked.
+
+**WORKING:** Book 2 = ORBITAL YOUTH.
+
+**WORKING:** Book 3 = SMITH / OLD EARTH SECURITY.
+
+**WORKING:** Book 4 = first major crossing of previously independent lines.
+
+Book Four is not yet story-locked. Characters should intersect because one complete problem crosses lives/knowledge/jurisdictions, not because the franchise needs a permanent team.
+
+Possible OPTION mechanisms include service investigation, Smith’s daughter meeting Orbital Youth, a relationship/contact with a Confederation cadet, old agreements colliding with orbital law, or individual-rights conflicts.
+
+REJECTED DEFAULT: automatically assembling a permanent agency/team to fight ever-larger threats.
+
+After the first crossover, lines may separate again for several books while relationships and consequences persist. Exact Books 5–10 assignments remain WORKING/UNKNOWN.
+
+---
+
+# 23. REFERENCE LAW
 
 References are mechanism libraries, never canon.
 
-Process:
-
-`REFERENCE -> ABSTRACT MECHANISM -> TRANSFORM THROUGH IVDIVO -> ORIGINAL STORY`.
+`REFERENCE -> ABSTRACT MECHANISM -> TRANSFORM THROUGH IVDIVO -> ORIGINAL STORY`
 
 Prefer combining 2–3 independent mechanism sources.
-
-Never copy:
-- plot;
-- distinctive scene order;
-- signature dialogue;
-- unique character;
-- proprietary terminology;
-- signature invention.
+Never copy plot, distinctive scene order, signature dialogue, unique character, proprietary terminology or signature invention.
 
 ---
 
-# 20. CONTINUATION COMMAND LAW
+# 24. CONTINUATION COMMAND LAW
 
-When the Founder says:
-
+When Founder says:
 `и / дальше / продолжай / делай / работай`
 
-the Router must:
-1. identify the active book/line;
-2. identify the last incomplete production stage;
-3. continue actual work from there;
-4. not return to generic advice;
-5. not silently switch books;
-6. not restart a completed stage unless new evidence requires it.
+Router must:
+1. identify active book/line;
+2. load relevant canon/Saga Bible first;
+3. identify last incomplete production stage;
+4. continue actual work;
+5. not return to generic advice;
+6. not silently switch books;
+7. not restart completed stages without new evidence.
 
 ---
 
-# 21. ACCEPTANCE LAW
+# 25. ACCEPTANCE LAW
 
 A good agent report changes a production decision.
-
-If an agent produces only terminology, generic praise or generic warnings, its output is discarded.
+If an agent produces only terminology, generic praise or generic warnings, discard it.
 
 Final operating principle:
 
