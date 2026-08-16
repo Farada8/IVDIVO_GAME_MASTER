@@ -1,7 +1,7 @@
 # IVDIVO NARRATIVE OS — ROOT INDEX
 
 **Status:** CANONICAL SPECIALIZED PRODUCTION SYSTEM  
-**Version:** 1.0  
+**Version:** 1.1  
 **Established:** 2026-08-16
 
 Permanent multi-agent orchestration layer for the IVDIVO Writers’ Studio.
@@ -19,6 +19,16 @@ Start here:
 - [`06_BOOK_STUDIO_MODE.md`](./IVDIVO_NARRATIVE_OS/06_BOOK_STUDIO_MODE.md)
 - [`07_SYNC_POLICY.md`](./IVDIVO_NARRATIVE_OS/07_SYNC_POLICY.md)
 - [`CHANGELOG.md`](./IVDIVO_NARRATIVE_OS/CHANGELOG.md)
+
+## Current story-development routing
+
+- [`IVDIVO_STORY_GATE_v2.md`](./IVDIVO_NARRATIVE_OS/IVDIVO_STORY_GATE_v2.md) — active production gate for book/sequence/scene causality, progressive pressure, character choice, crisis/climax and completed resolution.
+- [`REFERENCE_MCKEE_STORY_MECHANICS.md`](./IVDIVO_NARRATIVE_OS/REFERENCE_MCKEE_STORY_MECHANICS.md) — **REFERENCE ONLY** craft mechanisms: value turn, gap, beats, causality, progressive pressure, character under pressure, crisis/climax.
+- [`IVDIVO_BOOK2_ORBITAL_YOUTH_STORY_CORE_v0.1.md`](./IVDIVO_NARRATIVE_OS/IVDIVO_BOOK2_ORBITAL_YOUTH_STORY_CORE_v0.1.md) — **WORKING** current Book 2 story-core candidate under the newer Saga Bible route `BOOK 2 = ORBITAL YOUTH`.
+
+## Superseded routing warning
+
+Older NARR-008 / NARR-010 development material that labels `SMITH'S DAUGHTER / EARTH AWAKENING = BOOK 2` remains valuable as Smith/Earth-line development, but that **book-number assignment is superseded** by the newer `IVDIVO_MASTER_SAGA_BIBLE_v1.0.md` unless the Founder explicitly restores it.
 
 The system orchestrates the existing canonical specialist bank [`IVDIVO_WRITERS_ROOM_50_PROMPTS.md`](./IVDIVO_WRITERS_ROOM_50_PROMPTS.md). It does not replace it.
 
