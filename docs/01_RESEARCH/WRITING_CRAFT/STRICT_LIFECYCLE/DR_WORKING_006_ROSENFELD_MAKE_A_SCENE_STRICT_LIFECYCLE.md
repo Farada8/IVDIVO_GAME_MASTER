@@ -24,28 +24,23 @@ Status: **STRICT FULL READ IN PROGRESS**
 - MANUSCRIPT VALIDATION — **OPEN**
 - SYNTHESIZED — **OPEN**
 
-This source must not be called `STUDIED + INTEGRATED` or strict synthesized until the continuous full read and all downstream stages are explicitly closed.
+Do not call this source `STUDIED + INTEGRATED` or strict synthesized until the continuous full read and all downstream stages are explicitly closed.
 
 ---
 
 # 1. INTEGRITY CHECK
 
-Visible front matter and TOC identify the 2017 Revised and Expanded Edition.
+Verified 2017 Revised and Expanded Edition.
 
-TOC contains:
-- Preface / Introduction;
-- Part I — Architecture of a Scene, Chapters 1–4;
-- Part II — Core Elements, Chapters 5–11;
-- Part III — Scene Types, Chapters 12–21;
-- Part IV — Other Scene Considerations, Chapters 22–25;
-- terminal `ABOUT THE AUTHOR` is present in the fetched text resource.
-
-Raw Drive PDF was materialized and independently inspected in this pass:
+Source checks:
+- PDF title metadata: `Make a Scene Revised and Expanded Edition`;
+- author: Jordan Rosenfeld;
 - 336 pages;
-- title metadata `Make a Scene Revised and Expanded Edition`;
-- author `Jordan Rosenfeld`;
-- local `pdftotext -layout` extraction produced 8,728 text lines;
-- no excerpt/demo marker observed.
+- 6,138,593 bytes;
+- full TOC through Part IV / Chapter 25 and terminal author matter;
+- no excerpt/demo marker observed;
+- local `pdftotext -layout` extraction is continuous and readable;
+- Chapter 9 opening page was visually rendered and checked against extracted text.
 
 Integrity confidence: **HIGH**.
 
@@ -53,21 +48,13 @@ Integrity confidence: **HIGH**.
 
 # 2. FULL READ LEDGER
 
-## Previous strict read
+## Closed before Pass 22
 
-Completed before this pass:
 - front matter;
 - Preface;
 - Introduction;
 - Chapter 1 `Functions of a Scene`;
-- Chapter 2 `Strong Scene Launches` through the start of `Action Launches`.
-
-## Continuous strict read completed in this pass
-
-Using the same Drive source, locally extracted with `pdftotext -layout`, continuous text was read from the prior continuation passage `GET STRAIGHT TO THE ACTION` through the end of Chapter 8.
-
-Closed in this pass:
-- remainder of Chapter 2 `Strong Scene Launches`;
+- Chapter 2 `Strong Scene Launches`;
 - Chapter 3 `Powerful Scene Middles`;
 - Chapter 4 `Successful Scene Endings`;
 - Chapter 5 `Setting`;
@@ -75,125 +62,211 @@ Closed in this pass:
 - Chapter 7 `Character Development and Motivation`;
 - Chapter 8 `Plot and Your Character’s Emotional Journey`.
 
-Local extraction continuity marker:
-- source text lines **576–2904** were processed from the prior pointer through the Chapter 9 heading.
+## Continuous strict read closed in Pass 22
+
+- Chapter 9 `Subtext`;
+- Chapter 10 `Dramatic Tension`;
+- Chapter 11 `Scene Intentions`;
+- Chapter 12 `Scene Types`;
+- Chapter 13 `Prologues`;
+- Chapter 14 `The First Scene`;
+- Chapter 15 `Contemplative Scenes`;
+- Chapter 16 `Suspense Scenes`;
+- Chapter 17 `Dialogue Scenes`.
+
+Continuous local text was read from the Chapter 9 heading through the end of Chapter 17.
 
 ## EXACT CONTINUATION POINTER
 
-**NEXT STRICT READ:** Chapter 9 `SUBTEXT`, local extracted-text line **2905**.
+**NEXT STRICT READ:** Chapter 18 `FLASHBACK SCENES`, local extracted-text line approximately **5924**, PDF page **229**.
 
-Recovery procedure if local file is unavailable in a later runtime:
+Recovery procedure:
 1. re-fetch Drive file ID `1tZ5l0rDCAyfcBffJX8oDv9AbYUUUVsnk`;
-2. extract readable text;
-3. find the Chapter 9 heading `SUBTEXT` immediately after Chapter 8 section `SHORING UP YOUR PLOT` and its criteria list ending with `Add complications or resolve an earlier complication`;
+2. extract readable text with layout preserved;
+3. find `18 FLASHBACK SCENES` immediately after `DIALOGUE SCENE MUSE POINTS`;
 4. resume there.
 
 Do **not** restart from page one without a retrieval reason.
 
 ---
 
-# 3. PRELIMINARY OBSERVATIONS — NOT YET FINAL CLAIMS
+# 3. PRELIMINARY OBSERVATIONS — NOT FINAL CLAIMS
 
-These notes come only from continuously read material and remain provisional until FULL READ and downstream stages close.
+These remain provisional until FULL READ and downstream lifecycle closure.
 
-## Scene launches
+## A. Scene architecture already supported
 
-1. Action-first is a useful launch mode, not a universal mandate. Rosenfeld herself allows narrative and setting launches when they perform a concrete job.
-2. Narrative summary at launch can be efficient when it saves dramatized logistics, supplies prerequisite information, or gives access to an otherwise inaccessible interior state.
-3. Setting launch is strongest when place materially affects plot, tone, character perception, or action.
-4. Her own caveat that not every scene can open with a large/surprising action is important for IVDIVO anti-inflation rules.
+1. A scene is a multi-element system; no single recipe of `conflict + reversal` is sufficient.
+2. Launch mode is functional: action, setting, narrative, character, or dialogue may work depending on the scene job.
+3. New scenes should arise from prior consequences rather than from author convenience.
+4. Scene intention is an immediate planned action; motivation is the reason beneath it. Confusing the two produces passive or abstract scenes.
+5. Plot-level intention and scene-level intention should be distinguishable but causally connected.
+6. Support matters as much as opposition: uninterrupted thwarting eventually stalls the plot and makes competence impossible.
+7. Endings may zoom in toward decision/emotion/revelation or zoom out toward reflection/aftershock; cliffhanger is one option, not a mandate.
+8. Setting, objects and senses are strongest when they affect action, perception, relationship or future payoff.
 
-## Scene middles / complications
+## B. Subtext — Chapter 9
 
-5. Complications should change plot or reveal character; cruelty `just because` is explicitly warned against.
-6. Withholding can create tension through emotion, information, or objects, but Rosenfeld overstates this when she says every scene should withhold some plot information. IVDIVO must retain fair-play/source-monitoring gates and allow scenes whose power comes from disclosure, consequence, intimacy, competence, or decision rather than withholding.
-7. Physical danger is only one pressure type; emotional danger and relationship power are often equally strong.
-8. Unexpected revelation is useful only when it transforms the operative model of character/reader and creates consequences.
+9. Rosenfeld defines subtext as the underlayer beneath visible action/dialogue: emotional baggage, agenda, suppressed information, unconscious motive and thematic resonance.
+10. Transferable subtext mechanisms include:
+   - recurring thematic imagery;
+   - suggestive objects/symbols;
+   - innuendo;
+   - involuntary or uncontrolled behavior;
+   - foreground/background counterpoint;
+   - environmental action that comments on the foreground without narrator explanation.
+11. The strongest transferable law is **surface action + second meaning**, not `insert a symbol`.
+12. Subtext works best when the reader can infer it without an explanatory sentence immediately afterward.
+13. Repeated imagery becomes useful only when its meaning evolves or pays against character/plot; otherwise it becomes decorative symbolism.
+14. A background action can carry thematic pressure while the foreground scene remains ordinary; this is valuable for Orbital Youth social scenes.
 
-## Scene endings
+## C. Dramatic tension — Chapter 10
 
-9. Rosenfeld’s `zoom-in / zoom-out` distinction is useful as a functional ending taxonomy: intimacy/decision/revelation versus distance/visual reset/reflection.
-10. Cliffhangers are explicitly not for every scene; overuse destroys modulation.
-11. Conclusive endings are legitimate and necessary when a local plotline or question has actually closed.
-12. Her allowance for character summaries at endings is risky for IVDIVO because it can become post-action thematic restatement. Existing `No End-of-Scene Restatement` remains the stricter gate: summary only when it adds information or interpretation the scene did not already demonstrate.
+15. Rosenfeld defines dramatic tension as potential conflict/uncertainty rather than overt fighting. Useful sources include goal resistance, power shifts, unexplained change, atmosphere, expectation gap and language rhythm.
+16. Narrative summary can **increase** tension when it compresses routine time/information and returns quickly to the decision-bearing moment.
+17. Technical/procedural knowledge should be digested and filtered through POV instead of reproduced as manual text.
+18. `Change without immediate explanation` is legitimate only when the change is plot-grounded and drives action; arbitrary oddity is not tension.
+19. Foreboding is mood; foreshadowing points toward actual later plot. Do not confuse the two.
+20. Melodrama often appears as emotional overstatement, hysterics, implausible gestures, affected speech, knee-jerk behavior changes and descriptor overload.
+21. Subtlety can carry more impact than emotional volume because silence, refusal, absence of expected tenderness and restrained behavior let the reader complete the emotional inference.
 
-## Setting / sensory work
+## D. Scene intentions — Chapter 11
 
-13. Setting is primarily action-support and reader-grounding, not decorative worldbuilding.
-14. Cultural/historical setting influences behavior, language, values and expectations and therefore can be causal rather than merely descriptive.
-15. Object attention creates an implicit significance contract: the more description/isolated emphasis an object receives, the more the reader expects payoff or character meaning.
-16. Setting is strongest when filtered through character perception and physical interaction.
-17. Sensory writing should remove unnecessary filter phrases (`saw`, `heard`, etc.) when POV already establishes the sensing subject; this supports existing IVDIVO anti-filter-word gates.
-18. Touch is not decoration: interpersonal touch carries consent, culture, history, threat, intimacy and boundary information.
-19. Scent can function as memory/transition trigger; sound can establish a location’s `signature`; taste can create small relational conflicts and intimacy.
+22. Strong practical chain: `prior consequence → immediate want → action → resistance/support → changed state → next intention`.
+23. Intentions should not be arbitrary mini-goals. They should arise from the inciting disturbance and/or its consequences.
+24. Opposition options: prevent completion, change feasibility, complicate the route, or force a new intention.
+25. Rosenfeld tends to overstate delay/opposition as the primary tension method. IVDIVO keeps the stricter rule: success, support, competence and disclosure are allowed when they change the story.
+26. A protagonist can receive help without becoming passive; allies are part of causal architecture, not plot weakness.
 
-## Character / plot causality
+## E. Prologues / first scenes — Chapters 13–14
 
-20. Rosenfeld strongly supports `prior consequence → new information/event → character reaction → complication → change`, which converges with the IVDIVO ONE MAIN STORY and scene-causality rules.
-21. Character and plot should be mutually dependent: if the plot can advance unchanged without the protagonist’s participation, the character may not actually own the story.
-22. Backstory is strongest when demonstrated through current behavior and relationships rather than delivered as explanation.
-23. A character may behave differently under pressure, but large behavior changes require accumulated causal preparation.
+27. A prologue needs a job unavailable or substantially clumsier in the linear first scene: nonlinear information, alternate POV, prior/future event, foreshadowing or high-value hook.
+28. Prologue is rejected when it is simply `starting too early` or a vignette whose function can be folded into Chapter 1.
+29. First-scene burden is real: orient protagonist, disturbance/problem, immediate intention, setting/tone and future complication without front-loading the entire world.
+30. Rosenfeld’s preference for fast opening pace is genre-market guidance, not universal law. IVDIVO preserves voice-first, social, contemplative or ordinary-life openings when the scene has causal pressure and curiosity.
+31. The first scene must not become world encyclopedia, cast roll call or backstory dossier.
 
-## Plot information / mystery
+## F. Contemplative scenes — Chapter 15
 
-24. New information should make the reader/character smarter, alter thought/feeling/action, and create consequences. This is a useful diagnostic, not a requirement that every scene deliver a factual clue.
-25. `Who / What / Where / When / Why / How` is useful as an information audit, especially for mystery, but IVDIVO must keep `observation / inference / source / confidence` distinctions from the existing Source-Monitoring Ledger.
-26. Rosenfeld’s recommendation to reveal `why` through discovery/action/dialogue rather than explanatory narration converges strongly with current IVDIVO mystery and character gates.
-27. Her `small courses` metaphor for information supports clue-ladder staging, but fair-play requires that delay not become authorial cheating.
-28. Chapter 8’s end contains a particularly useful practical rule: before inventing the next scene, review prior scenes to prevent repeated information and ask what new consequence naturally follows.
+32. This chapter materially corrects the earlier `every scene must visibly advance plot` rhetoric. A contemplative scene may primarily process consequences, reveal inner change, reshape intention and prepare the next action.
+33. Strong chain: `pressure/event → processing → reinterpretation → decision/changed readiness → renewed action`.
+34. Contemplation needs a concrete referent: thoughts should be about something the story actually caused, not generic philosophizing.
+35. Setting can operate as a reflective surface for thought; physical interaction prevents interior monologue from floating in a vacuum.
+36. Back-to-back contemplative scenes risk repetition and drag unless each creates a distinct state change.
+37. Rosenfeld often recommends ending contemplation with renewed action, decision, surprise or foreshadowing. IVDIVO adopts the functional change, not mandatory action cliffhanger.
 
-## Macro structure — strong but not universal
+## G. Suspense scenes — Chapter 16
 
-29. The four `Energetic Markers` (Point of No Return / Rededication / Dark Night / Triumph) are a school-specific architecture, not mandatory IVDIVO canon.
-30. The most useful transferable mechanism is **pressure creates strategy change and deeper commitment**.
-31. The weak/overprescriptive part is the expectation that the middle should broadly worsen until a singular darkest point and the ending should resolve with a `Triumph`. IVDIVO may use tragic, ambiguous, ensemble, procedural, mystery, social-SF, or partial-resolution structures where this exact arc does not fit.
-32. Rosenfeld also correctly notes that complications may become *less* severe for pacing, false security, or genuine resolution; this partially corrects her own escalation rhetoric.
+38. Suspense = meaningful uncertainty under stakes; it is not identical to fast pacing.
+39. Rosenfeld explicitly supports **slowing down** suspense through small details, measured action and interior thought. This strongly supports IVDIVO’s anti-choppy-syntax rule.
+40. Useful suspense mechanisms:
+   - legitimate delay;
+   - power transfer;
+   - protagonist/reader knowledge asymmetry;
+   - body/sensory signals;
+   - abnormality inside an otherwise normal pattern;
+   - uncertainty about which interpretation is correct.
+41. Suspense should arise from causal uncertainty, not from characters withholding information they would naturally share.
+42. A suspense sequence requires relief/modulation; three or more high-pressure scenes in a row are a warning signal, not a hard numeric law.
+43. Ending suspense may resolve the immediate danger and allow aftershock, or carry uncertainty forward. The next scene must pay whatever thread is left dangling.
+
+## H. Dialogue scenes — Chapter 17
+
+44. Dialogue is action when speakers are pursuing incompatible or partially incompatible aims.
+45. `Please / No` is a useful abstraction: underneath literal words, identify the tactical push/counterpush.
+46. Dialogue scenes should be grounded in place/body so voices do not float in a blank room.
+47. Dialogue used only for exposition/filler is weak. Direct speech is justified when the exact wording itself changes knowledge, power, relationship, emotion or decision.
+48. Big reveals should be **earned** and should have an observable effect on the receiving character.
+49. Rosenfeld’s claim that a major reveal should usually fall middle/end for maximum impact is a useful option, not a mandatory location rule.
+50. Subtext in dialogue can be carried by body language, setting objects, shared history, social power and the topic both sides avoid naming.
+51. A dialogue scene may end on spoken revelation, destabilization, readiness for action or reflective aftershock.
+52. Back-to-back dialogue scenes can create speed/rush and debate fatigue; modulation with action, setting, consequence or quiet processing may be needed.
 
 ---
 
-# 4. PRELIMINARY FAILURE MODES TO TEST LATER
+# 4. PRELIMINARY CROSS-SOURCE SYNTHESIS
+
+Not final until Rosenfeld lifecycle closure.
+
+## With Bell — Conflict & Suspense
+
+- AGREEMENT: tension may be local uncertainty rather than overt conflict.
+- AGREEMENT: delay only works if the reader cares about the outcome.
+- IMPORTANT CORRECTION: Rosenfeld explicitly supports slow, detail-rich suspense; therefore short sentences are not a suspense requirement.
+- IVDIVO synthesis: `CARE → UNCERTAINTY → RESISTANCE/PRESSURE → CHOICE → CONSEQUENCE`, with pace chosen by desired reader effect.
+
+## With Card / Kress / Hodgins
+
+- AGREEMENT: character behavior must be causally prepared; sudden emotional flip reads false/melodramatic.
+- AGREEMENT: POV filters setting/information.
+- IVDIVO synthesis: technical or social information is selected by what the POV character needs, fears, misunderstands or is trying to do.
+
+## With Chatman / prior scene gates
+
+- Rosenfeld’s contemplative scenes confirm that not every valuable scene is a kernel-like external event.
+- IVDIVO keeps emotional, relationship, epistemic and decision causality alongside event causality.
+
+## With Zunshine / source-monitoring work
+
+- Rosenfeld favors controlled information release.
+- IVDIVO adds a stricter firewall: `source → observation → inference → confidence → alternative explanation` must remain distinguishable. Delay cannot convert interpretation into fact.
+
+---
+
+# 5. PRELIMINARY FAILURE MODES
 
 Not final until full lifecycle closure.
 
-- **ACTION-LAUNCH MONOCULTURE** — every scene begins with movement or shock because `action first` is treated as law.
-- **COMPLICATION INFLATION** — adding danger/loss without causal relevance just to keep pressure rising.
-- **WITHHOLDING MONOCULTURE** — withholding information characters would naturally share, solely to preserve suspense.
-- **ENDING RESTATEMENT** — character explains what the already-demonstrated scene meant.
-- **OBJECT FALSE PROMISE** — heavily emphasized prop never acquires plot/character significance.
-- **SETTING TOURISM** — worldbuilding observed but not interacted with and not causal.
-- **SENSORY CHECKLIST PROSE** — inserting all five senses mechanically instead of selecting perception that matters to POV/action.
-- **FILTER DISTANCE** — repeated `he saw / she heard / he felt` weakening close POV without functional reason.
-- **PLOT-POLICE OVERREACH** — deleting relationship/identity/recovery material because it does not deliver an obvious external plot event, even when it changes future choices or emotional causality.
-- **ENERGETIC-MARKER TEMPLATE LOCK** — forcing every IVDIVO story into Rededication/Dark Night/Triumph architecture.
-- **UNPAID CHARACTER LEAP** — pressure is invoked as excuse for behavior not actually prepared by prior scenes.
+- **ACTION-LAUNCH MONOCULTURE** — every scene starts with movement/shock.
+- **COMPLICATION INFLATION** — new trouble is added only because pressure is supposed to rise.
+- **WITHHOLDING MONOCULTURE** — characters unnaturally hide facts to manufacture suspense.
+- **ENDING RESTATEMENT** — narration explains the meaning of behavior the reader already understood.
+- **OBJECT FALSE PROMISE** — emphasized prop/detail never pays.
+- **SETTING TOURISM** — world is shown but does not affect action or social meaning.
+- **SENSORY CHECKLIST PROSE** — senses inserted mechanically rather than through POV/action relevance.
+- **FILTER DISTANCE** — repeated `saw/heard/felt` weakens intended close POV.
+- **PLOT-POLICE OVERREACH** — relationship/recovery/identity scenes are cut despite changing future choice.
+- **ENERGETIC-MARKER TEMPLATE LOCK** — every story forced into one four-marker arc.
+- **UNPAID CHARACTER LEAP** — pressure used to justify unprepared behavior.
+- **SYMBOL ANNOUNCEMENT** — prose explains the symbol/image immediately after presenting it.
+- **SUBTEXT DECORATION** — symbolic detail has no causal, emotional or thematic relation to the scene.
+- **TENSION EVERYWHERE MONOCULTURE** — every ordinary interaction is darkened merely to feel dramatic.
+- **MELODRAMA AS STAKES** — emotional volume substitutes for meaningful consequence.
+- **INTENTION THWARTING LOOP** — hero repeatedly fails without strategy change or genuine support.
+- **PROLOGUE INSURANCE POLICY** — prologue exists because Chapter 1 is weak rather than because nonlinear placement adds value.
+- **CONTEMPLATION LOOP** — repeated reflection rephrases the same conclusion.
+- **SUSPENSE SPEED ERROR** — choppy syntax is used automatically where slow measured attention would create more anxiety.
+- **DEBATE DIALOGUE** — characters become polished thesis delivery systems rather than people with local agendas.
+- **REVEAL WITHOUT AFTERMATH** — information lands but no decision, relationship or emotional state changes.
 
 ---
 
-# 5. CURRENT CROSS-SOURCE QUESTIONS TO TEST DURING FULL READ
+# 6. CURRENT QUESTIONS FOR THE REMAINING FULL READ
 
-- Does Chapter 15 `Contemplative Scenes` adequately counterbalance Chapter 8’s `every scene pertains to plot` rhetoric?
-- How does Chapter 10 define tension beyond overt conflict?
-- How precise is Chapter 11 on intention changes within a scene?
-- Does the revised 2017 edition permit quiet/competence/success scenes strongly enough to support current IVDIVO modulation rules?
-- How do scene-type chapters handle suspense without mandatory withholding/cliffhangers?
+- How does Chapter 18 handle flashback without breaking forward causality?
+- Do Chapters 19–21 overprescribe climax/epiphany/final-scene form or allow partial/ambiguous closure?
 - How does Chapter 22 POV treatment compare with Card/Kress/Hodgins and current POV-distance continuity gates?
+- How does Chapter 23 handle secondary/minor-character independence versus protagonist service?
 - Does Chapter 24 transition advice support compression of logistics and anti-fragment prose?
+- Does Chapter 25 revision distinguish structural repair from cosmetic line edit strongly enough for IVDIVO?
 - Which numerical length/pacing suggestions must remain heuristics only?
 
 ---
 
-# 6. MANUSCRIPT / PRODUCTION FIREWALL WHILE SOURCE IS IN PROGRESS
+# 7. PRODUCTION FIREWALL WHILE FULL READ IS OPEN
 
-No LESSON ZERO or Book Two rewrite may be justified solely from these provisional Rosenfeld notes.
+No LESSON ZERO or Book Two rewrite may be justified solely from provisional Rosenfeld notes.
 
-Already-synthesized IVDIVO gates remain authoritative during the read. In particular:
+Existing synthesized IVDIVO laws remain authoritative:
 - ONE MAIN STORY;
+- structural defect before line edit;
 - no mandatory negative outcome;
 - no mandatory cliffhanger;
 - no complication merely for escalation;
-- no information withholding that violates POV/fair-play;
-- quiet scenes survive when they change relationship, decision, emotional state, knowledge, or future strategy;
-- short syntax/paragraphs remain contrast tools, not target metrics;
-- structural defect is repaired structurally before line editing.
+- no unfair information withholding;
+- quiet scenes survive when they change relationship, decision, emotion, knowledge or future strategy;
+- short syntax/paragraphs are contrast tools, not target metrics;
+- direct dialogue is used when exact wording matters; routine/process may be summarized;
+- suspense pace may accelerate **or slow**, depending on reader effect.
 
-The source may add or revise mandatory production gates only after FULL READ and the downstream strict lifecycle stages are closed.
+Rosenfeld-specific mandatory gates may be promoted only after FULL READ and downstream lifecycle stages close.
