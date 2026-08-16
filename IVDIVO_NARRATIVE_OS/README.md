@@ -1,11 +1,11 @@
 # IVDIVO NARRATIVE OS — MULTI-AGENT WRITERS’ STUDIO
 
 **Status:** CANONICAL SPECIALIZED PRODUCTION SYSTEM  
-**Version:** 1.0  
+**Version:** 1.2  
 **Established:** 2026-08-16  
+**Updated:** 2026-08-17  
 **Owner / Founder:** Yaromyr Farada  
-**Repository:** `Farada8/IVDIVO_GAME_MASTER`  
-**Authority:** subordinate only to the Founder’s newest direct instruction and `IVDIVO_WRITING_PRODUCTION_CANON.md`.
+**Repository:** `Farada8/IVDIVO_GAME_MASTER`
 
 ---
 
@@ -13,9 +13,7 @@
 
 IVDIVO Narrative OS is the permanent orchestration layer for writing, analysing, revising and validating the IVDIVO saga.
 
-It is designed as a multi-agent narrative studio: one Router selects independent specialist agents; specialists return structured reports; the Reconciler resolves contradictions; only then does the Primary Writer draft or revise prose.
-
-This system does **not** pretend to reproduce any proprietary narrative engine. It uses an original IVDIVO workflow built from the project canon, the existing `IVDIVO_WRITERS_ROOM_50_PROMPTS.md`, the reference library and the Founder’s production laws.
+It is not an isolated-chat prompt. It is a cross-conversation production system that restores the active book, current production stage, latest accepted frontier, governing canon and relevant working/reference sources before work continues.
 
 Core principle:
 
@@ -23,116 +21,170 @@ Core principle:
 
 ---
 
-## RELATION TO THE EXISTING 50-MODULE WRITERS’ ROOM
+## AUTHORITY
 
-The existing `IVDIVO_WRITERS_ROOM_50_PROMPTS.md` remains active and canonical as the specialist module bank.
+Use the authority order defined in `00_NARRATIVE_OS_CANON.md` and the parent production canon.
 
-Narrative OS does **not** replace those 50 modules. It solves the missing orchestration problem:
+At minimum:
 
-`task -> Router -> selected agents -> selected specialist modules -> independent reports -> Reconciler -> Writer Brief -> Draft/Revision -> Regression Gate -> Lock`.
+1. Founder’s newest direct instruction.
+2. `IVDIVO_WRITING_PRODUCTION_CANON.md`.
+3. locked previous-book canon/manuscripts and Founder-approved saga/world continuity.
+4. `IVDIVO_MASTER_SAGA_BIBLE_v1.0.md`.
+5. Narrative OS canon/config.
+6. current book architecture, bibles, decision logs and accepted draft frontier.
+7. reference mechanisms.
+8. archive/superseded material.
 
-The 20 permanent agents are therefore stable professional departments. Each agent may invoke one or more of the 50 deeper modules.
+Never silently allow a lower source to override a higher source.
+
+Material status vocabulary:
+`CANON / WORKING / OPTION / UNKNOWN / REFERENCE ONLY / SUPERSEDED / REJECTED`.
+
+---
+
+## MANDATORY BOOK-CONVERSATION BOOTSTRAP
+
+Before book development, drafting, revision, continuity, reference research or Book Studio work, A00 Router must identify:
+
+- active book / line;
+- current production stage;
+- last unfinished decision or draft frontier.
+
+Then load:
+
+1. `00_NARRATIVE_OS_CANON.md`;
+2. `01_NARRATIVE_OS_CONFIG.yaml`;
+3. `09_UNIVERSAL_BOOK_WORKROOM_BOOT.md`;
+4. `08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`;
+5. `02_AGENT_PROMPTS_MASTER.md`;
+6. applicable section of `10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md`;
+7. current-book `DRAFT_STATUS` / active source-of-truth index / architecture / manuscript;
+8. relevant Project conversations, Google Drive working mirror and ChatGPT File Library sources when they can materially change the decision.
+
+If a required source is unavailable: mark `UNKNOWN`; do not reconstruct canon from memory.
+
+---
+
+## SHORT ENTRY POINT
+
+For a new book conversation use:
+
+`11_BOOK_CHAT_STARTER.md`
+
+It is a compact launcher, not a substitute for the underlying prompt/canon stack.
+
+Example:
+
+`ACTIVE BOOK: BOOK 3 — SMITH I. RUN IVDIVO BOOK CHAT STARTER. WORK.`
+
+For continuation commands such as `и / дальше / продолжай / делай / работай`, do not restart ideation. Resume the latest verified active stage/frontier.
+
+---
+
+## RELATION TO THE WRITERS’ ROOM
+
+`IVDIVO_WRITERS_ROOM_50_PROMPTS.md` remains the specialist method bank.
+
+`08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md` is the internal professional department layer.
+
+Narrative OS coordinates both:
+
+`Founder command -> bootstrap -> Router -> selected specialists -> independent checks where useful -> Reconciler -> Writer Brief -> Draft/Revision -> Red Team -> Regression -> Lock`.
+
+The studio does not output fake committee transcripts unless Founder asks for them.
 
 ---
 
 ## FILES
 
-- `00_NARRATIVE_OS_CANON.md` — authority, laws, statuses, independence and stop rules.
-- `01_NARRATIVE_OS_CONFIG.yaml` — machine-readable agent registry, priorities, phases and default routes.
-- `02_AGENT_PROMPTS_MASTER.md` — master prompts for the 20 permanent agents.
-- `03_ROUTER_EXECUTION_RUNBOOK.md` — how the system chooses agents and executes a task.
-- `04_RECONCILER_GATES.md` — conflict resolution, Story Gates, regression and lock rules.
-- `05_OUTPUT_SCHEMAS.md` — standard packets, reports, Writer Briefs, patch instructions and ledgers.
-- `06_BOOK_STUDIO_MODE.md` — downstream publishing/market validation after development lock.
-- `CHANGELOG.md` — Narrative OS changes.
+- `00_NARRATIVE_OS_CANON.md` — governing operating law.
+- `01_NARRATIVE_OS_CONFIG.yaml` — machine-readable routing/bootstrap config.
+- `02_AGENT_PROMPTS_MASTER.md` — master prompts for permanent agents.
+- `03_ROUTER_EXECUTION_RUNBOOK.md` — execution and recovery routing.
+- `04_RECONCILER_GATES.md` — Story Gates, regression and lock rules.
+- `05_OUTPUT_SCHEMAS.md` — structured packets/reports/Writer Briefs.
+- `06_BOOK_STUDIO_MODE.md` — downstream publisher/market/audio/adaptation validation.
+- `07_SYNC_POLICY.md` — GitHub/Drive synchronization rules.
+- `08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md` — internal specialist studio.
+- `09_UNIVERSAL_BOOK_WORKROOM_BOOT.md` — mandatory universal writing/workroom prompt.
+- `10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md` — B01–B10 + HQ overlays.
+- `11_BOOK_CHAT_STARTER.md` — short cross-conversation entry point.
+- `BOOKS/` — active book status/frontier control files.
+- `CHANGELOG.md` — production-system changes.
+
+---
+
+## UNIVERSAL PIPELINE
+
+For a new/unlocked book:
+
+`CONTINUITY LOAD -> REFERENCE MECHANISM PASS -> STORY DISCOVERY -> STORY CORE -> WRITERS’ ROOM -> CHARACTER/RELATIONSHIP -> WORLD PRESSURE -> CAUSAL CHAPTER MAP -> STORY GATE -> PROSE -> DEVELOPMENT EDIT -> RED TEAM -> CHARACTER/RELATIONSHIP PASS -> READER ADVOCATE -> DIALOGUE PASS -> LINE EDIT -> FINAL STORY GATE -> EXTERNAL FEEDBACK/BOOK STUDIO -> LOCK`.
+
+Do not run stages mechanically when the book is already farther downstream. Continue from the latest verified state.
 
 ---
 
 ## 20 PERMANENT AGENTS
 
-| ID | Agent | Primary function |
-|---|---|---|
-| A00 | Router / Showrunner | classify task, select agents, enforce canon and stop rules |
-| A01 | Story Discovery | premise, story engine, research mechanisms, hooks |
-| A02 | Storyform / Architecture | hero, want, opposition, causal book architecture, climax, resolution |
-| A03 | Character Arc | character truth, contradiction, desire, fear, price, change |
-| A04 | Relationship | friendship, romance, family, dependency, status, rupture and repair |
-| A05 | World & Social Systems | civilization, institutions, economics, culture, everyday life |
-| A06 | Science / Technology / Metaphysics | system rules, AI, synthetic life, embodiment, costs and limits |
-| A07 | Mystery / Continuity / Memory | evidence chains, provenance, setup/payoff, timeline and knowledge state |
-| A08 | Storyweaver | sequence, reveals, chapter architecture, information order |
-| A09 | Scene Engine | scene desire, resistance, tactics, turn, price and exit state |
-| A10 | Dialogue / Voice | dialogue as action, subtext, individual voices, anti-exposition |
-| A11 | Youth Psychology | age authenticity, peers, family, school/work, status, autonomy |
-| A12 | Action / Horror / Pressure | physical causality, tactical pressure, dread, aftermath |
-| A13 | Reader Reception | curiosity, boredom, emotion, hooks, wonder, comprehension |
-| A14 | Market / Genre / Franchise | genre promise, positioning, adaptation and market risk |
-| A15 | Primary Writer | prose execution from approved Writer Brief only |
-| A16 | Red Team | hostile independent audit for fatal/major/medium/polish failures |
-| A17 | Revision Surgeon | convert approved diagnoses into minimal effective repairs |
-| A18 | Prose / Line Editor | human prose, rhythm, POV texture, repetition and clarity |
-| A19 | Reconciler / Editor-in-Chief | resolve specialist conflicts and issue one integrated decision |
+A00 Router / Showrunner  
+A01 Story Discovery  
+A02 Storyform / Architecture  
+A03 Character Arc  
+A04 Relationship  
+A05 World & Social Systems  
+A06 Science / Technology / Metaphysics  
+A07 Mystery / Continuity / Memory  
+A08 Storyweaver  
+A09 Scene Engine  
+A10 Dialogue / Voice  
+A11 Youth Psychology  
+A12 Action / Horror / Pressure  
+A13 Reader Reception  
+A14 Market / Genre / Franchise  
+A15 Primary Writer  
+A16 Red Team  
+A17 Revision Surgeon  
+A18 Prose / Line Editor  
+A19 Reconciler / Editor-in-Chief
 
----
-
-## STANDARD PHASES
-
-1. **DISCOVER** — what story is worth telling and why now.
-2. **FORM** — hero, want, opposition, causality, midpoint, climax, resolution.
-3. **ENCODE** — turn abstract theme/world into concrete people, places, jobs, objects and choices.
-4. **WEAVE** — chapter/scene order, reveals, relationship movement, setup/payoff.
-5. **GREENLIGHT** — Story Gate before prose.
-6. **DRAFT** — Primary Writer executes the approved brief.
-7. **ATTACK** — Red Team tries to break the draft.
-8. **REVISE** — Revision Surgeon applies only justified repairs.
-9. **RECEIVE** — Reader Reception checks actual reading experience.
-10. **INTEGRATE** — Reconciler resolves remaining conflicts.
-11. **LOCK** — freeze development until new evidence exists.
-
----
-
-## LAUNCH COMMANDS
-
-When the Founder writes any of the following, A00 Router should activate automatically:
-
-- `RUN THE STUDIO`
-- `WRITERS’ ROOM`
-- `RED TEAM`
-- `BOOK STUDIO`
-- `ПРОГОНИ КНИГУ`
-- `РАБОТАЙ`
-- `ДЕЛАЙ`
-- `ПРОДОЛЖАЙ`
-- `ДАЛЬШЕ`
-- `И`
-
-For brief continuation commands such as `и`, `дальше`, `продолжай`, the Router must continue the **current active pipeline stage**, not restart from brainstorming and not silently switch books.
-
----
-
-## LOCKED BOOK RULE
-
-`LESSON ZERO` is BOOK ONE and is in publisher/external-feedback stage.
-
-Do not reopen development unless:
-
-1. the Founder explicitly orders it;
-2. external reader/editor/publisher evidence identifies a concrete problem;
-3. a real continuity, factual or technical error is found.
-
-A locked book may still enter Book Studio for submission, packaging, copyedit, audio and adaptation work without reopening its story architecture.
+These are stable functions, not a requirement to invoke all agents every time.
 
 ---
 
 ## REFERENCE LAW
 
-Uploaded fiction, films, scripts, manga and craft books are references, never IVDIVO canon.
+References are never automatically canon.
 
 Mandatory transformation:
 
-`REFERENCE -> ABSTRACT MECHANISM -> IVDIVO CONDITIONS -> ORIGINAL STORY`.
+`REFERENCE -> ABSTRACT MECHANISM -> COMBINE 2–3 INDEPENDENT SOURCES WHEN USEFUL -> TRANSFORM THROUGH IVDIVO -> ORIGINAL STORY`.
 
-Never copy distinctive dialogue, characters, scene sequence, proprietary terminology, unique inventions or signature plot machinery.
+Never copy distinctive dialogue, character, scene sequence, proprietary terminology, unique invention or signature plot machinery.
+
+---
+
+## CURRENT LOCK EXAMPLES
+
+- `LESSON ZERO = BOOK ONE`, development-locked / publisher-external-feedback stage.
+- Early Contact Confederation knowledge does not equal jurisdiction.
+- Smith/OES remain operational across the saga; do not close the service by default.
+- Planetary governments are not automatically subordinate to orbital polities.
+- Long-term AI/synthetic/artificial-body technology enters only when story earns it and access is continuity-consistent.
+
+Full details live in the Saga Bible and Narrative OS canon; do not infer from this README alone.
+
+---
+
+## SAVE / CROSS-CONVERSATION LAW
+
+A current chapter/book frontier is valid only when the controlling book status/index identifies it.
+
+For active Book 2, use:
+`IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/DRAFT_STATUS.md`
+and its referenced active source-of-truth index.
+
+Historical pre-prose indexes are not allowed to overrule newer draft-status/frontier files.
 
 ---
 
