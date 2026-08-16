@@ -31,9 +31,10 @@ Folder ID: `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`
 7. `Chapter 7 — STATIC SAFE` — Ollie POV — GREEN / Full Studio patched
 8. `Chapter 8 — NOT A VISITOR SPORT` — Samir POV — GREEN / Full Studio patched
 9. `Chapter 9 — THE APPRENTICES` — Ollie POV — GREEN / Full Studio patched
+10. `Chapter 10 — NIGHT WITHOUT A HANDLER` — Maya POV — GREEN / Full Studio patched
 
 Current active frontier:
-**NEXT = Chapter 10 — NIGHT WITHOUT A HANDLER — Maya POV.**
+**NEXT = Chapter 11 — WHOSE STORY — Aoife POV.**
 
 ## Active drafting authority
 
@@ -64,18 +65,39 @@ For each substantive step:
 
 Do not call a chapter complete until accepted draft + gate are persisted.
 
-## Next prose unit
+## Latest accepted chapter
 
 ### Chapter 10 — NIGHT WITHOUT A HANDLER
+Accepted draft:
+`DRAFTS/CH10_NIGHT_WITHOUT_A_HANDLER_v0.2_FULL_STUDIO.md`
+
+Accepted gate:
+`GATES/CH10_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+
+Drive mirrors:
+- Writer Brief ID `1tIrHo8DZCgcUotbOR68XhpxF390s0lbLKxvw3ou4OQI`
+- Accepted Ch10 v0.2 ID `1DTGbWC99OXiXZwKN0z8U4k4tDXYnD5gl3tbnsEDlz1Q`
+- Gate ID `12Tj0uZ4oGYCrt4iCIrA1EB7IzUWfuo6-dAardzKEhKA`
+
+Gate verdict:
+**GREEN TO KEEP / PROCEED TO CHAPTER 11.**
+
+## Next prose unit
+
+### Chapter 11 — WHOSE STORY
+**POV:** Aoife
+
 Required core:
-- Maya wants genuine late-night autonomy without live tracking/escort;
-- host needs enough location/return information for orbital logistics;
-- negotiation must sound like teenagers/hosts, not policy counsel;
-- Maya receives real freedom;
-- later plan changes to a safe but different sleeping location;
-- she uses ambiguity to avoid updating the host;
-- no immediate punishment or catastrophe;
-- the night remains fun;
-- this seeds the later relational/logistical cost.
+- make ordinary orbital life the documentary subject rather than spectacle/frontier;
+- local source distrusts being turned into another Earth-facing “life in space” story;
+- Aoife earns access by paying attention to boring/ordinary details locals actually care about;
+- source sets a concrete context boundary around a body/environment/private detail;
+- Aoife explicitly records and plays back the allowed context/audience/excerpt conditions;
+- source gives stronger material after the boundary proves real;
+- the strongest emotional line occurs after recorder-off and Aoife leaves it out;
+- Source S1 approves the cleaned excerpt;
+- ambient context capable of later inference remains as setup only;
+- do NOT trigger the inference breach yet;
+- Ethan/Aoife relationship pressure may appear only as a small unsolicited-edit/withheld-reason beat, not take over the chapter.
 
 Do not switch books on ordinary `и / дальше`.
