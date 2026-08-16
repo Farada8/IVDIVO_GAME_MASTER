@@ -1,43 +1,58 @@
 # IVDIVO NARRATIVE OS — ROUTER & EXECUTION RUNBOOK
 
 **Status:** CANONICAL OPERATING GUIDE  
-**Version:** 1.0
+**Version:** 1.1  
+**Updated:** 2026-08-17
 
 ---
 
 # 1. PURPOSE
 
-This runbook defines how A00 Router turns a Founder instruction into actual multi-agent work.
+This runbook defines how A00 Router turns a Founder instruction into actual cross-conversation production work.
 
 The studio must never degrade into:
 - a list of roles;
 - fake committee dialogue;
 - repeated generic advice;
 - endless re-analysis;
-- prose generation before story is ready.
+- prose generation before story is ready;
+- restarting an older book state because a stale file was opened first.
 
-The operating chain is:
+Operating chain:
 
-`FOUNDER COMMAND -> ACTIVE CONTEXT -> ROUTE -> AGENT PACKETS -> INDEPENDENT PASSES -> RECONCILE -> GATE -> WRITER BRIEF -> DRAFT/REVISION -> REGRESSION -> LOCK`.
+`FOUNDER COMMAND -> BOOTSTRAP -> ACTIVE VERIFIED CONTEXT -> ROUTE -> AGENT PACKETS -> INDEPENDENT PASSES -> RECONCILE -> GATE -> WRITER BRIEF -> DRAFT/REVISION -> REGRESSION -> SAVE/SYNC -> LOCK`.
 
 ---
 
-# 2. STEP ZERO — IDENTIFY ACTIVE CONTEXT
+# 2. STEP ZERO — MANDATORY BOOK BOOTSTRAP
 
-Before any creative work, A00 identifies:
+For any book-writing task, before creative work A00 identifies:
 
-1. Saga/project.
-2. Book/line.
-3. Version.
-4. Current stage.
-5. Last completed decision.
-6. Current unresolved decision.
-7. Locked previous consequences.
+1. active saga/project;
+2. active book/line;
+3. current mode;
+4. current production stage;
+5. latest verified accepted frontier;
+6. current unresolved decision;
+7. locked previous-book consequences;
 8. Founder’s newest instruction.
 
-Do not ask the Founder to repeat context that already exists in project state.
+Then load the mandatory stack:
 
-For ambiguous brief continuations such as `и`, `дальше`, `продолжай`, use the last active pipeline state.
+1. `00_NARRATIVE_OS_CANON.md`;
+2. `01_NARRATIVE_OS_CONFIG.yaml`;
+3. `09_UNIVERSAL_BOOK_WORKROOM_BOOT.md`;
+4. `08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`;
+5. `02_AGENT_PROMPTS_MASTER.md`;
+6. applicable overlay in `10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md`;
+7. current book `DRAFT_STATUS` / active source-of-truth / architecture / manuscript;
+8. relevant Project conversations, Google Drive working documents and ChatGPT File Library references when material.
+
+Do not ask the Founder to repeat context already recoverable from project state.
+
+If sources disagree, prefer the higher authority and the newest verified current-book frontier. Do not let a historical pre-prose index override a later active-draft status.
+
+If a required source cannot be loaded, mark `UNKNOWN`; do not invent the missing canon.
 
 ---
 
@@ -46,240 +61,127 @@ For ambiguous brief continuations such as `и`, `дальше`, `продолж�
 ## NEW_BOOK
 Use when a new novel/major story has not passed Story Core/Architecture.
 
-Default route:
-
-`A00 -> A01 -> [A03, A04, A05, A06, A07, A11 independent as relevant] -> A02 -> A19 -> STORY CORE GATE -> A08 -> A09 -> A19 -> PRE-DRAFT GATE -> A15 -> A16 -> A17 -> A13 -> A19 -> FINAL STORY GATE -> LOCK`.
+Route:
+`A00 -> Continuity Load -> Reference Mechanism Pass -> A01 -> selected A03/A04/A05/A06/A07/A11 -> A02 -> A19 -> STORY CORE GATE -> A08 -> A09 -> PRE-DRAFT GATE -> A15 -> A16 -> A17 -> A13 -> A19 -> FINAL STORY GATE -> LOCK`.
 
 ## ACTIVE_DRAFT
 Use when architecture is approved and prose is being written.
 
-Default reduced route:
-
-`A00 -> A07 continuity -> A09 scene -> A03/A04/A11 if character pressure matters -> A10 dialogue -> A19 -> A15 -> A16 targeted -> A17 if needed -> regression`.
+Route:
+`A00 -> latest DRAFT_STATUS/frontier -> A07 continuity -> A09 scene -> A03/A04/A11 as needed -> A10 -> A19 Writer Brief -> A15 -> A16 -> A17 if justified -> local regression -> save/sync -> frontier update`.
 
 ## LOCKED_BOOK
 Use when development is frozen.
 
-Default:
-
+Route:
 `A00 -> A13/A14/Book Studio or copy/continuity tasks -> A19`.
 
-Do not route to A02/A15 for structural rewrite without unlock evidence.
+No structural rewrite without unlock evidence.
 
 ## REFERENCE_RESEARCH
-Use when the Founder asks to study books, scripts, films or craft sources.
-
-Default:
-
-`A00 -> A01 (Library Intelligence + Mechanism Miner + Deep Research) -> A19`.
+Route:
+`A00 -> Library Intelligence / Mechanism Miner -> A01 -> A19`.
 
 Output mechanisms, not imitation.
 
 ## RED_TEAM
-Default:
-
+Route:
 `A00 -> A16 independent -> optional A03/A07/A13 independent -> A19`.
 
 ## BOOK_STUDIO
-Use after development lock for submission/market/audio/screen/rights work.
+Route:
+`A00 -> A13 + A14 + downstream publishing specialists -> A19`.
 
-Default:
-
-`A00 -> A13 + A14 -> publishing specialists -> A19`.
-
-Story rewrite defaults to OFF.
+Story rewrite defaults OFF.
 
 ## SAGA_CONTINUITY
-Use before Book N or after a retcon risk.
-
-Default:
-
-`A00 -> A07 -> A03 relationship/character memory if needed -> A06 technology state if needed -> A19`.
+Route:
+`A00 -> A07 -> A03/A04 relationship memory if needed -> A06 technology state if needed -> A19`.
 
 ---
 
 # 4. ROUTING BY PROBLEM
 
-## “There is no story / only fragments”
-Route:
-`A01 -> A02 -> A03 -> A19`.
-
-Do not call Prose Editor.
-
-## “The middle is boring”
-Route independent:
-`A13 Reader Reception + A02 Architecture + A08 Storyweaver -> A19`.
-
-Then, only if diagnosed, A17.
-
-## “Character feels fake”
-Route:
-`A03 + A11 if young + A04 if relationship-linked + A10 if voice-linked -> A19`.
-
-## “Dialogue sounds like AI/policy committee”
-Route:
-`A10 + A11 + A18 -> A19`.
-
-## “World feels like exposition”
-Route:
-`A05 + A09 + A13 -> A19`.
-
-## “Mystery makes no sense”
-Route:
-`A07 + A02 + A13 -> A19`.
-
-## “Climax is weak”
-Route:
-`A02 + A03 + A12 + A34/35 specialist modules via relevant agents -> A19`.
-
-## “We need ideas from uploaded books”
-Route:
-`A01 -> mechanism extraction -> A19`.
-
-Never send raw borrowed plot to A15.
-
-## “Make it more marketable”
-Route:
-`A14 + A13 -> A19`.
-
-A19 must distinguish package/positioning from story change.
+**No story / fragments:** `A01 -> A02 -> A03 -> A19`.  
+**Boring middle:** independent `A13 + A02 + A08 -> A19`; then A17 only if diagnosed.  
+**Fake character:** `A03 + A11 if young + A04 if relational + A10 if voice-linked -> A19`.  
+**AI/policy dialogue:** `A10 + A11 + A18 -> A19`.  
+**Exposition-world:** `A05 + A09 + A13 -> A19`.  
+**Broken mystery:** `A07 + A02 + A13 -> A19`.  
+**Weak climax:** `A02 + A03 + A12 + relevant specialist modules -> A19`.  
+**Ideas from uploaded books:** reference search -> mechanism extraction -> A19; never pass borrowed plot directly to A15.  
+**Make more marketable:** `A14 + A13 -> A19`; separate packaging/positioning from story change.
 
 ---
 
 # 5. INDEPENDENCE GROUPS
 
-Some agents should not see each other’s verdict first.
-
-## Default independent diagnostic group
-- A02 Storyform.
-- A03 Character.
-- A07 Continuity/Mystery.
-- A13 Reader Reception.
-- A14 Market/Genre.
-- A16 Red Team.
-
-They receive the same source but not each other’s conclusions.
+When diagnostic independence improves audit quality, A02 Storyform, A03 Character, A07 Continuity/Mystery, A13 Reader Reception, A14 Market/Genre and A16 Red Team should receive source material without each other’s verdicts.
 
 A19 compares later.
 
-This prevents consensus contamination.
-
 ---
 
-# 6. AGENT PACKET ASSEMBLY
+# 6. AGENT PACKETS
 
-A00 creates one packet per agent.
-
-Do not flood every agent with the full saga bible.
-
-Packet includes:
-
-### Required
+Required packet fields:
 - Founder command;
 - active book;
 - mode/phase;
-- relevant manuscript or architecture;
-- relevant canon excerpts/references;
+- latest verified status/frontier;
+- relevant manuscript/architecture;
+- canon excerpts;
 - locked facts;
 - exact question;
 - output schema;
 - forbidden changes.
 
-### Conditional
-- prior reports if the agent depends on them;
-- reference sources;
+Conditional:
+- prior reports only where dependency is intentional;
+- references;
 - market data;
 - previous-book consequences;
-- timeline/character bible.
+- timeline/character/world bibles.
 
-### Forbidden packet behaviour
-- giving a Red Team the Reconciler’s desired answer;
-- giving Reader Reception an explanation of what they are “supposed” to feel;
-- giving Character Agent a market conclusion as fact;
-- giving Writer unfiltered committee chatter.
+Forbidden:
+- giving Red Team the desired answer;
+- explaining to Reader Reception what it should feel;
+- treating market conclusion as character fact;
+- giving Primary Writer committee chatter instead of an integrated Writer Brief.
 
 ---
 
-# 7. NEW BOOK PIPELINE
+# 7. UNIVERSAL NEW-BOOK PIPELINE
 
-## Stage 1 — Story Core
-A01 discovery + selected domain agents.
+0. Continuity Load.  
+1. Reference Mechanism Pass.  
+2. Story Discovery.  
+3. Story Core.  
+4. Writers’ Room.  
+5. Character / Relationship Architecture.  
+6. World Pressure.  
+7. Causal Chapter Map.  
+8. Story Gate.  
+9. Prose Draft.  
+10. Development Edit.  
+11. Red Team.  
+12. Character / Relationship Pass.  
+13. Reader Advocate.  
+14. Dialogue Pass.  
+15. Line Edit.  
+16. Final Story Gate.  
+17. External Feedback / Book Studio where applicable.  
+18. Lock.
 
-Gate requires:
-- hero;
-- want;
-- why now;
-- opposition;
-- wrong strategy;
-- price;
-- midpoint;
-- climax choice;
-- resolution;
-- hook after closure.
-
-No prose if RED.
-
-## Stage 2 — Architecture
-A02 builds causal movements.
-
-A03/A04/A07 test character/relationship/mystery causality.
-
-A19 resolves.
-
-## Stage 3 — Causal Chapter Map
-A08 creates chapter sequence.
-
-Every chapter gets:
-- dramatic function;
-- cause from previous material;
-- turn;
-- cost;
-- new state;
-- reason to continue.
-
-## Stage 4 — Scene Cards
-A09 creates scenes.
-
-Do not write full chapter prose from vague chapter summaries.
-
-## Stage 5 — Pre-Draft Greenlight
-A19 checks Story Gate.
-
-## Stage 6 — Prose Draft
-A15 receives Writer Brief one chapter/story unit at a time unless whole-draft execution is explicitly approved.
-
-## Stage 7 — Red Team
-A16 attacks the actual draft, not the outline.
-
-## Stage 8 — Revision
-A17 converts approved issues into patch instructions.
-
-A15/A18 applies repairs at correct level.
-
-## Stage 9 — Reception
-A13 tests reading experience.
-
-For real locked decisions, external beta evidence outranks simulated preference when available.
-
-## Stage 10 — Final Gate
-A19 performs regression:
-- did repair solve issue?
-- what did it break?
-- is main story closed?
-- is character change earned?
-- are open hooks properly secondary?
-
-Then LOCK.
+Do not restart completed stages without new evidence.
 
 ---
 
 # 8. CHAPTER PIPELINE
 
-For an approved book architecture:
+For an approved architecture:
 
-`CONTINUITY -> SCENE CARD -> CHARACTER/RELATIONSHIP -> DIALOGUE FUNCTION -> WRITER BRIEF -> DRAFT -> TARGETED RED TEAM -> REVISION -> CHAPTER REGRESSION`.
-
-A chapter is not accepted because it reached target word count.
+`BOOTSTRAP -> CURRENT FRONTIER -> SCENE CARD -> CHARACTER/RELATIONSHIP -> DIALOGUE FUNCTION -> WRITER BRIEF -> DRAFT -> HOSTILE RED TEAM -> TARGETED REVISION -> CHARACTER/YOUTH/READER -> DIALOGUE/LINE -> CONTINUITY/LOCAL GATE -> SAVE GITHUB -> MIRROR DRIVE -> VERIFY -> UPDATE FRONTIER`.
 
 Chapter acceptance requires:
 - clear want;
@@ -291,137 +193,141 @@ Chapter acceptance requires:
 - no new contradiction;
 - useful exit pull.
 
----
-
-# 9. COMPLETE STORY UNIT PIPELINE
-
-When several chapters form one local case/story, do not evaluate them only chapter-by-chapter.
-
-After the last chapter, run a Story Unit Regression:
-
-`initial state -> disruption -> attempts -> escalation -> error/price -> changed understanding -> decisive choice -> climax -> result -> aftermath`.
-
-Local conflict must close.
-
-A series hook may follow only after this closure.
+Word count is not an acceptance criterion.
 
 ---
 
-# 10. SMITH ROUTE
+# 9. SAVE / FRONTIER LAW
 
-For SMITH / OLD EARTH SECURITY, A00 automatically adds:
+A chapter is not accepted cross-conversation merely because prose was generated in chat.
+
+Accepted frontier requires, where the current book workflow uses persistence:
+- accepted draft persisted;
+- gate persisted;
+- GitHub canonical write verified;
+- Google Drive mirror verified;
+- current `DRAFT_STATUS` / active source-of-truth updated.
+
+When a stale file conflicts with a newer `DRAFT_STATUS`, mark the stale file `SUPERSEDED / DO NOT ROUTE` rather than leaving two apparent active states.
+
+---
+
+# 10. SMITH ROUTE — EARLY CONTACT CORRECTED
+
+For SMITH / OLD EARTH SECURITY, A00 normally adds:
 - A05 World/Social Systems;
-- A07 Continuity/History;
-- A12 pressure/action if case-based;
-- specialist modules 24 Historical Depth and 25 Systems Conflict.
+- A07 Continuity/History/Mystery;
+- A12 pressure/action where case-based;
+- Law/Institutions;
+- Synthesis/Enia where relevant;
+- specialist Historical Depth / Systems Conflict modules.
 
-Each case must test:
-- old-system knowledge;
-- Confederation knowledge;
-- jurisdiction;
-- moral history;
-- mutual dependency.
+Early-saga conflict is NOT automatically `OES vs Confederation Security` inside one jurisdiction.
 
-Do not route by default to “monster hunt.”
+Use the current multi-sided model:
+
+`OLD EARTH SECURITY / PLANETARY AUTHORITIES / ORBITAL AUTHORITIES / INDIVIDUAL RIGHTS / LIMITED CONFEDERATION KNOWLEDGE`.
+
+A Smith case may test:
+- what OES knows historically;
+- what current science/limited Confederation knowledge clarifies;
+- who actually has legal authority;
+- consequences of past successes/crimes;
+- what Smith must decide and pay.
+
+Smith remains operational. Enia changes his model/questions; she does not deliver plot answers.
+
+Do not default to monster hunt.
 
 ---
 
 # 11. ORBITAL YOUTH ROUTE
 
-For ORBITAL YOUTH, A00 automatically adds:
+Automatically consider:
 - A05 World/Social Systems;
 - A11 Youth Psychology;
 - A04 Relationship;
-- A13 Reader Reception.
+- A13 Reader Reception;
+- Economy/Work;
+- Technology/Orbital Systems;
+- Dialogue/Scene Architecture.
 
-Every major story must include genuine orbital-life pressure, not merely space scenery.
+Check story-relevant pressure from housing, jobs, money, transport, maintenance, education, family, friends, status, romance, sport/entertainment, orbital law and ordinary city life.
 
-Check:
-- housing;
-- jobs;
-- money;
-- transport;
-- maintenance;
-- school;
-- family;
-- friends;
-- status;
-- romance;
-- mixed-species culture.
+If the story can move to a contemporary Earth campus with cosmetic changes, redesign.
+
+Current Book 2 control files are under:
+`IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/`.
+
+Router must read `DRAFT_STATUS.md` before assuming the next chapter.
 
 ---
 
 # 12. REFERENCE LIBRARY ROUTE
 
-1. Identify the writing problem.
-2. Search relevant sources.
-3. Rank by function.
-4. Extract mechanism.
-5. Record failure conditions.
-6. Record copy boundary.
-7. Combine 2–3 independent mechanisms where possible.
-8. Transform through IVDIVO character/world conditions.
-9. Similarity audit.
-10. Only then allow architecture work.
+1. identify actual writing problem;
+2. search relevant current sources;
+3. rank by function;
+4. extract hook/story/pressure/relationship/mystery/escalation/climax/resolution mechanisms;
+5. record failure conditions;
+6. record copy boundary;
+7. combine 2–3 independent mechanisms where useful;
+8. transform through IVDIVO character/world conditions;
+9. similarity audit;
+10. only then permit architecture or scene application.
 
-The Writer never receives “write this like [specific work]” as the final instruction.
+References remain `REFERENCE ONLY` unless Founder explicitly promotes a factual/world item to canon.
 
 ---
 
-# 13. BOOK STUDIO ROUTE
+# 13. BOOK-SPECIFIC OVERLAYS
 
-Book Studio begins after development lock.
+After Universal Boot, load only the applicable overlay from `10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md`.
 
-Allowed tasks:
-- reader validation;
-- acquisitions simulation;
-- query/synopsis;
-- market positioning;
-- comps;
-- copyedit/style sheet;
-- continuity proof;
-- audio adaptation;
-- screen adaptation;
-- foreign-rights terminology;
-- submission tracking.
+B01 prevents accidental reopening of LESSON ZERO.  
+B02 enforces lived orbital youth civilization.  
+B03 enforces active OES/Smith + Enia/Synthesis without generic monster-hunting.  
+B04 enforces natural crossover, limited Confederation jurisdiction and no automatic permanent team.  
+B05–B10 preserve future functions as WORKING/UNKNOWN until completed-book consequences justify specificity.
 
-Book Studio may recommend reopening development, but A00 must require evidence and A19 must issue an explicit UNLOCK DECISION.
+Overlay never overrides higher canon.
 
 ---
 
 # 14. CONTINUATION BEHAVIOUR
 
-When Founder says `и`:
+When Founder says `и / дальше / продолжай / делай / работай`:
 
-A00 does not answer “what would you like next?” when current stage is known.
+1. do not ask “what next?” if recoverable;
+2. run bootstrap;
+3. open current book `DRAFT_STATUS` / active source-of-truth;
+4. identify the last accepted frontier and next unfinished production task;
+5. continue actual work;
+6. do not silently switch books;
+7. do not restart architecture/prose already accepted.
 
-A00 retrieves the current stage and continues actual work.
-
-Examples:
-- chapter 12 drafted but not Red Teamed -> run Red Team;
-- Red Team done but no patch -> Revision Surgeon;
-- book architecture done but chapter map incomplete -> continue chapter map;
-- locked Book 1 -> do not spontaneously rewrite; continue external validation/Book 2 as context dictates.
+Example for current Book 2 at the time of this update: `Chapters 1–9 GREEN; Chapter 10 — NIGHT WITHOUT A HANDLER — Maya POV next.` Future `DRAFT_STATUS` updates outrank this example.
 
 ---
 
 # 15. FAILURE RECOVERY
 
-If a tool/source is unavailable:
-- do not fabricate its result;
-- complete everything possible from grounded materials;
+If tool/source unavailable:
+- do not fabricate result;
+- complete grounded work that remains possible;
 - label missing evidence;
-- continue with unaffected agents;
-- do not reset entire pipeline.
+- continue unaffected agents;
+- do not reset pipeline.
 
-If agents disagree severely:
-- route to A19;
-- if canon ambiguity remains, mark UNKNOWN and present decision options to Founder only when the ambiguity genuinely blocks work.
+If specialist conclusions conflict, A19 resolves by priority:
+Founder/canon -> current story completion -> causality -> character truth -> emotional impact -> reader engagement -> continuity -> world logic -> genre -> market -> franchise -> polish.
+
+If genuine canon ambiguity blocks work, mark UNKNOWN and present at most 2–3 consequential options.
 
 ---
 
 # 16. END CONDITION
 
-The task ends when the requested decision is made and the required gate passes.
+The task ends when the requested production decision/work unit is completed, saved where required, and the relevant gate passes.
 
-Do not continue generating extra versions because agents remain available.
+Do not keep generating extra versions merely because more agents are available.
