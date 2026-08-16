@@ -1,10 +1,31 @@
 system:
   name: IVDIVO_NARRATIVE_OS
-  version: "1.0"
+  version: "1.2"
   status: CANONICAL_SPECIALIZED_PRODUCTION_SYSTEM
   owner: Yaromyr Farada
   parent_canon: IVDIVO_WRITING_PRODUCTION_CANON.md
+  saga_bible: IVDIVO_MASTER_SAGA_BIBLE_v1.0.md
   specialist_bank: IVDIVO_WRITERS_ROOM_50_PROMPTS.md
+
+conversation_bootstrap:
+  required_for_book_work: true
+  identify_before_work:
+    - active_book_or_line
+    - current_production_stage
+    - last_unfinished_decision
+  mandatory_prompt_load:
+    - IVDIVO_NARRATIVE_OS/00_NARRATIVE_OS_CANON.md
+    - IVDIVO_NARRATIVE_OS/09_UNIVERSAL_BOOK_WORKROOM_BOOT.md
+    - IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md
+    - IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md
+    - IVDIVO_NARRATIVE_OS/10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md
+  connected_sources_when_relevant:
+    - project_conversations
+    - github_main
+    - google_drive_ivdivo
+    - chatgpt_file_library
+  unavailable_source_rule: MARK_UNKNOWN_DO_NOT_RECONSTRUCT_CANON_FROM_MEMORY
+  continuation_rule: CONTINUE_LAST_UNFINISHED_STAGE
 
 priority:
   - founder_instruction
@@ -47,16 +68,24 @@ statuses:
     - ABANDONED_INTENTIONALLY
 
 phases:
+  - CONTINUITY_LOAD
+  - REFERENCE_MECHANISM_PASS
   - DISCOVER
   - FORM
+  - CHARACTER_RELATIONSHIP
   - ENCODE
   - WEAVE
   - GREENLIGHT
   - DRAFT
+  - DEVELOPMENT_EDIT
   - ATTACK
-  - REVISE
+  - CHARACTER_RELATIONSHIP_PASS
   - RECEIVE
+  - DIALOGUE_PASS
+  - LINE_EDIT
   - INTEGRATE
+  - FINAL_STORY_GATE
+  - EXTERNAL_FEEDBACK
   - LOCK
 
 agents:
@@ -153,7 +182,7 @@ agents:
     output: REVISION_PLAN
   A18:
     name: Prose_Line_Editor
-    phase: REVISE
+    phase: LINE_EDIT
     calls_modules: [5, 27, 38]
     output: LINE_EDIT_REPORT
   A19:
@@ -187,17 +216,49 @@ profiles:
   LESSON_ZERO:
     book: 1
     status: DEVELOPMENT_LOCKED_EXTERNAL_FEEDBACK
+    overlay: B01
     reopen_story_on:
       - founder_instruction
       - convergent_external_feedback
       - continuity_or_factual_error
-  SMITH:
-    force_modules: [24, 25, 19]
-    core_engine: OLD_EARTH_SECURITY_VS_NEW_CONFEDERATION_SECURITY
   ORBITAL_YOUTH:
+    book: 2
+    status: WORKING
+    overlay: B02
     force_agents: [A05, A11]
     force_modules: [16, 22, 31]
     everyday_life_required: true
+  SMITH:
+    book: 3
+    status: WORKING
+    overlay: B03
+    force_modules: [24, 25, 19]
+    early_contact_engine: OLD_EARTH_SECURITY_PLANETARY_AUTHORITIES_ORBITAL_AUTHORITIES_INDIVIDUAL_RIGHTS_LIMITED_CONFEDERATION_KNOWLEDGE
+    service_remains_active: true
+    enia_synthesis_continues: true
+  CROSSING_I:
+    book: 4
+    status: WORKING_NO_STORY_ENGINE_LOCKED
+    overlay: B04
+    permanent_team_default: REJECTED
+  BOOKS_5_TO_10:
+    status: WORKING_OR_UNKNOWN
+    overlay_rule: LOAD_ONLY_IF_FOUNDER_OR_COMPLETED_BOOK_CONSEQUENCES_CONFIRM_FUNCTION
+
+reference_policy:
+  transformation: REFERENCE_TO_ABSTRACT_MECHANISM_TO_COMBINE_2_3_TO_IVDIVO_ORIGINAL
+  source_locations:
+    - google_drive_library
+    - chatgpt_file_library
+    - github_source_registry
+    - story_engine
+  never_copy:
+    - plot
+    - distinctive_scene_sequence
+    - signature_dialogue
+    - unique_character
+    - proprietary_terminology
+    - signature_invention
 
 stop_rules:
   - do_not_run_all_agents_without_need
@@ -207,6 +268,9 @@ stop_rules:
   - do_not_line_edit_before_structural_failures_are_resolved
   - do_not_silently_change_canon
   - do_not_copy_reference_expression
+  - do_not_start_prose_before_story_gate
+  - do_not_restart_completed_stage_without_new_evidence
+  - do_not_lock_books_5_to_10_from_present_forecasts
 
 continuation_commands:
   - "и"
