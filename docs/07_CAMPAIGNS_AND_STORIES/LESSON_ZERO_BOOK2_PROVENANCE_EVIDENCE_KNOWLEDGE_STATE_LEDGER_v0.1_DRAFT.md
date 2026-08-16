@@ -5,6 +5,7 @@
 **Current prose base:** Chapters 1–6 v0.2  
 **Architecture base:** Book Two Master Architecture v0.1  
 **Craft basis:** CRAFT-012, CRAFT-016, CRAFT-017  
+**Alignment note:** updated after re-reading the exact Master Architecture Ch7–15 map and R-14 / Root-Library evidence ladder. Architecture outcomes are preserved; CRAFT-based changes are explicitly marked as proposed embodiment only.
 
 ---
 
@@ -32,14 +33,14 @@ Use only:
 - `UNVERIFIED` — claim exists, not checked;
 - `CONTESTED` — credible alternatives remain;
 - `WITHHELD BY RIGHT` — information exists but legitimate access is denied;
-- `PLANNED SETUP` — future evidence required by architecture, not yet prose fact;
-- `UNKNOWN TO PRODUCTION` — must be frozen before reveal drafting.
+- `ARCHITECTURE-LOCKED DRAFT` — specified in Master Architecture v0.1 but not yet prose fact;
+- `PROPOSED EMBODIMENT` — craft-driven staging change requiring Founder approval before architecture override.
 
 ---
 
-# 2. CURRENT TRUTH BOUNDARY
+# 2. CURRENT TRUTH BOUNDARY AFTER CH6
 
-## What Book Two already supports
+## What current prose supports
 
 - Lattice uses both declared and inferred relations.
 - Lattice can predict likely companion/assistance behavior and change routing accordingly.
@@ -48,19 +49,20 @@ Use only:
 - Samir explicitly says it is **not a match**.
 - Voss says current Rivergate components have documented development history, with some older academic lineages.
 - Voss is willing to examine whether an inherited design assumption remains justified.
+- Lattice genuinely works and can prevent harm.
 
-## What Book Two does NOT yet support
+## What current prose does NOT yet support
 
-- direct descent from R-14;
+- direct descent from R-14 / RL-0;
 - deliberate copying from the unresolved old model;
 - conspiracy;
 - alien/Confederation origin;
-- Root Library causation;
+- Root Library as an organization or causal agent;
 - secret institutional plan to reproduce an old system;
 - malicious intent by Voss/Rowe/Calder;
-- uniqueness of actor-order dependence.
+- a direction of transmission.
 
-Those conclusions are forbidden until the ledger gains sufficient evidence.
+Those conclusions remain forbidden until the architecture's evidence ladder earns them — and even Book Two does not resolve direction of transmission.
 
 ---
 
@@ -70,17 +72,17 @@ Those conclusions are forbidden until the ledger gains sufficient evidence.
 |---|---:|---|---|---|---|---|---|---|---|---|
 | P01 | 1 | Mel and Taven receive divergent routes while companion continuity remains green | OBSERVED | yes | yes | yes | yes | system can preserve a relation while giving different instructions | bug; ordinary optimization; one-off routing conflict | group watches relation logic rather than only route output |
 | P02 | 1 | Taven says system assumed one of them would correct divergence | INTERPRETED by affected participant | yes | yes | yes | yes | behavior prediction may be part of routing | Taven may be interpreting interface behavior; could be incidental | motivates audit question |
-| P03 | 1 | after stop, mode changes to `EXPLICITLY COUPLED` | RECORDED/OBSERVED | yes | yes | yes | yes | fallback uses more conservative relation logic | stop may have triggered generic conservative mode, not specifically relation honesty | establishes before/after model state |
+| P03 | 1 | after stop, mode changes to `EXPLICITLY COUPLED` | RECORDED/OBSERVED | yes | yes | yes | yes | fallback uses more conservative relation logic | stop may have triggered generic conservative mode | establishes before/after model state |
 | P04 | 1 | Samir: `The shape is not a match. It is also not random.` | DECLARED + bounded interpretation | yes | yes | yes | group | structural similarity exists in Samir's comparison | coincidence; common modeling technique; shared academic lineage | Rivergate model becomes relevant to unresolved historical question |
-| P05 | 2 | Lattice hold specifically includes mismatch between declared and inferred preference | RECORDED policy | yes | yes | yes | all | inferred preference is operationally important enough to regulate | policy may be preventive rather than evidence of current abuse | frames what can justify intervention |
-| P06 | 3 | Lattice distinguishes declared from inferred relation types | RECORDED/DECLARED by Voss | yes | yes | yes | all | relation inference is intentional architecture, not accidental bug | still normal civic modeling | narrows investigation to inference behavior |
+| P05 | 2 | Lattice hold includes mismatch between declared and inferred preference | RECORDED policy | yes | yes | yes | all | inferred preference is operationally important enough to regulate | policy may be preventive rather than evidence of current abuse | frames what can justify intervention |
+| P06 | 3 | Lattice distinguishes declared from inferred relation types | RECORDED/DECLARED by Voss | yes | yes | yes | all | relation inference is intentional architecture | still normal civic modeling | narrows investigation to inference behavior |
 | P07 | 3 | actor order changes next available relational state | OBSERVED in model | yes | yes | yes | all | system is path/order sensitive | many state systems are order sensitive | first formal feature comparable to historical material |
 | P08 | 3 | Samir states older human models show similar actor-order structure | DECLARED + comparison | yes | yes | yes | Voss/Rowe/all present | nontrivial similarity worth examining | independent invention; broad method family; superficial topology | Voss offers lineage review |
-| P09 | 3 | Voss: components have 12-year history in pieces, 4 integrated; older published lineages exist | DECLARED, potentially document-verifiable | yes | yes | yes | all | present system has traceable human development | records may contain gaps; lineage may branch | creates legitimate research path instead of conspiracy leap |
+| P09 | 3 | Voss: components have 12-year history in pieces, 4 integrated; older published lineages exist | DECLARED, document-verifiable in principle | yes | yes | yes | all | present system has traceable human development | lineage may branch or predate integration | creates legitimate research path instead of conspiracy leap |
 | P10 | 3 | Voss asks whether they inherited a design assumption they no longer understand | DECLARED intention | yes | yes | yes | all | responsible internal uncertainty exists | no implication that inheritance is mysterious or improper | adult competence joins investigation |
 | P11 | 4 | Ethan declines hold because threshold not established | RECORDED decision | yes | yes | yes | audit team | suspicion alone is insufficient | — | establishes epistemic standard for later mystery claims |
-| P12 | 5 | Samir retains control over personal/historical record access | WITHHELD BY RIGHT | yes | yes | yes | all | missing evidence cannot be treated as proof | access may later be granted in derived form | future investigation must work without violating him |
-| P13 | 6 | Lattice prevents a real incident through predictive allocation | OBSERVED/RECORDED | yes | yes | yes | all | system has genuine public value | success does not prove fairness of burden distribution | makes later intervention morally costly |
+| P12 | 5 | Samir retains control over personal/historical record access | WITHHELD BY RIGHT | yes | yes | yes | all | missing evidence cannot be treated as proof | derived comparison may later be allowed | investigation must respect his boundary |
+| P13 | 6 | Lattice prevents a real incident through predictive allocation | OBSERVED/RECORDED | yes | yes | yes | all | system has genuine public value | success does not prove fairness of burden distribution | later intervention has real moral cost |
 
 ---
 
@@ -97,7 +99,7 @@ Knows:
 Does **not** know:
 - whether similarity means descent;
 - whether burden is concentrated unfairly;
-- whether any old lineage is causally important.
+- direction of any cross-civilizational relationship.
 
 Primary bias risk:
 `pattern recognition + desire for a large answer`.
@@ -116,205 +118,196 @@ Does **not** owe:
 - raw personal record access;
 - proof for other people's preferred theory.
 
-Primary bias risk:
-`overprotection / refusal to let useful derived evidence travel` may become a real dilemma later, but cannot be manufactured by disrespecting his rights.
+Primary function:
+keep provenance evidence bounded without becoming an exposition oracle.
 
 ## Aoife
 
-Knows:
-- interface language can turn inference into apparently objective description;
-- transparency wording matters.
-
-Primary function in mystery:
-separate `what system says` from `what evidence supports`.
+Primary function:
+separate `what system says` from `what evidence supports`, and catch true-but-misleading framing.
 
 ## Maya
 
-Knows:
-- people experience model constraints even when model semantics are technically narrower;
-- a system can be formally correct yet socially over-directive.
-
-Primary function in mystery:
-force evidence back into lived movement/choice rather than abstract diagrams.
+Primary function:
+force model claims back into lived movement/choice and ask who actually bears the inconvenience.
 
 ## Ollie
 
-Knows:
-- physical fallback and nonintegrated tools matter;
-- elegant model-state claims must eventually survive hardware failure and real-world state mismatch.
-
-Primary function in mystery:
-ask what can actually be tested, reproduced or falsified.
+Primary function:
+ask what can be tested, reproduced, falsified, or handled by physical fallback.
 
 ## Voss
 
 Knows:
 - documented Rivergate lineage;
 - which published methods/components feed the system;
-- more about implementation than the teens.
+- implementation details the teens do not know.
 
-Does not yet know:
-- whether any inherited assumption is problematic in the way Samir suspects.
-
-Must remain competent; no arbitrary adult blindness.
+Must remain competent and good-faith.
 
 ---
 
-# 5. PLANNED EVIDENCE REQUIREMENTS — CH7–10
+# 5. ARCHITECTURE-LOCKED DRAFT — CH7–10
 
-Architecture says Movement II must prove the system works and Ethan signs a limited expansion because evidence supports it.
+These outcomes come directly from Master Architecture v0.1 and are not replaced by CRAFT-016/017.
 
-Therefore these chapters should **not** reveal the provenance answer yet.
+## Ch7 — FAMILIAR SHAPE
 
-They should add only evidence that sharpens the question.
+**Architecture outcome:** Samir notices a transition pattern in Lattice diagnostics resembling the old relational-state family. He reports resemblance without claiming lineage. Ethan does not turn it into a theory before Samir finishes.
 
-## Required function A — ordinary/social consequence
+**Evidence status:** `ARCHITECTURE-LOCKED DRAFT`.
 
-`PLANNED SETUP`
-A real youth/public situation should demonstrate that inferred relation routing affects somebody's ordinary choice, convenience, status or burden without catastrophic harm.
+**CRAFT-016 proposed embodiment only:** begin from a lived/public routing event that makes the order-sensitive behavior observable, then use diagnostics to verify it. This preserves the exact outcome while reducing screen-room repetition. See separate Ch7–10 Change Request.
 
-Possible domains allowed by existing world:
-- transit;
-- school/community event;
-- youth observer movement;
-- volunteer work;
-- maker-team logistics;
-- family/companion routing;
-- public media/transparency.
+## Ch8 — NOT YOUR DATA
 
-Do not choose the exact event opportunistically after prose begins. Freeze scene function first.
+**Architecture outcome:** Voss asks for deeper comparison. Samir refuses raw data but offers a derived route later. Calder backs the legitimacy of refusal despite plausible public-safety benefit.
 
-## Required function B — successful predictive benefit
+**Evidence function:** rights constraints change the method of investigation.
 
-`PLANNED SETUP`
-At least one case should show inference improving access or safety in a way a purely manual system would likely miss or delay.
+**Mystery gate:** no inference may treat withheld-by-right data as suspicious evidence.
 
-Purpose:
-prevent `inference = evil` simplification.
+## Ch9 — THE SIMPLE MACHINE
 
-## Required function C — first asymmetry hint
+**Architecture outcome:** Ollie's maker team demonstrates breadcrumb rovers: low-cost mobile route markers working without central prediction. Rivergate staff call them useful but crude; `crude ≠ wrong`.
 
-`PLANNED SETUP`
-A repeated cooperative participant/group may absorb a small additional inconvenience because the model predicts they will adapt.
+**Evidence function:** establishes a real alternative/fallback architecture before the later hold crisis.
 
-At this stage it should be:
-- observable;
-- explainable benignly;
-- not yet proof of burden concentration.
+**Mystery function:** none required. Do not make every useful technology a provenance clue.
 
-Required alternative explanations:
-- random load;
-- route geometry;
-- temporary staffing;
-- legitimate optimization;
-- sample too small.
+## Ch10 — SIGN HERE
 
-## Partial closure by Ch10
+**Architecture outcome:** successful tests lead Ethan to co-sign expansion of youth-zone testing. He authorizes rather than merely refrains from interfering.
 
-Close:
-`Does Lattice actually work?` → **YES, materially.**
+**Fair-play requirement:** the reader must have the same substantive evidence Ethan uses to sign.
 
-Keep open:
-`Does it distribute the costs of working fairly?`
+### Movement II partial closure
 
-This reduces cognitive burden before Movement III.
+By Ch10 close:
+
+`Does Lattice materially work?` → **YES.**
+
+Still open:
+
+`Does it distribute the cost of working fairly?`
+
+`Why does one part of its relational logic resemble older structures?`
 
 ---
 
-# 6. PLANNED EVIDENCE REQUIREMENTS — CH11–15
+# 6. ARCHITECTURE-LOCKED DRAFT — CH11–15
 
-Architecture says Movement III discovers burden concentration and inferred willingness.
+Master Architecture already specifies the burden-concentration sequence.
 
-Before prose drafting, freeze a measurable pattern.
+## Ch11 — WHO PAYS
 
-## Required data structure
+Audit logs show repeated small delays assigned to the same users. Maya asks for burden by person rather than by route.
 
-At least three independent observations across different contexts should support:
+**Evidence upgrade:** from isolated inconvenience to aggregate-person pattern.
 
-`participants predicted to accommodate change are repeatedly assigned more adjustment burden`.
+## Ch12 — TRUE FOOTAGE
 
-Avoid three copies of the same kind of evidence.
+Aoife has footage that is literally true but misleading without context.
 
-Suggested evidence diversity by function, not fixed plot:
+**Craft function:** demonstrates that fair evidence can still be misinterpreted through framing.
 
-1. **route evidence** — one group rerouted more often;
-2. **resource evidence** — translator/refuge/queue delay allocated toward predicted cooperative participant;
-3. **human testimony** — affected person says they keep being the one asked/expected to adjust;
-4. **model trace** — variable explicitly or functionally encodes probable willingness/likelihood of correction.
+## Ch13 — THE ROUTE YOU REFUSE
 
-At least one of 1–3 must exist before 4 becomes decisive, so the model trace confirms lived evidence rather than manufacturing the problem from a screen.
+Nico legally refuses a recommendation; his choice reveals another assumption. Maya must not convert responsibility into unauthorized control.
 
-## Required alternative hypothesis phase
+**Evidence function:** human agency generates a test the system did not schedule.
 
-Before declaring burden concentration:
+## Ch14 — PROBABLE YES
 
-- normalize for route length / needs;
-- compare comparable participants;
-- check whether safety constraints explain pattern;
-- test whether burden follows cooperation prediction rather than another correlated variable.
+Samir finds a variable equivalent to predicted accommodation: probability a person will yield, wait, assist or reroute. Voss argues this is not consent; Samir argues the system acts as if probable cooperation is a resource.
 
-Ollie/Voss should demand falsification attempts.
+**Required evidentiary standard before chapter ends:** distinguish correlation from actual burden allocation. Do not treat the variable name alone as proof of harm.
 
-## Required partial answer
+## Ch15 — PUBLIC COMMENT
 
-By end Ch15, local claim may become:
+Voss defends Lattice with real outcome data. Critics overstate R-14 link. Ethan corrects them even though it weakens his own preferred suspicion.
 
-`SUPPORTED: under specified conditions, Lattice repeatedly externalizes marginal inconvenience onto participants it predicts will comply/adapt.`
-
-Do **not** yet conclude historical origin from this behavior.
+**Partial closure:** burden concentration / predicted accommodation becomes a legitimate current-system problem, while provenance remains unresolved.
 
 ---
 
-# 7. PLANNED EVIDENCE REQUIREMENTS — CH16–20 PROVENANCE COLLISION
+# 7. MASTER ARCHITECTURE R-14 / ROOT-LIBRARY EVIDENCE LADDER
 
-The architecture permits provenance to become causally relevant here.
+The exact evidence ladder is already specified in Book Two Master Architecture v0.1 and must replace any looser `UNKNOWN TO PRODUCTION` assumption:
 
-However, current production truth is insufficient to specify the final historical answer.
+1. `ARCHITECTURE-LOCKED DRAFT` — Lattice uses a modern relational-state formalism with documented human development history.
+2. `CURRENTLY PARTLY ONSTAGE` — Samir notices one structural feature similar to the older R-14 family.
+3. `FUTURE ARCHITECTURE-LOCKED DRAFT` — Vey confirms an analogous Confederation formalism exists, but similarity is not lineage.
+4. `FUTURE ARCHITECTURE-LOCKED DRAFT` — a controlled comparison identifies a **rare transition-order operator** shared by RL-0 material and one older Confederation archive family.
+5. `FUTURE ARCHITECTURE-LOCKED DRAFT` — match is too specific to dismiss casually but still does not establish direction of transfer.
+6. `FUTURE ARCHITECTURE-LOCKED DRAFT` — a second nonhuman civilization's archival standard contains an equivalent `ROOT CLASS / RELATIONAL MATRIX` notation from before its own Confederation membership.
+7. `BOOK-TWO END STATE` — Earth is no longer the only unexplained occurrence.
 
-Therefore fields below are marked `UNKNOWN TO PRODUCTION` and must be frozen before Ch16 prose.
+## Explicit non-conclusions
 
-| Field | Current status |
-|---|---|
-| exact shared formal feature beyond broad actor-order sensitivity | UNKNOWN TO PRODUCTION |
-| whether Lattice directly descends from old model | UNKNOWN TO PRODUCTION |
-| whether both descend from a shared published method | UNKNOWN TO PRODUCTION |
-| whether there is an undocumented intermediary | UNKNOWN TO PRODUCTION |
-| what record proves chronology | UNKNOWN TO PRODUCTION |
-| what record is missing | UNKNOWN TO PRODUCTION |
-| what Book Two can conclusively resolve | UNKNOWN TO PRODUCTION |
-| what saga question remains | UNKNOWN TO PRODUCTION |
+Book Two still does **not** prove:
 
-### Mandatory fair-play rule
+- Matrix is an organization;
+- aliens taught humans;
+- humans taught aliens;
+- a single source exists;
+- the five were selected;
+- pre-Contact Earth was secretly managed.
 
-Whatever answer is frozen, at least one of its decisive traces must be seeded before the final provenance reveal and be visible to reader + active investigators.
+## Book Two provenance ending status
 
-### Mandatory anti-conspiracy rule
+**MULTIPLE UNRESOLVED OCCURRENCES. DIRECTION OF TRANSMISSION UNKNOWN.**
 
-A gap in records is only:
-
-`MISSING RECORD`.
-
-It is not:
-
-`PROOF OF COVER-UP`.
-
-A cover-up requires independent evidence of intentional concealment.
+This is the required local closure + saga opening.
 
 ---
 
-# 8. MYSTERY VS SUSPENSE LEDGER
+# 8. FAIR-PLAY REQUIREMENTS FOR THE FUTURE LADDER
+
+## Vey confirmation
+
+Before Vey's statement matters, reader must understand:
+- what exact formal property Samir is asking about;
+- why Vey is a relevant source;
+- that `analogous formalism` is weaker than lineage.
+
+## Rare transition-order operator
+
+The word `rare` must be earned, not asserted.
+
+Required support in prose/records:
+- comparison against a broader method family or documented alternatives;
+- reason experts regard the operator as unusually specific;
+- at least one credible objection/alternative.
+
+## Second nonhuman archive
+
+This cannot arrive as a magical final document.
+
+Seed before payoff:
+- existence of independent pre-membership archives;
+- why dating/provenance is trusted;
+- why notation equivalence is meaningful despite translation problems.
+
+## Ending inference
+
+Allowed:
+`Earth is not the only unexplained occurrence.`
+
+Forbidden:
+`therefore one hidden organization seeded all civilizations.`
+
+---
+
+# 9. MYSTERY VS SUSPENSE LEDGER
 
 ## Mystery channel
 
 Main question:
-**What exactly is the relationship between the present Lattice relational logic and the older unresolved human model lineage?**
+**What exactly is the relationship among present Lattice relational logic, older human R-14/RL-0 material, and analogous nonhuman archival formalisms?**
 
-Subquestions:
-- which features are genuinely shared?
-- which are common modeling practice?
-- what lineage is documented?
-- where are the gaps?
-- does provenance alter how Rivergate should evaluate the design?
+Book Two answer:
+**There are multiple unresolved occurrences; direction of transmission remains unknown.**
 
 ## Suspense channel
 
@@ -322,21 +315,21 @@ Main question:
 **Will Ethan use or withhold his Youth-Scope Hold correctly when Lattice is both useful and capable of concentrating hidden burden?**
 
 Pressure variables:
-- opening/public launch;
+- public opening;
 - real people in system;
-- fallback is worse in some respects;
+- fallback is measurably worse in some respects;
 - limited evidence access;
 - cost of stopping;
 - cost of continuing;
 - eventual short decision window.
 
-These channels may collide, but must not be treated as the same thing.
+These channels collide but are not the same engine.
 
 ---
 
-# 9. COGNITIVE-LOAD BUDGET
+# 10. COGNITIVE-LOAD BUDGET
 
-At any one sequence, foreground no more than:
+At any one sequence, foreground approximately:
 
 - **1 dominant question**;
 - **2–3 active competing explanations**;
@@ -345,38 +338,38 @@ At any one sequence, foreground no more than:
 
 This is a production heuristic, not a universal literary law.
 
-## Relief points
-
-Required partial closures:
+## Required relief points
 
 - by Ch10: `Lattice works` closes;
-- by Ch15: `burden concentration exists under defined conditions` closes;
-- by Ch20: one meaningful provenance question closes, even if deeper lineage remains open;
-- later movements convert knowledge into authority/action rather than adding endless mystery branches.
+- by Ch15: `burden concentration / predicted accommodation is a real current-system issue` substantially closes;
+- by Ch20: the rare-operator comparison produces a meaningful partial provenance answer;
+- later movements convert knowledge into authority/action rather than opening endless new theory branches;
+- by ending: multiple occurrences established, direction unknown.
 
 ---
 
-# 10. RED-HERRING RULES FOR THIS BOOK
+# 11. RED-HERRING RULES FOR THIS BOOK
 
 Allowed:
 
-`true structural similarity → initially interpreted as direct inheritance → later shown to have a more complex lineage`.
+`true structural similarity → initially suspected as direct inheritance → later shown to support a more complex multi-occurrence mystery`.
 
 Allowed:
 
-`record gap → suspicion → later explained by mundane institutional discontinuity`, if all facts remain true.
+`record gap → suspicion → mundane institutional explanation`, if all displayed facts remain true.
 
 Not allowed:
 
 - fabricated log;
 - narrator hiding Ethan's already-known decisive fact;
-- Voss lying without motive/evidence just to preserve twist;
-- Samir secretly knowing the answer while narration pretends he does not, unless his withholding is explicitly visible as withholding;
-- late historical document that single-handedly solves everything without prior setup.
+- Voss lying without established motive/evidence solely to preserve twist;
+- Samir secretly knowing the final answer while narration falsely presents uncertainty;
+- late historical/nonhuman document that single-handedly solves everything without prior setup;
+- missing record treated as proof of cover-up.
 
 ---
 
-# 11. CHAPTER CARD ADDITION — MYSTERY FIELDS
+# 12. CHAPTER CARD ADDITION — MYSTERY FIELDS
 
 Every chapter touching provenance now gets:
 
@@ -395,19 +388,16 @@ If `ACTION CAUSED` is blank, ask whether the clue belongs here or is only lore.
 
 ---
 
-# 12. NEXT PRODUCTION DECISION
+# 13. CURRENT CHANGE CONTROL
 
-Before Ch11+ provenance prose, freeze the local Truth Box.
+Master Architecture v0.1 already contains Ch7–10 outcomes and the complete R-14 evidence ladder. Therefore no craft batch may silently replace them.
 
-Before Ch7 prose, freeze one ordinary/social event that creates a real new audit question rather than another training-room exercise.
+CRAFT-016/017 proposes only a **dramatic embodiment adjustment** for Ch7–10:
 
-Current best structural sequence is:
+`same chapter outcome + more lived/ordinary causation + less repeated diagnostic-room grammar`.
 
-`Ch6: SYSTEM PROVES VALUE`
-→ `Ch7: VALUE/COST ENTERS ORDINARY YOUTH LIFE`
-→ `Ch8: TEAM TESTS THE NEW QUESTION`
-→ `Ch9: BENEFIT AND SMALL ASYMMETRY COEXIST`
-→ `Ch10: ETHAN APPROVES LIMITED EXPANSION BECAUSE CURRENT EVIDENCE SUPPORTS IT`
-→ `Ch11+: PATTERN BECOMES MEASURABLE`.
+That proposal is stored separately as:
 
-This preserves the book's one main story and keeps the provenance mystery subordinate to live consequences.
+`LESSON_ZERO_BOOK2_CH7-10_ARCHITECTURE_CHANGE_REQUEST_CRAFT016_017_v0.1_DRAFT.md`.
+
+Until Founder approval, Master Architecture v0.1 remains the story source of truth.
