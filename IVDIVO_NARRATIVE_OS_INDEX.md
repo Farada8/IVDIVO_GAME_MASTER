@@ -1,0 +1,26 @@
+# IVDIVO NARRATIVE OS — ROOT INDEX
+
+**Status:** CANONICAL SPECIALIZED PRODUCTION SYSTEM  
+**Version:** 1.0  
+**Established:** 2026-08-16
+
+Permanent multi-agent orchestration layer for the IVDIVO Writers’ Studio.
+
+Main directory: [`IVDIVO_NARRATIVE_OS/`](./IVDIVO_NARRATIVE_OS/)
+
+Start here:
+- [`README.md`](./IVDIVO_NARRATIVE_OS/README.md)
+- [`00_NARRATIVE_OS_CANON.md`](./IVDIVO_NARRATIVE_OS/00_NARRATIVE_OS_CANON.md)
+- [`01_NARRATIVE_OS_CONFIG.yaml`](./IVDIVO_NARRATIVE_OS/01_NARRATIVE_OS_CONFIG.yaml)
+- [`02_AGENT_PROMPTS_MASTER.md`](./IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md)
+- [`03_ROUTER_EXECUTION_RUNBOOK.md`](./IVDIVO_NARRATIVE_OS/03_ROUTER_EXECUTION_RUNBOOK.md)
+- [`04_RECONCILER_GATES.md`](./IVDIVO_NARRATIVE_OS/04_RECONCILER_GATES.md)
+- [`05_OUTPUT_SCHEMAS.md`](./IVDIVO_NARRATIVE_OS/05_OUTPUT_SCHEMAS.md)
+- [`06_BOOK_STUDIO_MODE.md`](./IVDIVO_NARRATIVE_OS/06_BOOK_STUDIO_MODE.md)
+- [`CHANGELOG.md`](./IVDIVO_NARRATIVE_OS/CHANGELOG.md)
+
+The system orchestrates the existing canonical specialist bank [`IVDIVO_WRITERS_ROOM_50_PROMPTS.md`](./IVDIVO_WRITERS_ROOM_50_PROMPTS.md). It does not replace it.
+
+Authority remains:
+
+`Founder -> IVDIVO_WRITING_PRODUCTION_CANON -> Narrative OS -> approved book/series canon -> specialist standards -> working drafts -> references`.
