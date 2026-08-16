@@ -11,7 +11,8 @@ Before continuing Book 2 in any conversation, read:
 1. `/IVDIVO_START_HERE_CROSS_CONVERSATION_ROUTER_v1_0.md`
 2. `/IVDIVO_GITHUB_GOOGLE_DRIVE_SYNC_PROTOCOL_v1_0.md`
 3. this `DRAFT_STATUS.md`
-4. the latest active source-of-truth / reconciliation files referenced below.
+4. `ACTIVE_SOURCE_OF_TRUTH_INDEX_v1.2.md`
+5. the latest active source-of-truth / reconciliation files referenced there.
 
 GitHub `main` is canonical. Google Drive mirrors the working state.
 
@@ -36,8 +37,8 @@ Current active frontier:
 
 ## Active drafting authority
 
-Use the latest active/reconciled stack, including:
-- `IVDIVO_BOOK2_ORBITAL_YOUTH_ACTIVE_PRE_PROSE_SOURCE_OF_TRUTH_INDEX_v1_1.md`
+Use:
+- `ACTIVE_SOURCE_OF_TRUTH_INDEX_v1.2.md`
 - `IVDIVO_BOOK2_ORBITAL_YOUTH_POST_REFERENCE_INTEGRATION_CONFLICT_RESOLUTION_v1_0.md`
 - `IVDIVO_BOOK2_ORBITAL_YOUTH_RECONCILED_SCENE_ARCHITECTURE_PATCH_v0_2.md`
 - `IVDIVO_BOOK2_ORBITAL_YOUTH_FINAL_PRE_PROSE_STORY_GATE_v0_3.md`
