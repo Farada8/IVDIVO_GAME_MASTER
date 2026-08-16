@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–10 GREEN / Chapter 11 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–11 GREEN / Chapter 12 next
 
 ## READ ORDER
 
@@ -41,7 +41,8 @@
 - Vela / Ring Six remain WORKING names unless Founder locks.
 - Nadia Park remains WORKING housing/relocation coordinator.
 - Iri remains biologically embodied, non-human-default, cooler/drier preference with narrower rapid warm-humid tolerance.
-- Aoife Source S1 remains unnamed; current privacy mechanism is respiratory/environmental accommodation inferred through context.
+- Aoife Source S1 remains separate from Iri; current working name `Sela` is OPTION / NOT CANON.
+- S1 sensitive body/environment ontology remains UNKNOWN; only a private environmental accommodation and explicit non-disclosure boundary are established in Ch11.
 - Ch36 remains four braided resolution scenes.
 - Rivergate/Lattice/Ethan-primary Book 2 branch is SUPERSEDED AS BOOK TWO.
 
@@ -56,19 +57,20 @@ Ch6 — THE RING PEOPLE WANT — GREEN / Full Studio patched
 Ch7 — STATIC SAFE — GREEN / Full Studio patched  
 Ch8 — NOT A VISITOR SPORT — GREEN / Full Studio patched  
 Ch9 — THE APPRENTICES — GREEN / Full Studio patched  
-Ch10 — NIGHT WITHOUT A HANDLER — GREEN / Full Studio patched
+Ch10 — NIGHT WITHOUT A HANDLER — GREEN / Full Studio patched  
+Ch11 — WHOSE STORY — GREEN / Full Studio patched
 
-**NEXT: Ch11 — WHOSE STORY — Aoife POV.**
+**NEXT: Ch12 — THE CLEAN MODEL — Ollie POV.**
 
 Latest accepted chapter controls:
-- `STUDIO/CH10_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
-- `DRAFTS/CH10_NIGHT_WITHOUT_A_HANDLER_v0.2_FULL_STUDIO.md`
-- `GATES/CH10_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- `STUDIO/CH11_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
+- `DRAFTS/CH11_WHOSE_STORY_v0.2_FULL_STUDIO.md`
+- `GATES/CH11_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive mirrors:
-- Ch10 Writer Brief ID `1tIrHo8DZCgcUotbOR68XhpxF390s0lbLKxvw3ou4OQI`
-- Ch10 v0.2 ID `1DTGbWC99OXiXZwKN0z8U4k4tDXYnD5gl3tbnsEDlz1Q`
-- Ch10 Gate ID `12Tj0uZ4oGYCrt4iCIrA1EB7IzUWfuo6-dAardzKEhKA`
+- Ch11 Writer Brief ID `1VkNj6bCWhcR8QhTJEPZjRA6UK0fgyB-QOyd6PUxjc1s`
+- Ch11 v0.2 ID `1HfYGPpF5coTyC0JlKKf712KnYbcstIZ455YA3y_MRDA`
+- Ch11 Gate ID `1zj87Q3aoTzDI11cM0k_gCSfCGqBj-Zcx6jR3Csvo0L8`
 
 ## ACTIVE DRAFTING MODE
 
