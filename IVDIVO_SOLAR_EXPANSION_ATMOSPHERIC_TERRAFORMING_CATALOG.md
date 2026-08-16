@@ -200,3 +200,230 @@ Ireland is therefore a place where orbital technology returns to Earth, is natur
 7. Exact Atmospheric Foundry and Atmospheric Seed implementations remain TO DESIGN until technical passports are written.
 8. Specialized synthetic bodies remain a parallel alternative to transforming every world into Earth.
 9. Ireland is an Earthside testbed linking orbital habitat technology to later planetary-engineering systems.
+
+---
+
+# 12. SETTLEMENT CIVILIZATION LADDER
+
+## WORKING ARCHITECTURE
+
+The Solar System should not become a collection of Earth colonies with different scenery. Each environment produces a distinct human civilization, economy, youth culture, identity and political interest.
+
+Development ladder:
+
+`EARTH -> ORBITAL CITIES -> MOON -> ASTEROID MOBILE SETTLEMENTS -> MARS -> CERES / MAIN BELT -> VENUS ATMOSPHERIC CITIES -> JOVIAN WORLDS -> SATURNIAN WORLDS -> OUTER-SYSTEM CIVILIZATIONS`
+
+The word “colony” should gradually become politically obsolete as second- and third-generation populations regard their settlements as home rather than extensions of Earth.
+
+---
+
+# 13. ORBITAL CITIES — FIRST POST-PLANETARY IDENTITY
+
+## CANON CONNECTION / WORKING SOCIAL DETAIL
+
+Orbital cities are the first human societies in which large populations are born, educated, employed, form families and die without treating Earth as their normal physical home.
+
+They develop:
+- local law and political identity;
+- artificial-gravity cultures;
+- habitat-specific architecture;
+- maintenance professions as civic necessities;
+- closed-loop ecological ethics;
+- youth cultures shaped by station access, transit, pressure safety and mixed populations;
+- a growing refusal to be treated as temporary installations or administrative dependencies of planetary governments.
+
+This supports the established ORBITAL YOUTH line.
+
+---
+
+# 14. MOON — ARTIFICIAL ECOLOGY CIVILIZATIONS
+
+## WORKING ARCHITECTURE
+
+The Moon should contain multiple different city types rather than one generic lunar colony.
+
+Possible functional/cultural families include:
+- polar water/energy/industrial cities;
+- enclosed crater cities with landscape-scale atmospheres;
+- research/university cities;
+- construction and launch hubs;
+- far-side cities whose residents do not see Earth in their daily sky.
+
+Local ecology can become a cultural marker. Different lunar cities may intentionally maintain different climate, gravity, vegetation and urban-environment regimes.
+
+Youth born on the lunar far side can experience “going to see Earth” as travel rather than as looking up at home.
+
+Exact city names, sovereignties and chronology remain TO DESIGN.
+
+---
+
+# 15. ASTEROID / MOBILE-CITY CULTURE
+
+## WORKING ARCHITECTURE
+
+Volatile and mineral extraction supports long-duration settlements attached to or travelling with asteroids.
+
+Some become mobile industrial communities rather than temporary mining camps.
+
+This creates populations for whom:
+- the city itself moves through Solar-System space;
+- gravity and orientation may vary;
+- family work cycles are tied to navigation and extraction windows;
+- “where are you from?” may refer to a moving settlement rather than a fixed planet;
+- adolescents can inherit strong occupational expectations from multi-generation mobile communities.
+
+This is a distinct youth and social line, not simply “space miners.”
+
+---
+
+# 16. MARS — COMPETING CIVILIZATIONAL MODELS
+
+## WORKING ARCHITECTURE
+
+Mars should contain several settlement philosophies simultaneously:
+
+1. **SEALED / SUBSURFACE CITIES** — reliable, conservative, heavily engineered habitats.
+2. **PARATERRAFORMED REGIONS** — large valleys/craters with breathable atmosphere, hydrology and living ecosystems inside controlled boundaries.
+3. **PLANETARY TERRAFORMING ZONES** — areas participating in long-term attempts to change Mars itself.
+4. **ADAPTIVE COMMUNITIES** — humans who prefer specialized synthetic bodies or environmental interfaces rather than converting all Martian environments into Earth-like ones.
+
+This generates a durable political and ethical conflict:
+
+- **TERRAFORMERS:** make the world habitable for biological humans.
+- **PRESERVATIONISTS:** protect Mars as a distinct planetary environment, especially if indigenous life or unique prebiotic systems exist.
+- **ADAPTIVES:** alter the human carrier rather than the whole world.
+
+No side is automatically correct.
+
+---
+
+# 17. CERES — INTERPLANETARY CROSSROADS
+
+## WORKING ARCHITECTURE
+
+Ceres can become a major logistical, water, industrial and cultural hub between the inner and outer Solar System.
+
+Its cities may extend deeply inside the body, using internal caverns, rotating habitat volumes, reservoirs, shipyards and manufacturing systems.
+
+Story function:
+- meeting place for Earth, orbital, lunar, Martian, asteroid and outer-system populations;
+- mixed youth culture;
+- logistics and migration hub;
+- neutral or contested political ground;
+- place where “planetary” and “mobile” identities meet.
+
+Do not reduce Ceres to a fuel station.
+
+---
+
+# 18. VENUS — ATMOSPHERIC CIVILIZATION
+
+## WORKING ARCHITECTURE
+
+Venus should initially be inhabited primarily through floating / atmospheric cities rather than conventional surface colonization.
+
+A mature Venus culture can include people born and raised in airborne settlements who may never normally touch the solid planetary surface.
+
+This produces:
+- architecture without the same relationship to ground;
+- weather-navigation culture;
+- floating agriculture and industry;
+- distinctive sports and transport;
+- social concepts of altitude, drift, anchoring and atmospheric territory;
+- a powerful contrast with subterranean lunar/Martian cultures.
+
+Irish atmospheric-city experience can contribute technology and expertise without making Venus politically Irish.
+
+---
+
+# 19. JOVIAN SYSTEM — OCEAN AND RADIATION FRONTIER
+
+## WORKING ARCHITECTURE
+
+The Jovian system should not be one civilization.
+
+Possible distinctions:
+- **Callisto:** major outer-system logistics and relatively safer settlement hub;
+- **Ganymede:** deep subsurface/industrial/scientific civilization;
+- **Europa:** high-protection scientific and ocean-contact world where preservation law may dominate.
+
+If Europa contains indigenous life, ordinary terraforming becomes politically and ethically unacceptable by default. Human access may rely on remote systems, submerged habitats and specialized synthetic bodies.
+
+Europa is a prime setting for the question: **can a human enter an alien biosphere without forcing that biosphere to become human?**
+
+---
+
+# 20. SATURN / TITAN — ADAPTIVE HUMANITY
+
+## WORKING ARCHITECTURE
+
+Titan becomes one of the strongest long-term settings for specialized bodies and multiple forms of embodiment.
+
+Dense atmosphere, low gravity and hydrocarbon environments create a world where biological Earth bodies may remain protected indoors while citizens use specialized carriers for external life and work.
+
+This produces identity questions with direct story value:
+- Which body feels like home?
+- Can legal identity remain continuous across carriers?
+- What happens to relationships when partners prefer different embodiment modes?
+- Can someone be culturally Titanian while biologically Earth-human?
+
+Do not use synthetic embodiment only as a superpower or technical convenience. It must reshape ordinary life, family, work, intimacy and identity.
+
+---
+
+# 21. MERCURY — SOLAR FRONTIER
+
+## WORKING ARCHITECTURE
+
+Mercury can support deep underground settlements, polar infrastructure and highly specialized solar-industry / research environments.
+
+A possible later concept is mobile or distributed settlement associated with thermal transition regions, but exact mechanism remains TO DESIGN.
+
+Mercury's story role should connect to:
+- extreme solar energy;
+- materials and industry;
+- solar observation;
+- hazardous-environment embodiment;
+- eventual access to environments where ordinary biological bodies are impossible.
+
+---
+
+# 22. POLITICAL CONSEQUENCE — FROM COLONIES TO WORLDS
+
+## WORKING / HIGH-PRIORITY SAGA CONSEQUENCE
+
+As off-world populations become multigenerational, the political vocabulary changes.
+
+Earth can no longer assume that all human settlements are extensions of planetary states. Lunar cities, Mars regions, Ceres, orbital cities and outer-system settlements increasingly claim autonomous or sovereign status.
+
+This makes the Dublin Earth–Orbit governance talks historically necessary rather than ceremonial.
+
+The central question becomes:
+
+**Who has the legitimate right to make decisions in the name of humanity once humanity no longer lives in one planetary environment?**
+
+This connects directly to `IVDIVO_EARTH_ORBIT_GOVERNANCE_DUBLIN_CATALOG.md`.
+
+---
+
+# 23. STORY PRODUCTION LAW FOR SOLAR SETTLEMENTS
+
+Worldbuilding must generate human stories.
+
+For every new settlement, define before prose:
+- what ordinary people do for work;
+- where young people gain independence;
+- what housing costs or allocation problems exist;
+- what can embarrass a teenager there;
+- what local sport/entertainment exists;
+- what families fight about;
+- what physical danger locals treat as ordinary;
+- what outsiders misunderstand;
+- what locals envy about another world;
+- what social status means there;
+- what love/sex/relationships are complicated by;
+- what political grievance the settlement carries;
+- what would make a young resident leave;
+- what would make them return.
+
+A planet or habitat that cannot answer these questions is not yet ready to carry a novel.
