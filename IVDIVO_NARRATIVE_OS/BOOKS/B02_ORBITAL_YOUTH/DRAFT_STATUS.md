@@ -32,9 +32,10 @@ Folder ID: `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`
 8. `Chapter 8 — NOT A VISITOR SPORT` — Samir POV — GREEN / Full Studio patched
 9. `Chapter 9 — THE APPRENTICES` — Ollie POV — GREEN / Full Studio patched
 10. `Chapter 10 — NIGHT WITHOUT A HANDLER` — Maya POV — GREEN / Full Studio patched
+11. `Chapter 11 — WHOSE STORY` — Aoife POV — GREEN / Full Studio patched
 
 Current active frontier:
-**NEXT = Chapter 11 — WHOSE STORY — Aoife POV.**
+**NEXT = Chapter 12 — THE CLEAN MODEL — Ollie POV.**
 
 ## Active drafting authority
 
@@ -67,37 +68,35 @@ Do not call a chapter complete until accepted draft + gate are persisted.
 
 ## Latest accepted chapter
 
-### Chapter 10 — NIGHT WITHOUT A HANDLER
+### Chapter 11 — WHOSE STORY
 Accepted draft:
-`DRAFTS/CH10_NIGHT_WITHOUT_A_HANDLER_v0.2_FULL_STUDIO.md`
+`DRAFTS/CH11_WHOSE_STORY_v0.2_FULL_STUDIO.md`
 
 Accepted gate:
-`GATES/CH10_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+`GATES/CH11_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive mirrors:
-- Writer Brief ID `1tIrHo8DZCgcUotbOR68XhpxF390s0lbLKxvw3ou4OQI`
-- Accepted Ch10 v0.2 ID `1DTGbWC99OXiXZwKN0z8U4k4tDXYnD5gl3tbnsEDlz1Q`
-- Gate ID `12Tj0uZ4oGYCrt4iCIrA1EB7IzUWfuo6-dAardzKEhKA`
+- Writer Brief ID `1VkNj6bCWhcR8QhTJEPZjRA6UK0fgyB-QOyd6PUxjc1s`
+- Accepted Ch11 v0.2 ID `1HfYGPpF5coTyC0JlKKf712KnYbcstIZ455YA3y_MRDA`
+- Gate ID `1zj87Q3aoTzDI11cM0k_gCSfCGqBj-Zcx6jR3Csvo0L8`
 
 Gate verdict:
-**GREEN TO KEEP / PROCEED TO CHAPTER 11.**
+**GREEN TO KEEP / PROCEED TO CHAPTER 12.**
 
 ## Next prose unit
 
-### Chapter 11 — WHOSE STORY
-**POV:** Aoife
+### Chapter 12 — THE CLEAN MODEL
+**POV:** Ollie
 
 Required core:
-- make ordinary orbital life the documentary subject rather than spectacle/frontier;
-- local source distrusts being turned into another Earth-facing “life in space” story;
-- Aoife earns access by paying attention to boring/ordinary details locals actually care about;
-- source sets a concrete context boundary around a body/environment/private detail;
-- Aoife explicitly records and plays back the allowed context/audience/excerpt conditions;
-- source gives stronger material after the boundary proves real;
-- the strongest emotional line occurs after recorder-off and Aoife leaves it out;
-- Source S1 approves the cleaned excerpt;
-- ambient context capable of later inference remains as setup only;
-- do NOT trigger the inference breach yet;
-- Ethan/Aoife relationship pressure may appear only as a small unsolicited-edit/withheld-reason beat, not take over the chapter.
+- combine certified sensors, maintenance logs, Samir timing, Maya route geometry and bounded Aoife wording observations;
+- build a coherent transition-state model for Ring Six;
+- resident/body reports remain secondary annotations rather than primary evidence;
+- the model becomes cleaner precisely because Ollie's evidence hierarchy encodes his blind spot;
+- Mara asks what evidence was excluded and why;
+- adults must have enough reason to treat the model as technically defensible;
+- the model should predict known incidents well enough to create false confidence;
+- no midpoint incident / no partial opening yet;
+- preserve ordinary-life pressure around the technical work where possible.
 
 Do not switch books on ordinary `и / дальше`.
