@@ -46,7 +46,7 @@ The host set down the utensil they were holding.
 
 Maya leaned on the counter. “Not a technical reason.”
 
-“Fortunately I am not certifying a pressure vessel.”
+“It is the reason I’m awake if you miss the last transfer.”
 
 The younger member of the household crossed the room carrying a plate, heard that, and reversed direction without slowing.
 
@@ -56,15 +56,13 @@ The younger member of the household crossed the room carrying a plate, heard tha
 
 Her host waited until the corridor was empty again.
 
-“Condition-based message,” they said. “The route changes. The permitted zone changes. Lea leaves. You miss the return and activate the sleep backup. Any of those happen, you tell me. Otherwise I do not need a report that you continue to exist.”
+“Condition-based message,” they said. “The route changes. The permitted zone changes. Lea leaves. You miss the return and activate the sleep backup. Any of those happen, tell me. Otherwise I expect to hear nothing.”
 
 Maya read the agreement again.
 
 No location stream. No escort. No scheduled check-in. Two permitted late-event zones. Lea as local contact. One return condition. One approved sleep backup. Message only if something relevant changed.
 
-She had asked to be trusted with judgment.
-
-Annoyingly, this looked like judgment.
+She scanned the terms a third time and found no new demand hiding between the lines.
 
 “Fine.”
 
@@ -422,11 +420,11 @@ Maya looked toward the corridor. Davi was holding the door open with one foot wh
 
 Maya closed the agreement and reopened the transit board instead.
 
-She had spent half an hour getting rid of the location stream, the escort and the scheduled check-in. She had got almost everything she asked for. Now twelve minutes stood between her and leaving while everybody else stayed.
+The return countdown dropped to eleven minutes fifty-nine.
 
-The host had trusted her to report a meaningful change.
+Maya swiped back to the agreement. The condition-based message line sat exactly where she had negotiated it.
 
-Maya did not like how simple that made the problem.
+She locked the screen.
 
 Davi called from the corridor. “Are you two coming?”
 
@@ -492,11 +490,11 @@ The host reply appeared.
 
 HOST: understood. message if condition changes. enjoy.
 
-No demand for a location. No argument. No order to return.
+There was no demand for a location, no argument and no order to return.
 
-Maya felt the relief before she could decide whether she deserved it.
+Maya’s shoulders dropped before she could stop them.
 
-Lea watched her for another second.
+Lea saw.
 
 “Once,” she said.
 
