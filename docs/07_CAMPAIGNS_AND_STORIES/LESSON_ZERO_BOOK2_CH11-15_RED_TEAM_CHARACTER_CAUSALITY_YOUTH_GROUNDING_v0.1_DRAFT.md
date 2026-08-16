@@ -1,247 +1,214 @@
 # LESSON ZERO — BOOK TWO
-# CH11–15 RED TEAM — CHARACTER / CAUSALITY / YOUTH GROUNDING / PREACHINESS
+# CH11–15 RED TEAM — CONTINUITY / CHARACTER / CAUSALITY / YOUTH GROUNDING
 
-Version: v0.1  
+Version: v0.2  
 Date: 2026-08-16  
 Status: **RED TEAM / OUR SYNTHESIS / NOT CANON**
 
-Target: `LESSON_ZERO_BOOK2_CH11-15_WORKING_SPECIFICATION_FREEZE_v0.1_DRAFT.md`
-Craft basis: Batches 27–31 + current IVDIVO Character / Youth / Scene laws.
+Target: `LESSON_ZERO_BOOK2_CH11-15_WORKING_SPECIFICATION_FREEZE_v0.1_DRAFT.md`  
+Authority checked against: `LESSON_ZERO_BOOK2_MASTER_ARCHITECTURE_v0.1.md`.
 
-## 1. Executive verdict
+## 1. Corrected executive verdict
 
-**Overall: YELLOW-GREEN.** The Ch11–15 causal chain is strong enough to retain, but prose drafting should not begin until four risks are controlled:
+**Overall: RED / MAJOR until specification freeze is repaired.**
 
-1. the recurring burden user in Ch11 is presently too close to an illustrative ethics example rather than a person;
-2. Ch12 can become an essay on media literacy unless Aoife has a concrete social cost with a specific person/group;
-3. Ch13's paid-work pressure is excellent youth grounding, but Nico must own it as his life rather than function as Maya's lesson;
-4. Ch14–15 risk sounding like a policy workshop if technical proof is not continuously attached to human consequences, status and disagreement.
+The first Red Team pass correctly identified character/instrumentalization risks but missed a higher-priority continuity problem. Direct comparison with Master Architecture shows that the working freeze silently changed two architecturally owned chapter mechanisms:
 
-No fatal structural defect found. No new subplot is justified.
+- **Ch12 TRUE FOOTAGE** in Master Architecture is an Aoife-recorded Nharu-adult incident in which a short clip makes an apparent refusal of staff direction look different because the full context includes a contradictory companion-route instruction and a local media request.
+- **Ch13 THE ROUTE YOU REFUSE** in Master Architecture is Nico deliberately ignoring a Lattice recommendation inside an allowed observer boundary because he wants to compare the physical route; Maya nearly orders him back, then discovers responsibility without that authority.
 
----
+The freeze replaced Ch12 with an edited compilation of the Ch11 recurring user's delays and replaced Ch13's route-comparison motive with a paid-work/lateness motive.
 
-## 2. Causality audit
+Those replacements are **not authorized** by a Founder instruction or approved Change Request. Under canon hierarchy the Master Architecture wins.
 
-Current chain:
-
-`ETHAN AUTHORIZES`
-→ `EXPANDED REAL USE PRODUCES ENOUGH CASES TO SEE BURDEN DISTRIBUTION`
-→ `PUBLIC FOOTAGE OVERSTATES CAUSE`
-→ `NICO REFUSAL EXPOSES PREDICTION/CONSENT GAP`
-→ `TEAM TESTS WHETHER ACCOMMODATION PREDICTION CAUSES ALLOCATION`
-→ `PUBLIC REVIEW MUST GOVERN A REAL BUT BOUNDED FINDING`.
-
-### Verdict: PASS
-
-The chapters are not five adjacent lessons; each changes what the next chapter is able/required to ask.
-
-### Watch
-Ch12 must have a causal effect on Ch14/15 evidence practice. If Aoife only “learns context matters,” the chapter floats. Required downstream consequence: public/review evidence in Ch15 uses explicit labels such as observation / cause / inference because Ch12 made this necessary.
+Therefore: **NO PROSE from the v0.1 freeze for Ch12–13.**
 
 ---
 
-## 3. Ch11 — WHO PAYS
+## 2. Continuity disposition
 
-### Strong
-- Stakes remain civic/social rather than artificially lethal.
-- Maya's attention begins with bodies and behavior rather than fairness jargon.
-- matched cases preserve epistemic discipline.
+### Ch11 — WHO PAYS
+**KEEP / refine.** The freeze is compatible with Master Architecture: repeated small delays become visible only when Maya asks for burden by person.
 
-### Major risk: TEST-CASE PERSON
-The recurring young user is currently described mainly by what the system does to them. That risks turning a person into a moral illustration.
+### Ch12 — TRUE FOOTAGE
+**REVERT TO MASTER ARCHITECTURE mechanism by default.**
 
-### Required repair before prose
-Freeze 3–4 ordinary facts that matter **inside the scene** but do not create a subplot:
-- where they are trying to get;
-- why timing matters today;
-- one social relation present or waiting elsewhere;
-- how they personally respond to repeated accommodation (not necessarily anger).
+Protected outcome:
+- Aoife has authentic footage of a Nharu adult apparently refusing staff direction;
+- full context shows the staff instruction contradicted the companion route;
+- the short clip is factually true and socially misleading;
+- a local media request creates the decision pressure.
 
-The person should be allowed to surprise Maya. They may genuinely prefer helping in one instance and resent another. This directly supports the book's thesis that predicted cooperation is not reusable consent.
+Craft additions may deepen this without replacing it:
+- exact cut point / missing seconds;
+- source / sequence / context distinction;
+- Aoife must decide what to release before knowing reception;
+- a specific youth/team relationship can make contextual accuracy socially costly.
 
-### Gate
-Do not give the user a perfect speech explaining exploitation.
+Do **not** turn the chapter into the Ch11 recurring-user montage unless a formal Change Request is approved.
 
----
+### Ch13 — THE ROUTE YOU REFUSE
+**REVERT TO MASTER ARCHITECTURE motive by default.**
 
-## 4. Ch12 — TRUE FOOTAGE
+Protected outcome:
+- Nico deliberately ignores a Lattice recommendation;
+- he remains inside an allowed observer boundary;
+- he wants to compare the physical route;
+- Maya nearly orders him back;
+- she discovers she has responsibility but not that authority;
+- his choice reveals another system assumption.
 
-### Strong
-The false inference is produced from true material. This is more sophisticated than fake media and keeps mystery/source-monitoring fair.
+The paid-shift/lateness motive from the freeze is a plausible YA mechanism but it materially changes why Nico acts. It is therefore **OPTION / rejected as silent replacement** unless Founder approves a Change Request.
 
-### Major risk: ESSAY CHAPTER
-Aoife could become the author's media-literacy lecturer.
+Better canon-compatible grounding already exists in written Ch5: Nico is 14, runs a transit/signage video channel, notices places where maps and buildings disagree, chooses the west mobility loop because of variable-width gates, and finds a real signage-orientation error. This gives him a strong independent reason to compare the physical route without inventing a new job motive.
 
-### Required human pressure
-Aoife's correction must cost her a **specific relationship/status position**. Options that remain subordinate to A-story:
-- a youth peer who shared the clip thinks she is protecting Rivergate;
-- another member of the team privately wishes she had waited because the clip gave them leverage;
-- the affected user's friend dislikes Aoife separating causes because lived frustration was still real.
+### Ch14 — PROBABLE YES
+**KEEP WITH CLAIM CEILING.** The replay/falsification design is compatible with the architecture's predicted-accommodation reveal provided it does not imply full causal proof of every allocation pathway, malice or R-14 lineage.
 
-Do not make all three happen. Choose one dominant resistance.
-
-### Required action
-Aoife must choose whether/when/how to correct before she knows how the public will receive it. The chapter is about a decision, not a lesson after the fact.
-
----
-
-## 5. Ch13 — THE ROUTE YOU REFUSE
-
-### Strong
-This is the best youth-grounding mechanism in the freeze because money/work/independence converts an abstract autonomy debate into ordinary life.
-
-### Major risk: NICO AS TEACHING DEVICE
-If Nico's shift exists only so Maya can learn restraint, he is still a plot instrument.
-
-### Required Nico ownership
-Before prose freeze:
-- specify what kind of paid obligation is credible for his age/status/world;
-- specify the immediate mundane consequence of lateness;
-- establish that Nico has already made a tradeoff before Maya enters the argument;
-- let Nico withhold some explanation initially because he does not owe Maya a dossier.
-
-Maya can be right about operational risk and still lack standing to choose for him.
-
-### Character test for Maya
-Her defining beat is not “understands autonomy.” It is **stops an action she is already preparing to take**.
+### Ch15 — PUBLIC COMMENT
+**KEEP / stage asymmetrically.** The scheduled review format is compatible with the architecture's public review. Ethan must correct an overclaim favorable to his own side.
 
 ---
 
-## 6. Ch14 — PROBABLE YES
+## 3. Corrected causal chain
 
-### Strong
-- clear bounded hypothesis;
-- strongest benign alternative is explicitly tested;
-- no magic certainty;
-- no lineage reveal;
-- Voss remains partly right.
+`CH10 ETHAN AUTHORIZES LIMITED EXPANSION`
+→ `CH11 BURDEN-BY-PERSON REVEALS REPEATED SMALL COSTS`
+→ `CH12 NHARU TRUE-FOOTAGE INCIDENT PROVES THAT TRUE RECORDING CAN MISSTATE CAUSE/CONTEXT`
+→ `CH13 NICO TESTS PHYSICAL ROUTE AND EXPLICITLY CHOOSES AGAINST A RECOMMENDATION WITHIN HIS RIGHTS`
+→ `CH14 TEAM TESTS WHETHER PREDICTED ACCOMMODATION ACTUALLY AFFECTS BURDEN ALLOCATION`
+→ `CH15 PUBLIC REVIEW MUST GOVERN A REAL BUT BOUNDED FINDING WITHOUT OVERCLAIMING`.
 
-### Major risk: BLOODLESS PROOF
-A replay test can become a lab chapter detached from adolescence and lived consequence.
-
-### Required embodiment
-Keep one Ch11 case and the Ch13 Nico case visible as comparison anchors, but do not replay their emotions as data theatre. The team should know what outcome each test would imply for actual people.
-
-### Technical credibility watch
-Do not imply that swapping one model input proves all causal architecture. Prose should clearly constrain claim to the permitted replay environment and observed allocation response.
-
-### Character ownership
-Samir earns the claim because of restraint, but Ollie/Voss should actively attempt to break it. Ethan should not be the one who notices every decisive result.
+This preserves chapter ownership and still produces the intended ethical escalation.
 
 ---
 
-## 7. Ch15 — PUBLIC COMMENT
+## 4. Ch11 character Red Team
 
-### Strong
-Ethan correcting an overclaim useful to his own side is an excellent character-action test and prepares climax legitimacy.
+### Strength
+Maya notices who physically moves, waits, apologizes and makes room before she has a fairness theory.
 
-### Major risk: FIVE PERFECT POSITIONS IN SEQUENCE
-The hearing/review can become symmetrical dialogue where each smart person states a polished thesis.
+### MAJOR watch — illustrative person
+The recurring affected user cannot exist only as the person who proves the algorithm is unfair.
 
-### Required scene asymmetry
-Build competing objectives:
-- Voss wants pilot continuation without an evidentiary standard that makes operation impossible;
-- Ethan wants explicit trigger conditions attached to continuation;
-- Aoife wants source distinctions preserved in the public record;
-- Maya wants affected-user burden named without being diluted into aggregate success;
-- critics want stronger public action now;
-- Calder wants a reviewable process that survives appeal/reinspection.
+Before prose, give the person a scene-local objective and a response that is not a perfect moral speech. They may willingly accommodate once and resent a later request. That distinction is dramatically useful because it demonstrates that one act of cooperation is not a reusable permission token.
 
-Not everyone needs equal airtime.
-
-### Required interruptions/status
-Use time limits, question ownership, who has standing to answer, documentary exhibits, public comments, and a chair/process authority to make dialogue action rather than seminar.
-
-### Ethan speech constraint
-No manifesto. His strongest moment should be short: correct unsupported lineage claim, then return to the supported local mechanism and requested condition.
+Do not create a large subplot.
 
 ---
 
-## 8. Character-strength shadow audit
+## 5. Ch12 character / media Red Team
 
-### Ethan — procedural precision
-**Strength:** can make bounded reviewable decisions.  
-**Shadow:** can treat relationship problems as scope definitions.  
-**Required Ch11–15 evidence:** at least once a person does not become easier to understand after Ethan clarifies procedure.
+### Strength
+Master Architecture's Nharu case is superior to the freeze's montage because the ambiguity arises inside one lived interaction rather than from a didactic compilation.
 
-### Maya — agency/protection
-**Strength:** notices hidden human cost.  
-**Shadow:** can become paternalistic.  
-**Required:** Ch13.
+### Required dramatic action
+Aoife must decide how to answer the media request:
+- what exact material to release;
+- whether the short clip is technically accurate;
+- what adjacent context is necessary;
+- what she cannot responsibly claim about motive.
 
-### Samir — epistemic restraint
-**Strength:** distinguishes observation from inference.  
-**Shadow:** may withhold so much that others cannot act.  
-**Required:** Ch14 should force him to state a claim once threshold is met, not hide behind permanent uncertainty.
+### Cost
+Choose one dominant social resistance rather than a chorus of correct positions. Somebody should prefer the shorter, more useful story.
 
-### Ollie — concrete fallback/engineering
-**Strength:** makes alternatives material.  
-**Shadow:** can prefer solvable mechanical frames.  
-**Required:** let him discover that fallback cost is socially distributed too.
-
-### Aoife — context/source fidelity
-**Strength:** protects truth conditions.  
-**Shadow:** can overestimate what documentation can repair socially.  
-**Required:** Ch12.
-
-### Voss — evidence/safety optimization
-**Strength:** system really works.  
-**Shadow:** aggregate success can hide normative allocation choices.  
-**Required:** Ch14–15, without villainization.
+### Downstream causality
+Ch15 public evidence practice should be stricter because Ch12 demonstrated that factual authenticity and causal interpretation are different questions.
 
 ---
 
-## 9. Youth-life grounding audit
+## 6. Ch13 Nico / Maya Red Team
 
-### PASS elements
-- paid work / lateness / money / independence;
-- peer reputation around circulated footage;
-- embarrassment and repeated social accommodation;
-- youth team status inside an adult institution.
+Current written Ch5 already establishes Nico as a transit/signage observer with his own channel and a habit of checking whether maps match physical infrastructure. That is stronger continuity than inventing a late paid-shift motive.
 
-### Missing risk
-The five can still sound like junior policy professionals if every scene begins and ends at Rivergate.
+### Nico's independent objective
+He wants to compare the Lattice recommendation with the physical route/signage because this is exactly the public-system mismatch he already notices and documents.
 
-### Requirement
-Across Ch11–15, at least two transitions/aftermaths should touch ordinary youth life without becoming separate scenes unless something changes: food, transport, messages, school/work scheduling, family check-in, friend reaction, money/time pressure. Use summary/brief beats when causal weight is small.
+### Maya's live conflict
+She has a plausible safety concern and starts to intervene. The defining beat is behavioral: she stops before turning limited responsibility into route ownership.
 
-Do not add “teen stuff” decoratively. It must change pressure or interpretation.
+### Required consequence
+Nico's choice must produce usable information, inconvenience or risk — not merely prove Maya's lesson. His route comparison should reveal the system assumption that becomes relevant to Ch14.
+
+### Youth voice
+Nico does not owe Maya a policy explanation. His language remains practical, curious and slightly provocative, consistent with Ch5.
 
 ---
 
-## 10. Preachiness audit
+## 7. Ch14 technical / character Red Team
 
-### Highest danger phrases
-Any prose that explicitly states variants of:
-- “prediction is not consent” immediately after action already proves it;
-- “cooperation became infrastructure” as repeated narrator thesis;
-- “truth can still mislead” after Aoife's choice;
+### Strength
+The bounded replay test is useful because it actively attacks a benign alternative instead of treating correlation as proof.
+
+### Credibility constraint
+Do not write `we changed one input, therefore we know the whole system's cause`. The supported claim is local:
+
+**under defined replay conditions, changing predicted accommodation changes allocation often enough that geometry/load alone does not explain the observed pattern.**
+
+### Distributed intelligence
+- Samir owns claim discipline;
+- Ollie should attack the test mechanically;
+- Voss should offer the strongest engineering counterinterpretation;
+- Maya keeps human burden visible;
+- Ethan does not discover everything.
+
+---
+
+## 8. Ch15 dialogue / status Red Team
+
+### MAJOR risk — policy seminar
+Avoid five polished positions in sequence.
+
+Use unequal standing, time limits, document ownership, interruptions and review procedure. Voss wants continued operation with workable standards. Ethan wants explicit bounded trigger conditions. Critics want a stronger conclusion. Aoife protects source/context distinctions. Calder protects reviewability.
+
+Ethan's defining action should be short: correct the unsupported R-14 lineage claim even though it helps his side, then return to what the evidence actually supports.
+
+No applause speech.
+
+---
+
+## 9. Character-strength shadows
+
+- **Ethan / procedure:** can mistake definitional clarity for human resolution.
+- **Maya / protection:** can become paternalistic; Ch13 must cost her the action she wants to take.
+- **Samir / caution:** must eventually state a claim when evidence earns it, not hide forever in uncertainty.
+- **Ollie / engineering:** can reduce social cost to a solvable mechanism; fallback itself should have human costs.
+- **Aoife / documentation:** can protect factual truth but cannot control social meaning.
+- **Voss / measurable benefit:** can miss normatively important burden concentration while remaining competent and good-faith.
+
+---
+
+## 10. Youth-life grounding
+
+Do not manufacture generic teen decoration. Use existing character life:
+- Nico's transit/signage channel;
+- peer/media reaction around Aoife's footage;
+- travel/food/messages/schedules only where they alter pressure;
+- Rivergate youth status inside an adult institution.
+
+The abandoned paid-shift idea can be reused elsewhere only if it grows from an established character and does not replace architecture.
+
+---
+
+## 11. Anti-preachiness
+
+Production phrases are backstage tools, not manuscript slogans. Avoid narrator/dialogue restatements such as:
+- “prediction is not consent” after action proves it;
+- “cooperation became infrastructure” repeated as thesis;
+- “truth can mislead” after the footage scene;
 - “responsibility is not control” after Maya stops herself.
 
-These are useful production formulations, **not dialogue/narration slogans**.
-
-### Rule
-Production language stays backstage. Manuscript uses:
+Manuscript preference:
 `OBJECT → ACTION → CONSEQUENCE`.
 
 ---
 
-## 11. Red Team severity
+## 12. Severity / go-no-go
 
 **FATAL:** none.  
-**MAJOR:** supporting-person instrumentalization in Ch11/13 if not repaired; seminarization of Ch14/15.  
-**MEDIUM:** Aoife chapter could float without downstream evidence-process consequence; youth life could thin out across institutional run.  
-**POLISH:** voice/rhythm only after above is fixed.
+**MAJOR:** Ch12 and Ch13 working-freeze mechanisms contradict Master Architecture; must be reverted or formally approved through Change Request before prose. Seminarization Ch14–15 remains a major execution risk.  
+**MEDIUM:** Ch11 affected user may become an ethics prop; Aoife needs one concrete social resistance; ordinary youth life may thin out.  
+**POLISH:** voice/rhythm only after continuity and scene function are stable.
 
-## 12. Go / no-go
-
-**GO for beat architecture, NOT YET for prose.**
-
-Before drafting Ch11, freeze:
-1. Ch11 recurring user's immediate ordinary-life objective and personal response;
-2. the one relationship/status pressure that makes Aoife's Ch12 correction costly;
-3. Nico's exact paid obligation and lateness consequence;
-4. Ch15 process asymmetry / who can interrupt and decide.
-
-Once those are specified, Ch11 can move to beat-by-beat architecture.
+**GO:** repair working specification, then build Ch11 beat architecture.  
+**NO-GO:** drafting Ch12–13 from the current v0.1 freeze.
