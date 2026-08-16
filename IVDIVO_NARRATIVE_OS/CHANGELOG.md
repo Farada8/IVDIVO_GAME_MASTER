@@ -1,5 +1,40 @@
 # IVDIVO NARRATIVE OS — CHANGELOG
 
+## 1.2 — 2026-08-16
+
+**Status:** LESSON ZERO BOOK STUDIO / SUBMISSION PACKAGE LOCK
+
+Completed the next Book Studio downstream gates for `LESSON ZERO` Book One without reopening development:
+- Copy / Continuity Gate GREEN TO ADVANCE;
+- Knowledge-State + WCF timeline audit GREEN;
+- POV / interface final copy gate GREEN;
+- internal Audio / Read-Aloud QA GREEN WITH TARGETED WATCHES;
+- Submission / Publishing Gate GREEN TO TARGET.
+
+Created a submission version firewall:
+- authoritative manuscript remains `LESSON_ZERO_BOOK1_MASTER_MANUSCRIPT_v1.1_RECONCILED_DEVELOPMENT_LOCKED_DRAFT.txt`;
+- later `v1.0 FULL_WRITERS_ROOM_PATCH_DRAFT` remains rejected regression/archive material;
+- clean outbound text master is `LESSON_ZERO_BOOK1_SUBMISSION_MASTER_v1.0_CLEAN.txt`;
+- query-facing word count remains approximately 113,000;
+- 113k length is a market watch, not an automatic internal cut order;
+- no Submission Compression Gate opens without convergent real reader/agent/editor evidence.
+
+Added:
+- `PROJECT_GATES/LESSON_ZERO_BOOK1_SUBMISSION_PUBLISHING_GATE_v1.0.md`;
+- `PROJECT_GATES/LESSON_ZERO_BOOK1_SUBMISSION_MANIFEST_v1.0.md`.
+
+Google Drive mirror:
+- `BOOK1_SUBMISSION_PUBLISHING_GATE` under `BOOK1_WRITING_STUDIO`;
+- contains Submission Manifest, Query Letter v1.1, Full Synopsis 3–5 Page v1.0 and clean Book 1 Submission Master.
+
+Submission law reinforced:
+- lead with Ethan / four-month exclusion / Lesson Zero / competence-authority flaw / WCF emergency;
+- do not lead with R-14, MATRIX, future-saga metaphysics or planned-book count;
+- sell Book One as complete with series potential;
+- build each outbound packet to the recipient's live guidelines instead of sending one universal bundle.
+
+Open non-blocking copy query remains: `Orrin` visiting-group/profile terminology versus `Orren` the named specialist; do not normalize without Founder/canon evidence.
+
 ## 1.1 — 2026-08-16
 
 **Status:** CANON SYNCHRONIZATION / EARLY-CONTACT WORLD LOCK
