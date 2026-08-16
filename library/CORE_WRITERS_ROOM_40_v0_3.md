@@ -14,9 +14,20 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **2/40**
+- Strict complete #8: Les Edgerton — *Hooked*.
+- Strict complete #14: Orson Scott Card — *Characters & Viewpoint*.
+- All other Core sources remain below strict synthesized status until the full lifecycle is explicitly closed.
 - Fiction sources are mechanism laboratories only.
 - Scientific/technical claims require technical sources; fiction and historical genre criticism cannot establish technical canon.
 - Wider library remains DEEP REFERENCE and is called only when the active story exposes a genuine gap.
+
+### STRICT LIFECYCLE DEFINITION
+
+A source counts toward `STRICT_LIFECYCLE_SYNTHESIZED_v1.0` only after:
+`REGISTERED → INTEGRITY VERIFIED → FULL READ → STRUCTURE MAP → SOURCE PASSPORT → CLAIM EXTRACTION → MECHANISM EXTRACTION → FAILURE MODES → CROSS-SOURCE COMPARISON → IVDIVO OPERATIONALIZATION → MANUSCRIPT VALIDATION → SYNTHESIZED`.
+
+The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifecycle and must not be used to claim 40 fully studied books.
 
 ## DEEP READ PACKETS
 
@@ -35,13 +46,13 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 5. James Scott Bell — *Conflict & Suspense* — trouble, stakes, suspense, propulsion.
 6. Jordan Rosenfeld — *Make a Scene* — scene movement, intention, tension, transitions.
 7. Jessica Brody — *Save the Cat! Writes a Young Adult Novel* — YA age lens and genre diagnostic; not mandatory beat authority.
-8. Les Edgerton — *Hooked* — opening, story-worthy problem, controlled backstory.
+8. Les Edgerton — *Hooked* — opening, story-worthy problem, controlled backstory. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 9. Dwight V. Swain — *Techniques of the Selling Writer* — stimulus/response, micro-causality, scene/sequel.
 10. Jack M. Bickham — *Scene & Structure* — causal scene chains, narrowing options, escalation.
 11. John Truby — *The Anatomy of Genres* — genre systems, moral/world logic, genre mixing.
 12. Robert McKee — *Action* — action as tactic/risk/power/pace rather than spectacle alone.
 13. James Scott Bell — *Plot & Structure* — structural diagnosis, middle, alternative plot approaches.
-14. Orson Scott Card — *Characters & Viewpoint* — differentiation, motive, POV distance, reader alignment.
+14. Orson Scott Card — *Characters & Viewpoint* — differentiation, motive, POV distance, reader alignment. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 15. David Corbett — *The Art of Character* — desire, wounds, contradictions, behaviour, relationships.
 16. Gwen Hayes — *Romancing the Beat* — relationship causality, attraction/retreat/choice/payoff.
 17. Charles Baxter — *The Art of Subtext* — indirect pressure, staging, withheld meaning.
