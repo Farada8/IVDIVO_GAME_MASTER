@@ -1,9 +1,8 @@
-# IVDIVO — BOOK 2 ORBITAL YOUTH STORY CORE v0.1
+# IVDIVO — ORBITAL YOUTH STORY CORE OPTION v0.1
 
-**Status:** WORKING STORY CORE / NOT CANON  
-**Current routing:** follows `IVDIVO_MASTER_SAGA_BIBLE_v1.0.md` where Book 2 = ORBITAL YOUTH.  
-**Continuity note:** older NARR-008 / NARR-010 material that labels Smith's Daughter / Earth Awakening as Book 2 is retained as development for a later Smith/Earth line and must not silently override the newer saga order.  
-**Gate:** `IVDIVO_STORY_GATE_v2.md`
+**Status:** OPTION / FUTURE STORY MECHANISM BANK / NOT CURRENT BOOK 2 / NOT CANON  
+**Superseded routing note:** This construction was briefly generated as a Book 2 candidate, but the current Book 2 architecture had already advanced to the Vela / Ollie / Aoife / Ethan / Maya / Samir branch with a 36-chapter causal map and active prose. It must NOT replace or redirect that current branch. Retain only as a future Orbital Youth / technology-access story option unless the Founder explicitly reactivates it.  
+**Gate used:** `IVDIVO_STORY_GATE_v2.md`
 
 ---
 
@@ -21,7 +20,7 @@ The hero must decide whether belonging means protecting family, protecting the c
 
 ## HERO
 
-**WORKING:** 17-year-old Orbitborn, raised in a maintenance/service-ring household. Gender/name open until voice tests.
+**OPTION:** 17-year-old Orbitborn, raised in a maintenance/service-ring household. Gender/name open until voice tests.
 
 Ordinary competence: real habitat maintenance experience; understands systems physically rather than academically.
 
@@ -181,7 +180,7 @@ Series hook only after closure: invitation / disciplinary assignment / contact c
 
 # 5. WORLD THROUGH STORY
 
-The novel reveals orbital civilization through:
+The option reveals orbital civilization through:
 
 - family housing allocation and contract status;
 - service-ring work;
@@ -202,7 +201,7 @@ No technology lecture is permitted unless it changes a current decision.
 
 ---
 
-# 6. RED TEAM — CURRENT STATUS
+# 6. RED TEAM — OPTION STATUS
 
 ## STRONG
 
@@ -211,28 +210,22 @@ No technology lecture is permitted unless it changes a current decision.
 - Irish technological exception creates story pressure without solving its mystery;
 - orbital secrecy has a morally credible opponent;
 - climax requires protagonist choice and action, not rescue by superior adults;
-- current book can close while larger politics remain open.
+- story can close while larger politics remain open.
 
-## RISKS / TO SOLVE
+## RISKS IF REACTIVATED
 
-1. The leak technology must receive a technical passport so its danger is concrete rather than author-declared.
+1. The leak technology needs a technical passport so its danger is concrete rather than author-declared.
 2. Family member's motive must be personal and specific, not a political speech.
 3. The Irish student needs a full independent desire/arc and cannot function only as suspect/rival.
 4. The protagonist's romantic line needs an actual person and pressure function.
 5. Synthetic-person presence must be lived, not checklist representation.
-6. Exact city age/date must be reconciled with Book 1 and Book 3 timeline before architecture lock.
+6. Exact city age/date must be reconciled with active saga timeline before architecture lock.
 7. The ending must not imply that orbital technology withholding is automatically justified; the fundamental policy remains contested.
 
 ---
 
-# 7. NEXT PASS
+# 7. ROUTING RULE
 
-Before chapters:
+Do not continue this option under a command such as “и / дальше / продолжай” while the active Book 2 branch is Vela / Ollie / Aoife / Ethan / Maya / Samir.
 
-1. choose protagonist + Irish student + family member character architecture;
-2. define orbital city social/economic model;
-3. technical passport for atmosphere kernel and containment failure;
-4. design 5–6 major relationship turns;
-5. create 12-sequence causal map;
-6. run Story Gate v2 and Red Team again;
-7. only then build chapter cards.
+Only reactivate after an explicit Founder decision or after the current Book 2 is complete and the option is deliberately reassigned to another book/story slot.
