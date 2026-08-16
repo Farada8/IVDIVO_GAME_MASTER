@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–9 GREEN / Chapter 10 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–10 GREEN / Chapter 11 next
 
 ## READ ORDER
 
@@ -55,9 +55,20 @@ Ch5 — FIRST SHIFT — GREEN
 Ch6 — THE RING PEOPLE WANT — GREEN / Full Studio patched  
 Ch7 — STATIC SAFE — GREEN / Full Studio patched  
 Ch8 — NOT A VISITOR SPORT — GREEN / Full Studio patched  
-Ch9 — THE APPRENTICES — GREEN / Full Studio patched
+Ch9 — THE APPRENTICES — GREEN / Full Studio patched  
+Ch10 — NIGHT WITHOUT A HANDLER — GREEN / Full Studio patched
 
-**NEXT: Ch10 — NIGHT WITHOUT A HANDLER — Maya POV.**
+**NEXT: Ch11 — WHOSE STORY — Aoife POV.**
+
+Latest accepted chapter controls:
+- `STUDIO/CH10_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
+- `DRAFTS/CH10_NIGHT_WITHOUT_A_HANDLER_v0.2_FULL_STUDIO.md`
+- `GATES/CH10_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+
+Drive mirrors:
+- Ch10 Writer Brief ID `1tIrHo8DZCgcUotbOR68XhpxF390s0lbLKxvw3ou4OQI`
+- Ch10 v0.2 ID `1DTGbWC99OXiXZwKN0z8U4k4tDXYnD5gl3tbnsEDlz1Q`
+- Ch10 Gate ID `12Tj0uZ4oGYCrt4iCIrA1EB7IzUWfuo6-dAardzKEhKA`
 
 ## ACTIVE DRAFTING MODE
 
