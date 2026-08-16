@@ -150,6 +150,48 @@ from
 
 Do not let a niche school's claims become public technological fact merely because the reader knows the larger saga may eventually validate some of them.
 
+## 7A. HIGH TECHNOLOGY DOES NOT AUTOMATICALLY PRODUCE HIGH CONSCIOUSNESS SCIENCE
+
+The orbital cities may stand at a **very high material, engineering, robotic, biomedical, computational and space-industrial level** while remaining comparatively weak in disciplines that depend on long-term development of consciousness itself.
+
+This is not technological backwardness and not a contradiction.
+
+The bottleneck is the **human practitioner base**.
+
+There are relatively few people who seriously devote years or decades to yoga, meditation, contemplative disciplines, initiatory traditions, consciousness training, subtle-perception schools and related practices. Because the number of trained practitioners is small, the civilization cannot rapidly accumulate a large, reproducible body of lived observations, teachers, lineages, comparative schools and researchers in this domain.
+
+Robots, AI, laboratories and automated fabrication can support such research, but they cannot simply manufacture the missing population of deeply trained human practitioners or replace years of first-person disciplined development where that is part of the method.
+
+Therefore the developmental asymmetry is:
+
+`VERY HIGH EXTERNAL TECHNOLOGY`
++
+`LIMITED MASS PARTICIPATION IN CONSCIOUSNESS PRACTICES`
+=
+`SLOW / UNEVEN DEVELOPMENT OF DIMENSIONAL, SOUL, SUBTLE-BODY AND EMBODIMENT KNOWLEDGE`.
+
+### Consequences
+
+- A mainstream orbital engineer may understand matter, energy, robotics, medicine and space systems at an extraordinary level while knowing almost nothing serious about dimensional worlds.
+- A small specialist school may possess observations the mainstream academy cannot yet reproduce because it lacks enough trained subjects and practitioners.
+- Some schools may be correct in part, wrong in part, internally divided or unable to translate experiential knowledge into public scientific language.
+- Institutional science may study physiological, neural and cognitive correlates of practice without possessing the ontology eventually revealed later in the saga.
+- The existence of advanced AI does not automatically solve the problem because the missing evidence may depend on a type of lived consciousness development that AI systems do not simply infer from external data.
+- Robot civilization may have its own philosophy and consciousness research, but this does not automatically grant humans operational knowledge of soul transfer, dimensional embodiment or human post-biological migration.
+- A rare youth character entering such a school is not merely taking an elective; they are entering a thin, underpopulated frontier of knowledge inside an otherwise mature technological civilization.
+
+### Story rule
+
+Do not present `science vs mysticism` as a simplistic opposition.
+
+The more interesting structure is:
+
+`ADVANCED CIVILIZATION WITH AN UNEVEN KNOWLEDGE MAP`.
+
+Some domains are mature enough to be infrastructure. Other domains remain dependent on rare practitioners, fragmentary schools, disputed experience and incomplete methods.
+
+This asymmetry can generate story through apprenticeship, conflicting schools, failed replication, rare talent, discipline, secrecy, institutional skepticism, genuine mistakes and discoveries that cannot yet be mass-produced.
+
 ## 8. STORY CONSEQUENCES FOR ORBITAL YOUTH
 
 Orbital adolescence must not be a 2020s Earth teen drama with futuristic decoration.
@@ -199,5 +241,7 @@ Before any Orbital Youth scene is approved, test:
 5. Is human consciousness transfer being smuggled in through synthetic-body language?
 6. Is dimensional-world knowledge being presented as mainstream when it belongs only to specialist schools/directions?
 7. Does the conflict still produce a concrete goal, resistance, choice, price and resolution?
+8. Is high external technology being incorrectly treated as proof that consciousness-based disciplines must be equally advanced?
+9. If a scene uses dimensional/subtle-body knowledge, who trained the practitioner, for how long, in what school, with what reproducibility limits and what competing interpretations?
 
-If 1, 4, 5 or 6 fail: **STOP / REBUILD BEFORE PROSE**.
+If 1, 4, 5, 6 or 8 fail: **STOP / REBUILD BEFORE PROSE**.
