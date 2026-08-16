@@ -20,6 +20,10 @@ Added:
 - continuation-command behavior for `и / дальше / продолжай / делай / работай`;
 - development stop rule;
 - locked-book rule for LESSON ZERO;
-- Book Studio downstream validation mode.
+- Book Studio downstream validation mode;
+- GitHub <-> Google Drive synchronization policy.
 
 The existing 50-module system remains canonical and active as the specialist method bank. Narrative OS adds orchestration rather than replacing it.
+
+### Sync convention
+GitHub `IVDIVO_NARRATIVE_OS/` is the canonical machine-readable source; Google Drive `IVDIVO NARRATIVE OS v1.0` is the human-readable working mirror. A newer direct Founder-approved instruction outranks either surface until synchronization is completed.
