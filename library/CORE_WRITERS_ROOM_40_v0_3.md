@@ -1,7 +1,7 @@
 # IVDIVO CORE WRITERS' ROOM 40 — v0.3
 
 Status: WORKING / ACTIVE SHELF / DEEP-READ CYCLE COMPLETE
-Date: 2026-08-16
+Date: 2026-08-17
 
 Purpose: permanent callable core library for IVDIVO production. Selection is by story function, not popularity.
 
@@ -14,9 +14,10 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **4/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **5/40**
 - Strict complete #5: James Scott Bell — *Conflict & Suspense*.
 - Strict complete #6: Jordan Rosenfeld — *Make a Scene: Revised and Expanded Edition*.
+- Strict complete #7: Jessica Brody — *Save the Cat! Writes a Young Adult Novel*.
 - Strict complete #8: Les Edgerton — *Hooked*.
 - Strict complete #14: Orson Scott Card — *Characters & Viewpoint*.
 - All other Core sources remain below strict synthesized status until the full lifecycle is explicitly closed.
@@ -47,7 +48,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 4. Robert McKee — *Character* — contradiction, pressure, cast design, true character.
 5. James Scott Bell — *Conflict & Suspense* — trouble, stakes, suspense, propulsion. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 6. Jordan Rosenfeld — *Make a Scene* — scene movement, intention, tension, transitions. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
-7. Jessica Brody — *Save the Cat! Writes a Young Adult Novel* — YA age lens and genre diagnostic; not mandatory beat authority.
+7. Jessica Brody — *Save the Cat! Writes a Young Adult Novel* — YA age lens and genre diagnostic; not mandatory beat authority. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 8. Les Edgerton — *Hooked* — opening, story-worthy problem, controlled backstory. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 9. Dwight V. Swain — *Techniques of the Selling Writer* — stimulus/response, micro-causality, scene/sequel.
 10. Jack M. Bickham — *Scene & Structure* — causal scene chains, narrowing options, escalation.
