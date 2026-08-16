@@ -1,5 +1,37 @@
 # IVDIVO NARRATIVE OS — CHANGELOG
 
+## 1.4 — 2026-08-16
+
+**Status:** BOOK 2 ORBITAL YOUTH / SCENE ENGINE PART II GREEN
+
+Scene Engine continued on the current `ORBITAL YOUTH` branch.
+
+Added:
+- `IVDIVO_BOOK2_ORBITAL_YOUTH_SCENE_CARDS_v0_1_PART_II_CH7-13.md`.
+
+Scene architecture now reaches Scene 42 / end of Chapter 13.
+
+Key production decisions:
+- Ch7 turns the ring anomaly from a static component fault into a movement-sequence problem;
+- Ch8 gives Samir an actual orbital sport/social domain and lets ordinary transit produce useful timing evidence without making him the mystery solver;
+- Ch9 makes Ollie’s evidence hierarchy a real work relationship with local apprentices rather than a thematic speech;
+- Ch10 locks Maya’s Book-Two mistake as privacy/concealment after genuine autonomy, not a repeat of unauthorized technical action;
+- Ch11 shows Aoife respecting explicit recording boundaries before the later, subtler inference/recontextualization failure;
+- Ch12 creates a technically coherent wrong model that becomes cleaner when resident/body reports remain secondary;
+- Ch13 protects `Vela Night` as a positive youth/wonder event with sport, food, attraction, jealousy, local status and mixed-species everyday life;
+- no catastrophe is allowed to punish the event immediately;
+- real crowd movement from the event provides data that strengthens Ollie’s wrong model, causally braiding ordinary youth life into the A-story.
+
+Part-II Scene Gate: **GREEN FOR SCENE DEVELOPMENT**.
+
+Working names Vela / Ring Six / Iri remain **WORKING / NOT CANON**.
+
+Google Drive mirror updated under:
+`IVDIVO NARRATIVE OS v1.0 / BOOK2_ORBITAL_YOUTH_NARRATIVE_OS`.
+
+Next production step:
+`Scene Cards Part III (Ch14–21) -> false victory -> inference breach -> go/no-go -> partial opening -> oscillation -> Ollie loses trust`.
+
 ## 1.3 — 2026-08-16
 
 **Status:** BOOK 2 ORBITAL YOUTH / ROUTER BRANCH RECONCILIATION + SCENE ENGINE START
