@@ -1,7 +1,7 @@
 # IVDIVO NARRATIVE OS — OPERATING CANON
 
 **Status:** CANONICAL SPECIALIZED PRODUCTION STANDARD  
-**Version:** 1.1  
+**Version:** 1.2  
 **Established:** 2026-08-16  
 **Owner / Founder:** Yaromyr Farada  
 **Parent authority:** `IVDIVO_WRITING_PRODUCTION_CANON.md`  
@@ -336,7 +336,34 @@ Router must:
 
 ---
 
-# 25. ACCEPTANCE LAW
+# 25. MANDATORY BOOK-CONVERSATION BOOTSTRAP
+
+Every IVDIVO conversation that performs book development, drafting, revision, continuity, reference research or Book Studio work must load the production context before inventing new material.
+
+Mandatory prompt stack:
+1. this Narrative OS canon;
+2. `01_NARRATIVE_OS_CONFIG.yaml`;
+3. `09_UNIVERSAL_BOOK_WORKROOM_BOOT.md`;
+4. `08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`;
+5. `02_AGENT_PROMPTS_MASTER.md`;
+6. the applicable overlay from `10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md`;
+7. current-book architecture/manuscript/decision logs;
+8. relevant Project conversations, Google Drive material and ChatGPT File Library references when they can materially affect the current production decision.
+
+Before routing, A00 must identify:
+- ACTIVE BOOK / LINE;
+- CURRENT PRODUCTION STAGE;
+- LAST UNFINISHED DECISION.
+
+If relevant connected evidence is available, do not rely only on conversational memory. If a required source is unavailable, mark the gap `UNKNOWN` instead of silently reconstructing canon.
+
+The 100-person studio layer supplies professional checks, not one hundred simultaneous opinions. The smallest sufficient team is activated for the current stage and the external result is normally integrated.
+
+Book-specific overlays narrow production but never override higher authority. B01 remains locked downstream; B02–B04 follow their current WORKING statuses; Books 5–10 remain WORKING DEFAULT / UNKNOWN until Founder instructions or completed-book consequences establish their actual functions.
+
+---
+
+# 26. ACCEPTANCE LAW
 
 A good agent report changes a production decision.
 If an agent produces only terminology, generic praise or generic warnings, discard it.
