@@ -10,10 +10,14 @@ Law:
 
 `DEEP_READ_COMPLETE_v0.1` means full text was available and structurally processed, followed by targeted semantic passes across the source sufficient to extract core thesis, mechanisms, limits and IVDIVO routing. It does NOT mean the source can never receive a later deeper annotation pass.
 
+A stricter lifecycle is tracked separately when explicitly closed:
+`REGISTERED → INTEGRITY VERIFIED → FULL READ → STRUCTURE MAP → SOURCE PASSPORT → CLAIM EXTRACTION → MECHANISM EXTRACTION → FAILURE MODES → CROSS-SOURCE COMPARISON → IVDIVO OPERATIONALIZATION → MANUSCRIPT VALIDATION → SYNTHESIZED`.
+
 ## STATUS SNAPSHOT
 
 - Core selected: **40 / 40**
 - Deep Read complete v0.1: **30 / 40**
+- Strict lifecycle SYNTHESIZED: **1 / 40** (Orson Scott Card — *Characters & Viewpoint*)
 - Queued: **10 / 40**
 - Script Companion: **10 series, separate from Core-40**
 - Integrity exclusion discovered during deep read: mislabeled `building-character-arcs-2-books-in-1...pdf` is internally attributed to **John S. Warner (2023)**, not K. M. Weiland.
@@ -33,7 +37,7 @@ Law:
 11. John Truby — *The Anatomy of Genres* — **DEEP_READ_COMPLETE_v0.1** — genre as story philosophy, genre mixing.
 12. Robert McKee — *Action* — **DEEP_READ_COMPLETE_v0.1** — tactics, power, set pieces, progression, form vs formula.
 13. James Scott Bell — *Plot & Structure* — **DEEP_READ_COMPLETE_v0.1** — LOCK, disturbance, structural doorways, middle/end.
-14. Orson Scott Card — *Characters & Viewpoint* — **DEEP_READ_COMPLETE_v0.1** — motive, past, relationships, POV.
+14. Orson Scott Card — *Characters & Viewpoint* — **STRICT_LIFECYCLE_SYNTHESIZED_v1.0** / **DEEP_READ_COMPLETE_v0.1** — motive, past, relationship network, hierarchy, reader contract, POV. Final strict card: `library/deep_read/cards/DR_FINAL_014_CARD_CHARACTERS_AND_VIEWPOINT_STRICT_LIFECYCLE_v1.0.md`.
 15. David Corbett — *The Art of Character* — **DEEP_READ_COMPLETE_v0.1** — desire, frustration, wound, secret, contradiction, social identity.
 16. Gwen Hayes — *Romancing the Beat* — **DEEP_READ_COMPLETE_v0.1** — relationship causality braided with external plot.
 17. Charles Baxter — *The Art of Subtext* — **DEEP_READ_COMPLETE_v0.1** — staging, social behavior, unspoken meaning.
