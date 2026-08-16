@@ -1,5 +1,37 @@
 # IVDIVO NARRATIVE OS — CHANGELOG
 
+## 1.6 — 2026-08-17
+
+**Status:** MANDATORY BOOK-CONVERSATION BOOTSTRAP / UNIVERSAL + BOOK-SPECIFIC PROMPTS
+
+Founder required the production prompts to be stored in GitHub and Google Drive and applied across book-writing conversations, with universal rules for all books and book-specific rules where applicable.
+
+Added:
+- `09_UNIVERSAL_BOOK_WORKROOM_BOOT.md` — canonical universal prompt for book development, drafting, revision, continuity, reference research and Book Studio work;
+- `10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md` — B01–B10 routing overlays plus optional HQ overlays;
+- mandatory connected-source load across Project conversations, GitHub main, Google Drive IVDIVO and ChatGPT File Library when relevant;
+- mandatory identification of active book/line, current production stage and last unfinished decision before routing;
+- full universal pipeline from Continuity Load and Reference Mechanism Pass through Story Gate, prose, development, Red Team, Reader/Dialogue/Line passes, final gate, external feedback and lock;
+- book-specific overlay law: overlays narrow production but cannot override Founder/canon;
+- Books 5–10 remain WORKING DEFAULT / UNKNOWN until Founder decisions or completed-book consequences confirm their functions.
+
+Updated:
+- `00_NARRATIVE_OS_CANON.md` to v1.2 with Mandatory Book-Conversation Bootstrap;
+- `01_NARRATIVE_OS_CONFIG.yaml` to v1.2 with `conversation_bootstrap.required_for_book_work: true` and mandatory prompt stack;
+- stale SMITH config engine `OLD_EARTH_SECURITY_VS_NEW_CONFEDERATION_SECURITY` removed for early-contact routing and replaced with the canonical multi-sided model: Old Earth Security / planetary authorities / orbital authorities / individual rights / limited Confederation knowledge;
+- universal prompt source stack aligned with the machine config.
+
+Existing `08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md` remains the active internal studio layer: specialists are professional checks selected by the Showrunner, not one hundred simultaneous opinions; external output remains one integrated Studio Result unless Founder asks otherwise.
+
+Google Drive mirrors created/updated:
+- `00 IVDIVO Narrative OS — Canon & Index v1.2`;
+- `01 IVDIVO Narrative OS — Agent Prompts Master v1.1`;
+- `09 IVDIVO Universal Book Workroom Boot v1.0`;
+- `10 IVDIVO Book-Specific Workroom Overlays v1.0`;
+- existing `IVDIVO — 100-PERSON VIRTUAL PRODUCTION STUDIO — OPERATING LAYER` remains active.
+
+Continuation commands `и / дальше / продолжай / делай / работай` now explicitly resume the active book and last unfinished stage only after the mandatory production prompt/source stack is loaded.
+
 ## 1.5 — 2026-08-16
 
 **Status:** BOOK 2 ORBITAL YOUTH / FULL SCENE ARCHITECTURE + ORBITAL REFERENCE DEEP PASS
