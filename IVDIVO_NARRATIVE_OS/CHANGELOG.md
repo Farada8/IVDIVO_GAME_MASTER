@@ -1,5 +1,52 @@
 # IVDIVO NARRATIVE OS — CHANGELOG
 
+## 1.3 — 2026-08-16
+
+**Status:** BOOK 2 ORBITAL YOUTH / ROUTER BRANCH RECONCILIATION + SCENE ENGINE START
+
+Narrative OS was applied to Book Two after `LESSON ZERO` Book One reached external-feedback/submission stage.
+
+Router found two competing Book-Two development branches:
+- older `LESSON ZERO — BOOK TWO: THE PEOPLE IN THE MODEL` / Rivergate + Lattice / Ethan lead branch with Chapters 1–3 already drafted;
+- newer `ORBITAL YOUTH` branch required by `IVDIVO_MASTER_SAGA_BIBLE_v1.0.md` and developed through Story Core / Red Team / Development Packet v0.2.
+
+Decision:
+- `THE PEOPLE IN THE MODEL` is **SUPERSEDED AS BOOK TWO / REFERENCE MECHANISMS ONLY**;
+- do not continue or copy its existing Chapters 1–3 into current Book Two merely because prose exists;
+- salvage only abstract mechanisms when later stories earn them.
+
+Current Book Two primary branch:
+- hero = Ollie;
+- location/function = true orbital residency and lived orbital civilization;
+- story engine = real maintenance / residential-ring commissioning / mixed-occupancy coupled failure / housing relocation deadline;
+- Book Two must not repeat Lesson Zero's institutional-test engine.
+
+Reconciled repairs:
+- Maya's repeated unauthorized-work-zone beat rejected; replaced with genuine late-event freedom, false sleep/host location, transit-closure consequence and negotiated truthful privacy boundary;
+- Aoife's mistake changed from simple consent violation to inference/recontextualization failure after literal source approval;
+- Ethan's 18th birthday limited to setup / pressure / decision, not a new eligibility plot;
+- Ollie's climax upgraded from recommendation to narrow, pre-authorized `SAFE-STATE SEAL` physical isolation before fixed sensor threshold;
+- adults retain wider emergency command;
+- B-line rule: no more than two technical chapters without ordinary-life/relationship pressure that changes A-line behavior.
+
+Added:
+- `IVDIVO_BOOK2_ORBITAL_YOUTH_NARRATIVE_OS_BRANCH_RECONCILIATION_v1_0.md`;
+- `IVDIVO_BOOK2_ORBITAL_YOUTH_CAUSAL_CHAPTER_MAP_v0_2.md`;
+- `IVDIVO_BOOK2_ORBITAL_YOUTH_SCENE_CARDS_v0_1_PART_I_CH1_6.md`.
+
+Scene Engine status:
+- Chapters 1–6 expanded into 18 causal scene cards;
+- Part I Scene Gate = GREEN;
+- opening proves Book Two's new identity through Ollie's maker-team loss, Dublin orbital-transfer life, Maya's planet-born embarrassment, five separate orbital addresses, real maintenance hierarchy and Ring Six as desired housing before the first anomaly.
+
+Google Drive mirror:
+- `IVDIVO NARRATIVE OS v1.0 / BOOK2_ORBITAL_YOUTH_NARRATIVE_OS`.
+
+Working names such as Vela, Ring Six/Hearth, Iri, Lea, Tomas and Mara Saye remain **WORKING / NOT CANON** until Founder approval.
+
+Next production step:
+`Scene Cards Part II (Ch7–13) -> remaining scene architecture -> Story Gate -> prose`.
+
 ## 1.2 — 2026-08-16
 
 **Status:** LESSON ZERO BOOK STUDIO / SUBMISSION PACKAGE LOCK
