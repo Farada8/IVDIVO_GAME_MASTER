@@ -124,38 +124,58 @@ Ch18 result:
 - Ethan remains attracted to advancement/status and selects `LATER — AFTER CURRENT RING SIX COMMITMENT REVIEW` rather than abandoning the adult path;
 - later Ch31 scarcity remains intact.
 
+#### Ch19 — GO / NO-GO TECHNICAL RECAP TRIM
+**GREEN / ACCEPTED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
+
+Accepted candidate:
+`DRAFTS/CH19_GO_NO_GO_v0.4_PASS_B_CANDIDATE.md`
+
+Local gate:
+`GATES/CH19_PASS_B_ACCEPTANCE_GATE_v0.1.md`
+
+Transition gate:
+`GATES/BOOK2_PASS_B_CH18_20_TRANSITION_GATE_v0.1.md` — GREEN
+
+Drive mirrors/readback verified:
+- candidate `1GrXHiGw2zVCoyQVDbp7J6h_kvIGlOc0NP-XI_qzdjgE`
+- local gate `14bDZUJa1ZF8-acNHQNIQgt3TKTfQM1OKC4EUXZ67n1g`
+- transition gate `1oaFJS2IJfWyhHYp8WgCDjlGUgOy6oybnt4C0xGYYLaQ`
+
+Ch19 result:
+- duplicated Ch15 technical recap compressed;
+- 3.2-second allowed follow preserved;
+- disputed overlap and messier-cycle non-reproduction preserved;
+- embodied/personal-interface uncertainty preserved;
+- resident disagreement and Iri stop/report logic preserved;
+- Ollie's personal `YES` remains explicitly bounded and non-authoritative;
+- board authority and all `LIMITED GO` conditions unchanged;
+- actual household move-in still ends the chapter and Ch20 opens inside exactly those conditions.
+
+The old `CH19_GO_NO_GO_v0.4_PASS_B_TRIM_PATCH.md` is now provenance/working history only; the full candidate above is the routed prose.
+
 ## CURRENT CANONICAL FRONTIER
 
-**NEXT PRODUCTION STAGE = PASS B — VALIDATE / APPLY EXISTING Ch19 `GO / NO-GO` SURGICAL TRIM PATCH v0.4 AGAINST ACCEPTED v0.3.**
+**NEXT PRODUCTION STAGE = PASS B — REFRESH / VALIDATE Ch32 `THE LATE ROUTE` LIGHT LOCAL POLISH WATCH.**
 
-Existing working patch:
-`DRAFTS/CH19_GO_NO_GO_v0.4_PASS_B_TRIM_PATCH.md`
+Canonical Ch32:
+`DRAFTS/CH32_THE_LATE_ROUTE_v0.1_FULL_STUDIO.md`
 
-Its declared target is the confirmed Ch12–20 pressure issue: reduce duplicated technical recap in the middle of the institutional decision without changing:
-- board authority;
-- three live choices (remain unoccupied / another bounded test / staged partial habitation);
-- 3.2-second allowed follow;
-- disputed overlap rule;
-- messier-cycle non-reproduction;
-- embodied/personal-interface uncertainty;
-- Iri report-class stop logic;
-- resident disagreement;
-- Ollie's bounded personal recommendation;
-- LIMITED GO conditions;
-- handoff into Ch20 occupied failure.
+Do **not** route the superseded `THE PRIVACY AGREEMENT` execution.
 
 Required chain:
-1. validate every proposed Ch19 replacement against accepted v0.3 and Ch15–20 continuity;
-2. materialize a full prose candidate only if the patch actually removes recap without information loss;
-3. Dialogue / Reader Advocate / Continuity / Red Team / Line gate;
-4. continuous Ch18→20 transition regression;
-5. GitHub + Drive persistence/readback before acceptance.
+1. full Ch32 read against its accepted local gate and current Ch31→33 continuity;
+2. demonstrate an actual cumulative voice/line defect before editing;
+3. if no meaningful defect survives full read, PROTECT / NO PATCH;
+4. if defect is real, create the smallest possible local candidate only;
+5. Dialogue / Reader Advocate / Continuity / Red Team / Line gate;
+6. continuous Ch31→33 transition regression;
+7. GitHub + Drive persistence/readback before acceptance.
 
-Secondary routing after Ch19 must be refreshed, not assumed:
+Secondary routing after Ch32 must again be refreshed, not assumed:
 - Ch11 / Ch13 remain protected / no patch absent new evidence;
-- Ch32 canonical routing is `CH32_THE_LATE_ROUTE_v0.1_FULL_STUDIO.md`; old `THE PRIVACY_AGREEMENT` execution is superseded; only light local polish if demonstrated;
 - Ch31/34/35/36 remain closed absent demonstrated local defect;
-- Ch30 surface watch remains WORKING/SECONDARY until refreshed routing permits it.
+- Ch30 surface watch remains WORKING/SECONDARY until refreshed routing permits it;
+- secondary Ch12/20 notes remain HOLD unless a later whole-book read makes them reader-visible.
 
 ## CANON RECONCILIATION STILL ACTIVE
 
