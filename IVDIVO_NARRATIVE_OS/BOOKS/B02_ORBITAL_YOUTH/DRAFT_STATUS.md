@@ -22,45 +22,64 @@ Drive active folder: `ORBITAL_YOUTH_ACTIVE` — `1tZ6Kdkjq9blB10i98cE_3d02egYnPW
 
 ## Accepted prose frontier
 
-**Chapters 1–24: GREEN / accepted development drafts.**
+**Chapters 1–25: GREEN / accepted development drafts.**
 
 Latest accepted chapter:
-**Ch24 — WHERE MAYA IS — Maya POV — v0.2 — GREEN.**
+**Ch25 — NO INTERVIEW — Samir POV — v0.2 — GREEN.**
 
 GitHub:
-- Writer Brief: `STUDIO/CH24_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
-- Draft: `DRAFTS/CH24_WHERE_MAYA_IS_v0.2_FULL_STUDIO.md`
-- Gate: `GATES/CH24_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Writer Brief: `STUDIO/CH25_NO_INTERVIEW_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
+- Draft: `DRAFTS/CH25_NO_INTERVIEW_v0.2_FULL_STUDIO.md`
+- Gate: `GATES/CH25_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive:
-- Writer Brief ID `1UIFYwhVXspR-cagSlvxQPkrtthHmPKPbHqTFWrDvekc`
-- Draft ID `1HdDcJEV-QnY17fy0mirujiomgSYt54SsIDTAKcDAjoE`
-- Gate ID `1srA3-u1QdkucglVzl3tGm9lYtgT7j0XXwVz6OD4HiWw`
+- Writer Brief ID `1BrfwWeaj5byRpoZ33yAHIjkY0E8ZRTmbAzVcF37ZSy8`
+- Draft ID `1POY1IYj0QgGPNwvxujMAnCXq66Qgq6ISI-U0Bdy-OQY`
+- Gate ID `1-tY2htstRnSf8KwUWEBrTlsgc1gBMi66aWa7g50NQaU`
 
-Protected Ch24 continuity:
-- the older concealment is not repeated;
-- real Ring Six rollback / relocation work closes the planned transfer route;
-- Maya reports the changed route/sleep plan before moving;
-- receiving household confirms the overnight change directly;
-- no live tracking is required;
-- Maya does not use Lea as a backup story;
-- Lea acknowledges better behavior without restoring trust;
-- do not repeat another structurally identical sleep-location test.
+Protected Ch25 continuity:
+- Crossband remains real sport/social life rather than clue factory;
+- Samir declines interview, personal band window, team capture, peer extraction, biometric/support data and Contact-profile context;
+- Samir stays engaged and asks for the exact analytical question;
+- smaller yes uses only Samir's own Service Transfer 4 note/order + controller timing held by review;
+- independent movement-order case supports testing held/reversed transition choreography before displayed fixed correction;
+- no root cause, universal lag or special Samir perception is established;
+- no team identity/data retained;
+- result enters incident review, not Ollie's private inbox.
+
+## Canon reconciliation still active
+
+**Tomas = the Ch20 injured maintenance worker.**  
+This is established by the accepted Ch23 gate and supersedes earlier status text that left the injured worker unnamed.
+
+Current Tomas state:
+- probable forearm fracture / soft-tissue injury from Ch20;
+- manual service restriction / light-duty reassignment in Ch23;
+- do not rename the injured worker to a different person.
+
+Ch23 accepted reconciliation remains:
+- draft `DRAFTS/CH23_NO_ACCESS_v0.2_FULL_STUDIO.md`;
+- bounded comparison: 6 mature modules / 2 control generations / 30-day window / de-identified event order only;
+- negative cases dominate;
+- weak lead subset clusters mainly around combined return-correction + service-transition states in part of sample;
+- module/control-generation effects remain large;
+- removing one module nearly collapses effect;
+- no causal claim;
+- `SECOND MODEL — QUESTIONS ONLY`.
 
 ## Current canonical frontier
 
-**NEXT = Chapter 25 — NO INTERVIEW — Samir POV.**
+**NEXT = Chapter 26 — THE SECOND MODEL — Ollie POV.**
 
 Required direction:
-- begin with Samir's real sport/team life;
-- Samir protects the right to belong without becoming a profile or instrument;
-- external pressure asks for more raw observation/access than he wants to give;
-- he says no to extraction rather than disappearing;
-- he may offer one narrower analytical yes on his own terms;
-- his observation can constrain timing/sequence but must not solve Ring Six alone;
-- sport remains real social life, not a disguised sensor laboratory;
-- preserve privacy boundaries established in Ch22–24;
-- feed the second-model path without turning Samir into mystery exposition.
+- Ollie remains under REVIEW HOLD unless a newer accepted control explicitly changes access;
+- movement-order evidence from Ch25 joins mature-module and source-bound timing evidence only through authorized review channels;
+- build a falsifiable second model from multiple independent evidence classes;
+- do not convert lead timing into proof that resident/interface reports are always correct;
+- do not restore Ollie's privileged Ring Six access merely because his new model is promising;
+- Iri must be able to challenge model structure without becoming oracle;
+- negative cases must remain visible and capable of falsifying the new model;
+- chapter should end with a bounded testable hypothesis / proposed controlled reproduction, not a solved mechanism.
 
 ## Production mode
 
