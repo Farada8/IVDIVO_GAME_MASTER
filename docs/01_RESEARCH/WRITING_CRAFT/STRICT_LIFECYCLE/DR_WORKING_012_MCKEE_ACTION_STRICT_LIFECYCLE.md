@@ -35,7 +35,6 @@ Retained PDF:
 ## 2. PRELIMINARY STRUCTURE MAP
 
 ### Introduction
-
 ### Part One — Action Cores
 1. The Modern Genres
 2. The Core Value of Action
@@ -77,128 +76,150 @@ Continuous read completed:
 - Ch2 `The Core Value of Action` — COMPLETE;
 - Ch3 `The Core Cast of Action` — COMPLETE;
 - Ch4 `The Core Event of Action` — COMPLETE;
-- Ch5 `The Core Emotion of Action` — COMPLETE.
+- Ch5 `The Core Emotion of Action` — COMPLETE;
+- Ch6 `The Action Triad` — COMPLETE;
+- Ch7 `Power` — COMPLETE.
 
-Part One is now complete. Part Two has been entered only for orientation; Ch6 is **not credited** yet.
+Part One and Part Two are now complete. Ch8 was entered for orientation but is **not credited** yet.
 
 ## 4. PRELIMINARY FINDINGS — NOT FINAL SYNTHESIS
 
 ### A12-P01 — Action is not spectacle by itself
-The useful problem is not “how much action?” but what human value, choice, risk and consequence the physical event carries.
+Physical movement matters when it changes a human, relational, civic or existential state.
 
 ### A12-P02 — Genre is a reader-effect contract, not a prison
-McKee explicitly treats genres as evolving and distinguishes conventions from cliché. This supports IVDIVO transformation rather than template copying.
+Conventions have functions; their familiar executions can become clichés. Transform function rather than copy surface form.
 
 ### A12-P03 — Principal versus presentational genre is useful
-A story's causal/value engine can be separated from medium, tone, setting, ontology and presentation. `SF setting ≠ SF story engine`.
+`SF setting ≠ SF story engine`. Tone, ontology and medium do not substitute for causal/value architecture.
 
 ### A12-P04 — Core-value binaries are diagnostic, not ontology
-McKee's value binaries can identify what a sequence risks or changes, but IVDIVO should not force every scene/book into one positive/negative switch.
+Value polarity can identify what changes, but IVDIVO does not force every scene/book into one binary swing.
 
 ### A12-P05 — Life/Death absolutism is rejected outside McKee's narrow Action definition
-McKee defines Action through Life/Death. IVDIVO does **not** generalize this into a universal law of excitement, suspense, YA or adventure. Trust, responsibility, consent, autonomy, irreversible opportunity, relationship, civic consequence and unique mission can support intense pressure without fake mortality.
+Trust, responsibility, consent, autonomy, irreversible opportunity, relationship, civic consequence and unique mission can sustain intense pressure without fake mortality.
 
-### A12-P06 — Core cast contrast is useful; Hero/Villain/Victim ontology is not
-Useful transferable principle: in an ensemble, characters should not share the same attitude, first tactic or reaction to the same event. Rejected universalization: every strong action plot needs altruistic Hero / narcissistic Villain / helpless Victim.
+### A12-P06 — Cast contrast transfers; Hero/Villain/Victim ontology does not
+Useful: major characters should not share the same attention, first tactic or reaction. Rejected: every strong action plot needs altruistic Hero / narcissistic Villain / helpless Victim.
 
-### A12-P07 — Reader investment needs a positive human anchor, but not moral polarization
-McKee's `center of good` usefully reminds the writer that readers need a reason to invest. For IVDIVO this becomes **care-worthy specificity + intelligible desire + meaningful choice**, not automatic saintly hero versus evil villain.
+### A12-P07 — Reader investment needs a positive anchor, not moral polarization
+Use care-worthy specificity + intelligible desire + meaningful choice, not saint versus monster by default.
 
-### A12-P08 — Character revelation through pressure is useful, “true self” essentialism is not
-Action under pressure is strong evidence of character. But one extreme decision does not reveal a final immutable essence. IVDIVO uses repeated choice patterns, relationship-specific behavior and consequences instead.
+### A12-P08 — Pressure reveals patterns, not immutable “true self”
+Extreme action is evidence of character, not metaphysical proof of a permanent essence. Repeated choices, relationship-specific behavior and consequences matter more.
 
 ### A12-P09 — Victim helplessness is a genre convention, not a personhood rule
-A vulnerable person may resist, negotiate, improvise, refuse, document, coordinate or help shape the rescue. Conscious robots/nonhumans especially must not be reduced to rescue objects.
+Threatened people/nonhumans retain whatever meaningful agency the situation honestly permits.
 
-### A12-P10 — Core-event logic transfers as a convergence test
-McKee's `mercy scene` is too genre-specific, but its useful architecture is: remove easy tools → concentrate opposed forces → force an earned solution → no coincidence rescue. For IVDIVO this becomes a **bounded-choice convergence scene**, not mandatory lethal captivity.
+### A12-P10 — Mercy-scene logic transfers as bounded-choice convergence
+Transform `hero stripped of weapons before villain` into:
+`REMOVE EASY TOOL / ACCESS / CERTAINTY → CONCENTRATE PRESSURE → EARNED CHOICE → CONSEQUENCE`.
 
 ### A12-P11 — Remove favorite tactic before inventing bigger danger
-A strong escalation can come from taking away the protagonist's habitual solution, access, certainty, authority, instrument, ally or procedure. This is often stronger than simply increasing physical danger.
+Loss of habitual procedure, authority, certainty, instrument, ally or access may create better escalation than larger spectacle.
 
 ### A12-P12 — No obvious Achilles heel
-If the reader sees the antagonist/system's single off-switch early, suspense collapses. Better: a property that first functions as strength becomes exploitable only after accumulated evidence and changed understanding.
+Prefer a property that reads as strength until accumulated evidence makes a new interpretation possible.
 
 ### A12-P13 — Coincidence may enter trouble; it must not solve the decisive problem
-Critical resolution must remain in the causal chain of character knowledge, preparation, decision and action.
+Resolution remains in the causal chain of knowledge, preparation, relationship, decision and action.
 
 ### A12-P14 — Emotion follows meaningful change, not action density
-The transferable mechanism is `meaningful state change → reader interpretation → emotional response`. More movement, more violence or more short sentences do not automatically create excitement.
+`meaningful state change → interpretation → reader emotion`. Movement and short syntax are not emotion by themselves.
 
 ### A12-P15 — Excitement requires modulation
-Pressure should rise, release and reconfigure. Constant maximum intensity creates adaptation and numbness. Quiet competence, recovery, relationships and successful actions can preserve contrast and make later danger stronger.
+Quiet competence, recovery, relationships and genuine success preserve contrast and strengthen later pressure.
 
 ### A12-P16 — Five transferable excitement sources
-McKee's five categories can be abstracted beyond lethal Action:
-1. resistance to abused authority;
-2. entering the unknown;
-3. frustration near a meaningful goal;
-4. overcoming real limitations;
-5. crossing a consequential taboo/boundary.
-They are generators, not mandatory beats.
+Abused authority; unknown; near-goal frustration; real limitation; consequential boundary/taboo. Generators, not mandatory beats.
 
 ### A12-P17 — Convention versus cliché
-The transferable process is:
-`UNDERSTAND FUNCTION → RESEARCH SPECIFIC WORLD/PEOPLE → GENERATE MULTIPLE EXECUTIONS → SELECT CHARACTER-SPECIFIC / SETTING-SPECIFIC SOLUTION → RETROACTIVE SENSE`.
-This aligns strongly with IVDIVO's Five-Fork / mechanism-transformation workflow.
+`FUNCTION → WORLD/PERSON RESEARCH → MULTIPLE EXECUTIONS → CHARACTER/WORLD FIT → RETROACTIVE SENSE`.
+
+### A12-P18 — Dimensionality must be causal, not decorative contradiction
+A contradiction is useful only if it recurs coherently and changes choices/relationships. Random “opposite traits” are not depth.
+
+### A12-P19 — Positive traits in opposition increase pressure
+Courage, dignity, competence, patience, charisma or loyalty can strengthen an antagonist/countermodel. IVDIVO should prefer competent opposition over caricature.
+
+### A12-P20 — Plan/system quality determines protagonist resourcefulness
+A protagonist appears ingenious only when the opposing plan/system/problem is genuinely hard, coherent and capable of success without authorial sabotage.
+
+### A12-P21 — Role changes are allowed when causally earned
+Hero/opponent/vulnerable-party functions can shift through a story. Do not freeze people into labels. For IVDIVO use **temporary story function**, not ontology.
+
+### A12-P22 — Supporting cast can alter the pressure field
+McKee says no one in Action is neutral; IVDIVO softens this. Not every person must help/hinder, but recurring supporting characters should have a causal/relational reason for their screen time.
+
+### A12-P23 — Power imbalance is a strong pressure generator
+The useful mechanism is not “villain must be an overdog,” but **asymmetric leverage**: status, information, legitimacy, access, institutional authority, social trust, time, technical capability, or numbers.
+
+### A12-P24 — Dilemma can be stronger than danger
+A countermodel that makes every available choice carry a different real cost often produces better drama than simply increasing threat.
+
+### A12-P25 — Vulnerability should be specific to the opposing tactic
+A hero need not have a generic flaw. Ask instead: what exact method/system/relationship bypasses this character's normal competence?
+
+### A12-P26 — Unlimited power reduces ingenuity
+If a technology/person can do anything, every chosen action invites “why not do the easier thing?” Meaningful limits generate strategy.
+
+### A12-P27 — Institutional power should be dramatized through actual leverage
+Rank/title alone is exposition. Power becomes story when it changes what others can access, refuse, disclose, authorize, delay or contest.
+
+### A12-P28 — Power can live in subtext
+Surface calm can carry more threat than shouting when status, information or consequence is already understood. This supports quieter IVDIVO scenes with real leverage.
 
 ## 5. PRELIMINARY FAILURE MODES
 
-### A12-F01 — Mortality Inflation
-Raising every important conflict to death because “Action needs Life/Death.”
-
-### A12-F02 — Moral Polarization
-Flattening competent countermodels into narcissistic villains so the hero can look heroic.
-
-### A12-F03 — Rescue-Object Person
-A victim/nonhuman exists only to be endangered and saved.
-
-### A12-F04 — Helplessness Mandate
-A young or vulnerable character loses agency because the framework demands rescue.
-
-### A12-F05 — Mercy-Scene Retrofit
-Forcing every climax into “hero stripped of everything versus triumphant villain.”
-
-### A12-F06 — Achilles-Heel Telemetry
-The story plants an obvious off-switch so early that the reader waits for the inevitable use.
-
-### A12-F07 — Deus Ex Ally/System
-A partner, institution, robot, hidden feature or lucky arrival performs the protagonist's decisive action.
-
-### A12-F08 — Intensity Monoculture
-Every chapter tries to be more dangerous/louder/faster than the one before.
-
-### A12-F09 — Action-Syntax Fallacy
-Treating short sentences and chopped paragraphs as the default prose form of excitement.
-
-### A12-F10 — Convention Recycling
-Copying familiar Action imagery/roles while claiming adherence to genre convention.
+1. **Mortality Inflation** — death added because “Action needs Life/Death.”
+2. **Moral Polarization** — competent opposition simplified into evil.
+3. **Rescue-Object Person** — character/nonhuman exists only to be endangered.
+4. **Helplessness Mandate** — youth/vulnerable person denied meaningful agency.
+5. **Mercy-Scene Retrofit** — every climax becomes stripped hero versus triumphant villain.
+6. **Achilles-Heel Telemetry** — obvious off-switch makes ending foreseeable.
+7. **Deus Ex Ally/System** — decisive agency stolen by rescuer/system/luck.
+8. **Intensity Monoculture** — every chapter louder/faster/more dangerous.
+9. **Action-Syntax Fallacy** — chopped prose treated as inherent excitement.
+10. **Convention Recycling** — cliché defended as genre requirement.
+11. **Contradiction Confetti** — random opposing traits mistaken for complexity.
+12. **Villain Psych Diagnosis** — genre language about narcissism/psychopathy mistaken for psychology science.
+13. **Dimensionless Victim** — agency erased to protect a rescue structure.
+14. **Overdog Requirement** — every opponent artificially inflated into overwhelming power.
+15. **Omnipotence Fog** — technology/power lacks limits, making tactics arbitrary.
+16. **Institution-as-Villain Shortcut** — a complex useful institution is flattened into tyranny for easy stakes.
+17. **Subtext = Hidden Trauma** — quiet behavior automatically explained by secret damage.
 
 ## 6. PROVISIONAL IVDIVO PRODUCTION GATES
 
-### A12-G01 — Human Value Before Spectacle
-For any major action sequence, state what human/relational/civic value changes if the physical action succeeds or fails.
+**A12-G01 Human Value Before Spectacle** — What human/relational/civic state changes if this action succeeds or fails?
 
-### A12-G02 — Agency Preservation
-A threatened person must retain as much meaningful agency as the situation honestly permits.
+**A12-G02 Agency Preservation** — Does the threatened person still make meaningful choices where realistically possible?
 
-### A12-G03 — Favorite-Tactic Removal
-Before escalating scale, test whether removing the hero's easiest habitual tactic creates a more character-revealing problem.
+**A12-G03 Favorite-Tactic Removal** — Before increasing scale, test removal of the protagonist's easiest habitual tactic.
 
-### A12-G04 — No Obvious Off-Switch
-Do not resolve a formidable system/opponent with a weakness whose decisive use was obvious from the first planting.
+**A12-G04 No Obvious Off-Switch** — Could an attentive reader already name the exact final solution? If yes, redesign.
 
-### A12-G05 — Resolution Ownership
-The decisive result must arise from established knowledge, preparation, relationship, choice and action—not coincidence or a late rescuer.
+**A12-G05 Resolution Ownership** — Is the decisive outcome earned by established agency and causality?
 
-### A12-G06 — Excitement Modulation
-Track intensity and reader effect. Require contrast, recovery and qualitative pressure change.
+**A12-G06 Excitement Modulation** — Does pressure vary in kind and rhythm rather than climb one numeric ladder?
 
-### A12-G07 — Character-Specific Reaction
-Put the same pressure on two major characters; if their first response and follow-up tactic are interchangeable, differentiation is insufficient.
+**A12-G07 Character-Specific Reaction** — Same pressure, different attention/tactic/cost?
 
-### A12-G08 — Convention Function Test
-Before borrowing a genre convention, name its function. If another execution serves the function more originally in IVDIVO, use the transformed version.
+**A12-G08 Convention Function Test** — Preserve function, reinvent execution.
+
+**A12-G09 Causal Contradiction** — Does a character contradiction actually alter action/relationship, or is it decoration?
+
+**A12-G10 Competent Countermodel** — Does opposition have real evidence, benefits, skills and understandable interests?
+
+**A12-G11 Asymmetric Leverage Map** — Identify who controls information, status, access, legitimacy, time, technical capacity and social trust.
+
+**A12-G12 Specific Vulnerability** — What exact tactic bypasses the protagonist's normal competence?
+
+**A12-G13 Power Limits** — Could a reader reasonably ask “why not just use the stronger/easier capability?” If yes, define a real limit.
+
+**A12-G14 Institutional Personhood** — Do named institutional actors retain individual motives and relationships instead of becoming “the system” mouthpieces?
+
+**A12-G15 Subtext Leverage** — If a quiet exchange is tense, can the reader identify the leverage without author explanation?
 
 ## 7. CURRENT CANON FIREWALLS
 1. No mandatory Life/Death stakes for every action/suspense sequence.
@@ -212,6 +233,6 @@ Before borrowing a genre convention, name its function. If another execution ser
 
 ## EXACT CONTINUATION POINTER
 
-**NEXT STRICT READ:** Chapter 6 `THE ACTION TRIAD`, local extraction line **1451** in the current working extraction.
+**NEXT STRICT READ:** Chapter 8 `THE INCITING INCIDENT`, local extraction line **2747** in the current working extraction.
 
-Introduction and Chapters 1–5 are credited complete and should not be reread without a concrete reason. Ch6+ remain open.
+Introduction and Chapters 1–7 are credited complete and should not be reread without a concrete reason. Ch8+ remain open.
