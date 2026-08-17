@@ -101,8 +101,31 @@ Pass B corridor result:
 
 Protected character repetitions in Ch22/Ch24 are intentional and must not be normalized globally.
 
-Remaining Pass B targets now move **outside Ch21–29**:
-1. manuscript-level repeated `I know` acknowledgement cadence;
+### PASS B — GLOBAL SURFACE SWEEP OUTSIDE CH21–29
+**ACTIVE / YELLOW. FATAL 0 / MAJOR 0 / MEDIUM 2 line-level targets.**
+
+Current gate:
+`GATES/BOOK2_PASS_B_GLOBAL_SURFACE_SWEEP_v0.1.md`
+
+Current bounded patch control:
+`STUDIO/CH30_PASS_B_LINE_PATCH_SPEC_v0.1.md`
+
+Drive mirrors:
+- Global Surface Sweep: `1AQAhR2rhvbg399J7mbEm-Vo3sZ_THJWWQ4_G209F5h4`
+- Ch30 Patch Spec: `13WKfXsXJhlxdgaDqnm2MhfDmK2jCvHXz5tmuU971Ajg`
+
+Verified findings:
+1. **Ch30 `WHO WAITS`** — story/causality remain GREEN; concrete surface defect is over-signalling through catalogue fragmentation, `Not X / Changed X` verdict stacks, explicit absence-markers around S1 trust, and a mirrored explanatory closing summary. A bounded v0.3 line patch is authorized; scene order/facts/outcome are locked.
+2. **Ch31 `THE ADULT DOOR`** — prior Pass 18 audit found repeated neutral `looked` gaze glue. Only micro-line deletion/POV-specific substitution is authorized; no chapter rewrite.
+
+Protected during this sweep:
+- Ch22/Ch24 character-specific `I know` repetitions;
+- UI/status/chat/safety-command fragmentation;
+- youth hesitation/comic timing;
+- Ch35–36 climax/resolution and no-epilogue lock.
+
+Remaining Pass B targets outside Ch21–29:
+1. manuscript-level repeated acknowledgement cadence;
 2. clipped `No X / Not X` / fragment-stack rhythm;
 3. repeated neutral `looked` / gaze glue;
 4. explanatory thematic tails after action;
@@ -139,27 +162,17 @@ Remaining Pass B targets now move **outside Ch21–29**:
 
 ## Current canonical frontier
 
-**NEXT PRODUCTION STAGE = PASS B — WHOLE-MANUSCRIPT LINE / GENERATED-TEXT / DIALOGUE-RHYTHM SWEEP OUTSIDE CH21–29.**
+**NEXT PRODUCTION UNIT = CH30 `WHO WAITS` v0.3 PASS-B BOUNDED LINE PATCH.**
 
-Primary scope:
-- Ch01–20;
-- Ch30–36.
+Required immediate chain:
+`apply four locked line repairs -> Dialogue Gate -> Reader Advocate -> Continuity -> Red Team -> Line verification -> accept/reject -> GitHub + Drive readback`.
+
+After Ch30, run Ch31 micro-line gaze scan, then continue global Pass-B scan through Ch01–20 before declaring Pass B complete.
 
 Pass B may make bounded prose edits. It may not reopen story architecture without a newly demonstrated causal/continuity failure.
 
-Required checks:
-- global repeated acknowledgement / dialogue tic search;
-- fragment-stack and generated-summary rhythm search while protecting genuine interface readouts;
-- neutral `looked` / gaze-glue accumulation;
-- repeated explanation after already sufficient action;
-- evidence-category re-explanation;
-- dry-smart voice convergence;
-- protect intentional awkwardness and distinct character voice;
-- counts are candidate detection only; patch only after local-context verification;
-- any accepted patch must persist to GitHub + Drive and survive readback.
-
 ## Production mode
 
-`Pass B diagnose outside Ch21–29 -> issue map -> bounded prose patches if justified -> Red Team -> regression gate -> GitHub -> Drive -> readback -> update manuscript state`.
+`Pass B diagnose outside Ch21–29 -> local-context evidence -> bounded prose patch -> Red Team / Reader Advocate / Dialogue / Continuity / Line -> GitHub -> Drive -> readback -> update manuscript state`.
 
 Do not add an epilogue automatically. Do not switch books.
