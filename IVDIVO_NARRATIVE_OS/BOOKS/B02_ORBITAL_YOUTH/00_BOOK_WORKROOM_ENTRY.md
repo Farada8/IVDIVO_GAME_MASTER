@@ -19,26 +19,26 @@ Use this file when a conversation is explicitly working on Book 2.
 
 ## CURRENT VERIFIED FRONTIER
 
-`Chapters 1–18 GREEN / accepted development drafts.`
+`Chapters 1–19 GREEN / accepted development drafts.`
 
-**NEXT:** `Chapter 19 — GO / NO-GO — Ollie POV.`
+**NEXT:** `Chapter 20 — THE WRONG CAUSE — Ollie POV.`
 
 Future `DRAFT_STATUS.md` updates override this snapshot.
 
-## LATEST ACCEPTED CONTROLS
+## LATEST ACCEPTED CONTROL
 
-Chapter 18:
-- `DRAFTS/CH18_EIGHTEEN_v0.2_FULL_STUDIO.md`
-- `GATES/CH18_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+Chapter 19:
+- `DRAFTS/CH19_GO_NO_GO_v0.3_FULL_STUDIO.md`
+- `GATES/CH19_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive:
-- Draft `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`
-- Gate `1CLP6Zl96SvYA8xnGYcWULstgo7Vg7Jm-2RwHMrO3Kv8`
+- Draft `1TEB_85IkanzX1C1-U-UHhUNoYqvC6fEIoF7vim_VRe0`
+- Gate `1JFzsKEKdJL2vlT5lfNYhWjej48s4BaL4P_DnkOwgcbw`
 
-Earlier block controls:
-- Ch16 draft/gate persisted and mirrored.
-- Ch17 draft/gate persisted and mirrored.
-- Ch15 current accepted version is v0.3; earlier v0.2 gate is superseded/reference only.
+Current Ch16 accepted control is v0.3:
+- GitHub `DRAFTS/CH16_THE_INFERENCE_v0.3_FULL_STUDIO.md`
+- Drive draft `1V38otYv5wrui6gke2JpLBV_HvYb85bQCRmu9bNtPmdg`
+- Drive acceptance gate `1hEmI49MmiWrGDKarltOUv7v8YLUK2h1-G7XtBpS2v3w`
 
 ## BOOK 2 NON-NEGOTIABLES
 
@@ -51,25 +51,26 @@ Earlier block controls:
 - reference richness must change choice, pressure, character, physical legibility or social/emotional texture or be cut;
 - Rivergate / Lattice / Ethan-primary = SUPERSEDED AS BOOK TWO / REFERENCE ONLY.
 
-## CHAPTER 19 CONTROL — GO / NO-GO
+## CHAPTER 20 CONTROL — THE WRONG CAUSE
 
 Required:
-- Ollie presents two defensible evidence interpretations;
-- his timing work removes one legitimate reason to delay but does not establish unrestricted safety;
-- Mara forces him to state uncertainty and what the model does not prove;
-- residents and apprentices disagree for material reasons;
-- Ollie publicly supports only limited opening under defined restrictions;
-- the adult commissioning board makes the decision;
-- limited partial habitation is authorized with density / route / partition / monitoring restrictions;
-- the decision must remain rational in retrospect;
-- move-in staging begins, creating the false-success threshold before Ch20 failure.
+- midpoint failure happens after real households have entered R6-A;
+- ordinary occupied life and embodied/interface reports lead the failure sequence;
+- current transition-overlap predictor does not explain the event;
+- fixed-system anomaly follows later, exposing a missing causal class rather than proving previous analysis fraudulent;
+- Ch19 stop logic activates and adults act competently;
+- occupancy is paused/rolled back under the limited-opening rules;
+- real household, route, service and trust costs appear immediately;
+- Ollie’s public support for opening becomes personal/professional price;
+- he loses confidence in the current causal model, not in evidence-based reasoning itself.
 
 Forbidden:
-- no villainous or stupid board;
-- no youth-command fantasy;
-- no retrospective proof that Ch15 testing was worthless;
-- no early Ch20 oscillation payoff;
-- no Ethan adult-track takeover of the A-line.
+- no villain board or incompetent Mara;
+- no secretly ignored warning that would make Ch19 reckless;
+- no Iri oracle explanation;
+- no instant complete new theory;
+- no abstract technical failure without human consequence;
+- no Ethan/Aoife B-line takeover.
 
 ## CHAPTER EXECUTION
 
