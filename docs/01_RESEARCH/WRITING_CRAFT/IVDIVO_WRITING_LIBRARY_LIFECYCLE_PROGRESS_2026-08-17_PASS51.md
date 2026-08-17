@@ -88,5 +88,30 @@ Core strict remains independently **17/40**.
 - Wider ledger v0.9.
 - W009 working file safely removed after finalization.
 
-## NEXT
-At next continuation: check fresh uploads first; then select the next unique available incomplete Core source if a full exact copy can be verified. If not, continue the wider corpus with the next full unique craft source. Do not reopen W009 unless a concrete cross-source or manuscript-validation issue requires it.
+## NEXT-SOURCE SEARCH
+Exact searches for still-open Core positions were repeated. No reliable full exact copy of Swain *Techniques of the Selling Writer*, Bickham *Scene & Structure*, or Bell *Plot & Structure* was established in this pass. The system therefore did not substitute a similar book and did not inflate Core completion.
+
+## W010 LAUNCH — ANNE LAMOTT — BIRD BY BIRD
+A full unique wider-corpus source was registered instead:
+- retained Drive ID `192GeaZJ1OQCSha3T_Up0bpPcU4GpWReo`;
+- 114 PDF pages; 720,937 bytes; ~66.8k extracted words;
+- SHA-256 `24695abbb106ae8a4100d29c7aea12ec0c2fd9f15026b3190b03461133fc6dac`;
+- Drive ID `14LuAzabgdg5cFwcH-BZN_hZdnADWgINQ` verified byte-identical; counts as the same source.
+
+Strictly read continuously:
+- Introduction — COMPLETE;
+- Getting Started — COMPLETE;
+- Short Assignments — COMPLETE;
+- Shitty First Drafts — COMPLETE;
+- Perfectionism — COMPLETE.
+
+Status: `REGISTERED ✓ → INTEGRITY VERIFIED ✓ → FULL READ IN PROGRESS`; all later lifecycle stages remain provisional/open.
+
+Early transferable mechanisms:
+- `large project → smallest coherent working window → finish → reassess`;
+- `messy discovery draft → locate live material → structural selection → rewrite → line polish`;
+- failed attempts can identify what the story is not and sharpen the model of what it is;
+- first-draft/perfectionism pressure must not turn the Writers' Room into a generation-time compliance machine;
+- “short assignment” is a process-scope tool, not a justification for short final paragraphs/sentences.
+
+Exact next pointer: W010 *Bird by Bird*, local extraction line **946**, chapter `School Lunches`. Introduction through `Perfectionism` must not be reread without a concrete diagnostic reason.
