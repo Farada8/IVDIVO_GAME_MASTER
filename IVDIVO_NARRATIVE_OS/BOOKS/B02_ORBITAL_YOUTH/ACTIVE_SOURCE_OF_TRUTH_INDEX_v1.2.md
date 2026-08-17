@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–14 GREEN / Chapter 15 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–15 GREEN / Chapter 16 next
 
 ## READ ORDER
 
@@ -64,29 +64,40 @@ Ch10 — NIGHT WITHOUT A HANDLER — GREEN / Full Studio patched
 Ch11 — WHOSE STORY — GREEN / Full Studio patched  
 Ch12 — THE CLEAN MODEL — GREEN / Full Studio patched  
 Ch13 — VELA NIGHT — GREEN / Full Studio accepted  
-Ch14 — ALMOST LOCAL — GREEN / Full Studio accepted
+Ch14 — ALMOST LOCAL — GREEN / Full Studio accepted  
+Ch15 — LIMITED OPEN — GREEN / Full Studio accepted
 
-**NEXT: Ch15 — LIMITED OPEN — Ollie POV.**
+**NEXT: Ch16 — THE INFERENCE — Aoife POV.**
 
 Latest accepted chapter controls:
-- `DRAFTS/CH14_ALMOST_LOCAL_v0.2_FULL_STUDIO.md`
-- `GATES/CH14_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- `DRAFTS/CH15_LIMITED_OPEN_v0.2_FULL_STUDIO.md`
+- `GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive mirrors:
-- Ch14 v0.2 ID `1pIoEC6WFIwOpGmAV29vFhphchLfF3tSdgcc101vT1nk`
-- Ch14 Gate ID `1waDN3XQXWHhMu5zS9oau7sc_dT3u4f8I7F-rTf5fKGQ`
+- Ch15 v0.2 ID `10_p77yvxiEpFGzbXK7ikni6Gbcr5hJK0Mh_nVmGwHSo`
+- Ch15 Gate ID `18V_-Lal8aHylt0r_imiteJrAnug4oWkBmddDUC0uxJk`
 
-## CHAPTERS 15–18 PRE-ACCEPTANCE STATE
+## CH15 PROTECTED CONTINUITY
 
-Drive Full Studio drafts exist for Ch15–18. Structural comparison against the active Part III scene architecture produced **FATAL 0 / MAJOR 0** across the block. Ch17 has two small anti-generated-text line repairs; Ch18 has one narrator-verdict repair.
+- bounded realistic-occupancy test passed under two controlled sequences;
+- no disputed fixed-system lag appeared under the tested conditions;
+- two early embodied/interface events occurred without later escalation and remain unresolved;
+- transition-overlap remains the strongest current predictor, not proven cause;
+- Ch15 did not establish unrestricted habitation safety;
+- Ollie's analysis now has legitimate institutional visibility;
+- Mara/adults retain decision authority;
+- false victory must remain rational in retrospect, not rewritten as obvious negligence.
+
+## CHAPTERS 16–18 PRE-ACCEPTANCE STATE
+
+Drive Full Studio drafts exist for Ch16–18. Structural comparison against the active Part III scene architecture produced **FATAL 0 / MAJOR 0** across the block. Ch17 has two small anti-generated-text line repairs; Ch18 has one narrator-verdict repair.
 
 They remain **WORKING / NOT YET CANONICALLY ACCEPTED** until each complete draft and local gate is persisted and verified in GitHub.
 
 Next acceptance order:
-1. Ch15 — LIMITED OPEN
-2. Ch16 — THE INFERENCE
-3. Ch17 — PLANET PEOPLE
-4. Ch18 — EIGHTEEN
+1. Ch16 — THE INFERENCE
+2. Ch17 — PLANET PEOPLE
+3. Ch18 — EIGHTEEN
 
 ## ACTIVE DRAFTING MODE
 
