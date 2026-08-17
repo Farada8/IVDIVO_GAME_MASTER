@@ -1,7 +1,7 @@
 # IVDIVO — BOOK 2 ORBITAL YOUTH
 # CHAPTER 21 FULL-STUDIO ACCEPTANCE GATE v0.1
 
-**Accepted draft:** `DRAFTS/CH21_SHUT_v0.2_FULL_STUDIO.md`
+**Accepted draft:** `DRAFTS/CH21_SHUT_v0.3_FULL_STUDIO.md`
 **Chapter:** 21 — SHUT
 **POV:** Ollie
 **Status:** ACCEPTED / GREEN TO KEEP / PROCEED TO CH22
@@ -14,10 +14,12 @@ MEDIUM: 0 blocking
 
 Chapter 21 converts the midpoint emergency into precise distributed responsibility, legitimate access loss, trust rupture with Iri, and an earned evidence path toward the second model.
 
+The accepted v0.3 additionally removes four manuscript fourth-wall references to chapter numbers without changing scene causality.
+
 ## STORY / CAUSALITY
 
 - The incident cross-reference does not assign a simplistic blame arrow to Ollie.
-- Decision causality remains distributed across housing pressure, resident advisory, school routes, service staffing, environmental safety, Ch15 evidence, Ollie’s timing analysis, public restricted-profile support and board authorization.
+- Decision causality remains distributed across housing pressure, resident advisory, school routes, service staffing, environmental safety, bounded-test evidence, Ollie’s timing analysis, public restricted-profile support and board authorization.
 - Ollie’s analysis is not reclassified as fraudulent; it remains valid with stated limits and incomplete causal classification under review.
 - The chapter states the precise responsibility: his analysis removed one reason not to open and materially changed the decision environment without becoming sole cause or authority.
 
@@ -130,6 +132,18 @@ and requests review only if the incident team later authorizes cross-module comp
 
 This is strong behavioral evidence of growth.
 
+## LINE / CONTINUITY REPAIR IN ACCEPTED v0.3
+
+Removed manuscript-internal production references:
+- `BOUNDED OCCUPANCY TEST — CH15` -> `BOUNDED OCCUPANCY TEST — LIMITED OPEN CYCLE`;
+- `His answer from Ch19` -> `His answer from the opening review`;
+- `The ones during Ch15` -> `The ones during the bounded occupancy test`;
+- `He saw the Ch20 rail in his head` -> `He saw the incident rail in his head`.
+
+Also replaced one `Not recognition exactly / Attention` narrator construction with direct observable wording.
+
+No story or canon function changed.
+
 ## WORLD / ORBITAL LIFE
 
 GREEN.
@@ -178,11 +192,9 @@ MAJOR:
 ## POLISH WATCH
 
 Non-blocking line watch for later manuscript pass:
-- clustered `Not X` / short diagnostic fragments remain in a few places;
+- clustered short diagnostic fragments remain in a few places;
 - repeated “face” joke should not continue expanding indefinitely;
 - global line edit may compress without changing current scene causality.
-
-No current rewrite required.
 
 ## PROTECTED LAW FOR CH22+
 
@@ -198,4 +210,4 @@ No current rewrite required.
 
 ## FINAL RECONCILER VERDICT
 
-**CHAPTER 21 ACCEPTED / GREEN TO CH22 — AFTER THE CAMERA.**
+**CHAPTER 21 v0.3 ACCEPTED / GREEN TO CH22 — AFTER THE CAMERA.**
