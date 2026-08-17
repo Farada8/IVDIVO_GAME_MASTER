@@ -59,7 +59,6 @@ Routing:
 The filename token `CANDIDATE` is historical after combined acceptance.
 
 ### PASS B — OUTSIDE Ch21–29 LINE / DIALOGUE / GENERATED-PATTERN SWEEP
-**GREEN TO BOUNDED PATCH BATCH 1. FATAL 0 / MAJOR STORY-CONTINUITY 0 / LINE-VOICE MAJOR 1 cumulative family.**
 
 Canonical audit:
 `STUDIO/BOOK2_PASS_B_OUTSIDE_CH21_29_LINE_PATTERN_SWEEP_v0.1.md`
@@ -67,42 +66,63 @@ Canonical audit:
 Drive mirror:
 `1bBJsxqB1aX8iF9cecAnkN3YqzccH5d-LtEXo_QaOgac`
 
-The remaining primary pattern is distributional voice convergence: different young/adult characters sometimes share the same dry-smart category-correction engine (`No / Yes / I know / That is not / Better / Good / face`) and clipped relabeling rhythm.
+#### BATCH 1 — Ch06 / Ch09 / Ch17
+**GREEN / ACCEPTED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
+
+Accepted candidates:
+- `DRAFTS/CH06_THE_RING_PEOPLE_WANT_v0.4_PASS_B_CANDIDATE.md`
+- `DRAFTS/CH09_THE_APPRENTICES_v0.3_PASS_B_CANDIDATE.md`
+- `DRAFTS/CH17_PLANET_PEOPLE_v0.3_PASS_B_CANDIDATE.md`
+
+Local gates:
+- `GATES/CH06_PASS_B_BATCH1_ACCEPTANCE_GATE_v0.1.md`
+- `GATES/CH09_PASS_B_BATCH1_ACCEPTANCE_GATE_v0.1.md`
+- `GATES/CH17_PASS_B_BATCH1_ACCEPTANCE_GATE_v0.1.md`
+
+Transition gates:
+- `GATES/BOOK2_PASS_B_BATCH1_CH05_10_TRANSITION_GATE_v0.1.md` — GREEN
+- `GATES/BOOK2_PASS_B_BATCH1_CH16_18_TRANSITION_GATE_v0.1.md` — GREEN
+
+Combined gate:
+`GATES/BOOK2_PASS_B_BATCH1_COMBINED_ACCEPTANCE_GATE_v0.1.md`
+
+Drive combined acceptance:
+`1BRiaFZG0sugBML_fyphs9RjTksNkHk9sxs9NvY5RnxU`
+
+Drive prose mirrors verified:
+- Ch06 v0.4: `10H5KQXtrfC7ApnzA4r4zCHYPGrQtWlcjGk70tyWGKDY`
+- Ch09 v0.3: `1FyP8fOTeq9cyJ97phWHmcZpTgSQi0DDMBuBpe-_PNJQ`
+- Ch17 v0.3: `11XgB83s7lIbTHo0urS1q3E5rK6Hw1tYPpVGo0MUO7wU`
+
+Batch 1 result:
+- cross-character dry-smart category-correction convergence materially reduced;
+- Ch06 eleven-second evidence remains weak/bounded;
+- Ch09 Kalen resentment now rests on access/status/work rather than generic clever correction;
+- Ch17 Maya owns argumentative speed while Lea/local grievance are grounded in household/departure consequence;
+- Ch05→10 and Ch16→18 continuity survive.
 
 ## CURRENT CANONICAL FRONTIER
 
-**NEXT PRODUCTION STAGE = PASS B — BOUNDED PATCH BATCH 1 OUTSIDE Ch21–29.**
+**NEXT PRODUCTION STAGE = PASS B — BOUNDED Ch18 `EIGHTEEN` GROUP-VOICE REGRESSION.**
 
-Authorized sequence:
-1. **Ch06 — THE RING PEOPLE WANT — MUST PATCH / HIGH VALUE**
-2. **Ch09 — THE APPRENTICES — MUST PATCH / HIGH VALUE**
-3. **Ch17 — PLANET PEOPLE — MUST PATCH / HIGH VALUE**
-4. local Dialogue / Reader Advocate / Continuity / Red Team / Line regression against accepted sources;
-5. continuous transition read Ch05–10 and Ch16–18;
-6. accept only candidates that improve voice/rhythm without weakening story, youth texture, evidence limits or social consequence.
+Why Ch18 is next:
+- transition gate confirms structure is GREEN;
+- remaining issue is local surface distribution, not architecture;
+- birthday gathering and Tessa/Ethan adult-path exchange concentrate familiar `face / I know / quick correction / stacked group answer` mechanics;
+- patch must preserve birthday warmth, legal-status absurdity, adult-path temptation, real liability/access asymmetry and Ethan's desire to move ahead.
 
-Secondary routing:
-- Ch18 — EIGHTEEN — MEDIUM / HOLD until full-chapter group-voice regression;
-- Ch11 — WHOSE STORY — PROTECT / NO PATCH NOW;
-- Ch13 — VELA NIGHT — PROTECT / NO PATCH NOW;
-- Ch32 canonical routing is `CH32_THE_LATE_ROUTE_v0.1_FULL_STUDIO.md`; older `THE PRIVACY AGREEMENT` execution is superseded because Ch24 already paid that function; Ch32 receives LIGHT LOCAL POLISH ONLY after Batch 1;
-- Ch31/34/35/36 remain closed to automatic rewriting absent a newly demonstrated local defect.
+Required chain:
+1. full Ch18 group-voice read;
+2. bounded candidate only if specific replacements/deletions improve distribution;
+3. Dialogue / Reader Advocate / Continuity / Red Team / Line gate;
+4. Ch17→19 transition regression;
+5. GitHub + Drive persistence and readback before acceptance.
 
-### Batch 1 protected content
-
-**Ch06:** unfinished civic habitat; freight/school/housing collision; Lea/Tomas ordinary-life costs; messy occupancy; dry resident report + Iri local-regulator response + delayed fixed correction; eleven-second relation remains weak/bounded; no resident-as-sensor claim.
-
-**Ch09:** Ollie's lost personal fabrication slot; Iri lateness; local apprentice resentment of Earth-placement privilege; Samir timing note remains bounded; workshop/apprenticeship life independent of Ring Six.
-
-**Ch17:** Maya defends Aoife before being asked; Maya's need to win is the flaw; harm persists despite permission/correction; local resentment about Earth visitors leaving remains real; Lea household delay changes emotional frame; no simple moral winner.
-
-## SECONDARY WORKING WATCH — NOT CURRENT ROUTING
-
-A later local surface check identified plausible line-polish targets in Ch30 `WHO WAITS` and preserved them as **WORKING / SECONDARY**, not as the active frontier:
-- `GATES/BOOK2_PASS_B_GLOBAL_SURFACE_SWEEP_v0.1.md`
-- `STUDIO/CH30_PASS_B_LINE_PATCH_SPEC_v0.1.md`
-
-These do **not** supersede the earlier canonical outside-corridor audit authorizing Ch06/09/17 Batch 1. Ch30 is not automatically rewritten until Batch 1 and its transition regression are complete.
+Secondary routing after Ch18 must be refreshed, not assumed:
+- Ch11 / Ch13 remain protected / no patch absent new evidence;
+- Ch32 canonical routing is `CH32_THE_LATE_ROUTE_v0.1_FULL_STUDIO.md`; old `THE PRIVACY_AGREEMENT` execution is superseded; only light local polish if demonstrated;
+- Ch31/34/35/36 remain closed absent demonstrated local defect;
+- Ch30 surface watch remains WORKING/SECONDARY until refreshed routing permits it.
 
 ## CANON RECONCILIATION STILL ACTIVE
 
@@ -110,6 +130,6 @@ These do **not** supersede the earlier canonical outside-corridor audit authoriz
 
 ## PRODUCTION MODE
 
-`Batch 1 source read -> bounded prose candidate -> Dialogue / Reader Advocate / Continuity / Red Team / Line -> compare with accepted source -> accept/reject -> GitHub -> Drive -> readback -> update manuscript state`.
+`refreshed status -> full local read -> bounded patch only where demonstrated -> Dialogue / Reader Advocate / Continuity / Red Team / Line -> transition regression -> GitHub -> Drive -> readback -> update manuscript state`.
 
 Do not add Chapter 37. Do not restore the epilogue automatically. Do not switch books.
