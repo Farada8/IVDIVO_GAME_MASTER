@@ -1,8 +1,8 @@
 # IVDIVO — BOOK 2 ORBITAL YOUTH — DRAFT STATUS
 
-**Status:** FULL MANUSCRIPT DEVELOPMENT / REGRESSION  
+**Status:** FULL MANUSCRIPT DEVELOPMENT / REGRESSION PASS B  
 **Updated:** 2026-08-17  
-**Story Gate:** PROSE FRONTIER COMPLETE / DEVELOPMENT PASS ACTIVE  
+**Story Gate:** PROSE FRONTIER COMPLETE / STRUCTURAL REGRESSION PASS A GREEN  
 **Primary hero:** Ollie
 
 GitHub `main` is canonical production state. Google Drive mirrors working state.
@@ -44,6 +44,31 @@ Drive canonical mirror:
 
 Prior accepted gate explicitly required the optional historical provenance-trace epilogue to remain CUT. Stored v0.1/v0.2 prose still contained that tail. v0.3 resolves the prose↔gate mismatch only: the novel now ends at the imperfect shared dinner after Ollie postpones non-urgent Ring Six work. The `OLD EARTH SECURITY ARCHIVE / PENDING OWNER RESPONSE` tail is **SUPERSEDED / DO NOT ROUTE** for Book Two unless Founder later explicitly reopens it.
 
+## Full-manuscript regression
+
+### PASS A — STRUCTURAL / CAUSAL / CONTINUITY
+**GREEN / ACCEPTED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
+
+GitHub gate:
+`GATES/BOOK2_FULL_MANUSCRIPT_REGRESSION_GATE_v0.1.md`
+
+Drive mirror:
+`1br_qyunP1d4YVJHfu5QjnxYeH1l6DK6_fIYLNvZs2Dk`
+
+Pass A confirms:
+- causal chain survives 36-chapter prose;
+- Ollie / Ethan / Aoife / Maya / Samir / Iri arcs remain coherent;
+- adult authority and bounded-evidence law survive;
+- Tomas / 3-177 / 3-214 / Lea household consequences survive;
+- climax/resolution remain bounded and independent;
+- only concrete prose regression found was Ch36 provenance tail, already removed in accepted v0.3.
+
+Nonblocking Pass B targets:
+1. manuscript-level repeated `I know` acknowledgement cadence;
+2. clipped `No X / Not X` / fragment-stack rhythm, especially review/denial passages;
+3. cumulative Ch21–29 reader-density and explanation carryover;
+4. dry-smart voice convergence during global polish.
+
 ## Protected climax/resolution continuity
 
 ### Ch35 — SAFE-STATE
@@ -74,21 +99,19 @@ Prior accepted gate explicitly required the optional historical provenance-trace
 
 ## Current canonical frontier
 
-**NEXT PRODUCTION STAGE = FULL-MANUSCRIPT DEVELOPMENT / REGRESSION / CONTINUITY PASS across Chapters 1–36.**
+**NEXT PRODUCTION STAGE = PASS B — GLOBAL LINE / GENERATED-TEXT / DIALOGUE-RHYTHM + Ch21–29 PACING REGRESSION.**
+
+Pass B may make bounded prose edits. It may not reopen story architecture without a newly demonstrated causal/continuity failure.
 
 Required checks:
-- causal promise/payoff chain across all 36 chapters;
-- character arc regression for Ollie, Ethan, Aoife, Maya, Samir, Iri and principal adults;
-- Ring Six authority/technical continuity and bounded-evidence law;
-- privacy/inference continuity;
-- relocation/housing consequence continuity including Tomas and Households 3-177 / 3-214 / Lea household;
-- repeated-scene / duplicated-lesson / pacing regressions;
-- generated-text / fragment-stack / line-pattern regression;
-- ending closure vs accidental series-hook reopening;
-- no patch is accepted until it is persisted to GitHub + Drive and read back.
+- global repeated acknowledgement / dialogue tic search;
+- fragment-stack and generated-summary rhythm search while protecting genuine interface readouts;
+- Ch21–29 chapter-to-chapter density, scene-function repetition, explanation carryover, physical-action ratio, youth-life interruption and end-hook diversity;
+- protect intentional awkwardness and distinct character voice;
+- any accepted patch must persist to GitHub + Drive and survive readback.
 
 ## Production mode
 
-`verified manuscript frontier -> full regression audit -> issue classification -> bounded patch plan -> patch prose only where justified -> Red Team -> continuity gate -> GitHub -> Drive -> readback -> update manuscript state`.
+`Pass B diagnose -> issue map -> bounded prose patches if justified -> Red Team -> regression gate -> GitHub -> Drive -> readback -> update manuscript state`.
 
 Do not add an epilogue automatically. Do not switch books.
