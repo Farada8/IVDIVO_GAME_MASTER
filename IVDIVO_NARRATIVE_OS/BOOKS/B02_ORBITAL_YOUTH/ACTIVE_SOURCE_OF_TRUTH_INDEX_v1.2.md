@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–19 GREEN / Chapter 20 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–21 GREEN / Chapter 22 next
 
 ## READ ORDER
 
@@ -69,59 +69,13 @@ Ch15 — LIMITED OPEN — GREEN / Full Studio accepted v0.3
 Ch16 — THE INFERENCE — GREEN / Full Studio accepted v0.3  
 Ch17 — PLANET PEOPLE — GREEN / Full Studio accepted  
 Ch18 — EIGHTEEN — GREEN / Full Studio accepted  
-Ch19 — GO / NO-GO — GREEN / Full Studio accepted v0.3
+Ch19 — GO / NO-GO — GREEN / Full Studio accepted v0.3  
+Ch20 — THE WRONG CAUSE — GREEN / Full Studio accepted v0.3  
+Ch21 — SHUT — GREEN / Full Studio accepted v0.3
 
-**NEXT: Ch20 — THE WRONG CAUSE — Ollie POV.**
+**NEXT: Ch22 — AFTER THE CAMERA — Aoife POV.**
 
 ## LATEST ACCEPTED CONTROLS
-
-### Ch15 — LIMITED OPEN
-- GitHub draft: `DRAFTS/CH15_LIMITED_OPEN_v0.3_FULL_STUDIO.md`
-- GitHub gate: `GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-- Drive accepted draft ID `19Ixqvur0oDyEkuguGQabSgWvuIK0WX2MoA1S6PnfjXk`
-- Drive acceptance gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
-
-Protected continuity:
-- bounded occupancy only;
-- Ch15 3.2-second fixed-system follow remains unresolved inside ordinary settling tolerance;
-- second messier cycle does not reproduce disputed lag;
-- two early embodied/interface events remain unresolved;
-- transition-overlap is predictor, not proven cause;
-- Ch20 exposes a missing causal class rather than proving Ch15 work worthless.
-
-### Ch16 — THE INFERENCE v0.3
-- GitHub draft: `DRAFTS/CH16_THE_INFERENCE_v0.3_FULL_STUDIO.md`
-- GitHub gate: `GATES/CH16_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-- Drive accepted draft ID `1V38otYv5wrui6gke2JpLBV_HvYb85bQCRmu9bNtPmdg`
-- Drive acceptance gate ID `1hEmI49MmiWrGDKarltOUv7v8YLUK2h1-G7XtBpS2v3w`
-
-Protected continuity:
-- inferential privacy failure, not explicit promise-breaking;
-- derivative copies survive original takedown;
-- source trust/access does not reset cheaply;
-- Ethan’s useful action is restraint.
-
-### Ch17 — PLANET PEOPLE
-- GitHub draft: `DRAFTS/CH17_PLANET_PEOPLE_v0.2_FULL_STUDIO.md`
-- GitHub gate: `GATES/CH17_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-- Drive draft ID `1h_6U6zg2tKu2fGPFHeuFrW7awQn9MzfKaxR59hFlswM`
-- Drive gate ID `1pwUZ5swGuEYuQDV3nZKsykfRsDYDyrIlrIp6covkJ68`
-
-Protected continuity:
-- residents remain divided about opening/delay;
-- Lea household has legitimate material reason to prefer restricted opening sooner;
-- Maya’s concealment has paid relational/administrative cost.
-
-### Ch18 — EIGHTEEN
-- GitHub draft: `DRAFTS/CH18_EIGHTEEN_v0.2_FULL_STUDIO.md`
-- GitHub gate: `GATES/CH18_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-- Drive draft ID `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`
-- Drive gate ID `1CLP6Zl96SvYA8xnGYcWULstgo7Vg7Jm-2RwHMrO3Kv8`
-
-Protected continuity:
-- Ethan stays in Youth Cohort through Ring Six review;
-- adult-track remains a real later option;
-- Ethan/Aoife pressure is secrecy/timing/pre-management, not generic career-vs-romance.
 
 ### Ch19 — GO / NO-GO v0.3
 - GitHub draft: `DRAFTS/CH19_GO_NO_GO_v0.3_FULL_STUDIO.md`
@@ -137,17 +91,54 @@ Protected continuity:
 - board owns authorization;
 - opening remains rational in retrospect.
 
-## CH20 WORKING GATE
+### Ch20 — THE WRONG CAUSE v0.3
+- GitHub draft: `DRAFTS/CH20_THE_WRONG_CAUSE_v0.3_FULL_STUDIO.md`
+- GitHub gate: `GATES/CH20_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Drive draft ID `1BBbomx5KwTnw3kAAhkZAp0Z12PrXpeIsAGBQg2Gc9Q8`
+- Drive gate ID `1JKKBHkNd9IrOy7dd_A3t9Px3crAHno-X6ZSkaLIj9T0`
 
-Chapter 20 must:
-- deliver the midpoint failure in actual occupied conditions;
-- begin with ordinary household/service life and embodied/interface signals rather than a machine alarm;
-- reveal a causal class absent from Ollie’s current transition-overlap model;
-- allow stop logic to work because Ch19 retained report evidence;
-- keep adults competent under pressure;
-- produce a real occupancy rollback/pause with household and service consequences;
-- make Ollie pay for his public Ch19 yes without turning him into a scapegoat;
-- destroy confidence in the current causal model, not in evidence-based reasoning itself.
+Protected continuity:
+- no Ch19 restriction was secretly broken;
+- missing causal class = distributed equivalent transition across allowed states;
+- EAST SERVICE + COMMON RETURN CORRECTION + SERVICE C created coupled demand while PARTITION B remained locked;
+- five resident/interface entries preceded first fixed threshold crossing;
+- report/stop logic worked and reduced harm;
+- adult response was competent;
+- Ring Six occupancy is suspended / move-in reversed;
+- maintenance worker has probable forearm fracture / soft-tissue injury;
+- Lea household displaced again;
+- Ollie credential REVIEW HOLD;
+- exact role of embodied/interface reports remains UNKNOWN.
+
+### Ch21 — SHUT v0.3
+- GitHub draft: `DRAFTS/CH21_SHUT_v0.3_FULL_STUDIO.md`
+- GitHub gate: `GATES/CH21_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Drive draft ID `1Yh5DUPSlqtY2YCjk6aMCh0HwQI8ZMCV61whAioNnDRI`
+- Drive gate ID `1RjFKUZW-7cvu6yjcys8EVVLo_9H1EpD_UEhDWfhxtFY`
+
+Protected continuity:
+- Ollie did not cause the defect; his valid incomplete interpretation materially changed what competent adults believed they could attempt;
+- distributed equivalence is preliminary, not final root cause;
+- lead timing of resident/interface reports is now a serious investigation target, not proven causal variable;
+- Ollie remains off active Ring Six incident/commissioning access;
+- `useful` and `permitted` remain separate;
+- Iri’s trust remains damaged;
+- Iri agrees the reports were noisy/inconsistent and does not become an oracle;
+- older occupied-module complaints with similar lead-timing language are clue only and require authorized comparison;
+- Ollie uses allowed observation field and explicitly records `NO CLAIM OF COMMON CAUSE` rather than expanding access himself;
+- accepted v0.3 removes manuscript fourth-wall references to chapter numbers.
+
+## CH22 WORKING GATE
+
+Chapter 22 — AFTER THE CAMERA — Aoife POV must:
+- change texture away from Ollie technical analysis;
+- make Aoife’s earlier inferential-privacy failure and source-access loss materially constrain what she can know and show;
+- show Ring Six aftermath through people, absence, displaced routines and access limits rather than another technical postmortem;
+- preserve S1 privacy and do not cheaply restore source trust;
+- continue Aoife/Ethan trust pressure without generic romance repair;
+- preserve Lea/local anger and displaced-household continuity;
+- avoid giving Aoife privileged incident information she has not earned;
+- open the next evidence/social path through legitimate observation or relationship consequence.
 
 ## ACTIVE DRAFTING MODE
 
