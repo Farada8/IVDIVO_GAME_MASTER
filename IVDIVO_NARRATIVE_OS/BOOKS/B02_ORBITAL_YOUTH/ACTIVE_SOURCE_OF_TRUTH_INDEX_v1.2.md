@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–18 GREEN / Chapter 19 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–19 GREEN / Chapter 20 next
 
 ## READ ORDER
 
@@ -44,8 +44,8 @@
 - Nadia Park remains WORKING housing/relocation coordinator.
 - Iri remains biologically embodied, non-human-default, cooler/drier preference with narrower rapid warm-humid tolerance.
 - Aoife Source S1 remains separate from Iri; current working name `Sela` is OPTION / NOT CANON.
-- S1 sensitive body/environment ontology remains UNKNOWN; only a private environmental accommodation and explicit non-disclosure boundary are established in Ch11.
-- Synthetic/artificial bodies are not routine ordinary-human orbital technology. Any appearance in Book 2 must pass current technology-access canon and must not normalize ordinary orbital humans owning Confederation-level bodies.
+- S1 sensitive body/environment ontology remains UNKNOWN; only private environmental accommodation and explicit non-disclosure boundary are established in Ch11.
+- Synthetic/artificial bodies are not routine ordinary-human orbital technology. Any appearance in Book 2 must pass current technology-access canon.
 - Ch36 remains four braided resolution scenes.
 - Rivergate/Lattice/Ethan-primary Book 2 branch is SUPERSEDED AS BOOK TWO.
 
@@ -66,11 +66,12 @@ Ch12 — THE CLEAN MODEL — GREEN / Full Studio patched
 Ch13 — VELA NIGHT — GREEN / Full Studio accepted  
 Ch14 — ALMOST LOCAL — GREEN / Full Studio accepted  
 Ch15 — LIMITED OPEN — GREEN / Full Studio accepted v0.3  
-Ch16 — THE INFERENCE — GREEN / Full Studio accepted  
+Ch16 — THE INFERENCE — GREEN / Full Studio accepted v0.3  
 Ch17 — PLANET PEOPLE — GREEN / Full Studio accepted  
-Ch18 — EIGHTEEN — GREEN / Full Studio accepted
+Ch18 — EIGHTEEN — GREEN / Full Studio accepted  
+Ch19 — GO / NO-GO — GREEN / Full Studio accepted v0.3
 
-**NEXT: Ch19 — GO / NO-GO — Ollie POV.**
+**NEXT: Ch20 — THE WRONG CAUSE — Ollie POV.**
 
 ## LATEST ACCEPTED CONTROLS
 
@@ -81,25 +82,24 @@ Ch18 — EIGHTEEN — GREEN / Full Studio accepted
 - Drive acceptance gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
 
 Protected continuity:
-- bounded realistic occupancy only;
-- first cycle has a 3.2-second fixed-system follow inside ordinary settling band and closes without propagation;
-- second messier cycle does not reproduce disputed fixed-system lag;
+- bounded occupancy only;
+- Ch15 3.2-second fixed-system follow remains unresolved inside ordinary settling tolerance;
+- second messier cycle does not reproduce disputed lag;
 - two early embodied/interface events remain unresolved;
 - transition-overlap is predictor, not proven cause;
-- Ch20 reveals a missing causal class rather than proving Ch15 work worthless.
+- Ch20 exposes a missing causal class rather than proving Ch15 work worthless.
 
-### Ch16 — THE INFERENCE
-- GitHub draft: `DRAFTS/CH16_THE_INFERENCE_v0.2_FULL_STUDIO.md`
+### Ch16 — THE INFERENCE v0.3
+- GitHub draft: `DRAFTS/CH16_THE_INFERENCE_v0.3_FULL_STUDIO.md`
 - GitHub gate: `GATES/CH16_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-- Drive draft ID `1excpvqgTBu8PSl7Q0BPn4d0fIEjdb0_QBkBLyLmRujY`
-- Drive gate ID `1R5-ItHWGg6VrIm6eYsGSdABGVdOSSbyK8NN33RHZvu4`
+- Drive accepted draft ID `1V38otYv5wrui6gke2JpLBV_HvYb85bQCRmu9bNtPmdg`
+- Drive acceptance gate ID `1hEmI49MmiWrGDKarltOUv7v8YLUK2h1-G7XtBpS2v3w`
 
 Protected continuity:
-- source-approved excerpt still produces inferential exposure through contextual clues;
-- original is removed but derivative copies/stills may remain;
-- source trust/access is ruptured and does not reset cheaply;
-- Aoife cannot safely solve the problem through a clarifying public statement;
-- Ethan’s useful action is restraint, not response management.
+- inferential privacy failure, not explicit promise-breaking;
+- derivative copies survive original takedown;
+- source trust/access does not reset cheaply;
+- Ethan’s useful action is restraint.
 
 ### Ch17 — PLANET PEOPLE
 - GitHub draft: `DRAFTS/CH17_PLANET_PEOPLE_v0.2_FULL_STUDIO.md`
@@ -108,10 +108,9 @@ Protected continuity:
 - Drive gate ID `1pwUZ5swGuEYuQDV3nZKsykfRsDYDyrIlrIp6covkJ68`
 
 Protected continuity:
-- residents remain divided about delay/opening;
-- Lea’s household has a legitimate material reason to prefer restricted opening sooner;
-- Maya’s Ch10 concealment has paid relational/administrative cost;
-- future Maya autonomy must be built from truthful negotiated conditions.
+- residents remain divided about opening/delay;
+- Lea household has legitimate material reason to prefer restricted opening sooner;
+- Maya’s concealment has paid relational/administrative cost.
 
 ### Ch18 — EIGHTEEN
 - GitHub draft: `DRAFTS/CH18_EIGHTEEN_v0.2_FULL_STUDIO.md`
@@ -120,40 +119,39 @@ Protected continuity:
 - Drive gate ID `1CLP6Zl96SvYA8xnGYcWULstgo7Vg7Jm-2RwHMrO3Kv8`
 
 Protected continuity:
-- Ethan remains in Youth Cohort through current Ring Six commitment review;
-- adult-track remains a real attractive future option afterward;
-- Aoife/Ethan pressure is secrecy/timing/pre-management, not permission or generic career-vs-romance;
-- Ch19 returns the A-line to Ollie/Ring Six.
+- Ethan stays in Youth Cohort through Ring Six review;
+- adult-track remains a real later option;
+- Ethan/Aoife pressure is secrecy/timing/pre-management, not generic career-vs-romance.
 
-## CH19 WORKING GATE
+### Ch19 — GO / NO-GO v0.3
+- GitHub draft: `DRAFTS/CH19_GO_NO_GO_v0.3_FULL_STUDIO.md`
+- GitHub gate: `GATES/CH19_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Drive draft ID `1TEB_85IkanzX1C1-U-UHhUNoYqvC6fEIoF7vim_VRe0`
+- Drive gate ID `1JFzsKEKdJL2vlT5lfNYhWjej48s4BaL4P_DnkOwgcbw`
 
-Chapter 19 must:
-- present two defensible evidence interpretations;
-- let Ollie’s work remove one legitimate reason to delay without proving unrestricted safety;
-- force explicit uncertainty through Mara;
-- show materially divided resident/apprentice interests;
-- have Ollie publicly support only a limited/restricted opening;
-- keep adult commissioning board as decision authority;
-- authorize restricted partial habitation rationally;
-- begin move-in staging and cross the false-success threshold;
-- preserve Ch20 as the real midpoint failure without retroactively making Ch15/Ch19 actors stupid.
+Protected continuity:
+- LIMITED GO / OCCUPIED COMMISSIONING only;
+- R6-A, 42% density cap, disputed partition overlap prohibited, reviewed route combinations, enhanced monitoring, lowered stop threshold;
+- embodied/interface reports remain active in stop logic without medical-proof requirement;
+- Ollie personally supported the restricted profile; his position is public and attributable;
+- board owns authorization;
+- opening remains rational in retrospect.
+
+## CH20 WORKING GATE
+
+Chapter 20 must:
+- deliver the midpoint failure in actual occupied conditions;
+- begin with ordinary household/service life and embodied/interface signals rather than a machine alarm;
+- reveal a causal class absent from Ollie’s current transition-overlap model;
+- allow stop logic to work because Ch19 retained report evidence;
+- keep adults competent under pressure;
+- produce a real occupancy rollback/pause with household and service consequences;
+- make Ollie pay for his public Ch19 yes without turning him into a scapegoat;
+- destroy confidence in the current causal model, not in evidence-based reasoning itself.
 
 ## ACTIVE DRAFTING MODE
 
-For each chapter:
-1. load current scene architecture;
-2. apply relevant professional Writers' Room prompts;
-3. apply bibles/reference/voice guardrails;
-4. create integrated Writer Brief when needed;
-5. prose;
-6. hostile Red Team;
-7. character/relationship/youth/reader pass;
-8. dialogue + line pass;
-9. continuity/local gate;
-10. save accepted draft + gate to GitHub;
-11. mirror to Google Drive;
-12. verify both;
-13. update DRAFT_STATUS / this index / sync manifest when frontier moves.
+`architecture -> professional prompts -> bibles/reference/voice -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive -> verification -> advance controls`.
 
 ## SAVE LAW
 
@@ -161,11 +159,11 @@ A chapter is not accepted across the project until accepted draft + gate are per
 
 ## CROSS-CONVERSATION CONTINUATION
 
-When Founder says `и / дальше / продолжай / делай / работай`, bootstrap and continue from the frontier above. Do not ask Founder to reconstruct prior work.
+When Founder says `и / дальше / продолжай / делай / работай`, continue from the frontier above without asking Founder to reconstruct persisted work.
 
 ## DO NOT DRAFT FROM
 
 `THE PEOPLE IN THE MODEL / Rivergate / Lattice / Ethan-primary`
 = SUPERSEDED AS BOOK TWO / REFERENCE ONLY.
 
-Do not let reference-richness become homework. Story and character remain primary.
+Story and character remain primary.
