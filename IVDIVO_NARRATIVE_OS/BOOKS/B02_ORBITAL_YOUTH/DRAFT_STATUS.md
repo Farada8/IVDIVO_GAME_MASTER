@@ -1,8 +1,8 @@
 # IVDIVO — BOOK 2 ORBITAL YOUTH — DRAFT STATUS
 
-**Status:** ACTIVE DRAFT  
+**Status:** FULL MANUSCRIPT DEVELOPMENT / REGRESSION  
 **Updated:** 2026-08-17  
-**Story Gate:** GREEN TO PROSE  
+**Story Gate:** PROSE FRONTIER COMPLETE / DEVELOPMENT PASS ACTIVE  
 **Primary hero:** Ollie
 
 GitHub `main` is canonical production state. Google Drive mirrors working state.
@@ -10,73 +10,85 @@ Drive active folder: `ORBITAL_YOUTH_ACTIVE` — `1tZ6Kdkjq9blB10i98cE_3d02egYnPW
 
 ## Accepted prose frontier
 
-**Chapters 1–34: GREEN / accepted development drafts.**
+**Chapters 1–36: GREEN / accepted development drafts.**
 
-Latest accepted chapter: **Ch34 — REDUCED REDUNDANCY — controlled ensemble / Ollie anchor — v0.2 — GREEN.**
+Latest accepted climax:
+**Ch35 — SAFE-STATE — Ollie POV — v0.2 — GREEN.**
 
 GitHub:
-- Delegation reconciliation: `STUDIO/CH34_SAFE_STATE_DELEGATION_RECONCILIATION_v1.0.md`
-- Writer Brief: `STUDIO/CH34_REDUCED_REDUNDANCY_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
-- Draft: `DRAFTS/CH34_REDUCED_REDUNDANCY_v0.2_FULL_STUDIO.md`
-- Gate: `GATES/CH34_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Writer Brief: `STUDIO/CH35_SAFE_STATE_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
+- Draft: `DRAFTS/CH35_SAFE_STATE_v0.2_FULL_STUDIO.md`
+- Gate: `GATES/CH35_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+
+Drive:
+- Writer Brief ID `1G_nPdVmwkcHTaKQWY61fbG_SUwc8J9vZzcJmHF-4a3k`
+- Draft ID `1BE9Am2xCHhdJncgBgE0ZCChiIokJrooMSfn4msLQXEM`
+- Gate ID `19UnKjh8ExixkN2OeMlEA55XnHWiYZ5PQkwQlTjy7EP0`
+
+Latest accepted resolution:
+**Ch36 — A HOME THAT ISN'T FINISHED — braided resolution / Ollie anchor — v0.3 ACCEPTED CLEAN — GREEN.**
+
+GitHub:
+- Resolution reconciliation: `STUDIO/CH36_RESOLUTION_PROTECTION_RECONCILIATION_v1.0.md`
+- Writer Brief: `STUDIO/CH36_A_HOME_THAT_ISNT_FINISHED_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
+- Draft: `DRAFTS/CH36_A_HOME_THAT_ISNT_FINISHED_v0.3_FULL_STUDIO_ACCEPTED_CLEAN.md`
+- Gate: `GATES/CH36_FULL_STUDIO_ACCEPTANCE_GATE_v0.2_RECONCILED.md`
 
 Drive canonical mirror:
-- Delegation reconciliation ID `16JsDntSgcaOWz2BjVafoDe-LMD_wLPGWqDQ1xlJfYqg`
-- Writer Brief ID `150smljibeHKnH8nKOFBFxdKbyr8JFo0ouP-l5ChJLKU`
-- Draft ID `1cuEfoLGF_tJBJ0wwPO8ZQ8GJef13JiwvVMQwdVOshk0`
-- Gate ID `1LreY-GtH_ou6H8Yjg6Duk1C-J_tm_JW06ZnfVbmI2Wk`
+- Resolution reconciliation ID `1yLI7sm8jVX9_ji4JxzOraApfNcNbvRoP3l3W-ePH-Bw`
+- Writer Brief ID `1ZDVcNh-6QIFLxvao09f83zuDOH8wpTu34kMXO6QjQ1M`
+- Draft ID `1UzP5e5PPEXhVbdimoyCF-DK9Q_oi3EG1JhilNs_ImAI`
+- Gate ID `12hPVDCkAx7NW_z0aNtigmh9a1O0RmCEKW391UVu3S6M`
 
-## Protected Ch31–34 continuity
+### Ch36 ending reconciliation
 
-### Ch31 — THE ADULT DOOR
-- Ethan chose later intake and lost preferred immediate placement; no romance reward; envy remains; adult-track remains B-line.
+Prior accepted gate explicitly required the optional historical provenance-trace epilogue to remain CUT. Stored v0.1/v0.2 prose still contained that tail. v0.3 resolves the prose↔gate mismatch only: the novel now ends at the imperfect shared dinner after Ollie postpones non-urgent Ring Six work. The `OLD EARTH SECURITY ARCHIVE / PENDING OWNER RESPONSE` tail is **SUPERSEDED / DO NOT ROUTE** for Book Two unless Founder later explicitly reopens it.
 
-### Ch32 — THE LATE ROUTE
-- Maya autonomy protocol not renegotiated; failure mode is over-help/control; route competence stays under adult authority; Lea trust functional but not repaired.
+## Protected climax/resolution continuity
 
-### Ch33 — MIGRATION
-- Segment Three habitation is a real success; Room 3-214 remains home;
-- Ollie REVIEW HOLD remains; temporary migration watch is read-only / STOP REQUEST only;
-- adult operators retain safety/configuration/routing authority;
-- reports remain bounded; negative/no-report case visible;
-- migration clustering reduces spare margin without leaving certified profile.
+### Ch35 — SAFE-STATE
+- Ollie triggers only the pre-authorized local R3-S before legacy auto threshold;
+- adult primary and Mara remain operationally responsible;
+- Household 3-177 and other traffic pay immediate material cost;
+- delayed evidence later justifies early isolation for this event only;
+- no universal resident-sensor/root-cause proof;
+- full Ring Six commissioning is not declared successful;
+- Segment Three remains occupied under conservative safe-state, new inbound suspended at chapter end.
 
-### Ch34 — REDUCED REDUNDANCY
-- older-sector reduced-redundancy work begins only after actual-load review still holds certified floor;
-- adults delay/hold/reroute rationally and remain competent;
-- Ollie's underlying `REVIEW HOLD` remains unchanged;
-- temporary `LOCAL SAFE-STATE — SEGMENT THREE / R3-S` is explicitly adult-authorized, role-based and shared with adult primary operator;
-- R3-S can only close Segment Three inbound, hold next local transition and force conservative local recovery; Ollie cannot reopen/tune/change thresholds/reroute ring-wide;
-- R3-S arms from operational state envelope, not resident/Iri reports;
-- negative/no-report evidence remains visible;
-- Household 3-177 is inbound with a confirmed room tonight and will pay the immediate cost if gate closes;
-- at chapter exit R3-S = full MATCH / armed, legacy automatic isolation = NOT ARMED, adult primary sees same state, Ollie's hand is on R3-S.
+### Ch36 — A HOME THAT ISN'T FINISHED
+- unrestricted Ollie access remains suspended;
+- recovery/redesign role is narrow, supervised/read-only where specified;
+- Household 3-177 later reaches its retained room under slower corrected inbound procedure;
+- Ring Six remains partial inhabited success with normal commissioning incomplete;
+- R3-S survives only as narrower manual contingency under review; automatic state-aware control remains test work;
+- Maya autonomy protocol persists boringly; Lea trust functional, not reset;
+- Ethan later intake is real but not a magical upgrade;
+- Aoife's smaller work remains bounded; S1 trust not fully restored;
+- Samir's sport/social identity remains independent;
+- five friends fail to synchronize cleanly but choose an imperfect overlap;
+- final Book Two prose beat = Ollie postpones non-urgent work and stays at dinner.
 
 ## Canon reconciliation still active
 
-**Tomas = the Ch20 injured maintenance worker.** Light-duty/manual-service restriction remains active.
+**Tomas = the Ch20 injured maintenance worker.** Light-duty/manual-service restriction remains active unless later accepted prose explicitly changes it.
 
 ## Current canonical frontier
 
-**NEXT = Chapter 35 — SAFE-STATE — Ollie POV.**
+**NEXT PRODUCTION STAGE = FULL-MANUSCRIPT DEVELOPMENT / REGRESSION / CONTINUITY PASS across Chapters 1–36.**
 
-Required direction:
-- begin with action, not repeated technical explanation;
-- Ollie triggers R3-S under the already-earned authority before legacy automatic threshold;
-- adult primary remains present and immediately executes wider containment/logging; no applause;
-- inbound gate closes, next transition holds, Segment Three enters conservative local recovery;
-- Household 3-177 is turned back and loses access to its room that night; room remains theirs;
-- queues/service schedules break and social/material cost is immediate;
-- for a short interval legacy/fixed readings should still look recoverable enough that Ollie must live inside the possibility he overreacted;
-- delayed fixed evidence then moves in the direction the shadow model predicted; isolation prevents propagation into neighboring segments;
-- technical validation must remain bounded: early action justified for this event, not universal proof of every resident report or complete root cause;
-- Ollie explains the decision to Household 3-177 without demanding understanding; they may stay angry;
-- chapter should complete climax with truthful institutional naming: safe occupied segments can remain, unsafe/unresolved sections close/redesign; no false `full Ring Six successful opening` language;
-- no sole-savior headline identity; any media/public reaction remains secondary to real affected people;
-- end with main external conflict functionally closed enough for Ch36 resolution, not a new mystery escalation.
+Required checks:
+- causal promise/payoff chain across all 36 chapters;
+- character arc regression for Ollie, Ethan, Aoife, Maya, Samir, Iri and principal adults;
+- Ring Six authority/technical continuity and bounded-evidence law;
+- privacy/inference continuity;
+- relocation/housing consequence continuity including Tomas and Households 3-177 / 3-214 / Lea household;
+- repeated-scene / duplicated-lesson / pacing regressions;
+- generated-text / fragment-stack / line-pattern regression;
+- ending closure vs accidental series-hook reopening;
+- no patch is accepted until it is persisted to GitHub + Drive and read back.
 
 ## Production mode
 
-`verified frontier -> Writer Brief -> prose -> Red Team -> character/youth/dialogue/line -> continuity gate -> GitHub -> Drive -> verify -> update frontier`.
+`verified manuscript frontier -> full regression audit -> issue classification -> bounded patch plan -> patch prose only where justified -> Red Team -> continuity gate -> GitHub -> Drive -> readback -> update manuscript state`.
 
-Parallel alternate files do not become routing authority merely by being newer. Use this status + accepted gate chain after explicit reconciliation.
+Do not add an epilogue automatically. Do not switch books.
