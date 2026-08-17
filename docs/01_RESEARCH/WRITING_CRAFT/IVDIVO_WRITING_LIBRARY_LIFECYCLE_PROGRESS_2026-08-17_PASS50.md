@@ -67,9 +67,58 @@ No new evidence justifies reopening LESSON ZERO Book One development lock.
 - Wider strict ledger updated to v0.8.
 - Old W008 working file removed only after finalization.
 
-## COUNTS
+## COUNTS AFTER PUSHMAN
 - Wider strict complete: **8**
 - Core strict complete: **17/40** (unchanged)
 
+## W009 — CHRISTOPHER VOGLER — THE WRITER'S JOURNEY — STARTED
+After Pushman completion, the next unique full source was registered rather than ending the pass on administration.
+
+Retained source:
+- Christopher Vogler, *The Writer's Journey: Mythic Structure for Writers*, 25th Anniversary Edition;
+- Drive ID `1LRY1c1BCzXAnrkq2xZc8PyRa2RxC0Llf`;
+- 522 pages; 26,530,927 bytes; ~150.2k extracted words;
+- SHA-256 `6b10fe1afd9e305b9d87d9597be6af379e76e061f864b9ca47b7c383c3e3f842`.
+
+A Russian translation also exists on Drive (`1_VrSwycSVjFf7JE4vpHqPSlUg3YHuGwa`) and is treated as an alternate representation of the same bibliographic work, not new knowledge by default.
+
+Strict status:
+- REGISTERED — COMPLETE
+- INTEGRITY VERIFIED — COMPLETE
+- FULL READ — IN PROGRESS
+- all later lifecycle stages remain provisional/open.
+
+Continuously verified reading in this pass:
+- 25th Anniversary Introduction;
+- previous-edition Introduction;
+- Book One Ch1 `A Practical Guide`;
+- Book One Ch2 `Archetypes` completely;
+- Book Two Stage 1 `The Ordinary World` completely;
+- Stage 2 `Call to Adventure` completely;
+- Stage 3 `Refusal of the Call` through local extraction line 5804.
+
+Important preliminary synthesis:
+- Vogler's own text repeatedly warns that the Hero's Journey is a guideline/map, not a cookbook; stages may move, disappear or change function.
+- Archetypes are most useful as temporary story functions/masks rather than permanent character types.
+- `Special World` is better operationalized as a meaningful rule/rhythm/choice change, not necessarily a new physical world.
+- Call to Adventure can be quiet opportunity, dissatisfaction, message, loss or changed condition; catastrophe is not required.
+- Refusal is not mandatory; willing heroes and positive refusals exist.
+
+Hard firewalls already established:
+- no Hero's Journey retrofit as mandatory IVDIVO architecture;
+- no mandatory wound/flaw/death/sacrifice stakes;
+- no gender-essentialist anima/animus/Shapeshifter doctrine;
+- no “love interest completes hero” model;
+- named conscious robots are persons, not default Ally/Mentor utilities;
+- Jungian collective unconscious, chakras, vibrational rates, synchronicity, telepathy/clairvoyance and spiritual/metaphysical claims in Vogler are symbolic/craft material only, not scientific evidence and not IVDIVO ontology.
+
+Working file:
+`STRICT_LIFECYCLE/DR_WORKING_W009_VOGLER_WRITERS_JOURNEY_STRICT_LIFECYCLE.md`
+
+Exact next pointer:
+**local extraction line 5805, Book Two, Stage Three `REFUSAL OF THE CALL`, immediately after the `POSITIVE REFUSALS` heading/opening sentence.**
+
+Do not count later exploratory samples as read; they were orientation only where tool output was truncated.
+
 ## NEXT
-Run new-upload check, then select the next unique full source not already strict-complete. Do not restart Pushman without a concrete verification need.
+Run the next new-upload check, then resume Vogler at line 5805. Do not restart Pushman or Vogler's verified range without a concrete verification need.
