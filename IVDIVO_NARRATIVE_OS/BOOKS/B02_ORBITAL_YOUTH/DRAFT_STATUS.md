@@ -153,29 +153,50 @@ Ch19 result:
 
 The old `CH19_GO_NO_GO_v0.4_PASS_B_TRIM_PATCH.md` is now provenance/working history only; the full candidate above is the routed prose.
 
+#### Ch32 — THE LATE ROUTE LIGHT-VOICE PASS
+**GREEN / ACCEPTED FOR PASS-B ROUTING. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
+
+Accepted candidate:
+`DRAFTS/CH32_THE_LATE_ROUTE_v0.2_PASS_B_CANDIDATE.md`
+
+Local gate:
+`GATES/CH32_PASS_B_LIGHT_VOICE_ACCEPTANCE_GATE_v0.1.md`
+
+Transition gate:
+`GATES/BOOK2_PASS_B_CH31_33_TRANSITION_GATE_v0.1.md` — GREEN
+
+Drive mirrors/readback verified:
+- candidate `1q1KGyvyIWdP01w2CnhPIj3Rqa_VVNGJQXZOlm9udOyc`
+- local gate `1hamNk7PwUJn2lBVES-ARQSgNCrI48e8H_pSpHW9KAHg`
+- transition gate `1zI-U12FxW-joLXLEYDZrl5HD89KV4GuHT1bEcYmCWqk`
+
+Ch32 result:
+- full validation found no story/authority/continuity defect;
+- light pass reduces route-face/shared correction routine and cumulative `I know` ladders;
+- Lea household still refuses split move despite technically improved route;
+- Maya's mistake remains over-help/control, not concealment;
+- Ch24 autonomy protocol is used, not renegotiated;
+- no live tracking or surveillance retreat;
+- Maya earns only route/signage walk-through work under staff confirmation;
+- Lea functional trust improves only enough for one requested check;
+- Ch32 closes at 06:30 with bounded relocation support;
+- Ch33 opens at 06:31 with Ollie and migration as the A-line.
+
 ## CURRENT CANONICAL FRONTIER
 
-**NEXT PRODUCTION STAGE = PASS B — REFRESH / VALIDATE Ch32 `THE LATE ROUTE` LIGHT LOCAL POLISH WATCH.**
+**NEXT PRODUCTION STAGE = REFRESH REQUIRED AFTER Ch32 ACCEPTANCE. DO NOT ASSUME TARGET.**
 
-Canonical Ch32:
-`DRAFTS/CH32_THE_LATE_ROUTE_v0.1_FULL_STUDIO.md`
+Required next action:
+1. reread this `DRAFT_STATUS.md` after persistence;
+2. inspect newest canonical Pass-B audit / gates / commits;
+3. select only an explicitly permitted unresolved local or whole-manuscript watch;
+4. if no meaningful defect is demonstrated, move toward Pass-B assembly / whole-manuscript continuous regression instead of inventing more edits.
 
-Do **not** route the superseded `THE PRIVACY AGREEMENT` execution.
-
-Required chain:
-1. full Ch32 read against its accepted local gate and current Ch31→33 continuity;
-2. demonstrate an actual cumulative voice/line defect before editing;
-3. if no meaningful defect survives full read, PROTECT / NO PATCH;
-4. if defect is real, create the smallest possible local candidate only;
-5. Dialogue / Reader Advocate / Continuity / Red Team / Line gate;
-6. continuous Ch31→33 transition regression;
-7. GitHub + Drive persistence/readback before acceptance.
-
-Secondary routing after Ch32 must again be refreshed, not assumed:
-- Ch11 / Ch13 remain protected / no patch absent new evidence;
-- Ch31/34/35/36 remain closed absent demonstrated local defect;
-- Ch30 surface watch remains WORKING/SECONDARY until refreshed routing permits it;
-- secondary Ch12/20 notes remain HOLD unless a later whole-book read makes them reader-visible.
+Protected unless fresh evidence says otherwise:
+- Ch11 / Ch13 — PROTECT / NO PATCH;
+- Ch31 / Ch34 / Ch35 / Ch36 — CLOSED absent demonstrated local defect;
+- Ch30 surface watch — WORKING/SECONDARY only until refreshed routing permits it;
+- Ch12 / Ch20 secondary notes — HOLD unless reader-visible in refreshed whole-book read.
 
 ## CANON RECONCILIATION STILL ACTIVE
 
@@ -183,6 +204,6 @@ Secondary routing after Ch32 must again be refreshed, not assumed:
 
 ## PRODUCTION MODE
 
-`refreshed status -> full local read -> bounded patch only where demonstrated -> Dialogue / Reader Advocate / Continuity / Red Team / Line -> transition regression -> GitHub -> Drive -> readback -> update manuscript state`.
+`refreshed status -> verify latest canonical audit/gates -> bounded work only where demonstrated -> Dialogue / Reader Advocate / Continuity / Red Team / Line -> transition regression -> GitHub -> Drive -> readback -> update manuscript state`.
 
 Do not add Chapter 37. Do not restore the epilogue automatically. Do not switch books.
