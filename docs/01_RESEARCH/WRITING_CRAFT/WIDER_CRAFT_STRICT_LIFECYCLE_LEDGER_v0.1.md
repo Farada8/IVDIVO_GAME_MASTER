@@ -1,5 +1,5 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.5
+Version: v0.6
 Date: 2026-08-17
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
@@ -45,8 +45,16 @@ Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W005_BELL_ART_OF_WAR_FOR_WRITERS_S
 Core membership note: current registry evidence does not establish W005 as a Core-40 slot; Core count is therefore not modified.
 Market/date note: historical agent/query/platform/publishing advice is not current market authority; craft/process mechanisms are tracked separately.
 
+### W006 — Tom Chiarella — *Writing Dialogue*
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `1IbW87QTdMJjsbMRda02GFpkJqmgsgziD`
+Integrity: 77 pages; 2,361,842 bytes; ~58.7k extracted words; end-to-end text and terminal whole-story reading lab verified.
+Raw SHA-256: `d18524e1b69994188acdea3062631a69126f69696f7f824bdf9426cc981d2cb3`
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W006_CHIARELLA_WRITING_DIALOGUE_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry evidence does not establish W006 as a Core-40 slot; Core count is therefore not modified.
+
 ## COUNTS
-- Wider strict complete explicitly tracked here: **5**
+- Wider strict complete explicitly tracked here: **6**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
