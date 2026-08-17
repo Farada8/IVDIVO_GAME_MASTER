@@ -45,21 +45,31 @@ Drive:
 
 ## Accepted prose frontier
 
-Chapters 1–15 are accepted development drafts / GREEN.
+**Chapters 1–15: GREEN / accepted development drafts.**
 
 Latest accepted GitHub draft:
-- `DRAFTS/CH15_LIMITED_OPEN_v0.2_FULL_STUDIO.md`
+- `DRAFTS/CH15_LIMITED_OPEN_v0.3_FULL_STUDIO.md`
 
 Latest accepted GitHub gate:
 - `GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- detailed acceptance mirror: `GATES/CH15_FULL_STUDIO_ACCEPTANCE_GATE_v0.1.md`
 
 Drive mirrors:
-- Ch15 draft ID `10_p77yvxiEpFGzbXK7ikni6Gbcr5hJK0Mh_nVmGwHSo`
-- Ch15 gate ID `18V_-Lal8aHylt0r_imiteJrAnug4oWkBmddDUC0uxJk`
+- Ch15 v0.3 accepted ID `19Ixqvur0oDyEkuguGQabSgWvuIK0WX2MoA1S6PnfjXk`
+- Ch15 Full Studio Acceptance Gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
+- earlier v0.2 draft ID `10_p77yvxiEpFGzbXK7ikni6Gbcr5hJK0Mh_nVmGwHSo` = SUPERSEDED WORKING VERSION
+- earlier v0.2 gate ID `18V_-Lal8aHylt0r_imiteJrAnug4oWkBmddDUC0uxJk` = SUPERSEDED / REFERENCE ONLY
+
+## Ch15 protected continuity
+
+- first realistic cycle contains a 3.2-second expected fixed-system settling delay inside tolerance;
+- second messier cycle does not reproduce the disputed fixed-system lag;
+- two early embodied/interface events remain unresolved and visible;
+- transition-overlap remains strongest current predictor, not proven cause;
+- bounded test ≠ habitation authorization;
+- false victory remains genuinely informative and later failure must expose missing causal class rather than make Ch15 obviously reckless.
 
 ## Current frontier
-
-**Chapters 1–15: GREEN / accepted development drafts.**
 
 **NEXT: Chapter 16 — THE INFERENCE — Aoife POV.**
 
@@ -70,7 +80,7 @@ Drive working drafts:
 - Ch17 `PLANET PEOPLE` ID `1h_6U6zg2tKu2fGPFHeuFrW7awQn9MzfKaxR59hFlswM`
 - Ch18 `EIGHTEEN` ID `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`
 
-Structural pre-review: FATAL 0 / MAJOR 0 across Ch16–18. They are not accepted until draft + gate are in GitHub and Drive and verified.
+Structural pre-review: FATAL 0 / MAJOR 0 across Ch16–18. They are not accepted until current draft + gate are persisted and verified in GitHub and Drive.
 
 ## Save rule
 
