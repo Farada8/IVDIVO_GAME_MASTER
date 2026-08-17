@@ -1,5 +1,5 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.2
+Version: v0.3
 Date: 2026-08-17
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
@@ -21,8 +21,15 @@ Duplicate policy: three Drive representations of the same edition count as one s
 Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W002_KRESS_CHARACTERS_EMOTION_VIEWPOINT_STRICT_LIFECYCLE_v1.0.md`
 Core membership note: current registry search did not establish W002 as a Core-40 slot; Core count is therefore not modified.
 
+### W003 — David Herman — *Storytelling and the Sciences of Mind* (2013)
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `1HlpG7_OzH4jEkeQzhu7Qq5V3WZVjneZU`
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W003_HERMAN_STORYTELLING_SCIENCES_MIND_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry evidence still does not establish W003 as a Core-40 slot; Core count is therefore not modified.
+Science-status note: cognitive/neuroscience/psychology claims from the 2013 source are not current scientific authority by default; narrative mechanisms and scientific truth are tracked separately.
+
 ## COUNTS
-- Wider strict complete explicitly tracked here: **2**
+- Wider strict complete explicitly tracked here: **3**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
