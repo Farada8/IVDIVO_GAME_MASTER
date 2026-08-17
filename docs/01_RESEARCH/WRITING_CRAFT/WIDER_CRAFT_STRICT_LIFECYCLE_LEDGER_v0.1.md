@@ -1,5 +1,5 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.4
+Version: v0.5
 Date: 2026-08-17
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
@@ -36,8 +36,17 @@ Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W004_IGLESIAS_WRITING_FOR_EMOTIONA
 Core membership note: current registry evidence does not establish W004 as a Core-40 slot; Core count is therefore not modified.
 Medium/date note: 2005 screenplay-market and formatting prescriptions are not universal novel rules; transferable reader-effect mechanisms are tracked separately.
 
+### W005 — James Scott Bell — *The Art of War for Writers*
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `1b9kTDCusxxcGN7ai6kXgtpOHEWep1UO2`
+Integrity: 259 pages; 4,513,448 bytes; ~45.5k extracted words; 77-item architecture and end matter verified.
+Raw SHA-256: `493f6f1632ca6503689bf15a2519c13b7d6c9406760e2942c4e5719c943ed84a`
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W005_BELL_ART_OF_WAR_FOR_WRITERS_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry evidence does not establish W005 as a Core-40 slot; Core count is therefore not modified.
+Market/date note: historical agent/query/platform/publishing advice is not current market authority; craft/process mechanisms are tracked separately.
+
 ## COUNTS
-- Wider strict complete explicitly tracked here: **4**
+- Wider strict complete explicitly tracked here: **5**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
