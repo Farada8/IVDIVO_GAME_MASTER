@@ -2,233 +2,216 @@
 # CHAPTER 25 — NO INTERVIEW
 # FULL PROFESSIONAL STUDIO WRITER BRIEF v1.0
 
-**Status:** ACTIVE CHAPTER BRIEF  
+**Status:** ACTIVE CHAPTER BRIEF / RECONCILED TO CANONICAL FRONTIER  
 **POV:** Samir  
 **Mode:** YOUTH / SPORT / STATUS / PRIVACY / BOUNDED ANALYTICAL YES  
 **Date:** 2026-08-17
 
 ## CHAPTER JOB
 
-Give Samir a complete youth/sport chapter in which Ring Six consequences intrude on ordinary life and outside attention tries to turn him back into a profile, witness, or instrument.
+Give Samir a complete youth/sport chapter in which Ring Six consequences intrude on ordinary life and an incident-review intake tries to turn his whole lived history into potentially useful evidence.
 
-Samir’s story movement:
+Samir’s movement:
 
-`I came here to belong and play -> outside attention tries to extract a useful version of me -> I refuse the interview/raw access without leaving the space -> I still choose one narrow useful answer on my own terms -> I return to team/school life.`
+`I came here to play and belong -> review asks for interview/profile/route/biometric/peer access -> I refuse extraction without leaving my team -> I ask what exact question actually needs answering -> I give one bounded observation from my own prior Service Transfer 4 experience -> I return to sport and school.`
 
-The chapter must **not** become a second Ch22 privacy chapter or a disguised sensor laboratory.
-
-The central victory is not getting data. It is Samir protecting the right to be a teammate/student while still choosing a bounded contribution.
+The central victory is **not data collection**. It is Samir protecting the right to remain a teammate/student while choosing a smaller useful contribution on his own terms.
 
 ## CONTINUITY LOAD
 
 ### Samir / sport
-- Ch8 established Crossband as real orbital sport with Kesh, Nera, scarce 42-minute booking slots, variable gravity bands, body-class safety checks and Samir’s desire to stop being `planet` and simply belong.
-- Ch8 also established that relocation staging can threaten future sport bookings.
-- Samir explicitly told local players he would not discuss the old Contact-profile material inside the sport space.
+- Ch8 established Crossband, Kesh, Nera, scarce 42-minute bookings, variable gravity bands and Samir’s desire to stop being `planet` and simply belong.
+- Ch8 established that relocation staging threatens future sport bookings.
+- Ch8 also contains Samir’s own Service Transfer 4 observation: mixed movement / held transition, small airflow change before visible fixed correction, followed by his old message to Ollie. This is **Samir’s own evidence**, not teammate data and not a Ring Six witness statement.
+- Samir explicitly told local players he would not discuss the old Contact-profile material inside sport space.
 
 ### Current Ring Six line
 - Ring Six remains shut after Ch20.
-- Ch21–23 establish lead-order / embodied-interface timing as a serious but unresolved question.
+- Ch21–23 establish lead-order / distributed-equivalence timing as serious but unresolved.
 - Ch23 negative cases dominate; no universal body signal is proven.
 - Ollie remains REVIEW HOLD and cannot receive protected/raw material through friends.
-- Ch24 shows Ring Six rollback is still loading transport/relocation infrastructure.
+- Ch24 shows Ring Six rollback continues to load relocation/transport infrastructure.
 
 ### Current Samir pressure
-- his normal Crossband booking is **moved/compressed because nearby capacity is being used for relocation staging**;
-- he also has a **real remote academic deadline** after practice;
-- he therefore has a finite evening before anyone asks him to become useful for the investigation.
+- current Crossband booking is **moved/compressed because adjacent civic capacity is supporting Ring Six relocation staging**;
+- Samir also has a **real remote academic deadline** after practice;
+- he therefore has finite time before the review request asks him to become useful.
 
 ## STORY ENGINE
 
-### SCENE 77 — THE MOVED SLOT
+### SCENE 77 — SPORT FIRST
 
-**Samir wants:** a real Crossband session and one specific performance target before he has to leave for his remote academic deadline.
+**Immediate want:** Samir wants to recover status after a bad outer-band brake, get back into the starting rotation, and finish a real Crossband session before school work.
 
-The original slot/volume has been displaced by relocation staging. The team receives a less convenient volume or shorter booking window.
+Required lived pressure:
+- shortened booking because relocation staging took nearby capacity;
+- real score / bench / teammate status;
+- Kesh corrects Samir as athlete, not investigator;
+- Nera/Fen remain players with their own performance concerns;
+- Samir’s remote coursework deadline is visibly waiting after practice.
 
-Show material irritation:
-- different gravity-band geometry or equipment setup;
-- less warm-up time;
-- route delay;
-- another group waiting immediately after them;
-- Samir’s school deadline ticking.
+The sport scene must work even if the Ring Six plot were removed.
 
-This is not Ring Six exposition. It is what infrastructure failure does to Tuesday evening.
+**Turn:** Samir returns from the bench, adapts to the architecture, contributes to a comeback, but the team still loses by one. He ends the game wanting a rematch, not wanting evidence.
 
-**External pressure enters:** a local/student/public media producer or interviewer arrives with a plausible request built around Samir’s existing public identity and current Ring Six interest.
+### SCENE 78 — NO INTERVIEW / SMALLER YES
 
-They want some combination of:
-- a quick interview;
-- Samir’s first-person transition sensations;
-- footage in the sport volume;
-- permission to frame him as a First Human Cohort / planet-born comparison case;
-- access to training/adaptation traces or examples that make the story concrete.
+After sport, incident review sends a voluntary comparison intake.
 
-The requester is **not villainous**. The story is genuinely interesting. Samir still says no.
+The form may request optional:
+- personal band timeline;
+- movement/route capture;
+- team or peer corroboration;
+- interview availability;
+- biometric/personal-support data;
+- Contact/prior-profile context.
 
-Required distinction:
-- `no interview` is not `I disappear`;
-- Samir does not leave practice to avoid pressure;
-- he refuses extraction and continues being a player.
+This is not villainous. Review genuinely wants comparison material. Samir still refuses broad extraction.
 
-Kesh protects booking/team space through practical rules, not a speech.
+Required choices:
+- INTERVIEW: NO;
+- CONTACT / PRIOR PROFILE CONTEXT: NO;
+- BIOMETRIC / PERSONAL-SUPPORT DATA: NO;
+- TEAM / PEER CORROBORATION: NO;
+- MOVEMENT / ROUTE CAPTURE: NO.
 
-### SCENE 78 — WHAT DO YOU ACTUALLY NEED?
+He remains sitting with the team rather than leaving to become a case.
 
-The interviewer/requester tries a smaller tactic: no full profile, just one technical/embodied question or one training example.
+One field remains:
+`RELEVANT OBSERVATION — TEXT ONLY`.
 
-Samir initially hears the same extraction under smaller wording.
+Samir chooses one bounded yes from his **own** Service Transfer 4 experience:
+- approximate timestamp;
+- movement order;
+- held transition / mixed flow;
+- airflow change noticed before visible controller correction;
+- explicit uncertainty about exact lead interval;
+- no teammate identities or data.
 
-He asks:
-**“What are you actually trying to know?”**
+He asks review:
+**WHAT EXACT QUESTION DO YOU NEED ANSWERED?**
 
-The answer must be narrower than biography:
-- whether people can notice/adapt before fixed environmental systems update;
-- whether sport transition behavior offers a useful comparison;
-- whether the timing seems stable enough to say anything at all.
+Review narrows the question to relative event order and can query the controller log itself. Samir never receives raw system history.
 
-Samir refuses:
-- raw training logs;
-- teammate logs;
-- injury/fatigue/support settings;
-- identifiable body-class comparisons;
-- being filmed as a `human sensor` demonstration;
-- giving protected/private material about friends or Ring Six sources.
+He answers only:
+- his own prior note/messages;
+- anonymized movement order;
+- confidence split: high movement order / moderate subjective onset / low exact interval;
+- no peer contact permission.
 
-He may offer **one bounded analytical yes** on his own terms:
+**Turn:** the boundary does not prevent useful comparison; it changes the evidence shape.
 
-> In Crossband, the same environmental/gravity transition does **not** produce one stable bodily timing response. Load state, warm-up, recovery and the actual movement sequence change what happens. If review wants to test embodied lead timing, it must treat `body state + transition order` as variables rather than treating a person/body class as a fixed sensor.
+### SCENE 79 — INDEPENDENT CHECK / BACK TO LIFE
 
-This can be conveyed as:
-- an off-record/non-profile technical clarification;
-- a short purpose-restricted written note;
-- a coach-approved aggregate observation with no raw logs;
-- or an authorized review-channel note if causally natural.
+Review later matches Samir’s bounded statement to the controller event log.
 
-Do **not** rebuild the deleted `SPORT ISN'T DATA` draft’s full seven-athlete dataset. The chapter is about Samir’s boundary and ordinary life. The analytical yes is a compact consequence of lived sport knowledge.
+Allowed result:
+- held/mixed transition state existed;
+- return compensation began;
+- visible/fixed correction appeared after movement/hold state was already active;
+- exact relation to Samir’s subjective airflow onset remains uncertain;
+- no claim that Samir sensed a hidden variable;
+- no claim of Ring Six equivalence or root cause.
 
-**Turn:** requester accepts less than wanted, or leaves with no interview but a narrower question that can legitimately feed review later.
+Useful conclusion only:
+`ordinary held/reversed transition choreography can enter a shared-loop state before the fixed correction is displayed; test the ordering.`
 
-Samir has stayed visible without surrendering ownership of his life.
+Required controls:
+- NO TEAM DATA USED;
+- NO IDENTIFIABLE PEER DATA RETAINED;
+- NO PROFILE CONTEXT USED.
 
-### SCENE 79 — BACK TO PRACTICE
+Then return immediately to Crossband life. Booking is still scarce/shortened. Kesh/Nera care about Samir’s brake and the next game.
 
-The real price is that the interruption has eaten part of an already compressed booking.
-
-Samir returns to play.
-
-Give him a concrete sport outcome:
-- his team is behind because he was distracted;
-- he owes points/gates;
-- he misses a target;
-- or he recovers enough to make one clean play without becoming miraculous.
-
-His teammates react as teammates, not ethics witnesses.
-
-The academic deadline remains alive afterward. He has to leave, study, upload work, or finish a remote assignment.
-
-End on ordinary youth obligation, not mystery triumph.
-
-Possible ending mechanism:
-- teammate asks whether he solved Ring Six;
-- Samir says no;
-- teammate gives him the ball / reminds him of score / asks whether his assignment is done;
-- Samir chooses practice/school action.
-
-Do not copy exact prior reference lines.
+The academic deadline must also be paid: Samir still has to complete/submit real school work. Do not let review usefulness erase student life.
 
 ## SAMIR CHARACTER LAW
 
 Protect:
 - competitive seriousness;
-- dislike of being reduced to the Contact-profile identity;
-- friendship/team belonging;
 - compact humor;
-- impatience;
+- dislike of being reduced to Contact-profile identity;
+- team belonging;
 - willingness to help when he controls the terms;
+- impatience with institutional requests;
 - school responsibility competing with sport;
-- boundary-setting without a perfect policy speech.
+- boundary-setting without a policy speech.
 
-Important arc delta from Ch8:
-- Ch8: Samir is recognized and says he does not want to discuss the profile here.
-- Ch25: attention returns because he is useful again; he holds the same boundary under higher stakes **without retreating from the sport space**, then chooses a smaller useful contribution himself.
+Arc delta from Ch8:
+- Ch8: recognized publicly, Samir says he will not discuss profile material in sport space.
+- Ch25: institutional attention returns because he is useful. He refuses the broad intake **without retreating from the team**, then supplies only what is genuinely his to supply.
 
-That is growth.
+## KESH / NERA / FEN / TEAM
 
-## KESH / NERA / TEAM
+They remain teammates, not privacy-panel speakers.
 
-Kesh protects:
-- booking time;
-- team privacy;
-- competitive information;
-- consent around logs/filming.
+Kesh protects booking and corrects Samir’s sport performance.
+Nera jokes and holds practical boundaries.
+Fen has their own missed-gate/status pressure.
 
-Kesh is not Samir’s lawyer or moral teacher.
+No equal-airtime ethics debate.
+No raw team logs.
+No one becomes evidence without opting in independently.
 
-Nera / teammates should remain people who want to play. Reactions may include teasing, annoyance at lost booking minutes, curiosity, refusal to be filmed, indifference.
-
-Do not create equal-airtime group debate.
-
-Existing Nera continuity is allowed as already accepted Ch8 canon. Do not expand synthetic-body lore or make Nera a magical detector.
+Existing Nera synthetic-body continuity from Ch8 may remain incidental; do not expand synthetic-body lore or use Nera as a detector.
 
 ## WORLD / ORBITAL YOUTH
 
 Show:
-- relocation staging consuming scarce civic/sport space;
-- shifted booking and warm-up economics;
-- variable gravity sport as bodily skill;
-- school deadline coexisting with sport and public attention;
-- media/public-interest culture in an orbital city;
-- privacy as a social practice, not a lecture.
+- relocation staging consuming scarce sport space;
+- shortened booking and next-team turnover;
+- Crossband geometry physically changing Samir’s play;
+- food, equipment return, route splits;
+- school deadline after practice;
+- incident review as a real civic process that can ask too much and then narrow scope.
 
-The city is still living while Ring Six is shut.
+The city keeps living while Ring Six is shut.
 
 ## DIALOGUE LAW
 
-Interview request must be dialogue-as-action:
-- requester wants usable story/access;
-- Samir wants to preserve practice/private self;
-- requester narrows tactic;
-- Samir resists;
-- Samir asks what the actual analytical question is;
-- boundary changes the available story.
+Dialogue objectives stay concrete:
+- Kesh wants Samir to fix his brake/play;
+- Samir wants rotation/status;
+- review wants usable comparison;
+- Samir wants boundaries;
+- team wants next booking/rematch.
 
 Avoid:
 - perfect speeches about consent;
-- villainous journalist language;
 - Samir sounding like a lawyer;
-- everyone praising his boundary;
-- technical exposition replacing sport conflict.
+- review as villain;
+- teammates applauding his boundary;
+- technical explanation replacing sport.
 
 ## RED TEAM FAILURE CONDITIONS
 
 FATAL:
-- raw teammate/private sport logs are exposed without consent;
+- raw teammate/private sport data exposed without consent;
 - protected S1/Aoife material leaks through Samir;
-- Samir or one body class becomes a proven sensor;
-- chapter solves Ring Six root cause.
+- Ollie gets raw material through friendship;
+- Samir becomes a proven biological sensor;
+- Service Transfer 4 is retconned into Ring Six root cause.
 
 MAJOR:
 - sport exists only to deliver clue;
-- relocation/study pressure disappears once interview begins;
-- Samir simply walks away, repeating avoidance rather than choosing a boundary;
-- interviewer is a caricature;
-- analytical yes becomes a full new research project;
-- teammates become an ethics chorus;
-- ending is research triumph rather than sport/student consequence.
+- relocation or school pressure vanishes;
+- Samir simply avoids the request rather than making a bounded choice;
+- review accepts unsupported subjective certainty;
+- peer identities are inferred/retained;
+- result becomes proof instead of independent ordering constraint.
 
 ## ACCEPTANCE
 
 GREEN only if:
-1. Samir begins with a concrete sport want under a moved/compressed booking;
-2. remote academic deadline remains a live competing obligation;
-3. external attention plausibly tries to turn him into a profile/witness/instrument;
-4. he says NO to interview/raw extraction;
-5. he stays in the sport space rather than disappearing;
-6. he asks what narrow question is actually needed;
-7. one bounded analytical yes is offered on his terms;
-8. that yes constrains `body state + transition order` without proving causality;
-9. teammates/sport status change because time and attention were lost;
-10. chapter ends with Samir again acting as player/student, not evidence source.
+1. Samir begins and ends as athlete/student;
+2. current booking is compressed by relocation staging;
+3. sport has real score/status consequence;
+4. remote academic deadline remains live;
+5. broad review intake is declined field by field;
+6. team/peer data remain outside Samir’s authority;
+7. Samir asks what exact question is needed;
+8. bounded answer uses his own Service Transfer 4 record only;
+9. independent controller-log check constrains movement-order/shared-loop timing without causal proof;
+10. chapter returns to ordinary sport/school consequence.
 
-**END STATE:** NO INTERVIEW / NO RAW SPORT EXTRACTION / SAMIR REMAINS VISIBLE AND BELONGING / BOUNDED BODY-STATE + TRANSITION-ORDER OBSERVATION AVAILABLE / SPORT + SCHOOL STILL MATTER / CH26 READY.
+**END STATE:** NO INTERVIEW / NO PROFILE REUSE / NO TEAM DATA / ONE BOUNDED INDEPENDENT ORDERING CASE / SHARED-LOOP TIMING QUESTION TIGHTENED / SAMIR STILL PLAYER + STUDENT / CH26 READY.
