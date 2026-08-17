@@ -61,19 +61,56 @@ Anti-chop order remains:
 
 Post-money orbital stakes, conscious-robot personhood and rare-consciousness-school epistemic firewalls remain intact.
 
-## OUTPUTS
+## W005 OUTPUTS
 - Final W005 strict lifecycle file — commit `a6344d5758f0d76bd3cc93e600c96468fb6add64`
 - Batch 67 — Bell Generation / Scene Bull's-Eye / Revelation / Critique — `e1891fba1cf46594d50e3bcccbf536c8c3561564`
 - IVDIVO Batch 67 application gate — `d8fa28e4b08b372b90b51528c83b8faf93b3be87`
 - Wider strict ledger updated — `f1dfdb5081862238b1423a01bb6db1952d50ad08`
 - Old W005 working file removed after successful finalization — `4c00717a824d98b8a1d2183e27b6d5f5738dd110`
 
-## COUNTS
+## COUNTS AFTER W005
 - Core strict complete remains **17/40**.
 - Wider strict complete increases **4 → 5**.
 - W005 remains outside Core unless later registry evidence proves otherwise.
 
-## NEXT-SOURCE CHECK
-Exact searches for currently open Core sources (including Gwen Hayes / Charles Baxter in this pass) did not establish a reliable exact full source. Do not substitute similar titles.
+# W006 — TOM CHIARELLA — WRITING DIALOGUE — STARTED
+Exact searches for currently open Core sources (including Gwen Hayes / Charles Baxter in this pass) did not establish a reliable exact full source. Similar titles were not substituted.
 
-A unique wider-corpus candidate is visible on Drive: Tom Chiarella — *Writing Dialogue*. GitHub search found no existing Chiarella lifecycle registration. It may be registered next only after integrity verification confirms a complete source and duplicate status.
+A unique wider-corpus source was therefore integrity-checked and registered:
+- Tom Chiarella — *Writing Dialogue*
+- Drive ID `1IbW87QTdMJjsbMRda02GFpkJqmgsgziD`
+- 77 PDF pages
+- 2,361,842 bytes
+- approximately 58.7k extracted words
+- raw SHA-256 `d18524e1b69994188acdea3062631a69126f69696f7f824bdf9426cc981d2cb3`
+- GitHub search found no existing Chiarella strict-lifecycle registration.
+
+Strict FULL READ began in this pass and continuously completed local extraction lines 1–1348, covering:
+- introduction / anti-rule orientation;
+- listening and transcription practice;
+- selective attention to actual speech;
+- tension through direction / speed / distance;
+- directed dialogue;
+- interpolated dialogue;
+- misdirected dialogue;
+- modulated dialogue;
+- warning against treating those categories as fixed mutually exclusive forms.
+
+W006 remains **FULL READ IN PROGRESS** and does not increase any completion count.
+
+Initial high-value mechanisms:
+- `LISTEN → SELECT → SHAPE`, not transcript realism;
+- dialogue pressure through wants / pace / relational distance, not only overt argument;
+- directed-dialogue exposition test;
+- interpolation as `line → POV reaction/memory/detail → changed meaning → return`;
+- misdirection can reveal intimacy when causal response remains traceable;
+- modulation can integrate dialogue with narration, memory and place and is a useful antidote to chopped `quote → microreaction → quote → microreaction` prose;
+- no universal `robot voice` or contemporary consumer slang shortcut for Orbital Youth.
+
+W006 working file created — commit `5de4cfbafc60db9ac1ccd1daf814137a67a2e0b2`.
+
+## EXACT NEXT POINTER
+Continue W006 strict FULL READ at local extraction line **1349**, section:
+`PARTICULARS OF CHARACTER`.
+
+Do not reread Chiarella lines 1–1348 without a concrete verification need.
