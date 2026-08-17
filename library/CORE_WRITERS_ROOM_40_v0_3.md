@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **16/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **17/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -25,6 +25,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #8: Les Edgerton — *Hooked*.
 - Strict complete #12: Robert McKee with Bassim El-Wakil — *Action*.
 - Strict complete #14: Orson Scott Card — *Characters & Viewpoint*.
+- Strict complete #15: David Corbett — *The Art of Character*.
 - Strict complete #19: Alice LaPlante — *The Making of a Story*.
 - Strict complete #36: Mark J. P. Wolf — *Building Imaginary Worlds*.
 - Strict complete #37: Ignasi Ribó — *Prose Fiction*.
@@ -67,7 +68,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 12. Robert McKee — *Action* — tactical pressure, capability limits, asymmetric leverage, progression, set-piece causality and pace modulation. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 13. James Scott Bell — *Plot & Structure* — structural diagnosis, middle, alternative plot approaches.
 14. Orson Scott Card — *Characters & Viewpoint* — differentiation, motive, POV distance, reader alignment. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
-15. David Corbett — *The Art of Character* — desire, wounds, contradictions, behaviour, relationships.
+15. David Corbett — *The Art of Character* — independent personhood, nonfungible desire, frustration fingerprint, contextual contradiction, multi-cause motive, social ecology, scenes/POV/voice/dialogue as character action. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 16. Gwen Hayes — *Romancing the Beat* — relationship causality, attraction/retreat/choice/payoff.
 17. Charles Baxter — *The Art of Subtext* — indirect pressure, staging, withheld meaning.
 18. Mark Doty — *The Art of Description* — attention, sensory selection, implication through description.
@@ -124,7 +125,7 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 - Causality: Truby + Swain/Bickham.
 - Opposition/stakes: McKee Story + Bell.
 - Scene: Rosenfeld + Bickham; add McKee Dialogue for conversation-heavy scenes.
-- Character: McKee Character + Corbett + Card.
+- Character: McKee Character + Corbett + Card; Corbett is especially useful for independent personhood, nonfungible desire, social ecology and preventing plot puppets.
 - Youth truth: Brody + youth script companion + relevant fiction lab; scientific youth psychology must be separate.
 - Relationship: Hayes + McKee Dialogue + Baxter/Zunshine as needed.
 - SMITH: le Carré + McKee antagonism + Constantine/Butcher + Zunshine source-monitoring + task-specific science/institutional sources.
