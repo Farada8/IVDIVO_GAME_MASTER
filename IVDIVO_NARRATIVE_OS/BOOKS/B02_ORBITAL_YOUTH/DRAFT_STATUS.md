@@ -44,9 +44,10 @@ Folder ID: `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`
 18. `Chapter 18 — EIGHTEEN` — Ethan POV — GREEN / Full Studio accepted
 19. `Chapter 19 — GO / NO-GO` — Ollie POV — GREEN / Full Studio accepted v0.3
 20. `Chapter 20 — THE WRONG CAUSE` — Ollie POV — GREEN / Full Studio accepted v0.3
+21. `Chapter 21 — SHUT` — Ollie POV — GREEN / Full Studio accepted v0.3
 
 Current canonical frontier:
-**NEXT = Chapter 21 — SHUT — Ollie POV.**
+**NEXT = Chapter 22 — AFTER THE CAMERA — Aoife POV.**
 
 ## Active drafting authority
 
@@ -120,9 +121,6 @@ Drive:
 - Draft ID `1BBbomx5KwTnw3kAAhkZAp0Z12PrXpeIsAGBQg2Gc9Q8`
 - Gate ID `1JKKBHkNd9IrOy7dd_A3t9Px3crAHno-X6ZSkaLIj9T0`
 
-Gate verdict:
-**GREEN TO KEEP / ACCEPT CH20 / PROCEED TO CH21.**
-
 Protected Ch20 law:
 - no Ch19 restriction was secretly broken;
 - missing causal class = distributed equivalent transition across allowed states;
@@ -134,28 +132,47 @@ Protected Ch20 law:
 - one maintenance worker has probable forearm fracture / soft-tissue injury;
 - Lea household is displaced again;
 - Ollie credential is REVIEW HOLD;
-- exact role of embodied/interface reports remains UNKNOWN: early indication vs participation in feedback is not solved.
+- exact role of embodied/interface reports remains UNKNOWN.
+
+### Ch21 — SHUT v0.3
+Accepted draft:
+`DRAFTS/CH21_SHUT_v0.3_FULL_STUDIO.md`
+
+Accepted gate:
+`GATES/CH21_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+
+Drive:
+- Draft ID `1Yh5DUPSlqtY2YCjk6aMCh0HwQI8ZMCV61whAioNnDRI`
+- Gate ID `1RjFKUZW-7cvu6yjcys8EVVLo_9H1EpD_UEhDWfhxtFY`
+
+Gate verdict:
+**GREEN TO KEEP / ACCEPT CH21 / PROCEED TO CH22.**
+
+Protected Ch21 law:
+- responsibility is distributed: Ollie did not cause the defect, but his valid incomplete interpretation changed what competent adults believed they could attempt;
+- distributed equivalence remains preliminary, not final root cause;
+- resident/interface lead timing is now a serious investigation target, not a proven causal variable;
+- Ollie remains off Ring Six incident/commissioning access;
+- usefulness does not create permission;
+- Ollie accepts ordinary authorized maintenance rather than privileged review work;
+- Iri’s trust remains damaged and their accusation targets evidence hierarchy, not blame for the defect;
+- Iri explicitly admits resident reports were noisy/inconsistent;
+- older occupied-module complaints show similar lead-timing language but remain clue only;
+- Ollie does not abuse maintenance access and records `NO CLAIM OF COMMON CAUSE`;
+- Ch21 accepted v0.3 removed manuscript fourth-wall references to chapter numbers.
 
 ## Next prose / acceptance unit
 
-### Chapter 21 — SHUT
-**POV:** Ollie
-
-Writer Brief:
-`STUDIO/CH21_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
-
-Drive Writer Brief ID:
-`1_agbQB6ac52i947rJ8m3iaDUdL5dMcKIeto7dUcSrVo`
+### Chapter 22 — AFTER THE CAMERA
+**POV:** Aoife
 
 Required function:
-- convert emergency into exact distributed responsibility rather than generic guilt;
-- reconstruct enough of distributed-equivalence mechanism to pay M20-01 without claiming full root cause;
-- keep Ollie off Ring Six and make review hold legitimate;
-- Mara offers ordinary maintenance work elsewhere rather than privileged access;
-- Iri anger targets evidence hierarchy, while admitting resident reports were noisy/inconsistent;
-- Ollie accepts lower-status legitimate work;
-- ordinary maintenance exposes older occupied-module complaints with similar lead-timing language;
-- old complaints are clue only, not proof;
-- end with second-model path opening and trust still damaged.
+- change texture away from Ollie technical analysis;
+- make Aoife’s Ch16 source-access loss materially constrain what she can know/show now;
+- show consequences of Ring Six failure through people and missing access, not through another technical postmortem;
+- preserve source privacy and do not cheaply restore S1 trust;
+- continue Ethan/Aoife trust line without turning it into generic romance repair;
+- keep Ring Six residents displaced and Lea/local anger active;
+- open the next evidence/social path causally rather than giving Aoife privileged incident information she no longer has.
 
 Do not switch books on ordinary `и / дальше`.
