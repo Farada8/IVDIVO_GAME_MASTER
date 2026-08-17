@@ -1,5 +1,5 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.1
+Version: v0.2
 Date: 2026-08-17
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
@@ -14,10 +14,16 @@ Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
 Drive ID: `17gzADFU26jUxoNPU2AG57D9_4LG70Eov`
 Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W001_ELEMENTS_OF_CREATIVE_WRITING_2E_STRICT_LIFECYCLE_v1.0.md`
 
+### W002 — Nancy Kress — *Characters, Emotion & Viewpoint*
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `13kBjWL7YXH238Gzz19mavO_FEwtaykTw`
+Duplicate policy: three Drive representations of the same edition count as one source.
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W002_KRESS_CHARACTERS_EMOTION_VIEWPOINT_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry search did not establish W002 as a Core-40 slot; Core count is therefore not modified.
+
 ## COUNTS
-- Wider registered: 1+
-- Wider strict complete explicitly tracked here: **1**
+- Wider strict complete explicitly tracked here: **2**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
-Add only unique non-Core craft sources. Duplicates/alternate file representations do not create new rows.
+Add only unique non-Core craft sources. Duplicates/alternate file representations do not create new rows. If a source is later proven to be in Core-40, migrate its status instead of double-counting it.
