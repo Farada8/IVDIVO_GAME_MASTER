@@ -22,72 +22,56 @@ Drive active folder: `ORBITAL_YOUTH_ACTIVE` — `1tZ6Kdkjq9blB10i98cE_3d02egYnPW
 
 ## Accepted prose frontier
 
-**Chapters 1–31: GREEN / accepted development drafts.**
+**Chapters 1–32: GREEN / accepted development drafts.**
 
 Latest accepted chapter:
-**Ch31 — THE ADULT DOOR — Ethan POV — v0.2 — GREEN.**
+**Ch32 — THE LATE ROUTE — Maya POV — v0.1 — GREEN.**
 
 GitHub:
-- Writer Brief: `STUDIO/CH31_THE_ADULT_DOOR_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
-- Draft: `DRAFTS/CH31_THE_ADULT_DOOR_v0.2_FULL_STUDIO.md`
-- Gate: `GATES/CH31_FULL_STUDIO_ACCEPTANCE_GATE_v0.1.md`
+- Reconciliation patch: `STUDIO/CH32_RECONCILIATION_PATCH_v1.0.md`
+- Writer Brief: `STUDIO/CH32_THE_LATE_ROUTE_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
+- Draft: `DRAFTS/CH32_THE_LATE_ROUTE_v0.1_FULL_STUDIO.md`
+- Gate: `GATES/CH32_THE_LATE_ROUTE_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive canonical mirror:
-- Writer Brief ID `1APJKnKPBwX-Bl8knjRwchiGnCvx6kKrKTx9Igyizge8`
-- Draft ID `1oOrO5l0FIw9In_WKGGycP9V121VdYcRiw_AOD946H8o`
-- Gate ID `13Cw6btsPQ6WNy4nxNaufIWsrCywDNWzWnu80IOu6or8`
+- Reconciliation patch ID `1DtIfn2KBMPBnU5eS0oAyJHT1no6uC3p1v0JrwztYPqI`
+- Writer Brief ID `1ZP0iIquu5ksKzvhWJDDb_hYKq8a_6oiXPdpM1kHSms0`
+- Draft ID `1t2Wmivxy8v7-w_9RuEHc7IIkM8Ymu8U4JidhDhnRyjA`
+- Gate ID `1CMAMLnqa5qPf6BszcZHfsXsclnSwtLqHQ99lnvWd2Q0`
 
-## Protected Ch28–31 continuity
-
-### Ch28 — TWO BAD OPTIONS
-- A = deeper/full-recovery interlock can reopen sooner under reduced flexibility/capacity;
-- B = state-aware control may preserve more intended capacity but requires longer validation and carries unknown false-negative risk;
-- Ethan's private weighted score is NOT part of the decision packet;
-- affected-group priorities remain plural; proper civic/commissioning authority retains the decision.
+## Protected Ch29–32 continuity
 
 ### Ch29 — SEGMENTS
-- partial segmented opening is the bounded current direction; no claim of full Ring Six success;
-- three segments likely certifiable, one conditional/restricted candidate, two remain closed at chapter exit;
+- partial segmented opening is the bounded current direction; no full Ring Six success claim;
+- three segments likely certifiable, one conditional/restricted candidate, two closed at chapter exit;
 - technical compatibility does not determine allocation priority;
-- Lea's household is only partly compatible with first phase and receives no protagonist favoritism;
+- Lea's household remains only partly compatible and receives no protagonist favoritism;
 - Ollie remains model support, not board/housing authority.
 
 ### Ch30 — WHO WAITS
-- Aoife enters lived relocation/waiting work with recorder away;
+- Aoife works inside lived relocation/waiting consequences with recorder away;
 - source/S1 trust reopens only as one banal, explicitly bounded line for possible later use; no forgiveness/intimacy reset;
-- Aoife does not immediately record the line;
 - temporary housing consequences remain visible through laundry, school gear, split households, storage, route/shift burdens and sleep;
-- Tomas remains on light duty after Ch20 injury; changed route/commute consequences remain active;
-- partial opening produces mixed outcomes rather than consensus or clean success;
-- Ethan's adult-track response deadline arrives at chapter end.
+- Tomas remains on light duty after Ch20 injury with commute consequences active;
+- partial opening produces mixed outcomes rather than consensus.
 
 ### Ch31 — THE ADULT DOOR
-- Ethan is legally adult; no age appeal/exception plot returns;
-- real immediate Systems Operations — Transit / Service Coordination placement overlaps migration;
-- later intake exists but identical assignment/team/priority is not guaranteed;
-- coordinator is competent and does not moralize the choice;
-- Ethan tells Aoife before deciding and does not make her/group his moral jury;
-- group and Aoife matter partly, but Ethan also chooses because he said he would finish the current Ring Six commitment;
-- Aoife does not reward him with romantic certainty;
-- Ethan confirms later intake; preferred immediate slot disappears and a peer takes closely related work;
-- envy/resentment remains but is not converted into group-management behavior;
+- Ethan chooses later intake and finishes the current Ring Six commitment;
+- preferred immediate Transit / Service Coordination slot is lost, not deferred as a guaranteed reward;
+- he remains ambitious and may feel envy;
+- Aoife is told before the decision and does not become reward, judge or decision-maker;
+- Ethan/Aoife trust is slightly warmer, attraction unresolved;
 - adult-track remains B-line.
 
-## Maya continuity control for Ch32
-
-Accepted Ch24 `WHERE MAYA IS v0.2` already established and tested under real route disruption:
-- truthful zone + named contact + return condition + update before material plan change;
-- no continuous live tracking;
-- overnight elsewhere only with explicit receiving-household confirmation;
-- Maya successfully used the revised boundary under disruption;
-- Lea's trust moved only to `better than yesterday`, not repaired;
-- the Ch24 gate explicitly forbids another structurally identical `where did Maya sleep?` honesty test.
-
-Therefore old Ch32 scene-card material that re-runs the privacy agreement is superseded for execution where it conflicts with accepted Ch24.
-
-Reconciliation authority:
-- GitHub: `STUDIO/CH32_RECONCILIATION_PATCH_v1.0.md`
-- Drive mirror ID: `1DtIfn2KBMPBnU5eS0oAyJHT1no6uC3p1v0JrwztYPqI`
+### Ch32 — THE LATE ROUTE
+- Ch24 autonomy protocol remains active and unchanged; Ch32 does not renegotiate it;
+- Maya's new failure mode is over-help/control, not concealment;
+- Lea's household allocation choices remain theirs; Maya cannot optimize their burden for them;
+- Maya asks what help is actually wanted and accepts a smaller useful role;
+- Maya/Lea trust is imperfect but operationally functional, not restored intimacy;
+- Maya's local route competence is used only for traveler-facing walk-through/signage checks under adult staff confirmation;
+- Maya has no clearance authority, safety override or migration command;
+- move day begins at 06:30 with Maya in bounded support work.
 
 ## Canon reconciliation still active
 
@@ -96,25 +80,28 @@ Current state: continuing light-duty/manual-service restriction; do not rename o
 
 ## Current canonical frontier
 
-**NEXT = Chapter 32 — THE LATE ROUTE — Maya POV.**
-
-Working title; not Founder-locked.
+**NEXT = Chapter 33 — MIGRATION — Ollie POV.**
 
 Required direction:
-- do NOT repeat Ch24's host/privacy negotiation or another concealment test;
-- Maya's autonomy protocol is already active and should be used only briefly in background;
-- pay Lea/Maya relationship debt through concrete action, not another apology bargain;
-- Maya helps with a bounded relocation task and is tempted to turn clever route knowledge into a solution for Lea's household that Lea did not choose;
-- Lea stops the over-help/control, not because Maya lied again;
-- Maya asks what help is actually wanted and accepts a smaller useful role;
-- Maya's late mobility / local route knowledge becomes useful to relocation in a bounded youth-support role, never command or safety authority;
-- freedom now creates inconvenience and responsibility rather than surveillance;
-- no repetition of Ethan Ch31's `sacrifice attractive opportunity to honor commitment` structure;
-- end by strengthening the Ch33 migration handoff with Maya operationally useful and Lea relationship still imperfect but functional.
+- return the A-story firmly to Ollie and Ring Six;
+- first show relocation genuinely working: families, school bags, freight, organisms/pets where appropriate, service workers, room handoffs, route mistakes and ordinary move-day mess;
+- partial opening must feel useful before danger compresses margins;
+- Ollie remains under the exact authority/access limits inherited from accepted chapters; do not silently restore unrestricted Ring Six access;
+- if Ollie receives a local operational assignment or SAFE-STATE authority, it must be explicitly adult-authorized, narrow, logged and tied to a defined segment/signature;
+- Maya's Ch32 route/signage support remains bounded and can appear as ordinary migration texture, not command;
+- adults/Mara retain wider flow and safety authority;
+- real behavior must deviate from the schedule without immediately becoming catastrophe;
+- a specific household should anchor the emotional value of “a room tonight”;
+- by chapter end, throughput/freight/service substitutions should compress margins and move the story toward reduced-redundancy stress without triggering the climax early;
+- preserve the distinction between current safe operation, candidate early-warning evidence and unresolved dangerous escalation.
+
+## Ch33 continuity warning
+
+Older scene cards mention Ollie having a local SAFE-STATE seal. This is **not automatically active merely because the scene card says so**. Before prose, the Ch33 Writer Brief must reconcile Ollie's REVIEW HOLD and define exactly what bounded authority has been formally restored or delegated, if any. No youth-command fantasy.
 
 ## Production mode
 
-`bootstrap -> verified frontier -> reconciliation patch if needed -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive mirror -> verify -> update frontier`.
+`bootstrap -> verified frontier -> reconciliation/authority check -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive mirror -> verify -> update frontier`.
 
 Do not mark a chapter complete until accepted draft + gate exist in both stores and are verified.
 
