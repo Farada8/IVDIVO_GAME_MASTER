@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–21 GREEN / Chapter 22 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–22 GREEN / Chapter 23 next
 
 ## READ ORDER
 
@@ -71,9 +71,10 @@ Ch17 — PLANET PEOPLE — GREEN / Full Studio accepted
 Ch18 — EIGHTEEN — GREEN / Full Studio accepted  
 Ch19 — GO / NO-GO — GREEN / Full Studio accepted v0.3  
 Ch20 — THE WRONG CAUSE — GREEN / Full Studio accepted v0.3  
-Ch21 — SHUT — GREEN / Full Studio accepted v0.3
+Ch21 — SHUT — GREEN / Full Studio accepted v0.3  
+Ch22 — AFTER THE CAMERA — GREEN / Full Studio accepted v0.2
 
-**NEXT: Ch22 — AFTER THE CAMERA — Aoife POV.**
+**NEXT: Ch23 — NO ACCESS — Ollie POV.**
 
 ## LATEST ACCEPTED CONTROLS
 
@@ -128,17 +129,38 @@ Protected continuity:
 - Ollie uses allowed observation field and explicitly records `NO CLAIM OF COMMON CAUSE` rather than expanding access himself;
 - accepted v0.3 removes manuscript fourth-wall references to chapter numbers.
 
-## CH22 WORKING GATE
+### Ch22 — AFTER THE CAMERA v0.2
+- GitHub Writer Brief: `STUDIO/CH22_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
+- GitHub draft: `DRAFTS/CH22_AFTER_THE_CAMERA_v0.2_FULL_STUDIO.md`
+- GitHub gate: `GATES/CH22_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Drive Writer Brief ID `1aV32l27j1DqsAf6HDAslKx0n5FEUjMLPoY0S7se6MvU`
+- Drive draft ID `121fNgEekyCBRCpEs8WG6R5H2mBgaIfh4l07Y90wo_gU`
+- Drive gate ID `1oJETD90vGQKMvlnLF8z9Uc0U7qbqJXoE3B8xWq10mlk`
 
-Chapter 22 — AFTER THE CAMERA — Aoife POV must:
-- change texture away from Ollie technical analysis;
-- make Aoife’s earlier inferential-privacy failure and source-access loss materially constrain what she can know and show;
-- show Ring Six aftermath through people, absence, displaced routines and access limits rather than another technical postmortem;
-- preserve S1 privacy and do not cheaply restore source trust;
-- continue Aoife/Ethan trust pressure without generic romance repair;
-- preserve Lea/local anger and displaced-household continuity;
-- avoid giving Aoife privileged incident information she has not earned;
-- open the next evidence/social path through legitimate observation or relationship consequence.
+Protected continuity:
+- derivative privacy harm persists after original deletion;
+- S1 does not forgive Aoife and documentary access remains suspended/reduced;
+- no-recorder/no-notes/no-transcription/no-project-capture boundary is respected;
+- Aoife’s repair costs content/access and does not buy absolution;
+- S1 independently authorizes de-identified event-order correction for incident review;
+- personal/local support adjustment began before fixed wall response; exact seconds not asserted;
+- source validation may occur only through protected channel;
+- no publication/documentary rights attach to the correction;
+- Ollie does not receive source material through personal connection;
+- lead-timing evidence is strengthened but remains non-causal / non-root-cause proof.
+
+## CH23 WORKING GATE
+
+Chapter 23 — NO ACCESS — Ollie POV must:
+- return to ordinary authorized maintenance while Ring Six review access remains held;
+- use Ch21’s old-complaint seed rather than repeating its discovery;
+- solve a real mundane maintenance problem whose reward is only professional acknowledgement;
+- let a resident/user report another low-level `late air / wrong pressure` experience without making it proof;
+- compare only records legitimately relevant to the current service scope;
+- show older complaints clustering around occupancy/transition conditions while remaining non-identical;
+- ask Mara for one bounded de-identified timing query instead of broad incident access;
+- accept a bounded answer and turn lead timing into a measurable next hypothesis;
+- do not restore Ring Six access or Ollie’s status as a reward.
 
 ## ACTIVE DRAFTING MODE
 
