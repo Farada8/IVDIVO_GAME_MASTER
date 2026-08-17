@@ -3,7 +3,7 @@
 
 **Status:** ACTIVE / FULL MANUSCRIPT DEVELOPMENT / REGRESSION PASS B  
 **Updated:** 2026-08-17  
-**Current pipeline state:** Chapters 1–36 GREEN / Pass A GREEN / Ch21–29 Pass B ACCEPTED / whole-manuscript Pass B outside corridor ACTIVE
+**Current pipeline state:** Chapters 1–36 GREEN / Pass A GREEN / Ch21–29 Pass B ACCEPTED / outside-corridor diagnostic GREEN / bounded patch Batch 1 ACTIVE
 
 ## READ ORDER
 
@@ -93,6 +93,29 @@ Supplemental verification only:
 
 Pass-B Drive accepted copies for Ch21/23/25/26/27/28/29 were explicitly read back after creation.
 
+## PASS B — OUTSIDE-CORRIDOR DIAGNOSTIC
+
+**GREEN TO BOUNDED PATCH BATCH 1. FATAL 0 / MAJOR STORY-CONTINUITY 0.**
+
+GitHub audit:
+`STUDIO/BOOK2_PASS_B_OUTSIDE_CH21_29_LINE_PATTERN_SWEEP_v0.1.md`
+
+Drive mirror/readback:
+`1bBJsxqB1aX8iF9cecAnkN3YqzccH5d-LtEXo_QaOgac`
+
+Confirmed high-value voice/line targets:
+- Ch06 — MUST PATCH / correction-engine convergence across Ollie/Iri/Nadia/Mara;
+- Ch09 — MUST PATCH / Kalen-Iri-Mara/Ollie correction cadence and approval beats;
+- Ch17 — MUST PATCH / youth argument too symmetrical / policy-panel voice convergence.
+
+Secondary/protected:
+- Ch18 — HOLD pending full-chapter regression; opening shows group-chorus risk but is not enough alone to authorize patch;
+- Ch11 — PROTECT / NO PATCH NOW;
+- Ch13 — PROTECT / NO PATCH NOW;
+- Ch32 canonical = `THE LATE ROUTE`; LIGHT WATCH ONLY, no repeat privacy negotiation.
+
+Counts remain candidate detection only. Local story/voice context controls edits.
+
 ## PROTECTED DOWNSTREAM CONTINUITY
 
 - Ch30: Aoife recorder away; mixed waiting/moving outcomes; Tomas consequence persists.
@@ -109,25 +132,16 @@ Pass-B Drive accepted copies for Ch21/23/25/26/27/28/29 were explicitly read bac
 
 ## CURRENT CANONICAL FRONTIER
 
-**NEXT PRODUCTION STAGE = PASS B — WHOLE-MANUSCRIPT LINE / GENERATED-TEXT / DIALOGUE-RHYTHM SWEEP OUTSIDE CH21–29.**
+**NEXT PRODUCTION STAGE = PASS B — BOUNDED PATCH BATCH 1: Ch06 / Ch09 / Ch17.**
 
-Primary scope:
-- Ch01–20;
-- Ch30–36.
+Order:
+1. Ch09 — lowest technical-risk patch; full chapter already close-read and defect confirmed;
+2. Ch06 — patch with strict protection of subjective-report / local-regulator / delayed-fixed-return evidence chain;
+3. Ch17 — break equal-airtime argument symmetry while preserving Maya flaw, local resentment and Lea household pressure;
+4. local Red Team + transition read;
+5. accept only after GitHub + Drive persistence/readback.
 
-Candidate-detection targets:
-- repeated `I know` acknowledgement cadence;
-- clipped `No / Not X` fragment rhythm;
-- repeated `That is not...` correction structure;
-- `Good / Better` status beats;
-- neutral `looked` / gaze glue;
-- `face` joke family;
-- explanatory thematic tails after sufficient action;
-- repeated evidence-category explanation;
-- repeated screen/list exposition;
-- dry-smart voice convergence.
-
-Counts are detection only. Patch only after local-context verification.
+Ch18 remains HOLD. Ch11/Ch13 stay protected. Ch32 remains light-polish watch only until Batch 1 settles.
 
 Pass B may make bounded prose edits. It may **not** reopen story architecture without a newly demonstrated causal/continuity failure.
 
@@ -144,6 +158,6 @@ Parallel alternate files do not become authority merely by being newer.
 
 ## ACTIVE DEVELOPMENT MODE
 
-`whole-manuscript Pass B diagnosis -> issue map -> bounded prose patches only where justified -> Red Team -> regression gate -> GitHub -> Drive -> readback -> update manuscript state`.
+`bounded patch Batch 1 -> local Red Team -> transition regression -> GitHub -> Drive -> readback -> accept or reject -> then Ch18/Ch32 watch`.
 
 Do not add an epilogue automatically. Do not switch books.
