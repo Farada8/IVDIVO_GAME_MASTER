@@ -7,6 +7,21 @@
 
 ---
 
+# FOUNDER OVERRIDE — 2026-08-17 — CURRENT B08 ROUTING
+
+**ACTIVE BOOK: B08 — FIRST CROSSING.**
+
+**Current WORKING engine:** `THE LAST OVERRIDE / LEGACY EMERGENCY ANNEX`.
+
+The legacy `B08 — SECOND MAJOR CROSSING SLOT` later in this file is **SUPERSEDED FOR CURRENT B08** and is retained only as historical routing. Do not auto-load it unless Founder explicitly restores that assignment.
+
+This override changes current B08 routing only. **Do not globally renumber or reassign B05–B07 from this override alone.** Their existing entries remain WORKING DEFAULT / historical routing until separately changed by Founder or earned completed-book consequences.
+
+Current B08 architecture source:
+`docs/saga/B08_FIRST_CROSSING_THE_LAST_OVERRIDE_WORKING_ARCHITECTURE.md`
+
+---
+
 # GENERAL APPLICATION RULE
 
 At the start of a book-writing conversation:
@@ -248,13 +263,19 @@ Book requires an independent protagonist and complete conflict.
 
 ---
 
-# B08 — SECOND MAJOR CROSSING SLOT
+# B08 — SECOND MAJOR CROSSING SLOT — SUPERSEDED FOR CURRENT B08
 
-**Status:** WORKING DEFAULT ONLY. Exact Book 8 assignment remains subject to Founder and completed Books 5–7.
+**Status:** SUPERSEDED FOR CURRENT B08 / HISTORICAL ROUTING ONLY.
 
-If Founder keeps Book 8 as `CROSSING II`, do not design its plot in detail before loading all actual Books 1–7 consequences.
+This section is retained to preserve prior routing history. Newest Founder instruction establishes current `B08 — FIRST CROSSING`; use `docs/saga/B08_FIRST_CROSSING_THE_LAST_OVERRIDE_WORKING_ARCHITECTURE.md` instead.
 
-A second crossing must be qualitatively different from Book 4.
+Former routing text follows for provenance:
+
+Exact Book 8 assignment had been subject to Founder and completed Books 5–7.
+
+If Founder were to restore Book 8 as `CROSSING II`, do not design its plot in detail before loading all actual Books 1–7 consequences.
+
+A second crossing must be qualitatively different from an earlier crossing.
 
 Characters meet because one complete problem naturally crosses mature worlds/competencies/jurisdictions, not for fan service.
 
