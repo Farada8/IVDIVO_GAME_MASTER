@@ -38,36 +38,19 @@
 **Artifact:** E01 Emotional Micro-beats 1–7 / Concept F / audience reward routing
 **Type:** visual / performance / marketing
 **Status:** PASS AFTER TARGETED PATCH
-
-**MAJOR patched:**
-- no deliberately prolonged professional contact in Beat 4;
-- Naomi's fast threat reaction remains professional, not early romantic “personal stake”;
-- Concept F “owns his safety” reframed as operational responsibility + Eli's conscious protocol acceptance.
-
-**MEDIUM patched:**
-- repeated fist-clench motif removed from Beat 7;
-- pupil dilation not treated as diagnostic;
-- audience “psychotypes” reframed as preference clusters / marketing hypotheses.
-
-**Protected:** Naomi agency, Eli competence, slow-burn, guard/client power, story causality, truthful marketing.
-
-**Next:** human image/audio test before release lock.
+**MAJOR patched:** no deliberately prolonged professional contact; Naomi's threat reaction remains professional; Concept F ownership wording corrected.
+**MEDIUM patched:** repeated fist-clench removed; pupil dilation not diagnostic; audience “psychotypes” reframed as preference clusters.
+**Protected:** Naomi agency, Eli competence, slow-burn, guard/client power, causality, truthful marketing.
 
 ---
 
 ## P53-20260817-BODYGUARD-E01DIA-002
 **Project:** BODYGUARD FOR THE FALLEN IDOL — THE PROTECTION MONOPOLY
-**Artifact:** Episode 1 dialogue/audio — Recording Master v1.1
+**Artifact:** Episode 1 dialogue/audio
 **Type:** dialogue / audio
 **Status:** PASS — PERFORMANCE PATCHES ONLY
-
-**Key result:** no dialogue rewrite required. Existing text already contains push–pull, Eli private cost, Naomi agency, consent and earned micro-rewards. P53 improvements belong in actor timing/breath/role recovery.
-
-**Performance patches:** preserve existing beat after `safe floor`; drop Eli public register on Daniel line; one post-safety breath reset; preserve `Which ear? / Left.` beat; play public-frame anger without possession; protect Eli agency in raw-playback request.
-
-**Protected:** `Cross right. Now.`, rescue order, Naomi triage, explicit bodypack consent, left/right clue, two/four-click logic, guard/client boundary.
-
-**Next:** re-audit after rough audio; then E02–E06 dialogue regression.
+**Key result:** no dialogue rewrite required. P53 gains belong in actor timing/breath/role recovery.
+**Protected:** `Cross right. Now.`, rescue order, triage, bodypack consent, left/right clue, two/four-click logic, guard/client boundary.
 
 ---
 
@@ -78,18 +61,8 @@
 **Status:** PASS AFTER ONE TARGETED TEXT PATCH
 **FATAL:** 0
 **MAJOR:** 0 after patch
-
-**High-leverage MEDIUM patched:** E6 stock line `I am beginning to recognize that sentence as your love language.` replaced with `That sentence again. I'm starting to recognize the chorus.`
-
-**Why:** restores Eli's music-specific P51 voice, preserves slow-burn, removes generic premature romance labeling and keeps chemistry through attention rather than declaration.
-
-**E02–E05:** no dialogue rewrite required; P53 gains belong to performance timing, breath, silence, role recovery and emphasis.
-
-**Protected:** Naomi agency, Eli competence/private cost, guard/client power, Daniel guilt, route-choice consent, mystery evidence, public-choice cost, explicit romance boundary.
-
-**Master:** v1.1 superseded; v1.2 is current active recording master.
-
-**Next:** E07–E12 P53 dialogue regression before recording; E01 rough-audio re-audit remains pending human/performance evidence.
+**Patch:** `I am beginning to recognize that sentence as your love language.` → `That sentence again. I'm starting to recognize the chorus.`
+**Protected:** Naomi agency, Eli competence/private cost, guard/client power, Daniel guilt, route-choice consent, mystery evidence, public-choice cost.
 
 ---
 
@@ -100,17 +73,56 @@
 **Status:** PASS AFTER FOUR TARGETED TEXT PATCHES
 **FATAL:** 0
 **MAJOR:** 0 after patch
+**Patches:** meta-romance/P51 lines in E9–E10 removed; E12 causal referent corrected to Eli's Daniel statement.
+**Protected:** E9 active guard/client boundary; E11 informed-consent rupture; E12 mutual ugly truth without instant forgiveness.
 
-**High-leverage MEDIUM patched:** three meta-romance/P51 lines in E9–E10 plus one E12 causal-referent clarity line.
+---
 
-**Key replacements:**
-- `That may be the most romantic sentence she has ever said to evidence.` → `Two bars, no encore. I'm learning her rhythm.`
-- `You are very calm about becoming my alleged secret girlfriend.` → `You are very calm about being edited into my private life.`
-- `You really can make anything sound unromantic.` → `You even have a protocol for proximity.`
-- `I kept thinking you would look at me differently after Bellweather.` → `I kept waiting for you to look at me differently after I told you what I said about Daniel.`
+## P53-20260817-BODYGUARD-E13E18-005
+**Project:** BODYGUARD FOR THE FALLEN IDOL — THE PROTECTION MONOPOLY
+**Artifact:** Episodes 13–18 dialogue regression + Recording Master v1.4
+**Type:** dialogue / audio / block regression
+**Status:** PASS AFTER THREE TARGETED TEXT PATCHES
+**FATAL:** 0
+**MAJOR:** 0 after patch
+**Patches:** `She says romantic things when she is angry.` → `You get more exact when you're angry.`; `That one is less romantic.` → `Harder to set to music.`; `Because “partner” sounds romantic.` → `Because the short version leaves too much room.`
+**Protected:** privacy/autonomy; suspension as real loss; badge surrender; no advisor loophole; competent replacement; equal evidence partnership; `Not romantic partner / Not now`; independent staying; anti-scapegoat/no absolution.
+**Intentional keep:** `That sounds less sexy.` because it triggers `You flirt when you are frightened.` → `I am frightened too.` after authority ends.
 
-**Architecture protected:** E9 active guard/client boundary; E11 informed-consent rupture; E12 mutual ugly truth without instant forgiveness.
+---
 
-**Master:** v1.2 superseded; v1.3 is current active recording master.
+## P53-20260817-BODYGUARD-E19E24-006
+**Project:** BODYGUARD FOR THE FALLEN IDOL — THE PROTECTION MONOPOLY
+**Artifact:** Episodes 19–24 final-block regression + Recording Master v1.5
+**Type:** dialogue / audio / final-block regression
+**Status:** PASS AFTER 2 MAJOR COMPLIANCE PATCHES + 2 HIGH-LEVERAGE MEDIUM P53 PATCHES
+**FATAL:** 0
+**MAJOR patched:** spoken production shorthand `E12` and `Episode twenty-three` removed.
+**P53 patches:** `defending you looks romantic` → motive-story logic; `confidence feels romantic` → `You sound very sure of me.`
+**Protected:** safe canary; E21 vulnerability without caretaking; proof without confession; independent costly truth; no magic reinstatement; smaller comeback; case/power closure before date; current-consent kiss; hook after closure.
 
-**Next:** E13–E18 P53 dialogue regression before recording; E01 rough-audio re-audit remains pending human/performance evidence.
+---
+
+## P53-20260817-BODYGUARD-LANGUAGE-007
+**Project:** BODYGUARD FOR THE FALLEN IDOL — THE PROTECTION MONOPOLY
+**Artifact:** Whole-season Recording-Language Contamination Sweep → Recording Master v1.6
+**Type:** recording-prep / language compliance
+**Status:** PASS AFTER SYSTEMIC MAJOR CLEANUP
+**Finding:** 69 residual spoken production-shorthand lines contextually removed; 71 total contamination instances fixed across campaign including two earlier final-block items.
+**Verification:** 0 E# episode labels, 0 `Episode` labels, 0 meta season/arc/block/midpoint/phase terms remain in recorded dialogue. Three natural uses of `scene` reviewed and kept.
+**Counts:** 32,310 total; 1,346.3 average; all 24 episodes PASS 1,300–1,550. E06 = 1,300; E18 = 1,534.
+**Master:** v1.6 is current active recording source.
+
+---
+
+## P53-20260817-BODYGUARD-SEASONFINAL-008
+**Project:** BODYGUARD FOR THE FALLEN IDOL — THE PROTECTION MONOPOLY
+**Artifact:** Final Season P51/P52/P53/Recording-Language Compliance Gate v1.0
+**Type:** final internal script gate
+**Status:** PASS — HUMAN AUDIO SIGNAL STILL REQUIRED
+**FATAL:** 0
+**MAJOR remaining:** 0
+**MEDIUM requiring text rewrite now:** 0
+**Passes:** causality, P51, P52, P53, male competence/private cost, heroine agency/hidden cost, female gaze, consent/power, professional truth, after-action, micro-reward/repetition, mystery fair play, no-confession proof, climax independence, complete resolution, recording language, spoken counts.
+**Watch only:** E06 count floor; E18 timing; E23 proof-density performance/mix; E24 `I hate you / No, you do not` table-read watch; early chemistry actor timing; left/right/four-click mono/phone comprehension.
+**Next:** rough performed audio → mono/headphone/phone QC → blind listener test → evidence-based pickup only if repeated failure appears. No further internal prose rewrite; no E25; no Season 2.
