@@ -45,9 +45,10 @@ Folder ID: `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`
 19. `Chapter 19 — GO / NO-GO` — Ollie POV — GREEN / Full Studio accepted v0.3
 20. `Chapter 20 — THE WRONG CAUSE` — Ollie POV — GREEN / Full Studio accepted v0.3
 21. `Chapter 21 — SHUT` — Ollie POV — GREEN / Full Studio accepted v0.3
+22. `Chapter 22 — AFTER THE CAMERA` — Aoife POV — GREEN / Full Studio accepted v0.2
 
 Current canonical frontier:
-**NEXT = Chapter 22 — AFTER THE CAMERA — Aoife POV.**
+**NEXT = Chapter 23 — NO ACCESS — Ollie POV.**
 
 ## Active drafting authority
 
@@ -145,9 +146,6 @@ Drive:
 - Draft ID `1Yh5DUPSlqtY2YCjk6aMCh0HwQI8ZMCV61whAioNnDRI`
 - Gate ID `1RjFKUZW-7cvu6yjcys8EVVLo_9H1EpD_UEhDWfhxtFY`
 
-Gate verdict:
-**GREEN TO KEEP / ACCEPT CH21 / PROCEED TO CH22.**
-
 Protected Ch21 law:
 - responsibility is distributed: Ollie did not cause the defect, but his valid incomplete interpretation changed what competent adults believed they could attempt;
 - distributed equivalence remains preliminary, not final root cause;
@@ -161,18 +159,42 @@ Protected Ch21 law:
 - Ollie does not abuse maintenance access and records `NO CLAIM OF COMMON CAUSE`;
 - Ch21 accepted v0.3 removed manuscript fourth-wall references to chapter numbers.
 
+### Ch22 — AFTER THE CAMERA v0.2
+Accepted draft:
+`DRAFTS/CH22_AFTER_THE_CAMERA_v0.2_FULL_STUDIO.md`
+
+Accepted gate:
+`GATES/CH22_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+
+Drive:
+- Writer Brief ID `1aV32l27j1DqsAf6HDAslKx0n5FEUjMLPoY0S7se6MvU`
+- Draft ID `121fNgEekyCBRCpEs8WG6R5H2mBgaIfh4l07Y90wo_gU`
+- Gate ID `1oJETD90vGQKMvlnLF8z9Uc0U7qbqJXoE3B8xWq10mlk`
+
+Protected Ch22 law:
+- deleting the original does not erase derivative inference/reposts;
+- source S1 does not forgive Aoife and documentary access remains suspended/reduced;
+- Aoife gives up recorder/notes/transcription/project capture for the meeting;
+- repair is behavioral and costs content/access rather than producing instant absolution;
+- source independently authorizes one de-identified event-order correction for safety review;
+- correction: personal/local support adjustment began before fixed wall response; exact seconds not asserted;
+- validation may occur only through protected source channel;
+- publication/documentary rights do not follow the safety correction;
+- Aoife does not pass the source material privately to Ollie;
+- lead-timing evidence is strengthened but root cause remains unproven.
+
 ## Next prose / acceptance unit
 
-### Chapter 22 — AFTER THE CAMERA
-**POV:** Aoife
+### Chapter 23 — NO ACCESS
+**POV:** Ollie
 
 Required function:
-- change texture away from Ollie technical analysis;
-- make Aoife’s Ch16 source-access loss materially constrain what she can know/show now;
-- show consequences of Ring Six failure through people and missing access, not through another technical postmortem;
-- preserve source privacy and do not cheaply restore S1 trust;
-- continue Ethan/Aoife trust line without turning it into generic romance repair;
-- keep Ring Six residents displaced and Lea/local anger active;
-- open the next evidence/social path causally rather than giving Aoife privileged incident information she no longer has.
+- continue Ollie’s ordinary authorized maintenance while Ring Six review access remains held;
+- do not repeat Ch21’s first discovery of older-module complaints;
+- use Ch21’s scoped observation as the starting point for a legitimate comparison question;
+- show usefulness separating from recognition/access;
+- request only bounded/de-identified comparison data through Mara rather than trying to obtain raw incident access;
+- keep older-module complaints non-identical and non-proof until timing comparison earns more;
+- convert the strengthened lead-timing hypothesis into a measurable next step without restoring Ollie’s authority.
 
 Do not switch books on ordinary `и / дальше`.
