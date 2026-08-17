@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–30 GREEN / Chapter 31 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–31 GREEN / Chapter 32 next
 
 ## READ ORDER
 
@@ -27,15 +27,11 @@
 5. `IVDIVO_BOOK2_ORBITAL_YOUTH_DEVELOPMENT_PACKET_v0_2.md`.
 6. `IVDIVO_BOOK2_ORBITAL_YOUTH_RECONCILED_SCENE_ARCHITECTURE_PATCH_v0_2.md`.
 7. `IVDIVO_BOOK2_ORBITAL_YOUTH_POST_REFERENCE_INTEGRATION_CONFLICT_RESOLUTION_v1_0.md`.
-8. `IVDIVO_BOOK2_ORBITAL_YOUTH_WORLD_TECH_RECONCILIATION_v0_3_REFERENCE_ENHANCED.md` under conflict filter.
-9. `IVDIVO_BOOK2_ORBITAL_YOUTH_CHARACTER_RELATIONSHIP_BIBLE_v0_2_REFERENCE_ENHANCED.md` under conflict filter.
-10. `IVDIVO_BOOK2_ORBITAL_YOUTH_CAUSAL_CHAPTER_MAP_v0_3_REFERENCE_ENHANCED.md` under conflict filter.
-11. Scene Cards Part I–VI + `IVDIVO_BOOK2_ORBITAL_YOUTH_ALL_SCENE_REFERENCE_PATCH_v0_2.md`.
-12. `IVDIVO_BOOK2_ORBITAL_YOUTH_YOUTH_PSYCHOLOGY_DIALOGUE_PASS_v0_1.md`.
-13. `IVDIVO_BOOK2_ORBITAL_YOUTH_FULL_RED_TEAM_v0_2.md`.
-14. `IVDIVO_BOOK2_ORBITAL_YOUTH_ACTIVE_DRAFT_VOICE_HUMOUR_GUARDRAILS_v1_0.md`.
-15. Latest chapter-specific Writer Brief / Gate.
-16. Older/superseded/reference material.
+8. Reference-enhanced world/character/causal files under conflict filter.
+9. Scene Cards Part I–VI + reference patch.
+10. Youth/dialogue pass, full Red Team, active voice/humour guardrails.
+11. Latest chapter-specific Writer Brief / accepted Gate.
+12. Older/superseded/reference material.
 
 ## CURRENT WORKING LOCKS
 
@@ -51,86 +47,54 @@
 
 ## ACCEPTED PROSE FRONTIER
 
-**Chapters 1–30: GREEN / accepted development drafts.**
+**Chapters 1–31: GREEN / accepted development drafts.**
 
-Latest accepted chapter: **Ch30 — WHO WAITS — Aoife POV — v0.1 — GREEN.**
+Latest accepted chapter: **Ch31 — THE ADULT DOOR — Ethan POV — v0.2 — GREEN.**
 
 GitHub:
-- Writer Brief: `STUDIO/CH30_WHO_WAITS_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
-- Draft: `DRAFTS/CH30_WHO_WAITS_v0.1_FULL_STUDIO.md`
-- Gate: `GATES/CH30_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Writer Brief: `STUDIO/CH31_THE_ADULT_DOOR_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
+- Draft: `DRAFTS/CH31_THE_ADULT_DOOR_v0.2_FULL_STUDIO.md`
+- Acceptance Gate: `GATES/CH31_FULL_STUDIO_ACCEPTANCE_GATE_v0.1.md`
 
 Drive canonical mirror:
-- Writer Brief ID `1hi6MA3t2jMyMkZuagIw-35spMU9TKtnAUcAmnBjbAM4`
-- Draft ID `1ZFVJ-vcrjXkZbuaEFxiLJdimxC0MZD5shgksOezIaH4`
-- Gate ID `1zvdyPmTJN7qzcnJqSpFeegtkcdEuO0jhRQZDb7lHkIU`
+- Writer Brief ID `1APJKnKPBwX-Bl8knjRwchiGnCvx6kKrKTx9Igyizge8`
+- Draft ID `1oOrO5l0FIw9In_WKGGycP9V121VdYcRiw_AOD946H8o`
+- Acceptance Gate ID `13Cw6btsPQ6WNy4nxNaufIWsrCywDNWzWnu80IOu6or8`
 
-## PROTECTED CH26–30 CONTINUITY
+## PROTECTED CONTINUITY — Ch27–31
 
-### Ch26 — THE SECOND MODEL
-- Ollie remains REVIEW HOLD; no unrestricted Ring Six operational access is restored.
-- Candidate alignment uses shared-loop/control-state relationships rather than fixed display timestamp as universal center.
-- Resident/support timing remains a separate evidence rail, not infallible truth.
-- Model proposal proceeds through authorized review only.
-
-### Ch27 — CONTROLLED REPRODUCTION
-- Adult safety process owns execution; Ollie is observer/analysis participant only.
-- N0 negative control remains negative.
-- C1 safely enters candidate shared-loop state during residual return settling.
-- C2 apparently equivalent visible sequence from full physical baseline fails; failure remains in main result package.
-- C3 narrows the candidate condition and reproduces it through another visible service path.
-- Working measurable candidate: residual return imbalance / recovery state.
-- Dangerous oscillation is NOT reproduced; people/support timing is NOT tested; Ring Six REVIEW HOLD remains.
-
-### Ch28 — TWO BAD OPTIONS
-- A = deeper/full-recovery interlock can reach restricted occupancy sooner at a real capacity/service cost.
-- B = state-aware control may preserve more intended capacity but needs more validation and carries unknown false-negative risk against the dangerous escalation condition.
-- Hybrid A-now/B-later remains possible but carries revalidation, staffing and second-move costs.
-- Ethan’s private weighted score is NOT part of the decision packet.
-- Affected-group priorities remain plural; proper civic/commissioning authority retains the decision.
-
-### Ch29 — SEGMENTS
-- Partial segmented opening is the bounded current direction; no full Ring Six success claim.
-- Three segments likely certifiable, one conditional/restricted candidate, two remain closed at chapter exit.
-- Technical compatibility does not determine allocation priority.
-- Housing allocation remains constrained by household/environment/route/access/work-school/wait burdens and household preference against forced splitting.
-- Lea’s household is only partly compatible with first phase and receives no protagonist favoritism.
-- Ollie remains model support, not board/housing authority.
-
-### Ch30 — WHO WAITS
-- Aoife works inside relocation/waiting consequences with recorder away.
-- Source/S1 relationship reopens only as one banal, explicitly bounded line for possible later use; no forgiveness or intimacy reset.
-- Aoife does not immediately record the offered line.
-- Waiting remains material through laundry, school gear, split household logistics, storage, sleep and route/shift burden.
-- Tomas remains Ch20 injured worker on light duty; commute consequences remain active.
-- Partial opening yields mixed outcomes; no clean resident consensus.
-- Ethan's adult-track response deadline arrives at chapter end.
+- Ch27: distributed shared-loop state can be reproduced safely under bounded residual-return conditions; C2 failure stays visible; dangerous oscillation and people/support timing remain unresolved; Ollie remains REVIEW HOLD.
+- Ch28: full-recovery interlock vs state-aware control remain defensible but costly alternatives; Ethan’s weighted recommendation is not civic authority.
+- Ch29: segmented partial opening only; allocation is not determined by technical compatibility; Lea’s household receives no protagonist favoritism.
+- Ch30: waiting/moving remains lived household reality; Aoife keeps recorder away; S1 trust reopens only in one small bounded way; no clean consensus.
+- Ch31: Ethan is legally adult and receives a genuinely desirable immediate Systems Operations — Transit / Service Coordination placement; start conflicts with migration; later intake preserves eligibility but not assignment/team/priority; Ethan tells Aoife before deciding; she does not decide for him or reward him romantically; he selects later intake because the current commitment matters as well as the people; the immediate placement disappears and peers enter related work; envy remains; adult-track stays B-line.
 
 ## CANON RECONCILIATION STILL ACTIVE
 
-**Tomas = the Ch20 injured maintenance worker.**  
-Current state: continuing light-duty/manual-service restriction; do not rename or erase injury consequences.
+**Tomas = the Ch20 injured maintenance worker.** Current state: continuing light-duty/manual-service restriction; do not rename or erase injury consequences.
 
 ## CURRENT CANONICAL FRONTIER
 
-**NEXT = Chapter 31 — THE ADULT DOOR — Ethan POV.**
+**NEXT = Chapter 32 — THE PRIVACY AGREEMENT — Maya POV.**
 
 Required direction:
-- immediate adult-track placement start overlaps the migration period;
-- coordinator offers a real option, not manipulation;
-- later intake exists without guarantee of identical placement;
-- Ethan chooses to finish the current Ring Six commitment and enter later intake;
-- preferred immediate slot disappears, so the choice retains cost;
-- Ethan tells Aoife before deadline; trust repairs slightly without romantic certainty;
-- he admits group matters partly but also acts because he said he would finish;
-- later envy/uncertainty remains, but he does not convert it into group-management;
-- adult-track stays B-line.
+- repair with Lea/peer first; apology does not buy restored trust;
+- host negotiation separates privacy from operational legibility;
+- truthful zone + host/contact + return condition + update-on-change;
+- no continuous location stream / no hourly tracker;
+- trial agreement is bounded and revocable;
+- Maya actually uses the protocol when a late plan changes;
+- nothing dramatic happens; maturity proves itself by being boring;
+- no policy-seminar dialogue;
+- migration support remains the A-line context.
 
 ## SAVE / ROUTING LAW
 
-A chapter is not accepted across the project until accepted draft + gate are persisted in GitHub and Drive and mirrors are verified.
+A chapter is accepted only when accepted draft + gate persist in GitHub and Drive and both mirrors pass readback.
 
-Parallel alternate files that conflict with `DRAFT_STATUS.md` plus the accepted gate chain do not become routing authority merely by being newer. They require explicit reconciliation/acceptance. This currently applies to alternate Ch29/Ch30 files such as `PHASE TWO` / `SHADOW MODE` if they conflict with the verified accepted SEGMENTS → WHO WAITS chain.
+Parallel alternate files do not become routing authority merely by being newer. `DRAFT_STATUS.md` + accepted gate chain + this index determine routing after reconciliation.
+
+Current Ch31 routing: v0.2 + Acceptance Gate are canonical. Earlier v0.1/local-gate and mixed Drive candidates are superseded/reference only.
 
 ## ACTIVE DRAFTING MODE
 
