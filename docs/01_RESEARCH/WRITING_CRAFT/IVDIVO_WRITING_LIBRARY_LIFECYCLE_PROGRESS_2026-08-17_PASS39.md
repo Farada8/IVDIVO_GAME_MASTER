@@ -39,9 +39,10 @@ Major gates strengthened:
 
 ### Files/commits
 - `DR_FINAL_039_CAMBRIDGE_COMPANION_SCIENCE_FICTION_STRICT_LIFECYCLE_v1.0.md` — `8ffc7832eeff4e7f4489942b59c8a6cc6858a35b`
-- `BATCH 58 — Cambridge SF Mode / Post-Scarcity / Personhood / Politics / Epistemology` — `06153ddbf762e400d9d6bfd4e204c0035bf71c7f`
-- Orbital Youth Batch58 application gate — `10e73cea5d83d9113d3782f90c07dff7fec19eee`
-- old Cambridge working file safely removed — `f610979527f804de8bdaf7f2a13573463d722919`
+- `BATCH 58 — Cambridge SF Mode / Post-Scarcity / Personhood / Politics / Epistemology` — `86cf55c5c7bd57d8a817aa2a3f660daeb6d5f344`
+- Orbital Youth Batch58 application gate — `752a9b5f834189654033886ec43e2d6f39fb1a72`
+- ledger advanced to 14/40 — `e7295c920b6e08d937c585b0f803a3a45f300561`
+- old Cambridge working file safely removed — `c89caa774eb2492e43160c81b7f75f976385cd88`
 
 Strict count advanced **13/40 → 14/40**.
 
