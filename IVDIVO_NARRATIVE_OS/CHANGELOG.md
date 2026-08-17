@@ -1,5 +1,45 @@
 # IVDIVO NARRATIVE OS — CHANGELOG
 
+## 1.7 — 2026-08-17
+
+**Status:** WORKROOM CONTINUATION CONTROL + REFERENCE MECHANISM GATE EXPANSION
+
+Founder supplied a new `IVDIVO — SAGA WRITERS’ STUDIO / UNIVERSAL WORKROOM CONTINUATION PROMPT` as a direct workroom-control instruction.
+
+Added:
+- `12_UNIVERSAL_WORKROOM_CONTINUATION_PROMPT_v1.0.md` — full GitHub source for continuation behavior and universal production routing;
+- `12_UNIVERSAL_WORKROOM_CONTINUATION_PROMPT_v1.0_MANIFEST.md` — Google Drive mirror ID plus source integrity hash/line/byte controls;
+- explicit rule that `и / дальше / продолжай / делай / работай` resumes the active book/line and last unfinished production stage rather than restarting ideation;
+- explicit deep-work rule: when dependent stages can be completed without violating a gate, continue through them in the same work block;
+- source-completeness labels `LIKELY_FULL / FRAGMENT / COLLECTION / UNKNOWN / SCANNED_TEXT_UNAVAILABLE` for reference work.
+
+Google Drive mirror:
+- `12 IVDIVO Universal Workroom Continuation Prompt v1.0.txt`;
+- Drive ID `1UFbgAXci38_IH77TX0mzOR1MZlxvzhkl`;
+- original uploaded source SHA-256 `c115e71ff9f7c84f97ab377cd90b2072f51d5739b47e7e6e9d21993d3ff72d6a`.
+
+Reference-study system expanded through Passes 10–15:
+- Pass 10 — youth voice / first jobs / belonging / social mystery;
+- Pass 11 — institutions / status production / family secrets / operational procedure;
+- Pass 12 — screenplay scene economy / owned exposition / ensemble thread turns;
+- Pass 13 — dialogue action / tactics / resistance / subtext / silence / voice;
+- Pass 14 — scene goal / why-now / specific resistance / focal turn / consequence / openings;
+- Pass 15 — relationship / romance pressure / vulnerability / rupture / costly repair / changed future.
+
+New operating gates from these passes do **not** replace the Narrative OS or reopen already-green story cores automatically. They are downstream diagnostic/repair tools and must be applied without silently changing canon or accepted architecture.
+
+Library-control improvements:
+- `06_SCREENPLAYS_TV_AUDIO` is primary screen-source territory;
+- `27_SCREEN_TV_MEDIA_REFERENCE` is secondary/tie-in/media-reference territory;
+- title alone is insufficient for routing;
+- Erica Ridley’s `Charmed` was corrected as unrelated fantasy-romance, not a Charmed TV tie-in;
+- verified screenplay duplicates are archived only after identity evidence; Charmed 2x03 `Painted World` duplicate copies were SHA-256 confirmed identical while the primary remains on the active screenplay shelf.
+
+Next production use:
+- consolidate Pass 12–15 diagnostics into one downstream gate;
+- apply it first to the current accepted Book 2 frontier as a non-destructive audit;
+- repair only concrete MAJOR/FATAL findings rather than reopening the book wholesale.
+
 ## 1.6 — 2026-08-17
 
 **Status:** MANDATORY BOOK-CONVERSATION BOOTSTRAP / UNIVERSAL + BOOK-SPECIFIC PROMPTS
@@ -204,7 +244,7 @@ Corrected the early-saga world model after Founder clarification:
 - orbital polities are independent/emerging human jurisdictions whose exact constitutional relations remain to be designed;
 - Smith’s service/department remains active throughout the saga and is not closed after Contact;
 - Smith continues operational work across Earth and expanding worlds while studying the Philosophy of Synthesis with Enia in Dublin;
-- previous early-period shorthand `OLD EARTH SECURITY <-> NEW CONFEDERATION SECURITY` is superseded when interpreted as equal security jurisdictions inside the Solar System;
+- previous early-period shorthand `OLD EARTH SECURITY <-> NEW_CONFEDERATION_SECURITY` is superseded when interpreted as equal security jurisdictions inside the Solar System;
 - current early-period conflict model is multi-sided: Old Earth Security / planetary authorities / orbital authorities / individual rights / limited Confederation knowledge;
 - Book 1 LESSON ZERO remains publisher-locked;
 - Book 2 ORBITAL YOUTH, Book 3 SMITH and Book 4 first crossover are recorded as WORKING sequence, not locked future-book canon;
