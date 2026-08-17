@@ -38,7 +38,7 @@ Folder ID: `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`
 12. `Chapter 12 — THE CLEAN MODEL` — Ollie POV — GREEN / Full Studio patched
 13. `Chapter 13 — VELA NIGHT` — Aoife POV — GREEN / Full Studio accepted
 14. `Chapter 14 — ALMOST LOCAL` — Ethan POV — GREEN / Full Studio accepted
-15. `Chapter 15 — LIMITED OPEN` — Ollie POV — GREEN / Full Studio accepted
+15. `Chapter 15 — LIMITED OPEN` — Ollie POV — GREEN / Full Studio accepted v0.3
 
 Current canonical frontier:
 **NEXT = Chapter 16 — THE INFERENCE — Aoife POV.**
@@ -76,26 +76,30 @@ Do not call a chapter complete until accepted draft + gate are persisted and ver
 
 ### Chapter 15 — LIMITED OPEN
 Accepted draft:
-`DRAFTS/CH15_LIMITED_OPEN_v0.2_FULL_STUDIO.md`
+`DRAFTS/CH15_LIMITED_OPEN_v0.3_FULL_STUDIO.md`
 
 Accepted gate:
 `GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive mirrors:
-- Accepted Ch15 v0.2 ID `10_p77yvxiEpFGzbXK7ikni6Gbcr5hJK0Mh_nVmGwHSo`
-- Ch15 Gate ID `18V_-Lal8aHylt0r_imiteJrAnug4oWkBmddDUC0uxJk`
+- Accepted Ch15 v0.3 ID `19Ixqvur0oDyEkuguGQabSgWvuIK0WX2MoA1S6PnfjXk`
+- Ch15 Acceptance Gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
+
+Earlier Drive v0.2 gate ID `18V_-Lal8aHylt0r_imiteJrAnug4oWkBmddDUC0uxJk` is SUPERSEDED / REFERENCE ONLY.
 
 Gate verdict:
-**GREEN TO KEEP / PROCEED TO CHAPTER 16.**
+**GREEN TO KEEP / ACCEPT CH15 / PROCEED TO CHAPTER 16.**
 
 Protected Ch15 law:
-- the test is bounded realistic occupancy, not habitation opening;
-- Ollie's model succeeds under controlled conditions and earns a credible false victory;
+- bounded realistic occupancy, not habitation opening;
+- first cycle includes a 3.2-second fixed-system follow inside the ordinary settling band; it closes without propagation;
+- second messier cycle does not reproduce the disputed fixed-system lag;
 - two early embodied/interface events remain visible and unresolved rather than erased;
 - transition-overlap remains best current predictor, not proven cause;
 - Mara preserves uncertainty and adult decision authority;
 - Ollie's work now has legitimate institutional visibility;
-- false victory must not be retroactively made obviously reckless.
+- false victory must not be retroactively made reckless;
+- Ch20 must reveal a missing causal class, not prove Ch15 work worthless.
 
 ## Chapters 16–18 working state
 
