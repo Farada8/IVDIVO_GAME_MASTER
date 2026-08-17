@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **9/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **10/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -23,6 +23,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #6: Jordan Rosenfeld — *Make a Scene: Revised and Expanded Edition*.
 - Strict complete #7: Jessica Brody — *Save the Cat! Writes a Young Adult Novel*.
 - Strict complete #8: Les Edgerton — *Hooked*.
+- Strict complete #12: Robert McKee with Bassim El-Wakil — *Action*.
 - Strict complete #14: Orson Scott Card — *Characters & Viewpoint*.
 - All other Core sources remain below strict synthesized status until the full lifecycle is explicitly closed.
 - Fiction sources are mechanism laboratories only.
@@ -57,7 +58,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 9. Dwight V. Swain — *Techniques of the Selling Writer* — stimulus/response, micro-causality, scene/sequel.
 10. Jack M. Bickham — *Scene & Structure* — causal scene chains, narrowing options, escalation.
 11. John Truby — *The Anatomy of Genres* — genre systems, moral/world logic, genre mixing.
-12. Robert McKee — *Action* — action as tactic/risk/power/pace rather than spectacle alone.
+12. Robert McKee — *Action* — tactical pressure, capability limits, asymmetric leverage, progression, set-piece causality and pace modulation. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 13. James Scott Bell — *Plot & Structure* — structural diagnosis, middle, alternative plot approaches.
 14. Orson Scott Card — *Characters & Viewpoint* — differentiation, motive, POV distance, reader alignment. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 15. David Corbett — *The Art of Character* — desire, wounds, contradictions, behaviour, relationships.
@@ -127,6 +128,7 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 - World logic: Wolf + Continuity Editor; story-relevant reveal only.
 - SF genre sanity: Cambridge Companion + current task-specific science.
 - Prose/voice: Lodge + Doty + Baxter + McKee Dialogue.
+- Action/physical pressure: McKee Action + McKee Story + Bell; use human-state change and capability limits before spectacle escalation.
 
 ## STOP-RESEARCH RULE
 
