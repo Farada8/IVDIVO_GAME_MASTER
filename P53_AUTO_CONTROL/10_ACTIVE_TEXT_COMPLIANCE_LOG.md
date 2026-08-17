@@ -68,3 +68,25 @@
 **Protected:** `Cross right. Now.`, rescue order, Naomi triage, explicit bodypack consent, left/right clue, two/four-click logic, guard/client boundary.
 
 **Next:** re-audit after rough audio; then E02–E06 dialogue regression.
+
+---
+
+## P53-20260817-BODYGUARD-E02E06-003
+**Project:** BODYGUARD FOR THE FALLEN IDOL — THE PROTECTION MONOPOLY
+**Artifact:** Episodes 2–6 dialogue regression + Recording Master v1.2
+**Type:** dialogue / audio / block regression
+**Status:** PASS AFTER ONE TARGETED TEXT PATCH
+**FATAL:** 0
+**MAJOR:** 0 after patch
+
+**High-leverage MEDIUM patched:** E6 stock line `I am beginning to recognize that sentence as your love language.` replaced with `That sentence again. I'm starting to recognize the chorus.`
+
+**Why:** restores Eli's music-specific P51 voice, preserves slow-burn, removes generic premature romance labeling and keeps chemistry through attention rather than declaration.
+
+**E02–E05:** no dialogue rewrite required; P53 gains belong to performance timing, breath, silence, role recovery and emphasis.
+
+**Protected:** Naomi agency, Eli competence/private cost, guard/client power, Daniel guilt, route-choice consent, mystery evidence, public-choice cost, explicit romance boundary.
+
+**Master:** v1.1 superseded; v1.2 is current active recording master.
+
+**Next:** E07–E12 P53 dialogue regression before recording; E01 rough-audio re-audit remains pending human/performance evidence.
