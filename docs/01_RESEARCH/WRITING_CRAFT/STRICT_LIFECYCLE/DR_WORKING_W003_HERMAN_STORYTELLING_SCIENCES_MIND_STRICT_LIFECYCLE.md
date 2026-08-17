@@ -17,7 +17,7 @@ Core-40 membership: not yet verified; track as W003 until proven otherwise.
 - SOURCE PASSPORT — PROVISIONAL
 - CLAIM EXTRACTION — IN PROGRESS
 - MECHANISM EXTRACTION — IN PROGRESS
-- FAILURE MODES — OPEN
+- FAILURE MODES — IN PROGRESS
 - CROSS-SOURCE COMPARISON — OPEN
 - IVDIVO OPERATIONALIZATION — IN PROGRESS / PROVISIONAL
 - MANUSCRIPT VALIDATION — OPEN
@@ -56,9 +56,9 @@ Front matter and end matter present. Major structure:
 - Chapter 2 — COMPLETE.
 - Chapter 3 — COMPLETE.
 - Worked Example II — COMPLETE.
-- Chapter 4 — NOT READ STRICTLY.
-- Chapter 5 — NOT READ STRICTLY.
-- Worked Example III — NOT READ STRICTLY.
+- Chapter 4 — COMPLETE.
+- Chapter 5 — COMPLETE.
+- Worked Example III — COMPLETE.
 - Chapter 6 — NOT READ STRICTLY.
 - Worked Example IV — NOT READ STRICTLY.
 - Chapter 7 — NOT READ STRICTLY.
@@ -67,8 +67,8 @@ Front matter and end matter present. Major structure:
 - Coda — NOT READ STRICTLY.
 
 ### Exact continuation pointer
-Local plain-text extraction line **6739**, Chapter 4 **`Perspective Taking`**, first unread body paragraph after heading.
-Do not reread lines 1–6738 without a concrete verification need.
+Local plain-text extraction line **9535**, Part III / Chapter 6 **`Narrative as an Instrument of Mind`**, first unread body paragraph after heading.
+Do not reread lines 1–9534 without a concrete verification need.
 
 ## SCIENCE / CANON FIREWALL
 This is a 2013 interdisciplinary narrative-theory/cognitive-science book.
@@ -76,6 +76,7 @@ This is a 2013 interdisciplinary narrative-theory/cognitive-science book.
 - Any scientific claim used as factual worldbuilding guidance requires verification from current primary research when accuracy matters.
 - Philosophical claims about persons/mind are not IVDIVO metaphysical canon.
 - Narrative usefulness of a model is separate from truth of that model.
+- Historical frameworks for emotion, personhood and cognitive development are treated as research context, not as settled contemporary fact.
 
 ## PROVISIONAL CLAIMS FROM STRICT READ SO FAR
 
@@ -118,6 +119,36 @@ Selection, omission, modality and medium can shift reader sympathy and contextua
 ### H-C12 — Story versions are revisable social models
 Retelling is not neutral copying; exchanged stories change through selection, context and purpose. This matters for archives, testimony, rumor and institutional narratives in IVDIVO.
 
+### H-C13 — Perspective is a distributed system, not just a POV label
+The effect of a narrative depends on which viewpoints appear, in what sequence, which structurally possible viewpoints remain absent, and how perspective moves across characters, narrator, place and time.
+
+### H-C14 — An omitted viewpoint can be narratively active
+A perspective that could logically be available but is withheld can shape reader inference and the size of later cognitive repair. This is not license for cheating; the withholding must arise from the chosen perspective architecture.
+
+### H-C15 — Perspective shifts control reader model repair
+External/internal focalization, scope and distance can delay or enable knowledge. The moment a new viewpoint or fact becomes available can force large-scale reinterpretation of earlier events.
+
+### H-C16 — Understanding can be transindividual
+Sense-making may emerge from a network of persons, institutions, artifacts, records and places rather than a single brilliant mind. Narrative can represent the distribution and coordination of viewpoints across such a system.
+
+### H-C17 — Categorization helps but can erase personhood
+Characters are necessarily categorized by readers, but strong narrative can complicate or revise categories by providing contextualized individual behavior. Category is an interpretive shortcut, not a complete person model.
+
+### H-C18 — Personhood is ecological and relational
+A person's conduct becomes intelligible through embodiment, environment, history, relationships, social positions and projects. This supports IVDIVO's resistance to treating characters—including conscious robots—as bundles of predicted features.
+
+### H-C19 — Scenes of talk are multimodal social actions
+Dialogue includes verbal acts, silence, posture, gaze, spatial arrangement, artifacts and prior social positioning. What is not said can be as structuring as what is said.
+
+### H-C20 — Talk positions self and other inside larger narratives
+Speech acts can assign roles such as ally, threat, victim, expert, irresponsible child, trusted operator. Those local positionings accumulate into broader relationship narratives that later shape interpretation and action.
+
+### H-C21 — Emotion language is culturally mediated
+Texts draw on culture-specific repertoires for naming, displaying and interpreting emotion. Absence of explicit emotion vocabulary can itself be meaningful. Historical emotion theories in the source are not treated as current science.
+
+### H-C22 — Narrative can intervene in emotional/social models
+Stories do not merely represent culturally available emotion/relationship narratives; they can contest or reconfigure them. This is useful for reader-effect design but is not a therapeutic guarantee.
+
 ## PROVISIONAL IVDIVO MECHANISMS
 
 ### H-M01 — REASONS MODEL
@@ -153,6 +184,33 @@ Do not explain all six dimensions at opening. Provide WHEN/WHAT/WHERE/WHO/HOW/WH
 For testimony/rumor/archive:
 `EVENT/ACCOUNT → RETELLER → PURPOSE/CONTEXT → OMISSION/EMPHASIS → NEW VERSION → DOWNSTREAM BELIEF/ACTION`.
 
+### H-M10 — PERSPECTIVE MATRIX
+For a major sequence track:
+`AVAILABLE VIEWPOINTS → ACTUAL VIEWPOINT BY SEGMENT → OMITTED VIEWPOINTS → INFORMATION CONSEQUENCE → LATER REPAIR COST`.
+
+### H-M11 — VIEWPOINT OMISSION FAIRNESS
+Withhold a mind only if POV architecture genuinely excludes it. Do not hide information from a chosen focal consciousness that it actually knows simply to manufacture surprise.
+
+### H-M12 — DISTRIBUTED INTELLIGENCE
+`PERSON A EVIDENCE + PERSON B INTERPRETATION + TOOL/RECORD + ENVIRONMENTAL CONSTRAINT + PERSON C DECISION → EMERGENT SOLUTION`.
+This protects ensemble stories from protagonist knowledge monopoly.
+
+### H-M13 — CATEGORY REVISION
+`INITIAL CATEGORY → CHARACTER-SPECIFIC BEHAVIOR → CATEGORY STRAIN/CONTRADICTION → REVISED PERSON MODEL`.
+
+### H-M14 — POSITIONING LEDGER
+In dialogue, track not only content but role assignment:
+`WHO POSITIONS WHOM AS WHAT → ACCEPT/RESIST/REVERSE → RELATIONSHIP CONSEQUENCE`.
+
+### H-M15 — SCENE-OF-TALK MULTIMODALITY
+Dialogue pass includes:
+`WORDS + SILENCE + GESTURE + GAZE + BODY + SPACE + ARTIFACT + PRIOR STATUS`.
+
+### H-M16 — EMOTIONOLOGY FIREWALL
+Separate:
+`felt emotion / displayed behavior / culturally available emotion term / another person's interpretation / narrator's label`.
+Do not collapse them into one fact.
+
 ## PROVISIONAL FAILURE MODES
 - Behavior treated as motive.
 - Prediction treated as consent.
@@ -162,8 +220,16 @@ For testimony/rumor/archive:
 - Narrative omnipotence: forcing every social/emotional process into explicit story explanation.
 - Worldbuilding encyclopedia: answering all storyworld dimensions before reader needs them.
 - Archive/testimony treated as transparent rather than retold/versioned.
+- Perspective reduced to pronoun/POV label.
+- POV withholding that ignores what focal character knows.
+- Protagonist knowledge monopoly.
+- Ensemble members existing only as information-delivery functions.
+- Category treated as person.
+- Dialogue treated as words only.
+- Relationship positioning ignored.
+- Emotion word treated as transparent evidence of inner state.
 - Cognitive/philosophical claims imported as IVDIVO metaphysics.
 - 2013 cognitive claims cited as current science without verification.
 
 ## NEXT
-Continue strict FULL READ at local line 6739, Chapter 4 `Perspective Taking`. No lifecycle stage may be upgraded to COMPLETE beyond what this ledger explicitly records.
+Continue strict FULL READ at local line **9535**, Chapter 6 `Narrative as an Instrument of Mind`. No lifecycle stage may be upgraded to COMPLETE beyond what this ledger explicitly records.
