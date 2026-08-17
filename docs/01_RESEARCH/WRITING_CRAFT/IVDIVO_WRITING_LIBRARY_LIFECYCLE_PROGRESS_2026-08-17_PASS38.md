@@ -5,7 +5,7 @@ Status: COMPLETE FOR THIS PASS / CORPUS CONTINUES
 ## 1. FRESH UPLOAD CHECK
 At the start of the pass, Google Drive was checked for files modified after the previous Lodge checkpoint. New project-production documents were present (drama/episode/voiceover/collaboration packages), but a dedicated PDF search in the same fresh window returned no new PDF craft books. No new source was therefore added to the Core count, and no production document was misclassified as a craft source.
 
-## 2. ACTIVE SOURCE CONTINUATION
+## 2. ACTIVE SOURCE CONTINUATION — LODGE
 Source: David Lodge — *The Art of Fiction* — Core #40.
 
 Previous exact pointer:
@@ -18,7 +18,7 @@ This pass continued from that point and completed continuous strict reading thro
 - bibliography/index/end matter;
 - final source continuity check.
 
-## 3. STRICT LIFECYCLE CLOSED
+## 3. STRICT LIFECYCLE CLOSED — LODGE
 Lodge now has all required stages complete:
 
 `REGISTERED → INTEGRITY VERIFIED → FULL READ → STRUCTURE MAP → SOURCE PASSPORT → CLAIM EXTRACTION → MECHANISM EXTRACTION → FAILURE MODES → CROSS-SOURCE COMPARISON → IVDIVO OPERATIONALIZATION → MANUSCRIPT VALIDATION → SYNTHESIZED`.
@@ -90,10 +90,46 @@ Uncertainty must have an explicit reader contract and proof ceiling. Strange evi
 ### LESSON ZERO Book One
 No development-lock breach was justified by Lodge. New theory alone is not a manuscript defect.
 
-## 7. NEXT ACTION
+## 7. NEXT SOURCE STARTED — CORE #39
+After Lodge was safely closed, the next available incomplete Core with a verified full source was started:
+
+**Edward James & Farah Mendlesohn, eds. — *The Cambridge Companion to Science Fiction* — Core #39.**
+
+Integrity verified:
+- retained Drive ID `1MzDs-xh2lvWN2zvsDEriJts8iULJxFRY`;
+- 325 pages;
+- 1,280,557 bytes;
+- approximately 133.8k extracted words / 14,059 local lines;
+- Introduction + 20 essays + Further Reading + Index present.
+
+Continuous strict read completed in this pass:
+- Introduction — `Reading Science Fiction`;
+- Chapter 1 — `Science fiction before the genre`;
+- Chapter 2 — `The magazine era: 1926–1960`.
+
+Working strict file:
+`docs/01_RESEARCH/WRITING_CRAFT/STRICT_LIFECYCLE/DR_WORKING_039_CAMBRIDGE_COMPANION_SCIENCE_FICTION_STRICT_LIFECYCLE.md`
+commit: `90c12960f94d1441554cb9686fe4d102e2888d6a`
+
+Exact continuation pointer:
+- local line **2973** author heading / line **2975** chapter title;
+- Chapter 3 — **`New Wave and backwash: 1960–1980`**.
+
+Core #39 remains **FULL READ IN PROGRESS** and does not increase the strict count.
+
+Early production consequences already extracted:
+- SF is a mode/discussion that borrows actual plot engines; speculative world is not itself ONE MAIN STORY;
+- sense of wonder should progress into consequences;
+- conceptual breakthrough works as `observation → model → contradiction → revised model → action`;
+- future inhabitants should not become tutorial lecturers about their own normality;
+- inherited SF shorthand must not import unapproved IVDIVO ontology;
+- technical efficiency and ethical/social legitimacy are different questions;
+- historical SF criticism is genre authority only, never current technical authority.
+
+## 8. NEXT ACTION
 1. Recheck fresh uploads at the beginning of the next pass.
-2. Select the next unique Core source whose strict lifecycle is incomplete and whose full source is actually available.
-3. Prefer the earliest high-value available craft source; do not substitute fragments or related books for missing Core titles.
-4. Record an exact continuation pointer if the next source cannot be completed in the same pass.
+2. Resume Core #39 exactly at Chapter 3 / local line 2973–2975.
+3. Do not reread the Introduction or Chapters 1–2 without a concrete diagnostic reason.
+4. Continue strict lifecycle honestly; no `SYNTHESIZED` until the remaining Chapters 3–20, end matter and all later lifecycle stages are closed.
 
 No unfinished source has been falsely marked complete in this pass.
