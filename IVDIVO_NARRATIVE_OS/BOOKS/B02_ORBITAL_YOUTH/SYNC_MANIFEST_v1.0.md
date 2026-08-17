@@ -6,10 +6,8 @@
 
 ## Canonical locations
 
-GitHub: `Farada8/IVDIVO_GAME_MASTER`, branch `main`
-
-Book 2:
-`IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/`
+GitHub: `Farada8/IVDIVO_GAME_MASTER`, branch `main`  
+Book 2: `IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/`
 
 Google Drive root:
 `IVDIVO NARRATIVE OS v1.0`
@@ -25,7 +23,7 @@ GitHub root:
 - `IVDIVO_START_HERE_CROSS_CONVERSATION_ROUTER_v1_0.md`
 - `IVDIVO_GITHUB_GOOGLE_DRIVE_SYNC_PROTOCOL_v1_0.md`
 
-Drive root mirror:
+Drive root mirrors:
 - Router ID `1fGd_bmx96yrRFmsuE5mrS-Zvh1o2c1APWhK8E2wGTjs`
 - Sync Protocol ID `1A_8s3Pll9G2kakcRdDDlMLZXoBUG4XSfss0vY3x99CY`
 
@@ -44,27 +42,27 @@ Drive:
 
 ## Accepted prose frontier
 
-**Chapters 1–18: GREEN / accepted development drafts.**
+**Chapters 1–19: GREEN / accepted development drafts.**
 
-### Ch15 — LIMITED OPEN
+### Ch15 — LIMITED OPEN v0.3
 GitHub:
 - `DRAFTS/CH15_LIMITED_OPEN_v0.3_FULL_STUDIO.md`
 - `GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive:
-- accepted draft ID `19Ixqvur0oDyEkuguGQabSgWvuIK0WX2MoA1S6PnfjXk`
-- acceptance gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
+- draft ID `19Ixqvur0oDyEkuguGQabSgWvuIK0WX2MoA1S6PnfjXk`
+- gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
 
-Earlier Ch15 v0.2 draft/gate are SUPERSEDED WORKING / REFERENCE ONLY.
-
-### Ch16 — THE INFERENCE
+### Ch16 — THE INFERENCE v0.3
 GitHub:
-- `DRAFTS/CH16_THE_INFERENCE_v0.2_FULL_STUDIO.md`
+- `DRAFTS/CH16_THE_INFERENCE_v0.3_FULL_STUDIO.md`
 - `GATES/CH16_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive:
-- draft ID `1excpvqgTBu8PSl7Q0BPn4d0fIEjdb0_QBkBLyLmRujY`
-- gate ID `1R5-ItHWGg6VrIm6eYsGSdABGVdOSSbyK8NN33RHZvu4`
+- draft ID `1V38otYv5wrui6gke2JpLBV_HvYb85bQCRmu9bNtPmdg`
+- gate ID `1hEmI49MmiWrGDKarltOUv7v8YLUK2h1-G7XtBpS2v3w`
+
+Earlier Ch16 v0.2 is superseded working/reference material.
 
 ### Ch17 — PLANET PEOPLE
 GitHub:
@@ -84,11 +82,26 @@ Drive:
 - draft ID `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`
 - gate ID `1CLP6Zl96SvYA8xnGYcWULstgo7Vg7Jm-2RwHMrO3Kv8`
 
+### Ch19 — GO / NO-GO v0.3
+GitHub:
+- `DRAFTS/CH19_GO_NO_GO_v0.3_FULL_STUDIO.md`
+- `GATES/CH19_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+
+Drive:
+- draft ID `1TEB_85IkanzX1C1-U-UHhUNoYqvC6fEIoF7vim_VRe0`
+- gate ID `1JFzsKEKdJL2vlT5lfNYhWjej48s4BaL4P_DnkOwgcbw`
+
 ## Current frontier
 
-**NEXT: Chapter 19 — GO / NO-GO — Ollie POV.**
+**NEXT: Chapter 20 — THE WRONG CAUSE — Ollie POV.**
 
-Ch19 must return the A-line to Ring Six, preserve divided resident interests and adult decision authority, and make restricted opening rational before Ch20 exposes the missing causal class.
+Current protected setup:
+- Ring Six is in LIMITED GO / OCCUPIED COMMISSIONING state, not unrestricted habitation;
+- R6-A only, 42% density cap, disputed partition overlap prohibited, reviewed routes only;
+- enhanced fixed monitoring and reduced stop threshold are active;
+- resident/personal-interface reports remain operational evidence;
+- Ollie’s personal support for the restricted opening is public and attributable;
+- Ch20 must expose a missing causal class without making Ch15/Ch19 actors retrospectively reckless.
 
 ## Save rule
 
