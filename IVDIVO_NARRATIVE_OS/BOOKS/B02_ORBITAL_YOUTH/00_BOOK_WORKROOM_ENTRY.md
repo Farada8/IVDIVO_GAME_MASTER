@@ -19,26 +19,31 @@ Use this file when a conversation is explicitly working on Book 2.
 
 ## CURRENT VERIFIED FRONTIER
 
-`Chapters 1–19 GREEN / accepted development drafts.`
+`Chapters 1–22 GREEN / accepted development drafts.`
 
-**NEXT:** `Chapter 20 — THE WRONG CAUSE — Ollie POV.`
+**NEXT:** `Chapter 23 — NO ACCESS — Ollie POV.`
 
 Future `DRAFT_STATUS.md` updates override this snapshot.
 
 ## LATEST ACCEPTED CONTROL
 
-Chapter 19:
-- `DRAFTS/CH19_GO_NO_GO_v0.3_FULL_STUDIO.md`
-- `GATES/CH19_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+### Chapter 22 — AFTER THE CAMERA
+- GitHub Writer Brief: `STUDIO/CH22_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
+- GitHub draft: `DRAFTS/CH22_AFTER_THE_CAMERA_v0.2_FULL_STUDIO.md`
+- GitHub gate: `GATES/CH22_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive:
-- Draft `1TEB_85IkanzX1C1-U-UHhUNoYqvC6fEIoF7vim_VRe0`
-- Gate `1JFzsKEKdJL2vlT5lfNYhWjej48s4BaL4P_DnkOwgcbw`
+- Writer Brief `1aV32l27j1DqsAf6HDAslKx0n5FEUjMLPoY0S7se6MvU`
+- Draft `121fNgEekyCBRCpEs8WG6R5H2mBgaIfh4l07Y90wo_gU`
+- Gate `1oJETD90vGQKMvlnLF8z9Uc0U7qbqJXoE3B8xWq10mlk`
 
-Current Ch16 accepted control is v0.3:
-- GitHub `DRAFTS/CH16_THE_INFERENCE_v0.3_FULL_STUDIO.md`
-- Drive draft `1V38otYv5wrui6gke2JpLBV_HvYb85bQCRmu9bNtPmdg`
-- Drive acceptance gate `1hEmI49MmiWrGDKarltOUv7v8YLUK2h1-G7XtBpS2v3w`
+Protected:
+- S1 trust/documentary access remains reduced; no instant forgiveness;
+- derivative inference persists after original takedown;
+- de-identified event-order correction may enter safety review only through protected source channel;
+- personal/local support adjustment preceded fixed wall response, but exact seconds and root cause remain UNKNOWN;
+- no publication/documentary rights attach to the correction;
+- Ollie remains on Ring Six review hold and does not receive source material through Aoife.
 
 ## BOOK 2 NON-NEGOTIABLES
 
@@ -51,26 +56,25 @@ Current Ch16 accepted control is v0.3:
 - reference richness must change choice, pressure, character, physical legibility or social/emotional texture or be cut;
 - Rivergate / Lattice / Ethan-primary = SUPERSEDED AS BOOK TWO / REFERENCE ONLY.
 
-## CHAPTER 20 CONTROL — THE WRONG CAUSE
+## CHAPTER 23 CONTROL — NO ACCESS
 
 Required:
-- midpoint failure happens after real households have entered R6-A;
-- ordinary occupied life and embodied/interface reports lead the failure sequence;
-- current transition-overlap predictor does not explain the event;
-- fixed-system anomaly follows later, exposing a missing causal class rather than proving previous analysis fraudulent;
-- Ch19 stop logic activates and adults act competently;
-- occupancy is paused/rolled back under the limited-opening rules;
-- real household, route, service and trust costs appear immediately;
-- Ollie’s public support for opening becomes personal/professional price;
-- he loses confidence in the current causal model, not in evidence-based reasoning itself.
+- return to Ollie ordinary authorized maintenance while Ring Six review access remains held;
+- do not repeat Ch21’s old-complaint discovery; use the scoped observation already filed;
+- solve a mundane maintenance problem whose reward is only normal professional acknowledgement;
+- let another resident/user complaint make the lead-order question worth testing, not prove it;
+- compare only records legitimately available inside service scope;
+- ask Mara for one bounded/de-identified timing query rather than broad incident access;
+- preserve older-module differences and `NO CLAIM OF COMMON CAUSE`;
+- accept bounded answer without trying to expand authorization;
+- end with a measurable next hypothesis, not restored status.
 
 Forbidden:
-- no villain board or incompetent Mara;
-- no secretly ignored warning that would make Ch19 reckless;
-- no Iri oracle explanation;
-- no instant complete new theory;
-- no abstract technical failure without human consequence;
-- no Ethan/Aoife B-line takeover.
+- no privileged Ring Six access;
+- no Iri oracle;
+- no `same defect everywhere` conclusion;
+- no technical clue without ordinary work/social context;
+- no reward that resets Ollie’s professional price.
 
 ## CHAPTER EXECUTION
 
