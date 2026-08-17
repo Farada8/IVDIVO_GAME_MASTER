@@ -2,7 +2,7 @@
 
 **Status:** FULL MANUSCRIPT DEVELOPMENT / PASS B CLOSED / PASS C ACTIVE  
 **Updated:** 2026-08-17  
-**Story Gate:** PROSE FRONTIER COMPLETE / STRUCTURAL REGRESSION PASS A GREEN / PASS B GREEN  
+**Story Gate:** PROSE FRONTIER COMPLETE / STRUCTURAL REGRESSION PASS A GREEN / PASS B GREEN / PASS C CORE WATCHES GREEN  
 **Primary hero:** Ollie
 
 GitHub `main` is canonical production state. Google Drive mirrors working state.  
@@ -89,7 +89,7 @@ Drive Pass-B outside-corridor closure:
 - Ch11 `WHOSE STORY` — protected; consent/documentary behavior already gives distinct voice/function.
 - Ch13 `VELA NIGHT` — protected; fragments belong to festival/sport/coursework/music/route accumulation.
 - Ch22 / Ch24 — protected by corridor acceptance.
-- Ch30 `WHO WAITS` — **fresh full read = PROTECT / NO PASS-B PATCH**.
+- Ch30 `WHO WAITS` — fresh full read = PROTECT / NO PASS-B PATCH.
   - GitHub protection record: `STUDIO/CH30_PASS_B_PROTECT_NO_PATCH_v0.1.md`
   - Drive mirror: `1_fF4xUIBXX9vN1sOqSZXErD9wGBnNEX6QAkacAumVDk`
 - Ch31 / Ch34 / Ch35 / Ch36 — closed by dedicated late-book controls; no new local defect demonstrated.
@@ -100,46 +100,114 @@ The cumulative voice-convergence failure mode—too many characters sharing `No 
 
 **Over-cleaning risk now exceeds benefit from further automatic chapter-level patches.**
 
-## HOLD / NOT AUTOMATIC PATCHES
+## PASS C — CHARACTER / RELATIONSHIP / READER ADVOCATE
 
-- Ch12 / Ch20 secondary line notes: HOLD unless whole-book reader/line verification makes them reader-visible.
-- Ch15 Pass-C briefing compression: WORKING history only; Ch19 recap compression removed the immediate downstream repetition pressure. Do not promote automatically.
-- Samir inner arc: full-book character watch, not a demonstrated chapter defect.
-- Ollie private youth life: not a confirmed Ch12–20 MAJOR; verify payoff whole-book before inventing compensatory scenes.
+### Core evidence checks — COMPLETE / GREEN
+
+#### 1. SAMIR FULL ARC — GREEN / MAJOR WATCH CLOSED
+GitHub:
+`STUDIO/BOOK2_PASS_C_SAMIR_ARC_EVIDENCE_LEDGER_v0.1.md`
+Drive:
+`1yF97ddqs42n0sODeutKP4ZBzXrw409_4lwdNtVifETI`
+
+Result:
+- Crossband gives Samir independent orbital belonging, status, failure and adaptation;
+- Ch25 supplies self-generated price through bad Earth-style braking / wall impact / benching and changed embodied technique;
+- information arc matures from broad defensive separation to exact-question, self-owned bounded participation;
+- healthy consent boundaries are not treated as a flaw;
+- Ch36 preserves an independent Crossband life into which the original five may enter only as friends under Samir's conditions.
+
+No Samir prose repair authorized.
+
+#### 2. OLLIE PRIVATE YOUTH PAYOFF — GREEN / MAJOR WATCH CLOSED
+GitHub:
+`STUDIO/BOOK2_PASS_C_OLLIE_PRIVATE_YOUTH_PAYOFF_LEDGER_v0.1.md`
+Drive:
+`1iyR2346f5hCYrolU12BWX3GQ1q-6GV7sL1DuDce5dzg`
+
+Result:
+- access/status/approval hunger is visible from first shift onward;
+- work visibly displaces Vela Night and group time in Ch13–14;
+- Ch20/21 converts model/status desire into injury, guilt, review hold and loss of Ring Six access;
+- Ollie later accepts bounded usefulness without ownership;
+- Ch33 gives the decisive ordinary-life payoff: resident complaints about lights/storage/laundry/bread become one of his best hours on Vela;
+- Ch36's choice to defer nonurgent work for dinner is therefore earned and does not require Ollie to renounce engineering.
+
+No Ollie compensatory romance/hobby/family subplot authorized.
+
+#### 3. PRE-CLIMAX HERO CONTINUITY Ch28–32 — GREEN / MAJOR WATCH CLOSED
+GitHub:
+`STUDIO/BOOK2_PASS_C_PRECLIMAX_HERO_CONTINUITY_CH28_32_v0.1.md`
+Drive:
+`1SQFeoIBsNEDM2RzCcu5aaW1bmEX-Sp-CNCCt6TAM_xU`
+
+Result:
+- Ch28 Ethan POV has a necessary value-weight/consequence function Ollie should not own;
+- Ch29 is a full Ollie POV and major protagonist turn before the ensemble run;
+- Ch30–32 pay resident/Aoife, Ethan and Maya consequences while Ring Six/migration remains the A-line;
+- Ch32 ends at 06:30 move-day staging;
+- Ch33 begins Ollie migration watch at 06:31;
+- no Ollie cameo insertion is justified.
+
+Reader Advocate should still test whether Ch31 feels overlong in continuous flow; if so, repair transition/compression, not protagonist screen-time.
+
+#### 4. MYSTERY-PROMISE CALIBRATION — GREEN / PROMISE PAID AT CORRECT CEILING
+GitHub:
+`STUDIO/BOOK2_PASS_C_MYSTERY_PROMISE_CALIBRATION_v0.1.md`
+Drive:
+`1prvuCaUevQIKtqpb-0iBiw_e8nOfRrVmrKorIbYAyA0`
+
+Result:
+- early prose promises an operational commissioning/missing-state-class problem, not one universal hidden root cause;
+- Ch6/7 explicitly frame early evidence as timing/comparison, not theory;
+- Ch12 keeps unresolved embodied/interface evidence visible;
+- Ch21 says possible distributed equivalence / not root-cause finding;
+- Ch27 reproduces a safe-amplitude candidate state while explicitly not reproducing dangerous oscillation or human/support timing;
+- Ch35 validates R3-S early isolation only for the bounded event and leaves normal commissioning incomplete;
+- Ch36 does not invent a master explanation or franchise mystery stinger.
+
+No mystery patch authorized.
+
+### Pass C current result
+
+**Core character/mystery MAJOR watches = CLOSED / GREEN.**
+
+Do not reopen Samir, Ollie, Ch28–32 or mystery architecture unless the continuous Reader Advocate pass produces new reader-visible evidence.
 
 ## CANON RECONCILIATION STILL ACTIVE
 
 **Tomas = Ch20 injured maintenance worker.** Light-duty/manual-service restriction remains active unless later accepted prose explicitly changes it.
 
+Separate later continuity watch before final lock:
+- early-draft complete synthetic-body background references (notably old Ch02/Ch08 wording) must be checked against current technology-access canon before Final Story Gate. Do not let this derail Reader Advocate sequencing, but do not forget it at final continuity verification.
+
 ## CURRENT CANONICAL FRONTIER
 
-**NEXT PRODUCTION STAGE = PASS C — WHOLE-MANUSCRIPT CHARACTER / RELATIONSHIP / READER ADVOCATE / FINAL-LINE VERIFICATION.**
+**NEXT = PASS C — READER ADVOCATE CONTINUOUS READ.**
 
-Pass C is evidence-first. Do not reopen accepted chapters from counts alone.
+Required questions:
+1. Why turn the page at each major transition?
+2. What is the reader emotionally waiting for?
+3. Where does the book become homework after the accepted Pass-B reductions?
+4. Is wonder / aspiration / ordinary orbital life still alive through the technical middle?
+5. Does Ch31 create a real pace delay between WHO WAITS and THE LATE ROUTE / MIGRATION?
+6. Are the major relationship payoffs felt rather than merely technically present?
+7. Does Ch35 climax feel earned and Ch36 feel complete rather than deflated?
 
-### First required character checks
-1. **SAMIR FULL ARC** — verify across accepted prose whether he has a real `want → wrong strategy/mistake → price → changed choice`, not merely a well-written boundary/competence subplot. Priority evidence: early inherited state + Ch08/13 sport/belonging + Ch25 consent-bounded contribution + Ch36 resolution.
-2. **OLLIE PRIVATE YOUTH PAYOFF** — verify that his movement from usefulness addiction toward work/friendship balance is paid behaviorally across Ch12/13/15/20/21–29/33–36; do not insert a hobby scene by default.
-3. **PRE-CLIMAX HERO CONTINUITY Ch28–32** — confirm ensemble/civic settlement does not dilute Ollie so far that Ch33–35 feels like protagonist return after absence.
-4. **MYSTERY-PROMISE CALIBRATION** — confirm early prose promises a commissioning problem/missing causal class, not one total hidden root cause the novel never fully reveals.
-
-### Pass C outputs
-For each confirmed issue:
-- evidence ledger;
+Evidence-first rule:
+- no chapter patch from counts or taste alone;
+- identify a reader-visible symptom in continuous flow;
 - severity;
-- repair threshold;
-- smallest repair card if needed.
+- smallest repair card only if confirmed.
 
-If no MAJOR is demonstrated, PROTECT. Do not create prose merely to justify the pass.
-
-After character/relationship verification:
-- Reader Advocate continuous read;
+After Reader Advocate continuous read:
 - final global line verification;
+- final continuity reconciliation (including tech-access watch);
 - Final Story Gate;
 - external-feedback readiness.
 
 ## PRODUCTION MODE
 
-`fresh DRAFT_STATUS -> Pass C evidence ledger -> Red Team -> targeted repair only if demonstrated -> continuity regression -> GitHub -> Drive -> readback -> Final Story Gate`.
+`fresh DRAFT_STATUS -> Reader Advocate continuous read -> Red Team -> targeted repair only if demonstrated -> continuity regression -> GitHub -> Drive -> readback -> final global line verification -> final continuity reconciliation -> Final Story Gate`.
 
 Do not add Chapter 37. Do not restore the epilogue automatically. Do not switch books.
