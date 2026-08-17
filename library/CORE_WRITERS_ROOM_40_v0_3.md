@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **15/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **16/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -26,6 +26,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #12: Robert McKee with Bassim El-Wakil — *Action*.
 - Strict complete #14: Orson Scott Card — *Characters & Viewpoint*.
 - Strict complete #19: Alice LaPlante — *The Making of a Story*.
+- Strict complete #36: Mark J. P. Wolf — *Building Imaginary Worlds*.
 - Strict complete #37: Ignasi Ribó — *Prose Fiction*.
 - Strict complete #38: Lisa Zunshine — *Why We Read Fiction*.
 - Strict complete #39: Edward James & Farah Mendlesohn (eds.) — *The Cambridge Companion to Science Fiction*.
@@ -93,7 +94,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 
 ## C. WORLD / NARRATIVE THEORY — 5
 
-36. Mark J. P. Wolf — *Building Imaginary Worlds* — invention/completeness/consistency, infrastructures, world vs story, canonicity.
+36. Mark J. P. Wolf — *Building Imaginary Worlds* — world/database split, changed-default propagation, inferential completeness, relational infrastructures, canon provenance, explicit retcon governance, transmedia salient invariants and circles of authorship. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 37. Ignasi Ribó — *Prose Fiction* — neutral narratology router: story/discourse, emplotment variables, setting, character personhood/function, focalisation/knowledge, scene/summary, style/theme/ideology. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 38. Lisa Zunshine — *Why We Read Fiction* — Theory of Mind, source tracking, layered beliefs, controlled mistrust, evidence provenance, local unreliability and mystery inference load. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 39. *The Cambridge Companion to Science Fiction* — SF as changing mode/conversation; genre hybridity, post-scarcity stakes, speculative consequence, synthetic-personhood/representation ideology, politics, culture and epistemic firewalls; not current technical authority. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
@@ -130,7 +131,7 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 - AI/synthetic subjectivity: Murderbot + Ishiguro + Crouch/Weir + Zunshine for prediction/motive/source distinctions; technical claims require AI/robotics/neuro/bio sources.
 - Nonhuman civilisation/contact: Children of Time + Weir + Zunshine/Ribó for information flow; technical biology separate.
 - ORBITAL YOUTH belonging/status: Nevermoor function + Hunger Games/Skyward social pressure + youth scripts; transform completely into orbital civilisation.
-- World logic: Wolf + Continuity Editor; story-relevant reveal only.
+- World logic / canon provenance: Wolf + Continuity Editor; separate world database from book narrative, propagate changed defaults, and record authority/supersession instead of silent retcon.
 - SF genre sanity: Cambridge Companion + current task-specific science; use Cambridge especially to separate SF mode from local plot engine, historical trope from current canon, and technical efficacy from normative legitimacy.
 - Narrative-level diagnosis: Ribó; use its plot/setting/characterisation/narration/language/theme and story/discourse distinctions before choosing a repair school.
 - Prose/voice: Lodge + Doty + Baxter + McKee Dialogue; use Lodge as the pluralist anti-formula router across POV, description, duration, implication and endings.
