@@ -4,8 +4,8 @@ Date: 2026-08-17
 ## INPUT CHECK
 `19_INBOX_TO_PROCESS` remains populated by a large fiction/reference batch (Jewell, Christie, Eco, le Carré and others). No visible new unique writing-craft Core source was identified in the checked inbox. Multiple `Cards on the Table` files remain duplicate candidates and are not counted as separate knowledge.
 
-## ACTIVE SOURCE
-Robert McKee — *Story* — Core #2.
+## COMPLETED SOURCE — CORE #2
+Robert McKee — *Story*.
 
 Previous pointer: Chapter 9 `Act Design`.
 This pass continued from Chapter 9 through:
@@ -22,13 +22,12 @@ This pass continued from Chapter 9 through:
 - Ch19 A Writer's Method
 - Fade Out and terminal book matter.
 
-## STRICT LIFECYCLE RESULT
 McKee *Story* is now fully closed:
 REGISTERED → INTEGRITY VERIFIED → FULL READ → STRUCTURE MAP → SOURCE PASSPORT → CLAIM EXTRACTION → MECHANISM EXTRACTION → FAILURE MODES → CROSS-SOURCE COMPARISON → IVDIVO OPERATIONALIZATION → MANUSCRIPT VALIDATION → SYNTHESIZED.
 
 Strict Core advances **6/40 → 7/40**.
 
-## HIGH-VALUE NEW SYNTHESIS
+## HIGH-VALUE MCKEE STORY SYNTHESIS
 - relative reversal budget instead of act-climax inflation;
 - subplot must return to ONE MAIN STORY;
 - scene owner/tactic/reaction analysis;
@@ -50,11 +49,31 @@ Strict Core advances **6/40 → 7/40**.
 - Orbital Youth receives additive diagnostics only, not a three-act retrofit.
 - Post-money, conscious-robot, no-human-consciousness-transfer, and specialist-dimensional-knowledge firewalls remain in force.
 
-## NEXT POINTER
-McKee *Story* must **not** be restarted.
-At the next run:
-1. check fresh uploads/inbox;
-2. read the Core ledger;
-3. select the next unique Core source below `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`;
-4. verify integrity/duplicates;
-5. resume that source from its latest real stage, or begin FULL READ if no strict working pointer exists.
+## NEXT SOURCE LAUNCHED — CORE #3
+Robert McKee — *Dialogue: The Art of Verbal Action for Page, Stage, and Screen*.
+
+Integrity:
+- retained 259-page PDF, 1,766,841 bytes, continuous text, terminal material present;
+- two visible 1,766,841-byte copies were downloaded and SHA-256 matched byte-for-byte (`b4aa278308e1324f8bc31411234cbd33a7ba55612cc248f830fd6d13fbe6f7f0`), so they count as one source.
+
+Strict read completed this pass:
+- Preface / Introduction;
+- Ch1 `The Full Definition of Dialogue`;
+- Ch2 `The Three Functions of Dialogue`;
+- Ch3 `Expressivity I: Content`.
+
+Early mechanisms:
+- dialogue as verbal action/tactic, not decorative naturalism;
+- direct vs indirect dialogue routing;
+- exposition timing by current need, without false-mystery withholding;
+- exposition used as tactical ammunition;
+- `said / unsaid / unsayable` as optional layered model;
+- activity vs underlying action;
+- text vs subtext;
+- character-specific voice must exceed slang/dialect markers.
+
+## EXACT NEXT POINTER
+Do **not** restart McKee *Story* or McKee *Dialogue* Chapters 1–3.
+
+Next strict read:
+**McKee Dialogue, local extraction line 1601, Chapter 4 `EXPRESSIVITY II: FORM`, beginning `THE CONFLICT COMPLEX`.**
