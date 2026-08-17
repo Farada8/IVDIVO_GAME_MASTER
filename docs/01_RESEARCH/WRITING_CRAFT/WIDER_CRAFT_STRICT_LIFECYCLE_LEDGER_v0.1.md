@@ -1,5 +1,5 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.7
+Version: v0.8
 Date: 2026-08-17
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
@@ -62,8 +62,18 @@ Raw SHA-256: `279f1e468ef290e0811c05c9c09f9151064bc94b6fa75b2bc83dd1ba5ee06210`
 Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W007_FRANCINE_PROSE_READING_LIKE_A_WRITER_STRICT_LIFECYCLE_v1.0.md`
 Core membership note: current registry evidence does not establish W007 as a Core-40 slot; Core count is therefore not modified.
 
+### W008 — Erin M. Pushman — *How to Read Like a Writer: 10 Lessons to Elevate Your Reading and Writing Practice* (2022)
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `1NB4fcOVtjpk9Qj6n2m9vdA32lW0nBcs5`
+Duplicate policy: Drive ID `1Jx0UZWNeKk-nxjZ-0AMiQ_d9xTQPNAGp` is byte-identical and counts as the same source.
+Integrity: 217 pages; 9,279,219 bytes; ~88.3k extracted words; Prologue + 10 lessons + afterword + readings + index verified; graphic reading pages visually inspected.
+Raw SHA-256: `77923aa517a5a3580c9e387f4ba8b2cab1dcf285068479fd6d69b4305671ad0f`
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W008_PUSHMAN_HOW_TO_READ_LIKE_A_WRITER_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry evidence does not establish W008 as a Core-40 slot; Core count is therefore not modified.
+Distinct-source note: this is Erin M. Pushman's 2022 book, not Francine Prose's 2006 *Reading Like a Writer*.
+
 ## COUNTS
-- Wider strict complete explicitly tracked here: **7**
+- Wider strict complete explicitly tracked here: **8**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
