@@ -73,6 +73,22 @@ Drive canonical mirror:
 - envy/resentment remains but is not converted into group-management behavior;
 - adult-track remains B-line.
 
+## Maya continuity control for Ch32
+
+Accepted Ch24 `WHERE MAYA IS v0.2` already established and tested under real route disruption:
+- truthful zone + named contact + return condition + update before material plan change;
+- no continuous live tracking;
+- overnight elsewhere only with explicit receiving-household confirmation;
+- Maya successfully used the revised boundary under disruption;
+- Lea's trust moved only to `better than yesterday`, not repaired;
+- the Ch24 gate explicitly forbids another structurally identical `where did Maya sleep?` honesty test.
+
+Therefore old Ch32 scene-card material that re-runs the privacy agreement is superseded for execution where it conflicts with accepted Ch24.
+
+Reconciliation authority:
+- GitHub: `STUDIO/CH32_RECONCILIATION_PATCH_v1.0.md`
+- Drive mirror ID: `1DtIfn2KBMPBnU5eS0oAyJHT1no6uC3p1v0JrwztYPqI`
+
 ## Canon reconciliation still active
 
 **Tomas = the Ch20 injured maintenance worker.**  
@@ -80,22 +96,25 @@ Current state: continuing light-duty/manual-service restriction; do not rename o
 
 ## Current canonical frontier
 
-**NEXT = Chapter 32 — THE PRIVACY AGREEMENT — Maya POV.**
+**NEXT = Chapter 32 — THE LATE ROUTE — Maya POV.**
+
+Working title; not Founder-locked.
 
 Required direction:
-- repair with Lea/peer first; apology does not buy restored trust;
-- host negotiation separates privacy from operational legibility;
-- truthful zone + host/contact + return condition + update-on-change;
-- no continuous location stream / no hourly tracker;
-- trial agreement is bounded and revocable;
-- Maya actually uses the protocol when a late plan changes;
-- nothing dramatic happens; maturity proves itself by being boring;
-- no policy-seminar dialogue;
-- migration support remains the A-line context.
+- do NOT repeat Ch24's host/privacy negotiation or another concealment test;
+- Maya's autonomy protocol is already active and should be used only briefly in background;
+- pay Lea/Maya relationship debt through concrete action, not another apology bargain;
+- Maya helps with a bounded relocation task and is tempted to turn clever route knowledge into a solution for Lea's household that Lea did not choose;
+- Lea stops the over-help/control, not because Maya lied again;
+- Maya asks what help is actually wanted and accepts a smaller useful role;
+- Maya's late mobility / local route knowledge becomes useful to relocation in a bounded youth-support role, never command or safety authority;
+- freedom now creates inconvenience and responsibility rather than surveillance;
+- no repetition of Ethan Ch31's `sacrifice attractive opportunity to honor commitment` structure;
+- end by strengthening the Ch33 migration handoff with Maya operationally useful and Lea relationship still imperfect but functional.
 
 ## Production mode
 
-`bootstrap -> verified frontier -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive mirror -> verify -> update frontier`.
+`bootstrap -> verified frontier -> reconciliation patch if needed -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive mirror -> verify -> update frontier`.
 
 Do not mark a chapter complete until accepted draft + gate exist in both stores and are verified.
 
