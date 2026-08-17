@@ -1,5 +1,5 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.6
+Version: v0.7
 Date: 2026-08-17
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
@@ -53,8 +53,17 @@ Raw SHA-256: `d18524e1b69994188acdea3062631a69126f69696f7f824bdf9426cc981d2cb3`
 Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W006_CHIARELLA_WRITING_DIALOGUE_STRICT_LIFECYCLE_v1.0.md`
 Core membership note: current registry evidence does not establish W006 as a Core-40 slot; Core count is therefore not modified.
 
+### W007 — Francine Prose — *Reading Like a Writer* (2006)
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `1pVgGZMnK0PvW7b9kt3649nPfAzA-BWix`
+Duplicate policy: Drive ID `1fZp9bnKBHqDlHqW4VnSzhaTjPaiLSBmp` is byte-identical and counts as the same source.
+Integrity: 291 pages; 3,861,139 bytes; ~86.8k extracted words; all 11 chapters and end matter verified.
+Raw SHA-256: `279f1e468ef290e0811c05c9c09f9151064bc94b6fa75b2bc83dd1ba5ee06210`
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W007_FRANCINE_PROSE_READING_LIKE_A_WRITER_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry evidence does not establish W007 as a Core-40 slot; Core count is therefore not modified.
+
 ## COUNTS
-- Wider strict complete explicitly tracked here: **6**
+- Wider strict complete explicitly tracked here: **7**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
