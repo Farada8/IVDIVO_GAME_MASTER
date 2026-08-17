@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **13/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **14/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -27,6 +27,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #14: Orson Scott Card — *Characters & Viewpoint*.
 - Strict complete #19: Alice LaPlante — *The Making of a Story*.
 - Strict complete #38: Lisa Zunshine — *Why We Read Fiction*.
+- Strict complete #39: Edward James & Farah Mendlesohn (eds.) — *The Cambridge Companion to Science Fiction*.
 - Strict complete #40: David Lodge — *The Art of Fiction*.
 - All other Core sources remain below strict synthesized status until the full lifecycle is explicitly closed.
 - Fiction sources are mechanism laboratories only.
@@ -94,7 +95,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 36. Mark J. P. Wolf — *Building Imaginary Worlds* — invention/completeness/consistency, infrastructures, world vs story, canonicity.
 37. Ignasi Ribó — *Prose Fiction* — diagnostic vocabulary: plot, setting, characterisation, narration/focalisation, language, theme.
 38. Lisa Zunshine — *Why We Read Fiction* — Theory of Mind, source tracking, layered beliefs, controlled mistrust, evidence provenance, local unreliability and mystery inference load. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
-39. *The Cambridge Companion to Science Fiction* — SF history/subgenres/social consequences; genre context only, not current technical authority.
+39. *The Cambridge Companion to Science Fiction* — SF as changing mode/conversation; genre hybridity, post-scarcity stakes, speculative consequence, synthetic-personhood/representation ideology, politics, culture and epistemic firewalls; not current technical authority. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 40. David Lodge — *The Art of Fiction* — prose technique, implication, voice, POV, duration, showing/telling, youth skaz, beginnings/endings and anti-formula mode routing. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 
 ## SCRIPT COMPANION 10 — NOT COUNTED IN 40
@@ -129,7 +130,7 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 - Nonhuman civilisation/contact: Children of Time + Weir + Zunshine/Ribó for information flow; technical biology separate.
 - ORBITAL YOUTH belonging/status: Nevermoor function + Hunger Games/Skyward social pressure + youth scripts; transform completely into orbital civilisation.
 - World logic: Wolf + Continuity Editor; story-relevant reveal only.
-- SF genre sanity: Cambridge Companion + current task-specific science.
+- SF genre sanity: Cambridge Companion + current task-specific science; use Cambridge especially to separate SF mode from local plot engine, historical trope from current canon, and technical efficacy from normative legitimacy.
 - Prose/voice: Lodge + Doty + Baxter + McKee Dialogue; use Lodge as the pluralist anti-formula router across POV, description, duration, implication and endings.
 - Discovery/revision/POV epistemics: LaPlante + Rosenfeld + Card; use LaPlante especially for show/tell routing, reliability and revision-stage diagnosis.
 - Mystery/evidence provenance: Zunshine + Truby revelation/action + le Carré/Butcher/Veronica Mars labs; keep observation, source, interpretation and world fact separate.
