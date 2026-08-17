@@ -1,627 +1,812 @@
 ORBITAL YOUTH
 Chapter 17 — PLANET PEOPLE
 
-Maya decided Aoife needed defending before Aoife asked for it, which usually meant she was already halfway into the argument before checking whether one was happening.
+Maya decided Aoife needed defending before Aoife asked for it, which usually meant she was already halfway into the argument before checking whether one was needed.
 
-It was happening.
+They were in a food volume near one of the older residential rings, at a table designed for six and occupied by nine because Davi had decided chairs were a conservative idea.
 
-The food volume had no walls worth calling walls. Tables occupied a stepped platform beside a transit interchange where three routes changed gravity within sight of one another. People ate between shifts, school blocks, rehearsals and whatever else counted as a normal evening in Vela.
+Two people sat on the floor.
+One leaned against a service cabinet.
+Lea had taken the end nearest the route display because her household had three different return possibilities and she checked them often enough to pretend she did not.
 
-Maya had liked it the first time Lea brought her there because nobody could pretend a conversation was private while half the city kept moving around it.
+Aoife’s inference thread was open on somebody’s screen.
 
-Tonight that felt less useful.
+Not Aoife’s original clip.
 
-A local girl Maya knew by face but not name had a still from Aoife’s deleted clip open above the table.
+That was gone.
 
-“Tell me that’s not your friend.”
+The repost.
+The circles.
+The route map.
+The argument.
 
-“It is my friend.”
+A local boy Maya had met once at Vela Night said, “This is why I don’t talk to visitors with cameras.”
 
-“That was not the helpful answer.”
+Maya said, “She asked.”
 
-“You asked a factual question.”
+The boy looked at her.
 
-Lea, sitting opposite Maya, covered her eyes with one hand.
+“So?”
 
-“Please do not become Ethan.”
+“She got permission.”
 
-“I am defending factual accuracy.”
+“So?”
 
-“That is how it starts.”
+“She removed what they asked her to remove.”
 
-The girl flicked the still wider.
+Lea was watching Maya now.
 
-The source’s face was not visible.
+Maya continued because stopping would look weak.
 
-That was almost worse now.
+“She didn’t secretly record somebody’s private support system and upload it for attention.”
 
-Colored outlines had been added around a service marker, a route timestamp and a reflection from an interface strip.
+The boy said, “Nobody said she did.”
 
-Somebody had written:
+“You’re acting like she did.”
 
-PLANET MEDIA DOESN’T NEED YOUR NAME IF IT CAN RECONSTRUCT YOUR BODY CLASS ANYWAY
+“I’m acting like the person got identified anyway.”
 
-Maya disliked the phrasing enough that she wanted the underlying point to be wrong.
+“Not identified.”
 
-“It wasn’t intentional,” she said.
+Davi, from the floor, said, “Placement band narrowed.”
 
-The girl looked at her.
+Maya turned on him.
 
-“I didn’t say it was.”
+“Whose side are you on?”
 
-“Aoife took it down.”
+“I was reading.”
 
-“After people copied it.”
+“That is not an answer.”
 
-“She followed the agreement.”
+“It is in school.”
 
-Lea lowered her hand.
-
-“Maya.”
+Lea said, “Maya.”
 
 “What?”
 
-“That is not helping.”
+“Stop trying to win.”
 
-“I am not saying nothing happened.”
+“I’m not.”
 
-The girl said, “You are very close.”
+Everyone at the table looked at her.
 
-Maya leaned back.
+Maya spread her hands.
 
-Around them, people kept eating.
+“Fine. I am. But she made a mistake. She didn’t run an extraction operation.”
 
-A boy at the next table was explaining why his practical assessment had been invalidated by a tool booking conflict. Someone farther down was trying to split a food bill between six people who had ordered through three compatibility profiles. A transit board changed color and four people stood up at once.
+The boy laughed once.
 
-Nobody cared about Maya’s defense except the people at her table.
+“Extraction operation?”
 
-That made it harder to perform.
+“I’m improving my vocabulary.”
 
-“She made a mistake,” Maya said. “That is different from coming here to mine people for material.”
+“Please stop.”
 
-The girl shrugged.
+Maya pointed at the repost.
 
-“Impact is not required to care what you meant.”
+“Intent matters.”
 
-Maya opened her mouth.
-
-Lea said, “Don’t.”
-
-“I was going to agree.”
-
-“You had the wrong face.”
-
-“You are all obsessed with my face.”
-
-Davi arrived with a tray.
-
-“I like it.”
-
-Maya pointed at him without looking.
-
-“This is not your moment.”
-
-“It rarely is.”
-
-He sat beside the unnamed girl and immediately took one of her fried things.
-
-She slapped his hand.
-
-Normality made the argument worse.
-
-Maya looked at Lea.
-
-“Are you angry at Aoife?”
-
-Lea considered it.
-
-“Yes.”
-
-The answer landed harder because it was simple.
-
-“Do you think she did it on purpose?”
-
-“No.”
-
-“Do you think she was trying to expose anyone?”
-
-“No.”
-
-“Then—”
-
-Lea’s eyes narrowed.
+Lea said, “Yes.”
 
 Maya stopped.
 
-Then what?
-
-The question had been forming as if the next step were obvious.
-
-It wasn’t.
-
-Lea pushed her unfinished food away.
-
-“Do you know what another month does to my household?”
-
-Maya frowned.
-
-“This is about the clip.”
-
-“No. It is about all of you arriving here and discovering consequences one at a time.”
-
-Davi stopped stealing food.
-
-The girl with the still closed it.
-
-Maya felt the table change around her.
-
-She hated that too.
-
-“What does another month do?” she asked.
-
-Lea stood.
-
-“Come on.”
-
-“Where?”
-
-“You wanted to understand.”
-
-“I wanted to finish this argument.”
-
-“That is not the same thing.”
-
-Maya looked at Davi.
-
-He lifted both hands.
-
-“I am staying with the fried things.”
-
-Coward.
-
-Reasonable coward.
-
-Maya followed Lea.
-
-* * *
-
-Lea’s household was not poor.
-
-Maya understood that before they reached the door because Lea made sure she understood it.
-
-“This is temporary allocation,” Lea said while the door authenticated her. “Not emergency support. Not hardship housing. Not a tragic documentary opportunity.”
-
-“I was not going to document it.”
-
-“You know someone who might.”
-
-“That was unfair.”
-
-“Yes.”
-
-Lea opened the door.
-
-Maya went in anyway.
-
-The main room was smaller than Maya’s host household common space and currently trying to perform three incompatible functions.
-
-A folding sleeping surface occupied the wall above what had been a work table.
-
-A privacy sheet divided one corner from the rest of the room.
-
-Two storage modules had been stacked beside the food unit because their normal wall sockets were being used for something else.
-
-An older adult Maya had seen once on a route map call was asleep in a reclined seat near the window.
-
-A younger child sat on the floor doing schoolwork with one knee against a food container.
-
-Nobody looked miserable.
-
-That somehow made the arrangement more convincing.
-
-Lea lowered her voice.
-
-“My parent is in another sector four nights a week because their shift and this route do not fit after late-cycle reduction.”
-
-Maya looked at the privacy sheet.
-
-“My sibling sleeps there when they are here.”
-
-“And when they aren’t?”
-
-“With my parent. Closer to school transfer.”
-
-Maya looked around again.
-
-“How long?”
-
-“Since our old allocation ended.”
-
-“And Ring Six was supposed to fix it.”
-
-“Yes.”
-
-Maya sat carefully on the edge of a bench.
-
-Lea stayed standing.
-
-“If the opening waits another month, the placement team can keep this arrangement. It is technically compatible. Nobody is homeless. Nobody is unsafe.”
-
-“But you are split.”
-
-“Yes.”
-
-The child on the floor looked up.
-
-“We are not split. We are distributed.”
-
-Lea closed her eyes.
-
-Maya looked at the child.
-
-“That is the worst family terminology I have ever heard.”
-
-“It is accurate.”
-
-“See?” Lea said. “This is what I live with.”
-
-The child returned to the schoolwork.
-
-Maya almost smiled.
-
-Then she remembered why she was there.
-
-“So you want the ring opened.”
-
-“Yes.”
-
-“Even after what Ollie found?”
-
-Lea’s expression changed.
-
-Not anger.
-
-Something more tired.
-
-“I want it opened when the people responsible can defend the conditions.”
-
-“That is not the same as wanting maximum caution.”
-
-“No.”
-
-Maya waited.
-
-Lea sat opposite her.
-
-“Do you think caution has no cost?”
-
-“No.”
-
-“You say that now.”
-
-“I said it before.”
-
-“You said safe things should be delayed until they were safe.”
-
-“That sounds reasonable.”
-
-“It sounds complete.”
-
-Maya leaned back.
-
-Here it was again.
-
-A sentence that worked perfectly until somebody lived inside it.
+She had expected resistance.
 
 Lea continued.
 
-“If another month creates a real safety margin, fine. Another two months. Fine. If it is only everyone being afraid to sign their name after the data already supports a restricted opening, then the delay is also a decision.”
+“It just doesn’t erase what happened.”
 
-Maya looked toward the sleeping surface.
+“I didn’t say it erased it.”
 
-“And people like you pay for it.”
+“You’re saying it like the only choices are evil or innocent.”
 
-“People like everyone waiting.”
+“I did not use either word.”
 
-“That is a very mature answer.”
+“You are using them with your face.”
 
-“I hate you.”
+Davi said, “Local skill.”
 
-“Better.”
+Maya ignored him.
 
-Lea smiled despite herself.
+The boy at the table closed the repost.
 
-Then stopped.
+“I don’t care if she is evil. I care that now every Earth account with too much time has another thing to point at.”
 
-“The clip matters because people here already think Earth visitors can leave before consequences finish.”
+“Then blame them.”
 
-Maya’s first instinct was to say they were not visitors.
+“I do.”
 
-She did not.
-
-That would have been the wrong argument.
-
-“Some of us are staying longer.”
-
-“Still not the point.”
-
-“I know.”
-
-Lea studied her.
-
-“Do you?”
-
-Maya did not answer quickly enough.
-
-Her device buzzed.
-
-She looked down.
-
-HOST: checking next late-event authorization. Is Lea household still valid backup?
-
-Maya stopped breathing for a second.
-
-Lea saw the message because Maya had not angled the screen away.
-
-“What?”
-
-“Nothing.”
-
-“That is never true.”
-
-Maya locked the display.
-
-Lea’s face changed again.
-
-This time Maya knew exactly why.
-
-“Oh,” Lea said.
-
-“It is not—”
-
-“You told them you slept here.”
-
-“I did not tell them I slept here.”
-
-“That is not a reassuring distinction.”
-
-“I said the backup was active.”
-
-“And then you slept somewhere else.”
+“And Aoife?”
 
 “Yes.”
 
-Lea stood.
+Maya stared at him.
 
-The older adult near the window shifted in sleep.
+“That is convenient.”
 
-They both lowered their voices automatically.
+“So is leaving in three weeks.”
 
-“You used my household as your cover.”
+The table changed.
 
-“It was not a cover.”
+Not loudly.
 
-“What would they have called if you disappeared?”
+Enough.
 
-Maya said nothing.
+Maya leaned back.
 
-Lea pointed toward the door.
-
-“No, seriously. Who was your local contact if something happened after you muted the host?”
-
-“I was with people.”
-
-“Which people knew they were responsible?”
-
-Maya’s mouth opened.
-
-Closed.
-
-The answer was worse than the argument.
-
-Nobody.
-
-Davi had known where she was.
-
-Another girl had known which room they ended up in.
-
-Lea had assumed Maya returned to host housing after they separated.
-
-The host had assumed Lea’s household had become the approved backup.
-
-Maya had been the only person holding the full version.
-
-“It was one night,” she said.
-
-Lea laughed once.
-
-Not because it was funny.
-
-“That is what you have?”
+“We didn’t create that account.”
 
 “No.”
 
+“We didn’t ask them to turn one support marker into a political claim.”
+
+“No.”
+
+“We’re not—”
+
+Lea said, “Do you know what another Ring Six delay does to my household?”
+
+Maya turned.
+
+The question landed badly because it was not about Aoife.
+
+“What does that have to do with this?”
+
+Lea picked up her drink.
+
+“Nothing.”
+
+Then:
+
+“Everything.”
+
+Maya frowned.
+
+Lea stood.
+
+“I have to go.”
+
+“Where?”
+
+“Home.”
+
+Davi looked at the route board.
+
+“You said you were staying.”
+
+“I have school early and the direct transfer moved.”
+
+“You can take the lower connection.”
+
+“I can. Then I get home twenty-three minutes later.”
+
+Maya stood too.
+
+“I’ll come.”
+
+Lea looked at her.
+
+“You don’t live there.”
+
+“I know.”
+
+“You were defending your friend.”
+
+“I can continue later.”
+
+Davi said, “Heroic restraint.”
+
+Maya pointed at him.
+
+“Do not become interesting while I’m gone.”
+
+“Impossible.”
+
+She followed Lea out.
+
+* * *
+
+Lea’s temporary housing was farther away than Maya remembered.
+
+Not geographically.
+
+Operationally.
+
+They missed one transfer because a freight priority window expanded by three minutes.
+
+The next connection arrived on time and was full enough that Maya spent the first half of it standing badly and pretending the wall had chosen her position.
+
+Lea did not correct her.
+
+That was how Maya knew she was still annoyed.
+
+At the second junction, Lea bought food from a late counter.
+
+“You just ate,” Maya said.
+
+“That was social food.”
+
+“This is different?”
+
+“This is dinner for my brother.”
+
+“You have a brother?”
+
+Lea looked at her.
+
+Maya raised both hands.
+
+“I know. People have families when I’m not there.”
+
+“Advanced discovery.”
+
+They kept moving.
+
+The temporary unit was in a mature ring Maya had passed through twice without noticing.
+
+Nothing looked temporary from the corridor.
+
+That changed at the door.
+
+Lea opened it into a room that had been designed for one household arrangement and was currently performing three.
+
+A sleeping surface folded down over what should have been a work table.
+
+Two storage walls were open because closing either would block access to the other.
+
+Someone had hung a privacy sheet across the middle of the common volume.
+
+A younger boy sat behind it doing schoolwork with headphones on.
+
+An older adult was asleep in a seat that had been reclined almost flat.
+
+Another person was on a call in the corridor because there was nowhere inside to take it privately.
+
+Lea entered, stepped over a bag and put the food beside the boy.
+
+“You ate?” she asked.
+
+He removed one headphone.
+
+“No.”
+
+“I can see the empty container.”
+
+“That was earlier.”
+
+“When?”
+
+“Recently.”
+
+“Define recently.”
+
+He put the headphone back on.
+
+Lea looked at Maya.
+
+“Family.”
+
+Maya nodded.
+
+“Earth remains competitive.”
+
+The boy looked up again.
+
+“You’re Planet.”
+
+Maya stopped.
+
+Lea’s mouth moved.
+
+Not enough to count as a smile.
+
+“Absolutely not.”
+
+The boy pointed at her.
+
+“Lea said.”
+
+“Lea is spreading misinformation.”
+
+“I said one word.”
+
+“Historically how propaganda starts.”
+
+The boy considered this.
+
+“Are you from Ireland?”
+
+“No.”
+
+“Then America?”
+
+“Yes.”
+
+“Why do you say Earth?”
+
+Maya opened her mouth.
+
+Lea said, “Because she likes suffering.”
+
+The boy accepted this and returned to schoolwork.
+
+Maya looked around again.
+
+The unit was clean.
+Safe.
+Warm.
+Functioning.
+
+Nothing in it looked poor.
+
+That made the crowding harder to dismiss.
+
+A wall display showed household schedules layered on top of each other.
+
+School.
+Service shift.
+Care appointment.
+Sleep block.
+Transfer estimates.
+
+One line ran from 05:40 to 07:02 before the first work shift even began.
+
+Maya pointed at it.
+
+“That commute is real?”
+
+Lea took off her jacket.
+
+“My mother’s.”
+
+“Every day?”
+
+“When she gets that shift.”
+
+“Why not change the shift?”
+
+Lea looked at her.
+
+Maya heard herself.
+
+“Right. Stupid question.”
+
+“Not stupid. Just expensive.”
+
+“In what?”
+
+“Everything else.”
+
+Lea opened a storage panel.
+
+It contained half clothes and half household equipment that clearly belonged somewhere else.
+
+“If she changes the shift, she loses the care overlap with my aunt. If my aunt changes hers, my brother’s school pickup becomes stupid. If we move him to the school nearest this unit, then when Ring Six opens he moves again.”
+
+Maya looked at the boy.
+
+He was still wearing headphones.
+
+“Does he care?”
+
+“He says no.”
+
+The boy, without looking up, said, “I care about everybody stopping conversations about me while I’m in the room.”
+
+Lea shut the panel.
+
+“See?”
+
+Maya sat on the edge of the folded sleeping surface.
+
+It shifted under her.
+
+Lea said, “Don’t.”
+
+Maya stood immediately.
+
+“What?”
+
+“That release is bad.”
+
+“You sleep on it?”
+
+“My aunt does.”
+
+“Why isn’t it fixed?”
+
+“It is fixed.”
+
+Maya stared.
+
+Lea shrugged.
+
+“It is also bad.”
+
+Somewhere in Maya’s head, Aoife would have liked that line.
+
+Maya did not say so.
+
+Lea took a food container from the late counter and put it into a warming recess.
+
+Maya said, “So you want Ring Six open now.”
+
+“Yes.”
+
+“Even after the lag stuff?”
+
+Lea closed the recess.
+
+“I want them to decide.”
+
+“That isn’t the same thing.”
+
+“I want them to open what they can open.”
+
+“What if they can’t?”
+
+“Then I want them to say what they need and how long it takes.”
+
+“What if waiting is safer?”
+
+Lea turned.
+
+“Safer for who?”
+
+Maya almost answered everybody.
+
+Then she looked at the crowded room.
+
+There was nowhere to put the word.
+
+Lea continued.
+
+“If another month gives them a real safety margin, fine. If another month is everybody being scared to sign something, not fine.”
+
+“You think that’s what’s happening?”
+
+“I don’t know.”
+
+Maya blinked.
+
+Lea looked annoyed by her surprise.
+
+“What?”
+
+“You usually sound more certain.”
+
+“I am certain when I know things.”
+
+“That is not how you behaved at the food table.”
+
+“That was social.”
+
+Maya laughed.
+
+Lea did too, briefly.
+
+Then a household notice appeared on the wall display.
+
+RING SIX COMMISSIONING — GO / NO-GO REVIEW SCHEDULED.
+
+Lea read it first.
+
+The room became quiet in a way that had nothing to do with volume.
+
+Even the boy took off one headphone.
+
+Maya looked at the date.
+
+Soon.
+
+Lea’s mother, still half asleep in the reclined seat, opened her eyes.
+
+“Review?”
+
+“Yes.”
+
 “Good.”
 
-“I thought if I was safe, the location did not matter.”
+“Good?” Maya asked.
 
-“It mattered to the person you made part of the plan.”
+The woman looked at her as if she had appeared from a wall.
 
-“I did not ask you to lie.”
+“Who are you?”
 
-“You did not give me enough information to tell the truth.”
+“Planet,” the boy said.
 
-That one hit cleanly.
+Maya closed her eyes.
 
-Maya looked down at her device.
+Lea’s mother looked at Lea.
 
-The host message was still waiting.
+“Friend?”
 
-HOST: Is Lea household still valid backup?
+Lea hesitated just long enough to be irritating.
 
-She unlocked the thread.
+“Yes.”
 
-Lea watched her.
+Maya opened her eyes again.
 
-Maya typed:
+That word worked better than Planet.
 
-MAYA: no. I need to correct the last plan too. I did not sleep at Lea’s household. I changed locations after the return condition changed and did not update you. Lea did not know. I should have told you when the plan changed.
+Lea’s mother looked back at the notice.
 
-She read it twice.
+“Good,” she repeated.
 
-It sounded terrible.
+Maya said, “You want opening?”
 
-Good.
+“I want a decision with numbers attached.”
+
+Lea said, “She likes numbers more than people.”
+
+Her mother closed her eyes again.
+
+“Numbers do not ask for money after moving out.”
+
+The boy said, “I am still here.”
+
+“Temporarily.”
+
+He put the headphone back on.
+
+Maya looked at Lea.
+
+Lea already had the review notice open. Behind Maya, the sleeping surface needed to come down, so she stood and got out of the way.
+
+* * *
+
+Twenty minutes later, Maya’s band vibrated.
+
+Her host sent:
+
+HOST: next late-event authorization form is open. system carried forward Lea household as used backup from last time. confirm still valid?
+
+Maya read the message twice.
+
+Lea was beside her in the corridor outside the unit, waiting for a laundry slot.
+
+“What?” Lea asked.
+
+“Nothing.”
+
+Lea held out one hand.
+
+Maya moved the band away.
+
+“No.”
+
+“You came into my house. Privacy expired.”
+
+“That is not how privacy works.”
+
+“Then stop making the face.”
+
+Maya looked at the message again.
+
+The host had not accused her.
+Had not investigated.
+Had not asked where she actually slept.
+
+The system had simply carried forward the last arrangement as if it had happened exactly as understood.
+
+LEA HOUSEHOLD — USED BACKUP / PREVIOUS EVENT.
+
+Maya’s stomach tightened.
+
+Lea saw enough of the screen.
+
+Her expression changed.
+
+“What is that?”
+
+Maya locked the band.
+
+“Nothing important.”
+
+“Show me.”
+
+“No.”
+
+“Maya.”
+
+The way Lea said her name removed all usable jokes.
+
+Maya opened it.
+
+Lea read.
+
+Then read again.
+
+“You never corrected them.”
+
+“They never asked.”
+
+“You slept at Arel’s.”
+
+“I know where I slept.”
+
+“The host thinks you slept with my household.”
+
+“They think the backup was used.”
+
+“Yes. My backup.”
+
+“It didn’t affect anything.”
+
+Lea stared at her.
+
+Maya heard Lea’s warning from that night before Lea said a word.
+
+She tried to get ahead of it.
+
+“I was safe.”
+
+Lea laughed once.
+
+Not kindly.
+
+“That is still your answer?”
+
+Maya folded her arms.
+
+“What happened?”
+
+“You made me the person who made your story true.”
+
+“I didn’t ask you to lie.”
+
+“You asked me to say you were with me.”
+
+“I was with you.”
+
+“At Arel’s.”
+
+“Yes.”
+
+“And you knew your host thought backup meant my household.”
+
+Maya looked down the corridor.
+
+A laundry door opened.
+
+Someone else took the slot because Lea did not move.
+
+Lea noticed too late.
+
+“Great.”
+
+“Sorry.”
+
+“Not about the laundry.”
+
+“I know.”
+
+“Do you?”
+
+Maya’s first instinct was to explain the exact wording of the message from that night.
+
+Still with Lea.
+Inside Zone Four.
+No route or environment change.
+
+Every piece true.
+
+She could feel the argument assembling itself.
+
+Then she looked through the open doorway at the crowded temporary unit.
+
+Lea had let her use the name of a household that was already managing too many people, too many transfers, too many arrangements.
+
+Not officially.
+
+Socially.
+
+Enough.
+
+Maya opened the host thread.
+
+Typed:
+
+Correction from last late event: I did not sleep at Lea’s household. I stayed at Arel’s in Zone Four. Lea was with me, but the approved backup location was not used. I should have told you when the plan changed.
+
+She read it.
+
+Lea watched.
+
+“Send it,” Lea said.
+
+Maya looked at her.
+
+“I was going to.”
+
+“No, you were thinking about making it better.”
+
+Maya hated that Lea was right.
 
 She sent it.
 
-Lea’s shoulders moved a fraction.
+The reply came almost immediately.
 
-Not forgiveness.
+HOST: understood. thanks for correcting. next late-event authorization paused until we review backup/contact conditions together.
 
-Maybe the removal of one thing she had been forced to carry.
+Maya stared at the word paused.
 
-Maya waited.
+Lea said nothing.
 
-The reply took thirty-eight seconds.
+“No late event?” Maya said.
 
-HOST: understood. thank you for correcting it. late-event authorization paused until we review the condition design together.
+“Looks like.”
 
-Maya stared at the words.
+“That is ridiculous.”
 
-There it was.
+Lea’s eyebrows rose.
 
-A consequence.
+Maya stopped.
 
-No threat.
+“Fine. Not ridiculous.”
 
-No lecture.
+“Historic.”
 
-Worse.
+“I hate you.”
 
-She looked at Lea.
+“You have said that before.”
+
+Maya locked the band.
+
+Then unlocked it again.
+
+She wrote:
+
+MAYA: okay. I want no live tracking. can we define truthful zone/contact + return condition instead of fixed sleep backup next time?
+
+She sent it before she could optimize the sentence further.
+
+The host replied:
+
+HOST: yes. we can discuss.
+
+No punishment speech.
+No accusation.
+No surrender either.
+
+Maya looked at Lea.
 
 “Happy?”
 
 “No.”
 
-“Excellent.”
+“Good.”
 
-“But less angry.”
+“That was not approval.”
 
-“I will take partial credit.”
+“I know.”
 
-“You do that a lot.”
+Lea finally stepped toward the laundry queue.
 
-Maya almost argued.
+The next slot was eleven minutes away.
 
-Then decided not to prove the point.
+She swore.
 
-The child on the floor looked up again.
+Maya said, “I can wait.”
 
-“Are you the planet friend who fell at the transition?”
+“You don’t have laundry.”
 
-Maya turned.
+“I know.”
 
-“I did not fall.”
+“Then why?”
 
-Lea said, “She rotated unexpectedly.”
+Maya leaned against the wall.
 
-“It was controlled.”
+“Because apparently friendship can be scheduled.”
 
-“You hit a handrail with both arms.”
+Lea looked at her.
 
-“Control can be broad.”
+Maya immediately regretted the sentence.
 
-The child considered this.
+“Do not tell Ethan I said that.”
 
-“You fell.”
+“I still barely know who Ethan is.”
 
-Maya looked at Lea.
+“Keep it that way.”
 
-“This entire household is hostile.”
-
-Lea smiled.
-
-This time she did not stop.
-
-* * *
-
-On the return route, Maya did not go back to the food volume.
-
-She had told Davi she might.
-
-He sent one message.
-
-DAVI: planet survives domestic diplomacy?
-
-MAYA: unclear
-
-DAVI: should i send extraction team
-
-MAYA: no adults
-
-DAVI: cruel limitation
-
-She put the device away.
-
-The transit line carried her through two gravity changes and one crowded interchange.
-
-She noticed the route board before the people around her did.
-
-A late transfer shifted seven minutes.
-
-Three weeks ago she would have felt proud.
-
-Tonight she mostly thought about who else had built a plan around it.
-
-Her host thread buzzed again.
-
-HOST: tomorrow 19:00. we review what minimum truthful condition is actually necessary. no live location proposal remains on table.
-
-Maya read it twice.
-
-No live location remained on the table.
-
-They had not used her mistake as an excuse to take everything back.
-
-That made the consequence harder to dismiss as unfair.
-
-She typed:
-
-MAYA: okay. i want zone + named contact + return condition. no fixed sleep backup unless i actually activate it.
-
-The response came quickly.
-
-HOST: discuss tomorrow.
-
-Not yes.
-
-Not no.
-
-A negotiation.
-
-Maya leaned against the transit wall as the effective gravity increased under her feet.
-
-Her family thread had six unread messages.
-
-She opened it.
-
-FAMILY: is that the same lea from the mirror photo
-FAMILY: no wait that was someone else
-FAMILY: WHO IS DAVI
-FAMILY: maya
-FAMILY: answer your family
-FAMILY: this is why we should have had location tracking
-
-Maya stared at the last message.
-
-Then typed:
-
-MAYA: absolutely not
-
-A typing indicator appeared immediately.
-
-She smiled despite herself.
-
-The route carried her home.
+They waited for the next slot.
