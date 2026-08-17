@@ -22,64 +22,55 @@ Drive active folder: `ORBITAL_YOUTH_ACTIVE` — `1tZ6Kdkjq9blB10i98cE_3d02egYnPW
 
 ## Accepted prose frontier
 
-**Chapters 1–25: GREEN / accepted development drafts.**
+**Chapters 1–26: GREEN / accepted development drafts.**
 
 Latest accepted chapter:
-**Ch25 — NO INTERVIEW — Samir POV — v0.2 — GREEN.**
+**Ch26 — THE SECOND MODEL — Ollie POV — v0.1 — GREEN.**
 
 GitHub:
-- Writer Brief: `STUDIO/CH25_NO_INTERVIEW_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
-- Draft: `DRAFTS/CH25_NO_INTERVIEW_v0.2_FULL_STUDIO.md`
-- Gate: `GATES/CH25_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Writer Brief: `STUDIO/CH26_THE_SECOND_MODEL_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.1_RECONCILED.md`
+- Draft: `DRAFTS/CH26_THE_SECOND_MODEL_v0.1_FULL_STUDIO.md`
+- Gate: `GATES/CH26_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
-Drive:
-- Writer Brief ID `1BrfwWeaj5byRpoZ33yAHIjkY0E8ZRTmbAzVcF37ZSy8`
-- Draft ID `1POY1IYj0QgGPNwvxujMAnCXq66Qgq6ISI-U0Bdy-OQY`
-- Gate ID `1-tY2htstRnSf8KwUWEBrTlsgc1gBMi66aWa7g50NQaU`
+Drive canonical mirror:
+- Draft ID `1xX6J6ZVxZVQgGJoLrlQg6c-uWyjMz-2tMLI3rZe5qyg`
+- Gate ID `1tFesJpSilwfc2FmeV3o5WHQ24ZqeFwDeVUK9_ku16Ho`
 
-Protected Ch25 continuity:
-- Crossband remains real sport/social life rather than clue factory;
-- Samir declines interview, personal band window, team capture, peer extraction, biometric/support data and Contact-profile context;
-- Samir stays engaged and asks for the exact analytical question;
-- smaller yes uses only Samir's own Service Transfer 4 note/order + controller timing held by review;
-- independent movement-order case supports testing held/reversed transition choreography before displayed fixed correction;
-- no root cause, universal lag or special Samir perception is established;
-- no team identity/data retained;
-- result enters incident review, not Ollie's private inbox.
+Superseded alternate Ch26 v0.2 material in Drive is explicitly marked `SUPERSEDED / DO NOT ROUTE` and is not canonical.
+
+## Protected Ch26 continuity
+
+- Ollie remains `REVIEW HOLD`; no Ring Six operational access is restored.
+- Only released/de-identified review outputs are used; no raw Ring Six incident log, S1 raw material or Samir/team raw data enters Ollie's model.
+- Ch23 negative cases, module/control-generation effects and one-module sensitivity remain live evidence.
+- Fixed display timestamp is no longer the universal alignment center.
+- New candidate alignment is an **estimated shared-loop state-entry window** inferred from control-state relationships independently of resident/support timing.
+- Resident/support events remain a separate evidence rail; they may lead fixed display in some cases but are not assumed causal, infallible or sufficient.
+- Shared-loop state entry itself may be real and still insufficient for dangerous oscillation.
+- Phase 1 reproduction = control-state only; no resident/support volunteers.
+- Phase 2 requires separate review/consent before any human/personal-interface timing comparison.
+- Proposal is `ACCEPTED FOR TECHNICAL REVIEW / NOT AUTHORIZED FOR EXECUTION`.
 
 ## Canon reconciliation still active
 
-**Tomas = the Ch20 injured maintenance worker.**  
-This is established by the accepted Ch23 gate and supersedes earlier status text that left the injured worker unnamed.
-
-Current Tomas state:
-- probable forearm fracture / soft-tissue injury from Ch20;
-- manual service restriction / light-duty reassignment in Ch23;
-- do not rename the injured worker to a different person.
-
-Ch23 accepted reconciliation remains:
-- draft `DRAFTS/CH23_NO_ACCESS_v0.2_FULL_STUDIO.md`;
-- bounded comparison: 6 mature modules / 2 control generations / 30-day window / de-identified event order only;
-- negative cases dominate;
-- weak lead subset clusters mainly around combined return-correction + service-transition states in part of sample;
-- module/control-generation effects remain large;
-- removing one module nearly collapses effect;
-- no causal claim;
-- `SECOND MODEL — QUESTIONS ONLY`.
+**Tomas = the Ch20 injured maintenance worker.**
+Current state: continuing light-duty/manual-service restriction; do not rename or erase injury consequences.
 
 ## Current canonical frontier
 
-**NEXT = Chapter 26 — THE SECOND MODEL — Ollie POV.**
+**NEXT = Chapter 27 — CONTROLLED REPRODUCTION / SMALL TEST — Ollie POV.**
 
 Required direction:
-- Ollie remains under REVIEW HOLD unless a newer accepted control explicitly changes access;
-- movement-order evidence from Ch25 joins mature-module and source-bound timing evidence only through authorized review channels;
-- build a falsifiable second model from multiple independent evidence classes;
-- do not convert lead timing into proof that resident/interface reports are always correct;
-- do not restore Ollie's privileged Ring Six access merely because his new model is promising;
-- Iri must be able to challenge model structure without becoming oracle;
-- negative cases must remain visible and capable of falsifying the new model;
-- chapter should end with a bounded testable hypothesis / proposed controlled reproduction, not a solved mechanism.
+- adult safety team redesigns and owns the reproduction protocol;
+- Phase 1 is control-state reproduction only, without resident/support volunteers;
+- Ollie remains REVIEW HOLD and may receive only an explicitly authorized bounded role;
+- negative control sequences and abort conditions are mandatory;
+- test must be physically legible rather than an engineering exposition marathon;
+- objective: determine whether different allowed operational sequences can reproducibly enter the same shared-loop state relationship;
+- success validates a state relationship only; it does not yet prove embodied-evidence role or later oscillation mechanism;
+- if a later human/interface phase is used, it requires separate consent/review and must not turn Iri into symbolic test subject;
+- relocation deadline/resources constrain repetitions;
+- technical mystery should substantially close by Ch27 end, then Ch28 becomes a decision problem with two bad options.
 
 ## Production mode
 
