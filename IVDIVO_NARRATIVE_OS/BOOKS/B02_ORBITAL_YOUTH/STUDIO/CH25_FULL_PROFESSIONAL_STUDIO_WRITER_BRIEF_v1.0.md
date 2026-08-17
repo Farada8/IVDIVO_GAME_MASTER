@@ -11,7 +11,7 @@
 
 Use Samir’s real orbital sport life to test whether embodied lead-order signals can be studied without converting young people into involuntary sensors.
 
-Ch25 must change the evidence question while remaining a complete Samir chapter about sport, status, coach/team boundaries, bodily performance and consent.
+Ch25 must change the evidence question while remaining a complete Samir chapter about sport, status, coach/team boundaries, bodily performance, school pressure and consent.
 
 The chapter does NOT prove that bodies are better sensors than fixed systems.
 It should produce a narrower, more difficult result:
@@ -26,6 +26,8 @@ It should produce a narrower, more difficult result:
 - Ch23: bounded/de-identified comparison across older modules shows negative cases dominate; a weak lead-order subset may cluster around certain combined return/service-transition states; module/control-generation effects are large; Ollie remains REVIEW HOLD.
 - Ch24: route closure shows ordinary people reroute differently under one infrastructure change; Maya has practical recent experience of a live relocation/service closure, but Ch25 does not need to turn her into a data source unless causally useful.
 - Samir’s sport is ordinary youth life and status-bearing, not a research lab disguised as entertainment.
+- **Higher architecture patch:** Samir’s normal practice slot is displaced because a nearby sport/utility volume is being used for Ring Six relocation staging. Scarce sport-space continuity from Ch8 must pay off.
+- **Higher architecture patch:** Samir also has a real remote academic/study deadline. Investigation cannot simply consume his practice and school life.
 
 ## REFERENCE APPLICATION
 
@@ -46,7 +48,11 @@ All REFERENCE ONLY.
 
 ## SCENE 77 — RAW LOGS
 
-**Samir immediate want:** help the review answer a timing question by comparing sport adaptation/performance traces around gravity/environment transitions.
+**Samir immediate want:** preserve a reduced/moved practice session and his own performance goal while a review request lands on the team.
+
+**Immediate orbital friction:** their usual sport slot has been moved/compressed because nearby capacity is supporting relocation staging. Samir also has a remote academic deadline after practice. He does not have infinite time to become an evidence source.
+
+**Review want:** compare sport adaptation/performance traces around gravity/environment transitions.
 
 **Why Samir:** his sport already records movement/adaptation timing for training and safety, but those records belong to athletes/team context and were never collected as Ring Six evidence.
 
@@ -59,7 +65,7 @@ Required resistance:
 
 **Samir first tactic:** ask for existing raw team logs because they are already recorded.
 
-**Countermove:** coach refuses; "already recorded" does not mean "available for another purpose."
+**Countermove:** coach refuses; `already recorded` does not mean `available for another purpose`.
 
 **Tactic change:** Samir narrows request to an opt-in, de-identified event-order export:
 - transition/event class;
@@ -73,11 +79,11 @@ Required resistance:
 
 **Turn:** coach allows Samir to ask the team, not to take the data. Enough athletes opt in to create a bounded comparison set; some explicitly refuse.
 
-**Character/social price:** Samir has to ask peers and hear no without treating refusal as anti-science or disloyalty.
+**Character/social price:** Samir has to ask peers and hear no without treating refusal as anti-science or disloyalty. The request also steals time from an already compressed practice.
 
 ## SCENE 78 — NOT ONE BODY
 
-**Immediate want:** find a clean timing pattern.
+**Immediate want:** find a clean timing pattern without losing the entire practice session to analysis.
 
 **Obstacle:** the athletes do not respond as one body type or one adaptation curve.
 
@@ -91,13 +97,13 @@ Required comparison:
 
 **World reveal:** orbital sport evolved around variable gravity/environment transitions and must account for different bodies, but competitive fairness does not mean identical physiology.
 
-**Turn:** there is no universal "body alarm." A subset shows earlier adaptation/performance change around certain transition sequences, but the subset cuts across the categories Samir expected.
+**Turn:** there is no universal `body alarm`. A subset shows earlier adaptation/performance change around certain transition sequences, but the subset cuts across the categories Samir expected.
 
-**Character turn:** Samir stops trying to rank which body is "better" at sensing and starts asking what condition they share.
+**Character turn:** Samir stops trying to rank which body is `better` at sensing and starts asking what condition they share.
 
 ## SCENE 79 — THE MISSING VARIABLE
 
-**Immediate want:** identify what separates early-marker cases from non-cases.
+**Immediate want:** identify what separates early-marker cases from non-cases, then get back to being an athlete/student rather than a permanent evidence source.
 
 **Obstacle:** sport logs contain variables the technical model did not care about: warm-up state, recent exertion, hydration, attention, fatigue, stress, recovery interval, body-support/adaptation state where authorized.
 
@@ -107,7 +113,7 @@ Use practical sport argument:
 - athlete says a reading after a sprint cannot be compared with one after standing still;
 - coach says warm-up phase matters;
 - teammate points out a marker may be training fatigue rather than environment;
-- Samir sees that "body report" is not one variable.
+- Samir sees that `body report` is not one variable.
 
 **Mystery turn:** the useful distinction may be not `which body`, but `body state + transition order`.
 
@@ -122,6 +128,8 @@ NOT allowed:
 
 **A-line feed:** Samir submits only the bounded aggregate finding to the authorized review channel. Ollie may later receive only whatever de-identified summary review permits.
 
+**Scene exit:** Samir goes back to practice / score obligation and still has the academic deadline waiting. The chapter must end on ordinary youth responsibility, not research triumph.
+
 ## SAMIR CHARACTER
 
 Protect:
@@ -129,10 +137,12 @@ Protect:
 - desire to be useful without becoming institutional mouthpiece;
 - peer status matters;
 - sport matters independent of investigation;
+- school/study obligations remain real;
+- he is irritated that relocation staging has displaced scarce practice capacity;
 - he can be impatient with messy data;
 - he respects a teammate’s refusal after initially finding it inconvenient.
 
-Give Samir a private stake in the session: he has practice/performance goals and does not want the review request to consume the sport itself.
+Give Samir a concrete practice/performance target. Let the review request cost him training time, attention or score/status. His usefulness must not exempt him from sport or school.
 
 Do not make him sound like an ethics committee.
 
@@ -162,6 +172,11 @@ The data must arise naturally from:
 - recovery;
 - competition fairness.
 
+Also show scarcity:
+- practice volume moved/compressed because nearby capacity supports relocation staging;
+- youth do not have unlimited sport infrastructure;
+- Ring Six consequences physically displace ordinary life without every conversation becoming about Ring Six.
+
 Do not invent a new elaborate sport ruleset solely for this chapter if existing Book 2 sport continuity is sufficient.
 
 ## DIALOGUE / VOICE
@@ -190,19 +205,21 @@ MAJOR if:
 - negative cases disappear;
 - physiology becomes exposition catalogue;
 - Samir’s peer relationships have no cost/change;
+- relocation/study pressure disappears once investigation starts;
 - aggregate finding is treated as proof rather than bounded hypothesis.
 
 ## ACCEPTANCE
 
 GREEN only if:
-1. Samir begins with a concrete sport want, not an investigation lecture;
-2. broad/raw access is refused;
-3. consent changes the shape of the evidence set;
-4. refusals remain legitimate and visible;
-5. negative cases remain in comparison;
-6. no universal body response is found;
-7. useful result becomes `body state + transition order` as a testable variable family;
-8. only bounded aggregate finding enters review;
-9. Samir’s sport/peer life remains altered by the chapter, not consumed by plot function.
+1. Samir begins with a concrete sport want under a relocated/compressed practice slot, not an investigation lecture;
+2. his academic deadline remains a live competing obligation;
+3. broad/raw access is refused;
+4. consent changes the shape of the evidence set;
+5. refusals remain legitimate and visible;
+6. negative cases remain in comparison;
+7. no universal body response is found;
+8. useful result becomes `body state + transition order` as a testable variable family;
+9. only bounded aggregate finding enters review;
+10. Samir returns to practice/student life and remains more than an evidence source.
 
-**END STATE:** SPORT PRIVACY BOUNDARY PRESERVED / OPT-IN AGGREGATE DATASET CREATED / UNIVERSAL-BODY MODEL REJECTED / BODY-STATE + TRANSITION-ORDER HYPOTHESIS OPEN / CH26 READY.
+**END STATE:** SPORT PRIVACY BOUNDARY PRESERVED / RELOCATION PRESSURE VISIBLE / OPT-IN AGGREGATE DATASET CREATED / UNIVERSAL-BODY MODEL REJECTED / BODY-STATE + TRANSITION-ORDER HYPOTHESIS OPEN / SAMIR STILL OWES PRACTICE + SCHOOL / CH26 READY.
