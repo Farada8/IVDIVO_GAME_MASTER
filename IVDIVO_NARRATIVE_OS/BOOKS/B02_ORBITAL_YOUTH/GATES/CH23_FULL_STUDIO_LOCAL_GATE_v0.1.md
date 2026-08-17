@@ -2,7 +2,7 @@
 # CH23 NO ACCESS — FULL STUDIO LOCAL GATE v0.1
 
 **Status:** GREEN TO KEEP / ACCEPT CH23 / PROCEED TO CH24
-**Accepted draft:** `DRAFTS/CH23_NO_ACCESS_v0.1_FULL_STUDIO.md`
+**Accepted draft:** `DRAFTS/CH23_NO_ACCESS_v0.2_FULL_STUDIO.md`
 **Drive draft ID:** `1mycDuDqATeJ6UDamY-kLou128afYkhu7WEZr4UPhot0`
 **Date:** 2026-08-17
 **POV:** Ollie
@@ -37,7 +37,7 @@ MEDIUM blocking: 0
 - Ring Six remains shut.
 - Ollie still has no raw Ring Six incident/commissioning access.
 - Aoife/source data are not leaked to Ollie.
-- Injured maintenance worker remains unnamed; work restriction appears only as staffing consequence.
+- **CANON RECONCILIATION ACTIVE:** the unnamed Ch20 injured maintenance worker is Tomas. Ch23 correctly shows Tomas under arm-injury/manual-service restriction and temporary reassigned route; this is consequence continuity, not a new casualty or blame device.
 - Ch22 strengthened earlier-onset/lead-timing confidence, but Ch23 does not claim access to underlying source material.
 
 ## RED TEAM
@@ -65,5 +65,6 @@ MAJOR checks:
 6. No claim of physiology, accommodation class or cause.
 7. `SECOND MODEL — QUESTIONS ONLY` is the end state; do not present the second model as solved in Ch24.
 8. Usefulness continues to separate from recognition/access.
+9. Tomas injury/manual-work/commute consequence remains active downstream.
 
 **FINAL VERDICT: GREEN TO KEEP / ACCEPT CH23 / PROCEED TO CH24.**
