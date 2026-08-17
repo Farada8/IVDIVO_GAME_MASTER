@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **10/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **11/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -25,6 +25,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #8: Les Edgerton — *Hooked*.
 - Strict complete #12: Robert McKee with Bassim El-Wakil — *Action*.
 - Strict complete #14: Orson Scott Card — *Characters & Viewpoint*.
+- Strict complete #19: Alice LaPlante — *The Making of a Story*.
 - All other Core sources remain below strict synthesized status until the full lifecycle is explicitly closed.
 - Fiction sources are mechanism laboratories only.
 - Scientific/technical claims require technical sources; fiction and historical genre criticism cannot establish technical canon.
@@ -65,7 +66,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 16. Gwen Hayes — *Romancing the Beat* — relationship causality, attraction/retreat/choice/payoff.
 17. Charles Baxter — *The Art of Subtext* — indirect pressure, staging, withheld meaning.
 18. Mark Doty — *The Art of Description* — attention, sensory selection, implication through description.
-19. Alice LaPlante — *The Making of a Story* — integrated fiction craft and exercises.
+19. Alice LaPlante — *The Making of a Story* — discovery, particularity, show/tell routing, POV/reliability, soft causality, revision-stage discipline and epistemic humility. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 20. *Writing Fiction: A Guide to Narrative Craft* — broad prose-fiction craft; countercheck against prescriptive models.
 
 ## B. FICTION MECHANISM LABORATORIES — 15
@@ -128,6 +129,7 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 - World logic: Wolf + Continuity Editor; story-relevant reveal only.
 - SF genre sanity: Cambridge Companion + current task-specific science.
 - Prose/voice: Lodge + Doty + Baxter + McKee Dialogue.
+- Discovery/revision/POV epistemics: LaPlante + Rosenfeld + Card; use LaPlante especially for show/tell routing, reliability and revision-stage diagnosis.
 - Action/physical pressure: McKee Action + McKee Story + Bell; use human-state change and capability limits before spectacle escalation.
 
 ## STOP-RESEARCH RULE
