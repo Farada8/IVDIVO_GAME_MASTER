@@ -63,11 +63,51 @@ Pass A confirms:
 - climax/resolution remain bounded and independent;
 - only concrete prose regression found was Ch36 provenance tail, already removed in accepted v0.3.
 
-Nonblocking Pass B targets:
+### PASS B — CH21–29 CONTINUOUS CORRIDOR
+**GREEN / ACCEPTED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
+
+Continuous regression gate:
+`GATES/BOOK2_PASS_B_CH21_29_CONTINUOUS_REGRESSION_GATE_v0.1.md`
+
+Combined acceptance gate:
+`GATES/BOOK2_PASS_B_CH21_29_COMBINED_ACCEPTANCE_GATE_v0.1.md`
+
+Combined acceptance commit:
+`77fdcb9ee49e1fbb83d2eb5fa9624ceadfc85978`
+
+Drive acceptance mirror:
+`1jCMebHW2udpoNOlpbtzvUpaNunA79I_7DwHS8FjD6ZY`
+
+Accepted Pass-B routing inside the corridor:
+- Ch21 — `DRAFTS/CH21_SHUT_v0.4_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
+- Ch22 — `DRAFTS/CH22_AFTER_THE_CAMERA_v0.3_RECONCILED.md` — PROTECTED / NO PATCH;
+- Ch23 — `DRAFTS/CH23_NO_ACCESS_v0.3_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
+- Ch24 — `DRAFTS/CH24_WHERE_MAYA_IS_v0.2_FULL_STUDIO.md` — PROTECTED / NO PATCH;
+- Ch25 — `DRAFTS/CH25_NO_INTERVIEW_v0.3_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
+- Ch26 — `DRAFTS/CH26_THE_SECOND_MODEL_v0.3_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
+- Ch27 — `DRAFTS/CH27_CONTROLLED_REPRODUCTION_v0.3_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
+- Ch28 — `DRAFTS/CH28_TWO_BAD_OPTIONS_v0.2_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
+- Ch29 — `DRAFTS/CH29_SEGMENTS_v0.2_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING.
+
+The filename token `CANDIDATE` is historical only after the combined gate.
+
+Pass B corridor result:
+- cumulative review-room repetition materially reduced;
+- evidence/authority chain preserved;
+- negative cases preserved;
+- youth-life interruptions restored as real chapter engines;
+- voices more differentiated;
+- Ch29→Ch30 handoff and Ch35–36 closure untouched.
+
+Protected character repetitions in Ch22/Ch24 are intentional and must not be normalized globally.
+
+Remaining Pass B targets now move **outside Ch21–29**:
 1. manuscript-level repeated `I know` acknowledgement cadence;
-2. clipped `No X / Not X` / fragment-stack rhythm, especially review/denial passages;
-3. cumulative Ch21–29 reader-density and explanation carryover;
-4. dry-smart voice convergence during global polish.
+2. clipped `No X / Not X` / fragment-stack rhythm;
+3. repeated neutral `looked` / gaze glue;
+4. explanatory thematic tails after action;
+5. repeated evidence-category explanation;
+6. dry-smart voice convergence.
 
 ## Protected climax/resolution continuity
 
@@ -99,19 +139,27 @@ Nonblocking Pass B targets:
 
 ## Current canonical frontier
 
-**NEXT PRODUCTION STAGE = PASS B — GLOBAL LINE / GENERATED-TEXT / DIALOGUE-RHYTHM + Ch21–29 PACING REGRESSION.**
+**NEXT PRODUCTION STAGE = PASS B — WHOLE-MANUSCRIPT LINE / GENERATED-TEXT / DIALOGUE-RHYTHM SWEEP OUTSIDE CH21–29.**
+
+Primary scope:
+- Ch01–20;
+- Ch30–36.
 
 Pass B may make bounded prose edits. It may not reopen story architecture without a newly demonstrated causal/continuity failure.
 
 Required checks:
 - global repeated acknowledgement / dialogue tic search;
 - fragment-stack and generated-summary rhythm search while protecting genuine interface readouts;
-- Ch21–29 chapter-to-chapter density, scene-function repetition, explanation carryover, physical-action ratio, youth-life interruption and end-hook diversity;
+- neutral `looked` / gaze-glue accumulation;
+- repeated explanation after already sufficient action;
+- evidence-category re-explanation;
+- dry-smart voice convergence;
 - protect intentional awkwardness and distinct character voice;
+- counts are candidate detection only; patch only after local-context verification;
 - any accepted patch must persist to GitHub + Drive and survive readback.
 
 ## Production mode
 
-`Pass B diagnose -> issue map -> bounded prose patches if justified -> Red Team -> regression gate -> GitHub -> Drive -> readback -> update manuscript state`.
+`Pass B diagnose outside Ch21–29 -> issue map -> bounded prose patches if justified -> Red Team -> regression gate -> GitHub -> Drive -> readback -> update manuscript state`.
 
 Do not add an epilogue automatically. Do not switch books.
