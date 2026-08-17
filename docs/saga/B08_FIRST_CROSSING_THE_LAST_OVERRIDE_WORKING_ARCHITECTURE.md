@@ -210,3 +210,170 @@ Do **not** create a detailed chapter map or prose before these are solved and pa
 ## Story Law for B08
 
 FIRST CROSSING succeeds only if one complete emergency naturally forces already-distinct human, orbital, Old Earth and limited-Confederation competencies into the same causal chain — and the book still belongs emotionally and climactically to one protagonist.
+
+## 12. Stage E — Character / Relationship Options v0.1
+
+**Status:** WORKING OPTIONS / NOT CANON.
+
+Source check: Book 2 Character + Relationship Bible confirms current functions: Ollie = systems/maintenance protagonist; Ethan = coordination/control; Aoife = observation/media ethics; Samir = sequence/uncertainty/privacy; Maya = autonomy/boundary-pushing; Iri = local maintenance apprentice / peer / worker-status pressure. B08 must not merely repeat their Book 2 arcs.
+
+### Candidate A — IRI / LOCAL WORKER → OPERATIONS TRAINEE — WORKING LEAD
+
+**Condition:** viable only if Iri survives later continuity and remains available for this career path.
+
+**Career evolution:** local maintenance apprentice → experienced habitat worker → operations/dispatch trainee.
+
+**Private WANT:** secure a permanent operations certification and stable place in the habitat on their own professional record — not as the “local kid,” visitor-facing symbol, special body category or someone whose value comes from explaining orbital life to outsiders.
+
+**Ordinary-life stake:** certification affects shift quality, income, housing/commute stability, future placement and whether Iri can build a normal adult life in the city rather than remain on temporary/rotational status.
+
+**Relationship pressure:** the lawful orbital security director is not a stranger villain but the senior professional who sponsored or approved Iri’s operations track. Iri genuinely wants this person’s trust.
+
+**WRONG STRATEGY:** protect the clean professional path by keeping the crisis inside the current orbital chain of command. Iri delays acting on Smith’s legally awkward Annex until it can be made procedurally respectable, and initially treats legacy authority as a threat to the legitimacy of local orbital systems.
+
+**Why it fails:** the delay strengthens isolation, narrows evacuation windows and makes the director’s later hard-containment decision more rational.
+
+**PRICE:** using the Last Override means knowingly losing the clean certification path: automatic suspension/review, loss of the sponsored placement and likely loss of an attached preferred housing/route allocation. The larger profession may remain open, but the future Iri expected is gone.
+
+**CLIMAX CHOICE:** after Smith proves the narrow provenance of the Emergency Annex and the cadet proves that continued isolation increases the technical danger, Iri must personally execute the local routing action the Annex cannot execute by itself. They accept named operator responsibility, reopen a controlled evacuation corridor and move people through the closed sector against the director’s standing isolation order.
+
+**Why this is strong:** Smith supplies legacy authority; cadet supplies one epistemic correction; orbital director supplies real present authority/opposition; Iri supplies the indispensable local action and pays the personal price.
+
+**Red Team risk:** if Iri remains too lightly established in prior books, B08 may feel like a crossover whose hero readers barely know. Repair is not lore exposition; it is stronger ordinary-life setup and relationship inheritance before the incident.
+
+**Score:** 46/50 provisional.
+
+### Candidate B — SAMIR / NORMAL LIFE BECOMES PUBLIC RESPONSIBILITY
+
+**Career option:** transit-safety / routing trainee, earned from his established attention to sequence, mismatch and bounded uncertainty.
+
+**Private WANT:** build one normal orbital adult life in which useful observation does not turn him back into a public profile or classification problem.
+
+**WRONG STRATEGY:** refuse to put his name behind an uncertain pattern until he can bound it perfectly; pass observations anonymously or narrowly so nobody can convert him into “the special witness” again.
+
+**PRICE:** to make the decisive operational claim credible, Samir must become publicly attributable again and accept renewed institutional/media attention he does not want.
+
+**CLIMAX CHOICE:** attach his name and professional responsibility to the route decision, then execute it despite knowing the successful rescue may destroy the privacy he built.
+
+**Strength:** excellent continuity with his precision, silence and uncertainty ethic.
+
+**Red Team MAJOR:** risks repeating the R-14/public-classification wound rather than giving Samir a genuinely new life problem. It can also make internal withdrawal, rather than active operational tactics, the main wrong strategy.
+
+**Score:** 39/50 provisional.
+
+### Candidate C — MAYA / PROFESSIONAL TRUST
+
+**Career option:** mobile operations / emergency routing trainee, consistent with physical action, fast adaptation and appetite for real orbital independence.
+
+**Private WANT:** be trusted with an unsupervised real shift and be judged by current competence rather than old supervision history.
+
+**WRONG STRATEGY:** move first and regularize later; treat closure procedure as an obstacle created by frightened adults and use local workarounds before all parties share the same information.
+
+**PRICE:** professional trust, certification and hard-won mobility.
+
+**CLIMAX CHOICE:** unlike the earlier concealment pattern, make the final contested override transparently, on record, accepting responsibility rather than hiding the route.
+
+**Strength:** kinetic protagonist and strong youth voice.
+
+**Red Team MAJOR/FATAL-IF-UNCHANGED:** this repeats too much of Maya’s Book 1/Book 2 pressure field: boundary-pushing, concealment, adult trust, mobility restriction. The reversal at climax is not enough to make the novel new.
+
+**Score:** 34/50 provisional.
+
+### Studio Decision v0.1
+
+**WORKING LEAD = Candidate A / Iri, conditional on later continuity.**  
+Candidate B / Samir remains the strongest fallback.  
+Candidate C / Maya is REJECTED AS DEFAULT for repetition, not rejected forever.
+
+Ollie and Ethan are not preferred B08 leads: Ollie would risk repeating technical-system protagonism from Book 2; Ethan would risk repeating coordination/control centrality from Book 1/2.
+
+## 13. Exact Emergency Incident Competition v0.1
+
+### Option E1 — THE SEALED TRANSFER SPINE — WORKING LEAD
+
+**Observable event:** an outer orbital transfer/service sector registers a legacy-class anomalous signature during routine movement. Orbital security seals the sector before the unknown factor reaches the inhabited city.
+
+**Immediate consequence:** after isolation, systems inside the sealed volume begin developing repeatable timing/control distortions. People can still live there briefly, but safe occupancy time is shrinking. The closure that protects the city is also making the isolated sector progressively less stable.
+
+**Evacuation problem:** the only route capable of moving the trapped population at required throughput crosses the closed transfer spine. Exterior removal is unavailable or too slow under the current geometry/traffic/environment constraints.
+
+**Old Earth contribution:** Smith identifies the signature class or operational pattern in an Emergency Annex written after an older event. The Annex does NOT explain the ontology. It records a narrow empirical rule: under specified conditions, hard isolation must not be maintained; a controlled transit corridor must remain dynamically open.
+
+**Confederation contribution:** the cadet recognizes why the old empirical rule worked. The unknown effect is not behaving like ordinary contamination carried by people or cargo. The sealed boundary creates or intensifies the dangerous coupling. This is one correction, not a full solution.
+
+**Orbital director’s rational position:** opening the sector may admit an unknown factor into a populated system. The old Annex is incomplete, historically secret and legally disputed. The cadet has knowledge but no human jurisdiction. The director therefore orders continued isolation while preparing to sacrifice/detach the affected sector if thresholds worsen.
+
+**Hero necessity:** only the local operations/dispatch system can physically sequence the route, partitions and convoy. Smith cannot do it. The cadet cannot command it. The director will not authorize it. The hero knows the lived/local routing constraints and must execute.
+
+**Climax action:** activate the narrow LAST OVERRIDE: not a magic code, but a disputed legacy emergency clause protecting one local operator decision when present closure doctrine and the Annex conflict under defined casualty thresholds. The operator still must perform the route correctly and becomes personally auditable/accountable.
+
+**Resolution requirement:** the controlled evacuation proves the interaction model, collapses the dangerous sealed-state condition, and closes the physical emergency. The legal legitimacy of the Annex can remain disputed only after nobody is still trapped and the main danger is over.
+
+**Red Team:**
+- Avoid abstract “field topology” lectures. Show sensor/time/control symptoms first.
+- Do not make the anomaly a monster.
+- Do not make Smith’s archive perfectly explanatory.
+- Do not let the cadet predict everything.
+- Define why exterior evacuation is unavailable before the crisis, not as a late convenience.
+- Define hard thresholds for when sacrifice/detachment becomes rational.
+
+**Score:** 47/50 provisional.
+
+### Option E2 — RETURNING TENDER / QUARANTINE DOCK
+
+A civilian work tender returns from a restricted outer operation with an unknown signature. Orbital security refuses docking while onboard habitability degrades; Annex evidence and cadet science show hard quarantine itself amplifies the condition.
+
+**Strengths:** clean clock; understandable security logic; strong visual hook.
+
+**Weaknesses:** shifts too much story onto the returning vessel and Smith’s prior operation; youth dispatcher risks becoming a remote traffic controller. It also drifts toward a protected-vehicle/protected-people structure.
+
+**Score:** 40/50.
+
+### Option E3 — OLD BYPASS DURING DEBRIS EMERGENCY
+
+A mundane debris/structural emergency blocks normal evacuation routes, leaving an old closed sector as the only bypass. Smith’s Annex says it may be opened under a forgotten condition; cadet knowledge challenges the reason it was closed.
+
+**Strengths:** very legible physical action.
+
+**Weaknesses:** relies on coincidence between a current debris emergency and an unrelated legacy mystery. The crossing feels assembled rather than inevitable.
+
+**Score:** 33/50.
+
+### Studio Decision v0.1
+
+**WORKING LEAD = E1 / THE SEALED TRANSFER SPINE.**
+
+This is a mechanism-lock candidate, **NOT CANON** and **NOT yet engineering/ontology locked**.
+
+## 14. Provisional Causal Package — A + E1
+
+If Iri remains viable, the strongest current package is:
+
+- **HERO:** Iri, now operations/dispatch trainee — WORKING CONDITIONAL.
+- **PRIVATE WANT:** earn permanent operations certification and stable adult place in the habitat on their own professional record.
+- **WHY NOW:** a legacy-class signature triggers closure of an outer transfer sector; isolation begins making that sector unstable while residents remain trapped.
+- **OPPOSITION:** Iri’s sponsor/mentor, a lawful orbital security director, whose duty is to keep an unknown factor out of the inhabited city.
+- **WRONG STRATEGY:** protect career and local institutional legitimacy by keeping the problem inside current orbital procedure and delaying use of Smith’s disputed Annex.
+- **MIDPOINT:** cadet shows continued isolation is technically active harm, not neutral caution; Smith’s Annex suddenly has empirical meaning without becoming complete explanation.
+- **PRICE:** Iri knowingly destroys the clean certification/placement path and ruptures the mentor relationship by taking named responsibility for the override.
+- **CLIMAX CHOICE:** execute the controlled corridor personally under the narrow Last Override, moving the trapped population through the closed spine before the director’s sacrifice/detachment threshold.
+- **RESOLUTION:** evacuation succeeds; dangerous sealed-state interaction collapses/ends; physical crisis closes; Iri’s expected future does not return intact.
+- **SERIES HOOK:** still BLANK.
+
+## 15. Red Team Verdict on Provisional Package
+
+**GREEN AS DEVELOPMENT DIRECTION, NOT GREEN FOR CHAPTER MAP.**
+
+Remaining MAJOR blockers:
+1. Exact age/time gap and whether Iri survives later-book continuity.
+2. Exact meaning of “permanent operations certification,” including what authority a trainee can genuinely hold.
+3. Exact housing/economic consequence so the price is real rather than invented punishment.
+4. Exact relationship history with the orbital security director.
+5. Exact observable behavior of the anomalous condition and falsifiable thresholds.
+6. Exact scope/trigger of the Emergency Annex and why modern law never cleanly repealed/replaced it.
+7. Why exterior evacuation/detachment alternatives fail or cost more.
+8. Why the director remains rational after midpoint evidence.
+9. What hero mistake before midpoint materially worsens the situation.
+10. What permanent change occurs in Iri beyond “became brave.”
+
+**NEXT GATE:** Opposition Ladder + Emergency Rules Passport + Hero Relationship Architecture. No chapter map yet.
