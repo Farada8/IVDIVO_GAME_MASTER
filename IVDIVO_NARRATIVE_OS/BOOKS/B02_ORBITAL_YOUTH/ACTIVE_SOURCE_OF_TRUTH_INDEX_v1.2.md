@@ -65,28 +65,31 @@ Ch11 — WHOSE STORY — GREEN / Full Studio patched
 Ch12 — THE CLEAN MODEL — GREEN / Full Studio patched  
 Ch13 — VELA NIGHT — GREEN / Full Studio accepted  
 Ch14 — ALMOST LOCAL — GREEN / Full Studio accepted  
-Ch15 — LIMITED OPEN — GREEN / Full Studio accepted
+Ch15 — LIMITED OPEN — GREEN / Full Studio accepted v0.3
 
 **NEXT: Ch16 — THE INFERENCE — Aoife POV.**
 
 Latest accepted chapter controls:
-- `DRAFTS/CH15_LIMITED_OPEN_v0.2_FULL_STUDIO.md`
+- `DRAFTS/CH15_LIMITED_OPEN_v0.3_FULL_STUDIO.md`
 - `GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive mirrors:
-- Ch15 v0.2 ID `10_p77yvxiEpFGzbXK7ikni6Gbcr5hJK0Mh_nVmGwHSo`
-- Ch15 Gate ID `18V_-Lal8aHylt0r_imiteJrAnug4oWkBmddDUC0uxJk`
+- Ch15 v0.3 ID `19Ixqvur0oDyEkuguGQabSgWvuIK0WX2MoA1S6PnfjXk`
+- Ch15 Acceptance Gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
+- earlier v0.2 local gate ID `18V_-Lal8aHylt0r_imiteJrAnug4oWkBmddDUC0uxJk` = SUPERSEDED / REFERENCE ONLY.
 
 ## CH15 PROTECTED CONTINUITY
 
-- bounded realistic-occupancy test passed under two controlled sequences;
-- no disputed fixed-system lag appeared under the tested conditions;
-- two early embodied/interface events occurred without later escalation and remain unresolved;
+- bounded realistic-occupancy test passed under controlled conditions;
+- first cycle includes a 3.2-second fixed-system follow inside the ordinary settling band, closing without propagation;
+- second messier cycle does not reproduce disputed fixed-system lag;
+- two early embodied/interface events occur without later escalation and remain unresolved;
 - transition-overlap remains the strongest current predictor, not proven cause;
-- Ch15 did not establish unrestricted habitation safety;
-- Ollie's analysis now has legitimate institutional visibility;
+- Ch15 does not establish unrestricted habitation safety;
+- Ollie's analysis has legitimate institutional visibility;
 - Mara/adults retain decision authority;
-- false victory must remain rational in retrospect, not rewritten as obvious negligence.
+- false victory remains rational in retrospect;
+- Ch20 must reveal a missing causal class rather than retroactively make Ch15 evidence worthless.
 
 ## CHAPTERS 16–18 PRE-ACCEPTANCE STATE
 
