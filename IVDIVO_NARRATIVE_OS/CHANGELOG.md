@@ -1,5 +1,27 @@
 # IVDIVO NARRATIVE OS — CHANGELOG
 
+## 1.8 — 2026-08-17
+
+**Status:** B08 FOUNDER ROUTING OVERRIDE / FIRST CROSSING RESTORATION
+
+Founder override synchronized for current Book Eight work:
+- **ACTIVE BOOK: B08 — FIRST CROSSING**;
+- current WORKING engine = `THE LAST OVERRIDE / LEGACY EMERGENCY ANNEX`;
+- previous `B08 — SECOND MAJOR CROSSING SLOT` routing is **SUPERSEDED FOR CURRENT B08** and retained only for decision history;
+- stale `docs/saga/B08_SECOND_MAJOR_CROSSING_WORKING_ARCHITECTURE.md` marked SUPERSEDED;
+- current architecture added as `docs/saga/B08_FIRST_CROSSING_THE_LAST_OVERRIDE_WORKING_ARCHITECTURE.md`;
+- `10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md` receives a prominent Founder override so current B08 work cannot auto-route back to the stale second-crossing slot;
+- Google Drive workroom overlays/starters and current B08 architecture synchronized to the same override.
+
+Routing boundary:
+- this override changes current **B08** assignment;
+- do **not** globally renumber or reassign B05–B07 from this override alone;
+- later-book routing remains subject to separate Founder instruction and earned completed-book consequences.
+
+Current B08 development state:
+`ENGINE RESTORED / FORM INCOMPLETE`.
+Do not chapter-map or draft prose until private WANT / WRONG STRATEGY / PRICE / CLIMAX CHOICE / exact emergency incident / relationship pressure / opposition ladder pass Story Gate.
+
 ## 1.7 — 2026-08-17
 
 **Status:** WORKROOM CONTINUATION CONTROL + REFERENCE MECHANISM GATE EXPANSION
