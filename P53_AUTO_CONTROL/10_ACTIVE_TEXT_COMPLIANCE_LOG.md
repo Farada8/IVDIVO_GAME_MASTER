@@ -52,3 +52,19 @@
 **Protected:** Naomi agency, Eli competence, slow-burn, guard/client power, story causality, truthful marketing.
 
 **Next:** human image/audio test before release lock.
+
+---
+
+## P53-20260817-BODYGUARD-E01DIA-002
+**Project:** BODYGUARD FOR THE FALLEN IDOL — THE PROTECTION MONOPOLY
+**Artifact:** Episode 1 dialogue/audio — Recording Master v1.1
+**Type:** dialogue / audio
+**Status:** PASS — PERFORMANCE PATCHES ONLY
+
+**Key result:** no dialogue rewrite required. Existing text already contains push–pull, Eli private cost, Naomi agency, consent and earned micro-rewards. P53 improvements belong in actor timing/breath/role recovery.
+
+**Performance patches:** preserve existing beat after `safe floor`; drop Eli public register on Daniel line; one post-safety breath reset; preserve `Which ear? / Left.` beat; play public-frame anger without possession; protect Eli agency in raw-playback request.
+
+**Protected:** `Cross right. Now.`, rescue order, Naomi triage, explicit bodypack consent, left/right clue, two/four-click logic, guard/client boundary.
+
+**Next:** re-audit after rough audio; then E02–E06 dialogue regression.
