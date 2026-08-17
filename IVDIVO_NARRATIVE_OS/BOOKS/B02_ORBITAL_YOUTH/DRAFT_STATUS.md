@@ -14,7 +14,7 @@ Before continuing Book 2 in any conversation, read:
 4. `/IVDIVO_NARRATIVE_OS/10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md` → B02 only
 5. this `DRAFT_STATUS.md`
 6. `ACTIVE_SOURCE_OF_TRUTH_INDEX_v1.2.md`
-7. latest accepted chapter + gate + current chapter Writer Brief.
+7. latest accepted chapter + gate + current chapter Writer Brief when available.
 
 GitHub `main` is canonical production state. Google Drive mirrors working state.
 
@@ -36,9 +36,11 @@ Folder ID: `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`
 10. `Chapter 10 — NIGHT WITHOUT A HANDLER` — Maya POV — GREEN / Full Studio patched
 11. `Chapter 11 — WHOSE STORY` — Aoife POV — GREEN / Full Studio patched
 12. `Chapter 12 — THE CLEAN MODEL` — Ollie POV — GREEN / Full Studio patched
+13. `Chapter 13 — VELA NIGHT` — Aoife POV — GREEN / Full Studio accepted
+14. `Chapter 14 — ALMOST LOCAL` — Ethan POV — GREEN / Full Studio accepted
 
-Current active frontier:
-**NEXT = Chapter 13 — VELA NIGHT — Aoife POV.**
+Current canonical frontier:
+**NEXT = Chapter 15 — LIMITED OPEN — Ollie POV.**
 
 ## Active drafting authority
 
@@ -71,46 +73,51 @@ Do not call a chapter complete until accepted draft + gate are persisted and ver
 
 ## Latest accepted chapter
 
-### Chapter 12 — THE CLEAN MODEL
-Accepted Writer Brief:
-`STUDIO/CH12_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
-
+### Chapter 14 — ALMOST LOCAL
 Accepted draft:
-`DRAFTS/CH12_THE_CLEAN_MODEL_v0.2_FULL_STUDIO.md`
+`DRAFTS/CH14_ALMOST_LOCAL_v0.2_FULL_STUDIO.md`
 
 Accepted gate:
-`GATES/CH12_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+`GATES/CH14_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive mirrors:
-- Writer Brief ID `1JhvTCVPZtJGLI1dyfVzcrD2y5kmsnQ8VbYJNNYgI2Po`
-- Accepted Ch12 v0.2 ID `1WrFZClV6X7j2JzOuHpUX2E-Fdnxf7XmwXTtjfNTzmJE`
-- Gate ID `1wEJHkgHPMSbbBDxKP5ZDdq1dxXFogy0lT7bEGrsqicw`
+- Accepted Ch14 v0.2 ID `1pIoEC6WFIwOpGmAV29vFhphchLfF3tSdgcc101vT1nk`
+- Ch14 Gate ID `1waDN3XQXWHhMu5zS9oau7sc_dT3u4f8I7F-rTf5fKGQ`
 
 Gate verdict:
-**GREEN TO KEEP / PROCEED TO CHAPTER 13.**
+**GREEN TO KEEP / PROCEED TO CHAPTER 15.**
 
-Protected Ch12 law:
-- Ollie’s model is incomplete, not fake/stupid;
-- Mara rationally approves a bounded test, not habitation/opening;
-- unresolved resident/personal evidence remains visible and locked to review;
-- Iri cannot name the missing variable;
-- rover team succeeds without Ollie;
-- Ollie chooses one more run instead of joining Vela Night immediately.
+Protected Ch14 law:
+- Ethan's adult-track line remains B-story setup, not Book Two takeover;
+- his wrong reflex is optimization-as-care, now expressed through friendship scheduling;
+- he partially grows by refusing to rank other people's commitments as movable;
+- he keeps the orientation private because he wants one decision-space of his own, not because he has decided to abandon the group;
+- the five are not breaking up: orbital life is making them five increasingly independent lives;
+- Aoife/Ethan attraction advances through trust pressure and ordinary behaviour, not generic romance structure.
 
-## Next prose unit
+## Chapters 15–18 working state
 
-### Chapter 13 — VELA NIGHT
-**POV:** Aoife
+Drive contains Full Studio working drafts for:
+- Ch15 `LIMITED OPEN` — ID `10_p77yvxiEpFGzbXK7ikni6Gbcr5hJK0Mh_nVmGwHSo`
+- Ch16 `THE INFERENCE` — ID `1excpvqgTBu8PSl7Q0BPn4d0fIEjdb0_QBkBLyLmRujY`
+- Ch17 `PLANET PEOPLE` — ID `1h_6U6zg2tKu2fGPFHeuFrW7awQn9MzfKaxR59hFlswM`
+- Ch18 `EIGHTEEN` — ID `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`
+
+A structural acceptance review found **FATAL 0 / MAJOR 0** across Ch15–18 against current Part III scene architecture. Ch17 received two small line-texture repairs; Ch18 received one narrator-verdict repair. These chapters are **NOT YET CANONICALLY ACCEPTED** until their full drafts + gates are persisted to GitHub and verified.
+
+## Next prose / acceptance unit
+
+### Chapter 15 — LIMITED OPEN
+**POV:** Ollie
 
 Required function:
-- remain a positive youth / wonder / social-life chapter;
-- show Vela as a city living through work, transport, food, performance, sport, bookings, family/friendship, attraction, jealousy and ordinary inconvenience;
-- do **not** punish Ch12’s false confidence with immediate catastrophe;
-- Samir’s orbital sport/social belonging must remain real and independent;
-- Maya / Lea / Davi social life continues without turning into a forced triangle;
-- Ethan / Aoife attraction and status friction may move, but no generic romance beat;
-- real crowd movement and route adaptation may create useful later evidence and strengthen Ollie’s incomplete model without turning the event ominous;
-- audit any synthetic/artificial-body appearance against current technology-access canon before acceptance;
-- preserve Book 2 rule: youth life is story, not decorative downtime.
+- bounded realistic-occupancy test, not habitation opening;
+- real people disrupt clean test choreography through ordinary life rather than stupidity;
+- model succeeds under controlled conditions and earns a credible false victory;
+- early embodied/interface reports remain visible and unresolved rather than erased;
+- Mara enforces limits and uncertainty;
+- Ollie receives real credit without adults surrendering decision authority;
+- end with social life / local apprentice meal, not ominous collapse;
+- preserve delayed midpoint failure for Ch20.
 
 Do not switch books on ordinary `и / дальше`.
