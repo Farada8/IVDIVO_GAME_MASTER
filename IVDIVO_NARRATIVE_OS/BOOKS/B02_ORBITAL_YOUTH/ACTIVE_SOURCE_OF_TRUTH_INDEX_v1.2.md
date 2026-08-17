@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–23 GREEN / Chapter 24 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–29 GREEN / Chapter 30 next
 
 ## READ ORDER
 
@@ -51,86 +51,86 @@
 
 ## ACCEPTED PROSE FRONTIER
 
-Ch1–14 GREEN as previously accepted/patched.  
-Ch15 — LIMITED OPEN — GREEN v0.3  
-Ch16 — THE INFERENCE — GREEN v0.3  
-Ch17 — PLANET PEOPLE — GREEN  
-Ch18 — EIGHTEEN — GREEN  
-Ch19 — GO / NO-GO — GREEN v0.3  
-Ch20 — THE WRONG CAUSE — GREEN v0.3  
-Ch21 — SHUT — GREEN v0.3  
-Ch22 — AFTER THE CAMERA — GREEN v0.2  
-Ch23 — NO ACCESS — GREEN v0.1
+**Chapters 1–29: GREEN / accepted development drafts.**
 
-**NEXT: Ch24 — WHERE MAYA IS — Maya POV.**
+Latest accepted chapter: **Ch29 — SEGMENTS — Ollie POV — v0.1 — GREEN.**
 
-## LATEST ACCEPTED CONTROLS
+GitHub:
+- Writer Brief: `STUDIO/CH29_SEGMENTS_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
+- Draft: `DRAFTS/CH29_SEGMENTS_v0.1_FULL_STUDIO.md`
+- Gate: `GATES/CH29_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
-### Ch21 — SHUT v0.3
-- GitHub draft: `DRAFTS/CH21_SHUT_v0.3_FULL_STUDIO.md`
-- GitHub gate: `GATES/CH21_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-- Drive draft ID `1Yh5DUPSlqtY2YCjk6aMCh0HwQI8ZMCV61whAioNnDRI`
-- Drive gate ID `1RjFKUZW-7cvu6yjcys8EVVLo_9H1EpD_UEhDWfhxtFY`
+Drive canonical mirror:
+- Writer Brief ID `1A-JYIbyEYGM4XBIi-SUm_nHMLcc9Hi8dOmYdtoHS-_s`
+- Draft ID `1BsJPhdjN3-clsuj9yT6pPpc-21AR4v85Hg_Y30dw01Q`
+- Gate ID `1Tio2LCVU4rHRvLMhB4I4Vo7hK1NhFushZyFwPwWBToY`
 
-Protected:
-- distributed responsibility; no Ollie scapegoat;
-- distributed equivalence preliminary;
-- lead timing investigation target only;
-- Ollie remains off Ring Six access;
-- old-module complaints clue only.
+## PROTECTED CH26–29 CONTINUITY
 
-### Ch22 — AFTER THE CAMERA v0.2
-- GitHub Writer Brief: `STUDIO/CH22_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
-- GitHub draft: `DRAFTS/CH22_AFTER_THE_CAMERA_v0.2_FULL_STUDIO.md`
-- GitHub gate: `GATES/CH22_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-- Drive Writer Brief ID `1aV32l27j1DqsAf6HDAslKx0n5FEUjMLPoY0S7se6MvU`
-- Drive draft ID `121fNgEekyCBRCpEs8WG6R5H2mBgaIfh4l07Y90wo_gU`
-- Drive gate ID `1oJETD90vGQKMvlnLF8z9Uc0U7qbqJXoE3B8xWq10mlk`
+### Ch26 — THE SECOND MODEL
+- Ollie remains REVIEW HOLD; no unrestricted Ring Six operational access is restored.
+- Candidate alignment uses shared-loop/control-state relationships rather than fixed display timestamp as universal center.
+- Resident/support timing remains a separate evidence rail, not infallible truth.
+- Model proposal proceeds through authorized review only.
 
-Protected:
-- derivative privacy harm persists;
-- S1 does not forgive Aoife;
-- safety correction is de-identified and does not carry publication rights;
-- exact lead interval unknown;
-- Ollie receives no source material through Aoife.
+### Ch27 — CONTROLLED REPRODUCTION
+- Adult safety process owns execution; Ollie is observer/analysis participant only.
+- N0 negative control remains negative.
+- C1 safely enters candidate shared-loop state during residual return settling.
+- C2 apparently equivalent visible sequence from full physical baseline fails; failure remains in main result package.
+- C3 narrows the candidate condition and reproduces it through another visible service path.
+- Working measurable candidate: residual return imbalance / recovery state.
+- Dangerous oscillation is NOT reproduced; people/support timing is NOT tested; Ring Six REVIEW HOLD remains.
 
-### Ch23 — NO ACCESS v0.1
-- GitHub Writer Brief: `STUDIO/CH23_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
-- GitHub draft: `DRAFTS/CH23_NO_ACCESS_v0.1_FULL_STUDIO.md`
-- GitHub gate: `GATES/CH23_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-- Drive Writer Brief ID `1PJ39teQ4foO7sMRZThfbIr7S_OUvWqFHZG2MvrS8ihQ`
-- Drive draft ID `1mycDuDqATeJ6UDamY-kLou128afYkhu7WEZr4UPhot0`
-- Drive gate ID `1YUpP7BiKWOAk_A2zEcEBsjXqeV8mHoo_3joJfgorc1E`
+### Ch28 — TWO BAD OPTIONS
+- A = deeper/full-recovery interlock can reach restricted occupancy sooner at a real capacity/service cost.
+- B = state-aware control may preserve more intended capacity but needs more validation and carries unknown false-negative risk against the dangerous escalation condition.
+- Hybrid A-now/B-later remains possible but carries revalidation, staffing and second-move costs.
+- Ethan’s private weighted score is NOT part of the decision packet.
+- Affected-group priorities remain plural; proper civic/commissioning authority retains the decision.
 
-Protected:
-- Ollie remains REVIEW HOLD;
-- bounded extract = 6 modules / 2 control generations / 30 days / de-identified event order only;
-- no identity, household, medical/accommodation, complaint-text or raw personal-interface values;
-- negative cases dominate absolute count;
-- weak lead-timing subset clusters around combined return-correction + service-transition states in part of sample;
-- module/control-generation effects remain large; removal of one module nearly collapses effect;
-- no causal claim;
-- `SECOND MODEL — QUESTIONS ONLY`.
+### Ch29 — SEGMENTS
+- Partial segmented opening is the bounded current direction; no full Ring Six success claim.
+- Three segments likely certifiable, one conditional/restricted candidate, two remain closed at chapter exit.
+- Technical compatibility does not determine allocation priority.
+- Housing allocation remains constrained by household/environment/route/access/work-school/wait burdens and household preference against forced splitting.
+- Lea’s household is only partly compatible with first phase and receives no protagonist favoritism.
+- Lea remains angry at her own outcome while not demanding safe access be denied to others.
+- Ollie remains model support, not board/housing authority.
+- Aoife enters Ch30 waiting-resident logistics with recorder away.
 
-## CH24 WORKING GATE
+## CANON RECONCILIATION STILL ACTIVE
 
-Chapter 24 — WHERE MAYA IS — Maya POV must:
-- shift texture away from Ollie technical analysis;
-- pay off Maya’s Chapter-10 sleep-location concealment and Lea cover burden;
-- use actual pre-overhaul/relocation route closure as the operational trigger;
-- make Lea’s anger personal: Maya made Lea responsible for keeping Maya’s version true;
-- avoid a second structurally identical lie;
-- show autonomy/housing/trust consequences through ordinary action rather than a policy speech;
-- keep Ring Six relocation pressure present but secondary to Maya/Lea relationship consequence;
-- end with damaged boundary explicit, not repaired cheaply.
+**Tomas = the Ch20 injured maintenance worker.**  
+Current state: continuing light-duty/manual-service restriction; do not rename or erase injury consequences.
+
+## CURRENT CANONICAL FRONTIER
+
+**NEXT = Chapter 30 — WHO WAITS — Aoife POV.**
+
+Required direction:
+- move texture away from engineering and into lived relocation/waiting consequences;
+- Aoife spends the day helping with boxes, route planning and ordinary errands with recorder away;
+- temporary housing pressure appears through school gear, laundry, work shifts, sleep, relationships and stored possessions;
+- residents may contradict one another; Aoife must not force a clean documentary thesis;
+- S1/source relationship may reopen only in a small, practical, explicitly bounded way; no instant forgiveness or intimacy reset;
+- if one banal source-approved line becomes recordable, Aoife should not grab for it immediately;
+- partial opening shows mixed outcomes: some burdens shrink, others remain or redistribute;
+- unresolved technical mystery stays background; Ch30 is a people/waiting chapter, not another model chapter.
+
+## SAVE / ROUTING LAW
+
+A chapter is not accepted across the project until accepted draft + gate are persisted in GitHub and Drive and mirrors are verified.
+
+Current verified Drive routing note:
+- canonical Ch27 draft mirror is `1xnemGYB_JBi34accamkFQa_IWHYMe5ukmC7zeg2HLcA`;
+- old mixed Ch27 document is explicitly `SUPERSEDED MIXED — DO NOT ROUTE`;
+- canonical Ch29 gate is `1Tio2LCVU4rHRvLMhB4I4Vo7hK1NhFushZyFwPwWBToY`;
+- duplicate Ch29 gate created during concurrent recovery is explicitly `SUPERSEDED DUPLICATE — DO NOT ROUTE`.
 
 ## ACTIVE DRAFTING MODE
 
-`architecture -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive -> verification -> advance controls`.
-
-## SAVE LAW
-
-A chapter is not accepted across the project until accepted draft + gate are persisted and mirrors verified.
+`bootstrap -> verified frontier -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive mirror -> verify -> update frontier`.
 
 ## CROSS-CONVERSATION CONTINUATION
 
