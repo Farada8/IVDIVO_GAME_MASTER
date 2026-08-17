@@ -4,7 +4,7 @@ Status: COMPLETED PASS
 
 ## Intake check
 - Google Drive recent-upload window checked before reading.
-- No newly modified/uploaded files were returned for the latest window, so no new unique craft source was registered in this pass.
+- No newly modified/uploaded files were returned for the latest window, so no new unique craft source was registered from fresh intake.
 - Duplicate/reference intake therefore did not change the Core count.
 
 ## Active source completed
@@ -61,11 +61,45 @@ Core #19 is now `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`.
 
 The superseded LaPlante working lifecycle file was deleted only after the final file and ledger update were successfully persisted.
 
-## Next-source selection
-Core #13 James Scott Bell — *Plot & Structure* was searched again but the exact full source did not surface reliably in current Drive search results; it was therefore not started on the basis of old thematic notes.
+## Next source started in same pass
+Core #13 James Scott Bell — *Plot & Structure* was searched again but the exact full source did not surface reliably in current Drive search results; it was not started from old thematic notes.
 
-Next run must:
+A fully retrievable Core source was then selected instead:
+
+**Core #38 — Lisa Zunshine — *Why We Read Fiction: Theory of Mind and the Novel*.**
+
+Integrity verified:
+- retained Drive ID `1qvmzbeq6sV8jOYiSOO6rLQF-b7_Z6e95`;
+- 197 PDF pages;
+- 1,310,448 bytes;
+- approximately 65.7k extracted words;
+- cover, metadata, TOC and end matter present.
+
+Scientific-authority firewall:
+- the book is a 2006 cognitive-literary source;
+- its ToM/source-monitoring concepts may be used as narrative-theory mechanisms;
+- historical autism, psychiatric, evolutionary and modular-cognition claims are not current technical authority and require contemporary primary research before scientific use.
+
+Strict FULL READ progress in this pass:
+- front/project framing complete;
+- **PART I — ATTRIBUTING MINDS, Chapters 1–9 — COMPLETE**;
+- Part II not yet read in this strict pass.
+
+High-value early mechanism:
+`OBSERVABLE BEHAVIOR → MULTIPLE MENTAL/MOTIVE MODELS → NEW EVIDENCE → READER MODEL UPDATE`.
+
+This reinforces an IVDIVO rule already suggested by LaPlante/Card/McKee:
+**behavior is evidence about motive, not motive itself.**
+
+Zunshine strict working file:
+`docs/01_RESEARCH/WRITING_CRAFT/STRICT_LIFECYCLE/DR_WORKING_038_ZUNSHINE_WHY_WE_READ_FICTION_STRICT_LIFECYCLE.md`
+
+### Exact continuation pointer
+Continue at local extracted text line **1851**, **PART II — TRACKING MINDS — Chapter 1, `Whose Thought Is It, Anyway?`**.
+Do not reread Part I without a concrete diagnostic reason.
+
+## Next run
 1. recheck new uploads first;
-2. choose the next **actually retrievable full Core source** below strict status;
-3. register/integrity-check it before any FULL READ claim;
-4. continue the strict ledger from **11/40**, never from the older 40/40 deep-read label.
+2. resume Zunshine exactly at line 1851;
+3. do not promote her beyond FULL READ IN PROGRESS until Parts II–III and Conclusion are continuously completed;
+4. keep the strict ledger at **11/40** until the remaining lifecycle is actually closed.
