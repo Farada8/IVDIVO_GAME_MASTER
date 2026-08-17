@@ -101,24 +101,57 @@ Batch 1 result:
 - Ch17 Maya owns argumentative speed while Lea/local grievance are grounded in household/departure consequence;
 - Ch05→10 and Ch16→18 continuity survive.
 
+#### Ch18 — EIGHTEEN GROUP-VOICE REGRESSION
+**GREEN / ACCEPTED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
+
+Accepted candidate:
+`DRAFTS/CH18_EIGHTEEN_v0.3_PASS_B_CANDIDATE.md`
+
+Local gate:
+`GATES/CH18_PASS_B_GROUP_VOICE_ACCEPTANCE_GATE_v0.1.md`
+
+Transition gate:
+`GATES/BOOK2_PASS_B_CH17_19_TRANSITION_GATE_v0.1.md` — GREEN
+
+Drive mirrors/readback:
+- candidate `18jY-kyDwM0139okO7241KhvAZdllSBaWAtBuwsplE8w`
+- gate `1HfH2lUKZ9c0pUzIJDgA2j5JY9uByZM9Myu-bbFHHrqs`
+
+Ch18 result:
+- birthday warmth and ordinary group life preserved;
+- Maya/Aoife/Ollie/Samir/Tessa no longer share one stacked correction voice;
+- adult majority means more liability and fewer guardian layers, not instant authority;
+- Ethan remains attracted to advancement/status and selects `LATER — AFTER CURRENT RING SIX COMMITMENT REVIEW` rather than abandoning the adult path;
+- later Ch31 scarcity remains intact.
+
 ## CURRENT CANONICAL FRONTIER
 
-**NEXT PRODUCTION STAGE = PASS B — BOUNDED Ch18 `EIGHTEEN` GROUP-VOICE REGRESSION.**
+**NEXT PRODUCTION STAGE = PASS B — VALIDATE / APPLY EXISTING Ch19 `GO / NO-GO` SURGICAL TRIM PATCH v0.4 AGAINST ACCEPTED v0.3.**
 
-Why Ch18 is next:
-- transition gate confirms structure is GREEN;
-- remaining issue is local surface distribution, not architecture;
-- birthday gathering and Tessa/Ethan adult-path exchange concentrate familiar `face / I know / quick correction / stacked group answer` mechanics;
-- patch must preserve birthday warmth, legal-status absurdity, adult-path temptation, real liability/access asymmetry and Ethan's desire to move ahead.
+Existing working patch:
+`DRAFTS/CH19_GO_NO_GO_v0.4_PASS_B_TRIM_PATCH.md`
+
+Its declared target is the confirmed Ch12–20 pressure issue: reduce duplicated technical recap in the middle of the institutional decision without changing:
+- board authority;
+- three live choices (remain unoccupied / another bounded test / staged partial habitation);
+- 3.2-second allowed follow;
+- disputed overlap rule;
+- messier-cycle non-reproduction;
+- embodied/personal-interface uncertainty;
+- Iri report-class stop logic;
+- resident disagreement;
+- Ollie's bounded personal recommendation;
+- LIMITED GO conditions;
+- handoff into Ch20 occupied failure.
 
 Required chain:
-1. full Ch18 group-voice read;
-2. bounded candidate only if specific replacements/deletions improve distribution;
+1. validate every proposed Ch19 replacement against accepted v0.3 and Ch15–20 continuity;
+2. materialize a full prose candidate only if the patch actually removes recap without information loss;
 3. Dialogue / Reader Advocate / Continuity / Red Team / Line gate;
-4. Ch17→19 transition regression;
-5. GitHub + Drive persistence and readback before acceptance.
+4. continuous Ch18→20 transition regression;
+5. GitHub + Drive persistence/readback before acceptance.
 
-Secondary routing after Ch18 must be refreshed, not assumed:
+Secondary routing after Ch19 must be refreshed, not assumed:
 - Ch11 / Ch13 remain protected / no patch absent new evidence;
 - Ch32 canonical routing is `CH32_THE_LATE_ROUTE_v0.1_FULL_STUDIO.md`; old `THE PRIVACY_AGREEMENT` execution is superseded; only light local polish if demonstrated;
 - Ch31/34/35/36 remain closed absent demonstrated local defect;
