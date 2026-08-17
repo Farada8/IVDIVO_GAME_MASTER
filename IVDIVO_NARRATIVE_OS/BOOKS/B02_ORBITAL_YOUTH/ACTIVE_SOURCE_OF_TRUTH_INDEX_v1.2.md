@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–12 GREEN / Chapter 13 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–14 GREEN / Chapter 15 next
 
 ## READ ORDER
 
@@ -62,35 +62,31 @@ Ch8 — NOT A VISITOR SPORT — GREEN / Full Studio patched
 Ch9 — THE APPRENTICES — GREEN / Full Studio patched  
 Ch10 — NIGHT WITHOUT A HANDLER — GREEN / Full Studio patched  
 Ch11 — WHOSE STORY — GREEN / Full Studio patched  
-Ch12 — THE CLEAN MODEL — GREEN / Full Studio patched
+Ch12 — THE CLEAN MODEL — GREEN / Full Studio patched  
+Ch13 — VELA NIGHT — GREEN / Full Studio accepted  
+Ch14 — ALMOST LOCAL — GREEN / Full Studio accepted
 
-**NEXT: Ch13 — VELA NIGHT — Aoife POV.**
+**NEXT: Ch15 — LIMITED OPEN — Ollie POV.**
 
 Latest accepted chapter controls:
-- `STUDIO/CH12_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
-- `DRAFTS/CH12_THE_CLEAN_MODEL_v0.2_FULL_STUDIO.md`
-- `GATES/CH12_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- `DRAFTS/CH14_ALMOST_LOCAL_v0.2_FULL_STUDIO.md`
+- `GATES/CH14_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive mirrors:
-- Ch12 Writer Brief ID `1JhvTCVPZtJGLI1dyfVzcrD2y5kmsnQ8VbYJNNYgI2Po`
-- Ch12 v0.2 ID `1WrFZClV6X7j2JzOuHpUX2E-Fdnxf7XmwXTtjfNTzmJE`
-- Ch12 Gate ID `1wEJHkgHPMSbbBDxKP5ZDdq1dxXFogy0lT7bEGrsqicw`
+- Ch14 v0.2 ID `1pIoEC6WFIwOpGmAV29vFhphchLfF3tSdgcc101vT1nk`
+- Ch14 Gate ID `1waDN3XQXWHhMu5zS9oau7sc_dT3u4f8I7F-rTf5fKGQ`
 
-## CHAPTER 13 CONTROL
+## CHAPTERS 15–18 PRE-ACCEPTANCE STATE
 
-Existing Drive draft candidate:
-`IVDIVO BOOK2 ORBITAL YOUTH — CHAPTER 13 VELA NIGHT v0.1`
-ID `1V_zC29l70Jss25FguJZlN7WtgO6m5TxbjVuZMXLcPUI`
+Drive Full Studio drafts exist for Ch15–18. Structural comparison against the active Part III scene architecture produced **FATAL 0 / MAJOR 0** across the block. Ch17 has two small anti-generated-text line repairs; Ch18 has one narrator-verdict repair.
 
-Before acceptance:
-- run current B02 workroom stack;
-- protect Vela Night as positive youth/wonder/social life;
-- preserve Samir team belonging and group-life divergence;
-- preserve Aoife/Ethan attraction without forced romance formula;
-- preserve Maya/Lea/Davi ordinary youth status pressure without making Davi a required triangle;
-- preserve crowd movement / route adaptation as causal evidence, not disaster foreshadowing;
-- audit artificial/synthetic-body mentions against current technology-access canon;
-- selectively compress generated micro-staccato only where it grades already-clear action.
+They remain **WORKING / NOT YET CANONICALLY ACCEPTED** until each complete draft and local gate is persisted and verified in GitHub.
+
+Next acceptance order:
+1. Ch15 — LIMITED OPEN
+2. Ch16 — THE INFERENCE
+3. Ch17 — PLANET PEOPLE
+4. Ch18 — EIGHTEEN
 
 ## ACTIVE DRAFTING MODE
 
@@ -98,7 +94,7 @@ For each chapter:
 1. load current scene architecture;
 2. apply professional Writers' Room prompts relevant to the chapter;
 3. apply bibles/reference/voice guardrails;
-4. create Writer Brief;
+4. create Writer Brief when needed;
 5. write/edit prose;
 6. hostile Red Team;
 7. character/relationship/youth/reader pass;
