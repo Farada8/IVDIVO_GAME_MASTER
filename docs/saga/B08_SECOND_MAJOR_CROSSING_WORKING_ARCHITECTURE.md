@@ -2,7 +2,7 @@
 
 **Status:** WORKING  
 **Canon boundary:** CANON currently fixes only the book function — B08 is **SECOND MAJOR CROSSING** and must be qualitatively different from B04. The scenario is **NOT LOCKED**.  
-**Source authority:** IVDIVO Master Saga Bible + Saga Routing / Production State Machine.  
+**Source authority:** IVDIVO Master Saga Bible + Narrative OS v1.2 + Saga Routing / Production State Machine.  
 **Last updated:** 2026-08-17.
 
 ## 1. Document Status / Canon Boundary
@@ -12,6 +12,7 @@
 - B08 must be qualitatively different from B04 = FIRST CROSSING.
 - B05–B07 consequences must be loaded before detailed B08 architecture is frozen.
 - The book must close its own main conflict before a series hook opens.
+- Early-saga Solar-System authority must not be simplified into two equal jurisdictions called Old Earth Security and Confederation Security.
 
 ### WORKING
 - **Engine B — DUAL PROTOCOL / HABITAT LOCKDOWN** is the current winning macro-engine.
@@ -24,6 +25,7 @@
 - Exact returning cast from B05–B07.
 - Exact Old Earth legacy mechanism.
 - Exact AI/synthetic/personhood state inherited from B05–B07.
+- Exact legal/authority state after B05–B07.
 
 ### REJECTED AS B08 CANON
 The older `Agreement / daughter / protected young subject / cadets` package has no verified B08-canon basis. It may remain archive/reference material but must not be silently imported into B08.
@@ -39,7 +41,7 @@ Production sequence:
 ## 3. Three Macro-Engine Candidates
 
 ### OPTION A — RECOGNITION / TRANSIT CRISIS
-A mixed-system corridor or habitat-transfer conflict begins because a person/entity/property is recognized differently by Old Earth treaty logic and Confederation systems. Movement through contested jurisdiction becomes the deadline.
+A mixed-system corridor or habitat-transfer conflict begins because a person/entity/property is recognized differently by Old Earth treaty logic and present human/orbital institutions, with limited Confederation knowledge complicating the case. Movement through contested jurisdiction becomes the deadline.
 
 **Strengths:** direct jurisdiction collision; strong procedural pressure.  
 **Weaknesses:** risks becoming policy-heavy and resembling the old protected-person material.  
@@ -49,13 +51,15 @@ A mixed-system corridor or habitat-transfer conflict begins because a person/ent
 An orbital habitat/transit complex intersects a dormant pre-Confederation Old Earth quiet-zone / containment regime. Routine civilian operation crosses or activates a boundary.
 
 - Old Earth protocol: **SEAL / ISOLATE / CONTAIN**.
-- Confederation science/security: legacy containment itself is now creating or amplifying a new physical hazard.
-- Neither side can solve the crisis alone. Neither side is automatically right.
+- Limited Confederation science/representatives warn that legacy containment itself is now creating or amplifying a new physical hazard. Their knowledge does not by itself grant authority to command the habitat.
+- Orbital operational authority and possible planetary interests have their own legal duties, infrastructure knowledge and civilian responsibilities.
+- Individual rights become a real pressure field rather than an abstract legal footnote.
+- No actor can solve the crisis alone. No institution is automatically right, and superior knowledge does not automatically create jurisdiction.
 - Orbital Youth are not policy experts: housing, jobs, schooling, transport, maintenance, family and friendships become the lived stakes.
 - Smith / Old Earth Security contributes historical knowledge of what the boundary was built to prevent and what earlier operations cost.
-- Confederation security/science understands present habitat physics, infrastructure and current populations better.
+- Confederation science may understand aspects of the present phenomenon better, while orbital and planetary authorities understand their own infrastructure, populations and legal responsibilities.
 
-The book functions as an enclosed systems-thriller in which incompatible emergency procedures create the crisis and a concrete third solution resolves it.
+The book functions as an enclosed systems-thriller in which incompatible emergency procedures and jurisdictions create the crisis and a concrete third solution resolves it.
 
 **Score:** 44/45.
 
@@ -68,7 +72,7 @@ A pre-Confederation agreement activates when a new personhood/entity/AI/syntheti
 
 ## 4. Comparative Result
 
-Criteria: immediate hook / emotional pressure / Old Earth↔Confederation necessity / Orbital Youth integration / B04 differentiation / independence from unearned B05–B07 detail / actionable climax / exposition control / originality.
+Criteria: immediate hook / emotional pressure / necessity of mature-line cooperation / Orbital Youth integration / B04 differentiation / independence from unearned B05–B07 detail / actionable climax / exposition control / originality.
 
 - A = `4/4/5/3/4/4/3/3/4 = 34/45`
 - B = `5/5/5/5/5/5/5/4/5 = 44/45`
@@ -85,25 +89,25 @@ A young orbital resident/worker at the actual crossing point. Their ordinary job
 Keep home/community/family intact and prevent forced evacuation or permanent closure; preserve a future that is only beginning to become theirs.
 
 ### WHY NOW
-Routine service, transport or maintenance activity activates a dormant Old Earth boundary at the same moment Confederation-linked infrastructure expands, integrates or changes operating conditions.
+Routine service, transport or maintenance activity activates a dormant Old Earth boundary at the same moment Confederation-linked or other new infrastructure expands, integrates or changes operating conditions.
 
 ### OPPOSITION
-Two incompatible safety systems and the people responsible for them: legacy seal/containment protocol versus current science/security response. Each reads the other’s corrective action as a threat.
+A multi-jurisdiction emergency: Old Earth legacy containment, orbital operational authority, planetary interests/claims, individual rights and limited Confederation knowledge pull in incompatible directions. Confederation expertise can challenge assumptions but cannot simply command the Solar-System response.
 
 ### WRONG STRATEGY
-The hero games both systems locally to save the closest people and restore normality: withholding, rerouting or bypassing access/information. It buys time but increases distrust and makes the lockdown more severe.
+The hero games the competing systems locally to save the closest people and restore normality: withholding, rerouting or bypassing access/information. It buys time but increases distrust and makes the lockdown more severe.
 
 ### PRICE
 The hero cannot restore the old normal. The solution must cost home, status, job, authority, a family bond, or a habitat section important to them. Final selection waits for B05–B07 continuity, but the price must be personal and irreversible.
 
 ### MIDPOINT
-The apparent anomaly is not simply the thing the legacy system was built to contain. The present catastrophe is being created or amplified by interaction between old containment assumptions and modern habitat/Confederation infrastructure. The old system was rational in its original context; the new science is rational in the present one.
+The apparent anomaly is not simply the thing the legacy system was built to contain. The present catastrophe is being created or amplified by interaction between old containment assumptions and modern habitat/infrastructure conditions. The old system was rational in its original context; present science can also be rational now.
 
 ### CLIMAX CHOICE
-The hero uses real local infrastructure leverage to open, bridge or reroute a connection forbidden by both standard responses. Old Earth/Smith and Confederation leads must each surrender one critical protocol assumption. The act saves both populations but makes return to the previous status quo impossible.
+The hero uses real local infrastructure leverage to open, bridge or reroute a connection forbidden by the dominant standard responses. Old Earth/Smith, responsible orbital/planetary authorities and the Confederation expert/representative must each surrender one critical assumption without collapsing their distinct jurisdictions. The act saves the endangered populations but makes return to the previous status quo impossible.
 
 ### RESOLUTION
-The physical emergency is closed. The habitat/community survives in altered form. Responsibility is assigned. Security/legal integration changes permanently. The hero loses or transforms the old place in their life and gains a different form of agency/adulthood.
+The physical emergency is closed. The habitat/community survives in altered form. Responsibility is assigned. Security/legal relations change permanently. The hero loses or transforms the old place in their life and gains a different form of agency/adulthood.
 
 ### SERIES HOOK
 **BLANK BY DESIGN** until B05–B07 consequences are canonically available. Hook may open only after the B08 main conflict has resolved.
@@ -112,17 +116,17 @@ The physical emergency is closed. The habitat/community survives in altered form
 
 1. Ordinary orbital operation establishes hero life, work, relationships and want.
 2. A boundary/protocol activates; the first lock is localized.
-3. Old Earth order directly contradicts Confederation response.
+3. An Old Earth containment order collides with orbital/planetary operational authority; limited Confederation expertise challenges both but has no automatic right to command.
 4. Hero’s local workaround appears to solve the immediate human problem.
-5. Both systems interpret the workaround as escalation.
+5. The relevant human authorities interpret the workaround as escalation, while Confederation observers read different technical danger in the same act.
 6. Civilian life fractures: transport, housing, family, work and essential services separate.
-7. Forced cross-line cooperation begins because neither side has enough knowledge alone.
+7. Forced cross-line cooperation begins because no actor has enough knowledge, authority and local access alone.
 8. **MIDPOINT:** the hazard is the interaction of protocols/systems, not a simple intruder.
 9. Each institution doubles down for defensible reasons.
 10. Hero’s earlier withheld workaround creates or risks an irreversible breach.
 11. Personal price becomes unavoidable.
-12. A third solution is assembled from Old Earth historical knowledge + Confederation science + local infrastructure reality.
-13. **CLIMAX:** executing it requires both institutional sides to abandon a foundational assumption and the hero to pay the chosen personal price.
+12. A third solution is assembled from Old Earth historical knowledge + limited Confederation science + orbital/planetary infrastructure authority + local lived reality.
+13. **CLIMAX:** executing it requires multiple institutional actors to abandon a foundational assumption without merging their jurisdictions, and the hero to pay the chosen personal price.
 14. The physical main crisis is solved.
 15. Resolution rewrites the local and institutional relationship. Only then may a future hook appear.
 
@@ -130,7 +134,7 @@ The physical emergency is closed. The habitat/community survives in altered form
 
 **CANON:** B04 is FIRST CROSSING; B08 is SECOND MAJOR CROSSING and must not repeat it.
 
-**WORKING DIFFERENTIATION:** B08 is not another discovery/contact story. It is a mature systems collision. The lines can already know that the other exists; the problem is that their procedures, history, infrastructure and definitions of safety become physically incompatible inside civilian life. Escalation comes from consequence and complexity, not from making the enemy larger.
+**WORKING DIFFERENTIATION:** B08 is not another discovery/contact story. It is a mature systems collision. The lines can already know that the others exist; the problem is that their procedures, history, infrastructure, rights and definitions of safety become physically incompatible inside civilian life. Escalation comes from consequence and complexity, not from making the enemy larger.
 
 ## 8. Cross-Line Functional Matrix
 
@@ -139,10 +143,16 @@ The physical emergency is closed. The habitat/community survives in altered form
 - Carries evidence of earlier successes and crimes.
 - Has blind spots about current orbital systems and populations.
 
-### CONFEDERATION SECURITY / SCIENCE
-- Understands current system physics, telemetry and habitat infrastructure.
-- Understands the present population better.
+### ORBITAL / PLANETARY AUTHORITIES
+- Hold actual human responsibilities, law, infrastructure and emergency powers relevant to the habitat.
+- Know present populations and operating constraints.
+- May conflict with each other; planetary governments are not automatically superior to orbital polities, and orbital polities are not automatically superior to planetary governments.
+
+### LIMITED CONFEDERATION KNOWLEDGE / SCIENCE
+- May understand the phenomenon and advanced system physics beyond current human models.
+- Does not automatically understand local population, human law or lived habitat dependencies better than human authorities.
 - Has blind spots about pre-Confederation history, hidden agreements and legacy design intent.
+- Knowledge grants no automatic police, military, judicial or administrative jurisdiction.
 
 ### ORBITAL YOUTH
 - Provides lived topology: maintenance routes, transport habits, social dependencies, housing, work, family and informal movement networks.
@@ -163,18 +173,20 @@ The physical emergency is closed. The habitat/community survives in altered form
 - The novel turns into a committee novel.
 - Climax is officials simply agreeing.
 - Main physical/social crisis remains unresolved.
+- Confederation knowledge is silently converted into Solar-System jurisdiction without earned B05–B07 change.
 
 ### MAJOR
 - Youth cast are only witnesses.
 - Old Earth is secretly “right all along.”
-- Confederation is reduced to naive bureaucracy.
+- Orbital/planetary authorities are reduced to naive bureaucracy.
+- Confederation representatives become deus ex machina.
 - Mystery arrives as a lore dump.
 - The anomaly degenerates into a generic monster threat.
 - B08 depends on synthetic/AI ontology not yet earned by B05–B07.
 - The crossing could be deleted without changing the plot.
 
 ### PASS CONDITION
-The central threat is causally generated by incompatible systems; the climax requires concrete risky action; Old Earth, Confederation and Orbital Youth each supply something indispensable; the current book’s emergency fully closes.
+The central threat is causally generated by incompatible systems; the climax requires concrete risky action; Old Earth knowledge, orbital/planetary authority and infrastructure, limited Confederation science, and Orbital Youth lived knowledge each supply something indispensable; the current book’s emergency fully closes.
 
 ## 10. B05–B07 Inheritance Gate
 
@@ -203,6 +215,37 @@ Promote Stage D → E only when B05–B07 continuity is sufficiently loaded to r
 
 Do not create a detailed chapter map before that gate. Engine B may be replaced if B05–B07 inheritance invalidates it.
 
+## 12. Continuity Correction — Authority Model
+
+### CANON LOAD — Narrative OS v1.2
+The superseded shorthand `OLD EARTH SECURITY ↔ NEW CONFEDERATION SECURITY` must not be treated as two equal Solar-System security jurisdictions.
+
+Current early-saga authority field:
+
+`OLD EARTH SECURITY / PLANETARY AUTHORITIES / ORBITAL AUTHORITIES / INDIVIDUAL RIGHTS / LIMITED CONFEDERATION KNOWLEDGE`
+
+The Confederation does not currently govern Earth or the Solar System. Cadets/representatives may carry permitted knowledge and participate in controlled exchange, but they do not automatically possess police, military, judicial or administrative authority over Earth or human orbital polities. **Knowledge is not jurisdiction.**
+
+### WORKING CONSEQUENCE FOR B08
+Engine B is corrected from a binary Old Earth-versus-Confederation conflict into a **multi-jurisdiction systems collision**. The third solution cannot be simple compromise between two agencies. It must reconcile physical safety with distinct human authorities, individual rights and technically superior but jurisdiction-limited Confederation knowledge.
+
+### UNKNOWN
+B05–B07 may legally/politically change this authority field. Until those consequences exist, B08 must not assume that the Confederation has acquired direct Solar-System security jurisdiction.
+
+## 13. Inheritance Audit v1 — 2026-08-17
+
+Drive searches for `B05`, `B06`, `B07`, `Orbital Youth II`, `Smith II` and `Confederation Cadets`, plus GitHub searches for B05–B07, found routing/overlay definitions and earlier-book development material, but no verified completed B05–B07 architectures/consequence logs sufficient to close the B08 inheritance gate.
+
+Current slot functions only:
+
+- **B05 — WORKING DEFAULT:** post-crossing Orbital Youth II; independent orbital-life conflict; not B04 Part Two; load relationships/ages/jobs/housing/injuries/knowledge/laws/technology/political changes when they exist.
+- **B06 — WORKING DEFAULT:** Smith II; field-active Smith; new case/new opposition/new price; load B03/B04 consequences and OES/Enia/Synthesis progression.
+- **B07 — WORKING DEFAULT:** first full Confederation Cadets novel; Confederation seen from inside; independent protagonist and complete conflict; major Confederation environment/ship remains outside Solar System unless canon changes.
+
+**GATE RESULT: PARTIALLY INFORMED, NOT CLEARED.**
+
+Stage D remains the correct maximum B08 stage. Detailed character lock, exact location, chapter map and series hook remain blocked by missing B05–B07 consequences.
+
 ## Story Law for B08
 
-The crossing is not the story because two franchise lines appear together. It is the story only if their incompatible knowledge, institutions and procedures create a problem that neither line could generate or solve alone — and if one human protagonist must pay a personal price to close it.
+The crossing is not the story because franchise lines appear together. It is the story only if their incompatible knowledge, institutions, rights and procedures create a problem that no one line could generate or solve alone — and if one human protagonist must pay a personal price to close it.
