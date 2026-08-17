@@ -39,9 +39,12 @@ Folder ID: `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`
 13. `Chapter 13 — VELA NIGHT` — Aoife POV — GREEN / Full Studio accepted
 14. `Chapter 14 — ALMOST LOCAL` — Ethan POV — GREEN / Full Studio accepted
 15. `Chapter 15 — LIMITED OPEN` — Ollie POV — GREEN / Full Studio accepted v0.3
+16. `Chapter 16 — THE INFERENCE` — Aoife POV — GREEN / Full Studio accepted
+17. `Chapter 17 — PLANET PEOPLE` — Maya POV — GREEN / Full Studio accepted
+18. `Chapter 18 — EIGHTEEN` — Ethan POV — GREEN / Full Studio accepted
 
 Current canonical frontier:
-**NEXT = Chapter 16 — THE INFERENCE — Aoife POV.**
+**NEXT = Chapter 19 — GO / NO-GO — Ollie POV.**
 
 ## Active drafting authority
 
@@ -72,23 +75,18 @@ For each substantive step:
 
 Do not call a chapter complete until accepted draft + gate are persisted and verified.
 
-## Latest accepted chapter
+## Latest accepted controls
 
-### Chapter 15 — LIMITED OPEN
+### Chapter 15 — LIMITED OPEN v0.3
 Accepted draft:
 `DRAFTS/CH15_LIMITED_OPEN_v0.3_FULL_STUDIO.md`
 
 Accepted gate:
 `GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
-Drive mirrors:
+Drive:
 - Accepted Ch15 v0.3 ID `19Ixqvur0oDyEkuguGQabSgWvuIK0WX2MoA1S6PnfjXk`
 - Ch15 Acceptance Gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
-
-Earlier Drive v0.2 gate ID `18V_-Lal8aHylt0r_imiteJrAnug4oWkBmddDUC0uxJk` is SUPERSEDED / REFERENCE ONLY.
-
-Gate verdict:
-**GREEN TO KEEP / ACCEPT CH15 / PROCEED TO CHAPTER 16.**
 
 Protected Ch15 law:
 - bounded realistic occupancy, not habitation opening;
@@ -97,33 +95,79 @@ Protected Ch15 law:
 - two early embodied/interface events remain visible and unresolved rather than erased;
 - transition-overlap remains best current predictor, not proven cause;
 - Mara preserves uncertainty and adult decision authority;
-- Ollie's work now has legitimate institutional visibility;
 - false victory must not be retroactively made reckless;
 - Ch20 must reveal a missing causal class, not prove Ch15 work worthless.
 
-## Chapters 16–18 working state
+### Chapter 16 — THE INFERENCE
+Accepted draft:
+`DRAFTS/CH16_THE_INFERENCE_v0.2_FULL_STUDIO.md`
 
-Drive contains Full Studio working drafts for:
-- Ch16 `THE INFERENCE` — ID `1excpvqgTBu8PSl7Q0BPn4d0fIEjdb0_QBkBLyLmRujY`
-- Ch17 `PLANET PEOPLE` — ID `1h_6U6zg2tKu2fGPFHeuFrW7awQn9MzfKaxR59hFlswM`
-- Ch18 `EIGHTEEN` — ID `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`
+Accepted gate:
+`GATES/CH16_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
-Structural acceptance review found **FATAL 0 / MAJOR 0** across Ch16–18 against current Part III scene architecture. Ch17 has two small line-texture repairs; Ch18 has one narrator-verdict repair. These chapters remain **WORKING / NOT YET CANONICALLY ACCEPTED** until their full drafts + gates are persisted to GitHub and verified.
+Drive:
+- Draft ID `1excpvqgTBu8PSl7Q0BPn4d0fIEjdb0_QBkBLyLmRujY`
+- Gate ID `1R5-ItHWGg6VrIm6eYsGSdABGVdOSSbyK8NN33RHZvu4`
+
+Protected Ch16 law:
+- source-approved excerpt still creates inferential exposure through contextual clues;
+- literal consent compliance is not enough to protect inferential privacy;
+- original takedown cannot erase derivative copies;
+- source trust/access is ruptured and cannot reset cheaply;
+- Ethan’s useful action is restraint, not response management.
+
+### Chapter 17 — PLANET PEOPLE
+Accepted draft:
+`DRAFTS/CH17_PLANET_PEOPLE_v0.2_FULL_STUDIO.md`
+
+Accepted gate:
+`GATES/CH17_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+
+Drive:
+- Draft ID `1h_6U6zg2tKu2fGPFHeuFrW7awQn9MzfKaxR59hFlswM`
+- Gate ID `1pwUZ5swGuEYuQDV3nZKsykfRsDYDyrIlrIp6covkJ68`
+
+Protected Ch17 law:
+- local residents remain internally divided about opening and delay;
+- Lea’s household has a legitimate material reason to want restricted opening sooner;
+- Maya’s Ch10 concealment has now produced relational/administrative cost;
+- Maya’s next autonomy step must use truthful negotiated conditions rather than surveillance or concealment.
+
+### Chapter 18 — EIGHTEEN
+Accepted draft:
+`DRAFTS/CH18_EIGHTEEN_v0.2_FULL_STUDIO.md`
+
+Accepted gate:
+`GATES/CH18_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+
+Drive:
+- Draft ID `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`
+- Gate ID `1CLP6Zl96SvYA8xnGYcWULstgo7Vg7Jm-2RwHMrO3Kv8`
+
+Gate verdict:
+**GREEN TO KEEP / PROCEED TO CHAPTER 19.**
+
+Protected Ch18 law:
+- Ethan remains in Youth Cohort through the Ring Six commitment review;
+- adult-track opportunity remains real and attractive afterward;
+- Ethan/Aoife pressure concerns secrecy/timing/management of reaction, not permission or generic career-vs-romance;
+- adulthood increases liability and responsibility, not simply power;
+- Ch19 returns the A-line to Ollie and Ring Six.
 
 ## Next prose / acceptance unit
 
-### Chapter 16 — THE INFERENCE
-**POV:** Aoife
+### Chapter 19 — GO / NO-GO
+**POV:** Ollie
 
 Required function:
-- Aoife publishes the smaller, explicitly approved excerpt;
-- a specialist third party infers sensitive source status from contextual clues rather than forbidden explicit disclosure;
-- inference spreads beyond intended audience;
-- source orders takedown;
-- takedown cannot erase copies;
-- Aoife begins to defend herself with “approved” and stops when she hears what that defense means;
-- trust ruptures and documentary access is reduced;
-- Ethan may offer response-framing help, but Aoife correctly recognizes that messaging is not the core problem;
-- preserve Sela as a person with work/training/music/route life, not an ethics device.
+- present two defensible interpretations of the Ring Six evidence;
+- Ollie’s analysis must remove one legitimate reason to delay without proving unrestricted safety;
+- Mara forces explicit statement of uncertainty and of what the model does not prove;
+- affected residents and apprentices must disagree for material reasons rather than form a moral chorus;
+- Ollie publicly supports limited opening only under defined restrictions;
+- adult commissioning board makes the decision and retains authority;
+- authorize limited partial habitation with density/route/partition/monitoring restrictions;
+- the decision must be rational in retrospect, setting up Ch20 failure without retroactive stupidity;
+- move-in staging begins, crossing the false-success threshold.
 
 Do not switch books on ordinary `и / дальше`.
