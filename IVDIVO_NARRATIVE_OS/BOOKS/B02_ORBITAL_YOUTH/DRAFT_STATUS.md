@@ -38,9 +38,10 @@ Folder ID: `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`
 12. `Chapter 12 — THE CLEAN MODEL` — Ollie POV — GREEN / Full Studio patched
 13. `Chapter 13 — VELA NIGHT` — Aoife POV — GREEN / Full Studio accepted
 14. `Chapter 14 — ALMOST LOCAL` — Ethan POV — GREEN / Full Studio accepted
+15. `Chapter 15 — LIMITED OPEN` — Ollie POV — GREEN / Full Studio accepted
 
 Current canonical frontier:
-**NEXT = Chapter 15 — LIMITED OPEN — Ollie POV.**
+**NEXT = Chapter 16 — THE INFERENCE — Aoife POV.**
 
 ## Active drafting authority
 
@@ -73,51 +74,52 @@ Do not call a chapter complete until accepted draft + gate are persisted and ver
 
 ## Latest accepted chapter
 
-### Chapter 14 — ALMOST LOCAL
+### Chapter 15 — LIMITED OPEN
 Accepted draft:
-`DRAFTS/CH14_ALMOST_LOCAL_v0.2_FULL_STUDIO.md`
+`DRAFTS/CH15_LIMITED_OPEN_v0.2_FULL_STUDIO.md`
 
 Accepted gate:
-`GATES/CH14_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+`GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive mirrors:
-- Accepted Ch14 v0.2 ID `1pIoEC6WFIwOpGmAV29vFhphchLfF3tSdgcc101vT1nk`
-- Ch14 Gate ID `1waDN3XQXWHhMu5zS9oau7sc_dT3u4f8I7F-rTf5fKGQ`
+- Accepted Ch15 v0.2 ID `10_p77yvxiEpFGzbXK7ikni6Gbcr5hJK0Mh_nVmGwHSo`
+- Ch15 Gate ID `18V_-Lal8aHylt0r_imiteJrAnug4oWkBmddDUC0uxJk`
 
 Gate verdict:
-**GREEN TO KEEP / PROCEED TO CHAPTER 15.**
+**GREEN TO KEEP / PROCEED TO CHAPTER 16.**
 
-Protected Ch14 law:
-- Ethan's adult-track line remains B-story setup, not Book Two takeover;
-- his wrong reflex is optimization-as-care, now expressed through friendship scheduling;
-- he partially grows by refusing to rank other people's commitments as movable;
-- he keeps the orientation private because he wants one decision-space of his own, not because he has decided to abandon the group;
-- the five are not breaking up: orbital life is making them five increasingly independent lives;
-- Aoife/Ethan attraction advances through trust pressure and ordinary behaviour, not generic romance structure.
+Protected Ch15 law:
+- the test is bounded realistic occupancy, not habitation opening;
+- Ollie's model succeeds under controlled conditions and earns a credible false victory;
+- two early embodied/interface events remain visible and unresolved rather than erased;
+- transition-overlap remains best current predictor, not proven cause;
+- Mara preserves uncertainty and adult decision authority;
+- Ollie's work now has legitimate institutional visibility;
+- false victory must not be retroactively made obviously reckless.
 
-## Chapters 15–18 working state
+## Chapters 16–18 working state
 
 Drive contains Full Studio working drafts for:
-- Ch15 `LIMITED OPEN` — ID `10_p77yvxiEpFGzbXK7ikni6Gbcr5hJK0Mh_nVmGwHSo`
 - Ch16 `THE INFERENCE` — ID `1excpvqgTBu8PSl7Q0BPn4d0fIEjdb0_QBkBLyLmRujY`
 - Ch17 `PLANET PEOPLE` — ID `1h_6U6zg2tKu2fGPFHeuFrW7awQn9MzfKaxR59hFlswM`
 - Ch18 `EIGHTEEN` — ID `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`
 
-A structural acceptance review found **FATAL 0 / MAJOR 0** across Ch15–18 against current Part III scene architecture. Ch17 received two small line-texture repairs; Ch18 received one narrator-verdict repair. These chapters are **NOT YET CANONICALLY ACCEPTED** until their full drafts + gates are persisted to GitHub and verified.
+Structural acceptance review found **FATAL 0 / MAJOR 0** across Ch16–18 against current Part III scene architecture. Ch17 has two small line-texture repairs; Ch18 has one narrator-verdict repair. These chapters remain **WORKING / NOT YET CANONICALLY ACCEPTED** until their full drafts + gates are persisted to GitHub and verified.
 
 ## Next prose / acceptance unit
 
-### Chapter 15 — LIMITED OPEN
-**POV:** Ollie
+### Chapter 16 — THE INFERENCE
+**POV:** Aoife
 
 Required function:
-- bounded realistic-occupancy test, not habitation opening;
-- real people disrupt clean test choreography through ordinary life rather than stupidity;
-- model succeeds under controlled conditions and earns a credible false victory;
-- early embodied/interface reports remain visible and unresolved rather than erased;
-- Mara enforces limits and uncertainty;
-- Ollie receives real credit without adults surrendering decision authority;
-- end with social life / local apprentice meal, not ominous collapse;
-- preserve delayed midpoint failure for Ch20.
+- Aoife publishes the smaller, explicitly approved excerpt;
+- a specialist third party infers sensitive source status from contextual clues rather than forbidden explicit disclosure;
+- inference spreads beyond intended audience;
+- source orders takedown;
+- takedown cannot erase copies;
+- Aoife begins to defend herself with “approved” and stops when she hears what that defense means;
+- trust ruptures and documentary access is reduced;
+- Ethan may offer response-framing help, but Aoife correctly recognizes that messaging is not the core problem;
+- preserve Sela as a person with work/training/music/route life, not an ethics device.
 
 Do not switch books on ordinary `и / дальше`.
