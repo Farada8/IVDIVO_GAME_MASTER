@@ -1,853 +1,820 @@
 ORBITAL YOUTH
 Chapter 18 — EIGHTEEN
 
-Ethan turned eighteen at 00:00 Vela local and discovered adulthood came with seven automated notices, three legal acknowledgements and one message from Maya containing a picture of a paper crown with the word RESPONSIBLE written across it.
+Ethan turned eighteen at 00:00 Vela local and discovered adulthood came with seven automated notices, three legal acknowledgements and one message from Maya containing a badly drawn crown.
 
-He stared at the crown.
+The crown had teeth.
 
-MAYA: legally now
+ETHAN: why does it have teeth
 
-ETHAN: this is not how adulthood works
+MAYA: authority
 
-MAYA: already failing
+ETHAN: that is not what authority looks like
 
-Then Samir sent:
+MAYA: you would know
 
 SAMIR: happy birthday
-SAMIR: do not let maya define the law
 
-Aoife’s message arrived last.
+AOIFE: condolences on your administrative transformation
 
-AOIFE: congratulations on becoming exactly one day older than yesterday
+OLLIE: legal status update complete?
 
-ETHAN: thank you for respecting the significance
+MAYA: blocked
 
-AOIFE: impossible
+OLLIE: why
 
-Ethan put the device down.
+MAYA: you made birthday sound like firmware
 
-The legal notices were still waiting.
+ETHAN: he is not entirely wrong
 
-One confirmed that his host arrangement now required his direct acknowledgement rather than guardian-linked acceptance.
+AOIFE: blocked too
 
-One changed the way he could sign for certain supervised project duties.
+His family called eleven minutes later.
 
-Two altered nothing immediately but contained enough language about liability that he suspected they were designed to frighten people into reading them.
+His host household produced food at a time when nobody should have wanted food and everybody ate it anyway.
 
-The adult-track eligibility notice was there too.
+At 00:34 Ethan went to bed legally different and physically identical.
 
-It had appeared several days earlier.
+At 07:10 his band reminded him that he could now accept certain contracts independently.
 
-He had still not told anyone.
+At 07:11 another notice informed him that his Youth Cohort obligations were unchanged.
 
-Ethan closed everything and went to sleep.
+He appreciated the sequencing.
 
-* * *
+By breakfast, the group had arranged to meet in one of the market volumes before Ollie’s shift, Samir’s practice, Aoife’s damaged documentary schedule and Maya’s temporarily reduced late-event freedom made another full gathering impossible.
 
-By evening, Maya had acquired a real crown.
+Ethan arrived first.
 
-Not paper.
+He did not mention that.
 
-Worse.
+Aoife arrived second carrying a small package.
 
-A flexible fabrication strip had been shaped into something that fit badly around Ethan’s head and projected RESPONSIBLE in small letters whenever he turned too quickly.
+“Do not make a face,” she said.
 
-“This violates at least one law,” Ethan said.
+“I haven’t.”
 
-“That is why you are responsible for it.”
+“You are preparing gratitude.”
 
-Samir was laughing.
+“That is considered normal.”
 
-Ollie looked exhausted enough that laughter required visible effort.
+“Not from you. You will make it formal.”
 
-Aoife held a food container against one hip and watched Ethan attempt to remove the crown.
+She put the package on the table.
 
-“Keep it on.”
+“Open it and be embarrassed correctly.”
 
-“No.”
+Ethan did.
 
-“It improves you.”
+Inside was a printed route card.
 
-“It emits text.”
+Not digital.
 
-“You emit text.”
+A physical card.
 
-“That is not the same thing.”
+It showed one of the first impossible routes he had proposed during their arrival week, with every mistake marked in red.
 
-“Debatable.”
+At the bottom Aoife had written:
 
-The five had managed forty-eight minutes together by using a common-volume reservation between Samir’s sport block, Maya’s host review, Aoife’s source work and Ollie’s commissioning shift.
-
-Ethan had arranged it.
-
-He had not optimized anyone out of another commitment.
-
-He was taking that as progress.
-
-The table was too small for the food Maya had ordered and the things everyone had brought anyway.
-
-Samir gave Ethan a grip wrap from the sport hall because, according to him, Ethan’s hands were “planetary and therefore underqualified.”
-
-Maya gave him the crown.
-
-Ollie gave him a compact route tool that displayed late-cycle transfer alternatives without opening a full planning interface.
-
-“You made this?” Ethan asked.
-
-“Modified it.”
-
-“You had time?”
-
-“No.”
-
-“That sounds unhealthy.”
-
-Ollie looked at him.
-
-“It is your birthday. Do not become insightful.”
-
-Aoife handed Ethan the food container she had been carrying.
-
-Inside was a cake equivalent from a local bakery that had clearly interpreted “small” as a personal insult.
-
-“You bought this?”
-
-“I stole it from a family.”
-
-“Good.”
-
-“They cried.”
-
-“Better.”
-
-Maya pointed at them.
-
-“This is why nobody knows what you two are doing.”
-
-Aoife turned.
-
-“What are we doing?”
-
-Maya immediately ate something.
-
-Samir said, “Strong tactical retreat.”
-
-Ethan looked at Aoife.
-
-She looked back.
-
-Neither answered.
-
-Ollie was already cutting the cake.
-
-For several minutes the room became simple.
-
-Bad crown.
-Too much food.
-Samir explaining why Ethan’s grip wrap was not decorative.
-Maya complaining that her host household had paused late-event authorization “in an extremely reasonable way, which is offensive.”
-Aoife refusing to show anyone the message she had received from her source because “privacy is suddenly a thing I enjoy.”
-
-Ollie checked the time twice.
-
-Ethan noticed.
-
-“You have to go.”
-
-“In nine minutes.”
-
-“You can stay.”
-
-“I have an early test review.”
-
-“That was not permission.”
-
-“I know.”
-
-Ethan stopped.
-
-Ollie noticed that too.
-
-“Growth,” Ollie said.
-
-“Shut up.”
-
-“Birthday growth.”
-
-Maya raised both hands.
-
-“The adult transformation.”
-
-Aoife tapped the crown and made RESPONSIBLE flare across Ethan’s forehead.
-
-He hated all of them.
-
-It was a good evening.
-
-Then his device buzzed.
-
-ADULT TRACK — INFORMATIONAL MEETING CONFIRMED
-Tomorrow 16:30
-Civic Operations — Route Systems
-
-Ethan locked the screen before anyone could see it.
-
-Aoife saw the movement anyway.
-
-“What?”
-
-“Nothing.”
-
-She raised one eyebrow.
-
-Ethan said, “Administrative.”
-
-“Terrifying.”
-
-“It usually is.”
-
-She let it go.
-
-That should have made him feel better.
-
-It did not.
-
-* * *
-
-The adult-track office occupied half a level above a civic transport planning floor and looked disappointingly normal.
-
-Ethan had expected something that felt like access.
-
-Instead there were desks, route maps, three people arguing about maintenance windows and a wall display showing two school transfer delays.
-
-A coordinator met him at the entrance.
-
-“Ethan?”
-
-“Yes.”
-
-“Come through.”
-
-No ceremony.
-
-Good.
-
-They sat beside a window that showed one of Vela’s internal transport spines disappearing through a curve of the habitat.
-
-The coordinator opened Ethan’s eligibility record.
-
-“This is informational. You are not accepting transfer today.”
-
-“I know.”
-
-“I say that because people hear adult route and assume general independence.”
-
-Ethan almost smiled.
-
-“What does it actually mean?”
-
-“Different liability. Different supervision ratio. Earlier access to live project responsibility in areas where legal adulthood matters.”
-
-“More freedom.”
-
-“More signatures with your name on them.”
-
-That was less attractive.
-
-Also more attractive.
-
-The coordinator showed him three current pathways.
-
-Not elite work.
-
-Real work.
-
-One involved public route optimization during service disruptions.
-
-One involved civic event logistics.
-
-One involved temporary infrastructure planning where school, care, work and transport schedules conflicted.
-
-Ethan leaned forward despite himself.
-
-The third one was exactly the kind of problem he had always wanted someone to let him solve.
-
-“Those are supervised?”
-
-“Yes.”
-
-“But live.”
-
-“Yes.”
-
-“Not simulations.”
-
-“No.”
-
-He looked at the route map.
-
-The coordinator watched him notice everything.
-
-“You like this.”
-
-Ethan sat back.
-
-“I understand it.”
-
-“That is not what I said.”
-
-He did not answer.
-
-The coordinator opened another page.
-
-“Your Youth Cohort placement has a current Ring Six commitment window.”
-
-Ethan’s attention shifted.
-
-“Yes.”
-
-“You cannot simply drop that because you turned eighteen.”
-
-“I wasn’t planning to.”
-
-“Good. Adult-track work begins after current obligations close or where schedules do not conflict and the supervising programs agree.”
-
-Ethan read the line twice.
-
-The choice was not now or never.
-
-That helped.
-
-It also removed the excuse to treat the meeting as meaningless.
-
-“What happens if I continue the process?”
-
-“We assess fit. You observe one project meeting. If both sides want to proceed, you can enter a supervised project block after the Ring Six review window.”
-
-“And if I don’t?”
-
-“Nothing.”
-
-“No penalty?”
-
-“You are eighteen, not drafted.”
-
-Ethan laughed.
-
-The coordinator did not.
-
-Maybe that joke had been used too many times.
-
-Ethan looked again at the project descriptions.
-
-One part of him wanted to send the page to the group immediately.
-
-Another wanted to keep it closed until he understood what he wanted.
-
-The second part won.
-
-“Can I observe the project meeting?”
-
-“Yes.”
-
-“That is not acceptance?”
-
-“No.”
-
-“Then yes.”
-
-The coordinator marked the next step.
-
-“Good.”
-
-Ethan left forty-one minutes later with a continuation packet and the uneasy feeling that something he had wanted for a long time had finally become real enough to disappoint someone.
-
-He still did not know who.
-
-* * *
-
-Aoife found out because Ethan was careless with a shared display.
-
-Not very careless.
-
-Just enough.
-
-They were in a study/work volume two days later, both pretending to work while actually waiting for Ollie to finish a commissioning update.
-
-Aoife was editing captions with one earbud in.
-
-Ethan had the adult-track continuation packet open on a private panel.
-
-When Ollie messaged that he would be another twenty minutes, Ethan minimized it and opened the group thread on the shared wall.
-
-For less than a second, the system showed his recent document rail.
-
-ADULT TRACK — CONTINUATION / CIVIC OPERATIONS
-
-Aoife saw it.
-
-Ethan knew because she stopped moving.
-
-Not dramatically.
-
-Her finger just remained on the caption line.
-
-“What is that?” she asked.
-
-He could have lied.
-
-He did not.
-
-“Adult-track information.”
-
-“You applied?”
-
-“No.”
-
-“You attended something?”
-
-“A meeting.”
-
-“When?”
-
-“Tuesday.”
-
-Aoife removed the earbud.
-
-Ethan felt the conversation become dangerous.
-
-“It was informational.”
-
-“That was not the question.”
-
-“Tuesday.”
-
-“I heard you the first time.”
-
-He waited.
-
-She closed her caption interface.
-
-“You could have told me.”
-
-There it was.
-
-The sentence he had expected.
-
-That annoyed him because expecting it made him feel justified.
-
-“I didn’t know what it meant yet.”
-
-Aoife looked at him.
-
-“You knew it meant enough not to tell us.”
-
-Ethan leaned back.
-
-“I wanted to understand the option before everyone had opinions.”
-
-“Everyone?”
-
-“The group.”
-
-“You mean me.”
-
-“I mean the group.”
-
-“That is why you did not tell Samir either?”
-
-“No.”
-
-“Or Ollie?”
-
-“No.”
-
-“Maya?”
-
-“No.”
-
-Aoife folded her arms.
-
-“That is not helping your case.”
-
-“I am not making a case.”
-
-“You are absolutely making a case.”
-
-Ethan stopped.
-
-She was right.
-
-He had already arranged the information into a defense.
-
-“It was one meeting.”
-
-“I am not angry you went.”
-
-“Then what are you angry about?”
-
-Aoife stared at him.
-
-Ethan realized immediately that this was the wrong question.
-
-She had already told him.
-
-“You decided what telling me would do before I got to have the reaction,” she said.
-
-“I didn’t want to make it a thing before it was a thing.”
-
-“That is management.”
-
-“It is caution.”
-
-“That is what you call management when you are doing it politely.”
-
-He looked away.
-
-The transit spine outside the window shifted into a different illumination cycle.
-
-People crossed the level below them.
-
-Nobody else in the room cared that Ethan’s private decision had become public between two people.
-
-“I’m eighteen,” he said.
-
-Aoife blinked.
-
-Then laughed once.
-
-Not kindly.
-
-“I know.”
-
-“That means I can make the decision myself.”
-
-“I did not say you couldn’t.”
-
-Ethan stopped again.
-
-There it was.
-
-Legal adulthood was completely irrelevant to the argument they were having.
-
-He hated when arguments changed category while he was inside them.
-
-Aoife put the earbud on the table.
-
-“Do you want the adult track?”
-
-“I don’t know.”
-
-“That I believe.”
-
-“It is real work.”
-
-“I assumed.”
-
-“It starts sooner.”
-
-“Okay.”
-
-“It could change my schedule.”
-
-“Okay.”
-
-“Aoife.”
-
-“What?”
-
-“You are saying okay like it is not okay.”
-
-“I am saying okay because those are facts.”
-
-He almost smiled despite himself.
-
-“That sounds like me.”
-
-“That is insulting.”
-
-Silence.
-
-Then Aoife said, “I would rather know something uncertain than discover you decided uncertainty was a reason not to tell me.”
+FASTEST ROUTE: ASK SOMEONE.
 
 Ethan looked at her.
 
-There was more under the sentence.
+“This is hostile.”
 
-He could feel it.
+“It cost fabrication allowance.”
 
-He also knew asking directly would probably make both of them retreat.
+“You spent resources insulting me.”
 
-“What would you have said?” he asked.
+“That is friendship.”
 
-“If you told me before the meeting?”
+He laughed.
 
-“Yes.”
+“Thank you.”
 
-Aoife thought.
+“Better.”
 
-“Probably something annoying.”
+“What was wrong with that?”
 
-“That is not reassuring.”
+“Nothing. I was ready in case.”
 
-“I am not trying to reassure you.”
+Maya arrived carrying a food container and wearing a shirt Ethan had never seen.
 
-“Clearly.”
-
-“I would have asked if you wanted it.”
-
-“I didn’t know.”
-
-“Then I would have asked after.”
-
-Ethan looked at the minimized packet.
-
-“And now?”
-
-Aoife looked too.
-
-“Now I am asking after.”
-
-He did not answer immediately.
-
-“I want the option,” he said finally.
-
-“That is an answer.”
-
-“Not the same as wanting to leave.”
-
-“I did not say leave.”
+“Adult.”
 
 “No.”
 
-“You did.”
+“You legally are.”
 
-He exhaled.
+“That does not require a title.”
 
-That was worse.
+“It does now.”
 
-The whole reason he had kept the meeting quiet was because somewhere underneath the practical questions, he had already attached departure to it.
+She put the food down.
 
-Not from Vela.
+“Your gift is that I came despite restrictions.”
 
-From the shape of the five of them he had been trying to preserve.
+“You are restricted because you lied about where you slept.”
 
-Aoife watched him understand something.
+Maya froze.
 
-She did not help.
+Aoife looked at Ethan.
 
-Good.
+Ethan heard the sentence after it was gone.
 
-His device buzzed.
+Maya said, “Excellent birthday behavior.”
 
-OLLIE: done. coming over
+“Sorry.”
 
-Ethan looked at the message.
+“Too late.”
 
-Aoife reopened her captions.
+She opened the food container.
 
-Conversation over.
+Inside were six pieces of something baked, each cut into a different geometric shape.
 
-Not resolved.
+“One is yours,” Maya said.
 
-Different.
+“Which one?”
+
+“You’re an adult. Decide.”
+
+Samir arrived at the same time as Ollie.
+
+Samir carried a narrow strip of grip material used in his sport volume.
+
+Ollie carried nothing.
+
+Ethan looked at him.
+
+Ollie said, “Your gift is pending.”
+
+Maya made a noise.
+
+“I had work.”
+
+“You had eighteen years.”
+
+“I did not know him for most of them.”
+
+“Excuses.”
+
+Samir handed Ethan the grip strip.
+
+“What is this?”
+
+“You keep putting your hand on the wrong rail side during low-band transfers.”
+
+“I do not.”
+
+“You do.”
+
+Aoife said, “Confirmed.”
+
+Maya said, “Documented.”
+
+Ollie said, “Observed.”
+
+Ethan looked at all of them.
+
+“This is a coordinated attack.”
+
+Samir sat.
+
+“Birthday.”
+
+They ate.
+
+For fifteen minutes nobody discussed Ring Six, Aoife’s inference breach, Maya’s host conditions, Ethan’s adult track or anything large enough to deserve a meeting.
+
+Maya tried to convince Samir to bring her to practice under a false name.
+
+Samir refused before she finished.
+
+Aoife complained that one of her documentary gaps now lasted ninety-two seconds and looked like a deliberate artistic choice.
+
+Ollie said gaps could be useful.
+
+Aoife told him never to say that to an editor again.
+
+Ethan cut the wrong baked shape and discovered Maya had filled one with something aggressively sour.
+
+She looked innocent badly.
+
+At 08:02 his band vibrated.
+
+ADULT PROFESSIONAL PATHWAY — INFORMATION SESSION AVAILABLE.
+
+He did not open it.
+
+Aoife saw the header anyway.
+
+Her eyes moved from the band to him.
+
+She said nothing.
+
+Ethan hated how relieved that made him.
+
+Maya was trying to steal Samir’s grip strip.
+
+Nobody else noticed.
+
+The notification disappeared.
+
+Then returned with a second line.
+
+OPTIONAL INTRODUCTORY MEETING — TODAY 16:30.
+
+Ethan locked the screen.
+
+Aoife looked away first.
 
 * * *
 
-Samir learned about the adult track that evening because Ethan told him.
+The adult-track meeting took place in a civic operations office that was less impressive than Ethan had hoped and therefore more convincing.
 
-Not because Samir asked.
+No panoramic windows.
+No ceremonial table.
+No wall of famous names.
 
-That mattered enough that Ethan noticed himself doing it.
+Four work surfaces, three people, one badly placed storage unit and a route-status display large enough to dominate the room.
 
-They were walking between a food pickup and Samir’s transit connection.
+The person running the meeting was a woman in her thirties who introduced herself as Tessa and immediately said, “This is not recruitment.”
 
-“I had an adult-track meeting,” Ethan said.
+Ethan sat.
 
-Samir kept walking.
+“Good.”
 
-“Okay.”
+“You sound disappointed.”
 
-“That was easier than Aoife.”
+“I’m recalibrating.”
 
-Samir looked at him.
+“That phrase is spreading.”
 
-“You told her after she found out?”
+He almost asked from whom.
+
+She opened his pathway record.
+
+“You requested information before majority.”
 
 “Yes.”
 
-“Then you did not tell her.”
+“You turned eighteen today.”
 
-“She knows.”
-
-“That is different.”
-
-Ethan stared at him.
-
-“Are all of you taking a course?”
-
-“No.”
-
-“You sound coordinated.”
-
-“That is your nightmare.”
-
-They crossed a route junction.
-
-Samir checked the clock.
-
-“I have three minutes.”
-
-“Right.”
-
-Ethan matched his pace.
-
-“The track is real project work. After Ring Six review.”
-
-“Do you want it?”
-
-“I want the option.”
-
-Samir nodded.
-
-Same answer.
-
-No accusation.
-
-Ethan felt irritated anyway.
-
-“What?” Samir asked.
-
-“Nothing.”
-
-“You looked annoyed.”
-
-“I am surrounded by people who notice faces.”
-
-“That sounds difficult.”
-
-“You are enjoying this.”
-
-“A little.”
-
-They reached Samir’s platform.
-
-Ethan said, “Aoife thinks I was managing her reaction.”
-
-Samir looked at the incoming route indicator.
-
-“Were you?”
-
-“I wanted to know what the meeting meant before I told anyone.”
-
-“That is not an answer.”
-
-“Why does everyone say that?”
-
-“Maybe because you answer something else.”
-
-The route arrived.
-
-Samir stepped toward it.
-
-Ethan said, “Whose side are you on?”
-
-Samir stopped at the door.
-
-“No.”
-
-“What?”
-
-“I am not doing that.”
-
-“I was joking.”
-
-“You were mostly joking.”
-
-Ethan smiled despite himself.
-
-Samir stepped inside.
-
-Then turned.
-
-“You kept asking what she was angry about after she already told you.”
-
-The doors started closing.
-
-Ethan said, “That is incredibly unhelpful.”
-
-Samir smiled.
+“Yes.”
 
 “Happy birthday.”
 
-The route left.
+“Thank you.”
+
+“That is the ceremonial section complete.”
+
+Ethan liked her immediately and distrusted that fact.
+
+She showed him the adult civic-coordination pathway.
+
+It was not command.
+
+That became clear fast.
+
+Adults on the route carried more liability, not more general permission.
+
+They could sign certain commitments directly and accept responsibility for work windows that Youth Cohort participants could only observe or assist under supervision.
+
+They also lost protections Ethan had not realized he liked.
+
+A missed deadline did not automatically become an educational event.
+
+A bad decision attached to a real work record.
+
+A professional conflict did not wait for a coordinator to interpret it into growth.
+
+Schedules were less flexible.
+
+Some work began earlier.
+
+Some ended when the work ended.
+
+“Do I get broader access?” Ethan asked.
+
+“To what?”
+
+“Operational decision work.”
+
+“Sometimes.”
+
+“Civic simulation?”
+
+“That is not operational work.”
+
+“I know.”
+
+“Do you?”
+
+He waited.
+
+Tessa smiled slightly.
+
+“Good. You can be trained.”
+
+She opened a current project.
+
+Not Ring Six.
+
+A mature-ring service transition was being reorganized because one freight timing change had created conflicts between school routes, care schedules and two maintenance shifts.
+
+No one was in danger.
+
+Everyone was annoyed.
+
+The task was to map dependencies and produce three viable timing options for the actual decision group.
+
+“Can I work on that?” Ethan asked.
+
+“Not today.”
+
+“After intake?”
+
+“If accepted and scheduled.”
+
+“How soon?”
+
+“Sooner than the Youth Cohort route.”
+
+The phrase sooner than the Youth Cohort route stayed on the screen.
+
+Ethan stopped the thought before it turned into a sentence.
+
+Tessa continued.
+
+“You would not decide which option is right.”
+
+“I know.”
+
+“You would identify consequences.”
+
+“I know.”
+
+“You say that quickly.”
+
+“I have been told.”
+
+“By people who know you?”
+
+“Yes.”
+
+“That may be useful evidence.”
+
+Ethan leaned back.
+
+The work looked exactly like the kind of problem his mind wanted.
+
+Routes.
+Timing.
+Dependencies.
+Tradeoffs visible enough to map.
+
+And no one asking him to pretend the mapping itself was the decision.
+
+That last part irritated him slightly.
+
+Which probably meant it mattered.
+
+Tessa closed the example.
+
+“Your current Youth Cohort commitment runs through the Ring Six window.”
+
+“Yes.”
+
+“You can begin adult-path orientation now. Full transfer to project work would wait until that commitment closes unless both programmes agree otherwise.”
+
+Ethan said, “Could both agree?”
+
+“They could.”
+
+The answer arrived too easily.
+
+He imagined it.
+
+Adult project work.
+Real deliverables.
+No youth label in the title.
+
+He could start before the others.
+
+Before Samir’s sport became serious.
+Before Maya negotiated more independence.
+Before Aoife rebuilt her project.
+Before Ollie finished whatever Ring Six turned into.
+
+The thought felt good for the wrong reason.
+
+Tessa watched him.
+
+“You do not have to decide today.”
+
+“I know.”
+
+She raised one eyebrow.
+
+Ethan corrected.
+
+“Right.”
+
+She sent him the continuation packet.
+
+“Read it. If you want to continue, schedule after your current commitment review.”
+
+“After?”
+
+“That is my recommendation.”
+
+“Not requirement.”
+
+“No.”
+
+He heard the opening.
+
+Tessa heard him hear it.
+
+“Recommendation,” she repeated.
+
+Ethan looked at the packet.
+
+“Why?”
+
+“Because you are already inside one live commitment with people depending on your participation. Beginning a second path before you understand what the first one costs is usually bad scheduling.”
+
+“That sounds like a moral answer disguised as logistics.”
+
+“It is logistics.”
+
+“Convenient.”
+
+“I work in civic coordination.”
+
+He smiled.
+
+She did not tell him what to choose.
+
+Tessa slid the continuation packet back across the table and waited for him to take it.
 
 * * *
 
-That night Ethan reopened the continuation packet.
+Aoife found out because Ethan left his adult-track continuation packet open on a shared study display.
 
-The next project-observation slot was in four days.
+Not public.
 
-ACCEPT
-DECLINE
-LATER — AFTER CURRENT RING SIX COMMITMENT REVIEW
+Not private enough.
 
-He stared at the options.
+He had connected his tablet to the table while showing Samir a route conflict for the next day’s practice transfer.
 
-The adult track had not become less attractive because Aoife was angry.
+The adult-path file appeared in the recent-documents rail for three seconds.
 
-That would have been simpler.
+Aoife saw it.
 
-The meeting still interested him.
+Ethan saw her see it.
 
-The work still looked real.
+Samir saw both of them and stood.
 
-The responsibility still felt like the door that had been closed in Book One finally opening.
+“I am getting food.”
 
-But Ring Six was also real.
+“You have food,” Ethan said.
 
-So were the people inside it.
+“I need different food.”
 
-So was the promise he had already made by being there.
+He left.
 
-Ethan selected:
+Aoife kept looking at the blank table rail where the file had been.
 
-LATER — AFTER CURRENT RING SIX COMMITMENT REVIEW
+Ethan disconnected his tablet.
 
-The system asked for confirmation.
+“That was not how I planned to tell you.”
 
-He confirmed.
+Aoife said, “Excellent sentence.”
 
-Then he opened the group thread.
+“I mean it.”
 
-For a moment he considered writing a full explanation.
+“I know.”
 
-He did not.
+“That makes it worse?”
 
-ETHAN: adult-track option is real. i attended one info meeting. i’m not transferring during ring six. i selected later until current commitment review closes.
+“I did not say that.”
 
-Maya replied first.
+He waited.
 
-MAYA: responsible crown worked
+Aoife folded her arms.
 
-Ollie:
+“Did you go?”
 
-OLLIE: statistically unsupported
+“To the meeting?”
 
-Samir:
+“Yes.”
 
-SAMIR: noted
+“Yes.”
 
-Aoife did not reply for forty-seven seconds.
+“When?”
 
-Then:
+“Today.”
 
-AOIFE: okay
+“You had the notice before today.”
 
-Ethan stared at the word.
+“Yes.”
 
-He could not tell what kind of okay it was.
+“How long?”
 
-He decided not to ask.
+“Eight days.”
 
-For once, uncertainty was allowed to belong to somebody else.
+Aoife stared at him.
+
+Ethan felt the structure of the argument forming and wanted to get ahead of it.
+
+“I didn’t know what it meant yet.”
+
+The sentence came out before he could decide whether it was good.
+
+Aoife’s expression changed.
+
+“You knew it meant enough not to tell us.”
+
+“I didn’t hide it from the group.”
+
+“You put it on a private calendar.”
+
+Ethan stopped.
+
+“How do you know that?”
+
+“You told me you had something to confirm after the bridge meeting.”
+
+“That does not mean—”
+
+“No. I guessed.”
+
+“Then don’t state guesses like facts.”
+
+Aoife’s jaw tightened.
+
+“Fine. Did you put it on a private calendar?”
+
+“Yes.”
+
+Silence.
+
+Ethan hated that the clean answer made him look worse than the messy one.
+
+“I wanted one thing that wasn’t immediately a group discussion.”
+
+Aoife said nothing.
+
+“That is allowed.”
+
+“I know.”
+
+“I’m eighteen.”
+
+Aoife looked at him.
+
+The phrase sat between them.
+
+Samir returned with different food at exactly the wrong time.
+
+He looked from Ethan to Aoife.
+
+“No.”
+
+Ethan said, “What?”
+
+Samir sat.
+
+“Do not make me part of this.”
+
+“I wasn’t.”
+
+“You were about to.”
+
+Aoife almost laughed.
+
+That made Ethan more annoyed than it should have.
+
+He looked at her.
+
+“I’m allowed to go to the meeting.”
+
+Samir said, “Nobody said you weren’t.”
+
+Ethan turned.
+
+Samir opened his food.
+
+“That is not the question.”
+
+Ethan stared at him.
+
+Aoife said, “Thank you.”
+
+Samir pointed at her with the fork.
+
+“I am not on your side either.”
+
+“I know.”
+
+“Good.”
+
+He ate.
+
+Ethan looked back at Aoife.
+
+“What exactly are you angry about?”
+
+“Do you want the real answer or the answer you can solve?”
+
+“That is unfair.”
+
+“Yes.”
+
+“Then real.”
+
+Aoife hesitated.
+
+“I’m not angry you went.”
+
+“Okay.”
+
+“I’m angry you decided what telling me would do before I got to do it.”
+
+Ethan frowned.
+
+“That sentence needs work.”
+
+“Of course that is your response.”
+
+“No. I mean—what did I decide?”
+
+“That if you told us, it became a group issue. That if you told me, I would have an opinion. So you kept it until you understood it enough to manage the reaction.”
+
+“I didn’t manage anything.”
+
+“You tried.”
+
+“I was trying to know what I wanted.”
+
+“Then say that.”
+
+“I just did.”
+
+“Eight days later.”
+
+Ethan leaned back.
+
+The study volume around them continued without respect for the argument.
+
+A student across the aisle swore at a failed simulation.
+Two people fought quietly over a charging surface.
+A transit notice moved one late route by four minutes.
+
+Samir kept eating.
+
+Ethan said, “I didn’t know if I wanted it.”
+
+Aoife said, “Do you now?”
+
+He looked at the continuation packet.
+
+“Yes.”
+
+The word surprised him with how quickly it arrived.
+
+Aoife noticed.
+
+“Okay.”
+
+“That’s all?”
+
+“What do you want?”
+
+“I don’t know.”
+
+“Then okay.”
+
+Ethan almost smiled.
+
+Aoife did not.
+
+He said, “I’m not leaving the cohort tomorrow.”
+
+“I didn’t ask.”
+
+“I know.”
+
+“Do you?”
+
+He stopped.
+
+Samir looked at him over the food container.
+
+Ethan said, “Right.”
+
+Aoife picked up her recorder bag.
+
+“I have to go.”
+
+“Source?”
+
+“No source.”
+
+He heard the mistake immediately.
+
+Aoife’s face closed.
+
+“Sorry.”
+
+“Stop saying sorry before you know what part you’re apologizing for.”
+
+“That is difficult operational advice.”
+
+She almost smiled.
+
+Almost.
+
+Then she left.
+
+Samir waited until she was out of the study volume.
+
+Ethan said, “You can say it.”
+
+“No.”
+
+“You clearly have something.”
+
+“Yes.”
+
+“So?”
+
+Samir finished chewing.
+
+“You asked what she was angry about after she told you what she was angry about.”
+
+Ethan frowned.
+
+“She hadn’t told me yet.”
+
+“She had. Earlier.”
+
+“When?”
+
+Samir shrugged.
+
+“Several times.”
+
+“That is not useful.”
+
+“I know.”
+
+Ethan looked at the continuation packet.
+
+The option was still there.
+
+Real.
+Attractive.
+His.
+
+He opened the response field.
+
+CONTINUE ADULT-PATH PROCESS?
+
+YES / LATER / DECLINE
+
+His thumb hovered over YES.
+
+Then moved to LATER.
+
+Not decline.
+
+Not surrender.
+
+He selected:
+
+LATER — AFTER CURRENT RING SIX COMMITMENT REVIEW.
+
+The system accepted it.
+
+Samir looked at the screen.
+
+“Did she make you do that?”
+
+“No.”
+
+“Good.”
+
+“She did not ask me to.”
+
+“I know.”
+
+Ethan locked the tablet.
+
+“You are very irritating at eighteen.”
+
+Samir said, “You have been eighteen for less than a day.”
+
+“Exactly.”
+
+“Strong sample.”
