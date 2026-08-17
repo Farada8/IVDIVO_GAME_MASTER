@@ -1,5 +1,5 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.8
+Version: v0.9
 Date: 2026-08-17
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
@@ -72,8 +72,18 @@ Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W008_PUSHMAN_HOW_TO_READ_LIKE_A_WR
 Core membership note: current registry evidence does not establish W008 as a Core-40 slot; Core count is therefore not modified.
 Distinct-source note: this is Erin M. Pushman's 2022 book, not Francine Prose's 2006 *Reading Like a Writer*.
 
+### W009 — Christopher Vogler — *The Writer's Journey: Mythic Structure for Writers*, 25th Anniversary / 4th ed. (2020)
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `1LRY1c1BCzXAnrkq2xZc8PyRa2RxC0Llf`
+Alternate representation: Russian translation Drive ID `1_VrSwycSVjFf7JE4vpHqPSlUg3YHuGwa`; same bibliographic knowledge, not a separate source by default.
+Integrity: 522 pages; 26,530,927 bytes; ~150.2k extracted words; introductions, Books One/Two, epilogue, appendices, filmography, bibliography, subject index and terminal matter verified.
+Raw SHA-256: `6b10fe1afd9e305b9d87d9597be6af379e76e061f864b9ca47b7c383c3e3f842`
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W009_VOGLER_WRITERS_JOURNEY_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry evidence does not establish W009 as a Core-40 slot; Core count is therefore not modified.
+Metaphysics note: Jung/chakra/vibration/ESP/telepathy/synchronicity material is treated as symbolic craft theory, not scientific or IVDIVO ontological evidence.
+
 ## COUNTS
-- Wider strict complete explicitly tracked here: **8**
+- Wider strict complete explicitly tracked here: **9**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
