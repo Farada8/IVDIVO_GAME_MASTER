@@ -39,12 +39,13 @@ Folder ID: `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`
 13. `Chapter 13 — VELA NIGHT` — Aoife POV — GREEN / Full Studio accepted
 14. `Chapter 14 — ALMOST LOCAL` — Ethan POV — GREEN / Full Studio accepted
 15. `Chapter 15 — LIMITED OPEN` — Ollie POV — GREEN / Full Studio accepted v0.3
-16. `Chapter 16 — THE INFERENCE` — Aoife POV — GREEN / Full Studio accepted
+16. `Chapter 16 — THE INFERENCE` — Aoife POV — GREEN / Full Studio accepted v0.3
 17. `Chapter 17 — PLANET PEOPLE` — Maya POV — GREEN / Full Studio accepted
 18. `Chapter 18 — EIGHTEEN` — Ethan POV — GREEN / Full Studio accepted
+19. `Chapter 19 — GO / NO-GO` — Ollie POV — GREEN / Full Studio accepted v0.3
 
 Current canonical frontier:
-**NEXT = Chapter 19 — GO / NO-GO — Ollie POV.**
+**NEXT = Chapter 20 — THE WRONG CAUSE — Ollie POV.**
 
 ## Active drafting authority
 
@@ -78,96 +79,94 @@ Do not call a chapter complete until accepted draft + gate are persisted and ver
 ## Latest accepted controls
 
 ### Chapter 15 — LIMITED OPEN v0.3
-Accepted draft:
-`DRAFTS/CH15_LIMITED_OPEN_v0.3_FULL_STUDIO.md`
+GitHub draft: `DRAFTS/CH15_LIMITED_OPEN_v0.3_FULL_STUDIO.md`  
+GitHub gate: `GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`  
+Drive accepted draft ID `19Ixqvur0oDyEkuguGQabSgWvuIK0WX2MoA1S6PnfjXk`  
+Drive acceptance gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
 
-Accepted gate:
-`GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-
-Drive:
-- Accepted Ch15 v0.3 ID `19Ixqvur0oDyEkuguGQabSgWvuIK0WX2MoA1S6PnfjXk`
-- Ch15 Acceptance Gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
-
-Protected Ch15 law:
+Protected law:
 - bounded realistic occupancy, not habitation opening;
-- first cycle includes a 3.2-second fixed-system follow inside the ordinary settling band; it closes without propagation;
-- second messier cycle does not reproduce the disputed fixed-system lag;
-- two early embodied/interface events remain visible and unresolved rather than erased;
-- transition-overlap remains best current predictor, not proven cause;
-- Mara preserves uncertainty and adult decision authority;
-- false victory must not be retroactively made reckless;
-- Ch20 must reveal a missing causal class, not prove Ch15 work worthless.
+- first cycle includes a 3.2-second fixed-system follow inside ordinary settling tolerance and closes without propagation;
+- second messier cycle does not reproduce disputed fixed lag;
+- two early embodied/interface events remain unresolved;
+- transition-overlap is best current predictor, not proven cause;
+- Ch20 must expose a missing causal class rather than make Ch15 work worthless.
 
-### Chapter 16 — THE INFERENCE
-Accepted draft:
-`DRAFTS/CH16_THE_INFERENCE_v0.2_FULL_STUDIO.md`
+### Chapter 16 — THE INFERENCE v0.3
+GitHub draft: `DRAFTS/CH16_THE_INFERENCE_v0.3_FULL_STUDIO.md`  
+GitHub gate: `GATES/CH16_FULL_STUDIO_LOCAL_GATE_v0.1.md`  
+Drive accepted draft ID `1V38otYv5wrui6gke2JpLBV_HvYb85bQCRmu9bNtPmdg`  
+Drive acceptance gate ID `1hEmI49MmiWrGDKarltOUv7v8YLUK2h1-G7XtBpS2v3w`
 
-Accepted gate:
-`GATES/CH16_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-
-Drive:
-- Draft ID `1excpvqgTBu8PSl7Q0BPn4d0fIEjdb0_QBkBLyLmRujY`
-- Gate ID `1R5-ItHWGg6VrIm6eYsGSdABGVdOSSbyK8NN33RHZvu4`
-
-Protected Ch16 law:
-- source-approved excerpt still creates inferential exposure through contextual clues;
-- literal consent compliance is not enough to protect inferential privacy;
+Protected law:
+- inferential privacy failure, not explicit promise-breaking;
 - original takedown cannot erase derivative copies;
-- source trust/access is ruptured and cannot reset cheaply;
-- Ethan’s useful action is restraint, not response management.
+- source trust/access does not reset cheaply;
+- Ethan’s useful action remains restraint rather than response management.
 
 ### Chapter 17 — PLANET PEOPLE
-Accepted draft:
-`DRAFTS/CH17_PLANET_PEOPLE_v0.2_FULL_STUDIO.md`
+GitHub draft: `DRAFTS/CH17_PLANET_PEOPLE_v0.2_FULL_STUDIO.md`  
+GitHub gate: `GATES/CH17_FULL_STUDIO_LOCAL_GATE_v0.1.md`  
+Drive draft ID `1h_6U6zg2tKu2fGPFHeuFrW7awQn9MzfKaxR59hFlswM`  
+Drive gate ID `1pwUZ5swGuEYuQDV3nZKsykfRsDYDyrIlrIp6covkJ68`
 
-Accepted gate:
-`GATES/CH17_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-
-Drive:
-- Draft ID `1h_6U6zg2tKu2fGPFHeuFrW7awQn9MzfKaxR59hFlswM`
-- Gate ID `1pwUZ5swGuEYuQDV3nZKsykfRsDYDyrIlrIp6covkJ68`
-
-Protected Ch17 law:
-- local residents remain internally divided about opening and delay;
-- Lea’s household has a legitimate material reason to want restricted opening sooner;
-- Maya’s Ch10 concealment has now produced relational/administrative cost;
-- Maya’s next autonomy step must use truthful negotiated conditions rather than surveillance or concealment.
+Protected law:
+- residents remain divided about delay/opening;
+- Lea household has legitimate material reason to prefer restricted opening sooner;
+- Maya’s concealment has paid relational/administrative cost;
+- future autonomy must be built from truthful negotiated conditions.
 
 ### Chapter 18 — EIGHTEEN
+GitHub draft: `DRAFTS/CH18_EIGHTEEN_v0.2_FULL_STUDIO.md`  
+GitHub gate: `GATES/CH18_FULL_STUDIO_LOCAL_GATE_v0.1.md`  
+Drive draft ID `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`  
+Drive gate ID `1CLP6Zl96SvYA8xnGYcWULstgo7Vg7Jm-2RwHMrO3Kv8`
+
+Protected law:
+- Ethan remains in Youth Cohort through current Ring Six review;
+- adult-track stays real and attractive afterward;
+- Ethan/Aoife pressure is secrecy/timing/pre-management, not generic career-vs-romance;
+- A-line belongs to Ollie/Ring Six.
+
+### Chapter 19 — GO / NO-GO v0.3
 Accepted draft:
-`DRAFTS/CH18_EIGHTEEN_v0.2_FULL_STUDIO.md`
+`DRAFTS/CH19_GO_NO_GO_v0.3_FULL_STUDIO.md`
 
 Accepted gate:
-`GATES/CH18_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+`GATES/CH19_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive:
-- Draft ID `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`
-- Gate ID `1CLP6Zl96SvYA8xnGYcWULstgo7Vg7Jm-2RwHMrO3Kv8`
+- Draft ID `1TEB_85IkanzX1C1-U-UHhUNoYqvC6fEIoF7vim_VRe0`
+- Gate ID `1JFzsKEKdJL2vlT5lfNYhWjej48s4BaL4P_DnkOwgcbw`
 
 Gate verdict:
-**GREEN TO KEEP / PROCEED TO CHAPTER 19.**
+**GREEN TO KEEP / ACCEPT CH19 / PROCEED TO CH20.**
 
-Protected Ch18 law:
-- Ethan remains in Youth Cohort through the Ring Six commitment review;
-- adult-track opportunity remains real and attractive afterward;
-- Ethan/Aoife pressure concerns secrecy/timing/management of reaction, not permission or generic career-vs-romance;
-- adulthood increases liability and responsibility, not simply power;
-- Ch19 returns the A-line to Ollie and Ring Six.
+Protected Ch19 law:
+- LIMITED GO / OCCUPIED COMMISSIONING, not unrestricted habitation;
+- R6-A only; 42% planned occupancy cap;
+- disputed partition overlap prohibited;
+- reviewed route combinations only;
+- enhanced monitoring and lowered stop threshold;
+- resident/personal-interface reports remain in stop logic without medical-proof requirement;
+- Ollie personally supported this restricted profile and his position is public/attributable;
+- board/adults own authorization;
+- decision remains rational in retrospect.
 
 ## Next prose / acceptance unit
 
-### Chapter 19 — GO / NO-GO
+### Chapter 20 — THE WRONG CAUSE
 **POV:** Ollie
 
 Required function:
-- present two defensible interpretations of the Ring Six evidence;
-- Ollie’s analysis must remove one legitimate reason to delay without proving unrestricted safety;
-- Mara forces explicit statement of uncertainty and of what the model does not prove;
-- affected residents and apprentices must disagree for material reasons rather than form a moral chorus;
-- Ollie publicly supports limited opening only under defined restrictions;
-- adult commissioning board makes the decision and retains authority;
-- authorize limited partial habitation with density/route/partition/monitoring restrictions;
-- the decision must be rational in retrospect, setting up Ch20 failure without retroactive stupidity;
-- move-in staging begins, crossing the false-success threshold.
+- deliver the midpoint failure in real occupied conditions;
+- expose a missing causal class rather than simple recurrence of the already-modelled overlap;
+- initial symptoms/signals must appear first through lived resident/interface experience and ordinary household/service activity;
+- fixed-system anomaly follows later, proving the current predictor model incomplete but not fraudulent;
+- stop logic must activate because Ch19 kept embodied/interface reports operationally visible;
+- adults act competently and rapidly under the restricted-opening rules;
+- evacuation/pause carries housing, service and trust consequences because real households are now inside;
+- Ollie’s public Ch19 yes becomes personal/professional price;
+- end after the situation changes decisively: Ring Six occupancy paused/rolled back and Ollie loses confidence in the causal model he helped institutionalize.
 
 Do not switch books on ordinary `и / дальше`.
