@@ -22,11 +22,11 @@ Core movement:
 - Ch21 lead timing is a serious hypothesis class, not causal proof.
 - Ch22 adds authorized de-identified correction: experienced environmental onset may precede personal/interface log; exact interval unknown.
 - Aoife may not give Ollie source material directly.
-- Injured maintenance worker remains unnamed and under work restriction; no Tomas retcon.
+- **CANON RECONCILIATION:** the maintenance worker injured in Ch20 is Tomas. He has a distal wrist/forearm fracture + soft-tissue injury, several weeks of manual-work restriction, and a temporary/reassigned work pattern that worsens his commute. Do not invent a second casualty, make him heroic, or blame Ollie personally.
 
 ## SCENE 71 — ORDINARY WORK CONTINUES
 
-Ollie is doing real maintenance outside Ring Six. The city has not stopped. A staffing gap caused by the injured worker/review shifts makes ordinary service load visible without melodrama.
+Ollie is doing real maintenance outside Ring Six. The city has not stopped. A staffing gap caused by Tomas’s injury plus review shifts makes ordinary service load visible without melodrama.
 
 He sees that his Ch21 `related observation` was acknowledged by incident review, but acknowledgment does not restore access.
 
