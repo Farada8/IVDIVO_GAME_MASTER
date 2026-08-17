@@ -1,8 +1,8 @@
 # IVDIVO — BOOK 2 ORBITAL YOUTH — DRAFT STATUS
 
-**Status:** FULL MANUSCRIPT DEVELOPMENT / REGRESSION PASS B  
+**Status:** FULL MANUSCRIPT DEVELOPMENT / PASS B CLOSED / PASS C ACTIVE  
 **Updated:** 2026-08-17  
-**Story Gate:** PROSE FRONTIER COMPLETE / STRUCTURAL REGRESSION PASS A GREEN  
+**Story Gate:** PROSE FRONTIER COMPLETE / STRUCTURAL REGRESSION PASS A GREEN / PASS B GREEN  
 **Primary hero:** Ollie
 
 GitHub `main` is canonical production state. Google Drive mirrors working state.  
@@ -28,182 +28,118 @@ Protected late-book continuity:
 - Aoife/S1 trust remains narrow; Samir retains independent sport/social life;
 - final emotional beat belongs to the five young people, not franchise machinery.
 
-## FULL-MANUSCRIPT REGRESSION
+## PASS A — STRUCTURAL / CAUSAL / CONTINUITY
 
-### PASS A — STRUCTURAL / CAUSAL / CONTINUITY
 **GREEN / ACCEPTED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
 
 GitHub: `GATES/BOOK2_FULL_MANUSCRIPT_REGRESSION_GATE_v0.1.md`  
 Drive: `1br_qyunP1d4YVJHfu5QjnxYeH1l6DK6_fIYLNvZs2Dk`
 
-### PASS B — Ch21–29 CONTINUOUS CORRIDOR
-**GREEN / ACCEPTED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
+## PASS B — LINE / DIALOGUE / GENERATED-PATTERN REGRESSION
 
-GitHub:
+**GREEN / CLOSED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
+
+### Ch21–29 continuous corridor
+Accepted under:
 - `GATES/BOOK2_PASS_B_CH21_29_CONTINUOUS_REGRESSION_GATE_v0.1.md`
 - `GATES/BOOK2_PASS_B_CH21_29_COMBINED_ACCEPTANCE_GATE_v0.1.md`
 
-Drive combined acceptance: `1jCMebHW2udpoNOlpbtzvUpaNunA79I_7DwHS8FjD6ZY`
+Accepted routing:
+- Ch21 `CH21_SHUT_v0.4_PASS_B_CANDIDATE.md`
+- Ch22 `CH22_AFTER_THE_CAMERA_v0.3_RECONCILED.md` — protected
+- Ch23 `CH23_NO_ACCESS_v0.3_PASS_B_CANDIDATE.md`
+- Ch24 `CH24_WHERE_MAYA_IS_v0.2_FULL_STUDIO.md` — protected
+- Ch25 `CH25_NO_INTERVIEW_v0.3_PASS_B_CANDIDATE.md`
+- Ch26 `CH26_THE_SECOND_MODEL_v0.3_PASS_B_CANDIDATE.md`
+- Ch27 `CH27_CONTROLLED_REPRODUCTION_v0.3_PASS_B_CANDIDATE.md`
+- Ch28 `CH28_TWO_BAD_OPTIONS_v0.2_PASS_B_CANDIDATE.md`
+- Ch29 `CH29_SEGMENTS_v0.2_PASS_B_CANDIDATE.md`
 
-Routing:
-- Ch21 `CH21_SHUT_v0.4_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
-- Ch22 `CH22_AFTER_THE_CAMERA_v0.3_RECONCILED.md` — PROTECTED / NO PATCH;
-- Ch23 `CH23_NO_ACCESS_v0.3_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
-- Ch24 `CH24_WHERE_MAYA_IS_v0.2_FULL_STUDIO.md` — PROTECTED / NO PATCH;
-- Ch25 `CH25_NO_INTERVIEW_v0.3_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
-- Ch26 `CH26_THE_SECOND_MODEL_v0.3_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
-- Ch27 `CH27_CONTROLLED_REPRODUCTION_v0.3_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
-- Ch28 `CH28_TWO_BAD_OPTIONS_v0.2_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING;
-- Ch29 `CH29_SEGMENTS_v0.2_PASS_B_CANDIDATE.md` — ACCEPTED FOR ROUTING.
+The token `CANDIDATE` is historical after acceptance.
 
-The filename token `CANDIDATE` is historical after combined acceptance.
+### Outside-corridor accepted patches
 
-### PASS B — OUTSIDE Ch21–29 LINE / DIALOGUE / GENERATED-PATTERN SWEEP
+- Ch06 `DRAFTS/CH06_THE_RING_PEOPLE_WANT_v0.4_PASS_B_CANDIDATE.md`
+- Ch09 `DRAFTS/CH09_THE_APPRENTICES_v0.3_PASS_B_CANDIDATE.md`
+- Ch17 `DRAFTS/CH17_PLANET_PEOPLE_v0.3_PASS_B_CANDIDATE.md`
+- Ch18 `DRAFTS/CH18_EIGHTEEN_v0.3_PASS_B_CANDIDATE.md`
+- Ch19 `DRAFTS/CH19_GO_NO_GO_v0.4_PASS_B_CANDIDATE.md`
+- Ch32 `DRAFTS/CH32_THE_LATE_ROUTE_v0.2_PASS_B_CANDIDATE.md`
 
-Canonical audit:
-`STUDIO/BOOK2_PASS_B_OUTSIDE_CH21_29_LINE_PATTERN_SWEEP_v0.1.md`
+Key gates:
+- `GATES/BOOK2_PASS_B_BATCH1_COMBINED_ACCEPTANCE_GATE_v0.1.md`
+- `GATES/CH18_PASS_B_GROUP_VOICE_ACCEPTANCE_GATE_v0.1.md`
+- `GATES/BOOK2_PASS_B_CH17_19_TRANSITION_GATE_v0.1.md`
+- `GATES/CH19_PASS_B_ACCEPTANCE_GATE_v0.1.md`
+- `GATES/BOOK2_PASS_B_CH18_20_TRANSITION_GATE_v0.1.md`
+- `GATES/CH32_PASS_B_LIGHT_VOICE_ACCEPTANCE_GATE_v0.1.md`
+- `GATES/BOOK2_PASS_B_CH31_33_TRANSITION_GATE_v0.1.md`
+- `GATES/BOOK2_PASS_B_OUTSIDE_CORRIDOR_FINAL_CLOSURE_GATE_v0.1.md`
 
-Drive mirror:
-`1bBJsxqB1aX8iF9cecAnkN3YqzccH5d-LtEXo_QaOgac`
-
-#### BATCH 1 — Ch06 / Ch09 / Ch17
-**GREEN / ACCEPTED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
-
-Accepted candidates:
-- `DRAFTS/CH06_THE_RING_PEOPLE_WANT_v0.4_PASS_B_CANDIDATE.md`
-- `DRAFTS/CH09_THE_APPRENTICES_v0.3_PASS_B_CANDIDATE.md`
-- `DRAFTS/CH17_PLANET_PEOPLE_v0.3_PASS_B_CANDIDATE.md`
-
-Local gates:
-- `GATES/CH06_PASS_B_BATCH1_ACCEPTANCE_GATE_v0.1.md`
-- `GATES/CH09_PASS_B_BATCH1_ACCEPTANCE_GATE_v0.1.md`
-- `GATES/CH17_PASS_B_BATCH1_ACCEPTANCE_GATE_v0.1.md`
-
-Transition gates:
-- `GATES/BOOK2_PASS_B_BATCH1_CH05_10_TRANSITION_GATE_v0.1.md` — GREEN
-- `GATES/BOOK2_PASS_B_BATCH1_CH16_18_TRANSITION_GATE_v0.1.md` — GREEN
-
-Combined gate:
-`GATES/BOOK2_PASS_B_BATCH1_COMBINED_ACCEPTANCE_GATE_v0.1.md`
-
-Drive combined acceptance:
-`1BRiaFZG0sugBML_fyphs9RjTksNkHk9sxs9NvY5RnxU`
-
-Drive prose mirrors verified:
-- Ch06 v0.4: `10H5KQXtrfC7ApnzA4r4zCHYPGrQtWlcjGk70tyWGKDY`
-- Ch09 v0.3: `1FyP8fOTeq9cyJ97phWHmcZpTgSQi0DDMBuBpe-_PNJQ`
-- Ch17 v0.3: `11XgB83s7lIbTHo0urS1q3E5rK6Hw1tYPpVGo0MUO7wU`
-
-Batch 1 result:
-- cross-character dry-smart category-correction convergence materially reduced;
-- Ch06 eleven-second evidence remains weak/bounded;
-- Ch09 Kalen resentment now rests on access/status/work rather than generic clever correction;
-- Ch17 Maya owns argumentative speed while Lea/local grievance are grounded in household/departure consequence;
-- Ch05→10 and Ch16→18 continuity survive.
-
-#### Ch18 — EIGHTEEN GROUP-VOICE REGRESSION
-**GREEN / ACCEPTED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
-
-Accepted candidate:
-`DRAFTS/CH18_EIGHTEEN_v0.3_PASS_B_CANDIDATE.md`
-
-Local gate:
-`GATES/CH18_PASS_B_GROUP_VOICE_ACCEPTANCE_GATE_v0.1.md`
-
-Transition gate:
-`GATES/BOOK2_PASS_B_CH17_19_TRANSITION_GATE_v0.1.md` — GREEN
-
-Drive mirrors/readback:
-- candidate `18jY-kyDwM0139okO7241KhvAZdllSBaWAtBuwsplE8w`
-- gate `1HfH2lUKZ9c0pUzIJDgA2j5JY9uByZM9Myu-bbFHHrqs`
-
-Ch18 result:
-- birthday warmth and ordinary group life preserved;
-- Maya/Aoife/Ollie/Samir/Tessa no longer share one stacked correction voice;
-- adult majority means more liability and fewer guardian layers, not instant authority;
-- Ethan remains attracted to advancement/status and selects `LATER — AFTER CURRENT RING SIX COMMITMENT REVIEW` rather than abandoning the adult path;
-- later Ch31 scarcity remains intact.
-
-#### Ch19 — GO / NO-GO TECHNICAL RECAP TRIM
-**GREEN / ACCEPTED. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
-
-Accepted candidate:
-`DRAFTS/CH19_GO_NO_GO_v0.4_PASS_B_CANDIDATE.md`
-
-Local gate:
-`GATES/CH19_PASS_B_ACCEPTANCE_GATE_v0.1.md`
-
-Transition gate:
-`GATES/BOOK2_PASS_B_CH18_20_TRANSITION_GATE_v0.1.md` — GREEN
-
-Drive mirrors/readback verified:
-- candidate `1GrXHiGw2zVCoyQVDbp7J6h_kvIGlOc0NP-XI_qzdjgE`
-- local gate `14bDZUJa1ZF8-acNHQNIQgt3TKTfQM1OKC4EUXZ67n1g`
-- transition gate `1oaFJS2IJfWyhHYp8WgCDjlGUgOy6oybnt4C0xGYYLaQ`
-
-Ch19 result:
-- duplicated Ch15 technical recap compressed;
-- 3.2-second allowed follow preserved;
-- disputed overlap and messier-cycle non-reproduction preserved;
-- embodied/personal-interface uncertainty preserved;
-- resident disagreement and Iri stop/report logic preserved;
-- Ollie's personal `YES` remains explicitly bounded and non-authoritative;
-- board authority and all `LIMITED GO` conditions unchanged;
-- actual household move-in still ends the chapter and Ch20 opens inside exactly those conditions.
-
-The old `CH19_GO_NO_GO_v0.4_PASS_B_TRIM_PATCH.md` is now provenance/working history only; the full candidate above is the routed prose.
-
-#### Ch32 — THE LATE ROUTE LIGHT-VOICE PASS
-**GREEN / ACCEPTED FOR PASS-B ROUTING. FATAL 0 / MAJOR 0 / blocking MEDIUM 0.**
-
-Accepted candidate:
-`DRAFTS/CH32_THE_LATE_ROUTE_v0.2_PASS_B_CANDIDATE.md`
-
-Local gate:
-`GATES/CH32_PASS_B_LIGHT_VOICE_ACCEPTANCE_GATE_v0.1.md`
-
-Transition gate:
-`GATES/BOOK2_PASS_B_CH31_33_TRANSITION_GATE_v0.1.md` — GREEN
-
-Drive mirrors/readback verified:
+Drive verified Ch32:
 - candidate `1q1KGyvyIWdP01w2CnhPIj3Rqa_VVNGJQXZOlm9udOyc`
 - local gate `1hamNk7PwUJn2lBVES-ARQSgNCrI48e8H_pSpHW9KAHg`
 - transition gate `1zI-U12FxW-joLXLEYDZrl5HD89KV4GuHT1bEcYmCWqk`
 
-Ch32 result:
-- full validation found no story/authority/continuity defect;
-- light pass reduces route-face/shared correction routine and cumulative `I know` ladders;
-- Lea household still refuses split move despite technically improved route;
-- Maya's mistake remains over-help/control, not concealment;
-- Ch24 autonomy protocol is used, not renegotiated;
-- no live tracking or surveillance retreat;
-- Maya earns only route/signage walk-through work under staff confirmation;
-- Lea functional trust improves only enough for one requested check;
-- Ch32 closes at 06:30 with bounded relocation support;
-- Ch33 opens at 06:31 with Ollie and migration as the A-line.
+Drive Pass-B outside-corridor closure:
+`1o71W-3ZLr6srWUuC1sBm9Q7id3sjamZEAikGRcn3ciw`
 
-## CURRENT CANONICAL FRONTIER
+### Protected / no-patch after Pass B
 
-**NEXT PRODUCTION STAGE = REFRESH REQUIRED AFTER Ch32 ACCEPTANCE. DO NOT ASSUME TARGET.**
+- Ch11 `WHOSE STORY` — protected; consent/documentary behavior already gives distinct voice/function.
+- Ch13 `VELA NIGHT` — protected; fragments belong to festival/sport/coursework/music/route accumulation.
+- Ch22 / Ch24 — protected by corridor acceptance.
+- Ch30 `WHO WAITS` — **fresh full read = PROTECT / NO PASS-B PATCH**.
+  - GitHub protection record: `STUDIO/CH30_PASS_B_PROTECT_NO_PATCH_v0.1.md`
+  - Drive mirror: `1_fF4xUIBXX9vN1sOqSZXErD9wGBnNEX6QAkacAumVDk`
+- Ch31 / Ch34 / Ch35 / Ch36 — closed by dedicated late-book controls; no new local defect demonstrated.
 
-Required next action:
-1. reread this `DRAFT_STATUS.md` after persistence;
-2. inspect newest canonical Pass-B audit / gates / commits;
-3. select only an explicitly permitted unresolved local or whole-manuscript watch;
-4. if no meaningful defect is demonstrated, move toward Pass-B assembly / whole-manuscript continuous regression instead of inventing more edits.
+### Pass-B result
 
-Protected unless fresh evidence says otherwise:
-- Ch11 / Ch13 — PROTECT / NO PATCH;
-- Ch31 / Ch34 / Ch35 / Ch36 — CLOSED absent demonstrated local defect;
-- Ch30 surface watch — WORKING/SECONDARY only until refreshed routing permits it;
-- Ch12 / Ch20 secondary notes — HOLD unless reader-visible in refreshed whole-book read.
+The cumulative voice-convergence failure mode—too many characters sharing `No / Yes / I know / That is not / Better / Good / face` correction architecture—has been materially reduced without mechanically flattening youth banter, one-word replies, operational readouts or story-critical technical limits.
+
+**Over-cleaning risk now exceeds benefit from further automatic chapter-level patches.**
+
+## HOLD / NOT AUTOMATIC PATCHES
+
+- Ch12 / Ch20 secondary line notes: HOLD unless whole-book reader/line verification makes them reader-visible.
+- Ch15 Pass-C briefing compression: WORKING history only; Ch19 recap compression removed the immediate downstream repetition pressure. Do not promote automatically.
+- Samir inner arc: full-book character watch, not a demonstrated chapter defect.
+- Ollie private youth life: not a confirmed Ch12–20 MAJOR; verify payoff whole-book before inventing compensatory scenes.
 
 ## CANON RECONCILIATION STILL ACTIVE
 
 **Tomas = Ch20 injured maintenance worker.** Light-duty/manual-service restriction remains active unless later accepted prose explicitly changes it.
 
+## CURRENT CANONICAL FRONTIER
+
+**NEXT PRODUCTION STAGE = PASS C — WHOLE-MANUSCRIPT CHARACTER / RELATIONSHIP / READER ADVOCATE / FINAL-LINE VERIFICATION.**
+
+Pass C is evidence-first. Do not reopen accepted chapters from counts alone.
+
+### First required character checks
+1. **SAMIR FULL ARC** — verify across accepted prose whether he has a real `want → wrong strategy/mistake → price → changed choice`, not merely a well-written boundary/competence subplot. Priority evidence: early inherited state + Ch08/13 sport/belonging + Ch25 consent-bounded contribution + Ch36 resolution.
+2. **OLLIE PRIVATE YOUTH PAYOFF** — verify that his movement from usefulness addiction toward work/friendship balance is paid behaviorally across Ch12/13/15/20/21–29/33–36; do not insert a hobby scene by default.
+3. **PRE-CLIMAX HERO CONTINUITY Ch28–32** — confirm ensemble/civic settlement does not dilute Ollie so far that Ch33–35 feels like protagonist return after absence.
+4. **MYSTERY-PROMISE CALIBRATION** — confirm early prose promises a commissioning problem/missing causal class, not one total hidden root cause the novel never fully reveals.
+
+### Pass C outputs
+For each confirmed issue:
+- evidence ledger;
+- severity;
+- repair threshold;
+- smallest repair card if needed.
+
+If no MAJOR is demonstrated, PROTECT. Do not create prose merely to justify the pass.
+
+After character/relationship verification:
+- Reader Advocate continuous read;
+- final global line verification;
+- Final Story Gate;
+- external-feedback readiness.
+
 ## PRODUCTION MODE
 
-`refreshed status -> verify latest canonical audit/gates -> bounded work only where demonstrated -> Dialogue / Reader Advocate / Continuity / Red Team / Line -> transition regression -> GitHub -> Drive -> readback -> update manuscript state`.
+`fresh DRAFT_STATUS -> Pass C evidence ledger -> Red Team -> targeted repair only if demonstrated -> continuity regression -> GitHub -> Drive -> readback -> Final Story Gate`.
 
 Do not add Chapter 37. Do not restore the epilogue automatically. Do not switch books.
