@@ -1,6 +1,6 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.9
-Date: 2026-08-17
+Version: v0.10
+Date: 2026-08-18
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
 
@@ -82,8 +82,19 @@ Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W009_VOGLER_WRITERS_JOURNEY_STRICT
 Core membership note: current registry evidence does not establish W009 as a Core-40 slot; Core count is therefore not modified.
 Metaphysics note: Jung/chakra/vibration/ESP/telepathy/synchronicity material is treated as symbolic craft theory, not scientific or IVDIVO ontological evidence.
 
+### W010 — Anne Lamott — *Bird by Bird: Some Instructions on Writing and Life*
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `192GeaZJ1OQCSha3T_Up0bpPcU4GpWReo`
+Duplicate policy: Drive ID `14LuAzabgdg5cFwcH-BZN_hZdnADWgINQ` is byte-identical and counts as the same source.
+Integrity: 114 PDF pages; 720,937 bytes; ~66.8k extracted words; Introduction, Parts One–Five, author/copyright/end matter verified end-to-end.
+Raw SHA-256: `24695abbb106ae8a4100d29c7aea12ec0c2fd9f15026b3190b03461133fc6dac`
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W010_LAMOTT_BIRD_BY_BIRD_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry evidence does not establish W010 as a Core-40 slot; Core count is therefore not modified.
+Science/metaphysics note: intuition/unconscious/spiritual/religious claims are treated as personal/craft framing, not scientific or IVDIVO ontological evidence.
+Market/date note: 1990s publication/agent mechanics are historical, not current market authority.
+
 ## COUNTS
-- Wider strict complete explicitly tracked here: **9**
+- Wider strict complete explicitly tracked here: **10**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
