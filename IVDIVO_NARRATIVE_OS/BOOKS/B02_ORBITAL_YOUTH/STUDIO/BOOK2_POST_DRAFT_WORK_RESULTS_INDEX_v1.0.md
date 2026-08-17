@@ -20,6 +20,19 @@ Current stage: FULL-MANUSCRIPT INTEGRATION / CONTINUOUS PROSE EVIDENCE READ / PA
 5. `BOOK2_CHARACTER_RELATIONSHIP_INTEGRATION_AUDIT_v1.0.md` — Ollie/Iri, five-person divergence, Ethan/Aoife, Aoife/S1, Maya/Lea, Samir watches.
 6. `BOOK2_CH12_20_CONTINUOUS_PROSE_PRESSURE_AUDIT_v1.0.md` — first prose-evidence window.
 
+## BASE INTEGRATION CONTROLS
+A. `GATES/BOOK2_FULL_DRAFT_COMPLETION_GATE_v1.0.md` — closes chapter-drafting phase; Ch1–36 accepted; no Ch37/automatic epilogue.
+B. `STUDIO/BOOK2_FULL_BOOK_INTEGRATION_BRIEF_v1.0.md` — defines full-book passes, severity standard, repair law and required outputs.
+C. `STUDIO/BOOK2_FULL_BOOK_CAUSAL_SPINE_AUDIT_v1.0.md` — confirms main causal engine and isolates two unconfirmed MAJOR watches + five MEDIUM watches for prose verification.
+
+## GOOGLE DRIVE WORK ROUTER / HANDOFF
+Active folder: `ORBITAL_YOUTH_ACTIVE` — `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`.
+
+Use these Drive results for parallel human-readable work:
+- `00 BOOK2 ORBITAL YOUTH — POST-DRAFT WORK RESULTS INDEX v1.0` — ID `1DYma2FubqkifoCQ-R_B4Dphobg6T5p9iQfRPYzBeRX0`.
+- `BOOK2 ORBITAL YOUTH — CURRENT WORK RESULT — PASS B Ch12–20 to Ch21–29` — ID `1WO3R25u7tnhq_Yl8RFfUmii_LRB8w5HD2uGq_Gm6l_o`.
+- `BOOK2 ORBITAL YOUTH — Continuous Prose Pressure Audit Ch12–20 v1.0` — ID `1YsYyxLdsXz3Ps4vh_B4Bt9lurrOcWwGjhydFu7IdaOE`.
+
 ## CURRENT CONFIRMED FINDINGS
 - FATAL: 0.
 - Confirmed structural MAJOR requiring rewrite: 0.
