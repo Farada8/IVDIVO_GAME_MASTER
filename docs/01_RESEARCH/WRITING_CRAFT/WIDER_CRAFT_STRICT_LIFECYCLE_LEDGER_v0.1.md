@@ -1,5 +1,5 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.3
+Version: v0.4
 Date: 2026-08-17
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
@@ -28,8 +28,16 @@ Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W003_HERMAN_STORYTELLING_SCIENCES_
 Core membership note: current registry evidence still does not establish W003 as a Core-40 slot; Core count is therefore not modified.
 Science-status note: cognitive/neuroscience/psychology claims from the 2013 source are not current scientific authority by default; narrative mechanisms and scientific truth are tracked separately.
 
+### W004 — Karl Iglesias — *Writing for Emotional Impact* (2005)
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `16Tco9hWzOKum_cKASKrEYEz8wkQakvVU`
+Duplicate policy: three Drive representations of the same bibliographic source count as one source.
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W004_IGLESIAS_WRITING_FOR_EMOTIONAL_IMPACT_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry evidence does not establish W004 as a Core-40 slot; Core count is therefore not modified.
+Medium/date note: 2005 screenplay-market and formatting prescriptions are not universal novel rules; transferable reader-effect mechanisms are tracked separately.
+
 ## COUNTS
-- Wider strict complete explicitly tracked here: **3**
+- Wider strict complete explicitly tracked here: **4**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
