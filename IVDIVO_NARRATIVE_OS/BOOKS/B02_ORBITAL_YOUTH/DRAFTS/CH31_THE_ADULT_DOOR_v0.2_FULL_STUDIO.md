@@ -208,7 +208,7 @@ Ethan looked at her.
 
 “They prefer someone starts in the slot. They do not care whether that person is you enough to make this moral.”
 
-That was useful.
+The answer stripped away the easiest excuse.
 
 She closed one of the schedules.
 
@@ -222,10 +222,11 @@ It was the question he did not want to ask because the answer would make the cho
 
 The coordinator thought before answering.
 
+“Meaningfully likely.”
+
 She did not turn it into a percentage.
 
 “Meaningfully likely.”
-
 Ethan nodded.
 
 “Okay.”
@@ -567,7 +568,6 @@ Ethan put the fork down.
 “I didn’t want you to find out after.”
 
 Aoife's expression shifted before she looked back down at the food.
-
 “Okay.”
 
 Ethan looked at the floor.
@@ -596,19 +596,7 @@ Aoife looked at him for several seconds.
 
 “For us?”
 
-There it was.
-
-The dangerous version.
-
-He could say no.
-
-Clean.
-
-Independent.
-
-Mature.
-
-Also false.
+Aoife's question exposed the version he had been avoiding. He could say no and make the choice sound clean, independent and mature. It would also be false.
 
 “Partly.”
 
@@ -724,13 +712,11 @@ He looked at her.
 
 Aoife looked back.
 
-Neither solved anything.
-
-That was probably the point.
+The question remained between them without being converted into an answer they had not earned.
 
 Ethan said, “I’m going to take the later intake.”
 
-Aoife only nodded.
+Aoife nodded once and left it there.
 
 “Tell them before the deadline.”
 
@@ -889,15 +875,7 @@ Then at the confirmation page.
 
 He pressed CONFIRM.
 
-The current placement disappeared.
-
-Immediately.
-
-Not faded.
-
-Not marked declined.
-
-Gone from ACTIVE OFFERS.
+The current placement disappeared immediately from ACTIVE OFFERS instead of fading into a declined state.
 
 A new line appeared:
 
@@ -936,7 +914,6 @@ CURRENT INTAKE — CONFIRMED.
 For half a second, resentment arrived with perfect clarity.
 
 It was not about Luca personally. The resentment reached backward instead—toward timing, toward seventeen, toward the months already lost, toward the irritating fact that even without anyone blocking him, choosing one future still removed another.
-
 His hand moved toward the group chat.
 
 He stopped.
@@ -947,15 +924,8 @@ Never mind, this feels bad, everyone please make me feel correct?
 
 He closed the chat.
 
-The feeling stayed while the group chat remained closed.
-
-Ethan let it.
-
-He opened the migration schedule instead.
-
-Then closed that too.
-
-That was harder.
+Closing the group chat did not reduce the resentment, and Ethan did not reopen it to ask anyone else to carry it.
+He opened the migration schedule instead, then closed that too. The work he had chosen was easier to face than the opportunity he had released.
 
 Celia called from the kitchen.
 
@@ -1009,8 +979,9 @@ Aoife sent three windows.
 
 Ethan sent two of his.
 
-They found twenty-seven minutes the next evening without opening the group schedule.
+They found one overlap.
 
+They found twenty-seven minutes the next evening without opening the group schedule.
 He accepted.
 
 Then went to decide whether the thing in the kitchen was soup.
