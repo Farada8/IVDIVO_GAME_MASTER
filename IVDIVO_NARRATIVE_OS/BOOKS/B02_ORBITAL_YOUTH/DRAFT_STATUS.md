@@ -43,9 +43,10 @@ Folder ID: `1tZ6Kdkjq9blB10i98cE_3d02egYnPWQJ`
 17. `Chapter 17 — PLANET PEOPLE` — Maya POV — GREEN / Full Studio accepted
 18. `Chapter 18 — EIGHTEEN` — Ethan POV — GREEN / Full Studio accepted
 19. `Chapter 19 — GO / NO-GO` — Ollie POV — GREEN / Full Studio accepted v0.3
+20. `Chapter 20 — THE WRONG CAUSE` — Ollie POV — GREEN / Full Studio accepted v0.3
 
 Current canonical frontier:
-**NEXT = Chapter 20 — THE WRONG CAUSE — Ollie POV.**
+**NEXT = Chapter 21 — SHUT — Ollie POV.**
 
 ## Active drafting authority
 
@@ -76,97 +77,85 @@ For each substantive step:
 
 Do not call a chapter complete until accepted draft + gate are persisted and verified.
 
-## Latest accepted controls
+## Current protected continuity
 
-### Chapter 15 — LIMITED OPEN v0.3
-GitHub draft: `DRAFTS/CH15_LIMITED_OPEN_v0.3_FULL_STUDIO.md`  
-GitHub gate: `GATES/CH15_FULL_STUDIO_LOCAL_GATE_v0.1.md`  
-Drive accepted draft ID `19Ixqvur0oDyEkuguGQabSgWvuIK0WX2MoA1S6PnfjXk`  
-Drive acceptance gate ID `1Km9YwlLwRbF83Onpul2qZdVdI3DaGMo8zLXeDzmbcDE`
+### Ch15 — LIMITED OPEN v0.3
+- 3.2-second fixed-system follow remained inside ordinary settling tolerance;
+- second messier cycle did not reproduce disputed lag;
+- embodied/interface reports remained unresolved;
+- transition-overlap was predictor, not proven cause.
 
-Protected law:
-- bounded realistic occupancy, not habitation opening;
-- first cycle includes a 3.2-second fixed-system follow inside ordinary settling tolerance and closes without propagation;
-- second messier cycle does not reproduce disputed fixed lag;
-- two early embodied/interface events remain unresolved;
-- transition-overlap is best current predictor, not proven cause;
-- Ch20 must expose a missing causal class rather than make Ch15 work worthless.
-
-### Chapter 16 — THE INFERENCE v0.3
-GitHub draft: `DRAFTS/CH16_THE_INFERENCE_v0.3_FULL_STUDIO.md`  
-GitHub gate: `GATES/CH16_FULL_STUDIO_LOCAL_GATE_v0.1.md`  
-Drive accepted draft ID `1V38otYv5wrui6gke2JpLBV_HvYb85bQCRmu9bNtPmdg`  
-Drive acceptance gate ID `1hEmI49MmiWrGDKarltOUv7v8YLUK2h1-G7XtBpS2v3w`
-
-Protected law:
+### Ch16 — THE INFERENCE v0.3
 - inferential privacy failure, not explicit promise-breaking;
-- original takedown cannot erase derivative copies;
+- derivative copies survive takedown;
 - source trust/access does not reset cheaply;
-- Ethan’s useful action remains restraint rather than response management.
+- Ethan’s useful action is restraint.
 
-### Chapter 17 — PLANET PEOPLE
-GitHub draft: `DRAFTS/CH17_PLANET_PEOPLE_v0.2_FULL_STUDIO.md`  
-GitHub gate: `GATES/CH17_FULL_STUDIO_LOCAL_GATE_v0.1.md`  
-Drive draft ID `1h_6U6zg2tKu2fGPFHeuFrW7awQn9MzfKaxR59hFlswM`  
-Drive gate ID `1pwUZ5swGuEYuQDV3nZKsykfRsDYDyrIlrIp6covkJ68`
-
-Protected law:
+### Ch17 — PLANET PEOPLE
 - residents remain divided about delay/opening;
-- Lea household has legitimate material reason to prefer restricted opening sooner;
-- Maya’s concealment has paid relational/administrative cost;
-- future autonomy must be built from truthful negotiated conditions.
+- Lea household has material cost from delay;
+- Maya’s concealment has paid relational/administrative cost.
 
-### Chapter 18 — EIGHTEEN
-GitHub draft: `DRAFTS/CH18_EIGHTEEN_v0.2_FULL_STUDIO.md`  
-GitHub gate: `GATES/CH18_FULL_STUDIO_LOCAL_GATE_v0.1.md`  
-Drive draft ID `1_o4ty3DIi9vfAf71yblee5zM2DvYk6oJETXpH1rwi6M`  
-Drive gate ID `1CLP6Zl96SvYA8xnGYcWULstgo7Vg7Jm-2RwHMrO3Kv8`
+### Ch18 — EIGHTEEN
+- Ethan remains in Youth Cohort through Ring Six commitment review;
+- adult-track remains a real later option;
+- Ethan/Aoife pressure is secrecy/timing/pre-management, not generic career-vs-romance.
 
-Protected law:
-- Ethan remains in Youth Cohort through current Ring Six review;
-- adult-track stays real and attractive afterward;
-- Ethan/Aoife pressure is secrecy/timing/pre-management, not generic career-vs-romance;
-- A-line belongs to Ollie/Ring Six.
+### Ch19 — GO / NO-GO v0.3
+- LIMITED GO / OCCUPIED COMMISSIONING only;
+- R6-A, 42% density cap, disputed partition overlap prohibited, reviewed routes only;
+- enhanced monitoring / lowered stop threshold / resident-interface reports active;
+- Ollie personally supported the restricted profile;
+- board owned authorization;
+- decision remains rational in retrospect.
 
-### Chapter 19 — GO / NO-GO v0.3
+### Ch20 — THE WRONG CAUSE v0.3
 Accepted draft:
-`DRAFTS/CH19_GO_NO_GO_v0.3_FULL_STUDIO.md`
+`DRAFTS/CH20_THE_WRONG_CAUSE_v0.3_FULL_STUDIO.md`
 
 Accepted gate:
-`GATES/CH19_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+`GATES/CH20_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive:
-- Draft ID `1TEB_85IkanzX1C1-U-UHhUNoYqvC6fEIoF7vim_VRe0`
-- Gate ID `1JFzsKEKdJL2vlT5lfNYhWjej48s4BaL4P_DnkOwgcbw`
+- Draft ID `1BBbomx5KwTnw3kAAhkZAp0Z12PrXpeIsAGBQg2Gc9Q8`
+- Gate ID `1JKKBHkNd9IrOy7dd_A3t9Px3crAHno-X6ZSkaLIj9T0`
 
 Gate verdict:
-**GREEN TO KEEP / ACCEPT CH19 / PROCEED TO CH20.**
+**GREEN TO KEEP / ACCEPT CH20 / PROCEED TO CH21.**
 
-Protected Ch19 law:
-- LIMITED GO / OCCUPIED COMMISSIONING, not unrestricted habitation;
-- R6-A only; 42% planned occupancy cap;
-- disputed partition overlap prohibited;
-- reviewed route combinations only;
-- enhanced monitoring and lowered stop threshold;
-- resident/personal-interface reports remain in stop logic without medical-proof requirement;
-- Ollie personally supported this restricted profile and his position is public/attributable;
-- board/adults own authorization;
-- decision remains rational in retrospect.
+Protected Ch20 law:
+- no Ch19 restriction was secretly broken;
+- missing causal class = distributed equivalent transition across allowed states;
+- EAST SERVICE + COMMON RETURN CORRECTION + SERVICE C created coupled demand while PARTITION B remained locked;
+- five resident/interface entries preceded first fixed threshold crossing;
+- report/stop logic worked and reduced harm;
+- adult response was competent;
+- Ring Six occupancy is suspended / move-in reversed;
+- one maintenance worker has probable forearm fracture / soft-tissue injury;
+- Lea household is displaced again;
+- Ollie credential is REVIEW HOLD;
+- exact role of embodied/interface reports remains UNKNOWN: early indication vs participation in feedback is not solved.
 
 ## Next prose / acceptance unit
 
-### Chapter 20 — THE WRONG CAUSE
+### Chapter 21 — SHUT
 **POV:** Ollie
 
+Writer Brief:
+`STUDIO/CH21_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
+
+Drive Writer Brief ID:
+`1_agbQB6ac52i947rJ8m3iaDUdL5dMcKIeto7dUcSrVo`
+
 Required function:
-- deliver the midpoint failure in real occupied conditions;
-- expose a missing causal class rather than simple recurrence of the already-modelled overlap;
-- initial symptoms/signals must appear first through lived resident/interface experience and ordinary household/service activity;
-- fixed-system anomaly follows later, proving the current predictor model incomplete but not fraudulent;
-- stop logic must activate because Ch19 kept embodied/interface reports operationally visible;
-- adults act competently and rapidly under the restricted-opening rules;
-- evacuation/pause carries housing, service and trust consequences because real households are now inside;
-- Ollie’s public Ch19 yes becomes personal/professional price;
-- end after the situation changes decisively: Ring Six occupancy paused/rolled back and Ollie loses confidence in the causal model he helped institutionalize.
+- convert emergency into exact distributed responsibility rather than generic guilt;
+- reconstruct enough of distributed-equivalence mechanism to pay M20-01 without claiming full root cause;
+- keep Ollie off Ring Six and make review hold legitimate;
+- Mara offers ordinary maintenance work elsewhere rather than privileged access;
+- Iri anger targets evidence hierarchy, while admitting resident reports were noisy/inconsistent;
+- Ollie accepts lower-status legitimate work;
+- ordinary maintenance exposes older occupied-module complaints with similar lead-timing language;
+- old complaints are clue only, not proof;
+- end with second-model path opening and trust still damaged.
 
 Do not switch books on ordinary `и / дальше`.
