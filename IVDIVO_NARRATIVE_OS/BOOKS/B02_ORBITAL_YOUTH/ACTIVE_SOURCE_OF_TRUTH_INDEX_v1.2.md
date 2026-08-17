@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–29 GREEN / Chapter 30 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–30 GREEN / Chapter 31 next
 
 ## READ ORDER
 
@@ -51,21 +51,21 @@
 
 ## ACCEPTED PROSE FRONTIER
 
-**Chapters 1–29: GREEN / accepted development drafts.**
+**Chapters 1–30: GREEN / accepted development drafts.**
 
-Latest accepted chapter: **Ch29 — SEGMENTS — Ollie POV — v0.1 — GREEN.**
+Latest accepted chapter: **Ch30 — WHO WAITS — Aoife POV — v0.1 — GREEN.**
 
 GitHub:
-- Writer Brief: `STUDIO/CH29_SEGMENTS_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
-- Draft: `DRAFTS/CH29_SEGMENTS_v0.1_FULL_STUDIO.md`
-- Gate: `GATES/CH29_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Writer Brief: `STUDIO/CH30_WHO_WAITS_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
+- Draft: `DRAFTS/CH30_WHO_WAITS_v0.1_FULL_STUDIO.md`
+- Gate: `GATES/CH30_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive canonical mirror:
-- Writer Brief ID `1A-JYIbyEYGM4XBIi-SUm_nHMLcc9Hi8dOmYdtoHS-_s`
-- Draft ID `1BsJPhdjN3-clsuj9yT6pPpc-21AR4v85Hg_Y30dw01Q`
-- Gate ID `1Tio2LCVU4rHRvLMhB4I4Vo7hK1NhFushZyFwPwWBToY`
+- Writer Brief ID `1hi6MA3t2jMyMkZuagIw-35spMU9TKtnAUcAmnBjbAM4`
+- Draft ID `1ZFVJ-vcrjXkZbuaEFxiLJdimxC0MZD5shgksOezIaH4`
+- Gate ID `1zvdyPmTJN7qzcnJqSpFeegtkcdEuO0jhRQZDb7lHkIU`
 
-## PROTECTED CH26–29 CONTINUITY
+## PROTECTED CH26–30 CONTINUITY
 
 ### Ch26 — THE SECOND MODEL
 - Ollie remains REVIEW HOLD; no unrestricted Ring Six operational access is restored.
@@ -95,9 +95,16 @@ Drive canonical mirror:
 - Technical compatibility does not determine allocation priority.
 - Housing allocation remains constrained by household/environment/route/access/work-school/wait burdens and household preference against forced splitting.
 - Lea’s household is only partly compatible with first phase and receives no protagonist favoritism.
-- Lea remains angry at her own outcome while not demanding safe access be denied to others.
 - Ollie remains model support, not board/housing authority.
-- Aoife enters Ch30 waiting-resident logistics with recorder away.
+
+### Ch30 — WHO WAITS
+- Aoife works inside relocation/waiting consequences with recorder away.
+- Source/S1 relationship reopens only as one banal, explicitly bounded line for possible later use; no forgiveness or intimacy reset.
+- Aoife does not immediately record the offered line.
+- Waiting remains material through laundry, school gear, split household logistics, storage, sleep and route/shift burden.
+- Tomas remains Ch20 injured worker on light duty; commute consequences remain active.
+- Partial opening yields mixed outcomes; no clean resident consensus.
+- Ethan's adult-track response deadline arrives at chapter end.
 
 ## CANON RECONCILIATION STILL ACTIVE
 
@@ -106,27 +113,24 @@ Current state: continuing light-duty/manual-service restriction; do not rename o
 
 ## CURRENT CANONICAL FRONTIER
 
-**NEXT = Chapter 30 — WHO WAITS — Aoife POV.**
+**NEXT = Chapter 31 — THE ADULT DOOR — Ethan POV.**
 
 Required direction:
-- move texture away from engineering and into lived relocation/waiting consequences;
-- Aoife spends the day helping with boxes, route planning and ordinary errands with recorder away;
-- temporary housing pressure appears through school gear, laundry, work shifts, sleep, relationships and stored possessions;
-- residents may contradict one another; Aoife must not force a clean documentary thesis;
-- S1/source relationship may reopen only in a small, practical, explicitly bounded way; no instant forgiveness or intimacy reset;
-- if one banal source-approved line becomes recordable, Aoife should not grab for it immediately;
-- partial opening shows mixed outcomes: some burdens shrink, others remain or redistribute;
-- unresolved technical mystery stays background; Ch30 is a people/waiting chapter, not another model chapter.
+- immediate adult-track placement start overlaps the migration period;
+- coordinator offers a real option, not manipulation;
+- later intake exists without guarantee of identical placement;
+- Ethan chooses to finish the current Ring Six commitment and enter later intake;
+- preferred immediate slot disappears, so the choice retains cost;
+- Ethan tells Aoife before deadline; trust repairs slightly without romantic certainty;
+- he admits group matters partly but also acts because he said he would finish;
+- later envy/uncertainty remains, but he does not convert it into group-management;
+- adult-track stays B-line.
 
 ## SAVE / ROUTING LAW
 
 A chapter is not accepted across the project until accepted draft + gate are persisted in GitHub and Drive and mirrors are verified.
 
-Current verified Drive routing note:
-- canonical Ch27 draft mirror is `1xnemGYB_JBi34accamkFQa_IWHYMe5ukmC7zeg2HLcA`;
-- old mixed Ch27 document is explicitly `SUPERSEDED MIXED — DO NOT ROUTE`;
-- canonical Ch29 gate is `1Tio2LCVU4rHRvLMhB4I4Vo7hK1NhFushZyFwPwWBToY`;
-- duplicate Ch29 gate created during concurrent recovery is explicitly `SUPERSEDED DUPLICATE — DO NOT ROUTE`.
+Parallel alternate files that conflict with `DRAFT_STATUS.md` plus the accepted gate chain do not become routing authority merely by being newer. They require explicit reconciliation/acceptance. This currently applies to alternate Ch29/Ch30 files such as `PHASE TWO` / `SHADOW MODE` if they conflict with the verified accepted SEGMENTS → WHO WAITS chain.
 
 ## ACTIVE DRAFTING MODE
 
