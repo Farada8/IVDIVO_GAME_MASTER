@@ -41,11 +41,9 @@ Do not call this source studied/integrated until continuous FULL READ and every 
 
 ## Other Drive representations
 Visible alternate representations include:
-- `Robert-McKee-Story.pdf` — 49,105,060 bytes / 427 pages;
+- `Robert-McKee-Story.pdf` — same bibliographic source, different layout/extraction;
 - `mckee-robert-story.docx`;
 - `story-substance-structure-style-and-principles-of-screenwriting...docx`.
-
-The 49 MB PDF is **not byte-identical** to the retained PDF. It contains the same 1997 McKee title/copyright material and the opening text strongly aligns, but page layout/text extraction differs substantially. It is treated as another representation of the same bibliographic source, **not separate knowledge**. The clean 518-page PDF is retained because it has superior continuous extraction and terminal text.
 
 No visible McKee representation is counted as an additional Core source.
 
@@ -88,135 +86,256 @@ Close/adjust only after full read.
 
 # 3. FULL READ LEDGER
 
-## COMPLETE CONTINUOUSLY THIS PASS
-
 ### Front matter / Introduction — **COMPLETE**
-Read continuously through:
-- story as principles rather than rules;
-- universal form rather than formula;
-- archetype vs stereotype;
-- culture-specific detail over universal human conflict;
-- craft as disciplined diagnosis rather than shortcuts;
-- audience intelligence and predictive participation;
-- originality as content + form rather than eccentricity for its own sake;
-- story quality prioritized over cosmetic dialogue/description repair.
-
 ### Chapter 1 — `The Story Problem` — **COMPLETE**
-Read continuously through:
-- story as human search for meaningful patterns;
-- entertainment as emotionally lived experience rather than empty escape;
-- critique of spectacle/trickery substituting for story;
-- story design as upstream of dialogue/description;
-- good story / good telling;
-- creative/critical oscillation in writing and rewriting;
-- understructured portraiture vs overstructured spectacle;
-- story as metaphor for life rather than literal transcription;
-- facts vs interpreted meaning;
-- sensory perception and imagination as complementary powers;
-- distinction between literary talent and story talent;
-- craft as means of maximizing talent.
-
 ### Chapter 2 — `The Structure Spectrum` — **COMPLETE**
+
+### Chapter 3 — `Structure and Setting` — **COMPLETE THIS PASS**
 Read continuously through:
-- story triangle / Archplot / Miniplot / Antiplot;
-- classical design variables: causality, closed ending, external conflict, single active protagonist, consistent reality, linear time;
-- minimalist variations including open ending, internal conflict, multiple/passive protagonists;
-- antistructure variations including coincidence, nonlinear time and inconsistent reality;
-- change vs stasis / Nonplot;
-- cultural/political arguments around Hollywood vs art film;
-- warning against form chosen for ideology/status rather than belief;
-- McKee's strong preference that writers understand classical form before deliberately reducing/reversing it;
-- relationship between audience size and story form as McKee's historical/industrial argument, not universal contemporary law;
-- final injunction to write the form one genuinely believes.
+- setting as period + duration + location + level of conflict;
+- setting as a generator and limiter of possible events;
+- internal laws/probability contract of a story world;
+- specificity versus portable/generic story worlds;
+- creative limitation as a source of originality;
+- small/knowable world versus superficial vastness;
+- research of memory, imagination, and fact;
+- research ↔ invention feedback loop;
+- research as material rather than story substitute;
+- multiple creative alternatives before selecting a scene;
+- cliché defeated through specificity, research, and choice rather than by rejecting conventions automatically.
+
+### Chapter 4 — `Structure and Genre` — **COMPLETE THIS PASS**
+Read continuously through:
+- genre as audience expectation and creative limitation;
+- McKee's 25-category film taxonomy and its historical assumptions;
+- conventions as settings/roles/events/values rather than automatic clichés;
+- genre study by comparing successes and failures;
+- audience positioning and promise;
+- keeping convention while finding a fresh execution;
+- mixing genres;
+- genres evolving with changes in society;
+- Western / Psycho-Drama / Love Story examples of convention change;
+- genre as a long-term creative home / endurance argument.
+
+### Chapter 5 — `Structure and Character` — **COMPLETE THIS PASS**
+Read continuously through:
+- characterization versus deeper character;
+- choice under pressure as McKee's main test of character;
+- revelation through contradiction between surface and deeper nature;
+- character arc as changed deeper nature;
+- structure and character as mutually determining;
+- credibility of characterization relative to required action;
+- appropriateness of character complexity to story form;
+- climax as concentrated expression of character and structure.
+
+### Chapter 6 — `Structure and Meaning` — **COMPLETE THIS PASS**
+Read continuously through:
+- aesthetic emotion as simultaneous thought + feeling;
+- premise versus controlling idea;
+- structure as dramatized rhetoric rather than explanatory thesis;
+- controlling idea as value + cause extracted from the finished action;
+- meaning discovered from action rather than imposed as slogan;
+- Idea ↔ Counter-Idea progression;
+- need to make the opposing idea genuinely strong;
+- didacticism as suppression of the other side;
+- idealistic / pessimistic / ironic controlling ideas;
+- irony as simultaneously clear positive and negative result rather than vagueness;
+- social responsibility framed by McKee as truthfulness of the work.
+
+### Chapter 7 — `The Substance of Story` — **COMPLETE THIS PASS**
+Read continuously through:
+- protagonist variants: single / plural / multiprotagonist;
+- will, conscious desire, possible unconscious contradictory desire, capacity and possibility of attainment;
+- audience empathy versus mere likability;
+- minimum/conservative action from the character's subjective point of view;
+- the three conflict levels: inner / personal / extra-personal;
+- `the gap`: expectation/probability versus actual result/necessity;
+- increased effort/risk after a gap;
+- risk as a measure of value in McKee's system;
+- writing from inside the character rather than prescribing how someone `should` react;
+- point-of-view switching during authorial imagination;
+- CHINATOWN scene analysis as repeated action → reaction → gap;
+- reactions as a major source of specificity and insight;
+- story energy located in the difference between anticipated and actual response.
+
+### Chapter 8 — `The Inciting Incident` — **COMPLETE THIS PASS**
+Read continuously through:
+- story-world questioning: work, play, power/politics, rituals, values, laws, biography, backstory, cast;
+- cast polarization as distinct responses/attitudes;
+- authorship → authority → authenticity;
+- internal consistency rather than literal realism;
+- telling detail and selective authenticity;
+- inciting incident as decisive imbalance rather than mere change of address;
+- protagonist reaction, including temporary refusal;
+- conscious/unconscious desire and story spine;
+- Quest as McKee's universalized model;
+- inciting incident by decision or coincidence;
+- central inciting incident onscreen in McKee's screenwriting model;
+- Major Dramatic Question and projected Obligatory/Crisis scene;
+- `as soon as possible, but not before the audience can respond fully`;
+- McKee's 25%/feature-film timing as a rule of thumb, not IVDIVO law;
+- quiet events can carry major function if context/value change is strong;
+- best→worst / worst→best ideation prompts.
 
 ## EXACT CONTINUATION POINTER
 
-**NEXT STRICT READ:** local clean extraction line **2388**, Chapter 3 `STRUCTURE AND SETTING`, immediately after completion of Chapter 2.
+**NEXT STRICT READ:** local clean extraction line **7016**, Chapter 9 `ACT DESIGN`.
 
-Retained local extraction file used this run: `mckee_story.txt` generated from the 518-page retained PDF. Do not restart lines before 2388 absent an integrity reason.
+Retained local extraction file used this run: `mckee_story.txt` generated with `pdftotext` from the retained 518-page PDF. Do not restart lines before 7016 absent an integrity reason.
 
 ---
 
 # 4. PROVISIONAL CLAIMS / MECHANISMS
 
-These are working notes only; final synthesis is forbidden until FULL READ closes.
+Final synthesis remains forbidden until FULL READ closes.
 
 ### MCK-S01 — PRINCIPLES, NOT RULES
-McKee explicitly distinguishes durable causal principles from mandatory execution rules.
+Useful causal principles should not be confused with execution mandates.
 
-IVDIVO use: any later numerical/act prescription from McKee must be treated as diagnostic unless independently justified by the actual book.
-
-### MCK-S02 — FORM, NOT FORMULA
-Underlying story form can be varied; originality should emerge from the interaction of material and form rather than formula compliance or eccentricity-for-status.
-
-### MCK-S03 — STRUCTURE BEFORE COSMETICS
-Story failures such as false motivation, redundancy, holes and lack of progression cannot be repaired by polished dialogue or description.
-
-IVDIVO gate:
+### MCK-S02 — STRUCTURE BEFORE COSMETICS
 `STRUCTURE / CAUSALITY / CHARACTER MOTIVE → SCENE → POV / INFORMATION → PROSE`.
 
-### MCK-S04 — STORY AS INTERPRETED LIFE
-Fact is not automatically story truth. Events gain meaning through selection, causality, viewpoint and consequences.
+### MCK-S03 — STORY WORLD AS POSSIBILITY SPACE
+Setting is not scenery. It determines which actions, reactions, institutions, relationships, and consequences are credible.
 
-This converges with current IVDIVO rejection of `it really happened` as sufficient justification for a scene/detail.
+### MCK-S04 — CREATIVE LIMITATION
+Specific constraints can increase invention by eliminating generic possibilities.
 
-### MCK-S05 — PORTRAITURE VS SPECTACLE FAILURE
-Two opposite failure modes can produce the same reader effect:
-- daily-life detail without causal development;
-- spectacle/action without human consequence.
+### MCK-S05 — RESEARCH ↔ INVENTION LOOP
+`QUESTION FROM STORY → RESEARCH / MEMORY / IMAGINATION → NEW POSSIBILITY → STORY CHOICE → NEW QUESTION`.
+Research is productive only when it changes events, behavior, or design.
 
-Orbital Youth relevance: ordinary life remains essential, but it must change relationships/decisions/identity; advanced technology remains essential, but it must change options and consequences.
+### MCK-S06 — ALTERNATIVE GENERATION BEFORE COMMITMENT
+Generate multiple scene solutions before accepting the first plausible one; then select for character truth + world truth + freshness.
 
-### MCK-S06 — STORY TRIANGLE AS DESIGN SPACE
-Archplot/Miniplot/Antiplot are useful as dimensions of causality, protagonist design, time, reality consistency and closure—not as a quality hierarchy.
+### MCK-S07 — GENRE AS PROMISE / EXPECTATION FIELD
+A genre is most useful as a reader-expectation system and constraint field, not as a mandatory beat sheet.
 
-### MCK-S07 — CHANGE CAN BE EXTERNAL OR INTERNAL
-McKee correctly notices that meaningful change may become subtle as conflict turns inward. IVDIVO should track changed state rather than only visible action scale.
+### MCK-S08 — CONVENTION ≠ CLICHÉ
+A convention can be necessary; cliché is the stale execution of it.
 
-### MCK-S08 — FORM CHOICE MUST MATCH WORLDVIEW / STORY EFFECT
-Useful kernel: do not choose fragmented/minimal/classical form because it signals artistic or commercial identity. Choose because it produces the needed reader experience.
+### MCK-S09 — GENRE EVOLVES WITH SOCIETY
+Genre conventions must change when social assumptions change. Historical genre rules cannot be imported unchanged into a post-money orbital civilization.
+
+### MCK-S10 — CHARACTER THROUGH CONSEQUENTIAL CHOICE
+A character becomes legible through choices whose alternatives have meaningful costs.
+
+### MCK-S11 — STRUCTURE ↔ CHARACTER CO-DESIGN
+If a protagonist's deep decision logic changes, the event sequence must also change; changing biography/traits alone is insufficient.
+
+### MCK-S12 — IDEA / COUNTER-IDEA BALANCE
+A thematic argument is stronger when the opposing model receives real evidence, competence, benefit, and consequences.
+
+### MCK-S13 — MEANING BY CONSEQUENCE
+If the theme only exists in speeches, rebuild action. The story should let consequences carry the argument.
+
+### MCK-S14 — EXPECTATION / RESULT GAP
+Useful causal unit:
+`DESIRE → SUBJECTIVELY REASONABLE ACTION → WORLD RESPONSE → GAP → MODEL UPDATE → STRATEGY CHANGE`.
+
+### MCK-S15 — THREE LEVELS OF CONFLICT
+For a given problem, pressure can arise from:
+- self/body/mind/emotion;
+- intimate relationships;
+- institutions / persons / environment.
+Rotation between levels can prevent repetitive scene pressure.
+
+### MCK-S16 — REACTION SPECIFICITY
+The event itself may be familiar; distinctive reaction, interpretation, and subsequent choice create character specificity.
+
+### MCK-S17 — INCITING FUNCTION, NOT SIZE
+An inciting incident is defined by its causal function: it changes the relevant equilibrium and creates a durable pursuit/problem. It may be physically quiet.
+
+### MCK-S18 — MOMENT RIPE GATE
+Start the central engine as soon as the reader has enough character/world context for the disturbance to matter—no earlier for confusion, no later for exposition drag.
+
+### MCK-S19 — AUTHENTICITY BY INTERNAL CONSISTENCY
+SF credibility comes from coherent rules, behavioral truth, selective detail, and causal consistency rather than maximal technical description.
+
+### MCK-S20 — POLARIZED CAST AS RESPONSE DIFFERENTIATION
+Useful version: named major characters should not all interpret the same event in the same way. Distinction must arise from values/history/relationships, not artificial contrarianism.
 
 ---
 
 # 5. PROVISIONAL FAILURE MODES / FIREWALLS
 
-- **CLASSICAL-FORM UNIVERSALISM** — McKee sometimes moves from a useful description of common audience expectations to claims about universal human cognition stronger than evidence supplied by the book.
-- **MARKET HISTORY AS LAW** — 1990s Hollywood budget/audience arguments are historical industry context, not current universal market authority.
-- **CHANGE = STORY TOTALIZATION** — static/portrait forms may still produce powerful narrative experience even if McKee excludes them from his definition of story.
-- **ARCHPLOT NORMATIVITY** — mastering classical form can be useful; requiring it as the only legitimate foundation is a school position, not IVDIVO canon.
-- **SPECTACLE STRAWMAN** — spectacle can itself carry cognition/emotion when causally integrated; the problem is spectacle without story consequence, not spectacle per se.
-- **PORTRAITURE STRAWMAN** — ordinary-life observation is not automatically shallow; it becomes weak when it does not alter reader/character models or accumulate meaning.
+- **CLASSICAL-FORM UNIVERSALISM** — McKee's preferences are a school position, not IVDIVO canon.
+- **MARKET HISTORY AS LAW** — 1990s Hollywood assumptions are historical context.
+- **GENRE TAXONOMY REIFICATION** — his 25 labels are a working classification, not ontology.
+- **CONVENTION OVERREACH** — conventions cannot justify copying outdated social assumptions.
+- **DEEP-CHARACTER MYSTIFICATION** — people need not always hide a dramatic opposite self to be complex.
+- **PRESSURE ESCALATION MONOCULTURE** — meaningful character can be revealed by bounded responsibility, restraint, generosity, consent, or ordinary costly choice, not only extreme danger.
+- **ARC UNIVERSALISM** — not every major person must undergo profound inner transformation in every book.
+- **CLIMAX MAXIMALISM** — the climax must be functionally decisive, not necessarily the loudest or most intense event.
+- **CONTROLLING-IDEA REDUCTION** — `value + cause` is a useful diagnostic compression, not proof that a novel has one paraphrasable message.
+- **DIDACTIC COUNTERFEIT** — giving the opposing side straw arguments creates propaganda, not drama.
+- **GAP MONOCULTURE** — not every beat must violate expectation. Competence, intimacy, confirmation, recovery, or earned success may produce expected results and still change state.
+- **RISK = VALUE TOTALIZATION** — desire can matter deeply without maximum danger. Post-money youth stakes include trust, consent, relationship, role, time, reputation, autonomy, unique experience, and responsibility.
+- **UNCONSCIOUS-DESIRE MANDATE** — useful when evidenced, not mandatory.
+- **QUEST UNIVERSALISM** — a productive abstraction, but not the only legitimate narrative model.
+- **INCITING-PERCENTAGE LAW** — 25% is a dated screenwriting heuristic, not a novel gate.
+- **OBLIGATORY-SCENE LITERALISM** — reader promise matters; one standardized showdown does not.
+- **WORK = WAGES REGRESSION** — McKee's `how do characters make a living?` must not reintroduce money/rent/credits into orbital canon.
 
 ---
 
-# 6. EARLY CROSS-SOURCE NOTES
+# 6. CROSS-SOURCE NOTES
 
-- **McKee × Truby:** both privilege structure/causal design over cosmetic prose; Truby's action-learning loop is more explicit, McKee's early chapters add form spectrum and value-change framing.
-- **McKee × Rosenfeld:** Rosenfeld offers a more practical scene-level test for varied outcomes and contemplative causality, useful correction against over-dramatization.
-- **McKee × Brody:** both can become form-prescriptive; current IVDIVO uses function rather than percentages/mandatory modes.
-- **McKee × Card:** Card better protects independent personhood and POV truth when McKee generalizes protagonist form.
-- **McKee × Le Guin/Prose/Clark:** polished language matters, but only after story-level defects are solved; structural priority must not become an excuse for crude prose.
+- **McKee × Truby:** both privilege causal design and world constraints; Truby better formalizes action/information change, McKee adds expectation/result gap and explicit genre/audience promise.
+- **McKee × Rosenfeld:** Rosenfeld corrects McKee's tendency toward constant complication by allowing support, contemplation, partial success, and varied scene outcomes.
+- **McKee × Brody:** both offer strong expectation diagnostics but risk template lock. IVDIVO retains functions, not percentages/mandatory beats.
+- **McKee × Card:** Card better protects independent personhood and relationship-specific self; McKee is stronger on choice under pressure and structure-character interlock.
+- **McKee × Oatley/Herman:** McKee's inside-out action logic converges with goal/plan/world-response models, but cognitive sources better distinguish predicted behavior from reasons/consent.
+- **McKee × Le Guin/Prose/Clark:** structural priority does not excuse monotonous or crude prose; syntax/rhythm remain reader-effect tools after causal repair.
 
 ---
 
 # 7. PROVISIONAL IVDIVO GATES
 
-**MCK-G01 STRUCTURE BEFORE POLISH** — diagnose false motivation/redundancy/causal holes before dialogue or line edit.
+**MCK-G01 STRUCTURE BEFORE POLISH** — diagnose causality/motive/redundancy before line editing.
 
-**MCK-G02 ORDINARY LIFE MUST ACCUMULATE** — slice-of-life scenes stay if they change relation, identity, knowledge, decision, emotion or future action.
+**MCK-G02 WORLD RULE → CHOICE** — a setting detail earns narrative weight when it changes credible options or consequences.
 
-**MCK-G03 SPECTACLE MUST CHANGE STATE** — technology/action earns space if it changes human/robot options or consequences.
+**MCK-G03 KNOWABLE MICRO-WORLD** — a novel may imply a vast civilization but must deeply know the subset actually dramatized.
 
-**MCK-G04 FORM SERVES READER EFFECT** — do not choose fragmented/minimal/classical design for prestige signaling.
+**MCK-G04 RESEARCH MUST PAY INTO STORY** — research without changed design is reference accumulation, not development.
 
-**MCK-G05 CHANGE SCALE** — changed state can be physical, relational, emotional, epistemic or ethical; loudness is not function.
+**MCK-G05 MULTIPLE SOLUTIONS** — for major beats generate alternatives before committing to the first plausible/cinematic idea.
 
-**MCK-G06 NO HISTORICAL-MARKET IMPORT** — old Hollywood budget logic cannot restore money/credits or define current IVDIVO audience strategy.
+**MCK-G06 GENRE PROMISE / FRESH EXECUTION** — identify what readers reasonably expect, then satisfy or deliberately transform that promise without stale execution.
+
+**MCK-G07 GENRE MUST BE FUTURE-COMPATIBLE** — update romance, status, work, institutional and YA assumptions to orbital post-money society.
+
+**MCK-G08 CHOICE REVEALS MODEL** — important choices should reveal what the character values/believes, not merely advance logistics.
+
+**MCK-G09 NO MANDATORY HIDDEN OPPOSITE** — do not invent a secret contradictory self merely to satisfy a character theory.
+
+**MCK-G10 COUNTER-IDEA STRENGTH** — the opposing position must retain real evidence, benefit and competent advocates.
+
+**MCK-G11 GAP → MODEL UPDATE** — when expectation and result diverge, someone must update understanding or strategy; otherwise the surprise is decorative.
+
+**MCK-G12 NO GAP MONOCULTURE** — allow expected success when it builds trust, competence, intimacy, evidence, or future dependency.
+
+**MCK-G13 CONFLICT-LEVEL ROTATION** — avoid five consecutive scenes using only institutional opposition; vary inner, relational and extra-personal pressure when organic.
+
+**MCK-G14 INCITING INCIDENT FUNCTION** — require durable causal imbalance/problem, not spectacle.
+
+**MCK-G15 MOMENT RIPE** — give only the minimum prior context needed for the central disturbance to land.
+
+**MCK-G16 POST-MONEY LIFE QUESTION** — replace `how do they make a living?` with `how do they allocate contribution, time, responsibility, trust, unique access and obligations?`.
+
+**MCK-G17 ROBOT PERSONHOOD** — McKee explicitly allows any free-willed desiring agent to be protagonist; a conscious robot therefore requires its own will, goal, choices and consequences, not equipment behavior.
+
+**MCK-G18 CAST POLARIZATION WITHOUT CARTOONS** — distinct responses must be causally grounded in personhood, not assigned merely to generate argument.
+
+**MCK-G19 AUTHENTICITY > EXPLANATION** — a few causally potent orbital details beat encyclopedic technology exposition.
+
+**MCK-G20 THEME BY CONSEQUENCE** — if removing an ethical discussion destroys the theme, rebuild the event consequences.
 
 ---
 
 # 8. NEXT ACTION
 
-Continue strict full read from local line **2388**, Chapter 3 `Structure and Setting`.
+Continue strict full read from local line **7016**, Chapter 9 `ACT DESIGN`.
 
-Do not advance McKee to FULL READ COMPLETE or begin Core #3 until terminal book text has been reached.
+Do not advance McKee to FULL READ COMPLETE or begin another Core strict source until terminal book text has been reached and downstream lifecycle stages are closed.
