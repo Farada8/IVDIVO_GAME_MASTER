@@ -2,7 +2,7 @@
 # CH24 WHERE MAYA IS — FULL STUDIO LOCAL GATE v0.1
 
 **Status:** GREEN TO KEEP / ACCEPT CH24 / PROCEED TO CH25  
-**Accepted draft:** `DRAFTS/CH24_WHERE_MAYA_IS_v0.1_FULL_STUDIO.md`  
+**Accepted draft:** `DRAFTS/CH24_WHERE_MAYA_IS_v0.2_FULL_STUDIO.md`  
 **Date:** 2026-08-17  
 **POV:** Maya
 
@@ -11,9 +11,9 @@
 FATAL: 0  
 MAJOR: 0  
 MEDIUM: 0 blocking  
-POLISH: later line pass should watch a few explicit self-commentary constructions (`personal growth`, `almost mattered`) and repeated `Not X` rhythms. They do not justify reopening chapter causality now.
+POLISH: v0.2 already removes the most visible abstract self-commentary from v0.1 and compresses several generated-text rhythms. Remaining line issues are global-pass material, not chapter blockers.
 
-**FINAL VERDICT: GREEN TO KEEP / ACCEPT CH24 / PROCEED TO CH25.**
+**FINAL VERDICT: GREEN TO KEEP / ACCEPT CH24 v0.2 / PROCEED TO CH25.**
 
 ## STORY / CAUSALITY
 
@@ -40,8 +40,7 @@ Her growth is behavioral:
 - stays within the agreed zone until confirmation;
 - does not narrate every harmless movement as proof of obedience.
 
-The chapter preserves the important distinction:
-**autonomy is not cheerful compliance; it is truthful information before another person becomes responsible for a hidden plan.**
+The chapter preserves the distinction between autonomy and surveillance: Maya accepts shared-risk truth before improvisation while retaining the no-live-tracking boundary.
 
 ## LEA RELATIONSHIP
 
@@ -95,6 +94,14 @@ Orbital infrastructure actively changes adolescence:
 
 Ring Six remains materially present without taking over the Maya/Lea story.
 
+## LINE / CONTINUITY REPAIR IN v0.2
+
+- removes the abstract `Almost mattered too much` beat and lets Maya leave the old argument alone behaviorally;
+- compresses the closure response from explanatory narration into visible route checking and movement;
+- compresses the old-method recognition into Maya hearing the pattern in her own proposed delay;
+- removes one explicit `personal growth` joke and keeps the social awkwardness in action;
+- preserves the same story causality, Arel overnight contrast, host boundary and Lea payoff.
+
 ## RED TEAM
 
 FATAL checks:
@@ -121,6 +128,6 @@ MAJOR checks:
 5. Lea’s household remains affected by Ring Six displacement and poor temporary-route/household logistics.
 6. Arel household can be part of Maya’s ordinary local social life; do not turn Arel into an administrative device only.
 7. Ring Six rollback continues to load transit and relocation systems.
-8. Ch25 should advance a different pressure axis rather than re-testing Maya’s honesty.
+8. Ch25 must advance a different pressure axis rather than re-testing Maya’s honesty.
 
 **END STATE:** MAYA PROVISIONAL AUTONOMY SURVIVES REAL ROUTE FAILURE / LEA TRUST PARTIALLY MOVED BUT NOT REPAIRED / NO-LIVE-TRACKING BOUNDARY HOLDS / CH25 READY.
