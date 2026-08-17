@@ -90,3 +90,27 @@
 **Master:** v1.1 superseded; v1.2 is current active recording master.
 
 **Next:** E07–E12 P53 dialogue regression before recording; E01 rough-audio re-audit remains pending human/performance evidence.
+
+---
+
+## P53-20260817-BODYGUARD-E07E12-004
+**Project:** BODYGUARD FOR THE FALLEN IDOL — THE PROTECTION MONOPOLY
+**Artifact:** Episodes 7–12 dialogue regression + Recording Master v1.3
+**Type:** dialogue / audio / block regression
+**Status:** PASS AFTER FOUR TARGETED TEXT PATCHES
+**FATAL:** 0
+**MAJOR:** 0 after patch
+
+**High-leverage MEDIUM patched:** three meta-romance/P51 lines in E9–E10 plus one E12 causal-referent clarity line.
+
+**Key replacements:**
+- `That may be the most romantic sentence she has ever said to evidence.` → `Two bars, no encore. I'm learning her rhythm.`
+- `You are very calm about becoming my alleged secret girlfriend.` → `You are very calm about being edited into my private life.`
+- `You really can make anything sound unromantic.` → `You even have a protocol for proximity.`
+- `I kept thinking you would look at me differently after Bellweather.` → `I kept waiting for you to look at me differently after I told you what I said about Daniel.`
+
+**Architecture protected:** E9 active guard/client boundary; E11 informed-consent rupture; E12 mutual ugly truth without instant forgiveness.
+
+**Master:** v1.2 superseded; v1.3 is current active recording master.
+
+**Next:** E13–E18 P53 dialogue regression before recording; E01 rough-audio re-audit remains pending human/performance evidence.
