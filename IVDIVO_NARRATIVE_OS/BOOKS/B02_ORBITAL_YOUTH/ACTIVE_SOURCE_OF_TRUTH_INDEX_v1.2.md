@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–33 GREEN / Chapter 34 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–34 GREEN / Chapter 35 next
 
 ## READ ORDER
 
@@ -28,10 +28,9 @@
 6. Reference-enhanced world/character/causal files under conflict filter.
 7. Scene Cards Part I–VI under accepted chapter/gate overrides.
 8. Youth/dialogue pass, Full Red Team, active voice/humour guardrails, Pass 18 prose/line gate.
-9. `STUDIO/CH32_RECONCILIATION_PATCH_v1.0.md` where applicable.
-10. `STUDIO/CH33_AUTHORITY_RECONCILIATION_v1.0.md` for late migration authority.
-11. Latest chapter-specific Writer Brief / accepted Gate.
-12. Older/superseded/reference material.
+9. Chapter-specific reconciliation patches and authority controls.
+10. Latest chapter-specific Writer Brief / accepted Gate.
+11. Older/superseded/reference material.
 
 ## CURRENT WORKING LOCKS
 
@@ -46,40 +45,36 @@
 
 ## ACCEPTED PROSE FRONTIER
 
-**Chapters 1–33: GREEN / accepted development drafts.**
+**Chapters 1–34: GREEN / accepted development drafts.**
 
-Latest accepted chapter: **Ch33 — MIGRATION — Ollie POV — v0.2 — GREEN.**
+Latest accepted chapter: **Ch34 — REDUCED REDUNDANCY — controlled ensemble / Ollie anchor — v0.2 — GREEN.**
 
 GitHub:
-- Authority reconciliation: `STUDIO/CH33_AUTHORITY_RECONCILIATION_v1.0.md`
-- Writer Brief: `STUDIO/CH33_MIGRATION_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
-- Draft: `DRAFTS/CH33_MIGRATION_v0.2_FULL_STUDIO.md`
-- Gate: `GATES/CH33_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Delegation reconciliation: `STUDIO/CH34_SAFE_STATE_DELEGATION_RECONCILIATION_v1.0.md`
+- Writer Brief: `STUDIO/CH34_REDUCED_REDUNDANCY_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
+- Draft: `DRAFTS/CH34_REDUCED_REDUNDANCY_v0.2_FULL_STUDIO.md`
+- Gate: `GATES/CH34_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive canonical mirror:
-- Authority reconciliation ID `1i3zgD3Cwzrbj_ZvPpQ5vmyf2Fbr6guKxBhB00qX9TII`
-- Writer Brief ID `1Y-dbukOEZyrWJdlHOCFyep2d-zLgUv0n_HF6vgzhEZI`
-- Draft ID `13cKd-ziWv3oM1dQ6HIbdJzaHOZNrN-w1s09iwXBEkVs`
-- Gate ID `1Evbagvq3p4qrfAkjtXEUEIGQoAjrlUI6w2AVyASlXTw`
+- Delegation reconciliation ID `16JsDntSgcaOWz2BjVafoDe-LMD_wLPGWqDQ1xlJfYqg`
+- Writer Brief ID `150smljibeHKnH8nKOFBFxdKbyr8JFo0ouP-l5ChJLKU`
+- Draft ID `1cuEfoLGF_tJBJ0wwPO8ZQ8GJef13JiwvVMQwdVOshk0`
+- Gate ID `1LreY-GtH_ou6H8Yjg6Duk1C-J_tm_JW06ZnfVbmI2Wk`
 
-## PROTECTED CONTINUITY — Ch27–33
+## PROTECTED CONTINUITY — Ch31–34
 
-- Ch27: adult safety owns reproduction; residual-return/shared-loop candidate is reproducible under bounded conditions; dangerous oscillation and people/support role unresolved; Ollie REVIEW HOLD.
-- Ch28: A/B remain costly defensible alternatives; Ethan weighted recommendation is not civic authority.
-- Ch29: segmented partial opening only; allocation not determined by technical compatibility; no Lea favoritism.
-- Ch30: lived movers/waiters; Aoife recorder away; source trust only small bounded reopening; Tomas injury/commute persists; mixed outcomes.
-- Ch31: Ethan chooses later adult intake and loses preferred immediate slot; no romance reward; envy remains; B-line stays B-line.
-- Ch32: no repeat privacy test; Maya over-help/control is failure mode; Lea household owns its choices; route/signage support stays under adult authority; trust functional, not repaired.
-- Ch33: real Segment Three habitation succeeds; Room 3-214 reaches home; Ollie has read-only `MIGRATION WATCH / SEGMENT THREE`, STOP REQUEST only, no configuration or independent SAFE-STATE seal; adult operators retain control; one `soft step` report remains bounded evidence and a tighter no-report negative case remains; actual migration clustering reduces spare margin without leaving certified profile; planned reduced-redundancy operation remains rationally conditional on actual-load floor.
+- Ch31: Ethan chooses later intake, loses preferred immediate slot, no romance reward; envy remains; adult-track B-line.
+- Ch32: Maya autonomy protocol is not renegotiated; route/signage support stays under adult authority; Lea trust functional, not repaired.
+- Ch33: Segment Three habitation is a real success; Room 3-214 remains home; Ollie REVIEW HOLD + read-only local watch; reports bounded, negative/no-report evidence visible; migration clustering reduces spare margin without profile exit.
+- Ch34: actual-load review makes planned reduced-redundancy launch rational and conditional; adults remain competent; Ollie REVIEW HOLD remains unchanged; temporary `LOCAL SAFE-STATE — SEGMENT THREE / R3-S` is adult-authorized, role-based and duplicated at adult primary; R3-S only closes inbound, holds next local transition and drives conservative local recovery; no reopen/tuning/threshold/ring-wide authority; resident/Iri reports remain corroborating only; Household 3-177 carries real room-night cost; full R3-S match is armed while legacy auto isolation remains NOT ARMED; chapter ends with Ollie's hand on control and no activation yet.
 
-## CH33 ROUTING RECONCILIATION
+## CH34 AUTHORITY ROUTING
 
-Canonical = v0.2 line-polished successor.
+Canonical execution control:
+`STUDIO/CH34_SAFE_STATE_DELEGATION_RECONCILIATION_v1.0.md`.
 
 Do not route from:
-- `DRAFTS/CH33_MIGRATION_v0.1_FULL_STUDIO.md` except REFERENCE ONLY;
-- `GATES/CH33_MIGRATION_FULL_STUDIO_LOCAL_GATE_v0.1.md`, now explicitly SUPERSEDED / DO NOT ROUTE;
-- Drive v0.1 mirror, renamed `SUPERSEDED LINE-PREPASS — CH33 MIGRATION v0.1 — USE v0.2`.
+`STUDIO/CH34_AUTHORITY_RECONCILIATION_v1.0.md` = SUPERSEDED ALTERNATE / REFERENCE ONLY.
 
 ## CANON RECONCILIATION STILL ACTIVE
 
@@ -87,27 +82,28 @@ Do not route from:
 
 ## CURRENT CANONICAL FRONTIER
 
-**NEXT = Chapter 34 — REDUCED REDUNDANCY — controlled ensemble / Ollie anchor.**
+**NEXT = Chapter 35 — SAFE-STATE — Ollie POV.**
 
 Required:
-- planned, known operation; no sabotage/freak-event/adult-stupidity shortcut;
-- actual-load precheck makes proceeding rational but conditional;
-- Ch34 must earn any Ollie local SAFE-STATE delegation before Ch35 uses it;
-- delegation must be adult-authorized, role-based, redundant with adult authority, Segment Three only, exact trigger envelope, narrow local isolation action, logged, unable to reopen, wider automatic/adult controls intact;
-- trigger envelope should rely on operational state variables: reduced redundancy + specified residual-recovery/shared-loop relation + load/sequence trend; resident/support reports may corroborate but cannot be magic trigger;
-- preserve negative/no-report evidence;
-- do not reuse Room 3-214 as the family who loses a room;
-- move from rationally safe plan → concentration/reroute pressure → trigger convergence while automatic fixed threshold still waits;
-- end at the pre-seal choice, with consequence visible.
+- begin with action, not another R3-S explanation scene;
+- Ollie triggers the already-authorized local R3-S only while its envelope remains valid and before legacy auto threshold;
+- inbound gate closes, next local transition holds, conservative recovery begins; Household 3-177 loses access to its room tonight but the room remains theirs;
+- adult primary and wider operations remain active, own containment/logging and all reopening authority;
+- Ollie cannot reopen or expand scope;
+- preserve a short interval where legacy/fixed readings still look recoverable enough for the early action to feel costly/uncertain;
+- delayed fixed evidence may later move in the direction predicted, validating this bounded action without proving complete root cause or universal early-warning law;
+- preserve resident/Iri reports as corroboration and retain negative/no-report cases in review;
+- no applause, commander framing, instant promotion or unrestricted credential restoration;
+- close the main external conflict enough to allow Ch36 resolution rather than opening a new mystery escalation.
 
 ## SAVE / ROUTING LAW
 
 Accepted = draft + gate persisted in GitHub and Drive and mirrors verified.
-Parallel alternate files do not become authority merely by being newer. `DRAFT_STATUS.md` + accepted gate chain + this index determine routing after explicit reconciliation.
+Parallel alternate files do not become authority merely by being newer. `DRAFT_STATUS.md` + accepted gate chain + this index determine routing after reconciliation.
 
 ## ACTIVE DRAFTING MODE
 
-`verified frontier -> authority/reconciliation check -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive -> verify -> advance frontier`.
+`verified frontier -> Writer Brief -> prose -> Red Team -> character/youth/dialogue/line -> continuity gate -> GitHub -> Drive -> verify -> advance frontier`.
 
 ## CROSS-CONVERSATION CONTINUATION
 
