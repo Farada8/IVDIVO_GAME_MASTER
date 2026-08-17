@@ -4,7 +4,7 @@
 **Status:** ACTIVE  
 **Book:** 2 — ORBITAL YOUTH  
 **Updated:** 2026-08-17  
-**Current pipeline state:** ACTIVE DRAFT / Chapters 1–22 GREEN / Chapter 23 next
+**Current pipeline state:** ACTIVE DRAFT / Chapters 1–23 GREEN / Chapter 24 next
 
 ## READ ORDER
 
@@ -14,9 +14,9 @@
 4. `IVDIVO_NARRATIVE_OS/10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md` → B02 only
 5. `IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/DRAFT_STATUS.md`
 6. this index
-7. current reconciled architecture / bibles / reference layer
+7. reconciled architecture / bibles / reference layer
 8. latest accepted chapter + gate
-9. next chapter Writer Brief when created
+9. current/next chapter Writer Brief.
 
 ## ACTIVE AUTHORITY STACK
 
@@ -34,7 +34,7 @@
 12. `IVDIVO_BOOK2_ORBITAL_YOUTH_YOUTH_PSYCHOLOGY_DIALOGUE_PASS_v0_1.md`.
 13. `IVDIVO_BOOK2_ORBITAL_YOUTH_FULL_RED_TEAM_v0_2.md`.
 14. `IVDIVO_BOOK2_ORBITAL_YOUTH_ACTIVE_DRAFT_VOICE_HUMOUR_GUARDRAILS_v1_0.md`.
-15. Latest chapter-specific Full Professional Writer Brief / Gate.
+15. Latest chapter-specific Writer Brief / Gate.
 16. Older/superseded/reference material.
 
 ## CURRENT WORKING LOCKS
@@ -43,73 +43,28 @@
 - Vela / Ring Six remain WORKING names unless Founder locks.
 - Nadia Park remains WORKING housing/relocation coordinator.
 - Iri remains biologically embodied, non-human-default, cooler/drier preference with narrower rapid warm-humid tolerance.
-- Aoife Source S1 remains separate from Iri; current working name `Sela` is OPTION / NOT CANON.
-- S1 sensitive body/environment ontology remains UNKNOWN; only private environmental accommodation and explicit non-disclosure boundary are established in Ch11.
-- Synthetic/artificial bodies are not routine ordinary-human orbital technology. Any appearance in Book 2 must pass current technology-access canon.
+- Aoife Source S1 remains separate from Iri; working name `Sela` remains OPTION / NOT CANON.
+- S1 sensitive body/environment ontology remains UNKNOWN beyond established private accommodation boundary.
+- Synthetic/artificial bodies are not routine ordinary-human orbital technology.
 - Ch36 remains four braided resolution scenes.
 - Rivergate/Lattice/Ethan-primary Book 2 branch is SUPERSEDED AS BOOK TWO.
 
 ## ACCEPTED PROSE FRONTIER
 
-Ch1 — THE LAST GROUND — GREEN  
-Ch2 — DUBLIN VERTICAL — GREEN  
-Ch3 — ARRIVAL WITHOUT A FLOOR — GREEN  
-Ch4 — FIVE ADDRESSES — GREEN  
-Ch5 — FIRST SHIFT — GREEN  
-Ch6 — THE RING PEOPLE WANT — GREEN / Full Studio patched  
-Ch7 — STATIC SAFE — GREEN / Full Studio patched  
-Ch8 — NOT A VISITOR SPORT — GREEN / Full Studio patched  
-Ch9 — THE APPRENTICES — GREEN / Full Studio patched  
-Ch10 — NIGHT WITHOUT A HANDLER — GREEN / Full Studio patched  
-Ch11 — WHOSE STORY — GREEN / Full Studio patched  
-Ch12 — THE CLEAN MODEL — GREEN / Full Studio patched  
-Ch13 — VELA NIGHT — GREEN / Full Studio accepted  
-Ch14 — ALMOST LOCAL — GREEN / Full Studio accepted  
-Ch15 — LIMITED OPEN — GREEN / Full Studio accepted v0.3  
-Ch16 — THE INFERENCE — GREEN / Full Studio accepted v0.3  
-Ch17 — PLANET PEOPLE — GREEN / Full Studio accepted  
-Ch18 — EIGHTEEN — GREEN / Full Studio accepted  
-Ch19 — GO / NO-GO — GREEN / Full Studio accepted v0.3  
-Ch20 — THE WRONG CAUSE — GREEN / Full Studio accepted v0.3  
-Ch21 — SHUT — GREEN / Full Studio accepted v0.3  
-Ch22 — AFTER THE CAMERA — GREEN / Full Studio accepted v0.2
+Ch1–14 GREEN as previously accepted/patched.  
+Ch15 — LIMITED OPEN — GREEN v0.3  
+Ch16 — THE INFERENCE — GREEN v0.3  
+Ch17 — PLANET PEOPLE — GREEN  
+Ch18 — EIGHTEEN — GREEN  
+Ch19 — GO / NO-GO — GREEN v0.3  
+Ch20 — THE WRONG CAUSE — GREEN v0.3  
+Ch21 — SHUT — GREEN v0.3  
+Ch22 — AFTER THE CAMERA — GREEN v0.2  
+Ch23 — NO ACCESS — GREEN v0.1
 
-**NEXT: Ch23 — NO ACCESS — Ollie POV.**
+**NEXT: Ch24 — WHERE MAYA IS — Maya POV.**
 
 ## LATEST ACCEPTED CONTROLS
-
-### Ch19 — GO / NO-GO v0.3
-- GitHub draft: `DRAFTS/CH19_GO_NO_GO_v0.3_FULL_STUDIO.md`
-- GitHub gate: `GATES/CH19_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-- Drive draft ID `1TEB_85IkanzX1C1-U-UHhUNoYqvC6fEIoF7vim_VRe0`
-- Drive gate ID `1JFzsKEKdJL2vlT5lfNYhWjej48s4BaL4P_DnkOwgcbw`
-
-Protected continuity:
-- LIMITED GO / OCCUPIED COMMISSIONING only;
-- R6-A, 42% density cap, disputed partition overlap prohibited, reviewed route combinations, enhanced monitoring, lowered stop threshold;
-- embodied/interface reports remain active in stop logic without medical-proof requirement;
-- Ollie personally supported the restricted profile; his position is public and attributable;
-- board owns authorization;
-- opening remains rational in retrospect.
-
-### Ch20 — THE WRONG CAUSE v0.3
-- GitHub draft: `DRAFTS/CH20_THE_WRONG_CAUSE_v0.3_FULL_STUDIO.md`
-- GitHub gate: `GATES/CH20_FULL_STUDIO_LOCAL_GATE_v0.1.md`
-- Drive draft ID `1BBbomx5KwTnw3kAAhkZAp0Z12PrXpeIsAGBQg2Gc9Q8`
-- Drive gate ID `1JKKBHkNd9IrOy7dd_A3t9Px3crAHno-X6ZSkaLIj9T0`
-
-Protected continuity:
-- no Ch19 restriction was secretly broken;
-- missing causal class = distributed equivalent transition across allowed states;
-- EAST SERVICE + COMMON RETURN CORRECTION + SERVICE C created coupled demand while PARTITION B remained locked;
-- five resident/interface entries preceded first fixed threshold crossing;
-- report/stop logic worked and reduced harm;
-- adult response was competent;
-- Ring Six occupancy is suspended / move-in reversed;
-- maintenance worker has probable forearm fracture / soft-tissue injury;
-- Lea household displaced again;
-- Ollie credential REVIEW HOLD;
-- exact role of embodied/interface reports remains UNKNOWN.
 
 ### Ch21 — SHUT v0.3
 - GitHub draft: `DRAFTS/CH21_SHUT_v0.3_FULL_STUDIO.md`
@@ -117,17 +72,12 @@ Protected continuity:
 - Drive draft ID `1Yh5DUPSlqtY2YCjk6aMCh0HwQI8ZMCV61whAioNnDRI`
 - Drive gate ID `1RjFKUZW-7cvu6yjcys8EVVLo_9H1EpD_UEhDWfhxtFY`
 
-Protected continuity:
-- Ollie did not cause the defect; his valid incomplete interpretation materially changed what competent adults believed they could attempt;
-- distributed equivalence is preliminary, not final root cause;
-- lead timing of resident/interface reports is now a serious investigation target, not proven causal variable;
-- Ollie remains off active Ring Six incident/commissioning access;
-- `useful` and `permitted` remain separate;
-- Iri’s trust remains damaged;
-- Iri agrees the reports were noisy/inconsistent and does not become an oracle;
-- older occupied-module complaints with similar lead-timing language are clue only and require authorized comparison;
-- Ollie uses allowed observation field and explicitly records `NO CLAIM OF COMMON CAUSE` rather than expanding access himself;
-- accepted v0.3 removes manuscript fourth-wall references to chapter numbers.
+Protected:
+- distributed responsibility; no Ollie scapegoat;
+- distributed equivalence preliminary;
+- lead timing investigation target only;
+- Ollie remains off Ring Six access;
+- old-module complaints clue only.
 
 ### Ch22 — AFTER THE CAMERA v0.2
 - GitHub Writer Brief: `STUDIO/CH22_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
@@ -137,38 +87,50 @@ Protected continuity:
 - Drive draft ID `121fNgEekyCBRCpEs8WG6R5H2mBgaIfh4l07Y90wo_gU`
 - Drive gate ID `1oJETD90vGQKMvlnLF8z9Uc0U7qbqJXoE3B8xWq10mlk`
 
-Protected continuity:
-- derivative privacy harm persists after original deletion;
-- S1 does not forgive Aoife and documentary access remains suspended/reduced;
-- no-recorder/no-notes/no-transcription/no-project-capture boundary is respected;
-- Aoife’s repair costs content/access and does not buy absolution;
-- S1 independently authorizes de-identified event-order correction for incident review;
-- personal/local support adjustment began before fixed wall response; exact seconds not asserted;
-- source validation may occur only through protected channel;
-- no publication/documentary rights attach to the correction;
-- Ollie does not receive source material through personal connection;
-- lead-timing evidence is strengthened but remains non-causal / non-root-cause proof.
+Protected:
+- derivative privacy harm persists;
+- S1 does not forgive Aoife;
+- safety correction is de-identified and does not carry publication rights;
+- exact lead interval unknown;
+- Ollie receives no source material through Aoife.
 
-## CH23 WORKING GATE
+### Ch23 — NO ACCESS v0.1
+- GitHub Writer Brief: `STUDIO/CH23_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0.md`
+- GitHub draft: `DRAFTS/CH23_NO_ACCESS_v0.1_FULL_STUDIO.md`
+- GitHub gate: `GATES/CH23_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Drive Writer Brief ID `1PJ39teQ4foO7sMRZThfbIr7S_OUvWqFHZG2MvrS8ihQ`
+- Drive draft ID `1mycDuDqATeJ6UDamY-kLou128afYkhu7WEZr4UPhot0`
+- Drive gate ID `1YUpP7BiKWOAk_A2zEcEBsjXqeV8mHoo_3joJfgorc1E`
 
-Chapter 23 — NO ACCESS — Ollie POV must:
-- return to ordinary authorized maintenance while Ring Six review access remains held;
-- use Ch21’s old-complaint seed rather than repeating its discovery;
-- solve a real mundane maintenance problem whose reward is only professional acknowledgement;
-- let a resident/user report another low-level `late air / wrong pressure` experience without making it proof;
-- compare only records legitimately relevant to the current service scope;
-- show older complaints clustering around occupancy/transition conditions while remaining non-identical;
-- ask Mara for one bounded de-identified timing query instead of broad incident access;
-- accept a bounded answer and turn lead timing into a measurable next hypothesis;
-- do not restore Ring Six access or Ollie’s status as a reward.
+Protected:
+- Ollie remains REVIEW HOLD;
+- bounded extract = 6 modules / 2 control generations / 30 days / de-identified event order only;
+- no identity, household, medical/accommodation, complaint-text or raw personal-interface values;
+- negative cases dominate absolute count;
+- weak lead-timing subset clusters around combined return-correction + service-transition states in part of sample;
+- module/control-generation effects remain large; removal of one module nearly collapses effect;
+- no causal claim;
+- `SECOND MODEL — QUESTIONS ONLY`.
+
+## CH24 WORKING GATE
+
+Chapter 24 — WHERE MAYA IS — Maya POV must:
+- shift texture away from Ollie technical analysis;
+- pay off Maya’s Chapter-10 sleep-location concealment and Lea cover burden;
+- use actual pre-overhaul/relocation route closure as the operational trigger;
+- make Lea’s anger personal: Maya made Lea responsible for keeping Maya’s version true;
+- avoid a second structurally identical lie;
+- show autonomy/housing/trust consequences through ordinary action rather than a policy speech;
+- keep Ring Six relocation pressure present but secondary to Maya/Lea relationship consequence;
+- end with damaged boundary explicit, not repaired cheaply.
 
 ## ACTIVE DRAFTING MODE
 
-`architecture -> professional prompts -> bibles/reference/voice -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive -> verification -> advance controls`.
+`architecture -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive -> verification -> advance controls`.
 
 ## SAVE LAW
 
-A chapter is not accepted across the project until accepted draft + gate are persisted and GitHub/Drive mirrors are verified.
+A chapter is not accepted across the project until accepted draft + gate are persisted and mirrors verified.
 
 ## CROSS-CONVERSATION CONTINUATION
 
@@ -176,7 +138,4 @@ When Founder says `и / дальше / продолжай / делай / раб�
 
 ## DO NOT DRAFT FROM
 
-`THE PEOPLE IN THE MODEL / Rivergate / Lattice / Ethan-primary`
-= SUPERSEDED AS BOOK TWO / REFERENCE ONLY.
-
-Story and character remain primary.
+`THE PEOPLE IN THE MODEL / Rivergate / Lattice / Ethan-primary` = SUPERSEDED AS BOOK TWO / REFERENCE ONLY.
