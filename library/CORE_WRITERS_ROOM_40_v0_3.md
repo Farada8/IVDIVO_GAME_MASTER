@@ -14,9 +14,10 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **7/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **8/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
+- Strict complete #3: Robert McKee — *Dialogue*.
 - Strict complete #5: James Scott Bell — *Conflict & Suspense*.
 - Strict complete #6: Jordan Rosenfeld — *Make a Scene: Revised and Expanded Edition*.
 - Strict complete #7: Jessica Brody — *Save the Cat! Writes a Young Adult Novel*.
@@ -46,7 +47,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 
 1. John Truby — *The Anatomy of Story* — causal architecture, character web, desire/action/learning/revelation. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 2. Robert McKee — *Story* — value turns, antagonism, progressive complication, crisis/climax/resolution. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
-3. Robert McKee — *Dialogue* — dialogue as action, tactics, subtext, voice.
+3. Robert McKee — *Dialogue* — dialogue as action, tactics, subtext, voice. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 4. Robert McKee — *Character* — contradiction, pressure, cast design, true character.
 5. James Scott Bell — *Conflict & Suspense* — trouble, stakes, suspense, propulsion. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 6. Jordan Rosenfeld — *Make a Scene* — scene movement, intention, tension, transitions. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
