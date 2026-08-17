@@ -22,59 +22,73 @@ Drive active folder: `ORBITAL_YOUTH_ACTIVE` — `1tZ6Kdkjq9blB10i98cE_3d02egYnPW
 
 ## Accepted prose frontier
 
-**Chapters 1–26: GREEN / accepted development drafts.**
+**Chapters 1–29: GREEN / accepted development drafts.**
 
 Latest accepted chapter:
-**Ch26 — THE SECOND MODEL — Ollie POV — v0.1 — GREEN.**
+**Ch29 — SEGMENTS — Ollie POV — v0.1 — GREEN.**
 
 GitHub:
-- Writer Brief: `STUDIO/CH26_THE_SECOND_MODEL_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.1_RECONCILED.md`
-- Draft: `DRAFTS/CH26_THE_SECOND_MODEL_v0.1_FULL_STUDIO.md`
-- Gate: `GATES/CH26_FULL_STUDIO_LOCAL_GATE_v0.1.md`
+- Writer Brief: `STUDIO/CH29_SEGMENTS_FULL_PROFESSIONAL_STUDIO_WRITER_BRIEF_v1.0_RECONCILED.md`
+- Draft: `DRAFTS/CH29_SEGMENTS_v0.1_FULL_STUDIO.md`
+- Gate: `GATES/CH29_FULL_STUDIO_LOCAL_GATE_v0.1.md`
 
 Drive canonical mirror:
-- Draft ID `1xX6J6ZVxZVQgGJoLrlQg6c-uWyjMz-2tMLI3rZe5qyg`
-- Gate ID `1tFesJpSilwfc2FmeV3o5WHQ24ZqeFwDeVUK9_ku16Ho`
+- Writer Brief ID `1A-JYIbyEYGM4XBIi-SUm_nHMLcc9Hi8dOmYdtoHS-_s`
+- Draft ID `1BsJPhdjN3-clsuj9yT6pPpc-21AR4v85Hg_Y30dw01Q`
+- Gate ID `1Tio2LCVU4rHRvLMhB4I4Vo7hK1NhFushZyFwPwWBToY`
 
-Superseded alternate Ch26 v0.2 material in Drive is explicitly marked `SUPERSEDED / DO NOT ROUTE` and is not canonical.
+## Protected Ch26–29 continuity
 
-## Protected Ch26 continuity
+### Ch26 — THE SECOND MODEL
+- Ollie remains REVIEW HOLD; no unrestricted Ring Six operational access is restored.
+- candidate alignment uses estimated shared-loop state-entry relationships, not fixed display timestamp as universal center;
+- resident/support timing remains separate evidence, not infallible truth;
+- model proposal proceeds through authorized review only.
 
-- Ollie remains `REVIEW HOLD`; no Ring Six operational access is restored.
-- Only released/de-identified review outputs are used; no raw Ring Six incident log, S1 raw material or Samir/team raw data enters Ollie's model.
-- Ch23 negative cases, module/control-generation effects and one-module sensitivity remain live evidence.
-- Fixed display timestamp is no longer the universal alignment center.
-- New candidate alignment is an **estimated shared-loop state-entry window** inferred from control-state relationships independently of resident/support timing.
-- Resident/support events remain a separate evidence rail; they may lead fixed display in some cases but are not assumed causal, infallible or sufficient.
-- Shared-loop state entry itself may be real and still insufficient for dangerous oscillation.
-- Phase 1 reproduction = control-state only; no resident/support volunteers.
-- Phase 2 requires separate review/consent before any human/personal-interface timing comparison.
-- Proposal is `ACCEPTED FOR TECHNICAL REVIEW / NOT AUTHORIZED FOR EXECUTION`.
+### Ch27 — CONTROLLED REPRODUCTION
+- adult safety process owns the reproduction protocol;
+- negative controls / abort conditions remain part of evidence discipline;
+- reproduced state relationship does not equal full root-cause proof;
+- no youth command fantasy or special-body oracle.
+
+### Ch28 — TWO BAD OPTIONS
+- A = deeper/full-recovery interlock can reopen sooner under reduced flexibility/capacity;
+- B = state-aware control may preserve more intended capacity but requires longer validation and carries unknown false-negative risk;
+- Ethan's private weighted score is NOT part of the decision packet;
+- affected-group priorities remain plural; proper civic/commissioning authority retains the decision.
+
+### Ch29 — SEGMENTS
+- partial segmented opening is the bounded current direction; no claim of full Ring Six success;
+- three segments likely certifiable, one conditional/restricted candidate, two remain closed at chapter exit;
+- technical compatibility does not determine allocation priority;
+- housing allocation remains constrained by household/environment/route/access/work-school/wait burdens;
+- Lea's household is only partly compatible with first phase and receives no protagonist favoritism;
+- Lea remains angry at her own outcome while not demanding that safe access be denied to others;
+- Ollie remains model support, not board/housing authority;
+- Aoife enters Ch30 waiting-resident logistics with recorder away.
 
 ## Canon reconciliation still active
 
-**Tomas = the Ch20 injured maintenance worker.**
+**Tomas = the Ch20 injured maintenance worker.**  
 Current state: continuing light-duty/manual-service restriction; do not rename or erase injury consequences.
 
 ## Current canonical frontier
 
-**NEXT = Chapter 27 — CONTROLLED REPRODUCTION / SMALL TEST — Ollie POV.**
+**NEXT = Chapter 30 — WHO WAITS — Aoife POV.**
 
 Required direction:
-- adult safety team redesigns and owns the reproduction protocol;
-- Phase 1 is control-state reproduction only, without resident/support volunteers;
-- Ollie remains REVIEW HOLD and may receive only an explicitly authorized bounded role;
-- negative control sequences and abort conditions are mandatory;
-- test must be physically legible rather than an engineering exposition marathon;
-- objective: determine whether different allowed operational sequences can reproducibly enter the same shared-loop state relationship;
-- success validates a state relationship only; it does not yet prove embodied-evidence role or later oscillation mechanism;
-- if a later human/interface phase is used, it requires separate consent/review and must not turn Iri into symbolic test subject;
-- relocation deadline/resources constrain repetitions;
-- technical mystery should substantially close by Ch27 end, then Ch28 becomes a decision problem with two bad options.
+- move texture away from engineering and into lived relocation/waiting consequences;
+- Aoife spends the day helping with boxes, route planning and ordinary errands with recorder away;
+- temporary housing pressure must appear through school gear, laundry, work shifts, sleep, relationships and stored possessions;
+- residents may contradict each other; Aoife must not force a clean documentary thesis;
+- S1/source relationship may reopen only in a small, practical, explicitly bounded way; no instant forgiveness or intimacy reset;
+- if one banal source-approved line becomes recordable, Aoife should not grab for it immediately;
+- partial opening must show mixed outcomes: some burdens shrink, others remain or redistribute;
+- unresolved technical mystery stays background; Ch30 is a people/waiting chapter, not another model chapter.
 
 ## Production mode
 
-`frontier -> Writer Brief -> prose -> Red Team -> character/youth/dialogue/line -> continuity gate -> GitHub -> Drive -> verification -> advance frontier`.
+`bootstrap -> verified frontier -> Writer Brief -> prose -> hostile Red Team -> character/relationship/youth/reader -> dialogue/line -> continuity gate -> GitHub -> Drive mirror -> verify -> update frontier`.
 
 Do not mark a chapter complete until accepted draft + gate exist in both stores and are verified.
 
