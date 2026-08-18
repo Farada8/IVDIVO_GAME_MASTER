@@ -1,7 +1,7 @@
 # IVDIVO CORE WRITERS' ROOM 40 — v0.3
 
 Status: WORKING / ACTIVE SHELF / DEEP-READ CYCLE COMPLETE
-Date: 2026-08-17
+Date: 2026-08-18
 
 Purpose: permanent callable core library for IVDIVO production. Selection is by story function, not popularity.
 
@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **17/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **18/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -24,6 +24,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #7: Jessica Brody — *Save the Cat! Writes a Young Adult Novel*.
 - Strict complete #8: Les Edgerton — *Hooked*.
 - Strict complete #12: Robert McKee with Bassim El-Wakil — *Action*.
+- Strict complete #13: James Scott Bell — *Plot & Structure*.
 - Strict complete #14: Orson Scott Card — *Characters & Viewpoint*.
 - Strict complete #15: David Corbett — *The Art of Character*.
 - Strict complete #19: Alice LaPlante — *The Making of a Story*.
@@ -66,7 +67,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 10. Jack M. Bickham — *Scene & Structure* — causal scene chains, narrowing options, escalation.
 11. John Truby — *The Anatomy of Genres* — genre systems, moral/world logic, genre mixing.
 12. Robert McKee — *Action* — tactical pressure, capability limits, asymmetric leverage, progression, set-piece causality and pace modulation. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
-13. James Scott Bell — *Plot & Structure* — structural diagnosis, middle, alternative plot approaches.
+13. James Scott Bell — *Plot & Structure* — dominant causal engine, commitment transitions, material variant generation, opening contract, causal adhesive, scene-mode routing, strand convergence, adaptive planning, macro-before-micro revision, troubleshooting and function-before-formula. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 14. Orson Scott Card — *Characters & Viewpoint* — differentiation, motive, POV distance, reader alignment. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 15. David Corbett — *The Art of Character* — independent personhood, nonfungible desire, frustration fingerprint, contextual contradiction, multi-cause motive, social ecology, scenes/POV/voice/dialogue as character action. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 16. Gwen Hayes — *Romancing the Beat* — relationship causality, attraction/retreat/choice/payoff.
@@ -122,9 +123,9 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 
 ## SOURCE AUTHORITY BY PROBLEM
 
-- Causality: Truby + Swain/Bickham.
+- Causality: Truby + Swain/Bickham; Bell Plot & Structure is a practical secondary router for commitment transitions and troubleshooting.
 - Opposition/stakes: McKee Story + Bell.
-- Scene: Rosenfeld + Bickham; add McKee Dialogue for conversation-heavy scenes.
+- Scene: Rosenfeld + Bickham; add McKee Dialogue for conversation-heavy scenes; Bell Plot & Structure can diagnose action/reaction/setup/deepening/summary routing but its negative-outcome preference is nonbinding.
 - Character: McKee Character + Corbett + Card; Corbett is especially useful for independent personhood, nonfungible desire, social ecology and preventing plot puppets.
 - Youth truth: Brody + youth script companion + relevant fiction lab; scientific youth psychology must be separate.
 - Relationship: Hayes + McKee Dialogue + Baxter/Zunshine as needed.
