@@ -1,5 +1,5 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.11
+Version: v0.12
 Date: 2026-08-18
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
@@ -104,8 +104,18 @@ Core membership note: current registry evidence does not establish W011 as a Cor
 Medium/date note: nonfiction form prescriptions and historical publishing/usage examples are not universal fiction/current-market laws.
 IVDIVO ontology note: Zinsser's metaphorical use of `robotic` for impersonal prose is explicitly not imported; conscious robots remain persons.
 
+### W012 — Monika Fludernik — *An Introduction to Narratology* (English translation, 2009)
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `1c569W4lHUp8dWuLNbEqbmLvxtkZi8pA1`
+Integrity: 201 PDF pages; 1,240,031 bytes; ~102,687 extracted words; Preface, 12 chapters, glossary, notes, bibliography and author/subject indexes verified end-to-end.
+Raw SHA-256: `46d451acba9ad9d664f0ebb66e6a8ad4d6492c00af141b3f52d0ebbf6c0ad494`
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W012_FLUDERNIK_INTRODUCTION_TO_NARRATOLOGY_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry evidence does not establish W012 as a Core-40 slot; Core count is therefore not modified.
+Science-status note: historical cognitive/narratological claims are not treated as current scientific authority by default.
+IVDIVO ontology note: anthropocentric narratology is not imported as a rule about conscious robots; POV experience and specialist-school interpretation do not automatically become ontology.
+
 ## COUNTS
-- Wider strict complete explicitly tracked here: **11**
+- Wider strict complete explicitly tracked here: **12**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
