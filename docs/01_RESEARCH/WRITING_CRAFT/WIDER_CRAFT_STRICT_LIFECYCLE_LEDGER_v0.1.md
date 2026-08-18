@@ -1,5 +1,5 @@
 # IVDIVO WIDER CRAFT — STRICT LIFECYCLE LEDGER
-Version: v0.10
+Version: v0.11
 Date: 2026-08-18
 
 Purpose: track strict lifecycle completion for useful craft sources outside the Core-40 without inflating the Core count.
@@ -93,8 +93,19 @@ Core membership note: current registry evidence does not establish W010 as a Cor
 Science/metaphysics note: intuition/unconscious/spiritual/religious claims are treated as personal/craft framing, not scientific or IVDIVO ontological evidence.
 Market/date note: 1990s publication/agent mechanics are historical, not current market authority.
 
+### W011 — William Zinsser — *On Writing Well: The Classic Guide to Writing Nonfiction*, 30th Anniversary Edition
+Status: **STRICT LIFECYCLE SYNTHESIZED v1.0**
+Drive ID: `1IgR7bs9FC_-MXxquwSUtFAGn0JxCqzsd`
+Alternate representation: Drive ID `16ZpGqGvbcy1-ZcKrow1DD3CeAlI3uPlS` is the earlier 6th edition of the same bibliographic work; do not count as a separate knowledge source by default.
+Integrity: 233 PDF pages; 1,437,553 bytes; ~97,259 extracted words; Introduction, 25 chapters, Sources, Index and terminal matter verified end-to-end.
+Raw SHA-256: `ef75d9d6c816319e7182c00d25708887d3120b9e0bdcfaa4ae610894c4d528e5`
+Final strict file: `STRICT_LIFECYCLE/DR_FINAL_W011_ZINSSER_ON_WRITING_WELL_STRICT_LIFECYCLE_v1.0.md`
+Core membership note: current registry evidence does not establish W011 as a Core-40 slot; Core count is therefore not modified.
+Medium/date note: nonfiction form prescriptions and historical publishing/usage examples are not universal fiction/current-market laws.
+IVDIVO ontology note: Zinsser's metaphorical use of `robotic` for impersonal prose is explicitly not imported; conscious robots remain persons.
+
 ## COUNTS
-- Wider strict complete explicitly tracked here: **10**
+- Wider strict complete explicitly tracked here: **11**
 - Core strict count remains independently **17/40**.
 
 ## NEXT
