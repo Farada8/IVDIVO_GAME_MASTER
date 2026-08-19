@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **22/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **23/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -32,6 +32,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #17: Charles Baxter — *The Art of Subtext*.
 - Strict complete #19: Alice LaPlante — *The Making of a Story*.
 - Strict complete #22: Andy Weir — *Project Hail Mary*.
+- Strict complete #23: Blake Crouch — *Dark Matter*.
 - Strict complete #36: Mark J. P. Wolf — *Building Imaginary Worlds*.
 - Strict complete #37: Ignasi Ribó — *Prose Fiction*.
 - Strict complete #38: Lisa Zunshine — *Why We Read Fiction*.
@@ -84,7 +85,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 
 21. John le Carré — *Tinker Tailor Soldier Spy* — institution, compromised trust, information asymmetry, old networks.
 22. Andy Weir — *Project Hail Mary* — evidence-driven competence, complementary distributed intelligence, task-first contact semantics, reciprocal nonhuman agency, uneven domain development, system-coupled successful solutions, relationship/A-story braid, local closure with cost and external confirmation. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
-23. Blake Crouch — *Dark Matter* — identity, alternate realisation, intimate anchor, price of choice.
+23. Blake Crouch — *Dark Matter* — intimate baseline, identity evidence webs, competing-model suspense, counterfactual pressure, path-dependent information asymmetry, decision-owner legitimacy, consent/personhood, local closure with open ontology. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 24. Blake Crouch — *Recursion* — memory, causality, intervention ethics, conceptual scale tied to intimacy.
 25. Kazuo Ishiguro — *Klara and the Sun* — artificial subjectivity, service identity, observation, obsolescence.
 26. Kazuo Ishiguro — *Never Let Me Go* — normalised exploitation, institutional language, personhood and fate.
@@ -132,19 +133,20 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 - Scene: Rosenfeld + Bickham; add McKee Dialogue for conversation-heavy scenes; Swain is useful for action/processing routing and compression but scene/sequel is not a compulsory metronome; Bell Plot & Structure can diagnose action/reaction/setup/deepening/summary routing but its negative-outcome preference is nonbinding.
 - Character: McKee Character + Corbett + Card; add Swain for behavior under varied relational pressure and cast economy, while rejecting his dated gender/psychology assumptions; Corbett is especially useful for independent personhood, nonfungible desire, social ecology and preventing plot puppets.
 - Youth truth: Brody + youth script companion + relevant fiction lab; scientific youth psychology must be separate.
-- Relationship: Hayes + Baxter + McKee Dialogue + Corbett/Card for independent personhood + Zunshine/Herman for evidence/person-model firewalls; Weir is a fiction lab for trust-through-work and relationship-state changes that alter A-story choices without changing evidence status.
+- Relationship: Hayes + Baxter + McKee Dialogue + Corbett/Card for independent personhood + Zunshine/Herman for evidence/person-model firewalls; Weir is a fiction lab for trust-through-work, while Crouch adds strong consent/decision-owner and identity-evidence gates. Relationship state may change action but never evidence proof-status.
 - SMITH: le Carré + McKee antagonism + Constantine/Butcher + Zunshine source-monitoring + task-specific science/institutional sources.
-- AI/synthetic subjectivity: Murderbot + Ishiguro + Crouch/Weir + Zunshine for prediction/motive/source distinctions; Baxter may supply embodiment-specific cue/staging design; Weir is useful for complementary capability and reciprocal agency, not as technical authority; technical claims require AI/robotics/neuro/bio sources.
-- Nonhuman civilisation/contact: Children of Time + Weir + Zunshine/Ribó for information flow; Weir is especially useful for shared-referent first contact, reciprocal agency and uneven civilizational competence; technical biology separate.
-- ORBITAL YOUTH belonging/status: Nevermoor function + Hunger Games/Skyward social pressure + youth scripts; Swain may support success→responsibility escalation and ordinary-life valleys; Hayes may support relation-state causality; Baxter may support youth attention/staging; Weir may support technical-scene causality, distributed competence and uneven-domain development; monetary examples are nonbinding.
-- World logic / canon provenance: Wolf + Continuity Editor; separate world database from book narrative, propagate changed defaults, and record authority/supersession instead of silent retcon. Weir can serve as a fiction laboratory for the rule `DOMAIN A MATURITY ≠ DOMAIN B MATURITY`.
-- SF genre sanity: Cambridge Companion + current task-specific science; use Cambridge especially to separate SF mode from local plot engine, historical trope from current canon, and technical efficacy from normative legitimacy.
-- Narrative-level diagnosis: Ribó; use its plot/setting/characterisation/narration/language/theme and story/discourse distinctions before choosing a repair school.
-- Prose/voice: Lodge + Doty + Baxter + McKee Dialogue; Baxter is strongest for staging, listener-attention divergence, silence/inflection and cue discipline; use Lodge as the pluralist anti-formula router; Swain supports functional variation; Weir confirms that technical suspense may require sustained syntax rather than short-sentence KPIs.
+- AI/synthetic subjectivity: Murderbot + Ishiguro + Crouch/Weir + Zunshine for prediction/motive/source distinctions; Crouch is especially useful for multi-evidence identity and decision-owner legitimacy; technical claims require AI/robotics/neuro/bio sources.
+- Nonhuman civilisation/contact: Children of Time + Weir + Zunshine/Ribó for information flow; add Crouch's decision-owner gate whenever a conscious nonhuman subject's continuity is being allocated by humans.
+- ORBITAL YOUTH belonging/status: Nevermoor function + Hunger Games/Skyward social pressure + youth scripts; Swain supports success→responsibility escalation; Hayes relation-state causality; Baxter youth attention/staging; Weir technical causality/uneven domains; Crouch counterfactual pressure and path-dependent information asymmetry. Monetary examples remain nonbinding.
+- World logic / canon provenance: Wolf + Continuity Editor; separate world database from book narrative, propagate changed defaults, and record authority/supersession instead of silent retcon. Weir demonstrates uneven domain maturity; Crouch's multiverse remains fiction mechanism only.
+- SF genre sanity: Cambridge Companion + current task-specific science; use Cambridge to separate SF mode from local plot engine, historical trope from current canon, and technical efficacy from normative legitimacy.
+- Narrative-level diagnosis: Ribó; use plot/setting/characterisation/narration/language/theme and story/discourse distinctions before choosing a repair school.
+- Prose/voice: Lodge + Doty + Baxter + McKee Dialogue; use Lodge as pluralist anti-formula router; Swain supports functional variation; Weir supports sustained technical syntax; Crouch's fragments are author-specific and never a suspense KPI.
 - Discovery/revision/POV epistemics: LaPlante + Rosenfeld + Card; add Swain for generator/critic separation, research balance, flexible planning and revision-versus-polishing routing.
-- Mystery/evidence provenance: Zunshine + Truby revelation/action + le Carré/Butcher/Veronica Mars labs; Weir supplies a strong fiction lab for observation→hypothesis→test→model revision; keep observation, source, interpretation and world fact separate.
+- Mystery/evidence provenance: Zunshine + Truby revelation/action + le Carré/Butcher/Veronica Mars labs; Weir supplies observation→hypothesis→test; Crouch adds competing-model suspense and identity evidence webs. Keep observation, source, interpretation, motive and world fact separate.
 - Action/physical pressure: McKee Action + McKee Story + Bell; use human-state change and capability limits before spectacle escalation.
-- Consciousness-practice / uneven knowledge: Founder/canon + task-specific science first; use Wolf for world consistency and Weir only as a fiction-lab demonstration that high capability in one domain does not entail high maturity in another. Maintain `observation → reproducible effect → school interpretation → competing interpretation → ontology ceiling`.
+- Consciousness-practice / uneven knowledge: Founder/canon + task-specific science first; maintain `observation → reproducible effect → school interpretation → competing interpretation → ontology ceiling`. Weir may illustrate uneven knowledge; Crouch's observer/multiverse premise is not evidence.
+- Governance/personhood: Founder/canon + consent/personhood rules first; use Crouch's `decision owner before claimant fairness` test for votes, lotteries, rescue allocations, continuity protocols and contested identity.
 
 ## STOP-RESEARCH RULE
 
