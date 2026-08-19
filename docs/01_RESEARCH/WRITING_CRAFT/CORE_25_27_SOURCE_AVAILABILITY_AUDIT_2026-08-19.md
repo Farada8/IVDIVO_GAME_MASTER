@@ -1,7 +1,7 @@
 # CORE #25–27 SOURCE AVAILABILITY AUDIT — 2026-08-19
 
-Status: VERIFIED
-Purpose: prevent preview fragments and misleading filenames from being counted as FULL READ sources.
+Status: VERIFIED / UPDATED
+Purpose: prevent preview fragments, misleading filenames and collection containers from being counted as FULL READ sources.
 
 ## #25 Kazuo Ishiguro — *Klara and the Sun*
 
@@ -45,22 +45,33 @@ The available payload is not a complete three-Ishiguro-novel source suitable for
 
 Drive folder: `MARTHA_WELLS_MURDERBOT` (`1UGyyOvUyhX7di-Y_RgwjSvzv-21w60La`).
 
-Retained source:
+Retained collection source:
 - `Uells_Marta_[Dnevniki_Killerbota]_Otkaz_vseh_sistem_(sbornik).zip` (`1rUi2lk2ZF4PnuSVVY3OhtPhdEPeSeOMb`)
 
-Result:
-The FB2 collection contains a complete *All Systems Red* section followed by *Artificial Condition*. The first novella contains eight numbered chapters and the terminal departure/message scene. Approximate extracted *All Systems Red* length: 25.5k words.
+Updated collection-boundary verification:
+The internal FB2 contains exactly two fiction works after front matter:
+1. `Отказ всех систем` / *All Systems Red* — approximately 24.7k extracted words.
+2. `Искусственное состояние` / *Artificial Condition* — approximately 24.8k extracted words.
 
-Lifecycle status:
+The earlier collection ambiguity is therefore resolved at the work-boundary level. The collection container must still not be counted as a single “book” or as two copies of one source.
+
+*All Systems Red* contains eight numbered chapters and the terminal departure/message scene and remains independently completed.
+
+Lifecycle status for Core #27:
 `REGISTERED → INTEGRITY VERIFIED → FULL READ → ... → SYNTHESIZED = COMPLETE`.
+
+### Artificial Condition note
+
+*Artificial Condition* has now been continuously read and synthesized as a separate reference source. However, this audit does **not** assert a Core slot for it because an authoritative Core-40 mapping for the next slot was not found in the current source-of-record search. It therefore must not increase the Core count merely because it shares the same collection archive.
 
 ## Queue consequence
 
 - #25 remains blocked until a complete exact source is uploaded/found.
 - #26 remains blocked until a complete exact source is uploaded/found.
-- #27 is completed and may be counted in strict Core.
-- Queue may move to #28 after #27 without pretending #25/#26 were completed.
+- #27 remains completed and may be counted in strict Core.
+- *Artificial Condition* is a distinct strict-complete reference work, but is not assigned a Core number here without authoritative mapping.
+- Queue may move beyond #27 without pretending #25/#26 were completed.
 
 ## Dedupe rule reinforced
 
-Numeric filenames and multiple archives do not imply unique knowledge. Book identity must be established from internal metadata/text; duplicate preview text is one unavailable/incomplete source state, not multiple books.
+Numeric filenames, multiple archives and collection containers do not imply unique knowledge. Book identity must be established from internal metadata/text and work boundaries; duplicate preview text is one unavailable/incomplete source state, not multiple books.
