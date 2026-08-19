@@ -64,12 +64,24 @@ Lifecycle status for Core #27:
 
 *Artificial Condition* has now been continuously read and synthesized as a separate reference source. However, this audit does **not** assert a Core slot for it because an authoritative Core-40 mapping for the next slot was not found in the current source-of-record search. It therefore must not increase the Core count merely because it shares the same collection archive.
 
+### System Collapse collection note
+
+A second retained Murderbot archive has now also been resolved at contained-work level:
+- `Uells_Marta_[Dnevniki_Killerbota]_Kollaps_sistemyi_(sbornik).zip` (`1YwYyDKBiBBMG6jbDG7DJqgROeq2Hz9Cz`).
+
+Internal FB2 contains:
+1. `Коллапс системы` / *System Collapse* — a distinct novel section, 1,946 parsed narrative entries including headings, approximately 50.3k words.
+2. A later `Рассказы` block — separate short-story material, excluded from the novel lifecycle.
+
+*System Collapse* has now been continuously read P1–P1946 and completed through SYNTHESIZED as a reference/mechanism source. This audit does **not** assign it a Core slot. It therefore does not change the Core count.
+
 ## Queue consequence
 
 - #25 remains blocked until a complete exact source is uploaded/found.
 - #26 remains blocked until a complete exact source is uploaded/found.
 - #27 remains completed and may be counted in strict Core.
 - *Artificial Condition* is a distinct strict-complete reference work, but is not assigned a Core number here without authoritative mapping.
+- *System Collapse* is also a distinct strict-complete reference work, with the short stories excluded, but is not assigned a Core number here without authoritative mapping.
 - Queue may move beyond #27 without pretending #25/#26 were completed.
 
 ## Dedupe rule reinforced
