@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **19/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **20/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -28,6 +28,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #13: James Scott Bell — *Plot & Structure*.
 - Strict complete #14: Orson Scott Card — *Characters & Viewpoint*.
 - Strict complete #15: David Corbett — *The Art of Character*.
+- Strict complete #16: Gwen Hayes — *Romancing the Beat*.
 - Strict complete #19: Alice LaPlante — *The Making of a Story*.
 - Strict complete #36: Mark J. P. Wolf — *Building Imaginary Worlds*.
 - Strict complete #37: Ignasi Ribó — *Prose Fiction*.
@@ -71,7 +72,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 13. James Scott Bell — *Plot & Structure* — dominant causal engine, commitment transitions, material variant generation, opening contract, causal adhesive, scene-mode routing, strand convergence, adaptive planning, macro-before-micro revision, troubleshooting and function-before-formula. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 14. Orson Scott Card — *Characters & Viewpoint* — differentiation, motive, POV distance, reader alignment. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 15. David Corbett — *The Art of Character* — independent personhood, nonfungible desire, frustration fingerprint, contextual contradiction, multi-cause motive, social ecology, scenes/POV/voice/dialogue as character action. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
-16. Gwen Hayes — *Romancing the Beat* — relationship causality, attraction/retreat/choice/payoff.
+16. Gwen Hayes — *Romancing the Beat* — relationship-state causality, external/romance braid, consent/boundary progression, costly credible relational proof and product-weight routing; full beat sheet is nonbinding outside romance-primary products. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 17. Charles Baxter — *The Art of Subtext* — indirect pressure, staging, withheld meaning.
 18. Mark Doty — *The Art of Description* — attention, sensory selection, implication through description.
 19. Alice LaPlante — *The Making of a Story* — discovery, particularity, show/tell routing, POV/reliability, soft causality, revision-stage discipline and epistemic humility. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
@@ -129,17 +130,17 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 - Scene: Rosenfeld + Bickham; add McKee Dialogue for conversation-heavy scenes; Swain is useful for action/processing routing and compression but scene/sequel is not a compulsory metronome; Bell Plot & Structure can diagnose action/reaction/setup/deepening/summary routing but its negative-outcome preference is nonbinding.
 - Character: McKee Character + Corbett + Card; add Swain for behavior under varied relational pressure and cast economy, while rejecting his dated gender/psychology assumptions; Corbett is especially useful for independent personhood, nonfungible desire, social ecology and preventing plot puppets.
 - Youth truth: Brody + youth script companion + relevant fiction lab; scientific youth psychology must be separate.
-- Relationship: Hayes + McKee Dialogue + Baxter/Zunshine as needed.
+- Relationship: Hayes + McKee Dialogue + Corbett/Card for independent personhood + Zunshine/Herman for evidence/person-model firewalls. Hayes is a relationship-causality specialist; its full beat sheet is high-authority only for romance-primary diagnosis and never overrides the active Romance Weight Dial.
 - SMITH: le Carré + McKee antagonism + Constantine/Butcher + Zunshine source-monitoring + task-specific science/institutional sources.
 - AI/synthetic subjectivity: Murderbot + Ishiguro + Crouch/Weir + Zunshine for prediction/motive/source distinctions; technical claims require AI/robotics/neuro/bio sources.
 - Nonhuman civilisation/contact: Children of Time + Weir + Zunshine/Ribó for information flow; technical biology separate.
-- ORBITAL YOUTH belonging/status: Nevermoor function + Hunger Games/Skyward social pressure + youth scripts; Swain may support success→responsibility escalation and ordinary-life valleys, but monetary examples are nonbinding; transform completely into orbital civilisation.
+- ORBITAL YOUTH belonging/status: Nevermoor function + Hunger Games/Skyward social pressure + youth scripts; Swain may support success→responsibility escalation and ordinary-life valleys, but monetary examples are nonbinding; Hayes may support relation-state causality without importing salary/rent/credits or partner-as-cure logic; transform completely into orbital civilisation.
 - World logic / canon provenance: Wolf + Continuity Editor; separate world database from book narrative, propagate changed defaults, and record authority/supersession instead of silent retcon.
 - SF genre sanity: Cambridge Companion + current task-specific science; use Cambridge especially to separate SF mode from local plot engine, historical trope from current canon, and technical efficacy from normative legitimacy.
 - Narrative-level diagnosis: Ribó; use its plot/setting/characterisation/narration/language/theme and story/discourse distinctions before choosing a repair school.
 - Prose/voice: Lodge + Doty + Baxter + McKee Dialogue; use Lodge as the pluralist anti-formula router across POV, description, duration, implication and endings; Swain's clarity/syntax material supports functional variation, not short-sentence KPIs.
 - Discovery/revision/POV epistemics: LaPlante + Rosenfeld + Card; add Swain for generator/critic separation, research balance, flexible planning and revision-versus-polishing routing.
-- Mystery/evidence provenance: Zunshine + Truby revelation/action + le Carré/Butcher/Veronica Mars labs; keep observation, source, interpretation and world fact separate.
+- Mystery/evidence provenance: Zunshine + Truby revelation/action + le Carré/Butcher/Veronica Mars labs; keep observation, source, interpretation and world fact separate; Hayes may alter trust/disclosure choices but never evidence status.
 - Action/physical pressure: McKee Action + McKee Story + Bell; use human-state change and capability limits before spectacle escalation.
 
 ## STOP-RESEARCH RULE
