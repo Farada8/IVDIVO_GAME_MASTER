@@ -1,7 +1,7 @@
 # IVDIVO CORE WRITERS' ROOM 40 — v0.3
 
 Status: WORKING / ACTIVE SHELF / DEEP-READ CYCLE COMPLETE
-Date: 2026-08-18
+Date: 2026-08-19
 
 Purpose: permanent callable core library for IVDIVO production. Selection is by story function, not popularity.
 
@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **18/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **19/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -23,6 +23,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #6: Jordan Rosenfeld — *Make a Scene: Revised and Expanded Edition*.
 - Strict complete #7: Jessica Brody — *Save the Cat! Writes a Young Adult Novel*.
 - Strict complete #8: Les Edgerton — *Hooked*.
+- Strict complete #9: Dwight V. Swain — *Techniques of the Selling Writer*.
 - Strict complete #12: Robert McKee with Bassim El-Wakil — *Action*.
 - Strict complete #13: James Scott Bell — *Plot & Structure*.
 - Strict complete #14: Orson Scott Card — *Characters & Viewpoint*.
@@ -63,7 +64,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 6. Jordan Rosenfeld — *Make a Scene* — scene movement, intention, tension, transitions. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 7. Jessica Brody — *Save the Cat! Writes a Young Adult Novel* — YA age lens and genre diagnostic; not mandatory beat authority. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 8. Les Edgerton — *Hooked* — opening, story-worthy problem, controlled backstory. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
-9. Dwight V. Swain — *Techniques of the Selling Writer* — stimulus/response, micro-causality, scene/sequel.
+9. Dwight V. Swain — *Techniques of the Selling Writer* — selection/arrangement/description, motivation-reaction causality, scene/processing routing, commitment transitions, changed-state middles, peaks/valleys, cast economy with personhood firewall, flexible planning, research balance, revision-versus-polishing separation and sentence-rhythm diagnostics. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 10. Jack M. Bickham — *Scene & Structure* — causal scene chains, narrowing options, escalation.
 11. John Truby — *The Anatomy of Genres* — genre systems, moral/world logic, genre mixing.
 12. Robert McKee — *Action* — tactical pressure, capability limits, asymmetric leverage, progression, set-piece causality and pace modulation. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
@@ -123,21 +124,21 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 
 ## SOURCE AUTHORITY BY PROBLEM
 
-- Causality: Truby + Swain/Bickham; Bell Plot & Structure is a practical secondary router for commitment transitions and troubleshooting.
-- Opposition/stakes: McKee Story + Bell.
-- Scene: Rosenfeld + Bickham; add McKee Dialogue for conversation-heavy scenes; Bell Plot & Structure can diagnose action/reaction/setup/deepening/summary routing but its negative-outcome preference is nonbinding.
-- Character: McKee Character + Corbett + Card; Corbett is especially useful for independent personhood, nonfungible desire, social ecology and preventing plot puppets.
+- Causality: Truby + Swain/Bickham; Swain is especially useful for motivation/reaction legibility, changed-state middles, delay-vs-complication and commitment transitions; Bell Plot & Structure is a practical secondary router for commitment transitions and troubleshooting.
+- Opposition/stakes: McKee Story + Bell; use Swain's peaks/valleys and causal-involvement tools without importing mandatory disaster/death logic.
+- Scene: Rosenfeld + Bickham; add McKee Dialogue for conversation-heavy scenes; Swain is useful for action/processing routing and compression but scene/sequel is not a compulsory metronome; Bell Plot & Structure can diagnose action/reaction/setup/deepening/summary routing but its negative-outcome preference is nonbinding.
+- Character: McKee Character + Corbett + Card; add Swain for behavior under varied relational pressure and cast economy, while rejecting his dated gender/psychology assumptions; Corbett is especially useful for independent personhood, nonfungible desire, social ecology and preventing plot puppets.
 - Youth truth: Brody + youth script companion + relevant fiction lab; scientific youth psychology must be separate.
 - Relationship: Hayes + McKee Dialogue + Baxter/Zunshine as needed.
 - SMITH: le Carré + McKee antagonism + Constantine/Butcher + Zunshine source-monitoring + task-specific science/institutional sources.
 - AI/synthetic subjectivity: Murderbot + Ishiguro + Crouch/Weir + Zunshine for prediction/motive/source distinctions; technical claims require AI/robotics/neuro/bio sources.
 - Nonhuman civilisation/contact: Children of Time + Weir + Zunshine/Ribó for information flow; technical biology separate.
-- ORBITAL YOUTH belonging/status: Nevermoor function + Hunger Games/Skyward social pressure + youth scripts; transform completely into orbital civilisation.
+- ORBITAL YOUTH belonging/status: Nevermoor function + Hunger Games/Skyward social pressure + youth scripts; Swain may support success→responsibility escalation and ordinary-life valleys, but monetary examples are nonbinding; transform completely into orbital civilisation.
 - World logic / canon provenance: Wolf + Continuity Editor; separate world database from book narrative, propagate changed defaults, and record authority/supersession instead of silent retcon.
 - SF genre sanity: Cambridge Companion + current task-specific science; use Cambridge especially to separate SF mode from local plot engine, historical trope from current canon, and technical efficacy from normative legitimacy.
 - Narrative-level diagnosis: Ribó; use its plot/setting/characterisation/narration/language/theme and story/discourse distinctions before choosing a repair school.
-- Prose/voice: Lodge + Doty + Baxter + McKee Dialogue; use Lodge as the pluralist anti-formula router across POV, description, duration, implication and endings.
-- Discovery/revision/POV epistemics: LaPlante + Rosenfeld + Card; use LaPlante especially for show/tell routing, reliability and revision-stage diagnosis.
+- Prose/voice: Lodge + Doty + Baxter + McKee Dialogue; use Lodge as the pluralist anti-formula router across POV, description, duration, implication and endings; Swain's clarity/syntax material supports functional variation, not short-sentence KPIs.
+- Discovery/revision/POV epistemics: LaPlante + Rosenfeld + Card; add Swain for generator/critic separation, research balance, flexible planning and revision-versus-polishing routing.
 - Mystery/evidence provenance: Zunshine + Truby revelation/action + le Carré/Butcher/Veronica Mars labs; keep observation, source, interpretation and world fact separate.
 - Action/physical pressure: McKee Action + McKee Story + Bell; use human-state change and capability limits before spectacle escalation.
 
