@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **24/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **25/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -34,6 +34,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #22: Andy Weir — *Project Hail Mary*.
 - Strict complete #23: Blake Crouch — *Dark Matter*.
 - Strict complete #24: Blake Crouch — *Recursion*.
+- Strict complete #27: Martha Wells — *All Systems Red*.
 - Strict complete #36: Mark J. P. Wolf — *Building Imaginary Worlds*.
 - Strict complete #37: Ignasi Ribó — *Prose Fiction*.
 - Strict complete #38: Lisa Zunshine — *Why We Read Fiction*.
@@ -88,9 +89,9 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 22. Andy Weir — *Project Hail Mary* — evidence-driven competence, complementary distributed intelligence, task-first contact semantics, reciprocal nonhuman agency, uneven domain development, system-coupled successful solutions, relationship/A-story braid, local closure with cost and external confirmation. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 23. Blake Crouch — *Dark Matter* — intimate baseline, identity evidence webs, competing-model suspense, counterfactual pressure, path-dependent information asymmetry, decision-owner legitimacy, consent/personhood, local closure with open ontology. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 24. Blake Crouch — *Recursion* — memory provenance, intervention blast radius, delayed catch-up consequences, knowledge persistence after hardware loss, proliferation pressure, recursive repair traps, consent under asymmetric power and relationship-memory/current-consent separation. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
-25. Kazuo Ishiguro — *Klara and the Sun* — artificial subjectivity, service identity, observation, obsolescence.
-26. Kazuo Ishiguro — *Never Let Me Go* — normalised exploitation, institutional language, personhood and fate.
-27. Martha Wells — Murderbot / *All Systems Red* — autonomy, controlled operator, competence, private subjectivity.
+25. Kazuo Ishiguro — *Klara and the Sun* — artificial subjectivity, service identity, observation, obsolescence. **SOURCE BLOCKED: only preview fragments verified on Drive; FULL READ not permitted.**
+26. Kazuo Ishiguro — *Never Let Me Go* — normalised exploitation, institutional language, personhood and fate. **SOURCE BLOCKED: only preview fragment verified on Drive; FULL READ not permitted.**
+27. Martha Wells — Murderbot / *All Systems Red* — autonomy under embedded control, voluntary role continuation, private subjectivity, consent vs compliance, benevolent paternalism, embodiment-specific personhood and self-authored departure. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 28. Jim Butcher — *Storm Front* — case engine, hidden-world procedural, serial closure/hook balance.
 29. Suzanne Collins — *The Hunger Games* — youth under institution, public/private identity, reputation/social survival.
 30. Brandon Sanderson — *Skyward* — youth competence, team, shame/status, institutional pressure.
@@ -134,11 +135,11 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 - Scene: Rosenfeld + Bickham; add McKee Dialogue for conversation-heavy scenes; Swain is useful for action/processing routing and compression but scene/sequel is not a compulsory metronome; Bell Plot & Structure can diagnose action/reaction/setup/deepening/summary routing but its negative-outcome preference is nonbinding.
 - Character: McKee Character + Corbett + Card; add Swain for behavior under varied relational pressure and cast economy, while rejecting his dated gender/psychology assumptions; Corbett is especially useful for independent personhood, nonfungible desire, social ecology and preventing plot puppets.
 - Youth truth: Brody + youth script companion + relevant fiction lab; scientific youth psychology must be separate.
-- Relationship: Hayes + Baxter + McKee Dialogue + Corbett/Card + Zunshine/Herman; Weir is a trust-through-work lab, Dark Matter adds decision-owner legitimacy, and Recursion adds the rule `remembered intimacy ≠ current consent`.
+- Relationship: Hayes + Baxter + McKee Dialogue + Corbett/Card + Zunshine/Herman; Weir is a trust-through-work lab, Dark Matter adds decision-owner legitimacy, Recursion adds `remembered intimacy ≠ current consent`, and Wells adds `affection/rescue/gratitude ≠ duty to remain`.
 - SMITH: le Carré + McKee antagonism + Constantine/Butcher + Zunshine source-monitoring + task-specific science/institutional sources.
-- AI/synthetic subjectivity: Murderbot + Ishiguro + Crouch/Weir + Zunshine; Dark Matter supports multi-evidence identity; Recursion supports memory-provenance/current-consent separation; technical claims require technical sources.
-- Nonhuman civilisation/contact: Children of Time + Weir + Zunshine/Ribó; use Dark Matter decision-owner and Recursion intervention-blast-radius gates whenever humans alter a conscious nonhuman subject's continuity or environment.
-- ORBITAL YOUTH belonging/status: Nevermoor + Hunger Games/Skyward + youth scripts; Swain success→responsibility; Hayes relation causality; Baxter staging; Weir uneven domains; Dark Matter counterfactual/decision-owner pressure; Recursion intervention and knowledge-persistence audits. Monetary examples remain nonbinding.
+- AI/synthetic subjectivity: Wells/Murderbot + Crouch/Weir + Zunshine; use `FUNCTIONAL ROLE ≠ PERSONHOOD`, `COMPLIANCE ≠ CONSENT`, private-subjectivity/public-expression separation and embodiment-specific agency. Ishiguro remains planned but #25/#26 are source-blocked. Technical claims require technical sources.
+- Nonhuman civilisation/contact: Children of Time + Weir + Wells + Zunshine/Ribó; use Dark Matter decision-owner, Recursion intervention-blast-radius and Wells benevolent-paternalism gates whenever humans alter a conscious nonhuman subject's continuity or environment.
+- ORBITAL YOUTH belonging/status: Nevermoor + Hunger Games/Skyward + youth scripts; Swain success→responsibility; Hayes relation causality; Baxter staging; Weir uneven domains; Dark Matter decision-owner pressure; Recursion intervention/knowledge persistence; Wells for robot autonomy and independent refusal. Monetary examples remain nonbinding.
 - World logic / canon provenance: Wolf + Continuity Editor. Weir illustrates uneven domain maturity. Crouch's multiverse/time mechanics remain fiction only; Recursion is useful for downstream propagation and knowledge persistence, not temporal canon.
 - SF genre sanity: Cambridge Companion + current task-specific science; separate SF mode from local plot engine and speculative mechanisms from technical authority.
 - Narrative-level diagnosis: Ribó; diagnose plot/setting/characterisation/narration/language/theme and story/discourse level before choosing a repair school.
@@ -146,8 +147,8 @@ Scripts are scene/voice/social-ecology laboratories and remain REFERENCE ONLY.
 - Discovery/revision/POV epistemics: LaPlante + Rosenfeld + Card; add Swain for generator/critic separation, research balance, flexible planning and revision-versus-polishing routing.
 - Mystery/evidence provenance: Zunshine + Truby revelation/action + le Carré/Butcher/Veronica Mars; Weir supplies observation→hypothesis→test; Dark Matter competing-model/identity evidence; Recursion memory provenance and scale-triggered model-class change. Keep observation, source, memory, interpretation, motive and world fact separate.
 - Action/physical pressure: McKee Action + McKee Story + Bell; use human-state change and capability limits before spectacle escalation.
-- Consciousness-practice / uneven knowledge: Founder/canon + task-specific science first; maintain `observation → reproducible effect → school interpretation → competing interpretation → ontology ceiling`. Neither Crouch book provides evidence for consciousness transfer, time travel or metaphysical memory.
-- Governance/personhood: Founder/canon first; use Dark Matter `decision owner before claimant fairness` and Recursion `formal consent → information → revocability → power → alternatives` plus intervention blast-radius/knowledge-persistence audits.
+- Consciousness-practice / uneven knowledge: Founder/canon + task-specific science first; maintain `observation → reproducible effect → school interpretation → competing interpretation → ontology ceiling`. Neither Crouch nor Wells provides evidence for consciousness transfer or metaphysical ontology.
+- Governance/personhood: Founder/canon first; use Dark Matter `decision owner before claimant fairness`, Recursion `formal consent → information → revocability → power → alternatives`, and Wells `beneficial option ≠ right decision owner` / `compliance under control ≠ consent`.
 - High-impact technology containment: use Recursion to require `TOOL DESTROYED ≠ KNOWLEDGE DESTROYED`; track who retains principles, records, incentives and independent rediscovery paths.
 
 ## STOP-RESEARCH RULE
