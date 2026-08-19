@@ -1,7 +1,7 @@
 # IVDIVO WRITING LIBRARY LIFECYCLE PROGRESS — PASS 98
 
 Date: 2026-08-19
-Status: COMPLETE FOR THIS PASS / NO FALSE LIFECYCLE PROMOTIONS
+Status: COMPLETE FOR THIS PASS / NO FALSE CORE PROMOTIONS
 
 ## 1. Fresh-upload audit
 Google Drive recent-file window was checked first.
@@ -67,7 +67,7 @@ Main mechanisms:
 7. Discovery scenes may teach the writer something important without entering the publication manuscript.
 8. Reference intelligence must extract mechanisms, not copy surface style.
 
-## 5. IVDIVO operationalization
+## 5. IVDIVO operationalization — Scofield
 Created:
 `IVDIVO_BATCH130_SCOFIELD_SCENE_WEIGHT_EMBEDDED_SCENE_APPLICATION_GATE_v0.1_DRAFT.md`.
 
@@ -98,37 +98,85 @@ Evidence properties themselves may not be altered for prose beauty.
 ### Conscious nonhuman persons
 Do not expand a scene merely because embodiment is novel; do not compress away a nonhuman subject's own consent/refusal/decision when it changes the option space.
 
-## 6. LESSON ZERO Book One
+## 6. New unique wider source — Jack M. Bickham
+A previously unregistered unique wider source was identified and registered:
+*The 38 Most Common Fiction Writing Mistakes (And How to Avoid Them)*.
+
+Bibliographic identity:
+- Jack M. Bickham;
+- copyright 1992;
+- Writer's Digest Books;
+- ISBN-13 978-0-89879-821-0;
+- source explicitly includes an index.
+
+Important firewall:
+**This is NOT Bickham's *Scene & Structure* and does not satisfy Core #10.**
+
+Lifecycle:
+`REGISTERED ✓ → INTEGRITY VERIFIED ✓ → FULL READ IN PROGRESS`.
+
+Fresh direct stream was sequentially read through:
+- Forward;
+- Sections 1–6 complete;
+- Section 7 begins, then runtime truncates.
+
+Exact pointer:
+Section 7 `Don't Use Real People in Your Story` — first unread paragraph after truncation.
+
+## 7. Batch 131 — Bickham provisional mechanisms
+Created:
+`IVDIVO_CRAFT_STUDY_BATCH_131_BICKHAM_READER_RESPECT_OPENING_CHANGE_DESCRIPTION_MODE_PACING_v0.1_PROVISIONAL.md`.
+
+Main mechanisms:
+- reader respect / no condescension;
+- specialist knowledge must change story state rather than display expertise;
+- opening function retained as meaningful **change**, while mandatory threat is rejected;
+- description/pacing treated as a narrative-mode decision before a sentence-length decision;
+- description may earn length when the described variable itself changes time, access, evidence, physical possibility or relationship.
+
+### Bickham × Doty synthesis
+Bickham fears description stopping external movement; Doty shows description can develop attention/thought.
+
+IVDIVO synthesis:
+**Description is strong when it produces functional movement** — either a story variable changes, or the POV/reader model changes in a way that affects later interpretation/action.
+
+### Bickham × Scofield synthesis
+`FORWARD MOVEMENT ≠ CONSTANT FULL-SCENE ACTION`.
+Summary, commentary, interiority and description can move knowledge, relationship, commitment or future option space.
+
+## 8. LESSON ZERO Book One
 No development lock was reopened.
 
 Current authority remains:
 **KEEP / DO NOT REBUILD / publishing validation**.
 
-Batch 130 may be used only if external reader/audio/copy evidence identifies a concrete passage with:
-- over-dramatized routine process;
-- multiple light scenes that should merge;
-- a buried bull's-eye moment that should be expanded;
-- microreaction/paragraph fragmentation.
-
+Batch 130/131 may be used only if external reader/audio/copy evidence identifies a concrete problem.
 Quiet but load-bearing ordinary-life, autonomy, consent, relationship and payoff scenes remain protected.
 
-## 7. Ledger correction
+## 9. Ledger correction
 Created authoritative:
 `CORE_STRICT_LIFECYCLE_LEDGER_v7.md`.
 
-It preserves Core = 31/40 and corrects the stale wider-note by explicitly recording Scofield as already REGISTERED + INTEGRITY VERIFIED + FULL READ IN PROGRESS.
+It preserves Core = 31/40 and correctly records Scofield as already REGISTERED + INTEGRITY VERIFIED + FULL READ IN PROGRESS.
 
-## 8. Exact continuation pointers
+## 10. Exact continuation pointers
 ### Core
 Mark Doty — establish sequential access, then continue Chapter 1 `World into Word` continuously.
 
-### Wider
+### Wider A
 Sandra Scofield — Chapter 1 `The Basics`, continue from runtime truncation around `TENDER MERCIES`.
 
-Do not repeat integrity work unless new source evidence appears.
+### Wider B
+Jack M. Bickham — Section 7 `Don't Use Real People in Your Story`, continue from the first unread paragraph after runtime truncation.
+
+Do not repeat integrity work unless new evidence appears.
 Do not count targeted later snippets as continuous FULL READ.
 
-## 9. Pass verdict
-**Substantive progress achieved without false lifecycle promotion.**
+## 11. Pass verdict
+**Substantive progress achieved without false Core promotion.**
 
-The main gain of Pass 98 is not a higher book count but a sharper scene-mode/scene-weight routing layer that directly reduces procedural over-dramatization and choppy paragraph/sentence cadence in future IVDIVO manuscripts while preserving quiet load-bearing scenes.
+The main gains are:
+- sharper scene-mode/scene-weight routing;
+- a stronger anti-choppiness pipeline;
+- direct integration of description with functional movement;
+- registration and real sequential start of an additional unique wider craft source.
