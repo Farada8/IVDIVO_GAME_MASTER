@@ -8,45 +8,97 @@ Source role: FICTION MECHANISM LABORATORY
 ## BIBLIOGRAPHIC IDENTITY
 Author: Andy Weir
 Title: *Project Hail Mary*
-Retained candidate source: `Project Mary Hail.pdf`
+Edition verified from retained source: Ballantine Books, 2021
+Retained source: `Project Mary Hail.pdf`
 Drive file id: `185CfASdSCIoIK5fdiJnW6hy3I-VqXJkJ`
-File size reported by Drive: 10,391,506 bytes
+File size: 10,391,506 bytes
 Format: PDF
+PDF extent: 340 pages
+Extracted text: approximately 139,278 words / 14,458 local extraction lines
+Structure verified: Chapters 1–29 plus terminal matter/acknowledgments
+Language: English
 
 ## CURRENT STRICT LIFECYCLE
 REGISTERED ✓
-INTEGRITY VERIFIED — OPEN
-FULL READ — NOT STARTED
+INTEGRITY VERIFIED ✓
+FULL READ — IN PROGRESS
 STRUCTURE MAP — OPEN
 SOURCE PASSPORT — provisional
-CLAIM EXTRACTION — OPEN
-MECHANISM EXTRACTION — OPEN
-FAILURE MODES — OPEN
-CROSS-SOURCE COMPARISON — OPEN
-IVDIVO OPERATIONALIZATION — OPEN
-MANUSCRIPT VALIDATION — OPEN
+CLAIM EXTRACTION — provisional only; final stage OPEN
+MECHANISM EXTRACTION — provisional only; final stage OPEN
+FAILURE MODES — provisional only; final stage OPEN
+CROSS-SOURCE COMPARISON — provisional only; final stage OPEN
+IVDIVO OPERATIONALIZATION — provisional only; final stage OPEN
+MANUSCRIPT VALIDATION — provisional only; final stage OPEN
 SYNTHESIZED — OPEN
 
-## WHY THIS SOURCE IS NEXT-AVAILABLE CANDIDATE
-Core #18 Mark Doty — *The Art of Description* was searched by exact title/author but no exact retained craft source was confirmed. Core #20 *Writing Fiction: A Guide to Narrative Craft* / Janet Burroway was likewise not confirmed as a direct retained source. Core #21 *Tinker Tailor Soldier Spy* is present in Russian translation, but an English retained source was not confirmed in this pass; because voice/prose mechanisms are translation-sensitive, it is not promoted ahead of an exact-language source without an explicit decision.
+Strict Core completion count remains 21/40. This source does not increment the count until the entire lifecycle is completed.
 
-Core #22 has an exact-title retained PDF candidate and is therefore registered for integrity verification next.
+## STRICT READ PROGRESS — PASS 86
+A raw Drive-backed PDF was obtained and converted to a continuous local text layer. Sequential reading has been completed from the first narrative page through local extraction line 3200, approximately 27,820 words.
 
-## AUTHORITY LIMITS
-Registration does not imply integrity or FULL READ. Prior source-pass notes, summaries, targeted snippets, adaptations, reviews, or memories cannot be used to claim strict completion.
+The PDF's printed chapter numerals are not reliably recoverable as unique structural markers in the linear extraction, so this record intentionally does not overclaim exact chapter boundaries. The authoritative continuation pointer is the local extraction position.
 
-For this mechanism lab, focus should ultimately include:
-- observation → hypothesis → test → error → revision;
-- technical problem solving that changes human/relationship state;
-- trust built through shared work;
-- distributed competence;
-- information withholding versus fair reconstruction;
-- capability constraints and earned solutions.
+### Next exact pointer
+`/mnt/data/project_hail_mary.txt` — local extraction line 3201, first unread paragraph.
 
-Scientific claims in the novel remain fiction-reference material and require independent current technical sources before entering IVDIVO canon.
+Do not reread lines 1–3200 without a concrete diagnostic reason.
 
-## EXACT NEXT POINTER
-Before reading:
-1. verify PDF identity, language, beginning/end and chapter continuity;
-2. confirm no duplicate retained representation should be preferred;
-3. only then begin strict continuous FULL READ from the first narrative page.
+## PROVISIONAL MECHANISMS FROM THE SEQUENTIALLY READ MATERIAL
+1. **Evidence-Driven Competence Ladder**
+   `OBSERVE → QUANTIFY → HYPOTHESIZE → TEST → CONFIRM/FAIL → UPDATE MODEL → ACT`
+
+2. **Technical Exposition Through Present Problem**
+   `CHARACTER QUESTION → MINIMUM NECESSARY TECHNICAL DATA → TEST → RESULT → MODEL UPDATE → NEXT CHOICE`
+
+3. **Intelligent Mistake**
+   `REASONABLE LIMITED MODEL → OBSERVATION/TEST → CONTRADICTION → REVISED MODEL`
+   Competent protagonists can be wrong without becoming stupid-for-plot.
+
+4. **Flashback as Current-State Update**
+   `CURRENT ANOMALY → MEMORY TRIGGER → PAST CONTEXT → NEW PRESENT MODEL`
+   A flashback earns space when it changes present interpretation, decision, evidence status, or action.
+
+5. **Legible Specificity**
+   Technical vocabulary is most effective after enough functional context exists for a reader to infer its relevance. Precision must remain compatible with POV knowledge and reader legibility.
+
+6. **Causal Worldbuilding**
+   Scientific/world information enters through tasks, tests, constraints, failures, decisions, and consequences rather than encyclopedia display.
+
+7. **Competent Countermodel / Institutional Leverage**
+   A high-capability institutional actor can combine real competence, urgency, leverage, and a genuine blind spot/cost. Technical competence does not itself establish ethical legitimacy.
+
+8. **Relationship Grounding Through Ordinary Identity**
+   Grace's teacher identity grounds extreme stakes in ordinary relational and ethical habits rather than requiring cheap monetary or melodramatic stakes.
+
+9. **Nonlinear Payoff Rule**
+   Past/present alternation pays when each return restores missing causal information and changes the protagonist/reader model of the current problem.
+
+10. **Voice/Humor Integrated With Cognition**
+    Humor can arise from a protagonist's habitual framing, self-correction, expertise, and social identity rather than joke density.
+
+11. **Rhythm Firewall**
+    `INTENSITY ≠ SHORT-SENTENCE DENSITY.` Technical reasoning and suspense can require sustained paragraphs and longer syntax when the reader must follow a model being built or revised.
+
+## PROVISIONAL FAILURE-MODE WATCHES
+These are watches, not final judgments on the book:
+- **Competence Exposition Loop:** repeated `puzzle → calculation → answer` scenes could become structurally repetitive if relationship/information/action states do not also change.
+- **Flashback Convenience:** memory retrieval could feel mechanically timed if every present problem produces exactly the historical information needed.
+- **Authoritarian Competence Normalization:** capability and urgency can make coercive institutional action feel self-justifying unless costs, alternatives, and affected persons remain visible.
+
+## CROSS-SOURCE POSITION — PROVISIONAL
+- With Herman/Zunshine: reinforces explicit separation of observation, inference, model, evidence update, and action.
+- With Swain/Clark/LaPlante: supports repairing causal/state problems before cosmetic prose edits.
+- With Bell/McKee: offers a fiction mechanism lab for competent countermodels and meaningful constraints.
+- Against exposition-as-lecture: technical density earns its place through immediate problem solving and changed state.
+
+## IVDIVO FIREWALLS
+- This is a fiction mechanism laboratory, not scientific authority.
+- Astrophage, Weir's fictional science, institutions, technologies, and world facts do not enter IVDIVO canon by reference.
+- Technical competence does not equal moral legitimacy, consent, or personhood authority.
+- Predicting an agent's behavior does not establish that agent's motive or consent.
+- For consciousness schools, science-like explanatory prose cannot leap over the standing evidence ladder:
+  `observation → reproducible effect → school interpretation → competing interpretation → possible ontological conclusion`.
+
+## MANUSCRIPT POLICY
+No reason has been found in the currently read material to reopen the development-locked LESSON ZERO Book One. New mechanisms apply prospectively and diagnostically unless a concrete current defect is demonstrated.
