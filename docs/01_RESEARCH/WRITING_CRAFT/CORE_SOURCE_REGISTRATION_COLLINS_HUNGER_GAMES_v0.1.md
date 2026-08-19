@@ -1,7 +1,7 @@
 # CORE SOURCE REGISTRATION — #29 SUZANNE COLLINS — THE HUNGER GAMES
 
 Date: 2026-08-19
-Status: REGISTERED / INTEGRITY VERIFIED / FULL READ IN PROGRESS
+Status: STRICT_LIFECYCLE_SYNTHESIZED_v1.0
 Core slot: #29
 Source role: FICTION MECHANISM LAB — youth under institution, public/private identity, coercive incentives, reputation/social survival
 
@@ -14,66 +14,58 @@ Source role: FICTION MECHANISM LAB — youth under institution, public/private i
 - Drive id: `1BSNP3UVu2N5HvXvmW0MJP3rXHYzrii3G`
 - File size: 1,278,890 bytes
 - Physical PDF pages: 358
-- Extracted text: approximately 104k words / 13,614 local text lines
+- Terminal marker: `END OF BOOK ONE`
+
+The separate Russian TXT candidate is not counted as a second unique source.
 
 ## Integrity verification
 
 PASS.
 
-Verification performed on the actual retained PDF rather than search snippets:
-- beginning present;
-- narrative text layer present;
-- 358 physical pages inspected for continuity using full-document contact-sheet review;
-- chapter/part divider pages visible through the full document;
-- no image-only or obviously missing narrative blocks found;
-- terminal page contains `END OF BOOK ONE`;
-- final physical page is terminal/blank rather than an apparent truncation.
-
-The separate Russian TXT candidate is NOT counted as a second unique source. This lifecycle retains the English PDF above.
+The retained PDF contains the beginning, continuous narrative, part/chapter dividers, complete ending and terminal marker. Full-document visual inspection found no image-only or apparently missing narrative blocks.
 
 ## Lifecycle
 
 - REGISTERED — COMPLETE
 - INTEGRITY VERIFIED — COMPLETE
-- FULL READ — IN PROGRESS
-- STRUCTURE MAP — OPEN / provisional only
-- SOURCE PASSPORT — OPEN beyond registration facts
-- CLAIM EXTRACTION — OPEN / provisional only
-- MECHANISM EXTRACTION — OPEN / provisional only
-- FAILURE MODES — OPEN / provisional only
-- CROSS-SOURCE COMPARISON — OPEN / provisional only
-- IVDIVO OPERATIONALIZATION — OPEN / provisional only
-- MANUSCRIPT VALIDATION — OPEN
-- SYNTHESIZED — OPEN
+- FULL READ — COMPLETE
+- STRUCTURE MAP — COMPLETE
+- SOURCE PASSPORT — COMPLETE
+- CLAIM EXTRACTION — COMPLETE
+- MECHANISM EXTRACTION — COMPLETE
+- FAILURE MODES — COMPLETE
+- CROSS-SOURCE COMPARISON — COMPLETE
+- IVDIVO OPERATIONALIZATION — COMPLETE
+- MANUSCRIPT VALIDATION — COMPLETE
+- SYNTHESIZED — COMPLETE
 
-No increment to strict Core completion until the full lifecycle closes.
+Detailed synthesis:
+`DR_FINAL_029_COLLINS_HUNGER_GAMES_STRICT_LIFECYCLE_v1.0.md`
 
-## Strict reading pointer
+Primary production batch:
+`IVDIVO_CRAFT_STUDY_BATCH_118_COLLINS_YOUTH_INSTITUTION_PUBLIC_PRIVATE_IDENTITY_v0.1_DRAFT.md`
 
-Continuous reading verified through local extraction line **6300**.
+## Routing card
 
-Exact continuation:
-**line 6301 — first unread line after the current verified continuous block.**
+Call this source for:
+- youth under institutional pressure;
+- public/private identity;
+- surveillance and performance;
+- same rule / unequal burden;
+- audience-driven institutional incentives;
+- domain-specific competence;
+- intelligent mistakes from incomplete models;
+- strategic performance becoming real relationship pressure;
+- edited public narratives;
+- forced-binary climax / third-option leverage;
+- local success creating new authority pressure.
 
-Earlier long-range tool outputs containing omitted/ellipsized portions are not used to advance the strict pointer unless those ranges are subsequently reread continuously.
+Do not use it as authority for:
+- post-money economics;
+- normal IVDIVO institutional design;
+- consent ethics by itself;
+- science/technology;
+- IVDIVO metaphysics;
+- house prose cadence.
 
-## Early provisional observations — NOT final synthesis
-
-1. `SPECIFIC ORDINARY LIFE → VALUE / RELATIONSHIP BASELINE → COERCIVE RUPTURE → READER CAN MEASURE LOSS`.
-2. Formal equality can hide unequal exposure: universal rules plus materially unequal participation produce an institutional fairness problem.
-3. `PRIVATE STATE → PUBLIC PERFORMANCE → AUDIENCE MODEL → MATERIAL CONSEQUENCE`.
-4. Reputation/publicity becomes a resource system: presentation affects sponsors, institutional attention and survival options.
-5. Competence is domain-specific and transferable: hunting, plants, camouflage, strength, social performance and observation have different values in new contexts.
-6. `OBSERVATION → MOTIVE HYPOTHESES → MODEL UPDATE`; Katniss repeatedly has incomplete models of Peeta's motives.
-7. Public relationship performance creates real relationship pressure and strategic consequence.
-8. Recovery does not automatically reset damaged relationships.
-9. Worldbuilding enters through action, ration rules, fences, trade, ceremony, training and audience behavior rather than through a neutral encyclopedia voice.
-10. Institutional manipulation repeatedly turns private feeling, local difference and forced competition into public spectacle.
-11. `ACTION / SUSPENSE ≠ SHORT-SENTENCE DENSITY`; Collins' first-person-present register is source-specific and must not become IVDIVO house style.
-
-## Firewalls
-
-- Panem scarcity, money, sponsorship economy and coercive extraction are source-world mechanics; do not import them as defaults for post-money IVDIVO orbital cities.
-- Institutional cruelty in this source is a mechanism lab, not a requirement that every IVDIVO institution be dystopian.
-- Public romance/performance must not override consent or evidence status in IVDIVO relationship/mystery stories.
-- Fiction is not scientific or political authority for real-world claims.
+Final status: **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
