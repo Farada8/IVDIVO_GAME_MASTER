@@ -14,7 +14,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 
 - Core selected: **40/40**
 - `DEEP_READ_COMPLETE_v0.1`: **40/40**
-- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **25/40**
+- `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`: **26/40**
 - Strict complete #1: John Truby — *The Anatomy of Story*.
 - Strict complete #2: Robert McKee — *Story*.
 - Strict complete #3: Robert McKee — *Dialogue*.
@@ -35,6 +35,7 @@ No source is IVDIVO canon. Source authority is task-specific. Founder instructio
 - Strict complete #23: Blake Crouch — *Dark Matter*.
 - Strict complete #24: Blake Crouch — *Recursion*.
 - Strict complete #27: Martha Wells — *All Systems Red*.
+- Strict complete #28: Jim Butcher — *Storm Front*.
 - Strict complete #36: Mark J. P. Wolf — *Building Imaginary Worlds*.
 - Strict complete #37: Ignasi Ribó — *Prose Fiction*.
 - Strict complete #38: Lisa Zunshine — *Why We Read Fiction*.
@@ -92,7 +93,7 @@ The older `DEEP_READ_COMPLETE_v0.1` label is not equivalent to strict full lifec
 25. Kazuo Ishiguro — *Klara and the Sun* — artificial subjectivity, service identity, observation, obsolescence. **SOURCE BLOCKED: only preview fragments verified on Drive; FULL READ not permitted.**
 26. Kazuo Ishiguro — *Never Let Me Go* — normalised exploitation, institutional language, personhood and fate. **SOURCE BLOCKED: only preview fragment verified on Drive; FULL READ not permitted.**
 27. Martha Wells — Murderbot / *All Systems Red* — autonomy under embedded control, voluntary role continuation, private subjectivity, consent vs compliance, benevolent paternalism, embodiment-specific personhood and self-authored departure. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
-28. Jim Butcher — *Storm Front* — case engine, hidden-world procedural, serial closure/hook balance.
+28. Jim Butcher — *Storm Front* — case braid, hidden-world procedural, evidence/source provenance, multi-authority pressure, protective-withholding costs, competent institutional countermodels and local closure with persistent relationship damage. **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 29. Suzanne Collins — *The Hunger Games* — youth under institution, public/private identity, reputation/social survival.
 30. Brandon Sanderson — *Skyward* — youth competence, team, shame/status, institutional pressure.
 31. Jessica Townsend — *Nevermoor* #1 — stigma → desired belonging; social life inside extraordinary institution.
