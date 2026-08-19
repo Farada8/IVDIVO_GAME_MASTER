@@ -1,104 +1,86 @@
 # CORE SOURCE REGISTRATION — ANDY WEIR — PROJECT HAIL MARY
 
-Version: v0.1
+Version: v1.0 FINAL
 Date: 2026-08-19
 Core slot: #22
 Source role: FICTION MECHANISM LABORATORY
+Status: STRICT_LIFECYCLE_SYNTHESIZED_v1.0
 
 ## BIBLIOGRAPHIC IDENTITY
 Author: Andy Weir
 Title: *Project Hail Mary*
-Edition verified from retained source: Ballantine Books, 2021
+Edition visible in retained source: Ballantine Books, 2021
 Retained source: `Project Mary Hail.pdf`
 Drive file id: `185CfASdSCIoIK5fdiJnW6hy3I-VqXJkJ`
 File size: 10,391,506 bytes
 Format: PDF
-PDF extent: 340 pages
-Extracted text: approximately 139,278 words / 14,458 local extraction lines
-Structure verified: Chapters 1–29 plus terminal matter/acknowledgments
 Language: English
+Physical PDF extent from final raw-file inspection: 523 pages
+Current extraction: approximately 150,201 words / 16,931 local extraction lines
+Structure: Chapters 1–29 plus terminal matter
+
+## METADATA CORRECTION
+Earlier working records for the same Drive ID/file size listed 340 pages, ~139,278 words and 14,458 lines. Pass 87 directly refetched the retained raw file and produced 523 physical PDF pages / ~150,201 extracted words / 16,931 local lines. The direct raw-file inspection supersedes the earlier extent/count metadata. The bibliographic source itself did not change.
 
 ## CURRENT STRICT LIFECYCLE
 REGISTERED ✓
 INTEGRITY VERIFIED ✓
-FULL READ — IN PROGRESS
-STRUCTURE MAP — OPEN
-SOURCE PASSPORT — provisional
-CLAIM EXTRACTION — provisional only; final stage OPEN
-MECHANISM EXTRACTION — provisional only; final stage OPEN
-FAILURE MODES — provisional only; final stage OPEN
-CROSS-SOURCE COMPARISON — provisional only; final stage OPEN
-IVDIVO OPERATIONALIZATION — provisional only; final stage OPEN
-MANUSCRIPT VALIDATION — provisional only; final stage OPEN
-SYNTHESIZED — OPEN
+FULL READ ✓
+STRUCTURE MAP ✓
+SOURCE PASSPORT ✓
+CLAIM EXTRACTION ✓
+MECHANISM EXTRACTION ✓
+FAILURE MODES ✓
+CROSS-SOURCE COMPARISON ✓
+IVDIVO OPERATIONALIZATION ✓
+MANUSCRIPT VALIDATION ✓
+SYNTHESIZED ✓
 
-Strict Core completion count remains 21/40. This source does not increment the count until the entire lifecycle is completed.
+Core strict-complete count after finalization: 22/40.
 
-## STRICT READ PROGRESS — PASS 86
-A raw Drive-backed PDF was obtained and converted to a continuous local text layer. Sequential reading has been completed from the first narrative page through local extraction line 3200, approximately 27,820 words.
+## FULL READ RECORD
+- Pass 86: sequential read from first narrative page through prior local line 3200.
+- Pass 87: refetched same retained Drive source, resumed exactly at line 3201, continued sequentially to final narrative scene and complete terminal matter.
 
-The PDF's printed chapter numerals are not reliably recoverable as unique structural markers in the linear extraction, so this record intentionally does not overclaim exact chapter boundaries. The authoritative continuation pointer is the local extraction position.
+No TOC, search snippet, review, memory or adaptation was substituted for unread narrative text.
 
-### Next exact pointer
-`/mnt/data/project_hail_mary.txt` — local extraction line 3201, first unread paragraph.
+## FINAL TRANSFERABLE MECHANISMS
+1. `OBSERVE → QUANTIFY → HYPOTHESIZE → TEST → CONFIRM/FAIL → UPDATE MODEL → ACT`.
+2. Technical exposition routed through a present character problem and changed action.
+3. Intelligent mistakes from reasonable limited models.
+4. Complementary distributed competence across agents/civilizations.
+5. First contact through shared measurable referents before abstraction.
+6. Trust accumulated through reliable shared work and reciprocal help.
+7. Embodiment-specific nonhuman personhood.
+8. Uneven civilizational development: maturity in one domain does not imply maturity in another.
+9. Genuine success followed by system-coupled consequences.
+10. Success→responsibility escalation rather than setback monoculture.
+11. Flashback as present causal/self-model update.
+12. Identity revision tested by later behavior.
+13. Reciprocal nonhuman agency.
+14. Constraint-driven invention from established capabilities.
+15. Local ending with cost, aftermath, independent confirmation and larger wonder left open.
+16. `INTENSITY ≠ SHORT-SENTENCE DENSITY`.
 
-Do not reread lines 1–3200 without a concrete diagnostic reason.
+## FINAL FAILURE-MODE FIREWALLS
+- competence exposition loop;
+- flashback answer-machine convenience;
+- competence/urgency mistaken for institutional legitimacy;
+- scientific voice mistaken for scientific authority;
+- single-protagonist knowledge monopoly;
+- idealized nonhuman competence without limits;
+- anthropomorphic inference promoted to motive fact;
+- unprepared system-coupling reversals;
+- sacrifice treated as mandatory proof of relationship or courage;
+- linear technology-ladder assumptions.
 
-## PROVISIONAL MECHANISMS FROM THE SEQUENTIALLY READ MATERIAL
-1. **Evidence-Driven Competence Ladder**
-   `OBSERVE → QUANTIFY → HYPOTHESIZE → TEST → CONFIRM/FAIL → UPDATE MODEL → ACT`
+## IVDIVO AUTHORITY LIMITS
+This is a fiction mechanism laboratory. Astrophage, Taumoeba, Weir's scientific claims, institutions, technologies and cosmology do not enter IVDIVO canon by reference.
 
-2. **Technical Exposition Through Present Problem**
-   `CHARACTER QUESTION → MINIMUM NECESSARY TECHNICAL DATA → TEST → RESULT → MODEL UPDATE → NEXT CHOICE`
+Especially for consciousness-practice lines:
+`PRACTITIONER OBSERVATION → REPRODUCIBLE EFFECT → SCHOOL INTERPRETATION → COMPETING INTERPRETATION → POSSIBLE ONTOLOGICAL CLAIM`.
 
-3. **Intelligent Mistake**
-   `REASONABLE LIMITED MODEL → OBSERVATION/TEST → CONTRADICTION → REVISED MODEL`
-   Competent protagonists can be wrong without becoming stupid-for-plot.
-
-4. **Flashback as Current-State Update**
-   `CURRENT ANOMALY → MEMORY TRIGGER → PAST CONTEXT → NEW PRESENT MODEL`
-   A flashback earns space when it changes present interpretation, decision, evidence status, or action.
-
-5. **Legible Specificity**
-   Technical vocabulary is most effective after enough functional context exists for a reader to infer its relevance. Precision must remain compatible with POV knowledge and reader legibility.
-
-6. **Causal Worldbuilding**
-   Scientific/world information enters through tasks, tests, constraints, failures, decisions, and consequences rather than encyclopedia display.
-
-7. **Competent Countermodel / Institutional Leverage**
-   A high-capability institutional actor can combine real competence, urgency, leverage, and a genuine blind spot/cost. Technical competence does not itself establish ethical legitimacy.
-
-8. **Relationship Grounding Through Ordinary Identity**
-   Grace's teacher identity grounds extreme stakes in ordinary relational and ethical habits rather than requiring cheap monetary or melodramatic stakes.
-
-9. **Nonlinear Payoff Rule**
-   Past/present alternation pays when each return restores missing causal information and changes the protagonist/reader model of the current problem.
-
-10. **Voice/Humor Integrated With Cognition**
-    Humor can arise from a protagonist's habitual framing, self-correction, expertise, and social identity rather than joke density.
-
-11. **Rhythm Firewall**
-    `INTENSITY ≠ SHORT-SENTENCE DENSITY.` Technical reasoning and suspense can require sustained paragraphs and longer syntax when the reader must follow a model being built or revised.
-
-## PROVISIONAL FAILURE-MODE WATCHES
-These are watches, not final judgments on the book:
-- **Competence Exposition Loop:** repeated `puzzle → calculation → answer` scenes could become structurally repetitive if relationship/information/action states do not also change.
-- **Flashback Convenience:** memory retrieval could feel mechanically timed if every present problem produces exactly the historical information needed.
-- **Authoritarian Competence Normalization:** capability and urgency can make coercive institutional action feel self-justifying unless costs, alternatives, and affected persons remain visible.
-
-## CROSS-SOURCE POSITION — PROVISIONAL
-- With Herman/Zunshine: reinforces explicit separation of observation, inference, model, evidence update, and action.
-- With Swain/Clark/LaPlante: supports repairing causal/state problems before cosmetic prose edits.
-- With Bell/McKee: offers a fiction mechanism lab for competent countermodels and meaningful constraints.
-- Against exposition-as-lecture: technical density earns its place through immediate problem solving and changed state.
-
-## IVDIVO FIREWALLS
-- This is a fiction mechanism laboratory, not scientific authority.
-- Astrophage, Weir's fictional science, institutions, technologies, and world facts do not enter IVDIVO canon by reference.
-- Technical competence does not equal moral legitimacy, consent, or personhood authority.
-- Predicting an agent's behavior does not establish that agent's motive or consent.
-- For consciousness schools, science-like explanatory prose cannot leap over the standing evidence ladder:
-  `observation → reproducible effect → school interpretation → competing interpretation → possible ontological conclusion`.
+The useful world-design transfer is the domain-asymmetry principle: a highly advanced civilization can still have immature knowledge in a field whose bottleneck is scarce long-trained practitioners, reproducibility history, institutional attention or missing data.
 
 ## MANUSCRIPT POLICY
-No reason has been found in the currently read material to reopen the development-locked LESSON ZERO Book One. New mechanisms apply prospectively and diagnostically unless a concrete current defect is demonstrated.
+LESSON ZERO Book One remains development-locked. Apply Weir prospectively to Orbital Youth, B07/nonhuman-personhood stories, technical scenes, contact, distributed competence, and systems-coupling diagnostics. Reopen locked prose only when a concrete current defect is demonstrated.
