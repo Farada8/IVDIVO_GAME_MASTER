@@ -18,28 +18,17 @@ Integrity: PASS — Prologue + Chapters 1–55 + Epilogue + terminal matter conf
 
 ### COMPLETE IN SEQUENCE
 - Prologue
-- Chapter 1
-- Chapter 2
-- Chapter 3
-- Chapter 4
-- Chapter 5
-- Chapter 6
-- Chapter 7
-- Chapter 8
-- Chapter 9
-- Chapter 10
-- Chapter 11
-- Chapter 12
-- Chapter 13
-- Chapter 14
+- Chapters 1–15
 
 ### NEXT POINTER
-**Chapter 15 — first paragraph.**
+**Chapter 16 — first paragraph.**
 
 ### NOT YET STRICT READ
-- Chapters 15–55
+- Chapters 16–55
 - Epilogue
 - terminal matter
+
+Later Ch17–18 material inspected while testing extraction is explicitly NOT counted toward FULL READ because Chapter 16 remains the continuity gate.
 
 ## PROVISIONAL MECHANISMS — DO NOT TREAT AS FINAL BOOK SYNTHESIS
 
@@ -52,6 +41,8 @@ The institution can sincerely celebrate equal contribution while simultaneously 
 `PAST PUBLIC NARRATIVE → AUDIENCE / INSTITUTION MODEL → ACCESS / REPUTATION CONSEQUENCE → CHARACTER RESPONSE`.
 
 A family or person can be governed by a public interpretation before individual behavior is examined. Public narrative is not evidence of individual motive.
+
+Chapter 15 adds a peer-group version: once Spensa's inherited stigma is disclosed, the social field changes immediately even though no new evidence about her own behavior has appeared.
 
 ### 3. Privilege / competence separation
 `UNFAIR ACCESS ≠ INCOMPETENCE`.
@@ -115,6 +106,21 @@ Distinct cadets require distinct competence fingerprints, goals, embodied limits
 ### 15. Public/defensive want vs deeper positive want
 A character may defend a socially legible goal (redeem a family name, prove critics wrong) while a more affirmative desire (flight, wonder, mastery) also exists. Do not force every difference into trauma/hidden-wound doctrine.
 
+### 16. Metric gaming / mission failure
+Chapter 15 demonstrates that a scoring system can reward behavior that would be useless or destructive under real mission conditions.
+
+`FORMAL METRIC → AGENT OPTIMIZES METRIC → LOCAL WIN → REAL-WORLD OBJECTIVE CHECK → METRIC / RULE REQUIRES REVISION`.
+
+Production gate:
+`WHAT DOES THE SYSTEM MEASURE? → WHAT DOES THE REAL TASK REQUIRE? → CAN A RATIONAL AGENT WIN THE METRIC WHILE HARMING THE TASK?`
+
+Useful for education, algorithms, public evaluation and governance without requiring malicious actors.
+
+### 17. Public disclosure changes relationship state
+`PRIVATE / CONTROLLED FACT → PUBLIC DISCLOSURE → AUDIENCE MODEL UPDATE → BELONGING / SELF-PRESENTATION CHANGE → NEXT ACTION`.
+
+The important event is not merely that information became known; it changes what the protagonist believes is possible socially.
+
 ## PROVISIONAL FAILURE MODES
 
 1. `PRIVILEGE = INCOMPETENCE` simplification.
@@ -130,6 +136,8 @@ A character may defend a socially legible goal (redeem a family name, prove crit
 11. `UNIVERSAL WIT` across ensemble.
 12. `MILITARY SCARCITY / MERIT ECONOMY IMPORT` into post-money IVDIVO.
 13. `THRILLER/ACTION CADENCE IMPORT` as house style.
+14. `METRIC = MISSION` — assuming a score/rank/test directly represents the actual objective.
+15. `PUBLIC DISCLOSURE = TRUTH VALIDATION` — wider awareness does not raise evidentiary status.
 
 ## IVDIVO FIREWALLS
 
