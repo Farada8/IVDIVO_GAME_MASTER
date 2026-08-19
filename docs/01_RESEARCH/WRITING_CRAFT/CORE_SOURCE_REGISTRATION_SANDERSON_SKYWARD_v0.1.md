@@ -1,9 +1,9 @@
 # CORE SOURCE REGISTRATION — #30 BRANDON SANDERSON — SKYWARD — v0.1
 
 Date: 2026-08-19
-Status: REGISTERED / INTEGRITY VERIFIED / FULL READ IN PROGRESS
+Status: STRICT_LIFECYCLE_SYNTHESIZED_v1.0
 Core slot: #30
-Source role: FICTION MECHANISM LAB — youth competence, stigma/status, institutional pressure, team formation, embodied training, earned responsibility
+Source role: FICTION MECHANISM LAB — youth competence, stigma/status, institutional pressure, team formation, embodied training, earned responsibility, synthetic-personhood pressure
 
 ## SOURCE PASSPORT
 
@@ -18,31 +18,50 @@ EPUB metadata identifies the work as *Skyward* by Brandon Sanderson. Spine inspe
 
 Integrity result: PASS.
 
-## CURRENT STRICT STATUS
+## STRICT LIFECYCLE
 
 - REGISTERED — COMPLETE
 - INTEGRITY VERIFIED — COMPLETE
-- FULL READ — IN PROGRESS
-- STRUCTURE MAP — OPEN
-- SOURCE PASSPORT — PROVISIONAL / WILL FINALIZE AFTER FULL READ
-- CLAIM EXTRACTION — PROVISIONAL
-- MECHANISM EXTRACTION — PROVISIONAL
-- FAILURE MODES — PROVISIONAL
-- CROSS-SOURCE COMPARISON — PROVISIONAL
-- IVDIVO OPERATIONALIZATION — PROVISIONAL
-- MANUSCRIPT VALIDATION — PROVISIONAL
-- SYNTHESIZED — OPEN
+- FULL READ — COMPLETE
+- STRUCTURE MAP — COMPLETE
+- SOURCE PASSPORT — COMPLETE
+- CLAIM EXTRACTION — COMPLETE
+- MECHANISM EXTRACTION — COMPLETE
+- FAILURE MODES — COMPLETE
+- CROSS-SOURCE COMPARISON — COMPLETE
+- IVDIVO OPERATIONALIZATION — COMPLETE
+- MANUSCRIPT VALIDATION — COMPLETE
+- SYNTHESIZED — COMPLETE
 
-## STRICT READ CHECKPOINT
+Detailed synthesis:
+`DR_FINAL_030_SANDERSON_SKYWARD_STRICT_LIFECYCLE_v1.0.md`
 
-Continuous read completed:
-- Prologue
-- Chapters 1–14
+Primary production batch:
+`IVDIVO_CRAFT_STUDY_BATCH_121_SANDERSON_SKYWARD_TEAM_BELONGING_METRIC_PERSONHOOD_v0.1_DRAFT.md`
 
-Next exact pointer:
-- Chapter 15 — first paragraph.
+Orbital Youth application:
+`ORBITAL_YOUTH_BATCH121_SKYWARD_BELONGING_METRIC_PERSONHOOD_GATE_v0.1_DRAFT.md`
 
-Nothing after Chapter 14 is counted toward FULL READ unless subsequently read in sequence.
+## ROUTING CARD
+
+Call this source for:
+- youth qualification vs actual belonging;
+- role-specific competence and differentiated team value;
+- official safety policy vs peer/status incentives;
+- proxy metrics that can be gamed against the real mission;
+- inherited stigma as public model rather than current-person evidence;
+- success creating more responsibility;
+- distributed ensemble climax;
+- local operational answer with larger ontology unresolved;
+- nonhuman preference, inherited control and self-authored choice.
+
+Do not use it as authority for:
+- post-money economics;
+- IVDIVO institutional norms;
+- military adolescence;
+- technical aerospace canon;
+- consciousness/metaphysical ontology;
+- IVDIVO house prose cadence.
 
 ## DUPLICATE / SERIES POLICY
 
@@ -51,3 +70,5 @@ Other Skyward-series EPUBs in the same Drive folder (*Starsight*, *Cytonic*, *De
 ## AUTHORITY FIREWALL
 
 *Skyward* is a fiction mechanism laboratory, not IVDIVO canon and not technical authority. Its economic/scarcity model, military institution, fighter technology, cosmology and social arrangements cannot be imported without Founder/canon validation.
+
+Final status: **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
