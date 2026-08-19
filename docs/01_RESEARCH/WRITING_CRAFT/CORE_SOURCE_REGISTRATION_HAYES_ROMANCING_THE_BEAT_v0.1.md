@@ -1,6 +1,6 @@
 # CORE SOURCE REGISTRATION — GWEN HAYES — ROMANCING THE BEAT
 
-Version: v0.1
+Version: v1.0 status update
 Date: 2026-08-19
 Core slot: #16
 
@@ -24,52 +24,49 @@ Verified structural coverage in retained source:
 - Beat Sheet
 - Where to Start?
 - Phase One: The Setup
-  - Introducing H1 and H2
-  - Meet Cute
-  - No Way #1
-  - Adhesion
 - Phase Two: Falling in Love
-  - No Way #2
-  - The Inkling
-  - Deepening Desire
-  - Maybe This Time
-  - Midpoint of Love
 - Phase Three: Retreating from Love
-  - Inkling of Doubt
-  - Deepening Doubt
-  - Retreat!
-  - Shields Up
-  - Break Up
 - Phase Four: Fighting for Love
-  - Dark Night of the Soul
-  - Wake Up! Smell the Coffee
-  - Grand Gesture
-  - Whole-hearted
 - Epilogue
-- Sample Beat Sheet
+- complete Sample Beat Sheet
 - Appendix
-- About the Author / terminal material
+- Acknowledgements / About / terminal material
 
-The retained source therefore appears structurally complete. This does **not** equal FULL READ.
-
-## CURRENT LIFECYCLE
+## STRICT LIFECYCLE STATUS
 REGISTERED ✓
 INTEGRITY VERIFIED ✓
-FULL READ — IN PROGRESS / JUST STARTED
-STRUCTURE MAP — provisional only
-SOURCE PASSPORT — provisional only
-CLAIM EXTRACTION — provisional only
-MECHANISM EXTRACTION — provisional only
-FAILURE MODES — provisional only
-CROSS-SOURCE COMPARISON — provisional only
-IVDIVO OPERATIONALIZATION — provisional only
-MANUSCRIPT VALIDATION — open
-SYNTHESIZED — open
+FULL READ ✓
+STRUCTURE MAP ✓
+SOURCE PASSPORT ✓
+CLAIM EXTRACTION ✓
+MECHANISM EXTRACTION ✓
+FAILURE MODES ✓
+CROSS-SOURCE COMPARISON ✓
+IVDIVO OPERATIONALIZATION ✓
+MANUSCRIPT VALIDATION ✓
+SYNTHESIZED ✓
 
-## INITIAL STRICT READING BOUNDARY
-The `Welcome` opening block has been read from the beginning. Later sections have been inspected for integrity and targeted comparison, but targeted search snippets do not count as continuous FULL READ.
+Final status: **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**.
 
-## EXACT NEXT POINTER
-Continue sequentially from `What is What`, first unread paragraph.
+## PRIMARY PRODUCTION ROLE
+Relationship causality specialist.
 
-Do not claim Phase One or the full beat sheet as strict-read complete until sequential reading proves continuity.
+Primary transformed mechanism:
+`TWO COMPLETE AGENTS → SUSTAINED CAUSAL CONTACT → RELATIONSHIP STATE CHANGE → EXTERNAL CHOICE CHANGE → COST → NEW TERMS OF RELATIONSHIP`.
+
+## AUTHORITY LIMITS
+Hayes does not override:
+- current book ONE MAIN STORY;
+- IVDIVO canon;
+- evidence architecture in mystery;
+- consent/personhood;
+- the IVDIVO Romance Weight Dial;
+- scientific/psychological evidence.
+
+The full Hayes beat sheet is a diagnostic map, not a compulsory template. It has highest relevance for ROMANCE-PRIMARY products; MYSTERY-PRIMARY products use it selectively for relationship-state causality.
+
+## FINAL ARTIFACT
+See:
+`DR_FINAL_016_HAYES_ROMANCING_THE_BEAT_STRICT_LIFECYCLE_v1.0.md`.
+
+The old working pointer is CLOSED. Do not restart sequential reading without a concrete diagnostic reason.
