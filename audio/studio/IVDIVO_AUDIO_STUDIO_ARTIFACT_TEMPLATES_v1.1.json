@@ -1,0 +1,79 @@
+{
+  "version": "1.1",
+  "status": "CANON_TEMPLATE_PACK_AUDITED",
+  "canon_release": "v3.2",
+  "templates": {
+    "BUILD_MANIFEST": {
+      "build_id": null,
+      "project_id": null,
+      "source_hash": null,
+      "authority_versions": [],
+      "live_render_status": "DRY_RUN",
+      "required_render_blocks": [],
+      "live_evidence_by_block": {},
+      "reused_evidence_by_block": {},
+      "placeholder_or_synthetic_blocks": [],
+      "status": "WORKING"
+    },
+    "VOICE_BINDING_LEDGER": {"ledger_version": "1.0", "bindings": []},
+    "VOICE_BINDING": {
+      "character_id": null, "provider": null, "voice_id": null, "status": "CANDIDATE",
+      "locked_at": null, "locked_by_build_id": null, "sample_evidence": null,
+      "pronunciation_version": null, "substitution_policy": "EXPLICIT_APPROVAL"
+    },
+    "SILENT_REACTION_ANCHOR": {
+      "anchor_id": null, "character_id": null, "state_in": null, "trigger_event": null,
+      "silent_action": null, "breath_or_foley_refs": [], "silence_policy": null,
+      "state_out": null, "semantic_anchor": null, "dispatch_required": false
+    },
+    "ACOUSTIC_IDENTITY_LEDGER": {"ledger_version": "1.0", "identities": []},
+    "ACOUSTIC_IDENTITY": {
+      "identity_id": null, "identity_type": null, "story_function": null,
+      "specification": {}, "tolerance": {}, "transpose_or_variation_policy": null,
+      "required_asset_ids": [], "qc_method": null, "status": "WORKING"
+    },
+    "STEREO_INTENT_RECORD": {
+      "asset_or_stem_id": null, "stereo_intent": "SOURCE_DEPENDENT",
+      "source_width_reference": null, "allowed_processing": [], "qc_tolerance": {}
+    },
+    "NORMALIZED_ALIGNMENT_RECORD": {
+      "provider": null, "endpoint_profile": null, "source_schema": null, "block_id": null,
+      "unit_id": null, "unit_index": null, "start_seconds": null, "end_seconds": null,
+      "text_ref": null, "confidence_or_quality": null, "raw_evidence_ref": null
+    },
+    "CAUSAL_OVERLAP_PROFILE": {
+      "scene_or_beat_id": null, "total_relevant_event_pairs": 0, "overlapping_event_pairs": 0,
+      "causal_overlap_ratio": 0.0, "overlap_expected": false, "expected_reason": null,
+      "status": "DIAGNOSTIC"
+    },
+    "STEREO_INTEGRITY_RECORD": {
+      "asset_or_stem_id": null, "stereo_intent_ref": null,
+      "source_lr_correlation": null, "stem_lr_correlation": null,
+      "source_width_metric": null, "stem_width_metric": null,
+      "collapse_delta": null, "diagnosis": "MANUAL_REVIEW"
+    },
+    "REVIEW_PRIORITY_QUEUE_ITEM": {
+      "unit_or_beat_id": null, "risk_score": null, "risk_class": null, "reason": null,
+      "evidence_ref": null, "story_criticality": null, "required_review_action": null,
+      "status": "OPEN"
+    },
+    "TAKE_RECORD": {
+      "take_id": null, "block_id": null, "provider": null, "request_hash": null,
+      "hypothesis": "baseline", "status": "GENERATED", "diagnosed_defects": [],
+      "reused_from_build_id": null, "original_take_id": null, "provenance_chain": [],
+      "locked_at": null
+    },
+    "QC_ISSUE": {
+      "issue_id": null, "severity": null, "category": null, "artifact": null,
+      "semantic_anchor_or_time": null, "evidence": null, "smallest_repair": null,
+      "owner_role": null, "status": "OPEN"
+    },
+    "RELEASE_GATE": {
+      "master_id": null, "build_id": null, "live_render_status": "DRY_RUN",
+      "source_hash": null, "authority_versions": [], "required_gates": {},
+      "unresolved_manual_review": 0, "open_fatal": 0, "open_major": 0,
+      "unresolved_anchors": 0, "missing_required_assets": 0,
+      "missing_live_evidence": 0, "release_go_no_go": "NO_GO", "lock_timestamp": null
+    }
+  }
+}
