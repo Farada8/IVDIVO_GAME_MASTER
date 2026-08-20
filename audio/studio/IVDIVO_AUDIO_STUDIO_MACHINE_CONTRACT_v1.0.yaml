@@ -1,0 +1,144 @@
+version: 1.0
+status: CANON_MACHINE_CONTRACT
+applies_to: ALL_IVDIVO_AUDIO_PRODUCTIONS
+
+studio_state:
+  project_id: string
+  source_version: string
+  source_hash: string
+  authority_versions: [string]
+  project_overlay_version: string|null
+  delivery_mode: NARRATED|MULTI_VOICE|DRAMATIZED|FULL_AUDIO_DRAMA
+  current_stage: string
+  release_state: NOT_READY|REPAIR_REQUIRED|RELEASE_CANDIDATE|MASTER_LOCKED
+
+stages:
+  - id: S00_AUTHORITY
+    owner_role: 1
+    required_inputs: [source, canon, audio_authority, delivery_mode]
+    outputs: [AUTHORITY_MANIFEST]
+    gate: AUTHORITY_PASS
+  - id: S01_DRAMATURGY
+    owner_role: 2
+    required_inputs: [AUTHORITY_MANIFEST]
+    outputs: [LISTENER_CONTRACT, DRAMATIC_FORCE_MAP, AUDIO_DRAMATURGY]
+    gate: DRAMATURGY_PASS
+  - id: S02_STAGING
+    owner_role: 2
+    outputs: [AUDIO_STAGING_SCRIPT]
+    gate: STAGING_PASS
+  - id: S03_PERFORMANCE
+    owner_role: 3
+    outputs: [CAST_MAP, CHARACTER_VOICE_BIBLE, CHARACTER_STATE_TIMELINE, ACTOR_DIRECTOR_SCORE, RHYTHM_PAUSE_BREATH_PLAN]
+    gate: PERFORMANCE_PLAN_PASS
+  - id: S04_SOUND_WORLD
+    owner_roles: [5,6,7]
+    outputs: [FOLEY_CAUSALITY_GRAPH, FOLEY_PERFORMANCE_SCORE, MICROTEXTURE_PLAN, SFX_CUE_SHEET, ACOUSTIC_PASSPORT, LISTENER_POINT_OF_AUDITION, AMBIENCE_ARCHITECTURE, ASSET_REGISTRY]
+    gate: SOUND_PLAN_PASS
+  - id: S05_MUSIC
+    owner_role: 8
+    outputs: [MUSIC_DRAMATURGY, THEME_REGISTRY, MUSIC_CUE_SHEET]
+    gate: MUSIC_PLAN_PASS
+  - id: S06_PROVIDER_DRY_RUN
+    owner_role: 4
+    outputs: [RENDER_BLOCK_PLAN, PROVIDER_REQUESTS_DRY_RUN, PRONUNCIATION_MAP]
+    gate: DRY_RUN_PASS
+  - id: S07_DIALOGUE_RENDER
+    owner_roles: [3,4]
+    outputs: [TAKE_REGISTRY, LOCKED_DIALOGUE]
+    gate: DIALOGUE_LOCK
+  - id: S08_ASSET_RENDER
+    owner_roles: [5,6,7,8]
+    outputs: [LOCKED_ASSETS]
+    gate: ASSET_LOCK
+  - id: S09_EDIT_ALIGNMENT
+    owner_role: 4
+    outputs: [EDIT_DECISION_LOG, ALIGNMENT_MAP, RESOLVED_TIMELINE]
+    gate: TIMELINE_LOCK
+  - id: S10_MIX
+    owner_role: 9
+    outputs: [MIX_ACTION_SCORE, AUTOMIX_MANIFEST, PREMIX_STEMS, FINAL_MIX]
+    gate: MIX_PASS
+  - id: S11_MASTER
+    owner_role: 9
+    outputs: [MASTER_REPORT, MASTER_FILES]
+    gate: MASTER_TECH_PASS
+  - id: S12_QC_RELEASE
+    owner_role: 10
+    outputs: [QC_REPORT, HUMAN_LISTEN_REPORT, REPAIR_LIST, RELEASE_GATE, MASTER_LOCK]
+    gate: RELEASE_GO
+
+objects:
+  ListenerContract:
+    required: [scene_id, beat_id, listener_must_understand, listener_may_feel, listener_must_wait_for, focus_owner, suppress, comprehension_critical]
+  ResponseState:
+    required: [beat_id, speaker_id, heard_event, response_impulse, entry_trigger, reply_mode, state_out]
+  PerformanceBlock:
+    required: [block_id, speaker_id, exact_text, state_in, objective, tactic, playable_behavior, energy, tempo, listening_state, reply_mode, body_state, proximity, state_out]
+  FoleyCue:
+    required: [cue_id, character_or_source, action, object, material, cause, story_function, performer_intent, action_tempo, contact_force, audibility, sync_tolerance]
+  MicrotextureCue:
+    required: [cue_id, physical_cause, story_function, audibility, proximity, repulsion_risk, fatigue_risk, repetition_limit]
+  SoundCue:
+    required: [cue_id, physical_class, story_function, cause, literal_meaning, possible_extended_meaning, forbidden_implications, sonic_identity, asset_strategy]
+  ListenerPointOfAudition:
+    required: [scene_id, listener_position, listener_orientation, pov_mode, mono_safe]
+  MusicCue:
+    required: [cue_id, story_function, value_change, entry_anchor, exit_anchor, intensity, forbidden_implications]
+  RenderBlock:
+    required: [block_id, block_type, exact_text, source_text_ids, selective_regeneration_boundary, request_hash_inputs]
+  TakeRecord:
+    required: [take_id, block_id, provider, request_hash, status, hypothesis]
+    allowed_status: [GENERATED, REVIEW_PENDING, ACCEPTED, LOCKED, REJECTED, SUPERSEDED]
+  MixAction:
+    required: [beat_id, focus_owner, time_conflict, frequency_conflict, level_conflict, stereo_conflict, depth_conflict, dramatic_reason]
+  ReleaseGate:
+    required: [master_id, source_hash, required_gates, open_fatal, open_major, release_go_no_go]
+
+invariants:
+  - locked_text_cannot_change_without_authorized_adaptation_diff
+  - no_absolute_production_timestamps_before_alignment
+  - locked_take_is_immutable
+  - locked_asset_is_immutable
+  - critical_meaning_must_survive_mono
+  - clue_causality_must_not_depend_on_music
+  - provider_is_not_authority
+  - downstream_stage_requires_upstream_pass
+  - missing_required_asset_is_fail_closed
+  - unresolved_semantic_anchor_is_fail_closed
+  - every_reactive_line_requires_heard_event_or_explicit_nonreactive_classification
+  - audible_eating_requires_body_state_consistency
+  - spatial_dialogue_requires_listener_point_of_audition_when_geography_is_story_relevant
+
+repair_classes:
+  FATAL: [wrong_source, wrong_branch, source_hash_mismatch, missing_critical_line, wrong_speaker, broken_clue_order, corrupted_master]
+  MAJOR: [false_emotional_coding, character_state_reset, unintelligible_dialogue, clue_masking, impossible_body_causality, severe_voice_drift, music_spoiler]
+  MEDIUM: [weak_rhythm, repetitive_ambience, local_spatial_mismatch, over_dense_foley, mild_ai_cadence]
+  POLISH: [minor_trim, small_gain_refinement, harmless_tonal_adjustment]
+
+provider_compilation:
+  allowed_inputs:
+    - exact_text
+    - voice_id
+    - scene_context_packet
+    - heard_event
+    - objective
+    - tactic
+    - response_impulse
+    - playable_behavior
+    - energy
+    - tempo
+    - reply_mode
+    - breath
+    - body_state
+    - proximity
+    - pronunciation
+    - take_hypothesis
+    - output_format
+  forbidden_inputs:
+    - full_unfiltered_canon_dump
+    - hidden_future_story_solution
+    - unsupported_vague_emotion_only
+
+minimum_stems: [DIALOGUE, CLUE_SFX, SFX, FOLEY, AMBIENCE, MUSIC]
+playback_qc: [HEADPHONES, EARBUDS, PHONE_SPEAKER, MONO, LOW_VOLUME, CASUAL_ATTENTION, SPEED_1_25X]
