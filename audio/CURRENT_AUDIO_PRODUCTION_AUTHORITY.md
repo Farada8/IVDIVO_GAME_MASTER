@@ -3,24 +3,33 @@
 **Status:** CURRENT ROUTER  
 **Date:** 2026-08-20
 
-Use `00_IVDIVO_AUDIO_PRODUCTION_INDEX_v2.3.md` as the current universal audio-production router.
+Use `studio/00_IVDIVO_AUDIO_STUDIO_INDEX_v3.0.md` as the current universal audio-studio operating router.
 
-Current universal authority:
+The underlying audio-production canon router remains:
+- `00_IVDIVO_AUDIO_PRODUCTION_INDEX_v2.3.md`.
+
+Current universal canon authority:
 - `IVDIVO_UNIVERSAL_AUDIO_PRODUCTION_CANON_v2.1.md` — base canon;
 - `IVDIVO_UNIVERSAL_AUDIO_PRODUCTION_CANON_ADDENDUM_v2.2.md` — additive listener/sound/mix authority;
-- `IVDIVO_UNIVERSAL_AUDIO_PRODUCTION_CANON_ADDENDUM_v2.3.md` — additive performance/Foley/body-state/spatial/mix-action authority; controls where more specific;
-- `IVDIVO_AUDIO_DIRECTOR_PROGRAM_CONTRACT_v2.1.md` — base machine contract;
-- `IVDIVO_AUDIO_DIRECTOR_PROGRAM_AND_PROMPT_PATCH_v2.2.md` — additive machine/prompt authority;
-- `IVDIVO_AUDIO_DIRECTOR_PROGRAM_AND_PROMPT_PATCH_v2.3.md` — additive response/Foley/listener-POA/mix-action machine/prompt authority; controls where more specific;
-- `IVDIVO_AUDIO_PRODUCTION_PROMPT_STACK_v2.1.md` — base prompt stack;
-- `IVDIVO_HUMAN_MICROTEXTURE_SPATIAL_SOUND_LIBRARY_v1.0.md` — reusable sound vocabulary, filtered through current selective-detail, physical-coherence and salience laws.
+- `IVDIVO_UNIVERSAL_AUDIO_PRODUCTION_CANON_ADDENDUM_v2.3.md` — additive performance/Foley/body-state/spatial/mix-action authority.
+
+Current studio operating authority:
+- `studio/IVDIVO_AUDIO_STUDIO_OS_v3.0.md`;
+- `studio/IVDIVO_AUDIO_STUDIO_10_SPECIALISTS_v1.0.md`;
+- `studio/IVDIVO_AUDIO_STUDIO_END_TO_END_SOP_v1.0.md`;
+- `studio/IVDIVO_AUDIO_STUDIO_MACHINE_CONTRACT_v1.0.yaml`;
+- `studio/IVDIVO_AUDIO_STUDIO_MASTER_PROMPT_STACK_v3.0.md`;
+- `studio/IVDIVO_ELEVENLABS_PROVIDER_ADAPTER_CONTRACT_v1.0.md`;
+- `studio/IVDIVO_AUDIO_STUDIO_QC_RELEASE_GATES_v1.0.md`;
+- `studio/orchestrator.py` — fail-closed local stage/gate orchestrator; no provider secrets/live calls.
 
 Evidence records:
 - `IVDIVO_AUDIO_REFERENCE_INTELLIGENCE_AUDIT_BATCH1_v1.0.md`;
-- `IVDIVO_AUDIO_REFERENCE_INTELLIGENCE_AUDIT_BATCH2_v1.0.md`.
+- `IVDIVO_AUDIO_REFERENCE_INTELLIGENCE_AUDIT_BATCH2_v1.0.md`;
+- `IVDIVO_AUDIO_REFERENCE_INTELLIGENCE_AUDIT_BATCH3_v1.0.md`.
 
 Project-specific overlays remain below universal authority and may not overwrite locked story canon.
 
-Earlier audio documents are retained for history and remain valid only where not superseded by current v2.1/v2.2/v2.3 authority.
+Earlier audio documents remain history/base layers where referenced by current routers.
 
-Provider implementations, including ElevenLabs, are replaceable execution backends and are not canon authority.
+Provider implementations, including ElevenLabs, remain replaceable execution backends and are not canon authority. API keys/secrets must never be committed.
