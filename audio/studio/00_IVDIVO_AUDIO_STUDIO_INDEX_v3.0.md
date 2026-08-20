@@ -12,10 +12,12 @@
 6. `audio/studio/IVDIVO_AUDIO_STUDIO_END_TO_END_SOP_v1.0.md` — execution SOP.
 7. `audio/studio/IVDIVO_AUDIO_STUDIO_MACHINE_CONTRACT_v1.0.yaml` — machine state/artifact/gate contract.
 8. `audio/studio/IVDIVO_AUDIO_STUDIO_MASTER_PROMPT_STACK_v3.0.md` — execution prompts.
-9. `audio/studio/IVDIVO_ELEVENLABS_PROVIDER_ADAPTER_CONTRACT_v1.0.md` — provider implementation contract; below canon.
-10. `audio/studio/IVDIVO_AUDIO_STUDIO_QC_RELEASE_GATES_v1.0.md` — fail-closed release standard.
-11. Project-specific overlay.
-12. Working manifests/takes/assets/timelines/mixes/QC.
+9. `audio/studio/IVDIVO_AUDIO_STUDIO_ARTIFACT_TEMPLATES_v1.0.json` — canonical starter templates for production artifacts.
+10. `audio/studio/IVDIVO_ELEVENLABS_PROVIDER_ADAPTER_CONTRACT_v1.0.md` — provider implementation contract; below canon.
+11. `audio/studio/IVDIVO_AUDIO_STUDIO_QC_RELEASE_GATES_v1.0.md` — fail-closed release standard.
+12. `audio/studio/orchestrator.py` — local fail-closed stage/gate program; no live provider calls.
+13. Project-specific overlay.
+14. Working manifests/takes/assets/timelines/mixes/QC.
 
 Evidence records include:
 - `audio/IVDIVO_AUDIO_REFERENCE_INTELLIGENCE_AUDIT_BATCH1_v1.0.md`
@@ -51,3 +53,5 @@ The studio is complete when it can answer, for every important audible event:
 
 ## Execution program
 Use `orchestrator.py` to initialize project folder structures, bind source hash, track required artifacts/gates and perform fail-closed release checks. It intentionally does not call providers; external adapters remain replaceable.
+
+See `README.md` for quick start.
