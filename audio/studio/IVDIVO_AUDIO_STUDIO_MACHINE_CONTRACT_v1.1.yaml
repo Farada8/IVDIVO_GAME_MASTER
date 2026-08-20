@@ -1,0 +1,119 @@
+version: 1.1
+status: CANON_MACHINE_CONTRACT_AUDITED
+applies_to: ALL_IVDIVO_AUDIO_PRODUCTIONS
+canon_release: v3.2
+
+studio_state:
+  project_id: string
+  build_id: string
+  source_version: string
+  source_hash: string
+  authority_versions: [string]
+  project_overlay_version: string|null
+  delivery_mode: NARRATED|MULTI_VOICE|DRAMATIZED|FULL_AUDIO_DRAMA
+  live_render_status: DRY_RUN|LIVE|MIXED
+  current_stage: string
+  release_state: NOT_READY|REPAIR_REQUIRED|RELEASE_CANDIDATE|MASTER_LOCKED
+
+gate_states: [NOT_STARTED, NOT_APPLICABLE, WORKING, REVIEW_PENDING, PASS, FAIL, LOCKED, SUPERSEDED]
+qc_issue_states: [OPEN, PASS, FAIL, MANUAL_REVIEW, RESOLVED, NOT_APPLICABLE]
+
+gate_dependencies:
+  AUTHORITY_PASS: []
+  DRAMATURGY_PASS: [AUTHORITY_PASS]
+  STAGING_PASS: [DRAMATURGY_PASS]
+  PERFORMANCE_PLAN_PASS: [STAGING_PASS]
+  SOUND_PLAN_PASS: [STAGING_PASS]
+  MUSIC_PLAN_PASS: [DRAMATURGY_PASS]
+  DRY_RUN_PASS: [PERFORMANCE_PLAN_PASS]
+  PROVIDER_PREFLIGHT_PASS: [DRY_RUN_PASS]
+  PILOT_SAMPLE_PASS: [PROVIDER_PREFLIGHT_PASS]
+  DIALOGUE_LOCK: [PILOT_SAMPLE_PASS]
+  ASSET_LOCK: [SOUND_PLAN_PASS, MUSIC_PLAN_PASS]
+  TIMELINE_LOCK: [DIALOGUE_LOCK, ASSET_LOCK]
+  MIX_PASS: [TIMELINE_LOCK]
+  MASTER_TECH_PASS: [MIX_PASS]
+  HUMAN_LISTEN_PASS: [MASTER_TECH_PASS]
+  RELEASE_GO: [HUMAN_LISTEN_PASS]
+
+objects:
+  BuildManifest:
+    required: [build_id, project_id, source_hash, authority_versions, live_render_status, required_render_blocks, live_evidence_by_block, reused_evidence_by_block, placeholder_or_synthetic_blocks, status]
+  VoiceBindingLedger:
+    required: [ledger_version, bindings]
+    binding_required: [character_id, provider, voice_id, status]
+    binding_status: [CANDIDATE, SMOKE_ONLY, APPROVED, LOCKED, SUPERSEDED]
+  ListenerContract:
+    required: [scene_id, beat_id, listener_must_understand, listener_may_feel, listener_must_wait_for, focus_owner, suppress, comprehension_critical]
+  ResponseState:
+    required: [beat_id, speaker_id, heard_event, response_impulse, entry_trigger, reply_mode, state_out]
+  SilentReactionAnchor:
+    required: [anchor_id, character_id, state_in, trigger_event, silent_action, state_out, semantic_anchor]
+    dispatch_required: false
+  PerformanceBlock:
+    required: [block_id, speaker_id, exact_text, state_in, objective, tactic, playable_behavior, energy, tempo, listening_state, reply_mode, body_state, proximity, state_out]
+  FoleyCue:
+    required: [cue_id, character_or_source, action, object, material, cause, story_function, performer_intent, action_tempo, contact_force, audibility, sync_tolerance]
+  MicrotextureCue:
+    required: [cue_id, physical_cause, story_function, audibility, proximity, repulsion_risk, fatigue_risk, repetition_limit]
+  SoundCue:
+    required: [cue_id, physical_class, story_function, cause, literal_meaning, possible_extended_meaning, forbidden_implications, sonic_identity, asset_strategy]
+  AcousticIdentityLedger:
+    required: [ledger_version, identities]
+    identity_types: [PITCH_IDENTITY, INTERVAL_IDENTITY, RHYTHM_IDENTITY, TIMBRE_MOTIF, SIGNAL_PATTERN, MECHANICAL_SIGNATURE]
+  ListenerPointOfAudition:
+    required: [scene_id, listener_position, listener_orientation, pov_mode, mono_safe]
+  StereoIntentRecord:
+    required: [asset_or_stem_id, stereo_intent]
+    intents: [MONO_INTENTIONAL, NARROW, NATURAL_STEREO, WIDE, BINAURAL_OR_POSITIONAL, SOURCE_DEPENDENT]
+  MusicCue:
+    required: [cue_id, story_function, value_change, entry_anchor, exit_anchor, intensity, forbidden_implications]
+  RenderBlock:
+    required: [block_id, block_type, exact_text, source_text_ids, selective_regeneration_boundary, request_hash_inputs, dispatch_required]
+  TakeRecord:
+    required: [take_id, block_id, provider, request_hash, status, hypothesis]
+    allowed_status: [GENERATED, REVIEW_PENDING, ACCEPTED, LOCKED, REJECTED, SUPERSEDED]
+    provenance_fields: [reused_from_build_id, original_take_id, provenance_chain]
+  NormalizedAlignmentRecord:
+    required: [provider, endpoint_profile, source_schema, block_id, unit_id, unit_index, start_seconds, end_seconds, raw_evidence_ref]
+  CausalOverlapProfile:
+    required: [scene_or_beat_id, total_relevant_event_pairs, overlapping_event_pairs, causal_overlap_ratio, overlap_expected, status]
+  MixAction:
+    required: [beat_id, focus_owner, time_conflict, frequency_conflict, level_conflict, stereo_conflict, depth_conflict, dramatic_reason]
+  StereoIntegrityRecord:
+    required: [asset_or_stem_id, stereo_intent_ref, diagnosis]
+    diagnoses: [PASS, SOURCE_NARROWNESS, MIXER_COLLAPSE, INTENTIONAL_MONO, MANUAL_REVIEW]
+  ReviewPriorityQueueItem:
+    required: [unit_or_beat_id, risk_score, risk_class, reason, story_criticality, required_review_action, status]
+  QC_Issue:
+    required: [issue_id, severity, category, artifact, evidence, smallest_repair, owner_role, status]
+  ReleaseGate:
+    required: [master_id, build_id, live_render_status, source_hash, required_gates, unresolved_manual_review, open_fatal, open_major, unresolved_anchors, missing_required_assets, missing_live_evidence, release_go_no_go]
+
+provider_adapter_invariants:
+  - raw_provider_alignment_must_not_reach_timeline_or_qc_directly
+  - supported_raw_alignment_must_normalize_before_downstream_use
+  - provider_preflight_required_before_live_dispatch
+  - secrets_never_persisted_in_build_artifacts
+  - every_live_render_block_has_request_response_audio_evidence
+
+release_invariants:
+  - locked_text_cannot_change_without_authorized_adaptation_diff
+  - no_absolute_production_timestamps_before_normalized_alignment
+  - locked_take_is_immutable
+  - locked_asset_is_immutable
+  - critical_meaning_must_survive_mono
+  - provider_is_not_authority
+  - dependency_gates_must_be_satisfied_or_explicitly_not_applicable
+  - missing_required_asset_is_fail_closed
+  - unresolved_semantic_anchor_is_fail_closed
+  - unresolved_mandatory_manual_review_is_fail_closed
+  - dry_run_build_cannot_release
+  - live_or_mixed_release_requires_complete_required_render_evidence
+  - reused_take_or_asset_requires_origin_provenance
+  - actually_dispatched_voice_id_must_match_voice_binding_ledger
+  - story_required_cross_domain_acoustic_identity_must_be_linked
+  - stereo_qc_uses_declared_intent_and_source_comparison_not_correlation_alone
+
+minimum_stems: [DIALOGUE, CLUE_SFX, SFX, FOLEY, AMBIENCE, MUSIC]
+playback_qc: [HEADPHONES, EARBUDS, PHONE_SPEAKER, MONO, LOW_VOLUME, CASUAL_ATTENTION, SPEED_1_25X]
