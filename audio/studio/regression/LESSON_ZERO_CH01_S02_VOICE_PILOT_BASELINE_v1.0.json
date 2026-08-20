@@ -1,0 +1,43 @@
+{
+  "baseline_id": "LESSON_ZERO_CH01_S02_VOICE_PILOT_v1_BAD_BASELINE",
+  "status": "REGRESSION_FIXTURE_KNOWN_FAIL_ARTISTIC",
+  "project_id": "LESSON_ZERO_RU_AUDIO",
+  "scene_id": "CH01_S02",
+  "source_audio": "LESSON_ZERO_CH01_SCENE2_VOICE_PILOT.wav",
+  "known_human_verdict": "FAIL — chopped / one rhythm / reads lines rather than living the exchange",
+  "measured_metrics": {
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "frame_count": 9657600,
+    "duration_s": 201.2,
+    "peak_dbfs": -0.3909,
+    "rms_dbfs": -17.2603,
+    "active_ratio": 0.909543,
+    "active_level_p10_dbfs": -26.9648,
+    "active_level_p90_dbfs": -13.4849,
+    "active_level_spread_db": 13.4799,
+    "silence_threshold_dbfs": -45.0,
+    "pause_count_ge_0_08": 122,
+    "pause_median_s": 0.18,
+    "pause_mean_s": 0.1897,
+    "pause_std_s": 0.0726,
+    "pause_cv": 0.3826,
+    "pause_p10_s": 0.1,
+    "pause_p90_s": 0.28,
+    "pause_max_s": 0.38,
+    "pause_count_ge_0_5": 0,
+    "pause_count_ge_0_8": 0,
+    "pause_count_ge_1_0": 0,
+    "silence_total_s_ge_0_08": 23.14
+  },
+  "authored_evidence": {
+    "protected_silence_after_CH01_S02_U024_ms": {"minimum": 450, "target": 750, "maximum": 1200},
+    "protected_silence_after_CH01_S02_U049_ms": {"minimum": 650, "target": 1100, "maximum": 1600}
+  },
+  "candidate_acceptance_rules": [
+    {"metric": "pause_count_ge_0_5", "op": ">=", "value": 2, "severity": "MAJOR", "reason": "Scene 2 has two authored protected silences; candidate must expose at least two >=0.5s silence events in the assembled dry performance."},
+    {"metric": "pause_max_s", "op": ">=", "value": 0.65, "severity": "MAJOR", "reason": "Second protected silence has authored minimum 650ms."}
+  ],
+  "non_universal_note": "These rules are Scene 2 regression requirements, not a universal rule that longer/more varied pauses are always better."
+}
