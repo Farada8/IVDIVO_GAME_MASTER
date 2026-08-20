@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "status": "WORKING_RUNTIME_CONTRACT",
+  "purpose": "Single source of scene reality for dramaturgy, acting, emotion, body, space, sound, music, mix and listener attention.",
+  "required_root": ["project_id", "scene_id", "source_hash", "delivery_mode", "scene_objective", "listener_point_of_audition", "world_state", "beats"],
+  "turn_layers": {
+    "story": ["exact_text", "source_text_ids", "state_in", "state_out"],
+    "knowledge": ["known_now", "unknown_now", "newly_understood"],
+    "attention": ["target", "shift_cause"],
+    "action": ["want", "tactic", "subtext"],
+    "emotion": ["felt", "shown", "suppression", "leakage", "transition_cause", "carryover"],
+    "relationship": ["trust", "closeness", "suspicion", "current_boundary"],
+    "status": ["control", "power_shift", "status_before", "status_after"],
+    "listening": ["heard_event", "response_impulse", "entry_trigger", "listening_state"],
+    "body": ["posture", "physical_occupation", "mouth_state", "speech_allowed", "speech_impairment", "breath_reset", "audible_actions"],
+    "performance": ["reply_mode", "tempo", "projection", "phrase_ending", "breath", "hesitation", "emphasis", "restraint", "playable_behavior"],
+    "rhythm": ["pause_before", "pause_after", "pause_function", "pause_range_ms", "overlap_policy", "protected_silence"],
+    "space": ["azimuth", "distance", "head_orientation", "occlusion", "mic_distance", "acoustic_distance", "ear_specific", "mono_fallback"],
+    "listener": ["must_understand", "may_feel", "must_wait_for", "focus_owner", "suppress"],
+    "sound_policy": ["ambience", "sound_events", "music", "automation_intent", "mix_reason"]
+  },
+  "emotion_model": {
+    "felt": {"primary": "string|null", "secondary": "string|null", "intensity": "0..10"},
+    "shown": {"primary": "string|null", "intensity": "0..10"},
+    "rule": "Emotion is compiled to behavior; unsupported raw emotion-only provider direction is forbidden. FELT and SHOWN may differ."
+  },
+  "invariants": [
+    "locked_story_facts_not_invented",
+    "reactive_turn_requires_heard_event_and_response_impulse",
+    "emotion_change_requires_cause_when_material",
+    "body_state_constrains_speech",
+    "foley_requires_physical_cause_and_story_function",
+    "ear_specific_staging_requires_mono_fallback",
+    "music_requires_story_value_change",
+    "no_absolute_timestamps_before_real_alignment",
+    "listener_focus_controls_mix_priority",
+    "providers_are_execution_backends_not_scene_authority"
+  ],
+  "promotion_policy": "This schema remains WORKING until regression tests and live Scene 2 evidence prove the runtime path; then it may be proposed as an additive canon patch."
+}
