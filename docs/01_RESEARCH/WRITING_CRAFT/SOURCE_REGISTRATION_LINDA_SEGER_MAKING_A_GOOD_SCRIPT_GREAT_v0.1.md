@@ -1,6 +1,6 @@
 # SOURCE REGISTRATION — Linda Seger, *Making a Good Script Great*
 
-Status: **REGISTERED ✓ → INTEGRITY VERIFIED ✓ → FULL READ IN PROGRESS**
+Status: **STRICT_LIFECYCLE_SYNTHESIZED_v1.0**
 
 ## Bibliographic identity
 
@@ -10,56 +10,61 @@ Status: **REGISTERED ✓ → INTEGRITY VERIFIED ✓ → FULL READ IN PROGRESS**
 - Publisher: Silman-James Press
 - Copyright: 2010
 - ISBN: 978-1-935247-01-2
-- Medium retained in File Library: EPUB
+- Classification: WIDER craft source; not a Core-40 slot.
 
-## Duplicate handling
+## Source representations
 
-Two File Library objects are present:
-
+English File Library representations:
 - `_OceanofPDF.com_Making_a_Good_Script_Great_-_Linda_Seger.epub`
 - `_OceanofPDF.com_Making_a_Good_Script_Great_-_Linda_Seger (1).epub`
 
-They present the same bibliographic identity, copyright, ISBN, contents, opening text and chapter structure. They are therefore treated as **one bibliographic source / probable duplicate representations**. Byte identity has not been proven and is not claimed.
+They share the same bibliographic identity, copyright, ISBN, contents, opening text and chapter structure and are treated as one bibliographic source / probable duplicate representations. Byte identity has not been proven and is not claimed.
+
+Sequential strict reading was completed using an authorized Russian representation of the same 2010 third-edition work:
+- Linda Seger — *Как хороший сценарий сделать великим. Практическое руководство голливудского эксперта*
+- Mann, Ivanov and Ferber, 2019
+- ISBN 978-5-00117-690-9
+- edition metadata: 350 pages.
+
+The translation is treated as another representation of the same work, not a separate knowledge source.
+It is not used as evidence of Seger's original English sentence rhythm/diction/punctuation.
 
 ## Integrity evidence
 
-Verified spine:
-
-- Acknowledgments
+Verified complete spine:
 - Preface to the Third Edition
 - Introduction
-- 1 — Gathering Ideas
-- 2 — The Three-Act Structure: Why You Need It and What to Do with It
-- 3 — What Do Subplots Do?
-- 4 — Act Two—How to Keep It Moving
-- 5 — Establishing a Point of View
-- 6 — Creating the Scene
-- 7 — Creating a Cohesive Script
-- 8 — Making It Commercial
-- 9 — Balancing Images and Dialogue
-- 10 — From Motivation to Goal: Finding Your Character’s Spine
-- 11 — Finding the Conflict
-- 12 — Creating Multidimensional and Transformational Characters
-- 13 — Character Functions
-- 14 — A Case Study: Writer Paul Haggis in His Own Words
-- Index
+- Chapters 1–14
+- Acknowledgments
 - About the Author
+- name / film indexes and terminal publication matter.
 
-No missing-spine evidence has been found.
+## Strict lifecycle completion
 
-## Strict-read state after Pass 123
+Completed stages:
+- REGISTERED ✓
+- INTEGRITY VERIFIED ✓
+- FULL READ ✓
+- STRUCTURE MAP ✓
+- SOURCE PASSPORT ✓
+- CLAIM EXTRACTION ✓
+- MECHANISM EXTRACTION ✓
+- FAILURE MODES ✓
+- CROSS-SOURCE COMPARISON ✓
+- IVDIVO OPERATIONALIZATION ✓
+- MANUSCRIPT VALIDATION ✓
+- SYNTHESIZED ✓
 
-- Preface — COMPLETE
-- Introduction — COMPLETE
-- Chapter 1 `Gathering Ideas` — COMPLETE
-- Chapter 2 — IN PROGRESS
-- Chapters 3–14 — OPEN
-- Index / About the Author — integrity-confirmed only; not counted as FULL READ
+Final strict artifact:
+`DR_FINAL_WIDER_SEGER_MAKING_A_GOOD_SCRIPT_GREAT_STRICT_LIFECYCLE_v1.0.md`
 
-## Exact continuation pointer
-
-Continue Chapter 2 from the **first not-yet-proven continuous block immediately after the already read opening / overall three-act and page-distribution section**. The later Chapter 2 material and Chapter 2→3 transition have been located for continuity checking, but must not substitute for sequential reading of the remaining bridge.
+Key synthesis batches:
+- Batch 158 — rewrite diagnosis / flexible process / research / structure
+- Batch 159 — turning points / midpoint / momentum
+- Batch 160 — subplots / momentum / POV / scene / unity
+- Batch 161 — audience / character / conflict / cast / process
 
 ## Accounting rule
 
-Seger is a **wider craft source**, not a proven open Core-40 slot. Registering or reading it does **not** alter the authoritative strict Core count.
+Seger is a **WIDER** strict-lifecycle source.
+Its completion does **not** alter the authoritative strict Core count, which remains 31/40 at this checkpoint.
