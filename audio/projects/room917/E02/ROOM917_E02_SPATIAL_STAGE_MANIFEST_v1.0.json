@@ -1,0 +1,66 @@
+{
+  "project_id": "ROOM917",
+  "episode_id": "E02",
+  "title": "LENI-BIRD",
+  "status": "WORKING_PRODUCTION",
+  "source_authority": "ROOM 917 — PHASE D — Episodes 01–03 — v1.0",
+  "delivery_mode": "FULL_AUDIO_DRAMA",
+  "stage_mode": "HYBRID_STAGE",
+  "text_lock": true,
+  "absolute_timestamps_allowed": false,
+  "global_rules": {
+    "position_is_not_pan": true,
+    "body_head_orientation_independent": true,
+    "movement_requires_story_cause": true,
+    "voice_foley_path_must_match": true,
+    "critical_meaning_mono_safe": true,
+    "near_ear_allowed": false,
+    "music_under_evidence_test": false
+  },
+  "scenes": [
+    {
+      "scene_id": "E02_S01",
+      "location": "SWITCHBOARD_ALCOVE_MORNING",
+      "listener_point_of_audition": {"pov_mode":"OBJECTIVE_SCENE","reference":"near old board / evidence work surface","mono_safe":true},
+      "capture_topology": "VIRTUAL_STEREO",
+      "actors": {"ELENA":{"start":"close_board_evidence","role_in_space":"procedure_owner"},"MINA":{"start":"witness_side_of_table","role_in_space":"independent_witness"},"JULIAN":{"start":"outside_alcove_door","role_in_space":"institutional_entry"}},
+      "trajectories": [
+        {"trajectory_id":"E02_S01_JULIAN_ENTRY_COFFEE","actor":"JULIAN","start_anchor":"ALCOVE_DOOR_OPENS","end_anchor":"ELENA_YOU_KNEW_THE_FOURTH_NOTE","movement":"ENTER_APPROACH_STOP","why_move_now":"brings two coffees as peace offering and joins evidence discussion","foley_links":["FOLEY_ALCOVE_DOOR","FOLEY_JULIAN_STEPS","FOLEY_TWO_COFFEES_SET_DOWN"],"end_function":"movement freezes when the personal accusation lands"},
+        {"trajectory_id":"E02_S01_MINA_OFFICE_ATTEMPT","actor":"MINA","start_anchor":"MINA_IM_GOING_TO_WRITE_MY_STATEMENT_IN_THE_OFFICE","end_anchor":"ELENA_STAY_YOU_ARE_THE_INDEPENDENT_WITNESS","movement":"WITHDRAW_TO_DOOR_STOP","why_move_now":"tries to remove herself from escalating management conflict","foley_links":["FOLEY_MINA_TWO_STEPS"],"end_function":"Elena re-establishes Mina's evidentiary role"},
+        {"trajectory_id":"E02_S01_COPY_TWO_HANDOFF","actor":"ELENA","start_anchor":"ELENA_SLIDES_SEALED_ENVELOPE","end_anchor":"JULIAN_RECEIVES_COPY_TWO","movement":"OBJECT_HANDOFF_ONLY","why_move_now":"preserves evidence boundary while giving management a copy","foley_links":["FOLEY_ENVELOPE_SLIDE","FOLEY_ENVELOPE_RECEIVE"],"end_function":"Julian gets access without taking control of original evidence"}
+      ],
+      "protected_silence_anchors": ["AFTER_ELENA_YOU_KNEW_THE_FOURTH_NOTE","AFTER_ELENA_CATHERINE_REED_MISSING_AFTER_FIRE"]
+    },
+    {
+      "scene_id": "E02_S02",
+      "location": "ELENA_HOTEL_ROOM_LATE_MORNING",
+      "listener_point_of_audition": {"pov_mode":"OBJECTIVE_SCENE","reference":"near portable cassette deck","mono_safe":true},
+      "capture_topology": "VIRTUAL_STEREO",
+      "actors": {"ELENA":{"start":"closest_to_deck","role_in_space":"owner_of_personal_evidence"},"MINA":{"start":"supportive_offset","role_in_space":"witness"},"JULIAN":{"start":"near_room_threshold","role_in_space":"skeptical_guest"}},
+      "trajectories": [
+        {"trajectory_id":"E02_S02_JULIAN_THRESHOLD","actor":"JULIAN","start_anchor":"JULIAN_WHY_ARE_WE_DOING_THIS_IN_YOUR_ROOM","end_anchor":"ELENA_EXPLAINS_CASSETTE_PROVENANCE","movement":"SMALL_STEP_IN","why_move_now":"accepts the evidentiary premise enough to participate","foley_links":[],"end_function":"enters the test without invading Elena's personal radius"},
+        {"trajectory_id":"E02_S02_LISTENING_TABLEAU","actor":"ALL_LIVE_CHARACTERS","start_anchor":"ELENA_HEADPHONES_ON_NOBODY_SPEAKS","end_anchor":"ELENA_STOPS_DECK_AFTER_COMPLETE_LULLABY","movement":"FREEZE_LISTEN","why_move_now":"the cassette evidence must own attention","foley_links":["FOLEY_HEADPHONES_HANDOFF","FOLEY_CASSETTE_PLAY","FOLEY_DECK_STOP"],"end_function":"prevents visualized acting noise from masking Cate"},
+        {"trajectory_id":"E02_S02_JULIAN_WITHDRAWAL","actor":"JULIAN","start_anchor":"JULIAN_NOT_UNTIL_MARGOT_ARRIVES","end_anchor":"ELENA_THERE_IT_IS_AGAIN","movement":"LEAN_OR_STEP_BACK","why_move_now":"returns to institutional boundary after evidence becomes personally dangerous","foley_links":[],"end_function":"physicalizes closure without melodramatic exit"}
+      ],
+      "device_mediated_sources": [
+        {"source_id":"CATE_CASSETTE","must_not_sound_live_in_room":true,"acoustic_domain":"CASSETTE_DOMESTIC_ARCHIVE","story_function":"voice/nickname/lullaby authentication"},
+        {"source_id":"FIELD_RECORDING_CALL","must_not_share_room_reverb_with_live_voices":true,"acoustic_domain":"GREYHAVEN_COPPER_FIELD_RECORDING","story_function":"compare media/noise signatures"}
+      ],
+      "protected_silence_anchors": ["AFTER_COMPLETE_LULLABY_BEFORE_MINA_SAME_TUNE"]
+    },
+    {
+      "scene_id": "E02_S03",
+      "location": "SWITCHBOARD_AND_FRONT_DESK_EARLY_AFTERNOON",
+      "listener_point_of_audition": {"pov_mode":"OBJECTIVE_SCENE","reference":"near old switchboard","mono_safe":true},
+      "capture_topology": "VIRTUAL_STEREO",
+      "actors": {"ELENA":{"start":"at_old_board","role_in_space":"test_operator"},"JULIAN":{"start":"near_old_board","role_in_space":"skeptical_observer"},"MINA":{"start":"near_old_board","role_in_space":"mobile_test_witness"}},
+      "trajectories": [
+        {"trajectory_id":"E02_S03_MINA_TO_RECEPTION","actor":"MINA","start_anchor":"ELENA_MINA_TAKE_YOUR_MOBILE_TO_RECEPTION","end_anchor":"MINA_GREYHAVEN_HOTEL_MINA_SPEAKING_TO_MINA","movement":"EXIT_ALCOVE_CROSS_LOBBY_TO_FRONT_DESK","why_move_now":"creates a physical external-network control test","foley_links":["FOLEY_MINA_STEPS_TO_RECEPTION","FOLEY_MOBILE_DIAL","SFX_MODERN_FRONT_DESK_RING","FOLEY_RECEIVER_PICKUP"],"end_function":"places ordinary public-network call far from the old board"},
+        {"trajectory_id":"E02_S03_MINA_RETURN","actor":"MINA","start_anchor":"MINA_IM_HANGING_UP","end_anchor":"MINA_IS_THAT_A_SEVEN","movement":"FRONT_DESK_TO_ALCOVE_RETURN","why_move_now":"test at reception is complete and hidden-terminal inspection now requires her physical presence","foley_links":["FOLEY_RECEIVER_DOWN","FOLEY_MINA_RETURN_STEPS"],"end_function":"Mina is close enough to visually confirm filed-off digit"},
+        {"trajectory_id":"E02_S03_JULIAN_CLOSES_DISTANCE","actor":"JULIAN","start_anchor":"HIDDEN_TERMINAL_DIGIT_EMERGES","end_anchor":"JULIAN_STOP_MARGOT_WILL_BE_HERE_AT_TWO","movement":"APPROACH_BLOCK_PATH","why_move_now":"undocumented physical evidence turns institutional anxiety into immediate control action","foley_links":["FOLEY_JULIAN_SINGLE_APPROACH"],"end_function":"blocks next investigative step without touching Elena/equipment"}
+      ],
+      "critical_spatial_proof": {"ordinary_public_network":"modern front desk phone rings at distance while old board remains silent","hidden_local_pair":"local meter pulse/test return remains close to Elena at old board","must_read_as_two_systems":true,"stereo_only_proof_forbidden":true},
+      "protected_silence_anchors": ["AFTER_HIDDEN_TERMINAL_REVEAL_BEFORE_JULIAN_STOP"]
+    }
+  ]
+}
