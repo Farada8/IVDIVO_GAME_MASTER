@@ -1,0 +1,79 @@
+version: "1.0"
+status: CANON_MACHINE_CONTRACT
+system: IVDIVO_MICROPHONE_CHOREOGRAPHY_ENGINE
+applies_to: ALL_DRAMATIZED_IVDIVO_AUDIO_WHERE_SPATIAL_PERFORMANCE_APPLIES
+
+modes: [REAL_STAGE, VIRTUAL_STAGE, HYBRID_STAGE]
+capture_topologies:
+  [MONO_CENTER_MIC, STEREO_PAIR, BINAURAL_HEAD, MULTI_MIC_ISO, VIRTUAL_BINAURAL, VIRTUAL_STEREO]
+
+scene:
+  required: [scene_id, mode, capture_topology, acoustic_passport_id, listener, microphones, actors, trajectories]
+
+listener:
+  required: [position, orientation_deg]
+
+microphone:
+  required: [mic_id, position, orientation_deg, polar_pattern, capture_role, reference_distance_m, safe_min_distance_m]
+
+actor_keyframe:
+  required: [anchor, position, body_yaw_deg, head_yaw_deg, movement_state]
+  optional: [body_state, performance_state, occlusion, foley_links, speech_unit_links, ear_target]
+
+trajectory:
+  required: [actor_id, source_track_id, trajectory_id, semantic_start_anchor, semantic_end_anchor, interpolation, keyframes]
+
+compiled_keyframe:
+  required:
+    [actor_id, trajectory_id, anchor, distance_listener_m, azimuth_listener_deg,
+     distance_mic_m, mic_incidence_deg, voice_to_listener_angle_deg,
+     estimated_distance_gain_db, estimated_mic_pattern_gain_db,
+     estimated_head_offaxis_hf_loss_db, recommended_room_send,
+     recommended_pan_fallback, intelligibility_risk]
+
+near_ear_event:
+  required: [actor_id, anchor, ear_target, story_function, mono_fallback]
+  constraints:
+    min_distance_cm: 5
+    must_be_story_earned: true
+
+invariants:
+  - position_is_not_pan
+  - body_orientation_is_separate_from_head_orientation
+  - actor_movement_requires_story_cause
+  - voice_path_and_foley_path_must_match
+  - critical_meaning_must_survive_mono
+  - no_absolute_time_before_alignment
+  - no_actor_teleport_without_explicit_cut
+  - near_ear_requires_supported_capture_topology
+  - mono_center_mic_cannot_claim_true_ear_specific_localization
+  - ordinary_walking_does_not_require_doppler
+  - performance_behavior_precedes_spatial_processing
+
+outputs:
+  - MICROPHONE_CHOREOGRAPHY_SCORE
+  - REAL_STAGE_BLOCKING_PLAN
+  - SPATIAL_AUTOMATION_MANIFEST
+  - ROOM_SEND_AUTOMATION
+  - HEAD_TURN_AUTOMATION
+  - OCCLUSION_AUTOMATION
+  - MOVEMENT_FOLEY_LINKS
+  - NEAR_EAR_EVENTS
+  - MONO_FALLBACK_RULES
+  - MICROPHONE_CHOREOGRAPHY_QC
+
+failure_codes:
+  - FAIL_STAGE_GEOMETRY
+  - FAIL_ACTOR_TELEPORT
+  - FAIL_MIC_BLOCKING
+  - FAIL_MIC_PICKUP_ZONE
+  - FAIL_VOICE_FOLEY_PATH_MISMATCH
+  - FAIL_HEAD_ORIENTATION_MISMATCH
+  - FAIL_UNEARNED_NEAR_EAR
+  - FAIL_MONO_SPATIAL_MEANING_LOSS
+  - FAIL_SPATIAL_INTELLIGIBILITY
+  - FAIL_SPATIAL_AUTOMATION_CLICK
+  - FAIL_ROOM_DISTANCE_INCOHERENCE
+  - FAIL_TRAJECTORY_UNRESOLVED_ANCHOR
+  - FAIL_CAPTURE_TOPOLOGY_MISMATCH
+  - FAIL_SPATIAL_TRICK_REPLACES_PERFORMANCE
