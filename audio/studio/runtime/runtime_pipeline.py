@@ -9,7 +9,7 @@ from __future__ import annotations
 import argparse, json
 from pathlib import Path
 from scene_state_graph import validate_graph
-from performance_compiler import compile_graph
+from performance_compiler import compile_scene
 from body_foley_compiler import compile_body_foley
 from spatial_sound_compiler import compile_spatial_sound
 from music_mix_compiler import compile_music_mix
@@ -28,17 +28,17 @@ def run(graph,out_dir):
     if reports["scene_validation"]["gate"]!="PASS":
         return {"gate":"FAIL","failed_stage":"SCENE_STATE_VALIDATION","reports":reports}
 
-    perf=compile_graph(graph); reports["performance"]=perf; write(out/"ACTOR_DIRECTOR_SCORE.json",perf.get("actor_director_score",perf))
-    if perf.get("gate","PASS")!="PASS": return {"gate":"FAIL","failed_stage":"PERFORMANCE","reports":reports}
+    perf=compile_scene(graph); reports["performance"]=perf
+    for name,obj in perf.items(): write(out/f"{name}.json",obj)
 
     body=compile_body_foley(graph); reports["body_foley"]=body; write(out/"BODY_FOLEY_PLAN.json",body)
     spatial=compile_spatial_sound(graph); reports["spatial_sound"]=spatial; write(out/"SPATIAL_SOUND_WORLD_PLAN.json",spatial)
     music=compile_music_mix(graph); reports["music_mix"]=music; write(out/"MUSIC_MIX_INTENT.json",music)
 
     failed=[name for name,r in (("BODY_FOLEY",body),("SPATIAL_SOUND",spatial),("MUSIC_MIX",music)) if r.get("gate")!="PASS"]
+    artifacts=["SCENE_STATE_VALIDATION.json",* [f"{n}.json" for n in perf],"BODY_FOLEY_PLAN.json","SPATIAL_SOUND_WORLD_PLAN.json","MUSIC_MIX_INTENT.json"]
     manifest={"schema":"IVDIVO_AUDIO_NOVEL_RUNTIME_COMPILE_v1","project_id":graph.get("project_id"),"scene_id":graph.get("scene_id"),
-              "gate":"FAIL" if failed else "PASS","failed_stages":failed,
-              "artifacts":["SCENE_STATE_VALIDATION.json","ACTOR_DIRECTOR_SCORE.json","BODY_FOLEY_PLAN.json","SPATIAL_SOUND_WORLD_PLAN.json","MUSIC_MIX_INTENT.json"],
+              "gate":"FAIL" if failed else "PASS","failed_stages":failed,"artifacts":artifacts,
               "next_if_pass":"PROVIDER_SAFE_RENDER_BLOCK_COMPILATION_AND_DRY_RUN",
               "explicitly_not_done":["LIVE_PROVIDER_CALL","ABSOLUTE_TIMELINE","FINAL_AUTOMIX","MASTER"]}
     write(out/"RUNTIME_COMPILE_MANIFEST.json",manifest)
