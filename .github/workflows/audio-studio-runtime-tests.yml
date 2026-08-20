@@ -1,0 +1,22 @@
+name: Audio Studio Runtime Tests
+
+on:
+  push:
+    paths:
+      - 'audio/studio/runtime/**'
+      - 'audio/studio/tests/test_audio_novel_runtime.py'
+      - '.github/workflows/audio-studio-runtime-tests.yml'
+  workflow_dispatch:
+
+jobs:
+  runtime-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Audio Novel runtime tests
+        run: python -m unittest audio/studio/tests/test_audio_novel_runtime.py -v
+      - name: Run existing Audio Studio tests
+        run: python -m unittest discover -s audio/studio/tests -p 'test_*.py' -v
