@@ -1,13 +1,21 @@
 # IVDIVO AUDIO NOVEL STUDIO — RUNTIME EXTENSION v0.1
 
 **Status:** WORKING / IMPLEMENTATION EXTENSION — NOT YET UNIVERSAL CANON  
-**Purpose:** turn the existing Audio Studio v3.0 canon/SOP into executable performance-learning machinery without creating a parallel production system.
+**Current integration target:** `00_IVDIVO_AUDIO_STUDIO_INDEX_v3.2.1.md` + current v3.2.1 machine/provider stack.  
+**Purpose:** turn the current Audio Studio canon/SOP into executable performance-learning machinery without creating a parallel production system.
 
 ## 1. Boundary
 
-This extension sits **behind the existing Studio OS v3.0 gate chain**. It does not replace story authority, v2.3, the Studio OS, SOP, Machine Contract, provider contracts or release gates.
+This extension sits **behind the current v3.2.1 router and its existing gate/evidence chain**. It does not replace story authority, underlying v2.3 audio canon, Studio OS v3.0 base, v3.2 audited patch, Machine Contract v1.1, provider preflight, ElevenLabs adapter, alignment normalizer, stereo QC, orchestrator or release gates.
 
-It exists to close the observed implementation gap between a rich Director Score and a provider request that otherwise degenerates into `text + voice_id`.
+It exists to close the observed implementation gap between a rich Director Score and a live provider request that can otherwise degenerate into `text + voice_id`.
+
+Integration points:
+- populate/validate rich performance state before `PERFORMANCE_PLAN_PASS`;
+- compile provider-safe performance behavior before `DRY_RUN_PASS`;
+- reuse current provider preflight/live-evidence/alignment normalization rather than creating another provider stack;
+- run performance regression/human listening before sound design is allowed to hide a weak dialogue render;
+- feed proven repair evidence into a controlled learning registry.
 
 ## 2. Central runtime object — SCENE_STATE_GRAPH
 
@@ -85,7 +93,17 @@ Provider-facing packets receive the playable behavior, not an unfiltered psychol
 - never silently rewrites universal canon;
 - promotion requires explicit human/Founder approval.
 
-## 6. Production learning loop
+## 6. Provider-performance execution note
+
+Current v3.2.1 already provides verified ElevenLabs endpoints, preflight, evidence persistence and alignment normalization. This extension must **not fork those responsibilities**.
+
+The remaining performance integration must preserve two separate values:
+- `exact_text` — locked words for coverage/QC;
+- provider performance instruction/text — non-spoken delivery guidance compiled from playable behavior.
+
+Any provider-specific audio tags or delivery syntax must be validated so that removing non-spoken directives yields the exact protected words. A provider adapter update is not promoted merely because a dry request compiles; it requires the hard-scene regression and human-listen gate below.
+
+## 7. Production learning loop
 
 `PLAN -> RENDER -> MEASURE -> HUMAN LISTEN -> DEFECT -> ROOT CAUSE -> SMALLEST REPAIR -> RETEST -> RECORD`.
 
@@ -100,13 +118,13 @@ Candidate promotion default:
 
 The registry may improve prompts, block strategy, provider adapter defaults, edit policies, QC thresholds and production heuristics. It may **not** silently alter locked story canon, character canon, release authority or provider contracts.
 
-## 7. Regression discipline
+## 8. Regression discipline
 
 Known bad pilots are retained as regression fixtures.
 
 For LESSON ZERO CH01 Scene 2, v1 is a known artistic failure. The failure is useful evidence: the live renderer passed only text/voice IDs, collapsed authored block structure and did not enforce protected silences. The replacement pipeline must beat the fixture before it is allowed to become the new baseline.
 
-## 8. Promotion gate
+## 9. Promotion gate
 
 This extension remains WORKING until one hard scene proves:
 - Scene State Graph validation PASS;
@@ -115,6 +133,7 @@ This extension remains WORKING until one hard scene proves:
 - authored rhythm survives render/edit;
 - human listen reports believable actor-to-actor reaction;
 - no FATAL/MAJOR performance defect;
-- selective repair works without rerendering unrelated locked material.
+- selective repair works without rerendering unrelated locked material;
+- current v3.2.1 provider preflight/evidence/alignment requirements remain intact.
 
-After that evidence, merge the runtime into the canonical orchestrator and version the Machine Contract/templates rather than maintaining a second system.
+After that evidence, merge the runtime functions into the canonical orchestrator/machine/provider contracts and version them rather than maintaining a second system.
