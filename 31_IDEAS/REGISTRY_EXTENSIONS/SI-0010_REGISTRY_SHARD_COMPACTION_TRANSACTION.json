@@ -2,36 +2,57 @@
   "candidate_id": "SI-0010",
   "title": "Improvement Registry shard-write + deterministic compaction transaction",
   "candidate_type": "TOOLING_OR_AUTOMATION",
-  "status": "DEVELOPING",
+  "status": "READY_FOR_PILOT",
   "scope": "UNIVERSAL_IVDIVO",
   "source_provenance": [
-    {"source_type":"GITHUB","locator":"31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json","version":"1.0","date":"2026-08-21","notes":"Current base+extensions family pointer"},
-    {"source_type":"GITHUB","locator":"31_IDEAS/TRANSCRIPT_RECOVERY_32_PROMPT_SPRINT_2_2026-08-21/02_EXECUTION_RESULTS_N01_N32.md","version":"1.0","date":"2026-08-21","notes":"N31/N32 selected shard+index + controlled compaction"}
+    {"source_type":"GITHUB","locator":"31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json","version":"1.2","date":"2026-08-21","notes":"Current base+extensions family pointer"},
+    {"source_type":"GITHUB","locator":"31_IDEAS/SPRINTS/2026-08-21_G01_G32_PROMOTION_PILOT/06_NEXT_GENERATION_PROMPTS_H01_H64.md#H01-H02","version":"1.0","date":"2026-08-21","notes":"Founder-authorized next engineering tranche selected atomic registry mutation and regression"},
+    {"source_type":"GITHUB","locator":"ENGINEERING_CONTRACTS/SELF_IMPROVEMENT_REGISTRY_TRANSACTION_v1.0.md","version":"1.0","date":"2026-08-21","notes":"Transaction/rollback engineering contract"}
   ],
   "problem_or_opportunity": "The monolithic registry is unsafe for concurrent whole-file writes. The current family pointer solved visibility of extensions but still needs a canonical shard-write transaction and reproducible compaction path.",
-  "proposed_mechanism": "Use candidate shards as the concurrent write surface; validate unique IDs across family; update family index with stale-write protection; periodically compile base+extensions into deterministic canonical JSON plus manifest of input SHAs/count/output SHA, readback and rollback snapshot.",
+  "proposed_mechanism": "Use candidate shards as the concurrent write surface; validate lifecycle/provenance and unique IDs across family; require optional expected-family SHA for stale-base protection; snapshot exact pre-write bytes; atomically write shard and family pointer; read back; automatically rollback on post-snapshot failure; provide explicit byte-preserving rollback; periodically compile base+extensions into deterministic canonical JSON plus an input/output hash manifest.",
   "dedupe_relation": "EXTENSION_OF_CURRENT_REGISTRY_FAMILY",
   "related_candidates": ["SI-0007","SI-0008","SI-0009"],
-  "expected_benefit": "Reduces lost-update risk, avoids risky reconstruction of a minified monolith, and makes registry compaction auditable/reversible.",
+  "expected_benefit": "Reduces lost-update risk, avoids risky reconstruction of a minified monolith, gives repeatable stale-write and duplicate-ID behavior, and makes registry compaction auditable/reversible.",
   "evidence_state": "INTERNAL_EVIDENCE",
-  "priority_vector": {"impact":"HIGH","recurrence":"SYSTEMIC","effort":"MEDIUM","regression_risk":"MEDIUM","reversibility":"EASY","urgency":"MEDIUM","affected_surface":"PORTFOLIO"},
+  "priority_vector": {"impact":"HIGH","recurrence":"SYSTEMIC","effort":"MEDIUM","regression_risk":"MEDIUM","reversibility":"EASY","urgency":"HIGH","affected_surface":"PORTFOLIO"},
   "development_contract": {
     "current_family": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json",
     "extension_directory": "31_IDEAS/REGISTRY_EXTENSIONS/",
-    "required_compaction_manifest": ["base_registry_sha","extension_shas","schema_versions","candidate_count","output_sha","previous_snapshot","readback_status"],
-    "hard_fail": "duplicate candidate_id across base/extensions"
+    "implementation": "tools/ivdivo_registry_transaction.py",
+    "test_suite": "tests/test_registry_transaction.py",
+    "engineering_contract": "ENGINEERING_CONTRACTS/SELF_IMPROVEMENT_REGISTRY_TRANSACTION_v1.0.md",
+    "required_compaction_manifest": ["base_registry_sha256","extension_shas","family_sha256","candidate_count","output_sha256","readback_status"],
+    "hard_failures": ["duplicate candidate_id across base/extensions","invalid lifecycle/provenance","stale expected family SHA","incomplete readback"]
   },
-  "pilot_evidence": ["Current SI-0008 extension demonstrates shard visibility without rewriting base","Sprint 2 N31/N32 analysis selected shard+index and deterministic compaction"],
-  "red_team_findings": ["Family index update itself must use stale-write/rebase semantics","Compactor must not silently override duplicate IDs","Compacted monolith is a build/read model, not proof that candidates are promoted"],
+  "pilot_evidence": [
+    "Current SI-0008/0009/0010/0011/0012 extension architecture demonstrates shard visibility without rewriting base",
+    "H01-H02 deterministic fixture design covers commit/no-op, duplicate-ID conflict, malformed lifecycle, stale-base, interruption rollback, explicit rollback and deterministic compaction roundtrip"
+  ],
+  "red_team_findings": [
+    "Family pointer update itself remains subject to repository stale-write/rebase semantics",
+    "A process-local lock is not a distributed provider lease and must not be represented as one",
+    "Compactor must never silently override duplicate IDs",
+    "Compacted monolith is a build/read model, not proof that candidates are promoted",
+    "Unit/CI success is INTERNAL_EVIDENCE and does not replace a real registry transaction pilot"
+  ],
   "promotion_level": "NONE",
-  "application_targets": ["31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json","31_IDEAS/REGISTRY_EXTENSIONS/","future registry compaction tool/manifest"],
-  "verification_evidence": [],
-  "protected_authorities": ["Self-Improvement lifecycle authority","No story/canon authority mutation"],
-  "owner_role": "Improvement Registry Maintainer",
-  "next_action": "Implement unique-ID concurrency fixture and deterministic compaction builder with roundtrip/readback regression.",
-  "next_gate": "REGISTRY_COMPACTION_ROUNDTRIP_AND_CONCURRENCY_GATE",
+  "application_targets": [
+    "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json",
+    "31_IDEAS/REGISTRY_EXTENSIONS/",
+    "tools/ivdivo_registry_transaction.py",
+    "tests/test_registry_transaction.py",
+    "ENGINEERING_CONTRACTS/SELF_IMPROVEMENT_REGISTRY_TRANSACTION_v1.0.md"
+  ],
+  "verification_evidence": [
+    "LOCAL_DETERMINISTIC_TRANSACTION_FIXTURE_DESIGN_COMPLETED_PENDING_REPOSITORY_CI_READBACK"
+  ],
+  "protected_authorities": ["Self-Improvement lifecycle authority","Founder/project/story authority","No story/canon authority mutation"],
+  "owner_role": "Improvement Registry Maintainer / Self-Improvement Engine",
+  "next_action": "Run repository CI and then execute one real non-canon registry transaction through the new tool with GitHub readback; only after that consider PILOT_PASS/promotion.",
+  "next_gate": "REAL_REGISTRY_TRANSACTION_PILOT_AND_CI_GATE",
   "hold_trigger": null,
   "terminal_reason": null,
   "last_movement": "2026-08-21",
-  "notes": "Bounded pilot; current registry-family architecture stays CURRENT until candidate proves safe."
+  "notes": "Pilot-ready engineering candidate only. Current registry-family architecture remains CURRENT; this candidate does not replace it until real pilot and promotion gates pass."
 }
