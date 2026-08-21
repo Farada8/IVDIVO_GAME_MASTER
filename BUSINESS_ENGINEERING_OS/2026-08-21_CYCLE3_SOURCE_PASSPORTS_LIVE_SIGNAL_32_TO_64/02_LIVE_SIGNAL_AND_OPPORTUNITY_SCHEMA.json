@@ -1,0 +1,16 @@
+{
+  "schema": "BUSINESS_OPPORTUNITY_OBJECT_v3",
+  "signal": {"signal_id": null,"type": null,"claim": null,"source_url_or_id": null,"source_authority": null,"observed_at": null,"valid_from": null,"valid_until": null,"freshness_status": "UNKNOWN","corroboration": [],"S_grade": "S0"},
+  "why_now": {"event": null,"date": null,"actor": null,"forced_action": null,"budget_owner_or_payer": null,"deadline": null,"falsifier": null},
+  "buyer_workload": {"buyer_class": null,"job": null,"pain_or_risk": null,"current_alternative": null,"public_evidence_only": true,"willingness_to_pay": null},
+  "micro_market": {"segment": null,"benefit": null,"access": null,"competitive_alternatives": [],"asymmetry": null,"fatal_flaw": null},
+  "hypotheses": {"value": null,"growth": null,"economics": null,"delivery": null,"legal": null},
+  "assumptions": [],
+  "experiment": {"decision": null,"uncertainty": null,"kill_power": null,"information_value": null,"cash_cost_eur": 0,"reversible": true,"selected_test": null},
+  "capital_topology": {"founder_cash_eur": 0,"customer_funding": null,"supplier_terms": null,"grant": null,"loan": null,"investor": null,"cash_gap_eur": null},
+  "routes": {"CREATE": {},"BROKER": {},"ACQUIRE": {}},
+  "strategic_power": {"benefit": null,"barrier": null,"power_type": null,"status": "UNPROVEN"},
+  "proof": {"K_grade": null,"S_grade": null,"E_grade": "E0","evidence_ceiling": "E2+_WHEN_NO_OUTREACH"},
+  "next_action": null,
+  "next_gate": null
+}
