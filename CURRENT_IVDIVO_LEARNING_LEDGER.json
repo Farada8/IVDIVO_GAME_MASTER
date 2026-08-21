@@ -89,6 +89,23 @@
       "candidate_id": "SI-0005",
       "generalization_hypothesis": "Successful project-specific fixes should be mined for portable abstract mechanisms after stripping project identities and clue content.",
       "status": "CLOSED"
+    },
+    {
+      "observation_id": "OBS-0006",
+      "date": "2026-08-21",
+      "domain": "RESEARCH",
+      "project_id": null,
+      "stage": "STRICT_CRAFT_LIFECYCLE_SYNTHESIS",
+      "signal_type": "SUCCESS",
+      "severity": "INFO",
+      "description": "The strict craft-research lifecycle reached a verified checkpoint where 31 of 40 Core sources were recorded as synthesized or later and produced reusable project-neutral action, tempo, evidence and anti-overfit mechanisms. The research checkpoint is useful evidence but must not be mistaken for story quality or permanent authority.",
+      "evidence": ["CORE_STRICT_LIFECYCLE_LEDGER_v21 records PASS 140 and 31/40 Core strict-lifecycle synthesized or later at the inspected checkpoint", "John Gillett Acting Stanislavski is recorded as WIDER strict-complete", "Several Core/Wider sources remain integrity/full-read blocked and therefore cannot be promoted from snippets"],
+      "source_artifact": "docs/01_RESEARCH/WRITING_CRAFT/CORE_STRICT_LIFECYCLE_LEDGER_v21.md",
+      "source_hash_or_revision": null,
+      "earliest_failed_layer": null,
+      "candidate_id": null,
+      "generalization_hypothesis": "Strict source lifecycle plus problem-targeted retrieval can improve writing diagnostics without turning references into canon or forcing global rewrites.",
+      "status": "CLOSED"
     }
   ],
   "experiments": [
@@ -184,6 +201,16 @@
       "disposition": "APPLY",
       "application_targets": ["Engine/tool promotion gates"],
       "confidence_basis": "Observed environment limitation during attempted exact checkout smoke."
+    },
+    {
+      "learning_id": "LRN-0005",
+      "statement": "Strict craft research should promote only project-neutral diagnostics: character action is adaptation to partner/world response rather than aggression; inner process speed, outer motion speed and sentence length are separate variables; private character laboratory is not manuscript exposition; evidence access must be separated from interpretation; and no new craft evidence justifies an automatic global rewrite of locked/green story work.",
+      "scope": "UNIVERSAL_IVDIVO",
+      "evidence_refs": ["OBS-0006", "CORE_STRICT_LIFECYCLE_LEDGER_v21 PASS 140"],
+      "candidate_id": null,
+      "disposition": "APPLY",
+      "application_targets": ["IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md", "future problem-targeted reference retrieval", "development/rewrite diagnostics"],
+      "confidence_basis": "Mechanisms are abstracted from the strict research lifecycle and are compatible with existing Story First, targeted-repair, source-distance and metric/story-substance laws."
     }
   ]
 }
