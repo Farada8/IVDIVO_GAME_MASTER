@@ -1,1 +1,1 @@
-{"status":"PREPARED_PRE_PROSE_NOT_ACTIVE_UNTIL_D01_FOUNDER_LOCK","portfolio_precondition":"D01 explicit Founder Lock + persistence readback","prepared_frontier":"CH1_CH29_PLUS_CYCLE32","drive_folder":"1faAfasqcsYCgHCOHAla7tKrpDCgoK9Rp","fatal":0,"major":1,"prose_authorized":false,"next":"D01 Founder Lock decision first; then fresh B03 rebase -> F1/F2/F3 -> N24-N47 -> CH1 at FATAL0/MAJOR0"}
+{"status":"PREPARED_NOT_ACTIVE_UNTIL_D01_LOCK","portfolio_gate":"D01_FOUNDER_EXPLICIT_LOCK_DECISION","prepared_frontier":"CH1_CH29_CYCLE32","fatal":0,"major":1,"prose":false}
