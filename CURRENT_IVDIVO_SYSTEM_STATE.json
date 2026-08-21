@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "updated": "2026-08-21",
   "status": "CURRENT_ROUTING_STATE_NOT_STORY_CANON",
   "purpose": "Machine-readable resume pointer for cross-conversation and cross-model IVDIVO work. This file routes work; it never overrides locked project canon or project-specific source-of-truth files.",
@@ -21,17 +21,24 @@
   "current_routers": {
     "writing": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
     "autopilot": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
+    "continuous_delta_learning": "IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md",
     "project_wide_continuation": "IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md",
+    "self_improvement_engine": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
+    "improvement_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+    "improvement_registry_schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
+    "self_improvement_utility": "tools/ivdivo_self_improvement.py",
     "multi_model_prompts": "IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md",
     "cross_ai_handoff": "CURRENT_IVDIVO_CROSS_AI_HANDOFF.md",
     "book_chat_starter": "IVDIVO_NARRATIVE_OS/11_BOOK_CHAT_STARTER.md",
     "runtime_craft_addendum": "IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md",
+    "reference_mechanism_upgrade": "IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md",
     "audio": "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md"
   },
   "resume_algorithm": [
     "FRESHNESS_SWEEP",
     "CONCURRENT_DIALOG_REBASE_CHECK",
     "CHAT_ONLY_DISCOVERY_AND_INGESTION_GATE",
+    "IMPROVEMENT_REGISTRY_SWEEP",
     "STALE_WORK_GATE",
     "RECOMPUTE_DEPENDENCY_DAG",
     "SELECT_HIGHEST_UNBLOCKED_OBLIGATION",
@@ -65,6 +72,45 @@
       "SAFETY_OR_LEGAL_CONSTRAINT",
       "FOUNDER_STOP_OR_HOLD"
     ]
+  },
+  "self_improvement": {
+    "engine_status": "CURRENT_OPERATIONAL_ENGINE_V1_INITIAL_ACCEPTANCE",
+    "engine_authority": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
+    "delta_intake_authority": "IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md",
+    "reference_learning_authority": "IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md",
+    "machine_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+    "schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
+    "utility": "tools/ivdivo_self_improvement.py",
+    "drive_engine_mirror_id": "1lbAaKASLAKFzCiGEF84Xrs-ziwQhCJASwLfDh3UGwSg",
+    "drive_registry_mirror_id": "1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs",
+    "drive_portability_inventory_id": "1WofqSiO3fBD_VoIveOVDihBybwlpeDE051zVrf1ipVs",
+    "lifecycle": "DISCOVER -> CAPTURE -> DEDUPE -> CLASSIFY -> DEVELOP -> EVIDENCE -> PILOT/CANARY -> RED_TEAM/REGRESSION -> PROMOTION_DECISION -> APPLY -> VERIFY -> MONITOR -> RETAIN_OR_ROLLBACK",
+    "anti_loss_invariants": [
+      "ACTIVE_CANDIDATE_REQUIRES_PROVENANCE",
+      "ACTIVE_CANDIDATE_REQUIRES_OWNER_ROLE",
+      "ACTIVE_CANDIDATE_REQUIRES_NEXT_ACTION",
+      "ACTIVE_CANDIDATE_REQUIRES_NEXT_GATE",
+      "PROMOTED_OR_APPLIED_REQUIRES_APPLICATION_TARGETS",
+      "VERIFIED_CURRENT_REQUIRES_VERIFICATION_EVIDENCE",
+      "HOLD_WITH_TRIGGER_REQUIRES_REOPEN_TRIGGER",
+      "REJECTED_SUPERSEDED_ROLLED_BACK_REQUIRES_REASON"
+    ],
+    "initial_registry_candidates": 6,
+    "initial_registry_relevant_audit": "PASS",
+    "adversarial_state_machine_checks": [
+      "ORPHAN_NO_NEXT_ACTION_BLOCKED",
+      "PROMOTED_WITHOUT_TARGET_BLOCKED",
+      "VERIFIED_WITHOUT_EVIDENCE_BLOCKED",
+      "HOLD_WITHOUT_TRIGGER_BLOCKED"
+    ],
+    "current_candidate": "SI-0006",
+    "current_candidate_status": "APPLIED_UNVERIFIED",
+    "remaining_acceptance": [
+      "EXACT_EXECUTABLE_UTILITY_RUNTIME_SMOKE",
+      "GITHUB_AND_DRIVE_READBACK_OF_ALL_POINTERS",
+      "THEN_MARK_SI_0006_VERIFIED_CURRENT_IF_GREEN"
+    ],
+    "story_first_guard": "SELF_IMPROVEMENT_MUST_NOT_STARVE_ACTIVE_STORY_PRODUCTION_UNLESS_SYSTEM_FATAL_MAJOR_BLOCKS_IT"
   },
   "portfolio_policy": "FINISH_ALL_ACTIVE_TEXTS_TO_LEGITIMATE_LOCK_THEN_MASS_AUDIO_NOVEL_STUDIO",
   "portfolio_frontier": {
@@ -211,7 +257,9 @@
     "UNIVERSAL_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE",
     "CURRENT_IVDIVO_SYSTEM_STATE",
     "CURRENT_IVDIVO_CROSS_AI_HANDOFF",
-    "SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT"
+    "SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT",
+    "SELF_IMPROVEMENT_ENGINE_v1.0",
+    "CURRENT_IMPROVEMENT_REGISTRY_v1.0"
   ],
   "pending_system_upgrade": {
     "name": "PROJECT_WIDE_CONTINUATION_LAW_v1.1_CHAT_ONLY_INGESTION",
