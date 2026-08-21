@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "WORKING_ROUTING_INVENTORY",
+  "files": [
+    {"path":"CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md","role":"AUTHORITY","domain":"WRITING"},
+    {"path":"CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md","role":"AUTHORITY","domain":"AUDIO"},
+    {"path":"CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md","role":"AUTHORITY","domain":"SELF_IMPROVEMENT"},
+    {"path":"CURRENT_IVDIVO_SYSTEM_STATE.json","role":"GENERATED_MIRROR","domain":"PORTFOLIO_ROUTING","note":"Machine routing state; never story canon."},
+    {"path":"CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json","role":"GENERATED_MIRROR","domain":"SELF_IMPROVEMENT_ROUTING"},
+    {"path":"IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md","role":"AUTHORITY","domain":"CONTINUATION_STATE"},
+    {"path":"IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md","role":"AUTHORITY","domain":"DELTA_LEARNING"},
+    {"path":"IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md","role":"DOMAIN_OVERLAY","domain":"MULTI_MODEL"},
+    {"path":"IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md","role":"DOMAIN_OVERLAY","domain":"REFERENCE_INTELLIGENCE"},
+    {"path":"IVDIVO_NARRATIVE_OS/16_AGENT_PROMPTS_CONTINUOUS_SYNC_SUPPLEMENT_v1.0.md","role":"COMPATIBILITY_MAP","domain":"PROMPT_BOOT"},
+    {"path":"IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md","role":"AUTHORITY","domain":"PROJECT_WIDE_CONTINUATION"},
+    {"path":"IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md","role":"DOMAIN_OVERLAY","domain":"ASSET_PERSISTENCE"},
+    {"path":"IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md","role":"AUTHORITY","domain":"SELF_IMPROVEMENT_ENGINE"},
+    {"path":"IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md","role":"DOMAIN_OVERLAY","domain":"TRANSCRIPT_RECOVERY"},
+    {"path":"31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json","role":"GENERATED_MIRROR","domain":"SELF_IMPROVEMENT_REGISTRY","note":"Base registry."},
+    {"path":"31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json","role":"COMPATIBILITY_MAP","domain":"SELF_IMPROVEMENT_REGISTRY","note":"Base+extensions family pointer created by N05."},
+    {"path":"31_IDEAS/REGISTRY_EXTENSIONS/SI-0008_TRANSCRIPT_RECOVERY_EXTENSION.json","role":"DOMAIN_OVERLAY","domain":"SELF_IMPROVEMENT_REGISTRY"},
+    {"path":"PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json","role":"GENERATED_MIRROR","domain":"PROJECT_ROUTING"},
+    {"path":"31_IDEAS/SPRINTS/2026-08-21_32_PROMPT_RND/RUN64_EXECUTION/00_CURRENT_IVDIVO_BOOT_MANIFEST.json","role":"COMPATIBILITY_MAP","domain":"COLD_START"}
+  ],
+  "drive_mirrors": [
+    {"id":"1wTpFLza7x5wB39sDWDpHXQBVLqaYyzzEO27YvOppcgM","title":"00_CURRENT_PROMPT_AUTHORITY_INDEX v1.1","role":"GENERATED_MIRROR"},
+    {"id":"1mlUAkQVLH41CfdMa2ZDa8gR3MN7eNi-w3ZC705_b03g","title":"CURRENT_PROMPTS_v2.2","role":"GENERATED_MIRROR"},
+    {"id":"1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w","title":"CURRENT_WORKSTATE_v2.2","role":"GENERATED_MIRROR"}
+  ],
+  "smallest_controlling_boot": [
+    "FOUNDER_NEWEST_DIRECT_INSTRUCTION",
+    "PROJECT_SOURCE_OF_TRUTH",
+    "CURRENT_DOMAIN_AUTHORITY",
+    "PROJECT_SPECIFIC_STATE",
+    "CURRENT_IVDIVO_SYSTEM_STATE.json",
+    "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md"
+  ],
+  "drift_findings": [
+    "Drive CURRENT_PROMPTS/CURRENT_WORKSTATE contain historical appended sections and must remain mirrors only.",
+    "Compatibility wrappers are useful for discovery but must not become parallel CURRENT authority.",
+    "Registry family currently requires explicit base+extensions handling until compaction migration."
+  ]
+}
