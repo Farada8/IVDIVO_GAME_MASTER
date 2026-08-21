@@ -24,10 +24,30 @@ COMPLETENESS = {
     "MULTI_TRANSCRIPT_BUNDLE",
 }
 
+ROLE_ALIASES = {
+    "user": "user",
+    "assistant": "assistant",
+    "system": "system",
+    "developer": "developer",
+    "founder": "founder",
+    "claude": "claude",
+    "grok": "grok",
+    "chatgpt": "chatgpt",
+    "codex": "codex",
+    "пользователь": "user",
+    "ассистент": "assistant",
+    "основатель": "founder",
+    "користувач": "user",
+    "асистент": "assistant",
+    "засновник": "founder",
+}
+
 ROLE_RE = re.compile(
-    r"^\s*(user|assistant|system|developer|founder|claude|grok|chatgpt|codex)\s*[:：]\s*(.*)$",
+    r"^[ \t]{0,3}(user|assistant|system|developer|founder|claude|grok|chatgpt|codex|"
+    r"пользователь|ассистент|основатель|користувач|асистент|засновник)\s*[:：]\s*(.*)$",
     re.IGNORECASE,
 )
+FENCE_RE = re.compile(r"^[ \t]{0,3}(```|~~~)")
 URL_RE = re.compile(r"https?://[^\s<>\])}]+")
 DRIVE_ID_RE = re.compile(r"\b[1-9A-Za-z_-]{25,}\b")
 FILE_RE = re.compile(
@@ -44,23 +64,27 @@ SECRET_PATTERNS = [
 ]
 WORK_CLAIM_RE = re.compile(
     r"(?i)\b(?:saved|created|updated|wrote|uploaded|committed|merged|locked|passed|verified|"
-    r"сохранил|создал|обновил|записал|загрузил|внес|закоммитил|прош[её]л|проверил|зафиксировал)\b"
+    r"сохранил|создал|обновил|записал|загрузил|внес|закоммитил|прош[её]л|проверил|зафиксировал|"
+    r"зберіг|створив|оновив|записав|завантажив|вніс|закомітив|пройшов|перевірив|зафіксував)\b"
 )
 DIRECTIVE_RE = re.compile(
     r"(?i)\b(?:do|make|create|continue|use|save|write|update|check|must|should|"
-    r"надо|нужно|сделай|делай|продолжай|сохрани|запиши|внеси|обнови|проверь|используй|внедри|интегрируй|пусть|должен|обязан)\b"
+    r"надо|нужно|сделай|делай|продолжай|сохрани|запиши|внеси|обнови|проверь|используй|внедри|интегрируй|пусть|должен|обязан|"
+    r"треба|потрібно|зроби|роби|продовжуй|збережи|запиши|внеси|онови|перевір|використай|впровадь|інтегруй|повинен)\b"
 )
 AUTHORITY_RE = re.compile(
     r"(?i)\b(?:canon|canonical|authority|current|locked|final|superseded|rejected|"
-    r"канон|канонич|авторитет|текущ|зафиксир|лок|финал|отклон|заменен|заменён)\b"
+    r"канон|канонич|авторитет|текущ|зафиксир|лок|финал|отклон|заменен|заменён|"
+    r"каноніч|поточн|зафікс|заблок|фінал|відхил|замінен)\b"
 )
 NEXT_RE = re.compile(
     r"(?i)\b(?:next action|next step|next obligation|next gate|дальше|следующ(?:ий|ая|ее)|"
-    r"следующий шаг|следующая задача|что дальше)\b"
+    r"следующий шаг|следующая задача|что дальше|далі|наступн(?:ий|а|е)|що далі)\b"
 )
 SYSTEM_IMPROVEMENT_RE = re.compile(
     r"(?i)\b(?:engine|protocol|router|prompt|program|schema|workflow|self[- ]?improv|"
-    r"движок|протокол|роутер|промт|программ|схем|процесс|самосоверш)\b"
+    r"движок|протокол|роутер|промт|программ|схем|процесс|самосоверш|"
+    r"двигун|маршрутизатор|програм|процес|самовдосконал)\b"
 )
 
 
@@ -85,15 +109,22 @@ def split_turns(text: str) -> list[dict[str, str]]:
     turns: list[dict[str, str]] = []
     role = "unknown"
     buffer: list[str] = []
+    in_fence = False
 
     for line in text.splitlines():
-        match = ROLE_RE.match(line)
+        if FENCE_RE.match(line):
+            in_fence = not in_fence
+            buffer.append(line)
+            continue
+
+        match = None if in_fence else ROLE_RE.match(line)
         if match:
             if buffer:
                 body = "\n".join(buffer).strip()
                 if body:
                     turns.append({"role": role, "text": body})
-            role = match.group(1).lower()
+            raw_role = match.group(1).lower()
+            role = ROLE_ALIASES.get(raw_role, raw_role)
             buffer = [match.group(2)]
         else:
             buffer.append(line)
