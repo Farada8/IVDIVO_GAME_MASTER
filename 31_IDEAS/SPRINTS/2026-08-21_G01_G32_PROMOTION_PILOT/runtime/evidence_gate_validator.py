@@ -29,13 +29,25 @@ def check(record):
         errors.append("LIVE_RENDER_REQUIRES_LIVE_PROVIDER")
     return errors
 
+def flatten(payload):
+    if isinstance(payload,list):
+        return [("default",x) for x in payload]
+    if isinstance(payload,dict):
+        out=[]
+        for group,rows in payload.items():
+            if not isinstance(rows,list):
+                raise ValueError(f"group {group} must be a list")
+            out.extend((group,x) for x in rows)
+        return out
+    raise ValueError("fixture payload must be list or mapping of lists")
+
 if __name__=="__main__":
-    fixtures=json.load(open(sys.argv[1],encoding="utf-8"))
+    payload=json.load(open(sys.argv[1],encoding="utf-8"))
     failed=0
-    for f in fixtures:
+    for group,f in flatten(payload):
         got=check(f)
         expected=f.get("expected_fail",False)
         ok=(bool(got)==expected)
-        print(f["id"],"PASS" if ok else "FAIL",got)
+        print(group,f["id"],"PASS" if ok else "FAIL",got)
         failed += int(not ok)
     raise SystemExit(1 if failed else 0)
