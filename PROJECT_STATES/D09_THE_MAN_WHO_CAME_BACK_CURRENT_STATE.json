@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "CURRENT_PROJECT_ROUTING_STATE_NOT_STORY_CANON",
+  "project_id": "D09",
+  "title": "THE MAN WHO CAME BACK",
+  "active_line": "THE_DIVORCE_LEDGER",
+  "authority_note": "Founder newest instruction and locked/current D09 source-of-truth outrank this routing state.",
+  "current_phase": "FINAL_STORY_GATE_PASSED_AWAITING_FOUNDER_APPROVAL",
+  "completed_frontier": "E01-E24_ONE_CURRENT_BRANCH_PER_EPISODE_TEXT_COMPLETE",
+  "main_conflict_status": "CLOSED",
+  "version_reconciliation_status": "CLOSED",
+  "final_story_gate": {
+    "status": "PASS",
+    "fatal": 0,
+    "major": 0,
+    "drive_id": "1IZfae96Y4gS7JDqFrVxv-2O53zFwoWVOYzOV7zoDXL0",
+    "title": "THE MAN WHO CAME BACK — FINAL SEASON STORY GATE v1.0 — TEXT COMPLETE — READY FOR FOUNDER LOCK",
+    "founder_lock": "NOT_YET_ISSUED"
+  },
+  "next_safe_action": "FOUNDER_APPROVAL_OR_LOCK_D09_SEASON",
+  "blockers": ["FOUNDER_DECISION_REQUIRED_FOR_LOCK"],
+  "parallel_safe_branches": ["INDEPENDENT_SYSTEM_RND_AUTHORIZED_BY_FOUNDER", "OTHER_PROJECT_WORK_ONLY_WHEN_EXPLICITLY_ROUTED_OR_INDEPENDENT_AND_NON_CONTAMINATING"],
+  "do_not_repeat": [
+    "DO_NOT_RECONCILE_E07_E12_AGAIN",
+    "DO_NOT_RERUN_FINAL_SEASON_STORY_GATE_WITHOUT_NEW_EVIDENCE",
+    "DO_NOT_CREATE_E25",
+    "DO_NOT_MARK_FOUNDER_LOCK_FROM_GATE_PASS",
+    "DO_NOT_OPEN_SERIES_CONTINUATION_BEFORE_FOUNDER_LOCK_DECISION"
+  ],
+  "provenance": [
+    "CURRENT_IVDIVO_SYSTEM_STATE.json schema 1.9",
+    "Drive final gate 1IZfae96Y4gS7JDqFrVxv-2O53zFwoWVOYzOV7zoDXL0",
+    "Drive master season script 1Yoc6QDDixcp8UR5hIdGsxSvRIpT4vLGv2GqvGgL86sI"
+  ]
+}
