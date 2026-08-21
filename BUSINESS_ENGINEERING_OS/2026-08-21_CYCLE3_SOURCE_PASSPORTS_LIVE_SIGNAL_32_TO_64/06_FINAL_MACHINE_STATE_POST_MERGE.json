@@ -1,7 +1,7 @@
 {
   "schema": "BUSINESS_ENGINEERING_OS_CYCLE3_FINAL_STATE_POST_MERGE_v1",
   "date": "2026-08-21",
-  "status": "PERSISTENCE_CLOSURE_PASS_PENDING_FINAL_CI",
+  "status": "PERSISTENCE_CLOSURE_PASS",
   "constraints": {
     "no_outreach": true,
     "new_founder_cash_eur": 0,
@@ -37,7 +37,11 @@
     "cycle3_head_ci_run": 32535557752,
     "cycle3_head_ci_job": 96935667870,
     "cycle3_head_ci": "SUCCESS",
-    "main_readback": "PASS"
+    "main_readback": "PASS",
+    "closure_pr": 171,
+    "closure_proof_ci_run": 32535842903,
+    "closure_proof_ci_job": 96936493808,
+    "closure_proof_ci": "SUCCESS"
   },
   "drive": {
     "cycle3_folder_id": "1kNafMWT_H0_MVX7J37aUuhPZ-lWHErVu",
@@ -57,6 +61,6 @@
     "authority_effect_from_cycle3": "NONE"
   },
   "current_constraint": "FRESH_PUBLIC_SIGNALS_TO_32_OPPORTUNITY_OBJECTS_TO_FATAL_ASSUMPTIONS_TO_CHEAPEST_NO_OUTREACH_DECISIVE_TESTS",
-  "next_gate": "CYCLE4_FRESH_PUBLIC_SIGNAL_SCAN_AFTER_FINAL_CROSS_STORE_CLOSURE",
+  "next_gate": "CYCLE4_FRESH_PUBLIC_SIGNAL_SCAN",
   "supersedes": "05_MACHINE_STATE_PRE_CLOSURE.json"
 }
