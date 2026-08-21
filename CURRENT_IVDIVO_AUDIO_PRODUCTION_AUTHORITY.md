@@ -38,6 +38,9 @@ Current LIVE provider cost-control / casting cascade:
 Current shared musical-fact / motif consistency gate:
 `AUDIO_PRODUCTION/IVDIVO_AUDIO_SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT_v1.0.md`
 
+Current whole-system learning router:
+`CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md`
+
 Future work must check the Drive root router and persisted current execution state for a newer authority/frontier before assuming this GitHub pointer is still current.
 
 ## Authority order
@@ -142,6 +145,34 @@ ElevenLabs and other providers are replaceable execution backends, not canon aut
 
 Do not claim a render/listen/mix/voice lock occurred without actual provider or supplied-audio evidence.
 
+## Self-improvement feedback adapter
+
+Audio production is downstream from Story Lock but **not a learning dead end**.
+
+At Hard Pilot, major repair, Release QC and Master Lock milestones, record reusable production evidence into the current Self-Improvement system:
+- voice audition rejection causes;
+- direction-change responsiveness failures/successes;
+- pair/ensemble failures;
+- long-form fatigue;
+- pronunciation/identity drift;
+- clue/SFX/musical-fact inconsistencies;
+- render-block regeneration reasons;
+- provider/API failures;
+- alignment/timeline defects;
+- mix/master/QC defects;
+- manual-listen defects;
+- preventable provider-credit/cost waste;
+- mechanisms that repeatedly prevent defects or improve listening comprehension/emotional performance.
+
+Route evidence through:
+`AUDIO EVENT -> CURRENT_IVDIVO_LEARNING_LEDGER.json OBSERVATION -> ROOT CAUSE/GENERALIZATION -> IMPROVEMENT CANDIDATE IF REUSABLE -> PILOT ELSEWHERE -> DOMAIN/UNIVERSAL PROMOTION`.
+
+Project story facts, voice IDs, exact clue chains, actual melodies/motifs and other project-specific identities must be stripped before universalization.
+
+This feedback adapter **does not authorize audio to reopen Story Lock**. If the earliest demonstrated failed layer is audio, repair audio. Escalate to writing/story only when evidence proves the protected source itself is the root cause and higher authority allows reopening.
+
+Self-improvement priority remains: better book first, better audio from the locked book second, factory learning third.
+
 ## Narrative OS handoff
 
 For books/saga work entering audio, load:
@@ -150,7 +181,7 @@ For books/saga work entering audio, load:
 Book/story authority remains higher for protected text and story facts. Audio production must not silently reopen locked development.
 
 For cross-conversation state restoration also obey:
-`IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md` and `CURRENT_IVDIVO_SYSTEM_STATE.json`.
+`IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md`, `CURRENT_IVDIVO_SYSTEM_STATE.json` and `CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md`.
 
 ## Historical/base layer
 
@@ -167,7 +198,8 @@ On any substantive turn inside an established audio line:
 4. execute the highest unblocked production obligation;
 5. continue through further unblocked dependent stages in the same work block;
 6. persist the new frontier;
-7. stop only at a real gate: authority ambiguity, human/live-provider evidence, Founder decision, FATAL/MAJOR, tool/runtime limitation or safety/legal constraint.
+7. at meaningful audio milestones feed reusable evidence to the Learning Ledger/Self-Improvement loop;
+8. stop only at a real gate: authority ambiguity, human/live-provider evidence, Founder decision, FATAL/MAJOR, tool/runtime limitation or safety/legal constraint.
 
 `и / дальше / продолжай / делай / работай / AUDIO CONTINUE` remain explicit shorthand, not a required heartbeat.
 
