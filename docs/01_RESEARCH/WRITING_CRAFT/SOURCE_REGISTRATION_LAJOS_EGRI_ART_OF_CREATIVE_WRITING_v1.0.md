@@ -13,7 +13,7 @@ Retained source:
 - 159 pages;
 - 1,048,665 bytes;
 - ~60,282 extracted words;
-- SHA-256: `9f70220657856188c71aa69efb5eefba56e6a2d8174869821e0020111961053c`.
+- SHA-256: `3f5fa28c2e40ee3f63446357640c3325298135554314e0b0a1cb8736364e9ac9`.
 
 PDF metadata identifies title `The Art of Creative Writing`, author `Lajos Egri`; Citadel Press / Kensington edition, copyright 1965/1993, ISBN 978-0-8065-4073-3.
 
