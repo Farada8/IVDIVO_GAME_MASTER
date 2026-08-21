@@ -1,0 +1,42 @@
+name: Durable Interface Run35 Tests
+
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_durable_transaction_interface.py'
+      - 'tools/ivdivo_durable_write_reconciler.py'
+      - 'tools/ivdivo_interruption_learning.py'
+      - 'tests/test_durable_transaction_interface.py'
+      - 'tests/test_durable_transaction_interface_schema.py'
+      - 'tests/test_session_checkpoint.py'
+      - 'tests/test_session_resilience_run33.py'
+      - 'tests/test_registry_transaction.py'
+      - 'schemas/IVDIVO_DURABLE_TRANSACTION_INTERFACE_SCHEMA_v1.json'
+      - 'ENGINEERING_CONTRACTS/DURABLE_TRANSACTION_INTERFACE_v1.0.md'
+      - '.github/workflows/durable-interface-run35-tests.yml'
+  workflow_dispatch:
+
+jobs:
+  convergence-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependency
+        run: python -m pip install --upgrade pytest
+      - name: Run Run35 convergence regressions
+        run: python -m pytest -q tests/test_durable_transaction_interface.py tests/test_durable_transaction_interface_schema.py
+      - name: Run inherited Run33 recovery tests
+        run: python -m unittest tests.test_session_resilience_run33 -v
+      - name: Run inherited Run32 checkpoint regression
+        run: python -m unittest tests.test_session_checkpoint -v
+      - name: Run inherited registry transaction regressions
+        run: python -m pytest -q tests/test_registry_transaction.py
+      - name: Validate registry family references
+        run: python tools/validate_improvement_registry_refs.py
+      - name: Validate portfolio resumability claim
+        run: python tools/validate_project_state_coverage.py
+      - name: Validate new schema JSON
+        run: python -m json.tool schemas/IVDIVO_DURABLE_TRANSACTION_INTERFACE_SCHEMA_v1.json >/dev/null

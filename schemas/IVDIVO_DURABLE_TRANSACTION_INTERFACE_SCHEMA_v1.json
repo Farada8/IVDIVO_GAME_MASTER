@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ivdivo.local/schemas/IVDIVO_DURABLE_TRANSACTION_INTERFACE_SCHEMA_v1.json",
+  "title": "IVDIVO Durable Transaction Interface Record",
+  "type": "object",
+  "required": ["event", "evidence"],
+  "properties": {
+    "event": {"$ref": "IVDIVO_INTERRUPTION_LEARNING_EVENT_SCHEMA_v1.json"},
+    "evidence": {
+      "type": "object",
+      "required": [
+        "controlled",
+        "synthetic",
+        "unplanned",
+        "interruption_origin",
+        "restart_observed",
+        "pre_interrupt_checkpoint_id",
+        "post_restart_authority_readback",
+        "recovery_readback_verified",
+        "project_state_before",
+        "project_state_after",
+        "source_evidence_refs"
+      ],
+      "properties": {
+        "controlled": {"type": "boolean"},
+        "synthetic": {"type": "boolean"},
+        "unplanned": {"type": "boolean"},
+        "interruption_origin": {"enum": ["UNPLANNED_UI_SESSION_LOSS", "UNPLANNED_PROCESS_TERMINATION", "UNPLANNED_RUNTIME_RESTART", "UNPLANNED_NETWORK_OR_PLATFORM_DISCONNECT", "CONTROLLED_TEST", "SYNTHETIC_FIXTURE", "UNKNOWN"]},
+        "restart_observed": {"type": "boolean"},
+        "pre_interrupt_checkpoint_id": {"type": ["string", "null"]},
+        "post_restart_authority_readback": {"type": "boolean"},
+        "recovery_readback_verified": {"type": "boolean"},
+        "project_state_before": {"type": ["string", "null"]},
+        "project_state_after": {"type": ["string", "null"]},
+        "source_evidence_refs": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
