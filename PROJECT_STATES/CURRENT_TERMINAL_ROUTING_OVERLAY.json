@@ -1,0 +1,65 @@
+{
+  "schema_version": "ivdivo.terminal_routing_overlay/1.0",
+  "updated": "2026-08-21",
+  "status": "CURRENT_ROUTING_OVERLAY_NOT_STORY_CANON",
+  "authority_law": "Project-specific current state and terminal gates outrank aggregate routing prose. This overlay repairs routing only and may not mutate story canon or infer Founder/Human/provider approval.",
+  "projects": {
+    "D01": {
+      "title": "THE WIFE AT HIS WEDDING",
+      "source_of_truth": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/CURRENT_STATE.md",
+      "terminal_gate_drive_id": "1C-VzyTORtauuDFZToJ4bx5Nic9dOwsrPfRudL3dAOcM",
+      "frontier": "E01-E120_TEXT_COMPLETE_FINAL_STORY_GATE_PASS",
+      "founder_lock": "NOT_YET_ISSUED",
+      "route": "FOUNDER_EXPLICIT_LOCK_DECISION",
+      "prohibited": ["GENERATE_E121", "RETURN_TO_E96", "RESTART_E91_E120_DRAFTING"],
+      "quarantines": ["CURRENT_IVDIVO_SYSTEM_STATE.json:portfolio_frontier.active_project E96_TO_E97_ROUTE"]
+    },
+    "D10": {
+      "title": "BLOODBOUND",
+      "source_of_truth": "PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json",
+      "frontier": "E01-E24_FOUNDER_LOCKED",
+      "founder_lock": "ISSUED",
+      "route": "DOWNSTREAM_PRODUCTION_ONLY",
+      "prohibited": ["GENERATE_E25", "REOPEN_STORY_WITHOUT_NEW_FATAL_MAJOR_OR_FOUNDER"]
+    },
+    "D09": {
+      "title": "THE MAN WHO CAME BACK",
+      "source_of_truth": "PROJECT_STATES/D09_THE_MAN_WHO_CAME_BACK_CURRENT_STATE.json",
+      "frontier": "E01-E24_FINAL_STORY_GATE_PASS",
+      "founder_lock": "NOT_YET_ISSUED",
+      "route": "FOUNDER_APPROVAL_OR_REFUSAL_OF_STORY_LOCK",
+      "prohibited": ["GENERATE_E25", "INFER_LOCK_FROM_GATE_PASS"]
+    },
+    "IVDIVO_BOOK_2": {
+      "title": "ORBITAL YOUTH",
+      "source_of_truth": "IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/GATES/BOOK2_FINAL_STORY_GATE_v1.0.md",
+      "frontier": "CH01-CH36_FINAL_STORY_GATE_GREEN",
+      "lock": "NOT_LOCKED",
+      "route": "EXTERNAL_FEEDBACK_PUBLISHER_READER_EVIDENCE",
+      "prohibited": ["PASS_C_READER_ADVOCATE_AS_NEXT_ACTION", "ADD_CHAPTER_37", "BROAD_INTERNAL_REWRITE_WITHOUT_NEW_EVIDENCE"],
+      "quarantines": ["IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/DRAFT_STATUS.md:PASS_C_ACTIVE_ROUTE", "CURRENT_WORKSTATE_v2.8:B02_READER_ADVOCATE_ROUTE"]
+    },
+    "D04": {
+      "title": "SEVEN NIGHTS BEFORE CODE BLUE",
+      "source_of_truth": "PROJECT_STATES/D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE_CURRENT_STATE.json",
+      "route": "REAL_HUMAN_BLIND_TRANSFER_LISTEN_RESPONSE_AND_AUTHENTICATED_PROVIDER_BINDING_WHERE_APPLICABLE",
+      "evidence_gates": ["HUMAN_SIGNAL_REQUIRED", "EXTERNAL_PROVIDER_REQUIRED"],
+      "prohibited": ["MODEL_AS_HUMAN_SIGNAL", "FAKE_PROVIDER_RESULT", "REOPEN_STORY_FOR_PROVIDER_CONVENIENCE"]
+    },
+    "D02_ROOM917": {
+      "title": "ROOM 917 CALLS AT MIDNIGHT",
+      "source_of_truth": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
+      "route": "RECOVER_EXACT_IMMUTABLE_MASTER_BYTES_OR_TRUSTED_INTERVAL_MAP_THEN_RUN_EXISTING_P003A2_PIPELINE",
+      "evidence_gates": ["REAL_TOOL_RUNTIME_LIMITATION", "HUMAN_EVIDENCE_REQUIRED_LATER"],
+      "prohibited": ["RESTART_S0_S1", "INVENT_MASTER_BYTES", "SIMULATE_HUMAN_LISTEN"]
+    }
+  },
+  "propagation_laws": {
+    "FOUNDER_LOCK": "Propagate only from explicit Founder evidence bound to exact project/frontier/gate; never infer from Final Story Gate PASS.",
+    "FINAL_STORY_GATE": "Stop new prose for the completed scope and route to the exact Founder/external/downstream gate.",
+    "EXTERNAL_PROVIDER_REQUIRED": "Carry blocker through routers without synthesizing provider success or failure.",
+    "HUMAN_EVIDENCE_REQUIRED": "Carry blocker through routers; model agreement is not Human Signal.",
+    "STALE_AGGREGATE": "Prefer stronger project-specific state/terminal gate and mark aggregate route quarantined until repaired.",
+    "LOCKED_OR_TERMINAL_PROSE": "Any generated-next-episode route against locked/terminal scope fails closed."
+  }
+}
