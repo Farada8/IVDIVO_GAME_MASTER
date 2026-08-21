@@ -56,16 +56,31 @@
     "session_resilience_run33": {"run_id": 32517285494, "status": "PASS"},
     "session_resilience": {"run_id": 32517285548, "status": "PASS"},
     "self_improvement_integrity": {"run_id": 32517285452, "status": "PASS"},
+    "earlier_failures_classified": [
+      "MISSING_PYTEST_IN_NEW_WORKFLOW_ENVIRONMENT",
+      "INVALID_VALIDATE_REGISTRY_CLI_ARGUMENT",
+      "STALE_PORTFOLIO_RESUMABILITY_CLAIM"
+    ],
+    "all_repaired": true,
     "all_required_green": true
   },
   "drive_readback": {
     "folder": "SESSION_RESILIENCE_RUN33_2026-08-21",
     "folder_id": "1CCIXde5_2k57yHHIOENgO7staWyyZ1yv",
+    "pre_pilot_files_expected": 7,
     "pre_pilot_files_nonempty": 7,
+    "pre_pilot_content_markers_verified": [
+      "32 SYNTHESIZE/PERSIST",
+      "prompt 64 final SI-0014 decision",
+      "REAL PRODUCTION PILOT: NOT YET SATISFIED"
+    ],
     "pre_pilot_status": "PASS",
+    "current_files_expected": 8,
+    "current_files_nonempty": 8,
     "controlled_pilot_document_id": "12_eH5DDRJ6A73tNIFDbnI26RsHV3Qiivm2CzdB5dP_0",
     "controlled_pilot_final_marker": "RUN33-PILOT-TRANSACTION-COMPLETE-001",
-    "controlled_pilot_readback": "PASS"
+    "controlled_pilot_readback": "PASS",
+    "status": "PASS"
   },
   "controlled_partial_write_pilot": {
     "pilot_id": "RUN33-CONTROLLED-PARTIAL-001",
