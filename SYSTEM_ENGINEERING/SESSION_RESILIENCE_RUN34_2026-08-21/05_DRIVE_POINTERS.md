@@ -1,0 +1,17 @@
+# RUN34 DRIVE POINTERS
+
+Folder: `SESSION_RESILIENCE_RUN34_CONTROLLED_RECOVERY_PILOT_2026-08-21`
+Folder ID: `1Xu_sdb-YiDki8wVMgF20ObJ750Dcgjj9`
+
+Recovered payload:
+- `RUN34_PAYLOAD_A — CONTROLLED RECOVERY PILOT`
+- Drive ID: `1IS7pZwClUGqWWWORw__sQGJEqSmbZafKCBRxgdTkUm4`
+- exact readback marker: `RUN34_RECOVERY_PAYLOAD_V1`
+
+Final evidence report:
+- `RUN34 — CONTROLLED PARTIAL-WRITE RECOVERY — FINAL EVIDENCE`
+- Drive ID: `1qpiXNWDJ4AjI_8pUGpnWwDq05gHBLBElr4XU_RU2-3w`
+
+Authority effect: NONE.
+Story canon effect: NONE.
+Promotion effect: NONE.
