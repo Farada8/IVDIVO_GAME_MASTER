@@ -44,7 +44,7 @@
     "SI-0010": "READY_FOR_PILOT — atomic shard transaction + rollback + deterministic compaction implementation and CI pending",
     "SI-0013": "READY_FOR_PILOT — durable project-state coverage / portfolio resumability gate; all 12 required projects currently have PASS-like durable routes; portfolio claim is PASS_FULL",
     "SI-0014": "READY_FOR_PILOT — session checkpoint + durable multi-store recovery stack; 27/27 Run33 tests, inherited checkpoint/registry regressions, fresh-main CI and Drive readback PASS; controlled/realtime recovery evidence still required",
-    "SI-0015": "DEVELOPMENT_CONTRACT_READY — embedded CURRENT project-slice freshness + explicit approval-event assertion; executable canaries pending"
+    "SI-0015": "READY_FOR_PILOT — executable project-slice freshness + typed approval-event canaries; 7/7 local PASS, GitHub Actions success, Drive readback and implementation on main; real project pilots + healthy controls + false-positive review still required"
   },
   "migration_note": "The monolithic base registry is a compatibility/read model until a deterministic compaction build validates all base+extension IDs, emits input/output hashes, passes roundtrip/readback regression, and switches pointers transactionally. Candidate shard visibility does not promote candidate status.",
   "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009/0010/0011/0012/0013/0014/0015 are candidates/pilots unless their own lifecycle state says otherwise."
