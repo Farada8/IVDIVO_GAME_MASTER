@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_BLIND_FUNCTION_TEST",
+  "locked_scene_function":"A needs B to reveal who changed a report; B needs A to stop treating B as a subordinate witness. Scene must end with limited cooperation and a new condition, not friendship.",
+  "variant_a_without_pair_state":"A and B exchange witty suspicion, summarize known facts and end with A saying they should work together. No tactic changes when resistance appears; status remains implicit; withheld fact has no behavioral consequence.",
+  "variant_b_with_pair_state":"A begins by demanding the name; B refuses and instead asks who will own the accusation. A tries procedural authority; B cites the prior time A used B's statement without warning. A switches tactic and offers B control over when the evidence is released. B gives the location of the altered report but withholds the editor's identity pending that condition. The scene ends with bounded cooperation and a changed power arrangement.",
+  "blind_evaluation":{
+    "A":{"changes_action":false,"changes_status":false,"changes_relationship":false,"voice_polish_only":true,"result":"FAIL"},
+    "B":{"changes_action":true,"changes_status":true,"changes_relationship":true,"tactic_changes_caused_by_listening":true,"result":"PASS"}
+  },
+  "conclusion":"The pair-state card improves the probability that dialogue functions as action because resistance triggers tactic change and a measurable scene-state delta. It is not a prose-style template and does not replace character voice work.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST",
+  "cannot_prove":"Does not establish reader preference or human naturalism in a specific manuscript."
+}
