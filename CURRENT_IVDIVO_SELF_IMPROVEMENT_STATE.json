@@ -1,9 +1,10 @@
 {
-  "schema_version": "2.2",
+  "schema_version": "2.3",
   "updated": "2026-08-21",
   "status": "V2_APPLIED_UNVERIFIED_RUNTIME_PROVISIONAL",
   "authority_router": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
   "engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+  "core_kernels": "IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md",
   "machine_config": "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json",
   "historical_base": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
   "priority_order": [
@@ -30,9 +31,15 @@
     "learning_ledger_schema": "LEARNING_LEDGER_SCHEMA_v1.json",
     "utility": "tools/ivdivo_self_improvement.py"
   },
+  "kernels": {
+    "general_problem_solving": "OUTCOME -> DONE_EVIDENCE -> AUTHORITY/CONSTRAINTS -> ROOT_CAUSE/BOTTLENECK -> RETRIEVE_KNOWN_MECHANISMS -> DISTINCT_OPTIONS -> CHEAPEST_DECISIVE_TEST -> BOUNDED_EXECUTION -> VERIFY -> LEARN",
+    "engine_builder": "ENGINE_WORTHINESS -> PURPOSE/IO/AUTHORITY/STATE/DAG/GATES -> MINIMAL_CORE -> FIXTURES -> ADVERSARIAL/REGRESSION -> REAL_PILOT -> PROMOTION -> MONITOR/PRUNE",
+    "research_radar": "DECISION_OR_BOTTLENECK_TRIGGER -> FRESHNESS/UNKNOWN -> TARGETED_SOURCES -> SOURCE_FACT/MECHANISM -> TEST/DECISION -> APPLICATION -> STOP"
+  },
   "drive_mirrors": {
     "engine_v2": "1TamY1cuiCUGP5zgheF-1nM2LaRt2f5vtZLwfJTJeSaY",
     "current_self_improvement_authority": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
+    "learning_ledger": "1Qi-MhGcoup3o5YPy0vKutw7ZWZ0J3UKs2A7nInhaYXE",
     "v1_engine_base": "1lbAaKASLAKFzCiGEF84Xrs-ziwQhCJASwLfDh3UGwSg",
     "improvement_registry_mirror": "1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs",
     "portability_inventory": "1WofqSiO3fBD_VoIveOVDihBybwlpeDE051zVrf1ipVs"
@@ -53,15 +60,19 @@
     "SELF_REFERENCE_GUARD",
     "KNOWLEDGE_COMPACTION_AND_PRUNING",
     "FAILURE_AND_SUCCESS_MEMORY",
-    "OBSERVATION_EXPERIMENT_LEARNING_LEDGER"
+    "OBSERVATION_EXPERIMENT_LEARNING_LEDGER",
+    "GENERAL_PROBLEM_SOLVING_KERNEL",
+    "ENGINE_BUILDER_KERNEL",
+    "RESEARCH_RADAR_KERNEL"
   ],
   "application_readback": {
     "writing_router": "PASS",
-    "aggregate_system_state": "PASS_SCHEMA_1_5",
-    "central_registry_si_0007": "PASS",
+    "aggregate_system_state": "PASS_SCHEMA_1_6",
+    "central_registry_si_0007": "PASS_APPLIED_UNVERIFIED",
     "drive_engine_mirror": "PASS",
-    "drive_router_mirror": "PASS",
-    "learning_ledger": "CREATED",
+    "drive_router_mirror": "PASS_WITH_V2_2_APPEND",
+    "learning_ledger": "PASS_CREATED_AND_DRIVE_MIRRORED",
+    "core_kernels": "PASS_CREATED_AND_ROUTED",
     "concurrent_sibling_progress_preserved": true
   },
   "runtime_status": {
@@ -77,10 +88,11 @@
     "writing_router": "UPDATED_AND_READBACK_VALID",
     "drive_mirrors": "CREATED_AND_READBACK_VALID",
     "aggregate_system_state": "UPDATED_AND_READBACK_VALID",
-    "registry_candidate_record": "SI-0007_PRESENT",
+    "registry_candidate_record": "SI-0007_APPLIED_UNVERIFIED",
     "learning_ledger": "ACTIVE",
+    "core_kernels": "ACTIVE",
     "next_gate": "UTILITY_RUNTIME_SMOKE_THEN_FINAL_VERIFIED_CURRENT_REVIEW"
   },
-  "next_action": "During the next session/environment with a runnable repository checkout, execute exact current tools/ivdivo_self_improvement.py against the exact current registry: audit, queue/next for book-audio priorities, and negative lifecycle fixture. Until then use v2 as the applied operating architecture with CLI runtime explicitly provisional.",
+  "next_action": "Use v2 during active book/audio/production work and collect real observations/experiments. When a runnable repository checkout is available, execute the exact utility runtime smoke: audit live registry, queue/next with book-audio query, negative lifecycle fixture. Then perform final VERIFIED_CURRENT review.",
   "story_first_guard": "META_IMPROVEMENT_MUST_NOT_STARVE_ACTIVE_BOOK_OR_AUDIO_PRODUCTION_UNLESS_SYSTEM_FATAL_MAJOR_BLOCKS_IT_OR_FOUNDER_SWITCHES_FOCUS"
 }
