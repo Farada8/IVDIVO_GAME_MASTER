@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Typed proof manifests for Audio Studio claims.
+"""Typed evidence-class manifests for Audio Studio claims.
 
 Prevents code/test evidence from being laundered into provider, human, live-audio,
 real-alignment, durable-recovery, measured-economics or cross-project claims.
+
+This module verifies evidence-class composition and manifest integrity. It does NOT
+independently fetch external refs; therefore complete class coverage is deliberately
+named EVIDENCE_CLASS_COMPLETE, never PROVEN.
 """
 from __future__ import annotations
 
@@ -10,7 +14,7 @@ from hashlib import sha256
 import json
 from typing import Any, Iterable
 
-SCHEMA_VERSION = "ivdivo.audio.proof_manifest/1.1"
+SCHEMA_VERSION = "ivdivo.audio.proof_manifest/1.2"
 EVIDENCE_CLASSES = {
     "SOURCE_AUTHORITY", "CODE_TEST", "GITHUB_CI", "AUTH_PROVIDER", "LIVE_AUDIO",
     "REAL_ALIGNMENT", "HUMAN_REVIEW", "MEASURED_ECONOMICS", "DURABLE_RECOVERY",
@@ -68,6 +72,7 @@ def compile_proof_manifest(*, claim: str, subject: str, evidence: Iterable[dict[
             "ref": str(item["ref"]),
             "sha256": str(sha).lower() if _valid_sha(sha) else None,
             "verified": verified,
+            "verification_authority": item.get("verification_authority"),
             "observed_at": item.get("observed_at"),
         }
         rows.append(row)
@@ -82,7 +87,8 @@ def compile_proof_manifest(*, claim: str, subject: str, evidence: Iterable[dict[
         "required_evidence_classes": sorted(required),
         "verified_evidence_classes": sorted(classes),
         "missing_evidence_classes": missing,
-        "status": "PROVEN" if not missing else "HOLD_UNPROVEN",
+        "status": "EVIDENCE_CLASS_COMPLETE" if not missing else "HOLD_UNPROVEN",
+        "claim_externally_proven_by_this_module": False,
         "evidence": rows,
         "machine_may_upgrade_claim_without_required_evidence": False,
     }
@@ -100,7 +106,9 @@ def verify_proof_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
         raise ValueError("PROOF_HASH_MISMATCH")
     required = set(manifest.get("required_evidence_classes") or [])
     verified = set(manifest.get("verified_evidence_classes") or [])
-    actual_status = "PROVEN" if required <= verified else "HOLD_UNPROVEN"
+    actual_status = "EVIDENCE_CLASS_COMPLETE" if required <= verified else "HOLD_UNPROVEN"
     if manifest.get("status") != actual_status:
         raise ValueError("PROOF_STATUS_INCONSISTENT")
+    if manifest.get("claim_externally_proven_by_this_module") is not False:
+        raise ValueError("PROOF_MODULE_EXTERNAL_AUTHORITY_OVERCLAIM")
     return {"status": "PASS", "proof_status": actual_status, "proof_sha256": expected}
