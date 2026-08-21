@@ -1,0 +1,28 @@
+{
+  "schema_version":"0.1",
+  "status":"PASS_ENGINEERING_FIXTURES_ONLY",
+  "tests_total":18,
+  "passed":18,
+  "failed":0,
+  "evidence_ceiling":"Internal deterministic canary logic; not literary/Human/provider/legal/market proof.",
+  "fixtures":[
+    {"name":"approval_generic_resume","observed":"APPROVAL_EVENT_MISSING","expected":"APPROVAL_EVENT_MISSING","pass":true},
+    {"name":"approval_exact_no_source","observed":"APPROVAL_EVENT_MISSING","expected":"APPROVAL_EVENT_MISSING","pass":true},
+    {"name":"approval_exact_typed","observed":"PASS","expected":"PASS","pass":true},
+    {"name":"story_core_complete","observed":"STORY_CORE_READY","expected":"STORY_CORE_READY","pass":true},
+    {"name":"story_core_missing_midpoint","observed":"PROSE_NO_GO","expected":"PROSE_NO_GO","pass":true},
+    {"name":"story_core_unknown_resolution","observed":"PROSE_NO_GO","expected":"PROSE_NO_GO","pass":true},
+    {"name":"evidence_exact","observed":"SUPPORTED","expected":"SUPPORTED","pass":true},
+    {"name":"evidence_model_to_human","observed":"EVIDENCE_CLASS_MISMATCH","expected":"EVIDENCE_CLASS_MISMATCH","pass":true},
+    {"name":"evidence_dry_to_live","observed":"EVIDENCE_CLASS_MISMATCH","expected":"EVIDENCE_CLASS_MISMATCH","pass":true},
+    {"name":"metric_unknown_null","observed":"UNKNOWN_NULL","expected":"UNKNOWN_NULL","pass":true},
+    {"name":"metric_false_zero","observed":"FAIL_FALSE_ZERO","expected":"FAIL_FALSE_ZERO","pass":true},
+    {"name":"metric_measured_zero","observed":"MEASURED_ZERO","expected":"MEASURED_ZERO","pass":true},
+    {"name":"hook_before_closure","observed":"HOOK_QUARANTINED","expected":"HOOK_QUARANTINED","pass":true},
+    {"name":"hook_reopens_closed","observed":"HOOK_QUARANTINED","expected":"HOOK_QUARANTINED","pass":true},
+    {"name":"hook_after_closure","observed":"CLOSED_THEN_HOOK","expected":"CLOSED_THEN_HOOK","pass":true},
+    {"name":"jurisdiction_science_advice","observed":"ADVISORY_ONLY","expected":"ADVISORY_ONLY","pass":true},
+    {"name":"jurisdiction_science_command","observed":"OVERREACH","expected":"OVERREACH","pass":true},
+    {"name":"jurisdiction_authorized_command","observed":"AUTHORIZED","expected":"AUTHORIZED","pass":true}
+  ]
+}
