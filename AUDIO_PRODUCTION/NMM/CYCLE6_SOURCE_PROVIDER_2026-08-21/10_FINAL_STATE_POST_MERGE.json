@@ -1,0 +1,34 @@
+{
+  "schema": "NMM_CYCLE6_FINAL_STATE_POST_MERGE_v1",
+  "date": "2026-08-21",
+  "cycle6_merge_commit": "f9650602c8c1e4e51684cf5006408ea4b5931e7e",
+  "pr": 167,
+  "pr_merge_ref_ci": {
+    "workflow_run_id": 32532150026,
+    "job_id": 96926122484,
+    "tests": "32/32_PASS"
+  },
+  "github_readback": "PASS_FROM_MAIN",
+  "drive": {
+    "folder_id": "1ca5Tu_3OZl-kpsUh_6SZD_4wi6rhiuGi",
+    "clean_zip_file_id": "1oHUws2KvUYucVwmkNAi5NCDFF5YMJDvY",
+    "clean_zip_sha256": "8bd61d8545a81390dc0dd205239243119f962ccb3cdd95c6c830e5c261b11ada",
+    "raw_readback": "PASS"
+  },
+  "executed_prompts": 32,
+  "real_source_bindings": 3,
+  "provider_snapshot": "HOLD_EXTERNAL",
+  "paid_synthesis": 0,
+  "live_canaries": 0,
+  "human_listener_results": 0,
+  "measured_spend": null,
+  "voice_lock": false,
+  "release": "NO_GO",
+  "next_prompt_bank": 64,
+  "self_improvement": {
+    "candidate": "STALE_ROLE_BINDING_GUARD",
+    "status": "DISCOVERY_ONLY",
+    "promotion": "NONE"
+  },
+  "cross_store_parity": "PASS_FOR_CYCLE6_PACKAGE_AND_STATE"
+}
