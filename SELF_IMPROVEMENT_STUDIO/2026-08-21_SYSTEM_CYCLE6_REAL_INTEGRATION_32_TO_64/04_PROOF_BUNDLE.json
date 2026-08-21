@@ -1,0 +1,43 @@
+{
+  "schema": "ivdivo.cycle6.proof_bundle/1.0",
+  "status": "WORKING_PILOT",
+  "source_snapshot": {
+    "captured_at": "2026-08-21T20:12:00+01:00",
+    "github_main_sha": "55c69de4f19aec1c2b408020c1447cbd38beef5b",
+    "registry_main_known_ids": ["SI-0008","SI-0009","SI-0010","SI-0011","SI-0012","SI-0013"],
+    "open_pr_reservations": ["SI-0014"],
+    "book_milestone_g": {
+      "source_pr": 115,
+      "second_project": "D10_BLOODBOUND",
+      "positive_fixture": {"expected_hits":1,"observed_hits":1},
+      "repaired_no_change_fixture": {"expected_hits":0,"observed_hits":0},
+      "false_positive_control": {"observed_hits":0},
+      "locked_story_mutated": false
+    },
+    "d01": {
+      "frontiers": [
+        {"episode":95,"obligation":"E96","persisted":true,"observed_at":"2026-08-21T16:51:46Z"},
+        {"episode":112,"obligation":"E113","persisted":true,"observed_at":"2026-08-21T18:28:37Z"},
+        {"episode":120,"obligation":"FOUNDER_LOCK_DECISION","persisted":true,"observed_at":"2026-08-21T18:36:46Z"}
+      ],
+      "human_signal":"NOT_RUN"
+    },
+    "d04": {
+      "g4":"MACHINE_PASS_HUMAN_LISTENER_PACKET_READY",
+      "human_gate":"READY_REQUIRES_REAL_BLIND_RESPONSE",
+      "provider_spend":null,
+      "human_minutes":null
+    },
+    "nmm":{"source_pr":118,"human_result":"NOT_TESTED","provider_result":"NOT_RUN"},
+    "session_resilience":{"source_pr":108,"drive_folder_id":"1CCIXde5_2k57yHHIOENgO7staWyyZ1yv"}
+  },
+  "proofs": [
+    {"id":"P-C6-REGISTRY","class":"PERSISTED_READBACK","source_ref":"GitHub main CURRENT_IMPROVEMENT_REGISTRY_FAMILY + PR108 reservation","claim":"SI-0015 is next unreserved in observed surfaces, but allocation not authorized","result":"PASS_WITH_HOLD"},
+    {"id":"P-C6-BOOK-REPL","class":"PROJECT_REPLICATION_EVIDENCE","source_ref":"PR115 Book Engine Milestone G","claim":"MF-C03-style book sensor mechanism transferred to D10 positive/no-change/control without story mutation","result":"PASS_BOOK_DOMAIN_REVIEW_ONLY"},
+    {"id":"P-C6-D01-DRIFT","class":"PERSISTED_READBACK","source_ref":"D01 main Founder Review packet","claim":"E120 Founder-lock frontier supersedes earlier E95/E112 work obligations","result":"PASS"},
+    {"id":"P-C6-D04-HUMAN","class":"PERSISTED_READBACK","source_ref":"D04 current state","claim":"Human packet ready but Human Signal not run","result":"HOLD_REAL_HUMAN"},
+    {"id":"P-C6-NMM-AUDIO","class":"PROJECT_ENGINEERING_EVIDENCE","source_ref":"PR118 + Drive NMM Cycle3","claim":"NMM is a second audio project but identical generic repair contract + human PASS not proven","result":"HOLD"},
+    {"id":"P-C6-ECON","class":"PERSISTED_READBACK","source_ref":"D04 current state","claim":"measured provider spend/human minutes absent; actual economics cannot be computed","result":"HOLD"}
+  ],
+  "forbidden_promotions": ["HUMAN_SIGNAL_FROM_MODEL","AUDIO_DOMAIN_PROMOTION_FROM_NMM","NEW_SI_ID_WITHOUT_COMPLETE_FAMILY","LITERARY_SUPERIORITY_FROM_AUTOMATED_TESTS"]
+}
