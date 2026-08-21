@@ -1,0 +1,40 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_WITH_REAL_AND_SYNTHETIC_EVIDENCE",
+  "test_cases":[
+    {
+      "id":"C01_NON_OVERLAPPING_BRANCHES",
+      "agent_a":{"target":"PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json","operation":"create_or_update_routing_state"},
+      "agent_b":{"target":"AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json","operation":"objective_post_render_analysis"},
+      "expected":"PARALLEL_ALLOWED",
+      "result":"PASS_BY_DEPENDENCY_ANALYSIS",
+      "reason":"Different project frontiers and no shared mutable artifact required for the individual operation."
+    },
+    {
+      "id":"C02_SAME_FRONTIER_STALE_WRITE",
+      "agent_a":{"target":"Drive CURRENT_WORKSTATE","prewrite_revision":"R1"},
+      "agent_b":{"target":"Drive CURRENT_WORKSTATE","writes_revision":"R2"},
+      "expected":"AGENT_A_WRITE_REJECTED_AND_REBASE_REQUIRED",
+      "result":"PASS_REAL_PRODUCTION_EVIDENCE",
+      "reason":"Google Docs requiredRevisionId conflicts were observed and rejected during cross-dialog synchronization; worker re-read/rebased instead of force overwrite."
+    },
+    {
+      "id":"C03_GITHUB_SAME_PATH_STALE_SHA",
+      "agent_a":{"target":"same GitHub file","blob_sha":"OLD"},
+      "agent_b":{"target":"same GitHub file","writes":"NEW_SHA"},
+      "expected":"OLD_SHA_UPDATE_FAILS",
+      "result":"PASS_CONTRACT_PLUS_PRIOR_REAL_EVIDENCE",
+      "reason":"Current continuation/hand-off records include stale Git SHA collision/rebase behavior; GitHub update contract requires current blob SHA."
+    },
+    {
+      "id":"C04_FOUNDER_GATE_BYPASS",
+      "agent_a":{"target":"D09","operation":"mark_founder_lock"},
+      "agent_b":{"target":"independent R&D sprint","operation":"system_analysis"},
+      "expected":"D09_MUTATION_BLOCKED_RND_ALLOWED",
+      "result":"PASS",
+      "reason":"D09 dedicated state now exposes Founder decision blocker while system R&D is explicitly Founder-authorized and non-contaminating."
+    }
+  ],
+  "conclusion":"Independent DAG branches may proceed; shared frontier mutation must serialize through revision/SHA ownership and rebase. Model agreement never substitutes for frontier ownership.",
+  "not_proven":"This does not prove arbitrary external providers implement distributed transactions; it validates current GitHub/Drive operational guards and IVDIVO routing behavior."
+}
