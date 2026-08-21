@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ivdivo.local/schemas/IVDIVO_EXECUTION_STATE_SCHEMA_v1_2.json",
+  "title": "IVDIVO Explicit Project Execution State Gate Contract v1.2",
+  "description": "Canonical explicit gate envelope for machine next-action resolution under Cross-Conversation State & Autopilot v1.2+. Existing project-specific legacy states may continue to use their own schemas; tools/ivdivo_next_action.py provides fail-closed compatibility without making this schema retroactively mandatory.",
+  "type": "object",
+  "required": ["schema_version", "authority_sources", "current_source", "blocked_reasons", "unresolved_fatal_major", "state_status", "selected_next_action"],
+  "properties": {
+    "schema_version": {"const": "ivdivo.execution_state/1.2"},
+    "project_id": {"type": "string", "minLength": 1},
+    "active_project": {"type": "string"},
+    "active_line": {"type": "string"},
+    "active_branch": {"type": "string"},
+    "mode": {"type": "string"},
+    "current_phase": {"type": "string"},
+    "authority_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["ref", "status"],
+        "properties": {"ref": {"type": "string", "minLength": 1}, "status": {"type": "string", "minLength": 1}},
+        "additionalProperties": true
+      }
+    },
+    "current_source": {
+      "type": "object",
+      "required": ["ref"],
+      "properties": {"ref": {"type": "string", "minLength": 1}, "status": {"type": "string"}, "hash": {"type": ["string", "null"]}},
+      "additionalProperties": true
+    },
+    "completed_artifacts": {"type": "array"},
+    "last_completed_artifact": {},
+    "open_gates": {"type": "array"},
+    "unresolved_fatal_major": {"type": "array"},
+    "dependency_dag": {"type": ["object", "array"]},
+    "next_unblocked_obligations": {"type": "array"},
+    "blocked_reasons": {"type": "array"},
+    "state_revision": {"type": ["string", "number", "null"]},
+    "state_status": {"enum": ["ACTIVE", "COMPLETE", "BLOCKED", "AUTHORITY_UNRESOLVED", "FRONTIER_CONFLICT", "CANON_APPROVAL_REQUIRED", "HUMAN_EVIDENCE_REQUIRED", "EXTERNAL_PROVIDER_REQUIRED", "FATAL_MAJOR_UNRESOLVED", "TOOL_RUNTIME_LIMITATION", "HOLD"]},
+    "selected_next_action": {
+      "type": "object",
+      "required": ["stage", "freshness_valid", "authority_unambiguous", "dependencies_pass", "executable_here", "requires_new_founder_choice", "requires_human_evidence", "requires_external_provider", "reopens_locked_layer", "irreversible_high_impact"],
+      "properties": {
+        "stage": {"type": "string", "minLength": 1},
+        "freshness_valid": {"type": "boolean"},
+        "authority_unambiguous": {"type": "boolean"},
+        "dependencies_pass": {"type": "boolean"},
+        "executable_here": {"type": "boolean"},
+        "requires_new_founder_choice": {"type": "boolean"},
+        "requires_human_evidence": {"type": "boolean"},
+        "requires_external_provider": {"type": "boolean"},
+        "external_provider_available": {"type": "boolean"},
+        "reopens_locked_layer": {"type": "boolean"},
+        "locked_layer_reopen_authorized": {"type": "boolean"},
+        "irreversible_high_impact": {"type": "boolean"},
+        "approval_present": {"type": "boolean"},
+        "safe": {"type": "boolean"},
+        "safety_clear": {"type": "boolean"},
+        "zero_cost": {"type": "boolean"},
+        "reversible": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
