@@ -2,7 +2,7 @@
 """Typed proof manifests for Audio Studio claims.
 
 Prevents code/test evidence from being laundered into provider, human, live-audio,
-measured-economics or cross-project claims.
+real-alignment, durable-recovery, measured-economics or cross-project claims.
 """
 from __future__ import annotations
 
@@ -10,20 +10,26 @@ from hashlib import sha256
 import json
 from typing import Any, Iterable
 
-SCHEMA_VERSION = "ivdivo.audio.proof_manifest/1.0"
+SCHEMA_VERSION = "ivdivo.audio.proof_manifest/1.1"
 EVIDENCE_CLASSES = {
     "SOURCE_AUTHORITY", "CODE_TEST", "GITHUB_CI", "AUTH_PROVIDER", "LIVE_AUDIO",
-    "HUMAN_REVIEW", "MEASURED_ECONOMICS", "CROSS_PROJECT_REAL",
+    "REAL_ALIGNMENT", "HUMAN_REVIEW", "MEASURED_ECONOMICS", "DURABLE_RECOVERY",
+    "CROSS_PROJECT_REAL",
 }
 CLAIM_REQUIREMENTS = {
     "CODE_READY": {"CODE_TEST"},
     "CI_GREEN": {"GITHUB_CI"},
     "PROVIDER_AUTHENTICATED": {"AUTH_PROVIDER"},
     "LIVE_AUDIO_ACCEPTED_AS_PROVIDER_EVIDENCE": {"AUTH_PROVIDER", "LIVE_AUDIO"},
+    "REAL_ALIGNMENT_PASS": {"LIVE_AUDIO", "REAL_ALIGNMENT"},
     "HUMAN_QUALITY_PASS": {"HUMAN_REVIEW"},
     "MEASURED_ECONOMICS_PASS": {"MEASURED_ECONOMICS"},
+    "DURABLE_RECOVERY_PASS": {"DURABLE_RECOVERY"},
     "CROSS_PROJECT_PORTABILITY_PASS": {"CROSS_PROJECT_REAL"},
-    "V1_RELEASE_EVIDENCE_COMPLETE": {"SOURCE_AUTHORITY", "GITHUB_CI", "AUTH_PROVIDER", "LIVE_AUDIO", "HUMAN_REVIEW", "MEASURED_ECONOMICS", "CROSS_PROJECT_REAL"},
+    "V1_RELEASE_EVIDENCE_COMPLETE": {
+        "SOURCE_AUTHORITY", "GITHUB_CI", "AUTH_PROVIDER", "LIVE_AUDIO", "REAL_ALIGNMENT",
+        "HUMAN_REVIEW", "MEASURED_ECONOMICS", "DURABLE_RECOVERY", "CROSS_PROJECT_REAL"
+    },
 }
 
 
