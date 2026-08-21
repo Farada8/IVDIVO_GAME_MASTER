@@ -1,0 +1,1 @@
+{"transaction_id":"RUN34-CONTROLLED-GH-DRIVE-001","marker":"RUN34_RECOVERY_PAYLOAD_V1","authority_effect":"NONE","story_canon_effect":"NONE","scope":"CONTROLLED_REVERSIBLE_RECOVERY_PILOT","payload":"same logical artifact must exist on GitHub and Drive before transaction completion"}
