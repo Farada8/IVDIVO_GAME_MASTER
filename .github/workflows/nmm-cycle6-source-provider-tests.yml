@@ -1,0 +1,18 @@
+name: NMM Cycle6 Source Provider Tests
+on:
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/NMM/CYCLE6_SOURCE_PROVIDER_2026-08-21/**'
+      - '.github/workflows/nmm-cycle6-source-provider-tests.yml'
+  workflow_dispatch:
+jobs:
+  cycle6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Cycle6 tests
+        working-directory: AUDIO_PRODUCTION/NMM/CYCLE6_SOURCE_PROVIDER_2026-08-21
+        run: python -m unittest tests.test_nmm_cycle6 -v

@@ -1,0 +1,20 @@
+{
+  "schema":"NMM_CYCLE6_FINAL_STATE_v1",
+  "date":"2026-08-21",
+  "cycle5_merged_commit":"61c1540e91fb7b849dc0e775d001893e2cc6fda0",
+  "executed_prompts":32,
+  "source_bindings_real":3,
+  "provider_snapshot":"HOLD_EXTERNAL_NO_AUTHENTICATED_SNAPSHOT_AVAILABLE_TO_THIS_EXECUTION",
+  "candidate_sets":"HOLD_EXTERNAL",
+  "live_canaries":0,
+  "paid_synthesis":0,
+  "measured_spend":null,
+  "voice_lock":false,
+  "release":"NO_GO",
+  "generic_provider_owner":"audio/studio Wave10",
+  "self_improvement_candidate":"STALE_ROLE_BINDING_GUARD_DISCOVERY_ONLY",
+  "next_prompts":64,
+  "drive":{"folder_id":"1ca5Tu_3OZl-kpsUh_6SZD_4wi6rhiuGi","v2_zip_file_id":"1oHUws2KvUYucVwmkNAi5NCDFF5YMJDvY","v2_zip_sha256":"8bd61d8545a81390dc0dd205239243119f962ccb3cdd95c6c830e5c261b11ada","v2_zip_bytes":21184,"v2_zip_entries":23,"v2_pycache_present":false,"raw_readback":"PASS","zip_integrity":"PASS"},
+  "github":"PENDING_FRESH_MAIN_BRANCH_PR_CI_MERGE",
+  "cross_store_parity":"DRIVE_PASS_GITHUB_PENDING"
+}
