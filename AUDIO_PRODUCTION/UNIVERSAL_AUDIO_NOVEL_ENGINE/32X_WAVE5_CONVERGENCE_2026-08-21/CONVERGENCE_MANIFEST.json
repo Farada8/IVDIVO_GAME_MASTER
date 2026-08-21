@@ -1,0 +1,22 @@
+{
+  "wave": "WAVE5_CONVERGENCE",
+  "canonical_runtime_target": "audio/studio/runtime",
+  "rules": {
+    "create_second_runtime": false,
+    "draft_test_count_proves_quality": false,
+    "project_specific_transfer": false,
+    "source_fingerprint_required_before_spend": true,
+    "live_timing_may_be_synthetic": false,
+    "machine_may_voice_lock": false,
+    "economics_projection_may_be_claimed_actual": false
+  },
+  "parallel_lines": [
+    {"id":"MAIN_V0.3","role":"existing runtime lineage","disposition":"CANONICAL_TARGET"},
+    {"id":"PR82","role":"production-control candidate","disposition":"RECONCILE_UNIQUE_GAPS"},
+    {"id":"PR84","role":"studio-intelligence candidate","disposition":"DECOMPOSE_AND_RECONCILE"},
+    {"id":"PR86","role":"main-rebased wave4 candidate","disposition":"RECONCILE_UNIQUE_GAPS"},
+    {"id":"NMM","role":"project evidence","disposition":"TRANSFER_MECHANISMS_ONLY"},
+    {"id":"ROOM917","role":"project evidence","disposition":"TRANSFER_MECHANISMS_ONLY"},
+    {"id":"SELF_IMPROVEMENT","role":"governance","disposition":"APPLY_VERIFIED_CURRENT"}
+  ]
+}
