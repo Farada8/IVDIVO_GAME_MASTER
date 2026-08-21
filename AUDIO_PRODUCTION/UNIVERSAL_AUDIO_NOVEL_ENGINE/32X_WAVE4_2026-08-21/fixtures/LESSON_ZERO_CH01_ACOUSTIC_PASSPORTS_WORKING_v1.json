@@ -1,0 +1,38 @@
+{
+  "artifact": "LESSON_ZERO_CH01_ACOUSTIC_PASSPORTS_WORKING_v1",
+  "status": "PASS_PLAN_LIVE_AUDIO_NOT_RUN",
+  "project": "LESSON_ZERO_RU_AUDIO",
+  "episode": "BOOK1_CH01",
+  "domains": {
+    "A1_OUTDOOR_CONTACT_FESTIVAL_TO_SCHOOL_PAVILION": {
+      "point_of_audition": "CHARACTER_RELATIVE / dialogue intelligible inside wide public field",
+      "topology": ["open public Contact festival", "moving crowd/food-truck field", "youth-stage distance", "school pavilion transition"],
+      "movement": ["characters move through public field", "domain crossfade toward pavilion"],
+      "occlusion": ["crowd diffusion only; no hard-room occlusion assumption"],
+      "stereo_policy": "natural width from public field; no extreme panning dependency",
+      "mono_policy": "dialogue and action cues remain legible; geography may narrow but not disappear",
+      "bound_cues": ["CH01_CUE_001", "CH01_CUE_002", "CH01_CUE_003", "CH01_CUE_004", "CH01_CUE_005", "CH01_CUE_006", "CH01_CUE_007"]
+    },
+    "A2_OUTDOOR_REFLECTING_POOL_INTIMATE": {
+      "point_of_audition": "close conversational perspective at water edge with medium-wide festival behind",
+      "topology": ["reflecting-pool edge", "water-adjacent quiet zone", "distant festival behind"],
+      "movement": ["small body shifts", "recorder handling", "shoulder-bump release"],
+      "occlusion": ["none invented; intimacy by distance/perspective not artificial reverb"],
+      "stereo_policy": "festival remains behind/around; voices stable near-center with natural spatial cues",
+      "mono_policy": "public-vs-private depth remains inferable through level/spectrum, not pan alone",
+      "bound_cues": ["CH01_CUE_008", "CH01_CUE_009", "CH01_CUE_010", "CH01_CUE_011", "CH01_CUE_012", "CH01_CUE_013", "CH01_CUE_014"]
+    },
+    "M1_DIEGETIC_RECORDER_CAPTURE": {
+      "point_of_audition": "audio recorded by Aoife inside scene, not continuous external room bed",
+      "topology": ["same festival world observed through recorder medium"],
+      "movement": ["capture starts after U019 and runs about 10 seconds by story plan"],
+      "occlusion": ["media bandwidth/perspective change allowed; content identity remains same-world"],
+      "stereo_policy": "media identity may narrow/change but must remain distinct from continuous CUE008 bed",
+      "mono_policy": "medium change remains inferable without narration",
+      "bound_cues": ["CH01_CUE_010"]
+    }
+  },
+  "protected_silence": ["CH01_CUE_004", "CH01_CUE_011", "CH01_CUE_013"],
+  "project_leak_check": {"ROOM917_specific_assumptions": 0},
+  "absolute_timestamps": null
+}
