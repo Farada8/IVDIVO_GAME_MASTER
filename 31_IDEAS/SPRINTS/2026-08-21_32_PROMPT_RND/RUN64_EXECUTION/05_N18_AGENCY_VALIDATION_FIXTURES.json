@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_FIXTURE_VALIDATION",
+  "fixtures":[
+    {"id":"QUIET_REFUSAL","mode":"quiet","action":"refuses relocation, keeps inspection appointment, documents hazard","changed_state":"landlord cannot clear unit before inspector; evidence preserved","aggression":"NONE","expected":"AGENCY","result":"PASS"},
+    {"id":"RELATIONAL_BOUNDARY","mode":"relational","action":"declines reconciliation unless debt is disclosed to both families","changed_state":"relationship terms change and concealment becomes costly","aggression":"LOW","expected":"AGENCY","result":"PASS"},
+    {"id":"INVESTIGATIVE_WITHHOLDING","mode":"investigative","action":"does not confront suspect; quietly changes chain-of-custody routing","changed_state":"suspect loses ability to alter the evidence path","aggression":"NONE","expected":"AGENCY","result":"PASS"},
+    {"id":"ACTION_RESCUE","mode":"action","action":"breaks a sealed door to reach trapped crew","changed_state":"physical access changes; injury cost incurred","aggression":"HIGH","expected":"AGENCY","result":"PASS"},
+    {"id":"LOUD_PSEUDO_AGENCY","mode":"loud","action":"shouts threats but follows someone else's plan","changed_state":"none caused by protagonist behavior","aggression":"HIGH","expected":"NO_AGENCY","result":"PASS"}
+  ],
+  "conclusion":"Agency is measured by consequential state change caused by chosen action/tactic, not confrontation volume. Restraint, refusal and cooperation count when they materially alter access, evidence, relationship, status or self-binding consequence.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST",
+  "cannot_prove":"This does not certify a specific manuscript scene without applying the ledger to that scene's actual causal context."
+}
