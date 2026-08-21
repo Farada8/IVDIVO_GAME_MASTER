@@ -46,7 +46,16 @@ def _secret_key_hits(value: Any, path: str = "$") -> list[str]:
     return hits
 
 
-def _expected_source_ref(repository: str, run_id: int | str) -> str:
+def _positive_decimal_identity(value: int | str) -> str | None:
+    text = str(value).strip()
+    if not text.isdecimal():
+        return None
+    if int(text) <= 0:
+        return None
+    return str(int(text))
+
+
+def _expected_source_ref(repository: str, run_id: str) -> str:
     return f"https://github.com/{repository}/actions/runs/{run_id}"
 
 
@@ -62,6 +71,27 @@ def intake_provider_evidence(
     now: datetime | None = None,
 ) -> dict[str, Any]:
     """Validate one provider evidence bundle and derive its next admissible state."""
+    normalized_run_id = _positive_decimal_identity(run_id)
+    normalized_attempt = _positive_decimal_identity(run_attempt)
+    if normalized_run_id is None or normalized_attempt is None:
+        return {
+            "schema": "ivdivo.provider_evidence_intake/1.0",
+            "status": "FAIL_WORKFLOW_RUN_IDENTITY_SHAPE",
+            "verified": False,
+            "provider_calls_performed": 0,
+            "provider_dispatch_allowed": False,
+            "voice_lock": False,
+        }
+    if not isinstance(repository, str) or repository.count("/") != 1 or any(part.strip() == "" for part in repository.split("/")):
+        return {
+            "schema": "ivdivo.provider_evidence_intake/1.0",
+            "status": "FAIL_REPOSITORY_IDENTITY_SHAPE",
+            "verified": False,
+            "provider_calls_performed": 0,
+            "provider_dispatch_allowed": False,
+            "voice_lock": False,
+        }
+
     secret_hits = _secret_key_hits(payload)
     if secret_hits:
         return {
@@ -91,8 +121,8 @@ def intake_provider_evidence(
             "voice_lock": False,
         }
 
-    expected_transaction = f"{run_id}:{run_attempt}"
-    expected_ref = _expected_source_ref(repository, run_id)
+    expected_transaction = f"{normalized_run_id}:{normalized_attempt}"
+    expected_ref = _expected_source_ref(repository, normalized_run_id)
     durable = payload.get("durable_receipt") if isinstance(payload.get("durable_receipt"), dict) else {}
     if str(durable.get("transaction_id")) != expected_transaction:
         return {
@@ -193,8 +223,8 @@ def intake_provider_evidence(
         "verified": True,
         "provider": "elevenlabs",
         "repository": repository,
-        "workflow_run_id": str(run_id),
-        "workflow_run_attempt": str(run_attempt),
+        "workflow_run_id": normalized_run_id,
+        "workflow_run_attempt": normalized_attempt,
         "transaction_id": expected_transaction,
         "source_ref": expected_ref,
         "snapshot_hash": trust["snapshot_hash"],
