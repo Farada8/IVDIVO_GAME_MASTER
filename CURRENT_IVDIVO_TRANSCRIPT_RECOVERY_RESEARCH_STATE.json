@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "CURRENT_RESEARCH_SPRINT_COMPLETE_NEXT_UPGRADE_SELECTED",
+  "authority": "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md",
+  "verified_executable_base": {
+    "tool": "tools/ivdivo_transcript_recovery.py",
+    "schema": "schemas/IVDIVO_TRANSCRIPT_RECOVERY_LEDGER_SCHEMA_v1.json",
+    "tests": "tests/test_transcript_recovery.py",
+    "runtime_evidence": "IVDIVO_NARRATIVE_OS/TRANSCRIPT_RECOVERY_RUNTIME_VERIFICATION_2026-08-21.md",
+    "status": "VERIFIED_CURRENT_FIRST_PASS_EXTRACTOR",
+    "pytest": {"passed": 5, "failed": 0}
+  },
+  "founder_sprint": {
+    "request": "Create 32 prompts on the topic, execute each sequentially, analyze/structure/save all work to GitHub and Google Drive, then derive twice as many prompts for future work.",
+    "requested_prompts": 32,
+    "executed_prompts": 32,
+    "derived_next_prompts": 64,
+    "github_folder": "31_IDEAS/TRANSCRIPT_RECOVERY_32_PROMPT_SPRINT_2026-08-21/",
+    "drive_folder_id": "1aVpmzE0oPu5NKJ_0ASxrWi6cJG4sXb12",
+    "drive_master_doc_id": "1ZVOJLoHK_kkUi5hor66dCxtm_Y4DR3WVnBeCZO4_s2Y"
+  },
+  "red_team": {
+    "fatal": [],
+    "major": [
+      "RECONCILED_RECOVERY_STATE_V2_MISSING",
+      "IMPROVEMENT_REGISTRY_ATOMICITY_SHARD_INDEX_WEAKNESS",
+      "FIRST_REAL_LARGE_CORPUS_PILOT_NOT_YET_RUN",
+      "ADVERSARIAL_AND_CONCURRENCY_REGRESSION_TOO_SMALL",
+      "RECOVERY_COMPLETION_GATE_NOT_FORMALLY_COUPLED_TO_NEXT_ACTION_RESOLVER"
+    ],
+    "medium": [
+      "SOURCE_COMPLETENESS_BASIS_AMBIGUOUS",
+      "MULTI_PROJECT_PARTITION_MODEL_NOT_MACHINE_FORMALIZED",
+      "CLAIM_EVIDENCE_TAXONOMY_NOT_MACHINE_FORMALIZED",
+      "OBSERVABILITY_NOT_FORMALIZED",
+      "RAW_CONTEXT_COMPACTION_POLICY_NOT_MACHINE_FORMALIZED"
+    ]
+  },
+  "selected_wip": {
+    "primary": {
+      "candidate_id": "SI-0009",
+      "file": "31_IDEAS/SI-0009_RECONCILED_RECOVERY_STATE_V2.json",
+      "title": "Reconciled Recovery State v2 + Recovery Completion Gate",
+      "status": "DEVELOPING",
+      "next_prompt_subset": ["N01", "N02", "N03", "N04", "N05", "N06", "N07", "N08", "N33", "N34", "N35", "N36", "N37", "N38", "N39", "N40"]
+    },
+    "pilot_a": {
+      "candidate_id": "SI-0010",
+      "file": "31_IDEAS/SI-0010_IMPROVEMENT_REGISTRY_ATOMIC_SHARD_INDEX_REPAIR.json",
+      "status": "READY_FOR_PILOT",
+      "next_prompt_subset": ["N31", "N32"]
+    },
+    "pilot_b": {
+      "candidate_id": "SI-0011",
+      "file": "31_IDEAS/SI-0011_RECOVERY_ADVERSARIAL_AND_REAL_CORPUS_PILOT.json",
+      "status": "READY_FOR_PILOT",
+      "next_prompt_subset": ["N17", "N18", "N19", "N20", "N21", "N22", "N23", "N24", "N49", "N50", "N51", "N52", "N53", "N54", "N55", "N56"]
+    }
+  },
+  "architecture_target": "RAW_TRANSCRIPT -> EXTRACT_LEDGER_V1 -> RECONCILED_RECOVERY_STATE_V2 -> PERSISTENCE_VERIFICATION -> PROJECT_PARTITIONS_FRONTIER -> CHAT_ONLY_WRITE_THROUGH -> SELF_IMPROVEMENT_HARVEST -> READBACK -> RECOVERY_COMPLETE_GATE -> NEXT_ACTION_RESOLVER -> CONTINUE_PRODUCTION",
+  "core_separation": "EXTRACTION_CONFIDENCE != AUTHORITY != PERSISTENCE_VERIFICATION != CANON_STATUS",
+  "acceptance_gates": [
+    "NO_TRANSCRIPT_AS_AUTOMATIC_CANON",
+    "NO_UNEVIDENCED_SAVED_LOCK_PASS_PROVIDER_HUMAN_MARKET_PROMOTION",
+    "NO_SECRET_WRITE_THROUGH",
+    "SAME_SOURCE_RERUN_IDEMPOTENT",
+    "LARGE_CORPUS_RESUMABLE_WITH_FINAL_TAIL_PROOF",
+    "MULTI_PROJECT_PARTITION_ISOLATION",
+    "NO_STALE_TRANSCRIPT_OVERWRITE_OF_NEWER_AUTHORITY",
+    "ALL_MATERIAL_CHAT_ONLY_ITEMS_DISPOSITIONED",
+    "ALL_ACCEPTED_WRITES_READ_BACK",
+    "AUTO_CONTINUE_BLOCKED_BEFORE_RECOVERY_COMPLETE",
+    "FIRST_REAL_CORPUS_PILOT_RECORDED",
+    "NO_NEXT_PACKAGE_PROMOTION_WITHOUT_FULL_REGRESSION"
+  ],
+  "registry_note": "SI-0009..SI-0011 are stored as safe candidate shards because the central minified registry requires a separate atomic shard/index migration before risk-free compaction.",
+  "next_action": "Develop SI-0009 with the smallest decisive subset of N01-N08 and N33-N40, while keeping SI-0010 and SI-0011 bounded; do not execute all 64 prompts ritualistically. Return to story/audio production once recovery-blocking controls are sufficient or a real corpus pilot becomes available.",
+  "story_first_guard": "SYSTEM_RESEARCH_MAY_NOT_STARVE_ACTIVE_STORY_OR_AUDIO_PRODUCTION"
+}
