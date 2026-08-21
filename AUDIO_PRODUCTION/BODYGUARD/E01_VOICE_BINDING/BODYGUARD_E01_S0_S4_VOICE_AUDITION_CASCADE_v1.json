@@ -1,0 +1,60 @@
+{
+  "artifact": "BODYGUARD_E01_S0_S4_VOICE_AUDITION_CASCADE_v1",
+  "status": "ZERO_COST_READY_LIVE_BLOCKED_BY_BINDING_AND_CREDENTIAL",
+  "authority": {
+    "recording_master": "BODYGUARD Season One Recording Master v1.6 — RECORDING LANGUAGE CLEAN",
+    "request_manifest": "BODYGUARD_E01_ELEVENLABS_ROUGH_RENDER_REQUESTS_v1.json",
+    "spoken_sequence_sha256": "2af60ca3b58bc90a2863e8f6dbee2bf7541d6b1f2315e78704f12ca214da9149",
+    "exact_text_locked": true,
+    "voice_binding_manifest_drive_id": "1dfUInLrXQlxZGYULqCAT3XpjxXZxPzfRTRzxrpUMIiY"
+  },
+  "law": {
+    "S0_does_not_cast": true,
+    "S1_only_after_S0_pass": true,
+    "S2_survivors_only_max_jobs": 10,
+    "S3_forbidden_mode_and_direction_change_survivors_only": true,
+    "S4_pair_survivors_only": true,
+    "no_voice_lock_before_real_audio": true,
+    "no_full_E01_before_provisional_pilot_lock": true
+  },
+  "S0": {
+    "name": "S0_TECHNICAL_CANARY",
+    "job_count": 5,
+    "jobs": [
+      {"job_id":"BG_S0_NAOMI_PARK_A","stage":"S0_TECHNICAL_CANARY","role":"NAOMI_PARK","candidate":"A","block_id":"BG_E01_S3_122","exact_text":"Cross right. Now.","exact_text_sha256":"4dc1ad97594f2586c700f2fca3e217132e51e9b5abed044760b59a6557197ecf","purpose":"technical execution only; cannot cast/reject actor"},
+      {"job_id":"BG_S0_ELI_KWON_A","stage":"S0_TECHNICAL_CANARY","role":"ELI_KWON","candidate":"A","block_id":"BG_E01_S2_087","exact_text":"I spent a year being told other people's decisions were my preferences.","exact_text_sha256":"338cf18bad0955b67c6adb9cba01d728c5c0d250830f4da5adc7734370e351e9","purpose":"technical execution only; cannot cast/reject actor"},
+      {"job_id":"BG_S0_CAL_MERCER_A","stage":"S0_TECHNICAL_CANARY","role":"CAL_MERCER","candidate":"A","block_id":"BG_E01_S1_038","exact_text":"Threat detail comes to security first.","exact_text_sha256":"8ebb63cf119fb0c8b50c4bef713bef1cce8cd8456aea0b268ec352fa8d788d12","purpose":"technical execution only; cannot cast/reject actor"},
+      {"job_id":"BG_S0_TALIA_WYNN_A","stage":"S0_TECHNICAL_CANARY","role":"TALIA_WYNN","candidate":"A","block_id":"BG_E01_S1_008","exact_text":"Lift B at show height. Stage-left lane clear. Stand by descent.","exact_text_sha256":"0d0f91bc750610c5bb20aa07701d51c921bc4bf9d15ffe458ae601c76cf38e07","purpose":"technical execution only; cannot cast/reject actor"},
+      {"job_id":"BG_S0_THREAT_VOICE_A","stage":"S0_TECHNICAL_CANARY","role":"THREAT_VOICE","candidate":"A","block_id":"BG_E01_S3_120","exact_text":"At eleven forty-three, the stage will fall. Your new bodyguard arranged it.","exact_text_sha256":"78d18b22887fbbb68d1da47c72e8c8b498b2e84f64742477bcf0fa339d0a0d3b","purpose":"technical execution only; cannot cast/reject actor"}
+    ],
+    "pass_to_S1_when": ["all five provider calls complete","returned audio is non-empty and decodable","exact requested text preserved in request provenance","no authentication/model/output-format/provider-contract failure","sidecar/provenance written"],
+    "cannot_decide": ["acting quality","chemistry","final voice lock"]
+  },
+  "S1": {
+    "name": "S1_FAIR_ANCHOR_COMPARISON",
+    "job_count": 15,
+    "jobs": [
+      {"job_id":"BG_S1_NAOMI_PARK_A","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"NAOMI_PARK","candidate":"A","block_id":"BG_E01_S3_122","exact_text":"Cross right. Now.","exact_text_sha256":"4dc1ad97594f2586c700f2fca3e217132e51e9b5abed044760b59a6557197ecf","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_NAOMI_PARK_B","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"NAOMI_PARK","candidate":"B","block_id":"BG_E01_S3_122","exact_text":"Cross right. Now.","exact_text_sha256":"4dc1ad97594f2586c700f2fca3e217132e51e9b5abed044760b59a6557197ecf","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_NAOMI_PARK_C","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"NAOMI_PARK","candidate":"C","block_id":"BG_E01_S3_122","exact_text":"Cross right. Now.","exact_text_sha256":"4dc1ad97594f2586c700f2fca3e217132e51e9b5abed044760b59a6557197ecf","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_ELI_KWON_A","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"ELI_KWON","candidate":"A","block_id":"BG_E01_S2_087","exact_text":"I spent a year being told other people's decisions were my preferences.","exact_text_sha256":"338cf18bad0955b67c6adb9cba01d728c5c0d250830f4da5adc7734370e351e9","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_ELI_KWON_B","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"ELI_KWON","candidate":"B","block_id":"BG_E01_S2_087","exact_text":"I spent a year being told other people's decisions were my preferences.","exact_text_sha256":"338cf18bad0955b67c6adb9cba01d728c5c0d250830f4da5adc7734370e351e9","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_ELI_KWON_C","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"ELI_KWON","candidate":"C","block_id":"BG_E01_S2_087","exact_text":"I spent a year being told other people's decisions were my preferences.","exact_text_sha256":"338cf18bad0955b67c6adb9cba01d728c5c0d250830f4da5adc7734370e351e9","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_CAL_MERCER_A","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"CAL_MERCER","candidate":"A","block_id":"BG_E01_S1_038","exact_text":"Threat detail comes to security first.","exact_text_sha256":"8ebb63cf119fb0c8b50c4bef713bef1cce8cd8456aea0b268ec352fa8d788d12","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_CAL_MERCER_B","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"CAL_MERCER","candidate":"B","block_id":"BG_E01_S1_038","exact_text":"Threat detail comes to security first.","exact_text_sha256":"8ebb63cf119fb0c8b50c4bef713bef1cce8cd8456aea0b268ec352fa8d788d12","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_CAL_MERCER_C","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"CAL_MERCER","candidate":"C","block_id":"BG_E01_S1_038","exact_text":"Threat detail comes to security first.","exact_text_sha256":"8ebb63cf119fb0c8b50c4bef713bef1cce8cd8456aea0b268ec352fa8d788d12","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_TALIA_WYNN_A","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"TALIA_WYNN","candidate":"A","block_id":"BG_E01_S1_008","exact_text":"Lift B at show height. Stage-left lane clear. Stand by descent.","exact_text_sha256":"0d0f91bc750610c5bb20aa07701d51c921bc4bf9d15ffe458ae601c76cf38e07","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_TALIA_WYNN_B","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"TALIA_WYNN","candidate":"B","block_id":"BG_E01_S1_008","exact_text":"Lift B at show height. Stage-left lane clear. Stand by descent.","exact_text_sha256":"0d0f91bc750610c5bb20aa07701d51c921bc4bf9d15ffe458ae601c76cf38e07","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_TALIA_WYNN_C","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"TALIA_WYNN","candidate":"C","block_id":"BG_E01_S1_008","exact_text":"Lift B at show height. Stage-left lane clear. Stand by descent.","exact_text_sha256":"0d0f91bc750610c5bb20aa07701d51c921bc4bf9d15ffe458ae601c76cf38e07","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_THREAT_VOICE_A","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"THREAT_VOICE","candidate":"A","block_id":"BG_E01_S3_120","exact_text":"At eleven forty-three, the stage will fall. Your new bodyguard arranged it.","exact_text_sha256":"78d18b22887fbbb68d1da47c72e8c8b498b2e84f64742477bcf0fa339d0a0d3b","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_THREAT_VOICE_B","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"THREAT_VOICE","candidate":"B","block_id":"BG_E01_S3_120","exact_text":"At eleven forty-three, the stage will fall. Your new bodyguard arranged it.","exact_text_sha256":"78d18b22887fbbb68d1da47c72e8c8b498b2e84f64742477bcf0fa339d0a0d3b","purpose":"fair same-text A/B/C comparison"},
+      {"job_id":"BG_S1_THREAT_VOICE_C","stage":"S1_FAIR_ANCHOR_COMPARISON","role":"THREAT_VOICE","candidate":"C","block_id":"BG_E01_S3_120","exact_text":"At eleven forty-three, the stage will fall. Your new bodyguard arranged it.","exact_text_sha256":"78d18b22887fbbb68d1da47c72e8c8b498b2e84f64742477bcf0fa339d0a0d3b","purpose":"fair same-text A/B/C comparison"}
+    ],
+    "comparison": "same exact line, A/B/C within each role, loudness matched, music/reverb/heavy processing off",
+    "first_elimination_allowed": true
+  },
+  "S2": {"name":"S2_SECONDARY_DISCRIMINATION","max_jobs":10,"template_jobs":[{"role":"NAOMI_PARK","candidate":"SURVIVOR_ONLY","block_id":"BG_E01_S2_088","exact_text":"During danger I need compliance. Outside it, I need your agreement.","exact_text_sha256":"d25707c80e38b5a0b53290563e1d1d80d2b39ec4431b2a12fdbe1847af2f8231"},{"role":"NAOMI_PARK","candidate":"SURVIVOR_ONLY","block_id":"BG_E01_S3_125","exact_text":"No. Eli, stay on solid deck. Answer me. Head clear?","exact_text_sha256":"8167e5e8b9f5346cfecbf3b5bc958ca5cccfec3d36ed437f2e160b08c5f0b760"},{"role":"ELI_KWON","candidate":"SURVIVOR_ONLY","block_id":"BG_E01_S1_018","exact_text":"First live show in a year, twelve thousand people outside, and half the internet waiting to decide whether I can still stand under lights. No pressure.","exact_text_sha256":"8de33443a5388ee8d39029f47815e288a55f920c8170713741e7259ae55ad4dc"},{"role":"ELI_KWON","candidate":"SURVIVOR_ONLY","block_id":"BG_E01_S3_180","exact_text":"I want to hear it before someone tells me what I heard.","exact_text_sha256":"d477bc46a7b7a28b2c63bd9d092c20eef4a2da965393e424d0dfc3f133be5a7c"},{"role":"CAL_MERCER","candidate":"SURVIVOR_ONLY","block_id":"BG_E01_S3_157","exact_text":"You don't get to decide that alone.","exact_text_sha256":"0fd0b93520879e23da1caba973a53f9136b9e4af43b4904462ad83c708fff39d"},{"role":"TALIA_WYNN","candidate":"SURVIVOR_ONLY","block_id":"BG_E01_S3_135","exact_text":"No. I was still on standby. I never got an acknowledgement.","exact_text_sha256":"8560a87409a95177264a793d092073f276c5dc1e1c893b13972aa71dc18b893c"},{"role":"THREAT_VOICE","candidate":"SURVIVOR_ONLY","block_id":"BG_E01_S3_181","exact_text":"At eleven forty-three, the stage will fall. Your new bodyguard arranged it.","exact_text_sha256":"78d18b22887fbbb68d1da47c72e8c8b498b2e84f64742477bcf0fa339d0a0d3b"}],"rule":"only surviving candidates; choose jobs that discriminate unresolved functions"},
+  "S3": {"name":"S3_FORBIDDEN_MODE_AND_DIRECTION_CHANGE","roles":{"NAOMI_PARK":["same authority, more humanity; no monotone","no maternal/caretaker coding","no seductive bodyguard tone","command clarity without shouting"],"ELI_KWON":["private fracture without helplessness","public/private register difference","no possessive/alpha tone","music clues sound native, not exposition"],"CAL_MERCER":["irritated but plausibly correct","no thug/henchman/sinister defense"],"TALIA_WYNN":["routine cue rhythm -> one panic spike -> precise recovery","no pre-guilty anxiety"],"THREAT_VOICE":["human certainty, not horror","same identity first occurrence and replay","access is frightening; voice itself is not monster-coded"]}},
+  "S4": {"name":"S4_NAOMI_ELI_PAIR_TEST","pair":["NAOMI_PARK","ELI_KWON"],"block_ids":["BG_E01_S1_029","BG_E01_S1_030","BG_E01_S1_031","BG_E01_S1_032","BG_E01_S1_033","BG_E01_S1_034","BG_E01_S1_035","BG_E01_S1_036","BG_E01_S1_037"],"pass_when":["lively without acting flirtation","Eli actively chooses protocol rather than submissive obedience","Naomi remains professionally centered","extra attention survives underplayed delivery","no maternal / possessive / couple-already energy","target = privately important / professionally constrained"]},
+  "after_S4": {"provisional_pilot_lock":"allowed only for individual score >=88, no hard fail, direction-change PASS, pair gate PASS for leads","season_lock":"still prohibited until 8–10 minute fatigue + E01–E03 performed evidence"}
+}
