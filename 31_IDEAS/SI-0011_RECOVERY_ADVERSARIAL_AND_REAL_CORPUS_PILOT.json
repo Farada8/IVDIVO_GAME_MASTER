@@ -1,0 +1,26 @@
+{
+  "candidate_id": "SI-0011",
+  "title": "Transcript recovery adversarial suite + first real large-corpus pilot",
+  "candidate_type": "TOOLING_OR_AUTOMATION",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type": "GITHUB", "locator": "31_IDEAS/TRANSCRIPT_RECOVERY_32_PROMPT_SPRINT_2026-08-21/02_32_EXECUTIONS_AND_FINDINGS_v1.0.md#P18-P31", "date": "2026-08-21"},
+    {"source_type": "GITHUB", "locator": "tests/test_transcript_recovery.py", "date": "2026-08-21", "notes": "Current baseline covers 5 narrow deterministic tests"}
+  ],
+  "problem_or_opportunity": "The current extractor has 5/5 exact-source smoke tests but lacks nested-quote, malformed-role, markdown/code, multilingual, fake-artifact, huge-input, multi-project, connector reconciliation and concurrency evidence. No real large pasted-corpus recovery pilot has yet been recorded.",
+  "proposed_mechanism": "Build a bounded adversarial fixture suite and a first-real-corpus run card measuring material-item coverage/disposition, false authority promotion, secret persistence, duplicate creation, frontier accuracy, stale-write handling, readback and Founder questions. Feed actual pilot observations to Learning Ledger and improvement candidates.",
+  "dedupe_relation": "EXTENSION_OF_SI-0008",
+  "related_candidates": ["SI-0008", "SI-0009", "SI-0010"],
+  "expected_benefit": "Converts transcript recovery from narrow unit-test confidence into operational evidence while preserving strict evidence separation.",
+  "evidence_state": "INTERNAL_EVIDENCE",
+  "priority_vector": {"impact": "HIGH", "recurrence": "SYSTEMIC", "effort": "MEDIUM", "regression_risk": "LOW", "reversibility": "EASY", "urgency": "HIGH", "affected_surface": "PORTFOLIO"},
+  "owner_role": "Recovery Red Team / Regression Verifier",
+  "next_action": "Execute N17-N24 and N49-N56 selectively; create adversarial fixtures and exact first-real-corpus pilot run card. Run real pilot only when Founder actually supplies a long pasted old conversation.",
+  "next_gate": "ADVERSARIAL_SUITE_GREEN_AND_FIRST_REAL_CORPUS_AVAILABLE",
+  "application_targets": [],
+  "verification_evidence": [],
+  "protected_authorities": ["No simulated human evidence", "No provider evidence fabrication", "No pasted transcript as canon", "Secret/privacy firewall"],
+  "last_movement": "2026-08-21",
+  "notes": "BOUNDED PILOT B under ANTI-BEDLAM. Real large-corpus evidence cannot be fabricated before an actual transferred conversation is provided."
+}
