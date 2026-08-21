@@ -1,42 +1,113 @@
 {
-  "schema_version": "ivdivo.room917_execution_state/2.0",
-  "updated": "2026-08-21",
+  "schema_version": "ivdivo.room917_execution_state/3.0",
+  "updated": "2026-08-21T13:42:00+01:00",
   "project": "ROOM 917 CALLS AT MIDNIGHT",
+  "project_id": "ROOM917",
+  "active_branch": "THE_INSURABLE_FIRE",
   "active_engine": "THE INSURABLE FIRE",
   "delivery_mode": "FULL_AUDIO_DRAMA",
   "story_status": "LOCKED",
   "universal_audio_authority": "IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md",
-  "pilot_package": {
+  "cross_conversation_authority": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
+  "asset_persistence_authority": "IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md",
+  "status": "POST_RENDER_EVALUATION_BLOCKED_ON_MASTER_BYTE_ACCESS",
+  "current_production_phase": "POST_RENDER_EVALUATION_AND_SELECTIVE_REPAIR",
+  "historical_pre_render_package": {
     "name": "ROOM917_E01_03_V3_3_PILOT_COMPLETION_v1.9.zip",
-    "drive_id": "1cAPNfIpowl7UbWZYMZZXsE4Vipp1_mP-"
+    "drive_id": "1cAPNfIpowl7UbWZYMZZXsE4Vipp1_mP-",
+    "status": "HISTORICAL_UPSTREAM_EVIDENCE_NOT_CURRENT_FRONTIER"
   },
-  "status": "READY_FOR_USER_SIDE_S0_LIVE_RENDER",
-  "live_render_performed_in_chat": false,
-  "voice_lock": false,
-  "zero_cost_validation": {
-    "python_compile": "PASS",
-    "s0_dry_preview_jobs": 5,
-    "s0_dry_preview_network_calls": 0,
-    "s1_dry_preview_jobs": 15,
-    "s1_dry_preview_network_calls": 0,
-    "provider_contract_rechecked": "2026-08-21",
-    "provider_contract_result": "PASS_NO_RUNNER_REWRITE_REQUIRED"
+  "real_audio_exists": true,
+  "real_master": {
+    "asset_id": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K",
+    "filename": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "status": "UNRECOVERABLE_CHAT_ONLY",
+    "source_state": "ASSET_CREATED_BUT_NOT_PERSISTED",
+    "known_source_location": "neighboring active ChatGPT conversation",
+    "durable_storage_pointer": null,
+    "shared_drive_access_verified": false,
+    "file_library_access_verified": false,
+    "sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "size_bytes": 189558764,
+    "format": "WAV_PCM_SIGNED_24BIT",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_seconds": 658.190,
+    "duration_hms": "00:10:58.190",
+    "integrated_lufs_approx": -16.04,
+    "sample_peak_dbfs": {"L": -2.15, "R": -2.25},
+    "true_peak_dbtp_approx": {"L": -2.14, "R": -2.25},
+    "clipping_detected": false,
+    "stereo_correlation_approx": 0.9956,
+    "side_relative_to_mid_db_approx": -25.38,
+    "known_total_test_audio_context": "Founder reports approximately 15 minutes across current test work; do not equate this with the 10:58.190 master without locating sibling files."
+  },
+  "current_drive_router": {
+    "title": "00_ROOM917_AUDIO_PRODUCTION_CURRENT_STATE_AFTER_REAL_MASTER_v1.0",
+    "drive_id": "1u4yKOIiJwDicsh27nar52bzZ2rM48U0dnlAL5ucWDwo"
+  },
+  "evaluation_register": {
+    "title": "ROOM917_E01_REAL_MASTER_EVALUATION_AND_REPAIR_REGISTER_v1",
+    "drive_id": "1y9191gcAnaRLN0_eXfRCOXJ5BUUZLJAl5Ie3GYKLDsw",
+    "status": "WORKING_WAITING_FOR_MASTER_BYTES_FOR_PERCEPTUAL_TIMECODE_REVIEW"
+  },
+  "ingest_register": {
+    "title": "ROOM 917 — FIRST RENDER INGEST + VERSION CONTROL REGISTER — v1.0",
+    "drive_id": "1v_A25N-fxI097TqxQh4hgp7db5gdJFaInczUSNWYktY"
+  },
+  "founder_observed_quality_issues": [
+    "music/background scoring perceived as insufficient",
+    "sound world/body-presence/Foley perceived as thinner than professional commercial reference",
+    "commercial sellability remains unproven"
+  ],
+  "open_gates": [
+    "ASSET_PERSISTENCE_REQUIRED:ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K",
+    "REAL_MASTER_PERCEPTUAL_LISTEN",
+    "TIMESTAMPED_DEFECT_MAP",
+    "SELECTIVE_REPAIR",
+    "A_B_C_PREMIUM_COMPARISON",
+    "COMMERCIAL_QUALITY_GATE",
+    "NO_SCALE_UNTIL_E01_V2_PROVEN"
+  ],
+  "current_blocker": {
+    "type": "MISSING_REAL_EVIDENCE",
+    "subtype": "ASSET_PERSISTENCE_REQUIRED",
+    "description": "The real E01 evaluation master is known to exist and its identity/technical metrics are persisted, but its WAV bytes remain chat-local in another conversation and are not accessible from shared Drive/File Library in the current session. Perceptual listening and timestamped repair cannot proceed without the bytes.",
+    "asset_id": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K",
+    "failure_class": "ASSET_CREATED_BUT_NOT_PERSISTED"
   },
   "next_action": {
-    "stage": "S0_TECHNICAL_CANARY",
-    "jobs": 5,
-    "launcher": "RUN_ROOM917_S0_TECHNICAL_CANARY.ps1"
+    "stage": "RECOVER_AND_PERSIST_REAL_MASTER_BYTES",
+    "action": "Attempt source-conversation retrieval or supported transfer of the exact WAV bytes; persist the immutable original into ROOM917 controlled Drive ingest; register durable pointer/hash; verify readback; then immediately perform real listening and timestamped defect diagnosis.",
+    "safe": true,
+    "zero_cost": true,
+    "reversible": true,
+    "tool_executable_here": false
   },
-  "after_pass": {
-    "stage": "S1_FAIR_ANCHOR_COMPARISON",
-    "jobs": 15,
-    "launcher": "RUN_ROOM917_S1_FAIR_ANCHORS.ps1"
-  },
-  "prohibited_until_real_audio_evidence": [
-    "VOICE_LOCK",
-    "FULL_E01_RENDER",
-    "E01_SCENE3_HARD_MIXED_PILOT",
-    "E04_E24_BATCH_RENDER"
+  "after_persistence_pass": [
+    "VERIFY_SHA256_MATCH",
+    "REAL_MASTER_LISTEN",
+    "TIMESTAMP_DEFECT_MAP",
+    "EARLIEST_FAILED_LAYER_ROUTING",
+    "SELECTIVE_REPAIR_ONLY",
+    "BUILD_A_FORENSIC_CONTROL",
+    "BUILD_B_COMMERCIAL",
+    "BUILD_C_PREMIUM",
+    "LOUDNESS_MATCHED_FOUNDER_OR_BLIND_COMPARISON",
+    "SCALE_GO_NO_GO"
   ],
+  "prohibited_actions": [
+    "DO_NOT_RESTART_S0_S1_FROM_STALE_STATE",
+    "DO_NOT_CLAIM_MASTER_LISTENED_WITHOUT_BYTES",
+    "DO_NOT_REGENERATE_MISSING_MASTER_FROM_SUMMARY_OR_METRICS",
+    "DO_NOT_REWRITE_LOCKED_STORY_FROM_AUDIO_PREFERENCE_ALONE",
+    "DO_NOT_BATCH_RENDER_E02_E24_BEFORE_E01_V2_QUALITY_GATE",
+    "DO_NOT_DECLARE_COMMERCIAL_GO_WITHOUT_REAL_LISTENER_OR_FOUNDER_EVIDENCE"
+  ],
+  "continuation_policy": {
+    "default_continue_when_unblocked": true,
+    "require_repeated_continuation_word": false,
+    "safe_zero_cost_reversible_only": true
+  },
   "secret_policy": "API_KEYS_NEVER_IN_GITHUB_DRIVE_JSON_PROMPTS_OR_CANON"
 }
