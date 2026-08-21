@@ -1,0 +1,20 @@
+{
+  "writing": [
+    {"id":"E01_MACHINE_TEST_NOT_LITERARY","evidence_class":"MACHINE_TEST","claim_class":"LITERARY_QUALITY","evidence_source":"pytest","verification_method":"fixture","cannot_prove":"reader satisfaction","expected_fail":true},
+    {"id":"E02_MODEL_NOT_HUMAN","evidence_class":"MODEL_REVIEW","claim_class":"HUMAN_SIGNAL","evidence_source":"model review","verification_method":"bounded review","cannot_prove":"human response","expected_fail":true},
+    {"id":"E03_DRY_NOT_LIVE","evidence_class":"DRY_RUN","claim_class":"LIVE_RENDER","evidence_source":"manifest","verification_method":"dry-run","cannot_prove":"provider output","expected_fail":true},
+    {"id":"E04_GATE_NOT_FOUNDER_LOCK","evidence_class":"PERSISTED_READBACK","claim_class":"FOUNDER_LOCK","evidence_source":"story gate","verification_method":"readback","cannot_prove":"Founder approval","expected_fail":true},
+    {"id":"E05_VALID_PERSISTED","evidence_class":"PERSISTED_READBACK","claim_class":"PERSISTED_STATE","evidence_source":"GitHub main","verification_method":"exact file readback","cannot_prove":"human quality","expected_fail":false},
+    {"id":"E06_SOURCE_INTEGRITY_NOT_FULL_READ","evidence_class":"SOURCE_INTEGRITY","claim_class":"FULL_READ","evidence_source":"hash/integrity","verification_method":"checksum","cannot_prove":"full semantic reading","expected_fail":true}
+  ],
+  "audio": [
+    {"id":"A01_DRY_NOT_LIVE","evidence_class":"DRY_RUN","claim_class":"LIVE_RENDER","evidence_source":"synthetic manifest","verification_method":"dry request build","cannot_prove":"provider bytes or performance","expected_fail":true},
+    {"id":"A02_MODEL_NOT_HUMAN_LISTEN","evidence_class":"MODEL_REVIEW","claim_class":"HUMAN_SIGNAL","evidence_source":"AI audio critique","verification_method":"model rubric","cannot_prove":"human perceptual judgment","expected_fail":true},
+    {"id":"A03_LIVE_PROVIDER_VALID","evidence_class":"LIVE_PROVIDER","claim_class":"LIVE_RENDER","evidence_source":"provider response + bytes","verification_method":"hash/readback","cannot_prove":"human artistic quality","expected_fail":false}
+  ],
+  "reference": [
+    {"id":"R01_HASH_NOT_FULL_READ","evidence_class":"SOURCE_INTEGRITY","claim_class":"FULL_READ","evidence_source":"checksum","verification_method":"hash identity","cannot_prove":"semantic full read","expected_fail":true},
+    {"id":"R02_MODEL_SUMMARY_NOT_HUMAN","evidence_class":"MODEL_REVIEW","claim_class":"HUMAN_SIGNAL","evidence_source":"model summary","verification_method":"review","cannot_prove":"human reader response","expected_fail":true},
+    {"id":"R03_PERSISTED_SYNTHESIS","evidence_class":"PERSISTED_READBACK","claim_class":"PERSISTED_STATE","evidence_source":"strict lifecycle ledger","verification_method":"readback","cannot_prove":"market truth","expected_fail":false}
+  ]
+}
