@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IVDIVO Mirror Integrity Manifest v1",
+  "type": "object",
+  "required": ["github_records", "drive_records"],
+  "properties": {
+    "github_records": {"$ref": "#/$defs/records"},
+    "drive_records": {"$ref": "#/$defs/records"}
+  },
+  "$defs": {
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["logical_id", "authority_epoch", "frontier_token", "status_token", "mirror_mode"],
+        "properties": {
+          "logical_id": {"type": "string"},
+          "authority_epoch": {"type": "string"},
+          "frontier_token": {"type": "string"},
+          "status_token": {"type": "string"},
+          "mirror_mode": {"enum": ["SEMANTIC", "EXACT_BYTES"]},
+          "content_fingerprint": {"type": ["string", "null"]},
+          "raw_sha256": {"type": ["string", "null"]},
+          "source_revision": {"type": ["string", "null"]},
+          "expected_peer_revision": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

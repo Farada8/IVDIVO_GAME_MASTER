@@ -1,0 +1,54 @@
+{
+  "P25_D10_MIRROR_RESULT": {
+    "status": "PASS",
+    "errors": [],
+    "items": [{"logical_id": "D10_STORY_LOCK", "status": "PASS", "issues": []}],
+    "policy": "NEVER_SELECT_AUTHORITY_BY_MTIME; RECONCILE_USING_DECLARED_AUTHORITY_AND_FRONTIER"
+  },
+  "P26_D10_ROUTING_RESULT": {
+    "status": "PASS",
+    "project_id": "D10",
+    "event": "FOUNDER_LOCK",
+    "issues": [],
+    "repairs": [],
+    "law": "ROUTING_REPAIR_ONLY; NEVER_INFER_OR_CREATE_FOUNDER_AUTHORITY"
+  },
+  "P27_D01_PROOF_RESULT": {
+    "status": "HOLD",
+    "proof_id": "94298fe06eee953155d059b7560b781a320c90c0ff89a69d9745095f8bb8f4fb",
+    "claim_results": {"INTERNAL_STORY_COMPLETE": {"status": "PASS", "evidence": ["D01_FINAL_GATE", "D01_SEASON_REGRESSION"]}},
+    "gate_results": {"D01_FOUNDER_LOCK": {"status": "HOLD", "required_claim_ids": ["INTERNAL_STORY_COMPLETE"]}},
+    "errors": [],
+    "holds": ["HUMAN_OR_FOUNDER_APPROVAL_REQUIRED:D01_FOUNDER_LOCK"],
+    "warnings": []
+  },
+  "P28_D10_PROOF_RESULT": {
+    "status": "PASS",
+    "proof_id": "8f7c3d8948091490f66a6fa79792edfe888c1dc969f8fc792a88baecfeddee28",
+    "claim_results": {"D10_STORY_LOCK_SUPPORTED": {"status": "PASS", "evidence": ["FOUNDER_D10_LOCK", "D10_FINAL_GATE", "D10_LOCK_READBACK"]}},
+    "gate_results": {"D10_LOCK_PROOF": {"status": "PASS", "required_claim_ids": ["D10_STORY_LOCK_SUPPORTED"]}},
+    "errors": [], "holds": [], "warnings": []
+  },
+  "P31_D01_AGGREGATE_DRIFT_RESULT": {
+    "status": "ISSUES_FOUND",
+    "project_id": "D01",
+    "event": "FINAL_STORY_GATE_PASS",
+    "issues": ["EVENT_STATE_STALE:SYSTEM_AGGREGATE:ACTIVE_STORY"],
+    "repairs": [{"role": "SYSTEM_AGGREGATE", "action": "PATCH_ROUTING_ONLY", "expected_event": "FINAL_STORY_GATE_PASS"}],
+    "law": "ROUTING_REPAIR_ONLY; NEVER_INFER_OR_CREATE_FOUNDER_AUTHORITY"
+  },
+  "P29_VALUE_RESULTS": {
+    "P29_MIRROR_INTEGRITY_V1_VALUE_RESULT": {"status": "PASS", "candidate_id": "MIRROR_INTEGRITY_V1", "disposition": "HOLD_FOR_MEASUREMENT", "metrics": {"precision": null, "benefit_points": 2.0, "cost_points": 0.0, "net_points": 2.0, "real_project_pilots": 1.0, "independent_human_evidence_count": 0.0, "measurement_state": "PARTIAL"}, "reasons": ["VALUE_TELEMETRY_NOT_COMPLETE"], "authority_boundary": "REVIEW_DISPOSITION_ONLY; NEVER_AUTO_PROMOTE_OR_REWRITE_CANON"},
+    "P29_PROOF_CHAIN_V1_VALUE_RESULT": {"status": "PASS", "candidate_id": "PROOF_CHAIN_V1", "disposition": "HOLD_FOR_MEASUREMENT", "metrics": {"precision": null, "benefit_points": 4.0, "cost_points": 0.0, "net_points": 4.0, "real_project_pilots": 2.0, "independent_human_evidence_count": 0.0, "measurement_state": "PARTIAL"}, "reasons": ["VALUE_TELEMETRY_NOT_COMPLETE"], "authority_boundary": "REVIEW_DISPOSITION_ONLY; NEVER_AUTO_PROMOTE_OR_REWRITE_CANON"},
+    "P29_ROUTING_CONSISTENCY_V1_VALUE_RESULT": {"status": "PASS", "candidate_id": "ROUTING_CONSISTENCY_V1", "disposition": "HOLD_FOR_MEASUREMENT", "metrics": {"precision": null, "benefit_points": 2.0, "cost_points": 0.0, "net_points": 2.0, "real_project_pilots": 1.0, "independent_human_evidence_count": 0.0, "measurement_state": "PARTIAL"}, "reasons": ["VALUE_TELEMETRY_NOT_COMPLETE"], "authority_boundary": "REVIEW_DISPOSITION_ONLY; NEVER_AUTO_PROMOTE_OR_REWRITE_CANON"},
+    "P29_VALUE_GUARD_V1_VALUE_RESULT": {"status": "PASS", "candidate_id": "VALUE_GUARD_V1", "disposition": "HOLD_FOR_MEASUREMENT", "metrics": {"precision": null, "benefit_points": 2.0, "cost_points": 0.0, "net_points": 2.0, "real_project_pilots": 1.0, "independent_human_evidence_count": 0.0, "measurement_state": "PARTIAL"}, "reasons": ["VALUE_TELEMETRY_NOT_COMPLETE"], "authority_boundary": "REVIEW_DISPOSITION_ONLY; NEVER_AUTO_PROMOTE_OR_REWRITE_CANON"}
+  },
+  "P30_NEGATIVE_VALUE_SYNTHETIC_RESULT": {
+    "status": "PASS",
+    "candidate_id": "SYNTHETIC_NEGATIVE_VALUE_FIXTURE",
+    "disposition": "PRUNE_OR_REVISE",
+    "metrics": {"precision": 0.14285714285714285, "benefit_points": 4.0, "cost_points": 30.5, "net_points": -26.5, "real_project_pilots": 2.0, "independent_human_evidence_count": 1.0, "measurement_state": "COMPLETE"},
+    "reasons": ["LOW_PRECISION"],
+    "authority_boundary": "REVIEW_DISPOSITION_ONLY; NEVER_AUTO_PROMOTE_OR_REWRITE_CANON"
+  }
+}
