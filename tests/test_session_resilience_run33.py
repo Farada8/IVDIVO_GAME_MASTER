@@ -28,6 +28,20 @@ def base_tx():
     }
 
 
+def action(action_id, state="NOT_STARTED", effect="REVERSIBLE_WRITE"):
+    return {
+        "action_id": action_id,
+        "artifact_id": action_id.lower(),
+        "store": "DRIVE",
+        "operation": "write",
+        "effect_class": effect,
+        "side_effect_state": state,
+        "readback_verified": False,
+        "intended_identity": {},
+        "observed_identity": {},
+    }
+
+
 class DurableTransactionTests(unittest.TestCase):
     def test_key_deterministic(self):
         a = derive_idempotency_key(transaction_id="t", action_id="a", store="github", operation="put", artifact_id="x")
@@ -35,8 +49,7 @@ class DurableTransactionTests(unittest.TestCase):
         self.assertEqual(a, b)
 
     def test_hash_stable_across_key_order(self):
-        tx = base_tx()
-        h1 = transaction_hash(tx)
+        tx = base_tx(); h1 = transaction_hash(tx)
         tx2 = {"actions": tx["actions"], "work_unit": tx["work_unit"], "project_id": tx["project_id"],
                "authority_snapshot": tx["authority_snapshot"], "transaction_id": tx["transaction_id"], "blockers": []}
         self.assertEqual(h1, transaction_hash(tx2))
@@ -59,6 +72,11 @@ class DurableTransactionTests(unittest.TestCase):
         tx = base_tx(); tx["actions"][0]["side_effect_state"] = "STARTED_UNKNOWN"; tx["actions"][0]["effect_class"] = "PAID_WRITE"
         result = reconcile_transaction(tx, current_repo_main_sha="different", current_state_revision="2.0")
         self.assertEqual(result["decision"], "REBASE_FIRST")
+
+    def test_failed_action_outranks_unstarted_actions(self):
+        tx = base_tx(); tx["actions"] = [action("FAILED-1", "FAILED"), action("NEW-1", "NOT_STARTED")]
+        result = reconcile_transaction(tx, current_repo_main_sha="main-a", current_state_revision="2.0")
+        self.assertEqual(result["decision"], "STOP"); self.assertEqual(result["reason"], "FAILED_ACTIONS_PRESENT")
 
     def test_identity_mismatch_stops(self):
         tx = base_tx(); tx["actions"][0]["observed_identity"] = {"sha256": "bbb"}
@@ -106,6 +124,25 @@ class LineageTests(unittest.TestCase):
         a = append_checkpoint({"entries": []}, entry_id="e1", work_unit="W", checkpoint_id="c1", checkpoint_sha256="a"*64, repo_main_sha="m", state_revision="1")
         with self.assertRaises(ValueError): append_checkpoint(a, entry_id="e2", work_unit="W", checkpoint_id="c2", checkpoint_sha256="b"*64, repo_main_sha="m", state_revision="1")
 
+    def test_existing_multiple_roots_rejected(self):
+        ledger = {"entries":[
+            {"entry_id":"e1","work_unit":"W","checkpoint_id":"c1","checkpoint_sha256":"a"*64,"parent_entry_id":None,"generation":0,"status":"SUPERSEDED"},
+            {"entry_id":"e2","work_unit":"W","checkpoint_id":"c2","checkpoint_sha256":"b"*64,"parent_entry_id":None,"generation":0,"status":"ACTIVE"}]}
+        with self.assertRaises(ValueError): validate_ledger(ledger)
+
+    def test_existing_multiple_active_heads_rejected(self):
+        ledger = {"entries":[
+            {"entry_id":"e1","work_unit":"W","checkpoint_id":"c1","checkpoint_sha256":"a"*64,"parent_entry_id":None,"generation":0,"status":"SUPERSEDED"},
+            {"entry_id":"e2","work_unit":"W","checkpoint_id":"c2","checkpoint_sha256":"b"*64,"parent_entry_id":"e1","generation":1,"status":"ACTIVE"},
+            {"entry_id":"e3","work_unit":"W","checkpoint_id":"c3","checkpoint_sha256":"c"*64,"parent_entry_id":"e2","generation":2,"status":"ACTIVE"}]}
+        with self.assertRaises(ValueError): validate_ledger(ledger)
+
+    def test_duplicate_checkpoint_sha_rejected(self):
+        ledger = {"entries":[
+            {"entry_id":"e1","work_unit":"W1","checkpoint_id":"c1","checkpoint_sha256":"a"*64,"parent_entry_id":None,"generation":0,"status":"ACTIVE"},
+            {"entry_id":"e2","work_unit":"W2","checkpoint_id":"c2","checkpoint_sha256":"a"*64,"parent_entry_id":None,"generation":0,"status":"ACTIVE"}]}
+        with self.assertRaises(ValueError): validate_ledger(ledger)
+
     def test_cross_work_parent_rejected(self):
         a = append_checkpoint({"entries": []}, entry_id="e1", work_unit="W1", checkpoint_id="c1", checkpoint_sha256="a"*64, repo_main_sha="m", state_revision="1")
         with self.assertRaises(ValueError): append_checkpoint(a, entry_id="e2", work_unit="W2", checkpoint_id="c2", checkpoint_sha256="b"*64, repo_main_sha="m", state_revision="1", parent_entry_id="e1")
@@ -141,10 +178,20 @@ class LearningTests(unittest.TestCase):
         result = summarize_events(events)
         self.assertEqual(result["promotion_recommendation"], "ELIGIBLE_FOR_PROMOTION_REVIEW")
 
-    def test_high_false_stop_narrows(self):
+    def test_high_real_false_stop_narrows(self):
         events = [{"event_id":str(i),"project_id":"P1" if i%2 else "P2","work_unit":f"W{i}","recovery_decision":"STOP","real_interruption":True,"false_stop": i<2} for i in range(10)]
         result = summarize_events(events)
         self.assertEqual(result["promotion_recommendation"], "NARROW")
+
+    def test_synthetic_false_stops_do_not_inflate_real_false_stop_rate(self):
+        events = [
+            {"event_id":"r1","project_id":"P1","work_unit":"W1","recovery_decision":"REBASE_FIRST","real_interruption":True},
+            {"event_id":"r2","project_id":"P2","work_unit":"W2","recovery_decision":"RECOVER_VOLATILE_FIRST","real_interruption":True},
+            {"event_id":"r3","project_id":"P1","work_unit":"W3","recovery_decision":"RESUME_EXACT","real_interruption":True},
+        ] + [{"event_id":f"s{i}","project_id":"S","work_unit":f"S{i}","recovery_decision":"STOP","real_interruption":False,"false_stop":True} for i in range(20)]
+        result = summarize_events(events)
+        self.assertEqual(result["promotion_recommendation"], "ELIGIBLE_FOR_PROMOTION_REVIEW")
+        self.assertEqual(result["metrics"]["real_false_stop_rate"], 0.0)
 
 
 if __name__ == "__main__": unittest.main()
