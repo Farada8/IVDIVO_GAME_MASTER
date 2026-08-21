@@ -1,0 +1,42 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/schemas/universal_evidence_ledger_candidate_v1.json",
+  "title":"Universal Mystery/Evidence Ledger Candidate",
+  "type":"object",
+  "required":["project_id","evidence_items"],
+  "properties":{
+    "project_id":{"type":"string"},
+    "evidence_items":{"type":"array","items":{"type":"object","required":["evidence_id","fact_or_trace","source","lineage","access","reliability","surface_meaning","true_meaning","alternative_model","corroboration","current_timeline_availability","action","payoff"],"properties":{
+      "evidence_id":{"type":"string"},
+      "fact_or_trace":{"type":"string"},
+      "source":{"type":"string"},
+      "lineage":{"type":"string"},
+      "access":{"type":"array","items":{"type":"string"}},
+      "reliability":{"enum":["UNKNOWN","LOW","MEDIUM","HIGH","DIRECT_PHYSICAL","INDEPENDENT_CORROBORATED"]},
+      "surface_meaning":{"type":"string"},
+      "true_meaning":{"type":"string"},
+      "alternative_model":{"type":"string"},
+      "corroboration":{"type":"array","items":{"type":"string"}},
+      "current_timeline_availability":{"enum":["YES","NO","MEMORY_ONLY","AUTHOR_ONLY","HISTORICAL_RECORD","RECREATED_CURRENT_LINE"]},
+      "action":{"type":"string"},
+      "payoff":{"type":"string"},
+      "protected_order":{"type":"boolean"},
+      "chain_of_custody":{"type":"string"},
+      "cannot_prove":{"type":"array","items":{"type":"string"}}
+    }}}
+  },
+  "fairness_gates":[
+    "Final accusation/solution cannot depend on AUTHOR_ONLY or MEMORY_ONLY items unless current-line corroboration independently supports the decisive claim.",
+    "A clue is not its interpretation; alternative_model must remain explicit until excluded by evidence.",
+    "Access must be current to the character who acts on the evidence.",
+    "Protected clue order cannot be silently changed by audio/marketing adaptation.",
+    "Red herrings must resolve into a real lie, secret, crime, relationship fact or institutional failure rather than pure noise."
+  ],
+  "n31_result":"PASS_CANDIDATE_SCHEMA_CREATED",
+  "n32_validation":[
+    {"project":"D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE","source":"current project state plus persisted Gate 3 evidence/chain-of-custody artifact","result":"PASS_STRUCTURE: current project state explicitly protects current-line proof and rejects loop-memory-as-proof; detailed Gate 3 artifact exists in Drive"},
+    {"project":"D09_THE_MAN_WHO_CAME_BACK","source":"current project state plus final season Story Gate","result":"PASS_AT_FINAL_GATE_LEVEL_ONLY: main conflict and version reconciliation closed with FATAL 0/MAJOR 0, but this sprint did not re-audit every individual evidence object from the full season manuscript; therefore no new stronger fairness claim is made"}
+  ],
+  "n32_verdict":"PASS_WITH_LIMIT: schema detects the intended fairness boundary; D04 is a strong persisted example, D09 requires item-level extraction before claiming full ledger calibration.",
+  "evidence_class":"PERSISTED_STATE_PLUS_INTERNAL_MODEL_MAPPING"
+}
