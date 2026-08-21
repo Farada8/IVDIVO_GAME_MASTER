@@ -1,4 +1,4 @@
-# IVDIVO — RUNTIME CRAFT MECHANISM ADDENDUM v1.2
+# IVDIVO — RUNTIME CRAFT MECHANISM ADDENDUM v1.3
 
 **Status:** CANONICAL DOWNSTREAM CRAFT GATE  
 **Established:** 2026-08-21  
@@ -66,6 +66,41 @@ Enter as late as possible without losing the information or emotional setup requ
 Subtext is not mandatory decoration. Use it when fear, shame, status, strategy or relational cost makes indirect action more truthful than direct speech.
 
 If the dialogue is carrying structural work the scene/plot should have done, repair structure first.
+
+### 3A. SCENE-QUESTION / OUTCOME-INTEGRITY LAW
+
+For an important dramatic scene, derive one immediate `SCENE_QUESTION` from the active character's concrete goal and opposition.
+
+The scene's turn/outcome must answer or causally transform **that same question**. Valid result families include:
+- `YES`;
+- `NO`;
+- `YES, BUT`;
+- `NO, AND`;
+- `QUESTION TRANSFORMED BY A CAUSALLY EARNED REVEAL`.
+
+A shock, disaster, revelation or new threat that does not answer, complicate or transform the scene's active question is arbitrary escalation rather than a scene turn.
+
+The closing beat may open a stronger next question only after the present scene has produced a real consequence. Do not drop an unrelated event into the scene merely because a cliffhanger is desired.
+
+Runtime test:
+`IMMEDIATE GOAL -> SCENE QUESTION -> CONFLICT MANEUVERS -> OUTCOME -> CONSEQUENCE/NEXT QUESTION`.
+
+This is a causality check, not a demand that every scene end badly. Victory is allowed when it creates cost, changed state, a new obligation or legitimate closure.
+
+### 3B. TRANSFORMATION-SCALE / STABLE-CORE SERIES LAW
+
+`CHANGE` does not require a sweeping personality reversal in every story.
+
+Before forcing an arc, identify the earned transformation scale:
+- `POLAR TRANSFORMATION` — a major moral/identity reversal;
+- `REORIENTATION` — the character keeps core identity but changes belief, priority or strategy;
+- `REINFORCEMENT UNDER COST` — the character proves/strengthens an existing core value through harder choices;
+- `KNOWLEDGE / RELATIONSHIP / STATUS CHANGE` — the person is recognizably the same but future behavior and relationships are permanently altered;
+- `STABLE CORE / WORLD CHANGED` — especially in serial fiction, the protagonist's defining core remains stable while consequences, obligations, losses, reputation, institutions or world conditions accumulate around that core.
+
+Every completed story must still create a non-resettable consequence: changed choice capacity, relationship, knowledge, price, status or world state. Do not manufacture an epiphany or personality transplant merely to satisfy an abstract arc template.
+
+For series leads, preserve recognizability while allowing consequence and learning to accumulate book by book.
 
 ## 4. DIALOGUE-AS-ACTION / THREE-LAYER LAW
 
@@ -225,7 +260,8 @@ Do not optimize prose toward a metric until the manuscript becomes uniformly thi
 Invoke:
 - Dual-Protagonist Romance when romance is a primary/secondary engine.
 - Waiting-Question Ledger at serial architecture, retention audit, chapter/episode exit, mystery/suspense repair.
-- Scene-Pressure + Dialogue Three-Layer Law at scene design, P51/P53/dialogue/development edit.
+- Scene-Pressure + Scene-Question/Outcome Integrity + Dialogue Three-Layer at scene design, scene cards, development edit and causality regression.
+- Transformation-Scale / Stable-Core Series when a book/episode arc risks forcing personality change unsupported by the story or when a recurring lead must remain recognizable while consequences accumulate.
 - P51 Shared-Rhetorical-Construction when multiple characters begin to share the same authorial sentence geometry.
 - P53 two-axis + task classification wherever character/relationship emotion is relevant.
 - Inference-First Audio + Functional Silence at audio staging, Director Score, sound design, edit/mix QA.
