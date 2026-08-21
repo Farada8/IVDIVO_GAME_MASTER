@@ -1,0 +1,28 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.relationship_authority_graph/1.0",
+  "title":"IVDIVO Relationship Authority Graph",
+  "type":"object",
+  "required":["project_id","characters","edges"],
+  "properties":{
+    "project_id":{"type":"string"},
+    "characters":{"type":"array","minItems":2,"items":{"type":"string"},"uniqueItems":true},
+    "edges":{"type":"array","items":{"type":"object","required":["a","b","relationship_type","current_trust","boundary","power","debt","knowledge_asymmetry","vulnerability","consent_state","unresolved_obligation"],"properties":{
+      "a":{"type":"string"},
+      "b":{"type":"string"},
+      "relationship_type":{"type":"string","enum":["ROMANCE_ACTIVE","ATTRACTION_AUTHORIZED_NOT_ACTIVE","FAMILY","FRIENDSHIP","PROFESSIONAL","INSTITUTIONAL","ANTAGONISTIC","MIXED","NONE"]},
+      "current_trust":{"type":"string"},
+      "boundary":{"type":"string"},
+      "power":{"type":"string"},
+      "debt":{"type":"string"},
+      "knowledge_asymmetry":{"type":"string"},
+      "vulnerability":{"type":"string"},
+      "rupture":{"type":["string","null"]},
+      "repair":{"type":["string","null"]},
+      "consent_state":{"type":"string","enum":["NOT_APPLICABLE","NO_CURRENT_CONSENT","LIMITED_CONTEXTUAL_CONSENT","CURRENT_EXPLICIT_CONSENT","COERCION_OR_AUTHORITY_CONFLICT","UNKNOWN"]},
+      "privileged_knowledge_is_not_consent":{"type":"boolean"},
+      "unresolved_obligation":{"type":"string"},
+      "last_changed_unit":{"type":["string","null"]}
+    }}}
+  }
+}
