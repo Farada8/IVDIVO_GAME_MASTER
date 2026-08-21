@@ -1,0 +1,15 @@
+{
+  "artifact":"PMV217_248_TEST_REPORT_v1",
+  "synthetic_only":true,
+  "authority_effect":"NONE",
+  "tests":{
+    "acoustic_clean":{"verdict":"PASS","pass":true},
+    "acoustic_clipped":{"verdict":"FAIL","pass":true},
+    "pair_compile":{"pass":true,"line_count":7},
+    "blind_randomizer":{"pass":true},
+    "hard_fail_override":{"pass":true},
+    "granularity_gate":{"pass":true,"fixture_verdict":"ISOLATED_TTS"},
+    "pilot_lock_fail_closed":{"pass":true},
+    "pilot_lock_positive_fixture":{"pass":true,"authority_effect":"NONE_SYNTHETIC"}
+  }
+}
