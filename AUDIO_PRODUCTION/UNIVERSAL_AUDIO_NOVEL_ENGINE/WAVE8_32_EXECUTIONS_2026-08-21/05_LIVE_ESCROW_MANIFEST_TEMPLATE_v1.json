@@ -1,0 +1,30 @@
+{
+  "schema_version": "ivdivo.audio.live_escrow/1.0",
+  "status": "TEMPLATE_NOT_LIVE_EVIDENCE",
+  "project_id": "LESSON_ZERO",
+  "canary_identity": {
+    "request_count": 3,
+    "spoken_units": 36,
+    "characters": 2163,
+    "block_ids": ["CH01_S02_RB001", "CH01_S02_RB002", "CH01_S02_RB003"]
+  },
+  "provider_snapshot": {"snapshot_hash": null, "provider": null, "captured_at": null},
+  "locks": {
+    "narrator_voice_id": null,
+    "ethan_voice_id": null,
+    "aoife_voice_id": null,
+    "pronunciation_lock_sha": null,
+    "voice_lock_sha": null
+  },
+  "lineages": [
+    {"block_id":"CH01_S02_RB001","request_hash":null,"ledger_state":"UNSENT","provider_request_id":null,"response_metadata_hash":null,"charge_evidence":null,"raw_audio_sha256":null,"alignment_sha256":null,"canonical_audio_sha256":null,"human_sanity_status":"HOLD_NOT_RUN"},
+    {"block_id":"CH01_S02_RB002","request_hash":null,"ledger_state":"UNSENT","provider_request_id":null,"response_metadata_hash":null,"charge_evidence":null,"raw_audio_sha256":null,"alignment_sha256":null,"canonical_audio_sha256":null,"human_sanity_status":"HOLD_NOT_RUN"},
+    {"block_id":"CH01_S02_RB003","request_hash":null,"ledger_state":"UNSENT","provider_request_id":null,"response_metadata_hash":null,"charge_evidence":null,"raw_audio_sha256":null,"alignment_sha256":null,"canonical_audio_sha256":null,"human_sanity_status":"HOLD_NOT_RUN"}
+  ],
+  "gate": {
+    "exact_three_unique_lineages": false,
+    "no_duplicate_spend": null,
+    "fresh_session_readback": false,
+    "release": "HOLD_EXTERNAL_PROVIDER_AND_HUMAN_EVIDENCE"
+  }
+}
