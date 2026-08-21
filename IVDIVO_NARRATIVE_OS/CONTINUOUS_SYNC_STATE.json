@@ -1,0 +1,59 @@
+{
+  "schema_version": "ivdivo.continuous_sync_state/1.0",
+  "status": "PROPOSED_CURRENT_SYNC_STATE",
+  "last_sync_at": "2026-08-21T12:00:00+01:00",
+  "scope": "SYSTEM_WIDE_IVDIVO",
+  "github_main_sha_observed_during_sync": "f47736860ee4b7afd8ef221938b54f1c24b1bc67",
+  "integration_branch": "system/2026-08-21-continuous-studio-merge",
+  "drive_global_sync_mirror_id": "1ArRunZvX_Y0rdBWPq5qkSFLj9EzH7PKvMe0HgULO84U",
+  "delta_clusters": [
+    {
+      "id": "AUTOPILOT_AND_IMPLICIT_CONTINUATION",
+      "disposition": "ACCEPT",
+      "summary": "Persisted state and dependency gates drive continuation; resume words are shorthand, not heartbeat."
+    },
+    {
+      "id": "SEMANTIC_DEDUPE_AND_SOURCE_PARITY",
+      "disposition": "ACCEPT",
+      "summary": "Repeated/model-mirrored findings do not gain evidence weight; cross-model confirmation requires appropriate source parity and evidence."
+    },
+    {
+      "id": "IDEA_STORY_P51_SHARED_CONSTRUCTION",
+      "disposition": "ACCEPT",
+      "summary": "P51 scans shared rhetorical construction families across speakers, not only surface vocabulary."
+    },
+    {
+      "id": "IDEA_STORY_P53_TWO_AXIS",
+      "disposition": "ACCEPT",
+      "summary": "P53 separates inherited relationship authority from current scene function/dosage."
+    },
+    {
+      "id": "REFERENCE_ENGINE_MECHANISMS",
+      "disposition": "ACCEPT",
+      "summary": "Story Engine v4.1 mechanism families promoted under full/fragment/duplicate source discipline and originality firewall."
+    },
+    {
+      "id": "BODYGUARD_VOICE_AUDITION",
+      "disposition": "ACCEPT",
+      "summary": "Dry loudness-matched comparison, directed-change responsiveness, pair underplay, device translation, provisional vs season lock and fatigue tests."
+    },
+    {
+      "id": "NMM_ONE_LISTEN_AUDIO_COMPREHENSION",
+      "disposition": "ACCEPT",
+      "summary": "Evidence-heavy audio must preserve one-listen causal comprehension; repair performance/spacing/source identity/mix/edit before protected text."
+    }
+  ],
+  "held_for_test": [
+    "IDEA->STORY v1.1 executable patch remains not implemented until executable source integration is verified",
+    "Human Signal remains external-only"
+  ],
+  "duplicates_or_parallel_authorities_suppressed": [
+    "use the existing continuous multi-model studio candidate rather than creating a competing second autopilot canon"
+  ],
+  "open_gates": [
+    "PR 45 review/merge",
+    "Drive mirror readback verification"
+  ],
+  "highest_unblocked_next_obligation": "verify PR branch contents and update PR 45 description with new delta/evidence/reference/prompt additions",
+  "note": "Sync state is routing evidence, not story canon."
+}
