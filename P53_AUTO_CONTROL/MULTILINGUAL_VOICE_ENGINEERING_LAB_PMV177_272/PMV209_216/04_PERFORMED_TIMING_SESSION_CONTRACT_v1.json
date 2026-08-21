@@ -1,0 +1,13 @@
+{
+  "artifact": "BODYGUARD_RU_PERFORMED_TIMING_SESSION_CONTRACT_v1",
+  "status": "READY_FOR_SESSION",
+  "locale": "ru-RU",
+  "authority": "RU audition anchors patch candidate + current English source function",
+  "required_roles": ["NAOMI","ELI","VOICE IN IEM"],
+  "required_anchor_ids": ["BG_E01_S1_028","BG_E01_S1_032","BG_E01_S1_061","BG_E01_S2_087","BG_E01_S2_088","BG_E01_S2_106","BG_E01_S2_111","BG_E01_S3_120","BG_E01_S3_121","BG_E01_S3_122","BG_E01_S3_143","BG_E01_S3_160","BG_E01_S3_161","BG_E01_S3_166","BG_E01_S3_180","BG_E01_S3_186","BG_E01_S3_188","BG_E01_S3_190"],
+  "recording_conditions": {"music":false,"reverb":false,"natural_performance":true,"not_speed_read":true,"sample_rate_hz":48000,"timing_source":"actual waveform duration"},
+  "per_take_fields": ["block_id","candidate_text_sha256","performer_or_voice_id","take_id","start_seconds","end_seconds","duration_seconds","words_per_minute","clipped","mispronounced","unnatural_pause","function_preserved","notes"],
+  "hard_fails": ["source/function drift introduced to meet stopwatch","critical command becomes ambiguous","clue contrast cannot be perceived","consent/action specificity lost","performance must be unnaturally accelerated to fit"],
+  "pass_rule": "All critical anchors have at least one natural take preserving function; timing hotspots are patched only when real performance demonstrates a problem.",
+  "output": "BODYGUARD_RU_PERFORMED_TIMING_EVIDENCE_v1.json"
+}
