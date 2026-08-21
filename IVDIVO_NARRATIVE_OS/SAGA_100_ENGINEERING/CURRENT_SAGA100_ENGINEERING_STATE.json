@@ -1,44 +1,148 @@
 {
-  "schema_version": "1.0",
-  "updated": "2026-08-21",
-  "status": "CYCLE32_EXECUTED_WORKING_INTEGRATION_CANDIDATE",
-  "branch": "studio/saga100-engineering-cycle32-2026-08-21",
-  "founder_direction": {
-    "one_saga": true,
-    "default_cycle": ["SMITH_OES","ORBITAL","CONFEDERATION_FRONTIER","CROSSING"],
-    "target_capacity_books": 100,
-    "engineering_modules_required": true,
-    "self_improvement_required": true
+  "schema_version":"2.0",
+  "updated":"2026-08-21",
+  "status":"R01_R64_EXECUTED_HARDENED_PROMOTION_DECISION_READY",
+  "branch":"studio/saga100-engineering-cycle32-2026-08-21",
+  "draft_pr":147,
+  "merged":false,
+  "story_canon_effect":"NONE_UNTIL_EXPLICIT_FOUNDER_PROMOTION_AND_CONTROL_LAYER_UPDATE",
+  "founder_direction":{
+    "one_saga":true,
+    "preferred_long_run_lenses":["SMITH_OES","ORBITAL","CONFEDERATION_FRONTIER","CROSSING"],
+    "adaptive_default_cycle":true,
+    "mandatory_fourth_crossing":false,
+    "target_capacity_books":100,
+    "capacity_not_quota":true,
+    "engineering_modules_required":true,
+    "self_improvement_required":true,
+    "human_problem_first":true
   },
-  "completed": [
+  "completed":[
     "parallel_GitHub_Drive_development_audit",
-    "non_destructive_SAGA_SLOT_identity",
-    "Saga100_architecture_v1",
-    "machine_contracts_v1",
-    "32_prompt_cycle_execution",
-    "25_cycle_civilization_question_map_v0_1",
-    "64_followup_run_cards_v1",
-    "Google_Drive_workspace_created"
+    "non_destructive_PROJECT_ID_plus_SAGA_SLOT_ID_identity",
+    "initial_Saga100_architecture_v1",
+    "initial_Cycle32_32_of_32_prompts",
+    "initial_64_followup_run_cards",
+    "R01_R08_legacy_inventory_and_mapping",
+    "R09_R16_64_question_bank_to_25_threshold_selection_v0_2",
+    "R17_R24_eight_JSON_schemas",
+    "R25_R32_semantic_contract_engine_and_regression",
+    "R33_R40_real_book_vertical_proofs_B02_B03_B07_B08",
+    "R41_R48_self_improvement_integration_and_SI_0016_candidate",
+    "R49_R56_portfolio_reader_audio_market_contracts",
+    "R57_R59_drift_cycle_gate_slot_state_machine",
+    "R60_strategic_pointer_reused_and_verified",
+    "R61_GitHub_Drive_consolidated_mirror_verification",
+    "R62_independent_macro_red_team",
+    "R63_minimum_effective_hardening_v1_1",
+    "R64_promotion_decision_pack",
+    "Drive_readable_mirror_updated"
   ],
-  "drive_workspace": {
-    "folder_id": "1u5Fg8wiY2bjJACqYrq0_aiFLqsyySAaJ",
-    "title": "SAGA_100_ENGINEERING_CYCLE32_2026-08-21"
+  "proof_summary":{
+    "semantic_contract_tests":{"passed":14,"failed":0},
+    "hardening_canaries":{"passed":8,"failed":0},
+    "real_book_vertical_proofs":{"pass":6,"pass_with_hold":2,"fail":0},
+    "red_team":{"fatal":0,"major_design_risks":8,"medium":4,"major_repairs_applied":8},
+    "strategic_retrieval_defect":{"reproduced":true,"guard_canary_pass":true,"candidate":"SI-0016_READY_FOR_PILOT_NOT_PROMOTED"}
   },
-  "authority_constraints": [
-    "DO_NOT_RENUMBER_EXISTING_BXX_WITHOUT_RECONCILIATION",
-    "DO_NOT_REWRITE_LOCKED_BOOKS_FROM_MACRO_ROADMAP",
-    "DO_NOT_AUTO_PROMOTE_SELF_IMPROVEMENT_CANDIDATES",
-    "DO_NOT_TREAT_NARR009_AS_DELETED",
-    "DO_NOT_FREEZE_100_PLOTS"
+  "legacy_mapping":{
+    "B01":"PRE_CYCLE_FOUNDATION_CANDIDATE",
+    "B02":"S100_C01_O_CANDIDATE",
+    "B03":"S100_C01_S_CANDIDATE_PROJECT_GATE_HOLD",
+    "B04":"AUTHORITY_CONFLICT_HOLD",
+    "B05":"WORKING_DEFAULT_ONLY_HOLD",
+    "B06":"SOURCE_RECOVERY_REQUIRED_HOLD",
+    "B07":"S100_C01_C_CANDIDATE_CONTINUITY_PORTS",
+    "B08":"S100_C01_X_CANDIDATE_UPSTREAM_SUBSTITUTION_HOLD"
+  },
+  "current_threshold_map":{
+    "version":"0.2_WORKING",
+    "cycle_01":"STANDING_CLASSIFICATION_LEGITIMATE_AUTHORITY",
+    "exact_25_order_locked":false,
+    "retrofit_existing_books":false
+  },
+  "hardened_laws":[
+    "PROJECT_STORY_OUTRANKS_SAGA_SLOT_NEATNESS",
+    "3_PLUS_1_IS_ADAPTIVE_DEFAULT_NOT_ORDINAL_QUOTA",
+    "CROSSING_MAY_BE_DEFERRED",
+    "HUMAN_PROBLEM_FIRST_OUTRANKS_THRESHOLD_CURRICULUM",
+    "NARR009_RETAINED_AS_PROBLEM_SEED_MECHANISM_WAVE_BANK",
+    "CAPABILITY_DIFFUSION_REQUIRES_EVIDENCE_SCOPE_CONSEQUENCE_WITH_EXPLICIT_EXCEPTION_PATH",
+    "KNOWLEDGE_CAPABILITY_ACCESS_MANUFACTURE_LAW_ORDINARY_USE_JURISDICTION_ARE_DISTINCT",
+    "SMITH_OES_IS_A_PROFESSIONAL_CIVILIZATIONAL_LENS_NOT_A_FORCED_IMMORTALITY_CONTRACT",
+    "CONFEDERATION_CANNOT_BE_RECURRING_MORAL_REFEREE",
+    "UNKNOWN_AND_HOLD_REMAIN_FIRST_CLASS",
+    "CROSSING_REQUIRES_AT_LEAST_TWO_IRREDUCIBLE_LINE_DEPENDENCIES_NOT_EQUAL_CAMEOS",
+    "SAGA100_META_WORK_IS_SUBORDINATE_TO_SHIPPING_BOOKS_AUDIO_RELEASE_EVIDENCE"
   ],
-  "highest_value_next_runs": [
-    "R01_LEGACY_PROJECT_INVENTORY",
-    "R08_LEGACY_MAPPING_RECONCILER",
-    "R16_SELECT_FIRST_25_THRESHOLDS_AFTER_DEDUP_AND_DEPENDENCY_CHECK",
-    "R17_R24_EXECUTABLE_SCHEMAS",
-    "R33_R40_REAL_BOOK_PROOF_RUNS",
-    "R41_R48_SELF_IMPROVEMENT_INTEGRATION"
+  "self_improvement":{
+    "engine":"existing Self-Improvement Meta Engine v2",
+    "parallel_engine_created":false,
+    "candidate":"SI-0016_STRATEGIC_AUTHORITY_DISCOVERABILITY_SCOPE_BOOT",
+    "candidate_status":"READY_FOR_PILOT",
+    "promotion":"NONE",
+    "next_gate":"LIVE_SCOPE_AWARE_BOOT_PILOT_PLUS_REGRESSION"
+  },
+  "drive_workspace":{
+    "folder_id":"1u5Fg8wiY2bjJACqYrq0_aiFLqsyySAaJ",
+    "title":"SAGA_100_ENGINEERING_CYCLE32_2026-08-21",
+    "mirror_model":"CONSOLIDATED_READABLE_WORKING_MIRROR",
+    "byte_identical_to_github":false,
+    "current_docs":{
+      "authority_index":"1BRJDZLaFrXTHk9xVOPI39AGg0le8xSS_REvQfD27nho",
+      "cycle32":"1hq3jaHZBGJK25hj-uOAm4IC12sJ9fnSZbL4RDMRRcJw",
+      "map_v0_1":"14wN3lURA30c0CLsBbpWfA8utBN7lOuDBBg6b_9gNEPo",
+      "map_v0_2_current":"10rUi8-gO7uo3DE8DnZ0nFm_AgoL9szOCbNujsNK1k_Q",
+      "next64":"1y18vPdDaXJKENG31ydd95lxQqYbCpaM9LaIYLWmJyYY",
+      "contracts_proofs_si":"16vXfHwqUsF2rGgmWOmeKTaiiIbeRZPDwgMf3KfWffr4",
+      "R01_R32":"1h-A9-SNFsq_jrYze5-KabliKpyu0wZuSHvkddQ6HmGQ",
+      "R33_R48":"1aAfYBx0VUzvAS2uNtMvVuA89zKZhJvF00DRCSdc0BrI",
+      "R49_R64":"1pAryPm_30q2n_CmHhnsFUy9AszExVOOQauEHMMUsdJE"
+    }
+  },
+  "recommended_promotion_scope":[
+    "one_saga_strategic_direction",
+    "dual_PROJECT_ID_SAGA_SLOT_ID_law",
+    "NARR009_seed_bank_role",
+    "adaptive_3_plus_1_crossing_defer_law",
+    "Human_Problem_First",
+    "consequence_before_escalation",
+    "capability_access_jurisdiction_separation",
+    "Crossing_necessity_law",
+    "Confederation_anti_utopia_no_moral_referee",
+    "shipping_WIP_guard",
+    "bounded_engineering_contracts_after_normal_review"
   ],
-  "promotion_state": "NOT_AUTOMATICALLY_PROMOTED_TO_STORY_CANON",
-  "next_real_gate": "LEGACY_SEQUENCE_AND_AUTHORITY_RECONCILIATION_BEFORE_ANY_DESTRUCTIVE_RENUMBERING"
+  "held_from_promotion":[
+    "exact_25_threshold_order_v0_2",
+    "exact_C01_project_chronology_mapping",
+    "B04_assignment",
+    "B05_assignment",
+    "B06_assignment",
+    "B08_prose_execution",
+    "SI_0016_universal_promotion",
+    "near_term_12_slot_publication_order"
+  ],
+  "rejected":[
+    "destructive_Bxx_renumbering",
+    "fixed_100_plot_quota",
+    "mandatory_crossing_every_fourth_book",
+    "permanent_crossover_team_default",
+    "automatic_Confederation_technology_diffusion",
+    "knowledge_equals_jurisdiction",
+    "Confederation_as_moral_referee",
+    "forced_Smith_immortality_for_grid",
+    "delete_NARR009",
+    "retrofit_accepted_books_to_threshold",
+    "auto_promote_from_model_agreement",
+    "meta_sprints_without_live_need"
+  ],
+  "technical_followups_not_authority_gates":[
+    "CI_jsonschema_validation_for_all_new_schemas",
+    "live_SI_0016_scope_aware_boot_pilot",
+    "B04_B06_source_authority_recovery_when_relevant"
+  ],
+  "promotion_state":"FOUNDER_EXPLICIT_PROMOTION_MERGE_REQUIRED",
+  "next_real_gate":"FOUNDER_EXPLICIT_DECISION_ON_PROMOTING_PR147_RECOMMENDED_SAGA100_LAWS_TO_MAIN_NARRATIVE_OS_SAGA_BIBLE_CONTROL_LAYER",
+  "resume_law":"Generic и/дальше/продолжай is not explicit promotion/merge approval. Until explicit Founder approval, keep PR #147 draft and Saga100 WORKING."
 }
