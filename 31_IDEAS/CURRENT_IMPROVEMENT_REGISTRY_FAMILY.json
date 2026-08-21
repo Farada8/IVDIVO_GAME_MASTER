@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "status": "CURRENT_MACHINE_REGISTRY_FAMILY_POINTER_NOT_STORY_CANON",
   "updated": "2026-08-21",
   "base_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
@@ -8,10 +8,18 @@
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0008_TRANSCRIPT_RECOVERY_EXTENSION.json",
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0009_RECONCILED_RECOVERY_STATE_V2.json",
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0010_REGISTRY_SHARD_COMPACTION_TRANSACTION.json",
-    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0011_REAL_CORPUS_RECOVERY_ADVERSARIAL_PILOT.json"
+    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0011_REAL_CORPUS_RECOVERY_ADVERSARIAL_PILOT.json",
+    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0012_META_ORCHESTRATOR_CYCLE2_CANDIDATE.json"
   ],
   "validation_tool": "tools/validate_improvement_registry_refs.py",
   "merge_law": "candidate_id must be unique across base and extensions; duplicate IDs fail closed; extensions are first-class machine registry records but may not override a base record.",
+  "c3_38_integrity_repair": {
+    "defect": "DUPLICATE_SI_0008_IDENTITY",
+    "kept": "SI-0008 = Full chat transcript recovery and ingestion executable extension",
+    "migrated": "Prompt Router / Meta-Orchestrator candidate -> SI-0012",
+    "historical_redirect": "31_IDEAS/SI-0008_RUN_CARDS_V2_CANDIDATE.json",
+    "result": "RESOLVED_IN_REGISTRY_FAMILY"
+  },
   "migration_note": "Concurrent candidate writes should prefer validated extension shards plus this family pointer. The monolithic base registry is a compatibility/read model until a deterministic compaction build validates all base+extension IDs, emits input/output hashes, passes roundtrip/readback regression, and switches pointers transactionally. Candidate shard visibility does not promote candidate status.",
-  "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009/0010/0011 are candidates/pilots, not CURRENT engine authority."
+  "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009/0010/0011/0012 are candidates/pilots unless their own lifecycle state says otherwise."
 }
