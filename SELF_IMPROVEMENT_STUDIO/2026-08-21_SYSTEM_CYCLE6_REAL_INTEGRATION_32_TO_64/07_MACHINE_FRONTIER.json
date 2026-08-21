@@ -1,0 +1,24 @@
+{
+  "schema":"ivdivo.self_improvement.cycle6/1.0",
+  "status":"EXECUTED_REAL_INTEGRATION_PILOT_NOT_CURRENT_AUTHORITY",
+  "snapshot_main_sha":"55c69de4f19aec1c2b408020c1447cbd38beef5b",
+  "persistence_branch_base_sha":"97f394dfc4dd36f2d90b413c46b53097037ce5cb",
+  "runs_total":32,
+  "warm_tests":"48/48_PASS",
+  "cold_tests":"48/48_PASS",
+  "real_evidence":{
+    "book_second_project_replication":"PASS_BOOK_DOMAIN_REVIEW_ONLY",
+    "d01_frontier_drift":"PASS_E120_FOUNDER_GATE",
+    "d04_human_signal":"HOLD_REAL_HUMAN",
+    "d04_economics":"HOLD_MEASURED_DATA",
+    "nmm_second_audio_replication":"HOLD_CONTRACT_IDENTITY_AND_HUMAN",
+    "registry_next_id":"SI-0015_COMPUTED_NOT_ALLOCATED"
+  },
+  "drive_folder_id":"1MHlELpzb2wuy6OkBA4d_xlnvOqk2qKkD",
+  "drive_zip_id":"1pzRbPjCx4PH_GequnAYp0k0h3k_XI1vG",
+  "zip_sha256":"35aa6e79e2d45115f058e5654c4a2c7bb32ac47749c5f573ac3a79a450d64b78",
+  "next64_count":64,
+  "next64_auto_authorized":false,
+  "governor_selected":"D04_REAL_HUMAN",
+  "next_gate":"GITHUB_PR_FRESHNESS_READBACK_THEN_REAL_HUMAN_OR_PROVIDER_EVIDENCE"
+}
