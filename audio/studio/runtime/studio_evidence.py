@@ -1,18 +1,34 @@
 #!/usr/bin/env python3
-"""IVDIVO Audio Studio evidence layer v1.0 candidate.
+"""IVDIVO Audio Studio evidence layer v1.2.
 
 Evidence-only logic for cross-mode benchmark fairness, human performance review,
 measured economics and studio release readiness. It does not compile story/director
 artifacts, dispatch providers, repair audio, or auto-lock artistic decisions.
+
+Production-authoritative external evidence is receipt-backed and class-validated.
+Caller-supplied booleans remain insufficient for provider/human/live/alignment/
+economics/durability/cross-project release claims. Release evidence must also
+cross-bind to one coherent live-audio lineage rather than merely pass as separate
+unrelated receipts.
 """
 from __future__ import annotations
 from dataclasses import dataclass
+from datetime import datetime
 from hashlib import sha256
 from typing import Any, Iterable
+
+from external_evidence_trust import validate_external_evidence
 
 AUDIO_MODES = ("NARRATED", "MULTI_VOICE", "DRAMATIZED")
 QUALITY_DIMENSIONS = ("believability", "clarity", "want_more", "fatigue_resistance")
 PERFORMANCE_REQUIRED = ("multi_state", "pronunciation", "fatigue", "human_review")
+PERFORMANCE_SCOPE_BY_FAMILY = {
+    "multi_state": "MULTI_STATE",
+    "pronunciation": "PRONUNCIATION",
+    "fatigue": "FATIGUE",
+    "human_review": "PERFORMANCE",
+    "pair": "PAIR",
+}
 
 
 def text_hash(text: str) -> str:
@@ -91,6 +107,7 @@ def score_benchmark_variant(*, mode: str, human_scores: dict[str, float],
         "total_cost": round(total_cost, 4),
         "cost_per_accepted_minute": round(total_cost / accepted_minutes, 4),
         "composite": round(quality, 6),
+        "authority_scope": "ANALYTIC_ONLY_UNTIL_RECEIPT_BOUND",
     }
 
 
@@ -123,9 +140,15 @@ class PerformanceEvidence:
     pair: bool | None = None
     human_scores: dict[str, float] | None = None
     hard_fails: list[str] | None = None
+    trusted_human_evidence: dict[str, Any] | None = None
 
 
 def performance_evidence_gate(evidence: PerformanceEvidence, *, pair_required: bool = False) -> dict[str, Any]:
+    """Gate voice-lock eligibility through family-specific trusted human receipts.
+
+    The legacy booleans remain useful planning signals, but they can no longer
+    make a candidate eligible by themselves.
+    """
     missing = [key for key in PERFORMANCE_REQUIRED if not getattr(evidence, key)]
     if pair_required and evidence.pair is not True:
         missing.append("pair")
@@ -136,16 +159,48 @@ def performance_evidence_gate(evidence: PerformanceEvidence, *, pair_required: b
             "hard_fails": sorted(set(evidence.hard_fails)),
             "machine_may_auto_lock": False,
             "voice_lock": False,
+            "production_authoritative": False,
         }
+
     scores = evidence.human_scores or {}
     if evidence.human_review and not scores:
         missing.append("human_scores")
+
+    receipt_map = evidence.trusted_human_evidence or {}
+    required_families = list(PERFORMANCE_REQUIRED)
+    if pair_required:
+        required_families.append("pair")
+    validations: dict[str, Any] = {}
+    expected_candidate_hash = text_hash(f"{evidence.role_id}:{evidence.candidate_id}")
+    for family in required_families:
+        if not getattr(evidence, family if family != "pair" else "pair"):
+            continue
+        validation = validate_external_evidence(
+            "HUMAN_REVIEW",
+            receipt_map.get(family),
+            expected_scope=PERFORMANCE_SCOPE_BY_FAMILY[family],
+        )
+        validations[family] = validation
+        if not validation.get("verified"):
+            missing.append(f"trusted_{family}_evidence")
+            continue
+        if validation.get("candidate_hash") != expected_candidate_hash:
+            validations[family] = {
+                **validation,
+                "status": "FAIL_CANDIDATE_BINDING",
+                "verified": False,
+                "expected_candidate_hash": expected_candidate_hash,
+            }
+            missing.append(f"trusted_{family}_candidate_binding")
+
     return {
         "status": "ELIGIBLE_FOR_HUMAN_LOCK_DECISION" if not missing else "HOLD",
         "missing": sorted(set(missing)),
         "human_scores": scores,
+        "trusted_human_validations": validations,
         "machine_may_auto_lock": False,
         "voice_lock": False,
+        "production_authoritative": not missing,
     }
 
 
@@ -235,27 +290,132 @@ def economics_report(records: Iterable[EconomicsRecord]) -> dict[str, Any]:
         "acceptance_yield": round(accepted / generated, 4) if generated else None,
         "cache_reuse_fraction": round(cache / max(generated + cache, 1e-9), 4),
         "regeneration_fraction": round(regeneration / max(generated, 1e-9), 4),
+        "authority_scope": "ANALYTIC_ONLY_UNTIL_DURABLE_ECONOMICS_RECEIPT_BOUND",
     }
 
 
-def studio_release_evidence_matrix(evidence: dict[str, Any]) -> dict[str, Any]:
-    required = (
-        "locked_source_identity",
-        "production_control_on_main",
-        "provider_preflight_pass",
+def _release_lineage_consistency(validations: dict[str, Any]) -> dict[str, Any]:
+    """Cross-bind individually valid external receipts to one release lineage."""
+    keys = (
         "live_render_provenance",
         "real_alignment_timeline",
-        "performance_human_pass",
-        "blind_listener_pass",
-        "measured_economics",
         "durable_raw_assets",
+        "durable_recovery",
         "cross_project_live_portability",
     )
-    missing = [key for key in required if evidence.get(key) is not True]
+    if any(not validations.get(key, {}).get("verified") for key in keys):
+        return {
+            "status": "HOLD_PREREQUISITE_VALIDATION",
+            "verified": False,
+            "issues": ["CLASS_VALIDATION_INCOMPLETE"],
+        }
+
+    live = validations["live_render_provenance"].get("durable") or {}
+    alignment = validations["real_alignment_timeline"].get("durable") or {}
+    raw = validations["durable_raw_assets"].get("durable") or {}
+    recovery = validations["durable_recovery"]
+    cross = validations["cross_project_live_portability"].get("durable") or {}
+
+    live_hash = live.get("content_hash")
+    live_tx = live.get("transaction_id")
+    live_metadata = live.get("metadata") or {}
+    live_project = live_metadata.get("project_id")
+    alignment_hash = alignment.get("content_hash")
+    alignment_metadata = alignment.get("metadata") or {}
+    cross_metadata = cross.get("metadata") or {}
+
+    issues: list[str] = []
+    if raw.get("content_hash") != live_hash:
+        issues.append("DURABLE_RAW_ASSET_NOT_CURRENT_LIVE_AUDIO")
+    if alignment_metadata.get("audio_hash") != live_hash:
+        issues.append("ALIGNMENT_NOT_BOUND_TO_CURRENT_LIVE_AUDIO")
+
+    recovered_hashes = set(recovery.get("recovered_content_hashes") or [])
+    if live_hash not in recovered_hashes:
+        issues.append("RECOVERY_MISSING_CURRENT_LIVE_AUDIO")
+    if alignment_hash not in recovered_hashes:
+        issues.append("RECOVERY_MISSING_CURRENT_ALIGNMENT")
+    recovery_tx = recovery.get("transaction_id")
+    if live_tx and recovery_tx != live_tx:
+        issues.append("RECOVERY_TRANSACTION_NOT_CURRENT_LIVE_TRANSACTION")
+
+    project_ids = set(cross_metadata.get("project_ids") or [])
+    cross_hashes = set(cross_metadata.get("live_evidence_hashes") or [])
+    if live_project not in project_ids:
+        issues.append("CROSS_PROJECT_REPORT_MISSING_CURRENT_PROJECT")
+    if live_hash not in cross_hashes:
+        issues.append("CROSS_PROJECT_REPORT_MISSING_CURRENT_LIVE_HASH")
+
+    return {
+        "status": "PASS" if not issues else "HOLD_LINEAGE_MISMATCH",
+        "verified": not issues,
+        "issues": sorted(issues),
+        "current_live_hash": live_hash,
+        "current_alignment_hash": alignment_hash,
+        "current_project_id": live_project,
+        "transaction_id": live_tx,
+    }
+
+
+def studio_release_evidence_matrix(
+    evidence: dict[str, Any],
+    *,
+    expected_provider: str | None = None,
+    provider_max_age_seconds: float = 21600,
+    now: datetime | None = None,
+) -> dict[str, Any]:
+    """Production release-evidence gate.
+
+    Internal deterministic facts remain booleans. Every external class must be
+    supplied as its original class-specific receipt payload and is revalidated
+    here. A dictionary of all ``True`` values therefore fails closed. Individually
+    valid external receipts must additionally cross-bind to the same live-audio
+    lineage before the matrix can route to Founder release review.
+    """
+    internal_required = ("locked_source_identity", "production_control_on_main")
+    external_required = {
+        "provider_preflight_pass": ("AUTH_PROVIDER", None),
+        "live_render_provenance": ("LIVE_AUDIO", None),
+        "real_alignment_timeline": ("REAL_ALIGNMENT", None),
+        "performance_human_pass": ("HUMAN_REVIEW", "PERFORMANCE"),
+        "blind_listener_pass": ("HUMAN_REVIEW", "BLIND_LISTENER"),
+        "measured_economics": ("MEASURED_ECONOMICS", None),
+        "durable_raw_assets": ("DURABLE_RAW_ASSET", None),
+        "durable_recovery": ("DURABLE_RECOVERY", None),
+        "cross_project_live_portability": ("CROSS_PROJECT_LIVE", None),
+    }
+    missing = [key for key in internal_required if evidence.get(key) is not True]
+    validations: dict[str, Any] = {}
+    for key, (evidence_class, scope) in external_required.items():
+        validation = validate_external_evidence(
+            evidence_class,
+            evidence.get(key),
+            expected_scope=scope,
+            expected_provider=expected_provider if evidence_class == "AUTH_PROVIDER" else None,
+            max_age_seconds=provider_max_age_seconds,
+            now=now,
+        )
+        validations[key] = validation
+        if not validation.get("verified"):
+            missing.append(key)
+
+    lineage = _release_lineage_consistency(validations)
+    if all(validations.get(key, {}).get("verified") for key in (
+        "live_render_provenance",
+        "real_alignment_timeline",
+        "durable_raw_assets",
+        "durable_recovery",
+        "cross_project_live_portability",
+    )) and not lineage.get("verified"):
+        missing.append("cross_class_lineage")
+
     return {
         "status": "GO_FOR_FOUNDER_RELEASE_DECISION" if not missing else "HOLD",
-        "missing": missing,
+        "missing": sorted(set(missing)),
+        "external_validations": validations,
+        "lineage_validation": lineage,
         "machine_may_declare_production_ready": False,
         "production_ready": False,
-        "law": "Even a complete evidence matrix routes to Founder/human release decision; machine evidence never self-promotes artistic product readiness.",
+        "production_authoritative_gate": True,
+        "law": "External evidence must pass class-specific receipt validation and cross-bind to one live lineage. Even a complete matrix routes to Founder/human release decision; machine evidence never self-promotes artistic product readiness.",
     }
