@@ -1,0 +1,66 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE2_FINAL_STATE_v1",
+  "date": "2026-08-21",
+  "status": "PERSISTED_PENDING_FINAL_HEAD_CI",
+  "constraints": {
+    "no_outreach": true,
+    "new_founder_cash_eur": 0,
+    "public_evidence_ceiling": "E2+",
+    "unknown_economics": null
+  },
+  "library": {
+    "raw_drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "raw_drive_files": 69,
+    "chat_uploads": 64,
+    "drive_only_delta": 5,
+    "chat_valid_files": 59,
+    "chat_broken_files": 5,
+    "chat_unique_valid_byte_hashes": 50,
+    "exact_duplicate_groups": 8,
+    "canonical_unique_works": null
+  },
+  "engineering": {
+    "new_modules": "B33-B56",
+    "contracts": "C33-C64",
+    "priority_source_passports": 24,
+    "mechanism_graph_nodes": 22,
+    "executed_prompts": 32,
+    "run32_disposition": {"KEEP": 32, "MUTATE": 0, "KILL": 0},
+    "next_prompts_designed": 64,
+    "next_prompts_executed": 0,
+    "local_canaries": "18/18_PASS"
+  },
+  "proof": {
+    "knowledge_ladder": "K0-K5",
+    "market_ladder": "E0-E7",
+    "k_and_e_non_substitutable": true,
+    "market_e3_e4": "NOT_RUN"
+  },
+  "github": {
+    "repository": "Farada8/IVDIVO_GAME_MASTER",
+    "branch": "business-engineering-os-cycle2-library-20260821",
+    "base_main_sha": "df5de40de4bed8f420c65e4ca3082256dfa001ea",
+    "pr": 169,
+    "pre_closure_head_sha": "2456a2f0399a0a0ce05b1821c971eb28a92e168d",
+    "pre_closure_ci_run": 32533949206,
+    "pre_closure_ci_job": 96931237552,
+    "pre_closure_ci": "SUCCESS",
+    "final_head_ci": "PENDING_AFTER_THIS_STATE_COMMIT"
+  },
+  "drive": {
+    "business_engineering_root": "1yiKVWme2ZvAQMi0g1zIOzA4G5V4LMAgc",
+    "library_control_folder": "13pp8OPbNJOAubX26Lzi22nZr92r3EXVW",
+    "cycle2_folder": "1WPs7HJfNQCC4anHiK5IIap9G3qjqaAkY",
+    "master_readback": true,
+    "run32_readback": true,
+    "next64_readback": true
+  },
+  "current_constraint": "PRIORITY_SOURCE_PASSPORTS_TO_MECHANISM_COVERAGE_TO_LIVE_SIGNAL_OPPORTUNITY_OBJECTS",
+  "next_gate": "CYCLE3_SOURCE_PASSPORTS_AND_LIVE_SIGNAL_SCHEMA_BEFORE_FRESH_32_MARKET_SCAN",
+  "self_improvement": {
+    "fresh_main_checked": true,
+    "drive_readback_required": true,
+    "prompt_count_is_not_progress": true,
+    "no_new_top_level_meta_engine_until_constraint_consumed": true
+  }
+}
