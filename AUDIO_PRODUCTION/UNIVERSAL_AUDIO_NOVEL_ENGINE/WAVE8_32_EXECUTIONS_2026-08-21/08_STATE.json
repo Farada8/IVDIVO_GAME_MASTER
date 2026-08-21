@@ -1,0 +1,36 @@
+{
+  "schema_version": "ivdivo.audio.wave8.state/1.0",
+  "status": "WAVE8_01_32_PROCESSED_TO_EVIDENCE_BOUNDARY",
+  "source_wave": "WAVE7_32_EXECUTIONS_2026-08-21/04_64_NEXT_PROMPTS_WAVE8.md",
+  "current_main_sha_at_start": "58f434d7582a193ab3e120491159ccdec349717e",
+  "branch": "audio-novel-engine/wave8-32x64-2026-08-21",
+  "prompt_range": [1, 32],
+  "prompt_count_processed": 32,
+  "provider_calls": 0,
+  "human_listen_claims": 0,
+  "real_voice_locks": 0,
+  "pronunciation_locks": 0,
+  "story_mutations": 0,
+  "generic_runtime_modules_added": 0,
+  "architecture_refrozen": true,
+  "fresh_ci_status": "HOLD_NO_EXECUTABLE_RUN_IN_CURRENT_ENVIRONMENT",
+  "authenticated_provider_snapshot": "MISSING",
+  "canary": {
+    "requests": 3,
+    "spoken_units": 36,
+    "characters": 2163,
+    "blocks": ["CH01_S02_RB001", "CH01_S02_RB002", "CH01_S02_RB003"],
+    "live_status": "HOLD"
+  },
+  "new_operational_artifacts": [
+    "negative_fixture_catalog",
+    "provider_snapshot_contract",
+    "human_evidence_lock_contract",
+    "live_escrow_contract",
+    "architecture_refreeze_protocol",
+    "self_improvement_evidence_loop",
+    "wave9_64_prompt_bank"
+  ],
+  "next_gate": "AUTHENTICATED_SECRET_FREE_PROVIDER_SNAPSHOT",
+  "v1_status": "HOLD"
+}
