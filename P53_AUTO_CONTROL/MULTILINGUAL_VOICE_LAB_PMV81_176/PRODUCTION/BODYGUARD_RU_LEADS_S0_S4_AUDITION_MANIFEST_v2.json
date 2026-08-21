@@ -1,0 +1,48 @@
+{
+  "artifact": "BODYGUARD_RU_LEADS_S0_S4_AUDITION_MANIFEST_v2",
+  "status": "DESIGN_READY_TEXT_LOCK_AND_API_AUDIO_PENDING",
+  "locale": "ru-RU",
+  "source_text": "RU audition candidate v0.4 / full RU v0.2",
+  "voice_lock": false,
+  "S0_READ_ONLY": {
+    "billable": false,
+    "checks": ["credential presence without value exposure","GET models/capabilities","Voice Design endpoint availability","TTS with timestamps availability","TTD availability","output format/tier discoverability"],
+    "casting_decision": false
+  },
+  "S0B_CANARY": {
+    "billable": true,
+    "max_jobs": 2,
+    "jobs": [
+      {"role":"NAOMI_PARK","candidate":"N1","source_index":122,"text":"Вправо. Сейчас."},
+      {"role":"ELI_KWON","candidate":"E1","source_index":87,"text":"Я целый год слушал, как чужие решения называют моими предпочтениями."}
+    ],
+    "purpose": "technical audio/provenance only",
+    "casting_decision": false
+  },
+  "S1_FAIR": {
+    "same_text_required": true,
+    "music": false,
+    "reverb": false,
+    "loudness_match": true,
+    "jobs": {
+      "NAOMI_PARK": {"candidates":["N1","N2","N3"],"indices":[28,122]},
+      "ELI_KWON": {"candidates":["E1","E2","E3"],"indices":[87,180]}
+    }
+  },
+  "S2_SURVIVORS": {
+    "max_survivors_per_role": 2,
+    "indices": {"NAOMI_PARK":[32,88,111,160],"ELI_KWON":[61,106,121,186,188,190]}
+  },
+  "S3_DIRECTION": {
+    "NAOMI_PARK": ["same authority, slightly more humanity after safety","command clearer not louder","dry humor without smile-performance","private cost without breathy romance"],
+    "ELI_KWON": ["public polish to private economy","one rhythm fracture without helplessness","musician clue sounds native not expository","boundary accepted without submission or alpha challenge"]
+  },
+  "S4_PAIR": {
+    "target": "privately important / professionally constrained",
+    "candidate_pairs": "survivors only",
+    "pass": ["attention/respect audible","Naomi remains work-centered","Eli actively chooses protocol","underplayed delivery retains charge","power/consent clear"],
+    "fail": ["couple already","maternal Naomi","possessive Eli","chemistry only from flirt acting"]
+  },
+  "provisional_lock": "requires real audio, no hard fail, direction-change pass, pair pass",
+  "season_lock": "prohibited until fatigue + RU E01 evidence"
+}
