@@ -1,6 +1,9 @@
 # IVDIVO / BODYGUARD — MULTILINGUAL CHARACTER VOICE ARCHITECTURE v1.0
 
-STATUS: CURRENT WORKING PRODUCTION STANDARD
+**STATUS: SUPERSEDED BY `21_MULTILINGUAL_CHARACTER_VOICE_ARCHITECTURE_v2_0.md`**
+
+Historical v1.0 retained for provenance. Do not use as CURRENT authority.
+
 PRIMARY PILOT LANGUAGE: Russian
 EXPANSION LANGUAGES: English, Spanish, German, Italian
 PRINCIPLE: one character identity, potentially multiple language-native voice implementations.
@@ -38,7 +41,7 @@ BODYGUARD source script is English, so English is an independent performance mas
 
 TIER 3 — SPANISH
 Next expansion language.
-Select regional target before lock: Spain or LATAM/Mexico. Do not assume one Spanish accent serves all markets.
+Select regional target before lock: Spain or LATAM/Mexico. Do not assume one Spanish accent serves every market.
 
 TIER 4 — GERMAN / ITALIAN
 Prepare architecture now, but do not pay for full-season casting/render before RU + EN evidence and business/distribution need.
