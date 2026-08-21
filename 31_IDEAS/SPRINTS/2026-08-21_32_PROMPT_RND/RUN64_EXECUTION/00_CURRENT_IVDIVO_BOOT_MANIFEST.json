@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "status": "WORKING_OPERATIONAL_BOOT_MANIFEST_NOT_STORY_CANON",
   "updated": "2026-08-21",
   "purpose": "Single cold-start manifest for IVDIVO system/project routing during N01-N64 execution. It points to authorities and mirrors; it does not duplicate story canon.",
@@ -26,11 +26,15 @@
       {"role":"AUTHORITY_CONTROL_LAYER","path":"IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md"},
       {"role":"LEARNING_CONTROL_LAYER","path":"IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md"},
       {"role":"MULTI_MODEL_PROMPTS","path":"IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md"},
-      {"role":"SELF_IMPROVEMENT_REGISTRY","path":"31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json"},
+      {"role":"SELF_IMPROVEMENT_REGISTRY_BASE","path":"31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json"},
+      {"role":"SELF_IMPROVEMENT_REGISTRY_FAMILY","path":"31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json"},
       {"role":"LEARNING_LEDGER","path":"CURRENT_IVDIVO_LEARNING_LEDGER.json"},
-      {"role":"PROJECT_STATE_DIRECTORY","path":"PROJECT_STATES/"},
+      {"role":"PROJECT_STATE_COVERAGE_INDEX","path":"PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json"},
       {"role":"PROJECT_EXECUTION_STATE","project_id":"D04","path":"PROJECT_STATES/D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE_CURRENT_STATE.json"},
+      {"role":"PROJECT_EXECUTION_STATE","project_id":"D09","path":"PROJECT_STATES/D09_THE_MAN_WHO_CAME_BACK_CURRENT_STATE.json"},
+      {"role":"PROJECT_EXECUTION_STATE","project_id":"D10","path":"PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json"},
       {"role":"PROJECT_EXECUTION_STATE","project_id":"D02_ROOM917","path":"AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json"},
+      {"role":"BOOK_DRAFT_STATUS","project_id":"IVDIVO_BOOK_2","path":"IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/DRAFT_STATUS.md"},
       {"role":"RND_SPRINT_STATE","path":"31_IDEAS/SPRINTS/2026-08-21_32_PROMPT_RND/05_SPRINT_STATE.json"}
     ]
   },
@@ -39,12 +43,14 @@
       {"role":"AUTHORITY_INDEX_MIRROR","title":"00_CURRENT_PROMPT_AUTHORITY_INDEX v1.1","id":"1wTpFLza7x5wB39sDWDpHXQBVLqaYyzzEO27YvOppcgM"},
       {"role":"ROUTING_MIRROR","title":"CURRENT_PROMPTS_v2.2","id":"1mlUAkQVLH41CfdMa2ZDa8gR3MN7eNi-w3ZC705_b03g"},
       {"role":"ROUTING_MIRROR","title":"CURRENT_WORKSTATE_v2.2","id":"1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w"},
-      {"role":"RND_DURABLE_FOLDER","title":"IVDIVO SELF-IMPROVEMENT — 32→64 SYSTEM PASS — 2026-08-21","id":"1EF_co3l5AP35nJuuvvPjY5RElbc_FW4T"}
+      {"role":"RND_DURABLE_FOLDER","title":"IVDIVO SELF-IMPROVEMENT — 32→64 SYSTEM PASS — 2026-08-21","id":"1EF_co3l5AP35nJuuvvPjY5RElbc_FW4T"},
+      {"role":"RUN64_EXECUTION_FOLDER","title":"07_RUN64_EXECUTION_N01_N64","id":"1vYy9NkqVIwWYhe0hK1y8HJG0PEnt0x0P"}
     ]
   },
   "compatibility_or_history": [
     {"role":"HISTORY","note":"Older PR #45/candidate continuation protocols are not current authority."},
-    {"role":"COMPATIBILITY","note":"Drive CURRENT_PROMPTS/CURRENT_WORKSTATE are routing mirrors and never override fresher project-specific state."}
+    {"role":"COMPATIBILITY","note":"Drive CURRENT_PROMPTS/CURRENT_WORKSTATE are routing mirrors and never override fresher project-specific state."},
+    {"role":"COMPATIBILITY","note":"Registry family currently consists of base registry plus explicit extension records; duplicate candidate IDs fail closed until next compaction migration."}
   ],
   "cold_start_algorithm": [
     "READ_FOUNDER_CURRENT_INSTRUCTION",
@@ -52,14 +58,23 @@
     "READ_CURRENT_SYSTEM_STATE",
     "READ_RELEVANT_DOMAIN_AUTHORITY",
     "READ_PROJECT_SOURCE_OF_TRUTH_AND_PROJECT_STATE",
+    "READ_REGISTRY_FAMILY_IF_SELF_IMPROVEMENT_RELEVANT",
     "CHECK_DRIVE_MIRROR_ONLY_FOR_NEWER_VERIFIED_DELTA",
     "RUN_FRESHNESS_AND_STALE_WORK_GATE",
     "EXECUTE_HIGHEST_UNBLOCKED_OBLIGATION",
     "PERSIST_AND_READBACK"
   ],
-  "known_gaps_at_n01": [
-    "D09 lacks a dedicated PROJECT_STATES file and is currently routed from aggregate state/Drive project gate evidence.",
-    "D10/BLOODBOUND lacks a durable PROJECT_STATES routing file in GitHub main.",
-    "This manifest must be revalidated after N03 project-state coverage changes."
+  "n02_cold_start_validation": {
+    "D09":"PASS: dedicated state now resolves Final Story Gate PASS / Founder lock required without chat memory.",
+    "D04":"PASS: dedicated state resolves story complete and provider-neutral casting/audio preflight next obligation.",
+    "D10":"PASS: dedicated state resolves E01-E06 complete and E07-E12 Block II text next obligation.",
+    "IVDIVO_BOOK_2":"PASS: DRAFT_STATUS resolves Ch1-36 GREEN, Pass B closed, Pass C active.",
+    "ROOM917":"PASS if audio project path is loaded; project-specific current execution state outranks aggregate Drive mirrors.",
+    "uncovered_projects":"PARTIAL: see PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json; exact next action must be recovered before durable state creation."
+  },
+  "remaining_gaps_after_n05": [
+    "Base improvement registry has not yet been compacted with SI-0008; registry-family pointer and validator prevent invisibility until migration.",
+    "D03/D05/D06/D07/D08/Book1 still need dedicated minimal routing state after targeted authority recovery.",
+    "Independent external-model validation is evidence-class separate from this internal cold-start test."
   ]
 }
