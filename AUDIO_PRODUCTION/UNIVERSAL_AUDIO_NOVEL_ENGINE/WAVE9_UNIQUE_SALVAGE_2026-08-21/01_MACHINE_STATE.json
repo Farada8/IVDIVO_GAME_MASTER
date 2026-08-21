@@ -1,0 +1,43 @@
+{
+  "schema_version": "ivdivo.audio.wave9_unique_salvage_state/1.0",
+  "date": "2026-08-21",
+  "status": "CI_PENDING",
+  "base_main_sha": "9a3467ef798b2cce840fbb37df6d8a9130d2c66a",
+  "source_pr": 111,
+  "source_pr_disposition": "SUPERSEDE_PACKAGE_SALVAGE_UNIQUE_FUNCTIONS_ONLY",
+  "superseded_functions": {
+    "provider_snapshot": "MERGED_PR_122_PROVIDER_SNAPSHOT_CONTRACT",
+    "evidence_proof": "MERGED_PR_132_EXTERNAL_EVIDENCE_TRUST"
+  },
+  "salvaged_unique_functions": [
+    "audio/studio/runtime/human_review_ledger.py",
+    "audio/studio/runtime/live_lineage_escrow.py"
+  ],
+  "new_tests": [
+    "audio/studio/tests/test_human_review_ledger.py",
+    "audio/studio/tests/test_live_lineage_escrow.py"
+  ],
+  "trust_dependencies": [
+    "audio/studio/runtime/external_evidence_trust.py",
+    "audio/studio/runtime/provider_snapshot_contract.py"
+  ],
+  "evidence_boundary": {
+    "provider_calls": 0,
+    "paid_calls": 0,
+    "real_human_reviews": 0,
+    "real_live_audio": false,
+    "real_alignment": false,
+    "measured_economics": false,
+    "real_transaction_recovery": false,
+    "voice_locks": 0,
+    "story_mutations": 0
+  },
+  "machine_laws": {
+    "bare_verified_flag_is_evidence": false,
+    "pointer_only_is_durable_recovery": false,
+    "provider_acceptance_is_take_acceptance": false,
+    "machine_may_auto_voice_lock": false,
+    "machine_may_replay_paid_request": false
+  },
+  "next_gate": "OPEN_FRESH_PR_AND_RUN_FULL_AUDIO_STUDIO_CI"
+}
