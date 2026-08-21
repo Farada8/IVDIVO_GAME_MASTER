@@ -1,0 +1,36 @@
+{
+  "schema_version": "3.0",
+  "representation": "COMPACT_GITHUB_MIRROR",
+  "status": "LIBRARY78_PHYSICAL_AUTHORITY_RECONCILED_WORK_IDENTITY_PARTIAL",
+  "raw_drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+  "raw_drive_folder_url": "https://drive.google.com/drive/folders/1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+  "prior_manifest_drive_id": "1D09jlLTtWi5j5h6GjUmd56-lw1IcOZ4K",
+  "cycle3_full_manifest_drive_id": "1k2epQBjB3ZF5qMuUmd3gV0fke81Fqs4B",
+  "reconciliation": {
+    "prior_physical_files": 69,
+    "new_uploaded_physical_files": 9,
+    "current_physical_files": 78,
+    "prior_valid_files": 59,
+    "new_valid_files": 9,
+    "current_valid_physical_files": 68,
+    "broken_placeholders": 5,
+    "prior_unique_valid_byte_hashes": 50,
+    "new_unique_valid_byte_hashes": 8,
+    "current_unique_valid_byte_hashes": 58,
+    "exact_duplicate_hash_groups": 8,
+    "new_wave_exact_duplicate_count": 1,
+    "canonical_unique_works": null,
+    "reason_canonical_count_null": "Edition/format/translation relationships remain unresolved for legacy ambiguous files; exact byte identity is not equivalent to work identity."
+  },
+  "new_wave": [
+    {"title":"The Mom Test","author":"Rob Fitzpatrick","drive_id":"1hWMQTM_L0AY36ZrV3LkAol6anKxo5vMN","sha256":"11a1de31f6ad2060c0bb708ef0408ba3dbac3d80f3401c9499bda5b263b4f0fc","disposition":"EXACT_BYTE_DUPLICATE_OF_EXISTING_MOM_TEST"},
+    {"title":"Business Dynamics","author":"John D. Sterman","drive_id":"1QFxl2X1u_lmh_PXf-ZedNdlSXvRhv8ta","sha256":"eed69b2aa54e0372ffd25d2176906a048da0108fdf86bfb74f243d0412ad45e4","disposition":"NEW_UNIQUE_VALID_SOURCE"},
+    {"title":"The Principles of Product Development Flow","author":"Donald G. Reinertsen","drive_id":"1TKqFhhdzyJsV9hb-AEZAKtyaTxSzsMug","sha256":"8e516089a32250b38f324f7653fde89a5e6d56a2afbd113dbee8d52287310c93","disposition":"NEW_UNIQUE_VALID_SOURCE"},
+    {"title":"How to Measure Anything","author":"Douglas W. Hubbard","drive_id":"1trJV8PiV5gBc2C03znMqc5IM7BCyg5ES","sha256":"96b78f6a700c2b426b523e0204c6eb640bfe13fd1a1ff3c94e43b1fc00731f9d","disposition":"NEW_UNIQUE_VALID_SOURCE"},
+    {"title":"Devil Take the Hindmost","author":"Edward Chancellor","drive_id":"1qamhz7_cGvUqvIH78vBBXPLmgwLRSTnF","sha256":"369ee5057f2f9b751a2a93e327fbd78f0108c98593cd5f1170aa85d2db1c2ca1","disposition":"REFERENCE_ONLY"},
+    {"title":"The Worry Solution","author":"Martin Rossman","drive_id":"1e6H5N_MLXj910VBfPul7k7NywK8h63NF","sha256":"77e7de9874380f56c731d3b00a637d27dd02fbb81f8b997c311e75afc4fa2144","disposition":"NONCORE_REFERENCE_ONLY"},
+    {"title":"How to Make Sense of Any Mess","author":"Abby Covert","drive_id":"1Sg1c0XilNpecvnbKlCSAbvs7kuYJtKUF","sha256":"56710e07bc040efe9632b3cc84a898f81b4a042f4b5de53af387be7b4cf4c894","disposition":"NEW_UNIQUE_VALID_SOURCE"},
+    {"title":"Decisive","author":"Chip Heath & Dan Heath","drive_id":"1uNMbLoFihpRaT-8_NcxPOueUgmRrrjrH","sha256":"7108dac8bd55be7735e79f19485a1199078c4d1a8b5bdb4b0b1470c4189cc83a","disposition":"NEW_UNIQUE_VALID_SOURCE"},
+    {"title":"The Logic of Failure","author":"Dietrich Dörner","drive_id":"1lNQdw9g44KnTQBsO8mrVCzE36qvZcNwN","sha256":"dcb5860c0260be2a3b6ee8559879c76babf2214a58295fac91e23649ab538d4c","disposition":"NEW_UNIQUE_VALID_SOURCE"}
+  ]
+}
