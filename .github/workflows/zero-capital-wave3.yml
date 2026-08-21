@@ -1,0 +1,20 @@
+name: Zero Capital Wave3 Evidence Integrity
+
+on:
+  pull_request:
+    paths:
+      - '31_IDEAS/SPRINTS/2026-08-21_ZERO_CAPITAL_EVIDENCE_WAVE3_RUN32_64/**'
+      - '.github/workflows/zero-capital-wave3.yml'
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Wave3 regression
+        run: |
+          cd 31_IDEAS/SPRINTS/2026-08-21_ZERO_CAPITAL_EVIDENCE_WAVE3_RUN32_64
+          python -m unittest engine/test_zero_capital_evidence_engine.py engine/test_business_intelligence_v4.py -v
