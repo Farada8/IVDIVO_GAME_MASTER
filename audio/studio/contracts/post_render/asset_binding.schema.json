@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.audio.post_render.asset_binding/1.0",
+  "title": "IVDIVO Post-Render Asset Binding",
+  "type": "object",
+  "required": ["asset_id", "sha256", "sample_rate_hz", "channels", "gain_db", "rights_status"],
+  "properties": {
+    "asset_id": {"type": "string", "minLength": 1},
+    "sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+    "sample_rate_hz": {"const": 48000},
+    "channels": {"enum": [1, 2]},
+    "gain_db": {"type": "number", "maximum": 0},
+    "rights_status": {"enum": ["CLEARED", "OWNED", "GENERATED_WITH_RIGHTS"]},
+    "source_ref": {"type": "string"}
+  },
+  "additionalProperties": true,
+  "x-ivdivo-law": "No path-only asset binding, no inferred gain, no silent rights assumption, no automatic resample."
+}
