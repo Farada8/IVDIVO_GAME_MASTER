@@ -1,0 +1,12 @@
+{
+  "candidate_id": "INVALID_HISTORICAL_SI-0008_COLLISION",
+  "title": "SUPERSEDED ID COLLISION — Project-slice freshness assertion",
+  "status": "SUPERSEDED_ID_COLLISION",
+  "updated": "2026-08-21",
+  "reason": "SI-0008 is already the durable identity of Full Chat Transcript Recovery in the current improvement registry family. This file was created during B03 Cycle32 before the family registry was re-read.",
+  "correct_candidate_id": "SI-0014",
+  "correct_path": "31_IDEAS/REGISTRY_EXTENSIONS/SI-0014_PROJECT_SLICE_FRESHNESS_ASSERTION.json",
+  "authority": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json",
+  "must_not": ["treat this redirect as a registry candidate","reuse SI-0008 for project-slice freshness","delete this provenance record until all old pointers are migrated"],
+  "learning": "Candidate ID allocation is itself a freshness/registry-integrity operation. Re-read the registry family immediately before assigning a new candidate ID."
+}
