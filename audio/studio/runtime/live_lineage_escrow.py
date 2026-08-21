@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Exact-N paid live-lineage escrow bound to merged external-evidence receipts.
+"""Exact-N paid live-lineage escrow bound to trusted external-evidence receipts.
 
-This is the narrow salvage of Wave8's useful exact-canary/restart semantics. It
-reuses ``external_evidence_trust`` instead of accepting caller booleans, raw
-pointers or self-asserted ``verified`` flags. It never dispatches a provider,
-never accepts a production take, and never authorizes replay of paid work.
+The module never dispatches, never accepts a production take, and never replays
+paid work. It binds provider auth, request/result/spend evidence, live audio and
+optional alignment into one immutable lineage, then requires exact-N escrow and
+transaction-recoverable readback evidence.
 """
 from __future__ import annotations
 
@@ -74,7 +74,7 @@ def _durable(receipt: Any, *, kind: str) -> dict[str, Any]:
     return result
 
 
-def _require_bound_metadata(validation: Mapping[str, Any], expected: Mapping[str, str], *, prefix: str) -> None:
+def _require_metadata(validation: Mapping[str, Any], expected: Mapping[str, str], prefix: str) -> None:
     metadata = dict(validation.get("metadata") or {})
     for key, value in expected.items():
         if metadata.get(key) != value:
@@ -82,7 +82,6 @@ def _require_bound_metadata(validation: Mapping[str, Any], expected: Mapping[str
 
 
 def compile_lineage(record: Mapping[str, Any]) -> dict[str, Any]:
-    """Compile one dispatch outcome into a receipt-bound immutable lineage."""
     row = _plain(record)
     for key in ("project_id", "episode_id", "block_id", "provider", "provider_state", "dispatch_at"):
         if not isinstance(row.get(key), str) or not row[key].strip():
@@ -98,83 +97,77 @@ def compile_lineage(record: Mapping[str, Any]) -> dict[str, Any]:
         raise ValueError("REQUEST_HASH_INVALID")
     dispatch_at = _parse_time(row["dispatch_at"])
 
-    provider_validation = validate_external_evidence(
+    provider = validate_external_evidence(
         "AUTH_PROVIDER",
         row.get("provider_auth_receipt"),
         expected_provider=row["provider"],
         max_age_seconds=21600,
         now=dispatch_at,
     )
-    if not provider_validation.get("verified"):
-        raise ValueError(f"PROVIDER_AUTH_RECEIPT_INVALID:{provider_validation.get('status')}")
+    if not provider.get("verified"):
+        raise ValueError(f"PROVIDER_AUTH_RECEIPT_INVALID:{provider.get('status')}")
 
-    request_validation = _durable(row.get("request_receipt"), kind="PROVIDER_REQUEST")
-    result_validation = _durable(row.get("provider_result_receipt"), kind="PROVIDER_RESULT")
-    spend_validation = _durable(row.get("spend_receipt"), kind="SPEND_LEDGER_ENTRY")
-    if request_validation.get("content_hash") != request_hash:
+    request = _durable(row.get("request_receipt"), kind="PROVIDER_REQUEST")
+    result = _durable(row.get("provider_result_receipt"), kind="PROVIDER_RESULT")
+    spend = _durable(row.get("spend_receipt"), kind="SPEND_LEDGER_ENTRY")
+    if request.get("content_hash") != request_hash:
         raise ValueError("REQUEST_RECEIPT_HASH_BINDING_MISMATCH")
-    _require_bound_metadata(
-        request_validation,
-        {"project_id": row["project_id"], "block_id": row["block_id"], "request_hash": request_hash, "source_hash": source_hash},
-        prefix="REQUEST_RECEIPT",
-    )
-    _require_bound_metadata(
-        result_validation,
-        {"block_id": row["block_id"], "request_hash": request_hash, "provider_state": state},
-        prefix="PROVIDER_RESULT",
-    )
-    _require_bound_metadata(
-        spend_validation,
-        {"block_id": row["block_id"], "request_hash": request_hash, "provider_state": state},
-        prefix="SPEND_RECEIPT",
-    )
+    _require_metadata(request, {
+        "project_id": row["project_id"], "block_id": row["block_id"],
+        "request_hash": request_hash, "source_hash": source_hash,
+    }, "REQUEST_RECEIPT")
+    _require_metadata(result, {
+        "block_id": row["block_id"], "request_hash": request_hash, "provider_state": state,
+    }, "PROVIDER_RESULT")
+    _require_metadata(spend, {
+        "block_id": row["block_id"], "request_hash": request_hash, "provider_state": state,
+    }, "SPEND_RECEIPT")
 
-    result_meta = dict(result_validation.get("metadata") or {})
-    spend_meta = dict(spend_validation.get("metadata") or {})
+    result_meta = dict(result.get("metadata") or {})
+    spend_meta = dict(spend.get("metadata") or {})
     provider_request_id = result_meta.get("provider_request_id")
     if state == "ACCEPTED" and not provider_request_id:
         raise ValueError("ACCEPTED_PROVIDER_REQUEST_ID_REQUIRED")
     if state == "ACCEPTED" and not _trusted_ref(spend_meta.get("charge_ref")):
         raise ValueError("ACCEPTED_CHARGE_REF_REQUIRED")
 
-    live_validation: dict[str, Any] | None = None
-    alignment_validation: dict[str, Any] | None = None
+    live = None
+    alignment = None
     if state == "ACCEPTED":
-        live_validation = validate_external_evidence("LIVE_AUDIO", row.get("live_audio_receipt"))
-        if not live_validation.get("verified"):
-            raise ValueError(f"LIVE_AUDIO_RECEIPT_INVALID:{live_validation.get('status')}")
-        live_durable = live_validation.get("durable") or {}
+        live = validate_external_evidence("LIVE_AUDIO", row.get("live_audio_receipt"))
+        if not live.get("verified"):
+            raise ValueError(f"LIVE_AUDIO_RECEIPT_INVALID:{live.get('status')}")
+        live_durable = live.get("durable") or {}
         live_meta = dict(live_durable.get("metadata") or {})
         if live_meta.get("project_id") != row["project_id"]:
             raise ValueError("LIVE_AUDIO_PROJECT_BINDING_MISMATCH")
         if live_meta.get("request_hash") != request_hash:
             raise ValueError("LIVE_AUDIO_REQUEST_BINDING_MISMATCH")
-        if live_meta.get("provider_response_hash") != result_validation.get("content_hash"):
+        if live_meta.get("provider_response_hash") != result.get("content_hash"):
             raise ValueError("LIVE_AUDIO_PROVIDER_RESULT_BINDING_MISMATCH")
 
         if row.get("alignment_receipt") is not None:
-            alignment_validation = validate_external_evidence("REAL_ALIGNMENT", row.get("alignment_receipt"))
-            if not alignment_validation.get("verified"):
-                raise ValueError(f"ALIGNMENT_RECEIPT_INVALID:{alignment_validation.get('status')}")
-            alignment_durable = alignment_validation.get("durable") or {}
-            align_meta = dict(alignment_durable.get("metadata") or {})
+            alignment = validate_external_evidence("REAL_ALIGNMENT", row.get("alignment_receipt"))
+            if not alignment.get("verified"):
+                raise ValueError(f"ALIGNMENT_RECEIPT_INVALID:{alignment.get('status')}")
+            align_durable = alignment.get("durable") or {}
+            align_meta = dict(align_durable.get("metadata") or {})
             if align_meta.get("audio_hash") != live_durable.get("content_hash"):
                 raise ValueError("ALIGNMENT_AUDIO_BINDING_MISMATCH")
             if align_meta.get("source_hash") != source_hash:
                 raise ValueError("ALIGNMENT_SOURCE_BINDING_MISMATCH")
-    else:
-        if row.get("live_audio_receipt") is not None or row.get("alignment_receipt") is not None:
-            raise ValueError("NONACCEPTED_LINEAGE_CANNOT_ASSERT_MEDIA")
+    elif row.get("live_audio_receipt") is not None or row.get("alignment_receipt") is not None:
+        raise ValueError("NONACCEPTED_LINEAGE_CANNOT_ASSERT_MEDIA")
 
     transaction_ids = {
         validation.get("transaction_id")
-        for validation in (request_validation, result_validation, spend_validation)
+        for validation in (request, result, spend)
         if validation.get("transaction_id")
     }
-    if live_validation:
-        transaction_ids.add((live_validation.get("durable") or {}).get("transaction_id"))
-    if alignment_validation:
-        transaction_ids.add((alignment_validation.get("durable") or {}).get("transaction_id"))
+    if live:
+        transaction_ids.add((live.get("durable") or {}).get("transaction_id"))
+    if alignment:
+        transaction_ids.add((alignment.get("durable") or {}).get("transaction_id"))
     transaction_ids.discard(None)
     if len(transaction_ids) != 1:
         raise ValueError("LIVE_LINEAGE_TRANSACTION_ID_MISMATCH")
@@ -192,12 +185,12 @@ def compile_lineage(record: Mapping[str, Any]) -> dict[str, Any]:
         "provider_request_id": provider_request_id,
         "dispatch_at": row["dispatch_at"],
         "transaction_id": transaction_id,
-        "provider_snapshot_hash": provider_validation.get("snapshot_hash"),
-        "request_content_hash": request_validation.get("content_hash"),
-        "provider_result_content_hash": result_validation.get("content_hash"),
-        "spend_content_hash": spend_validation.get("content_hash"),
-        "live_audio_content_hash": (live_validation.get("durable") or {}).get("content_hash") if live_validation else None,
-        "alignment_content_hash": (alignment_validation.get("durable") or {}).get("content_hash") if alignment_validation else None,
+        "provider_snapshot_hash": provider.get("snapshot_hash"),
+        "request_content_hash": request.get("content_hash"),
+        "provider_result_content_hash": result.get("content_hash"),
+        "spend_content_hash": spend.get("content_hash"),
+        "live_audio_content_hash": (live.get("durable") or {}).get("content_hash") if live else None,
+        "alignment_content_hash": (alignment.get("durable") or {}).get("content_hash") if alignment else None,
         "provider_auth_receipt": row.get("provider_auth_receipt"),
         "request_receipt": row.get("request_receipt"),
         "provider_result_receipt": row.get("provider_result_receipt"),
@@ -225,12 +218,16 @@ def verify_lineage(lineage: Mapping[str, Any]) -> dict[str, Any]:
         raise ValueError("LIVE_LINEAGE_CANNOT_SELF_ACCEPT_TAKE")
     if row.get("machine_may_replay_paid_request") is not False:
         raise ValueError("LIVE_LINEAGE_REPLAY_FLAG_INVALID")
-    rebuilt = compile_lineage({k: v for k, v in row.items() if k not in {
-        "schema_version", "provider_request_id", "transaction_id", "provider_snapshot_hash",
-        "request_content_hash", "provider_result_content_hash", "spend_content_hash",
-        "live_audio_content_hash", "alignment_content_hash", "production_take_status",
-        "take_lock", "machine_may_replay_paid_request", "lineage_sha256"
-    }})
+
+    source_fields = {
+        k: v for k, v in row.items() if k not in {
+            "schema_version", "provider_request_id", "transaction_id", "provider_snapshot_hash",
+            "request_content_hash", "provider_result_content_hash", "spend_content_hash",
+            "live_audio_content_hash", "alignment_content_hash", "production_take_status",
+            "take_lock", "machine_may_replay_paid_request", "lineage_sha256",
+        }
+    }
+    rebuilt = compile_lineage(source_fields)
     for key in (
         "provider_request_id", "transaction_id", "provider_snapshot_hash", "request_content_hash",
         "provider_result_content_hash", "spend_content_hash", "live_audio_content_hash", "alignment_content_hash",
@@ -244,7 +241,6 @@ def compile_exact_escrow(
     lineages: Iterable[Mapping[str, Any]], *, expected_block_ids: Iterable[str],
     expected_source_hash: str, expected_request_hashes: Mapping[str, str] | None = None,
 ) -> dict[str, Any]:
-    """Require exactly the expected paid lineage set; any ambiguity fails closed."""
     source = str(expected_source_hash).lower()
     if not _is_sha256(source):
         raise ValueError("EXPECTED_SOURCE_HASH_INVALID")
@@ -258,13 +254,9 @@ def compile_exact_escrow(
     ids = [row["block_id"] for row in rows]
     requests = [row["request_hash"] for row in rows]
     expected_set = set(expected)
-    duplicates = sorted({block_id for block_id in ids if ids.count(block_id) > 1})
-    unknown = sorted(set(ids) - expected_set)
-    missing = sorted(expected_set - set(ids))
-    duplicate_requests = sorted({request_hash for request_hash in requests if requests.count(request_hash) > 1})
-    nonaccepted = sorted(row["block_id"] for row in rows if row["provider_state"] != "ACCEPTED")
-    source_drift = sorted(row["block_id"] for row in rows if row["source_hash"] != source)
-    request_drift: list[str] = []
+    duplicate_blocks = sorted({x for x in ids if ids.count(x) > 1})
+    duplicate_requests = sorted({x for x in requests if requests.count(x) > 1})
+    request_drift = []
     if expected_request_hashes is not None:
         for row in rows:
             expected_hash = expected_request_hashes.get(row["block_id"])
@@ -272,16 +264,16 @@ def compile_exact_escrow(
                 request_drift.append(row["block_id"])
 
     issues = {
-        "missing_block_ids": missing,
-        "duplicate_block_ids": duplicates,
-        "unknown_block_ids": unknown,
+        "missing_block_ids": sorted(expected_set - set(ids)),
+        "duplicate_block_ids": duplicate_blocks,
+        "unknown_block_ids": sorted(set(ids) - expected_set),
         "duplicate_request_hashes": duplicate_requests,
-        "nonaccepted_block_ids": nonaccepted,
-        "source_drift_block_ids": source_drift,
+        "nonaccepted_block_ids": sorted(row["block_id"] for row in rows if row["provider_state"] != "ACCEPTED"),
+        "source_drift_block_ids": sorted(row["block_id"] for row in rows if row["source_hash"] != source),
         "request_drift_block_ids": sorted(set(request_drift)),
     }
     blocked = len(rows) != len(expected) or any(issues.values())
-    ordered = sorted(rows, key=lambda row: expected.index(row["block_id"]) if row["block_id"] in expected_set else len(expected))
+    ordered = sorted(rows, key=lambda r: expected.index(r["block_id"]) if r["block_id"] in expected_set else len(expected))
     payload = {
         "schema_version": ESCROW_SCHEMA,
         "status": "HOLD" if blocked else "PASS_EXACT_ESCROW",
@@ -324,24 +316,28 @@ def lineage_recovery_hashes(lineage: Mapping[str, Any]) -> list[str]:
     return sorted({str(value).lower() for value in hashes if _is_sha256(value)})
 
 
-def compile_recovery_proof(
-    escrow: Mapping[str, Any], recovery_receipts: Iterable[Any]
-) -> dict[str, Any]:
-    """Require transaction-recoverable receipts that cover every lineage artifact hash."""
+def compile_recovery_proof(escrow: Mapping[str, Any], recovery_receipts: Iterable[Any]) -> dict[str, Any]:
+    """Require transaction-recoverable receipts covering every lineage content hash.
+
+    A failed receipt remains failed. We only preserve its raw transaction identity
+    so diagnostics can distinguish INVALID evidence from MISSING evidence.
+    """
     row = _plain(escrow)
     verify_escrow(row)
     validations: dict[str, dict[str, Any]] = {}
     duplicate_receipt_ids: set[str] = set()
+
     for receipt in recovery_receipts:
-        validation = validate_transaction_recovery_receipt(receipt)
-        tx = validation.get("transaction_id")
+        raw = _plain(receipt)
+        validation = validate_transaction_recovery_receipt(raw)
+        tx = validation.get("transaction_id") or raw.get("transaction_id")
         if not tx:
-            key = f"invalid:{len(validations)}"
-            validations[key] = validation
+            validations[f"invalid:{len(validations)}"] = validation
             continue
+        tx = str(tx)
         if tx in validations:
-            duplicate_receipt_ids.add(str(tx))
-        validations[str(tx)] = validation
+            duplicate_receipt_ids.add(tx)
+        validations[tx] = validation
 
     missing_transactions: list[str] = []
     invalid_transactions: list[str] = []
@@ -357,9 +353,9 @@ def compile_recovery_proof(
             continue
         required = set(lineage_recovery_hashes(lineage))
         recovered = set(validation.get("recovered_content_hashes") or [])
-        missing = sorted(required - recovered)
-        if missing:
-            uncovered[tx] = missing
+        missing_hashes = sorted(required - recovered)
+        if missing_hashes:
+            uncovered[tx] = missing_hashes
 
     issues = {
         "missing_transaction_receipts": sorted(set(missing_transactions)),
@@ -367,10 +363,9 @@ def compile_recovery_proof(
         "duplicate_transaction_receipts": sorted(duplicate_receipt_ids),
         "uncovered_content_hashes": uncovered,
     }
-    blocked = any(bool(value) for value in issues.values())
     payload = {
         "schema_version": RECOVERY_SCHEMA,
-        "status": "HOLD" if blocked else "PASS_TRANSACTION_RECOVERABLE",
+        "status": "HOLD" if any(bool(v) for v in issues.values()) else "PASS_TRANSACTION_RECOVERABLE",
         "escrow_sha256": row["escrow_sha256"],
         "issues": issues,
         "validated_transaction_ids": sorted(tx for tx, val in validations.items() if val.get("verified")),
