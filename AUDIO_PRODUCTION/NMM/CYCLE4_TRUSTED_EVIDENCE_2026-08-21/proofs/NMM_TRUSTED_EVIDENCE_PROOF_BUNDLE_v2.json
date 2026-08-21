@@ -1,0 +1,28 @@
+{
+  "schema": "NMM_TRUSTED_EVIDENCE_PROOF_BUNDLE_v2",
+  "deterministic": {
+    "tests": "20/20 PASS",
+    "listener_pack_leakage": "PASS",
+    "source_cycle3_reused": true
+  },
+  "external_truth": {
+    "provider_snapshot": "PENDING_REAL",
+    "human_whistle": "PENDING_REAL",
+    "voice_cast": "PENDING_REAL",
+    "hard_pilot": "PENDING_REAL",
+    "specialist": "PENDING_REAL",
+    "economics": "PENDING_REAL"
+  },
+  "evidence_vector": {
+    "source_integrity": "PASS_FROM_CYCLE3",
+    "deterministic_regression": "PASS",
+    "cross_storage_parity": "PENDING_PERSISTENCE",
+    "provider_truth": "UNKNOWN",
+    "human_truth": "UNKNOWN",
+    "specialist_truth": "UNKNOWN",
+    "economics_truth": "UNKNOWN"
+  },
+  "release": "NO_GO",
+  "highest_information_gain": ["AUTHENTICATED_PROVIDER_SNAPSHOT","REAL_HUMAN_WHISTLE_TEST"],
+  "generic_runtime_change": "NOT_JUSTIFIED"
+}

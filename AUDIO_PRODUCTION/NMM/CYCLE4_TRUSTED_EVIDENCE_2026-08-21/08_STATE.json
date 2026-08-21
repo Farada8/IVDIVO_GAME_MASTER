@@ -1,0 +1,57 @@
+{
+  "schema": "NMM_CYCLE4_TRUSTED_EVIDENCE_STATE_v1.3",
+  "date": "2026-08-21",
+  "github_reconciled_main_sha": "8a409cae3c6240d2f2051e39fd8d4b8311a5dfec",
+  "latest_main_merge_commit": "1519824953563ac590b52974f89bc38bf6342b9c",
+  "pr": {
+    "number": 145,
+    "url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/145",
+    "mergeable_after_reconciliation": true
+  },
+  "cycle3_reused": true,
+  "executed_prompts": 32,
+  "next_prompts": 64,
+  "modules": 8,
+  "contracts": 8,
+  "protocols": 5,
+  "deterministic_tests": {
+    "status": "PASS",
+    "count": "21/21",
+    "github_actions_run_id": 32525749487,
+    "job_id": 96907278830
+  },
+  "blind_stimuli": 24,
+  "blind_trial_set_sha256": "6f7a1ed281bcffd8829a4598a9b229c402b1147e2970283c5ad5d6d0a241c1cd",
+  "drive_readback": {
+    "folder_id": "1s6bRH7uzJyY5DgReT09k2aabporkNoKJ",
+    "zip_file_id": "18dNsWelX6btVrmG29lb9zULk36Pt8_hq",
+    "zip_size_bytes": 46263,
+    "zip_sha256": "fbcd4d6f9789f33da242e0b42f636d4a0d607f476ca8bdb3e70bc6488828e384",
+    "zip_integrity": "PASS",
+    "zip_entries": 53,
+    "folder_inventory_items": 9,
+    "raw_download_readback": "PASS"
+  },
+  "parallel_reconciliation": {
+    "universal_provider_snapshot_contract": "REUSE_CURRENT_MAIN",
+    "si0014_session_resilience": "REUSE_READY_FOR_PILOT_NOT_PROMOTED",
+    "si0015_project_slice_freshness": "INTEGRATED_ON_MAIN; DO_NOT_DUPLICATE",
+    "cycle7_durable_convergence": "INTEGRATED_BEFORE_CURRENT_MAIN; NMM_DELTA_REBASED"
+  },
+  "external_gates": {
+    "provider_snapshot": "PENDING_REAL",
+    "voice_cast": "PENDING_REAL",
+    "human_whistle": "PENDING_REAL",
+    "hard_pilot": "PENDING_REAL",
+    "specialist": "PENDING_REAL",
+    "economics": "PENDING_REAL"
+  },
+  "cross_storage_parity": "PASS_FOR_DURABLE_PERSISTENCE_AND_READBACK; EXTERNAL_TRUTH_NOT_IMPLIED",
+  "release": "NO_GO",
+  "next_frontier": "MERGE_CYCLE4_THEN_EXECUTE_CYCLE5_32",
+  "generic_runtime_architecture": "FROZEN_UNLESS_DEMONSTRATED_GAP",
+  "credential_environment_observation": {
+    "ELEVENLABS_API_KEY_present": false,
+    "secret_persisted": false
+  }
+}

@@ -1,0 +1,24 @@
+name: NMM Cycle4 Trusted Evidence Tests
+
+on:
+  push:
+    paths:
+      - 'AUDIO_PRODUCTION/NMM/CYCLE4_TRUSTED_EVIDENCE_2026-08-21/**'
+      - '.github/workflows/nmm-cycle4-trusted-evidence-tests.yml'
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/NMM/CYCLE4_TRUSTED_EVIDENCE_2026-08-21/**'
+      - '.github/workflows/nmm-cycle4-trusted-evidence-tests.yml'
+  workflow_dispatch:
+
+jobs:
+  cycle4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run NMM Cycle4 trusted-evidence tests
+        working-directory: AUDIO_PRODUCTION/NMM/CYCLE4_TRUSTED_EVIDENCE_2026-08-21
+        run: python -m unittest tests.test_nmm_cycle4 -v
