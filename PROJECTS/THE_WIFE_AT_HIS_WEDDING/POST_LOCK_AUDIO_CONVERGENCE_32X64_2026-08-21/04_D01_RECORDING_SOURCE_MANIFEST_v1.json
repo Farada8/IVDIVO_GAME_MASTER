@@ -1,0 +1,34 @@
+{
+  "schema": "ivdivo.recording_source_manifest/1.0",
+  "project_id": "D01",
+  "project_title": "THE WIFE AT HIS WEDDING",
+  "story_status": "FOUNDER_LOCKED",
+  "recording_authority": "ISSUED",
+  "season_frontier": "E01-E120",
+  "terminal_episode": "E120",
+  "e121_allowed": false,
+  "lock_authority": {
+    "drive_id": "1eueZnnYaUGktaSXCcMIiOAUUcINmCTV6xATBdZ9B9UA",
+    "revision_id": "AIroW34qz4t1jtb01IbCQVyTUl_nFzkegTDar2XeqB5vBmCFRjbIiMXNWimL8_dOhsSihkIJFTeGWGvyqjlWcL_zugxxC8WI6qxpiAQMjYo"
+  },
+  "e01_source": {
+    "drive_id": "1HLRY6hnj-1UyONTaoD9NiURGw930l2Uc",
+    "title": "01_EPISODES_01-05_EN_VOICEOVER_SCRIPTS.docx",
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "file_size_bytes": 73188,
+    "raw_container_sha256": "df93823aff722d708f84488a75bbaaabb56c8537968de1db52125f8807913d82",
+    "episode": "E01 THE WOMAN IN IVORY",
+    "spoken_word_count_declared": 1286,
+    "episode_only_lexical_hash": null,
+    "episode_only_lexical_hash_state": "NOT_COMPUTED"
+  },
+  "execution_authorities": {
+    "first_render_drive_id": "1oDvVLxzUJR8qUC64CrBiMvmrbqysfYsVAHUcT_U-Vrs",
+    "casting_handoff_drive_id": "1oa1OFV1uAp1OC8Miqs7UHzIfD16Jjcjzj0_O6ILFMDc",
+    "dry_manifest_drive_id": "1aw_p8mQPlMHc8fuAEIbsc4AXWgb_T4Ar9R0j9EoHH9A",
+    "live_smoke_handoff_drive_id": "1YFVDS0JbHmJR47V3JS_NBLOBEKSOsOTWExeYlHTXrPU"
+  },
+  "text_mutation_allowed": false,
+  "text_reopen_conditions": ["NEW_FATAL_OR_MAJOR_EVIDENCE", "CONCRETE_EXTERNAL_HUMAN_PROVIDER_EVIDENCE", "FOUNDER_DIRECT_INSTRUCTION"],
+  "manifest_hash_sha256": "3456090be8d51d2cfed84e54d9e5d4245953b8aa006a278c333d78f9e68f79c9"
+}
