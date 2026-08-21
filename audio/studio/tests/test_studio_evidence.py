@@ -49,7 +49,7 @@ class StudioEvidenceTests(unittest.TestCase):
             manual_hourly_cost=20,
         )
 
-    def durable(self, *, kind="RAW_AUDIO", content_hash=None, metadata=None, strength=None, artifact_id="A1"):
+    def durable(self, *, kind="RAW_AUDIO", content_hash=None, metadata=None, strength=None, artifact_id="A1", transaction_id="TX1"):
         content_hash = content_hash or self.h(artifact_id)
         return DurableArtifactReceipt(
             artifact_id=artifact_id,
@@ -62,7 +62,7 @@ class StudioEvidenceTests(unittest.TestCase):
             readback_at="2026-08-21T17:01:00+00:00",
             readback_hash=content_hash,
             readback_strength=strength or ReadbackStrength.CONTENT_HASH_VERIFIED.value,
-            transaction_id="TX1",
+            transaction_id=transaction_id,
             metadata=metadata or {},
         )
 
@@ -139,7 +139,7 @@ class StudioEvidenceTests(unittest.TestCase):
             artifact_id="CROSS",
             metadata={
                 "project_ids": ["P1", "P2"],
-                "live_evidence_hashes": [self.h("live-p1"), self.h("live-p2")],
+                "live_evidence_hashes": [live.content_hash, self.h("live-p2")],
             },
         )
         recovery = TransactionRecoveryReceipt(
@@ -167,6 +167,14 @@ class StudioEvidenceTests(unittest.TestCase):
             "durable_recovery": recovery,
             "cross_project_live_portability": cross,
         }
+
+    def release(self, evidence):
+        return studio_release_evidence_matrix(
+            evidence,
+            expected_provider="generic-provider",
+            provider_max_age_seconds=3600,
+            now=self.NOW,
+        )
 
     def test_manifest_pass(self):
         out = build_benchmark_manifest(source_id="x", source_hash="source", exact_text=self.TEXT, variants=self.variants())
@@ -311,16 +319,92 @@ class StudioEvidenceTests(unittest.TestCase):
         self.assertFalse(out["production_ready"])
 
     def test_release_complete_receipts_still_need_founder(self):
-        out = studio_release_evidence_matrix(
-            self.valid_release_evidence(),
-            expected_provider="generic-provider",
-            provider_max_age_seconds=3600,
-            now=self.NOW,
-        )
+        out = self.release(self.valid_release_evidence())
         self.assertEqual(out["status"], "GO_FOR_FOUNDER_RELEASE_DECISION")
         self.assertEqual(out["missing"], [])
+        self.assertEqual(out["lineage_validation"]["status"], "PASS")
         self.assertFalse(out["production_ready"])
         self.assertFalse(out["machine_may_declare_production_ready"])
+
+    def test_release_holds_if_alignment_belongs_to_other_live_audio(self):
+        evidence = self.valid_release_evidence()
+        alignment = evidence["real_alignment_timeline"]
+        evidence["real_alignment_timeline"] = self.durable(
+            kind="ALIGNMENT",
+            artifact_id="ALIGN2",
+            metadata={"audio_hash": self.h("other-live"), "source_hash": self.h("source"), "coverage_complete": True},
+        )
+        recovery = evidence["durable_recovery"]
+        evidence["durable_recovery"] = TransactionRecoveryReceipt(
+            transaction_id=recovery.transaction_id,
+            recovered_at=recovery.recovered_at,
+            recovered_content_hashes=[evidence["live_render_provenance"].content_hash, evidence["real_alignment_timeline"].content_hash],
+            durable_readback_strength=recovery.durable_readback_strength,
+            duplicate_provider_calls=0,
+            duplicate_charges=0,
+            unresolved_ambiguities=0,
+            recovery_manifest_ref=recovery.recovery_manifest_ref,
+            recovery_manifest_hash=recovery.recovery_manifest_hash,
+            synthetic_fixture=False,
+        )
+        out = self.release(evidence)
+        self.assertEqual(out["status"], "HOLD")
+        self.assertIn("cross_class_lineage", out["missing"])
+        self.assertIn("ALIGNMENT_NOT_BOUND_TO_CURRENT_LIVE_AUDIO", out["lineage_validation"]["issues"])
+        self.assertNotEqual(alignment.content_hash, evidence["real_alignment_timeline"].content_hash)
+
+    def test_release_holds_if_recovery_omits_current_alignment(self):
+        evidence = self.valid_release_evidence()
+        recovery = evidence["durable_recovery"]
+        evidence["durable_recovery"] = TransactionRecoveryReceipt(
+            transaction_id=recovery.transaction_id,
+            recovered_at=recovery.recovered_at,
+            recovered_content_hashes=[evidence["live_render_provenance"].content_hash, self.h("other-alignment")],
+            durable_readback_strength=recovery.durable_readback_strength,
+            duplicate_provider_calls=0,
+            duplicate_charges=0,
+            unresolved_ambiguities=0,
+            recovery_manifest_ref=recovery.recovery_manifest_ref,
+            recovery_manifest_hash=recovery.recovery_manifest_hash,
+            synthetic_fixture=False,
+        )
+        out = self.release(evidence)
+        self.assertEqual(out["status"], "HOLD")
+        self.assertIn("RECOVERY_MISSING_CURRENT_ALIGNMENT", out["lineage_validation"]["issues"])
+
+    def test_release_holds_if_recovery_transaction_is_unrelated(self):
+        evidence = self.valid_release_evidence()
+        recovery = evidence["durable_recovery"]
+        evidence["durable_recovery"] = TransactionRecoveryReceipt(
+            transaction_id="TX-OTHER",
+            recovered_at=recovery.recovered_at,
+            recovered_content_hashes=recovery.recovered_content_hashes,
+            durable_readback_strength=recovery.durable_readback_strength,
+            duplicate_provider_calls=0,
+            duplicate_charges=0,
+            unresolved_ambiguities=0,
+            recovery_manifest_ref=recovery.recovery_manifest_ref,
+            recovery_manifest_hash=recovery.recovery_manifest_hash,
+            synthetic_fixture=False,
+        )
+        out = self.release(evidence)
+        self.assertEqual(out["status"], "HOLD")
+        self.assertIn("RECOVERY_TRANSACTION_NOT_CURRENT_LIVE_TRANSACTION", out["lineage_validation"]["issues"])
+
+    def test_release_holds_if_cross_project_report_omits_current_lineage(self):
+        evidence = self.valid_release_evidence()
+        evidence["cross_project_live_portability"] = self.durable(
+            kind="CROSS_PROJECT_LIVE_REPORT",
+            artifact_id="CROSS2",
+            metadata={
+                "project_ids": ["P2", "P3"],
+                "live_evidence_hashes": [self.h("live-p2"), self.h("live-p3")],
+            },
+        )
+        out = self.release(evidence)
+        self.assertEqual(out["status"], "HOLD")
+        self.assertIn("CROSS_PROJECT_REPORT_MISSING_CURRENT_PROJECT", out["lineage_validation"]["issues"])
+        self.assertIn("CROSS_PROJECT_REPORT_MISSING_CURRENT_LIVE_HASH", out["lineage_validation"]["issues"])
 
 
 if __name__ == "__main__":
