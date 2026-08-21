@@ -98,6 +98,24 @@ Trigger:
 **Decision:** ACCEPT.
 **Action:** use inheritance headers + specialist routing; do not paste the full global standard into every prompt.
 
+### SYS-20260821-LOCALIZATION-007 — Function-equivalence before linguistic polish
+**Signal:** BODYGUARD PMV01–PMV24 multilingual execution re-audit before RU text lock.
+**Source:** execution report v1.0 / working RU anchor draft v0.1.
+**Problem:** six plausible Russian lines lost or drifted source function: dry-humor function, FOUR-vs-TWO clue, emergency-compliance distinction, bodypack action, live-two comparison and final insider-access inference.
+**Severity:** MAJOR before correction; caught before lock.
+**Earliest failure layer:** localization function equivalence, upstream of voice/performance/mix.
+**Evidence:** line-by-line source comparison against English Recording Master v1.6 and clue/consent/professional/P51/P52/P53 payload.
+**Existing rule check:** general localization law existed, but execution lacked a mandatory per-line function packet before linguistic polish.
+**Candidate improvement:** every critical localized line must carry SOURCE_LINE_ID + STORY_FUNCTION + CLUE/CONSENT/PROFESSIONAL/P51/P52/P53 payload before target wording can pass. Run function-equivalence audit before native style polish and before voice synthesis.
+**Scope:** all multilingual IVDIVO story/audio localization.
+**Protected invariants:** source canon, clue order, consent/power, professional logic, P51/P52/P53.
+**Test:** compare old working RU draft vs corrected v0.2 against source function ledger.
+**Result:** PASS — corrected v0.2 restored all six functions without changing story/canon.
+**Side effect:** slightly more explicit localization metadata, substantially lower risk of expensive downstream voice/mix repair.
+**Decision:** ACCEPT + WRITE-THROUGH.
+**Write-through:** Multilingual Voice Architecture v2.0; PMV03/11/12/13; corrected RU anchors v0.2; execution report v1.1; Global Autorun v1.1; Current Runtime Index v1.1.
+**Re-audit:** zero-cost source-function audit PASS; native/professional/audio gates remain pending.
+
 ---
 
 ## LEDGER LAW
