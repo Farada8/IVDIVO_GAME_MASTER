@@ -1,0 +1,22 @@
+{
+  "schema": "ivdivo.project_cast_spec/1.0",
+  "project_id": "D01",
+  "project_title": "THE WIFE AT HIS WEDDING",
+  "episode_scope": "E01",
+  "required_roles": ["NARRATOR", "MARA", "ADRIAN", "LILY", "CELESTE"],
+  "supporting_roles_deferred": ["OFFICIANT", "SECURITY"],
+  "pronunciation_terms": ["Mara Quinn", "Adrian Vale", "Evelyn Vale", "Celeste Arden", "Lily", "Vale Meridian", "Ravenmere", "Providence"],
+  "performance_states": ["NATURAL_RESTRAINED", "DIRECTED_CHANGE"],
+  "pair_roles": ["MARA", "ADRIAN"],
+  "fatigue": {"minimum_seconds": 480, "target_maximum_seconds": 600},
+  "voice_lock": false,
+  "provider_dispatch_allowed": false,
+  "machine_may_auto_lock": false,
+  "human_evidence_required": true,
+  "auto_substitution": false,
+  "source_authority": {
+    "founder_lock_drive_id": "1eueZnnYaUGktaSXCcMIiOAUUcINmCTV6xATBdZ9B9UA",
+    "e01_source_drive_id": "1HLRY6hnj-1UyONTaoD9NiURGw930l2Uc"
+  },
+  "spec_hash_sha256": "820656de4e47a7505edb69d8f3333605d20127f25f720ea5643688cb5a186494"
+}
