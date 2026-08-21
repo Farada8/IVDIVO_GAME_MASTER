@@ -1,0 +1,9 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_COMPARATIVE_FIXTURE",
+  "case_with_contrast":{"sequence":["ordinary warmth/micro-care","social embarrassment","work pressure","quiet repair","high-stakes rupture with new information","aftermath"],"high_intensity_units":1,"state_changes":5,"contrast_present":true,"result":"PASS_RANGE"},
+  "case_constant_crisis":{"sequence":["jealousy fight","rescue","jealousy fight","tearful rupture","rescue","tearful rupture"],"high_intensity_units":6,"state_changes":1,"contrast_present":false,"result":"HIGH_INFLATION_RISK"},
+  "interpretation":"The corrective principle is contrast + causal state change, not simply lowering intensity. A high-intensity beat is earned when it changes choice, price, information or relationship state; ordinary warmth/recovery creates emotional range and future intensity headroom.",
+  "market_boundary":"No retention uplift is claimed from this internal fixture; real retention requires target-audience/market behavior evidence.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST"
+}
