@@ -1,0 +1,26 @@
+{
+  "base_main_sha": "dcaba52b8956087d3792164acc7f0b861c775db7",
+  "contracts": 10,
+  "credential_environment": {"ELEVENLABS_API_KEY_present": false, "secret_persisted": false},
+  "cycle4_merged": true,
+  "date": "2026-08-21",
+  "deterministic_tests": "32/32 PASS_LOCAL_PRE_PERSISTENCE",
+  "engineering_execution": "32/32 EXECUTED_TO_EVIDENCE_BOUNDARY",
+  "executed_prompts": 32,
+  "external_truth": {"asset_lock": false, "human": "UNKNOWN_NO_REAL_LISTENERS", "provider": "UNKNOWN_NO_CREDENTIAL", "voice_lock": false},
+  "external_truth_claimed": false,
+  "next_frontier": "REAL_PROVIDER_SNAPSHOT || REAL_HUMAN_SESSION",
+  "next_prompts": 64,
+  "parallel_reconciliation": {
+    "audio_wave10_provider_to_cast": "REUSE_CURRENT_MAIN; NMM does not duplicate snapshot repeatability/inventory/cast-readiness",
+    "si0014_session_resilience": "REUSE_NOT_PROMOTED",
+    "si0015_project_slice_freshness": "REUSE_INTEGRATED_CANARIES",
+    "universal_provider_snapshot": "REUSE"
+  },
+  "protocols": 6,
+  "provider_cast_engine_owner": "audio/studio/runtime Wave10; NMM modules are project policy adapters only",
+  "release": "NO_GO",
+  "runtime_modules": 12,
+  "schema": "NMM_CYCLE5_EXTERNAL_EVIDENCE_STATE_v1.0",
+  "self_improvement": "DISCOVERY_ONLY_NO_NEW_SI_ID"
+}
