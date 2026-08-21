@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "project": "SEVEN NIGHTS BEFORE CODE BLUE",
+  "test": "TRANSFER_EXTRA_STATE_BLIND_AB",
+  "status": "READY_FOR_REAL_HUMAN_LISTENER",
+  "instructions": [
+    "Use ordinary playback volume; do not inspect waveform or filenames beyond A/B.",
+    "For each pair STEREO, MONO, PHONE, listen to A and B once or twice.",
+    "Choose which file contains an additional equipment/load-state change beyond the ordinary transfer.",
+    "Describe what you heard in plain words without technical analysis.",
+    "Also answer whether either version sounds like a cinematic/horror effect rather than ordinary equipment."
+  ],
+  "response_form": {
+    "STEREO_extra": "A_or_B",
+    "MONO_extra": "A_or_B",
+    "PHONE_extra": "A_or_B",
+    "plain_description": "free_text",
+    "cinematic_or_horror_feel": "yes_no_and_which_if_any"
+  },
+  "pass_rule": "Correct extra-state identification in STEREO, MONO and PHONE, with no reliance on sub-bass/explanation; cue should read as equipment behavior, not cinematic sting.",
+  "answer_key_excluded": true,
+  "drive_assets": {
+    "STEREO_A": "1hzVw7hneqSPnkl-7H833GwMmZiWVGsgv",
+    "STEREO_B": "1DyLLtp8o-cJ0MvgyMdFnqkAAFr5jcH4V",
+    "MONO_A": "1ggGeNowuzm_HxAEPs3pm83OH7xy2NmbZ",
+    "MONO_B": "1OUJuaXOd2IoqkejojfZST2s6VHtDUgIj",
+    "PHONE_A": "1uViPn4frg3lthuOyelU3sDGolMuY3rCG",
+    "PHONE_B": "1MD21wCxCCrgee6GuP9golnX8j1935nz-",
+    "listener_packet": "1Nb8YZ0PJrc__aVDZzxC-47Un79cLPcyn"
+  }
+}
