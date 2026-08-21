@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "status":"PARTIAL_PASS_QUEUE_CONTRACT_PLUS_REAL_STOPPING_DECISION",
+  "strict_lifecycle_checkpoint":{"name":"CORE_STRICT_LIFECYCLE_LEDGER_v21","known_checkpoint":"31/40 Core strict-lifecycle synthesized or later; PASS 140 reported in current routing mirrors","exact_unsynthesized_source_list":"NOT_LOCATED_IN_CURRENT_GITHUB_DRIVE_SEARCH"},
+  "n45_result":"PARTIAL: schema implemented; exact source queue is not fabricated because current connected search exposes checkpoint counts but not the underlying unsynthesized/integrity-blocked source IDs.",
+  "live_craft_question":"Should the studio keep processing more dialogue/naturalism craft sources before changing Lesson Zero text?",
+  "current_evidence":[
+    "Human Scene + Dialogue Naturalism Engine v1.0 already current",
+    "24-pass prompt stack already current",
+    "64-prompt naturalism research expansion already executed and promoted mechanisms M1-M8",
+    "Lesson Zero current decision is NO BULK REWRITE; first run 45-60 minute exact-text premium performance diagnostic and collect human markers"
+  ],
+  "n46_decision":"STOP_MORE_REFERENCE_READING_FOR_THIS_DECISION",
+  "reason":"Marginal additional craft sources are less informative than the already-defined performance/human diagnostic. New reading without a specific unresolved mechanism would become library processing for its own sake.",
+  "reopen_reference_queue_if":[
+    "performance diagnostic exposes a recurring failure not represented in M1-M8/current naturalism engine",
+    "a specific unsynthesized source is known to address that failure",
+    "source integrity is recovered for an integrity-blocked high-value source"
+  ],
+  "evidence_boundary":"This does not declare the remaining strict-lifecycle sources unimportant globally; it only stops them for the current Lesson Zero dialogue decision.",
+  "evidence_class":"CURRENT_STATE_PLUS_DECISION_ROUTING"
+}
