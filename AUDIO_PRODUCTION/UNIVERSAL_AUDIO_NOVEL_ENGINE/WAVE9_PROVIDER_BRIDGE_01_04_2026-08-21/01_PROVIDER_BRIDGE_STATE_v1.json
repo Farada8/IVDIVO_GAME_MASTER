@@ -1,0 +1,28 @@
+{
+  "schema_version": "ivdivo.audio_novel.provider_bridge_state/1.0",
+  "status": "CODE_READY_FRESH_CI_REQUIRED_EXTERNAL_CREDENTIAL_HOLD",
+  "current_frontier": "AUTHENTICATED_READ_ONLY_PROVIDER_SNAPSHOT",
+  "wave9_01": "PASS_ACCESS_SURFACE_INVENTORIED",
+  "wave9_02": "PASS_ENGINEERING_SECRET_BOUNDARY",
+  "wave9_03": "CODED_FRESH_CI_REQUIRED",
+  "wave9_04": "HOLD_EXTERNAL_CREDENTIAL",
+  "narrow_delta_justification": "Controlled dispatch previously accepted status=PASS capability JSON without independently validating authentication/provenance/hash/freshness.",
+  "snapshot_contract": {
+    "schema": "ivdivo.provider_snapshot/1.0",
+    "required_auth_method": "XI_API_KEY_RUNTIME_ENV",
+    "required_capture_method": "DIRECT_AUTHENTICATED_READ_ONLY_API",
+    "required_capture_engine": "ivdivo.elevenlabs_snapshot_acquirer/1.0",
+    "required_source_paths": ["/v1/user", "/v1/user/subscription", "/v1/models", "/v2/voices"],
+    "max_live_age_seconds": 21600,
+    "credential_persisted": false,
+    "auto_voice_substitution": false
+  },
+  "evidence_boundary": {
+    "provider_calls": 0,
+    "paid_calls": 0,
+    "real_snapshot_acquired": false,
+    "human_listen_claims": 0,
+    "authority_promotion": false
+  },
+  "next_gate": "Run the read-only snapshot acquirer in a trusted runtime with ephemeral ELEVENLABS_API_KEY, then validate/read back the secret-free snapshot before any paid canary."
+}
