@@ -1,8 +1,22 @@
 {
-  "schema_version": "ivdivo.audio.wave10.provider_cast_readiness/1.0",
+  "schema_version": "ivdivo.audio.wave10.provider_cast_readiness/1.1",
   "date": "2026-08-21",
-  "status": "WORKING_CODE_COMPLETE_CI_PENDING_EXTERNAL_PROVIDER_HOLD",
-  "branch_base_main_sha": "e3047a227552477c39c7d6af549208d18afc3fcc",
+  "status": "MERGED_CURRENT_32_OF_32_DISPOSITIONED_EXTERNAL_PROVIDER_HOLD",
+  "original_branch_base_main_sha": "e3047a227552477c39c7d6af549208d18afc3fcc",
+  "final_ci_base_main_sha": "132149b052e9d29faf6695d9659aaaf59ec082d2",
+  "wave10_head_sha": "4d2b2a208b0554538c1889f721e8ffce33ff58b5",
+  "final_ci_merge_ref_sha": "e0510205d56dd81bbbd1fdf148e22daf6136ca6a",
+  "merged_main_sha": "dcaba52b8956087d3792164acc7f0b861c775db7",
+  "pull_request": 146,
+  "ci": {
+    "workflow": "Audio Studio Runtime Tests",
+    "run_number": 148,
+    "run_id": 32526277958,
+    "job_id": 96908865842,
+    "runtime": "4/4 PASS",
+    "full_audio_studio": "218/218 PASS",
+    "wave10_provider_cast_tests": "11/11 PASS"
+  },
   "canonical_runtime": "audio/studio/runtime",
   "new_runtime_root_created": false,
   "new_si_candidate_id_allocated": false,
@@ -22,6 +36,20 @@
     "audio/studio/runtime/provider_inventory_compiler.py",
     "audio/studio/runtime/cast_readiness.py"
   ],
+  "drive": {
+    "folder_id": "1ygBs3dEo4ghGn4boePvMuestqDiD3aO2",
+    "master_doc_id": "1T23V_t-165zRQnbEQfMrV33tAbM6kYQOoR7Rsm69_0k",
+    "execution_32_doc_id": "1vHrLtNBJ7ORm8z-fzfR_NbNprPAeMU5_EPH52yZo18k",
+    "engineering_proofs_doc_id": "1AS7x2khn9RXHpilBj0bIQ2CXfH_9ZoyXVUS4ddNcOnM",
+    "next_64_doc_id": "1OtUnZKDqXcCBIZIyQoojS14CL8pwp5Fku8Fz6-gXMwA",
+    "readback_strength": "NATIVE_DOCUMENT_CONTENT_READBACK",
+    "byte_exact_hash_verified": false
+  },
+  "prompt_cycle": {
+    "wave10_executed_dispositioned": 32,
+    "wave11_prompts_derived": 64,
+    "wave11_auto_authorized": false
+  },
   "evidence_ceiling": {
     "provider_account_reads": 0,
     "paid_synthesis_calls": 0,
@@ -40,8 +68,8 @@
     "provider_characters": 2163,
     "roles": ["NARRATOR", "ETHAN", "AOIFE"]
   },
-  "exact_next_external_dependency": "RUN_REAL_AUTH_PROVIDER_WORKFLOW_THEN_COMPILE_REAL_INVENTORY",
-  "exact_next_internal_dependency": "FRESH_CI_AND_INTEGRATION_READBACK",
+  "exact_next_external_dependency": "RUN_REAL_AUTH_PROVIDER_WORKFLOW_THEN_WAVE11_01_08",
+  "exact_next_internal_dependency": "NONE_HIGHER_INFORMATION_THAN_EXTERNAL_PROVIDER_GATE",
   "forbidden": [
     "SECOND_AUDIO_ENGINE",
     "SECOND_RECOVERY_RUNTIME",
@@ -49,6 +77,7 @@
     "VOICE_LOCK_FROM_METADATA",
     "AUTO_VOICE_SUBSTITUTION",
     "SYNTHETIC_HUMAN_SIGNAL",
-    "CI_AS_PROVIDER_OR_ARTISTIC_PROOF"
+    "CI_AS_PROVIDER_OR_ARTISTIC_PROOF",
+    "BLIND_EXECUTION_OF_ALL_64_WHILE_REAL_PROVIDER_GATE_IS_AVAILABLE"
   ]
 }
