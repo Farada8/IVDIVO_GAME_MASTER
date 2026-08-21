@@ -1,0 +1,111 @@
+{
+  "candidate_id": "SI-0008",
+  "title": "Full-chat transcript recovery and ingestion",
+  "candidate_type": "TOOLING_OR_AUTOMATION",
+  "status": "VERIFIED_CURRENT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {
+      "source_type": "FOUNDER",
+      "locator": "2026-08-21 directive: when a conversation ends abruptly and is copied/pasted into a new chat, recover all useful work, verify persistence, write through to GitHub/Drive, feed reusable learning into the work engine and Self-Improvement Engine, then continue",
+      "version": null,
+      "hash": null,
+      "date": "2026-08-21",
+      "notes": "Direct Founder system directive"
+    },
+    {
+      "source_type": "GITHUB",
+      "locator": "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md",
+      "version": "1.0",
+      "hash": "7da242be031a67a3acfc6ef8f1503915ca5d809c",
+      "date": "2026-08-21",
+      "notes": "Canonical operational protocol"
+    },
+    {
+      "source_type": "GITHUB",
+      "locator": "tools/ivdivo_transcript_recovery.py",
+      "version": "1.0",
+      "hash": "79b9cd9f9b8e60f65a7ec156dc23689a194233a6",
+      "date": "2026-08-21",
+      "notes": "Deterministic first-pass extractor merged through PR #59"
+    }
+  ],
+  "problem_or_opportunity": "Abrupt conversation endings can strand Founder decisions, chat-only artifacts, completed-work claims and reusable system improvements. Manual reconstruction by the Founder is slow, error-prone and can lose work or promote stale claims.",
+  "proposed_mechanism": "Treat pasted/exported prior conversations as recovery corpora. Deterministically extract a secret-redacted recovery ledger, then semantically reconcile Founder directives, persisted-artifact claims, chat-only outputs, open gates and reusable improvements against current GitHub/Drive authority before write-through and continuation.",
+  "dedupe_relation": "EXTENSION",
+  "related_candidates": ["SI-0001", "SI-0002", "SI-0004", "SI-0007"],
+  "expected_benefit": "Reduces cross-chat context loss and Founder orchestration burden while preventing false saved/locked/PASS claims, stale overwrites, secret leakage and loss of reusable learning.",
+  "evidence_state": "PRODUCTION_EVIDENCE",
+  "priority_vector": {
+    "impact": "CRITICAL",
+    "recurrence": "SYSTEMIC",
+    "effort": "MEDIUM",
+    "regression_risk": "LOW",
+    "reversibility": "EASY",
+    "urgency": "HIGH",
+    "affected_surface": "PORTFOLIO"
+  },
+  "development_contract": {
+    "protected_invariants": [
+      "Transcript is recovery evidence, never automatic canon",
+      "Saved/locked/PASS/provider/Human/market claims require independent evidence",
+      "No missing exact detail reconstruction",
+      "No secret/API-key persistence",
+      "No overwrite of newer persisted work",
+      "Final transcript tail must be processed before INGESTION_COMPLETE"
+    ],
+    "machine_boundary": "Deterministic extractor produces EXTRACTED_UNVERIFIED only; AI/editorial reconciliation and connector readback remain required."
+  },
+  "pilot_evidence": [
+    "Exact-source pytest smoke: 5 passed / 0 failed",
+    "Concurrent main advances forced branch+PR integration rather than stale force overwrite; PR #59 merged successfully"
+  ],
+  "red_team_findings": [
+    "A deterministic parser cannot decide canon or semantic authority and therefore must fail closed at EXTRACTED_UNVERIFIED",
+    "A pasted transcript may contain credentials; secret redaction must occur before excerpts are persisted",
+    "A previous model claiming that it saved/locked/passed something is a claim, not persistence evidence",
+    "Do not retroactively claim the extension exists inside an older packaged ZIP"
+  ],
+  "promotion_level": "UNIVERSAL",
+  "application_targets": [
+    "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md",
+    "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
+    "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
+    "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+    "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+    "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json",
+    "CURRENT_IVDIVO_CROSS_AI_HANDOFF.md",
+    "tools/ivdivo_transcript_recovery.py",
+    "schemas/IVDIVO_TRANSCRIPT_RECOVERY_LEDGER_SCHEMA_v1.json",
+    "tests/test_transcript_recovery.py",
+    "Google Drive 18B mirror and current Self-Improvement router mirror"
+  ],
+  "verification_evidence": [
+    "PR #59 merged; merge commit 1e3bd068771135f8f1bf470269f2e9243af8f797",
+    "Tested tool Git blob SHA 79b9cd9f9b8e60f65a7ec156dc23689a194233a6 matched GitHub main readback",
+    "5/5 exact-source pytest smoke PASS",
+    "IVDIVO_NARRATIVE_OS/TRANSCRIPT_RECOVERY_RUNTIME_VERIFICATION_2026-08-21.md",
+    "Drive 18B protocol and current Self-Improvement router were updated with runtime evidence and read back"
+  ],
+  "protected_authorities": [
+    "Founder newest instruction",
+    "Locked project/book canon",
+    "Current project source-of-truth",
+    "Current Writing/Audio/Self-Improvement authorities",
+    "Human evidence firewall",
+    "Provider truth",
+    "Secret/privacy firewall"
+  ],
+  "owner_role": "A00 Router / Meta-Showrunner / Recovery Reconciler",
+  "next_action": "Use on the first real large pasted prior-conversation corpus, complete persisted-source reconciliation, and record recovery defects/successes in the Learning Ledger. Compact this record into CURRENT_IMPROVEMENT_REGISTRY.json when an atomic registry-write path is available without risking loss of existing one-line registry content.",
+  "next_gate": "FIRST_REAL_LARGE_TRANSCRIPT_INGESTION_OPERATIONAL_MONITORING",
+  "hold_trigger": null,
+  "terminal_reason": null,
+  "last_movement": "2026-08-21",
+  "notes": "Extension itself is VERIFIED_CURRENT. Central-registry compaction remains a storage-hygiene task; this shard preserves the full candidate record without rewriting or truncating the existing seven-candidate registry.",
+  "registry_write_through": {
+    "canonical_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+    "status": "PENDING_SAFE_COMPACTION",
+    "reason": "Current registry is stored as one very large minified line. Connector has whole-file replacement semantics; preserving all existing candidate detail takes priority over risky reconstruction."
+  }
+}
