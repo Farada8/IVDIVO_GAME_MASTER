@@ -28,6 +28,25 @@ class ValueTests(unittest.TestCase):
     def test_unmeasured_value_holds_without_fake_precision(self):
         result=evaluate(p(measurement_state="UNMEASURED",real_project_pilots=1))
         self.assertEqual(result["disposition"],"HOLD_FOR_MEASUREMENT")
+    def test_partial_null_measurements_hold_not_fake_zero(self):
+        result=evaluate({"candidate_id":"SI-X","telemetry":{
+            "measurement_state":"PARTIAL","real_project_pilots":2,
+            "measured_minutes_saved":None,"measured_overhead_minutes":None,
+            "independent_human_evidence_count":None
+        }})
+        self.assertEqual(result["disposition"],"HOLD_FOR_MEASUREMENT")
+        self.assertEqual(result["metrics"]["measurement_state"],"PARTIAL")
+    def test_complete_label_with_missing_fields_holds(self):
+        result=evaluate({"candidate_id":"SI-X","telemetry":{
+            "measurement_state":"COMPLETE","real_project_pilots":2
+        }})
+        self.assertEqual(result["disposition"],"HOLD_FOR_MEASUREMENT")
+        self.assertEqual(result["metrics"]["measurement_state"],"COMPLETE_INVALID")
+        self.assertIn("COMPLETE_LABEL_WITH_MISSING_OR_UNKNOWN_MEASUREMENTS",result["reasons"])
+    def test_negative_telemetry_fails_closed(self):
+        result=evaluate(p(measured_overhead_minutes=-1))
+        self.assertEqual(result["status"],"FAIL_CLOSED")
+        self.assertEqual(result["disposition"],"STOP")
     def test_missing_input_fails_closed(self):
         self.assertEqual(evaluate({})["status"],"FAIL_CLOSED")
 
