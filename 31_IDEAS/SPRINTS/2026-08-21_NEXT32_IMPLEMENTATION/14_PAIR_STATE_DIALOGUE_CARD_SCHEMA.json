@@ -1,0 +1,29 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/schemas/pair_state_dialogue_card_candidate_v1.json",
+  "title":"Pair-State Dialogue Card Candidate",
+  "type":"object",
+  "required":["scene_id","pair","objective_a","objective_b","resistance","status_asymmetry","withheld_fact","tactic_sequence","listening_behavior","interruption_pressure","subtext","final_state_delta"],
+  "properties":{
+    "scene_id":{"type":"string"},
+    "pair":{"type":"array","minItems":2,"maxItems":2,"items":{"type":"string"}},
+    "objective_a":{"type":"string"},"objective_b":{"type":"string"},
+    "resistance":{"type":"string"},
+    "status_asymmetry":{"type":"string"},
+    "withheld_fact":{"type":"string"},
+    "tactic_sequence":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "listening_behavior":{"type":"string"},
+    "interruption_pressure":{"type":"string"},
+    "subtext":{"type":"string"},
+    "unsayable":{"type":"string"},
+    "p51_voice_constraints":{"type":"string"},
+    "p52_emotional_range_constraints":{"type":"string"},
+    "p53_relationship_electricity":{"type":"string"},
+    "p53_enabled":{"type":"boolean"},
+    "final_state_delta":{"type":"string"}
+  },
+  "routing_law":"P51/P52 are conditional craft controls; P53 is enabled only when current relationship authority and scene function support romance/relational electricity. Do not inject P53 into unrelated professional/investigative exposition.",
+  "n27_result":"PASS_CANDIDATE_SCHEMA_CREATED",
+  "n28_validation":"Internal A/B reasoning predicts the card improves dialogue only when it changes tactic/status/withholding/listening and final pair state; independent blind reviewer evidence remains open and must not be claimed from this session.",
+  "evidence_class":"INTERNAL_MODEL_VALIDATION_WITH_INDEPENDENT_BLIND_GATE_OPEN"
+}
