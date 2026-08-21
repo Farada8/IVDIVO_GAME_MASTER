@@ -32,7 +32,7 @@ DEFAULT_FRAMES = {
 }
 
 DIALOGUE_QUOTE_RE = re.compile(r"[\u201c\"]([^\u201d\"]+)[\u201d\"]")
-SCRIPT_SPEAKER_RE = re.compile(r"^\s*([A-Z][A-Z0-9 _'\-]{1,40}):\s*(.*)$")
+SCRIPT_SPEAKER_RE = re.compile(r"^\s*([A-Z][A-Z0-9 _'\-]{0,40}):\s*(.*)$")
 TOKEN_RE = re.compile(r"[A-Za-z][A-Za-z'\-]*")
 
 
@@ -60,10 +60,10 @@ def phrase_counts(text: str, frames: dict[str, str]) -> dict[str, int]:
 
 
 def lexical_profile(lines: Iterable[str]) -> dict[str, float | int]:
-    toks = [w for line in lines for w in words(line)]
+    line_list = list(lines) if not isinstance(lines, list) else lines
+    toks = [w for line in line_list for w in words(line)]
     if not toks:
         return {"tokens": 0, "types": 0, "type_token_ratio": 0.0, "mean_line_words": 0.0}
-    line_list = list(lines) if not isinstance(lines, list) else lines
     return {
         "tokens": len(toks),
         "types": len(set(toks)),
