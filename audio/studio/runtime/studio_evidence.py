@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""IVDIVO Audio Studio evidence layer v1.1.
+"""IVDIVO Audio Studio evidence layer v1.2.
 
 Evidence-only logic for cross-mode benchmark fairness, human performance review,
 measured economics and studio release readiness. It does not compile story/director
@@ -7,7 +7,9 @@ artifacts, dispatch providers, repair audio, or auto-lock artistic decisions.
 
 Production-authoritative external evidence is receipt-backed and class-validated.
 Caller-supplied booleans remain insufficient for provider/human/live/alignment/
-economics/durability/cross-project release claims.
+economics/durability/cross-project release claims. Release evidence must also
+cross-bind to one coherent live-audio lineage rather than merely pass as separate
+unrelated receipts.
 """
 from __future__ import annotations
 from dataclasses import dataclass
@@ -292,6 +294,69 @@ def economics_report(records: Iterable[EconomicsRecord]) -> dict[str, Any]:
     }
 
 
+def _release_lineage_consistency(validations: dict[str, Any]) -> dict[str, Any]:
+    """Cross-bind individually valid external receipts to one release lineage."""
+    keys = (
+        "live_render_provenance",
+        "real_alignment_timeline",
+        "durable_raw_assets",
+        "durable_recovery",
+        "cross_project_live_portability",
+    )
+    if any(not validations.get(key, {}).get("verified") for key in keys):
+        return {
+            "status": "HOLD_PREREQUISITE_VALIDATION",
+            "verified": False,
+            "issues": ["CLASS_VALIDATION_INCOMPLETE"],
+        }
+
+    live = validations["live_render_provenance"].get("durable") or {}
+    alignment = validations["real_alignment_timeline"].get("durable") or {}
+    raw = validations["durable_raw_assets"].get("durable") or {}
+    recovery = validations["durable_recovery"]
+    cross = validations["cross_project_live_portability"].get("durable") or {}
+
+    live_hash = live.get("content_hash")
+    live_tx = live.get("transaction_id")
+    live_metadata = live.get("metadata") or {}
+    live_project = live_metadata.get("project_id")
+    alignment_hash = alignment.get("content_hash")
+    alignment_metadata = alignment.get("metadata") or {}
+    cross_metadata = cross.get("metadata") or {}
+
+    issues: list[str] = []
+    if raw.get("content_hash") != live_hash:
+        issues.append("DURABLE_RAW_ASSET_NOT_CURRENT_LIVE_AUDIO")
+    if alignment_metadata.get("audio_hash") != live_hash:
+        issues.append("ALIGNMENT_NOT_BOUND_TO_CURRENT_LIVE_AUDIO")
+
+    recovered_hashes = set(recovery.get("recovered_content_hashes") or [])
+    if live_hash not in recovered_hashes:
+        issues.append("RECOVERY_MISSING_CURRENT_LIVE_AUDIO")
+    if alignment_hash not in recovered_hashes:
+        issues.append("RECOVERY_MISSING_CURRENT_ALIGNMENT")
+    recovery_tx = recovery.get("transaction_id")
+    if live_tx and recovery_tx != live_tx:
+        issues.append("RECOVERY_TRANSACTION_NOT_CURRENT_LIVE_TRANSACTION")
+
+    project_ids = set(cross_metadata.get("project_ids") or [])
+    cross_hashes = set(cross_metadata.get("live_evidence_hashes") or [])
+    if live_project not in project_ids:
+        issues.append("CROSS_PROJECT_REPORT_MISSING_CURRENT_PROJECT")
+    if live_hash not in cross_hashes:
+        issues.append("CROSS_PROJECT_REPORT_MISSING_CURRENT_LIVE_HASH")
+
+    return {
+        "status": "PASS" if not issues else "HOLD_LINEAGE_MISMATCH",
+        "verified": not issues,
+        "issues": sorted(issues),
+        "current_live_hash": live_hash,
+        "current_alignment_hash": alignment_hash,
+        "current_project_id": live_project,
+        "transaction_id": live_tx,
+    }
+
+
 def studio_release_evidence_matrix(
     evidence: dict[str, Any],
     *,
@@ -303,7 +368,9 @@ def studio_release_evidence_matrix(
 
     Internal deterministic facts remain booleans. Every external class must be
     supplied as its original class-specific receipt payload and is revalidated
-    here. A dictionary of all ``True`` values therefore fails closed.
+    here. A dictionary of all ``True`` values therefore fails closed. Individually
+    valid external receipts must additionally cross-bind to the same live-audio
+    lineage before the matrix can route to Founder release review.
     """
     internal_required = ("locked_source_identity", "production_control_on_main")
     external_required = {
@@ -331,12 +398,24 @@ def studio_release_evidence_matrix(
         validations[key] = validation
         if not validation.get("verified"):
             missing.append(key)
+
+    lineage = _release_lineage_consistency(validations)
+    if all(validations.get(key, {}).get("verified") for key in (
+        "live_render_provenance",
+        "real_alignment_timeline",
+        "durable_raw_assets",
+        "durable_recovery",
+        "cross_project_live_portability",
+    )) and not lineage.get("verified"):
+        missing.append("cross_class_lineage")
+
     return {
         "status": "GO_FOR_FOUNDER_RELEASE_DECISION" if not missing else "HOLD",
         "missing": sorted(set(missing)),
         "external_validations": validations,
+        "lineage_validation": lineage,
         "machine_may_declare_production_ready": False,
         "production_ready": False,
         "production_authoritative_gate": True,
-        "law": "External evidence must pass class-specific receipt validation. Even a complete matrix routes to Founder/human release decision; machine evidence never self-promotes artistic product readiness.",
+        "law": "External evidence must pass class-specific receipt validation and cross-bind to one live lineage. Even a complete matrix routes to Founder/human release decision; machine evidence never self-promotes artistic product readiness.",
     }
