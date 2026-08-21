@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "updated": "2026-08-21",
   "status": "CURRENT_ROUTING_STATE_NOT_STORY_CANON",
   "purpose": "Machine-readable resume pointer for cross-conversation and cross-model IVDIVO work. This file routes work; it never overrides locked project canon or project-specific source-of-truth files.",
@@ -23,7 +23,10 @@
     "autopilot": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
     "continuous_delta_learning": "IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md",
     "project_wide_continuation": "IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md",
-    "self_improvement_engine": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
+    "self_improvement": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+    "self_improvement_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+    "self_improvement_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+    "self_improvement_config": "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json",
     "improvement_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
     "improvement_registry_schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
     "self_improvement_utility": "tools/ivdivo_self_improvement.py",
@@ -40,6 +43,7 @@
     "CONCURRENT_DIALOG_REBASE_CHECK",
     "CHAT_ONLY_DISCOVERY_AND_INGESTION_GATE",
     "IMPROVEMENT_REGISTRY_SWEEP",
+    "SELF_IMPROVEMENT_PRIORITY_REBASE",
     "STALE_WORK_GATE",
     "RECOMPUTE_DEPENDENCY_DAG",
     "SELECT_HIGHEST_UNBLOCKED_OBLIGATION",
@@ -77,17 +81,32 @@
     ]
   },
   "self_improvement": {
-    "engine_status": "CURRENT_OPERATIONAL_ENGINE_V1_INITIAL_ACCEPTANCE",
-    "engine_authority": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
+    "engine_status": "V2_APPLYING_CURRENT_CANDIDATE",
+    "authority_router": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+    "engine_authority": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+    "engine_config": "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json",
+    "engine_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+    "historical_base": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
     "delta_intake_authority": "IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md",
     "reference_learning_authority": "IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md",
     "machine_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
     "schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
     "utility": "tools/ivdivo_self_improvement.py",
-    "drive_engine_mirror_id": "1lbAaKASLAKFzCiGEF84Xrs-ziwQhCJASwLfDh3UGwSg",
+    "priority_order": [
+      "P0_AUTHORITY_SAFETY_INTEGRITY",
+      "P1_WRITE_STRONG_COMPLETE_BOOKS",
+      "P2_LOCKED_BOOK_TO_HIGH_QUALITY_AUDIO_NOVEL",
+      "P3_PRODUCTION_RELIABILITY_SPEED_REUSE_COST",
+      "P4_ENGINE_TOOL_PROMPT_PROGRAM_QUALITY",
+      "P5_RESEARCH_LEARNING",
+      "P6_BROADER_IVDIVO_CAPABILITY"
+    ],
+    "primary_loops": ["BOOK_PRODUCTION", "LOCKED_BOOK_TO_AUDIO_NOVEL", "SELF_IMPROVEMENT_LEARNING"],
+    "drive_engine_v2_mirror_id": "1TamY1cuiCUGP5zgheF-1nM2LaRt2f5vtZLwfJTJeSaY",
+    "drive_current_router_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
+    "drive_v1_engine_base_id": "1lbAaKASLAKFzCiGEF84Xrs-ziwQhCJASwLfDh3UGwSg",
     "drive_registry_mirror_id": "1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs",
     "drive_portability_inventory_id": "1WofqSiO3fBD_VoIveOVDihBybwlpeDE051zVrf1ipVs",
-    "lifecycle": "DISCOVER -> CAPTURE -> DEDUPE -> CLASSIFY -> DEVELOP -> EVIDENCE -> PILOT/CANARY -> RED_TEAM/REGRESSION -> PROMOTION_DECISION -> APPLY -> VERIFY -> MONITOR -> RETAIN_OR_ROLLBACK",
     "anti_loss_invariants": [
       "ACTIVE_CANDIDATE_REQUIRES_PROVENANCE",
       "ACTIVE_CANDIDATE_REQUIRES_OWNER_ROLE",
@@ -98,24 +117,29 @@
       "HOLD_WITH_TRIGGER_REQUIRES_REOPEN_TRIGGER",
       "REJECTED_SUPERSEDED_ROLLED_BACK_REQUIRES_REASON"
     ],
-    "initial_registry_candidates": 6,
-    "initial_registry_relevant_audit": "PASS",
-    "adversarial_state_machine_checks": [
-      "ORPHAN_NO_NEXT_ACTION_BLOCKED",
-      "PROMOTED_WITHOUT_TARGET_BLOCKED",
-      "VERIFIED_WITHOUT_EVIDENCE_BLOCKED",
-      "HOLD_WITHOUT_TRIGGER_BLOCKED"
+    "best_candidate_router": "QUALITATIVE_PRIORITY_BANDS_A_TO_E_WITH_BOOK_AUDIO_IMPACT_FIRST",
+    "wip_guard": "ONE_PRIMARY_META_INTEGRATION_PLUS_UP_TO_TWO_INDEPENDENT_BOUNDED_PILOTS",
+    "research_mode": "PROBLEM_DRIVEN_WITH_STOPPING_RULE_AND_APPLICATION_TARGET",
+    "current_candidate": "SI-0007",
+    "current_candidate_status": "APPLYING",
+    "completed_v2_application_targets": [
+      "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+      "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+      "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json",
+      "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+      "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
+      "CURRENT_IVDIVO_SYSTEM_STATE.json",
+      "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+      "Google Drive v2 mirrors"
     ],
-    "current_candidate": "SI-0006",
-    "current_candidate_status": "APPLIED_UNVERIFIED",
     "remaining_acceptance": [
-      "EXACT_EXECUTABLE_UTILITY_RUNTIME_SMOKE",
-      "GITHUB_AND_DRIVE_READBACK_OF_ALL_POINTERS",
-      "CAPTURE_NEW_RUNTIME_CRAFT_v1.3_PROMOTIONS_IN_MACHINE_REGISTRY_OR_LINK_THEIR_EXISTING_PROMOTION_RECORD",
-      "THEN_MARK_SI_0006_VERIFIED_CURRENT_IF_GREEN"
+      "READBACK_AGGREGATE_SYSTEM_STATE_AFTER_REBASE",
+      "UPDATE_DEDICATED_SELF_IMPROVEMENT_STATE_AFTER_REBASE",
+      "PROMOTION_REVIEW_AND_REGISTRY_STATUS_TRANSITION",
+      "EXACT_EXECUTABLE_UTILITY_RUNTIME_SMOKE_WHEN_RUNNABLE_CHECKOUT_AVAILABLE"
     ],
-    "latest_real_concurrency_evidence": "A stale-SHA update to CURRENT_IVDIVO_SYSTEM_STATE was rejected during this synchronization because a sibling dialog advanced main with the Self-Improvement Engine. The worker rebased instead of force-overwriting; this validates STALE_WORK_GATE + CONCURRENT_DIALOG_REBASE behavior.",
-    "story_first_guard": "SELF_IMPROVEMENT_MUST_NOT_STARVE_ACTIVE_STORY_PRODUCTION_UNLESS_SYSTEM_FATAL_MAJOR_BLOCKS_IT"
+    "runtime_status": "UTILITY_RUNTIME_PROVISIONAL_EXACT_CHECKOUT_SMOKE_NOT_RUN",
+    "story_first_guard": "META_IMPROVEMENT_MUST_NOT_STARVE_ACTIVE_BOOK_OR_AUDIO_PRODUCTION_UNLESS_SYSTEM_FATAL_MAJOR_BLOCKS_IT_OR_FOUNDER_SWITCHES_FOCUS"
   },
   "portfolio_policy": "FINISH_ALL_ACTIVE_TEXTS_TO_LEGITIMATE_LOCK_THEN_MASS_AUDIO_NOVEL_STUDIO",
   "portfolio_frontier": {
@@ -150,9 +174,7 @@
         "founder_lock": "NOT_YET_ISSUED"
       },
       "next_unblocked_obligation": "FOUNDER_APPROVAL_OR_LOCK_D09_SEASON",
-      "remaining_to_text_lock": [
-        "FOUNDER_APPROVAL_OR_LOCK_D09_SEASON"
-      ],
+      "remaining_to_text_lock": ["FOUNDER_APPROVAL_OR_LOCK_D09_SEASON"],
       "hard_locks": [
         "ETHAN_CANNOT_PHYSICALLY_CAUSE_SIMON_DISAPPEARANCE_UNDER_LOCKED_TIMELINE",
         "SIMON_FOUND_ALIVE_WITHOUT_MEMORY_GIMMICK",
@@ -303,11 +325,12 @@
     "CURRENT_IVDIVO_CROSS_AI_HANDOFF",
     "SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT",
     "SELF_IMPROVEMENT_ENGINE_v1.0",
-    "CURRENT_IMPROVEMENT_REGISTRY_v1.0"
+    "CURRENT_IMPROVEMENT_REGISTRY_v1.0",
+    "SELF_IMPROVEMENT_META_ENGINE_v2_APPLYING"
   ],
   "pending_system_upgrade": {
-    "name": "SELF_IMPROVEMENT_ENGINE_v1_INITIAL_ACCEPTANCE",
-    "status": "APPLIED_UNVERIFIED_PENDING_RUNTIME_SMOKE_AND_POINTER_READBACK"
+    "name": "SELF_IMPROVEMENT_META_ENGINE_v2",
+    "status": "APPLYING_PENDING_READBACK_PROMOTION_REVIEW_AND_RUNTIME_SMOKE"
   },
   "state_status": "D09_READY_FOR_FOUNDER_LOCK_DECISION_GATE"
 }
