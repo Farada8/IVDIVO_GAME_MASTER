@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.emotional_inflation/1.0",
+  "title":"IVDIVO Emotional Inflation Detector",
+  "type":"object",
+  "required":["project_id","units"],
+  "properties":{
+    "project_id":{"type":"string"},
+    "romance_weight":{"type":["string","number","null"]},
+    "units":{"type":"array","items":{"type":"object","required":["unit_id","primary_emotional_event","intensity","new_choice","new_price","new_information","relationship_state_change","ordinary_warmth_or_recovery","inflation_risk"],"properties":{
+      "unit_id":{"type":"string"},
+      "primary_emotional_event":{"type":"string"},
+      "intensity":{"type":"integer","minimum":0,"maximum":5},
+      "new_choice":{"type":"boolean"},
+      "new_price":{"type":"boolean"},
+      "new_information":{"type":"boolean"},
+      "relationship_state_change":{"type":"boolean"},
+      "ordinary_warmth_or_recovery":{"type":"boolean"},
+      "inflation_risk":{"type":"string","enum":["LOW","MEDIUM","HIGH"]}
+    }}}
+  },
+  "description":"Repeated high-intensity suffering/rupture/rescue/jealousy without new choice, price, information or relationship change is an inflation signal, not an automatic rewrite command."
+}
