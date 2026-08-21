@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "status": "SPRINT2_CANDIDATE_CONTRACTS_NOT_CURRENT_AUTHORITY",
+  "date": "2026-08-21",
+  "contracts": {
+    "RECOVERY_AUTHORITY_CLASS": {
+      "values": [
+        "FOUNDER_DIRECT",
+        "LOCKED_PROJECT_CANON",
+        "CURRENT_PROJECT_AUTHORITY",
+        "CURRENT_DOMAIN_AUTHORITY",
+        "CURRENT_STATE_POINTER",
+        "WORKING_CANDIDATE",
+        "EXTERNAL_FINDING",
+        "ASSISTANT_OR_MODEL_CLAIM",
+        "REFERENCE_ONLY"
+      ],
+      "law": "lower class cannot self-promote; direct Founder/current controlling authority and valid chronology govern conflicts"
+    },
+    "CLAIM_EVIDENCE_REQUIREMENT": {
+      "SAVED_CREATED_UPDATED": "persisted store readback + identity/currentness",
+      "FOUNDER_LOCK": "direct Founder decision or governing persisted Founder-lock evidence",
+      "STORY_GATE_PASS": "gate artifact/result under controlling project authority",
+      "AUTOMATED_TEST_PASS": "exact code/test identity + invocation + exit/count/log evidence",
+      "PROVIDER_EXECUTED": "real provider job/response/output identity; dry-run insufficient",
+      "HUMAN_APPROVED": "actual human response + exact stimulus/build + method/date",
+      "MARKET_VALIDATED": "actual platform/experiment metric + period/cohort/denominator/definition",
+      "CURRENT_AUTHORITY": "controlling pointer/authority + supersession/currentness check"
+    },
+    "RECOVERY_WRITE_TRANSACTION": {
+      "required": [
+        "recovery_id",
+        "target",
+        "precondition",
+        "content_fingerprint",
+        "intended_mutation",
+        "status",
+        "result_ref",
+        "readback_status"
+      ],
+      "failure_state": "PARTIAL_WRITE_REPAIR_REQUIRED",
+      "law": "no accepted material write is complete until readback; stale precondition triggers rebase"
+    },
+    "RECOVERY_IDEMPOTENCY_KEY": {
+      "formula": "sha256(source_sha|project_key|artifact_class|normalized_content_hash|lineage_key)",
+      "law": "same key under compatible current authority => NO_OP/DUPLICATE; changed authority => reconcile"
+    },
+    "REGISTRY_COMPACTION_MANIFEST": {
+      "inputs": ["base_registry_sha", "extension_shas", "schema_versions"],
+      "checks": ["unique_candidate_ids", "schema_valid", "stable_sort", "no_extension_override"],
+      "outputs": ["canonical_pretty_registry", "candidate_count", "output_sha", "previous_snapshot", "readback_status"]
+    }
+  },
+  "promotion_boundary": "These contracts are sprint outputs. They become CURRENT only through normal candidate/pilot/regression/application/readback lifecycle."
+}
