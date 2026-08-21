@@ -1,0 +1,24 @@
+name: Audio Wave11 External Evidence Frontier Tests
+
+on:
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/WAVE11_EXTERNAL_EVIDENCE_FRONTIER_32_TO_64_2026-08-21/**'
+      - '.github/workflows/audio-wave11-evidence-frontier-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  wave11-frontier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Wave11 dependency frontier tests
+        run: python -m unittest discover -s AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/WAVE11_EXTERNAL_EVIDENCE_FRONTIER_32_TO_64_2026-08-21/tests -p 'test_*.py' -v
+      - name: Run full Audio Studio regression
+        run: python -m unittest discover -s audio/studio/tests -p 'test_*.py' -v
