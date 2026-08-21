@@ -1,0 +1,10 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_FUNCTION_TEST",
+  "locked_problem":"A passage feels choppy because three consecutive paragraphs each restart the same reader-state fact before the character decides whether to enter the room.",
+  "variant_mechanical_smoothing":{"method":"vary sentence length, replace repeated words, combine two short paragraphs","causality_change":false,"reader_state_chain_fixed":false,"voice_risk":"MEDIUM","result":"FAIL_SYMPTOM_SMOOTHING"},
+  "variant_upstream_repair":{"method":"remove duplicate reader-state resets; make paragraph 1 establish object, paragraph 2 show action against it, paragraph 3 carry implication into the decision; preserve character-specific diction","causality_change":true,"reader_state_chain_fixed":true,"voice_risk":"LOW","result":"PASS_TARGETED_UPSTREAM"},
+  "conclusion":"Sentence variety is not the primary fix when choppiness originates in repeated scene/paragraph state. Route upward first; sentence-level polish follows only after the causal/topic chain is sound.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST",
+  "human_boundary":"No claim of human preference or literary excellence is made from this fixture."
+}
