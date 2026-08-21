@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "updated": "2026-08-21",
   "status": "VERIFIED_CURRENT_MACHINE_EXECUTION_NOT_CANON",
-  "purpose": "Machine-execution pointer for the tested IVDIVO Engine v11.2 package. This file routes executable implementation evidence; it never overrides Founder instruction, story/book canon, current domain authority, project source-of-truth, or Self-Improvement authority.",
+  "purpose": "Machine-execution pointer for the tested IVDIVO Engine v11.2 package plus verified post-package extensions on GitHub main. This file routes executable implementation evidence; it never overrides Founder instruction, story/book canon, current domain authority, project source-of-truth, or Self-Improvement authority.",
   "engine": {
     "display_version": "IVDIVO ENGINE v11.2",
     "runtime_version": "IVDIVO-ENGINE/6.2.0-continuous-execution",
@@ -29,9 +29,12 @@
     "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
     "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
     "IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md",
+    "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md",
     "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
     "schemas/IVDIVO_EXECUTION_STATE_SCHEMA_v1.json",
+    "schemas/IVDIVO_TRANSCRIPT_RECOVERY_LEDGER_SCHEMA_v1.json",
     "tools/ivdivo_next_action.py",
+    "tools/ivdivo_transcript_recovery.py",
     "IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md",
     "AUDIO_PRODUCTION/IVDIVO_AUDIO_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE_v1.0.md",
     "AUDIO_PRODUCTION/IVDIVO_AUDIO_SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT_v1.0.md"
@@ -41,6 +44,7 @@
     "NO_REPEATED_CONTINUATION_WORD_WHEN_EXPLICIT_AUTO_GATES_PASS",
     "CONCURRENT_DIALOG_REBASE_COMPATIBILITY",
     "CHAT_ONLY_RESULT_INGESTION_AND_PERSISTENCE_GATE",
+    "FULL_CHAT_TRANSCRIPT_RECOVERY_LEDGER_EXTRACTION_AND_SECRET_REDACTION",
     "SEMANTIC_DELTA_DEDUPE_AND_UNIVERSALIZATION_SCREENING",
     "CROSS_MODEL_TASK_ASSIGNMENT_GUARDS",
     "BOUNDED_RUN_CARD_VALIDATION",
@@ -49,6 +53,26 @@
     "PROVIDER_NEUTRAL_STAGED_VOICE_AUDITION_BINDING_EVIDENCE",
     "SELF_IMPROVEMENT_V2_WIP_RESEARCH_ENGINE_AND_EVIDENCE_BRIDGE"
   ],
+  "transcript_recovery_extension": {
+    "status": "VERIFIED_CURRENT_EXTENSION_NOT_YET_PACKAGED_IN_V11_2_ZIP",
+    "authority": "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md",
+    "tool": "tools/ivdivo_transcript_recovery.py",
+    "tool_git_blob_sha": "79b9cd9f9b8e60f65a7ec156dc23689a194233a6",
+    "schema": "schemas/IVDIVO_TRANSCRIPT_RECOVERY_LEDGER_SCHEMA_v1.json",
+    "tests": "tests/test_transcript_recovery.py",
+    "merge_pr": 59,
+    "merge_commit": "1e3bd068771135f8f1bf470269f2e9243af8f797",
+    "exact_source_smoke": {
+      "framework": "pytest",
+      "passed": 5,
+      "failed": 0,
+      "status": "PASS",
+      "identity_check": "Tested local tool bytes produced Git blob SHA 79b9cd9f9b8e60f65a7ec156dc23689a194233a6; GitHub main readback returned the same blob SHA."
+    },
+    "machine_boundary": "First-pass extraction only. It does not verify persisted claims, decide canon, promote candidates, or mark INGESTION_COMPLETE. Downstream AI/human reconciliation remains required.",
+    "secret_firewall": "Detected credentials are redacted from excerpts; secrets_persisted is always false in generated ledger.",
+    "next_packaging_gate": "Include extension in next tested engine ZIP only after full-package regression is run; do not relabel v11.2 package contents retroactively."
+  },
   "continuation_contract": {
     "repeated_continuation_word_required": false,
     "auto_continue_requires": [
@@ -69,7 +93,8 @@
     "requires_evidence_class_separation": true,
     "verified_current_requires_application_and_verification_evidence": true,
     "research_requires_decision_and_stopping_rule": true,
-    "engine_promotion_requires_mature_contract_and_regression": true
+    "engine_promotion_requires_mature_contract_and_regression": true,
+    "transcript_recovery_rule": "Pasted/exported transcript is recovery evidence, never self-verifying authority. Deterministic extraction must hand off to persisted-source verification, dedupe, reconciliation, application and readback."
   },
   "prohibitions": [
     "NO_CANON_MUTATION_BY_MACHINE_POINTER",
@@ -77,6 +102,8 @@
     "NO_SECRET_OR_API_KEY_PERSISTENCE",
     "NO_HUMAN_SIGNAL_FABRICATION",
     "NO_CHAT_MEMORY_AS_AUTHORITY",
+    "NO_PASTED_TRANSCRIPT_AS_AUTOMATIC_AUTHORITY",
+    "NO_UNVERIFIED_SAVED_LOCKED_PASS_CLAIM_PROMOTION",
     "NO_MODEL_VOTE_CANON",
     "NO_PROJECT_SPECIFIC_AUDIO_IDENTITY_TRANSFER_AS_UNIVERSAL_MECHANISM"
   ],
