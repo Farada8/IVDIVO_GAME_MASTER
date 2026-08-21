@@ -1,0 +1,21 @@
+name: Cycle8 Evidence Contracts
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE8_EVIDENCE_EXECUTION/**'
+      - '.github/workflows/cycle8-evidence-contracts.yml'
+  workflow_dispatch:
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Cycle8 bounded evidence contracts
+        run: |
+          cd SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE8_EVIDENCE_EXECUTION
+          python -m unittest discover -s tests -v
