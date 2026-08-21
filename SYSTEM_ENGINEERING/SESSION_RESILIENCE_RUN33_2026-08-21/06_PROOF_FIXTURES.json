@@ -1,0 +1,51 @@
+{
+  "schema_version": "ivdivo.session_resilience_run33_proofs/1.0",
+  "date": "2026-08-21",
+  "candidate_id": "SI-0014",
+  "evidence_class": "INTERNAL_MACHINE_EVIDENCE",
+  "proof_boundary": [
+    "NO_PROVIDER_EXECUTION_PROVEN",
+    "NO_BROWSER_UI_RESTORE_PROVEN",
+    "NO_PAID_OR_IRREVERSIBLE_REPLAY_PROVEN",
+    "NO_HUMAN_OR_FOUNDER_APPROVAL_INFERRED",
+    "NO_SELF_IMPROVEMENT_PROMOTION_INFERRED"
+  ],
+  "transaction_fixtures": [
+    {"id":"T01","condition":"stable idempotency input across store-case normalization","expected":"SAME_IDEMPOTENCY_KEY"},
+    {"id":"T02","condition":"same semantic transaction with reordered object keys","expected":"SAME_TRANSACTION_HASH"},
+    {"id":"T03","condition":"credential-like field present","expected":"REJECT"},
+    {"id":"T04","condition":"duplicate action_id/idempotency identity","expected":"REJECT"},
+    {"id":"T05","condition":"blocker + authority drift + ambiguous paid action","expected":"STOP_BLOCKER"},
+    {"id":"T06","condition":"authority drift + ambiguous paid action","expected":"REBASE_FIRST"},
+    {"id":"T07","condition":"FAILED action + NOT_STARTED safe action","expected":"STOP_FAILED_ACTIONS_PRESENT"},
+    {"id":"T08","condition":"confirmed identity mismatch","expected":"STOP_IDENTITY_MISMATCH"},
+    {"id":"T09","condition":"STARTED_UNKNOWN paid/irreversible","expected":"QUARANTINE_EXTERNAL_SIDE_EFFECT"},
+    {"id":"T10","condition":"STARTED_UNKNOWN reversible","expected":"VERIFY_STORE_BEFORE_RETRY"},
+    {"id":"T11","condition":"confirmed without readback","expected":"VERIFY_READBACK"},
+    {"id":"T12","condition":"only safe NOT_STARTED actions remain","expected":"EXECUTE_MISSING_SAFE_ACTIONS"},
+    {"id":"T13","condition":"NOT_STARTED paid/irreversible","expected":"REQUIRE_EXPLICIT_DISPATCH_GATE"},
+    {"id":"T14","condition":"all actions reconciled + matching identity + readback","expected":"TRANSACTION_COMPLETE"}
+  ],
+  "lineage_fixtures": [
+    {"id":"L01","condition":"root then ACTIVE child","expected":"PARENT_SUPERSEDED_CHILD_GENERATION_1"},
+    {"id":"L02","condition":"second root same work unit","expected":"REJECT"},
+    {"id":"L03","condition":"pre-existing multiple roots","expected":"REJECT"},
+    {"id":"L04","condition":"pre-existing multiple ACTIVE heads","expected":"REJECT"},
+    {"id":"L05","condition":"duplicate checkpoint SHA across ledger","expected":"REJECT"},
+    {"id":"L06","condition":"cross-work-unit parent","expected":"REJECT"},
+    {"id":"L07","condition":"generation mismatch/cycle-invalid lineage","expected":"REJECT"},
+    {"id":"L08","condition":"historical incident + latest head","expected":"AUDIT_KEEP_PLUS_EPHEMERAL_CURRENT"}
+  ],
+  "learning_fixtures": [
+    {"id":"E01","condition":"synthetic-only/no real interruption evidence","expected":"HOLD"},
+    {"id":"E02","condition":"any false resume","expected":"HOLD_FALSE_RESUME_PRESENT"},
+    {"id":"E03","condition":"3 clean real recoveries across 2 projects","expected":"ELIGIBLE_FOR_PROMOTION_REVIEW"},
+    {"id":"E04","condition":"real false-stop rate > 10%","expected":"NARROW"},
+    {"id":"E05","condition":"many synthetic false stops but 3 clean real recoveries","expected":"SYNTHETIC_DOES_NOT_INFLATE_REAL_FALSE_STOP_RATE"}
+  ],
+  "deterministic_run33_test_count_after_red_team": 27,
+  "run32_checkpoint_regression_count": 10,
+  "registry_transaction_regression": "INHERITED_PYTEST_SUITE",
+  "registry_reference_validation": "REQUIRED_PASS",
+  "real_production_pilot_state": "NOT_YET_SATISFIED"
+}
