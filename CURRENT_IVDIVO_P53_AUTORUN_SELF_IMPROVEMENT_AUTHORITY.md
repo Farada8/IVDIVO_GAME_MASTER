@@ -22,6 +22,14 @@ No paid review is a prerequisite for RU text lock or pilot production.
 
 Use official standards/docs, published practitioner material, public forums/discussions and voluntary native speakers. AI is secondary evidence only.
 
+## SELF-IMPROVEMENT RESEARCH DELTA — 2026-08-21
+A new reference-ingest layer exists at:
+`IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_REFERENCE_INGEST_WAVE2_2026-08-21/`.
+
+It introduces a **v3 CANDIDATE**, not a new authority. Main candidate mechanisms: system dynamics/policy resistance, WIP/queue/small-batch economics, uncertainty/value-of-information, complex-situation failure checks, human-evidence interview hygiene, WRAP decision hygiene and information-architecture normalization.
+
+**Self-Improvement v2 remains VERIFIED_CURRENT.** v3 may be promoted only after a real production pilot demonstrates net gain without Story/Audio/authority regression. Synthetic candidate-gate tests have authority effect NONE.
+
 ## NEXT CAUSAL SEQUENCE
 zero-cost evidence → RU text v1.0 lock → authenticated provider preflight → one Naomi N1 + one Eli E1 baseline → evidence-gated pilot path.
 
