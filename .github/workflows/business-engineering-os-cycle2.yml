@@ -1,0 +1,20 @@
+name: Business Engineering OS Cycle2
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-21_CYCLE2_LIBRARY_NORMALIZATION_32_TO_64/**'
+      - '.github/workflows/business-engineering-os-cycle2.yml'
+  workflow_dispatch:
+
+jobs:
+  cycle2-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Cycle2 business engineering canaries
+        working-directory: BUSINESS_ENGINEERING_OS/2026-08-21_CYCLE2_LIBRARY_NORMALIZATION_32_TO_64/engine
+        run: python -m unittest -v test_business_library_engine.py
