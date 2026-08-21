@@ -1,0 +1,57 @@
+import unittest
+import wave4_quality_core as q
+
+class Q(unittest.TestCase):
+    def test_01_passport(self): self.assertEqual(q.compile_acoustic_passport("A1","CHARACTERS","plaza pavilion".split(),["walk"],["crowd"],"wide-natural","mono-safe")["status"],"PASS_PLAN")
+    def test_02_passport_leak(self): self.assertEqual(q.compile_acoustic_passport("A1","X",[],[],[],"x","x",["ROOM917_Greyhaven"])["status"],"FAIL_PROJECT_LEAK")
+    def test_03_ambience_pass(self): self.assertEqual(q.ambience_variation_gate(60,30,0,0)["status"],"PASS")
+    def test_04_ambience_loop(self): self.assertIn("OBVIOUS_SHORT_LOOP",q.ambience_variation_gate(90,20,2,0)["failures"])
+    def test_05_ambience_protected(self): self.assertIn("PROTECTED_SILENCE_DECORATIVELY_FILLED",q.ambience_variation_gate(20,None,0,.2)["failures"])
+    def test_06_foley_pass(self): self.assertEqual(q.foley_causality_gate([{"cue_id":"C9","physical_cause":"hand","action":"recorder touch","sound":"handling","listener_function":"Aoife work identity"}])["status"],"PASS")
+    def test_07_foley_fail(self): self.assertEqual(q.foley_causality_gate([{"cue_id":"x"}])["status"],"FAIL")
+    def test_08_recorder(self): self.assertEqual(q.diegetic_recorder_contract("CUE008","CUE010",["bandlimit","perspective"])["status"],"PASS_PLAN")
+    def test_09_recorder_same(self): self.assertEqual(q.diegetic_recorder_contract("x","x",["x"])["status"],"FAIL")
+    def test_10_music_defer(self): self.assertFalse(q.music_causality_gate(False,True,False)["admit_music"])
+    def test_11_music_pass(self): self.assertTrue(q.music_causality_gate(True,True,False)["admit_music"])
+    def test_12_music_no_gain(self): self.assertFalse(q.music_causality_gate(True,False,False)["admit_music"])
+    def test_13_music_protected(self): self.assertIn("PROTECTED_SILENCE_INVASION",q.music_causality_gate(True,True,True)["failures"])
+    def test_14_music_wallpaper(self): self.assertIn("WALLPAPER",q.music_causality_gate(True,True,False,True)["failures"])
+    def test_15_music_answer(self): self.assertIn("PREMATURE_ANSWER",q.music_causality_gate(True,True,False,False,True)["failures"])
+    def test_16_musical_fact_hold(self): self.assertEqual(q.validate_musical_fact_contract({"musical_fact_id":"M","story_function":"CLUE","listener_must_infer":"same","bindings":{},"verification":{"result":"PENDING"}})["status"],"HOLD")
+    def test_17_musical_fact_pass(self): self.assertEqual(q.validate_musical_fact_contract({"musical_fact_id":"M","story_function":"CLUE","listener_must_infer":"same","bindings":{"music":[{"musical_fact_id":"M"}]},"verification":{"result":"PASS"}})["status"],"PASS")
+    def test_18_musical_fact_split(self): self.assertEqual(q.validate_musical_fact_contract({"musical_fact_id":"M","story_function":"CLUE","listener_must_infer":"same","bindings":{"music":[{"musical_fact_id":"X"}]},"verification":{"result":"PASS"}})["status"],"FAIL")
+    def test_19_spatial_pass(self): self.assertEqual(q.spatial_mono_safety(.8,.95,False)["status"],"PASS")
+    def test_20_spatial_mono_fail(self): self.assertIn("MONO_INFORMATION_LOSS",q.spatial_mono_safety(.8,.7,False)["failures"])
+    def test_21_spatial_pan_fail(self): self.assertIn("EXTREME_PANNING_DEPENDENCY",q.spatial_mono_safety(.8,.95,True)["failures"])
+    def test_22_abc_hold_alignment(self): self.assertEqual(q.abc_mini_mix_gate(False,None)["status"],"HOLD")
+    def test_23_abc_hold_human(self): self.assertEqual(q.abc_mini_mix_gate(True,None)["status"],"HOLD")
+    def test_24_abc_winner(self):
+        s={"A":{"comprehension":4,"acting":4,"space":4,"desire_to_continue":4},"B":{"comprehension":5,"acting":5,"space":5,"desire_to_continue":5}}
+        self.assertEqual(q.abc_mini_mix_gate(True,s)["winner"],"B")
+    def test_25_silence_hold(self): self.assertEqual(q.protected_silence_postfx_gate(None)["status"],"HOLD")
+    def test_26_silence_pass(self): self.assertEqual(q.protected_silence_postfx_gate(-90)["status"],"PASS")
+    def test_27_silence_fail(self): self.assertEqual(q.protected_silence_postfx_gate(-60)["status"],"FAIL_COLLISION")
+    def test_28_stereo_real_regression(self): self.assertEqual(q.stereo_source_stem_integrity(-.143527,1.0,-20,-999)["status"],"FAIL_STEREO_SOURCE_TO_MONO_STEM")
+    def test_29_stereo_no_false_positive(self): self.assertEqual(q.stereo_source_stem_integrity(.9999,1.0,-100,-999)["status"],"PASS")
+    def test_30_info_pass(self): self.assertEqual(q.information_audibility_gate(1,.9,.7,.4)["status"],"PASS")
+    def test_31_info_fail(self): self.assertEqual(q.information_audibility_gate(.7,.9,.6,.3)["status"],"FAIL_PRIORITY")
+    def test_32_router_performance(self): self.assertEqual(q.earliest_cause_router("wrong_intention")["earliest_layer"],"PERFORMANCE")
+    def test_33_router_stem(self): self.assertEqual(q.earliest_cause_router("stereo_source_collapsed")["earliest_layer"],"STEM_RENDER_ROUTING")
+    def test_34_router_unknown(self): self.assertEqual(q.earliest_cause_router("x")["earliest_layer"],"DIAGNOSE_BEFORE_REPAIR")
+    def test_35_edit_pause(self): self.assertEqual(q.edit_before_regen("long_pause")["route"],"EDIT_ONLY")
+    def test_36_regen_identity(self): self.assertEqual(q.edit_before_regen("wrong_identity")["route"],"SELECTIVE_RERENDER")
+    def test_37_reconcile_gap(self):
+        r=q.runtime_reconciliation_map({"A"},{"A","B"}); self.assertEqual(r["candidate_gaps"],["B"]); self.assertFalse(r["parallel_engine_authorized"])
+    def test_38_reconcile_none(self): self.assertEqual(q.runtime_reconciliation_map({"A"},{"A"})["status"],"NO_GAPS")
+    def test_39_sound_state(self):
+        r=q.sound_gate_state(False,False,False); self.assertEqual(r["acoustic_passports"],"PASS_PLAN"); self.assertEqual(r["abc_mix"],"HOLD_LIVE_ALIGNMENT_AUDIO_HUMAN")
+    def test_40_secret_scope(self): self.assertEqual(q.secret_scan_classification(0,0,"bounded")["status"],"PASS_CURRENT_SEARCH_SCOPE")
+    def test_41_secret_hit(self): self.assertEqual(q.secret_scan_classification(1,0,"bounded")["status"],"REVIEW_REQUIRED")
+    def test_42_third_dry(self): self.assertEqual(q.third_project_dry_portability("BODYGUARD",True,True,[])["status"],"PASS_DRY")
+    def test_43_third_leak(self): self.assertEqual(q.third_project_dry_portability("X",True,True,["ROOM917"])["status"],"HOLD")
+    def test_44_release_hold(self): self.assertEqual(q.release_decision({"architecture":"PASS","dry_portability":"PASS"})["status"],"HOLD")
+    def test_45_release_go(self):
+        g={k:"PASS" for k in ("architecture","dry_portability","authenticated_casting","live_portability","real_timeline","human_performance","economics","durable_provenance","release_qc")}; self.assertEqual(q.release_decision(g)["status"],"GO")
+    def test_46_hash(self): self.assertEqual(q.canonical_json_sha({"b":1,"a":2}),q.canonical_json_sha({"a":2,"b":1}))
+
+if __name__=="__main__": unittest.main(verbosity=2)
