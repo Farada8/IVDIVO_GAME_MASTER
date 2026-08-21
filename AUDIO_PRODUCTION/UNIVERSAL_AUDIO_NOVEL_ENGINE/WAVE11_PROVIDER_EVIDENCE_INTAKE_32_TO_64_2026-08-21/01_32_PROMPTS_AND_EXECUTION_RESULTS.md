@@ -33,14 +33,14 @@ Execution law: every prompt is executed to the strongest available evidence. `HO
 24. **Output/next-state contract** — PASS_CODED — publishes validated intake state only; no voice lock/artistic selection/release claim.
 
 ## D — PROOF / PERSISTENCE / SYNTHESIS
-25. **Positive mechanics fixtures** — PASS_CODED — valid run-bound packet, deterministic intake, repeatability/no-drift, inventory/cast route.
-26. **Negative mechanics fixtures** — PASS_CODED — wrong transaction/source, snapshot drift, stale evidence, secret-bearing key, capability drift, cross-account drift.
-27. **Workflow static security fixtures** — PASS_CODED — trigger, read-only permissions, exact run download, no provider secret/synthesis, trusted checkout.
-28. **Fresh Audio Studio CI** — PENDING_GITHUB_ACTIONS at initial ledger persistence; must pass before merge.
-29. **Fresh-main/merge-ref gate** — PENDING after CI; must re-read moving main and prove compatible merge ref.
-30. **Google Drive durable package + content readback** — PENDING at initial ledger persistence.
-31. **GitHub integration + post-merge readback** — PENDING until 28–30 close.
-32. **Integrated synthesis + derive exactly 64 next prompts** — PASS_DESIGN — Wave12 dependency-first bank is persisted in `06_NEXT_64_PROMPTS_WAVE12.md`; it does not bypass real provider/human/spend gates.
+25. **Positive mechanics fixtures** — PASS_CI — current exact-run packet, deterministic intake, repeatability/no-drift and inventory/cast route all pass.
+26. **Negative mechanics fixtures** — PASS_CI — wrong transaction/source, malformed run/repository identity, snapshot drift, stale evidence, secret-bearing key, capability drift and cross-account drift fail/hold closed.
+27. **Workflow static security fixtures** — PASS_CI — exact trigger, read-only permissions, triggering-run download, no provider secret/synthesis and trusted checkout all pass.
+28. **Fresh Audio Studio CI** — PASS_MERGE_REF_CI — run #162 / ID `32531737647` / job `96924941486`; merge ref `e131e1a5585cea1bac62d4a1487cc07d3e59545e`; runtime 4/4 PASS; full Audio Studio 238/238 PASS; Wave11-specific 20/20 PASS.
+29. **Fresh-main/merge-ref gate** — PASS_EXACT_PREMERGE_BASE — CI log proves merge ref = Wave11 head `8176182f5d011e6e786fb0fd001afbb3ea944a16` + exact pre-merge main `257fb8b36e4a7f7a72e0c821f2df40b7fc42fffd`; main was re-read unchanged immediately before merge.
+30. **Google Drive durable package + content readback** — PASS_NATIVE_CONTENT_READBACK — folder `1R5gjKpB4EHFT2XARQR3_YGVU9i78s5ad`; folder listing and content readback passed for master, 32 results, engineering/contracts/proofs/protocols and exact 64-prompt bank.
+31. **GitHub integration + post-merge readback** — PASS_MERGED_READBACK — PR #159 merged with expected-head guard at `72b34a28504eaa234a84c3d8bb4ab17c897f6b06`; current main and `provider_evidence_intake.py` + intake workflow were read back from main.
+32. **Integrated synthesis + exactly 64 next prompts** — PASS — Wave12 dependency-first bank exists in GitHub and Drive; it does not bypass real provider/human/spend gates.
 
-## Initial truthful disposition
-28 prompts are closed/dispositioned now; prompts 28–31 are persistence/integration obligations still pending. No provider call, paid synthesis, human listening, real voice/pronunciation lock, live Lesson Zero request, real alignment, measured economics or story mutation is claimed by this cycle.
+## Final truthful disposition
+**32/32 executed or dispositioned.** Engineering/CI/GitHub/Drive mechanics are closed for Wave11. External evidence remains bounded: Wave11 provider calls=0; paid synthesis=0; human listening=0; real voice/pronunciation locks=0; live Lesson Zero requests=0; real alignment=0; measured economics=none; story mutations=0. The next highest-information action remains a real authenticated provider snapshot event and automatic Wave11 intake.

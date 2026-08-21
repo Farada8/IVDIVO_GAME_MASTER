@@ -1,8 +1,12 @@
 {
-  "schema_version": "ivdivo.audio.wave11.provider_evidence_intake/1.0",
+  "schema_version": "ivdivo.audio.wave11.provider_evidence_intake/1.1",
   "date": "2026-08-21",
-  "status": "WORKING_ENGINEERING_IMPLEMENTED_CI_DRIVE_MERGE_PENDING_EXTERNAL_PROVIDER_UNKNOWN",
+  "status": "WAVE11_32_32_COMPLETE_CODE_MERGED_DRIVE_READBACK_PASS_EXTERNAL_PROVIDER_UNKNOWN",
   "branch_base_main_sha": "61c1540e91fb7b849dc0e775d001893e2cc6fda0",
+  "final_premerge_main_sha": "257fb8b36e4a7f7a72e0c821f2df40b7fc42fffd",
+  "tested_merge_ref_sha": "e131e1a5585cea1bac62d4a1487cc07d3e59545e",
+  "code_head_sha": "8176182f5d011e6e786fb0fd001afbb3ea944a16",
+  "code_merge_commit_sha": "72b34a28504eaa234a84c3d8bb4ab17c897f6b06",
   "canonical_runtime": "audio/studio/runtime",
   "new_runtime_root_created": false,
   "new_si_candidate_id_allocated": false,
@@ -24,6 +28,23 @@
     "human_review_ledger",
     "live_lineage_escrow"
   ],
+  "ci": {
+    "run_number": 162,
+    "run_id": 32531737647,
+    "job_id": 96924941486,
+    "runtime_tests": "4/4 PASS",
+    "audio_studio_tests": "238/238 PASS",
+    "wave11_specific_tests": "20/20 PASS"
+  },
+  "drive": {
+    "folder_id": "1R5gjKpB4EHFT2XARQR3_YGVU9i78s5ad",
+    "master_doc_id": "1fFArehlvCC-c5GQKqsVEBWlDeAQKdA-BLu-q0fYMUWc",
+    "execution_doc_id": "1HdQnkm2SZYRL0q3DT_gL0GBPlXg6L_sd8v-aVzuAIU0",
+    "engineering_doc_id": "1Fi_f4u8LGmrZCDFJV-t6m4TETHcZGnAf6r4OGfBIfac",
+    "wave12_prompts_doc_id": "17PLju1yQqIcugxW8NhMNnfy9SOf1JeaXDyklbBDKnc8",
+    "readback_strength": "NATIVE_DOCUMENT_CONTENT_READBACK",
+    "byte_exact_hash_claimed": false
+  },
   "evidence_ceiling": {
     "persisted_real_provider_artifact_visible": false,
     "workflow_dispatch_run_directly_enumerable_by_current_connector": false,
@@ -37,10 +58,10 @@
     "measured_provider_economics": false,
     "story_mutations": 0
   },
-  "wave11_prompt_status": {"executed_or_dispositioned": 28, "pending_ci_drive_merge": 4, "total": 32},
+  "wave11_prompt_status": {"executed_or_dispositioned": 32, "pending": 0, "total": 32},
   "wave12_prompt_bank_count": 64,
   "exact_next_external_dependency": "RUN_REAL_AUTH_PROVIDER_WORKFLOW_AND_ALLOW_WAVE11_INTAKE_TO_VALIDATE_EXACT_RUN_ARTIFACT",
-  "exact_next_internal_dependency": "FRESH_AUDIO_STUDIO_CI_THEN_DRIVE_READBACK_THEN_FRESH_MAIN_MERGE_GATE",
+  "exact_next_internal_dependency": "NONE_BEFORE_REAL_PROVIDER_EVENT_UNLESS_A_CONCRETE_REGRESSION_DEFECT_APPEARS",
   "forbidden": [
     "SECOND_AUDIO_ENGINE",
     "SECOND_PROVIDER_ACQUIRER",
@@ -50,6 +71,7 @@
     "AUTO_VOICE_SUBSTITUTION",
     "INTAKE_PROVIDER_SECRET",
     "INTAKE_PAID_SYNTHESIS",
-    "CI_AS_PROVIDER_OR_HUMAN_PROOF"
+    "CI_AS_PROVIDER_OR_HUMAN_PROOF",
+    "BLIND_WAVE12_EXECUTION_WHILE_REAL_PROVIDER_GATE_IS_AVAILABLE"
   ]
 }
