@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1",
+  "updated": "2026-08-21",
+  "source_project": "IVDIVO_BOOK_3_SMITH_THE_EMPTY_RESCUE",
+  "cycle": "CYCLE32_2026-08-21",
+  "status": "PERSISTED_LEARNING_DELTA_PENDING_SAFE_CENTRAL_LEDGER_MERGE",
+  "entries": [
+    {"id":"B03-L01","type":"OBSERVATION","evidence":"Fresh Drive rebase found a complete strong THE EMPTY RESCUE architecture, normalized geography/voices, CH1-12 scene cards and mystery gate.","learning":"Self-improvement must prefer recovering and strengthening a demonstrated viable engine over automatic recompetition or new-engine generation.","transferability":"UNIVERSAL_WRITING_PRODUCTION"},
+    {"id":"B03-L02","type":"OBSERVATION","evidence":"Detailed Smith daughter/family documents existed but each explicitly said NOT CANON UNTIL FOUNDER APPROVAL; Saga Bible retained daughter as OPTION.","learning":"Detail density, Founder provenance and repeated reuse do not equal canon promotion. Status/authority must be read, not inferred.","transferability":"UNIVERSAL_AUTHORITY"},
+    {"id":"B03-L03","type":"PRODUCTION_DEFECT","evidence":"CURRENT Human Scene router contained a stale BLOODBOUND E07/E08-next slice after D10 controlling state had Founder-locked E01-E24.","learning":"CURRENT_ROUTER != CURRENT_EMBEDDED_PROJECT_SLICE. Embedded current claims need project-state freshness assertions.","transferability":"UNIVERSAL_ROUTING","candidate_id":"SI-0014","candidate":"31_IDEAS/REGISTRY_EXTENSIONS/SI-0014_PROJECT_SLICE_FRESHNESS_ASSERTION.json"},
+    {"id":"B03-L04","type":"BOUNDED_STORY_EXPERIMENT","evidence":"Recurring civilian hydro-worker line was bound CH1-29 and the climax price changed from an anonymous/decorative casualty placeholder to a known civilian surviving with permanent disabling injury class.","learning":"Irreversible climax price need not default to another death; a nonfatal permanent consequence can preserve causality and reduce body-count inflation when earlier fatal beats already exist.","transferability":"CANDIDATE_STORY_MECHANISM_ONLY"},
+    {"id":"B03-L05","type":"CALIBRATION_RESULT","evidence":"Controlled Smith/Jana/Nika/Taren/narrator fixtures showed distinct attention/question/register ownership and exposed concrete residual collision watches.","learning":"Pre-draft internal voice calibration can close an internal calibration blocker while remaining explicitly separate from Human Signal and full-manuscript corpus proof.","transferability":"HUMAN_SCENE_ENGINE"},
+    {"id":"B03-L06","type":"REGISTRY_INTEGRITY_DEFECT_AND_REPAIR","evidence":"A new freshness candidate was initially assigned SI-0008 before the full registry family was re-read. Registry family showed SI-0008 already belongs to Transcript Recovery and SI-0013 is occupied; candidate migrated to SI-0014 before merge.","learning":"New self-improvement candidate IDs must be allocated only after a just-in-time read of CURRENT_IMPROVEMENT_REGISTRY_FAMILY; chat-local assumptions about next free ID are unsafe.","transferability":"UNIVERSAL_SELF_IMPROVEMENT_REGISTRY"}
+  ],
+  "evidence_firewall": "No entry claims Human Signal, provider/runtime, legal, market or final literary proof.",
+  "next_action": "Safe semantic merge into CURRENT_IVDIVO_LEARNING_LEDGER.json after fresh central-ledger read/merge; do not overwrite concurrent sibling entries."
+}
