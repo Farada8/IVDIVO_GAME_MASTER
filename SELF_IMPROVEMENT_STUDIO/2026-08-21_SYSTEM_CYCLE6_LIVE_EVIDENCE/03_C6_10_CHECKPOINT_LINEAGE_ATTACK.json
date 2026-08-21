@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "status": "C6_10_CHECKPOINT_LINEAGE_ATTACK_PASS_ENGINEERING",
+  "authority_effect": "NONE",
+  "story_canon_effect": "NONE",
+  "runtime_source": "SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE5_PROOFS_PROTOCOLS_32_TO_64/03_cycle5_proof_runtime.py",
+  "runtime_blob_sha": "b3d1651d1ecc94ee2415d282c446ca7d136e46bd",
+  "valid_chain": {
+    "status": "PASS",
+    "head": "d84ac8e86d4a281cd9de3d7a4e6a566385c25032733627b23c69500e8cfcc1a9"
+  },
+  "attacks": {
+    "tamper": {"status": "FAIL_TAMPER", "index": 1},
+    "reorder": {"status": "FAIL_LINEAGE", "index": 1},
+    "replay_old_head": {"status": "FAIL_LINEAGE", "index": 3}
+  },
+  "checkpoints": [
+    {
+      "seq": 1,
+      "payload": {"boundary": "STAGE_RESULT", "frontier": "C6_FACT_RACE_001_READY"},
+      "parent_hash": null,
+      "hash": "6ebea8a2dcc87ed348c116fd41f3b9a4870780573c29ce2f7f32e1443be5cab9"
+    },
+    {
+      "seq": 2,
+      "payload": {"boundary": "WRITE_READBACK", "frontier": "C6_FACT_RACE_001_AGENT_A_COMMITTED"},
+      "parent_hash": "6ebea8a2dcc87ed348c116fd41f3b9a4870780573c29ce2f7f32e1443be5cab9",
+      "hash": "0680152d21c92fa44720baaf1869bf9d74e10b65f4799d3e80e115392781bdac"
+    },
+    {
+      "seq": 3,
+      "payload": {"boundary": "GATE_RESULT", "frontier": "C6_FACT_RACE_001_AGENT_B_409_REJECTED"},
+      "parent_hash": "0680152d21c92fa44720baaf1869bf9d74e10b65f4799d3e80e115392781bdac",
+      "hash": "d84ac8e86d4a281cd9de3d7a4e6a566385c25032733627b23c69500e8cfcc1a9"
+    }
+  ],
+  "evidence_class": "ENGINEERING_TEST",
+  "note": "This is deterministic/adversarial proof, not a genuine abrupt-session recovery incident. C6-11 remains HOLD until a real interruption occurs."
+}
