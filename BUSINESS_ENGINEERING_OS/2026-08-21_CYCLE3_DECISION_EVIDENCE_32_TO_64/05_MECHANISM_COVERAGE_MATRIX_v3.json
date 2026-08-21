@@ -1,0 +1,37 @@
+{
+  "artifact": "BUSINESS_MECHANISM_COVERAGE_MATRIX_v3",
+  "status": "WORKING",
+  "rules": {
+    "K0": "unverified/metadata only",
+    "K1": "single weak/reference support",
+    "K2": "single usable source",
+    "K3": "strong source or corroborated multi-source",
+    "K4": "high-confidence mechanism with direct source support + cross-source consistency",
+    "K5": "locally reproduced mechanism/engineering behavior; still not market proof"
+  },
+  "mechanisms": [
+    {"id":"M01","name":"Seven Domains / micro-market gate","sources":["The New Business Road Test"],"grade":"K4","single_source":true},
+    {"id":"M02","name":"MVP as learning / value-growth hypotheses","sources":["The Lean Startup","Testing Business Ideas"],"grade":"K4","single_source":false},
+    {"id":"M03","name":"Experiment evidence ladder","sources":["Testing Business Ideas","The Right It","The Lean Startup"],"grade":"K4","single_source":false},
+    {"id":"M04","name":"Past behavior over opinions","sources":["The Mom Test","Demand-Side Sales 101"],"grade":"K4","single_source":false},
+    {"id":"M05","name":"Commitment / advancement","sources":["The Mom Test","Founding Sales"],"grade":"K3","single_source":false},
+    {"id":"M06","name":"JTBD / progress","sources":["Competing Against Luck","Demand-Side Sales 101"],"grade":"K3","single_source":false},
+    {"id":"M07","name":"Positioning from alternatives/value/best-fit","sources":["Obviously Awesome","Value Proposition Design","Competing Against Luck"],"grade":"K3","single_source":false},
+    {"id":"M08","name":"Customer-funded topology","sources":["The Customer-Funded Business","Getting to Plan B","Financial Intelligence"],"grade":"K3","single_source":false},
+    {"id":"M09","name":"Create vs acquire","sources":["Buy Then Build","HBR Guide to Buying a Small Business","The New Business Road Test"],"grade":"K3","single_source":false},
+    {"id":"M10","name":"Power = Benefit + Barrier","sources":["7 Powers"],"grade":"K3","single_source":true},
+    {"id":"M11","name":"Constraint / throughput first","sources":["What Is This Thing Called TOC","The Haystack Syndrome"],"grade":"K4","single_source":false},
+    {"id":"M12","name":"Explore / exploit","sources":["The Invincible Company","Lead and Disrupt"],"grade":"K4","single_source":false},
+    {"id":"M13","name":"Policy resistance","sources":["Business Dynamics","Thinking in Systems"],"grade":"K4","single_source":false},
+    {"id":"M14","name":"Stocks/flows/delays","sources":["Business Dynamics","Thinking in Systems"],"grade":"K4","single_source":false},
+    {"id":"M15","name":"Double-loop / model revision","sources":["Business Dynamics","The Logic of Failure"],"grade":"K3","single_source":false},
+    {"id":"M16","name":"Queue economics / WIP limits","sources":["Principles of Product Development Flow","Theory of Constraints corpus"],"grade":"K3","single_source":false},
+    {"id":"M17","name":"Small batch / fast feedback","sources":["Principles of Product Development Flow","Lean Startup","Testing Business Ideas"],"grade":"K4","single_source":false},
+    {"id":"M18","name":"Measurement = uncertainty reduction","sources":["How to Measure Anything"],"grade":"K4","single_source":true},
+    {"id":"M19","name":"Value of information","sources":["How to Measure Anything","existing EIG router"],"grade":"K4","single_source":false},
+    {"id":"M20","name":"WRAP decision hygiene","sources":["Decisive"],"grade":"K3","single_source":true},
+    {"id":"M21","name":"Intent-first information architecture","sources":["How to Make Sense of Any Mess"],"grade":"K3","single_source":true},
+    {"id":"M22","name":"Complexity/dynamics/intransparency failure modes","sources":["The Logic of Failure","Business Dynamics"],"grade":"K3","single_source":false},
+    {"id":"M23","name":"Hype/social-proof positive feedback warning","sources":["Devil Take the Hindmost","Business Dynamics"],"grade":"K2","single_source":false,"reference_only":true}
+  ]
+}
