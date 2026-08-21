@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0",
+  "status":"CANDIDATE_NEGATIVE_FIXTURE_PACK",
+  "fixtures":[
+    {"id":"EVC-01","claim":"290/290 tests prove the novel is emotionally satisfying","presented_as":"LITERARY_PROOF","actual_evidence":"MACHINE_TEST","expected":"REJECT_OR_DOWNGRADE","reason":"engineering tests cannot establish literary/emotional quality"},
+    {"id":"EVC-02","claim":"Three AIs agree, therefore Human Signal is positive","presented_as":"HUMAN_SIGNAL","actual_evidence":"MODEL_REVIEW","expected":"REJECT","reason":"model agreement is not human evidence and may share the same source chain"},
+    {"id":"EVC-03","claim":"Dry-run ElevenLabs request proves live voice performance works","presented_as":"LIVE_PROVIDER","actual_evidence":"DRY_RUN","expected":"REJECT","reason":"no live provider render/artifact"},
+    {"id":"EVC-04","claim":"Predicted retention score proves market demand","presented_as":"MARKET_BEHAVIOR","actual_evidence":"PREDICTION","expected":"REJECT","reason":"prediction is not observed acquisition/retention behavior"},
+    {"id":"EVC-05","claim":"Transcript parser extracted LOCKED, therefore the project is locked","presented_as":"CANON_AUTHORITY","actual_evidence":"TRANSCRIPT_EXTRACTION","expected":"REJECT","reason":"pasted/exported transcript is recovery evidence only; persisted claim must be verified"},
+    {"id":"EVC-06","claim":"Source was searched and summarized, therefore strict-complete","presented_as":"STRICT_SOURCE_COMPLETE","actual_evidence":"PARTIAL_SOURCE_INSPECTION","expected":"REJECT","reason":"strict lifecycle requires integrity/full-read and downstream synthesis"},
+    {"id":"EVC-07","claim":"A listener liked one voice sample, therefore season voice is locked","presented_as":"VOICE_LOCK","actual_evidence":"SINGLE_SAMPLE_PREFERENCE","expected":"REJECT_OR_PROVISIONAL_ONLY","reason":"role-wide state/direction/pair/device testing absent"},
+    {"id":"EVC-08","claim":"A project final Story Gate PASS means Founder lock is issued","presented_as":"FOUNDER_APPROVAL","actual_evidence":"INTERNAL_GATE","expected":"REJECT","reason":"decision authority remains Founder-only when explicitly gated"}
+  ],
+  "n10_result":"PASS_INTERNAL_FIXTURE_DESIGN; all eight must fail or downgrade under the evidence-aware gate contract"
+}
