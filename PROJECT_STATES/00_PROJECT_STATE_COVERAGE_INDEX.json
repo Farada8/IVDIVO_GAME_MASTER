@@ -31,7 +31,7 @@
     {"project_id":"IVDIVO_BOOK_2","title":"ORBITAL YOUTH","state_path":"IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/DRAFT_STATUS.md","recovery":"PASS_TEXT_POINTER_NON_JSON"}
   ],
   "blocked_recovery": [],
-  "portfolio_resumability_claim": "PASS",
+  "portfolio_resumability_claim": "PASS_FULL",
   "cold_start_test": {
     "D01":"PASS: E01-E120 TEXT COMPLETE, Final Story Gate PASS, Founder Lock decision gate and no-E121 rule recoverable from PROJECTS/THE_WIFE_AT_HIS_WEDDING/CURRENT_STATE.md.",
     "D03":"PASS: current Recording Master v1.6 + active performed-audio stage + Human Audio Signal pending are recoverable without chat history.",

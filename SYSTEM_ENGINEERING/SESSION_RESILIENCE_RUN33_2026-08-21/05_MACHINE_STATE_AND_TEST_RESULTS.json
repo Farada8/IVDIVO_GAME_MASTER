@@ -1,0 +1,91 @@
+{
+  "schema_version": "ivdivo.session_resilience_run33/1.1",
+  "date": "2026-08-21",
+  "status": "CI_GREEN_DRIVE_READBACK_PASS_MERGE_GATE",
+  "candidate_id": "SI-0014",
+  "candidate_status": "READY_FOR_PILOT",
+  "run32_merge_commit": "42e08b350c5d2f564ea380d4de8aba57fba90ab9",
+  "run33_pr": 108,
+  "fresh_main_rebase": {
+    "main_sha": "55c69de4f19aec1c2b408020c1447cbd38beef5b",
+    "semantic_merge_commit": "96e1a15f613209f55f47d5c22f7cebfe34fa9cf6",
+    "parallel_commits_preserved": 67,
+    "post_rebase_relation": "HEAD_AHEAD_MAIN_BEHIND_0",
+    "portfolio_state_delta_after_rebase": "ONE_FIELD_PASS_TO_PASS_FULL",
+    "status": "PASS"
+  },
+  "critical_integrity_repair": {
+    "defect": "SESSION_RESILIENCE_PENDING_ID_COLLIDED_WITH_REGISTRY_FAMILY_SI_0010",
+    "preserved": "SI-0010_REGISTRY_SHARD_COMPACTION_TRANSACTION",
+    "migrated_to": "SI-0014_SESSION_RESILIENCE_DURABLE_RECOVERY",
+    "prevention": "FULL_REGISTRY_FAMILY_ID_FRESHNESS_REQUIRED"
+  },
+  "modules": [
+    "tools/ivdivo_durable_write_reconciler.py",
+    "tools/ivdivo_checkpoint_lineage.py",
+    "tools/ivdivo_interruption_learning.py"
+  ],
+  "protocols_and_contracts": [
+    "IVDIVO_NARRATIVE_OS/18D_DURABLE_TRANSACTION_RECONCILIATION_PROTOCOL_v1.0.md",
+    "ENGINEERING_CONTRACTS/DURABLE_MULTI_STORE_TRANSACTION_v1.0.md",
+    "ENGINEERING_CONTRACTS/CHECKPOINT_LINEAGE_RETENTION_v1.0.md",
+    "ENGINEERING_CONTRACTS/INTERRUPTION_LEARNING_EVIDENCE_v1.0.md"
+  ],
+  "schemas": [
+    "schemas/IVDIVO_DURABLE_WRITE_TRANSACTION_SCHEMA_v1.json",
+    "schemas/IVDIVO_CHECKPOINT_LINEAGE_SCHEMA_v1.json",
+    "schemas/IVDIVO_INTERRUPTION_LEARNING_EVENT_SCHEMA_v1.json"
+  ],
+  "deterministic_evidence": {
+    "run33_after_red_team": {"passed": 27, "failed": 0, "status": "PASS"},
+    "run32_checkpoint_regression": {"passed": 10, "failed": 0, "status": "PASS"},
+    "registry_transaction_regression": {"passed": 7, "failed": 0, "status": "PASS"},
+    "red_team_repairs": [
+      "FAILED_ACTION_PRECEDENCE",
+      "MULTIPLE_ROOT_ACTIVE_HEAD_AND_DUPLICATE_CHECKPOINT_VALIDATION",
+      "REAL_VS_SYNTHETIC_FALSE_STOP_RATE_SEPARATION",
+      "FULL_REGISTRY_ID_FRESHNESS",
+      "STALE_D01_PORTFOLIO_CLAIM_RECONCILIATION"
+    ]
+  },
+  "ci_evidence": {
+    "session_resilience_run33": {"run_id": 32516926109, "status": "PASS"},
+    "session_resilience": {"run_id": 32516926107, "status": "PASS"},
+    "self_improvement_integrity": {"run_id": 32516926112, "status": "PASS"},
+    "earlier_failures_classified": [
+      "MISSING_PYTEST_IN_NEW_WORKFLOW_ENVIRONMENT",
+      "INVALID_VALIDATE_REGISTRY_CLI_ARGUMENT",
+      "STALE_PORTFOLIO_RESUMABILITY_CLAIM"
+    ],
+    "all_repaired": true
+  },
+  "drive_readback": {
+    "folder": "SESSION_RESILIENCE_RUN33_2026-08-21",
+    "folder_id": "1CCIXde5_2k57yHHIOENgO7staWyyZ1yv",
+    "files_expected": 7,
+    "files_nonempty": 7,
+    "content_markers_verified": [
+      "32 SYNTHESIZE/PERSIST",
+      "prompt 64 final SI-0014 decision",
+      "REAL PRODUCTION PILOT: NOT YET SATISFIED"
+    ],
+    "status": "PASS"
+  },
+  "parallel_development": {
+    "pr103": "AUDIO_SPECIFIC_COMPATIBLE",
+    "pr104": "RELATED_CANDIDATE_LOCAL_JOURNAL_LINEAGE_TELEMETRY_NOT_UNIVERSAL_RECOVERY_AUTHORITY",
+    "pr105": "BOOK_ENGINE_DISCOVERY_ONLY",
+    "pr98": "MERGED_REGISTRY_TRANSACTION_REUSED"
+  },
+  "evidence_boundary": [
+    "CONTROLLED_PARTIAL_WRITE_PILOT_NOT_YET_EXECUTED",
+    "GENUINE_NEW_INTERRUPTION_RECOVERY_NOT_YET_OBSERVED",
+    "NO_PROVIDER_CALL",
+    "NO_CREDIT_SPEND",
+    "NO_IRREVERSIBLE_REPLAY",
+    "NO_HUMAN_EVIDENCE_INFERRED",
+    "NO_CANON_MUTATION",
+    "NO_AUTOMATIC_SELF_IMPROVEMENT_PROMOTION"
+  ],
+  "next_gate": "FINAL_FRESHNESS_DIFF_CHECK_THEN_PR108_MERGE_READBACK_THEN_CONTROLLED_REVERSIBLE_GITHUB_DRIVE_PARTIAL_WRITE_PILOT"
+}
