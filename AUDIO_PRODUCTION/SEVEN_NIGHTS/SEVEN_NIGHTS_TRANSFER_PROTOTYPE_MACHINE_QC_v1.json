@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "project": "SEVEN NIGHTS BEFORE CODE BLUE",
+  "asset": "NORMAL_TRANSFER_vs_SECOND_TRANSFER_ENGINEERING_MACHINE_PROTOTYPE",
+  "status": "ENGINEERING_MACHINE_PASS_HUMAN_LISTENER_PENDING",
+  "sample_rate_hz": 48000,
+  "bit_depth": 24,
+  "duration_seconds": 24.0,
+  "timeline_seconds": {
+    "P0_equipment_room_bed": [0.0, 5.0],
+    "P1_normal_transfer": 5.0,
+    "P1_settled_analysis": [5.65, 8.6],
+    "P2_same_environment": [9.0, 13.8],
+    "P3_second_transfer": 14.0,
+    "P3_extra_load_state": 14.35,
+    "P3_settled_analysis": [14.85, 17.8],
+    "P4_radio_line_slot_unrendered": [18.4, 21.0]
+  },
+  "radio_line": {
+    "speaker": "CALEB_MOSS",
+    "exact_text": "Hold the second transfer.",
+    "rendered": false,
+    "reason": "No real cast/provider voice evidence; synthetic speech forbidden."
+  },
+  "design": {
+    "normal": "one clean ordinary relay/load-state change",
+    "second": "same normal change plus distinct additional mechanical/load-state change",
+    "phone_survival": "extra state includes 880/1320/1760 Hz information, not sub-bass-dependent",
+    "forbidden": ["music", "boom", "riser", "horror sting", "fake Moss speech"]
+  },
+  "machine_qc": {
+    "gate": "PASS",
+    "stereo_peak_dbfs": -19.5,
+    "mono_peak_dbfs": -19.79,
+    "phone_peak_dbfs": -21.39,
+    "stereo_rms_dbfs": -41.45,
+    "mono_rms_dbfs": -41.53,
+    "phone_rms_dbfs": -52.27,
+    "phone_600_1800_second_minus_normal_db": 7.28,
+    "bands": [
+      {"band_hz": [300,600], "normal_db": -91.76, "second_db": -91.75, "phone_normal_db": -91.77, "phone_second_db": -91.76, "phone_delta_db": 0.01},
+      {"band_hz": [600,1000], "normal_db": -96.08, "second_db": -90.64, "phone_normal_db": -96.08, "phone_second_db": -90.64, "phone_delta_db": 5.45},
+      {"band_hz": [1000,1800], "normal_db": -114.14, "second_db": -96.05, "phone_normal_db": -114.14, "phone_second_db": -96.05, "phone_delta_db": 18.09},
+      {"band_hz": [1800,3000], "normal_db": -114.27, "second_db": -114.39, "phone_normal_db": -114.27, "phone_second_db": -114.39, "phone_delta_db": -0.12}
+    ],
+    "nan_inf": "PASS"
+  },
+  "human_gate": {
+    "status": "PENDING",
+    "required": "blind listener identifies extra state in SECOND TRANSFER on stereo, mono, and ordinary-phone playback without explanation",
+    "not_claimed": true
+  },
+  "files": {
+    "SN_TRANSFER_PROTOTYPE_STEREO_MACHINE_v1.wav": {"sha256": "006b94f88e5d04384ea6e29bdd5df5b88d10990842bccf119c79c672a90d39e5", "bytes": 6912044, "drive_id": "1HKcTVYJLWMJSXQIfFpXDc8XylrMbSZTk"},
+    "SN_TRANSFER_PROTOTYPE_MONO_MACHINE_v1.wav": {"sha256": "b44dd6c9a5a89870fd54070a0bfe689e6053bf6388949b115b6e226d8dd3a371", "bytes": 3456044, "drive_id": "1JiDJI9cLGxsBayVGO1YkBqxbXKwpQteg"},
+    "SN_TRANSFER_PROTOTYPE_PHONE_MACHINE_v1.wav": {"sha256": "5c3d3bda0d22c9745d07e59c54e8b78c7aad62c1ca2b9dcc85cae6edd8ef46fe", "bytes": 3456044, "drive_id": "1LWxnBUqNJpIjOVuq8tNWnMYH02K0oGmy"},
+    "SN_TRANSFER_PROTOTYPE_MACHINE_QC_v1.json": {"drive_id": "1k3fpSq622_GcQl1IqXGkNN_EPNJ7zga0"}
+  }
+}

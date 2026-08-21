@@ -1,0 +1,18 @@
+{
+  "schema_version": "ivdivo.room917.tool_validation/1.0",
+  "status": "PASS",
+  "source_asset": "ROOM917_E01_SCENE3_V1_3E_MASTER_24BIT_48K.wav",
+  "source_file_library_id": "file_00000000f1e081f4b6143877e1fc5ae2",
+  "source_sha256_measured": "ce8fa1225ba399e6a738df22ab02ad2ae432cdebd77edab3bc0ed075efde4c70",
+  "size_bytes": 61404524,
+  "format": "PCM_SIGNED_24BIT_STEREO_48000HZ",
+  "duration_seconds": 213.210,
+  "analysis": {
+    "window_ms": 100,
+    "below_minus85_seconds": 0.0,
+    "below_minus50_seconds": 0.0,
+    "below_minus45_seconds": 0.0
+  },
+  "comparison_to_current_authority": "MATCHES_SAVED_SCENE3_TAIL_MEASUREMENTS",
+  "scope": "TOOL_VALIDATION_ONLY_DOES_NOT_CHANGE_SCENE3_AUTHORITY"
+}
