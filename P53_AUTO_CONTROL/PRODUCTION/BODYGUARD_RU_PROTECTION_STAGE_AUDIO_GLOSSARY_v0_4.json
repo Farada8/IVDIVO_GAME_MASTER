@@ -1,0 +1,37 @@
+{
+  "artifact": "BODYGUARD_RU_PROTECTION_STAGE_AUDIO_GLOSSARY_v0_4",
+  "status": "EVIDENCE_UPGRADED_HUMAN_PRACTITIONER_LOCK_PENDING",
+  "evidence": {
+    "security": [
+      {"source":"ГОСТ Р 70619-2022","supports":["личная охрана","охраняемое лицо","маршруты движения","сотрудник личной охраны","эскорт"]},
+      {"source":"Закон РФ №2487-1, действующая редакция 2026","supports":["защита жизни и здоровья граждан"]},
+      {"source":"Приказ Росгвардии №358 от 02.10.2025, вступает 01.09.2026","supports":["телохранитель","охраняемое лицо"],"status":"REFERENCE_FUTURE_NOT_CURRENT_AT_2026_08_21"}
+    ],
+    "stage": [
+      {"source":"Интервью российского стейдж-менеджера, Работа.ру","supports":["гоу used in Russian theatre","example: Свет номер 116, гоу"]},
+      {"source":"ArtMasters course","supports":["стейдж-менеджер as professional term","live show coordination"]}
+    ],
+    "audio": [
+      {"source":"Shure PSM1000 RU guide/brochure","supports":["поясной приемник","приёмник-бодипак","внутриканальные наушники"]},
+      {"source":"Yamaha QL/M7CL Russian resources","supports":["Cue / Monitor / Oscillator / Talkback labels","двусторонняя связь (Talkback)"]}
+    ]
+  },
+  "entries": [
+    {"en":"close protection","formal_ru":"личная охрана","spoken":["личная охрана","охрана"],"state":"DOCUMENTED_STRONG"},
+    {"en":"principal","formal_ru":"охраняемое лицо","spoken":["клиент","охраняемое лицо"],"state":"FORMAL_LOCK_SPOKEN_CONTEXT"},
+    {"en":"bodyguard","formal_ru":"телохранитель / сотрудник личной охраны","spoken":["телохранитель","телохранительница"],"state":"DOCUMENTED_STRONG"},
+    {"en":"route","formal_ru":"маршруты движения","spoken":["маршрут"],"state":"DOCUMENTED_STRONG"},
+    {"en":"bodypack","formal_ru":"приёмник-бодипак / поясной приёмник","spoken":["бодипак"],"state":"DOCUMENTED_STRONG_WITH_DEVICE_CHECK"},
+    {"en":"IEM","formal_ru":"внутриканальный мониторинг","spoken":["IEM"],"state":"DOCUMENTED_STRONG_PRONUNCIATION_PENDING"},
+    {"en":"talkback","formal_ru":"двусторонняя связь (Talkback)","spoken":["толкбэк"],"state":"DOCUMENTED_STRONG_WITH_COMPREHENSION_QA"},
+    {"en":"stage-left/right","formal_ru":"слева/справа по сцене","spoken":["слева по сцене","справа по сцене"],"state":"STRONG_WORKING"},
+    {"en":"standby","spoken":["готовность","standby"],"state":"PRACTITIONER_QA_REQUIRED"},
+    {"en":"acknowledgement","spoken":["подтверждение","готовы"],"state":"PRACTITIONER_QA_REQUIRED"},
+    {"en":"GO","formal_ru":"GO","spoken":["гоу"],"state":"DOCUMENTED_STRONG_WORKING"},
+    {"en":"cue","spoken":["кью","команда","реплика"],"state":"PRACTITIONER_QA_REQUIRED"},
+    {"en":"lift","spoken":["сценическая платформа","подъёмник"],"state":"CONTEXT_REQUIRED"},
+    {"en":"gateway","formal_ru":"шлюз","spoken":["шлюз"],"state":"TECHNICAL_CONTEXT_REQUIRED"},
+    {"en":"left channel only","formal_ru":"только левый канал","spoken":["только левый канал"],"state":"LOCK_CANDIDATE"},
+    {"en":"four clicks / two clicks","formal_ru":"четыре щелчка / два щелчка","spoken":["четыре щелчка","два щелчка"],"state":"LOCK_CANDIDATE"}
+  ]
+}
