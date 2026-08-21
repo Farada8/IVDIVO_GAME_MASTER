@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "status": "PASS_CORRECT_SOURCE_STAGE2",
+    "count": 8,
+    "passed": 8,
+    "failed": 0,
+    "pass_results": 7,
+    "source_holds": 1,
+    "warm_regression": "25/25_PASS",
+    "cold_regression": "25/25_PASS",
+    "story_mutation": "NONE",
+    "promotion": "NONE"
+  },
+  "sources": [
+    "BLOODBOUND Season Bible Drive 1gFejd94EBxJ3en9pzj94PFKBAI5xyG0x5rESZ8bkGAY",
+    "BLOODBOUND 24-Episode Causal Grid Drive 1_AiNjOT0si83tScCR_aost8UOfzoZt9lYfAYBCbiyHg"
+  ],
+  "results": [
+    {"pilot":"D10_story_core_bundle","status":"STORY_CORE_READY","evidence_grade":"SOURCE_EXPLICIT_PLUS_DERIVED_CAUSAL_MAPPING"},
+    {"pilot":"D10_ordinary_life_from_character_profile","status":"INSUFFICIENT_SOURCE_NOT_STORY_DEFECT","evidence_grade":"SOURCE_ADEQUACY_HOLD"},
+    {"pilot":"D10_opposition_legitimacy","status":"LEGITIMATE_RESISTANCE","evidence_grade":"SOURCE_EXPLICIT"},
+    {"pilot":"D10_wrong_strategy_causality","status":"CAUSALLY_PROVEN","evidence_grade":"DERIVED_INFERENCE_FROM_SOURCE_CAUSAL_CHAIN"},
+    {"pilot":"D10_midpoint_reclassification","status":"MIDPOINT_RECLASSIFICATION","evidence_grade":"SOURCE_EXPLICIT_PLUS_DERIVED_CAUSAL_MAPPING"},
+    {"pilot":"D10_climax_ownership","status":"ENSEMBLE_VALID","evidence_grade":"SOURCE_EXPLICIT"},
+    {"pilot":"D10_world_through_life","status":"EARNED_WORLD_REVEAL","evidence_grade":"SOURCE_EXPLICIT"},
+    {"pilot":"D10_institutional_differentiation","status":"DIFFERENTIATED","evidence_grade":"SOURCE_EXPLICIT_PLUS_STRUCTURED_MAPPING"}
+  ]
+}
