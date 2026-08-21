@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated": "2026-08-21",
   "status": "VERIFIED_CURRENT_MACHINE_EXECUTION_NOT_CANON",
   "purpose": "Machine-execution pointer for the tested IVDIVO Engine v11.2 package plus verified post-package extensions on GitHub main. This file routes executable implementation evidence; it never overrides Founder instruction, story/book canon, current domain authority, project source-of-truth, or Self-Improvement authority.",
@@ -75,16 +75,23 @@
   },
   "continuation_contract": {
     "repeated_continuation_word_required": false,
+    "semantics": "AUTOPILOT_V1_2_PLUS_REAL_GATES",
     "auto_continue_requires": [
       "NO_CURRENT_BLOCKER",
-      "CONTINUATION_POLICY_EXPLICITLY_ENABLED",
-      "NEXT_ACTION_SAFE_TRUE",
-      "NEXT_ACTION_ZERO_COST_TRUE",
-      "NEXT_ACTION_REVERSIBLE_TRUE",
-      "NEXT_ACTION_TOOL_EXECUTABLE_HERE_TRUE"
+      "FRESH_OR_USABLE_AUTHORITY",
+      "DEPENDENCIES_PASS",
+      "NEXT_ACTION_EXECUTABLE_HERE_TRUE",
+      "NO_REQUIRED_FOUNDER_CHOICE",
+      "NO_REQUIRED_HUMAN_EVIDENCE",
+      "NO_UNAVAILABLE_REQUIRED_EXTERNAL_PROVIDER",
+      "NO_UNAUTHORIZED_LOCKED_LAYER_REOPEN",
+      "NO_UNAPPROVED_IRREVERSIBLE_HIGH_IMPACT_ACTION",
+      "NO_UNRESOLVED_FATAL_MAJOR"
     ],
-    "missing_required_flag": "FAIL_CLOSED_STOP",
-    "after_each_material_action": "VERIFY -> PERSIST -> REBASE -> RECOMPUTE_DAG -> CONTINUE_UNTIL_REAL_GATE"
+    "legacy_label_policy": "safe/zero_cost/reversible are not blanket continuation prerequisites. If a legacy action marks unsafe, paid/provider, or irreversible risk, current gate metadata must explicitly resolve that risk or the resolver fails closed.",
+    "missing_required_gate_metadata": "FAIL_CLOSED_WHEN_CURRENT_RESOLVER_REQUIRES_IT",
+    "after_each_material_action": "VERIFY -> PERSIST -> REBASE -> RECOMPUTE_DAG -> CONTINUE_UNTIL_REAL_GATE",
+    "executable_reference": "tools/ivdivo_next_action.py"
   },
   "self_improvement_bridge": {
     "authority": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
