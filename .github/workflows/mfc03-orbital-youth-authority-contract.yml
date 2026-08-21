@@ -1,0 +1,20 @@
+name: MF-C03 Orbital Youth Authority Contract
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-21_MFC03_THIRD_REPLICATION_ORBITAL_YOUTH/**'
+      - 'tests/test_mfc03_orbital_youth_authority_contract.py'
+      - '.github/workflows/mfc03-orbital-youth-authority-contract.yml'
+  workflow_dispatch:
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run bounded MF-C03 authority contract
+        run: python -m unittest tests.test_mfc03_orbital_youth_authority_contract -v
