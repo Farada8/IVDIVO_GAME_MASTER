@@ -11,10 +11,13 @@ Load and obey, in this order where applicable:
 1. `IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md` — persisted-state/autopilot/rebase law.
 2. `CURRENT_IVDIVO_SYSTEM_STATE.json` — current machine-readable shared frontier; routing state, not story canon.
 3. `IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md` — bounded delta scan, learning/promotion, semantic dedupe and write-through law.
-4. `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md` — canonical operational prompt pack for new-chat resume, primary integration, independent reviews, reconciler and handoff.
-5. `CURRENT_IVDIVO_CROSS_AI_HANDOFF.md` — current portfolio/project resume card where still freshness-valid.
-6. `IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md` — future-critical binary/large assets may not remain chat-local when durable persistence is available.
-7. Active project/book authority and project-specific execution state/source-of-truth.
+4. `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md` — canonical base operational prompt pack, functions 1–13.
+5. `IVDIVO_NARRATIVE_OS/19_MULTI_MODEL_EXECUTION_PROMPTS_EXPANSION_v1.0.md` — canonical operational supplement, functions 14–26 for authority/freshness, router lint, asset persistence, concurrency, dedupe/drift, cross-AI provenance, project-state resolution, story-first starvation, audio commercial quality, provider-spend, release provenance, secret/privacy and disaster-resume audits.
+6. `CURRENT_IVDIVO_CROSS_AI_HANDOFF.md` — current portfolio/project resume card where still freshness-valid.
+7. `IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md` — future-critical binary/large assets may not remain chat-local when durable persistence is available.
+8. Active project/book authority and project-specific execution state/source-of-truth.
+
+The total operational prompt coverage is now 26 functions: 13 base + 13 specialist execution/audit functions. Do not run all 26 mechanically on every task; load only the functions capable of changing the current decision unless Founder requests a full hardening pass.
 
 If this compatibility router conflicts with any newer current source above, the newer governing source wins. Do not copy this file into project canon and do not fork its rules into a parallel prompt authority.
 
