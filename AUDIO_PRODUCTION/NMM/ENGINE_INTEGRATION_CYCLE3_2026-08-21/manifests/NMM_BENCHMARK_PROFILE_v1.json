@@ -1,0 +1,6 @@
+{
+  "schema":"NMM_BENCHMARK_PROFILE_v1",
+  "critical_metrics":["dialogue_intelligibility_score","voice_identity_score","human_believability_score","human_want_to_continue_score"],
+  "project_metrics":["timestamp_comprehension_score","whistle_discrimination_score","vivian_spoiler_neutrality_score","isla_fatigue_score"],
+  "law":"Project metrics complement generic benchmark gate; human-dependent values stay null until heard evidence."
+}
