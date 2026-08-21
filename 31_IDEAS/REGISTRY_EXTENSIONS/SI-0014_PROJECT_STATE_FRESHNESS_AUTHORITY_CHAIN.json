@@ -1,0 +1,57 @@
+{
+  "candidate_id": "SI-0014",
+  "title": "Project-State Freshness + Authority Version-Chain Gate",
+  "candidate_type": "TOOLING_OR_AUTOMATION",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type":"GITHUB","locator":"31_IDEAS/SPRINTS/2026-08-21_G01_G32_PROMOTION_PILOT/06_NEXT_GENERATION_PROMPTS_H01_H64.md#H17-H18","version":"1.0","date":"2026-08-21","notes":"Founder-authorized next-generation H17/H18 tasks"},
+    {"source_type":"GITHUB","locator":"ENGINEERING_CONTRACTS/PROJECT_STATE_FRESHNESS_AND_AUTHORITY_CHAIN_v1.0.md","version":"1.0","date":"2026-08-21","notes":"Freshness/version-chain contract"},
+    {"source_type":"GOOGLE_DRIVE","locator":"D06/D07/D08 current authority + Final Story Gate revision IDs","version":"2026-08-21 observation","date":"2026-08-21","notes":"Real provider revision baseline, not semantic/canon proof"}
+  ],
+  "problem_or_opportunity": "Durable project-state coverage proves a pointer exists but does not prove that its controlling authority has not changed since the state was persisted. A stale pointer can therefore resurrect old routing even when coverage is green.",
+  "proposed_mechanism": "Persist authority identity/revision observations; validate exactly one CURRENT highest-rank source with acyclic supersession lineage; compare future provider observations against baseline; return PASS_FRESH / REVIEW_REQUIRED / STALE_REBASE_REQUIRED / FAIL_CONTRACT; force re-read/reconciliation on drift without treating revision change as canon change.",
+  "dedupe_relation": "EXTENSION_OF_SI_0013_PROJECT_STATE_COVERAGE_GATE",
+  "related_candidates": ["SI-0001","SI-0002","SI-0007","SI-0013"],
+  "expected_benefit": "Closes the gap between durable pointer existence and durable pointer freshness, reducing stale continuation and accidental regression to superseded authority.",
+  "evidence_state": "INTERNAL_EVIDENCE_PLUS_PROVIDER_REVISION_BASELINE",
+  "priority_vector": {"impact":"HIGH","recurrence":"SYSTEMIC","effort":"LOW","regression_risk":"LOW","reversibility":"EASY","urgency":"HIGH","affected_surface":"PORTFOLIO"},
+  "development_contract": {
+    "freshness_validator":"tools/ivdivo_project_state_freshness.py",
+    "version_chain_validator":"tools/validate_authority_version_chain.py",
+    "tests":"tests/test_project_state_freshness.py",
+    "baseline":"PROJECT_STATES/AUTHORITY_FRESHNESS_BASELINE_2026-08-21.json",
+    "engineering_contract":"ENGINEERING_CONTRACTS/PROJECT_STATE_FRESHNESS_AND_AUTHORITY_CHAIN_v1.0.md",
+    "ci":".github/workflows/self-improvement-integrity.yml",
+    "hard_failures":["multiple CURRENT authorities","authority-rank regression","unknown supersession target","supersession cycle"],
+    "rebase_signals":["revision changed","locator changed","title changed","current authority changed","provider modification newer than baseline"]
+  },
+  "pilot_evidence": [
+    "Local syntax/smoke: unchanged authority -> PASS_FRESH; revision change -> STALE_REBASE_REQUIRED",
+    "D06/D07/D08 Drive current-authority and Final Story Gate revision IDs captured directly during H17/H18 execution"
+  ],
+  "red_team_findings": [
+    "Revision drift does not prove semantic/canon change",
+    "Missing provider observation must be REVIEW_REQUIRED rather than assumed fresh",
+    "Provider revision identity is routing evidence only",
+    "A freshness gate must not stop dependency-independent projects when only one project is stale"
+  ],
+  "promotion_level": "NONE",
+  "application_targets": [
+    "PROJECT_STATES durable routing",
+    "Cross-Conversation FRESHNESS_SWEEP",
+    "Self-Improvement Integrity CI",
+    "future provider observation adapters"
+  ],
+  "verification_evidence": [
+    "LOCAL_H17_H18_SMOKE_PASS_PENDING_REPOSITORY_CI_AND_REAL_DRIFT_PILOT"
+  ],
+  "protected_authorities": ["Founder newest instruction","Project-specific current authority","Locked story canon","Evidence-class firewall"],
+  "owner_role": "Continuity / State Freshness / Self-Improvement Engine",
+  "next_action": "Run CI; execute one unchanged real provider observation and one changed-revision rebase pilot; repeat on a second project family; then decide PILOT_PASS or repair.",
+  "next_gate": "CI_PLUS_REAL_STALE_REBASE_PILOT_PLUS_SECOND_PROJECT_REPLICATION",
+  "hold_trigger": null,
+  "terminal_reason": null,
+  "last_movement": "2026-08-21",
+  "notes": "H17/H18 candidate. No automatic CURRENT promotion."
+}
