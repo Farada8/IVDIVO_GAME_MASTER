@@ -1,0 +1,51 @@
+{
+  "artifact": "BODYGUARD_E01_ROUGH_RENDER_COVERAGE_REPORT_v1",
+  "authority": {
+    "source_title": "BODYGUARD FOR THE FALLEN IDOL — SEASON ONE RECORDING MASTER v1.6 — RECORDING LANGUAGE CLEAN",
+    "source_document_id": "1blOK7CwpExgKZ4QJriMFY6tMDyJgtiy4GAsGLonrqcE",
+    "episode": "E01",
+    "episode_title": "11:43",
+    "expected_spoken_words": 1344,
+    "story_locked": true,
+    "exact_text_must_not_change": true,
+    "episode_source_sha256": "85b2632a4a5930498eb3afa8f4080ed6b7238974aaec2977e5339343f749f568",
+    "spoken_sequence_sha256": "2af60ca3b58bc90a2863e8f6dbee2bf7541d6b1f2315e78704f12ca214da9149"
+  },
+  "coverage_validation": {
+    "expected_spoken_words": 1344,
+    "source_spoken_line_count": 190,
+    "request_count": 190,
+    "source_spoken_words": 1344,
+    "request_spoken_words": 1344,
+    "source_spoken_sha256": "2af60ca3b58bc90a2863e8f6dbee2bf7541d6b1f2315e78704f12ca214da9149",
+    "request_spoken_sha256": "2af60ca3b58bc90a2863e8f6dbee2bf7541d6b1f2315e78704f12ca214da9149",
+    "ordered_exact_text_match": true,
+    "every_source_line_exactly_once": true,
+    "unique_block_ids": true,
+    "pass": true
+  },
+  "speaker_counts": {
+    "NAOMI (V.O.)": 3,
+    "CAL": 24,
+    "NAOMI": 75,
+    "TALIA": 22,
+    "CREW VOICE": 1,
+    "ELI": 61,
+    "CREW WALLA": 1,
+    "VOICE IN IEM": 2,
+    "PHONE REPORTER": 1
+  },
+  "scene_counts": {"S1": 64, "S2": 52, "S3": 74},
+  "priority_counts": {"STANDARD": 165, "HIGH": 12, "CRITICAL": 13},
+  "processing_domain_counts": {
+    "NARRATION_VO": 3,
+    "CLEAN_DIALOGUE": 174,
+    "CREW_COMMS": 2,
+    "SHOW_COMMS": 8,
+    "IEM_THREAT": 2,
+    "PHONE_MEDIA": 1
+  },
+  "isolated_tts_blocks": 37,
+  "standard_tts_blocks": 153,
+  "verdict": "PASS"
+}
