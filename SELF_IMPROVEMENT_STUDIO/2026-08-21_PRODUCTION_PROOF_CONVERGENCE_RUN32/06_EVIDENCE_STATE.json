@@ -1,0 +1,63 @@
+{
+  "schema": "ivdivo.production_proof_run32_state/1.0",
+  "date": "2026-08-21",
+  "status": "RUN32_PERSISTED_FRESH_BRANCH_READY_FOR_DRAFT_PR_CI",
+  "scope": "PRODUCTION_PROOF_MIRROR_ROUTING_VALUE_GUARDS",
+  "drive_root_id": "13J_yDa4wULIM8VGkvs8W2eKhcIj5Banm",
+  "initial_branch": "codex/production-proof-run32-v1-2026-08-21",
+  "initial_branch_base": "42e08b350c5d2f564ea380d4de8aba57fba90ab9",
+  "fresh_main_observed_later": "0219586858797bf646ca2e7f020bf6a9ff662fc0",
+  "run32": {
+    "executed": 32,
+    "fatal": 0,
+    "system_major": 1,
+    "system_major_detail": "D01 aggregate CURRENT_IVDIVO_SYSTEM_STATE still E96/E97 while project-specific + portfolio overlay are E01-E120 Final Story Gate PASS"
+  },
+  "candidate_modules": [
+    "tools/ivdivo_proof_chain.py",
+    "tools/ivdivo_mirror_integrity.py",
+    "tools/ivdivo_routing_consistency.py",
+    "tools/ivdivo_value_guard.py"
+  ],
+  "candidate_schemas": [
+    "schemas/IVDIVO_PRODUCTION_PROOF_CHAIN_SCHEMA_v1.json",
+    "schemas/IVDIVO_MIRROR_INTEGRITY_MANIFEST_SCHEMA_v1.json",
+    "schemas/IVDIVO_ROUTING_CONSISTENCY_SCHEMA_v1.json",
+    "schemas/IVDIVO_CANDIDATE_VALUE_TELEMETRY_SCHEMA_v1.json"
+  ],
+  "local_isolated_tests": {
+    "passed": 35,
+    "failed": 0,
+    "status": "PASS",
+    "invocation": "cd <repo-root> && PYTHONPATH=. python -m unittest discover -s tests -p test_*.py -v",
+    "note": "An earlier invocation without project root on PYTHONPATH failed imports and is retained as reproducibility evidence."
+  },
+  "real_data_pilots": {
+    "D10_mirror": "PASS",
+    "D10_routing": "PASS",
+    "D01_proof": "HOLD_FOUNDER_APPROVAL_REQUIRED",
+    "D10_proof": "PASS",
+    "value_guard": "HOLD_FOR_MEASUREMENT",
+    "D01_aggregate_drift": "ISSUES_FOUND_PATCH_ROUTING_ONLY"
+  },
+  "authority_boundaries": {
+    "D10": "FOUNDER_LOCKED",
+    "D01": "FINAL_STORY_GATE_PASS_AWAITING_FOUNDER_LOCK",
+    "D09": "AWAITING_FOUNDER_LOCK",
+    "SMITH": "NOT_ACTIVE_UNTIL_D01_DECISION_PER_CURRENT_PORTFOLIO"
+  },
+  "next64_count": 64,
+  "promotion": "NONE",
+  "next_gate": "DRAFT_PR_CI_AND_FRESH_MAIN_COMPARE; THEN MEASURED_PILOTS_BEFORE_ANY_PROMOTION",
+  "fresh_main_final_persistence": "55c69de4f19aec1c2b408020c1447cbd38beef5b",
+  "fresh_candidate_branch": "codex/production-proof-run32-v1-final2-2026-08-21",
+  "schema_validation": {
+    "schemas_passed": 4,
+    "schemas_failed": 0,
+    "real_routing_instances_passed": ["P26_D10", "P31_D01"],
+    "contract_drifts_repaired": [
+      "SYSTEM_AGGREGATE_ROLE_MISSING",
+      "OBSERVED_STATUS_OVER_REQUIRED_FOR_AGGREGATE_EVENT_TRACKING"
+    ]
+  }
+}
