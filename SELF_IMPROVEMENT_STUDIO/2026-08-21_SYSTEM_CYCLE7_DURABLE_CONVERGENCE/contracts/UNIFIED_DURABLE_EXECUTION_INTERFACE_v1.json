@@ -1,0 +1,7 @@
+{
+  "status": "WORKING_CONVERGENCE",
+  "authority": "Self-Improvement v2 + SI-0012 + SI-0014",
+  "law": "FRESH_AUTHORITY -> CHECKPOINT -> BLOCKER/DRIFT -> EFFECT_RECONCILIATION -> READBACK -> SAFE_MISSING_ACTIONS -> PROOF/TELEMETRY -> LEARNING",
+  "no_new_runtime_root": true,
+  "auto_promotion": false
+}

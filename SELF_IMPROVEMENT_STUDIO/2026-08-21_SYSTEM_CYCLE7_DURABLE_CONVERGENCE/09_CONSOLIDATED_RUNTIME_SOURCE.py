@@ -1,0 +1,1 @@
+# CYCLE 7 consolidated runtime source is preserved in the full Drive/package artifact. GitHub review surface intentionally records the executable contracts and test/evidence summaries without creating a second runtime root under tools/. See README and full package SHA.

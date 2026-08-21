@@ -1,0 +1,8 @@
+{
+  "main_sha": "c047fd785fbb5aca16c2cfdb749fd458fa47eedb",
+  "registry_schema": "1.5",
+  "committed_ids": ["SI-0008","SI-0009","SI-0010","SI-0011","SI-0012","SI-0013","SI-0014","SI-0015"],
+  "d01": "E120_FOUNDER_LOCK_GATE_HUMAN_NOT_RUN",
+  "d04": "G4_MACHINE_PASS_HUMAN_NOT_RUN",
+  "si0014_gate": "3_GENUINE_INTERRUPTION_RECOVERIES_2_PROJECTS_ZERO_FALSE_RESUME"
+}
