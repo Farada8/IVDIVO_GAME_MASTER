@@ -1,0 +1,42 @@
+{
+  "schema_version": "ivdivo.durable_write_transaction/1.0",
+  "transaction_id": "RUN34-CONTROLLED-GH-DRIVE-001",
+  "project_id": "SELF_IMPROVEMENT_SI0014",
+  "work_unit": "CONTROLLED_REVERSIBLE_GITHUB_DRIVE_PARTIAL_WRITE_RECOVERY",
+  "authority_snapshot": {
+    "repo_main_sha": "e5f1a50d2960941840687d16939def3b61b5fb57",
+    "state_revision": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE_SCHEMA_2.7@RUN34_START",
+    "source_hash": "SI-0014_READY_FOR_PILOT"
+  },
+  "blockers": [],
+  "actions": [
+    {
+      "action_id": "A1_GITHUB_PAYLOAD",
+      "artifact_id": "RUN34_PAYLOAD_A",
+      "store": "GITHUB",
+      "operation": "CREATE_REVERSIBLE_PILOT_PAYLOAD",
+      "effect_class": "REVERSIBLE_WRITE",
+      "side_effect_state": "NOT_STARTED",
+      "readback_verified": false,
+      "intended_identity": {"marker": "RUN34_RECOVERY_PAYLOAD_V1", "authority_effect": "NONE"},
+      "observed_identity": {}
+    },
+    {
+      "action_id": "A2_DRIVE_PAYLOAD",
+      "artifact_id": "RUN34_PAYLOAD_A",
+      "store": "DRIVE",
+      "operation": "CREATE_REVERSIBLE_PILOT_PAYLOAD",
+      "effect_class": "REVERSIBLE_WRITE",
+      "side_effect_state": "NOT_STARTED",
+      "readback_verified": false,
+      "intended_identity": {"marker": "RUN34_RECOVERY_PAYLOAD_V1", "authority_effect": "NONE"},
+      "observed_identity": {}
+    }
+  ],
+  "evidence_boundary": [
+    "CONTROLLED_PARTIAL_WRITE_NOT_INVOLUNTARY_OUTAGE",
+    "NO_STORY_CANON_EFFECT",
+    "NO_PROVIDER_OR_PAID_EFFECT",
+    "NO_SELF_IMPROVEMENT_PROMOTION"
+  ]
+}
