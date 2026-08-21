@@ -1,6 +1,6 @@
 {
-  "schema_version": "ivdivo.room917_execution_state/3.1",
-  "updated": "2026-08-21T13:56:51+01:00",
+  "schema_version": "ivdivo.room917_execution_state/3.2",
+  "updated": "2026-08-21T15:05:00+01:00",
   "project": "ROOM 917 CALLS AT MIDNIGHT",
   "project_id": "ROOM917",
   "active_branch": "THE_INSURABLE_FIRE",
@@ -10,7 +10,7 @@
   "universal_audio_authority": "IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md",
   "cross_conversation_authority": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
   "asset_persistence_authority": "IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md",
-  "status": "POST_RENDER_EVALUATION_BLOCKED_ON_MASTER_BYTE_MATERIALIZATION_AND_LIVE_ALIGNMENT",
+  "status": "POST_RENDER_EVALUATION_SCENE3_LINEAGE_PASS_PRE_SCENE3_TARGETED_EVALUATION_OPEN",
   "current_production_phase": "POST_RENDER_EVALUATION_AND_SELECTIVE_REPAIR",
   "historical_pre_render_package": {
     "name": "ROOM917_E01_03_V3_3_PILOT_COMPLETION_v1.9.zip",
@@ -21,7 +21,7 @@
   "real_master": {
     "asset_id": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K",
     "filename": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
-    "status": "LIBRARY_POINTER_RECORDED_BYTES_NOT_MATERIALIZED_TO_CONTROLLED_INGEST",
+    "status": "FILE_LIBRARY_POINTER_RECORDED_CONTROLLED_DRIVE_DUPLICATION_STILL_OPEN",
     "source_state": "ASSET_CREATED_AND_PERSISTED_IN_CHATGPT_LIBRARY",
     "known_source_location": "ChatGPT File Library / originating production conversation",
     "file_library_id": "file_000000002c8081f58d0e656cdc0e7267",
@@ -30,7 +30,6 @@
     "shared_drive_access_verified": false,
     "file_library_pointer_recorded": true,
     "file_library_byte_materialization_verified_in_current_session": false,
-    "fresh_semantic_file_library_search_returned_exact_wav": false,
     "sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
     "size_bytes": 189558764,
     "format": "WAV_PCM_SIGNED_24BIT",
@@ -53,36 +52,57 @@
   "evaluation_register": {
     "title": "ROOM917_E01_REAL_MASTER_EVALUATION_AND_REPAIR_REGISTER_v1",
     "drive_id": "1eHCqGIJcT7Fi6YUtJTHwTxe64ue7gLNbxb__XFWIaMc",
-    "status": "P001_P002_PARTIAL_ARTIFACT_PASS_WAITING_FOR_LIVE_BYTES_AND_TIMING"
+    "status": "POST_RENDER_EVALUATION_ACTIVE"
   },
-  "p001_p002_evidence": {
-    "title": "ROOM917_E01_P001_P002_ARTIFACT_EVIDENCE_PASS_v1",
-    "drive_id": "1n0DNOgQIU4LMl7GTSdKju8KdoOxYdEWpfvStagCbiZE",
-    "p001": {
-      "status": "PARTIAL_ARTIFACT_PASS_LIVE_TIMELINE_REQUIRED",
-      "defect_id": "D001",
-      "defect_status": "CANDIDATE",
-      "finding": "Director Score requires multiple perceptible spatial states; objective real-master statistics are strongly center-heavy; no matching live resolved timeline is durably accessible to prove a scene-intent mismatch.",
-      "patch_authorized": false
+  "scene3_live_lineage_recovery": {
+    "title": "ROOM917_E01_SCENE3_LIVE_LINEAGE_RECOVERY_v1",
+    "drive_id": "1fLsYEFBvP_TPBjotET2zGnqjWGBxgnw9smGiClmNuGE",
+    "status": "VERIFIED_LINEAGE_RECOVERY_POST_RENDER_ROUTING_EVIDENCE",
+    "scene3_tail_start_seconds": 444.980,
+    "scene3_tail_start_hms": "00:07:24.980",
+    "scene3_tail_end_seconds": 658.190,
+    "scene3_tail_end_hms": "00:10:58.190",
+    "duration_seconds": 213.210,
+    "lineage_verdict": "HIGH_CONFIDENCE_V1_3E_SCENE3_LINEAGE_OR_BYTE_DIFFERENT_DESCENDANT_PRESERVING_V1_3E_CHARACTERISTICS",
+    "technical_staging_continuity": "PASS_UNLESS_NEW_DIRECT_REGRESSION_EVIDENCE",
+    "tail_measurements": {
+      "channel_correlation_approx": 0.995704,
+      "mid_side_gap_db_approx": 26.64,
+      "sample_peak_dbfs_approx": -3.37,
+      "integrated_lufs_approx": -16.0,
+      "true_peak_dbtp_approx": -3.4,
+      "windows_100ms_below_minus45_dbfs_seconds": 0.0,
+      "windows_100ms_below_minus50_dbfs_seconds": 0.0,
+      "minimum_100ms_rms_dbfs_approx": -43.18
     },
-    "p002": {
-      "status": "PARTIAL_ARTIFACT_PASS_LOW_LEVEL_DEFECT_NOT_PROVEN",
-      "defect_id": "D002",
-      "defect_status": "CANDIDATE",
-      "protected_silence_count": 6,
-      "protected_silence_samples_total": 141120,
-      "protected_silence_seconds_total": 2.94,
-      "finding": "Three one-second windows below -50 dBFS do not prove accidental dead air; false-positive risk is high because protected pauses are intentionally authored and subsecond.",
-      "auto_trim_or_fill_authorized": false
+    "protected_consequences": [
+      "DO_NOT_REAPPLY_OLD_V1_2_2_SCENE3_SPATIAL_STAGING_REPAIR",
+      "DO_NOT_RETURN_TO_OLD_SPATIAL_COLLAPSE_DIAGNOSIS_AS_CURRENT",
+      "DO_NOT_REGENERATE_SCENE3_DIALOGUE_SOLELY_FOR_FORMER_MONO_AMBIENCE_SEQUENTIAL_STAGING_FINDINGS"
+    ],
+    "still_open": [
+      "FOURTH_NOTE_PITCH_RELATIONSHIP",
+      "MINA_CATE_CAST_AUTHORITY_IF_NOT_CLOSED_ELSEWHERE",
+      "HUMAN_ARTISTIC_PERCEPTUAL_LISTEN"
+    ]
+  },
+  "pre_scene3_objective_candidate": {
+    "segment_start_seconds": 0.0,
+    "segment_end_seconds": 444.980,
+    "segment_end_hms": "00:07:24.980",
+    "status": "TARGETED_EVALUATION_REQUIRED_NOT_PROVEN_DEFECT",
+    "candidate_type": "PRODUCTION_DENSITY_ROOM_BED_CONTINUITY",
+    "measurements": {
+      "channel_correlation_approx": 0.996636,
+      "mid_side_gap_db_approx": 24.95,
+      "sample_peak_dbfs_approx": -2.15,
+      "windows_100ms_below_minus45_dbfs_seconds": 109.8,
+      "windows_100ms_below_minus50_dbfs_seconds": 103.2,
+      "windows_100ms_below_minus85_dbfs_seconds": 36.1
     },
-    "timing_firewall": {
-      "synthetic_alignment_artifact": "ROOM917_E01_SYNTHETIC_ALIGNMENT_v1.json",
-      "fixture_only": true,
-      "production_timestamps": false,
-      "fixture_duration_seconds": 71.0,
-      "real_master_duration_seconds": 658.190,
-      "promotion_to_live_timing_forbidden": true
-    }
+    "comparison": "Major low-level-density difference versus corrected Scene3 tail, which has 0.0 seconds of 100 ms windows below -45 dBFS.",
+    "interpretation_firewall": "These statistics do not prove accidental dead air and do not authorize automatic silence removal. Distinguish protected/authored pauses from missing room tone, ambience or causal-overlap support before patching.",
+    "auto_trim_or_fill_authorized": false
   },
   "ingest_register": {
     "title": "ROOM 917 — FIRST RENDER INGEST + VERSION CONTROL REGISTER — v1.0",
@@ -94,40 +114,40 @@
     "commercial sellability remains unproven"
   ],
   "open_gates": [
-    "MASTER_BYTE_MATERIALIZATION_OR_CONTROLLED_DRIVE_DUPLICATION",
-    "LIVE_ALIGNMENT_PERSISTENCE_REQUIRED:ROOM917_E01",
-    "REAL_MASTER_PERCEPTUAL_LISTEN",
-    "TIMESTAMPED_DEFECT_MAP",
-    "SELECTIVE_REPAIR",
-    "A_B_C_PREMIUM_COMPARISON",
+    "P003A_PRE_SCENE3_ACOUSTIC_AMBIENCE_PROTECTED_PAUSE_CAUSAL_DENSITY_EVALUATION",
+    "MASTER_CONTROLLED_DRIVE_DUPLICATION_AND_READBACK",
+    "P003B_HUMAN_PERCEPTUAL_LISTEN",
+    "FOURTH_NOTE_PITCH_RELATIONSHIP_VERIFICATION",
+    "MINA_CATE_CAST_AUTHORITY_VERIFICATION_IF_OPEN",
+    "P004_SELECTIVE_PATCH_CONTRACTS_ONLY_FOR_PROVEN_FAILURES",
+    "A_B_C_PREMIUM_COMPARISON_AFTER_PROVEN_REPAIR",
     "COMMERCIAL_QUALITY_GATE",
     "NO_SCALE_UNTIL_E01_V2_PROVEN"
   ],
-  "current_blocker": {
-    "type": "MISSING_ACCESSIBLE_REAL_EVIDENCE",
-    "subtypes": [
-      "MASTER_BYTE_MATERIALIZATION_OR_CONTROLLED_DRIVE_DUPLICATION",
-      "LIVE_ALIGNMENT_PERSISTENCE_REQUIRED"
-    ],
-    "description": "The real E01 master exists and a ChatGPT File Library pointer is recorded, but its bytes have not been materialized into the controlled ROOM917 Drive ingest or otherwise exposed for perceptual analysis in the current session. The matching live normalized alignment/resolved timeline/cue lineage is also not durably accessible. P001/P002 artifact-side analysis is complete only as a partial pass; no defect is proven and no repair is authorized.",
-    "asset_id": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K",
-    "failure_class": "ACCESSIBLE_BYTE_AND_LIVE_TIMING_LINEAGE_REQUIRED"
-  },
+  "current_blocker": null,
   "next_action": {
-    "stage": "RECOVER_ACCESSIBLE_MASTER_BYTES_AND_LIVE_TIMING_LINEAGE",
-    "action": "Materialize or duplicate the exact immutable master bytes into controlled ROOM917 ingest without rerendering; verify size/hash/readback; recover matching live normalized alignment/resolved timeline/cue sheet; then perform timecoded P001/P002 verification and P003 human perceptual listening.",
+    "stage": "P003A_PRE_SCENE3_TARGETED_EVALUATION",
+    "action": "Evaluate 00:00–07:24.980 against current scene acoustic passports, ambience policy, protected pauses and causal-event density. Classify low-level windows as PROTECTED_AUTHORED_PAUSE / VALID_LOW_DENSITY / MISSING_ROOM_OR_AMBIENCE_SUPPORT / MISSING_CAUSAL_OVERLAP_CANDIDATE / UNKNOWN. Do not patch or trim until a failure is proven.",
     "safe": true,
     "zero_cost": true,
     "reversible": true,
-    "tool_executable_here": false
+    "tool_executable_here": true
   },
-  "after_persistence_pass": [
-    "VERIFY_SHA256_MATCH",
-    "VERIFY_LIVE_TIMELINE_LINEAGE_MATCHES_MASTER",
-    "REAL_MASTER_LISTEN",
-    "TIMESTAMPED_P001_P002_VERIFICATION",
-    "P003_HUMAN_LISTEN",
-    "EARLIEST_FAILED_LAYER_ROUTING",
+  "parallel_external_gate": {
+    "stage": "P003B_HUMAN_PERCEPTUAL_LISTEN",
+    "status": "REQUIRED_NOT_SIMULATED",
+    "requires": [
+      "accessible actual master audio for human/artistic listen",
+      "acting/music/SFX/intimacy/mystery/comprehension evaluation"
+    ]
+  },
+  "after_p003a": [
+    "PRESERVE_SCENE3_V1_3E_TECHNICAL_LINEAGE",
+    "MATERIALIZE_OR_DUPLICATE_MASTER_TO_CONTROLLED_DRIVE_WHEN_BYTE_PATH_AVAILABLE",
+    "P003B_HUMAN_PERCEPTUAL_LISTEN",
+    "VERIFY_FOURTH_NOTE_PITCH_RELATIONSHIP",
+    "VERIFY_MINA_CATE_CAST_AUTHORITY_IF_STILL_OPEN",
+    "P004_ISSUE_PATCH_CONTRACTS_ONLY_FOR_PROVEN_FAILURES",
     "SELECTIVE_REPAIR_ONLY",
     "BUILD_A_FORENSIC_CONTROL",
     "BUILD_B_COMMERCIAL",
@@ -135,25 +155,14 @@
     "LOUDNESS_MATCHED_FOUNDER_OR_BLIND_COMPARISON",
     "SCALE_GO_NO_GO"
   ],
-  "pre_render_contingency_only": [
-    {
-      "title": "ROOM 917 — FIRST MICRO-AUDITION RENDER REQUEST PACK — v1.0",
-      "drive_id": "1GEgjn2VdeQY7-zLWN4yI5xsaALKel4aXk6yq7bW1xzA",
-      "status": "REFERENCE_ONLY_UNLESS_REAL_E01_PROVES_CAST_RESET"
-    },
-    {
-      "title": "ROOM 917 — CRITICAL SFX FIRST-FIVE GENERATION BRIEFS — v1.0",
-      "drive_id": "1LhWC-pcASg1reW-cMdAHPuge_c3AOy4zb0H7Bhf1Ic4",
-      "status": "REFERENCE_ONLY_UNLESS_REAL_E01_PROVES_MOTIF_REBUILD"
-    }
-  ],
   "prohibited_actions": [
     "DO_NOT_RESTART_S0_S1_FROM_STALE_STATE",
-    "DO_NOT_CLAIM_MASTER_LISTENED_WITHOUT_ACCESSIBLE_BYTES",
+    "DO_NOT_REAPPLY_V1_2_2_SCENE3_REPAIR_CAMPAIGN",
+    "DO_NOT_CLAIM_HUMAN_ARTISTIC_LISTEN_FROM_METRICS_OR_LINEAGE",
     "DO_NOT_REGENERATE_MASTER_FROM_SUMMARY_OR_METRICS",
     "DO_NOT_PROMOTE_SYNTHETIC_FIXTURE_TIMES_TO_LIVE_MASTER",
-    "DO_NOT_AUTO_TRIM_OR_FILL_PROTECTED_SILENCE",
-    "DO_NOT_UPGRADE_D001_OR_D002_TO_PROVEN_WITHOUT_LIVE_TIMECODE_EVIDENCE",
+    "DO_NOT_AUTO_TRIM_OR_FILL_PROTECTED_OR_UNCLASSIFIED_SILENCE",
+    "DO_NOT_UPGRADE_PRE_SCENE3_DENSITY_CANDIDATE_TO_PROVEN_DEFECT_WITHOUT_SCENE_CONTRACT_EVIDENCE",
     "DO_NOT_REWRITE_LOCKED_STORY_FROM_AUDIO_PREFERENCE_ALONE",
     "DO_NOT_BATCH_RENDER_E02_E24_BEFORE_E01_V2_QUALITY_GATE",
     "DO_NOT_DECLARE_COMMERCIAL_GO_WITHOUT_REAL_LISTENER_OR_FOUNDER_EVIDENCE"
@@ -161,7 +170,8 @@
   "continuation_policy": {
     "default_continue_when_unblocked": true,
     "require_repeated_continuation_word": false,
-    "safe_zero_cost_reversible_only": true
+    "real_gate_semantics": "AUTOPILOT_V1_2_PLUS",
+    "stop_only_on_real_gate": true
   },
   "secret_policy": "API_KEYS_NEVER_IN_GITHUB_DRIVE_JSON_PROMPTS_OR_CANON"
 }
