@@ -1,0 +1,29 @@
+{
+  "project": "IVDIVO_AUDIO_NOVEL_ENGINE",
+  "wave": 3,
+  "date": "2026-08-21",
+  "branch": "audio-novel-engine/32x-wave3-2026-08-21",
+  "base_branch": "audio-novel-engine/32x-wave2-2026-08-21",
+  "prompts_executed": 32,
+  "new_regression_tests": {"passed": 44, "failed": 0},
+  "provider_calls": 0,
+  "human_listening_claims": 0,
+  "voice_locks": 0,
+  "pronunciation_locks": 0,
+  "story_mutations": 0,
+  "canary": {"requests": 3, "spoken_units": 36, "characters": 2163, "roles": ["NARRATOR", "ETHAN", "AOIFE"]},
+  "status": {
+    "engine_architecture": "GO",
+    "second_project_dry_portability": "GO",
+    "wave3_production_candidate_runtime": "GO_FOR_REVIEW",
+    "authenticated_casting": "HOLD",
+    "live_second_project_portability": "HOLD",
+    "real_alignment_timeline": "HOLD",
+    "human_performance": "HOLD",
+    "economics": "HOLD",
+    "v1_release": "HOLD"
+  },
+  "exact_next_external_action": "authenticated provider voice inventory -> provisional Narrator/Ethan/Aoife candidates -> canonical auditions -> pair gate -> exactly 3 live canary requests",
+  "exact_next_internal_action": "reconcile/promote Wave3 candidate contracts into authoritative production runtime and CI; prepare golden/live provenance path",
+  "next_prompts_derived": 64
+}
