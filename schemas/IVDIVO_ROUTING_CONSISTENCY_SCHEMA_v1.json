@@ -13,7 +13,7 @@
         "type": "object",
         "required": ["role", "observed_status", "event_artifact_id"],
         "properties": {
-          "role": {"enum": ["PROJECT_STATE", "PORTFOLIO_ROUTER", "WORKSTATE", "PROMPT_ROUTER"]},
+          "role": {"enum": ["PROJECT_STATE", "PORTFOLIO_ROUTER", "WORKSTATE", "PROMPT_ROUTER", "SYSTEM_AGGREGATE"]},
           "observed_status": {"type": "string"},
           "event_artifact_id": {"type": "string"},
           "next_action": {"type": ["string", "null"]},
