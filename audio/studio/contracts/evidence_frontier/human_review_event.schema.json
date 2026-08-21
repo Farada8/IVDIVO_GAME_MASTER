@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.audio.human_review_event/1.0",
+  "title": "IVDIVO Human Review Evidence Event",
+  "type": "object",
+  "required": ["schema_version", "candidate_id", "role_id", "evidence_family", "reviewer_type", "reviewer_ref", "artifact_sha256", "source_sha256", "reviewed_at", "decision", "scores", "hard_fails", "machine_generated", "event_sha256"],
+  "properties": {
+    "schema_version": {"const": "ivdivo.audio.human_review_event/1.0"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "role_id": {"type": "string", "minLength": 1},
+    "evidence_family": {"enum": ["PRONUNCIATION", "MULTI_STATE", "PAIR", "FATIGUE", "BLIND_LISTEN", "TECHNICAL_QC"]},
+    "reviewer_type": {"enum": ["HUMAN_LISTENER", "HUMAN_DIRECTOR", "LANGUAGE_REVIEWER", "AUDIO_ENGINEER", "FOUNDER"]},
+    "reviewer_ref": {"type": "string", "minLength": 1},
+    "artifact_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "reviewed_at": {"type": "string", "minLength": 1},
+    "decision": {"enum": ["PASS", "FAIL", "HOLD"]},
+    "scores": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0, "maximum": 5}},
+    "hard_fails": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "machine_generated": {"const": false},
+    "event_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true,
+  "x-ivdivo-law": "Human review evidence is provenance-bound and append-only. Review may create eligibility for an authorized human/Founder lock decision; machine_may_auto_lock is always false."
+}
