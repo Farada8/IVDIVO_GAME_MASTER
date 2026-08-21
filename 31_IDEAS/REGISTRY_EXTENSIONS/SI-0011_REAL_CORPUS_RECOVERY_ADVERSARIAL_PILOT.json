@@ -1,0 +1,36 @@
+{
+  "candidate_id": "SI-0011",
+  "title": "First real large transcript recovery + adversarial operational pilot",
+  "candidate_type": "PROCESS_OR_ROUTER_RULE",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type":"GITHUB","locator":"IVDIVO_NARRATIVE_OS/TRANSCRIPT_RECOVERY_RUNTIME_VERIFICATION_2026-08-21.md","version":"1.0","date":"2026-08-21","notes":"Verified first-pass extractor runtime evidence"},
+    {"source_type":"GITHUB","locator":"31_IDEAS/TRANSCRIPT_RECOVERY_32_PROMPT_SPRINT_2_2026-08-21/03_SYNTHESIS_AND_UPGRADE_DECISIONS.md","version":"1.0","date":"2026-08-21","notes":"Sprint 2 identifies first real large corpus as decisive gate"}
+  ],
+  "problem_or_opportunity": "Synthetic/unit tests cannot prove that the recovery stack correctly reconstructs project partitions, persisted claims, chat-only material and the actual frontier in a long real copied conversation.",
+  "proposed_mechanism": "Use the first genuinely pasted/exported long prior conversation as a production pilot: preserve exact source hash, run v1 extraction, reconcile with current persisted stores, audit every consequential claim, recover at least one chat-only artifact when present, transactionally persist accepted deltas, read back, reconstruct frontier and compare to independently verified current state.",
+  "dedupe_relation": "PILOT_FOR_SI_0008_AND_SI_0009",
+  "related_candidates": ["SI-0008","SI-0009"],
+  "expected_benefit": "Provides real evidence about recovery precision, false promotion, context-loss reduction, tool-call cost, semantic partitioning and correct continuation.",
+  "evidence_state": "HYPOTHESIS",
+  "priority_vector": {"impact":"CRITICAL","recurrence":"SYSTEMIC","effort":"MEDIUM","regression_risk":"LOW","reversibility":"EASY","urgency":"HIGH","affected_surface":"PORTFOLIO"},
+  "development_contract": {
+    "required_inputs": ["real copied/exported prior conversation","current project/system persisted authority"],
+    "hard_invariants": ["no transcript self-promotion","no secret persistence","no simulated Human/provider/market evidence","all accepted writes read back","all material unknown/conflict dispositioned before completion"],
+    "measurements": ["false positive claims","missed material findings","verification tasks","writes/no-ops","tool calls/time proxy","frontier accuracy","Founder questions avoided","material recovery gaps"]
+  },
+  "pilot_evidence": [],
+  "red_team_findings": ["A real pilot may reveal parser/semantic failures not visible in unit tests","Pilot completion cannot fabricate missing source portions","A successful recovery can still legitimately STOP on a Founder/human/provider gate"],
+  "promotion_level": "NONE",
+  "application_targets": ["SI-0008 monitoring","SI-0009 promotion decision","Learning Ledger","future package regression"],
+  "verification_evidence": [],
+  "protected_authorities": ["Founder newest instruction","Locked project canon","Current project source-of-truth","Secret/privacy firewall"],
+  "owner_role": "Recovery Pilot Operator / Independent Reconciler",
+  "next_action": "Execute on the first real large pasted prior-conversation corpus; record all defects/successes and feed results to Learning Ledger and SI-0008/SI-0009 dispositions.",
+  "next_gate": "FIRST_REAL_LARGE_TRANSCRIPT_OPERATIONAL_MONITORING",
+  "hold_trigger": null,
+  "terminal_reason": null,
+  "last_movement": "2026-08-21",
+  "notes": "This is the empirical gate prioritized by Sprint 2 over further prompt inflation."
+}
