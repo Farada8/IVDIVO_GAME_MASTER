@@ -1,0 +1,10 @@
+{
+  "pilot_id": "RUN33-CONTROLLED-PARTIAL-001",
+  "drive_folder_id": "1CCIXde5_2k57yHHIOENgO7staWyyZ1yv",
+  "drive_document_id": "12_eH5DDRJ6A73tNIFDbnI26RsHV3Qiivm2CzdB5dP_0",
+  "drive_title": "07_CONTROLLED_PARTIAL_WRITE_PILOT — SESSION RESILIENCE RUN33",
+  "readback_marker": "RUN33-PILOT-TRANSACTION-COMPLETE-001",
+  "readback_status": "PASS",
+  "real_interruption": false,
+  "promotion_threshold_contribution": 0
+}
