@@ -1,6 +1,6 @@
 system:
   name: IVDIVO_NARRATIVE_OS
-  version: "1.2"
+  version: "1.3"
   status: CANONICAL_SPECIALIZED_PRODUCTION_SYSTEM
   owner: Yaromyr Farada
   parent_canon: IVDIVO_WRITING_PRODUCTION_CANON.md
@@ -9,23 +9,90 @@ system:
 
 conversation_bootstrap:
   required_for_book_work: true
+  required_for_substantive_ivdivo_work_when_persisted_state_can_change_answer: true
   identify_before_work:
     - active_book_or_line
     - current_production_stage
     - last_unfinished_decision
   mandatory_prompt_load:
     - IVDIVO_NARRATIVE_OS/00_NARRATIVE_OS_CANON.md
+    - IVDIVO_NARRATIVE_OS/13_CONTINUOUS_MULTI_MODEL_STUDIO_PROTOCOL_v1.0.md
+    - IVDIVO_NARRATIVE_OS/16_CONTINUOUS_DELTA_EVIDENCE_AND_DEDUPE_SUPPLEMENT_v1.0.md
     - IVDIVO_NARRATIVE_OS/09_UNIVERSAL_BOOK_WORKROOM_BOOT.md
     - IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md
     - IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md
+    - IVDIVO_NARRATIVE_OS/18_AGENT_PROMPTS_CONTINUOUS_SYNC_SUPPLEMENT_v1.0.md
+    - IVDIVO_NARRATIVE_OS/17_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md
     - IVDIVO_NARRATIVE_OS/10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md
   connected_sources_when_relevant:
     - project_conversations
     - github_main
     - google_drive_ivdivo
     - chatgpt_file_library
+    - multi_model_memory
+    - external_ai_outputs
+    - specialist_human_signal
   unavailable_source_rule: MARK_UNKNOWN_DO_NOT_RECONSTRUCT_CANON_FROM_MEMORY
-  continuation_rule: CONTINUE_LAST_UNFINISHED_STAGE
+  continuation_rule: AUTO_RESTORE_DELTA_SYNC_AND_CONTINUE_HIGHEST_UNBLOCKED_OBLIGATION
+  explicit_resume_tokens_are_required_heartbeat: false
+
+continuous_sync:
+  enabled: true
+  mode: BOUNDED_RELEVANT_DELTA_SCAN
+  triggers:
+    - substantive_ivdivo_request
+    - explicit_resume_command
+    - active_project_switch
+    - authority_or_frontier_change
+    - external_feedback_arrival
+    - prompt_program_change
+  delta_classes:
+    - PROJECT_CANON_CHANGE
+    - STATUS_FRONTIER_UPDATE
+    - UNIVERSAL_MECHANISM_CANDIDATE
+    - PROMPT_PROGRAM_UPGRADE
+    - EXECUTION_TOOLING_UPGRADE
+    - EXTERNAL_EVIDENCE
+    - REFERENCE_LEARNING
+    - DUPLICATE
+    - SUPERSEDED
+    - REJECTED
+  dispositions:
+    - ADOPT_PROJECT
+    - UNIVERSALIZE
+    - ACCEPT_WITH_MODIFICATION
+    - HOLD_FOR_TEST
+    - REJECT
+    - SUPERSEDE
+  semantic_dedupe_required: true
+  duplicate_evidence_weight_multiplier: 0
+  model_agreement_without_independent_evidence_is_validation: false
+  universalization_firewall: true
+  selective_invalidation_required: true
+  write_through_required_for_material_accepted_improvements: true
+  no_background_execution_claims: true
+
+cross_model:
+  source_parity_when_required: true
+  inventory_before_judgment: true
+  diagnosis_separate_from_proposed_rewrite: true
+  vote_based_canon_forbidden: true
+  missing_external_output_status: UNKNOWN_NOT_RECEIVED
+  recommendation_dispositions:
+    - ACCEPT
+    - ACCEPT_WITH_MODIFICATION
+    - HOLD_FOR_TEST
+    - REJECT
+
+voice_and_relationship_controls:
+  p51_shared_rhetorical_construction_scan: true
+  p52_dynamic_range_not_constant_escalation: true
+  p53_two_axis_routing:
+    enabled: true
+    axes:
+      - inherited_relationship_authority
+      - current_scene_function
+    scene_proximity_cannot_invent_attraction: true
 
 priority:
   - founder_instruction
@@ -69,6 +136,7 @@ statuses:
 
 phases:
   - CONTINUITY_LOAD
+  - DELTA_SYNC
   - REFERENCE_MECHANISM_PASS
   - DISCOVER
   - FORM
@@ -252,6 +320,8 @@ reference_policy:
     - chatgpt_file_library
     - github_source_registry
     - story_engine
+  source_completeness_required: true
+  duplicate_source_weight: 0
   never_copy:
     - plot
     - distinctive_scene_sequence
@@ -271,6 +341,8 @@ stop_rules:
   - do_not_start_prose_before_story_gate
   - do_not_restart_completed_stage_without_new_evidence
   - do_not_lock_books_5_to_10_from_present_forecasts
+  - do_not_require_founder_heartbeat_for_unblocked_continuation
+  - do_not_count_duplicate_or_derived_model_agreement_as_independent_evidence
 
 continuation_commands:
   - "и"
