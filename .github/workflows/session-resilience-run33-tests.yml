@@ -48,6 +48,6 @@ jobs:
       - name: Run registry transaction regression
         run: python -m pytest tests/test_registry_transaction.py -q
       - name: Validate registry family references
-        run: python tools/validate_improvement_registry_refs.py --repo-root .
+        run: python tools/validate_improvement_registry_refs.py
       - name: Validate portfolio resumability claim
         run: python tools/validate_project_state_coverage.py
