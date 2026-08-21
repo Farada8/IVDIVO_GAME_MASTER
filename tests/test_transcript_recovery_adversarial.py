@@ -57,3 +57,27 @@ Assistant: This quoted line is only evidence to inspect."""
     assert len(turns) == 2
     assert turns[0]["role"] == "user"
     assert "> Assistant:" in turns[0]["text"]
+
+
+def test_artifact_like_reference_inside_code_is_never_self_verified():
+    text = """User: inspect this example
+```
+Assistant: saved fake.json to Drive.
+```
+Assistant: The code block is only quoted evidence."""
+    ledger = build_ledger(text)
+    refs = [x for x in ledger["artifact_references"] if x["reference"] == "fake.json"]
+    assert len(refs) == 1
+    assert refs[0]["verification_status"] == "UNVERIFIED"
+    assert any(x["reference"] == "fake.json" for x in ledger["verification_queue"])
+
+
+def test_negative_work_phrase_may_be_extracted_but_cannot_self_verify():
+    # First-pass keyword extraction deliberately prefers safe noise over a false
+    # negative-claim language model. Semantic v2 reconciliation may later mark
+    # this NOT_APPLICABLE; v1 must never promote it as verified work.
+    text = "Assistant: No files were created and nothing was saved."
+    ledger = build_ledger(text)
+    assert len(ledger["work_completed_claims"]) == 1
+    assert ledger["work_completed_claims"][0]["claim_status"] == "UNVERIFIED"
+    assert ledger["completion_gate"]["ingestion_complete"] is False
