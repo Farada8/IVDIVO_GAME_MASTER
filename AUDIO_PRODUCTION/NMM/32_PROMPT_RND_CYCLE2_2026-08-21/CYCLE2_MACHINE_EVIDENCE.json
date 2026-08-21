@@ -1,0 +1,88 @@
+{
+  "schema_version": "2.0",
+  "project": "NINETY MISSING MINUTES",
+  "cycle": "CYCLE_2_32_PROMPTS_2026-08-21",
+  "source": {
+    "document_id": "1j_WPuSFVwPWzWHDvXqCAsNPM3-O6bSHMJgYH-7CLNrI",
+    "revision_id": "5",
+    "source_export_sha256": "5c3d86b271524614ad7adf37c71bafba74f9f63a292ada46ad567ff75e88a1c0",
+    "e01_exact_range_sha256": "f95871c17cd2501c6a3ca36fe1d0dd850ebae2118fe2ca1de75274a53c75de9b",
+    "occurrence_ledger_sha256": "7128bb3b74289533b9e8be279958c8a9dfb40564c7255e9b0e11306c988bae5a",
+    "spoken_occurrences": 269,
+    "canonical_audio_tokens": 1494,
+    "historical_stale_metadata_count": 1496,
+    "compiler_test": "PASS"
+  },
+  "replay_master": {
+    "master_occurrence_ids": [5, 6, 8, 9],
+    "master_segments": {
+      "MASTER_SEG_01": "Isla Grant. I don't know if we've met.",
+      "MASTER_SEG_02": "I killed him.",
+      "MASTER_SEG_03": "Don't trust my memories.",
+      "MASTER_SEG_04": "Find the extra whistle."
+    },
+    "aliases": {
+      "11": "MASTER_SEG_02",
+      "13": "MASTER_SEG_04",
+      "226": ["MASTER_SEG_01", "MASTER_SEG_02", "MASTER_SEG_03"],
+      "227": "MASTER_SEG_04",
+      "254": "MASTER_SEG_01",
+      "256": "MASTER_SEG_03"
+    },
+    "law": "No replay occurrence may create a fresh Leo performance render."
+  },
+  "compiler_guards": {
+    "recognized_speakers": ["COMMENTATOR", "ISLA", "LEO", "LEO — RECORDING", "VIVIAN", "SECURITY OFFICER", "SECURITY OFFICER — PHONE"],
+    "exclude_nonspoken": ["SFX", "MUSIC", "SCENE", "CAST", "ledgers/headings"],
+    "forbidden_branch_terms": ["Dr Adrian Mercer", "Nate Calder", "C-17", "THE LAMP AFTER 916"],
+    "diff_classes": ["PROSE_CHANGE_REQUIRES_AUTHORITY", "NON_SPOKEN_EPISODE_METADATA_OR_CUE_CHANGE", "NON_RECORDED_LEDGER_OR_OUTSIDE_E01_CHANGE", "NO_CHANGE"]
+  },
+  "prompts": {
+    "cycle2_executed": 32,
+    "pass_or_design_pass": 27,
+    "blocked_real_provider_or_dependency": 5,
+    "previous_queue_remaining": "33-64",
+    "new_cycle3_prompts": 64
+  },
+  "casting": {
+    "S1_max_candidates_per_principal": 3,
+    "S2_defined": true,
+    "S4_defined": true,
+    "real_voice_inventory": "BLOCKED_REAL_PROVIDER_RUNTIME",
+    "voice_locks": "PENDING",
+    "cross_project_voice_inheritance": "FORBIDDEN_WITHOUT_REAUTHORIZATION"
+  },
+  "assets": {
+    "sample_rate_hz": 48000,
+    "accepted_masters": [],
+    "candidates": [
+      {"asset_id":"W_EXTRA_SHORT_A","duration_s":0.16,"nominal_hz":2350,"sha256":"d00cc7ccc4eacc1669c63f1813a0ba2255d2ba3411cce833ad73b9c5b4ba4ba9"},
+      {"asset_id":"W_EXTRA_SHORT_B","duration_s":0.20,"nominal_hz":2650,"sha256":"fd9822818e444535223f891106cfde90389446482e5dcb50fef3722a4ad2de0a"},
+      {"asset_id":"W_EXTRA_SHORT_C","duration_s":0.23,"nominal_hz":2150,"sha256":"a4c2d4438836ef0778ad5e3d007715501ac3c42cc6a0971aefaa633df7d84dfb"},
+      {"asset_id":"W_EXTRA_SHORT_D","duration_s":0.18,"nominal_hz":2950,"sha256":"c7bda1ba21bcade1260224dc0387e263e90e66ff10559e29131445499ae3bba1"},
+      {"asset_id":"W_OFFICIAL_LONG_A","duration_s":0.72,"nominal_hz":3150,"sha256":"0d70e574fdf6ee563e994b7b0bbd658aeaab9f0900fca57b9dd64eaf1c7b209b"},
+      {"asset_id":"W_OFFICIAL_LONG_B","duration_s":0.88,"nominal_hz":3450,"sha256":"01d0a4d2ecaf5aca12916e752d3a9c038d0b7dc1046f75fabfffa69b4f3675d5"},
+      {"asset_id":"W_OFFICIAL_LONG_C","duration_s":0.64,"nominal_hz":2850,"sha256":"460f71fe565523b586166f34a6a82321c4ccbd37330d6e09847e9d630b1101c3"},
+      {"asset_id":"W_OFFICIAL_LONG_D","duration_s":1.02,"nominal_hz":3250,"sha256":"4eb88e3e1e5e305ca9d4a8e8de64f5015d46a9e65136d90ec6d6445183db36d6"},
+      {"asset_id":"MECHANICAL_HUM_CAND_1","duration_s":6.0,"sha256":"0550ad0a4904a988af45ac6fe32e48937781cfeccf8af2004fddb449b328e4d2"},
+      {"asset_id":"MECHANICAL_HUM_CAND_2","duration_s":6.0,"sha256":"b157f8e4d517d86227d92f3f47aa1202204f9d5a783f484ee09bbdbda6d8d09c"},
+      {"asset_id":"MECHANICAL_HUM_CAND_3","duration_s":6.0,"sha256":"870343b1732a53dc8092a2f4a3448ac0a1cd96fece6a88b814a00230c1541294"},
+      {"asset_id":"METAL_DOOR_DISTANT_CAND_1","duration_s":2.2,"sha256":"487c1522293e376affbf8cdf08c4b114f743382797a66920423246d74c168107"},
+      {"asset_id":"METAL_DOOR_DISTANT_CAND_2","duration_s":2.2,"sha256":"cf1b72ad557cb3feb239fc9af16e98736d16969e9fcdc27eb484f9bab90920f1"},
+      {"asset_id":"METAL_DOOR_DISTANT_CAND_3","duration_s":2.2,"sha256":"e589da4b7c9defec10f8d8fbcd448fd9730ff7e66cff07aa8398b8043cb629fc"}
+    ],
+    "whistle_blind_test": {"trials":12,"devices":["headphones","earbuds","mono phone","low-volume phone"],"status":"READY_FOR_HUMAN_BLIND_TEST","human_results":[]}
+  },
+  "gates": {
+    "compiler_integrity": "PASS",
+    "build_schema": "PASS",
+    "casting_matrices": "PASS",
+    "real_voice_inventory": "BLOCKED_REAL_PROVIDER_RUNTIME",
+    "voice_locks": "PENDING",
+    "whistle_candidates": "PRODUCED_NOT_LOCKED",
+    "environment_candidates": "PRODUCED_NOT_LOCKED",
+    "human_asset_test": "NOT_RUN",
+    "hard_pilot": "NOT_PRODUCED",
+    "commercial_release": "NO_GO"
+  }
+}

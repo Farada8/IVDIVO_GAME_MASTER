@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "project": "NINETY MISSING MINUTES",
+  "cycle": "NMM_AUDIO_RND_32_PROMPTS_2026-08-21",
+  "date": "2026-08-21",
+  "authority": {
+    "story_status": "TEXT_LOCKED",
+    "delivery_mode": "C_DRAMATIZED_AUDIOBOOK",
+    "season_episodes": 24,
+    "episode_25_authorized": false,
+    "e01_canonical_audio_spoken_count": 1494,
+    "e01_spoken_occurrences": 269
+  },
+  "gates": {
+    "authority": "PASS",
+    "exact_text_occurrence_coverage": "PASS",
+    "count_reconciliation": "PASS_WITH_METADATA_OVERRIDE",
+    "render_architecture": "PASS",
+    "voice_bindings": "PENDING",
+    "real_voice_auditions": "NOT_RUN",
+    "critical_assets": "PENDING",
+    "real_alignment": "NOT_AVAILABLE",
+    "hard_pilot": "NOT_PRODUCED",
+    "human_listen": "NOT_RUN",
+    "medical_specialist": "OPEN",
+    "legal_specialist": "OPEN",
+    "e10_audio_comprehension": "OPEN",
+    "e11_audio_comprehension": "OPEN",
+    "commercial_release": "NO_GO"
+  },
+  "next_frontier": [
+    "fresh_voice_discovery",
+    "zero_cost_provider_preflight",
+    "S0_technical_canary",
+    "S1_S4_casting_cascade",
+    "parallel_whistle_and_space_asset_candidates",
+    "two_sample_hard_pilot",
+    "normalized_real_alignment",
+    "device_and_blind_listener_QC",
+    "selective_repair",
+    "full_E01_only_after_pass"
+  ],
+  "prohibited_now": [
+    "story_rewrite",
+    "episode_25",
+    "full_E01_provider_render_before_voice_and_pilot_gates",
+    "mass_take_generation",
+    "guessing_voice_ids",
+    "reusing_ROOM917_voice_ids_by_analogy",
+    "claiming_listener_or_chemistry_pass_without_evidence",
+    "guessing_absolute_production_timestamps",
+    "storing_API_keys_in_drive_or_github"
+  ],
+  "promoted_policies": {
+    "evidence_per_render": true,
+    "project_ttd_character_ceiling": 1800,
+    "exact_text_normalization_default_candidate": "off_verify_in_S0",
+    "anti_spoiler_casting_veto": true,
+    "hard_pilot_shape": "two_causal_samples"
+  },
+  "next_prompt_count": 64
+}
