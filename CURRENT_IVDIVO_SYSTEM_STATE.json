@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "CURRENT_ROUTING_STATE_NOT_STORY_CANON",
+  "purpose": "Machine-readable resume pointer for cross-conversation and cross-model IVDIVO work. This file routes work; it never overrides locked project canon or project-specific source-of-truth files.",
+  "authority_order": [
+    "FOUNDER_NEWEST_DIRECT_INSTRUCTION",
+    "LOCKED_PROJECT_OR_BOOK_CANON_AND_SOURCE_OF_TRUTH",
+    "CURRENT_DOMAIN_AUTHORITY",
+    "PROJECT_SPECIFIC_EXECUTION_STATE_OR_DRAFT_STATUS",
+    "CURRENT_IVDIVO_SYSTEM_STATE",
+    "CURRENT_PROMPTS_AND_WORKSTATE_MIRRORS",
+    "EXTERNAL_MODEL_HANDOFF_WITH_DISPOSITION",
+    "WORKING_CANDIDATES",
+    "REFERENCE_ONLY"
+  ],
+  "repository": {
+    "full_name": "Farada8/IVDIVO_GAME_MASTER",
+    "branch": "main"
+  },
+  "current_routers": {
+    "writing": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
+    "autopilot": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
+    "book_chat_starter": "IVDIVO_NARRATIVE_OS/11_BOOK_CHAT_STARTER.md",
+    "runtime_craft_addendum": "IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md",
+    "audio": "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md"
+  },
+  "resume_algorithm": [
+    "FRESHNESS_SWEEP",
+    "CONCURRENT_DIALOG_REBASE_CHECK",
+    "STALE_WORK_GATE",
+    "RECOMPUTE_DEPENDENCY_DAG",
+    "SELECT_HIGHEST_UNBLOCKED_OBLIGATION",
+    "EXECUTE",
+    "VERIFY",
+    "PERSIST",
+    "REREAD_STATE_AND_REPEAT_UNTIL_REAL_GATE"
+  ],
+  "cross_dialog_policy": {
+    "repeated_short_command_required": false,
+    "short_commands_are_resume_shorthand": ["и", "дальше", "продолжай", "делай", "работай"],
+    "neighbor_chat_claim_without_persisted_artifact": "DISCOVERY_ONLY",
+    "promotion_flow": "DISCOVER -> LOCATE_PERSISTED_ARTIFACT -> VERIFY_STATUS_VERSION_HASH_GATES -> COMPARE_AUTHORITY_AND_FRESHNESS -> CLASSIFY -> PROMOTE_OR_HOLD_OR_REJECT -> UPDATE_POINTERS",
+    "stop_only_on": [
+      "DECISION_GATE",
+      "AUTHORITY_UNRESOLVED",
+      "CANON_APPROVAL_REQUIRED",
+      "HUMAN_EVIDENCE_REQUIRED",
+      "EXTERNAL_PROVIDER_REQUIRED",
+      "UNRESOLVED_FATAL_OR_MAJOR",
+      "IRREVERSIBLE_HIGH_IMPACT_ACTION_REQUIRING_APPROVAL",
+      "REAL_TOOL_RUNTIME_LIMITATION",
+      "SAFETY_OR_LEGAL_CONSTRAINT",
+      "FOUNDER_STOP_OR_HOLD"
+    ]
+  },
+  "portfolio_policy": "FINISH_ALL_ACTIVE_TEXTS_TO_LEGITIMATE_LOCK_THEN_MASS_AUDIO_NOVEL_STUDIO",
+  "portfolio_frontier": {
+    "text_locked_or_text_complete": [
+      "IVDIVO_BOOK_1_LESSON_ZERO",
+      "IVDIVO_BOOK_2_ORBITAL_YOUTH",
+      "D02_ROOM_917",
+      "D03_BODYGUARD_FOR_THE_FALLEN_IDOL",
+      "D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE",
+      "D05_NINETY_MISSING_MINUTES_TEXT_COMPLETE_STORY_LOCKED_PUBLICATION_SPECIALIST_HOLD",
+      "D06_SHE_STOLE_MY_NAME",
+      "D07_THE_PERFECT_WIFE_KNOWS",
+      "D08_SHE_FIRED_THE_BILLIONAIRE"
+    ],
+    "active_project": {
+      "project_id": "D09",
+      "title": "THE MAN WHO CAME BACK",
+      "line": "THE_DIVORCE_LEDGER",
+      "mode": "TEXT_COMPLETION",
+      "current_phase": "BLOCK_IV_THE_SETTLEMENT",
+      "last_completed_artifact": "E18_THE_COMPLIANCE_COPY",
+      "last_completed_drive_id": "1NdpwBCJWJq9mC289tgoLb1VIJnKFTgxs-QcxU9QSg1M",
+      "completed_episode_frontier": "E01-E18",
+      "next_unblocked_obligation": "E19_MY_DIVORCE_PUBLIC",
+      "remaining_to_text_lock": [
+        "E19_MY_DIVORCE_PUBLIC",
+        "E20_THE_LEDGER",
+        "E21_NO_CLEAN_MEN",
+        "E22_THE_PARTNER_STORY",
+        "E23_THE_FINAL_COMPARISON",
+        "E24_AFTER_MONDAY",
+        "FULL_SEASON_REGRESSION",
+        "FINAL_STORY_LOCK"
+      ],
+      "hard_locks": [
+        "ETHAN_CANNOT_PHYSICALLY_CAUSE_SIMON_DISAPPEARANCE_UNDER_LOCKED_TIMELINE",
+        "SIMON_FOUND_ALIVE_WITHOUT_MEMORY_GIMMICK",
+        "SIMON_TESTIMONY_CORROBORATES_BUT_DOES_NOT_SINGLE_HANDEDLY_PROVE",
+        "MARA_OWN_DIVORCE_IS_KEY_EVIDENCE",
+        "ETHAN_IS_NOT_SAVIOR_OR_SUBSTITUTE_FATHER",
+        "RUBY_IS_NOT_MATCHMAKER_OR_CLUE_MACHINE",
+        "NO_INSTANT_ROMANTIC_REUNION"
+      ]
+    },
+    "queue_after_active": [
+      "D10_BLOODBOUND_E04_E24_AND_STORY_LOCK",
+      "D01_THE_WIFE_AT_HIS_WEDDING_AUTHORITY_RECONCILIATION_AND_FINITE_STORY_COMPLETION",
+      "IVDIVO_BOOK_3_SMITH_FULL_NOVEL",
+      "IVDIVO_BOOK_4_AFTER_BOOK_3_LOCK",
+      "WHOLE_PORTFOLIO_TEXT_LOCK_AUDIT",
+      "AUDIO_NOVEL_STUDIO_BATCH_INGEST_AND_PRODUCTION"
+    ]
+  },
+  "idea_to_story_engine": {
+    "current_execution_core": "IDEA_TO_STORY_ENGINE_v1.0.0",
+    "current_execution_core_evidence": "ACCEPTANCE_REPORT reports GO and 15/15 automated tests PASS; real literary/provider quality remains provider dependent.",
+    "recovery_upgrade_candidate": "v0.5",
+    "recovery_status": "WORKING_UPGRADE_CANDIDATE_NOT_CURRENT_AUTHORITY",
+    "candidate_mechanisms_allowed_for_bounded_inheritance": [
+      "PATCH_QUEUE_AND_PATCH_CONTRACT",
+      "STAGE_REGEN_REQUEST_AND_STAGE_REPAIR_CONTRACT",
+      "SEMANTIC_CANDIDATE_DELTA",
+      "SEPARATE_REPAIR_QA",
+      "TRANSACTION_SNAPSHOT_AND_ROLLBACK",
+      "TRUE_SELECTIVE_DESCENDANT_REBUILD",
+      "GLOBAL_BEFORE_LOCAL_REPAIR_ORDER",
+      "CANON_REAPPROVAL_BOUNDARY",
+      "IDENTITY_AND_UNKNOWN_CHARACTER_PROTECTION",
+      "NO_EFFECT_REJECTION"
+    ],
+    "promotion_blockers": [
+      "EXECUTABLE_STORY_DISCOVERY_OR_ENGINE_RECOMPETITION_REPAIR",
+      "SPECIALIZED_WORLD_MYSTERY_AND_PROTECTED_CLUE_ORDER_REPAIR",
+      "FULL_ENSEMBLE_RELATIONSHIP_AUTHORITY_GRAPH",
+      "FULL_STORY_ENGINE_v4_1_REFERENCE_INTELLIGENCE_RUNTIME_INTEGRATION",
+      "LIVE_CALIBRATION_01",
+      "EXTERNAL_P51_BLIND_SWAP_AND_HUMAN_SIGNAL_WHERE_REQUIRED"
+    ],
+    "verification_note": "This sweep re-verified v1.0.0 acceptance evidence and v0.4/v0.3 recovery provenance in Library. The v0.5/130-test status remains a persisted CURRENT_WORKSTATE candidate pointer and must not be promoted solely by test-count claim."
+  },
+  "audio_system": {
+    "current_studio_router": "v3.3",
+    "microphone_choreography_integrated": true,
+    "provider_canary_contract": "AUDIO_PRODUCTION/IVDIVO_AUDIO_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE_v1.0.md",
+    "casting_cascade": "ZERO_COST_PREFLIGHT -> S0_TECHNICAL_CANARY -> S1_FAIR_ANCHOR_COMPARISON -> S2_SECONDARY_DISCRIMINATION -> S3_SPECIAL_STRESS -> S4_PAIR_ENSEMBLE -> PROVISIONAL_VOICE_LOCK -> HARD_PILOT -> SCALED_RENDER",
+    "cross_dialog_audio_boot_drive_id": "1ui02P9RH_B62DxDE6OjxCLrkB6fMOfZF0WcRtRtvOoU",
+    "new_universal_candidate_detected": "SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT",
+    "candidate_reason": "ROOM917 forensic evidence shows plot-relevant pitched events generated independently across performance-sound, TTS and music paths can lose the musical relationship the listener must infer. Universal contract should bind shared pitch/interval/rhythm identity before provider generation.",
+    "candidate_status": "VERIFY_AND_INTEGRATE_WITHOUT_REOPENING_LOCKED_STORY"
+  },
+  "multi_ai": {
+    "one_shared_state": true,
+    "parallel_work": "ONLY_INDEPENDENT_PASS_GATED_DAG_BRANCHES",
+    "handoff_required_fields": [
+      "SOURCE_MODEL",
+      "DATE",
+      "PROJECT",
+      "SOURCE_ARTIFACTS_AND_HASHES_WHERE_AVAILABLE",
+      "TASK",
+      "FINDINGS",
+      "SEVERITY",
+      "EVIDENCE",
+      "PROPOSED_REPAIR",
+      "DISPOSITION",
+      "CHANGED_ARTIFACTS",
+      "TESTS_AND_GATES",
+      "BLOCKERS",
+      "NEXT_ACTION"
+    ],
+    "recommendation_dispositions": [
+      "ACCEPT",
+      "ACCEPT_WITH_MODIFICATION",
+      "HOLD_FOR_TEST",
+      "REJECT"
+    ]
+  },
+  "recent_verified_main_integration": [
+    "CROSS_CONVERSATION_STATE_AND_AUTOPILOT_v1.1",
+    "CURRENT_WRITING_PRODUCTION_AUTHORITY_ROUTER",
+    "BOOK_CHAT_STARTER_AUTOPILOT_ROUTING",
+    "RUNTIME_CRAFT_MECHANISM_ADDENDUM",
+    "DUPLICATE_AUTOPILOT_PROTOCOL_RECONCILED_AS_SUPERSEDED",
+    "UNIVERSAL_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE"
+  ],
+  "state_status": "READY_TO_RESUME_D09_E19_AFTER_FRESHNESS_SWEEP"
+}
