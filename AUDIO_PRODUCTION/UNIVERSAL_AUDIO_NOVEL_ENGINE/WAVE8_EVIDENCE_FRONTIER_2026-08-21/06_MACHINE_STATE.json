@@ -1,0 +1,52 @@
+{
+  "schema_version": "ivdivo.audio.wave8_evidence_frontier_state/1.0",
+  "date": "2026-08-21",
+  "status": "INTEGRATION_CI_PENDING",
+  "project": "IVDIVO_AUDIO_NOVEL_ENGINE",
+  "cycle": "WAVE8_EVIDENCE_FRONTIER",
+  "branch": "audio-novel-engine/wave8-evidence-frontier-32x64-2026-08-21",
+  "base_main_sha": "b4c29e4a81fc368f440f39827df0adda46b4c897",
+  "canonical_runtime": "audio/studio/runtime",
+  "prompts_processed": 32,
+  "new_runtime_modules": [
+    "audio/studio/runtime/provider_snapshot.py",
+    "audio/studio/runtime/human_review_evidence.py",
+    "audio/studio/runtime/live_evidence_escrow.py",
+    "audio/studio/runtime/evidence_proof.py"
+  ],
+  "new_contract_schemas": [
+    "audio/studio/contracts/evidence_frontier/provider_snapshot.schema.json",
+    "audio/studio/contracts/evidence_frontier/human_review_event.schema.json",
+    "audio/studio/contracts/evidence_frontier/live_evidence_escrow.schema.json",
+    "audio/studio/contracts/evidence_frontier/proof_manifest.schema.json"
+  ],
+  "new_tests": [
+    "audio/studio/tests/test_provider_snapshot.py",
+    "audio/studio/tests/test_human_review_evidence.py",
+    "audio/studio/tests/test_live_evidence_escrow.py",
+    "audio/studio/tests/test_evidence_proof.py"
+  ],
+  "evidence_boundary": {
+    "authenticated_provider_snapshot": false,
+    "provider_calls": 0,
+    "human_listening_claims": 0,
+    "voice_locks": 0,
+    "pronunciation_locks": 0,
+    "real_live_audio": false,
+    "real_alignment": false,
+    "measured_provider_economics": false,
+    "cross_project_live_portability": false,
+    "story_mutations": 0
+  },
+  "current_internal_gate": "FULL_REPOSITORY_CI_RED_TEAM_FRESH_MAIN_INTEGRATION",
+  "current_external_gate": "AUTHENTICATED_SECRET_FREE_PROVIDER_PREFLIGHT_AND_SNAPSHOT",
+  "self_improvement": {
+    "candidate_mechanism": "TYPED_EVIDENCE_FRONTIER_PROVENANCE_BRIDGE",
+    "status": "PILOT_CODE_HOLD_REAL_EVIDENCE",
+    "new_central_candidate_id_allocated": false,
+    "reason": "Do not collide with SI-0009/SI-0010 or promote code-only evidence. Reconcile after real provider/human/restart/cross-project use.",
+    "machine_may_change_current_authority": false
+  },
+  "next_prompts_derived": 64,
+  "exact_next_action": "OPEN_PR_RUN_FULL_AUDIO_STUDIO_CI_RED_TEAM_REBASE_IF_MAIN_MOVED_THEN_DRIVE_MIRROR_READBACK"
+}
