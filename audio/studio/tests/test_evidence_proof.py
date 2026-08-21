@@ -11,13 +11,14 @@ SHA = "a" * 64
 
 
 def ev(cls, verified=True, ref=None):
-    return {"evidence_class": cls, "ref": ref or f"github://{cls}", "sha256": SHA, "verified": verified, "observed_at": "2026-08-21T18:00:00Z"}
+    return {"evidence_class": cls, "ref": ref or f"github://{cls}", "sha256": SHA, "verified": verified, "verification_authority": "UPSTREAM_VERIFIER", "observed_at": "2026-08-21T18:00:00Z"}
 
 
 class EvidenceProofTests(unittest.TestCase):
-    def test_code_test_proves_code_ready(self):
+    def test_code_test_reaches_class_complete_not_external_proven(self):
         p = compile_proof_manifest(claim="CODE_READY", subject="module", evidence=[ev("CODE_TEST")])
-        self.assertEqual(p["status"], "PROVEN")
+        self.assertEqual(p["status"], "EVIDENCE_CLASS_COMPLETE")
+        self.assertFalse(p["claim_externally_proven_by_this_module"])
         self.assertEqual(verify_proof_manifest(p)["status"], "PASS")
 
     def test_ci_does_not_prove_human_quality(self):
@@ -40,16 +41,14 @@ class EvidenceProofTests(unittest.TestCase):
         self.assertEqual(p["status"], "HOLD_UNPROVEN")
 
     def test_v1_requires_alignment_recovery_and_cross_project(self):
-        evidence = [
-            ev("SOURCE_AUTHORITY"), ev("GITHUB_CI"), ev("AUTH_PROVIDER"), ev("LIVE_AUDIO"),
-            ev("HUMAN_REVIEW"), ev("MEASURED_ECONOMICS")
-        ]
+        evidence = [ev("SOURCE_AUTHORITY"), ev("GITHUB_CI"), ev("AUTH_PROVIDER"), ev("LIVE_AUDIO"), ev("HUMAN_REVIEW"), ev("MEASURED_ECONOMICS")]
         p = compile_proof_manifest(claim="V1_RELEASE_EVIDENCE_COMPLETE", subject="AUDIO_NOVEL_ENGINE", evidence=evidence)
         self.assertEqual(p["status"], "HOLD_UNPROVEN")
         self.assertEqual(p["missing_evidence_classes"], ["CROSS_PROJECT_REAL", "DURABLE_RECOVERY", "REAL_ALIGNMENT"])
         evidence.extend([ev("REAL_ALIGNMENT"), ev("DURABLE_RECOVERY"), ev("CROSS_PROJECT_REAL")])
         p2 = compile_proof_manifest(claim="V1_RELEASE_EVIDENCE_COMPLETE", subject="AUDIO_NOVEL_ENGINE", evidence=evidence)
-        self.assertEqual(p2["status"], "PROVEN")
+        self.assertEqual(p2["status"], "EVIDENCE_CLASS_COMPLETE")
+        self.assertFalse(p2["claim_externally_proven_by_this_module"])
 
     def test_tampered_proof_fails(self):
         p = compile_proof_manifest(claim="CODE_READY", subject="module", evidence=[ev("CODE_TEST")])
