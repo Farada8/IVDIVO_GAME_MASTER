@@ -3,10 +3,33 @@
 
 Consumes measured telemetry; does not create telemetry and never promotes a mechanism
 to CURRENT authority. It returns a review disposition only.
+
+Unknown measurements must remain missing/null under PARTIAL/UNMEASURED. A payload may
+not label itself COMPLETE while silently relying on implicit numeric zeros.
 """
 from __future__ import annotations
 import argparse, json
 from pathlib import Path
+
+VALUE_FIELDS = [
+    "true_positive_findings",
+    "false_positive_findings",
+    "accepted_repairs",
+    "avoided_rework_cycles",
+    "measured_minutes_saved",
+    "measured_overhead_minutes",
+    "new_artifacts",
+    "new_prompts",
+    "real_project_pilots",
+    "independent_human_evidence_count",
+    "regressions_introduced",
+    "unsafe_or_unauthorized_actions_blocked",
+]
+
+
+def _is_number(value):
+    return isinstance(value, (int, float)) and not isinstance(value, bool)
+
 
 def evaluate(payload: dict) -> dict:
     required=["candidate_id","telemetry"]
@@ -14,9 +37,42 @@ def evaluate(payload: dict) -> dict:
         return {"status":"FAIL_CLOSED","disposition":"STOP","reasons":["MISSING_REQUIRED_INPUT"]}
     t=payload["telemetry"]
     measurement_state=str(t.get("measurement_state", "UNMEASURED")).upper()
+    if measurement_state not in {"COMPLETE", "PARTIAL", "UNMEASURED"}:
+        return {"status":"FAIL_CLOSED","disposition":"STOP","reasons":["INVALID_MEASUREMENT_STATE"]}
+
+    negative_fields=[k for k in VALUE_FIELDS if _is_number(t.get(k)) and float(t[k]) < 0]
+    if negative_fields:
+        return {
+            "status":"FAIL_CLOSED",
+            "disposition":"STOP",
+            "reasons":["NEGATIVE_TELEMETRY_VALUE"],
+            "fields":negative_fields,
+        }
+
+    if measurement_state == "COMPLETE":
+        missing_or_unknown=[k for k in VALUE_FIELDS if not _is_number(t.get(k))]
+        if missing_or_unknown:
+            return {
+                "status":"PASS",
+                "candidate_id":payload["candidate_id"],
+                "disposition":"HOLD_FOR_MEASUREMENT",
+                "metrics":{
+                    "precision":None,
+                    "benefit_points":None,
+                    "cost_points":None,
+                    "net_points":None,
+                    "real_project_pilots":t.get("real_project_pilots"),
+                    "independent_human_evidence_count":t.get("independent_human_evidence_count"),
+                    "measurement_state":"COMPLETE_INVALID",
+                },
+                "reasons":["COMPLETE_LABEL_WITH_MISSING_OR_UNKNOWN_MEASUREMENTS"],
+                "missing_or_unknown_fields":missing_or_unknown,
+                "authority_boundary":"REVIEW_DISPOSITION_ONLY; NEVER_AUTO_PROMOTE_OR_REWRITE_CANON",
+            }
+
     def num(k):
-        v=t.get(k,0)
-        return float(v) if isinstance(v,(int,float)) and not isinstance(v,bool) else 0.0
+        v=t.get(k)
+        return float(v) if _is_number(v) else 0.0
 
     tp=num("true_positive_findings")
     fp=num("false_positive_findings")
