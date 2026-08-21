@@ -3,16 +3,17 @@
 
 The machine may validate provenance and evidence coverage. It may never convert review
 signals into an artistic/voice lock automatically. Final lock remains Founder/human.
+Evidence from different voice/model/settings bindings may not be silently combined.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from hashlib import sha256
 import json
 from pathlib import Path
 from typing import Any, Iterable
 
-SCHEMA_VERSION = "ivdivo.audio.human_review_event/1.0"
+SCHEMA_VERSION = "ivdivo.audio.human_review_event/1.1"
 LEDGER_VERSION = "ivdivo.audio.human_review_ledger/1.0"
 REVIEWER_TYPES = {
     "HUMAN_LISTENER", "HUMAN_DIRECTOR", "LANGUAGE_REVIEWER", "AUDIO_ENGINEER", "FOUNDER"
@@ -37,6 +38,7 @@ def _valid_sha(value: Any) -> bool:
 class ReviewEvent:
     candidate_id: str
     role_id: str
+    candidate_binding_sha256: str
     evidence_family: str
     reviewer_type: str
     reviewer_ref: str
@@ -52,6 +54,8 @@ class ReviewEvent:
 def compile_event(event: ReviewEvent) -> dict[str, Any]:
     if not event.candidate_id or not event.role_id or not event.reviewer_ref or not event.reviewed_at:
         raise ValueError("HUMAN_REVIEW_IDENTITY_FIELDS_REQUIRED")
+    if not _valid_sha(event.candidate_binding_sha256):
+        raise ValueError("HUMAN_REVIEW_BINDING_SHA256_INVALID")
     family = event.evidence_family.upper()
     if family not in EVIDENCE_FAMILIES:
         raise ValueError("HUMAN_REVIEW_EVIDENCE_FAMILY_INVALID")
@@ -70,6 +74,7 @@ def compile_event(event: ReviewEvent) -> dict[str, Any]:
         "schema_version": SCHEMA_VERSION,
         "candidate_id": event.candidate_id,
         "role_id": event.role_id,
+        "candidate_binding_sha256": event.candidate_binding_sha256.lower(),
         "evidence_family": family,
         "reviewer_type": reviewer,
         "reviewer_ref": event.reviewer_ref,
@@ -94,6 +99,8 @@ def verify_event(event: dict[str, Any]) -> dict[str, Any]:
     unsigned.pop("event_sha256", None)
     if not _valid_sha(expected) or canonical_hash(unsigned) != expected:
         raise ValueError("HUMAN_REVIEW_EVENT_HASH_MISMATCH")
+    if not _valid_sha(event.get("candidate_binding_sha256")):
+        raise ValueError("HUMAN_REVIEW_BINDING_SHA256_INVALID")
     if event.get("machine_generated") is not False:
         raise ValueError("HUMAN_REVIEW_CANNOT_BE_MACHINE_GENERATED")
     return {"status": "PASS", "event_sha256": expected}
@@ -139,14 +146,21 @@ class HumanReviewLedger:
 
 def lock_eligibility(
     events: Iterable[dict[str, Any]], *, candidate_id: str, role_id: str,
-    required_families: Iterable[str], pair_required: bool = False,
+    candidate_binding_sha256: str, required_families: Iterable[str], pair_required: bool = False,
 ) -> dict[str, Any]:
-    """Validate evidence coverage; return eligibility for human lock decision only."""
+    """Validate one exact candidate binding; return human-lock eligibility only."""
+    if not _valid_sha(candidate_binding_sha256):
+        raise ValueError("LOCK_ELIGIBILITY_BINDING_SHA256_INVALID")
+    binding = candidate_binding_sha256.lower()
     relevant: list[dict[str, Any]] = []
+    foreign_binding_events = 0
     for event in events:
         verify_event(event)
         if event.get("candidate_id") == candidate_id and event.get("role_id") == role_id:
-            relevant.append(event)
+            if event.get("candidate_binding_sha256") == binding:
+                relevant.append(event)
+            else:
+                foreign_binding_events += 1
     families = {str(f).upper() for f in required_families}
     if pair_required:
         families.add("PAIR")
@@ -171,10 +185,12 @@ def lock_eligibility(
         "status": status,
         "candidate_id": candidate_id,
         "role_id": role_id,
+        "candidate_binding_sha256": binding,
         "required_families": sorted(families),
         "covered_pass_families": sorted(covered_pass),
         "missing": missing,
         "hard_fails": sorted(hard_fails),
+        "foreign_binding_events_ignored": foreign_binding_events,
         "machine_may_auto_lock": False,
         "voice_lock": False,
         "next_authority": "FOUNDER_OR_AUTHORIZED_HUMAN_LOCK_DECISION" if status == "ELIGIBLE_FOR_HUMAN_LOCK_DECISION" else None,
