@@ -1,0 +1,59 @@
+{
+  "status": "DISCOVERY_ONLY_HANDOFF_NOT_CURRENT_AUTHORITY",
+  "source_project": "Farada8/PORTALY_ZVEZD",
+  "source_branch": "ivdivo-book-engine-milestone-f-v5",
+  "source_milestone": "IVDIVO_BOOK_ENGINE_v0.5_MILESTONE_F",
+  "global_self_improvement_authority": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+  "promotion_authorized": false,
+  "protected_authorities": [
+    "FOUNDER_NEWEST_DIRECT_INSTRUCTION",
+    "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+    "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
+    "LOCKED_STORY_BOOK_PROJECT_CANON",
+    "HUMAN_SIGNAL",
+    "PROVIDER_EVIDENCE"
+  ],
+  "source_evidence": {
+    "lesson_zero_master_sha256": "b90ca3786f94911fbedf3fa776fe8b67101e42cc10a9a91af9088959a0fd6b5c",
+    "lesson_zero_measured_words": 113333,
+    "lesson_zero_chapters": 35,
+    "book_engine_package_version": "0.5.0",
+    "fresh_unzip_pytest": {"passed": 161, "failed": 0, "status": "PASS"},
+    "run32_v3": {"executed": 32, "pass": 32, "fail": 0, "ledger_sha256": "bc785be95930a4e97c31d26e9dfe1d0ee5931467ef25dda41520d5d72cab2bc4"},
+    "tested_package_sha256": "25c62c20075e9fefadac385785c3424aa6b30f732e18177b38cd80c75ce3f86e",
+    "literary_superiority": "NOT_PROVEN_BLOCKED_PENDING_LIVE_PROVIDER_PLUS_BLIND_HUMAN_EVIDENCE"
+  },
+  "candidates": [
+    {
+      "candidate_id": "MF-C01-PACKAGE-REPRO",
+      "requested_global_status": "DISCOVERY_ONLY",
+      "scope_request": "PROJECT_OR_DOMAIN",
+      "problem": "Book Engine release evidence was environment-sensitive and runtime/package version identity drifted.",
+      "mechanism": "fresh-unzip executable-script bootstrap + single package-version contract + cold regression",
+      "evidence_state": "PROJECT_PILOT_PASS",
+      "next_action": "Global SI reconciler decides MERGE / PROJECT promotion / HOLD; do not universalize from one project.",
+      "next_gate": "APPLICATION_PLUS_GITHUB_DRIVE_READBACK"
+    },
+    {
+      "candidate_id": "MF-C02-BOOK-SI-BRIDGE",
+      "requested_global_status": "DISCOVERY_ONLY",
+      "scope_request": "PROJECT_OR_BOOK_DOMAIN",
+      "problem": "Book-specific observations lacked a typed evidence-safe handoff into the already-current global Self-Improvement lifecycle.",
+      "mechanism": "BookObservation -> EvidenceClass -> EarliestFailureLocalization -> ImprovementCandidate -> PilotContract -> EvidenceGate -> bridge packet",
+      "evidence_state": "PROJECT_PILOT_PASS",
+      "next_action": "Check semantic overlap with current registry/core kernels; MERGE if equivalent rather than create a parallel engine.",
+      "next_gate": "GLOBAL_DEDUPE_AND_SCHEMA_COMPATIBILITY"
+    },
+    {
+      "candidate_id": "MF-C03-REAL-BOOK-SENSORS",
+      "requested_global_status": "DISCOVERY_ONLY",
+      "scope_request": "BOOK_DOMAIN_PILOT",
+      "problem": "Real-book proof had ingestion and deterministic infrastructure but insufficient falsifiable story-state instrumentation.",
+      "mechanism": "source-hash-bound state transitions + promise ledger + causal delete audit + healthy no-change controls",
+      "evidence_state": "SINGLE_BOOK_BOUNDED_PILOT_PASS",
+      "next_action": "Run cross-book positive and no-change transfer pilots before any wider promotion.",
+      "next_gate": "CROSS_BOOK_TRANSFER_EVIDENCE"
+    }
+  ],
+  "hard_boundary": "This file is recovery/reconciliation input only. It does not update CURRENT_IMPROVEMENT_REGISTRY, CURRENT state, story canon or universal authority by itself."
+}
