@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "CURRENT_PROJECT_ROUTING_STATE_NOT_STORY_CANON",
+  "project_id": "D06",
+  "title": "SHE STOLE MY NAME",
+  "authority_note": "Founder newest instruction and current D06 project authority/final story gate outrank this routing state. Historical pilot-only instructions lower in the authority document are superseded by its 2026-08-20/21 completion routing.",
+  "story_status": "E01_E24_TEXT_COMPLETE_STORY_LOCKED",
+  "current_project_authority": {
+    "drive_id": "16B3Mh_UoN_nDRgR62uG1DQcrZIEjW3j85n3not1l6_Q",
+    "title": "00_SHE STOLE MY NAME — CURRENT PROJECT AUTHORITY + NEXT ACTION v1.0",
+    "current_routing_from_source": "E01–E24 TEXT COMPLETE / STORY LOCKED"
+  },
+  "final_story_gate": {
+    "drive_id": "191WK31zh_dJ4SwDhlK_jnpDO3eTulocn9-CRVnStKls",
+    "title": "SHE STOLE MY NAME — FINAL SEASON STORY GATE v1.0 — TEXT COMPLETE — STORY LOCKED",
+    "status": "PASS_STORY_LOCKED"
+  },
+  "downstream_stage": "LOCKED_TEXT_WAITING_FOR_ACTIVE_BOOK_COMPLETION_QUEUE_THEN_AUDIO_NOVEL_STUDIO",
+  "non_reopen_holds": [
+    "MEDICAL_REHAB_PLAUSIBILITY",
+    "JURISDICTION_PROCEDURE_TERMINOLOGY",
+    "RUNTIME_TTS_COMPREHENSION"
+  ],
+  "next_safe_action": "WHEN_ACTIVE_BOOK_COMPLETION_QUEUE_CLOSES_INGEST_LOCKED_E01_E24_INTO_AUDIO_NOVEL_STUDIO_AND_RUN_DOWNSTREAM_VALIDATION_WITHOUT_REOPENING_STORY_AUTOMATICALLY",
+  "blockers": [
+    "ACTIVE_BOOK_COMPLETION_QUEUE_NOT_YET_CLOSED_FOR_MASS_AUDIO_ROUTING"
+  ],
+  "do_not_repeat": [
+    "DO_NOT_RETURN_TO_HISTORICAL_PILOT_E01_E03_STOP",
+    "DO_NOT_REWRITE_E01_E24_WITHOUT_NEW_QUALIFYING_EVIDENCE_OR_FOUNDER_INSTRUCTION",
+    "DO_NOT_WRITE_E25_OR_SEASON_2_WITHOUT_FOUNDER_INSTRUCTION_OR_QUALIFYING_EXTERNAL_EVIDENCE",
+    "DO_NOT_TREAT_MEDICAL_JURISDICTION_OR_TTS_HOLDS_AS_AUTOMATIC_STORY_REOPEN",
+    "DO_NOT_CONFUSE_D06_WITH_THE_SECOND_WIFE_FILE_OR_THE_WIFE_AT_HIS_WEDDING"
+  ],
+  "provenance": [
+    "Drive authority ID 16B3Mh_UoN_nDRgR62uG1DQcrZIEjW3j85n3not1l6_Q",
+    "Drive final story gate ID 191WK31zh_dJ4SwDhlK_jnpDO3eTulocn9-CRVnStKls"
+  ]
+}
