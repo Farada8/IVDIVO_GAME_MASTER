@@ -1,0 +1,43 @@
+{
+  "artifact":"BODYGUARD_MULTILINGUAL_VOICE_CURRENT_STATE_v7",
+  "date":"2026-08-21",
+  "source_authority":"EN Recording Master v1.6",
+  "executed_prompts":"PMV01-PMV208",
+  "designed_next":"PMV209-PMV272",
+  "ru_full_e01":"v0.3 WORKING documented-terminology patched; 190 lines; human native/pro lock pending",
+  "ru_audition_anchors":"v0.5 CANDIDATE NOT LOCKED",
+  "ru_glossary":"v0.4 evidence-upgraded; GO=гоу strong working; standby/ack practitioner hold",
+  "pronunciation_dictionary":"v0.2 draft PLS/JSON; no provider locator yet",
+  "provider":"ElevenLabs adapter v2.0 + official docs current; authenticated account preflight absent",
+  "render_plan":"v0.2 candidate compiler output; coverage PASS; TTD/TTS A/B absent",
+  "automation":"PMV161-168 programs created/tested on static/synthetic fixtures",
+  "engineering_layer":"v1 evidence/gate/patch contracts + 9-module registry",
+  "review_packets":"PMV177-180 READY_EXTERNAL",
+  "ru_text_lock":"BLOCKED_EXTERNAL_REVIEW_AND_PERFORMED_TIMING",
+  "provider_preflight":"ENGINE_READY_API_KEY_ABSENT",
+  "voice_cost_telemetry":"ENGINE_READY_NO_LIVE_ROWS",
+  "self_improvement_patch":"v7 ACCEPT_WITH_MODIFICATION engineering rules only",
+  "ru_voice_lock":false,
+  "en_voice_lock":false,
+  "spanish_region_lock":false,
+  "paid_scale_allowed":false,
+  "current_gate":"EXTERNAL_RU_NATIVE_STAGE_AUDIO_SECURITY_EVIDENCE",
+  "next_sequence":[
+    "collect PMV177 native decisions",
+    "collect PMV178 stage decisions",
+    "collect PMV179 live-audio decisions",
+    "collect PMV180 close-protection decisions",
+    "run PMV181 lock compiler",
+    "run PMV182 authenticated provider preflight",
+    "run PMV183 one-Naomi + one-Eli cost/quality probe",
+    "continue evidence-gated PMV184-199"
+  ],
+  "prohibited":[
+    "claim human/native/practitioner PASS from web/AI alone",
+    "lock RU audition text before external review/performed timing",
+    "spend broad S1 before tiny provider probe",
+    "TTD everywhere without A/B",
+    "generic ES production authority",
+    "one voice_id all languages as dogma"
+  ]
+}
