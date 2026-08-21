@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "status": "OBSERVATION_BASELINE_NOT_STORY_CANON",
+  "updated": "2026-08-21",
+  "evidence_class": "PERSISTED_PROVIDER_REVISION_OBSERVATION",
+  "projects": [
+    {
+      "project_id": "D06",
+      "sources": [
+        {
+          "source_key": "D06_CURRENT_PROJECT_AUTHORITY",
+          "locator": "google_drive:16B3Mh_UoN_nDRgR62uG1DQcrZIEjW3j85n3not1l6_Q",
+          "title": "00_SHE STOLE MY NAME — CURRENT PROJECT AUTHORITY + NEXT ACTION v1.0",
+          "revision": "AIroW35fkCrAj8LM2ezVnDuKdNJvZbYL9lPNQQOvob2xlVk5uIttpiYbFqzwNTTwTQACpV0bBHr7q4vj9m-s-tb88vynNDxSk1IgZyH6H3U",
+          "authority_rank": 2,
+          "disposition": "CURRENT",
+          "supersedes": ["D06_HISTORICAL_PILOT_ROUTING"]
+        },
+        {
+          "source_key": "D06_HISTORICAL_PILOT_ROUTING",
+          "locator": "embedded_in_current_authority:historical_section",
+          "authority_rank": 1,
+          "disposition": "SUPERSEDED",
+          "supersedes": []
+        },
+        {
+          "source_key": "D06_FINAL_STORY_GATE",
+          "locator": "google_drive:191WK31zh_dJ4SwDhlK_jnpDO3eTulocn9-CRVnStKls",
+          "title": "SHE STOLE MY NAME — FINAL SEASON STORY GATE v1.0 — TEXT COMPLETE — STORY LOCKED",
+          "revision": "AIroW368LkqwAZyk0q0taE7QmxpITTOYV8_ZMQeZOyo_kVjMQj_CVVn6D_HImyCp8Uu86RFTfhMz-ShxXuTAY17TFZjr3I2e6LNH912JCa4",
+          "authority_rank": 2,
+          "disposition": "REFERENCE_ONLY",
+          "supersedes": []
+        }
+      ]
+    },
+    {
+      "project_id": "D07",
+      "sources": [
+        {
+          "source_key": "D07_CURRENT_PROJECT_AUTHORITY",
+          "locator": "google_drive:1_HTWw-mZzOlEKP04Xr95pIEOAt63NQgiwcd6EmigTfQ",
+          "title": "00_THE PERFECT WIFE KNOWS — CURRENT PROJECT AUTHORITY + NEXT ACTION v1.0",
+          "revision": "AIroW354DaoleMCrr84Wau8czAYKTFZEaInDOntAfeZieNpMAQaRPQsdT-PWOfxuxsZwQlV95RijbMujo4mgLYSV00WSHfa78byu0wRjF2o",
+          "authority_rank": 2,
+          "disposition": "CURRENT",
+          "supersedes": ["D07_HISTORICAL_PILOT_ROUTING"]
+        },
+        {"source_key": "D07_HISTORICAL_PILOT_ROUTING", "locator": "embedded_in_current_authority:historical_section", "authority_rank": 1, "disposition": "SUPERSEDED", "supersedes": []},
+        {
+          "source_key": "D07_FINAL_STORY_GATE",
+          "locator": "google_drive:1bBJjd9A0BXi_bdFIIHn3-D7ofVBbAW_jSNG-kh0fRmc",
+          "title": "THE PERFECT WIFE KNOWS — FINAL SEASON STORY GATE v1.0 — TEXT COMPLETE — STORY LOCKED",
+          "revision": "AIroW36PUWFk4bnF8m6lK7fCO_HBaU9oO_5jVeWxko363mRGj1RKIwgmLx5WjwGWmMxk1QRtu7hBcxrAlFw4Oj1mX00NWBWd22xMdEFd98Q",
+          "authority_rank": 2,
+          "disposition": "REFERENCE_ONLY",
+          "supersedes": []
+        }
+      ]
+    },
+    {
+      "project_id": "D08",
+      "sources": [
+        {
+          "source_key": "D08_CURRENT_PROJECT_AUTHORITY",
+          "locator": "google_drive:13fQWAExMDEv3CFnri7wlYBwzoUMzHqn7JpWA5_uvYk0",
+          "title": "00_SHE FIRED THE BILLIONAIRE — CURRENT PROJECT AUTHORITY + NEXT ACTION v1.0",
+          "revision": "AIroW343o1bcI63_5Lsc8zRKo0H_2K_4RKCyXNxoSWerh-enx6Mw4oDXzqNfXEZuwpxyJePYquNDf6qY1qLFS3Zf8FwyRMOoFiQXh1jnb98",
+          "authority_rank": 2,
+          "disposition": "CURRENT",
+          "supersedes": ["D08_HISTORICAL_PILOT_ROUTING"]
+        },
+        {"source_key": "D08_HISTORICAL_PILOT_ROUTING", "locator": "embedded_in_current_authority:historical_section", "authority_rank": 1, "disposition": "SUPERSEDED", "supersedes": []},
+        {
+          "source_key": "D08_FINAL_STORY_GATE",
+          "locator": "google_drive:18iWC_j1uKtFse7gU-IXMob1ib4mCiBZ5I1fye8CuK9M",
+          "title": "SHE FIRED THE BILLIONAIRE — FINAL SEASON STORY GATE v1.0 — TEXT COMPLETE — STORY LOCKED",
+          "revision": "AIroW37FLVtsaH_sj-jbxdXfHYZ54iNfnhjta6hm6UHUDKP2zonHljC01A-pSXBMuR_SS5NvR2qnBBmueRh-RKnlD-HMLLRkvYGfBoMBsxI",
+          "authority_rank": 2,
+          "disposition": "REFERENCE_ONLY",
+          "supersedes": []
+        }
+      ]
+    }
+  ],
+  "law": "Revision drift triggers re-read/rebase, not automatic canon change. Provider revision identity is routing evidence only."
+}
