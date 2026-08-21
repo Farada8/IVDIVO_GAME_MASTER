@@ -104,6 +104,15 @@ class ProviderInventoryCompilerTests(unittest.TestCase):
         self.assertEqual(out["status"], "HOLD_PROVIDER_SNAPSHOT")
         self.assertFalse(out["verified"])
 
+    def test_stale_snapshot_holds_before_inventory_compilation(self):
+        stale_now = datetime(2026, 8, 22, 4, 0, tzinfo=timezone.utc)
+        out = compile_provider_inventory(snapshot(), now=stale_now)
+        self.assertEqual(out["status"], "HOLD_PROVIDER_SNAPSHOT")
+        self.assertFalse(out["verified"])
+        self.assertEqual(out["provider_validation"]["status"], "FAIL_STALE")
+        self.assertFalse(out["voice_lock"])
+        self.assertFalse(out["auto_substitution"])
+
 
 class CastReadinessTests(unittest.TestCase):
     def inventory(self):
