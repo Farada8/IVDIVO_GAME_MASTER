@@ -1,0 +1,26 @@
+name: Cycle8 Story Contract Canaries
+
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_story_contract_canaries.py'
+      - 'tests/test_ivdivo_story_contract_canaries.py'
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-21_CYCLE8_N01_N32_EXECUTABLE_STORY_CONTRACTS/**'
+      - '31_IDEAS/REGISTRY_EXTENSIONS/SI-0015_PROJECT_SLICE_FRESHNESS_ASSERTION.json'
+      - '31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json'
+      - '.github/workflows/cycle8-story-contract-canaries.yml'
+
+jobs:
+  canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run story contract canaries
+        run: python -m unittest -v tests.test_ivdivo_story_contract_canaries
+      - name: Validate registry family JSON
+        run: python -m json.tool 31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json >/dev/null
+      - name: Validate SI-0015 JSON
+        run: python -m json.tool 31_IDEAS/REGISTRY_EXTENSIONS/SI-0015_PROJECT_SLICE_FRESHNESS_ASSERTION.json >/dev/null
