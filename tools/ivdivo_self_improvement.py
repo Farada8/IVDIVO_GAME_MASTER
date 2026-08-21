@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """IVDIVO Self-Improvement Engine registry utility.
 
-Stdlib-only helper for the canonical live registry:
+Canonical live registry:
 31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json
 
-This tool does not promote canon by itself. It enforces lifecycle hygiene,
-anti-loss invariants, explicit next actions, provenance and verification state.
+The utility never promotes canon by itself. It enforces lifecycle hygiene,
+anti-loss invariants, explicit next actions, provenance, application integrity,
+and qualitative best-candidate routing without pretending to have a precise
+mathematical measure of creative value.
 """
 
 from __future__ import annotations
@@ -73,7 +75,39 @@ SCOPES = {
     "REFERENCE_ONLY",
 }
 
+SOURCE_TYPES = {
+    "FOUNDER",
+    "PROJECT_CONVERSATION",
+    "GITHUB",
+    "GOOGLE_DRIVE",
+    "FILE_LIBRARY",
+    "EXTERNAL_MODEL",
+    "HUMAN_SIGNAL",
+    "MARKET_DATA",
+    "PRODUCTION_FAILURE",
+    "OTHER",
+}
+
 PROMOTED = {"PROMOTED_PROJECT", "PROMOTED_DOMAIN", "PROMOTED_UNIVERSAL"}
+
+# Ordinal bands only. They are used to route attention, not to claim that
+# creative merit is reducible to a single numerical score.
+BAND = {
+    "impact": {"LOW": 0, "MEDIUM": 1, "HIGH": 2, "CRITICAL": 3},
+    "recurrence": {"ONE_OFF": 0, "RECURRING": 1, "SYSTEMIC": 2},
+    "evidence": {
+        "HYPOTHESIS": 0,
+        "INTERNAL_EVIDENCE": 1,
+        "INDEPENDENT_REVIEW": 2,
+        "PRODUCTION_EVIDENCE": 3,
+        "HUMAN_MARKET_EVIDENCE": 4,
+    },
+    "urgency": {"LOW": 0, "MEDIUM": 1, "HIGH": 2},
+    "risk": {"LOW": 3, "MEDIUM": 2, "HIGH": 1, "CRITICAL": 0},
+    "effort": {"LOW": 2, "MEDIUM": 1, "HIGH": 0},
+    "reversibility": {"EASY": 3, "MODERATE": 2, "HARD": 1, "IRREVERSIBLE": 0},
+    "surface": {"LOCAL": 0, "DOMAIN": 1, "PORTFOLIO": 2},
+}
 
 
 def load_registry(path: Path) -> dict[str, Any]:
@@ -88,9 +122,9 @@ def save_registry(path: Path, data: dict[str, Any]) -> None:
     data["updated"] = date.today().isoformat()
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
-    with tmp.open("w", encoding="utf-8", newline="\n") as f:
+    with tmp.open("w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-        f.write("\n")
+        print(file=f)
     tmp.replace(path)
 
 
@@ -153,6 +187,8 @@ def audit(data: dict[str, Any]) -> list[dict[str, str]]:
             for p in prov:
                 if not isinstance(p, dict) or not p.get("source_type") or not p.get("locator"):
                     issues.append({"severity": "FAIL", "candidate_id": cid, "code": "BAD_PROVENANCE", "message": "source provenance requires source_type and locator"})
+                elif p.get("source_type") not in SOURCE_TYPES:
+                    issues.append({"severity": "FAIL", "candidate_id": cid, "code": "INVALID_SOURCE_TYPE", "message": f"unknown source_type: {p.get('source_type')}"})
 
         if status not in TERMINAL:
             if not c.get("next_action"):
@@ -176,11 +212,81 @@ def audit(data: dict[str, Any]) -> list[dict[str, str]]:
             if not isinstance(evidence, list) or not evidence:
                 issues.append({"severity": "FAIL", "candidate_id": cid, "code": "VERIFIED_WITHOUT_EVIDENCE", "message": "VERIFIED_CURRENT requires verification_evidence"})
 
-        # Detect the classic failure: promotion declaration without actual application.
         if status in PROMOTED and not c.get("next_action"):
             issues.append({"severity": "FAIL", "candidate_id": cid, "code": "PROMOTION_STALLED", "message": "promotion must advance to application with explicit next_action"})
 
     return issues
+
+
+def relevance_score(c: dict[str, Any], query: str | None) -> int:
+    if not query:
+        return 0
+    tokens = [t for t in query.casefold().split() if len(t) > 1]
+    if not tokens:
+        return 0
+    fields = [
+        "title",
+        "problem_or_opportunity",
+        "proposed_mechanism",
+        "scope",
+        "candidate_type",
+        "notes",
+        "next_action",
+    ]
+    hay = " ".join(str(c.get(k, "")) for k in fields).casefold()
+    targets = " ".join(str(x) for x in c.get("application_targets", [])).casefold()
+    score = 0
+    for token in tokens:
+        if token in hay:
+            score += 2
+        if token in targets:
+            score += 1
+    return score
+
+
+def routing_key(c: dict[str, Any], query: str | None) -> tuple[int, ...]:
+    p = c.get("priority_vector") or {}
+    return (
+        relevance_score(c, query),
+        BAND["urgency"].get(p.get("urgency"), 0),
+        BAND["impact"].get(p.get("impact"), 0),
+        BAND["recurrence"].get(p.get("recurrence"), 0),
+        BAND["evidence"].get(c.get("evidence_state"), 0),
+        BAND["surface"].get(p.get("affected_surface"), 0),
+        BAND["risk"].get(p.get("regression_risk"), 0),
+        BAND["reversibility"].get(p.get("reversibility"), 0),
+        BAND["effort"].get(p.get("effort"), 0),
+    )
+
+
+def route_candidates(data: dict[str, Any], query: str | None, include_hold: bool = False) -> list[dict[str, Any]]:
+    rows = []
+    for c in data["candidates"]:
+        status = c.get("status")
+        if status in {"VERIFIED_CURRENT", "REJECTED_WITH_REASON", "SUPERSEDED", "ROLLED_BACK"}:
+            continue
+        if status == "HOLD_WITH_TRIGGER" and not include_hold:
+            continue
+        rows.append(c)
+    rows.sort(key=lambda c: (routing_key(c, query), c.get("candidate_id", "")), reverse=True)
+    return rows
+
+
+def route_reason(c: dict[str, Any], query: str | None) -> str:
+    p = c.get("priority_vector") or {}
+    parts = []
+    rel = relevance_score(c, query)
+    if query:
+        parts.append(f"task_relevance={rel}")
+    parts.extend([
+        f"impact={p.get('impact', 'UNKNOWN')}",
+        f"recurrence={p.get('recurrence', 'UNKNOWN')}",
+        f"evidence={c.get('evidence_state', 'UNKNOWN')}",
+        f"risk={p.get('regression_risk', 'UNKNOWN')}",
+        f"effort={p.get('effort', 'UNKNOWN')}",
+        f"reversibility={p.get('reversibility', 'UNKNOWN')}",
+    ])
+    return ", ".join(parts)
 
 
 def cmd_audit(args: argparse.Namespace) -> int:
@@ -260,6 +366,11 @@ def cmd_capture(args: argparse.Namespace) -> int:
         "notes": args.notes,
     }
     data["candidates"].append(candidate)
+    failures = [i for i in audit(data) if i["candidate_id"] == cid and i["severity"] == "FAIL"]
+    if failures:
+        for i in failures:
+            print(f"BLOCK {i['code']}: {i['message']}", file=sys.stderr)
+        return 1
     save_registry(path, data)
     print(cid)
     return 0
@@ -293,7 +404,7 @@ def cmd_advance(args: argparse.Namespace) -> int:
     if issues and not args.force:
         for i in issues:
             print(f"BLOCK {i['code']}: {i['message']}", file=sys.stderr)
-        print("candidate not saved; use the required fields instead of forcing an invalid lifecycle", file=sys.stderr)
+        print("candidate not saved; satisfy lifecycle requirements rather than forcing an invalid state", file=sys.stderr)
         return 1
 
     save_registry(path, data)
@@ -303,16 +414,47 @@ def cmd_advance(args: argparse.Namespace) -> int:
 
 def cmd_relevant(args: argparse.Namespace) -> int:
     data = load_registry(Path(args.registry))
-    q = args.query.casefold()
+    query = args.query.casefold()
     scored: list[tuple[int, dict[str, Any]]] = []
     for c in data["candidates"]:
-        hay = " ".join(str(c.get(k, "")) for k in ["title", "problem_or_opportunity", "proposed_mechanism", "scope", "candidate_type", "notes"]).casefold()
-        score = sum(1 for token in q.split() if token in hay)
+        score = relevance_score(c, query)
         if score:
             scored.append((score, c))
     scored.sort(key=lambda x: (-x[0], x[1].get("candidate_id", "")))
     for score, c in scored[: args.limit]:
         print(f"{score}\t{c.get('candidate_id')}\t{c.get('status')}\t{c.get('title')}\tNEXT={c.get('next_action')}")
+    return 0
+
+
+def cmd_queue(args: argparse.Namespace) -> int:
+    data = load_registry(Path(args.registry))
+    rows = route_candidates(data, args.query, args.include_hold)
+    for c in rows[: args.limit]:
+        print(
+            f"{c.get('candidate_id')}\t{c.get('status')}\t{c.get('title')}\t"
+            f"{route_reason(c, args.query)}\tNEXT={c.get('next_action')}\tGATE={c.get('next_gate')}"
+        )
+    return 0
+
+
+def cmd_next(args: argparse.Namespace) -> int:
+    data = load_registry(Path(args.registry))
+    rows = route_candidates(data, args.query, args.include_hold)
+    if not rows:
+        print("NO_UNBLOCKED_IMPROVEMENT_CANDIDATE")
+        return 0
+    c = rows[0]
+    out = {
+        "candidate_id": c.get("candidate_id"),
+        "title": c.get("title"),
+        "status": c.get("status"),
+        "scope": c.get("scope"),
+        "routing_reason": route_reason(c, args.query),
+        "next_action": c.get("next_action"),
+        "next_gate": c.get("next_gate"),
+        "guard": "Active story/project production outranks meta-improvement unless a system FATAL/MAJOR blocks production.",
+    }
+    print(json.dumps(out, ensure_ascii=False, indent=2))
     return 0
 
 
@@ -334,7 +476,7 @@ def build_parser() -> argparse.ArgumentParser:
     c.add_argument("--title", required=True)
     c.add_argument("--type", required=True, choices=sorted(CANDIDATE_TYPES))
     c.add_argument("--scope", required=True, choices=sorted(SCOPES))
-    c.add_argument("--source-type", required=True)
+    c.add_argument("--source-type", required=True, choices=sorted(SOURCE_TYPES))
     c.add_argument("--source", required=True)
     c.add_argument("--source-note")
     c.add_argument("--problem", required=True)
@@ -369,6 +511,17 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument("query")
     r.add_argument("--limit", type=int, default=10)
     r.set_defaults(func=cmd_relevant)
+
+    q = sub.add_parser("queue", help="route the best active improvement candidates without fake precision scoring")
+    q.add_argument("--query", help="active task/domain terms used only as a relevance band")
+    q.add_argument("--limit", type=int, default=10)
+    q.add_argument("--include-hold", action="store_true")
+    q.set_defaults(func=cmd_queue)
+
+    n = sub.add_parser("next", help="return the highest-priority active improvement candidate")
+    n.add_argument("--query", help="active task/domain terms used only as a relevance band")
+    n.add_argument("--include-hold", action="store_true")
+    n.set_defaults(func=cmd_next)
 
     return p
 
