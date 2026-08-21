@@ -1,0 +1,67 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-21",
+  "status":"R12_R16_EXECUTED",
+  "input":"SAGA100_CIVILIZATION_QUESTION_BANK_v1.json",
+  "selection_method": {
+    "dimensions": [
+      "human_universality",
+      "smith_lens_strength",
+      "orbital_lens_strength",
+      "confederation_lens_strength",
+      "crossing_synthesis_strength",
+      "dependency_readiness",
+      "anti_repeat_distance"
+    ],
+    "score_scale":"0-100 weighted editorial/engineering score; not market prediction",
+    "rules":[
+      "Merge questions that produce the same irreversible civilizational decision.",
+      "Prefer prerequisites before advanced identity/governance questions.",
+      "Do not order by spectacle or power level.",
+      "Keep a threshold only if Smith, Orbital and Confederation can ask materially different versions of it and Crossing can force a synthesis/conflict.",
+      "Existing B02/B03/B07/B08 evidence influences early dependency order but does not retroactively rewrite those books."
+    ]
+  },
+  "selected_thresholds":[
+    {"cycle":1,"id":"T01","name":"STANDING_CLASSIFICATION_LEGITIMATE_AUTHORITY","questions":["Q001","Q002","Q003","Q004","Q005","Q006","Q007","Q008"],"score":98,"why_now":"Current B02/B03/B07/B08 already supply proof material around expertise vs authority, inherited classification, standing, lawful action and jurisdiction.","depends_on":[]},
+    {"cycle":2,"id":"T02","name":"AUTONOMY_CONSENT","questions":["Q009","Q010","Q011","Q013","Q014","Q015","Q016"],"score":96,"depends_on":["T01"]},
+    {"cycle":3,"id":"T03","name":"PRIVACY_COGNITIVE_LIBERTY","questions":["Q025","Q026","Q027","Q028","Q029","Q030","Q032"],"score":93,"depends_on":["T01","T02"]},
+    {"cycle":4,"id":"T04","name":"MEMORY_IDENTITY_CONTINUITY","questions":["Q017","Q018","Q019","Q020","Q022","Q023"],"score":97,"depends_on":["T01","T02"]},
+    {"cycle":5,"id":"T05","name":"BODY_EMBODIMENT_SELF_IMAGE","questions":["Q017","Q022","Q036"],"score":92,"depends_on":["T02","T04"]},
+    {"cycle":6,"id":"T06","name":"FAMILY_PARENTHOOD_CARE","questions":["Q012","Q033","Q034","Q036","Q037","Q038","Q039"],"score":95,"depends_on":["T02","T04","T05"]},
+    {"cycle":7,"id":"T07","name":"WORK_COMPETENCE_HUMAN_VALUE","questions":["Q041","Q043","Q047","Q048"],"score":94,"depends_on":["T01"]},
+    {"cycle":8,"id":"T08","name":"EDUCATION_AUTHORITY_INITIATION","questions":["Q003","Q014","Q041","Q047"],"score":88,"depends_on":["T01","T07"]},
+    {"cycle":9,"id":"T09","name":"OWNERSHIP_ACCESS_SCARCITY","questions":["Q042","Q044","Q045","Q046","Q047","Q048"],"score":96,"depends_on":["T01","T07"]},
+    {"cycle":10,"id":"T10","name":"CITIZENSHIP_MIGRATION_BELONGING","questions":["Q037","Q050"],"score":92,"depends_on":["T01","T06","T09"]},
+    {"cycle":11,"id":"T11","name":"AI_SYNTHETIC_AGENCY","questions":["Q001","Q018","Q041","Q045"],"score":97,"depends_on":["T01","T02","T04","T07","T09"]},
+    {"cycle":12,"id":"T12","name":"JUSTICE_SECURITY_REHABILITATION","questions":["Q026","Q051","Q052","Q055","Q056"],"score":95,"depends_on":["T01","T02","T03"]},
+    {"cycle":13,"id":"T13","name":"GOVERNANCE_REPRESENTATION_EARTH_ORBIT","questions":["Q049","Q053","Q056"],"score":96,"depends_on":["T01","T09","T10","T12"]},
+    {"cycle":14,"id":"T14","name":"LONGEVITY_DEATH_RECOVERY","questions":["Q024","Q035"],"score":91,"depends_on":["T04","T05","T06"]},
+    {"cycle":15,"id":"T15","name":"DISTRIBUTED_IDENTITY_MULTIPLE_PRESENCE","questions":["Q013","Q021","Q031","Q039"],"score":94,"depends_on":["T02","T03","T04","T05","T11","T14"]},
+    {"cycle":16,"id":"T16","name":"CULTURE_MIXED_CIVILIZATION_BELONGING","questions":["Q033","Q037","Q040","Q050"],"score":90,"depends_on":["T06","T10","T13"]},
+    {"cycle":17,"id":"T17","name":"ECOLOGICAL_PERSONHOOD_LIVING_SYSTEMS","questions":["Q057","Q058"],"score":96,"depends_on":["T01","T02","T11"]},
+    {"cycle":18,"id":"T18","name":"PLANETARY_ENGINEERING_TERRAFORMING_OBLIGATION","questions":["Q058","Q059","Q062"],"score":93,"depends_on":["T13","T17"]},
+    {"cycle":19,"id":"T19","name":"CONTACT_NONINTERVENTION_HELP","questions":["Q054","Q060","Q063"],"score":98,"depends_on":["T01","T02","T12","T13","T16"]},
+    {"cycle":20,"id":"T20","name":"PLANETARY_ORBITAL_CONFEDERATION_SOVEREIGNTY","questions":["Q004","Q050","Q053","Q054"],"score":98,"depends_on":["T10","T13","T19"]},
+    {"cycle":21,"id":"T21","name":"INTERSPECIES_OBLIGATION_DIFFERENCE","questions":["Q010","Q058","Q060"],"score":94,"depends_on":["T02","T16","T17","T19"]},
+    {"cycle":22,"id":"T22","name":"CIVILIZATION_MEMORY_HISTORICAL_ACCOUNTABILITY","questions":["Q020","Q055"],"score":93,"depends_on":["T04","T12","T13"]},
+    {"cycle":23,"id":"T23","name":"GENERATIONAL_ACCOUNTABILITY_LEGACY","questions":["Q040","Q047","Q055"],"score":92,"depends_on":["T06","T08","T13","T22"]},
+    {"cycle":24,"id":"T24","name":"FRONTIER_UNKNOWN_KNOWLEDGE_LIMITS","questions":["Q061","Q062","Q063"],"score":99,"depends_on":["T18","T19","T20","T21","T23"]},
+    {"cycle":25,"id":"T25","name":"MATURE_SYNTHESIS_NEXT_FRONTIER","questions":["Q064"],"score":97,"depends_on":["T01","T02","T04","T09","T13","T19","T20","T22","T23","T24"]}
+  ],
+  "crossing_lens_compilation": {
+    "rule":"Each Txx must compile into S/O/C/X with X requiring at least two non-substitutable line competencies plus a rights/jurisdiction/value conflict.",
+    "early_cycle_proof_alignment": {
+      "T01":{"S":"B03 inherited OES classification/authority and local lawful rescue limits","O":"B02 technical insight vs civic/commissioning authority","C":"B07 CAM-4 excluded from evacuation category and cadet bounded authority","X":"B08 Smith evidence + Orbital authority + bounded Confederation prediction without auto-command"},
+      "status":"PROOF_CORPUS_ALIGNMENT_ONLY_NOT_RETROACTIVE_THEME_LOCK"
+    }
+  },
+  "dedup_result": {
+    "input_questions":64,
+    "selected_thresholds":25,
+    "discarded_as_worthless":0,
+    "merged_or_reused_across_thresholds":64,
+    "note":"Some human questions legitimately recur as prerequisites in more than one threshold; recurrence is controlled by the NoRepeatVector and must change arena, protagonist position, mechanism and type of closure."
+  },
+  "R16_verdict":"PASS_WORKING_THRESHOLD_ORDER_v0_2_READY"
+}
