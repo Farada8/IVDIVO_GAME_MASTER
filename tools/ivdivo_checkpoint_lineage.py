@@ -33,6 +33,9 @@ def validate_ledger(ledger: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(entries, list):
         raise ValueError("entries must be list")
     by_id: dict[str, dict[str, Any]] = {}
+    checkpoint_shas: set[str] = set()
+    active_by_work: dict[str, list[str]] = {}
+    roots_by_work: dict[str, list[str]] = {}
     for raw in entries:
         if not isinstance(raw, dict):
             raise ValueError("entry must be object")
@@ -42,20 +45,29 @@ def validate_ledger(ledger: dict[str, Any]) -> dict[str, Any]:
         work_unit = _require_string(raw, "work_unit")
         checkpoint_id = _require_string(raw, "checkpoint_id")
         checkpoint_sha256 = _require_string(raw, "checkpoint_sha256")
-        if len(checkpoint_sha256) != 64:
+        if len(checkpoint_sha256) != 64 or any(ch not in "0123456789abcdef" for ch in checkpoint_sha256.lower()):
             raise ValueError(f"invalid checkpoint sha:{entry_id}")
+        checkpoint_sha256 = checkpoint_sha256.lower()
+        if checkpoint_sha256 in checkpoint_shas:
+            raise ValueError(f"duplicate checkpoint_sha256:{checkpoint_sha256}")
+        checkpoint_shas.add(checkpoint_sha256)
         status = str(raw.get("status", "ACTIVE")).upper()
         if status not in STATUSES:
             raise ValueError(f"invalid status:{status}")
         generation = raw.get("generation")
         if not isinstance(generation, int) or generation < 0:
             raise ValueError(f"invalid generation:{entry_id}")
+        parent_entry_id = raw.get("parent_entry_id")
+        if parent_entry_id in (None, ""):
+            roots_by_work.setdefault(work_unit, []).append(entry_id)
+        if status == "ACTIVE":
+            active_by_work.setdefault(work_unit, []).append(entry_id)
         by_id[entry_id] = {
             "entry_id": entry_id,
             "work_unit": work_unit,
             "checkpoint_id": checkpoint_id,
             "checkpoint_sha256": checkpoint_sha256,
-            "parent_entry_id": raw.get("parent_entry_id"),
+            "parent_entry_id": parent_entry_id,
             "generation": generation,
             "status": status,
             "repo_main_sha": raw.get("repo_main_sha"),
@@ -63,6 +75,13 @@ def validate_ledger(ledger: dict[str, Any]) -> dict[str, Any]:
             "incident_id": raw.get("incident_id"),
             "notes": list(raw.get("notes", [])) if isinstance(raw.get("notes", []), list) else [],
         }
+
+    for work_unit, roots in roots_by_work.items():
+        if len(roots) > 1:
+            raise ValueError(f"multiple roots:{work_unit}:{','.join(sorted(roots))}")
+    for work_unit, heads in active_by_work.items():
+        if len(heads) > 1:
+            raise ValueError(f"multiple active heads:{work_unit}:{','.join(sorted(heads))}")
 
     for entry in by_id.values():
         parent = entry.get("parent_entry_id")
@@ -102,7 +121,7 @@ def append_checkpoint(
     existing = {e["entry_id"]: e for e in entries}
     if entry_id in existing:
         raise ValueError(f"duplicate entry_id:{entry_id}")
-    if any(e["checkpoint_sha256"] == checkpoint_sha256 for e in entries):
+    if any(e["checkpoint_sha256"] == checkpoint_sha256.lower() for e in entries):
         raise ValueError("duplicate checkpoint_sha256")
 
     if parent_entry_id:
@@ -111,6 +130,8 @@ def append_checkpoint(
         parent = existing[parent_entry_id]
         if parent["work_unit"] != work_unit:
             raise ValueError("parent belongs to another work_unit")
+        if parent["status"] != "ACTIVE":
+            raise ValueError("parent_entry_id must be current ACTIVE head")
         generation = parent["generation"] + 1
     else:
         roots = [e for e in entries if e["work_unit"] == work_unit]
@@ -128,7 +149,7 @@ def append_checkpoint(
         "entry_id": entry_id,
         "work_unit": work_unit,
         "checkpoint_id": checkpoint_id,
-        "checkpoint_sha256": checkpoint_sha256,
+        "checkpoint_sha256": checkpoint_sha256.lower(),
         "parent_entry_id": parent_entry_id,
         "generation": generation,
         "status": "ACTIVE",
