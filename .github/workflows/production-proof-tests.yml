@@ -1,5 +1,6 @@
 name: Production Proof Candidate Tests
 
+# Re-run merge-ref CI after fresh-main concurrency movement.
 on:
   pull_request:
     paths:
@@ -15,6 +16,7 @@ on:
       - 'tests/test_mirror_integrity.py'
       - 'tests/test_routing_consistency.py'
       - 'tests/test_value_guard.py'
+      - '.github/workflows/production-proof-tests.yml'
   workflow_dispatch:
 
 jobs:
