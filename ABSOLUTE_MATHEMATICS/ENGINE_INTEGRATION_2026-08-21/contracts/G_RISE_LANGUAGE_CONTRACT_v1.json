@@ -1,0 +1,6 @@
+{
+  "title": "G-Rise_L Contract v1",
+  "required": ["language_id", "primitive_generators", "closure_schema", "candidate_generator", "definability_test"],
+  "rule": "No generator novelty verdict is valid without a fixed definability language/closure schema.",
+  "verdicts": ["DEFINABLE", "NEW_RELATIVE_TO_L", "INCONCLUSIVE"]
+}
