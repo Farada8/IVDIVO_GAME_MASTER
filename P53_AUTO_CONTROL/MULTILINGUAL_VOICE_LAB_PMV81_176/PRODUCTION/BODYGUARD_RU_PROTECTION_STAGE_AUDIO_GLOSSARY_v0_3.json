@@ -1,0 +1,23 @@
+{
+  "artifact": "BODYGUARD_RU_PROTECTION_STAGE_AUDIO_GLOSSARY_v0_3",
+  "status": "WORKING_EVIDENCE_INTEGRATED_NATIVE_PRO_LOCK_PENDING",
+  "evidence": ["ГОСТ Р 70619-2022 personal-protection terminology","Russian live-audio technical rider using TalkBack","Russian IEM/bodypack practitioner sources","Russian theatre stage-direction terminology reference"],
+  "entries": [
+    {"en":"close protection","formal_ru":"личная охрана","spoken_candidates":["личная охрана","охрана"],"state":"STRONG_WORKING","note":"ГОСТ-supported formal term; spoken compression depends on line."},
+    {"en":"principal","formal_ru":"охраняемое лицо","spoken_candidates":["клиент","охраняемое лицо"],"state":"CONTEXT_REQUIRED","note":"ГОСТ formal term; `клиент` may be more natural in fast dialogue."},
+    {"en":"bodyguard","formal_ru":"телохранитель","spoken_candidates":["телохранитель","телохранительница","сотрудник личной охраны"],"state":"STRONG_WORKING","note":"Threat line favors immediately intelligible everyday form."},
+    {"en":"route","formal_ru":"маршрут движения","spoken_candidates":["маршрут"],"state":"STRONG_WORKING","note":"ГОСТ supports route terminology."},
+    {"en":"bodypack","spoken_candidates":["бодипак","поясной передатчик"],"state":"STRONG_WORKING_BODIPAK","note":"Russian live-sound sources use `бодипак`; retain explicit equipment action."},
+    {"en":"IEM","spoken_candidates":["IEM","ушной мониторинг","внутриканальный монитор"],"state":"STRONG_WORKING_IEM","note":"IEM/ушной мониторинг common in Russian stage/audio sources."},
+    {"en":"talkback","spoken_candidates":["TalkBack","служебная связь","служебный голосовой канал"],"state":"STRONG_WORKING_TALKBACK_WITH_CONTEXT","note":"Technical riders use TalkBack; clue clarity may need contextual wording."},
+    {"en":"stage-left/right","spoken_candidates":["слева по сцене / справа по сцене"],"state":"STRONG_WORKING","note":"Preserve performer perspective."},
+    {"en":"standby","spoken_candidates":["standby","готовность"],"state":"PROFESSIONAL_QA_REQUIRED","note":"Must remain distinct from acknowledgement and GO."},
+    {"en":"acknowledgement / ack","spoken_candidates":["подтверждение","ack"],"state":"PROFESSIONAL_QA_REQUIRED","note":"Clue-critical cue state."},
+    {"en":"GO","spoken_candidates":["GO","пуск","команда на спуск"],"state":"PROFESSIONAL_QA_REQUIRED","note":"Do not blur with standby/ack."},
+    {"en":"cue","spoken_candidates":["cue","команда","реплика"],"state":"PROFESSIONAL_QA_REQUIRED","note":"Live-show usage must be adjudicated."},
+    {"en":"lift","spoken_candidates":["сценическая платформа","подъёмник","лифт"],"state":"CONTEXT_REQUIRED","note":"Visual object and crew jargon need same referent."},
+    {"en":"gateway","spoken_candidates":["шлюз","gateway"],"state":"CONTEXT_REQUIRED","note":"Audio/network context."},
+    {"en":"left channel only","spoken_candidates":["только левый канал"],"state":"LOCK_CANDIDATE","note":"Clue-critical."},
+    {"en":"four clicks / two clicks","spoken_candidates":["четыре щелчка / два щелчка"],"state":"LOCK_CANDIDATE","note":"Clue-critical."}
+  ]
+}
