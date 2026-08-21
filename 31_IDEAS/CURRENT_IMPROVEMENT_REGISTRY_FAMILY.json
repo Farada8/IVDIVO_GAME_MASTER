@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "status": "CURRENT_MACHINE_REGISTRY_FAMILY_POINTER_NOT_STORY_CANON",
   "updated": "2026-08-21",
   "base_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
@@ -11,13 +11,14 @@
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0011_REAL_CORPUS_RECOVERY_ADVERSARIAL_PILOT.json",
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0012_META_ORCHESTRATOR_CYCLE2_CANDIDATE.json",
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0013_PROJECT_STATE_COVERAGE_GATE.json",
-    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0014_SESSION_RESILIENCE_DURABLE_RECOVERY.json"
+    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0014_SESSION_RESILIENCE_DURABLE_RECOVERY.json",
+    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0015_PROJECT_SLICE_FRESHNESS_ASSERTION.json"
   ],
   "validation_tool": "tools/validate_improvement_registry_refs.py",
   "transaction_candidate_tool": "tools/ivdivo_registry_transaction.py",
   "merge_law": "candidate_id must be unique across base and extensions; duplicate IDs fail closed; extensions are first-class machine registry records but may not override a base record.",
   "write_law": "Concurrent candidate writes should use validated extension shards. Transactional writer must stale-check, snapshot, atomically write, read back and rollback on incomplete mutation. Base monolith remains compatibility/read model until deterministic compaction is independently promoted.",
-  "candidate_id_freshness_law": "Before assigning any new SI candidate ID, read the complete current registry family (base + every extension shard), not only PENDING files or recent dialogue memory. The next ID must be proven unused across the full family. Partial visibility is DISCOVERY_ONLY.",
+  "candidate_id_freshness_law": "Before assigning any new SI candidate ID, read the complete current registry family (base + every extension shard), not only PENDING files or recent dialogue memory. The next ID must be proven unused across the full family. Re-read before merge whenever main has advanced. Partial visibility is DISCOVERY_ONLY.",
   "c3_38_integrity_repair": {
     "defect": "DUPLICATE_SI_0008_IDENTITY",
     "kept": "SI-0008 = Full chat transcript recovery and ingestion executable extension",
@@ -32,11 +33,19 @@
     "historical_source": "31_IDEAS/PENDING/SI-0010_VOLATILE_SESSION_CHECKPOINT_EXTENSION.json",
     "result": "MIGRATED_TO_UNIQUE_REGISTRY_EXTENSION; GREEN_CI_AND_DRIVE_READBACK; PRODUCTION_PILOT_PENDING"
   },
+  "b03_cycle32_integrity_repair": {
+    "defect": "FRESHNESS_CANDIDATE_COLLIDED_WITH_EXISTING_IDS_DURING_CONCURRENT_WORK",
+    "kept": ["SI-0008 = Transcript Recovery","SI-0014 = Session Resilience / Durable Recovery"],
+    "migrated": "Project-slice freshness assertion -> SI-0015",
+    "result": "RESOLVED_BEFORE_MAIN_MERGE",
+    "additional_learning": "Generic RESUME/CONTINUE does not satisfy an explicit Founder approval/lock event."
+  },
   "h_generation_delta": {
     "SI-0010": "READY_FOR_PILOT — atomic shard transaction + rollback + deterministic compaction implementation and CI pending",
     "SI-0013": "READY_FOR_PILOT — durable project-state coverage / portfolio resumability gate; all 12 required projects currently have PASS-like durable routes; portfolio claim is PASS_FULL",
-    "SI-0014": "READY_FOR_PILOT — session checkpoint + durable multi-store recovery stack; 27/27 Run33 tests, inherited checkpoint/registry regressions, fresh-main CI and Drive readback PASS; controlled/realtime recovery evidence still required"
+    "SI-0014": "READY_FOR_PILOT — session checkpoint + durable multi-store recovery stack; 27/27 Run33 tests, inherited checkpoint/registry regressions, fresh-main CI and Drive readback PASS; controlled/realtime recovery evidence still required",
+    "SI-0015": "DEVELOPMENT_CONTRACT_READY — embedded CURRENT project-slice freshness + explicit approval-event assertion; executable canaries pending"
   },
   "migration_note": "The monolithic base registry is a compatibility/read model until a deterministic compaction build validates all base+extension IDs, emits input/output hashes, passes roundtrip/readback regression, and switches pointers transactionally. Candidate shard visibility does not promote candidate status.",
-  "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009/0010/0011/0012/0013/0014 are candidates/pilots unless their own lifecycle state says otherwise."
+  "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009/0010/0011/0012/0013/0014/0015 are candidates/pilots unless their own lifecycle state says otherwise."
 }
