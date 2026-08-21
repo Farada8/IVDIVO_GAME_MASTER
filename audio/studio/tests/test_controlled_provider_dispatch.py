@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 import sys
 from unittest.mock import patch
@@ -11,6 +12,7 @@ sys.path.insert(0, str(STUDIO / "runtime"))
 
 import controlled_provider_dispatch as cpd
 from production_control import SpendLedger
+from provider_snapshot_contract import seal_snapshot
 
 
 def ttd_block():
@@ -31,16 +33,35 @@ class ControlledProviderDispatchTests(unittest.TestCase):
         path.write_text(json.dumps(obj, ensure_ascii=False), encoding="utf-8")
         return str(path)
 
+    def provider_snapshot(self, *, voices=None, models=None):
+        payload = {
+            "schema_version": "ivdivo.provider_snapshot/1.0",
+            "provider": "elevenlabs",
+            "status": "PASS",
+            "authentication": {
+                "state": "AUTHENTICATED",
+                "method": "TEST_AUTHENTICATED_FIXTURE",
+                "credential_persisted": False,
+            },
+            "provenance": {
+                "captured_at": datetime.now(timezone.utc).isoformat(),
+                "capture_method": "TEST_FIXTURE",
+                "capture_engine": "test_controlled_provider_dispatch",
+                "source": [{"path": "fixture", "http_status": 200}],
+            },
+            "account": {"fingerprint_sha256": "a" * 64},
+            "voices": voices if voices is not None else {"v1": {}, "v2": {}},
+            "models": models if models is not None else {"eleven_v3": {}},
+            "volatile": {},
+        }
+        return seal_snapshot(payload)
+
     def live_gates(self, root):
         # Minimal generic identity fixture for wrapper tests. Project fixtures such
         # as Lesson Zero freeze much richer scalar/block identity.
         manifest = self.write(root, "manifest.json", {"blocks": {}})
         fixture = self.write(root, "fixture.json", {"scalar_fields": {}, "blocks": {}})
-        snap = self.write(root, "snap.json", {
-            "status": "PASS",
-            "voices": {"v1": {}, "v2": {}},
-            "models": {"eleven_v3": {}},
-        })
+        snap = self.write(root, "snap.json", self.provider_snapshot())
         return manifest, fixture, snap
 
     def test_default_is_dry_no_dispatch(self):
@@ -62,10 +83,23 @@ class ControlledProviderDispatchTests(unittest.TestCase):
             self.assertIn("AUTHENTICATED_CAPABILITY_SNAPSHOT", out["missing"])
             dispatch.assert_not_called()
 
+    def test_legacy_status_pass_snapshot_no_longer_authorizes_capability(self):
+        with tempfile.TemporaryDirectory() as d:
+            block = self.write(d, "block.json", ttd_block())
+            snap = self.write(d, "snap.json", {
+                "status": "PASS",
+                "voices": {"v1": {}, "v2": {}},
+                "models": {"eleven_v3": {}},
+            })
+            out = cpd.execute(block, str(Path(d)/"out"), str(Path(d)/"ledger.json"), capability_snapshot_path=snap)
+            self.assertEqual(out["status"], "NO_DISPATCH_CAPABILITY")
+            self.assertEqual(out["capability_gate"]["status"], "FAIL_SNAPSHOT_CONTRACT")
+            self.assertEqual(out["capability_gate"]["snapshot_contract"]["status"], "FAIL_SCHEMA")
+
     def test_capability_missing_voice_blocks(self):
         with tempfile.TemporaryDirectory() as d:
             block = self.write(d, "block.json", ttd_block())
-            snap = self.write(d, "snap.json", {"status":"PASS","voices":{"v1":{}},"models":{"eleven_v3":{}}})
+            snap = self.write(d, "snap.json", self.provider_snapshot(voices={"v1": {}}))
             out = cpd.execute(block, str(Path(d)/"out"), str(Path(d)/"ledger.json"), capability_snapshot_path=snap)
             self.assertEqual(out["status"], "NO_DISPATCH_CAPABILITY")
             self.assertIn("v2", out["capability_gate"]["missing_voices"])
