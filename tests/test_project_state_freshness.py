@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 from tools.ivdivo_project_state_freshness import audit as freshness_audit
 from tools.validate_authority_version_chain import audit as chain_audit
 
@@ -74,3 +77,11 @@ def test_current_must_be_highest_rank():
     bad["sources"][0]["authority_rank"] = 3
     result = chain_audit(bad)
     assert "CURRENT_NOT_HIGHEST_RANK" in result["errors"]
+
+
+def test_real_d06_d08_baseline_chains_are_structurally_valid():
+    data = json.loads(Path("PROJECT_STATES/AUTHORITY_FRESHNESS_BASELINE_2026-08-21.json").read_text(encoding="utf-8"))
+    assert {p["project_id"] for p in data["projects"]} == {"D06", "D07", "D08"}
+    for project in data["projects"]:
+        result = chain_audit(project)
+        assert result["status"] == "PASS", (project["project_id"], result["errors"])
