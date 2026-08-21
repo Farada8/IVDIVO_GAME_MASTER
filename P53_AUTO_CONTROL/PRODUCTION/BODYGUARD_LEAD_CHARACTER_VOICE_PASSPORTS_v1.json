@@ -1,0 +1,51 @@
+{
+  "artifact": "BODYGUARD_LEAD_CHARACTER_VOICE_PASSPORTS_v1",
+  "status": "WORKING_PROVIDER_NEUTRAL",
+  "source_authority": "English Recording Master v1.6 + P51/P52/P53 current runtime",
+  "characters": {
+    "NAOMI_PARK": {
+      "perceived_age": "early-mid 30s",
+      "vocal_weight": "grounded medium-low",
+      "pitch_impression": "low-mezzo/alto",
+      "texture": "clean natural human texture; not polished announcer",
+      "articulation": "precise, economical",
+      "default_tempo": "controlled; slightly faster when solving danger",
+      "breath_behavior": "stable; private cost may reduce volume/pace, never breathy intimacy",
+      "phrase_endings": "decisive without theatrical drop",
+      "humor_rhythm": "dry, literal, delayed rather than performative",
+      "silence_style": "work first; softer answer may be withheld",
+      "authority_behavior": "clarity > force",
+      "public_register": "professional, compact",
+      "private_register": "slightly quieter, not softer or maternal",
+      "stress_signature": "more exact, not louder",
+      "vulnerability_signature": "controlled timing / withheld softer response / personal cost deferred",
+      "fear_signature": "attention narrows operationally, not emotionally",
+      "recovery_signature": "returns to task quickly after private crack",
+      "mic_proximity_states": ["neutral close","command","private low-volume","post-action recovery","public-facing","fatigue"],
+      "forbidden_modes": ["ice queen monotone","seductive bodyguard","maternal protector","action-hero growl","breathy romance"],
+      "pair_identity": "Eli may get selective attention; environmental awareness never disappears"
+    },
+    "ELI_KWON": {
+      "perceived_age": "early 30s",
+      "vocal_weight": "natural medium to medium-low",
+      "pitch_impression": "flexible tenor/baritone speaking impression",
+      "texture": "stage-trained but non-announcer",
+      "articulation": "musician timing; public ease, private compression",
+      "default_tempo": "easy public rhythm; fewer words/slower private",
+      "breath_behavior": "one earned rhythm/breath fracture under pressure",
+      "phrase_endings": "public polish; private lines may end more plainly",
+      "humor_rhythm": "music/metaphor based, lightly self-aware",
+      "silence_style": "lets no/boundary stand; does not fill every gap",
+      "authority_behavior": "asks more as trust grows",
+      "public_register": "warm, controlled, recognizably public-facing",
+      "private_register": "shorter/lower/less performed",
+      "stress_signature": "public mask thins; cognition remains active",
+      "vulnerability_signature": "shame/uncertainty/costly choice without helplessness",
+      "fear_signature": "rhythm breaks before agency does",
+      "recovery_signature": "reclaims choice rather than demanding comfort",
+      "mic_proximity_states": ["public stage","neutral close","private low-volume","post-action breath recovery","fatigue"],
+      "forbidden_modes": ["helpless celebrity","possessive alpha","permanent charming smile","trauma exhibition","announcer"],
+      "pair_identity": "attention + remembering + asking + accepting no + costly choice"
+    }
+  }
+}
