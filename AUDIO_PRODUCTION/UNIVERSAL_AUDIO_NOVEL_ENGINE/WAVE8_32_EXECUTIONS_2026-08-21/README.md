@@ -6,13 +6,17 @@ Status: `WAVE8_01_32_COMPLETE / CURRENT_MAIN_RECONCILED / WAVE9_PROVIDER_BRIDGE_
 This folder is the clean current-main persistence surface for the already-executed Wave8 cycle. It does **not** rerun Wave8 and does **not** introduce a second Audio Engine. Canonical runtime remains `audio/studio/runtime`.
 
 ## Fresh authority
-- start/reconciliation main: `9ecb752dced8055b11c520ebd89c21c6daff7867`;
+- final reconciliation base main: `a1ef1dc8e7f44d71f57a7774aa40cde9f28b4834`;
+- provider hardening entered main at `9ecb752dced8055b11c520ebd89c21c6daff7867` via PR #122;
+- SI-0014 / Run33 controlled partial-write recovery is merged on top and is REUSE_CURRENT; its pilot evidence explicitly has `real_interruption=false`;
 - Wave7 PR #109: merged/current;
 - post-render PR #103: merged/current;
-- provider hardening PR #122: merged/current, replacing stale PR #121;
-- stale Wave8 PR #114: research/provenance source only, not merge target;
-- Wave8 evidence-frontier PR #111: bounded candidate/research, requires fresh-main trust-boundary reconciliation before any promotion;
-- Drive Wave8 mirror: `1ytMxCtllxyVfqiRTyRb_wjgfRbppcw0y`.
+- stale Wave8 PR #114: closed/superseded as integration target, research/provenance only;
+- intermediate PR #124: closed/superseded after main advanced during persistence;
+- current clean Wave8 integration target: draft PR #126;
+- Wave8 evidence-frontier PR #111: bounded candidate/research, requires trust-boundary reconciliation before any promotion;
+- Drive Wave8 mirror: `1ytMxCtllxyVfqiRTyRb_wjgfRbppcw0y`;
+- fresh Drive reconciliation/readback supplement: `1aiBb2PpqFFXCMSya6YpBKiRHsW70FBLPH3c1eFlWl_8`.
 
 ## Evidence ceiling
 Provider/account reads: 0 in this work block. Paid synthesis: 0. Human-listening claims: 0. Real voice/pronunciation locks: 0. Real Lesson Zero WAV/alignment/economics: none. Story mutations: 0.
