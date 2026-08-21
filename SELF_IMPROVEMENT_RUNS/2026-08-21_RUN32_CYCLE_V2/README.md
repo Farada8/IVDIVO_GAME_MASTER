@@ -4,6 +4,8 @@ Status: WORKING R&D EVIDENCE / NOT STORY CANON / NOT AUTO-PROMOTED.
 
 Purpose: execute a second 32-prompt self-improvement cycle after the prior RUN32→RUN64 work had already advanced through N-series execution on `main`. This cycle intentionally avoids duplicating N01–N46 and focuses on convergence, mechanism promotion discipline, real audio evidence, package/version integrity, telemetry, pruning, and next-pilot selection.
 
+Current review branch: `codex/run32-cycle-v2-final-2026-08-21`. The original branch is superseded after a fresh-main rebase using exact Git blob identities for the run artifacts.
+
 Execution rule: freshness sweep -> concurrent-dialog rebase -> authority resolution -> semantic dedupe -> execute bounded prompt -> verify -> persist -> disposition -> next gate.
 
 Artifacts:
