@@ -1,1 +1,1 @@
-{"status":"PREPARED_QUEUE_BLOCKED_BY_D01_LOCK","current_stop_gate":"D01_FOUNDER_EXPLICIT_LOCK_DECISION","after_d01_lock":"B03_F1_F2_F3 -> N24-N47 -> CH1 only FATAL0/MAJOR0","SI_candidate":"SI-0015","prose_authorized":false}
+{"status":"PREPARED_QUEUE","stop":"D01_FOUNDER_EXPLICIT_LOCK_DECISION","after_lock":"B03_F1_F2_F3_THEN_N24_N47","candidate":"SI-0015","prose":false}
