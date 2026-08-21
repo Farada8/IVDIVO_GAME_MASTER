@@ -1,0 +1,179 @@
+{
+  "schema_version": "2.0",
+  "updated": "2026-08-21",
+  "status": "CURRENT_CANDIDATE_MACHINE_CONFIG",
+  "authority": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+  "primary_objective_order": [
+    "P0_AUTHORITY_SAFETY_INTEGRITY",
+    "P1_WRITE_STRONG_COMPLETE_BOOKS",
+    "P2_LOCKED_BOOK_TO_HIGH_QUALITY_AUDIO_NOVEL",
+    "P3_PRODUCTION_RELIABILITY_SPEED_REUSE_COST",
+    "P4_ENGINE_TOOL_PROMPT_PROGRAM_QUALITY",
+    "P5_RESEARCH_LEARNING",
+    "P6_BROADER_IVDIVO_CAPABILITY"
+  ],
+  "production_loops": {
+    "book": {
+      "authority_router": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
+      "studio_router": "CURRENT_IVDIVO_WRITING_STUDIO_AUTHORITY.md",
+      "terminal_success": "STORY_LOCK",
+      "story_first": true
+    },
+    "audio_novel": {
+      "authority_router": "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md",
+      "required_input": "STORY_LOCK_WITH_SOURCE_HASH",
+      "terminal_success": "MASTER_LOCK_RELEASE_GO",
+      "may_reopen_story_without_earliest_failure_evidence": false
+    },
+    "self_improvement": {
+      "delta_intake": "IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md",
+      "reference_learning": "IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md",
+      "registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+      "registry_schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
+      "utility": "tools/ivdivo_self_improvement.py"
+    }
+  },
+  "lifecycle": [
+    "OBSERVE",
+    "CAPTURE",
+    "DEDUPE",
+    "DIAGNOSE",
+    "RESEARCH",
+    "DEVELOP",
+    "PILOT_CANARY",
+    "RED_TEAM_REGRESSION",
+    "PROMOTION_DECISION",
+    "APPLY",
+    "VERIFY",
+    "MONITOR",
+    "RETAIN_NARROW_MERGE_ROLLBACK_SUPERSEDE"
+  ],
+  "priority_classes": {
+    "A": "PRODUCTION_BLOCKER_OR_MAJOR_LEVER",
+    "B": "HIGH_REUSE_HIGH_QUALITY_LEVER",
+    "C": "DOMAIN_OPTIMIZATION",
+    "D": "EXPLORATORY_RESEARCH",
+    "E": "LOW_VALUE_DUPLICATE_RITUAL"
+  },
+  "priority_dimensions": [
+    "ACTIVE_TASK_RELEVANCE",
+    "P1_P2_IMPACT",
+    "SYSTEMIC_RECURRENCE",
+    "EVIDENCE_STRENGTH",
+    "TRANSFERABILITY",
+    "DEPENDENCY_UNBLOCKING",
+    "EFFORT",
+    "REGRESSION_RISK",
+    "REVERSIBILITY",
+    "URGENCY"
+  ],
+  "wip_guard": {
+    "primary_meta_candidate_max": 1,
+    "independent_parallel_pilots_max": 2,
+    "captured_backlog_unlimited_if_stateful": true,
+    "production_frontier_outranks_meta_work": true,
+    "exceptions": [
+      "SYSTEM_FATAL_MAJOR_BLOCKS_PRODUCTION",
+      "IMPROVEMENT_IS_DIRECT_PREREQUISITE",
+      "FOUNDER_EXPLICITLY_SWITCHES_TO_SYSTEM_DEVELOPMENT"
+    ]
+  },
+  "mandatory_sweeps": [
+    "SUBSTANTIAL_PROJECT_BOOT",
+    "STORY_GATE_OR_MAJOR_DEVELOPMENT_RED_TEAM_MILESTONE",
+    "STORY_LOCK_BEFORE_AUDIO_HANDOFF",
+    "AUDIO_HARD_PILOT",
+    "AUDIO_RELEASE_QC_OR_MASTER_LOCK",
+    "MEANINGFUL_HUMAN_MARKET_EXTERNAL_FEEDBACK",
+    "RECURRING_PRODUCTION_DEFECT",
+    "BEFORE_NEW_UNIVERSAL_ENGINE_ROUTER_PROMPT"
+  ],
+  "book_sensors": [
+    "FATAL_MAJOR_TYPE_AND_EARLIEST_FAILED_LAYER",
+    "REPAIR_CYCLE_COUNT",
+    "PROTAGONIST_PASSIVITY",
+    "WEAK_MIDPOINT_CLIMAX_RESOLUTION",
+    "EXPOSITION_LORE_OVERLOAD",
+    "P51_VOICE_COLLISION_SHARED_CONSTRUCTIONS",
+    "P52_FLAT_EMOTIONAL_RANGE",
+    "P53_AUTHORITY_ROUTING_ERROR",
+    "CHARACTER_AS_FUNCTION",
+    "READER_HOMEWORK_COMPREHENSION",
+    "CONTINUITY_CONTRADICTION",
+    "SOURCE_DISTANCE_ORIGINALITY_RISK",
+    "UPSTREAM_CAUSE_OF_REPEATED_LINE_EDIT"
+  ],
+  "audio_sensors": [
+    "SPOKEN_UNIT_AMBIGUITY",
+    "TEXT_PROTECTION_VIOLATION",
+    "VOICE_AUDITION_REJECTION_CAUSE",
+    "DIRECTION_CHANGE_FAILURE",
+    "PAIR_ENSEMBLE_FAILURE",
+    "LONG_FORM_FATIGUE",
+    "PRONUNCIATION_IDENTITY_DRIFT",
+    "CLUE_SFX_MUSICAL_FACT_INCONSISTENCY",
+    "RENDER_BLOCK_REGEN_CAUSE",
+    "PROVIDER_API_FAILURE",
+    "ALIGNMENT_TIMELINE_ERROR",
+    "MIX_MASTER_QC_FAILURE",
+    "MANUAL_REVIEW_DEFECT",
+    "LISTENING_COMPREHENSION_PERFORMANCE_FAILURE",
+    "PREVENTABLE_PROVIDER_COST_WASTE"
+  ],
+  "productivity_sensors": [
+    "DUPLICATE_READING_SEARCH",
+    "CONTEXT_RECONSTRUCTION",
+    "UNNECESSARY_FULL_REGENERATION",
+    "SERIALIZED_INDEPENDENT_BRANCHES",
+    "MISSING_TEMPLATE_SCHEMA",
+    "PAID_PROVIDER_BEFORE_PREFLIGHT_CANARY",
+    "WORK_BEFORE_AUTHORITY_HASH_RESOLUTION",
+    "REPEATED_MANUAL_TRANSFER",
+    "REPEATED_OUTPUT_NOT_PERSISTED_AS_REUSABLE_ARTIFACT",
+    "OVERBROAD_PROMPT_CAUSING_CORRECTION_CYCLES"
+  ],
+  "research_contract": {
+    "problem_driven": true,
+    "required_fields": [
+      "DECISION_TO_IMPROVE",
+      "CURRENT_UNCERTAINTY",
+      "EVIDENCE_NEEDED",
+      "BEST_SOURCE_CLASSES",
+      "STOPPING_RULE",
+      "ABSTRACTION_TARGET",
+      "PILOT_OR_APPLICATION_TARGET"
+    ],
+    "output_separation": [
+      "SOURCE_FACT",
+      "ABSTRACT_MECHANISM",
+      "INFERENCE",
+      "HYPOTHESIS",
+      "TEST",
+      "DECISION"
+    ]
+  },
+  "promotion_firewall": {
+    "newer_is_not_better": true,
+    "model_vote_is_not_authority": true,
+    "larger_test_count_is_not_literary_proof": true,
+    "filename_final_is_not_lock": true,
+    "promotion_without_application_is_incomplete": true,
+    "application_without_verification_status": "APPLIED_UNVERIFIED",
+    "human_signal_must_be_real": true,
+    "rollback_required_for_material_system_changes": true
+  },
+  "self_reference_guard": {
+    "engine_changes_must_enter_own_registry": true,
+    "engine_may_not_bypass_own_gates": true,
+    "monitor_meta_work_starvation": true,
+    "monitor_backlog_bloat": true,
+    "monitor_duplicate_rules": true,
+    "monitor_false_promotion": true,
+    "monitor_useful_candidates_stuck": true
+  },
+  "current_acceptance": {
+    "non_runtime_operating_system": "CANDIDATE_PENDING_READBACK_AND_ROUTER_SYNC",
+    "utility_runtime": "PROVISIONAL_UNTIL_EXACT_CHECKOUT_SMOKE",
+    "next_gate": "SYNC_CURRENT_POINTERS_DRIVE_MIRROR_READBACK_THEN_PROMOTION_REVIEW"
+  }
+}
