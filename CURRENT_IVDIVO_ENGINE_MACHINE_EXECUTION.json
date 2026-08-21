@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "VERIFIED_CURRENT_MACHINE_EXECUTION_NOT_CANON",
+  "purpose": "Machine-execution pointer for the tested IVDIVO Engine v11.2 package. This file routes executable implementation evidence; it never overrides Founder instruction, story/book canon, current domain authority, project source-of-truth, or Self-Improvement authority.",
+  "engine": {
+    "display_version": "IVDIVO ENGINE v11.2",
+    "runtime_version": "IVDIVO-ENGINE/6.2.0-continuous-execution",
+    "base_release": "IVDIVO_ENGINE_v11_1_MICROPHONE_CHOREOGRAPHY_CURRENT.zip",
+    "base_drive_id": "1XFd4fVfTT_HOFnOEaLe-ruzRfOZGQ1L1",
+    "current_release": "IVDIVO_ENGINE_v11_2_CONTINUOUS_EXECUTION_CURRENT.zip",
+    "current_drive_id": "1xsZ6SrhHQpEMu_xhC9e-M6QUTO5dIfc3",
+    "sha256": "d7985036fc97b74019aa74bf422d03f2f6cbe2d5f6e30736bb70032fc399ff4f",
+    "size_bytes": 279417,
+    "fresh_unzip_regression": {
+      "framework": "pytest",
+      "passed": 290,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "integration_report_drive_id": "1Q7ewWz7-Mt-Ss39a6_r15m48nodzmjiO",
+    "checksum_drive_id": "1-aZXa53KSqsRBJjqdr_s0TvnwBXl60U8",
+    "fresh_unzip_log_drive_id": "17FmrAuQ4p1lg54RqrFQFrQBPP7I8iD4l"
+  },
+  "authority_refs": [
+    "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
+    "IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md",
+    "IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md",
+    "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+    "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+    "IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md",
+    "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+    "schemas/IVDIVO_EXECUTION_STATE_SCHEMA_v1.json",
+    "tools/ivdivo_next_action.py",
+    "IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md",
+    "AUDIO_PRODUCTION/IVDIVO_AUDIO_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE_v1.0.md",
+    "AUDIO_PRODUCTION/IVDIVO_AUDIO_SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT_v1.0.md"
+  ],
+  "capabilities": [
+    "FAIL_CLOSED_PERSISTED_STATE_CONTINUATION",
+    "NO_REPEATED_CONTINUATION_WORD_WHEN_EXPLICIT_AUTO_GATES_PASS",
+    "CONCURRENT_DIALOG_REBASE_COMPATIBILITY",
+    "CHAT_ONLY_RESULT_INGESTION_AND_PERSISTENCE_GATE",
+    "SEMANTIC_DELTA_DEDUPE_AND_UNIVERSALIZATION_SCREENING",
+    "CROSS_MODEL_TASK_ASSIGNMENT_GUARDS",
+    "BOUNDED_RUN_CARD_VALIDATION",
+    "FUTURE_CRITICAL_ASSET_ESCROW",
+    "SHARED_MUSICAL_FACT_VERIFICATION",
+    "PROVIDER_NEUTRAL_STAGED_VOICE_AUDITION_BINDING_EVIDENCE",
+    "SELF_IMPROVEMENT_V2_WIP_RESEARCH_ENGINE_AND_EVIDENCE_BRIDGE"
+  ],
+  "continuation_contract": {
+    "repeated_continuation_word_required": false,
+    "auto_continue_requires": [
+      "NO_CURRENT_BLOCKER",
+      "CONTINUATION_POLICY_EXPLICITLY_ENABLED",
+      "NEXT_ACTION_SAFE_TRUE",
+      "NEXT_ACTION_ZERO_COST_TRUE",
+      "NEXT_ACTION_REVERSIBLE_TRUE",
+      "NEXT_ACTION_TOOL_EXECUTABLE_HERE_TRUE"
+    ],
+    "missing_required_flag": "FAIL_CLOSED_STOP",
+    "after_each_material_action": "VERIFY -> PERSIST -> REBASE -> RECOMPUTE_DAG -> CONTINUE_UNTIL_REAL_GATE"
+  },
+  "self_improvement_bridge": {
+    "authority": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+    "status": "COMPATIBILITY_BRIDGE_NOT_PARALLEL_AUTHORITY",
+    "wip_limits": {"primary_meta_integration_max": 1, "independent_parallel_pilots_max": 2},
+    "requires_evidence_class_separation": true,
+    "verified_current_requires_application_and_verification_evidence": true,
+    "research_requires_decision_and_stopping_rule": true,
+    "engine_promotion_requires_mature_contract_and_regression": true
+  },
+  "prohibitions": [
+    "NO_CANON_MUTATION_BY_MACHINE_POINTER",
+    "NO_PROVIDER_CALL_OR_CREDIT_SPEND_FROM_READ_ONLY_CONTINUATION_RESOLVER",
+    "NO_SECRET_OR_API_KEY_PERSISTENCE",
+    "NO_HUMAN_SIGNAL_FABRICATION",
+    "NO_CHAT_MEMORY_AS_AUTHORITY",
+    "NO_MODEL_VOTE_CANON",
+    "NO_PROJECT_SPECIFIC_AUDIO_IDENTITY_TRANSFER_AS_UNIVERSAL_MECHANISM"
+  ],
+  "does_not_override": [
+    "FOUNDER_NEWEST_DIRECT_INSTRUCTION",
+    "LOCKED_STORY_BOOK_PROJECT_CANON",
+    "CURRENT_DOMAIN_AUTHORITIES",
+    "PROJECT_SPECIFIC_SOURCE_OF_TRUTH_AND_EXECUTION_STATE",
+    "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+    "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md"
+  ]
+}
