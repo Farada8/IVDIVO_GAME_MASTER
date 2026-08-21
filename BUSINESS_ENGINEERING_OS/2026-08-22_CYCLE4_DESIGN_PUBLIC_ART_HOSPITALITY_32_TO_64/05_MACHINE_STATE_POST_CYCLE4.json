@@ -1,15 +1,14 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "cycle": "CYCLE4_DESIGN_PUBLIC_ART_HOSPITALITY",
   "date": "2026-08-22",
-  "status": "PERSISTED_READBACK_VERIFIED",
+  "status": "PERSISTED_READBACK_VERIFIED_PARALLEL_RECONCILED",
   "github": {
     "repository": "Farada8/IVDIVO_GAME_MASTER",
     "base_branch": "main",
     "base_sha_observed": "be100f75ef5c7136513cfe5a1a931d3beeb49d75",
     "working_branch": "cycle4-design-business-engine-2026-08-22",
     "cycle_path": "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_DESIGN_PUBLIC_ART_HOSPITALITY_32_TO_64",
-    "readback_file_count": 6,
     "readback_verified": true
   },
   "drive": {
@@ -21,8 +20,6 @@
     "proofs_and_state": "1d8cT1howIzT6ozNEDXe9btPrDhD4qONy",
     "upstream_business_raw_authority": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
     "upstream_business_raw_count_reconciled": 69,
-    "work_products_readback_count": 4,
-    "proof_docs_readback_count": 1,
     "readback_verified": true
   },
   "drive_documents": {
@@ -31,6 +28,26 @@
     "run32": "14lZinp2qQSHQgsahjlV9g1kcqY11X5yfoJxBLTWaECs",
     "next64": "1YyDjJUUb-VOQ9NN_hn3IJnhm0rOvXxehQKTuZD8OjTM",
     "machine_state_proofs": "1u1cvjCiofmi3NYXf9dh05IDjOs6vrrj4Tn_HPbXutQk"
+  },
+  "parallel_reconciliation": {
+    "detected": true,
+    "project": "WICKLOW_SHILLELAGH_MASTER_PROJECT",
+    "drive_folder": "1qcpyix-tTCk57cEkPtWgX61PnX1LJgxj",
+    "parallel_vertical_claimed_module_range": "B81-B112",
+    "parallel_vertical_claimed_contract_range": "C97-C128",
+    "parallel_protocol_range": "P-M01-P-M08",
+    "parallel_reported_run32": "27_KEEP_5_HOLD_0_KILL",
+    "parallel_reported_tests": "32_OF_32_PASS",
+    "parallel_next_prompts": 64,
+    "authority_rule": "PARALLEL_VERTICAL_PRESERVED_NOT_AUTO_MERGED"
+  },
+  "namespace": {
+    "general_design_modules": {"first": "BDES01", "last": "BDES32", "count": 32},
+    "general_design_contracts": {"first": "CDES01", "last": "CDES32", "count": 32},
+    "protocols": {"first": "P-DES-01", "last": "P-DES-12", "count": 12},
+    "old_general_module_aliases": "B81-B112_PRE_RECONCILIATION_ONLY",
+    "old_general_contract_aliases": "C97-C128_PRE_RECONCILIATION_ONLY",
+    "collision_gate": "REQUIRED_BEFORE_FUTURE_GLOBAL_ID_ALLOCATION"
   },
   "source_state": {
     "business_raw_library": "CONFIRMED_UPSTREAM_AUTHORITY",
@@ -48,18 +65,16 @@
     "next_prompts_derived": 64,
     "next_prompts_executed": 0
   },
-  "engine": {
-    "modules": {"first": "B81", "last": "B112", "count": 32},
-    "contracts": {"first": "C97", "last": "C128", "count": 32},
-    "protocols": {"first": "P-DES-01", "last": "P-DES-12", "count": 12},
+  "proof_system": {
     "proof_planes": ["K0-K5", "D0-D6", "T0-T6", "E0-E7"],
-    "non_substitution": "K != D != T != E"
-  },
-  "proof_state": {
+    "non_substitution": "K != D != T != E",
     "knowledge": "MIXED_UPSTREAM_K_GRADES_DESIGN_INGEST_PENDING",
-    "design": "D0_ENGINE_ARCHITECTURE_ONLY_NO_REAL_SITE_PILOT",
-    "technical": "T0_NO_REAL_SITE_TECHNICAL_PILOT",
+    "design": "D0_GENERAL_ENGINE_ARCHITECTURE_ONLY",
+    "technical": "T0_GENERAL_ENGINE_NO_MAPPED_REAL_SITE_PILOT",
     "market": "NO_NEW_E3_E4_EVIDENCE",
+    "parallel_shillelagh_proof_import": "NOT_YET_MAPPED_INTO_GENERAL_D_T_E_OBJECTS"
+  },
+  "claims": {
     "buyer_intent_claimed": false,
     "profitability_claimed": false,
     "legal_or_code_compliance_claimed": false,
@@ -68,10 +83,12 @@
   "self_improvement": {
     "verified_authority": "v2",
     "v3_reference_ingest": "CANDIDATE_ONLY",
-    "cycle4_design_bridge": "CANDIDATE_UNTIL_REAL_PILOT",
+    "general_design_bridge": "CANDIDATE_UNTIL_REAL_PILOT",
+    "parallel_mural_application_readiness_plane": "DISCOVERY_ONLY",
+    "new_rule": "NAMESPACE_COLLISION_GATE",
     "promotion_rule": "REAL_PILOT_NET_GAIN_WITH_REGRESSION_PASS_REQUIRED"
   },
-  "current_constraint": "INGEST_FIRST_DESIGN_SOURCES -> SELECT_ONE_REAL_IRISH_SITE -> BUILD_DESIGN_PROJECT_OBJECT -> D_T_RED_TEAM -> PROTOTYPE_RENDER_FIXTURES -> COMMISSION_PROOF_PACK",
+  "current_constraint": "MAP_SHILLELAGH_VERTICAL_TO_GENERAL_BDES_OBJECTS + INGEST_FIRST_DESIGN_SOURCES -> VERIFY_REAL_SITE/BRIEF -> D_T_RED_TEAM -> PROTOTYPE_OR_SUBMISSION_PACK -> REAL_OUTCOME",
   "next_acceptance_target": {
     "design_grade": "D3_PLUS",
     "technical_grade": "T2_PLUS",
@@ -83,6 +100,7 @@
     "unknown_structure": "NULL_OR_TBD",
     "unknown_code_compliance": "NULL_OR_TBD",
     "unknown_economics": "NULL_OR_TBD",
-    "unpersisted_parallel_chat_work": "DISCOVERY_ONLY"
+    "unpersisted_parallel_chat_work": "DISCOVERY_ONLY",
+    "same_numeric_id_does_not_imply_same_module": true
   }
 }
