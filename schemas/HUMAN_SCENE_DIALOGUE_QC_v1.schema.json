@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ivdivo.local/schemas/HUMAN_SCENE_DIALOGUE_QC_v1.schema.json",
+  "title": "IVDIVO Human Scene Dialogue QC Report v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project_id",
+    "scene_id",
+    "authority",
+    "text_status",
+    "human_scene_state",
+    "speech_fingerprints",
+    "suspect_lines",
+    "text_vs_performance",
+    "severity_counts",
+    "gate_result",
+    "next_action"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "project_id": {"type": "string", "minLength": 1},
+    "scene_id": {"type": "string", "minLength": 1},
+    "authority": {"type": "string", "minLength": 1},
+    "text_status": {"enum": ["WORKING", "LOCKED", "EXACT_TEXT_PROTECTED"]},
+    "story_facts_protected": {"type": "array", "items": {"type": "string"}},
+    "human_scene_state": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["character_id", "immediate_want", "background_want", "known", "unknown", "status", "speech_risk", "default_defense"],
+        "properties": {
+          "character_id": {"type": "string"},
+          "body_state": {"type": "string"},
+          "emotional_state": {"type": "string"},
+          "cognitive_load": {"type": "string"},
+          "immediate_want": {"type": "string"},
+          "background_want": {"type": "string"},
+          "fear_or_loss": {"type": "string"},
+          "known": {"type": "array", "items": {"type": "string"}},
+          "believed": {"type": "array", "items": {"type": "string"}},
+          "suspected": {"type": "array", "items": {"type": "string"}},
+          "unknown": {"type": "array", "items": {"type": "string"}},
+          "wrong_about": {"type": "array", "items": {"type": "string"}},
+          "status": {"type": "string"},
+          "relationship_debt": {"type": "string"},
+          "speech_risk": {"type": "string"},
+          "default_defense": {"type": "string"}
+        }
+      }
+    },
+    "speech_fingerprints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["character_id", "vocabulary_domain", "directness", "humor_mechanism", "correction_style", "stress_pattern", "would_not_naturally_say"],
+        "properties": {
+          "character_id": {"type": "string"},
+          "vocabulary_domain": {"type": "array", "items": {"type": "string"}},
+          "abstract_concrete_balance": {"type": "string"},
+          "sentence_length": {"type": "string"},
+          "directness": {"type": "string"},
+          "hedging_style": {"type": "string"},
+          "humor_mechanism": {"type": "string"},
+          "question_style": {"type": "string"},
+          "correction_style": {"type": "string"},
+          "apology_style": {"type": "string"},
+          "silence_tolerance": {"type": "string"},
+          "stress_pattern": {"type": "string"},
+          "would_say": {"type": "array", "items": {"type": "string"}},
+          "would_not_naturally_say": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "dialogue_beat_map": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["beat_id", "speaker", "trigger", "tactic", "intended_effect", "observed_result"],
+        "properties": {
+          "beat_id": {"type": "string"},
+          "speaker": {"type": "string"},
+          "trigger": {"type": "string"},
+          "heard_or_misread": {"type": "string"},
+          "tactic": {"type": "string"},
+          "intended_effect": {"type": "string"},
+          "observed_result": {"type": "string"},
+          "tactical_change": {"type": "boolean"}
+        }
+      }
+    },
+    "suspect_lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["line_id", "speaker", "failure_codes", "severity", "reason", "disposition"],
+        "properties": {
+          "line_id": {"type": "string"},
+          "speaker": {"type": "string"},
+          "text_excerpt": {"type": "string", "maxLength": 300},
+          "failure_codes": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "RESPONSE_FLOATS",
+                "AUTHOR_RESPONSE",
+                "VOICE_CONVERGENCE",
+                "CLEVERNESS_CLUSTER",
+                "HOUSE_STYLE_LEAK",
+                "OVERLY_KNOWING",
+                "OVERLY_PERCEPTIVE",
+                "EXPOSITION_WITHOUT_MOTIVE",
+                "REGISTER_MISMATCH",
+                "PERFECT_COMPREHENSION",
+                "THEMATIC_DECLARATION",
+                "ACTIVITY_NOT_ACTION",
+                "READ_ALOUD_FRICTION",
+                "KNOWLEDGE_BOUNDARY_BREAK",
+                "RELATIONSHIP_AUTHORITY_BREAK"
+              ]
+            }
+          },
+          "severity": {"enum": ["FATAL", "MAJOR", "MEDIUM", "POLISH"]},
+          "reason": {"type": "string"},
+          "disposition": {"enum": ["KEEP", "REVISE", "PERFORMANCE_TEST", "HUMAN_SIGNAL_REQUIRED", "REMOVE"]},
+          "minimal_patch": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "house_style_metrics": {
+      "type": "object",
+      "properties": {
+        "repeated_frames": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "speaker_distribution": {"type": "object"},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "text_vs_performance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["moment_id", "classification", "evidence"],
+        "properties": {
+          "moment_id": {"type": "string"},
+          "classification": {"enum": ["PERFORMANCE_DEFECT", "WRITING_DEFECT", "ADAPTATION_DEFECT", "TRANSLATION_DEFECT", "CONTEXT_REQUIRED", "NO_DEFECT"]},
+          "evidence": {"type": "string"}
+        }
+      }
+    },
+    "severity_counts": {
+      "type": "object",
+      "required": ["fatal", "major", "medium", "polish"],
+      "properties": {
+        "fatal": {"type": "integer", "minimum": 0},
+        "major": {"type": "integer", "minimum": 0},
+        "medium": {"type": "integer", "minimum": 0},
+        "polish": {"type": "integer", "minimum": 0}
+      }
+    },
+    "human_signal_required": {"type": "array", "items": {"type": "string"}},
+    "gate_result": {"enum": ["PASS", "FAIL", "HOLD_FOR_HUMAN_SIGNAL", "HOLD_FOR_PERFORMANCE_TEST"]},
+    "next_action": {"type": "string", "minLength": 1}
+  }
+}
