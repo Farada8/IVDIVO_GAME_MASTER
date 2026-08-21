@@ -1,6 +1,6 @@
 {
-  "schema_version": "ivdivo.room917_execution_state/3.1",
-  "updated": "2026-08-21T13:56:51+01:00",
+  "schema_version": "ivdivo.room917_execution_state/3.2",
+  "updated": "2026-08-21T15:04:00+01:00",
   "project": "ROOM 917 CALLS AT MIDNIGHT",
   "project_id": "ROOM917",
   "active_branch": "THE_INSURABLE_FIRE",
@@ -84,6 +84,23 @@
       "promotion_to_live_timing_forbidden": true
     }
   },
+  "downstream_working_evidence": [
+    {
+      "episode": "E02_LENI_BIRD",
+      "artifact": "AUDIO_PRODUCTION/ROOM917/ROOM917_E02_CROSS_DIALOG_STAGING_RECOVERY_v1.0.md",
+      "drive_id": "1L1JOcPCi8s_Vlz_tICrom9HceuSigZgPB4IUyG-o7ow",
+      "status": "WORKING_RECOVERED_CROSS_DIALOG_PRODUCTION_EVIDENCE_NOT_CURRENT_FRONTIER",
+      "disposition": "ACCEPT_AS_WORKING_DOWNSTREAM_EVIDENCE",
+      "protected_constraints": [
+        "NO_NEAR_EAR_E02",
+        "MOVEMENT_MUST_FOLLOW_STATUS_INFORMATION_CHANGE",
+        "CATE_CASSETTE_VOICE_OWNS_DEVICE_ACOUSTIC_DOMAIN",
+        "MINA_SWITCHBOARD_LOBBY_RECEPTION_RETURN_PATH_CAUSAL",
+        "NO_COMPENSATING_MUSIC_STING_ON_FOURTH_NOTE_STOP"
+      ],
+      "promotion_gate": "ONLY_AFTER_CURRENT_E01_V2_QUALITY_AND_UPSTREAM_POST_RENDER_GATES_PASS"
+    }
+  ],
   "ingest_register": {
     "title": "ROOM 917 — FIRST RENDER INGEST + VERSION CONTROL REGISTER — v1.0",
     "drive_id": "1v_A25N-fxI097TqxQh4hgp7db5gdJFaInczUSNWYktY"
@@ -161,7 +178,10 @@
   "continuation_policy": {
     "default_continue_when_unblocked": true,
     "require_repeated_continuation_word": false,
-    "safe_zero_cost_reversible_only": true
+    "policy_authority": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md v1.2+",
+    "real_gate_semantics": true,
+    "safe_zero_cost_reversible_only": false,
+    "note": "SAFE/zero-cost/reversible are not blanket prerequisites. Continue when authority, freshness, dependencies, evidence, provider/tool availability and approval gates permit; stop fail-closed at the actual gate."
   },
   "secret_policy": "API_KEYS_NEVER_IN_GITHUB_DRIVE_JSON_PROMPTS_OR_CANON"
 }
