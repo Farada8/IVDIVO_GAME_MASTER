@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"IVDIVO Evidence Contract v1",
+  "type":"object",
+  "required":["evidence_id","project","source_type","source_version","claim","status","authority_weight","provenance"],
+  "properties":{
+    "evidence_id":{"type":"string"},
+    "project":{"type":"string"},
+    "source_type":{"enum":["FOUNDER","CANON","HUMAN_NATIVE","PRACTITIONER","BLIND_LISTENER","PROVIDER_RESPONSE","MACHINE_TEST","EXTERNAL_AI","WEB_DOCUMENT","INFERENCE"]},
+    "source_version":{"type":"string"},
+    "claim":{"type":"string"},
+    "status":{"enum":["PASS","FAIL","WATCH","HOLD","DISCOVERY_ONLY","REJECTED"]},
+    "authority_weight":{"type":"integer","minimum":0,"maximum":100},
+    "provenance":{"type":"object"},
+    "conflicts_with":{"type":"array","items":{"type":"string"}},
+    "decision_impact":{"type":"array","items":{"type":"string"}},
+    "expires_when":{"type":["string","null"]},
+    "notes":{"type":["string","null"]}
+  }
+}
