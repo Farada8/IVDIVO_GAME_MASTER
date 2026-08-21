@@ -1,0 +1,32 @@
+name: CPMRP Cycle2 Tests
+
+on:
+  pull_request:
+    paths:
+      - '31_IDEAS/SPRINTS/2026-08-21_CPMRP_CYCLE2_SELECTED32_INTEROP_ADVERSARIAL/**'
+      - '31_IDEAS/SPRINTS/2026-08-21_CPMRP_CREATIVE_PROVENANCE_MICROROYALTY_CYCLE1/**'
+      - '.github/workflows/cpmrp-cycle2-tests.yml'
+  push:
+    branches:
+      - 'rnd/cpmrp-cycle2-interop-adversarial-2026-08-21'
+    paths:
+      - '31_IDEAS/SPRINTS/2026-08-21_CPMRP_CYCLE2_SELECTED32_INTEROP_ADVERSARIAL/**'
+      - '31_IDEAS/SPRINTS/2026-08-21_CPMRP_CREATIVE_PROVENANCE_MICROROYALTY_CYCLE1/**'
+      - '.github/workflows/cpmrp-cycle2-tests.yml'
+
+jobs:
+  selected32-interop-adversarial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Cycle1 regression
+        env:
+          PYTHONPATH: .:31_IDEAS/SPRINTS/2026-08-21_CPMRP_CREATIVE_PROVENANCE_MICROROYALTY_CYCLE1/runtime
+        run: python 31_IDEAS/SPRINTS/2026-08-21_CPMRP_CREATIVE_PROVENANCE_MICROROYALTY_CYCLE1/tests/test_cpmrp_core.py
+      - name: Cycle2 selected32 proof suite
+        env:
+          PYTHONPATH: .:31_IDEAS/SPRINTS/2026-08-21_CPMRP_CREATIVE_PROVENANCE_MICROROYALTY_CYCLE1/runtime:31_IDEAS/SPRINTS/2026-08-21_CPMRP_CYCLE2_SELECTED32_INTEROP_ADVERSARIAL/runtime
+        run: python 31_IDEAS/SPRINTS/2026-08-21_CPMRP_CYCLE2_SELECTED32_INTEROP_ADVERSARIAL/tests/test_cpmrp_cycle2.py

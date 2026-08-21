@@ -1,0 +1,72 @@
+{
+  "project": "CPMRP",
+  "cycle": 2,
+  "date": "2026-08-21",
+  "status": "BOUNDED_INTEROP_ADVERSARIAL_PROTOTYPE",
+  "parent_cycle1_head": "f552d97ef70c32747b48d6cae49ce5155524ca8b",
+  "selected_prompts_executed": [
+    "N05","N06","N07","N08","N09","N10","N11","N12",
+    "N17","N21",
+    "N29","N30","N31","N32","N33","N34","N35","N36","N37","N38","N39","N40","N41","N42","N43","N44",
+    "N49","N50","N51","N52","N61","N62"
+  ],
+  "selected_prompts_executed_count": 32,
+  "next_prompts_designed_count": 64,
+  "next_prompt_range": "N65-N128",
+  "proof": {
+    "cycle1_regression": "10/10 PASS",
+    "cycle2_tests": "32/32 PASS",
+    "github_workflow_run": 32531823818,
+    "self_improvement_integrity_run": 32531823816,
+    "self_improvement_integrity": "SUCCESS"
+  },
+  "implemented": [
+    "TDMREP_ODRL_EXPORT",
+    "C2PA_TRAINING_MINING_ADAPTER",
+    "ASSET_PASSPORT_V0_2",
+    "EXTENDED_USAGE_INTENT",
+    "RECEIPT_ATTESTATION_INTERFACE",
+    "OFFLINE_RECEIPT_VERIFY",
+    "APPEND_ONLY_RECEIPT_CORRECTION",
+    "SI0014_DURABLE_REGISTRY_LEDGER_ADAPTER",
+    "SIMILARITY_EVIDENCE_V2",
+    "INDEPENDENT_CREATION_PACKET",
+    "PROVENANCE_GRAPH_CYCLE_GATE",
+    "MULTISOURCE_SHARE_METADATA",
+    "CLAIM_INTEGRITY",
+    "SYBIL_GUARD",
+    "HUMAN_APPEAL",
+    "CAN_USE_AGENT_CONTRACT",
+    "FREE_SOURCE_FALLBACK",
+    "FULL_REGISTER_TO_LEDGER_INTEGRATION",
+    "CYCLE2_RED_TEAM"
+  ],
+  "hard_invariants": [
+    "STANDARD_PROFILE_PURITY",
+    "CONSTRAINED_FAIL_CLOSED",
+    "CLAIM_ASSERTION_NOT_OWNERSHIP_PROOF",
+    "CORRECTION_APPEND_ONLY",
+    "DURABLE_RUNTIME_REUSE",
+    "COMMONNESS_SUPPRESSION",
+    "PROVENANCE_GRAPH_ACYCLIC_FOR_SETTLEMENT",
+    "REPUTATION_NOT_TITLE",
+    "HUMAN_APPEAL_REQUIRED",
+    "AGENT_UNKNOWN_MEANS_HOLD_OR_FALLBACK",
+    "TRANSACTION_BEFORE_SETTLEMENT"
+  ],
+  "not_proven": [
+    "external_parser_conformance",
+    "universal_legal_precedence",
+    "copyright_ownership",
+    "production_identity_and_signing",
+    "gdpr_production_compliance",
+    "kyc_tax_payment_readiness",
+    "market_willingness_to_pay",
+    "platform_adoption",
+    "real_money_settlement"
+  ],
+  "next_gate": "CYCLE3_CONFORMANCE_FEDERATION_SETTLEMENT_SANDBOX",
+  "not_legal_authority": true,
+  "not_si_promoted": true,
+  "real_money_dispatch_allowed": false
+}
