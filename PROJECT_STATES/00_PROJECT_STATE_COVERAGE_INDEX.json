@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "CURRENT_ROUTING_COVERAGE_INDEX_NOT_STORY_CANON",
+  "coverage": [
+    {"project_id":"D04","title":"SEVEN NIGHTS BEFORE CODE BLUE","state_path":"PROJECT_STATES/D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE_CURRENT_STATE.json","recovery":"PASS"},
+    {"project_id":"D09","title":"THE MAN WHO CAME BACK","state_path":"PROJECT_STATES/D09_THE_MAN_WHO_CAME_BACK_CURRENT_STATE.json","recovery":"PASS"},
+    {"project_id":"D10","title":"BLOODBOUND","state_path":"PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json","recovery":"PASS"},
+    {"project_id":"D02_ROOM917","title":"ROOM 917 CALLS AT MIDNIGHT","state_path":"AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json","recovery":"PASS_NONSTANDARD_LOCATION"},
+    {"project_id":"IVDIVO_BOOK_2","title":"ORBITAL YOUTH","state_path":"IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/DRAFT_STATUS.md","recovery":"PASS_TEXT_POINTER_NON_JSON"}
+  ],
+  "gaps_requiring_targeted_recovery_before_claiming_exact_next_action": [
+    "IVDIVO_BOOK_1_LESSON_ZERO: durable authority exists but project routing is distributed; publication/external-feedback status must be resolved from current book authority, not guessed.",
+    "D03_BODYGUARD_FOR_THE_FALLEN_IDOL: no PROJECT_STATES file located in the current coverage directory during N04 cold-start test.",
+    "D05_NINETY_MISSING_MINUTES: aggregate state says text complete/story locked/publication-specialist hold, but no dedicated PROJECT_STATES file was present in directory scan.",
+    "D06_SHE_STOLE_MY_NAME: aggregate text-complete/locked classification exists; exact downstream gate is not represented in PROJECT_STATES.",
+    "D07_THE_PERFECT_WIFE_KNOWS: aggregate text-complete/locked classification exists; exact downstream gate is not represented in PROJECT_STATES.",
+    "D08_SHE_FIRED_THE_BILLIONAIRE: aggregate text-complete/locked classification exists; exact downstream gate is not represented in PROJECT_STATES."
+  ],
+  "cold_start_test": {
+    "D04":"PASS: exact story/audio downstream state and next obligation recoverable without chat history.",
+    "D09":"PASS after N03: Founder lock gate recoverable without aggregate prose.",
+    "D10":"PASS after N03: E01-E06 frontier and E07-E12 next text block recoverable without chat history.",
+    "D02_ROOM917":"PASS if audio path is included by boot manifest; exact state is project-specific and fresher than aggregate mirrors.",
+    "other_text_complete_projects":"PARTIAL: aggregate classification recoverable, exact current downstream obligation may require Drive/project authority lookup."
+  },
+  "priority_for_future_state_creation": ["D03","D05","D06","D07","D08","IVDIVO_BOOK_1"],
+  "law": "Do not create detailed project-state facts from aggregate labels alone. Recover the actual project authority first, then persist a minimal routing state."
+}
