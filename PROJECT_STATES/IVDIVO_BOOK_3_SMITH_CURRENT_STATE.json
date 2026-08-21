@@ -1,1 +1,49 @@
-{"schema_version":"1.1","updated":"2026-08-21","project_id":"IVDIVO_BOOK_3_SMITH","title":"SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE","status":"PREPARED_PRE_PROSE_NOT_ACTIVE_UNTIL_D01_FOUNDER_LOCK","portfolio_precondition":{"active_project":"D01_THE_WIFE_AT_HIS_WEDDING","required_event":"FOUNDER_EXPLICIT_LOCK_FOR_D01_PLUS_PERSISTENCE_READBACK"},"prepared_frontier":"WORKING_SCENE_CARDS_CH1_CH29_PLUS_CYCLE32_ENGINEERING","cycle32":{"drive_folder_id":"1faAfasqcsYCgHCOHAla7tKrpDCgoK9Rp","prompts_executed":32,"modules":32,"contracts":32,"proofs":32,"protocols":32,"next_prompts_designed":64},"prepared_red_team":{"fatal":0,"blocking_major":1,"open_major":"SMITH_PERSONAL_FAMILY_CONTINUITY_AFTER_B03_ACTIVATION"},"prose_authorized":false,"next_obligation":"WAIT_FOR_D01_FOUNDER_LOCK. After D01 lock persistence closure, fresh-rebase B03; resolve remaining Founder gate; rerun N24-N47; CH1 only if FATAL=0 and MAJOR=0."}
+{
+  "schema_version": "1.2",
+  "updated": "2026-08-21",
+  "project_id": "IVDIVO_BOOK_3_SMITH",
+  "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+  "status": "ACTIVE_WORKING_PROSE_F1_RECORDED_CH04_PASS_CH05_AUTHORIZED",
+  "portfolio_precondition": {
+    "d01_founder_lock": "SATISFIED",
+    "d01_lock_drive_id": "1eueZnnYaUGktaSXCcMIiOAUUcINmCTV6xATBdZ9B9UA",
+    "d01_github_authority": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/FOUNDER_STORY_LOCK_AND_RECORDING_AUTHORITY_v1.0.md"
+  },
+  "founder_f1": {
+    "status": "RECORDED",
+    "drive_id": "1EkmIwNmE9kkZ6RBfeMZzQ6L-AbLKaPIcT5r8mU_PsU0",
+    "canon": ["Smith has a teenage daughter in the current saga period"],
+    "working": ["daughter age 16-17 pending timeline normalization"],
+    "unknown_do_not_invent": ["daughter name", "mother name", "exact marital history", "custody/household structure", "occupations", "contact schedule"]
+  },
+  "architecture": {
+    "working_scene_cards": "CH1-CH29",
+    "pre_prose_gate": "PASS_FATAL0_MAJOR0",
+    "prose_authorized": true
+  },
+  "working_manuscript_frontier": {
+    "completed_through": "CH04",
+    "ch01_drive_id": "197ikUS2gfyyXBykIMsgnPmCY8NphIVDLBLw0yZWx0PU",
+    "ch02_drive_id": "1Tx7jRTOJaiEA-YT_VGyIPWTDNKKQAb5PBHrj2wcDUaw",
+    "ch03_drive_id": "13fCfIg3mA0KTRfDvj4grmQGNW5tA6poImI4Ml2JiRsA",
+    "ch04_drive_id": "1Wvi1BtS949USSXln49_zIlPowSU4BSa9mvlvvTwCWJs",
+    "ch01_03_gate_drive_id": "1ToOyjGnfhuQC7cjmNl0Ihlhb9XaetrbPiI6c8hH5HY0",
+    "ch04_gate_drive_id": "1a_N1bIYgDe2cUu7X7hpK8DHD6WQ9CZN2YcG6e6j0JBU",
+    "latest_gate": "CH04_PASS_FATAL0_MAJOR0_CH05_AUTHORIZED"
+  },
+  "protected_invariants": [
+    "No Smith family facts beyond F1 without newer Founder authority",
+    "Confederation has no automatic Earth command jurisdiction",
+    "Local Slovenian emergency authority remains local",
+    "OES signature is evidence trigger, not ontology proof",
+    "Enia does not solve the case",
+    "Main case must close before series hook"
+  ],
+  "medium_watches": [
+    "Do not repeat Enia parallel teaching exercise as a revelation template",
+    "Do not promote OES reviewer without character need",
+    "CH05 must create real status conflict with Jana",
+    "Smith first model must be useful and wrong enough to generate later price"
+  ],
+  "next_obligation": "WRITE_CH05_WHAT_HAPPENED_BEFORE_THE_CALL_S013_S015_THEN_RUN_LOCAL_STORY_CHARACTER_DIALOGUE_GATE"
+}
