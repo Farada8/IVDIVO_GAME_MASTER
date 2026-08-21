@@ -1,49 +1,82 @@
 # IVDIVO — AUDIO PRODUCTION START HERE
 
-**Status:** CANONICAL ROUTER / START HERE  
-**Version:** 1.0  
-**Scope:** ALL IVDIVO audio developments  
-**Canonical production standard:** `IVDIVO_AUDIO_PRODUCTION_CANON_AND_BOOT_OS_v1.0.md`
+**Status:** CURRENT ROUTER / START HERE  
+**Version:** 1.1  
+**Updated:** 2026-08-21  
+**Scope:** ALL IVDIVO audio developments
 
-## Primary command
+## Current authority lookup
 
-For any IVDIVO project moving from approved text/story into audio, load the universal audio canon first, then the active project's current authority and project-specific audio overlay.
+Before any audio-production work, restore the current authority from both surfaces.
 
-Do **not** use conversational memory as the primary source when a current Drive/GitHub authority exists.
+### Google Drive CURRENT router
+`CURRENT — IVDIVO AUDIO PRODUCTION AUTHORITY`  
+Drive ID: `1B_iDVPXR0JgyKFb6mMohXnzzrkEGnZRptE4s_z1nM_E`
 
-## Mandatory source order
+### Current consolidated universal production authority
+`IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md`  
+Drive ID: `1ZG15kNcGjUKR_OKHQoXcqfrfVddlX6ma`
 
-1. Founder's newest direct instruction.
-2. Active project's current `PRODUCTION MASTER` / `CURRENT BRANCH AUTHORITY` / locked canon.
-3. Current Story / Character / Relationship / Continuity Bibles and exact script chain.
-4. `IVDIVO_AUDIO_PRODUCTION_CANON_AND_BOOT_OS_v1.0.md`.
-5. `IVDIVO_WRITING_PRODUCTION_CANON.md` and Narrative OS where relevant.
-6. Applicable specialized OS, including DORAMA MASS PRODUCTION OS for commercial dorama/romance serials.
-7. Working production artifacts.
-8. Reference mechanisms.
+This v3.3 consolidated release is the current universal audio-production authority discovered on 2026-08-21. Earlier v1/v2/v3.0–v3.2 documents remain base/history only where the current authority explicitly retains them.
+
+`IVDIVO_AUDIO_PRODUCTION_CANON_AND_BOOT_OS_v1.0.md` is a historical/base layer, **not** the current top router.
+
+## Authority order
+
+1. Founder’s newest direct instruction.
+2. Active project’s locked story/project canon and current project authority.
+3. Current consolidated universal audio authority (`v3.3` or any later Founder-approved/current router discovered after it).
+4. Current audited studio/router/machine/provider contracts referenced by the current authority.
+5. Project-specific audio overlay.
+6. Current voice-binding, pronunciation, acoustic-identity and protected-text locks.
+7. Current Director Score / render plan / cue sheets / manifests / accepted assets.
+8. Working takes/assets/timelines/mixes/QC.
 9. Archive / superseded / rejected material.
 
-## Universal boot
+**Fail closed** if active branch, source version/hash, cast lock, protected text, clue causality, project overlay, live/dry-run status or cross-build provenance is ambiguous.
 
-Before any render, casting, SFX, music or mix work:
+## Mandatory project boot
 
-`ACTIVE PROJECT -> AUTHORITY RESTORE -> STATUS MAP -> DELIVERY MODE -> PROJECT AUDIO OVERLAY -> LAST COMPLETED ARTIFACT -> NEXT UNBLOCKED OBLIGATION`
+`ACTIVE PROJECT -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + HASH -> DELIVERY MODE -> PROJECT AUDIO OVERLAY -> VOICE/PRONUNCIATION/ACOUSTIC LOCKS -> LAST COMPLETED ARTIFACT -> NEXT UNBLOCKED OBLIGATION`
 
 Status map:
 
 `CANON / WORKING / OPTION / UNKNOWN / REFERENCE ONLY / SUPERSEDED / REJECTED`
 
-## Production pipeline
+Do not reconstruct canon from conversational memory when authoritative sources exist.
 
-`AUTHORITY -> FORMAT -> PROJECT AUDIO OVERLAY -> CAST -> AUDITION -> PAIR TEST -> VOICE LOCK -> PRONUNCIATION -> DRY DIALOGUE -> ACTOR EDIT -> DIALOGUE QC -> AMBIENCE -> FOLEY -> RECURRING SFX -> EVIDENCE SFX -> PROCESSING -> MUSIC -> MIX -> PHONE/MONO QC -> BLIND LISTENER -> DEFECT REGISTER -> SURGICAL FIX -> FINAL QC -> MASTER -> RELEASE EXPORT`
+## Current universal production pipeline
 
-## Cross-project rule
+`LOCKED STORY -> AUTHORITY/BUILD MANIFEST -> SCENE + SPOKEN-UNIT MAP -> LISTENER CONTRACT -> DRAMATURGY -> STAGING -> CAST + VOICE BINDING -> PERFORMANCE DIRECTOR SCORE -> PAUSE/BREATH/LISTENING/OVERLAP -> SILENT REACTION ANCHORS -> MICROPHONE CHOREOGRAPHY / BLOCKING / PROXIMITY -> ACOUSTIC + POINT OF AUDITION + STEREO INTENT -> FOLEY/BODY MICROTEXTURE -> SFX/CLUE/PROCEDURAL SOUND + ACOUSTIC IDENTITY -> AMBIENCE -> MUSIC DRAMATURGY -> RENDER BLOCK COMPILATION -> PROVIDER DRY RUN -> PROVIDER PREFLIGHT -> HARD 3–5 MIN PILOT -> PARALLEL DIALOGUE + ASSET PRODUCTION -> DIALOGUE LOCK + ASSET LOCK -> EDIT-FIRST PASS -> RAW ALIGNMENT -> NORMALIZED ALIGNMENT -> RESOLVED TIMELINE -> MIX ACTION + CAUSAL OVERLAP + STEREO QC -> MIX/PREMASTER -> MASTERING -> MACHINE QC -> REVIEW PRIORITY -> HUMAN LISTEN/MANUAL REVIEW -> SELECTIVE REPAIR -> RELEASE GO/NO-GO -> MASTER LOCK`
 
-The **production process is reusable**. Project story content is not.
+The pipeline is a dependency DAG. Independent branches may run in parallel after their upstream gates pass; they converge before any consumer stage requiring both.
 
-Never transfer between projects without explicit authority:
-- names;
-- voice identities;
+## Project overlay requirement
+
+Instantiate `IVDIVO_AUDIO_PROJECT_OVERLAY_TEMPLATE_v1.0.md` or a newer equivalent for each active project before large-scale rendering.
+
+The overlay binds universal process to one project’s:
+- story authority and protected text;
+- delivery mode;
+- cast/voice bindings;
+- pronunciation;
+- performance continuity;
+- microphone proximity/blocking rules;
+- sound identity;
+- recurring/evidence assets;
+- acoustic passports / room tones;
+- music law;
+- forbidden implications/branches;
+- QC/release gates;
+- current production state.
+
+## Cross-project safety
+
+The **production process is reusable**. Story content is not.
+
+Never transfer without explicit project authority:
+- names or identities;
+- provider voice IDs;
 - culprit/solution;
 - clue chains;
 - signature sound motifs;
@@ -51,47 +84,31 @@ Never transfer between projects without explicit authority:
 - chronology;
 - obsolete branch facts.
 
-If a mechanism from another project is useful:
+Reusable mechanism rule:
 
 `REFERENCE -> ABSTRACT MECHANISM -> REMOVE PROJECT-SPECIFIC CONTENT -> TRANSFORM FOR ACTIVE PROJECT -> WORKING APPLICATION`
 
-## Project overlay requirement
+## Provider law
 
-Every audio production should instantiate `IVDIVO_AUDIO_PROJECT_OVERLAY_TEMPLATE_v1.0.md` or an equivalent current project-specific Audio Production Master before large-scale rendering.
+ElevenLabs and other providers are replaceable execution backends. Provider implementation is not story canon. API keys/secrets are never stored in canon, prompts or production documentation.
 
-The overlay must define at minimum:
-- active story engine and lock status;
-- delivery mode;
-- current source authority chain;
-- cast/voice bible;
-- pronunciation;
-- performance boundaries;
-- sound identity;
-- recurring/evidence assets;
-- ambience/room-tone palette;
-- music law;
-- forbidden implications;
-- obsolete-branch blacklist;
-- QC/release gates;
-- exact next production obligation.
+No DRY_RUN build can release. Provider-specific raw alignment may never bypass the normalized internal schema.
 
 ## Founder continuation commands
 
-When the Founder says `и / дальше / продолжай / делай / работай`:
+When Founder says `и / дальше / продолжай / делай / работай`:
 
-1. restore the active project's current authority;
-2. identify the last completed production artifact;
-3. execute the highest unblocked audio-production obligation;
-4. do not reopen locked story work without new evidence;
-5. save/version the artifact in the active project location;
+1. restore current universal + project authority;
+2. identify the last completed artifact;
+3. execute the highest unblocked production obligation;
+4. do not reopen locked story without new evidence;
+5. save/version the resulting artifact;
 6. report `DONE / STATUS / EXACT NEXT ACTION`.
 
 ## Tool honesty
 
-Do not claim audio was rendered, listened to, mixed or mastered unless a real tool performed that action or actual supplied audio was inspected.
+Do not claim audio was rendered, listened to, mixed or mastered unless a real tool performed that action or supplied audio was actually inspected.
 
-Without direct render access, produce the exact executable production artifacts: auditions, render blocks, actor directions, SFX prompts, timeline maps, mix maps, QC sheets, defect registers and release gates.
+Without direct render access, produce executable artifacts: authority/build manifests, listener contracts, Director Scores, voice-binding ledgers, render blocks, provider dry-run requests, SFX/Foley/acoustic plans, microphone choreography, timeline/mix maps, QC sheets, defect registers and release gates.
 
-## Universal law
-
-**STORY FIRST. CHARACTER SECOND. COMPREHENSION THIRD. SOUND SERVES STORY. MUSIC NEVER REPLACES DRAMA. NO SILENT CANON CHANGES.**
+**STORY AUTHORITY -> LISTENER COMPREHENSION -> CHARACTER/PERFORMANCE -> BODY/ACTION -> SPACE -> SOUND -> MUSIC -> MIX -> MASTER -> QC -> RELEASE.**
