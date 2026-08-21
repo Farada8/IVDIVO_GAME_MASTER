@@ -1,0 +1,17 @@
+{
+  "schema_version":"1.0",
+  "status":"CANDIDATE_RECOVERY_QUEUE_NOT_STORY_CANON",
+  "observed_current_index":"PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json",
+  "already_covered":["D04","D09","D10","D02_ROOM917","IVDIVO_BOOK_2"],
+  "missing_or_distributed":[
+    {"project_id":"D03","priority":"HIGH","reason":"text/project work exists but no PROJECT_STATES file in current directory","required_before_write":"recover current D03 authority and exact downstream gate"},
+    {"project_id":"D05","priority":"HIGH","reason":"aggregate says text complete/story locked/publication-specialist hold but dedicated routing state absent","required_before_write":"verify current publication-specialist hold and controlling artifact"},
+    {"project_id":"D06","priority":"MEDIUM","reason":"aggregate text-complete classification exists but exact downstream obligation not durable","required_before_write":"recover current project authority"},
+    {"project_id":"D07","priority":"MEDIUM","reason":"aggregate text-complete classification exists but exact downstream obligation not durable","required_before_write":"recover current project authority"},
+    {"project_id":"D08","priority":"MEDIUM","reason":"aggregate text-complete classification exists but exact downstream obligation not durable","required_before_write":"recover current project authority"},
+    {"project_id":"IVDIVO_BOOK_1","priority":"MEDIUM","reason":"authority exists but routing is distributed; publisher/external-feedback state must be resolved before project-state creation","required_before_write":"recover current Book 1 publication/external-feedback authority"}
+  ],
+  "write_law":"Do not infer missing project-state details from aggregate labels or chat memory. Recover actual current authority, then persist a minimal routing state with provenance and do-not-repeat list.",
+  "n03_disposition":"SUPERSEDED_IN_PART_BY_NEWER_MAIN_PLUS_DELTA_QUEUE_CREATED",
+  "n04_disposition":"PASS_WITH_KNOWN_GAPS_REUSED_FROM_CURRENT_COLD_START_INDEX"
+}
