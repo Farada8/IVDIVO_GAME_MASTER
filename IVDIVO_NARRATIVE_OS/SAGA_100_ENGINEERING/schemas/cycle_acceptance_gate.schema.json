@@ -1,0 +1,47 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/saga100/schemas/cycle_acceptance_gate.schema.json",
+  "title":"IVDIVO Saga100 Cycle Acceptance Gate",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["cycle_id","threshold_id","slots","crossing_gate","civilization_delta","result"],
+  "properties":{
+    "cycle_id":{"type":"string","pattern":"^S100-C(0[1-9]|1[0-9]|2[0-5])$"},
+    "threshold_id":{"type":"string","pattern":"^T(0[1-9]|1[0-9]|2[0-5])$"},
+    "slots":{"type":"object","additionalProperties":false,"required":["S","O","C","X"],"properties":{
+      "S":{"$ref":"#/$defs/line_gate"},
+      "O":{"$ref":"#/$defs/line_gate"},
+      "C":{"$ref":"#/$defs/line_gate"},
+      "X":{"$ref":"#/$defs/line_gate"}
+    }},
+    "crossing_gate":{"type":"object","additionalProperties":false,"required":["eligible","prerequisite_line_closure","upstream_consequences_loaded","irreducible_line_dependencies","rights_or_jurisdiction_conflict","advanced_actor_auto_commands","shared_civilization_delta"],"properties":{
+      "eligible":{"enum":["PASS","FAIL","HOLD","DEFERRED"]},
+      "prerequisite_line_closure":{"type":"boolean"},
+      "upstream_consequences_loaded":{"type":"boolean"},
+      "irreducible_line_dependencies":{"type":"integer","minimum":0},
+      "rights_or_jurisdiction_conflict":{"type":"boolean"},
+      "advanced_actor_auto_commands":{"type":"boolean"},
+      "shared_civilization_delta":{"type":"boolean"},
+      "hold_reasons":{"type":"array","items":{"type":"string"}}
+    }},
+    "civilization_delta":{"type":"object","additionalProperties":false,"required":["statement","evidence_refs","consequence_refs","locked"],"properties":{
+      "statement":{"type":"string","minLength":10},
+      "evidence_refs":{"type":"array","minItems":1,"items":{"type":"string"}},
+      "consequence_refs":{"type":"array","minItems":1,"items":{"type":"string"}},
+      "locked":{"type":"boolean"}
+    }},
+    "result":{"enum":["PASS","FAIL","HOLD","PARTIAL","DEFERRED_CROSSING"]},
+    "unresolved":{"type":"array","items":{"type":"string"}}
+  },
+  "$defs":{"line_gate":{"type":"object","additionalProperties":false,"required":["role","project_id","authority_status","book_independence","human_problem_first","line_function","consequence_carry","no_repeat","proof_refs"],"properties":{
+    "role":{"enum":["SMITH_OES","ORBITAL","CONFEDERATION_FRONTIER","CROSSING"]},
+    "project_id":{"type":["string","null"]},
+    "authority_status":{"enum":["LOCKED","CURRENT","WORKING","OPTION","UNKNOWN","HOLD","UNASSIGNED"]},
+    "book_independence":{"enum":["PASS","FAIL","HOLD","NOT_RUN"]},
+    "human_problem_first":{"enum":["PASS","FAIL","HOLD","NOT_RUN"]},
+    "line_function":{"enum":["PASS","FAIL","HOLD","NOT_RUN"]},
+    "consequence_carry":{"enum":["PASS","FAIL","HOLD","NOT_RUN"]},
+    "no_repeat":{"enum":["PASS","FAIL","HOLD","NOT_RUN"]},
+    "proof_refs":{"type":"array","items":{"type":"string"}}
+  }}}
+}
