@@ -1,0 +1,42 @@
+{
+  "schema_version": "ivdivo.audio.wave9.provider_access_bridge/1.1",
+  "date": "2026-08-21",
+  "status": "FRESH_MAIN_V2_CODED_CI_PENDING_EXTERNAL_RUN_BLOCKED",
+  "branch_base_main_sha": "f9e5d17cf95a8ce7f16118a14f3da58a49975acc",
+  "consumed_parallel_changes": [
+    "PR132_EXTERNAL_EVIDENCE_TRUST_BOUNDARY",
+    "PR134_CROSS_CLASS_RELEASE_LINEAGE_HARDENING"
+  ],
+  "canonical_runtime": "audio/studio/runtime",
+  "adds_only": [
+    ".github/workflows/elevenlabs-provider-snapshot.yml",
+    "audio/studio/provider_snapshot_receipt.py",
+    "audio/studio/tests/test_provider_snapshot_receipt.py",
+    "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/WAVE9_PROVIDER_ACCESS_BRIDGE_2026-08-21/00_EXECUTION_REPORT.md",
+    "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/WAVE9_PROVIDER_ACCESS_BRIDGE_2026-08-21/01_STATE.json"
+  ],
+  "evidence_ceiling": {
+    "provider_account_reads": 0,
+    "paid_synthesis_calls": 0,
+    "human_review_claims": 0,
+    "real_voice_locks": 0,
+    "story_mutations": 0,
+    "external_truth_claimed": false
+  },
+  "manual_external_dependency": {
+    "secret_name": "ELEVENLABS_API_KEY",
+    "workflow": "ElevenLabs Provider Snapshot Evidence",
+    "required_result": "SUCCESS",
+    "required_evidence_class": "AUTH_PROVIDER",
+    "required_readback_strength": "CONTENT_HASH_VERIFIED",
+    "max_snapshot_age_seconds": 21600
+  },
+  "next_after_real_auth_provider_pass": "BOUND_CURRENT_MODEL_VOICE_INVENTORY",
+  "forbidden": [
+    "PASTE_SECRET_IN_CHAT_GIT_DRIVE",
+    "PAID_SYNTHESIS_BEFORE_AUTH_PROVIDER_PASS",
+    "CALLER_BOOLEAN_AS_EXTERNAL_TRUTH",
+    "PROVIDER_RECEIPT_AS_LIVE_AUDIO_OR_HUMAN_EVIDENCE",
+    "BUILD_ANOTHER_GENERIC_AUDIO_ENGINE"
+  ]
+}
