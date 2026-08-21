@@ -1,0 +1,40 @@
+{
+  "artifact": "BODYGUARD_E01_RU_S1_FAIR_ANCHOR_MANIFEST_WORKING_v1",
+  "status": "NOT_LIVE_READY_UNTIL_RU_ANCHOR_QA_AND_PROVIDER_PREFLIGHT",
+  "locale": "ru-RU",
+  "source_authority": "EN Recording Master v1.6",
+  "localization_authority": "BODYGUARD_E01_RU_LOCALIZATION_ANCHORS_WORKING_v0.2.json",
+  "provider_fields": {
+    "provider": "ElevenLabs",
+    "endpoint_profile": null,
+    "model_id": null,
+    "language_code": "ru",
+    "output_format": null,
+    "pronunciation_map_version": null
+  },
+  "roles": {
+    "NAOMI_PARK": {
+      "fair_anchor_source_index": 88,
+      "working_text_ru": "Во время опасности мне нужно, чтобы вы выполняли команды. В остальное время — чтобы вы с ними соглашались.",
+      "candidate_slots": ["A", "B", "C"],
+      "listener_contract": {
+        "must_understand": "emergency authority is limited; ordinary agreement still matters",
+        "may_feel": "competence and safety",
+        "suppress": ["domination", "maternal care", "romantic softness"]
+      }
+    },
+    "ELI_KWON": {
+      "fair_anchor_source_index": 87,
+      "working_text_ru": "Я целый год слушал, как чужие решения называют моими предпочтениями.",
+      "candidate_slots": ["A", "B", "C"],
+      "listener_contract": {
+        "must_understand": "past year damaged his autonomy but he remains active and articulate",
+        "may_feel": "private cost beneath public competence",
+        "suppress": ["helplessness", "self-pity", "alpha challenge"]
+      }
+    }
+  },
+  "fairness_law": "A/B/C for a role render the exact same locked RU anchor with loudness-matched clean comparison.",
+  "live_gate": "PMV19 provider preflight PASS + RU anchor/localization QA PASS + explicit model/output profile",
+  "voice_lock": false
+}
