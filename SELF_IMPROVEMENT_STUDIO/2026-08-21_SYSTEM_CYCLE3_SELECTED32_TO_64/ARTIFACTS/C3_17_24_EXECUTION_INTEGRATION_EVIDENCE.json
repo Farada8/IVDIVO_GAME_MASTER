@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-21",
+  "runs": {
+    "C3-26": {
+      "status": "PASS_STRUCTURAL_CONTEXT_REDUCTION_A_B",
+      "baseline": "full C3-18 human RUN CARD includes repeated shared Inputs/Execute/Gate boilerplate",
+      "treatment": "Prompt IR compiled in C3-25",
+      "required_semantics_preserved": ["authority refs","task delta","required inputs","forbidden changes","outputs","gate","evidence requirement"],
+      "generic_prose_removed": ["repeated freshness/rebase boilerplate","generic no-irreversible-mutation prose","generic persist/readback prose"],
+      "decision_equivalence": "PASS_STRUCTURAL",
+      "outcome_equivalence": "NOT_CLAIMED_NO_CONTROLLED_MODEL_AB_RUN",
+      "decision": "IR_CAN_REDUCE_CONTEXT_ONLY_AFTER_PROVIDER_PACKET_REHYDRATES_SHARED_GUARDS"
+    },
+    "C3-27": {
+      "status": "PASS_ADAPTER_SPEC_NOT_PROVIDER_RUNTIME",
+      "target": "Claude-compatible persistence surfaces",
+      "mapping": {
+        "stable_project_rules": "CLAUDE.md / bounded rules surface",
+        "task_specific_ir": "ephemeral task packet",
+        "specialist_review": "bounded subagent/skill where supported",
+        "pre_post_mutation_guards": "hooks/lifecycle checks where supported",
+        "canon_story_content": "REFERENCED_NOT_COPIED_INTO_GLOBAL_PROVIDER_RULES"
+      },
+      "provider_runtime_executed": false,
+      "boundary": "adapter design from current research; no claim of Claude runtime success"
+    },
+    "C3-28": {
+      "status": "PASS_ADAPTER_SPEC_NOT_API_RUNTIME",
+      "target": "OpenAI code-first agent/task packet",
+      "mapping": {
+        "task": ["task_id","goal","task_delta"],
+        "authority": ["authority_refs","source_hashes","protected facts"],
+        "tools": ["allowed_tools","mutation_scope"],
+        "guards": ["freshness","approval","secret scan","expected diff","readback","rollback"],
+        "handoff": ["output_contract","evidence_class","open_gates","next_action"]
+      },
+      "provider_runtime_executed": false,
+      "provider_lock_in": false
+    },
+    "C3-29": {
+      "status": "PARTIAL_PARITY_PACKET_READY_EXTERNAL_SECOND_REVIEW_NOT_RUN",
+      "source_case": "BODYGUARD / PROTECTION MONOPOLY",
+      "persisted_external_protocol": "09_CLAUDE OPUS — PRE-RECORDING SECOND-ENGINE AUDIT — Drive 1iCHqhaeG710YQwdZKVud8rzH5XZQGjkHGWpun6CKr6U",
+      "parity_requirements": ["same current recording authority","same text/source version","same hard locks","same audit question","no previous verdict leakage"],
+      "finding": "an independent reviewer protocol exists, but a fresh paired same-source two-model trial was not located or executed in this tool session",
+      "next_gate": "TWO_ACTUAL_BLINDED_REPORTS_WITH_SOURCE_PARITY"
+    },
+    "C3-31": {
+      "status": "PASS_LIVE_GITHUB_MUTATION_GUARDRAIL",
+      "fixture": "ARTIFACTS/C3_31_GUARDRAIL_LIVE_FIXTURE.json",
+      "initial_blob_sha": "92cec9addeeb4d7496982f55fa771082c74a9330",
+      "committed_blob_sha": "adb69025b37dc1b25c2305d7b087f7d6b01b3a20",
+      "stale_write_attempt": "HTTP_409_REJECTED",
+      "final_readback": "version=2 COMMITTED_AFTER_FRESHNESS_TOKEN",
+      "evidence_class": "LIVE_GITHUB_TOOL_EXECUTION"
+    },
+    "C3-32": {
+      "status": "PASS_REAL_PERSISTED_EXTERNAL_REPORT_RECONCILIATION_WITH_LIMITATION",
+      "external_report": "00D_SYSTEM_UPGRADE_ANALYSIS_v1.0 — CLAUDE SOURCE — Drive 16zX-jPA0axsYYRqreSDc3WHKxzoGXdEIYg45t7eUhFE",
+      "dispositions": [
+        {"finding":"D1 single source of truth","disposition":"ACCEPT_WITH_MODIFICATION","reason":"current cross-conversation/current-authority system supersedes proposed old 00A-only solution"},
+        {"finding":"D2 stale active pointer","disposition":"ACCEPT_RESOLVED_BY_CURRENT_STATE","reason":"project-specific execution states and freshness/rebase now control routing"},
+        {"finding":"D3 collapse 100-headcount review theater","disposition":"ACCEPT_PRINCIPLE","reason":"internal specialist lenses may remain; fake 100-person transcript/count ritual carries no evidence weight"},
+        {"finding":"D4 human signal loop","disposition":"ACCEPT_STILL_EXTERNAL_GATE","reason":"current system explicitly separates Human Signal from model/internal evidence"},
+        {"finding":"P51 dialogue fingerprint","disposition":"ACCEPT_INTEGRATED","reason":"Human Scene/Dialogue Naturalism layers now cover voice divergence more broadly"},
+        {"finding":"P52 emotional dynamic range","disposition":"ACCEPT_INTEGRATED_AS_DIAGNOSTIC","reason":"contrast/release remains useful but numeric ritual cannot auto-rewrite"},
+        {"finding":"old ROOM917 E01-03 targeted text/audio patches","disposition":"HOLD_AS_HISTORICAL_EVIDENCE","reason":"ROOM917 current story is locked and post-render state v3.3 governs selective repair; old pre-Phase-D patch instructions cannot reopen current text automatically"}
+      ],
+      "independence_note": "one real persisted Claude report reconciled against current authority; not a two-fresh-model comparative trial"
+    },
+    "C3-33": {
+      "status": "PASS_COMPATIBILITY_INTEGRATION_ARCHITECTURE",
+      "integration_sequence": [
+        "CURRENT_SURFACE_SCAN",
+        "STATE_ADAPTER",
+        "SHARED_FACTS",
+        "OBLIGATION_DAG",
+        "PROMPT_IR",
+        "PRE_TOOL_GUARDS",
+        "EXECUTE",
+        "POST_TOOL_READBACK",
+        "TRANSACTION_STATE",
+        "TELEMETRY_EVIDENCE",
+        "LEARNING",
+        "REBASE",
+        "NEXT_ROUTE"
+      ],
+      "authority": "EXTENSION_UNDER_CURRENT_MACHINE_EXECUTION_AND_SELF_IMPROVEMENT_V2",
+      "new_top_level_engine_created": false,
+      "remaining_before_promotion": ["packaged executable integration","full regression","real cross-domain durability telemetry"]
+    },
+    "C3-36": {
+      "status": "PASS_LIVE_PARTIAL_WRITE_FAILURE_DETECTION",
+      "transaction_state": "ARTIFACTS/C3_36_TRANSACTION_STATE.json",
+      "payload": "ARTIFACTS/C3_36_PARTIAL_PAYLOAD.json",
+      "sequence": ["PREPARED","PAYLOAD_WRITTEN","INTERVENING_STATE_ADVANCE","STALE_COMMIT_REJECTED_HTTP_409","READBACK_DETECTED_PAYLOAD_WITHOUT_COMMIT","REPAIR_REQUIRED_PERSISTED"],
+      "final_state": "REPAIR_REQUIRED",
+      "false_success_prevented": true,
+      "evidence_class": "LIVE_GITHUB_TOOL_EXECUTION"
+    }
+  }
+}
