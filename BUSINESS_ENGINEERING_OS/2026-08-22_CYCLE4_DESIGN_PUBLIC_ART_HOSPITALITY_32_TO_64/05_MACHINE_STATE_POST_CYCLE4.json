@@ -1,14 +1,16 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "cycle": "CYCLE4_DESIGN_PUBLIC_ART_HOSPITALITY",
   "date": "2026-08-22",
-  "status": "ENGINEERING_PASS_COMPLETE_PERSISTENCE_IN_PROGRESS",
+  "status": "PERSISTED_READBACK_VERIFIED",
   "github": {
     "repository": "Farada8/IVDIVO_GAME_MASTER",
     "base_branch": "main",
     "base_sha_observed": "be100f75ef5c7136513cfe5a1a931d3beeb49d75",
     "working_branch": "cycle4-design-business-engine-2026-08-22",
-    "cycle_path": "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_DESIGN_PUBLIC_ART_HOSPITALITY_32_TO_64"
+    "cycle_path": "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_DESIGN_PUBLIC_ART_HOSPITALITY_32_TO_64",
+    "readback_file_count": 6,
+    "readback_verified": true
   },
   "drive": {
     "business_os_root": "1yiKVWme2ZvAQMi0g1zIOzA4G5V4LMAgc",
@@ -18,11 +20,21 @@
     "work_products": "1PHNYX4fxmi8jgIr9EaXt7f_L2AXM3rnY",
     "proofs_and_state": "1d8cT1howIzT6ozNEDXe9btPrDhD4qONy",
     "upstream_business_raw_authority": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
-    "upstream_business_raw_count_reconciled": 69
+    "upstream_business_raw_count_reconciled": 69,
+    "work_products_readback_count": 4,
+    "proof_docs_readback_count": 1,
+    "readback_verified": true
+  },
+  "drive_documents": {
+    "master": "1TzrzJSlvXcu-JVFS7Zw5rdgfRRcYIwiA3M65FjHRaf0",
+    "library_engineering_spec": "18-cszxDGuubjqu6703j5DXqMVDbtOIFg9E-9zZd_eco",
+    "run32": "14lZinp2qQSHQgsahjlV9g1kcqY11X5yfoJxBLTWaECs",
+    "next64": "1YyDjJUUb-VOQ9NN_hn3IJnhm0rOvXxehQKTuZD8OjTM",
+    "machine_state_proofs": "1u1cvjCiofmi3NYXf9dh05IDjOs6vrrj4Tn_HPbXutQk"
   },
   "source_state": {
     "business_raw_library": "CONFIRMED_UPSTREAM_AUTHORITY",
-    "design_raw_inbox": "CREATED",
+    "design_raw_inbox": "CREATED_EMPTY_OR_UNCONFIRMED_FOR_TIER_A",
     "loomis_search": "NO_CONFIRMED_MATCH",
     "arnheim_search": "NO_CONFIRMED_MATCH",
     "neufert_search": "NO_CONFIRMED_MATCH",
