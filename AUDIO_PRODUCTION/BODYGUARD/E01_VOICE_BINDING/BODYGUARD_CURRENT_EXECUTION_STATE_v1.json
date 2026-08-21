@@ -1,0 +1,34 @@
+{
+  "artifact": "BODYGUARD_CURRENT_EXECUTION_STATE_v1",
+  "updated": "2026-08-21",
+  "project": "BODYGUARD FOR THE FALLEN IDOL — THE PROTECTION MONOPOLY",
+  "story_state": "LOCKED_PASS",
+  "recording_master": "v1.6_RECORDING_LANGUAGE_CLEAN",
+  "p51_p52_p53": "PASS",
+  "audio_stage": "VOICE_AUDITION",
+  "voice_lock": false,
+  "current_gate": "S0_TECHNICAL_CANARY",
+  "zero_cost_preflight": "PASS",
+  "live_render_performed_in_this_line": false,
+  "blockers": [
+    "candidate voice IDs not bound",
+    "ElevenLabs API credential unavailable in current environment",
+    "no candidate WAVs supplied"
+  ],
+  "highest_unblocked_obligation": "complete/persist S0/S1 executable package and candidate binding contract",
+  "highest_blocked_live_obligation": "run S0 5-job technical canary",
+  "after_S0_pass": "run S1 15-job fair anchor comparison",
+  "prohibited": [
+    "voice lock without real audio",
+    "full E01 render before survivor/pair gate",
+    "405-take batch before evidence",
+    "E04-E24 batch render",
+    "text rewrite from hypothetical casting failure"
+  ],
+  "next_evidence_return": [
+    "S0/S1 audio files",
+    "provider request/provenance sidecars",
+    "machine QC",
+    "candidate mapping"
+  ]
+}
