@@ -2,8 +2,8 @@
   "candidate_id": "SI-0015",
   "title": "Project-slice freshness assertion for CURRENT routers",
   "candidate_type": "PROCESS_OR_ROUTER_RULE_PLUS_EXECUTABLE_CANARY",
-  "status": "DEVELOPMENT_CONTRACT_READY",
-  "scope": "UNIVERSAL_IVDIVO",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO_CANDIDATE_NOT_CURRENT_AUTHORITY",
   "source_provenance": [
     {
       "source_type": "PRODUCTION_DEFECT",
@@ -18,6 +18,16 @@
     {
       "source_type": "GITHUB",
       "locator": "commit c6401e2ed5c8ff242bf85bf4f24eea1c6849b359 — Register SI-0015 on clean B03 prepared branch",
+      "date": "2026-08-21"
+    },
+    {
+      "source_type": "GITHUB_CI",
+      "locator": "workflow run 32523634608 — SI-0015 Project Slice Freshness Canaries — success",
+      "date": "2026-08-21"
+    },
+    {
+      "source_type": "GOOGLE_DRIVE_READBACK",
+      "locator": "document 1QclgnhzIKtSPJKDBzxnJCdg6VIKJLS5XPCbAnhAtrgs — SI-0015 EXECUTABLE PROJECT-SLICE FRESHNESS + APPROVAL CANARIES",
       "date": "2026-08-21"
     }
   ],
@@ -42,10 +52,23 @@
       "explicit approval gate without matching authority event"
     ]
   },
-  "evidence_state": "PRODUCTION_DEFECT_PLUS_MANUAL_REPAIR_EVIDENCE",
-  "promotion_level": "NONE_YET",
+  "evidence_state": "EXECUTABLE_CANARIES_LOCAL_7_OF_7_PASS_PLUS_GITHUB_ACTIONS_SUCCESS_PLUS_DRIVE_READBACK_PLUS_MAIN_IMPLEMENTATION",
+  "evidence": {
+    "local_result": "7/7 PASS",
+    "github_actions_run": 32523634608,
+    "github_actions_conclusion": "success",
+    "implementation_commit_on_main": "8a409cae3c6240d2f2051e39fd8d4b8311a5dfec",
+    "drive_readback_document_id": "1QclgnhzIKtSPJKDBzxnJCdg6VIKJLS5XPCbAnhAtrgs"
+  },
+  "promotion_level": "READY_FOR_PILOT_ONLY",
   "owner_role": "System Routing / Self-Improvement Governor",
-  "next_action": "Execute freshness/history/approval-event canaries before promotion.",
-  "next_gate": "EXECUTABLE_FRESHNESS_AND_APPROVAL_EVENT_CANARY_PASS",
-  "notes": "SI-0008 and SI-0014 are occupied by other candidates; SI-0015 is the current candidate identity. Mandatory registry metadata repair only; no lifecycle promotion is implied."
+  "promotion_limits": [
+    "NOT_VERIFIED_CURRENT",
+    "NO_STORY_CANON_AUTHORITY",
+    "NO_FOUNDER_APPROVAL_INFERENCE",
+    "NO_AUTOMATIC_ROUTER_MUTATION"
+  ],
+  "next_action": "Run bounded real project-router pilots and healthy historical/superseded controls; measure false positives before any broader promotion.",
+  "next_gate": "REAL_PROJECT_PILOT_PLUS_HEALTHY_CONTROL_PLUS_FALSE_POSITIVE_REVIEW",
+  "notes": "Promotion from DEVELOPMENT_CONTRACT_READY is limited to READY_FOR_PILOT because the recorded executable-canary gate has been satisfied. Universal/current promotion remains unproven."
 }
