@@ -1,0 +1,42 @@
+{
+  "artifact": "BODYGUARD_MULTILINGUAL_LOCALE_RISK_MATRIX_v1",
+  "status": "ZERO_COST_PREP",
+  "locales": {
+    "ru-RU": {
+      "priority": 1,
+      "source": "localized from EN",
+      "major_risks": ["translationese", "dub/announcer tone", "professional loanword consistency", "brevity read as hostility"],
+      "paid_scale": "pilot only"
+    },
+    "en": {
+      "priority": 2,
+      "source": "canonical authority",
+      "major_risks": ["RU-master accent leakage", "back-translation contamination", "public/private drift"],
+      "paid_scale": "after RU identity evidence"
+    },
+    "es-ES": {
+      "priority": 3,
+      "source": "future localization",
+      "major_risks": ["formality/pronoun choices", "warmth inflation", "regional vocabulary"],
+      "paid_scale": "HOLD until regional/business fork"
+    },
+    "es-LATAM/MX": {
+      "priority": 3,
+      "source": "future localization",
+      "major_risks": ["regional neutrality", "status vocabulary", "over-generalized neutral Spanish"],
+      "paid_scale": "HOLD until regional/business fork"
+    },
+    "de-DE": {
+      "priority": 4,
+      "source": "future localization",
+      "major_risks": ["bureaucratic calque", "sentence-final information delay", "false emotional distance", "professional compounds"],
+      "paid_scale": "PREP ONLY"
+    },
+    "it-IT": {
+      "priority": 4,
+      "source": "future localization",
+      "major_risks": ["warmth/intimacy inflation", "melodramatic cadence", "professional jargon naturalness"],
+      "paid_scale": "PREP ONLY"
+    }
+  }
+}

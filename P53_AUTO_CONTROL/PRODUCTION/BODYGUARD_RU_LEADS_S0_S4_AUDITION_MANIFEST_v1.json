@@ -1,0 +1,74 @@
+{
+  "artifact": "BODYGUARD_RU_LEADS_S0_S4_AUDITION_MANIFEST_v1",
+  "status": "DESIGN_READY_TEXT_NOT_FINAL_NATIVE_LOCK",
+  "locale": "ru-RU",
+  "source_anchor_version": "v0.3 WORKING",
+  "hard_blocker": "native/professional terminology QA before paid S1",
+  "stages": {
+    "S0_READ_ONLY_PREFLIGHT": {
+      "billable": false,
+      "checks": [
+        "credential exists without printing",
+        "provider connectivity",
+        "required model/capabilities discoverable",
+        "candidate voice/preview access",
+        "locale support",
+        "output/alignment contract"
+      ],
+      "casting_decision_allowed": false
+    },
+    "S0B_MINIMAL_CANARY": {
+      "billable": true,
+      "max_jobs": 2,
+      "roles": ["NAOMI_PARK", "ELI_KWON"],
+      "anchor_indices": {"NAOMI_PARK": 122, "ELI_KWON": 87},
+      "purpose": "technical synthesis/decodability/provenance only",
+      "casting_decision_allowed": false
+    },
+    "S1_FAIR_ANCHORS": {
+      "candidate_count_per_lead": 3,
+      "same_text_required": true,
+      "anchor_indices": {"NAOMI_PARK": [28, 122], "ELI_KWON": [87, 180]},
+      "music_reverb": false,
+      "loudness_match": true,
+      "first_elimination_allowed": true
+    },
+    "S2_SURVIVOR_DISCRIMINATION": {
+      "survivors_only": true,
+      "max_candidates_per_lead": 2,
+      "anchor_indices": {"NAOMI_PARK": [32, 88, 111, 160], "ELI_KWON": [61, 106, 121, 186, 188, 190]},
+      "purpose": "differentiate unresolved voice functions"
+    },
+    "S3_DIRECTION_AND_FORBIDDEN_MODES": {
+      "NAOMI_PARK": [
+        "same authority, slightly more humanity after safety",
+        "command clearer not louder",
+        "dry humor without smile-performance",
+        "private cost without breathy romance"
+      ],
+      "ELI_KWON": [
+        "public polish -> private economy",
+        "one rhythm fracture without helplessness",
+        "musician clue native, not exposition",
+        "accept boundary without submissive or alpha coding"
+      ]
+    },
+    "S4_PAIR": {
+      "pair": ["NAOMI_PARK", "ELI_KWON"],
+      "target": "privately important / professionally constrained",
+      "pass": [
+        "attention/respect audible",
+        "no forced flirtation",
+        "Naomi remains centered on work",
+        "Eli actively chooses protocol",
+        "extra charge survives underplaying"
+      ],
+      "fail": [
+        "couple-already",
+        "maternal Naomi",
+        "possessive Eli",
+        "chemistry only from romantic acting"
+      ]
+    }
+  }
+}
