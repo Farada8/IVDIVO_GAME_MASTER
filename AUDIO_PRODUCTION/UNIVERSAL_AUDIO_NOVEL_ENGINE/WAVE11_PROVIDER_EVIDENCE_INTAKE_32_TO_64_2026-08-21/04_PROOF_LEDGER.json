@@ -1,0 +1,17 @@
+{
+  "schema_version": "ivdivo.audio.wave11.proof_ledger/1.0",
+  "date": "2026-08-21",
+  "branch_base_main_sha": "61c1540e91fb7b849dc0e775d001893e2cc6fda0",
+  "proofs": [
+    {"id":"W11-P001","class":"AUTHORITY_READBACK","status":"PASS_REAL_INPUT","claim":"Wave11 branch cut from fresh main after NMM Cycle5 merge.","external_truth":false},
+    {"id":"W11-P002","class":"PARALLEL_DEDUPE","status":"PASS_REAL_INPUT","claim":"NMM Cycle5 provides project-specific dependency-aware HOLD/READY pattern but not universal cross-run provider artifact intake.","external_truth":false},
+    {"id":"W11-P003","class":"CODE_CONTRACT","status":"CODED_CI_PENDING","claim":"AUTH_PROVIDER artifact intake revalidates class-specific receipt, exact run/attempt/source lineage, optional snapshot file equality and freshness before inventory compilation.","external_truth":false},
+    {"id":"W11-P004","class":"SECURITY_CONTRACT","status":"CODED_CI_PENDING","claim":"workflow_run intake has read-only permissions, trusted default-branch checkout, no provider secret, no synthesis/dispatch and exact triggering-run artifact download.","external_truth":false},
+    {"id":"W11-P005","class":"AUTHORITY_FIREWALL","status":"CODED_CI_PENDING","claim":"provider execution-state resolver cannot authorize human lock, pre-spend GO or paid dispatch and rejects caller-boolean authority substitution by construction.","external_truth":false},
+    {"id":"W11-P006","class":"AUTH_PROVIDER","status":"UNKNOWN_EXTERNAL_NO_PERSISTED_EVIDENCE_VISIBLE","claim":"A current real authenticated provider artifact has been produced and is available to intake.","external_truth":true,"observed_persisted_events":0,"connector_limit":"workflow_dispatch runs are not directly enumerable with the available workflow-run listing wrapper"},
+    {"id":"W11-P007","class":"HUMAN_REVIEW","status":"HOLD_DEPENDENCY","claim":"Real Lesson Zero candidates have trusted pronunciation/multi-state/pair/fatigue evidence.","external_truth":true,"observed_events":0},
+    {"id":"W11-P008","class":"LIVE_AUDIO","status":"HOLD_DEPENDENCY","claim":"RB001/RB002/RB003 live canary has durable raw lineage.","external_truth":true,"observed_events":0},
+    {"id":"W11-P009","class":"MEASURED_ECONOMICS","status":"HOLD_DEPENDENCY","claim":"Measured Lesson Zero provider/manual economics exists.","external_truth":true,"observed_events":0}
+  ],
+  "law": "CI may prove mechanics only. External provider/human/live/economics truth requires current real class-specific durable evidence."
+}
