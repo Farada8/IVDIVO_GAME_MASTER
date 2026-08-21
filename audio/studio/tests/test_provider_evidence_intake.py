@@ -13,7 +13,7 @@ for path in (STUDIO, RUNTIME):
 from cast_readiness import build_cast_readiness
 from provider_evidence_intake import intake_provider_evidence
 from provider_execution_state import resolve_provider_execution_state
-from provider_snapshot_contract import seal_snapshot, validate_provider_snapshot
+from provider_snapshot_contract import seal_snapshot
 
 NOW = datetime(2026, 8, 21, 22, 0, tzinfo=timezone.utc)
 REPO = "Farada8/IVDIVO_GAME_MASTER"
@@ -55,8 +55,7 @@ def snapshot(*, fingerprint="a" * 64, captured="2026-08-21T21:55:00+00:00", extr
 
 def packet(snap=None, *, transaction=f"{RUN_ID}:{ATTEMPT}", source_ref=SOURCE_REF):
     snap = snap or snapshot()
-    validation = validate_provider_snapshot(snap, expected_provider="elevenlabs", max_age_seconds=21600, now=NOW)
-    h = validation["snapshot_hash"]
+    h = snap["snapshot_hash"]
     durable = {
         "artifact_id": f"elevenlabs-provider-snapshot-{RUN_ID}-{ATTEMPT}",
         "artifact_kind": "PROVIDER_SNAPSHOT",
