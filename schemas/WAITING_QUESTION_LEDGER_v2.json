@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.waiting_question_ledger/2.0",
+  "title":"IVDIVO Waiting-Question Ledger v2",
+  "type":"object",
+  "required":["project_id","questions"],
+  "properties":{
+    "project_id":{"type":"string"},
+    "questions":{"type":"array","items":{"type":"object","required":["question_id","question","opened_unit","question_age","last_meaningful_update","transformation_count","delay_source","escalation","stale_risk","payoff_type","retirement_reason"],"properties":{
+      "question_id":{"type":"string"},
+      "question":{"type":"string"},
+      "opened_unit":{"type":"string"},
+      "question_age":{"type":"integer","minimum":0},
+      "last_meaningful_update":{"type":["string","null"]},
+      "transformation_count":{"type":"integer","minimum":0},
+      "delay_source":{"type":"string","enum":["OPPOSITION","MISSING_EVIDENCE","COMPETING_GOAL","RISK_OR_PRICE","RELATIONSHIP_BOUNDARY","PROCEDURAL_CONSTRAINT","DELIBERATE_WITHHOLDING","UNKNOWN"]},
+      "escalation":{"type":"string"},
+      "stale_risk":{"type":"string","enum":["LOW","MEDIUM","HIGH","UNKNOWN"]},
+      "payoff_type":{"type":"string","enum":["ANSWER","PARTIAL_ANSWER_NEW_QUESTION","TRANSFORMED_QUESTION","EMOTIONAL_PAYOFF","FALSE_MODEL_CORRECTED","RETIRED_AS_IRRELEVANT","OPEN"]},
+      "retirement_reason":{"type":["string","null"]},
+      "diagnostic_note":{"type":["string","null"]}
+    }}}
+  },
+  "description":"Age/threshold fields are diagnostics, never automatic rewrite triggers. A long-lived question may remain healthy when meaningfully transformed/escalated by causal delay."
+}
