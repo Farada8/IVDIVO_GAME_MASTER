@@ -1,11 +1,19 @@
 {
-  "schema_version": "ivdivo.session_resilience_run33/1.0",
+  "schema_version": "ivdivo.session_resilience_run33/1.1",
   "date": "2026-08-21",
-  "status": "INTEGRATION_IN_PROGRESS",
+  "status": "CI_GREEN_DRIVE_READBACK_PASS_MERGE_GATE",
   "candidate_id": "SI-0014",
   "candidate_status": "READY_FOR_PILOT",
   "run32_merge_commit": "42e08b350c5d2f564ea380d4de8aba57fba90ab9",
   "run33_pr": 108,
+  "fresh_main_rebase": {
+    "main_sha": "55c69de4f19aec1c2b408020c1447cbd38beef5b",
+    "semantic_merge_commit": "96e1a15f613209f55f47d5c22f7cebfe34fa9cf6",
+    "parallel_commits_preserved": 67,
+    "post_rebase_relation": "HEAD_AHEAD_MAIN_BEHIND_0",
+    "portfolio_state_delta_after_rebase": "ONE_FIELD_PASS_TO_PASS_FULL",
+    "status": "PASS"
+  },
   "critical_integrity_repair": {
     "defect": "SESSION_RESILIENCE_PENDING_ID_COLLIDED_WITH_REGISTRY_FAMILY_SI_0010",
     "preserved": "SI-0010_REGISTRY_SHARD_COMPACTION_TRANSACTION",
@@ -29,22 +37,39 @@
     "schemas/IVDIVO_INTERRUPTION_LEARNING_EVENT_SCHEMA_v1.json"
   ],
   "deterministic_evidence": {
-    "initial_run33": {"passed": 22, "failed": 0, "status": "PASS"},
-    "run32_checkpoint_ci_on_first_pr108_attempt": {"passed": 10, "failed": 0, "status": "PASS"},
+    "run33_after_red_team": {"passed": 27, "failed": 0, "status": "PASS"},
+    "run32_checkpoint_regression": {"passed": 10, "failed": 0, "status": "PASS"},
+    "registry_transaction_regression": {"passed": 7, "failed": 0, "status": "PASS"},
     "red_team_repairs": [
       "FAILED_ACTION_PRECEDENCE",
       "MULTIPLE_ROOT_ACTIVE_HEAD_AND_DUPLICATE_CHECKPOINT_VALIDATION",
-      "REAL_VS_SYNTHETIC_FALSE_STOP_RATE_SEPARATION"
-    ],
-    "expected_run33_after_red_team": {"tests": 27, "status": "CI_PENDING"}
+      "REAL_VS_SYNTHETIC_FALSE_STOP_RATE_SEPARATION",
+      "FULL_REGISTRY_ID_FRESHNESS",
+      "STALE_D01_PORTFOLIO_CLAIM_RECONCILIATION"
+    ]
   },
-  "first_ci_attempt": {
-    "run33_logic": "22/22 PASS",
-    "run32_checkpoint": "10/10 PASS",
-    "registry_transaction": "CI_ENVIRONMENT_FAILURE_MISSING_PYTEST",
-    "repair": "INSTALL_PYTEST_AND_RUN_INHERITED_PYTEST_SUITE",
-    "self_improvement_integrity": "FAILED_ON_STALE_BASE_PROJECT_STATE_COVERAGE_PASS_VS_PASS_FULL",
-    "registry_reference_validation": "PASS_INCLUDED_SI_0014"
+  "ci_evidence": {
+    "session_resilience_run33": {"run_id": 32516926109, "status": "PASS"},
+    "session_resilience": {"run_id": 32516926107, "status": "PASS"},
+    "self_improvement_integrity": {"run_id": 32516926112, "status": "PASS"},
+    "earlier_failures_classified": [
+      "MISSING_PYTEST_IN_NEW_WORKFLOW_ENVIRONMENT",
+      "INVALID_VALIDATE_REGISTRY_CLI_ARGUMENT",
+      "STALE_PORTFOLIO_RESUMABILITY_CLAIM"
+    ],
+    "all_repaired": true
+  },
+  "drive_readback": {
+    "folder": "SESSION_RESILIENCE_RUN33_2026-08-21",
+    "folder_id": "1CCIXde5_2k57yHHIOENgO7staWyyZ1yv",
+    "files_expected": 7,
+    "files_nonempty": 7,
+    "content_markers_verified": [
+      "32 SYNTHESIZE/PERSIST",
+      "prompt 64 final SI-0014 decision",
+      "REAL PRODUCTION PILOT: NOT YET SATISFIED"
+    ],
+    "status": "PASS"
   },
   "parallel_development": {
     "pr103": "AUDIO_SPECIFIC_COMPATIBLE",
@@ -53,14 +78,14 @@
     "pr98": "MERGED_REGISTRY_TRANSACTION_REUSED"
   },
   "evidence_boundary": [
-    "NO_REAL_LOGOUT_RECOVERY_PILOT_YET",
-    "NO_REAL_PARTIAL_GITHUB_DRIVE_WRITE_PILOT_YET",
+    "CONTROLLED_PARTIAL_WRITE_PILOT_NOT_YET_EXECUTED",
+    "GENUINE_NEW_INTERRUPTION_RECOVERY_NOT_YET_OBSERVED",
     "NO_PROVIDER_CALL",
     "NO_CREDIT_SPEND",
     "NO_IRREVERSIBLE_REPLAY",
-    "NO_HUMAN_EVIDENCE",
+    "NO_HUMAN_EVIDENCE_INFERRED",
     "NO_CANON_MUTATION",
     "NO_AUTOMATIC_SELF_IMPROVEMENT_PROMOTION"
   ],
-  "next_gate": "RUN33_REPORTS_AND_DRIVE_READBACK_THEN_FRESH_MAIN_REBASE_THEN_GREEN_CI_AND_DIFF_RED_TEAM"
+  "next_gate": "FINAL_FRESHNESS_DIFF_CHECK_THEN_PR108_MERGE_READBACK_THEN_CONTROLLED_REVERSIBLE_GITHUB_DRIVE_PARTIAL_WRITE_PILOT"
 }
