@@ -35,7 +35,7 @@ Google Drive and ChatGPT File Library are required connected working/reference s
 
 Then run:
 
-`FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE CHECK -> STALE-WORK GATE -> EXECUTE HIGHEST UNBLOCKED OBLIGATION -> VERIFY -> PERSIST -> RE-READ STATE -> CONTINUE UNTIL REAL GATE`.
+`FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE CHECK -> CHAT-ONLY DISCOVERY/INGESTION GATE -> STALE-WORK GATE -> EXECUTE HIGHEST UNBLOCKED OBLIGATION -> VERIFY -> PERSIST -> RE-READ STATE -> CONTINUE UNTIL REAL GATE`.
 
 Fail closed on authority ambiguity. Do not reconstruct canon from chat memory when verified persisted state exists.
 
@@ -51,7 +51,7 @@ Before every material write, re-read the current state/frontier. If another dial
 
 ## PROJECT-WIDE CONTINUATION / LEARNING LAW
 
-Founder-approved authority: `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md`.
+Founder-approved authority: `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md` (current internal version v1.1 after chat-only ingestion upgrade).
 
 Any substantial result produced in one IVDIVO Project conversation is a candidate for project-wide system improvement.
 
@@ -64,6 +64,29 @@ Promotion route:
 `DISCOVER -> LOCATE PERSISTED ARTIFACT -> VERIFY STATUS/VERSION/HASH/GATES -> COMPARE AGAINST CURRENT -> ABSTRACT PROJECT-SPECIFIC CONTENT -> RED TEAM/REGRESSION AS NEEDED -> CLASSIFY -> PROMOTE / PROJECT-SPECIFIC / HOLD / REJECT -> UPDATE CURRENT POINTERS`.
 
 A sibling-chat statement without persisted evidence is `DISCOVERY_ONLY`, never automatic authority. Do not create parallel routers when an existing CURRENT authority can be upgraded.
+
+## CHAT-ONLY INGESTION ENGINE
+
+A result must not be lost merely because another conversation failed to persist it, but it also must not enter CURRENT from memory alone.
+
+Statuses:
+- `DISCOVERY_ONLY` — only a claim/summary that the work exists is available;
+- `CHAT_ONLY_CANDIDATE` — the actual sibling-chat result has been retrieved but is not yet persisted/validated;
+- `UNRECOVERABLE_CHAT_ONLY` — the actual result cannot be reliably recovered.
+
+Required processing route:
+
+`DISCOVER CHAT-ONLY RESULT -> IDENTIFY SOURCE CONVERSATION/PROJECT/DATE/TASK -> RETRIEVE ACTUAL RESULT IF ACCESSIBLE -> EXTRACT MATERIAL DELTA -> RECORD PROVENANCE -> COMPARE WITH CURRENT AUTHORITY -> VALIDATE CANON/VERSION/HASH/GATES -> PERSIST CANDIDATE -> QA/RED TEAM/REGRESSION AS NEEDED -> PROMOTE/HOLD/REJECT -> UPDATE CURRENT STATE/HANDOFF/POINTERS -> READBACK VERIFY`.
+
+Rules:
+- if the source conversation is accessible, retrieve it before asking the Founder to repeat the work;
+- summary/memory alone cannot supply missing canon or exact details;
+- recovered chat content starts as candidate evidence, not authority;
+- a chat-only result never overwrites a newer accepted persisted artifact solely because the chat is newer;
+- when valid, persist it into the controlling project/system layer so future sessions no longer depend on retrieving that chat;
+- if recovery fails, record the gap and continue from verified persisted state.
+
+`CHAT MEMORY = DISCOVERY SURFACE. PERSISTED VERIFIED ARTIFACT = EXECUTION SURFACE.`
 
 ## CROSS-DIALOG DELTA HARVEST
 

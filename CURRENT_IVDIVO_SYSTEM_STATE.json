@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated": "2026-08-21",
   "status": "CURRENT_ROUTING_STATE_NOT_STORY_CANON",
   "purpose": "Machine-readable resume pointer for cross-conversation and cross-model IVDIVO work. This file routes work; it never overrides locked project canon or project-specific source-of-truth files.",
@@ -21,6 +21,7 @@
   "current_routers": {
     "writing": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
     "autopilot": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
+    "project_wide_continuation": "IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md",
     "multi_model_prompts": "IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md",
     "cross_ai_handoff": "CURRENT_IVDIVO_CROSS_AI_HANDOFF.md",
     "book_chat_starter": "IVDIVO_NARRATIVE_OS/11_BOOK_CHAT_STARTER.md",
@@ -30,6 +31,7 @@
   "resume_algorithm": [
     "FRESHNESS_SWEEP",
     "CONCURRENT_DIALOG_REBASE_CHECK",
+    "CHAT_ONLY_DISCOVERY_AND_INGESTION_GATE",
     "STALE_WORK_GATE",
     "RECOMPUTE_DEPENDENCY_DAG",
     "SELECT_HIGHEST_UNBLOCKED_OBLIGATION",
@@ -42,6 +44,13 @@
     "repeated_short_command_required": false,
     "short_commands_are_resume_shorthand": ["и", "дальше", "продолжай", "делай", "работай"],
     "neighbor_chat_claim_without_persisted_artifact": "DISCOVERY_ONLY",
+    "chat_only_statuses": ["DISCOVERY_ONLY", "CHAT_ONLY_CANDIDATE", "UNRECOVERABLE_CHAT_ONLY"],
+    "chat_only_ingestion_flow": "DISCOVER_CHAT_ONLY_RESULT -> IDENTIFY_SOURCE_CONVERSATION_PROJECT_DATE_TASK -> RETRIEVE_ACTUAL_RESULT_IF_ACCESSIBLE -> EXTRACT_MATERIAL_DELTA -> RECORD_PROVENANCE -> COMPARE_AGAINST_CURRENT_AUTHORITY -> VALIDATE_CANON_VERSION_HASH_GATES -> CLASSIFY -> PERSIST_CANDIDATE_ARTIFACT -> RUN_REQUIRED_QA_RED_TEAM_REGRESSION -> PROMOTE_OR_HOLD_OR_REJECT -> UPDATE_CURRENT_STATE_HANDOFF_POINTERS -> READBACK_VERIFY",
+    "chat_only_retrieval_rule": "IF_SOURCE_CONVERSATION_IS_ACCESSIBLE_RETRIEVE_IT_BEFORE_ASKING_FOUNDER_TO_REPEAT",
+    "chat_only_missing_detail_rule": "DO_NOT_RECONSTRUCT_MISSING_DETAILS_FROM_SUMMARY_OR_MEMORY",
+    "chat_only_default_authority": "NONE_UNTIL_PERSISTED_AND_VERIFIED",
+    "chat_only_success_condition": "REMOVE_CHAT_ONLY_CONDITION_AFTER_PERSISTENCE_VALIDATION_AND_READBACK",
+    "chat_only_failure_condition": "RECORD_GAP_AND_CONTINUE_FROM_VERIFIED_PERSISTED_STATE",
     "promotion_flow": "DISCOVER -> LOCATE_PERSISTED_ARTIFACT -> VERIFY_STATUS_VERSION_HASH_GATES -> COMPARE_AUTHORITY_AND_FRESHNESS -> CLASSIFY -> PROMOTE_OR_HOLD_OR_REJECT -> UPDATE_POINTERS",
     "stale_write_policy": "REBASE_DO_NOT_FORCE_OVERWRITE",
     "stop_only_on": [
@@ -204,5 +213,10 @@
     "CURRENT_IVDIVO_CROSS_AI_HANDOFF",
     "SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT"
   ],
+  "pending_system_upgrade": {
+    "name": "PROJECT_WIDE_CONTINUATION_LAW_v1.1_CHAT_ONLY_INGESTION",
+    "branch": "codex/chat-only-ingestion-engine-2026-08-21",
+    "status": "CANDIDATE_PENDING_MERGE_AND_READBACK"
+  },
   "state_status": "READY_TO_RECONCILE_D09_E07_E12_THEN_FINAL_STORY_GATE"
 }
