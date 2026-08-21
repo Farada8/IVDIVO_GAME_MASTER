@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.protagonist_state_change/1.0",
+  "title":"IVDIVO Protagonist State-Change Ledger",
+  "type":"object",
+  "required":["project_id","units"],
+  "properties":{
+    "project_id":{"type":"string"},
+    "units":{"type":"array","items":{"type":"object","required":["unit_id","present_want","action_or_tactic","world_or_partner_response","changed_state","price","next_adaptation","agency_effect"],"properties":{
+      "unit_id":{"type":"string"},
+      "present_want":{"type":"string"},
+      "action_or_tactic":{"type":"string"},
+      "world_or_partner_response":{"type":"string"},
+      "changed_state":{"type":"string"},
+      "price":{"type":"string"},
+      "next_adaptation":{"type":"string"},
+      "agency_effect":{"type":"string","enum":["MATERIAL_STATE_CHANGE","INFORMATION_STATE_CHANGE","RELATIONSHIP_STATE_CHANGE","ACCESS_OR_STATUS_CHANGE","SELF_BINDING_CHOICE","NO_CONSEQUENTIAL_CHANGE"]},
+      "aggression_level":{"type":["string","null"],"enum":["NONE","LOW","MEDIUM","HIGH",null]}
+    }}}
+  }
+}
