@@ -199,6 +199,10 @@ def reconcile_transaction(
     if drift:
         return {"decision": "REBASE_FIRST", "reason": "AUTHORITY_OR_STATE_DRIFT", "drift": drift}
 
+    failed = [a["action_id"] for a in tx["actions"] if a["side_effect_state"] == "FAILED"]
+    if failed:
+        return {"decision": "STOP", "reason": "FAILED_ACTIONS_PRESENT", "action_ids": failed}
+
     identity_conflicts = []
     for action in tx["actions"]:
         if action["side_effect_state"] in {"CONFIRMED", "RECONCILED"}:
@@ -244,10 +248,6 @@ def reconcile_transaction(
                 "safe_action_ids": safe_missing,
             }
         return {"decision": "EXECUTE_MISSING_SAFE_ACTIONS", "reason": "ONLY_SAFE_ACTIONS_REMAIN", "action_ids": safe_missing}
-
-    failed = [a["action_id"] for a in tx["actions"] if a["side_effect_state"] == "FAILED"]
-    if failed:
-        return {"decision": "STOP", "reason": "FAILED_ACTIONS_PRESENT", "action_ids": failed}
 
     return {
         "decision": "TRANSACTION_COMPLETE",
