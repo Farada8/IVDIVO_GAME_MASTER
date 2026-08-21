@@ -1,23 +1,30 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ivdivo.audio.provider_snapshot/1.0",
+  "$id": "ivdivo.audio.provider_snapshot/1.1",
   "title": "IVDIVO Credential-Safe Provider Snapshot",
   "type": "object",
   "required": ["schema_version", "status", "authenticated", "stable", "volatile", "stable_snapshot_hash", "volatile_snapshot_hash", "secret_persisted", "machine_may_infer_unlisted_voices"],
   "properties": {
-    "schema_version": {"const": "ivdivo.audio.provider_snapshot/1.0"},
+    "schema_version": {"const": "ivdivo.audio.provider_snapshot/1.1"},
     "status": {"enum": ["PASS", "HOLD"]},
     "authenticated": {"type": "boolean"},
     "stable": {
       "type": "object",
-      "required": ["provider", "inventory_scope", "account_inventory_complete", "models", "voices"],
+      "required": ["provider", "inventory_scope", "account_inventory_complete", "inventory_method", "models", "voices"],
       "properties": {
         "provider": {"type": "string", "minLength": 1},
         "inventory_scope": {"enum": ["TARGETED", "ACCOUNT_WIDE"]},
         "account_inventory_complete": {"type": "boolean"},
+        "inventory_method": {"enum": ["TARGETED_LOOKUP", "ACCOUNT_WIDE_ENUMERATION"]},
         "models": {"type": "object"},
         "voices": {"type": "object"}
-      }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"inventory_scope": {"const": "ACCOUNT_WIDE"}}},
+          "then": {"properties": {"account_inventory_complete": {"const": true}, "inventory_method": {"const": "ACCOUNT_WIDE_ENUMERATION"}}}
+        }
+      ]
     },
     "volatile": {"type": "object"},
     "stable_snapshot_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
@@ -26,5 +33,5 @@
     "machine_may_infer_unlisted_voices": {"const": false}
   },
   "additionalProperties": true,
-  "x-ivdivo-law": "Persist authenticated capability evidence, never credentials. TARGETED verification is not account-wide inventory. Stable capability drift blocks auto-substitution; volatile quota/request metadata is tracked separately."
+  "x-ivdivo-law": "Caller intent cannot upgrade targeted evidence to account-wide. ACCOUNT_WIDE requires source enumeration proof. Persist capability evidence, never credentials; no automatic substitution."
 }
