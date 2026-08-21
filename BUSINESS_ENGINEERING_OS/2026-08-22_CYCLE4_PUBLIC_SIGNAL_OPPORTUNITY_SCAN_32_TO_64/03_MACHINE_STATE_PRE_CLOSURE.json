@@ -1,0 +1,76 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE4_STATE_v1",
+  "date": "2026-08-22",
+  "status": "ENGINEERING_COMPLETE_CI_AND_DRIVE_CLOSURE_PENDING",
+  "constraints": {
+    "no_outreach": true,
+    "new_founder_cash_eur": 0,
+    "public_evidence_ceiling": "E2_LIKE_PUBLIC_ONLY",
+    "unknown_economics": null,
+    "legal_advice": false,
+    "raw_copyrighted_books_public_git": false
+  },
+  "library": {
+    "raw_drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "previous_authority_files": 69,
+    "new_delta_files": 2,
+    "current_raw_files": 71,
+    "delta": [
+      {"title": "Business_Dynamics_John_Sterman.pdf", "drive_id": "1QFxl2X1u_lmh_PXf-ZedNdlSXvRhv8ta", "knowledge_grade": "K1_METADATA_ONLY"},
+      {"title": "How_to_Measure_Anything_Douglas_Hubbard.pdf", "drive_id": "1trJV8PiV5gBc2C03znMqc5IM7BCyg5ES", "knowledge_grade": "K1_METADATA_ONLY"}
+    ],
+    "canonical_unique_works": null
+  },
+  "engineering": {
+    "modules": "B81-B112",
+    "module_count": 32,
+    "contracts": "C97-C128",
+    "contract_count": 32,
+    "proof_obligations": "P97-P128",
+    "proof_count": 32,
+    "protocols": "P-BIZ-09-P-BIZ-16",
+    "protocol_count": 8,
+    "public_signal_prompts_executed": 32,
+    "next_prompts": "N129-N192",
+    "next_prompts_designed": 64,
+    "next_prompts_executed": 0
+  },
+  "opportunity_scan": {
+    "objects": 32,
+    "keep_or_keep_with_gate": 28,
+    "hold": 4,
+    "kill": 0,
+    "market_winners_claimed": 0,
+    "wtp_proven": false,
+    "profitability_proven": false
+  },
+  "github": {
+    "repository": "Farada8/IVDIVO_GAME_MASTER",
+    "base_main_sha": "be100f75ef5c7136513cfe5a1a931d3beeb49d75",
+    "branch": "business-engineering-os-cycle4-public-signals-20260822",
+    "pr": null,
+    "head_sha": null,
+    "cycle4_ci": "PENDING",
+    "cycle3_regression": "PENDING",
+    "self_improvement_integrity": "PENDING"
+  },
+  "drive": {
+    "business_root_id": "1yiKVWme2ZvAQMi0g1zIOzA4G5V4LMAgc",
+    "cycle4_folder_id": "1qdbdtBmvmVJQupHchxpV8xBJ3wlayUiW",
+    "documents": [],
+    "readback": "PENDING"
+  },
+  "parallel_dedupe": {
+    "empty_drive_cycle4_folder_id": "1j-BtQucOerKMRllfQ6eM4PLbUBhIDB7p",
+    "classification": "DISCOVERY_ONLY_AT_RESTORE",
+    "competing_authority": false
+  },
+  "current_constraint": "32_PUBLIC_OPPORTUNITIES_TO_ROOT_WORKLOAD_DEDUPE_TO_FATAL_ASSUMPTION_KILL_TESTS_TO_MAX5_ZERO_CASH_NO_OUTREACH_ACTIVE_EXPERIMENTS",
+  "next_gate": "CYCLE5_TOP5_PUBLIC_DECISION_DELTA_EXPERIMENTS",
+  "self_improvement": {
+    "candidate_only": true,
+    "auto_promotion": false,
+    "decision_delta_required": true,
+    "readback_and_ci_required": true
+  }
+}

@@ -1,0 +1,31 @@
+name: Business Engineering OS Cycle4 Tests
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_PUBLIC_SIGNAL_OPPORTUNITY_SCAN_32_TO_64/**'
+      - 'BUSINESS_ENGINEERING_OS/LIBRARY/**'
+      - '.github/workflows/business-engineering-cycle4-tests.yml'
+  push:
+    branches:
+      - 'business-engineering-os-cycle4-public-signals-20260822'
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_PUBLIC_SIGNAL_OPPORTUNITY_SCAN_32_TO_64/**'
+      - 'BUSINESS_ENGINEERING_OS/LIBRARY/**'
+      - '.github/workflows/business-engineering-cycle4-tests.yml'
+
+jobs:
+  business-cycle4-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Cycle3 regression
+        working-directory: BUSINESS_ENGINEERING_OS/2026-08-21_CYCLE3_SOURCE_PASSPORTS_LIVE_SIGNAL_32_TO_64/engine
+        run: python test_business_opportunity_engine_v3.py
+      - name: Cycle4 exact 32 proof suite
+        env:
+          PYTHONPATH: BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_PUBLIC_SIGNAL_OPPORTUNITY_SCAN_32_TO_64/engine
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_PUBLIC_SIGNAL_OPPORTUNITY_SCAN_32_TO_64/tests/test_business_opportunity_engine_v4.py
