@@ -1,14 +1,1 @@
-{
-  "schema_version":"1.1",
-  "updated":"2026-08-21",
-  "project":"IVDIVO_BOOK_3_SMITH_THE_EMPTY_RESCUE",
-  "cycle":"CYCLE32_2026-08-21",
-  "status":"PREPARED_WORKING_PRE_PROSE_NOT_ACTIVE_UNTIL_D01_FOUNDER_LOCK",
-  "portfolio_precondition":"D01 explicit Founder Lock + persistence readback required before B03 activation.",
-  "counts":{"prompts_executed_cycle32":32,"modules_specified":32,"contracts_specified":32,"proof_obligations_or_results":32,"protocols_specified":32,"next_prompts_designed":64},
-  "evidence_law":"SPECIFIED is not EXECUTABLE_CODE; STATIC/MODEL/OFFICIAL_SOURCE evidence is not HUMAN_SIGNAL/RUNTIME/MARKET evidence.",
-  "drive":{"folder":"1faAfasqcsYCgHCOHAla7tKrpDCgoK9Rp","index":"16qEW8zrIJyrHGZovIz0yQ-LqyUEvwNgqnF77wWBYZYM","prompts32":"1VJRCYkLLoQjXTPVWZJ290Wr5CItcJKq9WKXyQ-H1-Ug","modules_contracts":"1SNLFFfSj4QYrDQb9D9R9pA3-wXBQGJekas7qj4NNdWM","proofs_protocols":"1QQlwrzPuOBy1ch5FH7EYm8RDuKalQ8JPcwcQxdb22mA","story_rebase":"1bCII388mfUgzbC9hZVodvS1sJLn9pzF1_nIjTqUQEy4","synthesis":"1-2yCF5CctfFd3IVo0aTiFdOjVaDTaxdEnvERWL2UbEA","next64":"1zU_44UkfeEcGV965jgau4H9GagV6wgRvqA-J2HfiZbs","civilian_loss":"18959yc9mlDURWOdbsseGdDIVbN2jHTwnxSTlCQF674A","voice_calibration":"1YL22zE4A5aAGVs9jRt73Vb3Rdas9cnFCuydvYiEuHDM","family_gate":"1IqERJ1ZBYWnCLe4H9VN1TXiP7SLnswZzP21lCxsNChY"},
-  "blockers":{"fatal":0,"major":1,"open":[{"id":"SMITH_PERSONAL_FAMILY_CONTINUITY","status":"FOUNDER_DECISION_REQUIRED_AFTER_B03_ACTIVATION","options":["F1_CANONIZE_DAUGHTER_CORE_ONLY","F2_CANONIZE_RECOVERED_FAMILY_FRAME","F3_DEFER_FAMILY_CANON_FOR_B03"]}],"closed":[{"id":"CIVILIAN_CONTINUITY_AND_IRREVERSIBLE_LOSS","status":"CLOSED_WORKING_PRE_PROSE"},{"id":"PRE_DRAFT_VOICE_CALIBRATION","status":"CLOSED_INTERNAL_CALIBRATION_PASS"}]},
-  "prose_authorized":false,
-  "next_obligation":"Portfolio first: D01 Founder Lock decision. After D01 lock persistence closure, fresh-rebase B03; then Founder selects F1/F2/F3; rerun N24 and full pre-prose gate before CH1."
-}
+{"schema_version":"1.1","updated":"2026-08-21","project":"IVDIVO_BOOK_3_SMITH_THE_EMPTY_RESCUE","cycle":"CYCLE32_2026-08-21","status":"PREPARED_WORKING_PRE_PROSE_NOT_ACTIVE_UNTIL_D01_FOUNDER_LOCK","portfolio_precondition":"D01 explicit Founder Lock + persistence readback required before B03 activation.","counts":{"prompts_executed_cycle32":32,"modules_specified":32,"contracts_specified":32,"proof_obligations_or_results":32,"protocols_specified":32,"next_prompts_designed":64},"drive":{"folder":"1faAfasqcsYCgHCOHAla7tKrpDCgoK9Rp","family_gate":"1IqERJ1ZBYWnCLe4H9VN1TXiP7SLnswZzP21lCxsNChY","civilian_loss":"18959yc9mlDURWOdbsseGdDIVbN2jHTwnxSTlCQF674A","voice_calibration":"1YL22zE4A5aAGVs9jRt73Vb3Rdas9cnFCuydvYiEuHDM"},"blockers":{"fatal":0,"major":1,"open":"SMITH_PERSONAL_FAMILY_CONTINUITY_AFTER_B03_ACTIVATION","closed":["CIVILIAN_CONTINUITY_AND_IRREVERSIBLE_LOSS","PRE_DRAFT_VOICE_CALIBRATION"]},"prose_authorized":false,"next_obligation":"D01 Founder Lock decision first; after lock/rebase resolve B03 F1/F2/F3 and rerun N24/pre-prose gates."}
