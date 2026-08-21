@@ -10,8 +10,10 @@ Verified Wave7 native Google Docs:
 - `03_WAVE7_SYNTHESIS_AND_PATH_TO_V1 — AUDIO NOVEL ENGINE` — `1hsci6wRDQuqs2nIp-2xdQQe3O_6JpKbDfLzDnymlYlc`
 - `04_64_NEXT_PROMPTS_WAVE8 — AUDIO NOVEL ENGINE` — `1lQHx1LpXG-hAMRUb8o5__FdBotyjLVBL2u0zn1tjixc`
 - `05_MACHINE_STATE_TESTS_EXACT_NEXT_ACTION — WAVE7 AUDIO NOVEL ENGINE` — `1LB1XgcYNLPcuapC75iTcooNoWuab94bWVGIViFidAsQ`
+- `06_POST_MERGE_READBACK — WAVE7 AUDIO NOVEL ENGINE` — `1cA2oHPQVd2VCbu6YzCtlaCIaWRApfSm6dyI8LerYRJ0`
 
-Folder readback verified all six documents are present and non-empty.
+Folder readback verified the original six execution documents present and non-empty; the post-merge readback was then added and moved into the same folder.
 Current shared workstate ID: `1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w`.
 
-Authority note: Drive is working mirror/handoff. GitHub `main` remains canonical production code where represented. Wave7 branch remains WORKING until its PR is reviewed/merged.
+Wave7 GitHub PR #109 is MERGED. Merge SHA: `fdc5a162e87b34116b1270b3cd6b1531bdfd8b2d`.
+Authority note: Drive is working mirror/handoff. GitHub `main` is canonical production storage where represented. Wave7 persistence status is `MERGED_CURRENT`.
