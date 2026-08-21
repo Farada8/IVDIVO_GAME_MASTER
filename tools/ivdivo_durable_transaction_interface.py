@@ -103,7 +103,10 @@ def _nonempty(value: Any) -> bool:
 
 
 def _evidence_refs_ok(value: Any) -> bool:
-    return isinstance(value, list) and len(value) >= 2 and all(_nonempty(v) for v in value)
+    if not isinstance(value, list) or len(value) < 2 or not all(_nonempty(v) for v in value):
+        return False
+    normalized = [v.strip() for v in value]
+    return len(set(normalized)) >= 2
 
 
 def qualify_interruption_event(event: dict[str, Any], evidence: dict[str, Any] | None) -> dict[str, Any]:
@@ -154,6 +157,7 @@ def qualify_interruption_event(event: dict[str, Any], evidence: dict[str, Any] |
         "evidence_boundary": [
             "RAW_REAL_INTERRUPTION_BOOLEAN_IS_NOT_SELF_VERIFYING",
             "CONTROLLED_OR_SYNTHETIC_EVENTS_CANNOT_SATISFY_REAL_THRESHOLD",
+            "QUALIFICATION_REQUIRES_AT_LEAST_TWO_DISTINCT_EVIDENCE_REFS",
             "QUALIFICATION_DOES_NOT_VERIFY_EXTERNAL_REFERENCE_EXISTENCE",
             "NO_AUTOMATIC_SELF_IMPROVEMENT_PROMOTION",
         ],
