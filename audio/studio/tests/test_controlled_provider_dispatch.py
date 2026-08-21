@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 import sys
 from unittest.mock import patch
@@ -11,6 +12,7 @@ sys.path.insert(0, str(STUDIO / "runtime"))
 
 import controlled_provider_dispatch as cpd
 from production_control import SpendLedger
+from provider_snapshot_contract import seal_snapshot
 
 
 def ttd_block():
@@ -31,16 +33,37 @@ class ControlledProviderDispatchTests(unittest.TestCase):
         path.write_text(json.dumps(obj, ensure_ascii=False), encoding="utf-8")
         return str(path)
 
+    def provider_snapshot(self, *, voices=None, models=None):
+        return seal_snapshot({
+            "schema_version": "ivdivo.provider_snapshot/1.0",
+            "provider": "elevenlabs",
+            "status": "PASS",
+            "authentication": {
+                "state": "AUTHENTICATED",
+                "method": "XI_API_KEY_RUNTIME_ENV",
+                "credential_persisted": False,
+            },
+            "provenance": {
+                "captured_at": datetime.now(timezone.utc).isoformat(),
+                "capture_method": "DIRECT_AUTHENTICATED_READ_ONLY_API",
+                "capture_engine": "ivdivo.elevenlabs_snapshot_acquirer/1.0",
+                "source": [
+                    {"path": "/v1/user", "http_status": 200},
+                    {"path": "/v1/user/subscription", "http_status": 200},
+                    {"path": "/v1/models", "http_status": 200},
+                    {"path": "/v2/voices", "http_status": 200},
+                ],
+            },
+            "account": {"fingerprint_sha256": "a" * 64},
+            "voices": voices if voices is not None else {"v1": {}, "v2": {}},
+            "models": models if models is not None else {"eleven_v3": {}},
+            "volatile": {},
+        })
+
     def live_gates(self, root):
-        # Minimal generic identity fixture for wrapper tests. Project fixtures such
-        # as Lesson Zero freeze much richer scalar/block identity.
         manifest = self.write(root, "manifest.json", {"blocks": {}})
         fixture = self.write(root, "fixture.json", {"scalar_fields": {}, "blocks": {}})
-        snap = self.write(root, "snap.json", {
-            "status": "PASS",
-            "voices": {"v1": {}, "v2": {}},
-            "models": {"eleven_v3": {}},
-        })
+        snap = self.write(root, "snap.json", self.provider_snapshot())
         return manifest, fixture, snap
 
     def test_default_is_dry_no_dispatch(self):
@@ -62,10 +85,21 @@ class ControlledProviderDispatchTests(unittest.TestCase):
             self.assertIn("AUTHENTICATED_CAPABILITY_SNAPSHOT", out["missing"])
             dispatch.assert_not_called()
 
+    def test_legacy_status_pass_snapshot_no_longer_authorizes_capability(self):
+        with tempfile.TemporaryDirectory() as d:
+            block = self.write(d, "block.json", ttd_block())
+            snap = self.write(d, "snap.json", {
+                "status": "PASS", "voices": {"v1": {}, "v2": {}}, "models": {"eleven_v3": {}}
+            })
+            out = cpd.execute(block, str(Path(d)/"out"), str(Path(d)/"ledger.json"), capability_snapshot_path=snap)
+            self.assertEqual(out["status"], "NO_DISPATCH_CAPABILITY")
+            self.assertEqual(out["capability_gate"]["status"], "FAIL_SNAPSHOT_CONTRACT")
+            self.assertEqual(out["capability_gate"]["snapshot_contract"]["status"], "FAIL_SCHEMA")
+
     def test_capability_missing_voice_blocks(self):
         with tempfile.TemporaryDirectory() as d:
             block = self.write(d, "block.json", ttd_block())
-            snap = self.write(d, "snap.json", {"status":"PASS","voices":{"v1":{}},"models":{"eleven_v3":{}}})
+            snap = self.write(d, "snap.json", self.provider_snapshot(voices={"v1": {}}))
             out = cpd.execute(block, str(Path(d)/"out"), str(Path(d)/"ledger.json"), capability_snapshot_path=snap)
             self.assertEqual(out["status"], "NO_DISPATCH_CAPABILITY")
             self.assertIn("v2", out["capability_gate"]["missing_voices"])
@@ -95,8 +129,7 @@ class ControlledProviderDispatchTests(unittest.TestCase):
                 )
             self.assertEqual(out["status"], "HOLD_AMBIGUOUS")
             ledger = SpendLedger(Path(d)/"ledger.json")
-            state = next(iter(ledger.snapshot().values()))["state"]
-            self.assertEqual(state, "AMBIGUOUS")
+            self.assertEqual(next(iter(ledger.snapshot().values()))["state"], "AMBIGUOUS")
 
     def test_4xx_rejection_marks_rejected_not_ambiguous(self):
         with tempfile.TemporaryDirectory() as d:
@@ -110,17 +143,14 @@ class ControlledProviderDispatchTests(unittest.TestCase):
                 )
             self.assertEqual(out["status"], "PROVIDER_REJECTED")
             ledger = SpendLedger(Path(d)/"ledger.json")
-            state = next(iter(ledger.snapshot().values()))["state"]
-            self.assertEqual(state, "REJECTED")
+            self.assertEqual(next(iter(ledger.snapshot().values()))["state"], "REJECTED")
 
     def test_provider_acceptance_is_not_take_lock_and_mp3_holds_canonical_ingest(self):
         with tempfile.TemporaryDirectory() as d:
             block_path = self.write(d, "block.json", ttd_block())
             manifest, fixture, snap = self.live_gates(d)
-            out_dir = Path(d) / "out"
-            out_dir.mkdir()
-            audio_path = out_dir / "RB001__audio.mp3"
-            audio_path.write_bytes(b"fake-mp3-provider-evidence")
+            out_dir = Path(d) / "out"; out_dir.mkdir()
+            audio_path = out_dir / "RB001__audio.mp3"; audio_path.write_bytes(b"fake-mp3-provider-evidence")
             evidence = {"audio_artifact": str(audio_path), "audio_sha256": "abc"}
             with patch.object(cpd.adapter, "dispatch", return_value=({"audio_base64":"unused"},{"provider_request_id":"p1"})), \
                  patch.object(cpd.adapter, "persist", return_value=evidence):
@@ -132,8 +162,7 @@ class ControlledProviderDispatchTests(unittest.TestCase):
             self.assertFalse(out["take_lock"])
             self.assertEqual(out["production_asset_gate"]["status"], "HOLD_EXPLICIT_UPSTREAM_CONVERSION_REQUIRED")
             ledger = SpendLedger(Path(d)/"ledger.json")
-            state = next(iter(ledger.snapshot().values()))["state"]
-            self.assertEqual(state, "ACCEPTED")
+            self.assertEqual(next(iter(ledger.snapshot().values()))["state"], "ACCEPTED")
 
     def test_identity_drift_blocks_before_dispatch(self):
         with tempfile.TemporaryDirectory() as d:
