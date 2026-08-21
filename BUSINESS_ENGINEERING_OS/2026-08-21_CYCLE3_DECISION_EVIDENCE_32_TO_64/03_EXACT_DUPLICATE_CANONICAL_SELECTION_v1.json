@@ -1,0 +1,15 @@
+{
+  "artifact": "BUSINESS_LIBRARY_EXACT_DUPLICATE_SELECTION_v1",
+  "rule": "exact duplicate bytes add zero evidence weight; keep aliases, select one canonical physical alias",
+  "groups": [
+    {"sha256":"f464416c1309e4dd83c2699f9c3db447b9a1099e254faab173f19d4257e8a167","work":"The Lean Startup","aliases":["Eric_Ries_The_Lean_Startup_How_Today_39_s_Entrepre.pdf","The_Lean_Startup_How_Todays_Entrepreneurs_Use_Continuous_Innovation_to_Create_Radically_Successful_Businesses_by_Eric_Ries.pdf"]},
+    {"sha256":"74439ba4fc","work":"Buy Then Build","aliases":["_OceanofPDF.com_Buy_Then_Build_-_Walker_Deibel (1).epub","_OceanofPDF.com_Buy_Then_Build_-_Walker_Deibel.epub"]},
+    {"sha256":"c26af73938","work":"Obviously Awesome","aliases":["_OceanofPDF.com_Obviously_Awesome_-_April_Dunford (1).epub","_OceanofPDF.com_Obviously_Awesome_-_April_Dunford.epub"]},
+    {"sha256":"7ffeae2fab","work":"The Invincible Company","aliases":["_OceanofPDF.com_The_Invincible_Company_-_Alex_er_Osterwalder (1).pdf","_OceanofPDF.com_The_Invincible_Company_-_Alex_er_Osterwalder.pdf"]},
+    {"sha256":"11a1de31f6ad2060c0bb708ef0408ba3dbac3d80f3401c9499bda5b263b4f0fc","work":"The Mom Test","canonical_drive_alias":"The_Mom_Test_Rob_Fitzpatrick.epub","aliases":["_OceanofPDF.com_The_Mom_Test_-_Rob_Fitzpatrick (1).epub","_OceanofPDF.com_The_Mom_Test_-_Rob_Fitzpatrick.epub","The_Mom_Test_Rob_Fitzpatrick.epub"]},
+    {"sha256":"0fcaaa9a6b","work":"The Right It","aliases":["_OceanofPDF.com_The_Right_It_-_Alberto_Savoia (1).epub","_OceanofPDF.com_The_Right_It_-_Alberto_Savoia.epub"]},
+    {"sha256":"0d144e8b93","work":"HBR Guide to Buying a Small Business","aliases":["_OceanofPDF.com_hbr_guide_to_buying_a_small_business_-_Richard_s_ruback (1).pdf","_OceanofPDF.com_hbr_guide_to_buying_a_small_business_-_Richard_s_ruback (2).pdf","_OceanofPDF.com_hbr_guide_to_buying_a_small_business_-_Richard_s_ruback.pdf"]},
+    {"sha256":"1f8410c22b","work":"Founding Sales","aliases":["dokumen.pub_founding-sales-the-early-stage-go-to-market-handbook-9781734505115-9781734505108-1734505117 (1).azw3","dokumen.pub_founding-sales-the-early-stage-go-to-market-handbook-9781734505115-9781734505108-1734505117.azw3"]}
+  ],
+  "note": "Some legacy hashes are abbreviated here for human readability; full hashes remain in the Drive manifest. This file is a routing index, not a cryptographic replacement for the full manifest."
+}
