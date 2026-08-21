@@ -1,0 +1,36 @@
+{
+  "artifact": "BODYGUARD_MULTILINGUAL_VOICE_CURRENT_STATE_v6",
+  "date": "2026-08-21",
+  "source_authority": "EN Recording Master v1.6",
+  "executed_prompts": "PMV01-PMV176",
+  "designed_next": "PMV177-PMV208",
+  "ru_full_e01": "v0.3 WORKING documented-terminology patched; 190 lines; human native/pro lock pending",
+  "ru_audition_anchors": "v0.5 CANDIDATE NOT LOCKED",
+  "ru_glossary": "v0.4 evidence-upgraded; GO=гоу strong working; standby/ack practitioner hold",
+  "pronunciation_dictionary": "v0.2 draft PLS/JSON; no provider locator yet",
+  "provider": "ElevenLabs adapter v2.0 + official docs current; authenticated account preflight absent",
+  "render_plan": "v0.2 candidate compiler output; coverage PASS; TTD/TTS A/B absent",
+  "automation": "PMV161-168 programs created/tested on static/synthetic fixtures",
+  "ru_voice_lock": false,
+  "en_voice_lock": false,
+  "spanish_region_lock": false,
+  "paid_scale_allowed": false,
+  "current_gate": "EXTERNAL_RU_NATIVE_STAGE_AUDIO_SECURITY_EVIDENCE",
+  "next_sequence": [
+    "PMV177 external native packet",
+    "PMV178 stage practitioner",
+    "PMV179 audio practitioner",
+    "PMV180 protection practitioner",
+    "PMV181 RU audition text v1.0 lock",
+    "PMV182 authenticated provider preflight",
+    "PMV183-188 bounded RU voice evidence"
+  ],
+  "prohibited": [
+    "claim human/native/practitioner PASS from web/AI alone",
+    "lock RU audition text before external review/performed timing",
+    "spend broad S1 before tiny provider probe",
+    "TTD everywhere without A/B",
+    "generic ES production authority",
+    "one voice_id all languages as dogma"
+  ]
+}
