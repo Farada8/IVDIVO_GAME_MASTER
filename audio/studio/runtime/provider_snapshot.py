@@ -9,6 +9,8 @@ Important boundary:
 - TARGETED voice verification is enough to prove the explicitly requested voice IDs;
 - it is NOT an account-wide voice inventory and must never be used to claim that all
   provider voices were enumerated;
+- ACCOUNT_WIDE can only be compiled when the source report itself carries explicit
+  account-wide enumeration proof; a caller flag alone can never upgrade evidence;
 - volatile quota/request metadata is separated from stable identity/capability data.
 """
 from __future__ import annotations
@@ -18,7 +20,7 @@ from hashlib import sha256
 import json
 from typing import Any, Iterable
 
-SCHEMA_VERSION = "ivdivo.audio.provider_snapshot/1.0"
+SCHEMA_VERSION = "ivdivo.audio.provider_snapshot/1.1"
 FORBIDDEN_KEY_FRAGMENTS = (
     "api_key", "apikey", "access_token", "refresh_token", "password", "passwd",
     "client_secret", "secret_key", "authorization", "bearer_token", "xi-api-key",
@@ -76,6 +78,14 @@ def _normalize_voice(voice_id: str, row: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _account_wide_source_proven(preflight: dict[str, Any]) -> bool:
+    return (
+        str(preflight.get("inventory_scope") or "").upper() == "ACCOUNT_WIDE"
+        and preflight.get("account_inventory_complete") is True
+        and str(preflight.get("inventory_method") or "").upper() == "ACCOUNT_WIDE_ENUMERATION"
+    )
+
+
 def compile_snapshot(preflight: dict[str, Any], *, inventory_scope: str = "TARGETED") -> dict[str, Any]:
     """Compile a deterministic secret-free provider snapshot from preflight evidence."""
     assert_secret_free(preflight)
@@ -85,6 +95,8 @@ def compile_snapshot(preflight: dict[str, Any], *, inventory_scope: str = "TARGE
     scope = str(inventory_scope).upper()
     if scope not in {"TARGETED", "ACCOUNT_WIDE"}:
         raise ValueError("INVENTORY_SCOPE_INVALID")
+    if scope == "ACCOUNT_WIDE" and not _account_wide_source_proven(preflight):
+        raise ValueError("ACCOUNT_WIDE_SCOPE_NOT_PROVEN_BY_SOURCE")
 
     models = {
         str(mid): _normalize_model(str(mid), row if isinstance(row, dict) else {})
@@ -97,7 +109,8 @@ def compile_snapshot(preflight: dict[str, Any], *, inventory_scope: str = "TARGE
     stable = {
         "provider": provider,
         "inventory_scope": scope,
-        "account_inventory_complete": scope == "ACCOUNT_WIDE",
+        "account_inventory_complete": scope == "ACCOUNT_WIDE" and _account_wide_source_proven(preflight),
+        "inventory_method": preflight.get("inventory_method") if scope == "ACCOUNT_WIDE" else "TARGETED_LOOKUP",
         "models": models,
         "voices": voices,
     }
@@ -135,6 +148,8 @@ def verify_snapshot(snapshot: dict[str, Any]) -> dict[str, Any]:
     volatile = snapshot.get("volatile")
     if not isinstance(stable, dict) or not isinstance(volatile, dict):
         raise ValueError("PROVIDER_SNAPSHOT_PAYLOAD_MISSING")
+    if stable.get("inventory_scope") == "ACCOUNT_WIDE" and stable.get("account_inventory_complete") is not True:
+        raise ValueError("ACCOUNT_WIDE_SNAPSHOT_INCONSISTENT")
     if canonical_hash(stable) != snapshot.get("stable_snapshot_hash"):
         raise ValueError("PROVIDER_STABLE_SNAPSHOT_HASH_MISMATCH")
     if canonical_hash(volatile) != snapshot.get("volatile_snapshot_hash"):
