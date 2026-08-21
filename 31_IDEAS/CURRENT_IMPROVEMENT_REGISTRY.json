@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "updated": "2026-08-21",
-  "engine_authority": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
+  "engine_authority": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
   "candidates": [
     {
       "candidate_id": "SI-0001",
@@ -162,7 +162,7 @@
     },
     {
       "candidate_id": "SI-0006",
-      "title": "Self-improvement engine and anti-loss registry",
+      "title": "Self-improvement engine and anti-loss registry v1",
       "candidate_type": "PROGRAM_OR_CODE",
       "status": "APPLIED_UNVERIFIED",
       "scope": "UNIVERSAL_IVDIVO",
@@ -173,7 +173,7 @@
       "problem_or_opportunity": "The project has many useful ideas and improvements but no single lifecycle guaranteeing capture, development, testing, promotion, application and verification.",
       "proposed_mechanism": "Central improvement registry with anti-loss invariants, lifecycle state machine, dedupe, development contract, pilot/canary, promotion/application map, monitoring and rollback.",
       "dedupe_relation": "EXTENSION",
-      "related_candidates": ["SI-0001", "SI-0002", "SI-0004"],
+      "related_candidates": ["SI-0001", "SI-0002", "SI-0004", "SI-0007"],
       "expected_benefit": "Turns fragmented project discoveries into cumulative verified system evolution while preserving story-first production.",
       "evidence_state": "INTERNAL_EVIDENCE",
       "priority_vector": {"impact": "CRITICAL", "recurrence": "SYSTEMIC", "effort": "MEDIUM", "regression_risk": "MEDIUM", "reversibility": "EASY", "urgency": "HIGH", "affected_surface": "PORTFOLIO"},
@@ -185,12 +185,49 @@
       "verification_evidence": [],
       "protected_authorities": ["Story-first priority", "Founder newest instruction", "Locked canon", "Current project frontier", "Human evidence firewall"],
       "owner_role": "Meta-Showrunner / System Reconciler",
-      "next_action": "Implement executable audit utility, wire current router/system state, mirror to Drive, then run anti-loss/promotion-integrity audit.",
-      "next_gate": "SELF_IMPROVEMENT_ENGINE_V1_ACCEPTANCE",
+      "next_action": "Retain as historical/base implementation while v2 candidate is evaluated and promoted.",
+      "next_gate": "V2_SUPERSESSION_RECONCILIATION",
       "hold_trigger": null,
       "terminal_reason": null,
       "last_movement": "2026-08-21",
-      "notes": "Current active self-improvement implementation candidate."
+      "notes": "Initial implementation; v2 extends its scope and priority architecture."
+    },
+    {
+      "candidate_id": "SI-0007",
+      "title": "Self-Improvement Meta Engine v2 — books first, audio second, whole factory learning",
+      "candidate_type": "PROGRAM_OR_CODE",
+      "status": "APPLIED_UNVERIFIED",
+      "scope": "UNIVERSAL_IVDIVO",
+      "source_provenance": [
+        {"source_type": "FOUNDER", "locator": "2026-08-21 directive: self-improvement must apply to everything, first writing books and making audio novels, then productivity, problem solving, engine creation, research and continuous improvement", "version": null, "hash": null, "date": "2026-08-21", "notes": "Direct Founder priority expansion"},
+        {"source_type": "GITHUB", "locator": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md", "version": "2.0", "hash": null, "date": "2026-08-21", "notes": "v2 governing candidate"},
+        {"source_type": "GITHUB", "locator": "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json", "version": "2.0", "hash": null, "date": "2026-08-21", "notes": "Machine config"},
+        {"source_type": "GITHUB", "locator": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json", "version": "2.0", "hash": null, "date": "2026-08-21", "notes": "Machine state/frontier"}
+      ],
+      "problem_or_opportunity": "v1 prevented idea loss but did not explicitly govern the entire production factory around the ordered priorities of book quality/completion, book-to-audio transformation, productivity, engine/tool improvement and continuous research.",
+      "proposed_mechanism": "Three coupled loops (Book, Book-to-Audio, Meta-Learning), ordered P0-P6 objective stack, problem mining, Best-Candidate Router, WIP anti-bedlam guard, research engine, book/audio/productivity sensors, multi-AI improvement cell, deployment/readback/rollback, real-product feedback, knowledge pruning and self-reference control.",
+      "dedupe_relation": "SUPERSEDING_CANDIDATE",
+      "related_candidates": ["SI-0006", "SI-0001", "SI-0002", "SI-0004", "SI-0005"],
+      "expected_benefit": "Makes system evolution directly serve stronger completed books and better audio novels while improving the full factory without losing ideas or drowning production in meta-work.",
+      "evidence_state": "INTERNAL_EVIDENCE",
+      "priority_vector": {"impact": "CRITICAL", "recurrence": "SYSTEMIC", "effort": "MEDIUM", "regression_risk": "MEDIUM", "reversibility": "EASY", "urgency": "HIGH", "affected_surface": "PORTFOLIO"},
+      "development_contract": {
+        "required_components": ["v2 governing engine", "machine config", "dedicated machine state", "writing router integration", "Drive mirrors", "central registry record", "book sensors", "audio sensors", "productivity sensors", "problem-driven research", "best-candidate routing", "self-reference guard"],
+        "acceptance_conditions": ["No higher-authority conflict", "Writing remains primary", "Audio consumes locked story", "Registry anti-loss invariants preserved", "Safe rebase with concurrent dialogs", "Readback of all v2 pointers", "Exact utility runtime smoke when checkout available"]
+      },
+      "pilot_evidence": ["v2 was integrated using freshness/rebase checks rather than overwriting concurrent schema-1.4 system-state progress", "Writing router now points to v2", "Drive engine/router mirrors created and populated"],
+      "red_team_findings": ["Meta-work can starve actual books unless WIP/priority guards exist", "A single score can hide tradeoffs; ordered objectives and qualitative priority bands are safer", "Audio learning must not become permission to rewrite locked story", "Research can become endless unless it has a decision and stopping rule", "Self-improvement itself must be subject to the same promotion/rollback gates"],
+      "promotion_level": "UNIVERSAL",
+      "application_targets": ["CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md", "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md", "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json", "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json", "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md", "CURRENT_IVDIVO_SYSTEM_STATE.json", "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json", "Google Drive v2 mirrors"],
+      "verification_evidence": [],
+      "protected_authorities": ["Founder newest instruction", "Locked book/project canon", "Current Writing authority", "Current Audio authority", "Story-first production", "Text protection", "Human evidence firewall", "No model-vote canon"],
+      "owner_role": "Meta-Showrunner / System Reconciler",
+      "next_action": "Read back v2 GitHub and Drive pointers, safely rebase aggregate CURRENT_IVDIVO_SYSTEM_STATE to v2, then run promotion review; exact utility runtime remains a separate provisional gate until executable checkout is available.",
+      "next_gate": "SELF_IMPROVEMENT_V2_PROMOTION_REVIEW",
+      "hold_trigger": null,
+      "terminal_reason": null,
+      "last_movement": "2026-08-21",
+      "notes": "Founder-priority expansion: books first, audio second, whole-factory learning after those priorities."
     }
   ]
 }
