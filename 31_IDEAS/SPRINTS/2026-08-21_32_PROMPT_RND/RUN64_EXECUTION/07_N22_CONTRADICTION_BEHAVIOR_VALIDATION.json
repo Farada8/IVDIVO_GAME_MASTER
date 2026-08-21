@@ -1,0 +1,11 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_FIXTURES_WITH_PROJECT_APPLICATION_REQUIRED",
+  "cases":[
+    {"id":"ADJECTIVE_ONLY_FAIL","description":"Character is described as generous but selfish; no choice changes under pressure.","result":"FAIL","reason":"Contradiction exists only as adjectives and cannot alter action/cost."},
+    {"id":"BEHAVIORAL_PASS","description":"Character values professional truth and family loyalty. When evidence implicates a sibling, she delays public accusation long enough to independently verify the chain, losing promotion credibility but refusing to destroy evidence.","result":"PASS","reason":"Competing values alter tactic, timing and concrete price without exposition replacing action."},
+    {"id":"EXPOSITION_FAIL","description":"Character explains for a page that he both loves freedom and fears abandonment, then makes the same choice he would make without either value.","result":"FAIL","reason":"Explanation does not produce a behavioral fork."}
+  ],
+  "project_rule":"When applied to a current major character, require at least one pressure event where the contradiction changes available action, selected tactic, cost or later pattern. Do not add biography exposition merely to satisfy the card.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST"
+}
