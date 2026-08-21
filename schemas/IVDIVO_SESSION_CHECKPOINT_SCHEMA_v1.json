@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ivdivo.local/schemas/IVDIVO_SESSION_CHECKPOINT_SCHEMA_v1.json",
+  "title": "IVDIVO Session Checkpoint",
+  "type": "object",
+  "required": ["checkpoint_id", "created_at", "payload", "checkpoint_sha256"],
+  "properties": {
+    "checkpoint_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "minLength": 1},
+    "checkpoint_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "payload": {
+      "type": "object",
+      "required": ["schema_version", "project_id", "work_unit", "current_phase", "checkpoint_status", "authority_snapshot", "selected_next_action", "blockers", "writes", "artifacts", "durability_summary"],
+      "properties": {
+        "schema_version": {"const": "ivdivo.session_checkpoint/1.0"},
+        "project_id": {"type": "string", "minLength": 1},
+        "active_line": {"type": ["string", "null"]},
+        "work_unit": {"type": "string", "minLength": 1},
+        "current_phase": {"type": "string", "minLength": 1},
+        "checkpoint_status": {"enum": ["ACTIVE", "WRITE_IN_PROGRESS", "RECOVERY_REQUIRED", "REBASE_REQUIRED", "BLOCKED", "COMPLETE"]},
+        "authority_snapshot": {
+          "type": "object",
+          "required": ["repo_main_sha", "state_revision"],
+          "properties": {
+            "repo": {"type": ["string", "null"]},
+            "repo_main_sha": {"type": "string", "minLength": 1},
+            "state_pointer": {"type": ["string", "null"]},
+            "state_revision": {"type": "string", "minLength": 1},
+            "source_hash": {"type": ["string", "null"]}
+          },
+          "additionalProperties": false
+        },
+        "last_verified_frontier": {},
+        "last_completed_artifact": {},
+        "selected_next_action": {"type": "object"},
+        "blockers": {"type": "array"},
+        "writes": {"type": "array", "items": {"type": "object"}},
+        "artifacts": {"type": "array", "items": {"type": "object"}},
+        "durability_summary": {
+          "type": "object",
+          "required": ["durable_write_ids", "pending_write_ids", "durable_artifact_ids", "volatile_artifact_ids"],
+          "properties": {
+            "durable_write_ids": {"type": "array", "items": {"type": "string"}},
+            "pending_write_ids": {"type": "array", "items": {"type": "string"}},
+            "durable_artifact_ids": {"type": "array", "items": {"type": "string"}},
+            "volatile_artifact_ids": {"type": "array", "items": {"type": "string"}}
+          },
+          "additionalProperties": false
+        },
+        "evidence_boundary": {"type": "array"},
+        "recovery_notes": {"type": "array"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

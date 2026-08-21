@@ -1,0 +1,40 @@
+{
+  "schema_version": "ivdivo.session_resilience_run32/1.0",
+  "date": "2026-08-21",
+  "status": "WORKING_INTEGRATION",
+  "fresh_main_baseline": "43b1e4db0af9d43563bf244d83bf948781eb3bce",
+  "problem": "VOLATILE_EXECUTION_WINDOW after useful work begins and before enough durable orchestration state is written/read back.",
+  "existing_authorities_reused": [
+    "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
+    "IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md",
+    "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md",
+    "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md"
+  ],
+  "candidate": {"candidate_id": "SI-0010", "title": "Volatile Session Checkpoint + Resume Extension", "promotion_state": "PILOT_CODE"},
+  "implementation": {
+    "protocol": "IVDIVO_NARRATIVE_OS/18C_VOLATILE_SESSION_CHECKPOINT_AND_RECOVERY_PROTOCOL_v1.0.md",
+    "tool": "tools/ivdivo_session_checkpoint.py",
+    "schema": "schemas/IVDIVO_SESSION_CHECKPOINT_SCHEMA_v1.json",
+    "tests": "tests/test_session_checkpoint.py",
+    "resume_decisions": ["RESUME_EXACT", "REBASE_FIRST", "RECOVER_VOLATILE_FIRST", "STOP"]
+  },
+  "deterministic_tests": {"framework": "unittest", "passed": 8, "failed": 0, "status": "PASS_LOCAL_ISOLATED"},
+  "run32": {"prompts": 32, "completed": 32, "status": "PASS_WITH_ONE_SYSTEM_DEFECT_FOUND"},
+  "defect_found": {
+    "id": "SESSION-RESILIENCE-POINTER-DRIFT-001",
+    "artifact": "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json",
+    "problem": "Pointer still requires universal SAFE/ZERO_COST/REVERSIBLE gates while current ivdivo_next_action.py explicitly does not.",
+    "repair": "Patch pointer to modern freshness/authority/dependency/executable + explicit stop-gate semantics.",
+    "package_boundary": "Do not relabel v11.2 packaged bytes; pointer/extension is post-package until next full regression."
+  },
+  "parallel_reconciliation": {
+    "pr94": "MERGED_PRODUCTION_CONTROL",
+    "pr97": "MERGED_STUDIO_EVIDENCE",
+    "pr93": "MERGED_WAVE5_CONVERGENCE",
+    "pr84": "CLOSED_SUPERSEDED",
+    "si0009": "OCCUPIED_ROOM917_POST_RENDER_REPAIR_CANDIDATE",
+    "session_candidate": "SI-0010"
+  },
+  "evidence_boundary": ["NO_BROWSER_UI_RESTORE_CLAIM", "NO_REAL_LOGOUT_RECOVERY_PILOT_YET", "NO_PROVIDER_CALL", "NO_CREDIT_SPEND", "NO_HUMAN_EVIDENCE", "NO_CANON_MUTATION"],
+  "next_action": "Run integrated CI and diff review; re-read main; merge only on green/fresh readback; mirror to Drive and use first real interruption as production pilot evidence."
+}
