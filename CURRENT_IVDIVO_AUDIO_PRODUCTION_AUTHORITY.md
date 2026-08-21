@@ -42,9 +42,12 @@ Future work must check the Drive root router for a newer authority before assumi
    - `IVDIVO_MICROPHONE_CHOREOGRAPHY_PROMPT_STACK_v1.0.md` — Drive ID `1GW8f0rOgu1aqg24SgxxXIQU4VFqGKvRO`
    - `IVDIVO_MICROPHONE_CHOREOGRAPHY_QC_v1.0.md` — Drive ID `1escUUTwztAd0L3hI5ELd-Jns53YLpull`
 7. Current machine/provider contracts, normalized alignment law, provider preflight, voice-binding ledger, acoustic-identity ledger, stereo-intent law, artifact templates and QC/release gates referenced by current v3.x authority.
-8. Project-specific audio overlay.
-9. Current Director Score / render plan / cue sheets / manifests / accepted assets / takes / timelines / mixes / QC.
-10. Archive/superseded material only when explicitly referenced as a base mechanism.
+8. Universal voice audition/binding evidence standard:
+   - `IVDIVO_AUDIO_VOICE_AUDITION_BINDING_STANDARD_v1.0.md`
+   - exact-text audition sides, SHA256 where supported, dry/loudness-matched comparisons, natural + directed-change takes, multi-state test, lead pair gate, blind speaker differentiation, long-form fatigue gate, role-specific hard fails and provisional-vs-season lock separation.
+9. Project-specific audio overlay.
+10. Current Director Score / render plan / cue sheets / manifests / accepted assets / takes / timelines / mixes / QC.
+11. Archive/superseded material only when explicitly referenced as a base mechanism.
 
 ## Universal scope
 
@@ -64,6 +67,10 @@ Fail closed if branch, source version/hash, protected text, cast/voice binding, 
 
 Dependency-DAG law: independent branches may run in parallel after their upstream PASS gates and must converge before consumer stages requiring both.
 
+### Voice-lock evidence law
+
+No major voice may be locked from one attractive sample. Before season lock, require representative multi-state evidence and long-form/fatigue evidence. Initial comparisons should be dry and loudness-matched. Any role-defined hard fail overrides numeric scoring. Relationship-pair chemistry must survive without flirtation tricks or music. Replayed evidence/source voices must preserve canonical source identity rather than being independently regenerated on every occurrence.
+
 ## Release law
 
 No DRY_RUN build can release. Required live/reused evidence must be provenance-valid. Mandatory MANUAL_REVIEW must be resolved. Open `FATAL = 0` and `MAJOR = 0`. Provider-specific raw alignment may never bypass the normalized internal schema.
@@ -73,6 +80,8 @@ No DRY_RUN build can release. Required live/reused evidence must be provenance-v
 Never transfer names, provider voice IDs, culprit/solution, distinctive clue chains, signature sound motifs, relationship timing, chronology or obsolete branch facts between projects without explicit authority.
 
 `REFERENCE -> ABSTRACT MECHANISM -> REMOVE PROJECT-SPECIFIC CONTENT -> TRANSFORM FOR ACTIVE PROJECT -> REBIND THROUGH PROJECT OVERLAY`
+
+A stronger production mechanism discovered in one project should be evaluated for portability. If universal, abstract project content and promote through the universal authority/change-control path rather than leaving the improvement trapped in one project folder.
 
 ## Provider law
 
@@ -85,12 +94,21 @@ For books/saga work entering audio, load:
 
 Book/story authority remains higher for protected text and story facts. Audio production must not silently reopen locked development.
 
+Cross-conversation system continuation additionally follows:
+`IVDIVO_NARRATIVE_OS/13_CONTINUOUS_MULTI_MODEL_STUDIO_PROTOCOL_v1.0.md`.
+
 ## Historical/base layer
 
 `IVDIVO_AUDIO_PRODUCTION_CANON_AND_BOOT_OS_v1.0.md` remains a historical/base layer only where not superseded by the current v3.3 authority. It is not the top router.
 
 ## Continuation law
 
-When Founder says `и / дальше / продолжай / делай / работай / AUDIO CONTINUE`, restore current universal + project authority, identify the last completed artifact and open gates, then execute the highest unblocked production obligation. Do not restart locked story development without new evidence.
+Explicit `и / дальше / продолжай / делай / работай / AUDIO CONTINUE` commands remain valid but are not required merely to move an unblocked active pipeline forward.
+
+On any project-relevant user turn, after satisfying the immediate request, restore current universal + project authority, identify the last completed artifact/open gates, and continue the highest unblocked dependent production obligation in the same work block until a real blocker, external evidence dependency, Founder decision or completed requested unit is reached.
+
+This is not permission to perform background/asynchronous work between user turns.
+
+Do not restart locked story development without new evidence.
 
 **NO SILENT CANON CHANGES. FAIL CLOSED ON AUTHORITY AMBIGUITY.**
