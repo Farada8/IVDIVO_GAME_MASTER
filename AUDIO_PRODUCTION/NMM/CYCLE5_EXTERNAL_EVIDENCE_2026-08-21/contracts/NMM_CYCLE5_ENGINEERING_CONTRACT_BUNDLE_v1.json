@@ -1,0 +1,15 @@
+{
+  "contracts": {
+    "ALIGNMENT_NORMALIZATION_v1": {"malformed_or_nonmonotonic": "QUARANTINE", "sample_lock_before_take_acceptance": false},
+    "ASSET_EVIDENCE_LEDGER_v1": {"append_only_hash_chain": true, "human_accept_without_raw_response_hash": "FORBIDDEN"},
+    "CAST_METADATA_PROVENANCE_v1": {"max_candidates_per_role": 5, "paid_audio_before_filter": "FORBIDDEN", "vivian_spoiler_neutrality": "REQUIRED"},
+    "DEVICE_EVIDENCE_v1": {"devices": ["HEADPHONES", "PHONE", "EARBUDS", "LOW_VOLUME_PHONE"], "per_listener_failures_must_remain_visible": true},
+    "EXTERNAL_EVIDENCE_VECTOR_v1": {"auto_release": false, "engineering_pass_cannot_substitute_external_truth": true, "unknown_stays_unknown": true},
+    "FINALIST_SELECTION_v1": {"human_evidence_required": true, "max_finalists": 2, "phone_translation_required": true},
+    "HUMAN_SESSION_PREDECLARATION_v1": {"answers_before_seal": "INVALID", "one_listen_rule_must_be_explicit": true, "seal_before_playback": true},
+    "PROVIDER_GATE_ADAPTER_v1": {"law": "Universal provider auth/hash/freshness and Wave10 readiness are authoritative; NMM may only add project policy", "paid_dispatch_without_verified_snapshot": "FORBIDDEN", "secret_persistence": false},
+    "RAW_ANSWER_IMMUTABILITY_v1": {"raw_response_hash_required": true, "scoring_separate_from_capture": true},
+    "S0_PRE_DISPATCH_FREEZE_v1": {"mutation_after_seal": "INVALIDATES_MANIFEST", "required": ["exact_text", "role", "provider", "model_id", "output_format", "settings"]}
+  },
+  "schema": "NMM_CYCLE5_CONTRACT_BUNDLE_v1"
+}

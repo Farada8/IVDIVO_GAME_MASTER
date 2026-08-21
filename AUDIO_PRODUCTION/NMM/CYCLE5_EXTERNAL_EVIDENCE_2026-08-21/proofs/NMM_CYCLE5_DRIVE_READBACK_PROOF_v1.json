@@ -1,0 +1,11 @@
+{
+  "schema": "NMM_CYCLE5_DRIVE_READBACK_PROOF_v1",
+  "drive_folder_id": "1McXdCbh_FBct6enllPok3I889KCiB8G0",
+  "zip_file_id": "1euC43phLZdhoI1gSqjbAQN31y9wQm3jm",
+  "zip_bytes": 38509,
+  "zip_sha256": "a771c4648b40e8e0a83b862dd2283c5bf6c4044baa3bab4685e31900a864cf72",
+  "zip_entries": 48,
+  "raw_download_readback": "PASS",
+  "archive_integrity": "PASS",
+  "external_truth_implication": false
+}

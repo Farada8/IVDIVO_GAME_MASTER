@@ -1,0 +1,18 @@
+name: NMM Cycle5 External Evidence Engineering Tests
+on:
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/NMM/CYCLE5_EXTERNAL_EVIDENCE_2026-08-21/**'
+      - '.github/workflows/nmm-cycle5-external-evidence-tests.yml'
+  workflow_dispatch:
+jobs:
+  cycle5:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Cycle5 tests
+        working-directory: AUDIO_PRODUCTION/NMM/CYCLE5_EXTERNAL_EVIDENCE_2026-08-21
+        run: python -m unittest tests.test_nmm_cycle5 -v

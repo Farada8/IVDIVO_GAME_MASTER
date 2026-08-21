@@ -1,0 +1,17 @@
+{
+  "contracts": 10,
+  "credential_observation": {"ELEVENLABS_API_KEY_present": false, "secret_persisted": false},
+  "date": "2026-08-21",
+  "deterministic_tests": {"count": 32, "passed": 32, "status": "PASS"},
+  "engineering_prompts_executed": 32,
+  "external_truth_claimed": false,
+  "paid_calls": 0,
+  "parallel_reconciliation": {"audio_wave10": "REUSED", "base_main_sha": "dcaba52b8956087d3792164acc7f0b861c775db7", "duplicate_provider_cast_engine_created": false},
+  "proof_law": "Engineering readiness and deterministic tests do not imply provider, listener, specialist, economics, or release truth.",
+  "protocols": 6,
+  "real_human_listener_rows": 0,
+  "real_provider_calls": 0,
+  "release": "NO_GO",
+  "runtime_modules": 12,
+  "schema": "NMM_CYCLE5_MACHINE_PROOF_v1"
+}
