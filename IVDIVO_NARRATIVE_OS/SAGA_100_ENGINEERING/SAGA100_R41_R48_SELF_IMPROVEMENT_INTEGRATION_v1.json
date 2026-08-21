@@ -1,0 +1,87 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-21",
+  "status":"R41_R48_EXECUTED",
+  "R41_observation_adapter":{
+    "event_schema":{
+      "event_id":"S100-OBS-{date}-{sequence}",
+      "source_scope":"SAGA100",
+      "source_project":"nullable PROJECT_ID",
+      "source_artifact":"required persisted ref",
+      "observation_type":["PRODUCTION_DEFECT","RECURRING_FRICTION","CONTRACT_FAILURE","PROOF_SUCCESS","RED_TEAM_FINDING","HUMAN_EXTERNAL_SIGNAL","EFFICIENCY_OPPORTUNITY"],
+      "problem_statement":"required",
+      "candidate_mechanism":"required abstract mechanism; project-specific details forbidden for universal candidates",
+      "evidence_refs":"1+ persisted refs",
+      "protected_authorities":"1+",
+      "proposed_scope":["PROJECT","DOMAIN","UNIVERSAL_IVDIVO"],
+      "dedupe_keys":"candidate title + mechanism signature + affected contract family"
+    },
+    "rule":"Saga100 emits observations into the existing Self-Improvement registry family; it never owns a parallel registry."
+  },
+  "R42_candidate_dedup":{
+    "id_allocation":"Read base registry + every CURRENT_IMPROVEMENT_REGISTRY_FAMILY extension immediately before assignment; duplicate candidate_id fails closed.",
+    "semantic_dedup":"Compare problem, proposed mechanism, outputs/failure states, target surfaces and proof obligations; same mechanism under new wording is EXTENSION or DUPLICATE, not NEW.",
+    "current_proof":"SI-0016 allocated only after base + family read showed SI-0001..SI-0015 occupied; relationship to SI-0002/SI-0013/SI-0015 explicitly documented.",
+    "result":"PASS"
+  },
+  "R43_evidence_classes":{
+    "note":"Weights are routing/prioritization aids, never arithmetic truth or automatic promotion.",
+    "classes":[
+      {"class":"DETERMINISTIC_MACHINE_TEST","weight":1.0,"use":"contract/schema/state invariants"},
+      {"class":"REAL_PRODUCTION_DEFECT","weight":1.0,"use":"proves actual recurrence/opportunity"},
+      {"class":"LOCKED_OR_CURRENT_PROJECT_PROOF","weight":0.9,"use":"real corpus behavior within authority status"},
+      {"class":"INDEPENDENT_HUMAN_EDITOR_LISTENER_READER","weight":1.0,"use":"perceptual/story/market-facing claims where machine tests cannot substitute"},
+      {"class":"INDEPENDENT_RED_TEAM","weight":0.7,"use":"adversarial risk discovery; requires evidence linkage"},
+      {"class":"CROSS_PROJECT_REPLICATION","weight":0.9,"use":"portability/generalization proof"},
+      {"class":"MARKET_OR_AUDIO_SIGNAL","weight":0.6,"use":"packaging/accessibility/downstream performance; cannot rewrite canon alone"},
+      {"class":"MODEL_INFERENCE","weight":0.3,"use":"candidate generation only"},
+      {"class":"MODEL_AGREEMENT_SHARED_SOURCES","weight":0.3,"use":"not independent evidence"}
+    ]
+  },
+  "R44_promotion_thresholds":{
+    "PROJECT_ONLY":{"minimum":["one real project need","bounded proof","no protected-authority regression"],"promotion":"project artifact only"},
+    "DOMAIN":{"minimum":["2+ independent project/corpus proofs or one strong repeated production defect","deterministic tests where applicable","targeted Red Team","selective regression"],"promotion":"domain standard; no unrelated projects forced to adopt"},
+    "UNIVERSAL_IVDIVO":{"minimum":["3+ heterogeneous proof contexts OR systemic production defect with cross-system evidence","machine canaries","authority/freshness regression","anti-duplication proof","explicit application map","rollback/minimum-repair plan"],"promotion":"current Narrative OS/router/system authority through controlled review/merge; never story canon by implication"},
+    "always_hold_if":["human evidence required but missing","authority ambiguity changes outcome","candidate duplicates existing stronger mechanism","benefit only terminological","regression scope unknown"]
+  },
+  "R45_regression_graph":{
+    "StrategicFreshnessGuard":["START_HERE_router","CURRENT_WORKSTATE","Saga100 strategic pointer","SI-0015 project-slice freshness","project resume canaries"],
+    "AuthorityResolver":["Saga100 legacy map","current project states","cross-dialog router","approval-event rules"],
+    "CivilizationProgressionLedger":["technology access law","B02 Orbital consequences","B07 Confederation access limits","future terraforming/body/synthetic-life continuity"],
+    "ProfessionalMatrixEngine":["B03 architecture","Smith overlay","Enia/Synthesis non-oracle law"],
+    "CrossingNecessityCompiler":["B08 architecture","continuity substitutions","jurisdiction matrix","book independence gate"],
+    "NoRepeatVector":["NARR-009 seed bank","nearby book vectors","philosophical repetition detector"]
+  },
+  "R46_selective_regression":{
+    "law":"Re-run the smallest descendant set that can be invalidated by the changed contract; never reopen locked prose merely because an upstream engine wording changed.",
+    "examples":[
+      {"change":"StrategicFreshnessGuard","rerun":["R32 strategic omission canaries","START HERE pointer readback","one active-book boot negative control"],"do_not_rerun":["book prose gates"]},
+      {"change":"capability stage names/order","rerun":["R27 transition tests","all capability ledgers","B02/B07 technology-access proofs"],"do_not_rerun":["dialogue/line edits"]},
+      {"change":"Crossing eligibility","rerun":["R28 tests","R39 B08 necessity proof","R40 jurisdiction/consequence proof"],"do_not_rerun":["B02 prose"]},
+      {"change":"ProfessionalMatrix fields","rerun":["R35/R36 B03 proofs"],"do_not_rerun":["unrelated Orbital/Confederation books"]}
+    ]
+  },
+  "R47_learning_harvest":{
+    "accepted_abstract_mechanisms":[
+      {"from":"B02","learning":"Treat lived civic variables as causal inputs; distinguish technical insight from deployment authority; require falsification/negative cases before confidence becomes command."},
+      {"from":"B03","learning":"Preserve useful legacy procedure while restoring hidden context/cost; model observer/response feedback when intervention changes the phenomenon; philosophy must become changed operational method, not answer exposition."},
+      {"from":"B07","learning":"Advanced civilization remains dramatically alive when capability is bounded by resources, consent, law, career price, institutional blind spots and provisional rather than universal resolution."},
+      {"from":"B08","learning":"Crossovers work when knowledge, capability, jurisdiction and liability are distributed across actors; each line supplies a non-substitutable function without permanent-team logic."}
+    ],
+    "rejected_project_specific_contamination":["Ring Six","R3-S","Precursor Channel","Morgen Pass","Kaira Nel","CAM-4/Quiet Network","Tessera","Last Override","Sealed Transfer Spine","specific B08 R1 identity"],
+    "result":"PASS"
+  },
+  "R48_complete_candidate_cycle":{
+    "candidate_id":"SI-0016",
+    "observation":"Long-horizon saga question initially recovered fresh CURRENT execution state but omitted persisted NARR-009 strategic roadmap.",
+    "candidate":"Scope-aware strategic authority discoverability for long-horizon work",
+    "evidence":["real production omission defect","persisted NARR-009","Drive START HERE strategic pointer + exact-text readback","R32 negative/positive executable canaries"],
+    "proof":"R32: 2/2 strategic freshness canaries PASS; overall R25-R32 regression 14/14 PASS",
+    "regression":"No active-book contract is changed to always load strategic material; scope-aware rule preserves lightweight active execution and protects current project authority from old-roadmap override.",
+    "disposition":"HOLD_FOR_LIVE_PILOT / READY_FOR_PILOT",
+    "promotion":"NONE_YET",
+    "next_gate":"LIVE_SCOPE_AWARE_BOOT_PILOT_PLUS_REGRESSION",
+    "persistence":["31_IDEAS/REGISTRY_EXTENSIONS/SI-0016_STRATEGIC_AUTHORITY_DISCOVERABILITY_SCOPE_BOOT.json","31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json on Saga100 branch","Drive strategic pointer already persisted"]
+  },
+  "aggregate_verdict":"PASS_R41_R48; SELF_IMPROVEMENT_INTEGRATED_WITHOUT_AUTO_PROMOTION"
+}
