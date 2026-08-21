@@ -1,0 +1,58 @@
+{
+  "candidate_id": "SI-0014",
+  "title": "Session Resilience + Durable Recovery Stack",
+  "candidate_type": "PROGRAM_OR_CODE",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO_CANDIDATE",
+  "source_provenance": [
+    {"source_type": "FOUNDER", "locator": "2026-08-21 instruction to solve abrupt page/session loss for future, integrate into engines/self-improvement, add engineering modules/contracts/proofs/protocols", "date": "2026-08-21"},
+    {"source_type": "PRODUCTION_INCIDENT", "locator": "2026-08-21 abrupt ChatGPT logout/page-loss during active IVDIVO work", "date": "2026-08-21"},
+    {"source_type": "GITHUB", "locator": "PR #100 / merge 42e08b350c5d2f564ea380d4de8aba57fba90ab9", "date": "2026-08-21", "notes": "18C checkpoint tool/schema/tests and Run32 evidence merged"},
+    {"source_type": "GITHUB", "locator": "ENGINEERING_CONTRACTS/SELF_IMPROVEMENT_REGISTRY_TRANSACTION_v1.0.md", "date": "2026-08-21", "notes": "Existing registry transaction authority reused; no parallel registry writer"},
+    {"source_type": "GITHUB", "locator": "IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md", "date": "2026-08-21"}
+  ],
+  "problem_or_opportunity": "A durable checkpoint can prove where work stopped, but safe recovery also requires multi-store write reconciliation, idempotency, checkpoint lineage/retention, and measured interruption evidence. Run32 additionally exposed that a candidate ID selected from partial visibility can collide with the full registry family.",
+  "proposed_mechanism": "Extend 18C with a project-neutral durable transaction reconciler, explicit external-side-effect states, checkpoint lineage/retention ledger, interruption-learning evidence summarizer, and full registry-family ID freshness before candidate registration. Fail-closed order remains blocker -> authority/state drift -> identity/effect reconciliation -> safe missing actions -> exact completion.",
+  "dedupe_relation": "EXTENDS_18C_AND_REUSES_EXISTING_REGISTRY_TRANSACTION",
+  "related_candidates": ["SI-0008", "SI-0010", "SI-0012", "SI-0013"],
+  "expected_benefit": "Prevents duplicate GitHub/Drive/provider work after interruption, quarantines ambiguous paid/irreversible side effects, preserves checkpoint lineage without transcript bloat, and gives Self-Improvement measurable recovery evidence instead of anecdotal claims.",
+  "evidence_state": "INTERNAL_ENGINEERING_EVIDENCE",
+  "priority_vector": {"impact": "HIGH", "recurrence": "RECURRING", "effort": "MEDIUM", "regression_risk": "MEDIUM", "reversibility": "EASY", "urgency": "HIGH", "affected_surface": "PORTFOLIO"},
+  "development_contract": {
+    "protected_invariants": ["Founder/project/story authority outranks recovery state", "No secret persistence", "No automatic replay of paid or irreversible effects", "No checkpoint/transaction ledger as canon", "No automatic Self-Improvement promotion", "No parallel registry transaction engine"],
+    "acceptance_conditions": ["Run33 deterministic suite green", "Repository CI green", "Full registry family has unique candidate IDs", "GitHub + Drive write/readback evidence", "At least one real interruption recovery before promotion beyond pilot", "Zero false-resume evidence"],
+    "rollback": "Remove SI-0014 Run33 modules/protocol references and retain merged 18C; do not roll back unrelated registry transaction, project-state, audio or story authorities."
+  },
+  "pilot_evidence": [
+    "PR #100 merged after 10/10 focused checkpoint regression and Self-Improvement Integrity CI",
+    "Run32 handled two real concurrent-main advances via REBASE_FIRST without overwriting sibling work",
+    "Run33 prototype: 22/22 deterministic tests PASS for durable transaction, checkpoint lineage/retention, and interruption-learning evidence",
+    "Run33 full-registry freshness sweep detected and corrected the erroneous pending SI-0010 identity before further promotion"
+  ],
+  "red_team_findings": [
+    "Partial candidate-ID visibility is insufficient; always inspect full registry family before assigning IDs",
+    "Provider accepted != production asset accepted != canonical/voice/take lock",
+    "STARTED_UNKNOWN paid/irreversible action must quarantine rather than retry",
+    "Identity mismatch after confirmed write is STOP, not repair-in-place",
+    "Retention must preserve incident evidence but garbage-collect superseded routine checkpoints"
+  ],
+  "application_targets": [
+    "IVDIVO_NARRATIVE_OS/18C_VOLATILE_SESSION_CHECKPOINT_AND_RECOVERY_PROTOCOL_v1.0.md",
+    "IVDIVO_NARRATIVE_OS/18D_DURABLE_TRANSACTION_RECONCILIATION_PROTOCOL_v1.0.md",
+    "tools/ivdivo_session_checkpoint.py",
+    "tools/ivdivo_durable_write_reconciler.py",
+    "tools/ivdivo_checkpoint_lineage.py",
+    "tools/ivdivo_interruption_learning.py"
+  ],
+  "verification_evidence": [
+    "SYSTEM_ENGINEERING/SESSION_RESILIENCE_RUN32_2026-08-21/05_MACHINE_STATE_AND_TEST_RESULTS.json",
+    "SYSTEM_ENGINEERING/SESSION_RESILIENCE_RUN33_2026-08-21/05_MACHINE_STATE_AND_TEST_RESULTS.json"
+  ],
+  "protected_authorities": ["Cross-Conversation Autopilot v1.3", "Asset Escrow v17", "Transcript Recovery 18B", "Self-Improvement v2", "Registry Transaction Contract v1.0", "project-specific current state"],
+  "owner_role": "System Reliability / Self-Improvement Reconciler",
+  "next_action": "Complete Run33 integration/CI/Drive readback, then use the next genuine interruption/partial multi-store event as production pilot evidence.",
+  "next_gate": "RUN33_CI_PLUS_DURABLE_READBACK_PLUS_REAL_INTERRUPTION_PILOT",
+  "hold_trigger": "Any false resume, secret leak, duplicate paid/irreversible side effect, registry ID collision, or checkpoint/transaction overhead that materially harms production.",
+  "last_movement": "2026-08-21",
+  "terminal_reason": null
+}
