@@ -1,0 +1,24 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/schemas/protagonist_state_change_ledger_candidate_v1.json",
+  "title":"Protagonist State-Change Ledger Candidate",
+  "type":"object",
+  "required":["unit_id","present_want","action_or_tactic","response","state_delta","price","next_adaptation"],
+  "properties":{
+    "unit_id":{"type":"string"},
+    "present_want":{"type":"string"},
+    "action_or_tactic":{"type":"string"},
+    "action_class":{"enum":["PURSUE","REFUSE","DELAY","COOPERATE","TEST","RESTRAIN","BARGAIN","WITHDRAW","PROTECT","EXPOSE","ENDURE","OTHER"]},
+    "response":{"type":"string"},
+    "state_delta":{"type":"object","properties":{"constraint":{"type":"string"},"value":{"type":"string"},"relationship":{"type":"string"},"knowledge":{"type":"string"},"status":{"type":"string"}},"additionalProperties":true},
+    "price":{"type":"string"},
+    "next_adaptation":{"type":"string"},
+    "material_change":{"type":"boolean"},
+    "passivity_risk":{"type":"boolean"}
+  },
+  "gate":"Restraint/refusal/cooperation count as agency only if material_change=true and the action alters access, risk, relationship, knowledge, status, timing or constraint.",
+  "negative_examples":["hero is present but others decide","hero loudly argues but nothing changes","hero waits because outline needs the next event"],
+  "n17_result":"PASS_CANDIDATE_SCHEMA_CREATED",
+  "n18_internal_fixture_result":{"quiet_protagonist":"PASS when refusal changes relationship/access","relational_protagonist":"PASS when cooperation creates cost/obligation","investigative_protagonist":"PASS when test changes theory or risk","action_protagonist":"FAIL if loud/physical action causes no meaningful state change"},
+  "evidence_class":"INTERNAL_MODEL_VALIDATION_NOT_HUMAN"
+}
