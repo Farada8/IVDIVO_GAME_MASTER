@@ -1,9 +1,14 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "updated": "2026-08-21",
   "project_id": "IVDIVO_BOOK_3_SMITH",
   "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
-  "status": "ACTIVE_WORKING_PRE_PROSE_FOUNDER_DECISION_GATE",
+  "status": "PREPARED_PRE_PROSE_NOT_ACTIVE_UNTIL_D01_FOUNDER_LOCK",
+  "portfolio_precondition": {
+    "active_project": "D01_THE_WIFE_AT_HIS_WEDDING",
+    "required_event": "FOUNDER_EXPLICIT_LOCK_FOR_D01_PLUS_PERSISTENCE_READBACK",
+    "law": "This B03 state is advance preparation only and may not supersede the current D01 Founder Lock decision gate."
+  },
   "authority": {
     "founder_newest_instruction": "OLD EARTH SECURITY ↔ NEW CONFEDERATION SECURITY; neither side automatically right; story first",
     "saga_bible_drive_id": "18boeup_cforR4zZ4Pc291WpG_T85OEklPH-t1YMlE6s",
@@ -13,7 +18,7 @@
     "cycle32_story_rebase_ch13_29_drive_id": "1bCII388mfUgzbC9hZVodvS1sJLn9pzF1_nIjTqUQEy4"
   },
   "case_engine": "predictive distress trace -> rescue response -> response changes causal state -> new predictive trace -> recursive intervention",
-  "completed_frontier": "WORKING_SCENE_CARDS_CH1_CH29_PLUS_CYCLE32_ENGINEERING",
+  "prepared_frontier": "WORKING_SCENE_CARDS_CH1_CH29_PLUS_CYCLE32_ENGINEERING",
   "story_core": {
     "hero": "Smith",
     "want": "Stop deadly precursor-driven deployments while preserving real rescue capability during a worsening storm.",
@@ -40,14 +45,14 @@
     "protocols": 32,
     "next_prompts_designed": 64
   },
-  "red_team": {
+  "prepared_red_team": {
     "fatal": 0,
     "blocking_major": 1,
     "closed_major": [
       "CIVILIAN_CONTINUITY_AND_IRREVERSIBLE_LOSS_UNBOUND -> CLOSED_WORKING_PRE_PROSE",
       "PRE_DRAFT_VOICE_CALIBRATION_NOT_RUN -> CLOSED_INTERNAL_CALIBRATION_PASS"
     ],
-    "open_major": "SMITH_PERSONAL_FAMILY_CONTINUITY -> FOUNDER_DECISION_REQUIRED"
+    "open_major": "SMITH_PERSONAL_FAMILY_CONTINUITY -> FOUNDER_DECISION_REQUIRED_AFTER_B03_ACTIVATION"
   },
   "smith_family_recovery": {
     "result": "RECOVERED_WORKING_OPTION_NOT_CANON",
@@ -73,12 +78,13 @@
   },
   "prose_authorized": false,
   "do_not": [
+    "DO_NOT_TREAT_B03_PREPARATION_AS_ACTIVE_PORTFOLIO_PROJECT",
     "DO_NOT_INVENT_SMITH_FAMILY",
     "DO_NOT_PROMOTE_RECOVERED_DRAFT_TO_CANON",
-    "DO_NOT_BEGIN_CH1_UNTIL_FATAL_0_MAJOR_0",
+    "DO_NOT_BEGIN_CH1_BEFORE_D01_FOUNDER_LOCK_AND_B03_FATAL_0_MAJOR_0",
     "DO_NOT_GIVE_CONFEDERATION_EARTH_COMMAND_JURISDICTION",
     "DO_NOT_REVEAL_PRECURSOR_ONTOLOGY",
     "DO_NOT_MAKE_ENIA_OR_TAREN_SOLVE_CASE"
   ],
-  "next_obligation": "FOUNDER_SELECT_F1_F2_OR_F3; then N24 Character Blocker Gate -> N25-N47 pre-prose validation -> CH1 canary only if FATAL=0 and MAJOR=0."
+  "next_obligation": "WAIT_FOR_D01_FOUNDER_LOCK. After D01 lock persistence closure, fresh-rebase B03; then Founder selects F1/F2/F3; rerun N24 -> N25-N47 -> CH1 canary only if FATAL=0 and MAJOR=0."
 }
