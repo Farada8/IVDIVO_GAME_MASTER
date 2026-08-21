@@ -83,6 +83,20 @@ class ProviderEvidenceIntakeTests(unittest.TestCase):
         self.assertFalse(out["provider_dispatch_allowed"])
         self.assertFalse(out["voice_lock"])
 
+    def test_non_numeric_or_zero_run_identity_fails_before_trust(self):
+        for run_id, attempt in (("abc", 1), (0, 1), (1, 0), (1, "2x")):
+            with self.subTest(run_id=run_id, attempt=attempt):
+                out = intake_provider_evidence(packet(), repository=REPO, run_id=run_id, run_attempt=attempt, now=NOW)
+                self.assertEqual(out["status"], "FAIL_WORKFLOW_RUN_IDENTITY_SHAPE")
+                self.assertFalse(out["verified"])
+
+    def test_malformed_repository_identity_fails_before_trust(self):
+        for repository in ("owneronly", "/repo", "owner/", "a/b/c"):
+            with self.subTest(repository=repository):
+                out = intake_provider_evidence(packet(), repository=repository, run_id=RUN_ID, run_attempt=ATTEMPT, now=NOW)
+                self.assertEqual(out["status"], "FAIL_REPOSITORY_IDENTITY_SHAPE")
+                self.assertFalse(out["verified"])
+
     def test_wrong_transaction_lineage_fails(self):
         out = intake_provider_evidence(packet(transaction="999:1"), repository=REPO, run_id=RUN_ID, run_attempt=ATTEMPT, now=NOW)
         self.assertEqual(out["status"], "FAIL_WORKFLOW_TRANSACTION_LINEAGE")
