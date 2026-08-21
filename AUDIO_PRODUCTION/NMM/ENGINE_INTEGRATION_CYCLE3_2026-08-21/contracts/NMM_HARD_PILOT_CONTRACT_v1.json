@@ -1,0 +1,8 @@
+{
+  "schema":"NMM_HARD_PILOT_CONTRACT_v1",
+  "samples":[
+    {"id":"HP_TEMPORAL_CONFESSION","primary_metric":"11:47_vs_12:04_one_listen_comprehension","protected":["exact confession master","timestamp lines","no explanatory music"]},
+    {"id":"HP_RELATIONSHIP_WHISTLE","primary_metric":"status_chemistry_plus_short_long_whistle_discrimination","protected":["no romantic direction","same clue masters","no hidden-guilt music"]}
+  ],
+  "full_e01_allowed_only_after":"HARD_PILOT_PASS"
+}
