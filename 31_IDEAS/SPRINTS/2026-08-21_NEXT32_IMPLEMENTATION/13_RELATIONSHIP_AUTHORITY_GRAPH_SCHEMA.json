@@ -1,0 +1,42 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/schemas/relationship_authority_graph_candidate_v1.json",
+  "title":"Relationship Authority Graph Candidate",
+  "type":"object",
+  "required":["project_id","nodes","edges"],
+  "properties":{
+    "project_id":{"type":"string"},
+    "nodes":{"type":"array","items":{"type":"object","required":["character_id"],"properties":{"character_id":{"type":"string"},"current_cycle_or_timeline":{"type":"string"}}}},
+    "edges":{"type":"array","items":{"type":"object","required":["a","b","relationship_type","trust","boundary","power","knowledge_asymmetry","vulnerability","consent_state","unresolved_obligation"],"properties":{
+      "a":{"type":"string"},"b":{"type":"string"},
+      "relationship_type":{"enum":["ROMANCE","FAMILY","FRIENDSHIP","PROFESSIONAL","ANTAGONISTIC","MENTORSHIP","MIXED"]},
+      "trust":{"type":"string"},
+      "boundary":{"type":"string"},
+      "power":{"type":"string"},
+      "debt":{"type":"string"},
+      "knowledge_asymmetry":{"type":"string"},
+      "vulnerability":{"type":"string"},
+      "rupture":{"type":"string"},
+      "repair":{"type":"string"},
+      "consent_state":{"enum":["NOT_APPLICABLE","NOT_ESTABLISHED","CURRENT_EXPLICIT","CURRENT_IMPLICIT_CONTEXTUAL","WITHDRAWN","AMBIGUOUS_REQUIRES_REPAIR"]},
+      "unresolved_obligation":{"type":"string"},
+      "current_timeline_only":{"type":"boolean"},
+      "state_delta_last_unit":{"type":"string"}
+    }}}
+  },
+  "hard_laws":[
+    "Privileged memory or erased-timeline intimacy does not create current consent.",
+    "Rescue, wealth, authority or employment power does not create emotional debt that substitutes for choice.",
+    "Relationship state is current-state data; prior-cycle/history can be remembered by a character only if canon allows it, but cannot be silently inherited by the other party.",
+    "Repair requires changed behavior or boundary, not a correct speech alone."
+  ],
+  "n25_result":"PASS_CANDIDATE_SCHEMA_CREATED",
+  "n26_stress_results":[
+    {"case":"erased-memory/time-loop","expected":"prior intimacy stored as one-sided knowledge asymmetry; consent resets to NOT_ESTABLISHED for non-remembering partner"},
+    {"case":"boss_employee","expected":"power edge remains active until employment/status leverage is genuinely removed or consent context is independently safe"},
+    {"case":"rescuer_rescued","expected":"rescue creates gratitude/context, not romantic obligation"},
+    {"case":"wealthy_powerful_lead","expected":"resources may change access/risk but cannot buy trust/consent"},
+    {"case":"professional_investigative","expected":"evidence access and duty can conflict with intimacy; professional authority cannot be used as romantic shortcut"}
+  ],
+  "evidence_class":"INTERNAL_MODEL_STRESS_TEST"
+}
