@@ -1,6 +1,6 @@
 # RUN35 — PROMPTS 01–32 EXECUTION REPORT
 
-Status: EXECUTED SEQUENTIALLY; final CI/Drive/freshness disposition appended after gates.
+Status: EXECUTED SEQUENTIALLY; only final fresh-main integration disposition remains.
 
 01. Restore current main / SI authorities. — PASS. Cycle6 is current review surface; SI-0012 PILOTING; SI-0014 READY_FOR_PILOT.
 02. Inspect SI-0012 transaction semantics. — PASS. Legacy stale/no-effect/ready/readback contract isolated.
@@ -31,9 +31,9 @@ Status: EXECUTED SEQUENTIALLY; final CI/Drive/freshness disposition appended aft
 27. Recompute candidate reservation state. — PASS. Full family + open PR search found SI-0015 unallocated; Cycle6 had not allocated it.
 28. Repair PR #130 identity without touching story gate. — PASS. Project-slice moved SI-0015, colliding SI-0014 file deleted, redirect/family/PR metadata repaired; B03 prose remains blocked by separate Founder decision.
 29. Implement interface/schema/contract/tests/workflow. — PASS. Additive Run35 surface created.
-30. Execute CI and repair defects. — IN_PROGRESS HISTORY: run #1 = 16/17 new tests PASS; Python 3.12 dynamic-import harness defect fixed. Run #2 = 17/17 new tests PASS; inherited workflow path was wrong (`tests/test_session_resilience.py` nonexistent); repaired from authoritative Run32/Run33 workflow definitions. Final run pending.
-31. Persist Drive evidence mirror and semantic readback. — IN_PROGRESS. Run35 folder created; 00/01/03/04 written; 02/05 final docs wait for final CI state.
-32. Synthesize final disposition, derive 64 next prompts, freshness/rebase/merge gate. — IN_PROGRESS. 64 next prompts already derived; final disposition awaits CI + Drive + latest-main diff.
+30. Execute CI and repair defects. — PASS after two explicit repairs. Run #1: 16/17 new tests PASS; Python 3.12 dynamic-import harness repaired. Run #2: 17/17 new tests PASS but inherited test path was nonexistent; authoritative Run32/Run33 workflow paths restored. Run #3 `32521664174`: 17/17 Run35 + 27/27 Run33 + 10/10 Run32 checkpoint + 7/7 registry transaction PASS; registry refs PASS; portfolio PASS_FULL; schema PASS.
+31. Persist Drive evidence mirror and semantic readback. — PASS. Folder `1vXrVeO0xjhxExaWwqoPy_HPu1BTsvclf`; six nonempty docs; six exact semantic markers verified.
+32. Synthesize final disposition, derive 64 next prompts, freshness/rebase/merge gate. — PARTIAL PASS. 64 next prompts derived. Freshness check found 11 parallel main commits, zero path overlap, Wave9 trust/evidence audio-only. Blob-exact semantic rebase and latest-head CI/diff gate are the remaining integration actions.
 
 ## Red Team severity summary
 FATAL: PR130 duplicate SI-0014 identity — repaired before merge.
