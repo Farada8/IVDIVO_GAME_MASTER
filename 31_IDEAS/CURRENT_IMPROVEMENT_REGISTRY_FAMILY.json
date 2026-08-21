@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "status": "CURRENT_MACHINE_REGISTRY_FAMILY_POINTER_NOT_STORY_CANON",
   "updated": "2026-08-21",
   "base_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
@@ -9,10 +9,13 @@
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0009_RECONCILED_RECOVERY_STATE_V2.json",
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0010_REGISTRY_SHARD_COMPACTION_TRANSACTION.json",
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0011_REAL_CORPUS_RECOVERY_ADVERSARIAL_PILOT.json",
-    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0012_META_ORCHESTRATOR_CYCLE2_CANDIDATE.json"
+    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0012_META_ORCHESTRATOR_CYCLE2_CANDIDATE.json",
+    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0013_PROJECT_STATE_COVERAGE_GATE.json"
   ],
   "validation_tool": "tools/validate_improvement_registry_refs.py",
+  "transaction_candidate_tool": "tools/ivdivo_registry_transaction.py",
   "merge_law": "candidate_id must be unique across base and extensions; duplicate IDs fail closed; extensions are first-class machine registry records but may not override a base record.",
+  "write_law": "Concurrent candidate writes should use validated extension shards. Transactional writer must stale-check, snapshot, atomically write, read back and rollback on incomplete mutation. Base monolith remains compatibility/read model until deterministic compaction is independently promoted.",
   "c3_38_integrity_repair": {
     "defect": "DUPLICATE_SI_0008_IDENTITY",
     "kept": "SI-0008 = Full chat transcript recovery and ingestion executable extension",
@@ -20,6 +23,10 @@
     "historical_redirect": "31_IDEAS/SI-0008_RUN_CARDS_V2_CANDIDATE.json",
     "result": "RESOLVED_IN_REGISTRY_FAMILY"
   },
-  "migration_note": "Concurrent candidate writes should prefer validated extension shards plus this family pointer. The monolithic base registry is a compatibility/read model until a deterministic compaction build validates all base+extension IDs, emits input/output hashes, passes roundtrip/readback regression, and switches pointers transactionally. Candidate shard visibility does not promote candidate status.",
-  "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009/0010/0011/0012 are candidates/pilots unless their own lifecycle state says otherwise."
+  "h_generation_delta": {
+    "SI-0010": "READY_FOR_PILOT — atomic shard transaction + rollback + deterministic compaction implementation and CI pending",
+    "SI-0013": "READY_FOR_PILOT — durable project-state coverage / portfolio resumability gate; D06-D08 recovered, D01 explicitly blocked"
+  },
+  "migration_note": "The monolithic base registry is a compatibility/read model until a deterministic compaction build validates all base+extension IDs, emits input/output hashes, passes roundtrip/readback regression, and switches pointers transactionally. Candidate shard visibility does not promote candidate status.",
+  "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009/0010/0011/0012/0013 are candidates/pilots unless their own lifecycle state says otherwise."
 }
