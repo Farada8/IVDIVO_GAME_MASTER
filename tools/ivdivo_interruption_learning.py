@@ -69,21 +69,25 @@ def summarize_events(events: list[dict[str, Any]]) -> dict[str, Any]:
     real = [e for e in rows if e["real_interruption"]]
     projects = sorted({e["project_id"] for e in real})
     false_resume_count = sum(1 for e in rows if e["false_resume"])
+    real_false_resume_count = sum(1 for e in real if e["false_resume"])
     false_stop_count = sum(1 for e in rows if e["false_stop"])
+    real_false_stop_count = sum(1 for e in real if e["false_stop"])
     duplicate_avoided = sum(e["duplicate_work_units_avoided"] for e in rows)
     writes_reconciled = sum(e["writes_reconciled"] for e in rows)
     checkpoint_tool_calls = sum(e["checkpoint_tool_calls"] for e in rows)
     recovery_tool_calls = sum(e["recovery_tool_calls"] for e in rows)
     checkpoint_bytes = sum(e["checkpoint_bytes"] for e in rows)
+    real_false_stop_rate = real_false_stop_count / len(real) if real else 0.0
 
+    # Any false resume, even synthetic, is a safety regression signal and blocks promotion.
     if false_resume_count:
         recommendation, reason = "HOLD", "FALSE_RESUME_PRESENT"
     elif len(real) < 1:
         recommendation, reason = "HOLD", "NO_REAL_INTERRUPTION_EVIDENCE"
     elif len(real) < 3 or len(projects) < 2:
         recommendation, reason = "CONTINUE_PILOT", "INSUFFICIENT_CROSS_PROJECT_RECOVERY_EVIDENCE"
-    elif false_stop_count / max(total, 1) > 0.10:
-        recommendation, reason = "NARROW", "FALSE_STOP_RATE_TOO_HIGH"
+    elif real_false_stop_rate > 0.10:
+        recommendation, reason = "NARROW", "REAL_FALSE_STOP_RATE_TOO_HIGH"
     else:
         recommendation, reason = "ELIGIBLE_FOR_PROMOTION_REVIEW", "MINIMUM_RECOVERY_EVIDENCE_MET"
 
@@ -92,9 +96,11 @@ def summarize_events(events: list[dict[str, Any]]) -> dict[str, Any]:
         "real_interruption_count": len(real),
         "real_project_count": len(projects),
         "projects": projects,
-        "false_resume_count": false_resume_count,
-        "false_stop_count": false_stop_count,
-        "false_stop_rate": (false_stop_count / total) if total else 0.0,
+        "false_resume_count_all": false_resume_count,
+        "false_resume_count_real": real_false_resume_count,
+        "false_stop_count_all": false_stop_count,
+        "false_stop_count_real": real_false_stop_count,
+        "real_false_stop_rate": real_false_stop_rate,
         "duplicate_work_units_avoided": duplicate_avoided,
         "writes_reconciled": writes_reconciled,
         "checkpoint_tool_calls": checkpoint_tool_calls,
@@ -113,5 +119,6 @@ def summarize_events(events: list[dict[str, Any]]) -> dict[str, Any]:
             "NO_AUTOMATIC_PROMOTION",
             "NO_FOUNDER_APPROVAL_INFERRED",
             "NO_HUMAN_QUALITY_EVIDENCE_INFERRED",
+            "SYNTHETIC_EVENTS_MAY_BLOCK_FOR_SAFETY_BUT_CANNOT_SATISFY_REAL_EVIDENCE_THRESHOLD",
         ],
     }
