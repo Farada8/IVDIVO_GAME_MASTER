@@ -1,0 +1,8 @@
+{
+  "title": "Absolute Math Improvement Proposal v1",
+  "required": ["proposal_id","parent_revision","hypothesis","mutation_scope","target_metrics","forbidden_mutations","benchmark_ids","rollback_ref"],
+  "properties": {
+    "status": ["PROPOSED","SANDBOXED","PASS","FAIL","HOLD","ARCHIVED","CANDIDATE"]
+  },
+  "rule": "Every self-improvement mutation is parent-pinned, bounded in scope, benchmarked, rollback-capable and candidate-only until external promotion."
+}
