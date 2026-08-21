@@ -1,0 +1,47 @@
+{
+  "artifact": "BODYGUARD_E01_E03_ROUGH_AUDIO_BUILD_MANIFEST_v1.0",
+  "status": "WORKING_PRODUCTION",
+  "authority": {
+    "story_source": "BODYGUARD FOR THE FALLEN IDOL — SEASON ONE RECORDING MASTER v1.6 — RECORDING LANGUAGE CLEAN",
+    "story_lock": true,
+    "p51_p52_p53_compliance": "PASS",
+    "dialogue_editing_during_build": "PROHIBITED_UNLESS_PICKUP_GATE_TRIGGERS"
+  },
+  "purpose": "Generate the first evidence-bearing performed-audio pilot for E01–E03 without reopening story architecture.",
+  "episodes": {
+    "E01": {
+      "spoken_words": 1344,
+      "builds": ["RAW_DIALOGUE_NO_MUSIC","SFX_ONLY_REFERENCE","ROUGH_MIX_STEREO","ROUGH_MIX_MONO","PHONE_SIM_REFERENCE","COLD_OPEN_64S","TRAILER_15A","TRAILER_15B","TRAILER_30A","TRAILER_30B"],
+      "mandatory_story_tests": ["four-click anomaly is audible","threat is intelligible","Naomi command lands before lift failure","rescue causality remains clear","left/right distinction survives headphones and mono explanation","public accusation is immediately understandable","Naomi/Eli chemistry exists without romanticizing unsafe action"]
+    },
+    "E02": {
+      "spoken_words": 1321,
+      "builds": ["RAW_DIALOGUE_NO_MUSIC","ROUGH_MIX_STEREO","ROUGH_MIX_MONO"],
+      "mandatory_story_tests": ["evidence-custody objective is understandable without legal homework","I believe you / not yet lands as relationship movement","Vivian remains credible rather than villain-coded","gateway discovery is understandable"]
+    },
+    "E03": {
+      "spoken_words": 1328,
+      "builds": ["RAW_DIALOGUE_NO_MUSIC","ROUGH_MIX_STEREO","ROUGH_MIX_MONO"],
+      "mandatory_story_tests": ["right voice / left music rule is listener-clear","conditional retention of Naomi feels costly rather than convenient","four-click discrepancy is memorable","Daniel revelation lands emotionally and causally","Eli guilt remains agency-bearing, not self-pity"]
+    }
+  },
+  "session_structure": {
+    "voice_lock_state": "TEMPORARY_PILOT_CAST_ONLY",
+    "recording_order": ["Naomi neutral/procedural tests","Eli public/private/emergency tests","Naomi-Eli pair read","supporting voices","E01 raw dialogue","E01 no-music assembly","E01 critical SFX","E01 stereo rough","E01 mono/phone validation","E01 blind test","if no blocker: E02","E03","E01-E03 binge test"],
+    "take_policy": {
+      "default_takes_per_priority_line": 3,
+      "default_takes_per_standard_line": 2,
+      "priority_take_types": ["NEUTRAL_TRUTH","DIRECTOR_ADJUSTED","UNDERPLAYED"],
+      "no_improvised_dialogue": true,
+      "no_new_story_information": true
+    }
+  },
+  "audio_grammar": {
+    "music_first_pass": "OFF",
+    "music_second_pass": "RESTRAINED_ONLY_AFTER_CLARITY_PASS",
+    "stereo_rule": "Stereo may enrich clue perception but must never be the sole carrier of required story information.",
+    "mono_rule": "Every essential causal inference must remain understandable in mono."
+  },
+  "blocking_gates": ["listener cannot retell E01 causal hook","Naomi reads reckless before the intended public frame","Eli reads helpless rather than privately shaken","chemistry requires touch or romantic score","critical clue disappears in mono/phone","Vivian or Cal are villain-coded before evidence","same confusion occurs for 3+ independent blind listeners","same line fails for 2+ performers/voices","rough audio reveals continuity/factual error"],
+  "exit_condition": "No E04–E24 batch recording before E01–E03 blind listener and pickup gates pass."
+}
