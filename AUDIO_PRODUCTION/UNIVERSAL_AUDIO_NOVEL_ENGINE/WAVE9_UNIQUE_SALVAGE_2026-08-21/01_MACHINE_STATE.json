@@ -1,27 +1,48 @@
 {
-  "schema_version": "ivdivo.audio.wave9_unique_salvage_state/1.0",
+  "schema_version": "ivdivo.audio.wave9_unique_salvage_state/1.1",
   "date": "2026-08-21",
-  "status": "CI_PENDING",
-  "base_main_sha": "9a3467ef798b2cce840fbb37df6d8a9130d2c66a",
+  "status": "MERGED_CURRENT_ENGINEERING",
+  "merged_pr": 137,
+  "merge_commit_sha": "221d0b2f206c0ad3429ef8df05530c9ee16b435a",
+  "tested_merge_ref_sha": "883a9f6e11e53578bbf131951f340a856a701906",
+  "tested_main_sha": "fd15c0812a001a89ead13b9da4ea535c0774acb4",
+  "tested_head_sha": "75e47b783c16d4a0edeca190e7dc051a9a7240cf",
+  "ci": {
+    "workflow": "Audio Studio Runtime Tests",
+    "run_id": 32522252057,
+    "job_id": 96896763921,
+    "conclusion": "SUCCESS",
+    "dedicated_audio_novel_runtime": "4/4 PASS",
+    "full_audio_studio": "207/207 PASS"
+  },
   "source_pr": 111,
-  "source_pr_disposition": "SUPERSEDE_PACKAGE_SALVAGE_UNIQUE_FUNCTIONS_ONLY",
+  "source_pr_disposition": "CLOSED_SUPERSEDED_PROVENANCE_ONLY",
   "superseded_functions": {
-    "provider_snapshot": "MERGED_PR_122_PROVIDER_SNAPSHOT_CONTRACT",
-    "evidence_proof": "MERGED_PR_132_EXTERNAL_EVIDENCE_TRUST"
+    "provider_snapshot": "MERGED_PR_122_PROVIDER_SNAPSHOT_CONTRACT_AND_CURRENT_PROVIDER_BRIDGE",
+    "evidence_proof": "MERGED_PR_132_EXTERNAL_EVIDENCE_TRUST_PLUS_PR_134_CROSS_CLASS_LINEAGE"
   },
   "salvaged_unique_functions": [
     "audio/studio/runtime/human_review_ledger.py",
     "audio/studio/runtime/live_lineage_escrow.py"
   ],
-  "new_tests": [
-    "audio/studio/tests/test_human_review_ledger.py",
-    "audio/studio/tests/test_live_lineage_escrow.py"
-  ],
   "trust_dependencies": [
     "audio/studio/runtime/external_evidence_trust.py",
     "audio/studio/runtime/provider_snapshot_contract.py"
   ],
+  "engineering_proofs": {
+    "human_review_append_only_history": true,
+    "pass_fail_conflict_preserved": true,
+    "synthetic_human_receipt_rejected": true,
+    "candidate_scope_binding": true,
+    "exact_n_live_lineage": true,
+    "request_result_spend_audio_alignment_content_binding": true,
+    "transaction_recovery_hash_coverage": true,
+    "invalid_recovery_transaction_classified_as_invalid_not_missing": true,
+    "provider_acceptance_is_not_take_acceptance": true,
+    "no_paid_replay": true
+  },
   "evidence_boundary": {
+    "real_authenticated_provider_run": false,
     "provider_calls": 0,
     "paid_calls": 0,
     "real_human_reviews": 0,
@@ -39,5 +60,6 @@
     "machine_may_auto_voice_lock": false,
     "machine_may_replay_paid_request": false
   },
-  "next_gate": "OPEN_FRESH_PR_AND_RUN_FULL_AUDIO_STUDIO_CI"
+  "current_external_frontier": "RUN_MERGED_ELEVENLABS_PROVIDER_SNAPSHOT_WORKFLOW_WITH_REPOSITORY_SECRET_OUTSIDE_CHAT_AND_REQUIRE_REAL_AUTH_PROVIDER_RECEIPT",
+  "next_internal_action": "DO_NOT_ADD_GENERIC_AUDIO_ARCHITECTURE_WITHOUT_A_CONCRETE_REAL_EVIDENCE_FAILURE"
 }
