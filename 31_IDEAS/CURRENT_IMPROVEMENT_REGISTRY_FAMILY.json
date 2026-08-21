@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.3",
+  "schema_version": "1.4",
   "status": "CURRENT_MACHINE_REGISTRY_FAMILY_POINTER_NOT_STORY_CANON",
   "updated": "2026-08-21",
   "base_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
@@ -10,7 +10,8 @@
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0010_REGISTRY_SHARD_COMPACTION_TRANSACTION.json",
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0011_REAL_CORPUS_RECOVERY_ADVERSARIAL_PILOT.json",
     "31_IDEAS/REGISTRY_EXTENSIONS/SI-0012_META_ORCHESTRATOR_CYCLE2_CANDIDATE.json",
-    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0013_PROJECT_STATE_COVERAGE_GATE.json"
+    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0013_PROJECT_STATE_COVERAGE_GATE.json",
+    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0014_PROJECT_STATE_FRESHNESS_AUTHORITY_CHAIN.json"
   ],
   "validation_tool": "tools/validate_improvement_registry_refs.py",
   "transaction_candidate_tool": "tools/ivdivo_registry_transaction.py",
@@ -24,9 +25,10 @@
     "result": "RESOLVED_IN_REGISTRY_FAMILY"
   },
   "h_generation_delta": {
-    "SI-0010": "READY_FOR_PILOT — atomic shard transaction + rollback + deterministic compaction implementation and CI pending",
-    "SI-0013": "READY_FOR_PILOT — durable project-state coverage / portfolio resumability gate; D06-D08 recovered, D01 explicitly blocked"
+    "SI-0010": "READY_FOR_PILOT — atomic shard transaction + rollback + deterministic compaction implementation",
+    "SI-0013": "READY_FOR_PILOT — durable project-state coverage / portfolio resumability gate; D06-D08 recovered, D01 explicitly blocked",
+    "SI-0014": "READY_FOR_PILOT — provider-neutral authority revision freshness + version-chain gate; D06-D08 real Drive revision baseline captured"
   },
   "migration_note": "The monolithic base registry is a compatibility/read model until a deterministic compaction build validates all base+extension IDs, emits input/output hashes, passes roundtrip/readback regression, and switches pointers transactionally. Candidate shard visibility does not promote candidate status.",
-  "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009/0010/0011/0012/0013 are candidates/pilots unless their own lifecycle state says otherwise."
+  "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009 through SI-0014 are candidates/pilots unless their own lifecycle state says otherwise."
 }
