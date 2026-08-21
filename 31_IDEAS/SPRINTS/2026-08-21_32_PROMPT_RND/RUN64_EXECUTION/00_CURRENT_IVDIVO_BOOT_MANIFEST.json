@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "status": "WORKING_OPERATIONAL_BOOT_MANIFEST_NOT_STORY_CANON",
+  "updated": "2026-08-21",
+  "purpose": "Single cold-start manifest for IVDIVO system/project routing during N01-N64 execution. It points to authorities and mirrors; it does not duplicate story canon.",
+  "authority_order": [
+    "FOUNDER_NEWEST_DIRECT_INSTRUCTION",
+    "PROJECT_OR_BOOK_SOURCE_OF_TRUTH",
+    "CURRENT_DOMAIN_AUTHORITY",
+    "PROJECT_SPECIFIC_EXECUTION_STATE",
+    "CURRENT_IVDIVO_SYSTEM_STATE",
+    "DRIVE_ROUTING_MIRRORS",
+    "EXTERNAL_MODEL_HANDOFF_WITH_DISPOSITION",
+    "WORKING_CANDIDATES",
+    "REFERENCE_ONLY"
+  ],
+  "github": {
+    "repository": "Farada8/IVDIVO_GAME_MASTER",
+    "branch": "main",
+    "pointers": [
+      {"role":"AUTHORITY_ROUTER","path":"CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md"},
+      {"role":"AUTHORITY_ROUTER","path":"CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md"},
+      {"role":"AUTHORITY_ROUTER","path":"CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md"},
+      {"role":"MACHINE_ROUTING_STATE","path":"CURRENT_IVDIVO_SYSTEM_STATE.json","expected_schema":"1.9"},
+      {"role":"MACHINE_ROUTING_STATE","path":"CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json","expected_schema":"2.7"},
+      {"role":"AUTHORITY_CONTROL_LAYER","path":"IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md"},
+      {"role":"LEARNING_CONTROL_LAYER","path":"IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md"},
+      {"role":"MULTI_MODEL_PROMPTS","path":"IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md"},
+      {"role":"SELF_IMPROVEMENT_REGISTRY","path":"31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json"},
+      {"role":"LEARNING_LEDGER","path":"CURRENT_IVDIVO_LEARNING_LEDGER.json"},
+      {"role":"PROJECT_STATE_DIRECTORY","path":"PROJECT_STATES/"},
+      {"role":"PROJECT_EXECUTION_STATE","project_id":"D04","path":"PROJECT_STATES/D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE_CURRENT_STATE.json"},
+      {"role":"PROJECT_EXECUTION_STATE","project_id":"D02_ROOM917","path":"AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json"},
+      {"role":"RND_SPRINT_STATE","path":"31_IDEAS/SPRINTS/2026-08-21_32_PROMPT_RND/05_SPRINT_STATE.json"}
+    ]
+  },
+  "drive": {
+    "pointers": [
+      {"role":"AUTHORITY_INDEX_MIRROR","title":"00_CURRENT_PROMPT_AUTHORITY_INDEX v1.1","id":"1wTpFLza7x5wB39sDWDpHXQBVLqaYyzzEO27YvOppcgM"},
+      {"role":"ROUTING_MIRROR","title":"CURRENT_PROMPTS_v2.2","id":"1mlUAkQVLH41CfdMa2ZDa8gR3MN7eNi-w3ZC705_b03g"},
+      {"role":"ROUTING_MIRROR","title":"CURRENT_WORKSTATE_v2.2","id":"1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w"},
+      {"role":"RND_DURABLE_FOLDER","title":"IVDIVO SELF-IMPROVEMENT — 32→64 SYSTEM PASS — 2026-08-21","id":"1EF_co3l5AP35nJuuvvPjY5RElbc_FW4T"}
+    ]
+  },
+  "compatibility_or_history": [
+    {"role":"HISTORY","note":"Older PR #45/candidate continuation protocols are not current authority."},
+    {"role":"COMPATIBILITY","note":"Drive CURRENT_PROMPTS/CURRENT_WORKSTATE are routing mirrors and never override fresher project-specific state."}
+  ],
+  "cold_start_algorithm": [
+    "READ_FOUNDER_CURRENT_INSTRUCTION",
+    "READ_THIS_MANIFEST",
+    "READ_CURRENT_SYSTEM_STATE",
+    "READ_RELEVANT_DOMAIN_AUTHORITY",
+    "READ_PROJECT_SOURCE_OF_TRUTH_AND_PROJECT_STATE",
+    "CHECK_DRIVE_MIRROR_ONLY_FOR_NEWER_VERIFIED_DELTA",
+    "RUN_FRESHNESS_AND_STALE_WORK_GATE",
+    "EXECUTE_HIGHEST_UNBLOCKED_OBLIGATION",
+    "PERSIST_AND_READBACK"
+  ],
+  "known_gaps_at_n01": [
+    "D09 lacks a dedicated PROJECT_STATES file and is currently routed from aggregate state/Drive project gate evidence.",
+    "D10/BLOODBOUND lacks a durable PROJECT_STATES routing file in GitHub main.",
+    "This manifest must be revalidated after N03 project-state coverage changes."
+  ]
+}
