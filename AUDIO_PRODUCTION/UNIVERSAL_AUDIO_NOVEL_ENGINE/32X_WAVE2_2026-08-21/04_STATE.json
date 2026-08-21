@@ -1,0 +1,38 @@
+{
+  "schema": "ivdivo.audio_novel_engine.wave2_state/1.0",
+  "date": "2026-08-21",
+  "wave": 2,
+  "source_prompt_range": "Wave1 prompts 01-32 of 64",
+  "status": "DETERMINISTIC_CONTRACTS_GREEN__LIVE_CAST_GATE_OPEN",
+  "github_branch": "audio-novel-engine/32x-wave2-2026-08-21",
+  "drive_folder_id": "1K-BHcsDcWX5NrBDrCJKaX7TEXUd4P0LC",
+  "canary": {
+    "project": "LESSON_ZERO_RU_AUDIO",
+    "chapter": "BOOK1_CH01",
+    "scene": "CH01_S02",
+    "request_count": 3,
+    "spoken_units": 36,
+    "characters": 2163,
+    "roles": ["NARRATOR", "ETHAN", "AOIFE"],
+    "live_calls_this_wave": 0
+  },
+  "harness": {"tests": 21, "pass": 21, "fail": 0, "error": 0},
+  "closed_prompts": [12,13,14,15,17,18,19,20,21,23,24,26,27,28,29,31],
+  "reused_pass": [25],
+  "partial_prompts": [9,11,16,22,32],
+  "blocked_prompts": [1,2,3,4,5,6,7,8,10,30],
+  "mandatory_open_gates": [
+    "AUTHENTICATED_VOICE_INVENTORY",
+    "NARRATOR_ETHAN_AOIFE_PROVISIONAL_BINDINGS",
+    "PRONUNCIATION_AUDITION",
+    "THREE_REQUEST_LIVE_CANARY",
+    "REAL_ALIGNMENT_AND_TIMELINE",
+    "PRODUCTION_CLI_INTEGRATION_REGRESSION",
+    "LONG_FORM_FATIGUE",
+    "HUMAN_LISTEN",
+    "MEASURED_ECONOMICS"
+  ],
+  "exact_next_external_action": "Authenticated voice inventory -> provisional Narrator/Ethan/Aoife candidates -> pronunciation + direction auditions -> pair gate -> exactly three live canary requests.",
+  "exact_next_internal_action": "Port Wave2 harness contracts into production code/CI and build Wave3 golden QC fixtures while live provider evidence is pending.",
+  "release_status": "HOLD_NOT_PRODUCTION_READY"
+}
