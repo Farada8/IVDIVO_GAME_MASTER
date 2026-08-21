@@ -1,0 +1,64 @@
+{
+  "candidate_id":"SI-0016",
+  "title":"Scope-aware strategic authority discoverability for long-horizon work",
+  "candidate_type":"PROCESS_OR_ROUTER_RULE_PLUS_EXECUTABLE_CANARY",
+  "status":"READY_FOR_PILOT",
+  "scope":"UNIVERSAL_IVDIVO",
+  "updated":"2026-08-21",
+  "source_provenance":[
+    {
+      "source_type":"PRODUCTION_DEFECT",
+      "locator":"2026-08-21 Saga100 conversation: strategic NARR-009 existed in Google Drive but initial narrow CURRENT routing omitted it during long-horizon saga analysis",
+      "date":"2026-08-21"
+    },
+    {
+      "source_type":"GOOGLE_DRIVE",
+      "locator":"IVDIVO_70_BOOK_YOUTH_STORY_ENGINE_MULTILINE_SAGA_v0.1_DRAFT — 1R6k8Dfy0s-O5NRlol_8OCuJf9QmVPQY4hyY2FdhKBO4",
+      "date":"2026-08-21"
+    },
+    {
+      "source_type":"GOOGLE_DRIVE",
+      "locator":"00 IVDIVO — START HERE — Cross-Conversation Router v1.2 — strategic Saga100 pointer appended and exact-text readback verified",
+      "date":"2026-08-21"
+    },
+    {
+      "source_type":"GITHUB_CANDIDATE",
+      "locator":"IVDIVO_NARRATIVE_OS/SAGA_100_ENGINEERING/engine/saga100_contracts.py#strategic_freshness_gate",
+      "date":"2026-08-21"
+    }
+  ],
+  "problem_or_opportunity":"A router optimized for the freshest active execution frontier can correctly recover the current book yet still omit an older strategic roadmap that is materially authoritative for a long-horizon sequencing question. Fresh execution state and strategic discoverability are different dimensions.",
+  "proposed_mechanism":"Classify request scope before authority loading. ACTIVE_BOOK_EXECUTION requires current execution/project authority. LONG_HORIZON_SAGA or SAGA_SEQUENCE requires both CURRENT_EXECUTION_AUTHORITY and LONG_HORIZON_STRATEGIC_AUTHORITY. Missing required layer fails closed as STRATEGIC_AUTHORITY_NOT_LOADED. Strategic loading does not override fresher project states; it supplies the macro constraint/seed layer only.",
+  "dedupe_relation":"EXTENSION",
+  "related_candidates":["SI-0002","SI-0013","SI-0015"],
+  "dedupe_analysis":{
+    "SI-0002":"discovers neighboring stronger mechanisms before universal design; does not assert request-scope-specific strategic layer completeness",
+    "SI-0013":"checks durable project-state coverage/portfolio resumability; does not require long-horizon strategic documents",
+    "SI-0015":"checks stale embedded CURRENT slices and explicit approval events; does not detect a missing strategic authority layer when the current slice itself is fresh"
+  },
+  "development_contract":{
+    "request_scopes":["ACTIVE_BOOK_EXECUTION","LONG_HORIZON_SAGA","SAGA_SEQUENCE","SYSTEM_ENGINEERING","REFERENCE_RESEARCH"],
+    "required_output_states":["PASS","STRATEGIC_AUTHORITY_NOT_LOADED","CURRENT_EXECUTION_AUTHORITY_NOT_LOADED","UNRESOLVED_STRATEGIC_POINTER","AUTHORITY_CONFLICT_HOLD"],
+    "negative_fixture":"LONG_HORIZON_SAGA + only CURRENT_EXECUTION_AUTHORITY => STRATEGIC_AUTHORITY_NOT_LOADED",
+    "positive_fixture":"LONG_HORIZON_SAGA + CURRENT_EXECUTION_AUTHORITY + LONG_HORIZON_STRATEGIC_AUTHORITY => PASS",
+    "non_override_rule":"Strategic authority may constrain macro planning but may not overwrite newer locked/current project facts.",
+    "fail_closed":["missing strategic layer for long-horizon scope","unresolved strategic pointer","strategic/current authority contradiction that changes requested outcome"]
+  },
+  "evidence_state":"REAL_PRODUCTION_DEFECT_PLUS_EXECUTABLE_CANARY",
+  "pilot_evidence":[
+    "R32 negative reproduction PASS: current-only load fails for long-horizon scope",
+    "R32 positive canary PASS: current+strategic load passes",
+    "Drive START HERE strategic pointer persisted and exact-text readback passed"
+  ],
+  "red_team_findings":[
+    "Do not load every strategic document on every active-book turn; that would increase context cost and stale-conflict noise.",
+    "Do not let old strategic roadmaps override current project authority merely because they are required for macro planning.",
+    "Scope classifier itself must fail closed if a request mixes active execution and long-horizon restructuring."
+  ],
+  "promotion_level":"NONE_YET",
+  "protected_authorities":["Founder newest instruction","Locked/current project authority","Story-first current-book completion","Existing Self-Improvement v2 registry family"],
+  "owner_role":"A00 Router / Strategic Authority Resolver / Self-Improvement Governor",
+  "next_action":"Run live cross-conversation pilots on at least one active-book resume request and one long-horizon saga/system request; verify lower retrieval cost on active work and zero strategic omission on macro work.",
+  "next_gate":"LIVE_SCOPE_AWARE_BOOT_PILOT_PLUS_REGRESSION",
+  "notes":"Candidate ID SI-0016 was assigned only after re-reading CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json and base registry on 2026-08-21. Candidate visibility is not lifecycle promotion."
+}
