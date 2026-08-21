@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "status": "INTERNAL_SCORING_KEY_DO_NOT_INCLUDE_IN_BLIND_PACKET",
+  "seed": 20260821,
+  "mapping": {
+    "STEREO": {"extra_state_file": "A"},
+    "MONO": {"extra_state_file": "A"},
+    "PHONE": {"extra_state_file": "B"}
+  },
+  "drive_id": "176yExP9bdUuFpF5vbB7eH8wImX-W2EcR"
+}
