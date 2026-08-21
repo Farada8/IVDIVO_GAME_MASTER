@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0",
+  "project_id":"IVDIVO_BOOK_3_SMITH",
+  "status":"MANUSCRIPT_CH4_6_FALSE_VICTORY_PASS",
+  "drive": {
+    "CH04":{"title":"DUBLIN","id":"1Wvi1BtS949USSXln49_zIlPowSU4BSa9mvlvvTwCWJs"},
+    "CH04_gate":{"id":"1a_N1bIYgDe2cUu7X7hpK8DHD6WQ9CZN2YcG6e6j0JBU"},
+    "CH05":{"title":"WHAT HAPPENED BEFORE THE CALL?","id":"1Jh8MlUyp6nXzhGA4xhmk3d4YP0BHEzI3GLvHqV8mIck"},
+    "CH05_gate":{"id":"1kcvvoxHxufSrqwfVUDqjqN65XDKnl4cdcVk7fYUycWU"},
+    "CH06":{"title":"FIRST PRECURSOR DOCTRINE","id":"1P7dyxjnvcGzbpdltV2yoSa6JhZRJr8FbPiKuUKKDArE"},
+    "CH04_06_gate":{"id":"1BsEXW5XnFu469VqvgQnLjsrgVM-ZC6TaLGNBQQQEd90"}
+  },
+  "gate":{"fatal":0,"major":0},
+  "story_result":"Smith's external-precursor/suppression model is professionally credible, locally authorized, reduces false deployments, preserves ordinary rescue and appears to reduce precursor recurrence. False victory is earned.",
+  "character_result":"Smith is introduced as active professional/father/student; Jana retains local authority; Nika/Andrej remain independent competent actors; Enia gives no case solution.",
+  "next_frontier":"CH07_OUT_OF_THE_SYSTEM",
+  "part_ii_requirement":"Suppression must now incur a concrete causally earned cost without retroactively making CH4-6 decisions stupid."
+}
