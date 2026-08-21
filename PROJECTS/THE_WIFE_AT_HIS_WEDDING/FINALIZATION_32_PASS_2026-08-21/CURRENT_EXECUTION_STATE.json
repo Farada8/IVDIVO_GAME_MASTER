@@ -2,40 +2,103 @@
   "project": "THE WIFE AT HIS WEDDING",
   "date": "2026-08-21",
   "scope": "E91-E120_FINAL_ARC",
-  "status": "WORKING_CONDITIONAL_GO_TO_DRAFTING",
+  "status": "E91_E97_WORKING_COMPLETE_GO_TO_E98_AFTER_GATE",
   "founder_locked": false,
   "upstream": {
     "E61_E90_story_block": "CLOSED_PASS",
     "E90_next_arc_hook": "TWO_LIVE_NEWBORN_WRISTBANDS_ONE_BIRTH_CERTIFICATE",
     "fire_arc_reopen": false
   },
-  "research_cycle": {
+  "research_cycle_1": {
     "prompts_created": 32,
     "prompts_executed": 32,
     "integrated_conclusions_created": true,
     "authority_convergence_completed": true,
-    "next_prompts_created": 64,
-    "next_prompts_executed": 0
+    "next_prompts_created": 64
+  },
+  "wave2": {
+    "source_queue_prompts_executed": "01-32_of_prior_64",
+    "prompts_executed": 32,
+    "episodes_completed": ["E91","E92","E93","E94","E95"],
+    "episode_frontier": "E95",
+    "runtime_spoken_words": {"E91":1176,"E92":1104,"E93":1138,"E94":1100,"E95":1101},
+    "red_team": {"fatal":0,"major":0,"medium":3},
+    "new_wave3_prompts_created": 64,
+    "github_folder": "WAVE2_32_EXECUTIONS_E91_95_2026-08-21/",
+    "drive_folder_id": "1Uy8zd8MwZ13P3aImqDYhMFjz-LF3Kqdw",
+    "drive_e91_e95_current_script_id": "1BGbN9Mlz4I9-uxMAfoJ-sYM4QgwFIFQr3yzu_D4uWjg",
+    "superseded_or_archive_pointer_note": "Drive ID 1YZgSpNWSvg54vZGsjGM31sJJ-6pT1cxha3Ss3zqjQXM was later renamed ARCHIVE_SIBLING_ALT_22_EPISODES_91-95_PRE_REBASE_GRACE_KELLAN and must not be treated as the current production master."
+  },
+  "wave3": {
+    "source_queue": "WAVE2_32_EXECUTIONS_E91_95_2026-08-21/04_WAVE3_64_NEXT_PROMPTS_v1.0.md",
+    "freshness_descendant_reuse_gate": "PASS_RECHECK_BEFORE_EACH_NEW_EPISODE",
+    "episodes_completed": ["E96","E97"],
+    "episode_frontier": "E97",
+    "runtime_spoken_words": {"E96":1138,"E97":1134},
+    "e96": {
+      "title": "THE TWO CARDS",
+      "status": "WORKING_COMPLETE",
+      "red_team": {"fatal":0,"major":0},
+      "drive_folder_id": "11aNNQU3FcitB_BoJUUHzY-DcsnMiHVD-",
+      "drive_script_id": "14VXqWzC72DmLaQNgzghYjHupFACXe0Wnfco-rRGAAV8",
+      "drive_gate_id": "1-njMR1lIBmcl_ljQ_hEaBXxGCfuYXBdDaIRozmsX_5g",
+      "story_answer": "HISTORICAL_MARA_QUINN_CARD_MAPS_TO_CURRENT_MARA_AND_HISTORICAL_EVELYN_CARD_MAPS_TO_CURRENT_EVELYN_AT_TEENAGE_INTAKE",
+      "explicit_non_answer": "BODY_MAPPING_DOES_NOT_PROVE_BABY_B_BIRTH_CIVIL_MARRIAGE_MATERNITY_PROPERTY_OR_NAME_ENTITLEMENT"
+    },
+    "e97": {
+      "title": "THE GIRL ADRIAN_MET",
+      "status": "WORKING_COMPLETE",
+      "runtime_spoken_words": 1134,
+      "runtime_gate": "PASS_1100_1550",
+      "red_team": {"fatal":0,"major":0},
+      "drive_folder_id": "1Wx6AQPZ8gOnbBr4YTKVPns_6om0NCp0W",
+      "drive_script_id": "1guIw2O1b4uSTNOOzCE9CePexyIa4Nrg-6cOuEmn8ZQw",
+      "drive_gate_id": "1OQYFPIyQAuwvUld9rE3lW5B0m909P4Ga2E9AX5amZDc",
+      "github_folder": "WAVE3_EXECUTION_E97_2026-08-21/",
+      "story_answer": "CURRENT_MARA_IS_THE_HISTORICAL_MARA_QUINN_SUBJECT_WHO_PHYSICALLY_OCCUPIED_AN_EXPOSED_EVELYN_ROUTE_DURING_THE_GREENHOUSE_INCIDENT",
+      "evidence_classes": ["WITNESSED","REMEMBERED","DOCUMENT_DERIVED","RECONSTRUCTED"],
+      "adrian_memory_role": "CORROBORATIVE_EMOTIONAL_EVIDENCE_NOT_IDENTITY_AUTHORITY",
+      "required_boundary_closed": "NO_DESTINY_OR_ROMANTIC_ENTITLEMENT_FROM_GREENHOUSE_MEMORY",
+      "cliff": "VICTORIA_ORDER_NO_MORE_DIRECT_ADRIAN_SUBSTITUTIONS"
+    }
   },
   "architecture": {
     "detailed_source": "20B_EPISODES_91-120_FINAL_ARC_ARCHITECTURE_v1.0",
-    "authority_status": "WORKING_PRE_PROSE",
+    "authority_status": "WORKING",
     "episode_order_retained": true,
     "research_macro_alternatives_status": "OPTION_ONLY_WHERE_CONFLICTING",
     "convergence_overlay": "05_AUTHORITY_CONVERGENCE_AND_CURRENT_EXECUTION_STATE_v1.1.md"
   },
-  "accepted_upgrades": [
-    "concrete_present_day_institutional_opposition",
-    "identity_layer_separation",
-    "independent_evidence_classes",
-    "ordinary_life_and_field_action",
-    "mara_evelyn_remedy_conflict",
-    "human_scene_naturalism_and_audio_first_gates"
+  "current_story_state": {
+    "two_live_births_supported": true,
+    "baby_b_post_birth_survival_supported": true,
+    "baby_b_protected_placement_without_permanent_civil_name_supported": true,
+    "quinn_source_predates_noah": true,
+    "quinn_source_subject": "DECEASED_MARA_ELISE_QUINN",
+    "noah_original_source_mining": "NOT_SUPPORTED",
+    "noah_later_withholding_and_post_fire_reuse": "SUPPORTED",
+    "historical_teen_informed_choice_of_mara_quinn": "SUPPORTED",
+    "dual_historical_biometric_cards": "AUTHENTICATED_AND_COMPARISON_COMPLETE",
+    "adult_body_mapping": "CURRENT_MARA_EQUALS_HISTORICAL_TEEN_MARA_QUINN_CURRENT_EVELYN_EQUALS_HISTORICAL_TEEN_EVELYN",
+    "greenhouse_body_route_mapping": "CURRENT_MARA_EQUALS_HISTORICAL_MARA_QUINN_SUBJECT_ON_TEMPORARY_EVELYN_ROUTE_DURING_GREENHOUSE_INCIDENT",
+    "adrian_greenhouse_memory": "CORROBORATIVE_NOT_DISPOSITIVE",
+    "victoria_post_greenhouse_order": "NO_MORE_DIRECT_ADRIAN_SUBSTITUTIONS_AUTHENTICATED_ORDER_COMPLIANCE_NOT_YET_PROVED",
+    "newborn_to_teen_mapping": "UNRESOLVED",
+    "mara_current_professional_credential": "ACTIVE_UNDER_REVIEW",
+    "mara_client_work": "ONE_PREVIOUSLY_PAUSED_STREAM_PARTIALLY_RESTARTED",
+    "mara_evelyn_remedy_conflict": "ACTIVE_WITH_INDEPENDENT_EVELYN_ACTION"
+  },
+  "medium_watches": [
+    "DOCUMENT_ARCHIVE_AND_EVIDENCE_LANGUAGE_DENSITY",
+    "MARA_ACKNOWLEDGEMENT_CORRECTION_AND_INSTITUTIONAL_CORPUS_RHETORIC",
+    "JURISDICTION_SPECIFIC_LEGAL_AND_EVIDENTIARY_PROCEDURE"
   ],
   "protected": {
     "lily_is_evidence": false,
     "post_marriage_sister_sexual_substitution": false,
     "adrian_memory_is_civil_identity_proof": false,
+    "adrian_memory_creates_romantic_entitlement_or_destiny": false,
+    "biometric_card_is_birth_marriage_maternity_or_civil_identity_shortcut": false,
     "original_missing_certificate_is_locked_as_grand_plot": false,
     "human_signal_run": false,
     "market_validation_claimed": false
@@ -45,16 +108,30 @@
     "JURISDICTION_SPECIFIC_LEGAL_REVIEW",
     "REAL_LISTENER_AUDIO_VALIDATION"
   ],
-  "next_queue": "03_NEXT_64_EXECUTION_PROMPTS_v1.0.md",
-  "highest_unblocked_obligation": "RUN_PROMPT_01_FRESH_AUTHORITY_STALE_WORK_GATE",
-  "after_no_newer_E91_found": "BUILD_E91_SCENE_CONTRACTS_THEN_DRAFT_AND_GATE_E91",
+  "next_queue": "WAVE2_32_EXECUTIONS_E91_95_2026-08-21/04_WAVE3_64_NEXT_PROMPTS_v1.0.md",
+  "highest_unblocked_obligation": "E98_COMPLIANCE_SCOPE_AND_RELATIONSHIP_CONSENT_CONTINUITY_THEN_DRAFT_GATE_NO_MORE_DIRECT_SUBSTITUTIONS",
+  "next_episode_contract": {
+    "episode": "E98",
+    "title": "NO MORE DIRECT SUBSTITUTIONS",
+    "required_question": "DID_VICTORIA_POST_GREENHOUSE_ORDER_ACTUALLY_STOP_DIRECT_ADRIAN_SUBSTITUTIONS",
+    "required_evidence": "DOWNSTREAM_ROUTE_COMPLIANCE_AND_PRIVATE_CONTACT_RECORDS_NOT_VICTORIA_MEMO_ALONE",
+    "required_turn": "LATER_DIRECT_PRIVATE_AND_MARITAL_INTERACTIONS_REMAIN_WITH_HISTORICAL_EVELYN_WHILE_MARA_LATER_ROTATIONS_ARE_PUBLIC_MEDICAL_OR_CONTROLLED",
+    "required_relationship_boundary": "CONSENT_CONTINUITY_PROTECTED_NO_RETROACTIVE_SISTER_SUBSTITUTION_IN_PRIVATE_OR_SEXUAL_RELATIONSHIP",
+    "required_cliff": "PRE_WEDDING_IDENTITY_VERIFICATION_BECOMES_DECISIVE"
+  },
   "prohibited": [
     "REOPEN_E61_E90_FIRE_ARC_WITHOUT_NEW_DEMONSTRATED_EVIDENCE",
     "SILENTLY_PROMOTE_WORKING_TO_CANON_OR_LOCKED",
     "USE_LILY_OR_DNA_AS_IDENTITY_SHORTCUT",
+    "USE_BIOMETRIC_CARD_AS_AUTOMATIC_BIRTH_MARRIAGE_MATERNITY_OR_CIVIL_PROOF",
+    "USE_ADRIAN_MEMORY_AS_CIVIL_IDENTITY_PROOF",
+    "USE_GREENHOUSE_MEMORY_AS_DESTINY_OR_ROMANTIC_ENTITLEMENT",
+    "USE_VICTORIA_ORDER_AS_PROOF_OF_COMPLIANCE_WITHOUT_DOWNSTREAM_RECORDS",
     "MAKE_ONE_WITNESS_OR_ONE_DOCUMENT_DISPOSITIVE",
     "RENUMBER_20B_EPISODE_MAP_FROM_RESEARCH_OPTION_ALONE"
   ],
   "drive_lab_folder_id": "1qW4EuQsKwsPNtIxG2KNytIL_p_Jo89mo",
-  "github_main_path": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/FINALIZATION_32_PASS_2026-08-21/"
+  "github_main_path": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/FINALIZATION_32_PASS_2026-08-21/",
+  "working_branch": "wife/wave2-e91-95-32x64-2026-08-21",
+  "working_pr": 85
 }
