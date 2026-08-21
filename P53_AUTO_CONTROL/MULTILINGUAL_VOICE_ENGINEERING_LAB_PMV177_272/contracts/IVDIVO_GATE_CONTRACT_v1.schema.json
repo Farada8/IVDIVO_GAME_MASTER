@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"IVDIVO Gate Contract v1",
+  "type":"object",
+  "required":["gate_id","input_authority","required_evidence","verdict","next_if_pass","next_if_fail"],
+  "properties":{
+    "gate_id":{"type":"string"},
+    "input_authority":{"type":"array","items":{"type":"string"}},
+    "required_evidence":{"type":"array","items":{"type":"string"}},
+    "hard_fails":{"type":"array","items":{"type":"string"}},
+    "verdict":{"enum":["PASS","FAIL","HOLD","NO_GO"]},
+    "next_if_pass":{"type":"array","items":{"type":"string"}},
+    "next_if_fail":{"type":"array","items":{"type":"string"}},
+    "invalidates":{"type":"array","items":{"type":"string"}},
+    "cost_ceiling":{"type":["number","null"]},
+    "human_approval_required":{"type":"boolean"}
+  }
+}
