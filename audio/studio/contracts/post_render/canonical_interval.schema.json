@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.audio.post_render.canonical_interval/1.0",
+  "title": "IVDIVO Canonical Audio Interval",
+  "type": "object",
+  "required": ["start_seconds", "end_seconds"],
+  "properties": {
+    "start_seconds": {"type": "number", "minimum": 0},
+    "end_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "duration_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "evidence_grade": {"enum": ["ACCEPTED_ALIGNMENT", "LIVE_TIMELINE"]},
+    "source": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true,
+  "x-ivdivo-law": "Writers emit start_seconds/end_seconds. start_s/end_s are read-only compatibility aliases and never new output authority."
+}
