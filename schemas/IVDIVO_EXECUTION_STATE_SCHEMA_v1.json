@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.execution_state/1.0",
+  "title": "IVDIVO Persisted Execution State",
+  "description": "Operational resume state. Never overrides story/project canon.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project",
+    "active_branch",
+    "story_status",
+    "delivery_mode",
+    "last_completed_artifact",
+    "open_gates",
+    "current_blocker",
+    "next_action",
+    "required_evidence",
+    "hard_stops"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "updated_at": {"type": ["string", "null"]},
+    "project": {"type": "string", "minLength": 1},
+    "project_id": {"type": ["string", "null"]},
+    "active_branch": {"type": "string", "minLength": 1},
+    "story_status": {"type": "string"},
+    "delivery_mode": {"type": "string"},
+    "build_id": {"type": ["string", "null"]},
+    "authority_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "source": {
+      "type": ["object", "null"],
+      "properties": {
+        "file": {"type": ["string", "null"]},
+        "version": {"type": ["string", "null"]},
+        "sha256": {"type": ["string", "null"], "pattern": "^(?:[0-9a-fA-F]{64})?$"},
+        "text_protection_mode": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "last_completed_artifact": {"type": ["string", "object"]},
+    "completed_action": {"type": ["string", "null"]},
+    "parent_artifacts": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "open_gates": {"type": "array", "items": {"type": ["string", "object"]}},
+    "current_blocker": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "string"},
+        {
+          "type": "object",
+          "required": ["type", "description"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "AUTHORITY_AMBIGUITY",
+                "FRONTIER_CONFLICT",
+                "MISSING_REAL_EVIDENCE",
+                "HUMAN_REVIEW_REQUIRED",
+                "PAID_AUTHENTICATED_ACTION",
+                "USER_CREDENTIAL_ACTION",
+                "APPROVAL_REQUIRED",
+                "FATAL_MAJOR_OPEN",
+                "TOOL_UNAVAILABLE",
+                "EXPLICIT_HOLD",
+                "SAFETY_OR_LEGAL",
+                "OTHER"
+              ]
+            },
+            "description": {"type": "string"}
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "next_action": {
+      "oneOf": [
+        {"type": "string"},
+        {
+          "type": "object",
+          "required": ["stage"],
+          "properties": {
+            "stage": {"type": "string"},
+            "action": {"type": ["string", "null"]},
+            "launcher": {"type": ["string", "null"]},
+            "safe": {"type": ["boolean", "null"]},
+            "zero_cost": {"type": ["boolean", "null"]},
+            "reversible": {"type": ["boolean", "null"]},
+            "tool_executable_here": {"type": ["boolean", "null"]}
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "required_evidence": {"type": "array", "items": {"type": ["string", "object"]}},
+    "hard_stops": {"type": "array", "items": {"type": ["string", "object"]}},
+    "allowed_actions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "prohibited_actions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "working_downstream_artifacts": {"type": "array", "items": {"type": ["string", "object"]}},
+    "continuation_policy": {
+      "type": ["object", "null"],
+      "properties": {
+        "default_continue_when_unblocked": {"type": "boolean"},
+        "require_repeated_continuation_word": {"type": "boolean"},
+        "safe_zero_cost_reversible_only": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "secret_policy": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}
