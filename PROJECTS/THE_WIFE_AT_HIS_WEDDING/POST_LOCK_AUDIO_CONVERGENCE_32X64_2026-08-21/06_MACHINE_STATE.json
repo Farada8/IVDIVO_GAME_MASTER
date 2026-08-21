@@ -1,5 +1,5 @@
 {
-  "schema": "ivdivo.d01_post_lock_audio_state/1.0",
+  "schema": "ivdivo.d01_post_lock_audio_state/1.1",
   "project": "D01",
   "story_frontier": "E01-E120",
   "story_status": "FOUNDER_LOCKED",
@@ -7,13 +7,18 @@
   "post_lock_run32": "EXECUTED_32_OF_32",
   "shared_runtime_patch": "CAST_READINESS_PROJECT_SPEC_V1_1_CANDIDATE",
   "targeted_local_tests": {"passed": 6, "failed": 0},
-  "provider_inventory": "MISSING_EXTERNAL",
+  "fresh_main_rebase": {
+    "d01_lock_pointer": "ALREADY_FIXED_BY_CYCLE8_MAIN_REUSED",
+    "provider_evidence_intake": "AUDIO_WAVE11_CURRENT_REUSED",
+    "duplicate_current_state_patch": "REMOVED_FROM_PR_DIFF"
+  },
+  "provider_inventory": "MISSING_EXTERNAL_OR_NOT_YET_ADMISSIBLY_BOUND_TO_D01",
   "principal_voice_ids_locked": 0,
   "live_audio_generated": false,
   "human_signal_run": false,
   "provider_dispatch_allowed": false,
-  "highest_unblocked_internal_action": "PERSIST_AND_REVIEW_PROJECT_SPEC_PATCH",
-  "highest_blocked_external_action": "AUTHENTICATED_SECRET_FREE_PROVIDER_SNAPSHOT_THEN_D01_CAST_AUDITION",
+  "highest_unblocked_internal_action": "REVIEW_PROJECT_CAST_SPEC_PATCH_AGAINST_CURRENT_WAVE11_MAIN",
+  "highest_blocked_external_action": "WAVE11_ADMISSIBLE_AUTH_PROVIDER_EVIDENCE_THEN_D01_CAST_AUDITION",
   "next64": "07_NEXT_64_PROMPTS.md",
   "no_story_reopen": true,
   "no_e121": true
