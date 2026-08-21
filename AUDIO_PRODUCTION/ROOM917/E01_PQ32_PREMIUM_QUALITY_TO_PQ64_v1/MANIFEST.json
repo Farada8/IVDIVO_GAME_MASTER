@@ -1,0 +1,32 @@
+{
+  "schema_version": "room917.e01_premium_quality_cycle/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "theme": "PREMIUM_AUDIO_QUALITY_CONVERGENCE",
+  "pq32_executed": 32,
+  "status_counts": {
+    "PASS": 25,
+    "BLOCKED_INFRA_403": 1,
+    "SPEC_READY_BYTE_COPY_BLOCKED": 1,
+    "SPEC_READY_FACT_BLOCKED": 1,
+    "HUMAN_GATE_REQUIRED": 1,
+    "HUMAN_REFERENCE_GATE_REQUIRED": 1,
+    "DESIGN_READY_RENDER_HUMAN_BLOCKED": 1,
+    "BLOCKED_CURRENT_GATE": 1
+  },
+  "pq64_created": 64,
+  "direct_new_evidence": {
+    "library_master_found": true,
+    "master_file_id": "file_000000002c8081f58d0e656cdc0e7267",
+    "master_size_bytes": 189558764,
+    "raw_materialization_attempted": true,
+    "raw_materialization_result": "HTTP_403_FORBIDDEN"
+  },
+  "protected": [
+    "LOCKED_STORY",
+    "SCENE3_V1_3E_LINEAGE",
+    "CURRENT_EXECUTION_STATE_NOT_REWRITTEN"
+  ],
+  "current_next_machine_action": "RECOVER_OR_CONTROLLED_ESCROW_MASTER_BYTES_THEN_RUN_P003A2_INTERVAL_LOCALIZATION",
+  "scale_permission": "NO_SCALE_UNTIL_E01_V2_PROVEN"
+}
