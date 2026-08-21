@@ -1,0 +1,95 @@
+{
+  "schema_version": "ivdivo.mfc03.third_project_replication/1.0",
+  "status": "THIRD_PROJECT_REPLICATION_PASS_WITH_SCOPE",
+  "promotion_authorized": false,
+  "story_canon_mutation": false,
+  "human_signal_claimed": false,
+  "fresh_branch_base_at_creation": "fa2032a7be4c63e4f5acdece4da214363ea7ac6a",
+  "candidate": {
+    "id": "MF-C03-REAL-BOOK-SENSORS",
+    "disposition": "ACCEPT_WITH_SCOPE",
+    "new_si_id_required": false,
+    "top_level_engine_required": false
+  },
+  "project": {
+    "id": "IVDIVO_BOOK_2",
+    "title": "ORBITAL YOUTH",
+    "domain": "youth_coming_of_age_orbital_science_fiction",
+    "terminal_state": "FINAL_STORY_GATE_GREEN_EXTERNAL_FEEDBACK_READY_NOT_LOCKED",
+    "terminal_git_blob": "1d805e6fd8f366aa0c2de13b0b4b5ee585f78904",
+    "terminal_drive_id": "1bXvnbzGHJQB8DAeDgPb60jeLnaqbWGoRd5Q8KUv6BS8"
+  },
+  "source_identity": {
+    "c02_drive_id": "1nCGlpWsBYe4S2_0ThwE_05lMuv33bGFU8E93_1Gi9zI",
+    "c02_revision": "AIroW37eeGoYL8QIYIxq4IdS4X3nn_HuteiMLmP0vOaX9hWIf1lDoLCJomcfs2KZ9MNlSr-LRdYlwV_ikctqKXwXP9zPluoq-T78sLab3es",
+    "c04_drive_id": "1Hh1U4xL9RLsByQLmivWwGdKi-YrYid-pe_j9l1jrZM4",
+    "c04_revision": "AIroW34uVJqJsuC5PF_Ggc6-cs43nC8mCpcpyIcKECH2b6FARPde2LD88ashYA6A7Y1zM8lWxtpmTcvo73bzkdggafD93XfNFyfdHp-EKIU",
+    "final_gate_drive_revision": "AIroW36nsIhf2hrGdxa7a57r1DxxM6v919ewLhuGLYLXMV0ROLz4prg369XB7CvT2_AfCQXHGDW-YDz9olsblGV1e9wFG-w7vNDPob1EY-I",
+    "drive_replication_artifact": "1oEJyBxm0buYoCnr0gUdxZYga1JRAWIHTRsQ8iatzg44"
+  },
+  "contract": {
+    "pre_route_required_inputs": [
+      "current_project_authority",
+      "current_relationship_edge_state",
+      "inherited_previous_book_relationship_state_if_applicable",
+      "relationship_state_source_identity_or_version",
+      "current_scene_function"
+    ],
+    "invariants": [
+      "SCENE_LOCAL_ABSENCE_CANNOT_ERASE_INHERITED_ATTRACTION_EDGE",
+      "INHERITED_ATTRACTION_CANNOT_FORCE_ROMANCE_DOSAGE_AGAINST_SCENE_OBJECTIVE",
+      "TERMINAL_GREEN_WITHOUT_NEW_DEFECT_RETURNS_PROTECT_NO_CHANGE"
+    ]
+  },
+  "known_positive": {
+    "pair": "Ethan-Aoife",
+    "authority_state": "ATTRACTION_AUTHORIZED",
+    "inherited": true,
+    "scene_function": "B_RELATIONSHIP_BEARING_NON_ROMANTIC",
+    "initial_p53_mode": "OFF",
+    "expected_findings": ["AUTHORITY_EDGE_OMITTED"],
+    "observed_findings": ["AUTHORITY_EDGE_OMITTED"],
+    "verdict": "PASS"
+  },
+  "repaired_negative": {
+    "pair": "Ethan-Aoife",
+    "authority_state": "ATTRACTION_AUTHORIZED",
+    "inherited": true,
+    "scene_function": "B_RELATIONSHIP_BEARING_NON_ROMANTIC",
+    "corrected_p53_mode": "LITE",
+    "expected_findings": [],
+    "observed_findings": [],
+    "verdict": "PASS"
+  },
+  "false_positive_controls": [
+    {"pair": "Ollie-Ethan", "authority_state": "FRIENDSHIP", "p53_mode": "OFF", "observed_findings": []},
+    {"pair": "General ensemble", "authority_state": "FRIENDSHIP", "p53_mode": "OFF", "observed_findings": []},
+    {"pair": "Maya-local transit peers", "authority_state": "NONE", "p53_mode": "OFF", "observed_findings": []},
+    {"pair": "Maya-host", "authority_state": "FAMILY", "p53_mode": "OFF", "observed_findings": []}
+  ],
+  "metrics": {
+    "positive_expected": 1,
+    "positive_observed": 1,
+    "repaired_negative_findings": 0,
+    "bounded_false_positives": 0,
+    "bounded_negative_controls": 4,
+    "internal_manual_adjudications": 1,
+    "human_editor_adjudications": 0
+  },
+  "protected_no_change": {
+    "surface": "B02_FINAL_STORY_GATE",
+    "expected_action": "PROTECT_NO_CHANGE",
+    "observed_action": "PROTECT_NO_CHANGE",
+    "manuscript_mutated": false,
+    "verdict": "PASS"
+  },
+  "promotion_gate": {
+    "third_independent_book_replication": "PASS",
+    "known_positive_and_healthy_negative": "PASS",
+    "bounded_false_positive_measurement": "PASS",
+    "protected_no_change": "PASS",
+    "human_editor_adjudication": "HOLD",
+    "universal_book_domain_promotion": "HOLD"
+  },
+  "next_action": "WAIT_FOR_REAL_HUMAN_EDITOR_ADJUDICATION_OR_APPLY_SCOPED_SENSOR_TO_FUTURE_REAL_BOOK_DEFECT_WITH_CONTINUED_FP_OVERRIDE_MEASUREMENT"
+}
