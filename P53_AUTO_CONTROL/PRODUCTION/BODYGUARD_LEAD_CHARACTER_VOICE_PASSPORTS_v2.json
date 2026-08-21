@@ -1,0 +1,37 @@
+{
+  "artifact": "BODYGUARD_LEAD_CHARACTER_VOICE_PASSPORTS_v2",
+  "status": "WORKING_CANONICAL_PERCEPTUAL_IDENTITY",
+  "source": "BODYGUARD canon + Voice Audio Bible + P51/P52/P53 + Audio Canon v3.3",
+  "characters": {
+    "NAOMI_PARK": {
+      "perceived_age": "early 30s",
+      "vocal_weight": "grounded",
+      "pitch_impression": "low-mezzo/alto",
+      "texture": "natural, controlled, non-glossy",
+      "default_tempo": "measured-efficient",
+      "danger_behavior": "clearer/faster, not louder",
+      "private_cost_behavior": "slightly quieter; controlled timing; never breathy",
+      "humor": "dry literal",
+      "public_private": "professional precision / minimal private softening through timing only",
+      "authority_signature": "clarity + consequence + options",
+      "vulnerability_signature": "withheld softer line / delayed reply / quieter register after safety",
+      "microphone_states": ["close-professional", "command", "private-low-volume", "post-action", "fatigue"],
+      "forbidden": ["maternal", "seductive bodyguard", "action-hero growl", "ice-queen monotone", "romance-over-safety"]
+    },
+    "ELI_KWON": {
+      "perceived_age": "early 30s",
+      "vocal_weight": "natural medium to medium-low",
+      "pitch_impression": "flexible male speaking register",
+      "texture": "stage-trained but not announcer-polished",
+      "default_tempo": "economical private; easier public rhythm",
+      "danger_behavior": "one rhythm/breath fracture; cognition remains active",
+      "private_cost_behavior": "less polished, shorter, lower, not helpless",
+      "humor": "music/rhythm concrete; self-aware under pressure",
+      "public_private": "public charisma / private economy",
+      "authority_signature": "asks increasingly; retains choice without domination",
+      "vulnerability_signature": "rhythm break / question instead of command / costly admission",
+      "microphone_states": ["public-stage", "close-private", "post-threat", "musician-clue", "fatigue"],
+      "forbidden": ["helpless celebrity", "alpha possession", "permanent smile", "trauma exhibition", "romantic pressure"]
+    }
+  }
+}
