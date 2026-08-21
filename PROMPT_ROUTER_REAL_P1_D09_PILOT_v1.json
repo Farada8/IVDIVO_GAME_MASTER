@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-21",
+  "pilot_type": "REAL_P1_BOOK_ROUTING",
+  "project_id": "D09",
+  "title": "THE MAN WHO CAME BACK",
+  "source_frontier": {
+    "current_phase": "FINAL_STORY_GATE_PASSED_AWAITING_FOUNDER_APPROVAL",
+    "final_story_gate": "PASS_FATAL_0_MAJOR_0",
+    "next_unblocked_obligation": "FOUNDER_APPROVAL_OR_LOCK_D09_SEASON"
+  },
+  "normalized_router_state": {
+    "domain": "BOOK",
+    "authority_clean": true,
+    "founder_decision_required": true,
+    "full_text_exists": true,
+    "final_story_gate_needed": false,
+    "story_core_ready": true,
+    "architecture_ready": true,
+    "prose_obligation": false,
+    "accepted_fatal_major": false
+  },
+  "router_result": {
+    "status": "STOP",
+    "stop_condition": "FOUNDER_DECISION_REQUIRED",
+    "rule_id": "P0_FOUNDERS_GATE",
+    "selected_prompt": null
+  },
+  "acceptance": "PASS",
+  "why_it_matters": "The router did not restart prose, rerun Red Team, generate E25, silently lock the season, or switch to lower-priority meta-work. It recognized the actual Founder authority gate.",
+  "mutation": "NONE",
+  "remaining_real_pilots": ["P2 locked-book-to-audio", "P3 engine/tool", "P4 research/evidence"]
+}
