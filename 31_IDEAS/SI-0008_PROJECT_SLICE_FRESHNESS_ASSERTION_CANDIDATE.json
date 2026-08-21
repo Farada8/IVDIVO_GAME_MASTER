@@ -1,1 +1,1 @@
-{"status":"SUPERSEDED_REDIRECT","correct_candidate":"SI-0015","note":"SI-0008 Transcript Recovery; SI-0014 Session Resilience."}
+{"status":"SUPERSEDED_REDIRECT","current":"SI-0015","occupied":{"SI-0008":"Transcript Recovery","SI-0014":"Session Resilience"}}
