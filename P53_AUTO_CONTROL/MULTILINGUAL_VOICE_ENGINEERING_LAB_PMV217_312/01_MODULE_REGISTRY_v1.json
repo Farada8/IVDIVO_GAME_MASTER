@@ -1,0 +1,7 @@
+{
+  "artifact":"BODYGUARD_PMV217_PMV248_MODULE_REGISTRY_v1",
+  "module_count":13,
+  "modules":["provider_capability_snapshot.py","baseline_preview_manifest_compiler.py","voice_reproducibility_analyzer.py","baseline_acoustic_qc.py","blind_candidate_randomizer.py","lead_score_aggregator.py","direction_response_comparator.py","pair_exchange_compiler.py","human_patch_semantic_regression.py","ttd_tts_granularity_gate.py","listener_failure_clusterer.py","evidence_pickup_compiler.py","ru_pilot_lock_gate.py"],
+  "contracts":["BODYGUARD_PROVIDER_CAPABILITY_SNAPSHOT_CONTRACT_v1.json","BODYGUARD_RU_BASELINE_PREVIEW_CONTRACT_v1.json","BODYGUARD_RU_LEAD_SCORING_CONTRACT_v2.json","BODYGUARD_RU_PAIR_AND_FATIGUE_PROTOCOL_v1.json","BODYGUARD_RU_E01_FULL_RENDER_AUTHORIZATION_CONTRACT_v1.json","BODYGUARD_RU_E01_DEVICE_CLUE_TEST_PROTOCOL_v1.json","BODYGUARD_RU_E01_BLIND_LISTENER_SESSION_v2.json"],
+  "proof":"synthetic engineering tests PASS; authority effect NONE"
+}
