@@ -135,7 +135,7 @@ def domain_promotion_review(project_results: Iterable[dict[str, Any]]) -> dict[s
     result = promotion_gate(project_results)
     result["self_improvement_decision"] = (
         "ACCEPT_DOMAIN_MECHANISM_CANDIDATE_FOR_FOUNDER_REVIEW"
-        if result["status"] == "DOMAIN_PROMOTED"
+        if result["status"] == "DOMAIN_PROMOTION_ELIGIBLE"
         else "HOLD_FOR_REAL_INDEPENDENT_REPLICATION"
     )
     result["machine_may_change_current_authority"] = False
