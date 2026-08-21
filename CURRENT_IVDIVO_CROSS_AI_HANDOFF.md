@@ -10,8 +10,7 @@
 Do not make the Founder restate recoverable work and do not wait for another `и` when the next obligation is already authorized, unambiguous, unblocked and executable.
 
 Before substantive work:
-
-`CURRENT AUTHORITY -> IF PRIOR CHAT TRANSCRIPT IS PASTED THEN FULL-CHAT RECOVERY -> CURRENT_IVDIVO_SYSTEM_STATE.json -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY + LEARNING LEDGER SWEEP -> SELF-IMPROVEMENT PRIORITY REBASE -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT UNTIL REAL GATE`
+`CURRENT AUTHORITY -> IF PRIOR CHAT TRANSCRIPT IS PASTED THEN FULL-CHAT RECOVERY -> CURRENT_IVDIVO_SYSTEM_STATE.json -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY + LEARNING LEDGER SWEEP -> SELF-IMPROVEMENT PRIORITY REBASE -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT UNTIL REAL GATE`.
 
 A sibling-chat statement is discovery context only until its actual result/persisted artifact/status/version/gates are located and verified. If accessible, recover actual chat-only work before asking the Founder to repeat it.
 
@@ -20,11 +19,7 @@ A sibling-chat statement is discovery context only until its actual result/persi
 Current protocol: `IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md`.
 Drive mirror: `1MsB3B0Byh4AlCMLtmPde9rXguzaejwUswBD5qPM8W50`.
 
-Founder workflow `OLD CHAT -> Ctrl+A -> Ctrl+C -> NEW CHAT -> paste -> продолжай` is explicitly supported.
-
-The receiving GPT/Claude/Grok/Codex session must not ask Founder to manually identify what matters. It must classify transcript completeness; recover explicit Founder directives and chronology; extract artifact references/work-completed claims; verify saved/locked/PASS claims against persisted sources; recover fully present unsaved work as `CHAT_ONLY_CANDIDATE`; keep unrecovered summary-only work as `DISCOVERY_ONLY`; semantic-dedupe; persist accepted project material; return reusable system learnings through Improvement Registry/Learning Ledger; process the final tail before `INGESTION_COMPLETE`; exclude secrets; then continue actual production from the reconciled frontier.
-
-The pasted transcript is a recovery corpus, not a new canon.
+Founder workflow `OLD CHAT -> Ctrl+A -> Ctrl+C -> NEW CHAT -> paste -> продолжай` is supported. The pasted transcript is a recovery corpus, not a new canon. Recover directives, artifact claims and fully present unsaved substantive work; verify persisted claims; semantic-dedupe; exclude secrets; persist accepted material; then continue from the reconciled frontier.
 
 ## Current portfolio directive
 
@@ -44,7 +39,7 @@ Finish all active unfinished text projects to legitimate text/story lock first. 
 **Founder lock:** NOT YET ISSUED  
 **Next actual obligation:** Founder approval/lock decision for D09.
 
-Do NOT repeat E07–E12 reconciliation, season-wide final gate, or generate E25. Do not silently Founder-lock the season. Real performance/blind-listener evidence and narrow release-stage specialist review remain downstream external gates.
+Do NOT repeat E07–E12 reconciliation, season-wide final gate, or generate E25. Do not silently Founder-lock the season.
 
 ## Queue after D09
 
@@ -55,28 +50,19 @@ Do NOT repeat E07–E12 reconciliation, season-wide final gate, or generate E25.
 5. Whole-portfolio text-lock audit.
 6. Audio Novel Studio batch ingest/adaptation/production for every locked work.
 
-## Completed / protected text lines
+## Cross-model execution contract — VERIFIED 26-FUNCTION ARCHITECTURE
 
-Do not restart or casually rewrite: LESSON ZERO; ORBITAL YOUTH; ROOM 917; BODYGUARD FOR THE FALLEN IDOL; SEVEN NIGHTS BEFORE CODE BLUE; NINETY MISSING MINUTES; SHE STOLE MY NAME; THE PERFECT WIFE KNOWS; SHE FIRED THE BILLIONAIRE. THE MAN WHO CAME BACK is text complete / Final Story Gate PASS / awaiting Founder lock decision only.
+Base universal prompt authority: `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md` **v1.2**, 13 controlling functions.
+Specialist supplement: `IVDIVO_NARRATIVE_OS/19_MULTI_MODEL_EXECUTION_PROMPTS_EXPANSION_v1.0.md`, functions **14–26**.
+Current reconciled execution audit: `IVDIVO_NARRATIVE_OS/22_PROMPTS_01_26_EXECUTION_AUDIT_v2_RECONCILED_2026-08-21.md`.
+Drive reconciled audit: `IVDIVO — PROMPTS 01–26 EXECUTION AUDIT v2 — RECONCILED — 2026-08-21`, Drive ID `1tsGiNBAm1JyTWgkr7P7vGe51SSDZ7_GA3X4ltllCntY`.
+Human/Drive execution card: `MULTI_MODEL_AGENT_RUN_CARD_TEMPLATE v1.2`, Drive ID `13qXjDsHD903j6RcdnOoy4-qmKggWzYOiMDuV_N0Ri_U`.
 
-## Cross-model execution contract — CURRENT v2.0
+The requested doubling has already been executed and reconciled: **13 -> 26 operational functions**. Functions 14–26 cover authority/freshness/frontier, router/bootstrap consistency, asset persistence/escrow, concurrent writes/rebase, semantic dedupe/drift, cross-AI provenance, project-state completeness/next action, story-first factory-drift, audio perceptual/commercial quality, provider spend/canary economics, release reproducibility, secret/privacy audit and disaster-resume recovery.
 
-Universal prompt authority: `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md` **v2.0**.
-Human/Drive execution card: `MULTI_MODEL_AGENT_RUN_CARD_TEMPLATE v2.0`, Drive ID `13qXjDsHD903j6RcdnOoy4-qmKggWzYOiMDuV_N0Ri_U`.
+Do **not** create a parallel alternate numbering scheme or more prompts merely to appear busy. The executed audit concluded that further prompt proliferation is lower value than the real product-evidence gate unless a new systemic defect appears.
 
-The prompt pack now exposes 26 bounded routes rather than a small set of broad reviewer roles: resume, evidence packet, integrator, story-engine competition, architecture Red Team, causal map, scene gate, character, relationship, dialogue, emotional range, mystery, dorama/melodrama serial, Orbital Youth, Smith/Old Earth Security, world/science/technology, Reference Intelligence/source distance, continuity/knowledge state, Reader Advocate, market/packaging, line/prose, engine/code automation, research/provider radar, audio casting/performance, audio sound dramaturgy/mix/QC, human-test design/handoff.
-
-**Routing rule:** do not run all 26. Select the smallest set that can materially change the current decision. More prompts are justified only by specialization and independence, not by ritual volume.
-
-Every Claude/Grok/GPT/other-model job receives a bounded RUN CARD with project/line, current authority, exact source/version/hash, task role, parent artifacts, open gates, locks, allowed actions, required evidence, output schema, acceptance tests and handoff destination.
-
-For comparative review, models receive the same locked source/version and protected invariants. Separate DIAGNOSIS from PROPOSED FIX. Repeated agreement from models sharing the same source/assumption is one evidence family, not triangulation.
-
-Every result is classified `ACCEPT / ACCEPT_WITH_MODIFICATION / HOLD_FOR_TEST / REJECT`. A recommendation is not integrated until the controlling artifact/state is actually changed and verified.
-
-If an external AI discovers a reusable prompt/process/program/craft mechanism, return it as an improvement candidate with scope, evidence family, dedupe check, pilot, regression risk, application targets and rollback path. External AI does not self-promote it.
-
-Parallel models may work only on independent PASS-gated dependency branches. Merge through artifacts/hashes/manifests, never conversational consensus.
+Every external model job still receives one bounded RUN CARD. Source parity and independence are required where independent confirmation is claimed. External output is evidence, not canon. Reusable findings return through the Improvement Registry/Learning Ledger after semantic dedupe.
 
 ## Self-improvement / anti-loss engine — CURRENT v2
 
@@ -85,20 +71,13 @@ Current governing engine: `IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v
 Core kernels: `IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md`.
 Transcript recovery module: `IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md`.
 Machine state: `CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json`.
-Machine config: `SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json`.
 Improvement registry: `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json`.
 Learning ledger: `CURRENT_IVDIVO_LEARNING_LEDGER.json`.
-Utility: `tools/ivdivo_self_improvement.py`.
 Historical/base only: `IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md`.
 
-Current status: **v2 VERIFIED_CURRENT**. Priority: `P0 AUTHORITY/INTEGRITY -> P1 STRONG COMPLETE BOOKS -> P2 LOCKED BOOK TO HIGH-QUALITY AUDIO -> P3 PRODUCTION PERFORMANCE -> P4 ENGINES/TOOLS/PROMPTS -> P5 RESEARCH/LEARNING -> P6 BROADER IVDIVO`.
+Priority: `P0 AUTHORITY/INTEGRITY -> P1 STRONG COMPLETE BOOKS -> P2 LOCKED BOOK TO HIGH-QUALITY AUDIO -> P3 PRODUCTION PERFORMANCE -> P4 ENGINES/TOOLS/PROMPTS -> P5 RESEARCH/LEARNING -> P6 BROADER IVDIVO`.
 
-Operating loop:
-`RESTORE -> FULL-CHAT RECOVERY IF TRIGGERED -> DELTA/FRESHNESS -> IMPROVEMENT REGISTRY -> LEARNING LEDGER -> BOTTLENECK -> RETRIEVE KNOWN GOOD MECHANISMS -> EXECUTE PRIMARY PRODUCTION -> RECORD REAL DEFECTS/SUCCESSES -> ADVANCE ONE JUSTIFIED IMPROVEMENT -> PILOT/RED TEAM -> APPLY -> VERIFY -> PERSIST -> CONTINUE`.
-
-WIP guard: one primary meta-integration at a time; up to two dependency-independent bounded pilots. Meta-work must not starve story/audio production unless it blocks P0–P2 or Founder explicitly switches focus.
-
-Evidence classes stay separate: automated tests do not prove literary quality; model review is not Human Signal; dry run is not live provider proof; predicted market quality is not real market behavior.
+Meta-work must not starve story/audio production.
 
 ## Verified machine execution implementation — v11.2
 
@@ -109,23 +88,23 @@ Runtime version: `IVDIVO-ENGINE/6.2.0-continuous-execution`.
 SHA-256: `d7985036fc97b74019aa74bf422d03f2f6cbe2d5f6e30736bb70032fc399ff4f`.
 Fresh-unzip regression: **290/290 pytest PASS**.
 
-This implementation is below Narrative/Audio/Self-Improvement authorities and not a parallel canon. It adds fail-closed persisted-state continuation, explicit no-heartbeat continuation gates, chat-only ingestion, semantic delta dedupe/universalization screening, cross-model assignment guards, bounded Run Card validation, future-critical asset escrow, shared musical-fact verification, provider-neutral staged voice evidence and Self-Improvement v2 compatibility checks.
+## ROOM917 product evidence frontier from reconciled 26-prompt audit
+
+The system-hardening objective is complete enough to stop expanding meta-prompts. ROOM917 is not at S0/S1. Current project evidence records a full E01 evaluation master identity and post-render analysis.
+
+Current exact product obligation from the reconciled audit:
+`P003A2 PRE-SCENE3 EXACT LOW-LEVEL INTERVAL LOCALIZATION + DURABLE MASTER ACCESS`, with parallel `P003B HUMAN PERCEPTUAL LISTEN`.
+
+Do not blanket-fill silence, ambience or music. Do not reapply the old Scene 3 repair campaign. Do not spend on E02–E24 scale rendering before E01 quality proof. Do not regenerate a missing master from summaries/metrics.
+
+If exact master bytes are inaccessible in the current tool surface, this is a real asset-persistence/tool blocker, not permission to invent evidence or create more prompts.
 
 ## Improvement / promotion law
 
-When a newer mechanism is found in another project/dialog/transcript:
 `DISCOVER -> VERIFY/RECOVER ACTUAL RESULT -> SEMANTIC DEDUPE -> ABSTRACT PROJECT-NEUTRAL CONTRACT -> RED TEAM/PILOT AS NEEDED -> CLASSIFY -> PROMOTE / PROJECT-SPECIFIC / HOLD / REJECT -> WRITE THROUGH -> UPDATE ROUTERS + MACHINE STATE -> READBACK VERIFY`.
-
-Never promote merely because a filename is newer, a test count is larger or several models prefer it.
-
-## Audio inheritance
-
-Current audio authority = v3.3 process chain plus current provider/casting canary. Microphone Choreography is integrated. Current universal pitched-story consistency gate: `AUDIO_PRODUCTION/IVDIVO_AUDIO_SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT_v1.0.md`.
-
-Audio new-chat boot Drive ID `1ui02P9RH_B62DxDE6OjxCLrkB6fMOfZF0WcRtRtvOoU` inherits current Project-Wide Continuation, Self-Improvement v2, Runtime Craft, **multi-model Run Card v2.0**, prompt pack v2.0 and current machine execution routing.
 
 ## Stop conditions
 
-Stop only at a real blocker: authority conflict, Founder creative/canon decision, required human evidence, unavailable paid/provider step, unresolved FATAL/MAJOR, irreversible external action requiring approval, real tool/runtime limitation, or safety/legal constraint.
+Stop only at a real blocker: authority conflict, Founder creative/canon decision, required human evidence, unavailable paid/provider step, unresolved FATAL/MAJOR, unavailable critical asset bytes, irreversible external action requiring approval, real tool/runtime limitation, or safety/legal constraint.
 
 Otherwise: **continue, verify, persist, re-read state, continue again.**
