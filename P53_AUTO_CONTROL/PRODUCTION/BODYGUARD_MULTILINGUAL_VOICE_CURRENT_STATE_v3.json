@@ -6,7 +6,7 @@
   "prompt_suite_total": 48,
   "pmv01_24": "COMPLETE previously",
   "pmv25_48": "COMPLETE zero-cost/design; evidence-dependent gates explicitly HOLD",
-  "ru_anchor_version": "v0.2 WORKING corrected; native/pro terminology QA pending",
+  "ru_anchor_version": "v0.3 WORKING reconciled; supersedes concurrent v0.2 representations for future audition input; native/pro terminology QA pending",
   "ru_glossary_version": "v0.1 WORKING",
   "voice_passports": "v1 WORKING provider-neutral",
   "ru_voice_lock": false,
@@ -15,7 +15,7 @@
   "next_real_gate": "RU native/professional anchor+terminology QA",
   "next_paid_gate": "after RU audition-anchor v1.0: read-only provider preflight then minimal RU S0 canary",
   "prohibited": [
-    "use superseded RU anchor table for paid audition",
+    "use v0.1/v0.2 RU anchor representations for paid audition after v0.3 reconciliation",
     "treat fluent localization as semantic pass",
     "five-language parallel paid casting",
     "voice lock without native/audio evidence",
