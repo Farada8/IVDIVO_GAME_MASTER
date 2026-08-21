@@ -1,0 +1,34 @@
+{
+  "schema_version": "2.0",
+  "updated": "2026-08-21",
+  "mode": "REGULATORY_SHOCK_CAPTURE_WAVE2",
+  "founder_cash_preproof_eur": 0,
+  "prior_primary": {
+    "name": "Tender/Opportunity Intelligence",
+    "status": "DEMOTED_TO_ARCHIVED_HYPOTHESIS",
+    "reason": "founder demand skepticism + substitution/commodity risk"
+  },
+  "primary": {
+    "name": "White-label AI Governance Handoff Pack for AI implementation agencies",
+    "evidence": "E1_E2",
+    "market_proof": "NOT_PROVEN",
+    "pilot_price_eur": 149
+  },
+  "pilot_1": {
+    "name": "CRA Reporting Readiness Drill",
+    "evidence": "E1",
+    "market_proof": "NOT_PROVEN",
+    "pilot_price_eur": 249
+  },
+  "pilot_2": {
+    "name": "PPWR Packaging Evidence Register",
+    "evidence": "E1",
+    "market_proof": "NOT_PROVEN",
+    "pilot_price_eur": 149
+  },
+  "proof_ladder": ["E0_HYPOTHESIS","E1_AUTHORITY_SIGNAL","E2_MARKET_OBSERVATION","E3_BUYER_ENGAGEMENT","E4_PAYMENT_OR_PO","E5_REPEAT_PAID","E6_RETENTION_OR_BANKABLE","E7_SCALE"],
+  "next_gate": "REAL_TARGETED_OUTREACH_AND_E3_E4",
+  "no_build_before": "E3",
+  "no_finance_before": "E4",
+  "kill_rule": "20 qualified contacts with <2 E3 and zero E4 => KILL_OR_MATERIAL_PIVOT"
+}
