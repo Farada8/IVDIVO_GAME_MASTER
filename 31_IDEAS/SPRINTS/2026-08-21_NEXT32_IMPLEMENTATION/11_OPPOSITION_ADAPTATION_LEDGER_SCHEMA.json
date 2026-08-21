@@ -1,0 +1,29 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/schemas/opposition_adaptation_ledger_candidate_v1.json",
+  "title":"Opposition Adaptation Ledger Candidate",
+  "type":"object",
+  "required":["unit_id","opposition_type","protagonist_move","opponent_observation_or_system_response","counter_move","new_constraint","protagonist_adaptation","price"],
+  "properties":{
+    "unit_id":{"type":"string"},
+    "opposition_type":{"enum":["PERSON","INSTITUTION","ENVIRONMENT","SOCIAL_SYSTEM","RELATIONSHIP","MIXED"]},
+    "protagonist_move":{"type":"string"},
+    "opponent_observation_or_system_response":{"type":"string"},
+    "counter_move":{"type":"string"},
+    "new_constraint":{"type":"string"},
+    "protagonist_adaptation":{"type":"string"},
+    "price":{"type":"string"},
+    "causal_link_explicit":{"type":"boolean"},
+    "scheduled_escalation_risk":{"type":"boolean"}
+  },
+  "gate":"If counter_move would happen unchanged without protagonist_move, classify escalation as SCHEDULED/GENERIC unless a separate causal driver is established.",
+  "genre_fixture_results":[
+    {"genre":"mystery","pass_condition":"suspect/institution changes access or evidence handling in response to investigation"},
+    {"genre":"romance_melodrama","pass_condition":"boundary/status/family/social pressure responds to a relationship choice rather than random jealousy"},
+    {"genre":"youth","pass_condition":"school/habitat/family/peer system reacts to young character's decision and changes independence/cost"},
+    {"genre":"Smith_OES","pass_condition":"old/new security systems and threat adapt to jurisdictional/containment choices rather than spawning arbitrary anomalies"}
+  ],
+  "n19_result":"PASS_CANDIDATE_SCHEMA_CREATED",
+  "n20_result":"PASS_INTERNAL_CROSS_GENRE_FIXTURE_LOGIC; real project calibration still required before promotion",
+  "evidence_class":"INTERNAL_MODEL_VALIDATION"
+}

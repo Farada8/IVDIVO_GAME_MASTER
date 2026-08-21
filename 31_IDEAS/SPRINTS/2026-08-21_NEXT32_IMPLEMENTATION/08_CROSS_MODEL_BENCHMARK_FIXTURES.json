@@ -1,0 +1,35 @@
+{
+  "schema_version":"1.0",
+  "status":"CANDIDATE_BENCHMARK_PACK",
+  "usage_rule":"Give reviewer_surface only to evaluator. Keep answer_key hidden until scoring.",
+  "scoring":"evidence quality + defect localization + false-positive control; agreement alone scores zero",
+  "reviewer_surface":[
+    {"id":"CM-01","task":"Identify whether a Story Core is causal or label-complete only.","fixture":"Hero wants to expose a fraud because her career is threatened. Midpoint: she learns her mentor is involved. Climax: she chooses to publish evidence and loses her job. Resolution: fraud investigation opens."},
+    {"id":"CM-02","task":"Identify the earliest failing layer.","fixture":"Dialogue is witty and distinct but scene participants want nothing from each other and the scene can be deleted with no downstream effect."},
+    {"id":"CM-03","task":"Classify evidence correctly.","fixture":"300 tests pass; an AI panel calls the book commercially irresistible; no reader data exists."},
+    {"id":"CM-04","task":"Check consent/current relationship state.","fixture":"A time-loop heroine remembers a kiss; the man in the new loop does not remember her and she treats the prior kiss as current consent."},
+    {"id":"CM-05","task":"Check opposition adaptation.","fixture":"Hero changes tactics twice; antagonist escalates on fixed episode numbers but never observes or reacts to those tactics."},
+    {"id":"CM-06","task":"Check scene modularity.","fixture":"Three investigation scenes can swap order without changing access, theory, risk or relationship state."},
+    {"id":"CM-07","task":"Check world reveal.","fixture":"Orbital school scene uses Earth classroom routines; zero-G habitat economics, transport, maintenance and independence do not affect choices."},
+    {"id":"CM-08","task":"Check evidence fairness.","fixture":"Final solution depends on a fact known only in an erased timeline; no current-line trace exists."},
+    {"id":"CM-09","task":"Check social pressure relevance.","fixture":"Character mentions being poor repeatedly, but money never changes access, choices, timing, risk or relationship power."},
+    {"id":"CM-10","task":"Check prose repair routing.","fixture":"Passage is choppy because scene function repeats the prior scene; proposed fix only lengthens sentences."},
+    {"id":"CM-11","task":"Check multi-AI concurrency.","fixture":"Two agents independently edit the same current project state from stale snapshots and both write without rebase."},
+    {"id":"CM-12","task":"Check audio/story boundary.","fixture":"Audio adapter changes a clue sentence for hearability and accidentally alters clue order and suspect implication."}
+  ],
+  "answer_key":[
+    {"id":"CM-01","expected":"CAUSAL_CORE_LIKELY_PASS_WITH_MORE_OPPOSITION_DETAIL"},
+    {"id":"CM-02","expected":"SCENE_FUNCTION_FAILURE_UPSTREAM_OF_DIALOGUE_POLISH"},
+    {"id":"CM-03","expected":"NO_HUMAN_OR_MARKET_EVIDENCE"},
+    {"id":"CM-04","expected":"CONSENT_AND_RELATIONSHIP_AUTHORITY_VIOLATION"},
+    {"id":"CM-05","expected":"SCHEDULED_ESCALATION_NOT_ADAPTIVE_OPPOSITION"},
+    {"id":"CM-06","expected":"PSEUDO_CAUSAL_MODULARITY_RISK"},
+    {"id":"CM-07","expected":"EARTH_SCHOOL_IN_SPACE_FAILURE"},
+    {"id":"CM-08","expected":"UNFAIR_FINAL_PROOF_CURRENT_TIMELINE_FAILURE"},
+    {"id":"CM-09","expected":"DECORATIVE_SOCIOLOGY_NOT_CAUSAL_PRESSURE"},
+    {"id":"CM-10","expected":"UPSTREAM_SCENE_ARCHITECTURE_FAILURE"},
+    {"id":"CM-11","expected":"STALE_WRITE_CONCURRENCY_VIOLATION"},
+    {"id":"CM-12","expected":"LOCKED_STORY_MUTATION_BY_AUDIO_ADAPTER"}
+  ],
+  "n13_result":"PASS_CANDIDATE_PACK_CREATED"
+}

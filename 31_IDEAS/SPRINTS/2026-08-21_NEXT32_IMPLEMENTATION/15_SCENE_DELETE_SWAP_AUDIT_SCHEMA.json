@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/schemas/scene_delete_swap_audit_candidate_v1.json",
+  "title":"Scene Delete/Swap Audit Candidate",
+  "type":"object",
+  "required":["scene_id","delete_test","swap_test","dependency_type","verdict"],
+  "properties":{
+    "scene_id":{"type":"string"},
+    "delete_test":{"type":"object","required":["what_breaks_if_removed"],"properties":{"what_breaks_if_removed":{"type":"array","items":{"type":"string"}},"downstream_units_affected":{"type":"array","items":{"type":"string"}}}},
+    "swap_test":{"type":"object","required":["adjacent_scene_id","what_breaks_if_swapped"],"properties":{"adjacent_scene_id":{"type":"string"},"what_breaks_if_swapped":{"type":"array","items":{"type":"string"}}}},
+    "dependency_type":{"enum":["CAUSAL_ACTION","EVIDENCE_ACCESS","KNOWLEDGE_STATE","RELATIONSHIP_STATE","ESCALATION_PRICE","TEMPORAL_LOGIC","SETUP_PAYOFF","MONTAGE_PARALLEL_VALID","OTHER"]},
+    "verdict":{"enum":["ESSENTIAL_CAUSAL","ESSENTIAL_ORDERED","VALID_MODULAR","PSEUDO_CAUSAL","FILLER_OR_DUPLICATE","REQUIRES_REPAIR"]},
+    "repair_route":{"type":"string"}
+  },
+  "law":"A scene is not automatically defective because it is movable; montage, parallelism and deliberate modular structures can be valid. Flag only when a supposedly causal chain remains unchanged despite removal/reordering.",
+  "n29_result":"PASS_CANDIDATE_SCHEMA_CREATED",
+  "n30_fixture_result":{"strong_causal_block":"PASS: deletion/swap breaks evidence access or choice/price chain","intentional_montage":"PASS_AS_VALID_MODULAR when order is not causally promised","filler_block":"FAIL: deletion causes no state loss","pseudo_causal_investigation":"FAIL: three clue scenes swap freely without changing theory/access/risk"},
+  "evidence_class":"INTERNAL_MODEL_FIXTURE_VALIDATION"
+}
