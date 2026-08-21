@@ -1,0 +1,94 @@
+{
+  "candidate_id": "SI-0008",
+  "title": "32 full production RUN CARD prompts + control Router v2",
+  "candidate_type": "PROMPT",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {
+      "source_type": "FOUNDER",
+      "locator": "2026-08-21 directive: develop each of the 32 next-step prompts and determine what follows",
+      "version": null,
+      "hash": null,
+      "date": "2026-08-21",
+      "notes": "Direct Founder continuation of Self-Improvement v2"
+    },
+    {
+      "source_type": "GITHUB",
+      "locator": "IVDIVO_NARRATIVE_OS/19_SELF_IMPROVEMENT_NEXT_32_RUN_CARDS_v2.0_MANIFEST.md",
+      "version": "2.0",
+      "hash": null,
+      "date": "2026-08-21",
+      "notes": "Manifest for full prompt pack"
+    },
+    {
+      "source_type": "GOOGLE_DRIVE",
+      "locator": "1GWleaTveP6Cn4gdpjIkd9zkFWBIaccgLbp0ohd4gAdc",
+      "version": "2.0",
+      "hash": "e17419756cfee12466636a5b9e61b344dc0017f7932725ff5e25de8d3e747289",
+      "date": "2026-08-21",
+      "notes": "Full 1344-line production prompt pack"
+    }
+  ],
+  "problem_or_opportunity": "The v1 32-run-card outline identified the right stages but was not sufficiently executable: each stage needed explicit inputs, execution algorithm, Red Team, required outputs, PASS/FAIL gate and auto-continuation; manual prompt selection would still create Founder routing burden.",
+  "proposed_mechanism": "Thirty-two full production prompt contracts organized around P1 Book, P2 Book-to-Audio, Factory/Engines/Productivity and Research/Self-Improvement, plus Prompt 33 A00 Router that selects the smallest applicable prompt from CURRENT state, permits only safe independent parallelism and recomputes the next route after PASS.",
+  "dedupe_relation": "EXTENSION",
+  "related_candidates": ["SI-0007"],
+  "expected_benefit": "Turns Self-Improvement v2 from policy into a repeatable production operating layer while reducing manual 'which prompt next?' decisions and preventing lower-priority meta-work from starving books/audio.",
+  "evidence_state": "INTERNAL_EVIDENCE",
+  "priority_vector": {
+    "impact": "HIGH",
+    "recurrence": "SYSTEMIC",
+    "effort": "MEDIUM",
+    "regression_risk": "MEDIUM",
+    "reversibility": "EASY",
+    "urgency": "MEDIUM",
+    "affected_surface": "PORTFOLIO"
+  },
+  "development_contract": {
+    "required_pilots": [
+      "one real active-book workflow",
+      "one locked-book-to-audio workflow",
+      "one engine/tool workflow",
+      "one research/evidence workflow"
+    ],
+    "acceptance_conditions": [
+      "Router chooses smallest correct prompt from persisted state",
+      "prompt does not restart solved work",
+      "outputs are consumable by downstream stage",
+      "auto-continue stops only at a real gate",
+      "no evidence-class substitution",
+      "P1/P2 outrank unrelated meta-work",
+      "parallel routes are dependency-independent and rebase before write"
+    ]
+  },
+  "pilot_evidence": [],
+  "red_team_findings": [
+    "Do not promote because the prompt text is comprehensive; it needs real workflow pilots.",
+    "Do not fire all 32 prompts as a checklist.",
+    "Prompt 33 must remain a router, not a new creative authority.",
+    "The full pack should eventually compile to machine routing/state contracts rather than remain manual prose only."
+  ],
+  "promotion_level": "NONE",
+  "application_targets": [
+    "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md after pilot evidence",
+    "CURRENT_IVDIVO_SYSTEM_STATE.json prompt-router pointer after pilot",
+    "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json when executable Router is implemented",
+    "Drive prompt pack mirror"
+  ],
+  "verification_evidence": [],
+  "protected_authorities": [
+    "Founder newest instruction",
+    "Story-first priority",
+    "Locked book/project authority",
+    "Current audio authority",
+    "Human/provider/market evidence firewalls"
+  ],
+  "owner_role": "A00 Router / Prompt Architect / Self-Improvement Reconciler",
+  "next_action": "Build executable Prompt Router state machine/schema, then run four bounded pilots beginning with the next real P1 book workflow rather than a synthetic demonstration.",
+  "next_gate": "PROMPT_ROUTER_EXECUTION_AND_FOUR_DOMAIN_PILOT_GATE",
+  "hold_trigger": null,
+  "terminal_reason": null,
+  "last_movement": "2026-08-21",
+  "notes": "Standalone candidate record created immediately to prevent prompt-pack loss. Next registry sweep should semantic-dedupe and merge it into CURRENT_IMPROVEMENT_REGISTRY.json rather than create a duplicate candidate."
+}
