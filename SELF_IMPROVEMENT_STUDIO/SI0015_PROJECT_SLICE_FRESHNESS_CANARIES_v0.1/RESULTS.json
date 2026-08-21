@@ -1,0 +1,54 @@
+{
+  "schema_version": "ivdivo.si0015.canary_results/0.1",
+  "candidate_id": "SI-0015",
+  "candidate_status_before": "DEVELOPMENT_CONTRACT_READY",
+  "promotion_mutation_authorized": false,
+  "story_canon_mutation": false,
+  "source_contract_blob": "b158c623892bedaddcc947496dfdad4fc0c234a6",
+  "fresh_branch_base_at_creation": "c047fd785fbb5aca16c2cfdb749fd458fa47eedb",
+  "fixtures": [
+    {
+      "id": "stale_bloodbound_current_slice",
+      "expected": "STALE_CURRENT_SLICE",
+      "observed_local": "STALE_CURRENT_SLICE"
+    },
+    {
+      "id": "d01_resume_without_founder_lock",
+      "expected": "APPROVAL_EVENT_MISSING",
+      "observed_local": "APPROVAL_EVENT_MISSING"
+    },
+    {
+      "id": "historical_slice_exempt",
+      "expected": "EXEMPT_HISTORICAL_SLICE",
+      "observed_local": "EXEMPT_HISTORICAL_SLICE"
+    },
+    {
+      "id": "unresolved_pointer",
+      "expected": "UNRESOLVED_POINTER",
+      "observed_local": "UNRESOLVED_POINTER"
+    },
+    {
+      "id": "competing_current_frontiers",
+      "expected": "UNRESOLVED_POINTER",
+      "observed_local": "UNRESOLVED_POINTER"
+    },
+    {
+      "id": "current_match",
+      "expected": "CURRENT_MATCH",
+      "observed_local": "CURRENT_MATCH"
+    },
+    {
+      "id": "exact_founder_approval_event",
+      "expected": "CURRENT_MATCH",
+      "observed_local": "CURRENT_MATCH"
+    }
+  ],
+  "local_machine_result": {
+    "tests": 7,
+    "passed": 7,
+    "failed": 0
+  },
+  "evidence_ceiling": "LOCAL_MACHINE_CANARY_ONLY_UNTIL_GITHUB_CI_AND_DRIVE_READBACK",
+  "candidate_status_after": "UNCHANGED_PENDING_CI_AND_DURABLE_READBACK",
+  "next_gate": "EXECUTABLE_FRESHNESS_AND_APPROVAL_EVENT_CANARY_PASS_WITH_CI_AND_DRIVE_READBACK"
+}

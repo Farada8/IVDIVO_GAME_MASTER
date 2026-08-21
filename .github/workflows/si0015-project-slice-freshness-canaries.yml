@@ -1,0 +1,21 @@
+name: SI-0015 Project Slice Freshness Canaries
+
+on:
+  pull_request:
+    paths:
+      - 'tools/si0015_project_slice_freshness_canary.py'
+      - 'tests/test_si0015_project_slice_freshness_canary.py'
+      - 'SELF_IMPROVEMENT_STUDIO/SI0015_PROJECT_SLICE_FRESHNESS_CANARIES_v0.1/**'
+      - '.github/workflows/si0015-project-slice-freshness-canaries.yml'
+  workflow_dispatch:
+
+jobs:
+  canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run SI-0015 canaries
+        run: python -m unittest tests.test_si0015_project_slice_freshness_canary -v
