@@ -1,6 +1,6 @@
 {
-  "schema_version": "room917.current_premium_quality_pointer/1.0",
-  "updated": "2026-08-21T17:21:00+01:00",
+  "schema_version": "room917.current_premium_quality_pointer/1.1",
+  "updated": "2026-08-21T17:36:00+01:00",
   "project": "ROOM917",
   "episode": "E01",
   "story_status": "LOCKED",
@@ -10,25 +10,31 @@
     "drive_folder_id": "1kjvvfcZDvhMmb6bGOJZfS2RtvwmI_3Kg",
     "drive_folder_name": "ROOM917_E01_PQ32_PREMIUM_QUALITY_TO_PQ64_v1",
     "pq32_executed": 32,
-    "pq64_created": 64
+    "pq64_created": 64,
+    "recovery_test_artifact": "AUDIO_PRODUCTION/ROOM917/E01_PQ32_PREMIUM_QUALITY_TO_PQ64_v1/05_MASTER_BYTE_RECOVERY_ROUTE_TESTS.md"
   },
   "new_direct_evidence": {
     "master_library_file_id": "file_000000002c8081f58d0e656cdc0e7267",
     "master_library_path": "/IVDIVO — SAGA WRITERS' STUDIO/ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
     "master_size_bytes": 189558764,
     "library_pointer_verified": true,
-    "raw_byte_materialization_attempted": true,
-    "raw_byte_materialization_result": "HTTP_403_FORBIDDEN",
-    "byte_fetch_verified": false
+    "raw_byte_materialization_attempts": 2,
+    "raw_byte_materialization_result": "HTTP_403_FORBIDDEN_BOTH_ATTEMPTS",
+    "byte_fetch_verified": false,
+    "control_scene3_file_id": "file_00000000f1e081f4b6143877e1fc5ae2",
+    "control_scene3_materialization": "PASS_61404524_BYTES",
+    "failure_scope": "FULL_MASTER_BACKING_OBJECT_OR_ASSET_SPECIFIC_ACCESS_BLOCK_NOT_GENERAL_LIBRARY_WAV_FAILURE",
+    "same_window_sibling_recovery_search": "NO_CURRENT_ROOM917_STEMS_PREMASTER_OR_ZIP_FOUND_AROUND_FULL_MASTER_CREATION_WINDOW"
   },
   "quality_conclusion": "CURRENT_E01_BOTTLENECK_IS_POST_RENDER_PERSISTENCE_PLUS_PHYSICAL_WORLD_PLUS_SELECTIVE_REPAIR_PLUS_HUMAN_VALIDATION_NOT_NEW_STORY_OR_WHOLE_EPISODE_TTS_REGENERATION",
-  "next_machine_action": "RECOVER_OR_CONTROLLED_ESCROW_MASTER_BYTES_THEN_RUN_P003A2_EXACT_INTERVAL_LOCALIZATION",
+  "next_machine_action": "RECOVER_OR_CONTROLLED_ESCROW_EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP_THEN_RUN_P003A2",
   "protected": [
     "LOCKED_STORY",
     "SCENE3_V1_3E_LINEAGE",
     "D003_AGGREGATE_MAJOR_NO_BLANKET_FILL",
     "D004_REMAINS_CANDIDATE_UNTIL_DIRECT_AUDIO_EVIDENCE",
-    "D005_REMAINS_COMMERCIAL_HYPOTHESIS_UNTIL_HUMAN_ABC_TEST"
+    "D005_REMAINS_COMMERCIAL_HYPOTHESIS_UNTIL_HUMAN_ABC_TEST",
+    "DO_NOT_SUBSTITUTE_SCENE3_OR_OLDER_ARCHIVES_FOR_FULL_MASTER_BYTES"
   ],
   "scale_permission": "NO_SCALE_UNTIL_E01_V2_PROVEN"
 }
