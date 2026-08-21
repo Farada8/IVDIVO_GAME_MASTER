@@ -8,11 +8,11 @@
 
 ## Purpose
 
-Persist the Founder-requested sequential 32-prompt post-render study, the integrated synthesis, and the exactly 64 evidence-driven prompts derived for subsequent work. This package is additive and does not modify locked story text or authorize season-scale rendering.
+Persist the Founder-requested sequential 32-prompt post-render study, the integrated synthesis, result matrix and the exactly 64 evidence-driven prompts derived for subsequent work. This package is additive and does not modify locked story text or authorize season-scale rendering.
 
 ## Fresh authority
 
-Immediately before this package was created, GitHub main `AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json` was re-read at schema `ivdivo.room917_execution_state/3.3`.
+The package is rebased against ROOM917 `AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json` schema `ivdivo.room917_execution_state/3.3` and has been repeatedly rebased against concurrent GitHub main advances rather than force-overwriting them.
 
 Current real master identity:
 - `ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav`
@@ -37,9 +37,10 @@ Current state:
 1. `01_32_PROMPTS_EXECUTED_ANALYSIS_v1.0.md` — all 32 prompt functions with results/status/decision.
 2. `02_32_PROMPT_SYNTHESIS_AND_DECISIONS_v1.0.md` — integrated analysis, Red Team, repair order, A/B/C and GO/NO-GO.
 3. `03_64_NEXT_PROMPTS_v1.0.md` — exactly 64 dependency-ordered prompts for subsequent work.
-4. `04_STATE.json` — machine-readable state for this research package.
-5. `05_HANDOFF.md` — exact continuation contract.
-6. `DRIVE_MIRROR_POINTERS.md` — durable Google Drive locations.
+4. `04_32_PROMPT_RESULT_MATRIX_v1.1_REBASED.md` — compact 32-prompt status matrix plus P003A/v3.3 rebase.
+5. `04_STATE.json` — machine-readable state for this research package.
+6. `05_HANDOFF.md` — exact continuation contract.
+7. `DRIVE_MIRROR_POINTERS.md` — durable Google Drive locations.
 
 ## Google Drive mirror
 
@@ -51,6 +52,15 @@ Current full Drive documents:
 - `01_ROOM917_32_PROMPTS_EXECUTED_ANALYSIS_v1.0` — `1kFX8mGWqG200nrJtu616LdC7MUD96-Gwx_2ldU_b-og`
 - `02_ROOM917_32_PROMPT_SYNTHESIS_AND_DECISIONS_v1.0` — `1fzuMsoYapBl7EId9LKJoQG-f-iqS77XcS8pfW3gzxk0`
 - `03_ROOM917_64_NEXT_PROMPTS_v1.0` — `1lIQKIMGkzuWztGC8BQJO4LHYY_ieFmeXAoXuHChuAhM`
+- `04_ROOM917_32_PROMPT_RESULT_MATRIX_v1.0` — `1HvK7DOOe6JOC77OxEemXFk4t6SVq9PQYD_CcYMaCs68`
+- `05_ROOM917_POST_RENDER_32X64_HANDOFF_v1.0` — `1J55ChDvxRm05mRZ2Rg5kx8x7UsQWMspIEXDGMjYUZbg`
+
+## GitHub integration
+
+Branch: `room917/postrender-32x64-rebased-2026-08-21`  
+Draft PR: `#74 — ROOM917: post-render 32×64 evidence studio package`.
+
+Draft status is deliberate: this persists the research/evidence package without silently promoting it into canonical project state while concurrent work is active.
 
 ## Evidence law
 
