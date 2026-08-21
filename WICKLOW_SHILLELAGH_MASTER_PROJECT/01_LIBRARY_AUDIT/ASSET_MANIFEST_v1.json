@@ -1,0 +1,13 @@
+{
+  "project": "WICKLOW_SHILLELAGH_MASTER_PROJECT",
+  "generated_at": "2026-08-22T00:45:00+01:00",
+  "assets": [
+    {"file":"great_cartouche_primary.png","description":"Great Cartouche / House of Many Windows vertical mural study","width_px":941,"height_px":1672,"bytes":3155568,"sha256":"ccc99349079898f5bd9334e375a5c8271c5c650614872b4f803eae75bc8a96d8","authority":"DRIVE_ORIGINAL_BINARY","github_policy":"MANIFEST_POINTER_ONLY"},
+    {"file":"house_many_windows_variant.png","description":"House of Many Windows vertical variant","width_px":941,"height_px":1672,"bytes":3160183,"sha256":"4ecea222d67d4445c2ea851854a35df04e77d925bdcee624d1bbc88b56438082","authority":"DRIVE_ORIGINAL_BINARY","github_policy":"MANIFEST_POINTER_ONLY"},
+    {"file":"giulio_hyperreal_railway.png","description":"Giulio Romano + hyperreal railway wall-rupture study","width_px":1024,"height_px":1536,"bytes":3216590,"sha256":"361902723b702a82d6589faec79327a700fd2e2788ea76fea41920830327038a","authority":"DRIVE_ORIGINAL_BINARY","github_policy":"MANIFEST_POINTER_ONLY"},
+    {"file":"ten_concepts_contact_board.png","description":"Ten-concept comparative presentation board","width_px":1536,"height_px":1024,"bytes":3469516,"sha256":"c03989b358d81998fc8bc7a8d1a43b077dc30bb9a3e1663f625200326e236399","authority":"DRIVE_ORIGINAL_BINARY","github_policy":"MANIFEST_POINTER_ONLY"},
+    {"file":"house_many_windows_board.png","description":"House of Many Windows competition concept board","width_px":1536,"height_px":1024,"bytes":3483590,"sha256":"bb906e120397182253201a2c0bbb4e537bbac043ce346347418a13fbbd79c94a","authority":"DRIVE_ORIGINAL_BINARY","github_policy":"MANIFEST_POINTER_ONLY"},
+    {"file":"women_carry_memory_board.png","description":"Women Who Carry Memory competition concept board","width_px":1536,"height_px":1024,"bytes":3428073,"sha256":"03b17ef7b4d913fbc17b8c26a0c22e68abd9f2c1178b081c9fe35745882ac301","authority":"DRIVE_ORIGINAL_BINARY","github_policy":"MANIFEST_POINTER_ONLY"},
+    {"file":"alternate_vertical_mural.png","description":"Alternate vertical mural composition","width_px":941,"height_px":1672,"bytes":3082611,"sha256":"f574a45e9cce0cd27948fd4819bf47bb4659a7f1ed7ec5db5139eb92a3d03f4e","authority":"DRIVE_ORIGINAL_BINARY","github_policy":"MANIFEST_POINTER_ONLY"}
+  ]
+}
