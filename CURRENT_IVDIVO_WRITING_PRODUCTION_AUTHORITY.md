@@ -16,16 +16,25 @@ Current canonical GitHub entry stack:
 5. `IVDIVO_NARRATIVE_OS/09_UNIVERSAL_BOOK_WORKROOM_BOOT.md`
 6. `IVDIVO_NARRATIVE_OS/12_UNIVERSAL_WORKROOM_CONTINUATION_PROMPT_v1.0.md`
 7. `IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md`
-8. `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md`
-9. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
-10. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
-11. current book/project overlay + source-of-truth/state/manuscript files.
+8. `CURRENT_IVDIVO_SYSTEM_STATE.json`
+9. `CURRENT_IVDIVO_CROSS_AI_HANDOFF.md`
+10. `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md`
+11. `IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md`
+12. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
+13. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
+14. current book/project overlay + source-of-truth/state/manuscript files.
 
 Google Drive and ChatGPT File Library are required connected working/reference sources when they can materially affect the current decision. Founder newest instruction outranks persisted mirrors until synchronized.
+
+`CURRENT_IVDIVO_SYSTEM_STATE.json` is a routing/resume state only. It never outranks a project-specific locked source-of-truth, but it must be checked so a new conversation does not repeat already completed work.
 
 ## UNIVERSAL BOOT
 
 `ACTIVE PROJECT/BOOK -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + VERSION + SHA256 -> ACTIVE BRANCH -> MODE/TEXT PROTECTION -> CURRENT PHASE -> BUILD/RUN MANIFEST -> LAST COMPLETED ARTIFACT -> OPEN GATES -> UNRESOLVED FATAL/MAJOR -> NEXT UNBLOCKED OBLIGATION`
+
+Then run:
+
+`FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE CHECK -> STALE-WORK GATE -> EXECUTE HIGHEST UNBLOCKED OBLIGATION -> VERIFY -> PERSIST -> RE-READ STATE -> CONTINUE UNTIL REAL GATE`.
 
 Fail closed on authority ambiguity. Do not reconstruct canon from chat memory when verified persisted state exists.
 
@@ -35,7 +44,21 @@ When an obligation is unambiguous, freshness-valid, dependency-unblocked and exe
 
 Founder shorthand `и / дальше / продолжай / делай / работай` means RESUME from persisted state and execute the highest unblocked obligation; it is not a required heartbeat.
 
-Stop only on a genuine gate: Founder decision, authority/canon ambiguity, unresolved FATAL/MAJOR, human-only evidence, unavailable required provider/tool, or another real blocker.
+Stop only on a genuine gate: Founder decision, authority/canon ambiguity, unresolved FATAL/MAJOR, human-only evidence, unavailable required provider/tool, irreversible/high-impact external action requiring approval, or another real blocker.
+
+Before every material write, re-read the current state/frontier. If another dialog advanced the same dependency, rebase/reconcile rather than overwriting it.
+
+## CROSS-DIALOG DELTA HARVEST
+
+Before inventing a new universal prompt, engine component, production program or adapter, search newer relevant GitHub/Drive/Library artifacts.
+
+Use:
+
+`DISCOVER -> LOCATE PERSISTED ARTIFACT -> VERIFY STATUS/VERSION/HASH/GATES -> ABSTRACT PROJECT-NEUTRAL MECHANISM -> RED TEAM -> CLASSIFY -> PROMOTE / PROJECT-SPECIFIC / HOLD / REJECT -> UPDATE POINTERS`.
+
+Sibling-chat recollection without a persisted artifact is `DISCOVERY_ONLY`, never automatic authority.
+
+Prefer upgrading/reconciling one current authority over creating parallel routers with the same function.
 
 ## MULTI-MODEL LAW
 
@@ -43,15 +66,19 @@ ChatGPT / Claude / Grok / other models are execution/review backends, not canon 
 
 Use `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md` for bounded new-chat resume, independent Red Team, Character/Relationship/Voice review, Reader/Market review, Reference/Continuity review and Reconciler handoff.
 
-Use bounded packets, preserve independent review when useful, classify external recommendations `ACCEPT / ACCEPT_WITH_MODIFICATION / HOLD_FOR_TEST / REJECT`, apply accepted changes to the actual controlling artifact, and persist the disposition/provenance.
+Use bounded RUN CARD / AGENT PACKET inputs, preserve independent review when useful, classify external recommendations `ACCEPT / ACCEPT_WITH_MODIFICATION / HOLD_FOR_TEST / REJECT`, apply accepted changes to the actual controlling artifact, and persist the disposition/provenance.
+
+Parallel models may work only on dependency-independent PASS-gated branches. Convergence happens through persisted artifacts, hashes, manifests and evidence, never conversational consensus.
 
 Never invent missing external feedback and never let a model self-certify real Human Signal or human P51 blind-swap.
 
 ## REPAIR LAW
 
-`SYMPTOM -> ROOT CAUSE -> EARLIEST FAILED LAYER -> SMALLEST EFFECTIVE REPAIR -> SELECTIVE DESCENDANT REGRESSION`
+`SYMPTOM -> ROOT CAUSE -> EARLIEST FAILED LAYER -> SMALLEST EFFECTIVE REPAIR -> CANDIDATE -> LOCAL QA -> COMMIT OR ROLLBACK -> SELECTIVE DESCENDANT REBUILD -> REGRESSION`
 
 Do not repair structure with prose polish or downstream production defects by reopening locked story without proof that story/text is the failed layer.
+
+Transactional repair mechanisms from the current Story Recovery line may be inherited where proven and bounded, but a WORKING recovery candidate does not become current Story Engine authority merely because its automated test count is higher.
 
 ## HANDOFF LAW
 
@@ -65,6 +92,8 @@ Persist when materially changed:
 - exact next unblocked obligation;
 - locks/blockers.
 
+Update `CURRENT_IVDIVO_SYSTEM_STATE.json` when the universal/project frontier materially changes. Use `CURRENT_IVDIVO_CROSS_AI_HANDOFF.md` as the compact current resume card. Project-specific state still outranks these aggregate pointers.
+
 Verify writes before claiming synchronization.
 
 ## AUDIO
@@ -72,5 +101,7 @@ Verify writes before claiming synchronization.
 If the active stage is audio, hand off to `CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md`. Writing/story authority remains higher for protected source text and story facts.
 
 **STORY FIRST. CHARACTER SECOND. WORLD THROUGH STORY. SAGA THROUGH COMPLETED BOOKS.**
+
+**PERSISTED STATE DRIVES THE WORK. REPEATED “И” IS OPTIONAL SHORTHAND, NOT WORKFLOW PLUMBING.**
 
 **CONTINUE UNTIL A REAL GATE STOPS THE WORK — NOT UNTIL THE CHAT NEEDS ANOTHER “И”.**
