@@ -20,9 +20,15 @@ Current canonical GitHub entry stack:
 9. `CURRENT_IVDIVO_CROSS_AI_HANDOFF.md`
 10. `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md`
 11. `IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md`
-12. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
-13. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
-14. current book/project overlay + source-of-truth/state/manuscript files.
+12. `IVDIVO_NARRATIVE_OS/16_CRAFT_RESEARCH_LIFECYCLE_BRIDGE_v1.0.md`
+13. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
+14. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
+15. `PROJECT_STATES/` current state for the active project/line when present.
+16. current book/project overlay + source-of-truth/state/manuscript files.
+
+Machine validation surface:
+- `schemas/IVDIVO_CURRENT_SYSTEM_STATE_SCHEMA_v1_2.json` validates aggregate cross-conversation routing state after v1.2 adoption;
+- project-specific state files remain subordinate to the project’s locked/current story authority.
 
 Google Drive and ChatGPT File Library are required connected working/reference sources when they can materially affect the current decision. Founder newest instruction outranks persisted mirrors until synchronized.
 
@@ -37,6 +43,8 @@ Then run:
 `FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE CHECK -> STALE-WORK GATE -> EXECUTE HIGHEST UNBLOCKED OBLIGATION -> VERIFY -> PERSIST -> RE-READ STATE -> CONTINUE UNTIL REAL GATE`.
 
 Fail closed on authority ambiguity. Do not reconstruct canon from chat memory when verified persisted state exists.
+
+When a `PROJECT_STATES/<PROJECT>_CURRENT_STATE.json` exists, use it as the durable downstream/frontier pointer for that project, but verify its artifact IDs/hashes against current project authority before material writes.
 
 ## AUTOPILOT / CONTINUATION
 
@@ -60,6 +68,29 @@ Sibling-chat recollection without a persisted artifact is `DISCOVERY_ONLY`, neve
 
 Prefer upgrading/reconciling one current authority over creating parallel routers with the same function.
 
+## REFERENCE / CRAFT RESEARCH LAW
+
+Current detailed bridge:
+`IVDIVO_NARRATIVE_OS/16_CRAFT_RESEARCH_LIFECYCLE_BRIDGE_v1.0.md`.
+
+Reference books, novels, scripts, research artifacts and craft studies remain evidence/reference, never story canon.
+
+Strict source promotion requires integrity plus full lifecycle evidence; TOCs/snippets/search results do not count as full reads.
+
+Operational route:
+
+`REFERENCE EVIDENCE -> VERIFIED MECHANISM -> ABSTRACT PROJECT-NEUTRAL LAW -> RUNTIME DIAGNOSTIC -> PROJECT-SPECIFIC APPLICATION`.
+
+Promoted runtime principles include:
+- `GIVEN CIRCUMSTANCES -> PRESENT WANT -> PARTNER/WORLD RESPONSE -> TACTIC -> ADAPTATION -> CHANGED STATE`;
+- `AGENCY != AGGRESSION`;
+- `INNER PROCESS SPEED != OUTER MOTION SPEED != SENTENCE LENGTH`;
+- `BEAT MAP != TYPOGRAPHY`;
+- `TOOLS HELP ASK / ORGANIZE / DIAGNOSE; STORY DOES NOT EXIST TO VALIDATE TOOLS`;
+- `NO NEW EVIDENCE -> NO NEW GLOBAL REWRITE`.
+
+Do not reread/reprocess the whole Library on every continuation. Run delta-first retrieval for the actual decision.
+
 ## MULTI-MODEL LAW
 
 ChatGPT / Claude / Grok / other models are execution/review backends, not canon authorities.
@@ -72,6 +103,18 @@ Parallel models may work only on dependency-independent PASS-gated branches. Con
 
 Never invent missing external feedback and never let a model self-certify real Human Signal or human P51 blind-swap.
 
+## P51 / P52 / P53 ROUTING
+
+Do not assume program numbers mean the same thing across obsolete generations. Resolve the current prompt authority/index first.
+
+Current Women’s Story / Romance / Dorama implementation remains in the current P01–P53 prompt stack and its P51/P52/P53 implementation standard.
+
+Universal writing inherits only the project-neutral functions represented by the current Narrative OS/runtime controls: character voice differentiation under pressure, emotional dynamic range, relationship truth, consent/power, changed state and truthful medium/marketing promise.
+
+P53 female-gaze/electricity is task-classified and must not inject romance into Smith, Orbital Youth, professional/investigative, family, antagonistic or exposition scenes where the active relationship authority does not support it.
+
+Genre/project overlay controls density through Romance Weight and current project brief.
+
 ## REPAIR LAW
 
 `SYMPTOM -> ROOT CAUSE -> EARLIEST FAILED LAYER -> SMALLEST EFFECTIVE REPAIR -> CANDIDATE -> LOCAL QA -> COMMIT OR ROLLBACK -> SELECTIVE DESCENDANT REBUILD -> REGRESSION`
@@ -79,6 +122,17 @@ Never invent missing external feedback and never let a model self-certify real H
 Do not repair structure with prose polish or downstream production defects by reopening locked story without proof that story/text is the failed layer.
 
 Transactional repair mechanisms from the current Story Recovery line may be inherited where proven and bounded, but a WORKING recovery candidate does not become current Story Engine authority merely because its automated test count is higher.
+
+## IDEA -> STORY STATUS LAW
+
+Keep executable evidence separate from source-authority promotion.
+
+Current persisted system state recognizes:
+- historical/current execution core evidence for `IDEA_TO_STORY_ENGINE_v1.0.0` including the preserved 15/15 automated acceptance result;
+- later recovery/hardening work as WORKING upgrade candidates unless explicitly promoted;
+- provider/human/literary calibration as separate evidence gates.
+
+Do not downgrade a proven acceptance result merely because source recovery is incomplete; do not promote a recovery candidate merely because its internal tests pass.
 
 ## HANDOFF LAW
 
@@ -94,11 +148,15 @@ Persist when materially changed:
 
 Update `CURRENT_IVDIVO_SYSTEM_STATE.json` when the universal/project frontier materially changes. Use `CURRENT_IVDIVO_CROSS_AI_HANDOFF.md` as the compact current resume card. Project-specific state still outranks these aggregate pointers.
 
+For project downstream work, update/create the project state pointer instead of stealing the aggregate `active_project` from another concurrent dialog.
+
 Verify writes before claiming synchronization.
 
 ## AUDIO
 
 If the active stage is audio, hand off to `CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md`. Writing/story authority remains higher for protected source text and story facts.
+
+Audio current authority already owns normalized alignment, LIVE/DRY_RUN/MIXED provenance, provider preflight, voice binding, acoustic/stereo intent, silent-reaction anchors, human/manual review and release fail-closed rules. Do not recreate those inside the story router.
 
 **STORY FIRST. CHARACTER SECOND. WORLD THROUGH STORY. SAGA THROUGH COMPLETED BOOKS.**
 
