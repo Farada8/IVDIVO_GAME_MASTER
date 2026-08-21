@@ -1,0 +1,17 @@
+name: Business Engineering OS Cycle3
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-21_CYCLE3_SOURCE_PASSPORTS_LIVE_SIGNAL_32_TO_64/**'
+      - '.github/workflows/business-engineering-os-cycle3.yml'
+jobs:
+  cycle3-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Cycle3 business opportunity canaries
+        working-directory: BUSINESS_ENGINEERING_OS/2026-08-21_CYCLE3_SOURCE_PASSPORTS_LIVE_SIGNAL_32_TO_64/engine
+        run: python -m unittest -v test_business_opportunity_engine_v3.py
