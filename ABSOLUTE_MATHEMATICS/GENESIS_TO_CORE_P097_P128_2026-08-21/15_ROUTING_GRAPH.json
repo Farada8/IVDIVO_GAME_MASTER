@@ -1,0 +1,15 @@
+{
+  "primary_sequence": ["P129","P137","P145","P153","P161","P169","P177","P185"],
+  "then_expand_within_each_group": true,
+  "mandatory_rules": [
+    "Every candidate state must face history-gain and micro-gain tests.",
+    "Every hierarchy claim must face composition-closure and flattening audits.",
+    "Every new detector must face explicit NO-BOUNDARY controls.",
+    "Every G-Rise claim must declare the definability language.",
+    "Every empirical threshold must carry uncertainty and preregistration.",
+    "Every novelty claim must pass exact-literature precedent search.",
+    "The Reactor must allow NO FINITE STATE and NO ORDER outcomes."
+  ],
+  "grand_red_team": "P191",
+  "roadmap_refresh": "P192"
+}
