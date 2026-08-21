@@ -1,0 +1,28 @@
+{
+  "artifact": "BODYGUARD_E01_PROVISIONAL_VOICE_LOCK_GATE_v1",
+  "status": "WAITING_FOR_CANDIDATE_AUDIO",
+  "roles_required_for_E01": [
+    "NAOMI_PARK",
+    "ELI_KWON",
+    "CAL_MERCER",
+    "TALIA_WYNN",
+    "THREAT_VOICE",
+    "MEDIA_REPORTER",
+    "CREW_UTILITY"
+  ],
+  "gates": [
+    {"id":"EXACT_SIDE_TEXT","fail_closed":true,"pass_when":"Audition side hashes match current locked request manifest."},
+    {"id":"LOUDNESS_MATCH","fail_closed":true,"pass_when":"Candidates compared at matched loudness with music/reverb off."},
+    {"id":"DIRECTION_CHANGE","fail_closed":true,"pass_when":"Selected candidate materially improves after one precise note without breaking P51/P53."},
+    {"id":"NAOMI_P53","fail_closed":true,"pass_when":"Competence + humanity + hidden cost coexist; no maternal/seductive/monotone fail."},
+    {"id":"ELI_P53","fail_closed":true,"pass_when":"Charisma + agency + private fracture coexist; no helpless/possessive fail."},
+    {"id":"PAIR_GATE","fail_closed":true,"pass_when":"Naomi/Eli have extra attention without forcing romance; target remains privately important/professionally constrained."},
+    {"id":"SUPPORT_NON_VILLAIN","fail_closed":true,"pass_when":"Cal/Talia do not telegraph guilt and remain professionally credible."},
+    {"id":"THREAT_MYSTERY","fail_closed":true,"pass_when":"Threat is human, intelligible, replay-consistent, non-supernatural and non-identifying."},
+    {"id":"DEVICE_TRANSLATION","fail_closed":true,"pass_when":"Finalists remain intelligible and distinct on headphones, mono and phone."},
+    {"id":"FATIGUE","fail_closed":true,"pass_when":"Naomi/Eli pass 8–10 minute long-form test before season lock."}
+  ],
+  "pilot_lock_rule": "Role score >=88, no hard fail, direction-change PASS; Naomi/Eli additionally pair-gate PASS.",
+  "season_lock_rule": "Pilot lock + E01–E03 performed evidence + long-form fatigue PASS.",
+  "voice_ids": "MUST_REMAIN_NULL_UNTIL_GATE_PASSES"
+}
