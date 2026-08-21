@@ -1,8 +1,9 @@
 # IVDIVO — MULTI-MODEL HANDOFF PROMPTS
 
 **Status:** CANONICAL OPERATIONAL PROMPT PACK  
-**Version:** 1.0  
+**Version:** 1.1  
 **Established:** 2026-08-21  
+**Updated:** 2026-08-21  
 **Parent:** `13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md`
 
 Purpose: let ChatGPT, Claude, Grok, Codex or another capable model enter an IVDIVO workflow without rebuilding the project, inventing canon or contaminating independent review.
@@ -42,6 +43,23 @@ Severity:
 `FATAL / MAJOR / MEDIUM / POLISH / INFO`.
 
 Never invent missing context to make the report look complete.
+
+### 2A. SOURCE-PARITY / INVENTORY / INDEPENDENCE GATE
+
+When two or more models are being compared as independent evidence, do not assume their outputs are comparable merely because they reviewed the same project name.
+
+Before comparison:
+1. verify the exact source artifact/version/hash or equivalent current revision supplied to each model where parity matters;
+2. verify the same governing locks and exact question;
+3. run an **inventory-before-judgment** pass for existence claims: identify what is actually present before interpreting whether it works;
+4. require evidence location for claims such as “missing,” “contradictory,” “already resolved,” “repeated,” or “not established”;
+5. if one reviewer had materially different context, label the comparison `NON_PARITY` and do not count agreement/disagreement as clean triangulation;
+6. when independence is being tested, do not reveal another reviewer’s verdict or desired repair before the independent pass;
+7. semantically cluster equivalent findings so copied/derived wording, shared summaries or repeated model echoes count as one evidence family rather than multiple votes.
+
+If a reviewer cannot verify a source-dependent claim, record `NOT VERIFIED / UNKNOWN`, not a confident reconstruction.
+
+**Two models making the same unsupported guess is not independent confirmation.**
 
 ---
 
@@ -102,6 +120,12 @@ Output: mechanism/evidence table + continuity contradictions + source-distance w
 Input: one or more independent model reports plus controlling authority.
 
 > For each recommendation classify `ACCEPT / ACCEPT_WITH_MODIFICATION / HOLD_FOR_TEST / REJECT`. Evidence and higher authority outrank model confidence. Merge only compatible findings; preserve genuine disagreement when evidence does not resolve it. Map every accepted FATAL/MAJOR to earliest failed layer, repair scope, protected elements and regression descendants. Never apply feedback just because multiple models phrase the same unsupported assumption. Duplicate opinion is not independent evidence if models share the same source/conclusion chain.
+
+Reconcile in two separate decisions:
+1. `DIAGNOSIS_VALIDITY` — is the claimed defect actually demonstrated by current evidence?
+2. `PROPOSED_REPAIR_VALIDITY` — if the defect is real, is this reviewer’s suggested fix the smallest/strongest safe repair?
+
+A valid diagnosis does not automatically validate the reviewer’s rewrite.
 
 Accepted recommendation is incomplete until applied to the controlling artifact and persisted.
 
