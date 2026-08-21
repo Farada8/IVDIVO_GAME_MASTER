@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "status": "PASS_REAL_PROJECT_BOUNDED_CANARY",
+    "count": 13,
+    "passed": 13,
+    "failed": 0,
+    "key_finding": "SOURCE_ADEQUACY_GATE_PREVENTS_ROUTING_SUMMARY_OMISSIONS_FROM_BECOMING_FALSE_STORY_DEFECTS",
+    "warm_regression": "24/24_PASS",
+    "cold_regression": "24/24_PASS",
+    "story_or_canon_mutation": "NONE",
+    "promotion": "NONE"
+  },
+  "results": [
+    {"pilot":"D01_story_core_from_routing_state","status":"INSUFFICIENT_SOURCE_NOT_STORY_DEFECT","pass":true},
+    {"pilot":"D01_resolution","status":"CLOSED_NO_HOOK","pass":true},
+    {"pilot":"D10_resolution_optional_future_hook","status":"CLOSED_THEN_HOOK","pass":true},
+    {"pilot":"B03_family_unknown","status":"FOUNDER_DECISION_REQUIRED","pass":true},
+    {"pilot":"B03_ordinary_life_option","status":"INSUFFICIENT_SOURCE_NOT_STORY_DEFECT","pass":true},
+    {"pilot":"D01_opposition_summary","status":"INSUFFICIENT_SOURCE_NOT_STORY_DEFECT","pass":true},
+    {"pilot":"D10_wrong_strategy_summary","status":"INSUFFICIENT_SOURCE_NOT_STORY_DEFECT","pass":true},
+    {"pilot":"D10_midpoint_summary","status":"INSUFFICIENT_SOURCE_NOT_STORY_DEFECT","pass":true},
+    {"pilot":"D10_climax_summary","status":"INSUFFICIENT_SOURCE_NOT_STORY_DEFECT","pass":true},
+    {"pilot":"B03_world_summary","status":"INSUFFICIENT_SOURCE_NOT_STORY_DEFECT","pass":true},
+    {"pilot":"B03_institutions_summary","status":"INSUFFICIENT_SOURCE_NOT_STORY_DEFECT","pass":true},
+    {"pilot":"D10_knowledge_jurisdiction","status":"OVERREACH","pass":true},
+    {"pilot":"D10_mystery_ladder","status":"FAIR_CLUE_RECORD","pass":true}
+  ]
+}
