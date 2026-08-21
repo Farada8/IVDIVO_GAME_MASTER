@@ -83,7 +83,7 @@
   },
   "session_resilience_extension": {
     "candidate_id": "SI-0014",
-    "status": "READY_FOR_PILOT_RUN33_CI_PENDING",
+    "status": "READY_FOR_PILOT_CI_AND_DRIVE_READBACK_PASS",
     "authority_candidate": "IVDIVO_NARRATIVE_OS/18C_VOLATILE_SESSION_CHECKPOINT_AND_RECOVERY_PROTOCOL_v1.0.md",
     "durable_reconciliation_protocol": "IVDIVO_NARRATIVE_OS/18D_DURABLE_TRANSACTION_RECONCILIATION_PROTOCOL_v1.0.md",
     "checkpoint_tool": "tools/ivdivo_session_checkpoint.py",
@@ -98,11 +98,20 @@
     ],
     "resume_decisions": ["RESUME_EXACT", "REBASE_FIRST", "RECOVER_VOLATILE_FIRST", "STOP"],
     "transaction_decisions": ["STOP", "REBASE_FIRST", "QUARANTINE_EXTERNAL_SIDE_EFFECT", "VERIFY_STORE_BEFORE_RETRY", "VERIFY_READBACK", "REQUIRE_EXPLICIT_DISPATCH_GATE", "EXECUTE_MISSING_SAFE_ACTIONS", "TRANSACTION_COMPLETE"],
-    "run32_ci": "PASS",
-    "run33_local_prototype": {"framework": "unittest", "passed": 22, "failed": 0, "status": "PASS_LOCAL_ISOLATED"},
+    "run32_ci": {"checkpoint_tests": 10, "status": "PASS"},
+    "run33_ci": {
+      "run33_tests": {"passed": 27, "failed": 0, "status": "PASS"},
+      "registry_transaction_tests": {"passed": 7, "failed": 0, "status": "PASS"},
+      "session_resilience_run33_workflow": 32516926109,
+      "session_resilience_workflow": 32516926107,
+      "self_improvement_integrity_workflow": 32516926112,
+      "status": "PASS"
+    },
+    "semantic_rebase_evidence": "Run33 synthetic merge onto main 55c69de4f19aec1c2b408020c1447cbd38beef5b preserved 67 parallel commits and reduced PROJECT_STATES coverage delta to PASS -> PASS_FULL only.",
+    "drive_readback": {"folder_id": "1CCIXde5_2k57yHHIOENgO7staWyyZ1yv", "files_nonempty": 7, "files_expected": 7, "content_markers": ["32 SYNTHESIZE/PERSIST", "prompt 64", "REAL PRODUCTION PILOT: NOT YET SATISFIED"], "status": "PASS"},
     "id_integrity_repair": "Run32 pending candidate incorrectly used SI-0010 despite full registry family already owning SI-0010; migrated to SI-0014 and candidate-ID freshness law added.",
     "boundary": "Recovery and transaction routing only; not project authority, transcript storage, asset byte escrow, provider dispatch, canon, or automatic Self-Improvement promotion.",
-    "promotion_gate": "Run33 repository CI + GitHub/Drive readback + real interruption/partial-write production evidence + zero false resume.",
+    "promotion_gate": "Controlled reversible partial-write recovery + genuine interruption evidence across projects + zero false resume before any promotion review.",
     "next_packaging_gate": "Post-package extension until included in a future engine package that passes full regression; v11.2 ZIP identity remains unchanged."
   },
   "continuation_contract": {
