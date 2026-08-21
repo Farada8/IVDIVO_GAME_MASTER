@@ -1,101 +1,118 @@
 # THE WIFE AT HIS WEDDING — 32-PASS INTEGRATED CONCLUSIONS + ARCHITECTURE PATCH v1.0
 
-**Status:** WORKING INTEGRATION DIRECTIVE  
-**Date:** 2026-08-21
+Status: **WORKING integration directive / not Founder-locked**  
+Date: 2026-08-21
 
-## Decision
+## Overall decision
 
-E61–90 remains CLOSED. Do not reopen the fire arc. E91–120 is viable but prose must inherit six upgrades:
-1. present-day opposition embodied by a living actor with concrete leverage;
-2. explicit separation of biology/history/civil record/cover identity/chosen name/relationship identity;
-3. multi-source proof rather than witness/confession solutions;
-4. substantial action outside archives/hearing rooms;
-5. genuine Mara/Evelyn disagreement over remedy;
-6. Human Scene + Dialogue Naturalism on every major confrontation.
+E61–E90 remains closed. E91–E120 is viable and may proceed to prose only after applying these six upgrades:
 
-## Locked final-arc engine
+1. **Present opposition** — embody current resistance in a living institutional actor/apparatus with concrete leverage; no faceless obstacle and no surprise mastermind.
+2. **Identity-layer discipline** — biology / historical person / original civil record / later cover / chosen present name / relationships must never be conflated.
+3. **Independent proof classes** — no dispositive conclusion from one interested witness, one posthumous recording or one biometric artifact.
+4. **Present-life action** — regularly leave archives/hearings for work, housing, money, family/school, transport and physical evidence handling.
+5. **Sister remedy conflict** — Mara and Evelyn must genuinely disagree about what a safe/just correction looks like.
+6. **Naturalism + audio-first controls** — important scenes require state/tactic design, P51 voice separation where relevant, dynamic-range control and hearable action.
 
-**HERO:** Mara Quinn.  
-**WANT:** obtain a legally/socially separate identity without surrendering her chosen present self.  
-**WHY NOW:** two-live-birth evidence collides with one original civil record and threatens her current document chain.  
-**OPPOSITION:** surviving risk/trust/legal apparatus prefers consolidation and confidential settlement.  
-**WRONG STRATEGY:** Mara initially assumes perfect historical reconstruction automatically creates a usable present identity.  
-**PRICE:** work credentials, banking/housing/travel, privacy, relationship security, reputation and her name.  
-**MIDPOINT:** proof that Mara is the second live-born child strengthens historical truth while weakening usable legal identity.  
-**CLIMAX CHOICE:** reject both absorption into Evelyn and invisible confidential recognition; insist on separate late registration plus recognition of Mara Quinn as present chosen name.  
-**RESOLUTION:** two women, two records, separate lives; Mara/Adrian HFN based on present choice.
+## Current WORKING final-arc engine
+
+- **Hero:** Mara Quinn.
+- **Want:** a legally/socially separate identity that does not require surrendering her chosen present self.
+- **Why now:** evidence of two live births collides with one original civil record and threatens Mara’s current documents.
+- **Opposition:** surviving legal/risk/trust structures prefer consolidation, confidentiality and minimal liability.
+- **Wrong strategy:** Mara believes complete historical reconstruction will automatically create usable present identity.
+- **Price:** work credentials, bank/housing/travel access, privacy, reputation, relationship security and potentially the name Mara Quinn.
+- **Midpoint:** proof that Mara is the second living historical person makes her current civil identity less usable.
+- **Climax choice:** reject both absorption into Evelyn and private/invisible recognition; choose separate late registration + adult recognition of Mara Quinn as present chosen name.
+- **Resolution:** two women, two records, separate adult lives; Mara/Adrian HFN is based on current conduct, not restoration of the past.
 
 ## Identity truth model
 
-- **BIOLOGICAL:** two live-born sisters.
-- **HISTORICAL:** two separate children whose protection routes sometimes overlapped.
-- **ORIGINAL CIVIL:** one birth certificate issued.
-- **COVER:** second girl's later usable identity chain drew from deceased Mara Elise Quinn.
-- **PRESENT CHOSEN:** current Mara knowingly retains Mara Quinn.
-- **RELATIONAL:** wife/mother/sister/adolescent-memory facts remain separate from civil identity.
+| Layer | Working truth |
+|---|---|
+| Biological | Two live-born sisters. |
+| Historical | Two separate children whose protection routes sometimes overlapped. |
+| Original civil | Only one original birth certificate was issued. |
+| Cover | Second girl’s later usable chain drew from deceased Mara Elise Quinn. |
+| Present chosen | Current Mara consciously retains Mara Quinn. |
+| Relational | Marriage, maternity, sisterhood and adolescent memory are separate facts from civil identity. |
 
-Hard law: no layer automatically proves another.
+**Hard law:** never use one layer as automatic proof of another.
 
 ## Relationship truth
 
-- Current Mara owns the greenhouse/adolescent incident with Adrian.
-- Evelyn owns the continuous legal bride/wife chain.
-- No sexual/intimate marital sister substitution.
-- Lily never functions as evidence.
-- Adrian cannot restore the past by choosing the 'correct' sister.
-- Mara/Adrian end in a new present relationship, separate homes, no proposal.
-- Mara/Evelyn end as sisters with boundaries, not merged identity.
-- Noah loses automatic brother status and must accept consequence.
+- Current Mara owns the bounded greenhouse/adolescent physical memory if the evidence chain earns it.
+- Evelyn owns the continuous legal bride/wife chain under the current WORKING architecture.
+- No post-marriage sexual/intimate sister substitution.
+- Lily is never evidence.
+- Adrian cannot recover the past by selecting the “correct sister.”
+- Mara/Adrian end, if earned, in a new present HFN relationship: explicit, separate homes, no proposal shortcut.
+- Mara/Evelyn end as bounded sisters, not merged identity.
+- Noah loses automatic brother-status and must accept consequence without bargaining for forgiveness.
 
 ## Evidence architecture
 
-Independent proof classes:
-A. contemporaneous maternity/neonatal records;
-B. civil-registry issuance history;
-C. current-to-historical biometric/fingerprint chain;
-D. access/change logs;
-E. institutional correspondence/actions;
-F. authenticated historical recordings;
+Required independent proof classes:
+
+A. contemporaneous maternity/neonatal records;  
+B. registry issuance history;  
+C. adult-to-historical biometric/fingerprint chain;  
+D. access/change logs;  
+E. institutional correspondence/actions;  
+F. independently authenticated historical recordings/material;  
 G. current expert interpretation.
 
-Witness testimony contextualizes. It does not alone establish dispositive facts.
+Witness testimony supplies context, not sole dispositive proof.
 
-## Macro map
+## Macro progression after convergence
 
-### E91–95 — TWO BIRTHS / ONE CIVIL LIFE
-Mara preserves evidence, finds two post-birth traces, suffers current credential damage, forces Noah's source disclosure, and traces Mara Quinn to a deceased identity chain. Cliff: proving she is real may invalidate the documents by which she presently exists.
+The detailed `20B_EPISODES_91-120_FINAL_ARC_ARCHITECTURE_v1.0` episode order remains the primary episode skeleton. The following are **functional block goals, not replacement numbering**:
 
-### E96–100 — PROOF MAKES IT WORSE
-Present counsel offers consolidation/confidentiality. Evelyn asserts independent access. Public/work costs rise. Midpoint proves Mara is the second live-born child but destabilizes her usable identity.
+- **E91–95 — TWO BIRTHS / ONE CIVIL LIFE:** authenticate second birth, trace Baby B/Quinn provenance, bring current-life cost and present opposition into the investigation, reach Victoria/biometric gate.
+- **E96–100 — BODY MAPPING WITHOUT RELATIONAL COLLAPSE:** map historical bodies, greenhouse exception, consent boundary, legal bride and Lily maternal record without using Lily as proof.
+- **E101–105 — PROOF MAKES PRESENT LIFE WORSE:** current civil defect becomes concrete; settlement pressure; Helena/Voss origin; midpoint where historical clarity destabilizes Mara’s usable identity.
+- **E106–110 — NAME / SOURCE / MARRIAGE SEPARATION:** Noah source consent, informed historical choice of Mara Quinn, Evelyn’s independent motion, Adrian/Evelyn resolve old marriage separately.
+- **E111–115 — TWO RECORDS, NOT ONE CORRECTION:** reseal/standing challenge, cumulative-person chain, no-trade decision and closure of Helena’s original choice.
+- **E116–120 — TWO PEOPLE:** sworn provenance, Evelyn testimony, rejection of collapse/waiver, separate order and ordinary-life Mara Quinn ending.
 
-### E101–105 — WHICH MEMORIES BELONG TO WHOM
-Bride-chain evidence proves Evelyn's legal marriage; adolescent evidence proves Mara's real early bond with Adrian. Victoria's blocked separate-registration effort appears. Easy 'Mara was Evelyn all along' theory dies.
+Passes 22–27 of the 32-pass execution generated useful macro alternatives. Where they conflict with 20B’s detailed episode clue order, they remain **DESIGN EXPLORATION / OPTION**, not episode authority. Use their strongest functions as present-day consequences, B-plots, opposition and naturalism upgrades without silently renumbering the causal spine.
 
-### E106–110 — THE DECISION TO KEEP ONE WOMAN VISIBLE
-Sisters cooperate but want different remedies. Noah and Adrian pay real costs. Logs establish knowing one-visible-identity containment.
+## Naturalism controls
 
-### E111–115 — THE SAFE DEAL
-Institution offers money/safety/usable papers in exchange for private incomplete recognition. Sisters rupture over practicality vs personhood. Alternatives close.
+Before important scenes define: BODY STATE / IMMEDIATE WANT / FEAR / KNOWN-UNKNOWN-SUSPECTED / STATUS / RELATIONSHIP DEBT / SPEECH RISK / DEFAULT DEFENSE.
 
-### E116–120 — TWO WOMEN
-Evidence confrontation; Mara rejects absorption and invisible settlement; separate record + present chosen name; Evelyn closes old marriage independently; ordinary-life resolution proves Mara exists in her own name.
+- No 3+ polished correction lines in sequence without behavior/interruption/misunderstanding/tactic change.
+- Mara precision becomes less elegant under overload.
+- Adrian does not speak perfect consent/boundary language by default.
+- Evelyn is not Mara with more anger.
+- Experts speak from task.
+- Institutional counsel speaks from remedy/risk/exposure/precedent/administrability, not villain monologue.
 
-## Human-scene law
+## Audio / retention controls
 
-Before each major scene resolve BODY STATE / IMMEDIATE WANT / FEAR / KNOWN-UNKNOWN-SUSPECTED / STATUS / RELATIONSHIP DEBT / SPEECH RISK / DEFAULT DEFENSE.
+Each episode should normally include:
 
-No 3+ polished correction lines in sequence without behavior, misunderstanding, interruption, silence or tactic shift. Mara becomes less elegant under overload. Adrian cannot speak perfect boundary language every time. Evelyn cannot be Mara-with-more-anger. Experts speak from task. Counsel argues remedy/risk rather than villain theme.
+- 3–5 audible scenes;
+- one immediate objective and real opposition;
+- meaningful choice;
+- irreversible turn;
+- at least one fair clue/contradiction;
+- relationship/status movement;
+- changed-fact or forced-choice cliff;
+- decisive Mara action.
 
-## Audio/retention law
+Each five-episode block: at least two substantial scenes outside archive/office/hearing space. No cliff based only on “another document exists.”
 
-Each episode: 3–5 audible scenes; immediate objective; opposition; meaningful choice; irreversible turn; fair clue/contradiction; relationship/status movement; changed-fact or forced-choice cliff; decisive Mara action.
+## Red Team status
 
-Each five-episode block: at least two substantial scenes outside archive/office/hearing spaces. No cliff whose only content is 'another file exists'.
+- FATAL identified after convergence: **0**.
+- Six pre-patch MAJOR design risks now have structural repairs.
+- Actual prose must be re-audited; this is not a claim that future episodes automatically pass.
+- Human Signal: **NOT RUN**.
+- Jurisdiction-specific legal specialist pass: **NOT RUN**.
 
-## Red Team
+Decision: **CONDITIONAL GO TO DRAFTING**.
 
-Pre-patch: FATAL 0 / MAJOR 6.  
-Patch target: FATAL 0 / MAJOR 0 before promotion.  
-Current decision: **CONDITIONAL GO TO DRAFTING.**
+Exact next stage: fresh-authority/stale-work gate → E91 scene contracts → E91 draft → runtime/naturalism/P51-P53/audio/continuity gates → only then E92.
 
-Exact next: draft/gate E91–95 under this patch.
+Conflict resolution and current routing are defined in `05_AUTHORITY_CONVERGENCE_AND_CURRENT_EXECUTION_STATE_v1.1.md`.
