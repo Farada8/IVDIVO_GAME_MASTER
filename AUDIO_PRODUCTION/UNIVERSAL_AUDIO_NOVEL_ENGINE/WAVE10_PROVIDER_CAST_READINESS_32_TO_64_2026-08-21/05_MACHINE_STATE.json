@@ -1,0 +1,54 @@
+{
+  "schema_version": "ivdivo.audio.wave10.provider_cast_readiness/1.0",
+  "date": "2026-08-21",
+  "status": "WORKING_CODE_COMPLETE_CI_PENDING_EXTERNAL_PROVIDER_HOLD",
+  "branch_base_main_sha": "e3047a227552477c39c7d6af549208d18afc3fcc",
+  "canonical_runtime": "audio/studio/runtime",
+  "new_runtime_root_created": false,
+  "new_si_candidate_id_allocated": false,
+  "reuse": [
+    "provider_snapshot_contract",
+    "provider_access_bridge",
+    "production_control",
+    "studio_evidence",
+    "external_evidence_trust",
+    "human_review_ledger",
+    "live_lineage_escrow",
+    "learning_registry",
+    "cycle7_si0012_si0014_durable_convergence"
+  ],
+  "wave10_modules": [
+    "audio/studio/runtime/provider_snapshot_diff.py",
+    "audio/studio/runtime/provider_inventory_compiler.py",
+    "audio/studio/runtime/cast_readiness.py"
+  ],
+  "evidence_ceiling": {
+    "provider_account_reads": 0,
+    "paid_synthesis_calls": 0,
+    "real_voice_ids_claimed": 0,
+    "real_voice_locks": 0,
+    "pronunciation_locks": 0,
+    "human_listening_claims": 0,
+    "lesson_zero_live_requests": 0,
+    "real_alignment_units": 0,
+    "measured_provider_economics": false,
+    "story_mutations": 0
+  },
+  "lesson_zero_canary_identity": {
+    "requests": 3,
+    "spoken_units": 36,
+    "provider_characters": 2163,
+    "roles": ["NARRATOR", "ETHAN", "AOIFE"]
+  },
+  "exact_next_external_dependency": "RUN_REAL_AUTH_PROVIDER_WORKFLOW_THEN_COMPILE_REAL_INVENTORY",
+  "exact_next_internal_dependency": "FRESH_CI_AND_INTEGRATION_READBACK",
+  "forbidden": [
+    "SECOND_AUDIO_ENGINE",
+    "SECOND_RECOVERY_RUNTIME",
+    "NEW_SI_ID_WITHOUT_FULL_REGISTRY_READBACK",
+    "VOICE_LOCK_FROM_METADATA",
+    "AUTO_VOICE_SUBSTITUTION",
+    "SYNTHETIC_HUMAN_SIGNAL",
+    "CI_AS_PROVIDER_OR_ARTISTIC_PROOF"
+  ]
+}
