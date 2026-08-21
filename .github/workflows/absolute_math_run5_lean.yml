@@ -1,0 +1,27 @@
+name: Absolute Mathematics Run5 Lean
+
+on:
+  push:
+    branches:
+      - "absolute-math-run5-amsi225-256-2026-08-21"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  lean-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lean build + independent no-sorry/axiom checks
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: ABSOLUTE_MATHEMATICS/RUN5_AMSI225_256_2026-08-21/formal/lean
+          build: true
+          test: false
+          use-github-cache: false
+          nanoda: true
+          nanoda-allow-sorry: false
+          axiom-audit: true
+          axiom-audit-root: AbsoluteMathRun5
