@@ -1,30 +1,41 @@
 {
-  "schema_version": "ivdivo.audio.wave9.trust_evidence/1.0",
+  "schema_version": "ivdivo.audio.wave9.trust_evidence/1.1",
   "date": "2026-08-21",
-  "status": "WAVE9_01_08_ENGINEERING_COMPLETE_FRESH_CI_PASS_MERGE_PENDING",
+  "status": "WAVE9_01_08_ENGINEERING_COMPLETE_MERGED_CURRENT_LINEAGE_BOUND_09_PLUS_EXTERNAL_HOLD",
   "canonical_runtime": "audio/studio/runtime",
-  "branch_base_main_sha": "0a3fcaa37b7774382013230e5eacc26b61e175c1",
-  "pr": 132,
+  "current_merge_sha": "fef2f4cb3af9d167cc0e6d7ca25e21b5057bef7a",
+  "trust_pr": 132,
+  "lineage_cross_binding_pr": 134,
   "external_evidence_module": "audio/studio/runtime/external_evidence_trust.py",
+  "release_evidence_module": "audio/studio/runtime/studio_evidence.py",
   "wave9": {
     "01": "PASS_ENGINEERING",
     "02": "PASS_ENGINEERING",
     "03": "PASS_BOUNDED",
-    "04": "PASS_ENGINEERING_CI",
-    "05": "PASS_ENGINEERING_CI",
-    "06": "PASS_ENGINEERING_CI",
-    "07": "PASS_ENGINEERING_CI",
-    "08": "PASS_FRESH_MERGE_RESULT_CI",
+    "04": "PASS_ENGINEERING_CI_MERGED",
+    "05": "PASS_ENGINEERING_CI_MERGED",
+    "06": "PASS_ENGINEERING_CI_MERGED",
+    "07": "PASS_ENGINEERING_CI_MERGED",
+    "08": "PASS_FRESH_MERGE_RESULT_CI_MERGED",
     "09_plus": "HOLD_EXTERNAL"
   },
   "ci": {
-    "workflow": "Audio Studio Runtime Tests",
-    "run_id": 32521002618,
-    "run_number": 117,
-    "job_id": 96892943790,
-    "merge_result_sha": "f1248e3feacf7cd00f8113c8ab31e39d2d32a499",
-    "dedicated_runtime": "4/4 PASS",
-    "full_audio_studio": "186/186 PASS"
+    "trust_boundary": {
+      "run_id": 32521002618,
+      "run_number": 117,
+      "job_id": 96892943790,
+      "merge_result_sha": "f1248e3feacf7cd00f8113c8ab31e39d2d32a499",
+      "dedicated_runtime": "4/4 PASS",
+      "full_audio_studio": "186/186 PASS"
+    },
+    "lineage_cross_binding": {
+      "run_id": 32521663376,
+      "run_number": 125,
+      "job_id": 96894946118,
+      "merge_result_sha": "594e70c2d13ccd667919a6b1fe64f651fbd60d74",
+      "dedicated_runtime": "4/4 PASS",
+      "full_audio_studio": "190/190 PASS"
+    }
   },
   "readback_strength_order": [
     "POINTER_PRESENT",
@@ -42,6 +53,16 @@
     "DURABLE_RECOVERY",
     "CROSS_PROJECT_LIVE"
   ],
+  "cross_class_lineage": {
+    "required": true,
+    "rules": [
+      "DURABLE_RAW_ASSET.content_hash == LIVE_AUDIO.content_hash",
+      "REAL_ALIGNMENT.metadata.audio_hash == LIVE_AUDIO.content_hash",
+      "DURABLE_RECOVERY contains current LIVE_AUDIO and REAL_ALIGNMENT hashes",
+      "DURABLE_RECOVERY transaction matches current LIVE_AUDIO transaction when present",
+      "CROSS_PROJECT_LIVE includes current project identity and current LIVE_AUDIO hash"
+    ]
+  },
   "evidence_ceiling": {
     "provider_account_reads_this_block": 0,
     "paid_synthesis_calls": 0,
@@ -59,6 +80,7 @@
     "SECOND_AUDIO_ENGINE",
     "CALLER_BOOLEAN_AS_EXTERNAL_TRUTH",
     "VERIFIED_TRUE_WITHOUT_CLASS_VALIDATOR",
+    "UNRELATED_VALID_RECEIPTS_AS_ONE_RELEASE_LINEAGE",
     "POINTER_ONLY_DURABILITY_AS_PASS",
     "SYNTHETIC_HUMAN_AS_HUMAN_REVIEW",
     "ENGINEERING_CI_AS_PROVIDER_OR_HUMAN_PROOF"
