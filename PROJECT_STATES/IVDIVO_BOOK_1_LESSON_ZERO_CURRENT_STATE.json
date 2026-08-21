@@ -1,0 +1,26 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-21",
+  "status":"CURRENT_PROJECT_ROUTING_STATE_NOT_STORY_CANON",
+  "project_id":"IVDIVO_BOOK_1",
+  "title":"LESSON ZERO",
+  "authority_note":"Founder newest instruction and approved/locked Book 1 canon outrank this routing state.",
+  "current_phase":"PUBLISHER_EXTERNAL_FEEDBACK_STAGE",
+  "submission_master":{
+    "drive_id":"1hdH_9rL0-_iF__t0RNyKoktjx3QlnYXQw_xNvFdjdzc",
+    "title":"03 LESSON ZERO — Book 1 Submission Master v1.0 CLEAN"
+  },
+  "rewrite_policy":"DO_NOT_REWRITE_UNLESS_FOUNDER_REQUESTS_IT_OR_EXTERNAL_FEEDBACK_IDENTIFIES_A_CONCRETE_PROBLEM_OR_A_REAL_CONTINUITY_FACTUAL_ERROR_IS_FOUND",
+  "next_safe_action":"PROCESS_CONCRETE_PUBLISHER_OR_EXTERNAL_FEEDBACK_WHEN_RECEIVED; OTHERWISE_PRESERVE_SUBMISSION_MASTER_AND_DO_NOT_START_A_NEW_GLOBAL_REWRITE",
+  "blockers":["AWAITING_ACTIONABLE_EXTERNAL_OR_FOUNDER_EVIDENCE_FOR_ANY_TEXT_REOPEN"],
+  "do_not_repeat":[
+    "DO_NOT_REBUILD_BOOK_1_ARCHITECTURE_WITHOUT_NEW_EVIDENCE",
+    "DO_NOT_APPLY_NEW_CRAFT_MECHANISMS_RETROACTIVELY_JUST_BECAUSE_THEY_EXIST",
+    "DO_NOT_TREAT_MODEL_PREFERENCE_AS_EXTERNAL_PUBLISHER_FEEDBACK",
+    "DO_NOT_REPLACE_SUBMISSION_MASTER_WITH_OLDER_WORKING_DRAFTS"
+  ],
+  "provenance":[
+    "Founder/project law: LESSON ZERO is Book One and is at publisher/external-feedback stage",
+    "Drive Submission Master v1.0 CLEAN ID 1hdH_9rL0-_iF__t0RNyKoktjx3QlnYXQw_xNvFdjdzc"
+  ]
+}

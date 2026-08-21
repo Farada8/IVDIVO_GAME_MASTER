@@ -1,0 +1,42 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-21",
+  "status":"CURRENT_PROJECT_ROUTING_STATE_NOT_STORY_CANON",
+  "project_id":"D05",
+  "title":"NINETY MISSING MINUTES",
+  "authority_note":"Founder newest instruction and current D05 lock/audio authority outrank this routing state.",
+  "story_status":"TEXT_COMPLETE_STORY_LOCKED",
+  "story_lock":{
+    "drive_id":"1-zJMFxftrhKmDmNKYn2kpjeQf033S0me7Ifsdub-8us",
+    "title":"00 NMM — TEXT COMPLETION LOCK v1.0 — STORY LOCKED / PUBLICATION SPECIALIST HOLD",
+    "publication_status":"PUBLICATION_SPECIALIST_HOLD"
+  },
+  "publication_hold_tracker":{
+    "drive_id":"1E4n0a0I1ALUeETLzjZzFmDQVJ-EKvamFSlgQNM0J2bQ",
+    "title":"03_NMM_PUBLICATION_SPECIALIST_HOLD_TRACKER_v1.0"
+  },
+  "audio_authority":{
+    "drive_id":"1OCuyVDD9Av22i3WjfGwmCpo5ibDun8H8GIKXMZpD7ck",
+    "title":"00_NMM_AUDIO_AUTHORITY_MANIFEST_v1.0",
+    "status_from_source":"STAGE 00 AUTHORITY INGEST — PASS FOR AUDIO DEVELOPMENT / COMMERCIAL RELEASE HOLD"
+  },
+  "audio_overlay":{
+    "drive_id":"1N-RxGRz0j6g4dllN3dgHX0oMDnAZneuvUQL9MMNYd1I",
+    "title":"NMM — AUDIO AUTHORITY MANIFEST + PROJECT OVERLAY v1.0",
+    "status_from_source":"WORKING AUDIO AUTHORITY — STORY TEXT LOCKED / AUDIO PRODUCTION ACTIVE / PUBLICATION SPECIALIST HOLDS TRACKED"
+  },
+  "next_safe_action":"CONTINUE_EVIDENCE_DRIVEN_AUDIO_PRODUCTION_FROM_CURRENT_NMM_AUDIO_AUTHORITY; KEEP_COMMERCIAL_RELEASE_ON_PUBLICATION_SPECIALIST_HOLD UNTIL THE HOLD IS EXPLICITLY CLEARED",
+  "blockers":["PUBLICATION_SPECIALIST_HOLD_FOR_COMMERCIAL_RELEASE"],
+  "do_not_repeat":[
+    "DO_NOT_CREATE_EPISODE_25",
+    "DO_NOT_REOPEN_LOCKED_E01_E24_STORY_FOR_AUDIO_CONVENIENCE",
+    "DO_NOT_TREAT_AUDIO_DRY_RUN_AS_LIVE_PROVIDER_EVIDENCE",
+    "DO_NOT_MARK_PUBLICATION_HOLD_CLEARED_WITHOUT_SPECIALIST_OR_FOUNDER_EVIDENCE"
+  ],
+  "provenance":[
+    "Drive text lock ID 1-zJMFxftrhKmDmNKYn2kpjeQf033S0me7Ifsdub-8us",
+    "Drive publication hold tracker ID 1E4n0a0I1ALUeETLzjZzFmDQVJ-EKvamFSlgQNM0J2bQ",
+    "Drive audio authority ID 1OCuyVDD9Av22i3WjfGwmCpo5ibDun8H8GIKXMZpD7ck",
+    "Drive audio overlay ID 1N-RxGRz0j6g4dllN3dgHX0oMDnAZneuvUQL9MMNYd1I"
+  ]
+}
