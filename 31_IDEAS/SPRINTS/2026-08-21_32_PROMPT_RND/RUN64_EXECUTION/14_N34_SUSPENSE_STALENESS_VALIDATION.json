@@ -1,0 +1,11 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_SERIAL_FIXTURES",
+  "cases":[
+    {"case":"EVOLVING_QUESTION","question":"Who altered the register?","updates":["proof alteration occurred","access list narrows actors","motive model changes after maternal ledger","witness adds cost to accusation"],"delay_source":"MISSING_EVIDENCE_PLUS_RISK_OR_PRICE","transformation_count":3,"stale_risk":"LOW","result":"PASS_SUSPENSE"},
+    {"case":"REPETITIVE_CLIFFHANGER","question":"Will she tell him?","updates":["almost tells him","almost tells him again","interrupted without new cause","almost tells him at another door"],"delay_source":"DELIBERATE_WITHHOLDING","transformation_count":0,"stale_risk":"HIGH","result":"FAIL_STALE_WITHHOLDING"},
+    {"case":"LEGITIMATE_LONG_DELAY","question":"Why was the old agreement written?","updates":["current anomaly proves agreement still active","archive access reveals one clause","opposition forces hero to use clause before learning origin"],"delay_source":"OPPOSITION_PLUS_PROCEDURAL_CONSTRAINT","transformation_count":2,"stale_risk":"LOW","result":"PASS_LONG_DELAY"}
+  ],
+  "conclusion":"Question age alone does not condemn suspense. Meaningful evidence/model/price transformations keep a question alive; repeated interruption without changed model or stakes is stale withholding.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST"
+}
