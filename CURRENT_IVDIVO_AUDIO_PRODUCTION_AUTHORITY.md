@@ -24,6 +24,9 @@ Current project overlay template:
 Drive ID: `1Stx3R6qP4bIoyrRpivCLhrgU7rvz-xg9Df0jMZ9N-io`  
 GitHub: `IVDIVO_AUDIO_PROJECT_OVERLAY_TEMPLATE_v1.1.md`
 
+Current LIVE provider cost-control / casting cascade:
+`AUDIO_PRODUCTION/IVDIVO_AUDIO_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE_v1.0.md`
+
 Future work must check the Drive root router for a newer authority before assuming this GitHub pointer is still current.
 
 ## Authority order
@@ -41,7 +44,7 @@ Future work must check the Drive root router for a newer authority before assumi
    - `IVDIVO_MICROPHONE_CHOREOGRAPHY_ENGINE_v1.0.md` — Drive ID `1XT8KKdMPlrHC8vYIPuohcDlApAX316J9`
    - `IVDIVO_MICROPHONE_CHOREOGRAPHY_PROMPT_STACK_v1.0.md` — Drive ID `1GW8f0rOgu1aqg24SgxxXIQU4VFqGKvRO`
    - `IVDIVO_MICROPHONE_CHOREOGRAPHY_QC_v1.0.md` — Drive ID `1escUUTwztAd0L3hI5ELd-Jns53YLpull`
-7. Current machine/provider contracts, normalized alignment law, provider preflight, voice-binding ledger, acoustic-identity ledger, stereo-intent law, artifact templates and QC/release gates referenced by current v3.x authority.
+7. Current machine/provider contracts, normalized alignment law, provider preflight, live-provider canary/casting cascade, voice-binding ledger, acoustic-identity ledger, stereo-intent law, artifact templates and QC/release gates referenced by current v3.x authority.
 8. Project-specific audio overlay.
 9. Current Director Score / render plan / cue sheets / manifests / accepted assets / takes / timelines / mixes / QC.
 10. Archive/superseded material only when explicitly referenced as a base mechanism.
@@ -54,15 +57,28 @@ Universal audio authority governs production **process**, not project story cont
 
 ## Required project boot
 
-`ACTIVE PROJECT -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + SHA256 -> ACTIVE BRANCH -> DELIVERY MODE -> TEXT PROTECTION MODE -> PROJECT AUDIO OVERLAY -> VOICE_BINDING_LEDGER -> PRONUNCIATION LOCKS -> ACOUSTIC_IDENTITY_LEDGER -> BUILD_ID/MANIFEST -> LAST COMPLETED ARTIFACT -> NEXT UNBLOCKED OBLIGATION`
+`ACTIVE PROJECT -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + SHA256 -> ACTIVE BRANCH -> DELIVERY MODE -> TEXT PROTECTION MODE -> PROJECT AUDIO OVERLAY -> VOICE_BINDING_LEDGER -> PRONUNCIATION LOCKS -> ACOUSTIC_IDENTITY_LEDGER -> BUILD_ID/MANIFEST -> LAST COMPLETED ARTIFACT -> OPEN GATES -> NEXT UNBLOCKED OBLIGATION`
 
 Fail closed if branch, source version/hash, protected text, cast/voice binding, clue causality, project overlay, LIVE/DRY_RUN/MIXED state or cross-build provenance is ambiguous.
 
 ## Current universal pipeline
 
-`LOCKED STORY -> AUTHORITY + BUILD MANIFEST -> SCENE/SPOKEN UNIT MAP -> LISTENER CONTRACT -> DRAMATIC FORCE MAP -> AUDIO STAGING -> CAST/VOICE BINDING -> PERFORMANCE DIRECTOR SCORE -> PAUSE/BREATH/LISTENING/OVERLAP -> SILENT REACTION ANCHORS -> MICROPHONE CHOREOGRAPHY/BLOCKING/PROXIMITY -> ACOUSTIC/P.O.A./STEREO INTENT -> FOLEY/BODY -> SFX/CLUE/PROCEDURAL + ACOUSTIC IDENTITY -> AMBIENCE -> MUSIC DRAMATURGY -> RENDER BLOCK COMPILATION -> PROVIDER DRY RUN -> PROVIDER PREFLIGHT -> HARD PILOT -> PARALLEL DIALOGUE+ASSET PRODUCTION -> DIALOGUE/ASSET LOCKS -> EDIT-FIRST -> RAW ALIGNMENT -> NORMALIZED ALIGNMENT -> RESOLVED TIMELINE -> MIX ACTION/CAUSAL OVERLAP/STEREO QC -> MIX/PREMASTER -> MASTERING -> MACHINE QC -> REVIEW PRIORITY -> HUMAN LISTEN/MANUAL REVIEW -> SELECTIVE REPAIR -> RELEASE GO/NO-GO -> MASTER LOCK`
+`LOCKED STORY -> AUTHORITY + BUILD MANIFEST -> SCENE/SPOKEN UNIT MAP -> LISTENER CONTRACT -> DRAMATIC FORCE MAP -> AUDIO STAGING -> CAST/VOICE BINDING -> PERFORMANCE DIRECTOR SCORE -> PAUSE/BREATH/LISTENING/OVERLAP -> SILENT REACTION ANCHORS -> MICROPHONE CHOREOGRAPHY/BLOCKING/PROXIMITY -> ACOUSTIC/P.O.A./STEREO INTENT -> FOLEY/BODY -> SFX/CLUE/PROCEDURAL + ACOUSTIC IDENTITY -> AMBIENCE -> MUSIC DRAMATURGY -> RENDER BLOCK COMPILATION -> PROVIDER DRY RUN -> PROVIDER PREFLIGHT -> LIVE CANARY/CASTING CASCADE WHEN PAID/UNLOCKED -> HARD PILOT -> PARALLEL DIALOGUE+ASSET PRODUCTION -> DIALOGUE/ASSET LOCKS -> EDIT-FIRST -> RAW ALIGNMENT -> NORMALIZED ALIGNMENT -> RESOLVED TIMELINE -> MIX ACTION/CAUSAL OVERLAP/STEREO QC -> MIX/PREMASTER -> MASTERING -> MACHINE QC -> REVIEW PRIORITY -> HUMAN LISTEN/MANUAL REVIEW -> SELECTIVE REPAIR -> RELEASE GO/NO-GO -> MASTER LOCK`
 
 Dependency-DAG law: independent branches may run in parallel after their upstream PASS gates and must converge before consumer stages requiring both.
+
+## Live-provider / casting spend law
+
+When provider calls cost credits/money and recurring voices are not yet locked, use:
+
+`ZERO-COST PREFLIGHT -> S0 TECHNICAL CANARY -> S1 FAIR ANCHOR COMPARISON -> S2 SECONDARY DISCRIMINATION -> S3 SPECIAL/FORBIDDEN-MODE STRESS -> S4 PAIR/ENSEMBLE TEST -> PROVISIONAL VOICE LOCK -> HARD PILOT -> SCALED RENDER`.
+
+The detailed current control is:
+`AUDIO_PRODUCTION/IVDIVO_AUDIO_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE_v1.0.md`.
+
+A full take manifest is a downstream capacity plan, not permission to buy every planned take before canary/casting evidence exists.
+
+No voice lock can be inferred from dry-run or technical canary alone.
 
 ## Release law
 
@@ -78,6 +94,8 @@ Never transfer names, provider voice IDs, culprit/solution, distinctive clue cha
 
 ElevenLabs and other providers are replaceable execution backends, not canon authority. API keys/secrets must never be stored in canon or production documents.
 
+Do not claim a render/listen/mix/voice lock occurred without actual provider or supplied-audio evidence.
+
 ## Narrative OS handoff
 
 For books/saga work entering audio, load:
@@ -85,12 +103,28 @@ For books/saga work entering audio, load:
 
 Book/story authority remains higher for protected text and story facts. Audio production must not silently reopen locked development.
 
+For cross-conversation state restoration also obey:
+`IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md`.
+
 ## Historical/base layer
 
 `IVDIVO_AUDIO_PRODUCTION_CANON_AND_BOOT_OS_v1.0.md` remains a historical/base layer only where not superseded by the current v3.3 authority. It is not the top router.
 
-## Continuation law
+## Continuation / autopilot law
 
-When Founder says `и / дальше / продолжай / делай / работай / AUDIO CONTINUE`, restore current universal + project authority, identify the last completed artifact and open gates, then execute the highest unblocked production obligation. Do not restart locked story development without new evidence.
+Audio continuation is driven by persisted project state, not by repeated nudges.
+
+On any substantive turn inside an established audio line:
+1. restore current universal + project authority;
+2. restore current execution/state manifest when present;
+3. identify last completed artifact, open gates and prohibited actions;
+4. execute the highest unblocked production obligation;
+5. continue through further unblocked dependent stages in the same work block;
+6. persist the new frontier;
+7. stop only at a real gate: authority ambiguity, human/live-provider evidence, Founder decision, FATAL/MAJOR, tool/runtime limitation or safety/legal constraint.
+
+`и / дальше / продолжай / делай / работай / AUDIO CONTINUE` remain explicit shorthand, not a required heartbeat.
+
+Do not restart locked story development without new evidence.
 
 **NO SILENT CANON CHANGES. FAIL CLOSED ON AUTHORITY AMBIGUITY.**
