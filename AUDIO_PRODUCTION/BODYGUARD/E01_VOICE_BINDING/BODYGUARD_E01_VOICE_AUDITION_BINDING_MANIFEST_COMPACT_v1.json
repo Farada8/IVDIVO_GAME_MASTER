@@ -1,0 +1,101 @@
+{
+  "artifact": "BODYGUARD_E01_VOICE_AUDITION_BINDING_MANIFEST_COMPACT_v1",
+  "authority": {
+    "recording_master": "v1.6 — RECORDING LANGUAGE CLEAN",
+    "request_manifest": "BODYGUARD_E01_ELEVENLABS_ROUGH_RENDER_REQUESTS_v1.json",
+    "spoken_sequence_sha256": "2af60ca3b58bc90a2863e8f6dbee2bf7541d6b1f2315e78704f12ca214da9149",
+    "voice_audio_bible_drive_id": "1V7cGvl8-VKCwnm296pmsAaTip__BZsCxlojweMfi_nA",
+    "casting_scorecard_drive_id": "1p5GJuizJJ1tULAgVdeqiN_OlFF_kjQc-bqrp-erCCYw",
+    "exact_text_locked": true
+  },
+  "method": {
+    "candidate_audio_must_be_loudness_matched": true,
+    "music": "OFF",
+    "reverb": "OFF",
+    "heavy_processing": "OFF",
+    "candidate_labels": "ANONYMOUS_WHERE_PRACTICAL",
+    "minimum_take_types": ["NATURAL_RESTRAINED", "DIRECTED_CHANGE"],
+    "lead_callback_take": "UNDERPLAYED",
+    "lead_pair_test_required": true,
+    "long_form_test_minutes_for_leads": "8-10",
+    "speaker_differentiation_blind_test": true,
+    "do_not_cast_from_one_best_line": true
+  },
+  "roles": {
+    "NAOMI_PARK": {
+      "candidate_slots": ["A","B","C","D"],
+      "audition_block_ids": {
+        "professional_control": ["BG_E01_S1_028","BG_E01_S2_088","BG_E01_S2_111"],
+        "danger_triage": ["BG_E01_S3_122","BG_E01_S3_125"],
+        "consent_power": ["BG_E01_S3_160"],
+        "pair_read": ["BG_E01_S1_029","BG_E01_S1_030","BG_E01_S1_031","BG_E01_S1_032","BG_E01_S1_033","BG_E01_S1_034","BG_E01_S1_035","BG_E01_S1_036","BG_E01_S1_037"]
+      },
+      "direction_change_test": {
+        "first_direction": "Natural restrained read. Do not make her cold.",
+        "second_direction": "Keep authority identical, but let one private cost become audible by slightly reducing speed or volume after safety. Do not soften the command.",
+        "pass_condition": "Competence stays intact while humanity appears; no seductive bodyguard tone; no monotone."
+      },
+      "p53_hard_fails": ["monotone competent-woman affect","breathy intimacy around Eli","maternal/caretaker coding","command becomes shouting","hidden cost requires loss of agency","chemistry disappears unless performer plays flirtation"],
+      "weights": {"character_contradiction":15,"natural_spoken_english":10,"voice_distinctiveness":10,"professional_credibility":15,"objective_resistance":10,"hidden_cost_without_agency_loss":15,"consent_power_accuracy":10,"direction_response":10,"long_form_listenability":5}
+    },
+    "ELI_KWON": {
+      "candidate_slots": ["A","B","C","D"],
+      "audition_block_ids": {
+        "public_mask": ["BG_E01_S1_018"],
+        "agency": ["BG_E01_S2_087","BG_E01_S2_106","BG_E01_S3_180"],
+        "musician_ear": ["BG_E01_S1_061","BG_E01_S3_186","BG_E01_S3_188","BG_E01_S3_190"],
+        "private_fracture": ["BG_E01_S3_121","BG_E01_S3_143","BG_E01_S3_166"],
+        "pair_read": ["BG_E01_S1_029","BG_E01_S1_030","BG_E01_S1_031","BG_E01_S1_032","BG_E01_S1_033","BG_E01_S1_034","BG_E01_S1_035","BG_E01_S1_036","BG_E01_S1_037"]
+      },
+      "direction_change_test": {
+        "first_direction": "Natural charismatic read with no announcer polish.",
+        "second_direction": "Reduce polish and volume on the private lines; keep agency and intelligence; one rhythm break is enough.",
+        "pass_condition": "Public/private register difference is audible; vulnerability increases attraction without helplessness."
+      },
+      "p53_hard_fails": ["helpless celebrity","alpha/possessive tone","same smile baked into public and private voice","trauma exhibition","romantic pressure toward Naomi","private fracture erases agency","musician clues sound like exposition"],
+      "weights": {"character_contradiction":15,"natural_spoken_english":10,"voice_distinctiveness":10,"public_private_register":15,"male_private_fracture_without_helplessness":15,"musician_credibility":10,"chemistry_without_forcing_romance":10,"direction_response":10,"long_form_listenability":5}
+    },
+    "CAL_MERCER": {
+      "candidate_slots": ["A","B","C"],
+      "audition_block_ids": {"field_authority":["BG_E01_S1_002","BG_E01_S1_038"],"incident_response":["BG_E01_S3_138","BG_E01_S3_157"]},
+      "direction_change_test": {"first_direction":"Competent practical security professional.","second_direction":"Add irritation without guilt or menace.","pass_condition":"His resistance sounds plausibly correct even when Naomi is right."},
+      "p53_hard_fails": ["thug","obvious henchman","sinister defensiveness","bully energy"],
+      "weights": {"professional_credibility":25,"natural_spoken_english":15,"voice_distinctiveness":10,"objective_resistance":15,"non_villain_plausibility":20,"direction_response":10,"long_form_listenability":5}
+    },
+    "TALIA_WYNN": {
+      "candidate_slots": ["A","B","C"],
+      "audition_block_ids": {"routine_cue":["BG_E01_S1_008","BG_E01_S1_054"],"panic_recovery":["BG_E01_S3_119","BG_E01_S3_135"]},
+      "direction_change_test": {"first_direction":"Normal show-control rhythm.","second_direction":"One true panic spike, then recover immediately into witness precision.","pass_condition":"Technical language sounds habitual before it becomes frightening."},
+      "p53_hard_fails": ["frantic from first line","pre-guilty anxiety","technical exposition voice"],
+      "weights": {"professional_credibility":25,"natural_spoken_english":15,"voice_distinctiveness":10,"routine_to_alarm_dynamic_range":20,"non_guilt_coding":15,"direction_response":10,"long_form_listenability":5}
+    },
+    "THREAT_VOICE": {
+      "candidate_slots": ["A","B","C","D"],
+      "audition_block_ids": {"source":["BG_E01_S3_120"],"replay_consistency":["BG_E01_S3_181"]},
+      "direction_change_test": {"first_direction":"Neutral human certainty.","second_direction":"Reduce menace further; make access itself frightening.","pass_condition":"No supernatural/horror coding; replay can function as evidence from the same source identity."},
+      "p53_hard_fails": ["monster voice","horror whisper","theatrical menace","source identity given away"],
+      "weights": {"intelligibility":20,"human_credibility":20,"mystery_fairness":20,"replay_identity_consistency":20,"non_horror_restraint":15,"direction_response":5}
+    },
+    "MEDIA_REPORTER": {
+      "candidate_slots": ["A","B","C"],
+      "audition_block_ids": {"broadcast_frame":["BG_E01_S3_165"]},
+      "direction_change_test": {"first_direction":"Clean breaking-news certainty.","second_direction":"More compressed and confident, but remove sneer or villainy.","pass_condition":"Public certainty feels dangerous because it is consumable, not because reporter is evil."},
+      "p53_hard_fails": ["tabloid sneer","comic reporter","villainous relish"],
+      "weights": {"broadcast_credibility":30,"intelligibility":20,"certainty_without_caricature":20,"voice_distinctiveness":10,"direction_response":10,"device_translation":10}
+    },
+    "CREW_UTILITY": {
+      "candidate_slots": ["A","B"],
+      "audition_block_ids": {"utility":["BG_E01_S1_009","BG_E01_S2_114"]},
+      "direction_change_test": {"first_direction":"Ordinary working crew.","second_direction":"Reduce performance; make it more incidental.","pass_condition":"Does not attract attention away from leads or clues."},
+      "p53_hard_fails": ["performative extra","comic tone","over-articulated exposition"],
+      "weights": {"naturalness":35,"intelligibility":25,"utility_neutrality":25,"direction_response":15}
+    }
+  },
+  "pair_gate": {
+    "pair": ["NAOMI_PARK","ELI_KWON"],
+    "exact_E01_pair_blocks": ["BG_E01_S1_029","BG_E01_S1_030","BG_E01_S1_031","BG_E01_S1_032","BG_E01_S1_033","BG_E01_S1_034","BG_E01_S1_035","BG_E01_S1_036","BG_E01_S1_037"],
+    "pass_conditions": ["exchange is lively without being played as flirting","Eli obeys because he chooses a good protocol, not because he becomes submissive","Naomi's competence remains attractive without becoming softened for Eli","extra attention is audible, but early relationship still reads professional","direction change can increase private charge without adding breathy romance","target calibration: privately important / professionally constrained"],
+    "hard_fails": ["mutual smirking through every line","obvious couple energy","Naomi sounds maternal","Eli sounds possessive","same sarcastic rhythm","chemistry disappears when flirtation is removed"]
+  },
+  "decision_thresholds": {"automatic_reject":"ANY_HARD_FAIL","hold":"70-79 if no hard fail","callback":"80-87 if no hard fail","provisional_pilot_lock":"88+ plus pair gate and direction-change pass","season_lock":"not allowed until 8-10 minute fatigue test + rough E01/E02/E03 evidence"}
+}
