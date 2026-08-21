@@ -1,0 +1,31 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/schemas/evidence_gate_contract_candidate_v1.json",
+  "title":"IVDIVO Evidence-Aware Gate Result Candidate",
+  "type":"object",
+  "required":["gate_id","status","evidence_class","evidence_source","verification_method","what_this_evidence_cannot_prove"],
+  "properties":{
+    "gate_id":{"type":"string","minLength":1},
+    "status":{"enum":["PASS","PASS_WITH_LIMIT","FAIL","BLOCKED","HOLD"]},
+    "evidence_class":{"enum":["SOURCE_AUTHORITY","MACHINE_TEST","INTERNAL_MODEL_REVIEW","INDEPENDENT_MODEL_REVIEW","HUMAN_SIGNAL","LIVE_PROVIDER","DRY_RUN","MARKET_BEHAVIOR","PREDICTION","TRANSCRIPT_EXTRACTION","PERSISTED_READBACK","MIXED"]},
+    "evidence_source":{"type":["string","array"],"minLength":1},
+    "verification_method":{"type":"string","minLength":1},
+    "what_this_evidence_cannot_prove":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "limitations":{"type":"array","items":{"type":"string"}},
+    "artifacts":{"type":"array","items":{"type":"string"}},
+    "next_gate":{"type":["string","null"]}
+  },
+  "allOf":[
+    {"if":{"properties":{"status":{"const":"PASS"}}},"then":{"required":["verification_method"]}},
+    {"if":{"properties":{"evidence_class":{"const":"HUMAN_SIGNAL"}}},"then":{"properties":{"verification_method":{"pattern":"human|reader|listener|founder|beta|panel"}}}},
+    {"if":{"properties":{"evidence_class":{"const":"LIVE_PROVIDER"}}},"then":{"properties":{"verification_method":{"pattern":"provider|live|render|response|artifact"}}}}
+  ],
+  "additionalProperties":true,
+  "standing_firewalls":[
+    "MACHINE_TEST does not prove literary quality",
+    "INTERNAL_MODEL_REVIEW does not equal HUMAN_SIGNAL",
+    "DRY_RUN does not equal LIVE_PROVIDER",
+    "PREDICTION does not equal MARKET_BEHAVIOR",
+    "TRANSCRIPT_EXTRACTION does not equal PERSISTED_CLAIM_VERIFICATION or CANON"
+  ]
+}
