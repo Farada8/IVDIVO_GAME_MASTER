@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated": "2026-08-21",
   "status": "CURRENT_ROUTING_STATE_NOT_STORY_CANON",
   "purpose": "Machine-readable resume pointer for cross-conversation and cross-model IVDIVO work. This file routes work; it never overrides locked project canon or project-specific source-of-truth files.",
@@ -18,6 +18,7 @@
     "full_name": "Farada8/IVDIVO_GAME_MASTER",
     "branch": "main"
   },
+  "machine_state_schema": "schemas/IVDIVO_CURRENT_SYSTEM_STATE_SCHEMA_v1_2.json",
   "current_routers": {
     "writing": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
     "autopilot": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
@@ -25,6 +26,7 @@
     "cross_ai_handoff": "CURRENT_IVDIVO_CROSS_AI_HANDOFF.md",
     "book_chat_starter": "IVDIVO_NARRATIVE_OS/11_BOOK_CHAT_STARTER.md",
     "runtime_craft_addendum": "IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md",
+    "research_lifecycle_bridge": "IVDIVO_NARRATIVE_OS/16_CRAFT_RESEARCH_LIFECYCLE_BRIDGE_v1.0.md",
     "audio": "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md"
   },
   "resume_algorithm": [
@@ -123,6 +125,67 @@
       "AUDIO_NOVEL_STUDIO_BATCH_INGEST_AND_PRODUCTION"
     ]
   },
+  "project_downstream_frontiers": {
+    "D04": {
+      "project_id": "D04",
+      "title": "SEVEN NIGHTS BEFORE CODE BLUE",
+      "project_state": "PROJECT_STATES/D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE_CURRENT_STATE.json",
+      "story_status": "SEASON_ONE_STORY_COMPLETE_FINAL_STORY_GATE_PASS",
+      "recording_master": {
+        "status": "READY",
+        "drive_id": "1fewLvu_DpSL8H6dkdy9E5TprUWtgH1Clqq5m_gvNBJ0"
+      },
+      "audio_production_pack": {
+        "status": "READY_FOR_CASTING_AND_PRODUCTION",
+        "drive_folder_id": "1wV-Zxcf4BsY_SWwVbsNXM2xd0thT9TYY"
+      },
+      "release_market_pack": {
+        "status": "READY_FOR_ASSET_PRODUCTION_AND_AB_TEST_PREP",
+        "drive_folder_id": "1IKKKYYphTvSkMxO5ilvB_lPl__5owcRr"
+      },
+      "live_audio_status": "NOT_CLAIMED_NOT_YET_PROVEN_IN_THIS_PROJECT_STATE",
+      "voice_binding_status": "UNLOCKED_NO_PROVIDER_VOICE_IDS_CANONIZED",
+      "visual_identity_status": "PROMPT_AND_MOODBOARD_STAGE_NO_FINAL_CHARACTER_IDENTITY_LOCK_RECORDED",
+      "next_unblocked_obligation": "RUN_PROVIDER_NEUTRAL_CASTING_AUDITIONS_AND_ZERO_COST_AUDIO_PREFLIGHT_FROM_LOCKED_RECORDING_MASTER; IN_PARALLEL, ESTABLISH_FINAL_VISUAL_IDENTITY_LOCK BEFORE SCALING KEY_ART/RUNWAY ASSETS",
+      "hard_stops": [
+        "NO_LIVE_RENDER_CLAIM_WITHOUT_PROVIDER_EVIDENCE",
+        "NO_VOICE_LOCK_FROM_ONE_SAMPLE",
+        "NO_STORY_REWRITE_FOR_PROVIDER_CONVENIENCE",
+        "NO_SCALED_VISUAL_ASSET_PRODUCTION_BEFORE_IDENTITY_LOCK"
+      ]
+    }
+  },
+  "research_library": {
+    "strict_lifecycle_ledger": "docs/01_RESEARCH/WRITING_CRAFT/CORE_STRICT_LIFECYCLE_LEDGER_v21.md",
+    "strict_complete_core": 31,
+    "core_total": 40,
+    "latest_pass": 140,
+    "runtime_bridge": "IVDIVO_NARRATIVE_OS/16_CRAFT_RESEARCH_LIFECYCLE_BRIDGE_v1.0.md",
+    "latest_verified_wider_source": "John Gillett — Acting Stanislavski — STRICT_LIFECYCLE_SYNTHESIZED_v1.0",
+    "blocked_sources": [
+      "Jack M. Bickham — Scene & Structure — exact full source not verified",
+      "John Truby — The Anatomy of Genres — exact full source not verified",
+      "Mark Doty — The Art of Description — full read open/not complete",
+      "Janet Burroway — Writing Fiction — exact full source/edition not verified",
+      "Kazuo Ishiguro — Klara and the Sun — complete source not verified",
+      "Kazuo Ishiguro — Never Let Me Go — complete source not verified",
+      "Philip Pullman — Northern Lights / The Golden Compass — exact full source not verified",
+      "Orson Scott Card — Ender's Game — exact full source not verified",
+      "Adrian Tchaikovsky — Children of Time — exact full source not verified",
+      "Alicia Rasley — The Power of Point of View — integrity blocked",
+      "Sandra Scofield — The Scene Book — full read in progress"
+    ],
+    "standing_laws": [
+      "GIVEN_CIRCUMSTANCES -> PRESENT_WANT -> PARTNER_WORLD_RESPONSE -> TACTIC -> ADAPTATION -> CHANGED_STATE",
+      "AGENCY_IS_NOT_AGGRESSION",
+      "BEAT_MAP_IS_NOT_TYPOGRAPHY",
+      "INNER_PROCESS_SPEED_IS_NOT_OUTER_MOTION_SPEED_IS_NOT_SENTENCE_LENGTH",
+      "PRIVATE_CHARACTER_LAB_IS_NOT_PAGE_OBLIGATION",
+      "NO_NEW_EVIDENCE_NO_NEW_GLOBAL_REWRITE",
+      "TOOLS_DIAGNOSE_STORY_DOES_NOT_EXIST_TO_VALIDATE_TOOLS",
+      "WORLD_FACT -> TRACE_SOURCE -> SOURCE_LINEAGE -> ACCESS -> INTERPRETATION -> ALTERNATIVE_MODEL -> CORROBORATION -> ACTION"
+    ]
+  },
   "idea_to_story_engine": {
     "current_execution_core": "IDEA_TO_STORY_ENGINE_v1.0.0",
     "current_execution_core_evidence": "Library ACCEPTANCE_REPORT reports GO and 15/15 automated tests PASS; real literary/provider quality remains provider dependent.",
@@ -148,7 +211,7 @@
       "LIVE_CALIBRATION_01",
       "EXTERNAL_P51_BLIND_SWAP_AND_HUMAN_SIGNAL_WHERE_REQUIRED"
     ],
-    "verification_note": "This sweep re-verified v1.0.0 acceptance evidence and v0.4/v0.3 recovery provenance in Library. Persisted Drive workstate records v0.5 at 130/130 as a WORKING candidate, but promotion remains blocked by the listed evidence gaps."
+    "verification_note": "v1.0.0 acceptance evidence remains valid. Drive v1.1 integration hardening is a WORKING design/acceptance contract; recovery v0.5 remains a WORKING candidate. Do not conflate automated acceptance with source-authority promotion or real human/provider calibration."
   },
   "audio_system": {
     "current_studio_router": "v3.3",
@@ -186,23 +249,39 @@
       "HOLD_FOR_TEST",
       "REJECT"
     ],
-    "superseded_candidate_pr": {
-      "pr": 45,
-      "status": "CLOSED_NOT_MERGED_SUPERSEDED_BY_NEWER_MAIN",
-      "do_not_promote": true
-    }
+    "superseded_candidate_prs": [
+      {
+        "pr": 45,
+        "status": "CLOSED_NOT_MERGED_SUPERSEDED_BY_NEWER_MAIN",
+        "do_not_promote": true
+      },
+      {
+        "pr": 46,
+        "status": "CLOSED_NOT_MERGED_SUPERSEDED_BY_NEWER_MAIN",
+        "do_not_promote": true
+      }
+    ]
   },
   "recent_verified_main_integration": [
-    "CROSS_CONVERSATION_STATE_AND_AUTOPILOT_v1.1",
+    "CROSS_CONVERSATION_STATE_AND_AUTOPILOT_v1.2",
     "CURRENT_WRITING_PRODUCTION_AUTHORITY_ROUTER",
     "MULTI_MODEL_HANDOFF_PROMPTS_v1.0",
     "BOOK_CHAT_STARTER_AUTOPILOT_ROUTING",
-    "RUNTIME_CRAFT_MECHANISM_ADDENDUM",
+    "RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.1",
+    "TARGETED_REPAIR_PATCH_CONTRACT_v1.0",
+    "ADVERSARIAL_10_LENS_REVIEW_GATE_v1.0",
+    "UNIVERSAL_AUDIO_VOICE_AUDITION_BINDING_STANDARD_v1.0",
     "DUPLICATE_AUTOPILOT_PROTOCOL_RECONCILED_AS_SUPERSEDED",
     "UNIVERSAL_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE",
     "CURRENT_IVDIVO_SYSTEM_STATE",
     "CURRENT_IVDIVO_CROSS_AI_HANDOFF",
     "SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT"
   ],
-  "state_status": "READY_TO_RECONCILE_D09_E07_E12_THEN_FINAL_STORY_GATE"
+  "candidate_branch_delta": [
+    "CURRENT_SYSTEM_STATE_SCHEMA_v1.2",
+    "CRAFT_RESEARCH_LIFECYCLE_BRIDGE_v1.0",
+    "D04_SEVEN_NIGHTS_DOWNSTREAM_STATE",
+    "WRITING_ROUTER_RESEARCH_AND_PROJECT_STATE_ROUTING"
+  ],
+  "state_status": "READY_TO_RECONCILE_D09_E07_E12_THEN_FINAL_STORY_GATE; D04_DOWNSTREAM_READY_FOR_CASTING_PREFLIGHT_AND_VISUAL_IDENTITY_LOCK"
 }
