@@ -37,11 +37,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install inherited test dependency
+        run: python -m pip install --upgrade pytest
       - name: Run Run33 recovery tests
         run: python -m unittest tests.test_session_resilience_run33 -v
       - name: Run session checkpoint regression
         run: python -m unittest tests.test_session_checkpoint -v
       - name: Run registry transaction regression
-        run: python -m unittest tests.test_registry_transaction -v
+        run: python -m pytest tests/test_registry_transaction.py -q
       - name: Validate registry family references
         run: python tools/validate_improvement_registry_refs.py --repo-root .
