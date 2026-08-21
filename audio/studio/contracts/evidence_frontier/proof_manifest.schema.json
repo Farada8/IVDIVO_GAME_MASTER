@@ -1,15 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ivdivo.audio.proof_manifest/1.0",
+  "$id": "ivdivo.audio.proof_manifest/1.1",
   "title": "IVDIVO Audio Evidence Proof Manifest",
   "type": "object",
   "required": ["schema_version", "claim", "subject", "required_evidence_classes", "verified_evidence_classes", "missing_evidence_classes", "status", "evidence", "machine_may_upgrade_claim_without_required_evidence", "proof_sha256"],
   "properties": {
-    "schema_version": {"const": "ivdivo.audio.proof_manifest/1.0"},
+    "schema_version": {"const": "ivdivo.audio.proof_manifest/1.1"},
     "claim": {"type": "string", "minLength": 1},
     "subject": {"type": "string", "minLength": 1},
     "status": {"enum": ["PROVEN", "HOLD_UNPROVEN"]},
-    "required_evidence_classes": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "required_evidence_classes": {"type": "array", "uniqueItems": true, "items": {"enum": ["SOURCE_AUTHORITY", "CODE_TEST", "GITHUB_CI", "AUTH_PROVIDER", "LIVE_AUDIO", "REAL_ALIGNMENT", "HUMAN_REVIEW", "MEASURED_ECONOMICS", "DURABLE_RECOVERY", "CROSS_PROJECT_REAL"]}},
     "verified_evidence_classes": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
     "missing_evidence_classes": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
     "evidence": {"type": "array"},
@@ -17,5 +17,5 @@
     "proof_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
   },
   "additionalProperties": true,
-  "x-ivdivo-law": "PASS_CODE cannot prove provider reality; CI cannot prove human quality; human preference cannot prove measured cost. Every claim must carry its required evidence classes."
+  "x-ivdivo-law": "PASS_CODE cannot prove provider reality; provider auth cannot prove live audio; live audio cannot prove alignment; human preference cannot prove measured cost; a successful run cannot prove durable recovery or cross-project portability."
 }
