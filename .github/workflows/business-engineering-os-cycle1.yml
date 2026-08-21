@@ -1,0 +1,20 @@
+name: Business Engineering OS Cycle1
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-21_CYCLE1_LIBRARY_ENGINE_32_TO_64/**'
+      - '.github/workflows/business-engineering-os-cycle1.yml'
+
+jobs:
+  canary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Business Engineering OS canaries
+        run: |
+          cd BUSINESS_ENGINEERING_OS/2026-08-21_CYCLE1_LIBRARY_ENGINE_32_TO_64/engine
+          python -m unittest -v test_business_engineering_os.py
