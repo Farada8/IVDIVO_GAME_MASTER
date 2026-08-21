@@ -1,7 +1,11 @@
 {
-  "schema":"NMM_ENGINE_INTEGRATION_CYCLE3_STATE_v1.1",
+  "schema":"NMM_ENGINE_INTEGRATION_CYCLE3_STATE_v1.2",
   "package_reconciled_against_wave7":true,
   "persistence_branch_base_main_sha":"75544f22010ae11713cfd67a367f7762cba486a8",
+  "cross_storage_parity":"PASS",
+  "drive_folder_id":"17uFSIXTzXCSvZMOM3kFORNTFtHM-JB-b",
+  "drive_zip_id":"1KpaL01YqxYutrVvk7T_P1Euz7XyPJrH1",
+  "drive_parity_doc_id":"1pDBzTkVzdQUgQlEtbzSdLix_WRRkGbE_t6McGLMVM-Q",
   "source":{"document_id":"1j_WPuSFVwPWzWHDvXqCAsNPM3-O6bSHMJgYH-7CLNrI","revision_id":"5","export_sha256":"5c3d86b271524614ad7adf37c71bafba74f9f63a292ada46ad567ff75e88a1c0","e01_sha256":"f95871c17cd2501c6a3ca36fe1d0dd850ebae2118fe2ca1de75274a53c75de9b","occurrence_ledger_sha256":"7128bb3b74289533b9e8be279958c8a9dfb40564c7255e9b0e11306c988bae5a","spoken_occurrences":269,"canonical_tokens":1494},
   "executed_prompts":32,
   "next_prompts":64,
