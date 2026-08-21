@@ -30,16 +30,24 @@ class EvidenceProofTests(unittest.TestCase):
         self.assertEqual(p["status"], "HOLD_UNPROVEN")
         self.assertIn("LIVE_AUDIO", p["missing_evidence_classes"])
 
+    def test_live_audio_does_not_prove_real_alignment(self):
+        p = compile_proof_manifest(claim="REAL_ALIGNMENT_PASS", subject="RB001", evidence=[ev("LIVE_AUDIO")])
+        self.assertEqual(p["status"], "HOLD_UNPROVEN")
+        self.assertIn("REAL_ALIGNMENT", p["missing_evidence_classes"])
+
     def test_unverified_evidence_does_not_count(self):
         p = compile_proof_manifest(claim="CI_GREEN", subject="runtime", evidence=[ev("GITHUB_CI", verified=False)])
         self.assertEqual(p["status"], "HOLD_UNPROVEN")
 
-    def test_v1_requires_all_evidence_classes(self):
-        evidence = [ev("SOURCE_AUTHORITY"), ev("GITHUB_CI"), ev("AUTH_PROVIDER"), ev("LIVE_AUDIO"), ev("HUMAN_REVIEW"), ev("MEASURED_ECONOMICS")]
+    def test_v1_requires_alignment_recovery_and_cross_project(self):
+        evidence = [
+            ev("SOURCE_AUTHORITY"), ev("GITHUB_CI"), ev("AUTH_PROVIDER"), ev("LIVE_AUDIO"),
+            ev("HUMAN_REVIEW"), ev("MEASURED_ECONOMICS")
+        ]
         p = compile_proof_manifest(claim="V1_RELEASE_EVIDENCE_COMPLETE", subject="AUDIO_NOVEL_ENGINE", evidence=evidence)
         self.assertEqual(p["status"], "HOLD_UNPROVEN")
-        self.assertEqual(p["missing_evidence_classes"], ["CROSS_PROJECT_REAL"])
-        evidence.append(ev("CROSS_PROJECT_REAL"))
+        self.assertEqual(p["missing_evidence_classes"], ["CROSS_PROJECT_REAL", "DURABLE_RECOVERY", "REAL_ALIGNMENT"])
+        evidence.extend([ev("REAL_ALIGNMENT"), ev("DURABLE_RECOVERY"), ev("CROSS_PROJECT_REAL")])
         p2 = compile_proof_manifest(claim="V1_RELEASE_EVIDENCE_COMPLETE", subject="AUDIO_NOVEL_ENGINE", evidence=evidence)
         self.assertEqual(p2["status"], "PROVEN")
 
