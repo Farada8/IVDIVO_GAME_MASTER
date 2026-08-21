@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_ARCHITECTURE_FIXTURES",
+  "cases":[
+    {"genre":"MYSTERY","protagonist_move":"requests sealed payroll records","opposition_inference":"investigator has linked payment timing to the crime","counter_move":"institution invokes a narrower retention rule and moves access to counsel review","new_constraint":"records remain discoverable but slower and auditable","adaptation":"hero subpoenas the audit trail instead of repeating the request","price":"deadline pressure and public exposure of investigation","causal_response":true},
+    {"genre":"ROMANCE_MELODRAMA","protagonist_move":"heroine refuses secret settlement","opposition_inference":"family cannot buy silence privately","counter_move":"family threatens a public board vote that will also harm the love interest","new_constraint":"truth now carries collateral relationship cost","adaptation":"heroine secures independent testimony before disclosure","price":"temporary rupture with love interest","causal_response":true},
+    {"genre":"YOUTH_ORBITAL","protagonist_move":"teen reroutes commute to keep apprenticeship shift","opposition_inference":"station scheduling system detects unauthorized load transfer","counter_move":"maintenance access is temporarily restricted","new_constraint":"work/school/housing route conflict worsens","adaptation":"teen trades a social-status favor for a legal maintenance escort","price":"peer debt and missed sport event","causal_response":true},
+    {"genre":"SMITH_OES","protagonist_move":"Smith invokes an old containment agreement","opposition_inference":"Old Earth jurisdiction can still block immediate confiscation","counter_move":"Confederation security reclassifies the site as a present biosafety emergency","new_constraint":"old agreement survives but cannot alone settle current scientific risk","adaptation":"Smith must admit Confederation researchers under bounded joint custody","price":"loss of unilateral control and exposure of an old OES crime","causal_response":true},
+    {"genre":"ARBITRARY_CRUELTY_CONTROL","protagonist_move":"hero changes nothing","opposition_inference":"none","counter_move":"villain randomly burns hero's house because episode 7 needs escalation","new_constraint":"higher pain without response logic","adaptation":"hero reacts","price":"house","causal_response":false}
+  ],
+  "conclusion":"Responsive opposition changes because it observes/infer/responds to protagonist behavior or system pressure. Scheduled pain without causal response is not earned escalation.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST",
+  "cannot_prove":"Does not certify any named manuscript architecture until applied to its actual episode/chapter sequence."
+}
