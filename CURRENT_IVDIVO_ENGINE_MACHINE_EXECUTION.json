@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "updated": "2026-08-21",
   "status": "VERIFIED_CURRENT_MACHINE_EXECUTION_NOT_CANON",
-  "purpose": "Machine-execution pointer for the tested IVDIVO Engine v11.2 package plus verified/post-package extensions on GitHub main. This file routes executable implementation evidence; it never overrides Founder instruction, story/book canon, current domain authority, project source-of-truth, or Self-Improvement authority.",
+  "purpose": "Machine-execution pointer for tested IVDIVO Engine v11.2 plus verified/post-package extensions and bounded engineering candidates. It never overrides Founder instruction, story/book canon, current domain authority, project source-of-truth, or Self-Improvement authority.",
   "engine": {
     "display_version": "IVDIVO ENGINE v11.2",
     "runtime_version": "IVDIVO-ENGINE/6.2.0-continuous-execution",
@@ -26,13 +26,22 @@
     "IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md",
     "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md",
     "IVDIVO_NARRATIVE_OS/18C_VOLATILE_SESSION_CHECKPOINT_AND_RECOVERY_PROTOCOL_v1.0.md",
+    "IVDIVO_NARRATIVE_OS/18D_DURABLE_TRANSACTION_RECONCILIATION_PROTOCOL_v1.0.md",
     "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+    "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json",
     "schemas/IVDIVO_EXECUTION_STATE_SCHEMA_v1.json",
     "schemas/IVDIVO_TRANSCRIPT_RECOVERY_LEDGER_SCHEMA_v1.json",
     "schemas/IVDIVO_SESSION_CHECKPOINT_SCHEMA_v1.json",
+    "schemas/IVDIVO_DURABLE_WRITE_TRANSACTION_SCHEMA_v1.json",
+    "schemas/IVDIVO_CHECKPOINT_LINEAGE_SCHEMA_v1.json",
+    "schemas/IVDIVO_INTERRUPTION_LEARNING_EVENT_SCHEMA_v1.json",
     "tools/ivdivo_next_action.py",
     "tools/ivdivo_transcript_recovery.py",
     "tools/ivdivo_session_checkpoint.py",
+    "tools/ivdivo_durable_write_reconciler.py",
+    "tools/ivdivo_checkpoint_lineage.py",
+    "tools/ivdivo_interruption_learning.py",
+    "tools/ivdivo_registry_transaction.py",
     "IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md",
     "AUDIO_PRODUCTION/IVDIVO_AUDIO_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE_v1.0.md",
     "AUDIO_PRODUCTION/IVDIVO_AUDIO_SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT_v1.0.md"
@@ -46,6 +55,11 @@
     "VOLATILE_SESSION_CHECKPOINT_HASHED_RESUME",
     "PARTIAL_MULTI_STORE_WRITE_RECOVERY",
     "AUTHORITY_DRIFT_REBASE_FROM_CHECKPOINT",
+    "DETERMINISTIC_MULTI_STORE_IDEMPOTENCY_KEYS",
+    "AMBIGUOUS_EXTERNAL_SIDE_EFFECT_QUARANTINE",
+    "CHECKPOINT_LINEAGE_AND_RETENTION_CLASSIFICATION",
+    "INTERRUPTION_RECOVERY_LEARNING_EVIDENCE",
+    "FULL_REGISTRY_FAMILY_ID_FRESHNESS",
     "SEMANTIC_DELTA_DEDUPE_AND_UNIVERSALIZATION_SCREENING",
     "CROSS_MODEL_TASK_ASSIGNMENT_GUARDS",
     "BOUNDED_RUN_CARD_VALIDATION",
@@ -63,31 +77,41 @@
     "tests": "tests/test_transcript_recovery.py",
     "merge_pr": 59,
     "merge_commit": "1e3bd068771135f8f1bf470269f2e9243af8f797",
-    "exact_source_smoke": {"framework": "pytest", "passed": 5, "failed": 0, "status": "PASS", "identity_check": "Tested local tool bytes produced Git blob SHA 79b9cd9f9b8e60f65a7ec156dc23689a194233a6; GitHub main readback returned the same blob SHA."},
-    "machine_boundary": "First-pass extraction only. It does not verify persisted claims, decide canon, promote candidates, or mark INGESTION_COMPLETE. Downstream AI/human reconciliation remains required.",
-    "secret_firewall": "Detected credentials are redacted from excerpts; secrets_persisted is always false in generated ledger.",
-    "next_packaging_gate": "Include extension in next tested engine ZIP only after full-package regression is run; do not relabel v11.2 package contents retroactively."
+    "exact_source_smoke": {"framework": "pytest", "passed": 5, "failed": 0, "status": "PASS"},
+    "machine_boundary": "First-pass extraction only. It does not verify persisted claims, decide canon, promote candidates, or mark INGESTION_COMPLETE.",
+    "next_packaging_gate": "Include extension in next tested engine ZIP only after full-package regression; do not relabel v11.2 retroactively."
   },
-  "session_checkpoint_extension": {
-    "candidate_id": "SI-0010",
-    "status": "PILOT_CODE_PENDING_INTEGRATED_CI_AND_REAL_RECOVERY_EVIDENCE",
+  "session_resilience_extension": {
+    "candidate_id": "SI-0014",
+    "status": "READY_FOR_PILOT_RUN33_CI_PENDING",
     "authority_candidate": "IVDIVO_NARRATIVE_OS/18C_VOLATILE_SESSION_CHECKPOINT_AND_RECOVERY_PROTOCOL_v1.0.md",
-    "tool": "tools/ivdivo_session_checkpoint.py",
-    "schema": "schemas/IVDIVO_SESSION_CHECKPOINT_SCHEMA_v1.json",
-    "tests": "tests/test_session_checkpoint.py",
+    "durable_reconciliation_protocol": "IVDIVO_NARRATIVE_OS/18D_DURABLE_TRANSACTION_RECONCILIATION_PROTOCOL_v1.0.md",
+    "checkpoint_tool": "tools/ivdivo_session_checkpoint.py",
+    "transaction_tool": "tools/ivdivo_durable_write_reconciler.py",
+    "lineage_tool": "tools/ivdivo_checkpoint_lineage.py",
+    "learning_tool": "tools/ivdivo_interruption_learning.py",
+    "schemas": [
+      "schemas/IVDIVO_SESSION_CHECKPOINT_SCHEMA_v1.json",
+      "schemas/IVDIVO_DURABLE_WRITE_TRANSACTION_SCHEMA_v1.json",
+      "schemas/IVDIVO_CHECKPOINT_LINEAGE_SCHEMA_v1.json",
+      "schemas/IVDIVO_INTERRUPTION_LEARNING_EVENT_SCHEMA_v1.json"
+    ],
     "resume_decisions": ["RESUME_EXACT", "REBASE_FIRST", "RECOVER_VOLATILE_FIRST", "STOP"],
-    "isolated_test_evidence": {"framework": "unittest", "passed": 8, "failed": 0, "status": "PASS_LOCAL_ISOLATED"},
-    "boundary": "Compact in-flight recovery envelope only; not project authority, not transcript storage, not asset byte escrow, not provider replay.",
-    "promotion_gate": "Integrated CI + GitHub/Drive readback + at least one real interruption/restart production pilot + no false-resume regression.",
+    "transaction_decisions": ["STOP", "REBASE_FIRST", "QUARANTINE_EXTERNAL_SIDE_EFFECT", "VERIFY_STORE_BEFORE_RETRY", "VERIFY_READBACK", "REQUIRE_EXPLICIT_DISPATCH_GATE", "EXECUTE_MISSING_SAFE_ACTIONS", "TRANSACTION_COMPLETE"],
+    "run32_ci": "PASS",
+    "run33_local_prototype": {"framework": "unittest", "passed": 22, "failed": 0, "status": "PASS_LOCAL_ISOLATED"},
+    "id_integrity_repair": "Run32 pending candidate incorrectly used SI-0010 despite full registry family already owning SI-0010; migrated to SI-0014 and candidate-ID freshness law added.",
+    "boundary": "Recovery and transaction routing only; not project authority, transcript storage, asset byte escrow, provider dispatch, canon, or automatic Self-Improvement promotion.",
+    "promotion_gate": "Run33 repository CI + GitHub/Drive readback + real interruption/partial-write production evidence + zero false resume.",
     "next_packaging_gate": "Post-package extension until included in a future engine package that passes full regression; v11.2 ZIP identity remains unchanged."
   },
   "continuation_contract": {
     "repeated_continuation_word_required": false,
     "auto_continue_requires": ["NO_CURRENT_BLOCKER", "CONTINUATION_POLICY_EXPLICITLY_ENABLED", "FRESHNESS_VALID_TRUE", "AUTHORITY_UNAMBIGUOUS_TRUE", "DEPENDENCIES_PASS_TRUE", "NEXT_ACTION_EXECUTABLE_HERE_TRUE"],
     "explicit_stop_gates": ["DECISION_GATE_OR_NEW_FOUNDER_CHOICE", "HUMAN_EVIDENCE_REQUIRED", "EXTERNAL_PROVIDER_REQUIRED_WHEN_UNAVAILABLE", "LOCKED_LAYER_REOPEN_NOT_AUTHORIZED", "IRREVERSIBLE_HIGH_IMPACT_APPROVAL_REQUIRED", "FATAL_MAJOR_UNRESOLVED", "TOOL_RUNTIME_LIMITATION", "AUTHORITY_UNRESOLVED_OR_FRONTIER_CONFLICT"],
-    "legacy_note": "safe/zero_cost/reversible are not universal continuation prerequisites under Autopilot v1.2+; where they imply provider, safety or irreversible risk, the corresponding explicit modern gate metadata must be present and fail closed.",
+    "legacy_note": "safe/zero_cost/reversible are not universal continuation prerequisites under Autopilot v1.2+; explicit modern gate metadata must fail closed where risk applies.",
     "missing_required_flag": "FAIL_CLOSED_STOP",
-    "after_each_material_action": "VERIFY -> PERSIST -> CHECKPOINT_WHEN_MATERIAL -> REBASE -> RECOMPUTE_DAG -> CONTINUE_UNTIL_REAL_GATE"
+    "after_each_material_action": "VERIFY -> PERSIST -> CHECKPOINT_WHEN_MATERIAL -> RECONCILE_TRANSACTION -> REBASE -> RECOMPUTE_DAG -> CONTINUE_UNTIL_REAL_GATE"
   },
   "self_improvement_bridge": {
     "authority": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
@@ -97,22 +121,22 @@
     "verified_current_requires_application_and_verification_evidence": true,
     "research_requires_decision_and_stopping_rule": true,
     "engine_promotion_requires_mature_contract_and_regression": true,
-    "transcript_recovery_rule": "Pasted/exported transcript is recovery evidence, never self-verifying authority. Deterministic extraction must hand off to persisted-source verification, dedupe, reconciliation, application and readback.",
-    "volatile_session_rule": "A checkpoint is recovery evidence below persisted project authority. It may route exact resume/rebase/recovery/stop but may not self-promote canon, replay paid/irreversible actions, or treat chat-local assets as durable."
+    "candidate_id_rule": "Assign new SI IDs only after reading complete current registry family; partial chat/recent-file visibility is insufficient.",
+    "volatile_session_rule": "Checkpoint and transaction records are recovery evidence below persisted project authority; they may route resume/rebase/recovery/quarantine/stop but never self-promote canon or replay paid/irreversible effects."
   },
   "prohibitions": [
     "NO_CANON_MUTATION_BY_MACHINE_POINTER",
-    "NO_PROVIDER_CALL_OR_CREDIT_SPEND_FROM_READ_ONLY_CONTINUATION_OR_CHECKPOINT_RESOLVERS",
+    "NO_PROVIDER_CALL_OR_CREDIT_SPEND_FROM_RECOVERY_RESOLVERS",
     "NO_SECRET_OR_API_KEY_PERSISTENCE",
     "NO_HUMAN_SIGNAL_FABRICATION",
     "NO_CHAT_MEMORY_AS_AUTHORITY",
-    "NO_CHECKPOINT_AS_AUTHORITY",
+    "NO_CHECKPOINT_OR_TRANSACTION_LEDGER_AS_AUTHORITY",
     "NO_AUTOREPLAY_PAID_OR_IRREVERSIBLE_SIDE_EFFECT",
     "NO_CHAT_LOCAL_ARTIFACT_AS_DURABLE",
     "NO_PASTED_TRANSCRIPT_AS_AUTOMATIC_AUTHORITY",
     "NO_UNVERIFIED_SAVED_LOCKED_PASS_CLAIM_PROMOTION",
     "NO_MODEL_VOTE_CANON",
-    "NO_PROJECT_SPECIFIC_AUDIO_IDENTITY_TRANSFER_AS_UNIVERSAL_MECHANISM"
+    "NO_PARTIAL_REGISTRY_VIEW_FOR_NEW_CANDIDATE_ID"
   ],
   "does_not_override": ["FOUNDER_NEWEST_DIRECT_INSTRUCTION", "LOCKED_STORY_BOOK_PROJECT_CANON", "CURRENT_DOMAIN_AUTHORITIES", "PROJECT_SPECIFIC_SOURCE_OF_TRUTH_AND_EXECUTION_STATE", "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md", "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md"]
 }
