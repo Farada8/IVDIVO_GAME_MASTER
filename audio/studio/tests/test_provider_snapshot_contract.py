@@ -26,6 +26,7 @@ class ProviderSnapshotContractTests(unittest.TestCase):
                 "capture_engine": "ivdivo.elevenlabs_snapshot_acquirer/1.0",
                 "source": [
                     {"path": "/v1/user", "http_status": 200},
+                    {"path": "/v1/user/subscription", "http_status": 200},
                     {"path": "/v1/models", "http_status": 200},
                     {"path": "/v2/voices", "http_status": 200},
                 ],
@@ -41,6 +42,7 @@ class ProviderSnapshotContractTests(unittest.TestCase):
         out = validate_provider_snapshot(snapshot, expected_provider="elevenlabs")
         self.assertEqual(out["status"], "PASS")
         self.assertTrue(out["verified"])
+        self.assertTrue(out["production_capture_contract"])
 
     def test_plain_status_pass_without_authentication_fails(self):
         payload = self.payload()
@@ -78,6 +80,32 @@ class ProviderSnapshotContractTests(unittest.TestCase):
             now=captured + timedelta(hours=2),
         )
         self.assertEqual(out["status"], "FAIL_STALE")
+
+    def test_wrong_capture_engine_fails(self):
+        payload = self.payload()
+        payload["provenance"]["capture_engine"] = "manual-json"
+        snapshot = seal_snapshot(payload)
+        out = validate_provider_snapshot(snapshot, expected_provider="elevenlabs")
+        self.assertEqual(out["status"], "FAIL_CAPTURE_ENGINE")
+
+    def test_missing_required_provider_source_fails(self):
+        payload = self.payload()
+        payload["provenance"]["source"] = [
+            {"path": "/v1/user", "http_status": 200},
+            {"path": "/v1/models", "http_status": 200},
+            {"path": "/v2/voices", "http_status": 200},
+        ]
+        snapshot = seal_snapshot(payload)
+        out = validate_provider_snapshot(snapshot, expected_provider="elevenlabs")
+        self.assertEqual(out["status"], "FAIL_SOURCE_COVERAGE")
+        self.assertIn("/v1/user/subscription", out["missing_paths"])
+
+    def test_credential_persistence_must_be_explicitly_false(self):
+        payload = self.payload()
+        payload["authentication"]["credential_persisted"] = None
+        snapshot = seal_snapshot(payload)
+        out = validate_provider_snapshot(snapshot, expected_provider="elevenlabs")
+        self.assertEqual(out["status"], "FAIL_CREDENTIAL_PERSISTENCE_UNPROVEN")
 
 
 if __name__ == "__main__":
