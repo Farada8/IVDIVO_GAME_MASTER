@@ -1,16 +1,21 @@
 {
-  "schema_version": "ivdivo.room917_execution_state/2.0",
+  "schema_version": "ivdivo.room917_execution_state/2.1",
   "updated": "2026-08-21",
   "project": "ROOM 917 CALLS AT MIDNIGHT",
+  "project_id": "ROOM917",
+  "active_branch": "THE_INSURABLE_FIRE",
   "active_engine": "THE INSURABLE FIRE",
   "delivery_mode": "FULL_AUDIO_DRAMA",
   "story_status": "LOCKED",
   "universal_audio_authority": "IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md",
+  "continuation_overlay": "IVDIVO_CROSS_DIALOG_CONTINUATION_AND_MULTI_AI_PROTOCOL_v1.0.md",
   "pilot_package": {
     "name": "ROOM917_E01_03_V3_3_PILOT_COMPLETION_v1.9.zip",
     "drive_id": "1cAPNfIpowl7UbWZYMZZXsE4Vipp1_mP-"
   },
   "status": "READY_FOR_USER_SIDE_S0_LIVE_RENDER",
+  "last_completed_artifact": "ROOM917_S0_LIVE_EXECUTION_READINESS_v2.0.md",
+  "completed_action": "ALL_RESPONSIBLE_ZERO_COST_PRE_S0_VALIDATION_PASSED",
   "live_render_performed_in_chat": false,
   "voice_lock": false,
   "zero_cost_validation": {
@@ -22,21 +27,86 @@
     "provider_contract_rechecked": "2026-08-21",
     "provider_contract_result": "PASS_NO_RUNNER_REWRITE_REQUIRED"
   },
+  "open_gates": [
+    "S0_TECHNICAL_CANARY_REAL_AUDIO",
+    "S1_FAIR_ANCHOR_COMPARISON_AFTER_S0_PASS",
+    "VOICE_SELECTION_AFTER_REAL_AUDIO_EVIDENCE",
+    "HARD_PILOT_AFTER_VOICE_EVIDENCE"
+  ],
+  "current_blocker": {
+    "type": "USER_CREDENTIAL_ACTION",
+    "description": "Authenticated ElevenLabs S0 technical canary must be executed on the user's Windows production machine with ELEVENLABS_API_KEY supplied only in the local PowerShell environment."
+  },
   "next_action": {
     "stage": "S0_TECHNICAL_CANARY",
+    "action": "Run 5 short real ElevenLabs technical canary renders from the accepted v1.9 package.",
     "jobs": 5,
-    "launcher": "RUN_ROOM917_S0_TECHNICAL_CANARY.ps1"
+    "launcher": "RUN_ROOM917_S0_TECHNICAL_CANARY.ps1",
+    "safe": true,
+    "zero_cost": false,
+    "reversible": true,
+    "tool_executable_here": false
   },
   "after_pass": {
     "stage": "S1_FAIR_ANCHOR_COMPARISON",
     "jobs": 15,
     "launcher": "RUN_ROOM917_S1_FAIR_ANCHORS.ps1"
   },
+  "required_evidence": [
+    "S0 generated WAVs",
+    "timestamp/alignment sidecars",
+    "execution log",
+    "machine QC",
+    "ROOM917_S0_TECHNICAL_GATE.json"
+  ],
+  "hard_stops": [
+    "NO_VOICE_LOCK_WITHOUT_REAL_AUDITION_AUDIO",
+    "NO_FULL_E01_RENDER_BEFORE_CASTING_GATE",
+    "NO_E01_SCENE3_HARD_MIXED_PILOT_BEFORE_REQUIRED_REAL_AUDIO_EVIDENCE",
+    "NO_E04_E24_BATCH_RENDER_BEFORE_UPSTREAM_GATES_PASS"
+  ],
   "prohibited_until_real_audio_evidence": [
     "VOICE_LOCK",
     "FULL_E01_RENDER",
     "E01_SCENE3_HARD_MIXED_PILOT",
     "E04_E24_BATCH_RENDER"
   ],
+  "working_downstream_artifacts": [
+    {
+      "artifact": "ROOM917_E01_AUTOMIX_FIXTURE_v1.json",
+      "status": "WORKING_DOWNSTREAM",
+      "stage": "AUTOMIX_DRY_RUN",
+      "note": "Useful downstream contract; does not supersede S0 voice/casting gate."
+    },
+    {
+      "artifact": "ROOM917_E01_SYNTHETIC_ALIGNMENT_v1.json",
+      "status": "WORKING_DOWNSTREAM",
+      "stage": "AUTOMIX_DRY_RUN",
+      "note": "Synthetic timing only; never production timing."
+    },
+    {
+      "artifact": "ROOM917_E01_QC_EXPECTATIONS_v1.json",
+      "status": "WORKING_DOWNSTREAM",
+      "stage": "AUTOMIX_QC",
+      "note": "Fail-closed downstream QC contract."
+    },
+    {
+      "artifact": "ROOM917_E01_COMMERCIAL_SOUND_PROOF_C_v1.json",
+      "status": "WORKING_DOWNSTREAM",
+      "stage": "COMMERCIAL_SOUND_QUALITY_GATE",
+      "note": "Run only after real performance evidence is available; not current next action."
+    },
+    {
+      "artifact": "ROOM917_E01_COMMERCIAL_SOUND_PROOF_GATE_v1.json",
+      "status": "WORKING_DOWNSTREAM",
+      "stage": "COMMERCIAL_SOUND_QUALITY_GATE",
+      "note": "Commercial proof decision gate; cannot replace casting/performance evidence."
+    }
+  ],
+  "continuation_policy": {
+    "default_continue_when_unblocked": true,
+    "require_repeated_continuation_word": false,
+    "safe_zero_cost_reversible_only": true
+  },
   "secret_policy": "API_KEYS_NEVER_IN_GITHUB_DRIVE_JSON_PROMPTS_OR_CANON"
 }
