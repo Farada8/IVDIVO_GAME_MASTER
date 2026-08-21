@@ -1,0 +1,48 @@
+{
+  "schema_version": "ivdivo.room917_cycle2_handoff/1.0",
+  "date": "2026-08-21",
+  "source_current_state_schema": "ivdivo.room917_execution_state/3.3",
+  "story_status": "LOCKED",
+  "frontier": "P003A2_PRE_SCENE3_INTERVAL_LOCALIZATION",
+  "scene3_lineage": {
+    "start_seconds": 444.980,
+    "end_seconds": 658.190,
+    "status": "RECOVERED_PROTECTED",
+    "do_not_reapply": "OLD_V1_2_2_SCENE3_SPATIAL_REPAIR"
+  },
+  "p003a": {
+    "segment_start_seconds": 0.0,
+    "segment_end_seconds": 444.980,
+    "status": "COMPLETE",
+    "proven_defect": {
+      "id": "D003",
+      "name": "PRE_SCENE3_ROOM_BED_CONTINUITY_UNDERCOVERAGE",
+      "severity": "MAJOR",
+      "proof_level": "SEGMENT_AGGREGATE",
+      "exact_patch_intervals_resolved": false,
+      "patch_authorized": false
+    },
+    "candidate_defects": [
+      {"id":"D004","name":"PRE_SCENE3_CAUSAL_FOLEY_ACTION_UNDERDENSITY","status":"MAJOR_CANDIDATE"},
+      {"id":"D005","name":"PRE_SCENE3_MUSIC_UNDERUSE","status":"WORKING_COMMERCIAL_HYPOTHESIS"}
+    ]
+  },
+  "next_action": [
+    "EXTRACT_CONTIGUOUS_PRE_SCENE3_INTERVALS_BELOW_-85_-50_-45_DBFS_ON_100MS_BASIS",
+    "MAP_INTERVALS_TO_SCENE1_2_BLOCK_CUE_LINEAGE",
+    "CLASSIFY_PROTECTED_VALID_LOW_DENSITY_MISSING_ROOM_SUPPORT_MISSING_CAUSAL_OVERLAP_UNKNOWN",
+    "AUTHORIZE_SELECTIVE_ROOM_BED_PATCH_ONLY_FOR_PROVEN_MISSING_SUPPORT",
+    "RUN_P003B_HUMAN_ARTISTIC_LISTEN_WHEN_AUDIO_ACCESSIBLE",
+    "KEEP_D004_D005_UNPATCHED_UNTIL_ADDITIONAL_EVIDENCE"
+  ],
+  "drive_cycle2_folder_id": "1vwBlQdAcvan4HuSQvUq0vWPUpRt0HqKk",
+  "prohibited": [
+    "RESTART_S0_S1",
+    "REAPPLY_V1_2_2_SCENE3_REPAIR",
+    "BLANKET_FILL_LOW_LEVEL_WINDOWS",
+    "USE_MUSIC_AS_ROOM_BED_SUBSTITUTE",
+    "PATCH_D004_OR_D005_WITHOUT_EVIDENCE",
+    "SIMULATE_HUMAN_ARTISTIC_LISTEN",
+    "BATCH_RENDER_E02_E24_BEFORE_E01_V2_GO"
+  ]
+}
