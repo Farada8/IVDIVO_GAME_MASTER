@@ -1,0 +1,23 @@
+{
+  "artifact":"IVDIVO_MULTILINGUAL_VOICE_RUNTIME_PATCH_v7",
+  "status":"ACCEPT_WITH_MODIFICATION",
+  "promoted_rules":[
+    "EXTERNAL_REVIEW_MICROPACKETS: ask specialists only questions that unlock a gate; do not request broad rewrite.",
+    "REVIEW_TO_LOCK_FIREWALL: native/pro reviewer output never edits authority directly; it enters decision ledger then lock compiler.",
+    "BASELINE_BEFORE_CHALLENGER: create one strongest lead preview per role before challenger variants.",
+    "CREDENTIAL_SAFE_PREFLIGHT: authenticated capabilities may be persisted; secrets may not.",
+    "EVIDENCE_CONTRACT_REQUIRED: every PASS/HOLD/FAIL that can change production state needs provenance.",
+    "EXPECTED_INFORMATION_GAIN_ROUTING: among eligible tasks, prefer uncertainty reduction and downstream unlock per unit cost.",
+    "SELF_IMPROVEMENT_PROMOTION_GATE: no universal runtime rule from model agreement alone.",
+    "BOUNDED_SLICE_BEFORE_FULL_RENDER: test 3–4 minutes before full episode when voice/render architecture is newly locked."
+  ],
+  "not_promoted":[
+    "Any specific Russian terminology as human-native final truth",
+    "Any candidate voice quality claim",
+    "TTD superiority over isolated TTS",
+    "Any Spanish region choice",
+    "Any retention/market claim"
+  ],
+  "next_current_gate":"EXTERNAL_RU_NATIVE_STAGE_AUDIO_SECURITY_EVIDENCE",
+  "next_sequence":["PMV177-180 external responses","PMV181 text lock","PMV182 provider preflight","PMV183-189 bounded voice evidence"]
+}
