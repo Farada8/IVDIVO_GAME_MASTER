@@ -1,0 +1,11 @@
+{
+  "candidate_id": null,
+  "dedupe_result": "No new provider/cast engine or SI identifier. NMM retains only project-specific evidence orchestration and human-device policies.",
+  "next_replication": "SECOND_REAL_AUDIO_PROJECT_AFTER_NMM_EXTERNAL_PILOT",
+  "observation": "Dependency-aware external-evidence orchestration reduces false completion by distinguishing engineering readiness from provider/human truth.",
+  "parallel_reuse": ["AUDIO_WAVE10_PROVIDER_TO_CAST", "SI-0014", "SI-0015"],
+  "promotion": "FORBIDDEN_FROM_SINGLE_PROJECT",
+  "reused": ["SI-0014_SESSION_RESILIENCE_DURABLE_RECOVERY", "SI-0015_PROJECT_SLICE_FRESHNESS"],
+  "schema": "NMM_CYCLE5_SELF_IMPROVEMENT_DISCOVERY_v1",
+  "status": "DISCOVERY_ONLY"
+}
