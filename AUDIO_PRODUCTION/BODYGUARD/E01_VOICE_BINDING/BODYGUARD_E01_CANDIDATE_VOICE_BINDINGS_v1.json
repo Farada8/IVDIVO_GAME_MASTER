@@ -1,0 +1,37 @@
+{
+  "artifact": "BODYGUARD_E01_CANDIDATE_VOICE_BINDINGS_v1",
+  "status": "UNBOUND",
+  "provider": "ElevenLabs",
+  "model_default": null,
+  "security": {"api_key_in_file": false, "api_key_source": "environment only"},
+  "roles": {
+    "NAOMI_PARK": {
+      "A": {"voice_id": null, "model_id": null, "label": "NAOMI_PARK_CANDIDATE_A", "status": "PENDING_BINDING", "notes": null},
+      "B": {"voice_id": null, "model_id": null, "label": "NAOMI_PARK_CANDIDATE_B", "status": "PENDING_BINDING", "notes": null},
+      "C": {"voice_id": null, "model_id": null, "label": "NAOMI_PARK_CANDIDATE_C", "status": "PENDING_BINDING", "notes": null},
+      "D": {"voice_id": null, "model_id": null, "label": "NAOMI_PARK_CANDIDATE_D", "status": "PENDING_BINDING", "notes": null}
+    },
+    "ELI_KWON": {
+      "A": {"voice_id": null, "model_id": null, "label": "ELI_KWON_CANDIDATE_A", "status": "PENDING_BINDING", "notes": null},
+      "B": {"voice_id": null, "model_id": null, "label": "ELI_KWON_CANDIDATE_B", "status": "PENDING_BINDING", "notes": null},
+      "C": {"voice_id": null, "model_id": null, "label": "ELI_KWON_CANDIDATE_C", "status": "PENDING_BINDING", "notes": null},
+      "D": {"voice_id": null, "model_id": null, "label": "ELI_KWON_CANDIDATE_D", "status": "PENDING_BINDING", "notes": null}
+    },
+    "CAL_MERCER": {
+      "A": {"voice_id": null, "model_id": null, "label": "CAL_MERCER_CANDIDATE_A", "status": "PENDING_BINDING", "notes": null},
+      "B": {"voice_id": null, "model_id": null, "label": "CAL_MERCER_CANDIDATE_B", "status": "PENDING_BINDING", "notes": null},
+      "C": {"voice_id": null, "model_id": null, "label": "CAL_MERCER_CANDIDATE_C", "status": "PENDING_BINDING", "notes": null}
+    },
+    "TALIA_WYNN": {
+      "A": {"voice_id": null, "model_id": null, "label": "TALIA_WYNN_CANDIDATE_A", "status": "PENDING_BINDING", "notes": null},
+      "B": {"voice_id": null, "model_id": null, "label": "TALIA_WYNN_CANDIDATE_B", "status": "PENDING_BINDING", "notes": null},
+      "C": {"voice_id": null, "model_id": null, "label": "TALIA_WYNN_CANDIDATE_C", "status": "PENDING_BINDING", "notes": null}
+    },
+    "THREAT_VOICE": {
+      "A": {"voice_id": null, "model_id": null, "label": "THREAT_VOICE_CANDIDATE_A", "status": "PENDING_BINDING", "notes": null},
+      "B": {"voice_id": null, "model_id": null, "label": "THREAT_VOICE_CANDIDATE_B", "status": "PENDING_BINDING", "notes": null},
+      "C": {"voice_id": null, "model_id": null, "label": "THREAT_VOICE_CANDIDATE_C", "status": "PENDING_BINDING", "notes": null},
+      "D": {"voice_id": null, "model_id": null, "label": "THREAT_VOICE_CANDIDATE_D", "status": "PENDING_BINDING", "notes": null}
+    }
+  }
+}
