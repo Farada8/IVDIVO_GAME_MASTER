@@ -1,8 +1,10 @@
 # WAVE8 — TEST + EVIDENCE READBACK
 
 ## Repository readback
-Fresh main at reconciliation: `9ecb752dced8055b11c520ebd89c21c6daff7867`.
-Provider hardening PR #122 is MERGED. It replaced stale PR #121 and repaired a concrete capability-trust defect without creating a second runtime.
+Final clean reconciliation base main: `a1ef1dc8e7f44d71f57a7774aa40cde9f28b4834`.
+Provider hardening PR #122 is MERGED; it entered main at `9ecb752dced8055b11c520ebd89c21c6daff7867`, replacing stale PR #121 and repairing a concrete capability-trust defect without creating a second runtime.
+SI-0014 / Run33 controlled partial-write recovery is also MERGED on the final reconciliation base and is REUSE_CURRENT. Its evidence ceiling explicitly remains `real_interruption=false`.
+Current clean Wave8 documentation/state integration target is draft PR #126. PR #114 and PR #124 are CLOSED / SUPERSEDED integration targets.
 
 ## CI
 - PR #122 head: `a6253605a9c53ba7270b2851a952975001c553f2`.
@@ -18,6 +20,8 @@ Historical Wave8 PR111 merge-ref evidence in Drive records a later repaired run 
 ## Drive readback
 Wave7 folder `1aAh8xfuwJ5D4N9Gykboit05u2oLCVlGO`: seven expected documents present.
 Wave8 folder `1ytMxCtllxyVfqiRTyRb_wjgfRbppcw0y`: execution, synthesis, machine/CI, Red Team, trust-anchored Wave9 and provider-bridge artifacts present and non-empty at inspection.
+Current-main reconciliation supplement `1aiBb2PpqFFXCMSya6YpBKiRHsW70FBLPH3c1eFlWl_8` was moved into the Wave8 folder and content-readback verified.
+CURRENT_WORKSTATE was updated with a Google Docs `requiredRevisionId` guard and readback located the new Wave8 reconciliation heading at document index 94532.
 
 ## Evidence ceiling — still fail-closed
 - provider/account reads in this work block: 0;
