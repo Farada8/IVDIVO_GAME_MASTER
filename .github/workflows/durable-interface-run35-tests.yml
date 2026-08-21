@@ -7,7 +7,7 @@ on:
       - 'tools/ivdivo_durable_write_reconciler.py'
       - 'tools/ivdivo_interruption_learning.py'
       - 'tests/test_durable_transaction_interface.py'
-      - 'tests/test_session_resilience.py'
+      - 'tests/test_session_checkpoint.py'
       - 'tests/test_session_resilience_run33.py'
       - 'tests/test_registry_transaction.py'
       - 'schemas/IVDIVO_DURABLE_TRANSACTION_INTERFACE_SCHEMA_v1.json'
@@ -27,9 +27,15 @@ jobs:
         run: python -m pip install --upgrade pytest
       - name: Run Run35 convergence regressions
         run: python -m pytest -q tests/test_durable_transaction_interface.py
-      - name: Run inherited session resilience regressions
-        run: python -m pytest -q tests/test_session_resilience.py tests/test_session_resilience_run33.py
+      - name: Run inherited Run33 recovery tests
+        run: python -m unittest tests.test_session_resilience_run33 -v
+      - name: Run inherited Run32 checkpoint regression
+        run: python -m unittest tests.test_session_checkpoint -v
       - name: Run inherited registry transaction regressions
         run: python -m pytest -q tests/test_registry_transaction.py
+      - name: Validate registry family references
+        run: python tools/validate_improvement_registry_refs.py
+      - name: Validate portfolio resumability claim
+        run: python tools/validate_project_state_coverage.py
       - name: Validate new schema JSON
         run: python -m json.tool schemas/IVDIVO_DURABLE_TRANSACTION_INTERFACE_SCHEMA_v1.json >/dev/null
