@@ -1,0 +1,30 @@
+{
+  "project": "ABSOLUTE MATHEMATICS",
+  "batch": "GENESIS_TO_CORE_P097_P128_2026-08-21",
+  "scope": "re-audit from the first order/absolute-number intuition through v1.13 and prior Batch32",
+  "completed_prompt_range": "P097-P128",
+  "completed_prompts": 32,
+  "status_counts": {
+    "DERIVED": 15,
+    "KNOWN": 7,
+    "COUNTEREXAMPLE": 3,
+    "INCONCLUSIVE": 1,
+    "FAILED": 3,
+    "HYPOTHESIS": 3
+  },
+  "formal_core": "01_FORMAL_CORE_v3.md",
+  "fresh_experiments": "05_EXPERIMENT_RESULTS.json",
+  "formal_results": "02_FORMAL_RESULTS_P097_P128.md",
+  "next_prompt_range": "P129-P192",
+  "next_prompt_count": 64,
+  "authority_rules": [
+    "Never infer Promotion from compression alone.",
+    "Never infer primitive from single-target prediction.",
+    "Exact/approximate closure must be context and operation aware.",
+    "Order depth is admissibility-relative and subject to flattening.",
+    "G-Rise is language-relative until an invariant definability notion is proved.",
+    "Context-free compressed absolute number is rejected in general.",
+    "Finite upper state is optional, not guaranteed.",
+    "FAIL and counterexamples are authority, not discarded."
+  ]
+}
