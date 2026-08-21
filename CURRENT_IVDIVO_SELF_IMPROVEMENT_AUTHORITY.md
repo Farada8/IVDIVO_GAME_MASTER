@@ -1,6 +1,6 @@
 # CURRENT — IVDIVO SELF-IMPROVEMENT AUTHORITY
 
-**Status:** CURRENT ROUTER — v2 APPLIED / RUNTIME MODULE PROVISIONAL  
+**Status:** CURRENT ROUTER — v2 VERIFIED_CURRENT  
 **Updated:** 2026-08-21  
 **Scope:** whole-project improvement, with primary priority on BOOK PRODUCTION and LOCKED BOOK → AUDIO NOVEL PRODUCTION.
 
@@ -19,8 +19,9 @@
 11. `IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md` — delta intake/dedupe/universalization firewall.
 12. `IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md` — reference/book learning route.
 13. `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md` — cross-conversation learning/continuation.
-14. `tools/ivdivo_self_improvement.py` — registry/audit/queue utility; exact checkout runtime remains PROVISIONAL until smoke-tested.
-15. `CURRENT_IVDIVO_SYSTEM_STATE.json` — aggregate project pointer; rebase rather than overwrite when sibling dialogs advance it.
+14. `tools/ivdivo_self_improvement.py` — VERIFIED_CURRENT registry/audit/queue utility.
+15. `IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-21.md` — exact current runtime evidence.
+16. `CURRENT_IVDIVO_SYSTEM_STATE.json` — aggregate project pointer; rebase rather than overwrite when sibling dialogs advance it.
 
 Historical/base: `IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md`.
 
@@ -100,12 +101,20 @@ Changes to this engine pass the same lifecycle. It may simplify itself and remov
 
 ## CURRENT ACCEPTANCE STATUS
 
-Applied/read back: v2 architecture, config, dedicated state, Writing router, Audio feedback adapter, aggregate state, SI-0007 registry record, Drive mirrors, book/audio/productivity/research sensors, Best-Candidate/WIP guards, Learning Ledger/schema, Problem-Solving/Engine-Builder/Research Radar kernels and cross-domain Evaluation Matrix.
+**SI-0007 = VERIFIED_CURRENT.**  
+**SI-0006 = SUPERSEDED historical/base implementation.**
 
-Current candidate: `SI-0007 = APPLIED_UNVERIFIED`.
+Exact runtime evidence closed the previous final blocker:
+- utility Git blob SHA `0805fd0596a05c2b1f9cdd14bf6f2ce03a6cf358` matched the current GitHub blob before execution;
+- live registry Git blob SHA `fe1605a13da9d3b83e9005971f79bb99d6a39999` matched the current registry snapshot before execution;
+- registry audit PASS: 7 candidates;
+- `queue/next --query 'book audio production'` selected SI-0007;
+- a negative lifecycle fixture correctly blocked direct `VERIFIED_CURRENT` when `application_targets` and `verification_evidence` were missing, returning exit code 1.
 
-Remaining verification gate: exact current checkout runtime smoke for `tools/ivdivo_self_improvement.py`. A real checkout was attempted and failed because the execution environment could not resolve github.com. This is recorded as a tool limitation, not a fabricated PASS.
+Evidence: `IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-21.md`.
 
-Until exact utility smoke, **the v2 operating/state architecture is applied and usable, while the standalone CLI runtime module remains PROVISIONAL**. Final `VERIFIED_CURRENT` promotion waits on that evidence or a later evidence-backed modular acceptance decision.
+The previous DNS/clone limitation remains an environment limitation only; it no longer blocks runtime verification because exact byte identity was proven through Git blob SHA before execution.
+
+Operational status: **the v2 architecture, registry lifecycle utility, learning ledger, kernels, evaluation contract and current router are VERIFIED_CURRENT.** Future improvements continue through normal candidate/pilot/evidence/promotion gates; real book/audio/Human/market evidence remains separate and must never be fabricated.
 
 **FIRST MAKE BETTER STORIES. THEN MAKE BETTER AUDIO FROM THOSE STORIES. THEN MAKE THE WHOLE FACTORY BETTER.**
