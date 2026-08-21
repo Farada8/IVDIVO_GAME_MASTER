@@ -1,0 +1,38 @@
+{
+  "project": "ABSOLUTE MATHEMATICS",
+  "batch": "SEMANTIC_DYNAMIC_HIERARCHY_P225_P256_2026-08-21",
+  "completed_prompt_range": "P225-P256",
+  "completed_prompts": 32,
+  "status_counts": {
+    "DERIVED": 21,
+    "KNOWN": 6,
+    "NOVELTY_UNVERIFIED": 2,
+    "COUNTEREXAMPLE": 3
+  },
+  "formal_core": "04_SYNTHESIS/FORMAL_CORE_v5.md",
+  "formal_results": "03_THEOREMS/FORMAL_RESULTS_P225_P256.md",
+  "experiments": "02_EXPERIMENTS/EXPERIMENT_RESULTS_PART2.json",
+  "new_prompt_range": "P289-P352",
+  "new_prompt_count": 64,
+  "preexisting_unexecuted_queue": "P257-P288",
+  "new_primary_front": [
+    "P289",
+    "P297",
+    "P305",
+    "P313",
+    "P321",
+    "P329",
+    "P337",
+    "P345"
+  ],
+  "authority_rules": [
+    "Semantic state is context/intervention relative.",
+    "Passive prediction is insufficient for control-safe abstraction.",
+    "Approximate closure requires metric normalization, horizon and stability.",
+    "History and micro conditional information are separate sufficiency gates.",
+    "Hidden-state count is not predictive dimension.",
+    "Finite upper state may not exist.",
+    "Construction complexity is admissibility/resource relative and multidimensional.",
+    "FAIL/COUNTEREXAMPLE/NO-FINITE-STATE are legitimate authority outcomes."
+  ]
+}
