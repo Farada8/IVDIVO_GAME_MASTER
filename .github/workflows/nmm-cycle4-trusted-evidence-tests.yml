@@ -20,4 +20,5 @@ jobs:
         with:
           python-version: '3.11'
       - name: Run NMM Cycle4 trusted-evidence tests
-        run: python -m unittest AUDIO_PRODUCTION.NMM.CYCLE4_TRUSTED_EVIDENCE_2026-08-21.tests.test_nmm_cycle4 -v
+        working-directory: AUDIO_PRODUCTION/NMM/CYCLE4_TRUSTED_EVIDENCE_2026-08-21
+        run: python -m unittest tests.test_nmm_cycle4 -v
