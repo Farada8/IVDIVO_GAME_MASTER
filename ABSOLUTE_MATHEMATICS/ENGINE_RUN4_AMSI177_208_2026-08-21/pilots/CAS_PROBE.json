@@ -1,8 +1,8 @@
 {
   "schema": "absolute_math.run4.cas_probe/1.0",
-  "phase": "CREATED",
+  "phase": "FRESH_SHA_UPDATE_CONFIRMED",
   "base_main_sha": "e3047a227552477c39c7d6af549208d18afc3fcc",
   "branch": "absolute-math-run4-amsi177-208-2026-08-21",
-  "sequence": 1,
+  "sequence": 2,
   "purpose": "reversible branch-only stale-SHA and readback pilot"
 }
