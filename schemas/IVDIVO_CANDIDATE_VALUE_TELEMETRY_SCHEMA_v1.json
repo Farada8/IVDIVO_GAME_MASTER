@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IVDIVO Candidate Value Telemetry Input v1",
+  "type": "object",
+  "required": ["candidate_id", "telemetry"],
+  "properties": {
+    "candidate_id": {"type": "string"},
+    "telemetry": {
+      "type": "object",
+      "properties": {
+        "measurement_state": {"enum": ["COMPLETE", "PARTIAL", "UNMEASURED"]},
+        "true_positive_findings": {"type": "number", "minimum": 0},
+        "false_positive_findings": {"type": "number", "minimum": 0},
+        "accepted_repairs": {"type": "number", "minimum": 0},
+        "avoided_rework_cycles": {"type": "number", "minimum": 0},
+        "measured_minutes_saved": {"type": "number", "minimum": 0},
+        "measured_overhead_minutes": {"type": "number", "minimum": 0},
+        "new_artifacts": {"type": "number", "minimum": 0},
+        "new_prompts": {"type": "number", "minimum": 0},
+        "real_project_pilots": {"type": "number", "minimum": 0},
+        "independent_human_evidence_count": {"type": "number", "minimum": 0},
+        "regressions_introduced": {"type": "number", "minimum": 0},
+        "unsafe_or_unauthorized_actions_blocked": {"type": "number", "minimum": 0}
+      },
+      "required": ["measurement_state", "real_project_pilots"]
+    }
+  }
+}
