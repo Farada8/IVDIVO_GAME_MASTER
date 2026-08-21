@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "IVDIVO_IMPROVEMENT_REGISTRY_SCHEMA_v1",
+  "title": "IVDIVO Improvement Registry",
+  "type": "object",
+  "required": ["schema_version", "updated", "candidates"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "updated": {"type": "string"},
+    "engine_authority": {"type": "string"},
+    "candidates": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/candidate"}
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["source_type", "locator"],
+      "properties": {
+        "source_type": {"enum": ["FOUNDER", "PROJECT_CONVERSATION", "GITHUB", "GOOGLE_DRIVE", "FILE_LIBRARY", "EXTERNAL_MODEL", "HUMAN_SIGNAL", "MARKET_DATA", "PRODUCTION_FAILURE", "OTHER"]},
+        "locator": {"type": "string", "minLength": 1},
+        "version": {"type": ["string", "null"]},
+        "hash": {"type": ["string", "null"]},
+        "date": {"type": ["string", "null"]},
+        "notes": {"type": ["string", "null"]}
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "required": ["candidate_id", "title", "candidate_type", "status", "scope", "source_provenance", "problem_or_opportunity", "proposed_mechanism", "owner_role", "next_action", "next_gate", "last_movement", "application_targets", "protected_authorities"],
+      "properties": {
+        "candidate_id": {"type": "string", "pattern": "^SI-[0-9]{4,}$"},
+        "title": {"type": "string", "minLength": 3},
+        "candidate_type": {"enum": ["STORY_IDEA", "STORY_ENGINE", "CHARACTER_OR_RELATIONSHIP_MECHANISM", "WORLD_OR_SYSTEM_MECHANISM", "CRAFT_MECHANISM", "PROMPT", "PROGRAM_OR_CODE", "PROCESS_OR_ROUTER_RULE", "REPAIR_MECHANISM", "REFERENCE_INSIGHT", "EXTERNAL_MODEL_FINDING", "HUMAN_OR_MARKET_SIGNAL", "AUDIO_VISUAL_PRODUCTION_MECHANISM", "BUG_OR_FAILURE_PATTERN", "TOOLING_OR_AUTOMATION", "OTHER_IMPROVEMENT"]},
+        "status": {"enum": ["DISCOVERED", "CAPTURED", "DEDUPING", "DEVELOPING", "READY_FOR_PILOT", "PILOTING", "PILOT_PASS", "PILOT_FAIL", "PROMOTION_REVIEW", "PROMOTED_PROJECT", "PROMOTED_DOMAIN", "PROMOTED_UNIVERSAL", "APPLYING", "APPLIED_UNVERIFIED", "VERIFIED_CURRENT", "HOLD_WITH_TRIGGER", "REJECTED_WITH_REASON", "SUPERSEDED", "ROLLED_BACK"]},
+        "scope": {"enum": ["PROJECT_ONLY", "BOOK_OR_SERIES", "GENRE_OR_DOMAIN", "UNIVERSAL_IVDIVO", "REFERENCE_ONLY"]},
+        "source_provenance": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+        "problem_or_opportunity": {"type": "string", "minLength": 3},
+        "proposed_mechanism": {"type": "string", "minLength": 3},
+        "dedupe_relation": {"enum": ["NEW", "DUPLICATE", "EXTENSION", "COMPETING_ALTERNATIVE", "SUPERSEDING_CANDIDATE", "PROJECT_SPECIFIC_VARIANT"]},
+        "related_candidates": {"type": "array", "items": {"type": "string"}},
+        "expected_benefit": {"type": ["string", "null"]},
+        "evidence_state": {"enum": ["HYPOTHESIS", "INTERNAL_EVIDENCE", "INDEPENDENT_REVIEW", "PRODUCTION_EVIDENCE", "HUMAN_MARKET_EVIDENCE"]},
+        "priority_vector": {
+          "type": "object",
+          "properties": {
+            "impact": {"enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]},
+            "recurrence": {"enum": ["ONE_OFF", "RECURRING", "SYSTEMIC"]},
+            "effort": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+            "regression_risk": {"enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]},
+            "reversibility": {"enum": ["EASY", "MODERATE", "HARD", "IRREVERSIBLE"]},
+            "urgency": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+            "affected_surface": {"enum": ["LOCAL", "DOMAIN", "PORTFOLIO"]}
+          },
+          "additionalProperties": false
+        },
+        "development_contract": {"type": ["object", "null"]},
+        "pilot_evidence": {"type": "array", "items": {"type": "string"}},
+        "red_team_findings": {"type": "array", "items": {"type": "string"}},
+        "promotion_level": {"enum": ["NONE", "PROJECT", "DOMAIN", "UNIVERSAL"]},
+        "application_targets": {"type": "array", "items": {"type": "string"}},
+        "verification_evidence": {"type": "array", "items": {"type": "string"}},
+        "protected_authorities": {"type": "array", "items": {"type": "string"}},
+        "owner_role": {"type": "string", "minLength": 1},
+        "next_action": {"type": "string", "minLength": 1},
+        "next_gate": {"type": "string", "minLength": 1},
+        "hold_trigger": {"type": ["string", "null"]},
+        "terminal_reason": {"type": ["string", "null"]},
+        "last_movement": {"type": "string", "minLength": 1},
+        "notes": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
