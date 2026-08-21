@@ -1,0 +1,17 @@
+name: Business Engineering OS Cycle4
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_CANONICAL_MECHANISM_HARDENING_32_TO_64/**'
+      - '.github/workflows/business-engineering-os-cycle4.yml'
+jobs:
+  cycle4-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Cycle4 business engineering canaries
+        working-directory: BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_CANONICAL_MECHANISM_HARDENING_32_TO_64/engine
+        run: python -m unittest -v test_cycle4_business_engine.py
