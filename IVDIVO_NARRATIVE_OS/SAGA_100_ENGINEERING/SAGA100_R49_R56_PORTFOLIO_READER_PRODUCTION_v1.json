@@ -1,0 +1,79 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-21",
+  "status":"R49_R56_EXECUTED",
+  "R49_scheduler":{
+    "engine":"engine/portfolio_scheduler.py",
+    "weights":{"dependency_readiness":0.25,"asset_maturity":0.20,"civilization_need":0.15,"line_balance":0.10,"diversity":0.10,"evidence_need":0.10,"production_capacity_fit":0.10},
+    "hard_rule":"A score can order work inside an eligibility class but can never bypass Founder, authority, upstream-continuity, human-evidence or unresolved FATAL/MAJOR gates.",
+    "current_interpretation":[
+      {"project":"B02","lane":"EXTERNAL_EVIDENCE","story_asset_maturity":"HIGH","execution_gate":"HUMAN/EXTERNAL_FEEDBACK rather than more internal chapter generation"},
+      {"project":"B03","lane":"STORY_PRODUCTION_PREP","story_asset_maturity":"MEDIUM_HIGH","execution_gate":"portfolio precondition + Founder family continuity gate before prose"},
+      {"project":"B07","lane":"STORY_APPROVAL_CONTINUITY","story_asset_maturity":"HIGH_WORKING","execution_gate":"Founder story approval/continuity ports before canon lock"},
+      {"project":"B08","lane":"CROSSING_PREP","story_asset_maturity":"HIGH_WORKING_ARCHITECTURE","execution_gate":"B02-B07 upstream continuity substitutions"}
+    ]
+  },
+  "R50_near_term_12_slot_slate":{
+    "status":"FUNCTIONAL_CANDIDATE_NOT_PUBLICATION_LOCK",
+    "law":"Existing PROJECT_IDs are not renumbered; SAGA_SLOT order is logical architecture, not a command to reorder historical publication numbers.",
+    "slots":[
+      {"slot":"S100-C01-S","project":"B03 candidate","threshold":"T01 STANDING_CLASSIFICATION_LEGITIMATE_AUTHORITY","function":"Smith/OES professional matrix confronts a classification/authority blind spot","status":"HOLD_PROJECT_GATE"},
+      {"slot":"S100-C01-O","project":"B02","threshold":"T01","function":"lived Orbital civilization distinguishes technical competence from civic authority","status":"EXISTING_STORY_COMPLETE_DEVELOPMENT_GREEN"},
+      {"slot":"S100-C01-C","project":"B07 candidate","threshold":"T01","function":"inside Confederation, a category/standing failure becomes operational and legally bounded","status":"WORKING_FOUNDER_APPROVAL_REQUIRED"},
+      {"slot":"S100-C01-X","project":"B08 candidate","threshold":"T01","function":"shared emergency separates standing, expertise, jurisdiction and liability across lines","status":"UPSTREAM_CONTINUITY_HOLD"},
+      {"slot":"S100-C02-S","project":null,"threshold":"T02 AUTONOMY_CONSENT","function":"Smith/OES line tests intervention vs competent refusal without repeating B03 mechanism","status":"UNASSIGNED_FUNCTION_ONLY"},
+      {"slot":"S100-C02-O","project":null,"threshold":"T02","function":"Orbital ordinary-life conflict makes consent operational through body/neural/family/work systems","status":"UNASSIGNED_FUNCTION_ONLY"},
+      {"slot":"S100-C02-C","project":null,"threshold":"T02","function":"Confederation shows advanced consent protocols plus a real edge failure/cost","status":"UNASSIGNED_FUNCTION_ONLY"},
+      {"slot":"S100-C02-X","project":null,"threshold":"T02","function":"incompatible consent standards collide in one causally shared problem","status":"UNASSIGNED_DEPENDENCY_LOCKED"},
+      {"slot":"S100-C03-S","project":null,"threshold":"T03 PRIVACY_COGNITIVE_LIBERTY","function":"security need vs cognitive privacy in Smith professional arena","status":"UNASSIGNED_FUNCTION_ONLY"},
+      {"slot":"S100-C03-O","project":null,"threshold":"T03","function":"neural/predictive privacy becomes ordinary orbital school/work/family infrastructure","status":"UNASSIGNED_FUNCTION_ONLY"},
+      {"slot":"S100-C03-C","project":null,"threshold":"T03","function":"shared cognition with protected private domains and non-utopian abuse/failure","status":"UNASSIGNED_FUNCTION_ONLY"},
+      {"slot":"S100-C03-X","project":null,"threshold":"T03","function":"public safety needs information no polity has uncontested right to access","status":"UNASSIGNED_DEPENDENCY_LOCKED"}
+    ],
+    "excluded_from_forced_mapping":["B04 authority conflict","B05 default-only overlay","B06 source-recovery hold"],
+    "padding_forbidden":true
+  },
+  "R51_standalone_reader_entry_test":{
+    "result":"SPEC_READY",
+    "required":[
+      "Main hero/want/problem understandable from current book without prior-book synopsis.",
+      "Current-book opposition and stakes become legible before franchise history is required.",
+      "Essential prior facts are reintroduced through present consequence/action, not recap lecture.",
+      "No proper noun is required merely to recognize fandom continuity; reader can understand function before history.",
+      "Main conflict closes locally even if civilization/relationship history continues."
+    ],
+    "context_budget":"Target <=5 indispensable prior-saga facts for the main conflict; more may appear as optional texture/reward.",
+    "fail_if":["recap chapter required","main mystery answer depends on an unread earlier climax with no current evidence","series hook substitutes for resolution"]
+  },
+  "R52_saga_reader_reward_test":{
+    "result":"SPEC_READY",
+    "optional_reward_layers":["relationship history","institutional scar","changed law/procedure","place evolution","artifact/motif callback","old choice reinterpreted by consequence","generational echo"],
+    "law":"A returning reader may understand more, feel more or predict more, but a new reader must still understand what the current hero wants and why the current choice matters.",
+    "anti_fan_service":"Callback must alter present emotion/decision/evidence or be brief texture; otherwise cut it."
+  },
+  "R53_philosophical_repetition_detector":{
+    "vector":["human_pain","tempting_answer","wrong_strategy","hard_choice","price","closure_answer","institutional_delta","relationship_delta"],
+    "comparison_window":"previous 6 books plus previous book in same line",
+    "flag":"MAJOR if 5+ dimensions are functionally equivalent despite different lore; MEDIUM at 4; below 4 normally distinct subject to Red Team.",
+    "important":"Repeated civilization question can return later only if protagonist position, evidence, price and institutional context materially change."
+  },
+  "R54_power_inflation_detector":{
+    "tracks":["threat_scale","capability_scale","jurisdiction_scale","population_at_risk","irreversibility","human_intimacy_cost","institutional_response_capacity"],
+    "flag":"Escalation is suspicious when threat/capability grows >=2 ordinal levels while human/civilization question, decision complexity and lasting consequence do not grow/change.",
+    "safe_pattern":"Later books may be smaller in physical scale but deeper in rights/identity/relationship consequence.",
+    "forbidden_default":"Every Crossing must be bigger than the prior Crossing."
+  },
+  "R55_audio_downstream_contract":{
+    "handoff_requires":["locked/current manuscript authority","exact source/version/hash or Drive revision","speaker/character authority","protected clue/reveal ledger","pronunciation/terminology list","allowed performance transformations","forbidden story transformations"],
+    "audio_may_change":["performance","pause","prosody","bounded SFX/music/acoustic domain","segmentation for production"],
+    "audio_may_not_silently_change":["exact story fact","dialogue wording when exact-text protected","clue identity","relationship state","chronology","canon terminology","ending"],
+    "feedback_backflow":"Audio/human-listener comprehension failure may open a bounded writing review only through evidence -> diagnosis -> minimum effective repair -> story regression; audio preference alone does not reopen canon."
+  },
+  "R56_market_accessibility_adapter":{
+    "accepted_inputs":["editor/publisher feedback","beta/reader comprehension evidence","platform completion/retention evidence when real","audio-listener evidence","market positioning evidence"],
+    "may_influence":["packaging","synopsis/pitch","entry context","pacing if demonstrated","book/line emphasis","format/runtime","release sequence options"],
+    "may_not_auto_change":["canon facts","philosophical answer","character truth","locked climax","jurisdiction/technology rules"],
+    "routing":"Signal -> source/evidence class -> affected decision -> severity -> minimum intervention -> regression -> accept/hold/reject."
+  },
+  "aggregate_verdict":"PASS_R49_R56; near-term slate remains adaptive and gate-aware"
+}
