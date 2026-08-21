@@ -1,0 +1,42 @@
+{
+  "schema_version": "ivdivo.room917_execution_state/2.0",
+  "updated": "2026-08-21",
+  "project": "ROOM 917 CALLS AT MIDNIGHT",
+  "active_engine": "THE INSURABLE FIRE",
+  "delivery_mode": "FULL_AUDIO_DRAMA",
+  "story_status": "LOCKED",
+  "universal_audio_authority": "IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md",
+  "pilot_package": {
+    "name": "ROOM917_E01_03_V3_3_PILOT_COMPLETION_v1.9.zip",
+    "drive_id": "1cAPNfIpowl7UbWZYMZZXsE4Vipp1_mP-"
+  },
+  "status": "READY_FOR_USER_SIDE_S0_LIVE_RENDER",
+  "live_render_performed_in_chat": false,
+  "voice_lock": false,
+  "zero_cost_validation": {
+    "python_compile": "PASS",
+    "s0_dry_preview_jobs": 5,
+    "s0_dry_preview_network_calls": 0,
+    "s1_dry_preview_jobs": 15,
+    "s1_dry_preview_network_calls": 0,
+    "provider_contract_rechecked": "2026-08-21",
+    "provider_contract_result": "PASS_NO_RUNNER_REWRITE_REQUIRED"
+  },
+  "next_action": {
+    "stage": "S0_TECHNICAL_CANARY",
+    "jobs": 5,
+    "launcher": "RUN_ROOM917_S0_TECHNICAL_CANARY.ps1"
+  },
+  "after_pass": {
+    "stage": "S1_FAIR_ANCHOR_COMPARISON",
+    "jobs": 15,
+    "launcher": "RUN_ROOM917_S1_FAIR_ANCHORS.ps1"
+  },
+  "prohibited_until_real_audio_evidence": [
+    "VOICE_LOCK",
+    "FULL_E01_RENDER",
+    "E01_SCENE3_HARD_MIXED_PILOT",
+    "E04_E24_BATCH_RENDER"
+  ],
+  "secret_policy": "API_KEYS_NEVER_IN_GITHUB_DRIVE_JSON_PROMPTS_OR_CANON"
+}
