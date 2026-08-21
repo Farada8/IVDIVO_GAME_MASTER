@@ -1,3 +1,4 @@
+import math
 import unittest
 from pathlib import Path
 import sys
@@ -63,6 +64,21 @@ def classification(start=0.25, end=1.25):
     }
 
 
+def authorize(**overrides):
+    kwargs = {
+        "classification": classification(),
+        "lineage": lineage(),
+        "source_master_expected_sha256": SHA_A,
+        "source_master_actual_sha256": SHA_A,
+        "asset_binding": binding(),
+        "patch_id": "P1",
+        "source_peak_dbfs": -8.0,
+        "added_signal_peak_dbfs": -24.0,
+    }
+    kwargs.update(overrides)
+    return authorize_patch(**kwargs)
+
+
 class PostRenderContractTests(unittest.TestCase):
     def test_legacy_interval_read_alias_normalizes(self):
         out = canonical_interval({"start_s": 1, "end_s": 2.5})
@@ -94,50 +110,48 @@ class PostRenderContractTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "ASSET_RIGHTS_NOT_CLEARED"):
             validate_asset_binding(binding(rights_status="UNKNOWN"))
 
-    def test_positive_patch_gain_forbidden(self):
-        with self.assertRaisesRegex(ValueError, "POSITIVE_PATCH_GAIN_FORBIDDEN"):
-            validate_asset_binding(binding(gain_db=2.0))
+    def test_positive_gain_is_not_universal_failure(self):
+        out = validate_asset_binding(binding(gain_db=2.0))
+        self.assertEqual(out["status"], "PASS")
+        self.assertEqual(out["gain_db"], 2.0)
+
+    def test_nonfinite_gain_fails(self):
+        with self.assertRaisesRegex(ValueError, "INVALID_NUMBER:gain_db"):
+            validate_asset_binding(binding(gain_db=math.nan))
 
     def test_noncanonical_asset_sample_rate_holds(self):
         with self.assertRaisesRegex(ValueError, "ASSET_SAMPLE_RATE_NOT_CANONICAL"):
             validate_asset_binding(binding(sample_rate_hz=44100))
 
+    def test_headroom_uses_amplitude_sum_not_db_addition(self):
+        out = validate_headroom(source_peak_dbfs=-8.0, added_signal_peak_dbfs=-24.0)
+        self.assertEqual(out["status"], "PASS")
+        self.assertEqual(out["prediction_model"], "WORST_CASE_COHERENT_AMPLITUDE_SUM")
+
     def test_headroom_preflight_holds_possible_clipping(self):
-        out = validate_headroom(source_true_peak_dbfs=-1.2, predicted_added_peak_db=0.5)
+        out = validate_headroom(source_peak_dbfs=-1.2, added_signal_peak_dbfs=-10.0)
         self.assertEqual(out["status"], "HOLD_HEADROOM")
+        self.assertGreater(out["predicted_peak_dbfs"], -1.0)
 
     def test_patch_authorization_passes_with_complete_evidence(self):
-        out = authorize_patch(
-            classification=classification(),
-            lineage=lineage(),
-            source_master_expected_sha256=SHA_A,
-            source_master_actual_sha256=SHA_A,
-            asset_binding=binding(),
-            patch_id="P1",
-            source_true_peak_dbfs=-8.0,
-            predicted_added_peak_db=1.0,
-        )
+        out = authorize()
         self.assertEqual(out.status, "AUTHORIZED")
         self.assertEqual(len(out.authorization_hash), 64)
 
     def test_classifier_nomination_does_not_override_master_identity(self):
-        out = authorize_patch(
-            classification=classification(), lineage=lineage(),
-            source_master_expected_sha256=SHA_A, source_master_actual_sha256=SHA_B,
-            asset_binding=binding(), patch_id="P1",
-            source_true_peak_dbfs=-8, predicted_added_peak_db=1,
-        )
+        out = authorize(source_master_actual_sha256=SHA_B)
         self.assertEqual(out.status, "HOLD")
         self.assertIn("MASTER_IDENTITY_MISMATCH", out.reasons)
+
+    def test_unsafe_headroom_blocks_even_with_valid_classifier(self):
+        out = authorize(source_peak_dbfs=-1.2, added_signal_peak_dbfs=-10.0)
+        self.assertEqual(out.status, "HOLD")
+        self.assertIn("HEADROOM_NOT_PROVEN", out.reasons)
 
     def test_unresolved_protected_pause_blocks_unrelated_auto_patch(self):
         protected = block("PB", protected=True)
         protected.pop("start_seconds"); protected.pop("end_seconds"); protected["evidence_grade"] = "ROOM_CONTRACT_REQUIRED"
-        out = authorize_patch(
-            classification=classification(), lineage=lineage([block(), protected]),
-            source_master_expected_sha256=SHA_A, source_master_actual_sha256=SHA_A,
-            asset_binding=binding(), patch_id="P1", source_true_peak_dbfs=-8, predicted_added_peak_db=1,
-        )
+        out = authorize(lineage=lineage([block(), protected]))
         self.assertIn("PROTECTED_TIMING_INCOMPLETE", out.reasons)
 
     def test_patch_overlapping_protected_range_blocks(self):
@@ -145,19 +159,13 @@ class PostRenderContractTests(unittest.TestCase):
             "id": "SIL1", "evidence_grade": "LIVE_TIMELINE", "source": "timeline",
             "start_seconds": 0.5, "end_seconds": 0.8,
         }
-        out = authorize_patch(
-            classification=classification(), lineage=lineage(protected_global=[protected]),
-            source_master_expected_sha256=SHA_A, source_master_actual_sha256=SHA_A,
-            asset_binding=binding(), patch_id="P1", source_true_peak_dbfs=-8, predicted_added_peak_db=1,
-        )
+        out = authorize(lineage=lineage(protected_global=[protected]))
         self.assertIn("PATCH_OVERLAPS_PROTECTED_RANGE", out.reasons)
 
     def test_cross_bed_domain_patch_blocks(self):
-        out = authorize_patch(
+        out = authorize(
             classification=classification(0.5, 2.5),
             lineage=lineage([block("B1", 0, 2, "ROOM_A"), block("B2", 2, 4, "ROOM_B")]),
-            source_master_expected_sha256=SHA_A, source_master_actual_sha256=SHA_A,
-            asset_binding=binding(), patch_id="P1", source_true_peak_dbfs=-8, predicted_added_peak_db=1,
         )
         self.assertIn("PATCH_CROSSES_BED_DOMAINS", out.reasons)
 
@@ -173,15 +181,16 @@ class PostRenderContractTests(unittest.TestCase):
         }])
         self.assertEqual(out["status"], "HOLD")
 
-    def test_two_independent_real_projects_can_reach_promotion_candidate(self):
+    def test_two_independent_real_projects_only_create_promotion_eligibility(self):
         common = {
             "synthetic_only": False, "locked_source": True, "real_audio_bytes": True,
             "real_defect_caught": True, "selective_repair_regression_pass": True,
             "human_listen_pass": True,
         }
         out = promotion_gate([{"project_id": "P1", **common}, {"project_id": "P2", **common}])
-        self.assertEqual(out["status"], "DOMAIN_PROMOTED")
+        self.assertEqual(out["status"], "DOMAIN_PROMOTION_ELIGIBLE")
         self.assertEqual(out["qualified_projects"], ["P1", "P2"])
+        self.assertFalse(out["machine_may_change_current_authority"])
 
 
 if __name__ == "__main__":
