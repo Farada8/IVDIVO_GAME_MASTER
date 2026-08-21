@@ -1,0 +1,74 @@
+{
+  "schema_version": "ivdivo.audio.wave10.proof_ledger/1.0",
+  "date": "2026-08-21",
+  "proofs": [
+    {
+      "id": "W10-PROOF-001",
+      "class": "AUTHORITY_READBACK",
+      "claim": "Wave10 branch was cut from fresh main e3047a227552477c39c7d6af549208d18afc3fcc.",
+      "status": "PASS_REAL_INPUT",
+      "external_truth": false
+    },
+    {
+      "id": "W10-PROOF-002",
+      "class": "PARALLEL_DEDUPE",
+      "claim": "PR143 is diverged and behind current main; Cycle7 already exists on main, so no blind merge or duplicate recovery runtime is authorized.",
+      "status": "PASS_REAL_INPUT",
+      "external_truth": false
+    },
+    {
+      "id": "W10-PROOF-003",
+      "class": "CODE_CONTRACT",
+      "claim": "ProviderSnapshot repeatability distinguishes account identity, capability inventory drift and volatile usage; auto substitution is always false.",
+      "status": "CODED_CI_PENDING",
+      "external_truth": false
+    },
+    {
+      "id": "W10-PROOF-004",
+      "class": "CODE_CONTRACT",
+      "claim": "Provider inventory compiler accepts only a fresh validated ProviderSnapshot and emits real IDs from that snapshot without artistic selection or lock.",
+      "status": "CODED_CI_PENDING",
+      "external_truth": false
+    },
+    {
+      "id": "W10-PROOF-005",
+      "class": "CODE_CONTRACT",
+      "claim": "Cast readiness requires NARRATOR/ETHAN/AOIFE candidate IDs from the same inventory, explicit TTS model binding and real-audio human evidence before lock eligibility.",
+      "status": "CODED_CI_PENDING",
+      "external_truth": false
+    },
+    {
+      "id": "W10-PROOF-006",
+      "class": "PROVIDER",
+      "claim": "A real authenticated current provider account snapshot exists for this execution block.",
+      "status": "HOLD_EXTERNAL",
+      "external_truth": true,
+      "observed_events": 0
+    },
+    {
+      "id": "W10-PROOF-007",
+      "class": "HUMAN_REVIEW",
+      "claim": "Real candidates pass pronunciation/multi-state/pair/fatigue/performance human evidence.",
+      "status": "HOLD_HUMAN_AUDIO",
+      "external_truth": true,
+      "observed_events": 0
+    },
+    {
+      "id": "W10-PROOF-008",
+      "class": "LIVE_AUDIO",
+      "claim": "LESSON ZERO RB001/RB002/RB003 were rendered with durable live lineage.",
+      "status": "HOLD_DEPENDENCY",
+      "external_truth": true,
+      "observed_events": 0
+    },
+    {
+      "id": "W10-PROOF-009",
+      "class": "MEASURED_ECONOMICS",
+      "claim": "Measured provider/manual economics exists for the accepted Lesson Zero canary.",
+      "status": "HOLD_DEPENDENCY",
+      "external_truth": true,
+      "observed_events": 0
+    }
+  ],
+  "law": "Engineering/CI proofs may prove deterministic mechanics only. They cannot satisfy provider, human, live-audio, alignment, economics, market or Founder authority classes."
+}
