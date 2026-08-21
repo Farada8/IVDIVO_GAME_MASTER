@@ -11,9 +11,10 @@ from hashlib import sha256
 import json
 from typing import Any, Iterable
 
-SCHEMA_VERSION = "ivdivo.audio.live_evidence_lineage/1.0"
-ESCROW_VERSION = "ivdivo.audio.live_evidence_escrow/1.0"
+SCHEMA_VERSION = "ivdivo.audio.live_evidence_lineage/1.1"
+ESCROW_VERSION = "ivdivo.audio.live_evidence_escrow/1.1"
 PROVIDER_STATES = {"ACCEPTED", "REJECTED", "AMBIGUOUS"}
+SPEND_STATES = {"ACCEPTED", "REJECTED", "AMBIGUOUS"}
 
 
 def _canonical(obj: Any) -> bytes:
@@ -35,17 +36,33 @@ def _require_sha(record: dict[str, Any], key: str) -> str:
     return str(value).lower()
 
 
+def _require_ref(record: dict[str, Any], key: str) -> str:
+    value = record.get(key)
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(f"{key.upper()}_REQUIRED")
+    return value.strip()
+
+
 def compile_lineage(record: dict[str, Any]) -> dict[str, Any]:
-    required_text = ("project_id", "episode_id", "block_id", "request_hash", "provider", "provider_state")
+    required_text = (
+        "project_id", "episode_id", "block_id", "request_hash", "provider", "provider_state", "spend_ledger_state"
+    )
     for key in required_text:
         if not isinstance(record.get(key), str) or not str(record[key]).strip():
             raise ValueError(f"{key.upper()}_REQUIRED")
     state = str(record["provider_state"]).upper()
+    spend_state = str(record["spend_ledger_state"]).upper()
     if state not in PROVIDER_STATES:
         raise ValueError("PROVIDER_STATE_INVALID")
+    if spend_state not in SPEND_STATES:
+        raise ValueError("SPEND_LEDGER_STATE_INVALID")
+    if spend_state != state:
+        raise ValueError("PROVIDER_SPEND_STATE_MISMATCH")
     request_hash = _require_sha(record, "request_hash")
     source_sha = _require_sha(record, "source_sha256")
     capability_hash = _require_sha(record, "capability_snapshot_sha256")
+    request_ref = _require_ref(record, "request_ref")
+    spend_ledger_ref = _require_ref(record, "spend_ledger_ref")
 
     provider_request_id = record.get("provider_request_id")
     audio_sha = record.get("audio_sha256")
@@ -53,10 +70,13 @@ def compile_lineage(record: dict[str, Any]) -> dict[str, Any]:
     charge_ref = record.get("charge_ref")
     audio_ref = record.get("audio_ref")
     alignment_ref = record.get("alignment_ref")
+    response_ref = record.get("response_ref")
 
     if state == "ACCEPTED":
         if not provider_request_id:
             raise ValueError("ACCEPTED_PROVIDER_REQUEST_ID_REQUIRED")
+        if not response_ref:
+            raise ValueError("ACCEPTED_RESPONSE_DURABLE_REF_REQUIRED")
         if not _valid_sha(audio_sha):
             raise ValueError("ACCEPTED_AUDIO_SHA256_REQUIRED")
         if not audio_ref:
@@ -68,6 +88,8 @@ def compile_lineage(record: dict[str, Any]) -> dict[str, Any]:
     elif state == "AMBIGUOUS":
         if audio_sha or alignment_sha:
             raise ValueError("AMBIGUOUS_EVIDENCE_CANNOT_ASSERT_ACCEPTED_MEDIA")
+    elif state == "REJECTED" and not response_ref:
+        raise ValueError("REJECTED_RESPONSE_OR_FAILURE_REF_REQUIRED")
 
     payload = {
         "schema_version": SCHEMA_VERSION,
@@ -78,15 +100,16 @@ def compile_lineage(record: dict[str, Any]) -> dict[str, Any]:
         "request_hash": request_hash,
         "provider": str(record["provider"]),
         "provider_state": state,
+        "spend_ledger_state": spend_state,
         "provider_request_id": provider_request_id,
         "capability_snapshot_sha256": capability_hash,
         "audio_sha256": str(audio_sha).lower() if _valid_sha(audio_sha) else None,
         "alignment_sha256": str(alignment_sha).lower() if _valid_sha(alignment_sha) else None,
         "audio_ref": audio_ref,
         "alignment_ref": alignment_ref,
-        "request_ref": record.get("request_ref"),
-        "response_ref": record.get("response_ref"),
-        "spend_ledger_ref": record.get("spend_ledger_ref"),
+        "request_ref": request_ref,
+        "response_ref": response_ref,
+        "spend_ledger_ref": spend_ledger_ref,
         "charge_ref": charge_ref,
         "canonical_asset_status": record.get("canonical_asset_status", "HOLD"),
         "production_take_status": "NOT_ACCEPTED",
@@ -106,6 +129,8 @@ def verify_lineage(lineage: dict[str, Any]) -> dict[str, Any]:
     unsigned.pop("lineage_sha256", None)
     if not _valid_sha(expected) or canonical_hash(unsigned) != expected:
         raise ValueError("LIVE_LINEAGE_HASH_MISMATCH")
+    if lineage.get("provider_state") != lineage.get("spend_ledger_state"):
+        raise ValueError("PROVIDER_SPEND_STATE_MISMATCH")
     if lineage.get("secret_persisted") is not False:
         raise ValueError("LIVE_LINEAGE_SECRET_BOUNDARY_VIOLATION")
     if lineage.get("take_lock") is not False or lineage.get("production_take_status") != "NOT_ACCEPTED":
