@@ -1,0 +1,45 @@
+{
+  "project": "THE WIFE AT HIS WEDDING",
+  "date": "2026-08-21",
+  "scope": "E91-E95_WAVE2_32_EXECUTIONS",
+  "status": "WORKING_COMPLETE_GO_TO_E96_AFTER_FRESH_GATE",
+  "founder_locked": false,
+  "prompt_wave": {
+    "source_queue_prompts": "01-32 of prior 64",
+    "prompts_executed": 32,
+    "prompts_total_in_wave": 32,
+    "new_prompts_created": 64,
+    "new_prompts_executed": 0
+  },
+  "story_frontier": {
+    "last_completed_episode": "E95",
+    "next_episode": "E96",
+    "episodes": {
+      "E91": {"spoken_words": 1176, "status": "WORKING_COMPLETE"},
+      "E92": {"spoken_words": 1104, "status": "WORKING_COMPLETE"},
+      "E93": {"spoken_words": 1138, "status": "WORKING_COMPLETE"},
+      "E94": {"spoken_words": 1100, "status": "WORKING_COMPLETE"},
+      "E95": {"spoken_words": 1101, "status": "WORKING_COMPLETE"}
+    }
+  },
+  "gates": {
+    "runtime": "PASS_ALL",
+    "red_team": {"fatal": 0, "major": 0, "medium": 3},
+    "human_signal": "NOT_RUN",
+    "jurisdiction_legal_review": "NOT_RUN",
+    "real_listener_audio_validation": "NOT_RUN"
+  },
+  "medium_watches": [
+    "DOCUMENT_ARCHIVE_DENSITY",
+    "MARA_ACKNOWLEDGEMENT_IMPERATIVE_AND_INSTITUTIONAL_CORPUS_RHETORIC",
+    "JURISDICTION_SPECIFIC_LEGAL_PROCEDURE"
+  ],
+  "highest_unblocked_obligation": "RUN_WAVE3_PROMPT_01_FRESHNESS_DESCENDANT_REUSE_GATE_THEN_E96",
+  "prohibited": [
+    "REOPEN_E61_E90_FIRE_ARC_WITHOUT_NEW_EVIDENCE",
+    "USE_BIOMETRIC_CARD_AS_AUTOMATIC_BIRTH_MARRIAGE_MATERNITY_OR_CIVIL_PROOF",
+    "USE_LILY_AS_FORENSIC_EVIDENCE",
+    "SILENTLY_PROMOTE_WORKING_TO_CANON_OR_FOUNDER_LOCK",
+    "CLAIM_HUMAN_SIGNAL_OR_REAL_AUDIO_VALIDATION_WITHOUT_EVIDENCE"
+  ]
+}
