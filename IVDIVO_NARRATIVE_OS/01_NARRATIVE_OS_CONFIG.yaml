@@ -6,24 +6,37 @@ system:
   parent_canon: IVDIVO_WRITING_PRODUCTION_CANON.md
   saga_bible: IVDIVO_MASTER_SAGA_BIBLE_v1.0.md
   specialist_bank: IVDIVO_WRITERS_ROOM_50_PROMPTS.md
+  current_entry_router: CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md
+  current_system_state: CURRENT_IVDIVO_SYSTEM_STATE.json
 
 conversation_bootstrap:
   required_for_book_work: true
   required_for_substantive_ivdivo_work_when_persisted_state_can_change_answer: true
   identify_before_work:
-    - active_book_or_line
+    - active_project_or_book_or_line
+    - active_branch
+    - current_authority
+    - current_source_version_hash_when_applicable
     - current_production_stage
+    - last_verified_frontier
+    - last_completed_artifact
+    - open_gates
+    - next_unblocked_obligation
     - last_unfinished_decision
   mandatory_prompt_load:
     - IVDIVO_NARRATIVE_OS/00_NARRATIVE_OS_CANON.md
     - IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md
     - IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md
     - IVDIVO_NARRATIVE_OS/09_UNIVERSAL_BOOK_WORKROOM_BOOT.md
+    - IVDIVO_NARRATIVE_OS/12_UNIVERSAL_WORKROOM_CONTINUATION_PROMPT_v1.0.md
+    - IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md
+    - IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md
     - IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md
     - IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md
-    - IVDIVO_NARRATIVE_OS/16_AGENT_PROMPTS_CONTINUOUS_SYNC_SUPPLEMENT_v1.0.md
-    - IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md
     - IVDIVO_NARRATIVE_OS/10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md
+  conditional_runtime_standards:
+    - IVDIVO_NARRATIVE_OS/14_TARGETED_REPAIR_PATCH_CONTRACT_STANDARD_v1.0.md
+    - IVDIVO_NARRATIVE_OS/15_ADVERSARIAL_10_LENS_REVIEW_GATE_v1.0.md
   connected_sources_when_relevant:
     - project_conversations
     - github_main
@@ -35,6 +48,7 @@ conversation_bootstrap:
   unavailable_source_rule: MARK_UNKNOWN_DO_NOT_RECONSTRUCT_CANON_FROM_MEMORY
   continuation_rule: AUTO_RESTORE_DELTA_SYNC_AND_CONTINUE_HIGHEST_UNBLOCKED_OBLIGATION
   explicit_resume_tokens_are_required_heartbeat: false
+  verify_persisted_write_before_claiming_sync: true
 
 continuous_sync:
   enabled: true
@@ -312,6 +326,8 @@ reference_policy:
     - story_engine
   source_completeness_required: true
   duplicate_source_weight: 0
+  reuse_story_engine_v4_1_abstraction_stack_first: true
+  fresh_source_pass_only_when_current_extraction_is_insufficient_or_new_evidence_is_material: true
   never_copy:
     - plot
     - distinctive_scene_sequence
@@ -333,6 +349,10 @@ stop_rules:
   - do_not_lock_books_5_to_10_from_present_forecasts
   - do_not_require_founder_heartbeat_for_unblocked_continuation
   - do_not_count_duplicate_or_derived_model_agreement_as_independent_evidence
+  - do_not_create_parallel_router_when_current_authority_can_absorb_improvement
+  - do_not_claim_sync_before_persisted_write_is_verified
+  - do_not_promote_external_model_output_without_validation
+  - do_not_manufacture_human_signal
 
 continuation_commands:
   - "и"
@@ -344,3 +364,4 @@ continuation_commands:
   - "WRITERS’ ROOM"
   - "RED TEAM"
   - "BOOK STUDIO"
+  - "AUDIO CONTINUE"
