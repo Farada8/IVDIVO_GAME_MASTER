@@ -21,9 +21,11 @@ Current canonical GitHub entry stack:
 10. `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md`
 11. `IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md`
 12. `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md`
-13. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
-14. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
-15. current book/project overlay + source-of-truth/state/manuscript files.
+13. `IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md`
+14. `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json`
+15. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
+16. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
+17. current book/project overlay + source-of-truth/state/manuscript files.
 
 Google Drive and ChatGPT File Library are required connected working/reference sources when they can materially affect the current decision. Founder newest instruction outranks persisted mirrors until synchronized.
 
@@ -35,7 +37,7 @@ Google Drive and ChatGPT File Library are required connected working/reference s
 
 Then run:
 
-`FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE CHECK -> CHAT-ONLY DISCOVERY/INGESTION GATE -> STALE-WORK GATE -> EXECUTE HIGHEST UNBLOCKED OBLIGATION -> VERIFY -> PERSIST -> RE-READ STATE -> CONTINUE UNTIL REAL GATE`.
+`FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE CHECK -> CHAT-ONLY DISCOVERY/INGESTION GATE -> IMPROVEMENT REGISTRY SWEEP -> STALE-WORK GATE -> EXECUTE HIGHEST UNBLOCKED OBLIGATION -> VERIFY -> PERSIST -> RE-READ STATE -> CONTINUE UNTIL REAL GATE`.
 
 Fail closed on authority ambiguity. Do not reconstruct canon from chat memory when verified persisted state exists.
 
@@ -64,6 +66,28 @@ Promotion route:
 `DISCOVER -> LOCATE PERSISTED ARTIFACT -> VERIFY STATUS/VERSION/HASH/GATES -> COMPARE AGAINST CURRENT -> ABSTRACT PROJECT-SPECIFIC CONTENT -> RED TEAM/REGRESSION AS NEEDED -> CLASSIFY -> PROMOTE / PROJECT-SPECIFIC / HOLD / REJECT -> UPDATE CURRENT POINTERS`.
 
 A sibling-chat statement without persisted evidence is `DISCOVERY_ONLY`, never automatic authority. Do not create parallel routers when an existing CURRENT authority can be upgraded.
+
+## SELF-IMPROVEMENT ENGINE / ANTI-LOSS LAW
+
+Current authority: `IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md`.
+Live machine registry: `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json`.
+Schema: `31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json`.
+Executable utility: `tools/ivdivo_self_improvement.py`.
+
+A good idea is not considered preserved merely because it appeared in a chat, draft or folder. It must enter a tracked lifecycle:
+
+`DISCOVER -> CAPTURE -> DEDUPE -> CLASSIFY -> DEVELOP -> EVIDENCE -> PILOT/CANARY -> RED TEAM/REGRESSION -> PROMOTION DECISION -> APPLY -> VERIFY -> MONITOR -> RETAIN OR ROLLBACK`.
+
+At every substantial work block, run a bounded improvement-registry sweep:
+- capture materially new story/system/process candidates;
+- surface existing candidates relevant to the active task;
+- advance unblocked candidate work without starving the active story/book;
+- never auto-promote from model enthusiasm, recency or filename;
+- persist disposition and next action.
+
+Anti-loss invariant: every non-terminal candidate must have provenance, owner_role, next_action and next_gate. `VERIFIED_CURRENT` requires application targets and verification evidence. `HOLD_WITH_TRIGGER` requires an explicit reopen trigger.
+
+Improvement promotion never outranks Founder instruction, canon, current project source-of-truth or human-evidence firewalls.
 
 ## CHAT-ONLY INGESTION ENGINE
 
@@ -129,6 +153,7 @@ Persist when materially changed:
 - prompts/process;
 - FATAL/MAJOR register;
 - accepted/rejected external critique;
+- improvement registry state;
 - exact next unblocked obligation;
 - locks/blockers.
 
@@ -143,6 +168,8 @@ If the active stage is audio, hand off to `CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHO
 **STORY FIRST. CHARACTER SECOND. WORLD THROUGH STORY. SAGA THROUGH COMPLETED BOOKS.**
 
 **THE PROJECT LEARNS ACROSS ITS CONVERSATIONS.**
+
+**A GOOD IDEA IS NOT SAVED UNTIL ITS STATE, EVIDENCE, NEXT ACTION AND APPLICATION PATH ARE SAVED.**
 
 **PERSISTED STATE DRIVES THE WORK. REPEATED “И” IS OPTIONAL SHORTHAND, NOT WORKFLOW PLUMBING.**
 
