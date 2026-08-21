@@ -3,6 +3,7 @@
 **Status:** CURRENT OPERATIONAL HANDOFF — NOT STORY CANON  
 **Updated:** 2026-08-21  
 **Machine state:** `CURRENT_IVDIVO_SYSTEM_STATE.json`  
+**Current portfolio overlay:** `CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json`  
 **Project-specific D10 state:** `PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json`  
 **Machine execution pointer:** `CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json`
 
@@ -11,9 +12,11 @@
 Do not make the Founder restate recoverable work and do not wait for another `и` when the next obligation is already authorized, unambiguous, unblocked and executable.
 
 Before substantive work:
-`CURRENT AUTHORITY -> IF PRIOR CHAT TRANSCRIPT IS PASTED THEN FULL-CHAT RECOVERY -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> CURRENT_IVDIVO_SYSTEM_STATE.json -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY + LEARNING LEDGER SWEEP -> SELF-IMPROVEMENT PRIORITY REBASE -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT UNTIL REAL GATE`.
+`CURRENT AUTHORITY -> IF PRIOR CHAT TRANSCRIPT IS PASTED THEN FULL-CHAT RECOVERY -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> CURRENT_IVDIVO_SYSTEM_STATE.json -> CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json FOR PORTFOLIO SLICE -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY + LEARNING LEDGER SWEEP -> SELF-IMPROVEMENT PRIORITY REBASE -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT UNTIL REAL GATE`.
 
 A sibling-chat statement is discovery context only until its actual result/persisted artifact/status/version/gates are located and verified. If accessible, recover actual chat-only work before asking the Founder to repeat it.
+
+The large aggregate `CURRENT_IVDIVO_SYSTEM_STATE.json` may contain independently updated domains. Do not destructively replace it merely to fix one stale portfolio slice. For the current D09/D10/D01 routing delta, the portfolio overlay above supersedes only the named aggregate portfolio fields; project-specific authority/state remains higher than both.
 
 ## Full-chat emergency recovery
 
