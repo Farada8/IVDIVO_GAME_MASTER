@@ -1,0 +1,6 @@
+{
+  "open":["AUTHENTICATED_PROVIDER_SNAPSHOT","VOICE_BINDINGS","REAL_CAST_AUDITIONS","HARD_PILOT_AUDIO","REAL_ALIGNMENT","DEVICE_QC","BLIND_HUMAN","SPECIALIST_HOLDS","MEASURED_ECONOMICS"],
+  "deterministic_closed":true,
+  "release":"NO_GO",
+  "law":"Missing proof remains open; classes do not substitute for one another."
+}
