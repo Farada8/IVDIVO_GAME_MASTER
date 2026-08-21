@@ -1,0 +1,43 @@
+{
+  "schema_version": "ivdivo.self_improvement.cycle8/1.0",
+  "status": "WORKING_BOUNDED_EVIDENCE_EXECUTION_NOT_CURRENT_AUTHORITY",
+  "date": "2026-08-21",
+  "base_main_sha": "e3047a227552477c39c7d6af549208d18afc3fcc",
+  "drive_folder_id": "1LiRGoNIUkIz88MKQ_wljW3vAzZFK3bdj",
+  "prompt_source_drive_id": "1P98_C_1FNFTGIr3NF4GpqrFYRvg--PYjZZqSuv5FIGg",
+  "executed_range": "C8-01..C8-32",
+  "executed_count": 32,
+  "next_prompts_designed": 64,
+  "new_si_candidate_id": null,
+  "story_canon_mutation": false,
+  "local_regression": {"passed": 24, "failed": 0},
+  "status_counts": {
+    "PASS_ENGINEERING": 2,
+    "PASS_REUSE_CURRENT": 1,
+    "PASS_ENGINEERING_CANARY": 1,
+    "HOLD_REAL_HUMAN": 3,
+    "HOLD_AUTHENTICATED_PROVIDER": 2,
+    "HOLD_MEASURED_DATA": 1,
+    "HOLD_REAL_INCIDENT": 1,
+    "PASS_CONTROLLED_ONLY": 1,
+    "HOLD_DEPENDENCY_CLOSURE": 1,
+    "HOLD_SECOND_MODEL": 1,
+    "PASS_MACHINE_INTERNAL": 1,
+    "PASS_REAL_FRONTIER_ROUTING": 1,
+    "PASS_FAIL_CLOSED": 16
+  },
+  "current_evidence_gates": {
+    "D04_HUMAN_SIGNAL": "HOLD_REAL_HUMAN",
+    "D01_HUMAN_SIGNAL": "HOLD_REAL_HUMAN",
+    "AUTH_PROVIDER": "HOLD",
+    "MEASURED_ECONOMICS": "HOLD",
+    "SI0014_GENUINE_INTERRUPTION": "HOLD",
+    "MF_C03_HUMAN_EDITOR": "HOLD",
+    "SECOND_MODEL_PROMPT_IR": "HOLD"
+  },
+  "computed_next_unreserved_si_id": "SI-0016_NOT_ALLOCATED",
+  "governor": {
+    "highest_information_overall": "D04_HUMAN_SIGNAL",
+    "highest_admissible_internal": "SI0015_FRESH_REBASE_REVIEW"
+  }
+}
