@@ -4,6 +4,28 @@
 **Updated:** 2026-08-21  
 **Scope:** ALL IVDIVO audio developments
 
+## Current entry points
+
+Google Drive root router:
+`CURRENT — IVDIVO AUDIO PRODUCTION AUTHORITY`  
+Drive ID: `1B_iDVPXR0JgyKFb6mMohXnzzrkEGnZRptE4s_z1nM_E`
+
+Current Drive studio index:
+`00 — IVDIVO AUDIO STUDIO INDEX v3.3 CURRENT`  
+Drive ID: `1dq5lBirQtQ7uiPgqzokc09WUpEYHVL09vNpYxotbBvY`
+
+Current new-chat boot:
+`02 — IVDIVO AUDIO PRODUCTION NEW-CHAT BOOT v3.3`  
+Drive ID: `15A8-QZD3uMcJLnIardDZKlrPJGkpyD74_luTPngarJc`  
+GitHub: `IVDIVO_AUDIO_NEW_CHAT_BOOT_v3.3.md`
+
+Current project overlay template:
+`01 — IVDIVO AUDIO PROJECT OVERLAY TEMPLATE v1.1`  
+Drive ID: `1Stx3R6qP4bIoyrRpivCLhrgU7rvz-xg9Df0jMZ9N-io`  
+GitHub: `IVDIVO_AUDIO_PROJECT_OVERLAY_TEMPLATE_v1.1.md`
+
+Future work must check the Drive root router for a newer authority before assuming this GitHub pointer is still current.
+
 ## Authority order
 
 1. Founder’s newest direct instruction.
@@ -11,7 +33,7 @@
 3. Current consolidated universal audio authority:
    - `IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md`
    - Google Drive file ID: `1ZG15kNcGjUKR_OKHQoXcqfrfVddlX6ma`
-   - Status in source: CURRENT CONSOLIDATED UNIVERSAL AUDIO PRODUCTION AUTHORITY — AUDITED + MICROPHONE CHOREOGRAPHY INTEGRATED.
+   - Source status: CURRENT CONSOLIDATED UNIVERSAL AUDIO PRODUCTION AUTHORITY — AUDITED + MICROPHONE CHOREOGRAPHY INTEGRATED.
 4. `00 — IVDIVO AUDIO STUDIO INDEX v3.2 AUDITED` as audited base router where not superseded by v3.3.
    - Drive ID: `1laR1lLJ8FbqOz3Xbt493DTTPgFx63kYV-i_QdoO0qRo`
 5. `00 — IVDIVO AUDIO PRODUCTION INDEX v2.3` where still referenced by current v3.x authority.
@@ -23,13 +45,6 @@
 8. Project-specific audio overlay.
 9. Current Director Score / render plan / cue sheets / manifests / accepted assets / takes / timelines / mixes / QC.
 10. Archive/superseded material only when explicitly referenced as a base mechanism.
-
-## Google Drive current router
-
-`CURRENT — IVDIVO AUDIO PRODUCTION AUTHORITY`  
-Drive ID: `1B_iDVPXR0JgyKFb6mMohXnzzrkEGnZRptE4s_z1nM_E`
-
-Future work must check that Drive router for a newer authority before assuming this GitHub pointer is still current.
 
 ## Universal scope
 
@@ -57,14 +72,25 @@ No DRY_RUN build can release. Required live/reused evidence must be provenance-v
 
 Never transfer names, provider voice IDs, culprit/solution, distinctive clue chains, signature sound motifs, relationship timing, chronology or obsolete branch facts between projects without explicit authority.
 
-`REFERENCE -> ABSTRACT MECHANISM -> REMOVE PROJECT-SPECIFIC CONTENT -> TRANSFORM FOR ACTIVE PROJECT -> WORKING APPLICATION`
+`REFERENCE -> ABSTRACT MECHANISM -> REMOVE PROJECT-SPECIFIC CONTENT -> TRANSFORM FOR ACTIVE PROJECT -> REBIND THROUGH PROJECT OVERLAY`
 
 ## Provider law
 
 ElevenLabs and other providers are replaceable execution backends, not canon authority. API keys/secrets must never be stored in canon or production documents.
 
+## Narrative OS handoff
+
+For books/saga work entering audio, load:
+`IVDIVO_NARRATIVE_OS/12_AUDIO_PRODUCTION_ROUTING_CURRENT.md`.
+
+Book/story authority remains higher for protected text and story facts. Audio production must not silently reopen locked development.
+
+## Historical/base layer
+
+`IVDIVO_AUDIO_PRODUCTION_CANON_AND_BOOT_OS_v1.0.md` remains a historical/base layer only where not superseded by the current v3.3 authority. It is not the top router.
+
 ## Continuation law
 
-When Founder says `и / дальше / продолжай / делай / работай`, restore current universal + project authority, identify the last completed artifact and execute the highest unblocked production obligation. Do not restart locked story development without new evidence.
+When Founder says `и / дальше / продолжай / делай / работай / AUDIO CONTINUE`, restore current universal + project authority, identify the last completed artifact and open gates, then execute the highest unblocked production obligation. Do not restart locked story development without new evidence.
 
-**NO SILENT CANON CHANGES.**
+**NO SILENT CANON CHANGES. FAIL CLOSED ON AUTHORITY AMBIGUITY.**
