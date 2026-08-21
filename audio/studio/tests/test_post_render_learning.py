@@ -94,7 +94,7 @@ class PostRenderLearningTests(unittest.TestCase):
             {"project_id": "P1", **common},
             {"project_id": "P2", **common},
         ])
-        self.assertEqual(out["status"], "DOMAIN_PROMOTED")
+        self.assertEqual(out["status"], "DOMAIN_PROMOTION_ELIGIBLE")
         self.assertEqual(out["self_improvement_decision"], "ACCEPT_DOMAIN_MECHANISM_CANDIDATE_FOR_FOUNDER_REVIEW")
         self.assertFalse(out["machine_may_change_current_authority"])
 
