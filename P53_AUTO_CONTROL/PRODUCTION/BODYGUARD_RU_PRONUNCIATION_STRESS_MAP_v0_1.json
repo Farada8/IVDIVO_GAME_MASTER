@@ -1,0 +1,15 @@
+{
+  "artifact": "BODYGUARD_RU_PRONUNCIATION_STRESS_MAP_v0_1",
+  "status": "WORKING_PRE_TTS",
+  "items": [
+    {"token":"Naomi","ru":"Наоми","risk":"LOW","note":"Keep stable stress and no theatrical foreigning."},
+    {"token":"Eli","ru":"Эли","risk":"MEDIUM","note":"Choose one stable stress/pronunciation for Russian production."},
+    {"token":"Daniel","ru":"Дэниел","risk":"LOW","note":"Lock spelling/pronunciation across episodes."},
+    {"token":"11:43","ru":"одиннадцать сорок три","risk":"LOW","note":"Threat must sound like a clock time, not a date/number string."},
+    {"token":"IEM","ru_candidates":["ай-и-эм","IEM as production acronym"],"risk":"HIGH","note":"Native professional QA required before line lock."},
+    {"token":"bodypack","ru_candidates":["бодипак","поясной передатчик"],"risk":"HIGH","note":"Terminology + pronunciation linked."},
+    {"token":"talkback","ru_candidates":["толкбэк","служебная связь"],"risk":"HIGH","note":"If English loan retained, pronunciation must sound professional rather than performative."},
+    {"token":"standby / ack / GO","ru_candidates":["retain professional English where natural","controlled Russian equivalents"],"risk":"HIGH","note":"Must preserve three distinct protocol states."}
+  ],
+  "rule":"pronunciation map is versioned per locale and must be attached to synthesis provenance"
+}
