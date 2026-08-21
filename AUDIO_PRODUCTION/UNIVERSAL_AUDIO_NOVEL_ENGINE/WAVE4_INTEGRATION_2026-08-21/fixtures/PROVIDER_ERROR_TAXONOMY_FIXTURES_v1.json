@@ -1,0 +1,18 @@
+{
+  "schema_version": "ivdivo.audio.provider_error_fixtures/1.0",
+  "status": "SANITIZED_CONTRACT_FIXTURES_NOT_PROVIDER_LIVE_EVIDENCE",
+  "cases": [
+    {"id":"auth_401","status":401,"code":null,"message":"unauthorized","expected_category":"AUTH","expected_retryable":false},
+    {"id":"auth_403","status":403,"code":null,"message":"forbidden","expected_category":"AUTH","expected_retryable":false},
+    {"id":"rate_429","status":429,"code":null,"message":"rate limited","expected_category":"RATE_LIMIT","expected_retryable":true},
+    {"id":"timeout_504","status":504,"code":"TIMEOUT","message":"gateway timeout","expected_category":"TIMEOUT","expected_retryable":true},
+    {"id":"invalid_422","status":422,"code":"INVALID_REQUEST","message":"invalid payload","expected_category":"INVALID_REQUEST","expected_retryable":false},
+    {"id":"voice_missing","status":400,"code":"VOICE_NOT_FOUND","message":"voice missing","expected_category":"VOICE","expected_retryable":false},
+    {"id":"model_missing","status":400,"code":"MODEL_NOT_FOUND","message":"model missing","expected_category":"MODEL","expected_retryable":false},
+    {"id":"alignment_bad","status":400,"code":"ALIGNMENT_SCHEMA","message":"alignment unavailable","expected_category":"ALIGNMENT","expected_retryable":false},
+    {"id":"format_bad","status":400,"code":"AUDIO_FORMAT_UNSUPPORTED","message":"format unsupported","expected_category":"FORMAT","expected_retryable":false},
+    {"id":"quota_credit","status":400,"code":"QUOTA","message":"insufficient credits","expected_category":"QUOTA","expected_retryable":false},
+    {"id":"server_503","status":503,"code":null,"message":"service unavailable","expected_category":"PROVIDER","expected_retryable":true}
+  ],
+  "evidence_boundary": "These cases exercise the stable internal taxonomy using sanitized shapes. They are not claimed as a freshly captured ElevenLabs error corpus."
+}
