@@ -11,9 +11,33 @@ Do not make the Founder restate recoverable work and do not wait for another `и
 
 Before substantive work:
 
-`CURRENT AUTHORITY -> CURRENT_IVDIVO_SYSTEM_STATE.json -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY + LEARNING LEDGER SWEEP -> SELF-IMPROVEMENT PRIORITY REBASE -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT UNTIL REAL GATE`
+`CURRENT AUTHORITY -> IF PRIOR CHAT TRANSCRIPT IS PASTED THEN FULL-CHAT RECOVERY -> CURRENT_IVDIVO_SYSTEM_STATE.json -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY + LEARNING LEDGER SWEEP -> SELF-IMPROVEMENT PRIORITY REBASE -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT UNTIL REAL GATE`
 
 A sibling-chat statement is discovery context only until its actual result/persisted artifact/status/version/gates are located and verified. If accessible, recover actual chat-only work before asking the Founder to repeat it.
+
+## Full-chat emergency recovery
+
+Current protocol: `IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md`.
+Drive mirror: `1MsB3B0Byh4AlCMLtmPde9rXguzaejwUswBD5qPM8W50`.
+
+Founder workflow `OLD CHAT -> Ctrl+A -> Ctrl+C -> NEW CHAT -> paste -> продолжай` is explicitly supported.
+
+The receiving GPT/Claude/Grok/Codex session must not ask Founder to manually identify what matters. It must:
+- classify transcript completeness;
+- recover explicit Founder directives and chronology;
+- extract artifact references and work-completed claims;
+- verify any “saved / GitHub updated / locked / PASS / Claude verified” claims against actual persisted sources;
+- recover fully present unsaved substantive content as `CHAT_ONLY_CANDIDATE`;
+- keep claim/summary-only unrecovered work as `DISCOVERY_ONLY`;
+- semantic-dedupe against current/newer work;
+- persist accepted project state/artifacts on correct controlling surfaces;
+- route reusable system learnings through the current Improvement Registry/Learning Ledger;
+- process the final tail of oversized transcripts before `INGESTION_COMPLETE`;
+- never invent missing exact details;
+- never persist API keys/passwords/tokens/secrets from copied transcripts;
+- continue actual production from the reconciled frontier after recovery.
+
+The pasted transcript is a recovery corpus, not a new canon and not a competing authority store.
 
 ## Current portfolio directive
 
@@ -87,11 +111,14 @@ If an external AI discovers a reusable prompt/process/program/craft mechanism, r
 
 Parallel models may work only on independent PASS-gated dependency branches. Merge through artifacts/hashes/manifests, never conversational consensus.
 
+If an entire external-AI conversation is pasted, run Full-Chat Recovery first, then convert relevant material into bounded persisted evidence/handoffs. Do not treat transcript length as authority.
+
 ## Self-improvement / anti-loss engine — CURRENT v2
 
 Current router: `CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md`.
 Current governing engine: `IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md`.
 Core kernels: `IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md`.
+Transcript recovery module: `IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md`.
 Machine state: `CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json`.
 Machine config: `SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json`.
 Improvement registry: `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json`.
@@ -107,11 +134,11 @@ Priority order:
 `P0 AUTHORITY/INTEGRITY -> P1 STRONG COMPLETE BOOKS -> P2 LOCKED BOOK TO HIGH-QUALITY AUDIO -> P3 PRODUCTION PERFORMANCE -> P4 ENGINES/TOOLS/PROMPTS -> P5 RESEARCH/LEARNING -> P6 BROADER IVDIVO`.
 
 Operating loop:
-`RESTORE -> DELTA/FRESHNESS -> IMPROVEMENT REGISTRY -> LEARNING LEDGER -> BOTTLENECK -> RETRIEVE KNOWN GOOD MECHANISMS -> EXECUTE PRIMARY PRODUCTION -> RECORD REAL DEFECTS/SUCCESSES -> ADVANCE ONE JUSTIFIED IMPROVEMENT -> PILOT/RED TEAM -> APPLY -> VERIFY -> PERSIST -> CONTINUE`.
+`RESTORE -> FULL-CHAT RECOVERY IF TRIGGERED -> DELTA/FRESHNESS -> IMPROVEMENT REGISTRY -> LEARNING LEDGER -> BOTTLENECK -> RETRIEVE KNOWN GOOD MECHANISMS -> EXECUTE PRIMARY PRODUCTION -> RECORD REAL DEFECTS/SUCCESSES -> ADVANCE ONE JUSTIFIED IMPROVEMENT -> PILOT/RED TEAM -> APPLY -> VERIFY -> PERSIST -> CONTINUE`.
 
 WIP guard: one primary meta-integration at a time; up to two dependency-independent bounded pilots. Meta-work must not starve story/audio production unless it blocks P0–P2 or Founder explicitly switches focus.
 
-Evidence classes stay separate: automated tests do not prove literary quality; model review is not Human Signal; dry run is not live provider proof; predicted market quality is not real market behavior.
+Evidence classes stay separate: automated tests do not prove literary quality; model review is not Human Signal; dry run is not live provider proof; predicted market quality is not real market behavior. A pasted transcript is a recovery evidence surface, not authority.
 
 A useful idea is not saved merely because it is mentioned. Non-terminal candidates require provenance, owner, next action and next gate. Promotion requires application targets; VERIFIED_CURRENT requires verification evidence; HOLD requires a trigger; terminal states require reasons where applicable.
 
@@ -142,6 +169,8 @@ This is executable implementation below the current Narrative/Audio/Self-Improve
 
 The read-only continuation resolver may return CONTINUE only when no blocker exists, continuation is explicitly enabled, repeated continuation is explicitly not required, and the declared next action explicitly has `safe=true`, `zero_cost=true`, `reversible=true`, `tool_executable_here=true`. Missing fields fail closed. It does not call providers, spend credits or mutate canon.
 
+Full-chat transcript recovery is currently a higher-level operational protocol layered over this v11.2 machine execution. Existing chat-only ingestion/dedupe contracts are reusable implementation primitives; a future machine upgrade may compile the entire 18B recovery ledger if real usage demonstrates need.
+
 ## Runtime craft deltas from current reference sweep
 
 Current Runtime Craft Addendum internal v1.3 includes:
@@ -153,7 +182,7 @@ These are abstract mechanisms from REFERENCE ONLY craft sources and must not reo
 
 ## Improvement / promotion law
 
-When a newer mechanism is found in another project/dialog:
+When a newer mechanism is found in another project/dialog/transcript:
 
 `DISCOVER -> VERIFY/RECOVER ACTUAL RESULT -> SEMANTIC DEDUPE -> ABSTRACT PROJECT-NEUTRAL CONTRACT -> RED TEAM/PILOT AS NEEDED -> CLASSIFY -> PROMOTE / PROJECT-SPECIFIC / HOLD / REJECT -> WRITE THROUGH -> UPDATE ROUTERS + MACHINE STATE -> READBACK VERIFY`.
 
