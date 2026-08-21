@@ -1,0 +1,16 @@
+{
+  "schema_version": "room917.current_post_render_engineering_pointer/2.0",
+  "updated": "2026-08-21T18:37:00+01:00",
+  "project": "ROOM917",
+  "episode": "E01",
+  "status": "PROJECT_ENGINEERING_PILOT_PASS_PRODUCTION_DATA_GATE_OPEN",
+  "toolkit_path": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/",
+  "signal_analyzer_dependency": "AUDIO_PRODUCTION/ROOM917/TOOLS/P003A2_MASTER_ESCROW_v1/p003a2_interval_analyzer.py",
+  "semantic_lineage": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/examples/ROOM917_E01_S01_S02_SEMANTIC_CUE_LINEAGE_v1.json",
+  "engine_pipeline": ["MASTER_BYTES","SEMANTIC_CUE_LINEAGE","ACCEPTED_OR_LIVE_TIMING","P003A2_SIGNAL_INTERVALS","EVIDENCE_CLASSIFICATION","P004A_REPAIR_PLAN","PATCH_RENDER","BYTE_REGRESSION","HUMAN_P003B","COMMERCIAL_ABC"],
+  "validation": {"unit_tests": "5_PASS", "synthetic_authorized_patch_chain": "PASS", "unauthorized_change_negative_test": "FAIL_AS_REQUIRED", "production_semantic_blocks": 13},
+  "real_gate": "EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP",
+  "self_improvement_candidate": "SI-0008",
+  "promotion_status": "PROJECT_PILOT_PASS_DOMAIN_PROMOTION_HOLD_FOR_SECOND_PROJECT_REPLICATION",
+  "protected": ["LOCKED_STORY","SCENE3_V1_3E_LINEAGE","NO_FAKE_HUMAN_PASS","NO_BLANKET_FILL","NO_SCALE_UNTIL_E01_V2_PROVEN"]
+}
