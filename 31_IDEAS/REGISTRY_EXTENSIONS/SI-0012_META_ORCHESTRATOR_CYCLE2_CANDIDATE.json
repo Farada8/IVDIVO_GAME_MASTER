@@ -1,0 +1,57 @@
+{
+  "candidate_id": "SI-0012",
+  "title": "Prompt Router / Meta-Orchestrator execution layer derived from 32→64 cycles",
+  "candidate_type": "PROMPT_ORCHESTRATION_AND_EXECUTION_LAYER",
+  "status": "PILOTING",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type":"FOUNDER","locator":"2026-08-21 directives: develop/execute 32 prompts, analyze, persist, derive 64; system-wide not book/audio-only","date":"2026-08-21","notes":"Direct Founder instruction"},
+    {"source_type":"GITHUB","locator":"SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE2_32_TO_64/","version":"Cycle2","hash":"merge:850085a8b26a517e82b1f3654c8ce054d8322d0c","date":"2026-08-21","notes":"Merged whole-system Cycle 2 evidence"},
+    {"source_type":"GOOGLE_DRIVE","locator":"1WjrET2saDfF6_Dv8hP7qXLD9glBYG0Fn","version":"Cycle2","hash":"cfa2a79c41ad66aefba007639aaa70dfd9cfe17a14a87251a77e42ef04a01dd9","date":"2026-08-21","notes":"Cycle 2 durable folder"},
+    {"source_type":"GITHUB","locator":"SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE3_SELECTED32_TO_64/","version":"Cycle3","date":"2026-08-21","notes":"Real book/audio/state/transaction pilots"}
+  ],
+  "problem_or_opportunity": "IVDIVO has strong authorities and domain engines but still needs durable normalized execution between CURRENT surfaces, task packets, tools, evidence and write-through without repeated Founder routing burden.",
+  "proposed_mechanism": "Extend Self-Improvement v2/current machine execution with CURRENT Surface Scan -> State Adapter -> Shared Facts -> Obligation DAG -> Prompt IR -> pre-tool guards -> execution -> readback -> transactional persistence -> telemetry/evidence -> learning -> rebase -> next route.",
+  "dedupe_relation": "EXTENSION_OF_SI_0007",
+  "related_candidates": ["SI-0007","SI-0003","SI-0004","SI-0010"],
+  "expected_benefit": "Reduce stale work, context duplication, unsafe concurrent writes and manual routing while keeping P1 books and P2 book-to-audio above meta-work.",
+  "evidence_state": "ENGINEERING_AND_PRODUCTION_ROUTING_EVIDENCE",
+  "priority_vector": {"impact":"CRITICAL","recurrence":"SYSTEMIC","effort":"HIGH","regression_risk":"MEDIUM","reversibility":"MODERATE","urgency":"HIGH","affected_surface":"PORTFOLIO"},
+  "development_contract": {
+    "cycle2_completed_runs": 32,
+    "cycle2_bounded_engineering_tests": "12/12 PASS",
+    "cycle3_real_pilots_completed": ["State Adapter Book","State Adapter Audio","State Adapter Engine","State Adapter Research","Shared Fact Book-to-Audio","Prompt IR migration","Live GitHub stale-write guard","Live partial-write detection"],
+    "still_required": ["packaged executable integration","fresh package regression","two-model parity trial","human reader/listener evidence","live provider evidence","normalized production economics"]
+  },
+  "pilot_evidence": [
+    "Cycle2 12/12 deterministic engineering suite PASS.",
+    "Cycle3 D10 state normalization preserved Founder/project authority and custody/romance hard lock.",
+    "Cycle3 ROOM917 state normalization preserved exact master SHA and real P003A blocker without S0/S1 regression.",
+    "Cycle3 NMM hash-bound exact-text audio manifest/block pilot preserved source and occurrence hashes.",
+    "Cycle3 live GitHub old-SHA mutation returned HTTP409 and preserved committed bytes.",
+    "Cycle3 partial-write injection persisted REPAIR_REQUIRED instead of false success."
+  ],
+  "red_team_findings": [
+    "Do not promote the whole orchestration layer because bounded pilots pass.",
+    "Do not create a parallel top-level authority.",
+    "Human/provider/market evidence cannot be synthesized.",
+    "Recursive prompt multiplication must stop when production pilots have higher information value.",
+    "Candidate ID collision discovered during C3-38: prior Meta-Orchestrator candidate incorrectly reused SI-0008, already occupied by transcript recovery; this record corrects it to SI-0012."
+  ],
+  "promotion_level": "NONE",
+  "application_targets": ["current machine-execution compatibility layer","State Adapter/Prompt IR/transaction modules","Unified telemetry/evidence bridge","context compaction after equivalence canaries"],
+  "verification_evidence": [
+    "Cycle2 merge 850085a8b26a517e82b1f3654c8ce054d8322d0c",
+    "Cycle3 selected32 persisted execution folder",
+    "C3-31 live GitHub stale-write canary",
+    "C3-36 live partial-write failure injection"
+  ],
+  "protected_authorities": ["Founder newest instruction","Story-first/P1 priority","locked project canon","Current Audio authority","human/provider/market evidence firewalls","SI-0008 transcript recovery identity"],
+  "owner_role": "Meta-Showrunner / A00 Router / Execution Architect",
+  "next_action": "Package the minimum accepted compatibility modules only after Cycle3 synthesis; then return execution capacity to D10 text completion and real book-to-audio pilots.",
+  "next_gate": "MINIMAL_META_ORCHESTRATOR_PACKAGE_PLUS_REAL_P1_P2_TELEMETRY",
+  "hold_trigger": null,
+  "terminal_reason": null,
+  "last_movement": "2026-08-21",
+  "notes": "ID migrated from conflicting SI-0008 to SI-0012 during C3-38. Transcript recovery retains SI-0008 as the earlier verified candidate."
+}
