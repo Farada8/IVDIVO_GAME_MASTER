@@ -32,7 +32,7 @@
         "recovery_readback_verified": {"type": "boolean"},
         "project_state_before": {"type": ["string", "null"]},
         "project_state_after": {"type": ["string", "null"]},
-        "source_evidence_refs": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}}
+        "source_evidence_refs": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
       },
       "additionalProperties": true
     }
