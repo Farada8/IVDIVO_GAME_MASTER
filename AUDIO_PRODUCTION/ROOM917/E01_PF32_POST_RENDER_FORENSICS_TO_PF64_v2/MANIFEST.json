@@ -1,0 +1,38 @@
+{
+  "schema_version": "ivdivo.room917.pf32_pf64/1.0",
+  "date": "2026-08-21",
+  "project": "ROOM917",
+  "episode": "E01",
+  "topic": "POST_RENDER_FORENSICS_ROOM_BED_FOLEY_MUSIC_SELECTIVE_REPAIR",
+  "pf32": {
+    "created": 32,
+    "executed": 32,
+    "status_counts": {
+      "PASS": 25,
+      "SPEC_READY_EXECUTION_BLOCKED": 3,
+      "BLOCKED_REAL_EVIDENCE": 1,
+      "DESIGN_READY_HUMAN_GATE": 1,
+      "TEMPLATE_READY_PATCH_BLOCKED": 1,
+      "BLOCKED_BY_CURRENT_GATE": 1
+    }
+  },
+  "derived_pf64": {
+    "created": 64,
+    "executed": 0,
+    "status": "WORKING_CANDIDATE_NEXT_CYCLE"
+  },
+  "evidence_basis": [
+    "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
+    "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003A_PRE_SCENE3_DENSITY_EVALUATION_v1.md"
+  ],
+  "protected": [
+    "SCENE3_V1_3E_LINEAGE",
+    "LOCKED_STORY",
+    "NO_SCALE_UNTIL_E01_V2_PROVEN"
+  ],
+  "current_blocker": "MASTER_BYTES_OR_EXACT_INTERVAL_MAP",
+  "next_action": "P003A2 exact interval localization from immutable master or trusted interval map",
+  "live_provider_calls": 0,
+  "human_listen_claimed": false,
+  "invented_timestamps": false
+}
