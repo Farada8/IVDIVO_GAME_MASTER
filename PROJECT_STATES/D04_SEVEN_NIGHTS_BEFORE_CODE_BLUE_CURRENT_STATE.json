@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.1",
+  "updated": "2026-08-21",
+  "status": "CURRENT_PROJECT_DOWNSTREAM_STATE_NOT_STORY_CANON",
+  "project_id": "D04",
+  "title": "SEVEN NIGHTS BEFORE CODE BLUE",
+  "authority_note": "Founder newest instruction and locked/current project story authority outrank this routing state. This file exists to prevent duplicate downstream work across dialogs and AIs.",
+  "story_status": "SEASON_ONE_STORY_COMPLETE_FINAL_STORY_GATE_PASS",
+  "episodes": "E01-E24",
+  "story_gate": {
+    "status": "PASS",
+    "fatal": 0,
+    "major": 0,
+    "drive_id": "18a0vJrN1XCNd21NTTiAkorNt7iDhoPb8RQ3POfx5lDI",
+    "title": "SEVEN NIGHTS BEFORE CODE BLUE — FINAL STORY GATE — PRE-RECORDING AUTHORIZATION — v1.0"
+  },
+  "recording_master": {
+    "status": "READY",
+    "drive_id": "1fewLvu_DpSL8H6dkdy9E5TprUWtgH1Clqq5m_gvNBJ0",
+    "title": "SEVEN NIGHTS BEFORE CODE BLUE — SEASON ONE RECORDING MASTER — E01–E24 — v1.0",
+    "text_scope": "E01-E24"
+  },
+  "audio_production_pack": {
+    "status": "READY_FOR_CASTING_AND_PRODUCTION",
+    "drive_folder_id": "1wV-Zxcf4BsY_SWwVbsNXM2xd0thT9TYY",
+    "title": "AUDIO PRODUCTION PACK — SEVEN NIGHTS BEFORE CODE BLUE"
+  },
+  "release_market_pack": {
+    "status": "READY_FOR_ASSET_PRODUCTION_AND_AB_TEST_PREP",
+    "drive_folder_id": "1IKKKYYphTvSkMxO5ilvB_lPl__5owcRr",
+    "title": "RELEASE & MARKET PACKAGE — SEVEN NIGHTS BEFORE CODE BLUE"
+  },
+  "live_audio_status": "NOT_CLAIMED_NOT_YET_PROVEN",
+  "voice_binding_status": "UNLOCKED_NO_PROVIDER_VOICE_IDS_CANONIZED",
+  "visual_identity_status": "PROMPT_AND_MOODBOARD_STAGE_NO_FINAL_CHARACTER_IDENTITY_LOCK_RECORDED",
+  "protected_audio_facts": [
+    "NORMAL_TRANSFER_MUST_DIFFER_FROM_SECOND_TRANSFER_IN_MONO_AND_PHONE_PLAYBACK",
+    "KEY_RADIO_LINE_EXACT: Hold the second transfer.",
+    "MOSS_MUST_NOT_BE_VILLAIN_CODED_BEFORE_EVIDENCE",
+    "ROWAN_MUST_NOT_CARRY_ERASED_AFFECTION_INTO_NEW_CYCLE",
+    "FINAL_NON_RESET_IS_PROVED_BY_ORDINARY_CONTINUITY_BEFORE_MUSIC"
+  ],
+  "next_unblocked_obligation": "RUN_PROVIDER_NEUTRAL_CASTING_AUDITIONS_AND_ZERO_COST_AUDIO_PREFLIGHT_FROM_LOCKED_RECORDING_MASTER; IN_PARALLEL ESTABLISH_FINAL_VISUAL_IDENTITY_LOCK BEFORE SCALING KEY_ART_OR_RUNWAY_ASSETS",
+  "parallel_safe_branches": [
+    "AUDIO_CASTING_AND_PROVIDER_PREFLIGHT",
+    "SOUND_REFERENCE_PROTOTYPE_NORMAL_TRANSFER_VS_SECOND_TRANSFER",
+    "VISUAL_CHARACTER_IDENTITY_LOCK_AND_KEY_ART_AB_VARIANTS",
+    "PLATFORM_COPY_METADATA_FINALIZATION"
+  ],
+  "hard_stops": [
+    "DO_NOT_CLAIM_LIVE_PROVIDER_RENDER_WITHOUT_REAL_PROVIDER_EVIDENCE",
+    "DO_NOT_LOCK_VOICE_FROM_ONE_ATTRACTIVE_SAMPLE",
+    "DO_NOT_REOPEN_STORY_TEXT_FOR_DOWNSTREAM_PROVIDER_CONVENIENCE",
+    "DO_NOT_SCALE_VIDEO_ASSETS_BEFORE_CHARACTER_VISUAL_CONTINUITY_IS_LOCKED",
+    "HUMAN_SIGNAL_REMAINS_EXTERNAL_EVIDENCE"
+  ],
+  "continuation_policy": {
+    "repeated_short_command_required": false,
+    "restore_and_continue_highest_unblocked_obligation": true,
+    "persist_material_frontier_after_work": true
+  }
+}
