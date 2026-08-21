@@ -1,0 +1,15 @@
+{
+  "schema_version": "ivdivo.audio.dependency_map/1.0",
+  "project_id": "LESSON_ZERO_RU_AUDIO",
+  "scene_id": "CH01_S02",
+  "binding:NARRATOR": ["CH01_S02_RB001", "CH01_S02_RB002", "CH01_S02_RB003"],
+  "binding:ETHAN": ["CH01_S02_RB001", "CH01_S02_RB002"],
+  "binding:AOIFE": ["CH01_S02_RB001", "CH01_S02_RB002"],
+  "pronunciation_version": ["CH01_S02_RB001", "CH01_S02_RB003"],
+  "acoustic_domain:OUTDOOR_REFLECTING_POOL_INTIMATE": ["CUE_008", "CUE_009", "CUE_010", "CUE_011"],
+  "notes": [
+    "Wave4 Prompt 24 explicitly requires RB001/RB003 invalidation with RB002 reusable for pronunciation-version changes.",
+    "Binding invalidation is role-scoped rather than whole-chapter scoped.",
+    "No live descendants exist yet because live canary has not run."
+  ]
+}
