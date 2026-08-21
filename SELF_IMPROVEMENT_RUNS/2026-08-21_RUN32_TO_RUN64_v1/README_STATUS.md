@@ -1,0 +1,1 @@
+This run directory records a Founder-requested 32-card execution cycle and the derived 64-card candidate pack. Run history may be kept on main; candidate authority changes require separate review/pilot.
