@@ -34,7 +34,7 @@
   },
   "h_generation_delta": {
     "SI-0010": "READY_FOR_PILOT — atomic shard transaction + rollback + deterministic compaction implementation and CI pending",
-    "SI-0013": "READY_FOR_PILOT — durable project-state coverage / portfolio resumability gate; D06-D08 recovered, D01 explicitly blocked",
+    "SI-0013": "READY_FOR_PILOT — durable project-state coverage / portfolio resumability gate; all 12 required projects currently have PASS-like durable routes; portfolio claim is PASS_FULL",
     "SI-0014": "READY_FOR_PILOT — session checkpoint + durable multi-store recovery stack; real interruption evidence still required"
   },
   "migration_note": "The monolithic base registry is a compatibility/read model until a deterministic compaction build validates all base+extension IDs, emits input/output hashes, passes roundtrip/readback regression, and switches pointers transactionally. Candidate shard visibility does not promote candidate status.",
