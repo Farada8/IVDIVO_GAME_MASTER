@@ -16,7 +16,7 @@ REQ2 = "2" * 64
 REQ3 = "3" * 64
 
 
-def lineage(block_id="RB001", request_hash=REQ1, state="ACCEPTED", source=SOURCE, audio=AUDIO, align=ALIGN):
+def lineage(block_id="RB001", request_hash=REQ1, state="ACCEPTED", source=SOURCE, audio=AUDIO, align=ALIGN, spend_state=None):
     row = {
         "project_id": "LESSON_ZERO",
         "episode_id": "CANARY",
@@ -25,10 +25,11 @@ def lineage(block_id="RB001", request_hash=REQ1, state="ACCEPTED", source=SOURCE
         "request_hash": request_hash,
         "provider": "elevenlabs",
         "provider_state": state,
+        "spend_ledger_state": spend_state or state,
         "provider_request_id": f"provider-{block_id}" if state == "ACCEPTED" else None,
         "capability_snapshot_sha256": CAP,
         "request_ref": f"drive://{block_id}/request",
-        "response_ref": f"drive://{block_id}/response",
+        "response_ref": f"drive://{block_id}/response" if state != "AMBIGUOUS" else f"drive://{block_id}/failure",
         "audio_sha256": audio if state == "ACCEPTED" else None,
         "alignment_sha256": align if state == "ACCEPTED" else None,
         "audio_ref": f"drive://{block_id}/audio" if state == "ACCEPTED" else None,
@@ -54,16 +55,31 @@ class LiveEvidenceEscrowTests(unittest.TestCase):
         row = lineage()
         self.assertFalse(row["take_lock"])
         self.assertEqual(row["production_take_status"], "NOT_ACCEPTED")
+        self.assertEqual(row["provider_state"], row["spend_ledger_state"])
         self.assertEqual(verify_lineage(row)["status"], "PASS")
 
     def test_accepted_media_requires_durable_audio_ref(self):
         base = {
             "project_id": "P", "episode_id": "E", "block_id": "B", "source_sha256": SOURCE,
-            "request_hash": REQ1, "provider": "elevenlabs", "provider_state": "ACCEPTED",
+            "request_hash": REQ1, "provider": "elevenlabs", "provider_state": "ACCEPTED", "spend_ledger_state": "ACCEPTED",
             "provider_request_id": "req", "capability_snapshot_sha256": CAP, "audio_sha256": AUDIO,
+            "request_ref": "drive://request", "response_ref": "drive://response", "spend_ledger_ref": "drive://ledger"
         }
         with self.assertRaisesRegex(ValueError, "ACCEPTED_AUDIO_DURABLE_REF_REQUIRED"):
             compile_lineage(base)
+
+    def test_request_and_spend_refs_are_mandatory(self):
+        base = {
+            "project_id": "P", "episode_id": "E", "block_id": "B", "source_sha256": SOURCE,
+            "request_hash": REQ1, "provider": "elevenlabs", "provider_state": "AMBIGUOUS", "spend_ledger_state": "AMBIGUOUS",
+            "capability_snapshot_sha256": CAP,
+        }
+        with self.assertRaisesRegex(ValueError, "REQUEST_REF_REQUIRED"):
+            compile_lineage(base)
+
+    def test_provider_spend_state_mismatch_fails(self):
+        with self.assertRaisesRegex(ValueError, "PROVIDER_SPEND_STATE_MISMATCH"):
+            lineage(state="ACCEPTED", spend_state="AMBIGUOUS")
 
     def test_exact_three_lineages_pass(self):
         escrow = compile_exact_escrow(exact_rows(), expected_block_ids=["RB001", "RB002", "RB003"], expected_source_sha256=SOURCE, expected_request_hashes=exact_hashes())
