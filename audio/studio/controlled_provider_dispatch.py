@@ -7,8 +7,8 @@ contracts without changing story text or provider payload semantics.
 Safety properties:
 - compile/dry-run is default; live requires explicit --live;
 - accepted request hashes are reused after restart rather than resent;
-- any *new* live dispatch requires an identity manifest+fixture AND a PASS
-  authenticated capability snapshot;
+- any *new* live dispatch requires an identity manifest+fixture AND a verified,
+  authenticated, secret-free, fresh capability snapshot;
 - immutable request/spend ledger prevents blind duplicate payment;
 - transport/provider uncertainty after POST is quarantined as AMBIGUOUS;
 - accepted provider evidence is persisted through the existing adapter;
@@ -36,6 +36,9 @@ if str(HERE) not in sys.path:
 import elevenlabs_adapter as adapter
 from audio_asset_ingest import persist_ingest
 from production_control import SpendLedger, capability_drift, validate_identity_fixture
+from provider_snapshot_contract import validate_provider_snapshot
+
+LIVE_SNAPSHOT_MAX_AGE_SECONDS = 6 * 60 * 60
 
 
 def load_json(path: str | Path) -> dict[str, Any]:
@@ -43,8 +46,18 @@ def load_json(path: str | Path) -> dict[str, Any]:
 
 
 def capability_gate(compiled: dict[str, Any], block: dict[str, Any], snapshot: dict[str, Any]) -> dict[str, Any]:
-    if snapshot.get("status") != "PASS":
-        return {"status": "FAIL_SNAPSHOT_NOT_PASS", "auto_substitution": False}
+    contract = validate_provider_snapshot(
+        snapshot,
+        expected_provider="elevenlabs",
+        max_age_seconds=LIVE_SNAPSHOT_MAX_AGE_SECONDS,
+    )
+    if contract.get("status") != "PASS":
+        return {
+            "status": "FAIL_SNAPSHOT_CONTRACT",
+            "auto_substitution": False,
+            "snapshot_contract": contract,
+        }
+
     voice_ids: list[str] = []
     bt = block.get("block_type")
     if bt == "TTD_BLOCK":
@@ -53,7 +66,10 @@ def capability_gate(compiled: dict[str, Any], block: dict[str, Any], snapshot: d
         voice_ids = [str(block["voice_id"])]
     model_id = compiled.get("body", {}).get("model_id")
     expected = {"voice_ids": voice_ids, "model_ids": [model_id] if model_id else []}
-    return capability_drift(expected, snapshot)
+    drift = capability_drift(expected, snapshot)
+    drift["snapshot_contract"] = contract
+    drift["snapshot_hash"] = contract["snapshot_hash"]
+    return drift
 
 
 def identity_gate(manifest_path: str | None, fixture_path: str | None) -> dict[str, Any]:
@@ -65,13 +81,7 @@ def identity_gate(manifest_path: str | None, fixture_path: str | None) -> dict[s
 
 
 def _canonical_asset_gate(compiled: dict[str, Any], evidence: dict[str, Any], out: Path) -> dict[str, Any]:
-    """Promote provider bytes to canonical 48 kHz evidence only when provable.
-
-    The current strict ingest accepts 48 kHz PCM WAV or raw PCM16 with explicit
-    metadata. The provider adapter may return MP3 or PCM without channel metadata;
-    those bytes remain durable provider evidence but are HOLD for production
-    timeline/take use until an explicit upstream conversion/metadata step exists.
-    """
+    """Promote provider bytes to canonical 48 kHz evidence only when provable."""
     audio_path = Path(str(evidence.get("audio_artifact") or ""))
     if not audio_path.exists():
         return {"status": "HOLD_AUDIO_ARTIFACT_MISSING"}
@@ -160,9 +170,6 @@ def execute(
             "ledger_state": plan,
         }
 
-    # New paid dispatch is fail-closed unless both identity and authenticated
-    # capability evidence are explicit. Reusing an already accepted hash above
-    # does not require re-proving these because no provider call will occur.
     missing_live_gates: list[str] = []
     if ig.get("status") != "PASS":
         missing_live_gates.append("IDENTITY_FIXTURE")
@@ -211,8 +218,6 @@ def execute(
         }
 
     evidence = adapter.persist(compiled, raw, meta, out)
-    # ACCEPTED here means the paid provider request/evidence is accepted into the
-    # spend/provenance ledger. It does NOT mean artistic/production take lock.
     ledger.transition(
         compiled["request_hash"],
         "ACCEPTED",
