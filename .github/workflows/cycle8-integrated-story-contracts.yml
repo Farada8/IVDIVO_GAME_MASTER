@@ -1,0 +1,27 @@
+name: Cycle8 Integrated Story Contracts
+
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_story_crossdomain_guards.py'
+      - 'tests/test_ivdivo_cycle8_integrated_story_contracts.py'
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-21_CYCLE8_N01_N32_INTEGRATED_STORY_CONTRACTS/**'
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-21_CYCLE8_STORY_ADAPTER_REAL_PILOT/story_adapters.py'
+      - '31_IDEAS/REGISTRY_EXTENSIONS/SI-0015_PROJECT_SLICE_FRESHNESS_ASSERTION.json'
+      - '31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json'
+      - '.github/workflows/cycle8-integrated-story-contracts.yml'
+
+jobs:
+  integrated-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run integrated story-contract regression
+        run: python -m unittest -v tests.test_ivdivo_cycle8_integrated_story_contracts
+      - name: Validate registry family JSON
+        run: python -m json.tool 31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json >/dev/null
+      - name: Validate SI-0015 JSON
+        run: python -m json.tool 31_IDEAS/REGISTRY_EXTENSIONS/SI-0015_PROJECT_SLICE_FRESHNESS_ASSERTION.json >/dev/null
