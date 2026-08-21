@@ -1,0 +1,66 @@
+{
+  "schema_version": "ivdivo.audio_novel.wave9_provider_bridge/1.0",
+  "date": "2026-08-21",
+  "authority_effect": "NONE_UNTIL_REVIEW_CI_MERGE",
+  "branch": "audio-provider-snapshot-hardening-2026-08-21",
+  "status": "HOLD_EXTERNAL_CREDENTIAL",
+  "prompts": {
+    "WAVE9_01": "PASS_ACCESS_SURFACE_INVENTORIED",
+    "WAVE9_02": "PASS_ENGINEERING_SECRET_BOUNDARY",
+    "WAVE9_03": "PASS_ENGINEERING_SCHEMA_AND_GATE_CODED_CI_PENDING",
+    "WAVE9_04": "HOLD_EXTERNAL_CREDENTIAL"
+  },
+  "provider": "elevenlabs",
+  "credential_contract": {
+    "runtime_env_name": "ELEVENLABS_API_KEY",
+    "persistence_allowed": false,
+    "allowed_persistence": [
+      "hashed account fingerprint",
+      "provider endpoint provenance",
+      "model inventory",
+      "voice inventory",
+      "non-secret plan/quota fields",
+      "snapshot hash",
+      "provider request IDs when returned"
+    ],
+    "forbidden_persistence": [
+      "api keys",
+      "authorization headers",
+      "bearer tokens",
+      "cookies",
+      "passwords",
+      "raw provider user id"
+    ]
+  },
+  "snapshot_contract": {
+    "schema_version": "ivdivo.provider_snapshot/1.0",
+    "max_live_age_seconds": 21600,
+    "required_source_paths": [
+      "/v1/user",
+      "/v1/user/subscription",
+      "/v1/models",
+      "/v2/voices"
+    ],
+    "required_capture_engine": "ivdivo.elevenlabs_snapshot_acquirer/1.0",
+    "required_capture_method": "DIRECT_AUTHENTICATED_READ_ONLY_API",
+    "required_auth_method": "XI_API_KEY_RUNTIME_ENV",
+    "legacy_status_pass_snapshot_authoritative": false,
+    "auto_voice_substitution": false
+  },
+  "execution_evidence": {
+    "provider_calls": 0,
+    "paid_synthesis_calls": 0,
+    "human_listen_claims": 0,
+    "real_snapshot_acquired": false,
+    "local_contract_tests_before_strengthening": {
+      "passed": 6,
+      "failed": 0
+    },
+    "fresh_github_ci": "PENDING"
+  },
+  "next_gate": {
+    "id": "AUTHENTICATED_READ_ONLY_SNAPSHOT",
+    "status": "BLOCKED_EXTERNAL_CREDENTIAL",
+    "required_action": "Run elevenlabs_snapshot_acquirer.py in a trusted runtime with ephemeral ELEVENLABS_API_KEY and persist only the resulting secret-free snapshot."
+  }
+}
