@@ -1,0 +1,16 @@
+{
+  "schema_version": "ivdivo.audio.wave8.sync_status/1.0",
+  "status": "WORKING_SYNC_PENDING",
+  "branch_base_sha": "58f434d7582a193ab3e120491159ccdec349717e",
+  "main_sha_observed_after_persistence": "08852ce359a9d2eef6a9b0980f0a2a54e5957410",
+  "parallel_delta": "BODYGUARD_PMV209_216_AND_CURRENT_AUTHORITY_ADVANCE",
+  "conflict_assessment": "MECHANISM_COMPATIBLE_PROJECT_SCOPED_NO_DIRECT_CONFLICT_FOUND",
+  "merge_allowed_now": false,
+  "required_before_merge": [
+    "refresh_or_rebase_against_current_main",
+    "fresh_conflict_and_authority_readback",
+    "fresh_CI_or_equivalent_test_evidence",
+    "preserve_PMV216_CURRENT_authority",
+    "do_not_auto_promote_Wave8_contracts_to_universal_authority"
+  ]
+}
