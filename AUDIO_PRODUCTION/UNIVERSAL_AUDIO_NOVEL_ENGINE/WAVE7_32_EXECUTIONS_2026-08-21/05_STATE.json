@@ -5,6 +5,11 @@
   "branch": "audio-novel-engine/wave7-empirical-readiness-32x64-2026-08-21",
   "base_main_sha": "0219586858797bf646ca2e7f020bf6a9ff662fc0",
   "github_path": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/WAVE7_32_EXECUTIONS_2026-08-21/",
+  "wave7_pr": 109,
+  "wave7_merged": true,
+  "wave7_merge_sha": "fdc5a162e87b34116b1270b3cd6b1531bdfd8b2d",
+  "wave7_delta_type": "RESEARCH_STATE_DOCS_ONLY",
+  "wave7_separate_audio_ci_triggered": false,
   "drive_folder_id": "1aAh8xfuwJ5D4N9Gykboit05u2oLCVlGO",
   "source_wave6_pr": 99,
   "post_render_hardening_pr": 103,
@@ -17,11 +22,13 @@
     "post_render_learning eligibility bridge -> Founder review candidate on DOMAIN_PROMOTION_ELIGIBLE"
   ],
   "ci": {
+    "authoritative_code_ci_source": "PR103_MERGE_RESULT",
     "workflow": "Audio Studio Runtime Tests",
     "run_id": 32513420831,
     "job_id": 96869536778,
     "dedicated_runtime": {"passed": 4, "failed": 0},
-    "full_audio_studio": {"passed": 158, "failed": 0}
+    "full_audio_studio": {"passed": 158, "failed": 0},
+    "wave7_docs_state_note": "PR109 changed only research/state artifacts; no separate Audio Studio workflow was observed on its head, so no additional CI PASS is claimed."
   },
   "lesson_zero_canary": {
     "requests": 3,
@@ -41,6 +48,7 @@
     "story_mutations": 0
   },
   "status": {
+    "wave7_persistence": "MERGED_CURRENT",
     "shared_runtime": "GO_CURRENT",
     "production_control": "GO_DETERMINISTIC",
     "studio_evidence": "GO_DETERMINISTIC",
