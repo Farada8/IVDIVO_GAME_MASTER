@@ -1,7 +1,7 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "updated": "2026-08-21",
-  "status": "V2_OPERATING_ARCHITECTURE_APPLIED_RUNTIME_PARTIAL",
+  "status": "V2_APPLIED_UNVERIFIED_RUNTIME_PROVISIONAL",
   "authority_router": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
   "engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
   "machine_config": "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json",
@@ -52,19 +52,29 @@
     "KNOWLEDGE_COMPACTION_AND_PRUNING",
     "FAILURE_AND_SUCCESS_MEMORY"
   ],
+  "application_readback": {
+    "writing_router": "PASS",
+    "aggregate_system_state": "PASS_SCHEMA_1_5",
+    "central_registry_si_0007": "PASS",
+    "drive_engine_mirror": "PASS",
+    "drive_router_mirror": "PASS",
+    "concurrent_sibling_progress_preserved": true
+  },
   "runtime_status": {
     "registry_state_machine": "DESIGNED_AND_PREVIOUSLY_ADVERSARIAL_CHECKED",
-    "best_candidate_queue_commands": "PRESENT_IN_CURRENT_UTILITY_PER_V1_UPGRADE_WORK",
-    "exact_current_checkout_smoke": "NOT_RUN_IN_THIS_SESSION",
-    "reason": "Current connector can read/write GitHub but does not expose repository checkout as an executable filesystem. Do not fabricate runtime execution."
+    "best_candidate_queue_commands": "PRESENT_IN_CURRENT_UTILITY",
+    "exact_current_checkout_smoke": "NOT_RUN_YET",
+    "runtime_authority": "PROVISIONAL_UNTIL_ACTUAL_EXECUTION",
+    "rule": "Do not promote utility runtime from inspection alone."
   },
   "promotion_status": {
     "engine_v2": "APPLIED_UNVERIFIED",
-    "writing_router": "UPDATED_TO_V2",
-    "drive_mirrors": "CREATED",
-    "aggregate_system_state": "PENDING_SAFE_REBASE_POINTER",
-    "registry_candidate_record": "PENDING_CENTRAL_REGISTRY_RECONCILIATION",
-    "next_gate": "READBACK_V2_GITHUB_DRIVE_POINTERS_THEN_REGISTER_V2_CANDIDATE_AND_PROMOTION_REVIEW"
+    "writing_router": "UPDATED_AND_READBACK_VALID",
+    "drive_mirrors": "CREATED_AND_READBACK_VALID",
+    "aggregate_system_state": "UPDATED_AND_READBACK_VALID",
+    "registry_candidate_record": "SI-0007_PRESENT",
+    "next_gate": "EXACT_UTILITY_RUNTIME_SMOKE_THEN_FINAL_PROMOTION_REVIEW"
   },
+  "next_action": "Attempt exact checkout/runtime smoke for tools/ivdivo_self_improvement.py against the current live registry. If runtime cannot be obtained, keep runtime PROVISIONAL while the operating/state architecture remains applied.",
   "story_first_guard": "META_IMPROVEMENT_MUST_NOT_STARVE_ACTIVE_BOOK_OR_AUDIO_PRODUCTION_UNLESS_SYSTEM_FATAL_MAJOR_BLOCKS_IT_OR_FOUNDER_SWITCHES_FOCUS"
 }
