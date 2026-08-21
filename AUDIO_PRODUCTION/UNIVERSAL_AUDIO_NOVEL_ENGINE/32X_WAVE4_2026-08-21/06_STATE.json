@@ -1,0 +1,46 @@
+{
+  "schema_version": "ivdivo.audio_novel_engine.wave4/1.0",
+  "date": "2026-08-21",
+  "status": "WAVE4_01_32_EXECUTED_INTERNAL_GATES_GREEN_LIVE_GATES_HOLD",
+  "source_prompt_stack": {
+    "drive_id": "1kR1yi6IBDpz5eT4Ac-EZLYGfPNBssrn3ndR5mqCDXvo",
+    "range": "01-32"
+  },
+  "github_branch": "audio-novel-engine/32x-wave4-main-rebase-2026-08-21",
+  "drive_folder_id": "11TOuH060LNSUfb1IeGK_fLAa7GLJiENS",
+  "tests": {
+    "runtime_promotion": "36/36 PASS",
+    "sound_space_mix_qc": "46/46 PASS",
+    "total": "82/82 PASS"
+  },
+  "provider_calls": 0,
+  "human_listens": 0,
+  "paid_spend_claimed": false,
+  "story_text_changed": false,
+  "current_gates": {
+    "architecture": "PASS",
+    "lesson_zero_dry_portability": "PASS",
+    "bodyguard_third_dry_portability_substrate": "PASS_DRY",
+    "wave4_candidate_code": "GO_FOR_REVIEW",
+    "authenticated_provider_inventory": "HOLD",
+    "real_voice_cast": "HOLD",
+    "pronunciation_lock": "HOLD",
+    "lesson_zero_live_canary": "HOLD",
+    "real_alignment_timeline": "HOLD",
+    "sound_assets_and_real_mix": "HOLD",
+    "human_performance": "HOLD",
+    "economics": "HOLD",
+    "v1_production_ready": "HOLD"
+  },
+  "next_external": "authenticated inventory -> Narrator/Ethan/Aoife -> pronunciation/multi-state/pair -> exact 3-request LZ canary -> durable WAV/alignment",
+  "next_internal": "review candidate promotion surface against current runtime; integrate only genuine missing helpers; add main CI negatives; prepare sound asset execution without spending ahead of evidence",
+  "prohibited": [
+    "NO_AUTO_SUBSTITUTION",
+    "NO_SYNTHETIC_TIMING_AS_LIVE",
+    "NO_VOICE_LOCK_WITHOUT_AUDIO",
+    "NO_FULL_CHAPTER_RENDER_BEFORE_CANARY",
+    "NO_HUMAN_CLAIMS_FROM_MACHINE_METRICS",
+    "NO_GENERIC_ENGINE_REDESIGN_WITHOUT_DEFECT",
+    "NO_STALE_BRANCH_INTEGRATION"
+  ]
+}
