@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.world_reveal_transaction/1.0",
+  "title":"IVDIVO World-Reveal Transaction Audit",
+  "type":"object",
+  "required":["scene_id","ordinary_objective","world_or_system_constraint","consequence","character_choice","new_reader_model_or_evidence","state_change"],
+  "properties":{
+    "scene_id":{"type":"string"},
+    "ordinary_objective":{"type":"string"},
+    "world_or_system_constraint":{"type":"string"},
+    "consequence":{"type":"string"},
+    "character_choice":{"type":"string"},
+    "new_reader_model_or_evidence":{"type":"string"},
+    "state_change":{"type":"string","enum":["ACTION","ACCESS","RISK","STATUS","RELATIONSHIP","EVIDENCE","COST","NONE"]},
+    "terminology_or_ontology_revealed":{"type":"array","items":{"type":"string"}},
+    "terminology_changes_action_or_reader_model":{"type":"boolean"},
+    "exposition_only":{"type":"boolean"}
+  }
+}
