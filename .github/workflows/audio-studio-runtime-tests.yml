@@ -23,6 +23,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install Audio Studio test dependencies
+        run: python -m pip install --disable-pip-version-check numpy
       - name: Run Audio Novel runtime tests
         run: python -m unittest audio/studio/tests/test_audio_novel_runtime.py -v
       - name: Run existing Audio Studio tests
