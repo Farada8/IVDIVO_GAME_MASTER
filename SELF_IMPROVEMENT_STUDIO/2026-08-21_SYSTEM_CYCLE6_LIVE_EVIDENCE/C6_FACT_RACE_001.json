@@ -1,12 +1,12 @@
 {
   "transaction_id": "C6-FACT-RACE-001",
   "fact_id": "C6_SHARED_FACT_001",
-  "value": "ALPHA",
-  "value_hash": "73ab66a033c267e00b7429bb256f6deb2734ebc4cd4ff5b564a8c9f9b2c8a719",
-  "version": 1,
-  "lock_owner": null,
+  "value": "BETA_FROM_AGENT_A",
+  "value_hash": "c13e43ec3c280c264703758167d187c58dcba64ac0f9d39849f5dd63b1ae9dc5",
+  "version": 2,
+  "lock_owner": "agent_A",
   "authority_effect": "NONE",
   "story_canon_effect": "NONE",
   "scope": "SELF_IMPROVEMENT_SANDBOX_NON_CANON",
-  "status": "READY_FOR_RACE"
+  "status": "AGENT_A_COMMITTED"
 }
