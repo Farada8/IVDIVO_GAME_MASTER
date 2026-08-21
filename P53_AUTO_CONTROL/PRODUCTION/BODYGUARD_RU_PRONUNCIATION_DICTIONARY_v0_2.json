@@ -1,0 +1,13 @@
+{
+  "artifact": "BODYGUARD_RU_PRONUNCIATION_DICTIONARY_v0_2",
+  "status": "DRAFT_NOT_UPLOADED",
+  "locale": "ru-RU",
+  "provider": "ElevenLabs-compatible aliases",
+  "rules": [
+    {"string_to_replace":"IEM","type":"alias","alias":"ай-и-эм","status":"HUMAN_AUDIO_QA_PENDING"},
+    {"string_to_replace":"TalkBack","type":"alias","alias":"толкбэк","status":"WORKING"},
+    {"string_to_replace":"talkback","type":"alias","alias":"толкбэк","status":"WORKING"},
+    {"string_to_replace":"Blueglass","type":"alias","alias":"Блюгласс","status":"HUMAN_AUDIO_QA_PENDING"}
+  ],
+  "provider_note": "Dictionary locators can be attached to TTS/TTD requests; actual dictionary id/version require authenticated upload."
+}
