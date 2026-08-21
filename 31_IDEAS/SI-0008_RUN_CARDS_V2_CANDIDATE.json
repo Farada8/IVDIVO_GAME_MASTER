@@ -1,44 +1,67 @@
 {
   "candidate_id": "SI-0008",
-  "title": "32 full production RUN CARD prompts + control Router v2",
-  "candidate_type": "PROMPT",
+  "title": "Prompt Router / Meta-Orchestrator execution layer derived from 32→64 cycles",
+  "candidate_type": "PROMPT_ORCHESTRATION_AND_EXECUTION_LAYER",
   "status": "PILOTING",
   "scope": "UNIVERSAL_IVDIVO",
   "source_provenance": [
-    {"source_type":"FOUNDER","locator":"2026-08-21 directive: develop each of the 32 next-step prompts and determine what follows","version":null,"hash":null,"date":"2026-08-21","notes":"Direct Founder continuation of Self-Improvement v2"},
-    {"source_type":"GITHUB","locator":"IVDIVO_NARRATIVE_OS/19_SELF_IMPROVEMENT_NEXT_32_RUN_CARDS_v2.0_MANIFEST.md","version":"2.0","hash":null,"date":"2026-08-21","notes":"Manifest for full prompt pack"},
-    {"source_type":"GOOGLE_DRIVE","locator":"1GWleaTveP6Cn4gdpjIkd9zkFWBIaccgLbp0ohd4gAdc","version":"2.0","hash":"e17419756cfee12466636a5b9e61b344dc0017f7932725ff5e25de8d3e747289","date":"2026-08-21","notes":"Full 1344-line production prompt pack"},
-    {"source_type":"GITHUB","locator":"tools/ivdivo_prompt_router.py + PROMPT_ROUTER_CONFIG_v1.json + PROMPT_ROUTER_ENGINEERING_TEST_REPORT_v1.json","version":"engineering-pilot-v1","hash":null,"date":"2026-08-21","notes":"Executable routing pilot and deterministic fixture evidence"}
+    {"source_type":"FOUNDER","locator":"2026-08-21 directives: develop/execute 32 prompts, analyze, persist, derive 64; system-wide not book/audio-only","date":"2026-08-21","notes":"Direct Founder instruction"},
+    {"source_type":"GITHUB","locator":"SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE2_32_TO_64/","version":"Cycle2","hash":"merge:850085a8b26a517e82b1f3654c8ce054d8322d0c","date":"2026-08-21","notes":"Merged PR #77 whole-system Cycle 2 evidence"},
+    {"source_type":"GOOGLE_DRIVE","locator":"1WjrET2saDfF6_Dv8hP7qXLD9glBYG0Fn","version":"Cycle2","hash":"cfa2a79c41ad66aefba007639aaa70dfd9cfe17a14a87251a77e42ef04a01dd9","date":"2026-08-21","notes":"Cycle 2 folder; full ZIP ID 136MgcY2K733pVnmbAypfgrwAGuJe1WSP"},
+    {"source_type":"GITHUB","locator":"IVDIVO_NARRATIVE_OS/19_SELF_IMPROVEMENT_NEXT_32_RUN_CARDS_v2.0_MANIFEST.md + tools/ivdivo_prompt_router.py","date":"2026-08-21","notes":"Cycle 1 prompt/router base"}
   ],
-  "problem_or_opportunity": "The v1 32-run-card outline identified the right stages but was not sufficiently executable, and manual prompt selection would still create Founder routing burden.",
-  "proposed_mechanism": "Thirty-two full production prompt contracts plus an A00 rule-based Router that selects the smallest applicable prompt from normalized CURRENT state, enforces P1/P2 priority, permits only safe independent parallelism and recomputes the next route after PASS.",
-  "dedupe_relation": "EXTENSION",
-  "related_candidates": ["SI-0007"],
-  "expected_benefit": "Turns Self-Improvement v2 from policy into a repeatable production operating layer while reducing manual prompt selection and preventing lower-priority meta-work from starving books/audio.",
-  "evidence_state": "INTERNAL_EVIDENCE",
-  "priority_vector": {"impact":"HIGH","recurrence":"SYSTEMIC","effort":"MEDIUM","regression_risk":"MEDIUM","reversibility":"EASY","urgency":"MEDIUM","affected_surface":"PORTFOLIO"},
+  "problem_or_opportunity": "IVDIVO has strong authorities, prompts and domain engines, but material execution still requires repeated state normalization, manual task packaging, repeated guard prose and fragmented evidence/write-through. Good prompts alone do not create a durable self-improving factory.",
+  "proposed_mechanism": "Extend Self-Improvement v2/current machine execution with CURRENT Surface Manifest -> heterogeneous State Adapter -> Shared Fact Contracts -> Obligation DAG -> Prompt IR -> pre-tool guards -> execution -> post-tool readback -> transactional persistence -> unified telemetry/evidence -> learning -> rebase -> next route. Keep books P1 and book-to-audio P2 while applying the same improvement architecture to multi-AI, code, research, economics and operations.",
+  "dedupe_relation": "EXTENSION_OF_SI_0007_AND_PRIOR_SI_0008",
+  "related_candidates": ["SI-0007","SI-0003","SI-0004"],
+  "expected_benefit": "Reduce manual routing/context duplication and stale writes; make system learning evidence-based and durable while preventing recursive meta-work from starving real book/audio production.",
+  "evidence_state": "ENGINEERING_AND_PRODUCTION_ROUTING_EVIDENCE",
+  "priority_vector": {"impact":"CRITICAL","recurrence":"SYSTEMIC","effort":"HIGH","regression_risk":"MEDIUM","reversibility":"MODERATE","urgency":"HIGH","affected_surface":"PORTFOLIO"},
   "development_contract": {
-    "required_pilots": ["one real active-book workflow","one locked-book-to-audio workflow","one engine/tool workflow","one research/evidence workflow"],
-    "acceptance_conditions": ["Router chooses smallest correct prompt from persisted state","prompt does not restart solved work","outputs are consumable by downstream stage","auto-continue stops only at a real gate","no evidence-class substitution","P1/P2 outrank unrelated meta-work","parallel routes are dependency-independent and rebase before write"]
+    "cycle2_completed_runs": 32,
+    "bounded_engineering_tests": "12/12 PASS",
+    "required_real_pilots": [
+      "State Adapter real book/audio/engine/research pilots",
+      "Prompt IR migration + context A/B",
+      "tool-guardrail transactional live workflow",
+      "one human reader/listener evidence protocol",
+      "one live-provider/casting/audio evidence ladder",
+      "unified telemetry before productivity/cost claims"
+    ],
+    "external_blockers": ["fresh Founder idea for live Idea→Story calibration","human evidence","live provider evidence","market evidence"]
   },
   "pilot_evidence": [
-    "Engineering routing fixtures 10/10 expected behavior PASS: Founder gate STOP; dirty authority→02; book prose→06; audio ingest→09; engine architecture→20; fresh research→27; unrelated meta suppressed by open P1/P2; direct-prerequisite meta allowed; invalid domain fail-closed; independent audio+research parallel route supported. Evidence: PROMPT_ROUTER_ENGINEERING_TEST_REPORT_v1.json."
+    "Cycle 1 Prompt Router deterministic fixtures: 10/10 expected behavior PASS.",
+    "Cycle 2 bounded engineering suite: 12/12 PASS for State Adapter fail-closed/D09 gate, causality signal, Prompt IR validation, registry invariants and transactional stale/no-effect/rollback/commit.",
+    "Cycle 2 real persisted-state finding: D09 correctly remains READY_FOR_FOUNDER rather than auto-lock/rewrite.",
+    "Concurrent-dialog operation repeatedly demonstrated need for freshness/rebase and transactional write-through.",
+    "Merged PR #77 preserved newer sibling-dialog progress while adding Cycle 2 in a dedicated folder."
   ],
   "red_team_findings": [
-    "Do not promote because deterministic routing fixtures pass; real workflow pilots are still required.",
-    "Do not fire all 32 prompts as a checklist.",
-    "Prompt 33 must remain a router, not a new creative authority.",
-    "A normalized-state adapter from arbitrary CURRENT project states is the next engineering layer."
+    "Do not promote the whole Cycle 2 package because engineering tests pass.",
+    "Do not equate provider documentation with casting/audio quality evidence.",
+    "Do not equate model review with human signal or market evidence.",
+    "Do not recursively multiply prompts without new production evidence; Starvation Guard requires return to P1/P2 or real integration pilots.",
+    "Package v11.2 remains immutable and diverges from verified post-package main extensions; build a new package only after selected integration + cold regression."
   ],
   "promotion_level": "NONE",
-  "application_targets": ["CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md after pilot evidence","CURRENT_IVDIVO_SYSTEM_STATE.json prompt-router pointer after pilot","CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json after real execution integration","Drive prompt pack mirror"],
-  "verification_evidence": [],
-  "protected_authorities": ["Founder newest instruction","Story-first priority","Locked book/project authority","Current audio authority","Human/provider/market evidence firewalls"],
-  "owner_role": "A00 Router / Prompt Architect / Self-Improvement Reconciler",
-  "next_action": "Build normalized CURRENT-state adapter, then run the first real P1 book-routing pilot without changing story authority; follow with audio, engine/tool and research/evidence pilots.",
-  "next_gate": "FOUR_REAL_DOMAIN_PILOT_GATE",
+  "application_targets": [
+    "current machine-execution compatibility layer after bounded module pilots",
+    "State Adapter / Prompt IR / transactional persistence modules",
+    "Unified telemetry/evidence bridge",
+    "Prompt/Context compaction only after equivalence canaries"
+  ],
+  "verification_evidence": [
+    "GitHub PR #77 merged at 850085a8b26a517e82b1f3654c8ce054d8322d0c and main readback of Cycle 2 synthesis succeeded.",
+    "Google Drive Cycle 2 full ZIP stored as 136MgcY2K733pVnmbAypfgrwAGuJe1WSP; SHA-256 cfa2a79c41ad66aefba007639aaa70dfd9cfe17a14a87251a77e42ef04a01dd9.",
+    "Cycle 2 deterministic engineering tests 12/12 PASS."
+  ],
+  "protected_authorities": ["Founder newest instruction","Story-first/P1 priority","locked book/project canon","Current Audio authority","human/provider/market evidence firewalls","no parallel top-level engine authority"],
+  "owner_role": "Meta-Showrunner / A00 Router / Execution Architect",
+  "next_action": "Run Cycle 3 integration and real-evidence pilots beginning with State Adapter Book/Audio/Engine/Research pilots, Prompt IR migration, transactional tool-guard workflow and unified telemetry; return resources to P1/P2 between bounded meta pilots.",
+  "next_gate": "REAL_INTEGRATION_AND_EXTERNAL_EVIDENCE_PILOT_GATE",
   "hold_trigger": null,
   "terminal_reason": null,
   "last_movement": "2026-08-21",
-  "notes": "Engineering pilot passed, but candidate remains non-current until real production evidence. Next registry sweep should merge this standalone record into CURRENT_IMPROVEMENT_REGISTRY.json after semantic dedupe."
+  "notes": "Semantic-deduped: Cycle 2 extends existing SI-0008 rather than creating a new top-level self-improvement candidate. Central CURRENT_IMPROVEMENT_REGISTRY merge remains an explicit C3-38 transaction so it can be done with the new Registry Transaction API rather than unsafe manual one-line JSON surgery."
 }
