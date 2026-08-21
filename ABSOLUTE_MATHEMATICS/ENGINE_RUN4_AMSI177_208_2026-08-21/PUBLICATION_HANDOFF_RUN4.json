@@ -1,0 +1,36 @@
+{
+  "schema": "absolute_math.handoff/4.0",
+  "batch": "RUN4_AMSI177_208",
+  "github": {
+    "base_main_sha": "e3047a227552477c39c7d6af549208d18afc3fcc",
+    "branch": "absolute-math-run4-amsi177-208-2026-08-21",
+    "pr": 144,
+    "pr_url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/144"
+  },
+  "drive": {
+    "folder_id": "1glNILD5L8Pj3M1wG1wls3EoOmfNArfA4",
+    "zip_file_id": "1uoOcwD4PGfPdkC-gfaqzoUskD-JtF9HI",
+    "cold_attestation_file_id": "1PbzX4vdJjK-6Cwje8VtTt28t-wgCOo4U",
+    "handoff_file_id": "1hXNMahW7u9IOsRCWYXX8viMgkA7MvWdE"
+  },
+  "package_sha256": "4d4d6aa89b49dd4696dcc06e2268a5934db721e69330203dae8bffa37236ab49",
+  "tests": {"warm": "99/99 PASS", "cold": "99/99 PASS"},
+  "key_verdicts": {
+    "descendant_proxy": "REAL_TASK_NOT_SUPPORTED",
+    "durability": "SUPPORTED_REVERSIBLE_RESEARCH_ARTIFACTS",
+    "formal_release": "HOLD",
+    "real_data": "OBSERVATIONAL_ONLY_CLOSURE_NOT_ESTABLISHED",
+    "integrated_protocol": "ADDITIONAL_FALSIFICATION_VALUE_ON_CONTROLS",
+    "strong_scientific_release": "HOLD"
+  },
+  "active_core": "FORMAL_CORE_v8_RUN4",
+  "next_bank": "AMSI-225..288",
+  "priority": ["AMSI-225","AMSI-233","AMSI-241","AMSI-249","AMSI-257","AMSI-265","AMSI-273","AMSI-281"],
+  "prohibited_stale_routes": [
+    "Do not promote Run3 synthetic descendant advantage as real-task support",
+    "Do not claim Lean machine verification",
+    "Do not claim causal intervention results from Nile",
+    "Do not claim a new mathematical field from project terminology",
+    "Do not extrapolate reversible-file durability to paid or irreversible actions"
+  ]
+}
