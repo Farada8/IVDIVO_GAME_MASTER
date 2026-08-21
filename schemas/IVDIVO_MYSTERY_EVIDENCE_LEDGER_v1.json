@@ -1,0 +1,33 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.mystery_evidence_ledger/1.0",
+  "title":"IVDIVO Mystery Evidence Ledger",
+  "type":"object",
+  "required":["project_id","evidence_items","final_proof"],
+  "properties":{
+    "project_id":{"type":"string"},
+    "evidence_items":{"type":"array","minItems":1,"items":{"type":"object","required":["evidence_id","fact","trace_or_source","lineage","access","reliability","surface_meaning","true_meaning","alternative_model","corroboration","current_timeline_available","action","payoff"],"properties":{
+      "evidence_id":{"type":"string"},
+      "fact":{"type":"string"},
+      "trace_or_source":{"type":"string"},
+      "lineage":{"type":"string"},
+      "access":{"type":"array","items":{"type":"string"}},
+      "reliability":{"type":"string","enum":["HIGH","MEDIUM","LOW","CONTESTED","UNKNOWN"]},
+      "surface_meaning":{"type":"string"},
+      "true_meaning":{"type":"string"},
+      "alternative_model":{"type":"array","items":{"type":"string"}},
+      "corroboration":{"type":"array","items":{"type":"string"}},
+      "current_timeline_available":{"type":"boolean"},
+      "action":{"type":"string"},
+      "payoff":{"type":"string"},
+      "author_only_knowledge":{"type":"boolean"}
+    }}}
+    ,"final_proof":{"type":"object","required":["conclusion","supporting_evidence_ids","accessible_to_protagonist","accessible_to_reader_or_fairly_inferable","requires_author_only_fact"],"properties":{
+      "conclusion":{"type":"string"},
+      "supporting_evidence_ids":{"type":"array","minItems":1,"items":{"type":"string"}},
+      "accessible_to_protagonist":{"type":"boolean"},
+      "accessible_to_reader_or_fairly_inferable":{"type":"boolean"},
+      "requires_author_only_fact":{"type":"boolean"}
+    }}
+  }
+}
