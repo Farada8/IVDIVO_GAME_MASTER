@@ -30,12 +30,12 @@
     "kept": "SI-0010 = Registry shard compaction transaction candidate",
     "migrated": "Volatile Session Checkpoint / Durable Recovery candidate -> SI-0014",
     "historical_source": "31_IDEAS/PENDING/SI-0010_VOLATILE_SESSION_CHECKPOINT_EXTENSION.json",
-    "result": "MIGRATED_TO_UNIQUE_REGISTRY_EXTENSION_ON_RUN33_BRANCH"
+    "result": "MIGRATED_TO_UNIQUE_REGISTRY_EXTENSION; GREEN_CI_AND_DRIVE_READBACK; PRODUCTION_PILOT_PENDING"
   },
   "h_generation_delta": {
     "SI-0010": "READY_FOR_PILOT — atomic shard transaction + rollback + deterministic compaction implementation and CI pending",
     "SI-0013": "READY_FOR_PILOT — durable project-state coverage / portfolio resumability gate; all 12 required projects currently have PASS-like durable routes; portfolio claim is PASS_FULL",
-    "SI-0014": "READY_FOR_PILOT — session checkpoint + durable multi-store recovery stack; real interruption evidence still required"
+    "SI-0014": "READY_FOR_PILOT — session checkpoint + durable multi-store recovery stack; 27/27 Run33 tests, inherited checkpoint/registry regressions, fresh-main CI and Drive readback PASS; controlled/realtime recovery evidence still required"
   },
   "migration_note": "The monolithic base registry is a compatibility/read model until a deterministic compaction build validates all base+extension IDs, emits input/output hashes, passes roundtrip/readback regression, and switches pointers transactionally. Candidate shard visibility does not promote candidate status.",
   "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009/0010/0011/0012/0013/0014 are candidates/pilots unless their own lifecycle state says otherwise."
