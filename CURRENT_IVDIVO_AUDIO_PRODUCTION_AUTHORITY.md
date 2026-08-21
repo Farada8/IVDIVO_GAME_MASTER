@@ -19,6 +19,11 @@ Current new-chat boot:
 Drive ID: `15A8-QZD3uMcJLnIardDZKlrPJGkpyD74_luTPngarJc`  
 GitHub: `IVDIVO_AUDIO_NEW_CHAT_BOOT_v3.3.md`
 
+Current resumed/cross-dialog audio boot overlay:
+`02 — IVDIVO AUDIO PRODUCTION NEW-CHAT BOOT v3.4 CROSS-DIALOG`  
+Drive ID: `1ui02P9RH_B62DxDE6OjxCLrkB6fMOfZF0WcRtRtvOoU`  
+This is a continuation/state overlay; it does not silently replace the v3.3 production canon.
+
 Current project overlay template:
 `01 — IVDIVO AUDIO PROJECT OVERLAY TEMPLATE v1.1`  
 Drive ID: `1Stx3R6qP4bIoyrRpivCLhrgU7rvz-xg9Df0jMZ9N-io`  
@@ -30,7 +35,10 @@ Current universal voice audition / binding standard:
 Current LIVE provider cost-control / casting cascade:
 `AUDIO_PRODUCTION/IVDIVO_AUDIO_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE_v1.0.md`
 
-Future work must check the Drive root router for a newer authority before assuming this GitHub pointer is still current.
+Current shared musical-fact / motif consistency gate:
+`AUDIO_PRODUCTION/IVDIVO_AUDIO_SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT_v1.0.md`
+
+Future work must check the Drive root router and persisted current execution state for a newer authority/frontier before assuming this GitHub pointer is still current.
 
 ## Authority order
 
@@ -47,7 +55,7 @@ Future work must check the Drive root router for a newer authority before assumi
    - `IVDIVO_MICROPHONE_CHOREOGRAPHY_ENGINE_v1.0.md` — Drive ID `1XT8KKdMPlrHC8vYIPuohcDlApAX316J9`
    - `IVDIVO_MICROPHONE_CHOREOGRAPHY_PROMPT_STACK_v1.0.md` — Drive ID `1GW8f0rOgu1aqg24SgxxXIQU4VFqGKvRO`
    - `IVDIVO_MICROPHONE_CHOREOGRAPHY_QC_v1.0.md` — Drive ID `1escUUTwztAd0L3hI5ELd-Jns53YLpull`
-7. Current machine/provider contracts, normalized alignment law, provider preflight, live-provider canary/casting cascade, voice-binding ledger, acoustic-identity ledger, stereo-intent law, artifact templates and QC/release gates referenced by current v3.x authority.
+7. Current machine/provider contracts, normalized alignment law, provider preflight, live-provider canary/casting cascade, voice-binding ledger, acoustic-identity ledger, stereo-intent law, shared musical-fact/motif contract, artifact templates and QC/release gates referenced by current v3.x authority.
 8. Universal voice audition/binding evidence standard:
    - `IVDIVO_AUDIO_VOICE_AUDITION_BINDING_STANDARD_v1.0.md`;
    - exact locked audition text + hash where supported;
@@ -71,15 +79,25 @@ Universal audio authority governs production **process**, not project story cont
 
 ## Required project boot
 
-`ACTIVE PROJECT -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + SHA256 -> ACTIVE BRANCH -> DELIVERY_MODE -> TEXT_PROTECTION_MODE -> PROJECT_AUDIO_OVERLAY -> VOICE_BINDING_LEDGER -> PRONUNCIATION_LOCKS -> ACOUSTIC_IDENTITY_LEDGER -> BUILD_ID/MANIFEST -> LAST_COMPLETED_ARTIFACT -> OPEN_GATES -> NEXT_UNBLOCKED_OBLIGATION`
+`ACTIVE PROJECT -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + SHA256 -> ACTIVE BRANCH -> DELIVERY_MODE -> TEXT_PROTECTION_MODE -> PROJECT_AUDIO_OVERLAY -> VOICE_BINDING_LEDGER -> PRONUNCIATION_LOCKS -> ACOUSTIC_IDENTITY_LEDGER -> MUSICAL_FACT_LEDGER_IF_RELEVANT -> BUILD_ID/MANIFEST -> LAST_COMPLETED_ARTIFACT -> OPEN_GATES -> NEXT_UNBLOCKED_OBLIGATION`
 
 Fail closed if branch, source version/hash, protected text, cast/voice binding, clue causality, project overlay, LIVE/DRY_RUN/MIXED state or cross-build provenance is ambiguous.
 
 ## Current universal pipeline
 
-`LOCKED STORY -> AUTHORITY + BUILD MANIFEST -> SCENE/SPOKEN UNIT MAP -> LISTENER CONTRACT -> DRAMATIC FORCE MAP -> AUDIO STAGING -> CAST/VOICE BINDING -> PERFORMANCE DIRECTOR SCORE -> PAUSE/BREATH/LISTENING/OVERLAP -> SILENT REACTION ANCHORS -> MICROPHONE CHOREOGRAPHY/BLOCKING/PROXIMITY -> ACOUSTIC/P.O.A./STEREO INTENT -> FOLEY/BODY -> SFX/CLUE/PROCEDURAL + ACOUSTIC IDENTITY -> AMBIENCE -> MUSIC DRAMATURGY -> RENDER BLOCK COMPILATION -> PROVIDER DRY RUN -> PROVIDER PREFLIGHT -> LIVE CANARY/CASTING CASCADE WHEN PAID/UNLOCKED -> HARD PILOT -> PARALLEL DIALOGUE+ASSET PRODUCTION -> DIALOGUE/ASSET LOCKS -> EDIT-FIRST -> RAW ALIGNMENT -> NORMALIZED ALIGNMENT -> RESOLVED TIMELINE -> MIX ACTION/CAUSAL OVERLAP/STEREO QC -> MIX/PREMASTER -> MASTERING -> MACHINE QC -> REVIEW PRIORITY -> HUMAN LISTEN/MANUAL REVIEW -> SELECTIVE REPAIR -> RELEASE GO/NO-GO -> MASTER LOCK`
+`LOCKED STORY -> AUTHORITY + BUILD MANIFEST -> SCENE/SPOKEN UNIT MAP -> LISTENER CONTRACT -> DRAMATIC FORCE MAP -> AUDIO STAGING -> CAST/VOICE BINDING -> PERFORMANCE DIRECTOR SCORE -> PAUSE/BREATH/LISTENING/OVERLAP -> SILENT REACTION ANCHORS -> MICROPHONE CHOREOGRAPHY/BLOCKING/PROXIMITY -> ACOUSTIC/P.O.A./STEREO INTENT -> SHARED MUSICAL FACT/MOTIF CONTRACT IF PITCHED STORY INFERENCE -> FOLEY/BODY -> SFX/CLUE/PROCEDURAL + ACOUSTIC IDENTITY -> AMBIENCE -> MUSIC DRAMATURGY -> RENDER BLOCK COMPILATION -> PROVIDER DRY RUN -> PROVIDER PREFLIGHT -> LIVE CANARY/CASTING CASCADE WHEN PAID/UNLOCKED -> HARD PILOT -> PARALLEL DIALOGUE+ASSET PRODUCTION -> DIALOGUE/ASSET LOCKS -> EDIT-FIRST -> RAW ALIGNMENT -> NORMALIZED ALIGNMENT -> RESOLVED TIMELINE -> MUSICAL FACT VERIFICATION IF APPLICABLE -> MIX ACTION/CAUSAL OVERLAP/STEREO QC -> MIX/PREMASTER -> MASTERING -> MACHINE QC -> REVIEW PRIORITY -> HUMAN LISTEN/MANUAL REVIEW -> SELECTIVE REPAIR -> RELEASE GO/NO-GO -> MASTER LOCK`
 
 Dependency-DAG law: independent branches may run in parallel after their upstream PASS gates and must converge before consumer stages requiring both.
+
+## Shared musical-fact law
+
+If the listener must infer that two or more pitched events are the same melody, continuation, interval, warning tone, clue family or transformed motif, those events must inherit one `MUSICAL_FACT_CONTRACT` before generation.
+
+Voice/hum, performance-sound, SFX/procedural and music backends may not independently invent plot-relevant versions of the same musical fact.
+
+If a provider cannot reliably preserve the required pitch/interval/rhythm identity, route that fact through a controllable performed/procedural/MIDI/reference-asset path instead of forcing an unconstrained generative backend.
+
+Acceptance requires post-render verification of the story-required relationship. Aesthetic similarity is insufficient when exact musical identity is the clue.
 
 ## Voice-lock evidence law
 
@@ -112,7 +130,7 @@ No DRY_RUN build can release. Required live/reused evidence must be provenance-v
 
 ## Cross-project law
 
-Never transfer names, provider voice IDs, culprit/solution, distinctive clue chains, signature sound motifs, relationship timing, chronology or obsolete branch facts between projects without explicit authority.
+Never transfer names, provider voice IDs, culprit/solution, distinctive clue chains, actual melodies/motifs/pitches/interval patterns, relationship timing, chronology or obsolete branch facts between projects without explicit authority.
 
 `REFERENCE -> ABSTRACT MECHANISM -> REMOVE PROJECT-SPECIFIC CONTENT -> TRANSFORM FOR ACTIVE PROJECT -> REBIND THROUGH PROJECT OVERLAY`
 
@@ -132,7 +150,7 @@ For books/saga work entering audio, load:
 Book/story authority remains higher for protected text and story facts. Audio production must not silently reopen locked development.
 
 For cross-conversation state restoration also obey:
-`IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md`.
+`IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md` and `CURRENT_IVDIVO_SYSTEM_STATE.json`.
 
 ## Historical/base layer
 
@@ -144,7 +162,7 @@ Audio continuation is driven by persisted project state, not by repeated nudges.
 
 On any substantive turn inside an established audio line:
 1. restore current universal + project authority;
-2. restore current execution/state manifest when present;
+2. restore `CURRENT_IVDIVO_SYSTEM_STATE.json` and project execution/state manifest when present;
 3. identify last completed artifact, open gates and prohibited actions;
 4. execute the highest unblocked production obligation;
 5. continue through further unblocked dependent stages in the same work block;
