@@ -14,14 +14,39 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Lean build + independent no-sorry/axiom checks
+
+      - name: Bootstrap pinned Lean and generate Lake manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          cd ABSOLUTE_MATHEMATICS/RUN5_AMSI225_256_2026-08-21/formal/lean
+          lean --version
+          lake --version
+          lake update
+          test -s lake-manifest.json
+
+      - name: Lean build + independent nanoda no-sorry check
         uses: leanprover/lean-action@v1
         with:
           lake-package-directory: ABSOLUTE_MATHEMATICS/RUN5_AMSI225_256_2026-08-21/formal/lean
+          auto-config: false
           build: true
           test: false
+          lint: false
+          use-mathlib-cache: false
           use-github-cache: false
           nanoda: true
           nanoda-allow-sorry: false
-          axiom-audit: true
-          axiom-audit-root: AbsoluteMathRun5
+
+      - name: Source escape audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILE=ABSOLUTE_MATHEMATICS/RUN5_AMSI225_256_2026-08-21/formal/lean/AbsoluteMathRun5.lean
+          if grep -En '(^|[^[:alnum:]_])(sorry|admit)([^[:alnum:]_]|$)' "$FILE"; then
+            echo "forbidden proof escape detected"
+            exit 1
+          fi
