@@ -13,6 +13,7 @@ on:
       - '31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json'
       - '31_IDEAS/REGISTRY_EXTENSIONS/SI-0014_SESSION_RESILIENCE_DURABLE_RECOVERY.json'
       - 'CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json'
+      - 'PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json'
       - '.github/workflows/session-resilience-run33-tests.yml'
   pull_request:
     paths:
@@ -26,6 +27,7 @@ on:
       - '31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json'
       - '31_IDEAS/REGISTRY_EXTENSIONS/SI-0014_SESSION_RESILIENCE_DURABLE_RECOVERY.json'
       - 'CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json'
+      - 'PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json'
       - '.github/workflows/session-resilience-run33-tests.yml'
   workflow_dispatch:
 
@@ -47,3 +49,5 @@ jobs:
         run: python -m pytest tests/test_registry_transaction.py -q
       - name: Validate registry family references
         run: python tools/validate_improvement_registry_refs.py --repo-root .
+      - name: Validate portfolio resumability claim
+        run: python tools/validate_project_state_coverage.py
