@@ -1,0 +1,9 @@
+{
+  "artifact":"PMV177_208_ENGINEERING_TEST_REPORT_v1",
+  "tests":{
+    "provider_preflight_dry":{"pass":true,"result":"DRY RUN — no network"},
+    "telemetry_empty":{"pass":true,"result":"empty ledger generated without invented costs"},
+    "eig_router":{"pass":true,"result":"PMV177 ranked above a blocked provider task; blocked item score forced to 0"},
+    "lock_compiler_fail_closed":{"pass":true,"result":"compiler refused lock when required reviewer roles/timing evidence were absent"}
+  }
+}
