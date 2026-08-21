@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-21",
+  "status": "SPRINT_COMPLETE_NEXT_PROMPT_BANK_READY",
+  "topic": "full chat transcript recovery, cross-dialog continuity, persistence verification, self-improvement harvesting and continuation",
+  "requested_prompts": 32,
+  "executed_prompts": 32,
+  "derived_next_prompts": 64,
+  "github_folder": "31_IDEAS/TRANSCRIPT_RECOVERY_32_PROMPT_SPRINT_2026-08-21/",
+  "github_files": [
+    "README.md",
+    "01_32_PROMPTS_v1.0.md",
+    "02_32_EXECUTIONS_AND_FINDINGS_v1.0.md",
+    "03_SYNTHESIS_AND_UPGRADE_PLAN_v1.0.md",
+    "04_NEXT_64_PROMPTS_v1.0.md",
+    "05_SPRINT_MANIFEST.json"
+  ],
+  "drive_folder_id": "1aVpmzE0oPu5NKJ_0ASxrWi6cJG4sXb12",
+  "drive_master_document_id": "1ZVOJLoHK_kkUi5hor66dCxtm_Y4DR3WVnBeCZO4_s2Y",
+  "current_verified_base": {
+    "protocol": "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md",
+    "extractor": "tools/ivdivo_transcript_recovery.py",
+    "extractor_tests": "5/5 PASS exact-source smoke already verified before this sprint",
+    "self_improvement_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json"
+  },
+  "sprint_red_team": {
+    "fatal": 0,
+    "major": [
+      "RECONCILED_RECOVERY_STATE_v2_MISSING",
+      "IMPROVEMENT_REGISTRY_ATOMICITY_SHARD_INDEX_WEAKNESS",
+      "FIRST_REAL_LARGE_CORPUS_PILOT_NOT_YET_RUN",
+      "ADVERSARIAL_AND_CONCURRENCY_REGRESSION_TOO_SMALL",
+      "RECOVERY_COMPLETION_GATE_NOT_FORMALLY_COUPLED_TO_NEXT_ACTION_RESOLVER"
+    ]
+  },
+  "anti_bedlam_wip": {
+    "primary": "RECONCILED_RECOVERY_STATE_v2_PLUS_RECOVERY_COMPLETION_GATE",
+    "pilot_a": "IMPROVEMENT_REGISTRY_ATOMIC_SHARD_INDEX_REPAIR",
+    "pilot_b": "ADVERSARIAL_LARGE_CORPUS_SUITE_PLUS_FIRST_REAL_CORPUS_MONITORING"
+  },
+  "next_prompt_bank": "04_NEXT_64_PROMPTS_v1.0.md",
+  "next_prompt_use_law": "Select prompts by current bottleneck; do not execute all 64 as ritual volume before returning to story/audio production.",
+  "authority_boundary": "Sprint artifacts are system-development work and do not override Founder instruction, locked canon, project source-of-truth, human/provider/market evidence or current domain authorities."
+}
