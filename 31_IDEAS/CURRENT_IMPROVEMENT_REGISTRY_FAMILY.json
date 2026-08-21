@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "status": "CURRENT_MACHINE_REGISTRY_FAMILY_POINTER_NOT_STORY_CANON",
+  "updated": "2026-08-21",
+  "base_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+  "extension_directory": "31_IDEAS/REGISTRY_EXTENSIONS/",
+  "known_extensions": [
+    "31_IDEAS/REGISTRY_EXTENSIONS/SI-0008_TRANSCRIPT_RECOVERY_EXTENSION.json"
+  ],
+  "validation_tool": "tools/validate_improvement_registry_refs.py",
+  "merge_law": "candidate_id must be unique across base and extensions; duplicate IDs fail closed; extensions are first-class machine registry records but may not override a base record.",
+  "migration_note": "The next registry schema/package promotion should compact compatible extensions into a single regenerated base registry after readback/regression. Until then this family pointer prevents SI-0008 from being invisible while avoiding unsafe whole-file overwrite of the concurrent base registry.",
+  "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority."
+}
