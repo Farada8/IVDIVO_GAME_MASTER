@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-21",
+  "runs": {
+    "C3-10": {
+      "status": "PASS_REAL_ENSEMBLE_GRAPH_PILOT",
+      "project": "D10 BLOODBOUND",
+      "source": "Drive current authority 17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8 + causal grid 1_AiNjOT0si83tScCR_aost8UOfzoZt9lYfAYBCbiyHg",
+      "scene_active_edges": [
+        {
+          "pair": "MIRA_RIAN",
+          "current_state": "EVIDENCE_BASED_COOPERATION_UNDER_CUSTODY_POWER_ASYMMETRY",
+          "power": "RIAN_HAS_LEGAL_CUSTODY_AUTHORITY",
+          "trust": "CONDITIONAL_GROWING",
+          "consent": "NO_ROMANTIC_PHYSICAL_ESCALATION_WHILE_CUSTODY_ACTIVE",
+          "future_transition": "E15_AUTHORITY_RELINQUISHMENT_REQUIRED_BEFORE_EQUAL_ROMANTIC_ESCALATION"
+        },
+        {
+          "pair": "MIRA_SABINE",
+          "current_state": "PROFESSIONAL_POLITICAL_ADVERSARIES",
+          "knowledge_asymmetry": "SABINE_HAS_HIDDEN_POLICY_AND_MURDER_CHAIN_KNOWLEDGE",
+          "unresolved_obligation": "PROVE_POLICY_AND_MURDER_WITH_CONVERGING_NON_MAGICAL_EVIDENCE"
+        },
+        {
+          "pair": "RIAN_SABINE",
+          "current_state": "INSTITUTIONAL_COMMAND_CONFLICT",
+          "power": "SABINE_CAN_TRIGGER_COUNCIL_PRESSURE; RIAN_HAS_BOUNDED_WARDEN_AUTHORITY",
+          "future_transition": "RISK_DISCIPLINE_THEN_RELINQUISH_COMMAND_POWER"
+        },
+        {
+          "pair": "MIRA_CELIA",
+          "current_state": "COMPETING_CLAIMANT_FRAME_WITHOUT_AUTHORIZED_RIVALRY",
+          "boundary": "MAGICAL_RESPONSE_IS_NOT_IDENTITY_OR_GUILT_PROOF",
+          "future_transition": "CELIA_TO_WITNESS_NOT_RIVAL_QUEEN"
+        }
+      ],
+      "finding": "multi-edge graph prevents romance from being inferred from proximity and prevents Celia from being auto-coded as romantic/political rival"
+    },
+    "C3-12": {
+      "status": "PASS_REAL_CAUSAL_MAP_SIGNAL_PILOT_WITH_DIRECT_CODE_ADAPTER_PENDING",
+      "project": "D10 BLOODBOUND",
+      "source": "BLOODBOUND PHASE D 24-EPISODE CAUSAL GRID v1.0",
+      "extracted_block_paths": [
+        "E01_MARK_RESPONSE -> E02_REPEAT_RESPONSE_AND_CUSTODY -> E03_RESONANCE_PLUS_MISSING_MATERNAL_REFERENCE -> E04_HOUSE_NAME_RULE -> E05_SURVIVING_DAUGHTER_PLUS_SUPPRESSANT -> E06_BLOCK_I_ANSWER_NOT_EXTINCT",
+        "E07_RECLASSIFIED_DAUGHTERS -> E08_CORVEN_TRANSFER_ORDERS -> E09_DOCUMENT_RISK_AND_FALSE_CLAIMANT -> E10_ANACHRONISTIC_BRIDGE_ENTRY -> E11_COUNCIL_STORES -> E12_DELIBERATE_POLICY_MINUTES",
+        "E13_SABINE_ACCESS -> E14_CUSTODY_CONFLICT_AND_MAGISTRATE_TRANSFER -> E15_RIAN_RELINQUISHES_AUTHORITY -> E16_SCRIBE -> E17_VIAL_AND_WITNESS -> E18_PREWRITTEN_DECREE",
+        "E19_RENEWAL_AUDIT -> E20_ANIKA_DUPLICATE -> E21_OBSTRUCTION_PLUS_FORENSICS -> E22_CONVERGENCE_PRESENTATION -> E23_TRIBUNAL_PROOF -> E24_REFORM_AND_POST_CASE_HFN"
+      ],
+      "orphan_signal": false,
+      "disconnected_payoff_signal": false,
+      "path_to_climax": true,
+      "boundary": "manual extraction from current prose grid; direct Cycle2 detector code integration still belongs to Meta-Orchestrator packaging"
+    },
+    "C3-13": {
+      "status": "PASS_SANDBOX_DESCENDANT_INVALIDATION_PILOT",
+      "mutation": "MOVE_RIAN_AUTHORITY_RELINQUISHMENT_FROM_E15_TO_E14",
+      "must_reopen": ["E14_END_STATE", "E15_RELATIONSHIP_POWER_STATE", "E16_FIRST_EXPLICIT_ATTRACTION_TIMING", "E21_FIRST_KISS_PRECONDITIONS"],
+      "must_not_reopen": ["E01_E06_CRIMSON_NOT_EXTINCT_EVIDENCE_CHAIN", "E07_E12_DELiberate_POLICY_PROOF_CHAIN", "SABINE_MURDER_EVIDENCE_BEFORE_RELATIONSHIP_TRANSITION"],
+      "result": "SELECTIVE_DESCENDANT_INVALIDATION_ONLY"
+    },
+    "C3-15": {
+      "status": "PASS_CROSS_TITLE_LOCK_READINESS_AUDIT",
+      "titles": [
+        {
+          "project": "D04 SEVEN NIGHTS BEFORE CODE BLUE",
+          "evidence": "Final Story Gate PASS + recording master READY + audio production pack READY",
+          "classification": "STORY_COMPLETE_DOWNSTREAM_AUDIO_READY",
+          "false_negative_risk": "LOW_IF_ROUTER_RECOGNIZES_RECORDING_MASTER",
+          "false_positive_risk": "DO_NOT_INFER_LIVE_AUDIO_OR_VOICE_LOCK"
+        },
+        {
+          "project": "D09 THE MAN WHO CAME BACK",
+          "evidence": "E01-E24 complete + Final Story Gate PASS + Founder Lock NOT_YET_ISSUED",
+          "classification": "READY_FOR_FOUNDER_DECISION_NOT_LOCKED_BY_MACHINE",
+          "false_positive_risk": "HIGH_IF_FINAL_GATE_PASS_IS_COLLAPSED_INTO_FOUNDER_LOCK"
+        },
+        {
+          "project": "D05 NINETY MISSING MINUTES",
+          "evidence": "aggregate routing identifies TEXT_COMPLETE_STORY_LOCKED_PUBLICATION_SPECIALIST_HOLD; E01 exact-text provider dry-run has source/ledger SHA and authority PASS",
+          "classification": "LOCKED_TEXT_WITH_DOWNSTREAM_AUDIO_PREFLIGHT_EVIDENCE",
+          "false_positive_risk": "DO_NOT_INFER_VOICE_LOCK_OR_PROVIDER_RENDER"
+        }
+      ],
+      "finding": "lock/readiness must be vector state: story gate, Founder lock, recording master, audio preflight, voice lock, live render are distinct gates"
+    },
+    "C3-16": {
+      "status": "PASS_BOOK_LEARNING_RETURN_COMPILER",
+      "reusable_mechanisms": [
+        "POWER_AUTHORITY_BEFORE_ROMANTIC_CHEMISTRY: legal/professional control must be relinquished or explicitly bounded before romantic escalation can count as freely chosen",
+        "BLOCK_ANSWER_ESCALATION: each serialized block must close one concrete question and open the next through the answer's consequences",
+        "MAGIC_OR_TECH_SIGNAL_IS_NOT_GUILT_PROOF: extraordinary phenomenon may route investigation but ordinary evidence must carry culpability",
+        "EXACT_AUDIO_FACT_BINDING: clue-bearing exact line/sound contrast must be bound upstream across all audio consumers"
+      ],
+      "project_specific_content_exported_to_universal_canon": false
+    },
+    "C3-17": {
+      "status": "PASS_REAL_HASH_BOUND_BOOK_TO_AUDIO_MANIFEST_PILOT",
+      "project": "NINETY MISSING MINUTES",
+      "episode": "E01 THE CONFESSION",
+      "source_document_id": "1j_WPuSFVwPWzWHDvXqCAsNPM3-O6bSHMJgYH-7CLNrI",
+      "source_export_sha256": "5c3d86b271524614ad7adf37c71bafba74f9f63a292ada46ad567ff75e88a1c0",
+      "spoken_occurrence_ledger_sha256": "32fbb9ae09ff15a519e2f4a522333e402da228e6dd81ef5565e3bc6f058b266e",
+      "authority_gate": "PASS",
+      "exact_text_gate": "PASS",
+      "occurrence_coverage": "PASS",
+      "canonical_word_count": 1494,
+      "voice_lock": "PENDING",
+      "provider_render": "NO_GO",
+      "decision": "AUDIO_BUILD_AUTHORITY_CAN_BE_COMPILED; LIVE_RENDER_CANNOT_ADVANCE"
+    },
+    "C3-18": {
+      "status": "PASS_REAL_TTD_BLOCK_COMPILATION_AUDIT",
+      "project": "NINETY MISSING MINUTES E01",
+      "source": "10_NMM_E01_EXACT_TEXT_PROVIDER_REQUESTS_DRY_RUN_v1.1.json / Drive 13CcEHbBA94Fc0KqnurvXCoRF9t07s3ya",
+      "observed_block_types": ["ISOLATED_TTS", "NARRATION_BLOCK", "TTD_BLOCK", "ASSET_ALIAS"],
+      "observed_processing_domains": ["D_BROADCAST", "D_NARRATION_DRY", "D_PHONE_RECORDING", "D_LIVE_LOCAL+D_PHONE_REMOTE"],
+      "exact_text_occurrence_count": 269,
+      "canonical_word_count": 1494,
+      "important_behavior": [
+        "phone-recorded Leo lines isolated from local/narration domains",
+        "repeated exact evidence phrases may alias accepted source assets instead of regenerating semantic variants",
+        "multi-speaker local/phone interaction may use TTD block while preserving occurrence IDs",
+        "voice IDs remain null until casting gate"
+      ],
+      "semantic_drift_detected": false
+    },
+    "C3-25": {
+      "status": "PASS_PROMPT_IR_MIGRATION_PILOT",
+      "source_run_card": "C3-18 Text-to-Dialogue Block Compiler",
+      "compiled_ir": {
+        "task_id": "C3-18",
+        "authority_refs": ["CURRENT_AUDIO_AUTHORITY", "LOCKED_SOURCE_IDENTITY"],
+        "task_delta": "COMPILE_EXACT_TEXT_TO_PROVIDER_SAFE_BLOCKS",
+        "required_inputs": ["source_hash", "occurrence_ledger", "speaker_map", "processing_domain_boundaries"],
+        "forbidden_changes": ["NO_EXACT_TEXT_REWRITE", "NO_VOICE_LOCK_WITHOUT_EVIDENCE", "NO_PROCESSING_DOMAIN_MERGE_ACROSS_CLUE_BOUNDARY"],
+        "required_outputs": ["block_manifest", "coverage_report", "open_gates"],
+        "gate": "EXACT_TEXT_AND_OCCURRENCE_COVERAGE_PASS",
+        "evidence_requirement": "SOURCE_HASH_PLUS_DETERMINISTIC_COVERAGE"
+      },
+      "decision_gate_equivalence": "PASS",
+      "authority_equivalence": "PASS",
+      "note": "human-readable prose remains a presentation layer; IR is the execution contract"
+    }
+  },
+  "evidence_boundaries": [
+    "C3-12 static/manual causality extraction is not a human literary verdict",
+    "C3-17/18 dry-run/manifest evidence is not live provider quality",
+    "C3-10 graph does not create relationship canon; it encodes current authority",
+    "C3-15 does not issue Founder lock"
+  ]
+}
