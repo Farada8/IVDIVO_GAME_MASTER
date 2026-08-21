@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.opposition_adaptation/1.0",
+  "title":"IVDIVO Opposition Adaptation Ledger",
+  "type":"object",
+  "required":["opposition_type","exchanges"],
+  "properties":{
+    "opposition_type":{"type":"string","enum":["PERSON","INSTITUTION","ENVIRONMENT","SOCIAL_SYSTEM","MIXED"]},
+    "exchanges":{"type":"array","minItems":1,"items":{"type":"object","required":["unit_id","protagonist_move","opposition_observation_or_inference","counter_move","new_constraint","protagonist_adaptation","price","causal_response"],"properties":{
+      "unit_id":{"type":"string"},
+      "protagonist_move":{"type":"string"},
+      "opposition_observation_or_inference":{"type":"string"},
+      "counter_move":{"type":"string"},
+      "new_constraint":{"type":"string"},
+      "protagonist_adaptation":{"type":"string"},
+      "price":{"type":"string"},
+      "causal_response":{"type":"boolean"},
+      "scheduled_escalation_only":{"type":"boolean"}
+    }}}
+  }
+}
