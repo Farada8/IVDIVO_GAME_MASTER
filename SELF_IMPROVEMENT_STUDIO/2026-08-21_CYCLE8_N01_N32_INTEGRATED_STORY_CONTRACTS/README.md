@@ -14,16 +14,31 @@ This run continues the Cycle8 Next64 queue without interpreting generic continua
 
 ## N06–N20 story adapter convergence
 
-While this run was being built, current main gained `SELF_IMPROVEMENT_STUDIO/2026-08-21_CYCLE8_STORY_ADAPTER_REAL_PILOT/`.
+Current main contains `SELF_IMPROVEMENT_STUDIO/2026-08-21_CYCLE8_STORY_ADAPTER_REAL_PILOT/`.
 
-That implementation is stronger than the duplicate local adapter draft because it adds `SOURCE_ADEQUACY_GATE` and already reports:
+Stage 1 added `SOURCE_ADEQUACY_GATE` and reported:
 - 13/13 bounded real-project canaries PASS;
 - 24/24 warm regression PASS;
 - 24/24 cold regression PASS;
 - D01, D10 and B03 fixtures;
 - no story/canon mutation.
 
-Disposition: **REUSE MAIN PILOT; DELETE/DO NOT MERGE DUPLICATE ADAPTER RUNTIME.**
+While this integration continued, Stage 2 landed on main using correct D10 Season Bible + 24-episode Causal Grid sources:
+- 8/8 Stage-2 checks dispositioned correctly: 7 PASS-like results + 1 source adequacy HOLD;
+- Story Core `STORY_CORE_READY`;
+- Opposition `LEGITIMATE_RESISTANCE`;
+- Wrong Strategy `CAUSALLY_PROVEN`;
+- Midpoint `MIDPOINT_RECLASSIFICATION`;
+- Climax `ENSEMBLE_VALID`;
+- World `EARNED_WORLD_REVEAL`;
+- Institutions `DIFFERENTIATED`;
+- Ordinary-life remains `INSUFFICIENT_SOURCE_NOT_STORY_DEFECT` because no adequate Character Bible/corpus source was supplied;
+- 25/25 warm + 25/25 exact cold regression PASS;
+- no story/canon mutation; no promotion.
+
+This strengthens the core law: **source adequacy is evaluated before story defect classification**. Missing information in a routing/final-gate/partial authority summary is not evidence that the underlying story is defective.
+
+Disposition: **REUSE MAIN PILOT; DELETE/DO NOT MERGE DUPLICATE ADAPTER RUNTIME.** Do not invent ordinary-life facts merely to turn a HOLD green.
 
 ## N14–N32 unique cross-domain layer
 
@@ -49,7 +64,13 @@ Integrated local regression against the main real-pilot adapter module plus thes
 
 ## Real concurrency evidence
 
-Two stale-branch events occurred during this run. One changed SI-0015 itself; another added the real story-adapter pilot. The run therefore used `REBASE_SALVAGE` rather than force-merging stale code. This is direct production evidence for the concurrency protocol, not a synthetic fixture.
+Multiple concurrent-main advances occurred during this run. One changed SI-0015 itself; another added the real Story Adapter pilot; later Stage 2 strengthened that pilot while this branch remained open. The run used semantic dedupe + `REBASE_SALVAGE` instead of force-overwriting newer main. This is direct production evidence for the concurrency protocol, not a synthetic fixture.
+
+## SI-0015 lifecycle
+
+The branch advances SI-0015 only to `READY_FOR_PILOT`, because its recorded executable-canary gate is satisfied by 7/7 local canaries, GitHub Actions success, Drive readback, and implementation present on main. `VERIFIED_CURRENT` is NOT claimed.
+
+Next SI-0015 gate: real project-router pilot + healthy historical/superseded control + false-positive review.
 
 ## Evidence ceiling
 
