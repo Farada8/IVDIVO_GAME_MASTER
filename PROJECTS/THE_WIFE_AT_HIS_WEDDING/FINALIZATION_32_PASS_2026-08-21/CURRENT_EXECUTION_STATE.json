@@ -1,0 +1,60 @@
+{
+  "project": "THE WIFE AT HIS WEDDING",
+  "date": "2026-08-21",
+  "scope": "E91-E120_FINAL_ARC",
+  "status": "WORKING_CONDITIONAL_GO_TO_DRAFTING",
+  "founder_locked": false,
+  "upstream": {
+    "E61_E90_story_block": "CLOSED_PASS",
+    "E90_next_arc_hook": "TWO_LIVE_NEWBORN_WRISTBANDS_ONE_BIRTH_CERTIFICATE",
+    "fire_arc_reopen": false
+  },
+  "research_cycle": {
+    "prompts_created": 32,
+    "prompts_executed": 32,
+    "integrated_conclusions_created": true,
+    "authority_convergence_completed": true,
+    "next_prompts_created": 64,
+    "next_prompts_executed": 0
+  },
+  "architecture": {
+    "detailed_source": "20B_EPISODES_91-120_FINAL_ARC_ARCHITECTURE_v1.0",
+    "authority_status": "WORKING_PRE_PROSE",
+    "episode_order_retained": true,
+    "research_macro_alternatives_status": "OPTION_ONLY_WHERE_CONFLICTING",
+    "convergence_overlay": "05_AUTHORITY_CONVERGENCE_AND_CURRENT_EXECUTION_STATE_v1.1.md"
+  },
+  "accepted_upgrades": [
+    "concrete_present_day_institutional_opposition",
+    "identity_layer_separation",
+    "independent_evidence_classes",
+    "ordinary_life_and_field_action",
+    "mara_evelyn_remedy_conflict",
+    "human_scene_naturalism_and_audio_first_gates"
+  ],
+  "protected": {
+    "lily_is_evidence": false,
+    "post_marriage_sister_sexual_substitution": false,
+    "adrian_memory_is_civil_identity_proof": false,
+    "original_missing_certificate_is_locked_as_grand_plot": false,
+    "human_signal_run": false,
+    "market_validation_claimed": false
+  },
+  "unrun_external_gates": [
+    "HUMAN_SIGNAL",
+    "JURISDICTION_SPECIFIC_LEGAL_REVIEW",
+    "REAL_LISTENER_AUDIO_VALIDATION"
+  ],
+  "next_queue": "03_NEXT_64_EXECUTION_PROMPTS_v1.0.md",
+  "highest_unblocked_obligation": "RUN_PROMPT_01_FRESH_AUTHORITY_STALE_WORK_GATE",
+  "after_no_newer_E91_found": "BUILD_E91_SCENE_CONTRACTS_THEN_DRAFT_AND_GATE_E91",
+  "prohibited": [
+    "REOPEN_E61_E90_FIRE_ARC_WITHOUT_NEW_DEMONSTRATED_EVIDENCE",
+    "SILENTLY_PROMOTE_WORKING_TO_CANON_OR_LOCKED",
+    "USE_LILY_OR_DNA_AS_IDENTITY_SHORTCUT",
+    "MAKE_ONE_WITNESS_OR_ONE_DOCUMENT_DISPOSITIVE",
+    "RENUMBER_20B_EPISODE_MAP_FROM_RESEARCH_OPTION_ALONE"
+  ],
+  "drive_lab_folder_id": "1qW4EuQsKwsPNtIxG2KNytIL_p_Jo89mo",
+  "github_main_path": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/FINALIZATION_32_PASS_2026-08-21/"
+}
