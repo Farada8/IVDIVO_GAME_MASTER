@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.audio.provider_snapshot/1.0",
+  "title": "IVDIVO Credential-Safe Provider Snapshot",
+  "type": "object",
+  "required": ["schema_version", "status", "authenticated", "stable", "volatile", "stable_snapshot_hash", "volatile_snapshot_hash", "secret_persisted", "machine_may_infer_unlisted_voices"],
+  "properties": {
+    "schema_version": {"const": "ivdivo.audio.provider_snapshot/1.0"},
+    "status": {"enum": ["PASS", "HOLD"]},
+    "authenticated": {"type": "boolean"},
+    "stable": {
+      "type": "object",
+      "required": ["provider", "inventory_scope", "account_inventory_complete", "models", "voices"],
+      "properties": {
+        "provider": {"type": "string", "minLength": 1},
+        "inventory_scope": {"enum": ["TARGETED", "ACCOUNT_WIDE"]},
+        "account_inventory_complete": {"type": "boolean"},
+        "models": {"type": "object"},
+        "voices": {"type": "object"}
+      }
+    },
+    "volatile": {"type": "object"},
+    "stable_snapshot_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "volatile_snapshot_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "secret_persisted": {"const": false},
+    "machine_may_infer_unlisted_voices": {"const": false}
+  },
+  "additionalProperties": true,
+  "x-ivdivo-law": "Persist authenticated capability evidence, never credentials. TARGETED verification is not account-wide inventory. Stable capability drift blocks auto-substitution; volatile quota/request metadata is tracked separately."
+}
