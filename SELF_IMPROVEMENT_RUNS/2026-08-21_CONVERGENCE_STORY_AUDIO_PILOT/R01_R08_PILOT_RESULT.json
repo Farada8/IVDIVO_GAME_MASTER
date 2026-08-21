@@ -1,0 +1,28 @@
+{
+  "status": "ISSUES_FOUND",
+  "projects": [
+    {
+      "project_id": "B02",
+      "status": "ISSUES_FOUND",
+      "selected_authority": "BOOK2_FINAL_STORY_GATE_v1.0",
+      "selected_next_action": "EXTERNAL_FEEDBACK_OR_FOUNDER_CHANGE",
+      "issues": [
+        {"type": "STALE_LOWER_AUTHORITY_POINTER", "artifact_id": "B02_DRAFT_STATUS", "stale_next_action": "READER_ADVOCATE_CONTINUOUS_READ", "stronger_artifact_id": "BOOK2_FINAL_STORY_GATE_v1.0", "stronger_next_action": "EXTERNAL_FEEDBACK_OR_FOUNDER_CHANGE", "disposition": "PATCH_POINTER_ONLY"},
+        {"type": "TERMINAL_GATE_OVERRIDES_ACTIVE_POINTER", "artifact_id": "B02_DRAFT_STATUS", "terminal_artifact_id": "BOOK2_FINAL_STORY_GATE_v1.0", "disposition": "STOP_OR_ROUTE_TO_TERMINAL_NEXT_EVIDENCE"}
+      ]
+    },
+    {
+      "project_id": "CONCURRENCY",
+      "status": "ISSUES_FOUND",
+      "selected_authority": "RUN_BRANCH_SOURCE",
+      "selected_next_action": "REBASE_AND_CONTINUE",
+      "issues": [
+        {"type": "STALE_SOURCE_REVISION", "artifact_id": "RUN_BRANCH_SOURCE", "expected": "1854f993714eef8f52a2ab377bbc3799b071c6ce", "observed": "MAIN_ADVANCED_AFTER_BRANCH_CREATE", "disposition": "REBASE_DO_NOT_OVERWRITE"}
+      ]
+    },
+    {"project_id": "D04", "status": "PASS", "selected_authority": "SEVEN_NIGHTS_CURRENT_EXECUTION_STATE", "selected_next_action": "BIND_REAL_CANDIDATE_VOICE_IDS_AND_RUN_S0", "issues": []},
+    {"project_id": "D09", "status": "PASS", "selected_authority": "CURRENT_IVDIVO_SYSTEM_STATE_D09", "selected_next_action": "FOUNDER_APPROVAL_OR_LOCK_D09_SEASON", "issues": []},
+    {"project_id": "D10", "status": "PASS", "selected_authority": "BLOODBOUND_FINAL_STORY_GATE", "selected_next_action": "FOUNDER_LOCK_DECISION_GATE", "issues": []}
+  ],
+  "test_result": {"framework": "pytest", "passed": 6, "failed": 0, "status": "PASS"}
+}

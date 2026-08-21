@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated": "2026-08-21",
   "status": "VERIFIED_CURRENT_MACHINE_EXECUTION_NOT_CANON",
   "purpose": "Machine-execution pointer for the tested IVDIVO Engine v11.2 package plus verified post-package extensions on GitHub main. This file routes executable implementation evidence; it never overrides Founder instruction, story/book canon, current domain authority, project source-of-truth, or Self-Improvement authority.",
@@ -12,12 +12,7 @@
     "current_drive_id": "1xsZ6SrhHQpEMu_xhC9e-M6QUTO5dIfc3",
     "sha256": "d7985036fc97b74019aa74bf422d03f2f6cbe2d5f6e30736bb70032fc399ff4f",
     "size_bytes": 279417,
-    "fresh_unzip_regression": {
-      "framework": "pytest",
-      "passed": 290,
-      "failed": 0,
-      "status": "PASS"
-    },
+    "fresh_unzip_regression": {"framework": "pytest", "passed": 290, "failed": 0, "status": "PASS"},
     "integration_report_drive_id": "1Q7ewWz7-Mt-Ss39a6_r15m48nodzmjiO",
     "checksum_drive_id": "1-aZXa53KSqsRBJjqdr_s0TvnwBXl60U8",
     "fresh_unzip_log_drive_id": "17FmrAuQ4p1lg54RqrFQFrQBPP7I8iD4l"
@@ -62,28 +57,38 @@
     "tests": "tests/test_transcript_recovery.py",
     "merge_pr": 59,
     "merge_commit": "1e3bd068771135f8f1bf470269f2e9243af8f797",
-    "exact_source_smoke": {
-      "framework": "pytest",
-      "passed": 5,
-      "failed": 0,
-      "status": "PASS",
-      "identity_check": "Tested local tool bytes produced Git blob SHA 79b9cd9f9b8e60f65a7ec156dc23689a194233a6; GitHub main readback returned the same blob SHA."
-    },
+    "exact_source_smoke": {"framework": "pytest", "passed": 5, "failed": 0, "status": "PASS", "identity_check": "Tested local tool bytes produced Git blob SHA 79b9cd9f9b8e60f65a7ec156dc23689a194233a6; GitHub main readback returned the same blob SHA."},
     "machine_boundary": "First-pass extraction only. It does not verify persisted claims, decide canon, promote candidates, or mark INGESTION_COMPLETE. Downstream AI/human reconciliation remains required.",
     "secret_firewall": "Detected credentials are redacted from excerpts; secrets_persisted is always false in generated ledger.",
     "next_packaging_gate": "Include extension in next tested engine ZIP only after full-package regression is run; do not relabel v11.2 package contents retroactively."
   },
   "continuation_contract": {
     "repeated_continuation_word_required": false,
+    "semantics": "AUTOPILOT_V1_2_REAL_GATES",
     "auto_continue_requires": [
       "NO_CURRENT_BLOCKER",
       "CONTINUATION_POLICY_EXPLICITLY_ENABLED",
-      "NEXT_ACTION_SAFE_TRUE",
-      "NEXT_ACTION_ZERO_COST_TRUE",
-      "NEXT_ACTION_REVERSIBLE_TRUE",
-      "NEXT_ACTION_TOOL_EXECUTABLE_HERE_TRUE"
+      "FRESHNESS_VALID",
+      "AUTHORITY_UNAMBIGUOUS",
+      "DEPENDENCIES_PASS",
+      "ACTION_EXECUTABLE_HERE",
+      "NO_NEW_FOUNDER_DECISION_REQUIRED",
+      "NO_HUMAN_EVIDENCE_REQUIRED",
+      "NO_UNAVAILABLE_EXTERNAL_PROVIDER_GATE",
+      "NO_UNAUTHORIZED_LOCKED_LAYER_REOPEN",
+      "NO_UNAPPROVED_IRREVERSIBLE_HIGH_IMPACT_ACTION",
+      "NO_UNRESOLVED_FATAL_OR_MAJOR",
+      "NO_TOOL_RUNTIME_LIMITATION",
+      "NO_SAFETY_OR_LEGAL_GATE"
     ],
-    "missing_required_flag": "FAIL_CLOSED_STOP",
+    "legacy_safe_zero_cost_reversible_are_universal_prerequisites": false,
+    "legacy_ambiguity_fail_closed": {
+      "safe_false_requires": "SAFETY_CLEAR_TRUE",
+      "zero_cost_false_requires": "EXPLICIT_PROVIDER_GATE_METADATA",
+      "reversible_false_requires": "EXPLICIT_IRREVERSIBLE_HIGH_IMPACT_METADATA"
+    },
+    "missing_required_modern_gate_metadata": "FAIL_CLOSED_STOP",
+    "resolver_authority": "tools/ivdivo_next_action.py",
     "after_each_material_action": "VERIFY -> PERSIST -> REBASE -> RECOMPUTE_DAG -> CONTINUE_UNTIL_REAL_GATE"
   },
   "self_improvement_bridge": {

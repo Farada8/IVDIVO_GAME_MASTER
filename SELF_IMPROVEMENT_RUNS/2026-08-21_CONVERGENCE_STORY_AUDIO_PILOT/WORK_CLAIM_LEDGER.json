@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "status": "BOUNDED_RUN_CLAIM_NOT_AUTHORITY_LOCK",
+  "scope": ["R01-R08_STATE_CONVERGENCE", "R17-R20_BLOODBOUND_NO_CHANGE_STORY_PILOT", "R25-R32_D04_LIVE_AUDIO_EVIDENCE"],
+  "source_main_sha_at_claim": "1854f993714eef8f52a2ab377bbc3799b071c6ce",
+  "branch": "codex/state-convergence-bloodbound-audio-pilot-2026-08-21",
+  "owner_role": "PRIMARY_INTEGRATOR",
+  "authority_lock": false,
+  "rebase_condition": "MAIN_ADVANCES_OR_PROJECT_SPECIFIC_FRONTIER_CHANGES",
+  "expiry_condition": "RUN_REPORTS_PERSISTED_AND_PR_OPEN_OR_REAL_GATE_REACHED",
+  "stale_write_policy": "REBASE_DO_NOT_FORCE_OVERWRITE",
+  "protected_layers": ["FOUNDER_LOCKS", "LOCKED_STORY_TEXT", "PROJECT_SOURCE_OF_TRUTH", "HUMAN_SIGNAL", "PROVIDER_EVIDENCE"],
+  "notes": "Advisory collision-avoidance record only. It cannot block sibling work or grant authority."
+}
