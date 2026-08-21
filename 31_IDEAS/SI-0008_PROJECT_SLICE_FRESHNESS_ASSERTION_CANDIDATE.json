@@ -1,1 +1,1 @@
-{"status":"SUPERSEDED_ID_COLLISION_REDIRECT_ONLY","correct_candidate_id":"SI-0015","correct_path":"31_IDEAS/REGISTRY_EXTENSIONS/SI-0015_PROJECT_SLICE_FRESHNESS_ASSERTION.json","note":"SI-0008 belongs to Transcript Recovery; SI-0014 belongs to Session Resilience/Durable Recovery."}
+{"status":"SUPERSEDED_REDIRECT","correct_candidate":"SI-0015","note":"SI-0008 Transcript Recovery; SI-0014 Session Resilience."}
