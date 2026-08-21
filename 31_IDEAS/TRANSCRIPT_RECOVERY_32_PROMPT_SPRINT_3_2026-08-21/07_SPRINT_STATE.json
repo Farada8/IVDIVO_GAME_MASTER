@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "date": "2026-08-21",
-  "status": "SPRINT3_EXECUTED_32_OF_32_SYNTHESIZED_NEXT64_READY",
+  "status": "SPRINT3_EXECUTED_32_OF_32_SYNTHESIZED_NEXT64_READY_POST_EXECUTION_REBASED",
   "scope": "FULL_CHAT_TRANSCRIPT_RECOVERY_OPERATIONALIZATION_AND_CYCLE_DEDUPE",
   "branch": "research/transcript-recovery-sprint3-20260821",
   "freshness_inputs": {
@@ -9,7 +9,7 @@
     "semantic_candidate": "SI-0009 / PR #67 / 11_OF_11_UNIT_SMOKE / NOT_CURRENT",
     "registry_family": "CURRENT base+extensions architecture with SI-0008..SI-0011 visible",
     "whole_system_cycle2": "PR #77 MERGED",
-    "open_broad_implementation_sprint": "PR #78 OPEN / real transcript N11-N12 blocked",
+    "broad_implementation_sprint": "PR #78 MERGED / N11-N12 real transcript evidence remained blocked in that sprint",
     "prior_transcript_sprint": "TRANSCRIPT_RECOVERY_32_PROMPT_SPRINT_2_2026-08-21"
   },
   "counts": {
@@ -54,11 +54,19 @@
     "SI_0013_PROMOTION",
     "NEXT_ENGINE_PACKAGE_REFRESH"
   ],
+  "post_execution_freshness_rebase": {
+    "observed_main_tip": "cc30010241aeeffdd7e9225c6ba24775b1579e1f",
+    "pr78_status": "MERGED_2026_08_21T16_23_41Z",
+    "pr78_merge_commit": "d07e6e1a585a4863ed0eb40b9f901f2f592aa350",
+    "sibling_cycle3_guardrail_evidence": "SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE3_SELECTED32_TO_64/ARTIFACTS/C3_31_GUARDRAIL_LIVE_FIXTURE.json reached COMMITTED_AFTER_FRESHNESS_TOKEN on main commit cc30010241aeeffdd7e9225c6ba24775b1579e1f",
+    "impact": "NO_CHANGE_TO_PRIMARY_CONCLUSION. Reuse/dedupe generic guardrail and transaction work from newer main; Sprint 3 remains unique mainly in recovery-specific completeness/partition/evidence fixtures and cycle-dedupe governance.",
+    "merge_law": "ADDITIVE_UNIQUE_PATH_ONLY; REVIEW_OR_REBASE_AGAINST_CURRENT_MAIN_BEFORE_MERGE; DO_NOT_OVERWRITE_NEWER_SHARED_STATE"
+  },
   "next_gate": "FIRST_REAL_LARGE_TRANSCRIPT_END_TO_END_PILOT",
   "parallel_bounded_work": [
     "IMPLEMENT_CONNECTOR_VERIFICATION_ADAPTERS",
     "RUN_ADVERSARIAL_RECOVERY_FIXTURES",
-    "INTEGRATE_TRANSACTIONAL_PERSISTENCE",
+    "INTEGRATE_TRANSACTIONAL_PERSISTENCE_BY_REUSING_NEWER_MAIN_GUARDRAILS",
     "REBASE_AND_REGRESSION_TEST_SI_0009"
   ],
   "do_not_do": [
