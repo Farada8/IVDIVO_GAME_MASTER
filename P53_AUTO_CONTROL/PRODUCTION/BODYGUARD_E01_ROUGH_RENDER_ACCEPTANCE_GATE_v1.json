@@ -1,0 +1,38 @@
+{
+  "artifact": "BODYGUARD_E01_ROUGH_RENDER_ACCEPTANCE_GATE_v1",
+  "status": "PRE_RENDER",
+  "authority": {
+    "request_manifest": "BODYGUARD_E01_ELEVENLABS_ROUGH_RENDER_REQUESTS_v1.json",
+    "voice_map": "BODYGUARD_E01_CURRENT_VOICE_MAP_TEMPLATE_v1.json",
+    "take_manifest": "BODYGUARD_E01_TAKE_MANIFEST_TEMPLATE_v1.json",
+    "expected_spoken_words": 1344,
+    "expected_blocks": 190,
+    "expected_raw_takes": 405,
+    "spoken_sequence_sha256": "2af60ca3b58bc90a2863e8f6dbee2bf7541d6b1f2315e78704f12ca214da9149"
+  },
+  "gates": [
+    {"id":"AUTHORITY","fail_closed":true,"pass_when":"Recording Master v1.6 remains source authority and story is locked."},
+    {"id":"EXACT_TEXT","fail_closed":true,"pass_when":"190 ordered request texts hash to the locked spoken-sequence SHA-256."},
+    {"id":"VOICE_BINDING","fail_closed":true,"pass_when":"Every used voice_role has a non-null pilot voice_id after audition; no unapproved substitution."},
+    {"id":"TAKE_COVERAGE","fail_closed":true,"pass_when":"All 405 planned rough takes are either rendered or explicitly waived with reason."},
+    {"id":"ONE_SELECTED_TAKE","fail_closed":true,"pass_when":"Exactly one QC-passing take is selected for every one of the 190 blocks."},
+    {"id":"POST_CHAIN_BOUNDARY","fail_closed":true,"pass_when":"IEM_THREAT, PHONE_MEDIA, NARRATION_VO, CREW_COMMS and SHOW_COMMS remain separately processable from CLEAN_DIALOGUE."},
+    {"id":"THREAT_CONSISTENCY","fail_closed":true,"pass_when":"Threat first occurrence and replay preserve the same human identity/performance; replay functions as evidence."},
+    {"id":"CLUE_MONO","fail_closed":true,"pass_when":"Four-click/two-click and wrong-channel inference remain understandable after mono collapse."},
+    {"id":"P53_HEROINE_AGENCY","fail_closed":true,"pass_when":"Naomi acts before emotional processing and never reads passive in the incident."},
+    {"id":"P53_MALE_AGENCY","fail_closed":true,"pass_when":"Eli's fracture does not become helplessness; he contributes decisions and final clue inference."},
+    {"id":"CONSENT","fail_closed":true,"pass_when":"Bodypack removal remains explicitly permission-based and non-romanticized."},
+    {"id":"NO_VILLAIN_CODING","fail_closed":true,"pass_when":"Cal/Talia/media/threat processing does not disclose culprit theory through performance shorthand."},
+    {"id":"NO_MUSIC_DEPENDENCY","fail_closed":true,"pass_when":"Raw dialogue + story-critical SFX carry hook, chemistry and clue logic before music."},
+    {"id":"DEVICE_QC","fail_closed":true,"pass_when":"Stereo headphones, mono and phone/small-speaker references all preserve causal comprehension."},
+    {"id":"BLIND_LISTENER_GATE","fail_closed":true,"pass_when":"No repeated blocker appears under the approved blind-listener protocol."}
+  ],
+  "release_state_machine": {
+    "PRE_RENDER": "voice IDs and audio assets incomplete",
+    "RAW_RENDER_COMPLETE": "all planned takes rendered",
+    "DIALOGUE_ASSEMBLY_PASS": "one QC-passing take selected per block",
+    "ROUGH_MIX_PASS": "processing and device QC pass",
+    "HUMAN_EVIDENCE_PASS": "blind listener gate pass",
+    "PILOT_GO": "E02/E03 render may continue"
+  }
+}
