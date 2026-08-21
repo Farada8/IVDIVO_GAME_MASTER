@@ -1,0 +1,9 @@
+{
+  "schema": "NMM_PROVIDER_AUTHENTICATED_SNAPSHOT_REQUEST_v2",
+  "status": "PENDING_REAL",
+  "provider": "ElevenLabs",
+  "required_outputs": ["authenticated capability snapshot","provider model","output format","voice metadata ids","captured_at","preflight hash"],
+  "credential_persistence": "PROHIBITED",
+  "dispatch_allowed": false,
+  "reason": "No authenticated provider evidence in this Cycle4 execution environment."
+}
