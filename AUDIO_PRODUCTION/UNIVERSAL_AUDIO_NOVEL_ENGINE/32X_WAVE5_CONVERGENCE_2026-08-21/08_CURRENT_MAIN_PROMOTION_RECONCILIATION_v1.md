@@ -1,4 +1,4 @@
-# CURRENT MAIN PROMOTION RECONCILIATION v1
+# CURRENT MAIN PROMOTION RECONCILIATION v2
 
 Date: 2026-08-21
 Branch: `audio-novel-engine/wave5-convergence-32x64-2026-08-21`
@@ -6,7 +6,7 @@ PR: #93
 
 ## Freshness result
 
-At the beginning of this promotion pass, current `main` had advanced 34 commits beyond the Wave5 merge base. The branch was therefore treated as a review surface only; current main was re-read before any shared-runtime integration decision.
+Current `main` advanced repeatedly during this convergence pass. Every shared-runtime decision was therefore re-read against fresh main rather than promoted from an older Wave branch.
 
 Current main already contains substantial Audio Studio production machinery:
 - `audio/studio/runtime/` WORKING v0.3 scene/runtime lineage;
@@ -14,72 +14,60 @@ Current main already contains substantial Audio Studio production machinery:
 - `audio/studio/provider_preflight.py` authenticated read-only model/voice capability preflight;
 - `audio/studio/elevenlabs_adapter.py` TTD/TTS request compilation, request hashing, live dispatch, durable response/audio/alignment persistence;
 - stereo integrity and timeline tests;
-- newer multilingual PMV main additions: render-block compiler v2, TTD-vs-TTS dry experiment harness, audio QC verifier, dependency invalidation/rollback tooling.
+- multilingual PMV additions including render-block compiler v2, TTD-vs-TTS dry experiment harness, audio QC verifier and dependency invalidation/rollback tooling.
 
-Therefore these mechanisms are classified `REUSE_MAIN`, not reimplemented in Wave5.
+These mechanisms are `REUSE_MAIN` and must not be recreated in Wave5.
 
-## PR #82 reconciliation
+## Production-control convergence — CLOSED ON MAIN
 
-PR #82 contained a broad `production_control.py` candidate. Function-by-function reconciliation produced a narrower genuinely missing provider-control layer:
+A narrow Wave5-local production-control experiment was initially implemented and passed 29/29 deterministic tests. During the mandatory sibling-delta sweep, fresher PR #94 was discovered. PR #94 contained a stronger fresh-main integration with controlled dispatch, exact identity+capability live gates, restart-safe spend/idempotency, ambiguous-response reconciliation, strict 48 kHz ingest, provider-vs-production acceptance separation, repair routing and expanded CI.
 
-PROMOTE AS CANDIDATE:
-1. persistent request/spend state keyed by deterministic request hash;
-2. duplicate-paid-dispatch prevention;
-3. ambiguous-response quarantine;
-4. explicit ambiguous charge/result reconciliation;
-5. stable provider error categories + retry policy;
-6. capability drift / no-auto-substitution policy;
-7. generic dependency descendant invalidation helper;
-8. selective rerender boundary validation;
-9. control-layer release evidence gate.
+PR #94 final evidence before merge:
+- Audio Studio Runtime workflow SUCCESS;
+- dedicated runtime 4/4 PASS;
+- full Audio Studio discovery 88/88 PASS;
+- no weakening of provider/human/economics evidence boundaries.
 
-DO NOT DUPLICATE:
-- alignment normalization;
-- provider preflight;
-- TTD/TTS request building;
-- response/audio persistence;
-- scene performance compilation;
-- pause/mic/body/Foley/spatial/music compilation;
-- human artistic lock decisions.
+PR #94 was promoted from Draft to Ready and merged with expected-head protection.
+Merge commit: `49a4d0e455b62dfd68932bf7c60ca4dee7df7b68`.
 
-Candidate location selected: `audio/studio/production_control.py`, beside provider adapter/preflight/alignment modules rather than creating a second runtime tree.
+Post-merge readback confirms current main now contains:
+- `audio/studio/runtime/production_control.py`;
+- `audio/studio/controlled_provider_dispatch.py`;
+- `audio/studio/runtime/audio_asset_ingest.py`;
+- `audio/studio/runtime/provider_reconciliation.py`;
+- `audio/studio/runtime/production_control_cli.py`;
+- `audio/studio/runtime/audio_repair_router.py`;
+- associated regression tests and CI hardening.
 
-## PR #84 reconciliation
+The duplicate Wave5-local `audio/studio/production_control.py` and its duplicate test file were therefore DELETED from PR #93 before merge. Their 29/29 run remains experiment evidence only; it is not another candidate runtime.
 
-Keep as candidate/evidence concepts:
-- same-source NARRATED / MULTI_VOICE / DRAMATIZED benchmark;
-- human-review compression as review planning only;
-- measured economics;
-- fail-closed studio release evidence matrix.
+## Supersession result
 
-Do not wholesale-promote Automatic Director because current main `runtime/performance_compiler.py` already emits Actor Director Score, Rhythm/Pause/Breath and provider-safe context packets. Unique future director deltas must be proven separately before porting.
+PR #82 = SUPERSEDED by merged #94. Do not merge it.
+PR #86 = historical Wave4 research/evidence package; any integration function duplicated by #94/main is superseded. Preserve history, do not merge stale runtime concepts over main.
+PR #93 = convergence/research/state package only; it must not carry a second shared runtime implementation.
 
-## PR #86 + PMV reconciliation
+## PR #84 reconciliation — NEXT UNIQUE INTERNAL FRONTIER
 
-Sound/QC and provider-routing functions increasingly exist on current main. Reuse before adding more modules. In particular, the PMV165-168 line already contributes render block v2, TTD/TTS dry comparison, audio QC and dependency invalidation evidence. Project-specific BODYGUARD roles, clue indices and RU story facts remain project-local.
+PR #84 still contains potentially unique Studio Intelligence evidence mechanisms:
+- same-source `NARRATED / MULTI_VOICE / DRAMATIZED` benchmark manifest;
+- evidence-only benchmark scoring requiring human quality + measured cost;
+- performance evidence envelope and no-auto-lock law;
+- Human Review Compressor as advisory review planning only;
+- measured economics (`generated`, `accepted`, provider cost, manual time, cache/regeneration waste);
+- Studio v1 release evidence matrix.
 
-## New candidate integration
-
-Added on PR #93:
-- `audio/studio/production_control.py`
-- `audio/studio/tests/test_production_control.py`
-
-Local deterministic result: 29/29 PASS.
-Prior Wave5 convergence suite: 68/68 PASS.
-Combined newly executed Wave5/convergence-control tests: 97 PASS, 0 FAIL, 0 ERROR.
-
-This is not a live provider or human-quality PASS.
-
-## Promotion gate
-
-Before merge/promotion:
-1. inspect GitHub CI/current-main compatibility;
-2. ensure no newer main file independently implements the same production-control surface;
-3. keep adapter and control separated unless a failing integration test proves a wrapper is needed;
-4. merge/readback only if no regression/conflict;
-5. after merge, mark duplicate PR82 production-control branch content superseded by current main;
-6. live LESSON ZERO canary remains a separate provider/human/economics gate.
+DO NOT wholesale-promote:
+- Automatic Director: current main `runtime/performance_compiler.py` already emits Actor Director Score, Rhythm/Pause/Breath and provider-safe context packets; any unique director delta needs its own proof.
+- selective repair planner: current main now has `runtime/audio_repair_router.py` and ROOM917 project-local post-render engineering; reuse those unless a concrete missing contract is demonstrated.
 
 ## Exact next internal action
 
-Run/inspect PR #93 checks and current-main compatibility. If green, merge the narrow production-control candidate. Then fresh-read main again and continue only with the next unique convergence gap; do not recreate alignment/preflight/adapter/director/QC already present.
+Fresh-read post-merge main -> reconcile PR #84 function-by-function -> create only missing Studio Intelligence evidence modules/tests -> run full Audio Studio CI -> merge/readback if green -> update Wave5/Drive/current workstate -> close redundant historical PRs.
+
+## Exact next external action
+
+`AUTHENTICATED INVENTORY -> NARRATOR/ETHAN/AOIFE -> ИФА/КОНТАКТ -> MULTI-STATE/PAIR -> EXACT 3 LIVE LESSON ZERO REQUESTS -> DURABLE WAV+ALIGNMENT -> RESOLVED TIMELINE/MINI-MIX -> BLIND HUMAN -> MEASURED COST -> V1 DECISION`.
+
+No provider/human/economics evidence may be simulated.
