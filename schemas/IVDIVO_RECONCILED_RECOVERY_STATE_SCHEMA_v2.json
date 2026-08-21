@@ -1,0 +1,346 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.reconciled_recovery_state/2.0",
+  "title": "IVDIVO Reconciled Recovery State",
+  "description": "Semantic/project-aware state downstream of Transcript Recovery Ledger v1. This schema never makes a transcript authoritative by itself; it records reconciliation, persistence verification, dispositions, writes/readback, frontier and completion gates.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "recovery_id",
+    "recovery_status",
+    "source",
+    "authority",
+    "project_partitions",
+    "verification_tasks",
+    "unknowns",
+    "conflicts",
+    "writes",
+    "system_improvement_candidates",
+    "completion_gate",
+    "next_action"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0"},
+    "recovery_id": {"type": "string", "minLength": 1},
+    "recovery_status": {
+      "enum": [
+        "EXTRACTED_UNVERIFIED",
+        "RECONCILING",
+        "PARTIAL_WRITE_REPAIR_REQUIRED",
+        "INGESTION_COMPLETE",
+        "FAIL_CLOSED"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "sha256",
+        "completeness",
+        "completeness_basis",
+        "input_tail_processed",
+        "source_completeness_proven",
+        "chunks"
+      ],
+      "properties": {
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": ["integer", "null"], "minimum": 1},
+        "completeness": {
+          "enum": ["FULL_TRANSCRIPT", "PARTIAL_TRANSCRIPT", "UNKNOWN_COMPLETENESS", "MULTI_TRANSCRIPT_BUNDLE"]
+        },
+        "completeness_basis": {"type": "string", "minLength": 1},
+        "input_tail_processed": {"type": "boolean"},
+        "source_completeness_proven": {"type": "boolean"},
+        "first_turn_signature": {"type": ["string", "null"]},
+        "last_turn_signature": {"type": ["string", "null"]},
+        "truncation_indicators": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "chunks": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/chunk"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "required": ["direct_founder_directives", "paraphrased_directive_claims", "authority_unambiguous"],
+      "properties": {
+        "direct_founder_directives": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+        "paraphrased_directive_claims": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+        "authority_unambiguous": {"type": "boolean"},
+        "authority_resolution_note": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "project_partitions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/projectPartition"}
+    },
+    "verification_tasks": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/verificationTask"}
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/unknown"}
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/conflict"}
+    },
+    "writes": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/write"}
+    },
+    "system_improvement_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["candidate_ref", "disposition"],
+        "properties": {
+          "candidate_ref": {"type": "string", "minLength": 1},
+          "disposition": {"enum": ["DISCOVERY_ONLY", "CAPTURED", "DUPLICATE", "HOLD_FOR_TEST", "REJECTED", "VERIFIED_CURRENT"]},
+          "evidence_ref": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "completion_gate": {
+      "type": "object",
+      "required": [
+        "all_material_items_dispositioned",
+        "all_accepted_writes_read_back",
+        "authority_unambiguous",
+        "frontier_fresh",
+        "no_material_conflicts",
+        "secrets_persisted",
+        "input_tail_processed",
+        "ingestion_complete",
+        "can_auto_continue",
+        "reason"
+      ],
+      "properties": {
+        "all_material_items_dispositioned": {"type": "boolean"},
+        "all_accepted_writes_read_back": {"type": "boolean"},
+        "authority_unambiguous": {"type": "boolean"},
+        "frontier_fresh": {"type": "boolean"},
+        "no_material_conflicts": {"type": "boolean"},
+        "secrets_persisted": {"const": false},
+        "input_tail_processed": {"type": "boolean"},
+        "ingestion_complete": {"type": "boolean"},
+        "can_auto_continue": {"type": "boolean"},
+        "reason": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "next_action": {
+      "type": "object",
+      "required": ["action", "requires_new_founder_choice", "requires_human_evidence", "requires_external_provider", "executable_here"],
+      "properties": {
+        "action": {"type": ["string", "null"]},
+        "requires_new_founder_choice": {"type": "boolean"},
+        "requires_human_evidence": {"type": "boolean"},
+        "requires_external_provider": {"type": "boolean"},
+        "executable_here": {"type": "boolean"},
+        "do_not_repeat": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"recovery_status": {"const": "INGESTION_COMPLETE"}}},
+      "then": {
+        "properties": {
+          "completion_gate": {
+            "properties": {
+              "all_material_items_dispositioned": {"const": true},
+              "all_accepted_writes_read_back": {"const": true},
+              "authority_unambiguous": {"const": true},
+              "frontier_fresh": {"const": true},
+              "no_material_conflicts": {"const": true},
+              "input_tail_processed": {"const": true},
+              "ingestion_complete": {"const": true}
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"completion_gate": {"properties": {"can_auto_continue": {"const": true}}}}},
+      "then": {
+        "properties": {
+          "recovery_status": {"const": "INGESTION_COMPLETE"},
+          "completion_gate": {"properties": {"ingestion_complete": {"const": true}}}
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "chunk": {
+      "type": "object",
+      "required": ["chunk_id", "source_sha256", "range_kind", "start", "end", "findings_hash", "input_tail_in_chunk"],
+      "properties": {
+        "chunk_id": {"type": "string", "minLength": 1},
+        "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "range_kind": {"enum": ["BYTE", "LINE", "TURN"]},
+        "start": {"type": "integer", "minimum": 0},
+        "end": {"type": "integer", "minimum": 0},
+        "overlap_hash": {"type": ["string", "null"]},
+        "findings_hash": {"type": "string", "minLength": 1},
+        "processed_at": {"type": ["string", "null"]},
+        "input_tail_in_chunk": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "finding": {
+      "type": "object",
+      "required": ["finding_id", "source_role", "excerpt", "authority_class", "verification_state"],
+      "properties": {
+        "finding_id": {"type": "string", "minLength": 1},
+        "source_role": {"type": "string", "minLength": 1},
+        "embedded_source_role": {"type": ["string", "null"]},
+        "excerpt": {"type": "string"},
+        "authority_class": {
+          "enum": [
+            "FOUNDER_DIRECT",
+            "LOCKED_PROJECT_CANON",
+            "CURRENT_PROJECT_AUTHORITY",
+            "CURRENT_DOMAIN_AUTHORITY",
+            "CURRENT_STATE_POINTER",
+            "WORKING_CANDIDATE",
+            "EXTERNAL_FINDING",
+            "ASSISTANT_OR_MODEL_CLAIM",
+            "REFERENCE_ONLY"
+          ]
+        },
+        "verification_state": {
+          "enum": ["UNCHECKED", "VERIFIED", "MISSING", "SUPERSEDED", "CONFLICT", "UNRECOVERABLE", "NOT_APPLICABLE"]
+        },
+        "extraction_confidence": {"enum": ["HIGH", "MEDIUM", "LOW"]},
+        "chronology_key": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "artifactIdentity": {
+      "type": "object",
+      "required": ["store", "locator", "project", "artifact_type", "status"],
+      "properties": {
+        "store": {"enum": ["GITHUB", "GOOGLE_DRIVE", "FILE_LIBRARY", "PROVIDER", "HUMAN_EVIDENCE", "OTHER"]},
+        "locator": {"type": "string", "minLength": 1},
+        "project": {"type": "string", "minLength": 1},
+        "artifact_type": {"type": "string", "minLength": 1},
+        "status": {"type": "string", "minLength": 1},
+        "version": {"type": ["string", "null"]},
+        "revision": {"type": ["string", "null"]},
+        "hash": {"type": ["string", "null"]},
+        "source_parent": {"type": ["string", "null"]},
+        "branch_or_line": {"type": ["string", "null"]},
+        "gate_result": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "verificationTask": {
+      "type": "object",
+      "required": ["task_id", "claim_type", "store", "reference", "required_action", "result"],
+      "properties": {
+        "task_id": {"type": "string", "minLength": 1},
+        "claim_type": {"type": "string", "minLength": 1},
+        "store": {"enum": ["GITHUB", "GOOGLE_DRIVE", "FILE_LIBRARY", "PROVIDER", "HUMAN_EVIDENCE", "MARKET_EVIDENCE", "OTHER"]},
+        "reference": {"type": "string", "minLength": 1},
+        "expected_identity": {"oneOf": [{"$ref": "#/$defs/artifactIdentity"}, {"type": "null"}]},
+        "required_action": {"type": "string", "minLength": 1},
+        "result": {"enum": ["UNCHECKED", "VERIFIED", "MISSING", "SUPERSEDED", "CONFLICT", "UNRECOVERABLE", "NOT_APPLICABLE"]},
+        "evidence_ref": {"type": ["string", "null"]},
+        "checked_at": {"type": ["string", "null"]},
+        "superseded_by": {"type": ["string", "null"]},
+        "notes": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "chatOnlyCandidate": {
+      "type": "object",
+      "required": ["candidate_id", "artifact_type", "content_fingerprint", "disposition"],
+      "properties": {
+        "candidate_id": {"type": "string", "minLength": 1},
+        "artifact_type": {"type": "string", "minLength": 1},
+        "content_fingerprint": {"type": "string", "minLength": 1},
+        "source_turns": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+        "unknown_gaps": {"type": "array", "items": {"type": "string"}},
+        "disposition": {"enum": ["UNREVIEWED", "PERSIST_CANDIDATE", "ACCEPTED", "DUPLICATE", "SUPERSEDED", "REJECTED", "HOLD_FOR_TEST"]},
+        "persisted_ref": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "frontier": {
+      "type": "object",
+      "required": ["last_verified_completed_artifact", "current_authority", "open_gates", "blockers", "do_not_repeat", "next_legal_action", "fresh"],
+      "properties": {
+        "last_verified_completed_artifact": {"type": ["string", "null"]},
+        "current_authority": {"type": "array", "items": {"type": "string"}},
+        "open_gates": {"type": "array", "items": {"type": "string"}},
+        "blockers": {"type": "array", "items": {"type": "string"}},
+        "do_not_repeat": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "next_legal_action": {"type": ["string", "null"]},
+        "fresh": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "projectPartition": {
+      "type": "object",
+      "required": ["partition_id", "project_key", "artifact_claims", "chat_only_candidates", "frontier", "material_items_dispositioned"],
+      "properties": {
+        "partition_id": {"type": "string", "minLength": 1},
+        "project_key": {"type": "string", "minLength": 1},
+        "project_id": {"type": ["string", "null"]},
+        "branch_or_line": {"type": ["string", "null"]},
+        "artifact_claims": {"type": "array", "items": {"$ref": "#/$defs/artifactIdentity"}},
+        "chat_only_candidates": {"type": "array", "items": {"$ref": "#/$defs/chatOnlyCandidate"}},
+        "frontier": {"$ref": "#/$defs/frontier"},
+        "material_items_dispositioned": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "unknown": {
+      "type": "object",
+      "required": ["unknown_id", "category", "description", "material"],
+      "properties": {
+        "unknown_id": {"type": "string", "minLength": 1},
+        "category": {"enum": ["MISSING_EXACT_DETAIL", "UNAVAILABLE_STORE", "INCOMPLETE_TRANSCRIPT", "UNRESOLVED_CHRONOLOGY", "UNRESOLVED_PROJECT_IDENTITY", "OTHER"]},
+        "description": {"type": "string", "minLength": 1},
+        "material": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "conflict": {
+      "type": "object",
+      "required": ["conflict_id", "left_ref", "right_ref", "material", "status"],
+      "properties": {
+        "conflict_id": {"type": "string", "minLength": 1},
+        "left_ref": {"type": "string", "minLength": 1},
+        "right_ref": {"type": "string", "minLength": 1},
+        "material": {"type": "boolean"},
+        "status": {"enum": ["OPEN", "RESOLVED", "SUPERSEDED", "NEEDS_FOUNDER_DECISION"]},
+        "resolution": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "write": {
+      "type": "object",
+      "required": ["write_id", "recovery_id", "target", "status", "readback_status"],
+      "properties": {
+        "write_id": {"type": "string", "minLength": 1},
+        "recovery_id": {"type": "string", "minLength": 1},
+        "target": {"type": "string", "minLength": 1},
+        "content_fingerprint": {"type": ["string", "null"]},
+        "previous_pointer": {"type": ["string", "null"]},
+        "status": {"enum": ["PLANNED", "WRITTEN", "FAILED", "ROLLED_BACK", "REPAIRED", "SKIPPED_DUPLICATE"]},
+        "result_ref": {"type": ["string", "null"]},
+        "readback_status": {"enum": ["NOT_REQUIRED", "PENDING", "PASS", "FAIL"]},
+        "notes": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
