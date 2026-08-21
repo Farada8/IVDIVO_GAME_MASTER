@@ -1,0 +1,15 @@
+{
+  "schema": "NMM_TRUST_MUTATION_MATRIX_v1",
+  "mutations": [
+    {"id":"M01","mutation":"hash integrity without external class","expected":"INTERNAL_ONLY"},
+    {"id":"M02","mutation":"provider snapshot authenticated=false","expected":"FAIL_CLOSED"},
+    {"id":"M03","mutation":"stale provider snapshot","expected":"STALE_REVALIDATE"},
+    {"id":"M04","mutation":"human record missing declaration","expected":"FAIL"},
+    {"id":"M05","mutation":"human record missing artifact/protocol hash","expected":"FAIL"},
+    {"id":"M06","mutation":"blind threshold edited after seal","expected":"FAIL_PROTOCOL_MUTATED"},
+    {"id":"M07","mutation":"escrow locator exists without byte readback","expected":"METADATA_ONLY"},
+    {"id":"M08","mutation":"deterministic PASS with human/provider UNKNOWN","expected":"EVIDENCE_INCOMPLETE"},
+    {"id":"M09","mutation":"generic architecture work without demonstrated gap","expected":"REFUSE_META_WORK"},
+    {"id":"M10","mutation":"one-project learning success","expected":"DISCOVERY_ONLY"}
+  ]
+}
