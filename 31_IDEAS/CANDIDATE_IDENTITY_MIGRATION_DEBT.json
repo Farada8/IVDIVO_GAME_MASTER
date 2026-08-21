@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "TRACKED_MIGRATION_DEBT_BLOCKS_PROMOTION_NOT_SAFE_WORK",
+  "tracked_collisions": [
+    {
+      "candidate_id": "SI-0010",
+      "classification": "ID_COLLISION_DIFFERENT_MECHANISM",
+      "expected_source_paths": [
+        "31_IDEAS/PENDING/SI-0010_VOLATILE_SESSION_CHECKPOINT_EXTENSION.json",
+        "31_IDEAS/REGISTRY_EXTENSIONS/SI-0010_REGISTRY_SHARD_COMPACTION_TRANSACTION.json"
+      ],
+      "repair_locator": "GitHub PR #108 — migrate Session Resilience / Durable Recovery to SI-0014",
+      "repair_branch": "system/session-resilience-run33-durable-txn-2026-08-21",
+      "required_resolution": "PR108 merge or equivalent fresh-main migration; then remove this debt entry after global identity readback returns PASS/PASS_WITH_INDEX_DEBT only",
+      "promotion_blocked": true,
+      "do_not_duplicate_repair": true
+    }
+  ],
+  "law": "Tracked debt is not PASS evidence. It only permits dependency-independent engineering to continue while promotion/current-authority mutation remains blocked. Any new collision or any change in the expected collision source set fails closed."
+}
