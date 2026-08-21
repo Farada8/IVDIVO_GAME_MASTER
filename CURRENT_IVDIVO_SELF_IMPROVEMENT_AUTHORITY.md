@@ -9,19 +9,20 @@
 1. Founder newest direct instruction.
 2. `IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md` — governing v2 operating architecture.
 3. `IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md` — General Problem-Solving, Engine-Builder and Research Radar kernels.
-4. `SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json` — machine configuration.
-5. `SELF_IMPROVEMENT_EVALUATION_MATRIX_v1.json` — cross-domain proof/quality contract.
-6. `CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json` — machine-readable v2 state/frontier.
-7. `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json` — live candidate memory.
-8. `31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json` — candidate schema.
-9. `CURRENT_IVDIVO_LEARNING_LEDGER.json` — production observations, bounded experiments and reusable learnings.
-10. `LEARNING_LEDGER_SCHEMA_v1.json` — evidence-ledger schema.
-11. `IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md` — delta intake/dedupe/universalization firewall.
-12. `IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md` — reference/book learning route.
-13. `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md` — cross-conversation learning/continuation.
-14. `tools/ivdivo_self_improvement.py` — VERIFIED_CURRENT registry/audit/queue utility.
-15. `IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-21.md` — exact current runtime evidence.
-16. `CURRENT_IVDIVO_SYSTEM_STATE.json` — aggregate project pointer; rebase rather than overwrite when sibling dialogs advance it.
+4. `IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md` — pasted/exported prior-conversation recovery, verification, persistence and learning harvest.
+5. `SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json` — machine configuration.
+6. `SELF_IMPROVEMENT_EVALUATION_MATRIX_v1.json` — cross-domain proof/quality contract.
+7. `CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json` — machine-readable v2 state/frontier.
+8. `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json` — live candidate memory.
+9. `31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json` — candidate schema.
+10. `CURRENT_IVDIVO_LEARNING_LEDGER.json` — production observations, bounded experiments and reusable learnings.
+11. `LEARNING_LEDGER_SCHEMA_v1.json` — evidence-ledger schema.
+12. `IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md` — delta intake/dedupe/universalization firewall.
+13. `IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md` — reference/book learning route.
+14. `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md` — cross-conversation learning/continuation.
+15. `tools/ivdivo_self_improvement.py` — VERIFIED_CURRENT registry/audit/queue utility.
+16. `IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-21.md` — exact current runtime evidence.
+17. `CURRENT_IVDIVO_SYSTEM_STATE.json` — aggregate project pointer; rebase rather than overwrite when sibling dialogs advance it.
 
 Historical/base: `IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md`.
 
@@ -47,9 +48,16 @@ Follow `CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md`, `CURRENT_IVDIVO_WRITING
 ### Book → Audio
 Follow `CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md`, current audio overlay/source hash and manifests/gates. Audio may not silently reopen locked story. Repair the earliest proven failed layer. Hard Pilot, major repair, Release QC and Master Lock feed reusable evidence back to the Learning Ledger.
 
+### Abrupt-chat recovery / manual transcript transfer
+When the Founder copies a previous conversation into a new session (`Ctrl+A -> Ctrl+C -> paste`, export or generated big-paste attachment), run `18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md` before normal production continuation.
+
+The transcript is a recovery corpus, not authority. Recover material Founder directives, persisted-artifact claims, chat-only outputs, open gates and system improvements; verify persisted claims; dedupe against current; write accepted material to the correct controlling surfaces; route reusable discoveries through the Improvement Registry/Learning Ledger; then continue from the real frontier.
+
+Do not require the Founder to manually label which parts matter. Do not trust “saved/locked/passed” claims without readback. Do not invent missing transcript content. Do not persist secrets/API keys from pasted conversations.
+
 ## OPERATING LOOP
 
-`RESTORE CURRENT STATE -> FRESHNESS/DELTA SWEEP -> IMPROVEMENT REGISTRY SWEEP -> LEARNING LEDGER SWEEP -> IDENTIFY CURRENT PRODUCTION BOTTLENECK -> SURFACE RELEVANT VERIFIED/CANDIDATE MECHANISMS -> EXECUTE PRIMARY PRODUCTION OBLIGATION -> RECORD NEW DEFECTS/SUCCESSES -> ADVANCE ONE PRIMARY IMPROVEMENT WHEN JUSTIFIED -> PILOT/RED TEAM -> EVALUATION MATRIX -> APPLY -> VERIFY -> PERSIST -> CONTINUE`.
+`RESTORE CURRENT STATE -> IF PASTED PRIOR TRANSCRIPT THEN RECOVERY/INGESTION -> FRESHNESS/DELTA SWEEP -> IMPROVEMENT REGISTRY SWEEP -> LEARNING LEDGER SWEEP -> IDENTIFY CURRENT PRODUCTION BOTTLENECK -> SURFACE RELEVANT VERIFIED/CANDIDATE MECHANISMS -> EXECUTE PRIMARY PRODUCTION OBLIGATION -> RECORD NEW DEFECTS/SUCCESSES -> ADVANCE ONE PRIMARY IMPROVEMENT WHEN JUSTIFIED -> PILOT/RED TEAM -> EVALUATION MATRIX -> APPLY -> VERIFY -> PERSIST -> CONTINUE`.
 
 ## GENERAL PROBLEM-SOLVING KERNEL
 
@@ -83,6 +91,8 @@ True checks while no active session exists require explicit scheduled automation
 
 Evidence classes may not substitute for each other: automated tests ≠ literary quality; model review ≠ Human Signal; dry run ≠ live provider; source inspection ≠ runtime; predicted market score ≠ market behavior.
 
+A recovered transcript is an additional **discovery/evidence surface**, not a third authority memory. Its material contents must be reconciled into the two existing memories and controlling project artifacts instead of creating a parallel transcript canon.
+
 ## BEST-IDEA / ANTI-BEDLAM LAW
 
 A strong idea is saved only with `PROVENANCE + STATE + EVIDENCE + NEXT_ACTION + NEXT_GATE + APPLICATION PATH`.
@@ -98,6 +108,8 @@ Default WIP: one primary meta-improvement integrating; up to two independent bou
 Newer is not automatically better. Model votes do not create authority. Higher test count does not prove literary quality. A file named FINAL is not a lock.
 
 Changes to this engine pass the same lifecycle. It may simplify itself and remove obsolete rules.
+
+For self-improvement discoveries recovered from an old transcript, the transcript supplies provenance/discovery content but does not bypass lifecycle gates. Fully present material can be persisted as `CHAT_ONLY_CANDIDATE`; summaries/claims alone remain `DISCOVERY_ONLY`.
 
 ## CURRENT ACCEPTANCE STATUS
 
@@ -115,6 +127,6 @@ Evidence: `IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-
 
 The previous DNS/clone limitation remains an environment limitation only; it no longer blocks runtime verification because exact byte identity was proven through Git blob SHA before execution.
 
-Operational status: **the v2 architecture, registry lifecycle utility, learning ledger, kernels, evaluation contract and current router are VERIFIED_CURRENT.** Future improvements continue through normal candidate/pilot/evidence/promotion gates; real book/audio/Human/market evidence remains separate and must never be fabricated.
+Operational status: **the v2 architecture, registry lifecycle utility, learning ledger, kernels, evaluation contract and current router are VERIFIED_CURRENT.** The new transcript-recovery module is a Founder-directed operational extension and must itself be monitored through normal self-improvement evidence; real book/audio/Human/market evidence remains separate and must never be fabricated.
 
 **FIRST MAKE BETTER STORIES. THEN MAKE BETTER AUDIO FROM THOSE STORIES. THEN MAKE THE WHOLE FACTORY BETTER.**
