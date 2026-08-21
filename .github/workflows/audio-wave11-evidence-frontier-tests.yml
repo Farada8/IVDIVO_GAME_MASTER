@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install Audio Studio test dependencies
+        run: python -m pip install --disable-pip-version-check numpy
       - name: Run Wave11 dependency frontier tests
         run: python -m unittest discover -s AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/WAVE11_EXTERNAL_EVIDENCE_FRONTIER_32_TO_64_2026-08-21/tests -p 'test_*.py' -v
       - name: Run full Audio Studio regression
