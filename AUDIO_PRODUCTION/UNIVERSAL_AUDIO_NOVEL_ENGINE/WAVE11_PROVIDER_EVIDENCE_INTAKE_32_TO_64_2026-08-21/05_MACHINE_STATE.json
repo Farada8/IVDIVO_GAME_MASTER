@@ -1,0 +1,55 @@
+{
+  "schema_version": "ivdivo.audio.wave11.provider_evidence_intake/1.0",
+  "date": "2026-08-21",
+  "status": "WORKING_ENGINEERING_IMPLEMENTED_CI_DRIVE_MERGE_PENDING_EXTERNAL_PROVIDER_UNKNOWN",
+  "branch_base_main_sha": "61c1540e91fb7b849dc0e775d001893e2cc6fda0",
+  "canonical_runtime": "audio/studio/runtime",
+  "new_runtime_root_created": false,
+  "new_si_candidate_id_allocated": false,
+  "new_modules": [
+    "audio/studio/runtime/provider_evidence_intake.py",
+    "audio/studio/runtime/provider_execution_state.py"
+  ],
+  "new_workflow": ".github/workflows/elevenlabs-provider-evidence-intake.yml",
+  "reuse": [
+    "provider_snapshot_contract",
+    "elevenlabs_snapshot_acquirer",
+    "provider_snapshot_receipt",
+    "external_evidence_trust",
+    "provider_snapshot_diff",
+    "provider_inventory_compiler",
+    "cast_readiness",
+    "production_control",
+    "studio_evidence",
+    "human_review_ledger",
+    "live_lineage_escrow"
+  ],
+  "evidence_ceiling": {
+    "persisted_real_provider_artifact_visible": false,
+    "workflow_dispatch_run_directly_enumerable_by_current_connector": false,
+    "provider_calls_by_wave11": 0,
+    "paid_synthesis_calls": 0,
+    "human_listening_claims": 0,
+    "real_voice_locks": 0,
+    "pronunciation_locks": 0,
+    "lesson_zero_live_requests": 0,
+    "real_alignment_units": 0,
+    "measured_provider_economics": false,
+    "story_mutations": 0
+  },
+  "wave11_prompt_status": {"executed_or_dispositioned": 28, "pending_ci_drive_merge": 4, "total": 32},
+  "wave12_prompt_bank_count": 64,
+  "exact_next_external_dependency": "RUN_REAL_AUTH_PROVIDER_WORKFLOW_AND_ALLOW_WAVE11_INTAKE_TO_VALIDATE_EXACT_RUN_ARTIFACT",
+  "exact_next_internal_dependency": "FRESH_AUDIO_STUDIO_CI_THEN_DRIVE_READBACK_THEN_FRESH_MAIN_MERGE_GATE",
+  "forbidden": [
+    "SECOND_AUDIO_ENGINE",
+    "SECOND_PROVIDER_ACQUIRER",
+    "SECOND_HUMAN_REVIEW_SYSTEM",
+    "CALLER_BOOLEAN_AS_EXTERNAL_EVIDENCE",
+    "AUTO_VOICE_LOCK",
+    "AUTO_VOICE_SUBSTITUTION",
+    "INTAKE_PROVIDER_SECRET",
+    "INTAKE_PAID_SYNTHESIS",
+    "CI_AS_PROVIDER_OR_HUMAN_PROOF"
+  ]
+}
