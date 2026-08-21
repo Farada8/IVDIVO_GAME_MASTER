@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import importlib.util
+import sys
 from pathlib import Path
 
 from tools.ivdivo_durable_transaction_interface import (
@@ -57,10 +58,16 @@ def _real_evidence(tag="1"):
 
 def _load_si0012_runtime():
     path = Path("SELF_IMPROVEMENT_STUDIO/SI0012_MIN_COMPAT_RUNTIME_v0.1/si0012_runtime_v0_1.py")
-    spec = importlib.util.spec_from_file_location("si0012_runtime_v0_1", path)
+    module_name = "si0012_runtime_v0_1"
+    spec = importlib.util.spec_from_file_location(module_name, path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    sys.modules[module_name] = module
+    try:
+        spec.loader.exec_module(module)
+    except Exception:
+        sys.modules.pop(module_name, None)
+        raise
     return module
 
 
