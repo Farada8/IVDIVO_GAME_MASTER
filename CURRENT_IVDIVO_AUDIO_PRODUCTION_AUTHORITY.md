@@ -24,6 +24,9 @@ Current project overlay template:
 Drive ID: `1Stx3R6qP4bIoyrRpivCLhrgU7rvz-xg9Df0jMZ9N-io`  
 GitHub: `IVDIVO_AUDIO_PROJECT_OVERLAY_TEMPLATE_v1.1.md`
 
+Current universal voice audition / binding standard:
+`IVDIVO_AUDIO_VOICE_AUDITION_BINDING_STANDARD_v1.0.md`
+
 Current LIVE provider cost-control / casting cascade:
 `AUDIO_PRODUCTION/IVDIVO_AUDIO_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE_v1.0.md`
 
@@ -45,9 +48,20 @@ Future work must check the Drive root router for a newer authority before assumi
    - `IVDIVO_MICROPHONE_CHOREOGRAPHY_PROMPT_STACK_v1.0.md` — Drive ID `1GW8f0rOgu1aqg24SgxxXIQU4VFqGKvRO`
    - `IVDIVO_MICROPHONE_CHOREOGRAPHY_QC_v1.0.md` — Drive ID `1escUUTwztAd0L3hI5ELd-Jns53YLpull`
 7. Current machine/provider contracts, normalized alignment law, provider preflight, live-provider canary/casting cascade, voice-binding ledger, acoustic-identity ledger, stereo-intent law, artifact templates and QC/release gates referenced by current v3.x authority.
-8. Project-specific audio overlay.
-9. Current Director Score / render plan / cue sheets / manifests / accepted assets / takes / timelines / mixes / QC.
-10. Archive/superseded material only when explicitly referenced as a base mechanism.
+8. Universal voice audition/binding evidence standard:
+   - `IVDIVO_AUDIO_VOICE_AUDITION_BINDING_STANDARD_v1.0.md`;
+   - exact locked audition text + hash where supported;
+   - dry/loudness-matched comparisons;
+   - natural + directed-change takes;
+   - multi-state role tests;
+   - pair/ensemble gate;
+   - blind speaker differentiation;
+   - long-form fatigue gate;
+   - role-specific hard fails;
+   - provisional-vs-season lock separation.
+9. Project-specific audio overlay.
+10. Current Director Score / render plan / cue sheets / manifests / accepted assets / takes / timelines / mixes / QC.
+11. Archive/superseded material only when explicitly referenced as a base mechanism.
 
 ## Universal scope
 
@@ -57,7 +71,7 @@ Universal audio authority governs production **process**, not project story cont
 
 ## Required project boot
 
-`ACTIVE PROJECT -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + SHA256 -> ACTIVE BRANCH -> DELIVERY MODE -> TEXT PROTECTION MODE -> PROJECT AUDIO OVERLAY -> VOICE_BINDING_LEDGER -> PRONUNCIATION LOCKS -> ACOUSTIC_IDENTITY_LEDGER -> BUILD_ID/MANIFEST -> LAST COMPLETED ARTIFACT -> OPEN GATES -> NEXT UNBLOCKED OBLIGATION`
+`ACTIVE PROJECT -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + SHA256 -> ACTIVE BRANCH -> DELIVERY_MODE -> TEXT_PROTECTION_MODE -> PROJECT_AUDIO_OVERLAY -> VOICE_BINDING_LEDGER -> PRONUNCIATION_LOCKS -> ACOUSTIC_IDENTITY_LEDGER -> BUILD_ID/MANIFEST -> LAST_COMPLETED_ARTIFACT -> OPEN_GATES -> NEXT_UNBLOCKED_OBLIGATION`
 
 Fail closed if branch, source version/hash, protected text, cast/voice binding, clue causality, project overlay, LIVE/DRY_RUN/MIXED state or cross-build provenance is ambiguous.
 
@@ -66,6 +80,18 @@ Fail closed if branch, source version/hash, protected text, cast/voice binding, 
 `LOCKED STORY -> AUTHORITY + BUILD MANIFEST -> SCENE/SPOKEN UNIT MAP -> LISTENER CONTRACT -> DRAMATIC FORCE MAP -> AUDIO STAGING -> CAST/VOICE BINDING -> PERFORMANCE DIRECTOR SCORE -> PAUSE/BREATH/LISTENING/OVERLAP -> SILENT REACTION ANCHORS -> MICROPHONE CHOREOGRAPHY/BLOCKING/PROXIMITY -> ACOUSTIC/P.O.A./STEREO INTENT -> FOLEY/BODY -> SFX/CLUE/PROCEDURAL + ACOUSTIC IDENTITY -> AMBIENCE -> MUSIC DRAMATURGY -> RENDER BLOCK COMPILATION -> PROVIDER DRY RUN -> PROVIDER PREFLIGHT -> LIVE CANARY/CASTING CASCADE WHEN PAID/UNLOCKED -> HARD PILOT -> PARALLEL DIALOGUE+ASSET PRODUCTION -> DIALOGUE/ASSET LOCKS -> EDIT-FIRST -> RAW ALIGNMENT -> NORMALIZED ALIGNMENT -> RESOLVED TIMELINE -> MIX ACTION/CAUSAL OVERLAP/STEREO QC -> MIX/PREMASTER -> MASTERING -> MACHINE QC -> REVIEW PRIORITY -> HUMAN LISTEN/MANUAL REVIEW -> SELECTIVE REPAIR -> RELEASE GO/NO-GO -> MASTER LOCK`
 
 Dependency-DAG law: independent branches may run in parallel after their upstream PASS gates and must converge before consumer stages requiring both.
+
+## Voice-lock evidence law
+
+No major voice may be locked from one attractive sample.
+
+Initial comparison must follow `IVDIVO_AUDIO_VOICE_AUDITION_BINDING_STANDARD_v1.0.md`.
+
+Before a lead/major recurring voice reaches season lock require project-appropriate multi-state evidence, direction-change responsiveness, role hard-fail PASS and long-form/fatigue evidence. Central relationship pairs/ensembles must work assembled, not merely in isolated voice beauty.
+
+Any role-defined hard fail overrides numeric scoring.
+
+Replayed evidence/source voices preserve canonical source identity unless story explicitly requires a different source/take.
 
 ## Live-provider / casting spend law
 
@@ -89,6 +115,8 @@ No DRY_RUN build can release. Required live/reused evidence must be provenance-v
 Never transfer names, provider voice IDs, culprit/solution, distinctive clue chains, signature sound motifs, relationship timing, chronology or obsolete branch facts between projects without explicit authority.
 
 `REFERENCE -> ABSTRACT MECHANISM -> REMOVE PROJECT-SPECIFIC CONTENT -> TRANSFORM FOR ACTIVE PROJECT -> REBIND THROUGH PROJECT OVERLAY`
+
+A stronger project-neutral production mechanism discovered in one project must be evaluated for portability rather than remaining trapped in that project folder.
 
 ## Provider law
 
