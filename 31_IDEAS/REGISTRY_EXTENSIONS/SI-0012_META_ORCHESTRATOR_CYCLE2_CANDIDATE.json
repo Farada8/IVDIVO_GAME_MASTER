@@ -1,79 +1,73 @@
 {
   "candidate_id": "SI-0012",
-  "title": "Prompt Router / Meta-Orchestrator minimum compatibility runtime",
+  "title": "Prompt Router / Meta-Orchestrator minimum compatibility and system-integration runtime",
   "candidate_type": "PROMPT_ORCHESTRATION_AND_EXECUTION_LAYER",
   "status": "PILOTING",
   "scope": "UNIVERSAL_IVDIVO",
   "source_provenance": [
-    {"source_type":"FOUNDER","locator":"2026-08-21 directives: execute whole-system self-improvement and then implement the next execution stage","date":"2026-08-21","notes":"Direct Founder authorization"},
-    {"source_type":"GITHUB","locator":"SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE2_32_TO_64/","version":"Cycle2","hash":"merge:850085a8b26a517e82b1f3654c8ce054d8322d0c","date":"2026-08-21","notes":"Merged whole-system Cycle 2 evidence"},
-    {"source_type":"GITHUB","locator":"SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE3_SELECTED32_TO_64/","version":"Cycle3","date":"2026-08-21","notes":"Real state/transaction pilots and stopping-threshold decision"},
-    {"source_type":"GITHUB","locator":"SELF_IMPROVEMENT_STUDIO/SI0012_MIN_COMPAT_RUNTIME_v0.1/","version":"0.1+hotfix-docs","date":"2026-08-21","notes":"Candidate source + v0.1.1 live-schema hotfix evidence"},
-    {"source_type":"GOOGLE_DRIVE","locator":"1Z8vbvdpsSbTXYWoCPryFMOonr659tzsb","version":"SI-0012 runtime durable folder","date":"2026-08-21","notes":"Contains immutable v0.1 and v0.1.1 ZIPs, checksums and cold-test evidence"},
-    {"source_type":"GOOGLE_DRIVE","locator":"1oacUip8tDABFePzjdAx-8Xn-7BJDLSYM","version":"0.1.1","hash":"530e2d3414bdc7fa8e1b6ef4909d826389cf947d46451cad6820fbb84808e287","date":"2026-08-21","notes":"Latest packaged live-schema hotfix candidate"}
+    {"source_type":"FOUNDER","locator":"2026-08-21 directives: whole-system self-improvement, concrete engineering modules/contracts, parallel GitHub/Drive rebase, 32 sequential executions -> 64 next prompts","date":"2026-08-21"},
+    {"source_type":"GITHUB","locator":"SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE2_32_TO_64/","version":"Cycle2","hash":"merge:850085a8b26a517e82b1f3654c8ce054d8322d0c"},
+    {"source_type":"GITHUB","locator":"SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE3_SELECTED32_TO_64/","version":"Cycle3"},
+    {"source_type":"GITHUB","locator":"SELF_IMPROVEMENT_STUDIO/SI0012_MIN_COMPAT_RUNTIME_v0.1/","version":"0.1+0.1.1"},
+    {"source_type":"GOOGLE_DRIVE","locator":"1Z8vbvdpsSbTXYWoCPryFMOonr659tzsb","version":"SI-0012 v0.1/v0.1.1 durable folder"},
+    {"source_type":"GITHUB_WORKING_BRANCH","locator":"SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE4_INTEGRATION_32_TO_64/","version":"Cycle4 v0.2.0","date":"2026-08-21"},
+    {"source_type":"GITHUB","locator":"P53_AUTO_CONTROL/LEARNINGS/ROOM917_POST_RENDER_ENGINEERING_LEARNING_2026-08-21.md","version":"SI-0009 parallel learning","date":"2026-08-21","notes":"Independent confirmation: written law needs executable enforcement/versioned interfaces; domain promotion requires second project"}
   ],
-  "problem_or_opportunity": "IVDIVO has strong authorities/domain engines but needs durable normalized execution between CURRENT surfaces, fresher compatible working frontiers, task packets, tools, evidence and write-through without manual Founder routing or stale-work regression.",
-  "proposed_mechanism": "Extend Self-Improvement v2/current machine execution with authority-vs-work-frontier separation, heterogeneous State Adapter, Shared Facts, Obligation DAG, Prompt IR, pre-execution guards, readback/transaction state and unified telemetry. Do not create a parallel top-level OS.",
+  "problem_or_opportunity": "IVDIVO has strong authorities and domain engines but needs durable normalized execution between CURRENT surfaces, fresher compatible work frontiers, shared facts, tools, evidence, write-through, telemetry and learning without stale-work regression or manual Founder routing burden.",
+  "proposed_mechanism": "Extend CURRENT Self-Improvement v2 and machine execution with Surface Manifest -> scope-aware authority/frontier separation -> readiness vectors -> fact locks -> evidence lineage -> Prompt IR/context budget -> mutation/transaction guards -> telemetry/economics evidence -> package divergence -> learning compiler -> self-improvement governor. Never create a second top-level OS.",
   "dedupe_relation": "EXTENSION_OF_SI_0007",
-  "related_candidates": ["SI-0007","SI-0003","SI-0004","SI-0010"],
-  "expected_benefit": "Reduce stale work, context duplication, unsafe concurrent writes and manual routing while keeping P1 books and P2 book-to-audio above meta-work.",
-  "evidence_state": "PACKAGED_ENGINEERING_AND_REAL_PERSISTED_STATE_ROUTING_EVIDENCE",
+  "related_candidates": ["SI-0007","SI-0003","SI-0004","SI-0009","SI-0010"],
+  "expected_benefit": "Reduce lost learning, stale work, context duplication, unsafe concurrent writes, duplicated evidence, false progress and manual routing while keeping P1 books and P2 book-to-audio above meta-work.",
+  "evidence_state": "PACKAGED_ENGINEERING_REAL_PERSISTED_STATE_AND_CONCURRENT_DRIFT_EVIDENCE",
   "priority_vector": {"impact":"CRITICAL","recurrence":"SYSTEMIC","effort":"HIGH","regression_risk":"MEDIUM","reversibility":"MODERATE","urgency":"HIGH","affected_surface":"PORTFOLIO"},
   "development_contract": {
-    "cycle2_completed_runs": 32,
-    "cycle2_bounded_engineering_tests": "12/12 PASS",
-    "cycle3_real_pilots_completed": ["State Adapter Book","State Adapter Audio","State Adapter Engine","State Adapter Research","Shared Fact Book-to-Audio","Prompt IR migration","Live GitHub stale-write guard","Live partial-write detection"],
-    "minimum_runtime_v0_1": {
-      "warm_regression": "36/36 PASS",
-      "cold_extract_regression": "36/36 PASS",
-      "first_run_defect_found_and_repaired": "UNKNOWN_DOMAIN_FAIL_OPEN_FIXED",
-      "real_routing_pilots": ["D09_FOUNDER_STOP","D10_FOUNDER_STOP","THE_WIFE_MAIN_AUTHORITY_PLUS_PR85_WORK_FRONTIER","D04_PROVIDER_NEUTRAL_AUDIO_PREFLIGHT","ROOM917_P003A2_TOOL_BLOCKER","V11_2_PACKAGE_IDENTITY_IMMUTABLE"]
+    "cycle2_runs": "32/32",
+    "cycle2_tests": "12/12 PASS",
+    "cycle3_real_pilots": ["state adapters","shared fact book-to-audio","Prompt IR","live stale-write guard","partial-write detection"],
+    "runtime_v0_1": "36/36 warm + 36/36 cold PASS",
+    "runtime_v0_1_1": {"trigger":"real D04 schema drift","tests":"40/40 warm + 40/40 cold PASS","sha256":"530e2d3414bdc7fa8e1b6ef4909d826389cf947d46451cad6820fbb84808e287"},
+    "cycle4_v0_2_0": {
+      "runs":"32/32 EXECUTED",
+      "status_counts":{"PASS_ENGINEERING":31,"PASS_CONTRACT_HOLD_REAL_DATA":1},
+      "new_integration_modules":16,
+      "runtime_modules_total":26,
+      "new_machine_contracts":12,
+      "warm_regression":"100/100 PASS",
+      "cold_unpack_regression":"100/100 PASS",
+      "zip_sha256":"466d058ff90ec3d2f5b6f6e4f744180ebe14671897d6b782b073f0c444646f28",
+      "next_run_cards_created":64,
+      "next_run_cards_auto_authorized":false
     },
-    "minimum_runtime_v0_1_1": {
-      "trigger": "D04_SCHEMA_1_4_ADVANCED_CONCURRENTLY_AFTER_V0_1_PACKAGING",
-      "repair": ["STRING_OR_DICT_NEXT_ACTION","HUMAN_LISTENER_BLOCKER_CLASSIFICATION","PROVIDER_BLOCKER_CLASSIFICATION","PROTECTED_FACT_RETENTION"],
-      "warm_regression": "40/40 PASS",
-      "cold_extract_regression": "40/40 PASS",
-      "zip_sha256": "530e2d3414bdc7fa8e1b6ef4909d826389cf947d46451cad6820fbb84808e287",
-      "drive_zip_id": "1oacUip8tDABFePzjdAx-8Xn-7BJDLSYM"
-    },
-    "still_required": ["two-model parity/equivalence trial","human reader/listener evidence","live provider evidence","normalized production economics","actual market evidence where promotion claim depends on it"]
+    "still_required": ["GitHub/Drive Cycle4 write-through readback","two-model Prompt-IR parity/equivalence","real human reader/listener evidence","authenticated live-provider evidence","measured production economics","market evidence where claim depends on it","new package build before post-v11.2 extensions can advance package pointer"]
   },
   "pilot_evidence": [
-    "Cycle2 12/12 deterministic engineering suite PASS.",
-    "Cycle3 live stale-SHA GitHub mutation rejected with HTTP409 and partial-write mismatch persisted REPAIR_REQUIRED.",
-    "SI-0012 v0.1 warm/cold 36/36 PASS.",
-    "D09 and D10 route to Founder decision and refuse additional prose.",
-    "THE WIFE keeps merged main as authority while selecting fresher PR #85 as WORKING frontier and routes to E96 freshness gate rather than old E91.",
-    "D04 v0.1 pilot routed provider-neutral preflight; a later real D04 schema 1.4 advance made that result stale and exposed string-next_action incompatibility.",
-    "SI-0012 v0.1.1 repaired the live schema drift and passed 40/40 warm + 40/40 cold; D04 now correctly STOPs at HUMAN_EVIDENCE_REQUIRED rather than replaying stale preflight.",
-    "ROOM917 stays at P003A2 tool/evidence blocker and does not regress to S0/S1."
+    "D09 and D10 stop at explicit Founder decision and refuse additional prose/E25.",
+    "THE WIFE keeps main as authority while recognizing fresher PR #85 as WORKING frontier.",
+    "D04 real schema change invalidated v0.1 assumption and triggered v0.1.1 compatibility repair; machine evidence never became Human Signal.",
+    "ROOM917 does not regress to stale S0/S1.",
+    "Cycle4 evidence lineage collapses derived model agreement into provenance families.",
+    "Cycle4 transaction journal makes partial GitHub/Drive writes REPAIR_REQUIRED instead of false PASS.",
+    "Cycle4 economics contract HOLDs when measured spend/human time are absent.",
+    "Cycle4 governor refuses blind execution of all 64 future prompts when real P1/P2/external evidence has higher information value."
   ],
   "red_team_findings": [
-    "Do not promote the whole orchestration layer because engineering/routing pilots pass.",
+    "Do not promote SI-0012 because deterministic/routing tests pass.",
     "Do not create a parallel top-level authority or Autonomous OS.",
-    "Human/provider/market evidence cannot be synthesized.",
-    "Recursive prompt multiplication must stop when production pilots have higher information value.",
-    "Authority source and fresher WORKING frontier must remain separate concepts.",
-    "A just-completed pilot may become stale minutes later; freshness must precede execution, not only session boot.",
-    "v11.2 package identity is immutable; post-package main extensions need a new packaged release gate."
+    "Human/provider/market/economics evidence cannot be synthesized.",
+    "Authority and freshest WORKING frontier must remain separate concepts.",
+    "Freshness is required immediately before execution/mutation, not only at session boot.",
+    "One-project success cannot become domain authority without independent second-project replication.",
+    "v11.2 package identity remains immutable."
   ],
   "promotion_level": "NONE",
-  "application_targets": ["current machine-execution compatibility layer","State Adapter/Prompt IR/transaction modules","Unified telemetry/evidence bridge","context compaction after equivalence canaries"],
-  "verification_evidence": [
-    "Cycle2 merge 850085a8b26a517e82b1f3654c8ce054d8322d0c",
-    "Cycle3 selected32 persisted execution folder",
-    "SI-0012 v0.1 36/36 warm and cold regression",
-    "SI-0012 v0.1.1 40/40 warm and cold regression",
-    "real D09/D10/Wife/D04/ROOM917 routing evidence",
-    "Drive folder 1Z8vbvdpsSbTXYWoCPryFMOonr659tzsb read/write persistence"
-  ],
+  "application_targets": ["current machine-execution compatibility layer","State/Surface adapters","shared fact/evidence lineage","Prompt IR/context compaction","mutation + transaction guards","unified telemetry/economics","package divergence","learning/governor"],
+  "verification_evidence": ["Cycle2 merge 850085a8b26a517e82b1f3654c8ce054d8322d0c","Cycle3 selected32 folder","v0.1.1 40/40 warm+cold","Cycle4 v0.2.0 100/100 warm+cold","fresh SI-0009 parallel learning rebase"],
   "protected_authorities": ["Founder newest instruction","Story-first/P1 priority","locked project canon","Current Audio authority","human/provider/market evidence firewalls","SI-0008 transcript recovery identity"],
   "owner_role": "Meta-Showrunner / A00 Router / Execution Architect",
-  "next_action": "Run two-model parity/equivalence on bounded Prompt IR packets and begin real production telemetry capture. D09/D10 remain Founder lock gates. D04 now waits for real blind Human Signal for G4 while its authenticated provider inventory remains a separate blocked live obligation. ROOM917 remains at P003A2 evidence/tool gate. Re-run freshness immediately before every mutable or production action.",
-  "next_gate": "TWO_MODEL_PARITY_PLUS_REAL_P1_P2_TELEMETRY_AND_EXTERNAL_EVIDENCE",
+  "next_action": "Finish Cycle4 GitHub/Drive readback, then use the governor to select the smallest high-information production/integration pilots: THE WIFE freshness->E96 if still current; D04 blind human G4 evidence; audio shared-runtime convergence; SI-0009 second-project replication; Prompt-IR parity when a second model surface is available. Do not auto-run all 64 Cycle5 cards.",
+  "next_gate": "CYCLE4_WRITE_THROUGH_PLUS_REAL_P1_P2_EXTERNAL_EVIDENCE_AND_BOUNDED_INTEGRATION",
   "hold_trigger": null,
   "terminal_reason": null,
   "last_movement": "2026-08-21",
-  "notes": "v0.1.1 demonstrates live self-correction from real sibling-dialog schema drift. Candidate remains PILOTING; no CURRENT promotion requested."
+  "notes": "Cycle4 strengthens SI-0012 as a bounded system-integration spine while deliberately holding CURRENT promotion."
 }
