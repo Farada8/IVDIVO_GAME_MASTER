@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 """IVDIVO Audio Studio — controlled paid-provider dispatch wrapper.
 
-This is the authoritative-integration candidate that connects the existing
-ElevenLabs adapter to the Wave3/Wave4 production-control contracts without
-changing story or provider payload semantics.
+Connects the existing provider adapter to provider-neutral production-control
+contracts without changing story text or provider payload semantics.
 
 Safety properties:
 - compile/dry-run is default; live requires explicit --live;
-- optional canary identity fixture may be checked before any dispatch;
-- authenticated capability snapshot must PASS when supplied;
+- accepted request hashes are reused after restart rather than resent;
+- any *new* live dispatch requires an identity manifest+fixture AND a PASS
+  authenticated capability snapshot;
 - immutable request/spend ledger prevents blind duplicate payment;
 - transport/provider uncertainty after POST is quarantined as AMBIGUOUS;
 - accepted provider evidence is persisted through the existing adapter;
-- accepted request hashes are reused after restart rather than resent.
+- provider acceptance is distinct from production-asset acceptance;
+- canonical 48 kHz WAV ingest is attempted only when the returned source format
+  can be validated without guessing or silent transcoding.
 
 No API key is persisted or printed.
 """
@@ -32,6 +34,7 @@ if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
 import elevenlabs_adapter as adapter
+from audio_asset_ingest import persist_ingest
 from production_control import SpendLedger, capability_drift, validate_identity_fixture
 
 
@@ -59,6 +62,46 @@ def identity_gate(manifest_path: str | None, fixture_path: str | None) -> dict[s
     if not manifest_path or not fixture_path:
         raise ValueError("IDENTITY_MANIFEST_AND_FIXTURE_REQUIRED_TOGETHER")
     return validate_identity_fixture(load_json(manifest_path), load_json(fixture_path))
+
+
+def _canonical_asset_gate(compiled: dict[str, Any], evidence: dict[str, Any], out: Path) -> dict[str, Any]:
+    """Promote provider bytes to canonical 48 kHz evidence only when provable.
+
+    The current strict ingest accepts 48 kHz PCM WAV or raw PCM16 with explicit
+    metadata. The provider adapter may return MP3 or PCM without channel metadata;
+    those bytes remain durable provider evidence but are HOLD for production
+    timeline/take use until an explicit upstream conversion/metadata step exists.
+    """
+    audio_path = Path(str(evidence.get("audio_artifact") or ""))
+    if not audio_path.exists():
+        return {"status": "HOLD_AUDIO_ARTIFACT_MISSING"}
+
+    output_format = str((compiled.get("query") or {}).get("output_format") or "")
+    if output_format.startswith("wav_"):
+        canonical_path = out / f"{compiled['block_id']}__canonical_48k.wav"
+        try:
+            ingest = persist_ingest(audio_path, canonical_path, source_format="WAV")
+        except ValueError as exc:
+            return {
+                "status": "HOLD_CANONICAL_INGEST_FAILED",
+                "reason": str(exc),
+                "provider_audio_artifact": str(audio_path),
+            }
+        return {"status": "PASS", "ingest": ingest}
+
+    if output_format.startswith("pcm_"):
+        return {
+            "status": "HOLD_RAW_PCM_METADATA_REQUIRED",
+            "provider_audio_artifact": str(audio_path),
+            "reason": "channel/sample metadata must be explicit before canonical wrapping",
+        }
+
+    return {
+        "status": "HOLD_EXPLICIT_UPSTREAM_CONVERSION_REQUIRED",
+        "provider_audio_artifact": str(audio_path),
+        "source_output_format": output_format or "UNKNOWN",
+        "reason": "provider bytes are spend/provenance evidence but not canonical timeline/take evidence",
+    }
 
 
 def execute(
@@ -117,6 +160,23 @@ def execute(
             "ledger_state": plan,
         }
 
+    # New paid dispatch is fail-closed unless both identity and authenticated
+    # capability evidence are explicit. Reusing an already accepted hash above
+    # does not require re-proving these because no provider call will occur.
+    missing_live_gates: list[str] = []
+    if ig.get("status") != "PASS":
+        missing_live_gates.append("IDENTITY_FIXTURE")
+    if cap.get("status") != "PASS":
+        missing_live_gates.append("AUTHENTICATED_CAPABILITY_SNAPSHOT")
+    if missing_live_gates:
+        return {
+            "status": "NO_DISPATCH_LIVE_GATES",
+            "dispatch": False,
+            "request_hash": compiled["request_hash"],
+            "missing": missing_live_gates,
+            "ledger_state": plan,
+        }
+
     if plan not in {"PLANNED", "EXISTS_REJECTED"}:
         return {
             "status": "NO_DISPATCH_LEDGER_STATE",
@@ -151,17 +211,22 @@ def execute(
         }
 
     evidence = adapter.persist(compiled, raw, meta, out)
+    # ACCEPTED here means the paid provider request/evidence is accepted into the
+    # spend/provenance ledger. It does NOT mean artistic/production take lock.
     ledger.transition(
         compiled["request_hash"],
         "ACCEPTED",
         provider_request_id=meta.get("provider_request_id"),
         response_hash=evidence.get("audio_sha256"),
     )
+    asset_gate = _canonical_asset_gate(compiled, evidence, out)
     return {
-        "status": "LIVE_ACCEPTED",
+        "status": "LIVE_PROVIDER_ACCEPTED",
         "dispatch": True,
         "request_hash": compiled["request_hash"],
         "evidence": evidence,
+        "production_asset_gate": asset_gate,
+        "take_lock": False,
     }
 
 
