@@ -1,0 +1,70 @@
+{
+  "schema_version": "2.0",
+  "updated": "2026-08-21",
+  "status": "V2_OPERATING_ARCHITECTURE_APPLIED_RUNTIME_PARTIAL",
+  "authority_router": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+  "engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+  "machine_config": "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json",
+  "historical_base": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
+  "priority_order": [
+    "P0_AUTHORITY_SAFETY_INTEGRITY",
+    "P1_WRITE_STRONG_COMPLETE_BOOKS",
+    "P2_LOCKED_BOOK_TO_HIGH_QUALITY_AUDIO_NOVEL",
+    "P3_PRODUCTION_RELIABILITY_SPEED_REUSE_COST",
+    "P4_ENGINE_TOOL_PROMPT_PROGRAM_QUALITY",
+    "P5_RESEARCH_LEARNING",
+    "P6_BROADER_IVDIVO_CAPABILITY"
+  ],
+  "primary_loops": {
+    "book": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
+    "audio_novel": "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md",
+    "self_improvement": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md"
+  },
+  "learning_stack": {
+    "delta_intake": "IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md",
+    "reference_learning": "IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md",
+    "project_wide_learning": "IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md",
+    "live_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+    "registry_schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
+    "utility": "tools/ivdivo_self_improvement.py"
+  },
+  "drive_mirrors": {
+    "engine_v2": "1TamY1cuiCUGP5zgheF-1nM2LaRt2f5vtZLwfJTJeSaY",
+    "current_self_improvement_authority": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
+    "v1_engine_base": "1lbAaKASLAKFzCiGEF84Xrs-ziwQhCJASwLfDh3UGwSg",
+    "improvement_registry_mirror": "1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs",
+    "portability_inventory": "1WofqSiO3fBD_VoIveOVDihBybwlpeDE051zVrf1ipVs"
+  },
+  "v2_new_capabilities": [
+    "ORDERED_OBJECTIVE_STACK_WITH_BOOKS_AND_AUDIO_FIRST",
+    "THREE_COUPLED_BOOK_AUDIO_META_LOOPS",
+    "PROBLEM_MINING_FROM_RECURRING_FAILURES_AND_SUCCESSES",
+    "BEST_CANDIDATE_ROUTER",
+    "WIP_ANTI_BEDLAM_GUARD",
+    "PROBLEM_DRIVEN_RESEARCH_ENGINE",
+    "BOOK_IMPROVEMENT_SENSORS",
+    "AUDIO_IMPROVEMENT_SENSORS",
+    "PRODUCTIVITY_AND_COST_SENSORS",
+    "MULTI_AI_SELF_IMPROVEMENT_CELL",
+    "PROMOTION_DEPLOYMENT_READBACK_ROLLBACK",
+    "REAL_PRODUCT_FEEDBACK_LOOP",
+    "SELF_REFERENCE_GUARD",
+    "KNOWLEDGE_COMPACTION_AND_PRUNING",
+    "FAILURE_AND_SUCCESS_MEMORY"
+  ],
+  "runtime_status": {
+    "registry_state_machine": "DESIGNED_AND_PREVIOUSLY_ADVERSARIAL_CHECKED",
+    "best_candidate_queue_commands": "PRESENT_IN_CURRENT_UTILITY_PER_V1_UPGRADE_WORK",
+    "exact_current_checkout_smoke": "NOT_RUN_IN_THIS_SESSION",
+    "reason": "Current connector can read/write GitHub but does not expose repository checkout as an executable filesystem. Do not fabricate runtime execution."
+  },
+  "promotion_status": {
+    "engine_v2": "APPLIED_UNVERIFIED",
+    "writing_router": "UPDATED_TO_V2",
+    "drive_mirrors": "CREATED",
+    "aggregate_system_state": "PENDING_SAFE_REBASE_POINTER",
+    "registry_candidate_record": "PENDING_CENTRAL_REGISTRY_RECONCILIATION",
+    "next_gate": "READBACK_V2_GITHUB_DRIVE_POINTERS_THEN_REGISTER_V2_CANDIDATE_AND_PROMOTION_REVIEW"
+  },
+  "story_first_guard": "META_IMPROVEMENT_MUST_NOT_STARVE_ACTIVE_BOOK_OR_AUDIO_PRODUCTION_UNLESS_SYSTEM_FATAL_MAJOR_BLOCKS_IT_OR_FOUNDER_SWITCHES_FOCUS"
+}
