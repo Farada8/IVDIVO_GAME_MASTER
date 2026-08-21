@@ -1,0 +1,71 @@
+# CYCLE 3 — NEXT 64 RUN CARD CATALOG
+
+Full developed RUN CARD bodies (Mission / Inputs / Execute / Output / Gate) are preserved in the Cycle 2 Drive package and SHA manifest. This GitHub catalog is the routing view.
+
+- **C3-01 — Current Surface Auto-Scanner** | `A_DURABLE_STATE_AUTHORITY` | Build a machine scan of CURRENT pointers, Drive mirrors, package hashes and readback evidence; emit split-brain/stale states.
+- **C3-02 — State Adapter Book Pilot** | `A` | Run normalized-state adapter against one real active book and prove no authority loss.
+- **C3-03 — State Adapter Audio Pilot** | `A` | Run normalized-state adapter against one real audio project/build and prove source/hash/text-protection preservation.
+- **C3-04 — State Adapter Engine Pilot** | `A` | Run normalized-state adapter against engine/package state including post-package extensions.
+- **C3-05 — State Adapter Research Pilot** | `A` | Normalize research/evidence task state with source date, claim and stopping rule.
+- **C3-06 — Shared Fact Contract Book→Audio Pilot** | `A` | Bind one story fact across book and audio consumers and verify no semantic drift.
+- **C3-07 — Cross-Agent Shared Fact Conflict Canary** | `A` | Give two agents conflicting stale fact copies and prove contract rejects the stale branch.
+- **C3-08 — Authority/Freshness Split-Brain Resolver** | `A` | Resolve older higher authority vs newer compatible progress without silently replacing canon.
+- **C3-09 — Fresh Idea→Story Live Calibration** | `B_BOOK_STORY_EVIDENCE` | Use a new Founder idea through discovery/3-engine competition/story sample and record observed defects.
+- **C3-10 — Relationship Graph Ensemble Pilot** | `B` | Instantiate multi-edge Relationship Authority Graph on an ensemble project and test scene-active edges.
+- **C3-11 — Sequel Relationship Inheritance Gate** | `B` | Prove unresolved inherited edge authority stops sequel romance/relationship invention.
+- **C3-12 — Causality Detector Real Map Pilot** | `B` | Run graph detector on a causal map and compare signals with human Red Team.
+- **C3-13 — Story Core Mutation Regression** | `B` | Change one Story Core field in sandbox and verify only true descendants reopen.
+- **C3-14 — Dialogue Naturalism Text-vs-Performance Canary** | `B` | Use directed audio + text review to classify repeated language defects at earliest layer.
+- **C3-15 — Story Lock Packet Cross-Book Audit** | `B` | Run lock-readiness packet on three titles and compare false-positive/false-negative risks.
+- **C3-16 — Book Learning Return Compiler** | `B` | Compile post-lock reusable mechanisms while stripping project-specific story content.
+- **C3-17 — Locked Book→Audio Manifest Live Pilot** | `C_AUDIO_PROVIDER_PRODUCTION` | Compile a real locked manuscript hash into audio build authority/open-gate map.
+- **C3-18 — Text-to-Dialogue Block Compiler** | `C` | Compile dialogue into provider-safe blocks respecting voice-count/text-length and acoustic boundaries.
+- **C3-19 — Voice Design Exploration Canary** | `C` | Test designed voices only as audition candidates; compare against stable alternatives where authorized.
+- **C3-20 — Voice Direction-Change Stress Test** | `C` | Measure whether candidate voices follow contradictory direction states without identity collapse.
+- **C3-21 — Pair/Ensemble Collision Test** | `C` | Evaluate role separation/chemistry assembled before recurring lock.
+- **C3-22 — Longform Fatigue Gate** | `C` | Run long-form samples and measure/listen for fatigue, drift and intelligibility.
+- **C3-23 — Audio Shared-Fact End-to-End Verification** | `C` | Bind repeated clue/motif/sound through render buses and verify listener-required identity.
+- **C3-24 — Audio Defect Router Production Pilot** | `C` | Feed real rejected takes/QC findings through root-cause router and measure repair-scope reduction.
+- **C3-25 — Prompt IR Migration Pilot** | `D_PROMPT_IR_MULTI_AI` | Convert one existing large RUN CARD to IR and compare decision/gate equivalence.
+- **C3-26 — Context Reduction A/B** | `D` | Compare full prompt vs compiled task packet for context size, omissions and outcomes.
+- **C3-27 — Claude Surface Compiler** | `D` | Map IR rules to CLAUDE.md/rules/skills/subagents/hooks by persistence and authority needs.
+- **C3-28 — OpenAI Agent Packet Compiler** | `D` | Map IR to code-first task/handoff/guardrail structure without provider lock-in.
+- **C3-29 — Independent Review Parity Trial** | `D` | Send source-parity blinded packets to two models and measure diagnosis/evidence independence.
+- **C3-30 — Model Backend Binding Cascade** | `D` | Audition candidate LLM backends on representative book/audio/code/research tasks before default binding.
+- **C3-31 — Tool Guardrail Hook Pilot** | `D` | Implement pre/post mutation hooks for freshness, approval, readback and rollback in one real workflow.
+- **C3-32 — Multi-AI Reconciler Live Trial** | `D` | Reconcile two independent reports, collapse duplicate evidence, apply one accepted repair transactionally.
+- **C3-33 — Meta-Orchestrator Integration Branch** | `E_DURABLE_EXECUTION_ENGINEERING` | Integrate State Adapter + Prompt IR + guardrails + transaction layer under current machine execution.
+- **C3-34 — Durable Replay Architecture Spike** | `E` | Prototype deterministic workflow state with external LLM/tool calls as idempotent activities.
+- **C3-35 — Crash-Recovery Canary** | `E` | Kill orchestrator mid-run, restart, prove completed external operations are not repeated.
+- **C3-36 — Partial-Write Failure Injection** | `E` | Interrupt persistence between write/readback and prove rollback or explicit repair state.
+- **C3-37 — Stale-Main Concurrent Write Canary** | `E` | Advance main from sibling branch during execution and prove rebase-before-write.
+- **C3-38 — Registry Transaction Live Merge** | `E` | Merge candidates into central registry with dedupe/readback and no orphan file.
+- **C3-39 — Package Builder vNext** | `E` | Build clean ZIP including accepted post-v11.2 extensions and cold-unpack full regression.
+- **C3-40 — Package/Main Continuous Divergence Check** | `E` | Automate package manifest vs verified-main-extension comparison on promotion candidates.
+- **C3-41 — Unified Telemetry Event Schema Pilot** | `F_EVIDENCE_TELEMETRY_EVALS` | Emit one event model from Story Gate, audio QC, code test and research experiment.
+- **C3-42 — Harness/Budget Eval Metadata** | `F` | Record model, harness, tools, turns, retries, cost and validity checks for every agent evaluation.
+- **C3-43 — Human Reader Evidence Protocol** | `F` | Run blinded reader panel with exact text hashes and structured confusion/belief/continue outcomes.
+- **C3-44 — Human Listener Evidence Protocol** | `F` | Run blinded listener panel with exact audio build IDs and comprehension/voice/emotion/fatigue outcomes.
+- **C3-45 — Provider Live Evidence Ladder** | `F` | Separate feature docs, dry-run, technical canary, quality sample, pair test, longform and scale permission.
+- **C3-46 — One-Variable Prompt IR Canary** | `F` | Change only prompt representation while holding model/source/task constant; measure regressions.
+- **C3-47 — Experiment Confound Analyzer** | `F` | Detect shared-source/model/harness confounds before promotion.
+- **C3-48 — Evidence-to-Claim Promotion Validator** | `F` | Reject promotion packets whose evidence class cannot prove the claimed improvement.
+- **C3-49 — Production Telemetry Instrumentation** | `G_ECONOMICS_PORTFOLIO_MARKET` | Instrument time, attempts, provider spend, human minutes, accept/reject and root cause.
+- **C3-50 — Audio Cost per Accepted Minute Baseline** | `G` | Measure live render/re-render/provider-credit cost after voice lock/canary controls.
+- **C3-51 — Book Cost per Locked Unit Baseline** | `G` | Measure model/human/rework effort per locked unit without valuing quality by word count.
+- **C3-52 — WIP Throughput Experiment** | `G` | Compare current portfolio WIP against limited lanes for cycle time/blocked-work accumulation.
+- **C3-53 — Release Pipeline Contract** | `G` | Map locked text/audio masters to metadata, packaging, distribution, replacement and rollback.
+- **C3-54 — Market Feedback Evidence Ingest** | `G` | Import observed retention/conversion/sales while separating packaging from story causality.
+- **C3-55 — Feedback Root-Cause Calibration** | `G` | Compare triage-router classifications against human/editor/provider adjudication.
+- **C3-56 — Business Learning Return** | `G` | Turn recurring cost/market evidence into candidates without rewriting creative authority.
+- **C3-57 — Meta-Starvation Continuous Metric** | `H_META_HEALTH_COMPACTION` | Measure meta-system share vs P1/P2 and trigger WIP reduction.
+- **C3-58 — Rule Value Removal Canary** | `H` | Remove one redundant compiled rule and prove decision/gate parity.
+- **C3-59 — Context Budget Compiler Pilot** | `H` | Run T0–T3 context selection on book/audio/engine tasks and measure missing-critical-context rate.
+- **C3-60 — Supersession Garbage Collector** | `H` | Retire stale aliases/candidate mirrors while preserving audit history/current pointers.
+- **C3-61 — Stuck Candidate Auto-Triage** | `H` | Find stale candidates and force MERGE/HOLD/REJECT/REACTIVATE based on evidence/trigger.
+- **C3-62 — Capability Gap Radar v2** | `H` | Compare desired factory with VERIFIED/CANDIDATE/BLOCKED states and rank gaps.
+- **C3-63 — Scenario Stress Matrix** | `H` | Test provider shutdown, GitHub/Drive outage, model change, chat loss, cost shock and portfolio growth.
+- **C3-64 — Autonomous Cycle Gate** | `H` | Choose next production route plus at most one meta integration/two pilots; prohibit recursive prompt multiplication without new evidence.
+
+## Shared execution contract for all 64
+Each full RUN CARD requires: freshness/rebase; baseline + exact claim; smallest decisive pilot; evidence-class recording; no unauthorized irreversible/canon mutation; persist/readback; Learning Ledger/candidate update if material. Gate: `REAL_PILOT_OR_EVIDENCE_REVIEW`; lower evidence creates a candidate but cannot self-promote to VERIFIED_CURRENT.
