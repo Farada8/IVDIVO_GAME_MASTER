@@ -1,0 +1,29 @@
+name: Production Proof Candidate Tests
+
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_proof_chain.py'
+      - 'tools/ivdivo_mirror_integrity.py'
+      - 'tools/ivdivo_routing_consistency.py'
+      - 'tools/ivdivo_value_guard.py'
+      - 'schemas/IVDIVO_PRODUCTION_PROOF_CHAIN_SCHEMA_v1.json'
+      - 'schemas/IVDIVO_MIRROR_INTEGRITY_MANIFEST_SCHEMA_v1.json'
+      - 'schemas/IVDIVO_ROUTING_CONSISTENCY_SCHEMA_v1.json'
+      - 'schemas/IVDIVO_CANDIDATE_VALUE_TELEMETRY_SCHEMA_v1.json'
+      - 'tests/test_proof_chain.py'
+      - 'tests/test_mirror_integrity.py'
+      - 'tests/test_routing_consistency.py'
+      - 'tests/test_value_guard.py'
+  workflow_dispatch:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run production-proof candidate tests
+        run: PYTHONPATH=. python -m unittest tests.test_proof_chain tests.test_mirror_integrity tests.test_routing_consistency tests.test_value_guard -v
