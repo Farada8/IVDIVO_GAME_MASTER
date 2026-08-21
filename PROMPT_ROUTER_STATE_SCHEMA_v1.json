@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "required": ["domain", "authority_clean"],
+  "domain_enum": ["BOOK", "AUDIO", "FACTORY", "ENGINE", "RESEARCH", "SELF_IMPROVEMENT"],
+  "optional_boolean_fields": [
+    "founder_decision_required", "portfolio_rebase_required", "engine_uncertain", "story_core_ready",
+    "architecture_ready", "prose_obligation", "accepted_fatal_major", "full_text_exists", "final_story_gate_needed",
+    "story_locked", "audio_ingest_ready", "listener_contract_ready", "casting_ready", "director_score_ready",
+    "sound_score_ready", "provider_canary_ready", "master_qc_ready", "release_gate_needed", "recurring_bottleneck",
+    "hard_problem", "engine_worthiness_needed", "engine_worthiness_pass", "engine_architecture_ready",
+    "engine_implementation_ready", "prompt_bloat", "multi_ai_cell_needed", "productivity_optimization_needed",
+    "registry_sweep_needed", "reference_mechanism_needed", "fresh_external_research_needed", "experiment_needed",
+    "evidence_classification_needed", "promotion_write_through_needed", "compaction_needed", "meta_audit_needed",
+    "direct_prerequisite"
+  ],
+  "portfolio_context": {
+    "unblocked_p1_or_p2": "boolean; suppress unrelated P3/P4 routes when true"
+  },
+  "independent_parallel_branches": "array of normalized state objects; only dependency-independent branches should be supplied",
+  "priority_override": "If an unblocked P1/P2 production obligation exists, unrelated P3/P4 routes are suppressed unless direct_prerequisite=true."
+}
