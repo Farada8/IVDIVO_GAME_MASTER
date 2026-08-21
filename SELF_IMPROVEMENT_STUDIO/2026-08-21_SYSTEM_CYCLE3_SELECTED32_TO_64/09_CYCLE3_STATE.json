@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-21",
+  "status": "CYCLE3_SELECTED32_EXECUTED_SYNTHESIZED_CYCLE4_64_READY",
+  "scope": "IVDIVO_WHOLE_SYSTEM_SELF_IMPROVEMENT",
+  "founder_instruction": "continue work; persist GitHub+Drive; analyze conclusions/path; execute 32 sequential prompts; derive 64 next prompts",
+  "github_folder": "SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE3_SELECTED32_TO_64/",
+  "drive_folder_id": "1HKSnkNCYRM1xWxWhtJyZWgFYziddmzjq",
+  "counts": {
+    "selected_prompts": 32,
+    "executed_or_dispositioned": 32,
+    "next_prompts_derived": 64,
+    "live_github_mutation_canaries": 2
+  },
+  "tranches": [
+    {"runs":"01-08","file":"02_RUNS_01_08.md","status":"COMPLETE"},
+    {"runs":"09-16","file":"03_RUNS_09_16.md","status":"COMPLETE"},
+    {"runs":"17-24","file":"04_RUNS_17_24.md","status":"COMPLETE"},
+    {"runs":"25-32","file":"05_RUNS_25_32.md","status":"COMPLETE"}
+  ],
+  "major_findings": [
+    "PROMPT_VOLUME_IS_NOT_PRIMARY_BOTTLENECK",
+    "CURRENT_SURFACE_AND_STATE_NORMALIZATION_MATTER_MORE",
+    "SHARED_FACTS_REQUIRE_UPSTREAM_IDENTITY",
+    "HASH_BOUND_TEXT_TO_AUDIO_COMPILATION_IS_PROVABLE",
+    "PROMPT_IR_IS_PROMISING_BUT_NEEDS_EQUIVALENCE_CANARIES",
+    "LIVE_STALE_SHA_GUARDS_WORK",
+    "PARTIAL_WRITE_MUST_ENTER_REPAIR_REQUIRED",
+    "DUPLICATE_SI_0008_IDENTITY_WAS_A_REAL_REGISTRY_INTEGRITY_DEFECT",
+    "PACKAGE_MAIN_DIVERGENCE_MUST_REMAIN_EXPLICIT",
+    "EVIDENCE_CLASS_CAPS_CLAIM_SCOPE",
+    "NEXT_INFORMATION_VALUE_IS_IN_P1_P2_AND_EXTERNAL_EVIDENCE_NOT_MORE_META_POLICY"
+  ],
+  "registry_repair": {
+    "kept": "SI-0008_TRANSCRIPT_RECOVERY",
+    "migrated": "META_ORCHESTRATOR_TO_SI-0012",
+    "family_pointer": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json schema 1.2",
+    "base_compaction": "OPEN_SI-0010_DETERMINISTIC_COMPACTION_GATE"
+  },
+  "current_primary_route": {
+    "priority": "P1",
+    "project": "D10 BLOODBOUND",
+    "action": "E07_E12_TEXT_COMPLETION_THEN_BLOCK_II_STORY_AND_HUMAN_SCENE_GATE"
+  },
+  "next_p2_routes": [
+    "D04_OR_NMM_PROVIDER_NEUTRAL_AUDIO_CANARY",
+    "ROOM917_P003A2_ONLY_WHEN_EXACT_MASTER_BYTES_OR_INTERVAL_MAP_AVAILABLE"
+  ],
+  "bounded_meta_route": "SI-0012_MINIMAL_COMPATIBILITY_INTEGRATION_ONLY_AFTER_PRODUCTION_PRIORITY",
+  "external_evidence_gaps": [
+    "HUMAN_READER_LISTENER_SIGNAL",
+    "LIVE_PROVIDER_CASTING_AUDIO_EVIDENCE",
+    "NORMALIZED_PRODUCTION_ECONOMICS",
+    "REAL_MARKET_BEHAVIOR"
+  ],
+  "cycle4_prompt_bank": "08_CYCLE4_NEXT_64_RUN_CARDS.md",
+  "cycle4_execution_policy": "TARGETED_BANK_NOT_BLIND_AUTO_EXECUTION",
+  "do_not_do": [
+    "DO_NOT_AUTO_EXECUTE_ALL_64_AS_RITUAL",
+    "DO_NOT_CREATE_NEW_TOP_LEVEL_ENGINE",
+    "DO_NOT_MARK_D09_FOUNDER_LOCK",
+    "DO_NOT_RESTART_ROOM917_S0_S1",
+    "DO_NOT_EQUATE_ENGINEERING_WITH_LITERARY_OR_AUDIO_OR_MARKET_QUALITY",
+    "DO_NOT_FORCE_MONOLITHIC_REGISTRY_WRITE_OVER_VALIDATED_SHARDS"
+  ],
+  "next_gate": "RETURN_TO_HIGHEST_UNBLOCKED_P1_P2_PRODUCTION_AFTER_DRIVE_AND_POINTER_WRITE_THROUGH"
+}
