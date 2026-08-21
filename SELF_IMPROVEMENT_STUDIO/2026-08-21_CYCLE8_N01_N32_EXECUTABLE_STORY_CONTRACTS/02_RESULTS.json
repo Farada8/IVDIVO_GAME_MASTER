@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.2",
+  "status": "LOCAL_PASS_PENDING_GITHUB_CI_AND_DRIVE_READBACK",
+  "local_suite": {"tests": 72, "passed": 72, "failed": 0},
+  "n01_n32_count": 32,
+  "n01_n05": {
+    "N01": "PASS_APPROVAL_EVENT_PARITY",
+    "N02": "HOLD_AUTHORITY_CONFLICT_D01",
+    "N03": "READY_FOR_PILOT_ELIGIBLE_SI0015",
+    "N04": "PASS_REUSE_MAIN_DURABLE_INTERFACE",
+    "N05": "PASS_NO_NEW_ID"
+  },
+  "n06_n32": "PASS_LOCAL_CANARY_27_OF_27_FAMILIES",
+  "real_concurrency_event": {"initial_branch_base":"e0566598c4a2a538b001f63e8390f131ca7d298f","fresh_main":"34d86f8bc57f1d00107776fcc2b934324f4b14dc","conflicting_path":"31_IDEAS/REGISTRY_EXTENSIONS/SI-0015_PROJECT_SLICE_FRESHNESS_ASSERTION.json","disposition":"REBASE_SALVAGE_PRESERVE_RICHER_MAIN_PROVENANCE"},
+  "si0015": {"decision": "PROMOTE_TO_READY_FOR_PILOT_ONLY", "verified_current": false},
+  "story_canon_changes": "NONE",
+  "d01_lock_issued": false,
+  "b03_activated": false,
+  "evidence_ceiling": "ENGINEERING_LOCAL_CANARY_ONLY_UNTIL_GITHUB_CI_AND_DURABLE_DRIVE_READBACK"
+}
