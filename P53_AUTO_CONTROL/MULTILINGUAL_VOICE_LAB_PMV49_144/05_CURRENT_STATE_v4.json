@@ -1,0 +1,28 @@
+{
+  "artifact": "BODYGUARD_MULTILINGUAL_VOICE_CURRENT_STATE_v4",
+  "date": "2026-08-21",
+  "source_authority": "EN Recording Master v1.6",
+  "multilingual_architecture": "v2.1 CURRENT",
+  "prompt_suite_total": 80,
+  "pmv01_48": "COMPLETE prior passes; evidence-dependent gates remain HOLD",
+  "pmv49_80": "COMPLETE sequential zero-cost/design pass",
+  "ru_anchor_version": "v0.3 WORKING reconciled; exact EN source integrity PASS; native/pro terminology QA pending",
+  "ru_glossary_version": "v0.2 WORKING decision matrix; native/pro QA pending",
+  "voice_passports": "v2 WORKING_CANONICAL_PERCEPTUAL_IDENTITY",
+  "ru_voice_design_candidates": "v1 READY_FOR_PROVIDER_PREVIEW_NOT_CAST",
+  "ru_audition_manifest": "S0-S4 v1 DESIGN READY",
+  "ru_voice_lock": false,
+  "en_voice_lock": false,
+  "paid_scale_allowed": false,
+  "current_gate": "RU_NATIVE_AND_PROFESSIONAL_TERMINOLOGY_QA",
+  "next_paid_gate": "after RU audition-anchor v1.0 + read-only provider preflight: S0B two-job canary",
+  "future_prompt_suite": "PMV81–PMV144 drafted, NOT executed",
+  "prohibited": [
+    "paid S1 from unreviewed RU v0.3",
+    "use state v3 stale voice-passport pointer",
+    "voice lock from design descriptions",
+    "five-language parallel paid casting",
+    "back-translate canonical English from Russian",
+    "claim native/audio/provider PASS without evidence"
+  ]
+}
