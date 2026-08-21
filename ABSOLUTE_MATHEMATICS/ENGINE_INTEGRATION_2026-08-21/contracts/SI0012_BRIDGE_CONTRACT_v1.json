@@ -1,0 +1,9 @@
+{
+  "title": "SI-0012 -> Absolute Math Bridge v1",
+  "input": {
+    "required": ["normalized_state", "dag", "task_ir", "decision", "telemetry_event"],
+    "note": "Shape emitted by merged SI-0012 minimum compatibility runtime."
+  },
+  "allowed_absolute_math_actions": ["READ_AUTHORITY_REFS", "PLAN_RESEARCH", "RUN_LOCAL_BENCHMARKS", "WRITE_CANDIDATE_ARTIFACTS", "EMIT_FEEDBACK_EVENT"],
+  "forbidden_without_external_authority": ["OVERWRITE_CURRENT", "MERGE_MAIN", "ISSUE_FOUNDER_LOCK", "CLAIM_HUMAN_PROVIDER_MARKET_EVIDENCE"]
+}
