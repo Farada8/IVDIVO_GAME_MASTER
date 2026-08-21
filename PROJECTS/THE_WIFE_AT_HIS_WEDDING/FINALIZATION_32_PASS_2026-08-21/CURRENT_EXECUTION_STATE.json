@@ -2,35 +2,59 @@
   "project": "THE WIFE AT HIS WEDDING",
   "date": "2026-08-21",
   "scope": "E91-E120_FINAL_ARC",
-  "status": "WORKING_CONDITIONAL_GO_TO_DRAFTING",
+  "status": "E91_E95_WORKING_COMPLETE_GO_TO_E96_AFTER_FRESH_GATE",
   "founder_locked": false,
   "upstream": {
     "E61_E90_story_block": "CLOSED_PASS",
     "E90_next_arc_hook": "TWO_LIVE_NEWBORN_WRISTBANDS_ONE_BIRTH_CERTIFICATE",
     "fire_arc_reopen": false
   },
-  "research_cycle": {
+  "research_cycle_1": {
     "prompts_created": 32,
     "prompts_executed": 32,
     "integrated_conclusions_created": true,
     "authority_convergence_completed": true,
-    "next_prompts_created": 64,
-    "next_prompts_executed": 0
+    "next_prompts_created": 64
+  },
+  "wave2": {
+    "source_queue_prompts_executed": "01-32_of_prior_64",
+    "prompts_executed": 32,
+    "episodes_completed": ["E91","E92","E93","E94","E95"],
+    "episode_frontier": "E95",
+    "runtime_spoken_words": {"E91":1176,"E92":1104,"E93":1138,"E94":1100,"E95":1101},
+    "red_team": {"fatal":0,"major":0,"medium":3},
+    "new_wave3_prompts_created": 64,
+    "new_wave3_prompts_executed": 0,
+    "github_folder": "WAVE2_32_EXECUTIONS_E91_95_2026-08-21/",
+    "drive_folder_id": "1Uy8zd8MwZ13P3aImqDYhMFjz-LF3Kqdw",
+    "drive_production_master_id": "1YZgSpNWSvg54vZGsjGM31sJJ-6pT1cxha3Ss3zqjQXM"
   },
   "architecture": {
     "detailed_source": "20B_EPISODES_91-120_FINAL_ARC_ARCHITECTURE_v1.0",
-    "authority_status": "WORKING_PRE_PROSE",
+    "authority_status": "WORKING",
     "episode_order_retained": true,
     "research_macro_alternatives_status": "OPTION_ONLY_WHERE_CONFLICTING",
     "convergence_overlay": "05_AUTHORITY_CONVERGENCE_AND_CURRENT_EXECUTION_STATE_v1.1.md"
   },
-  "accepted_upgrades": [
-    "concrete_present_day_institutional_opposition",
-    "identity_layer_separation",
-    "independent_evidence_classes",
-    "ordinary_life_and_field_action",
-    "mara_evelyn_remedy_conflict",
-    "human_scene_naturalism_and_audio_first_gates"
+  "current_story_state": {
+    "two_live_births_supported": true,
+    "baby_b_post_birth_survival_supported": true,
+    "baby_b_protected_placement_without_permanent_civil_name_supported": true,
+    "quinn_source_predates_noah": true,
+    "quinn_source_subject": "DECEASED_MARA_ELISE_QUINN",
+    "noah_original_source_mining": "NOT_SUPPORTED",
+    "noah_later_withholding_and_post_fire_reuse": "SUPPORTED",
+    "historical_teen_informed_choice_of_mara_quinn": "SUPPORTED_BUT_NOT_ADULT_MAPPING",
+    "dual_historical_biometric_cards": "AUTHENTICATED_OBJECTS_PENDING_COMPARISON",
+    "adult_body_mapping": "UNRESOLVED_UNTIL_E96",
+    "mara_current_professional_credential": "ACTIVE_UNDER_REVIEW",
+    "mara_client_work": "ONE_STREAM_PAUSED",
+    "mara_evelyn_remedy_conflict": "ACTIVE"
+  },
+  "medium_watches": [
+    "DOCUMENT_ARCHIVE_DENSITY",
+    "MARA_ACKNOWLEDGEMENT_IMPERATIVE_AND_INSTITUTIONAL_CORPUS_RHETORIC",
+    "JURISDICTION_SPECIFIC_LEGAL_PROCEDURE"
   ],
   "protected": {
     "lily_is_evidence": false,
@@ -45,13 +69,14 @@
     "JURISDICTION_SPECIFIC_LEGAL_REVIEW",
     "REAL_LISTENER_AUDIO_VALIDATION"
   ],
-  "next_queue": "03_NEXT_64_EXECUTION_PROMPTS_v1.0.md",
-  "highest_unblocked_obligation": "RUN_PROMPT_01_FRESH_AUTHORITY_STALE_WORK_GATE",
-  "after_no_newer_E91_found": "BUILD_E91_SCENE_CONTRACTS_THEN_DRAFT_AND_GATE_E91",
+  "next_queue": "WAVE2_32_EXECUTIONS_E91_95_2026-08-21/04_WAVE3_64_NEXT_PROMPTS_v1.0.md",
+  "highest_unblocked_obligation": "RUN_WAVE3_PROMPT_01_FRESHNESS_DESCENDANT_REUSE_GATE",
+  "after_no_newer_E96_found": "EXECUTE_WAVE3_PROMPTS_02_13_AND_DRAFT_GATE_E96_THE_TWO_CARDS",
   "prohibited": [
     "REOPEN_E61_E90_FIRE_ARC_WITHOUT_NEW_DEMONSTRATED_EVIDENCE",
     "SILENTLY_PROMOTE_WORKING_TO_CANON_OR_LOCKED",
     "USE_LILY_OR_DNA_AS_IDENTITY_SHORTCUT",
+    "USE_BIOMETRIC_CARD_AS_AUTOMATIC_BIRTH_MARRIAGE_MATERNITY_OR_CIVIL_PROOF",
     "MAKE_ONE_WITNESS_OR_ONE_DOCUMENT_DISPOSITIVE",
     "RENUMBER_20B_EPISODE_MAP_FROM_RESEARCH_OPTION_ALONE"
   ],
