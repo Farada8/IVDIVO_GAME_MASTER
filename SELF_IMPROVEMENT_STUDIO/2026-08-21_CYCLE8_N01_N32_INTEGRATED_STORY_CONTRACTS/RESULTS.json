@@ -1,7 +1,13 @@
 {
-  "schema_version":"0.4",
-  "status":"LOCAL_INTEGRATED_PASS_PENDING_PR_CI_AND_DRIVE_FINAL_READBACK",
+  "schema_version":"0.6",
+  "status":"PERSISTENCE_CLOSURE_PASS",
   "n01_n32":"32_OF_32_EXECUTED_OR_DISPOSITIONED",
+  "integration":{"functional_pr":157,"functional_merge_sha":"66080b6760ec3b5c21186f5c3cbf0c8adab4fd07","main_readback":"PASS"},
+  "ci":{
+    "cycle8_integrated_story_contracts":{"run":32531130052,"conclusion":"success"},
+    "session_resilience_run33":{"run":32531130035,"conclusion":"success"},
+    "self_improvement_integrity":{"run":32531129995,"conclusion":"success"}
+  },
   "parallel_main_story_pilot":{
     "path":"SELF_IMPROVEMENT_STUDIO/2026-08-21_CYCLE8_STORY_ADAPTER_REAL_PILOT/",
     "stage1":{"real_project_canaries":"13/13_PASS","warm":"24/24_PASS","cold":"24/24_PASS"},
@@ -9,12 +15,13 @@
     "disposition":"REUSE_MAIN_NO_DUPLICATE_RUNTIME"
   },
   "integrated_local_regression":{"tests":20,"passed":20,"failed":0},
-  "real_concurrency_events":"MULTIPLE_MAIN_ADVANCES_WITH_SEMANTIC_DEDUPE",
+  "real_concurrency_events":"MULTIPLE_MAIN_ADVANCES_WITH_SEMANTIC_DEDUPE_AND_LATE_AUTHORITY_SUPERSESSION",
   "concurrency_disposition":"REBASE_SALVAGE_NO_FORCE_OVERWRITE",
-  "si0015":{"current_before":"DEVELOPMENT_CONTRACT_READY","proposed_after":"READY_FOR_PILOT","verified_current":false,"next_gate":"REAL_PROJECT_PILOT_PLUS_HEALTHY_CONTROL_PLUS_FALSE_POSITIVE_REVIEW"},
-  "story_canon_changes":"NONE",
-  "d01_lock_issued":false,
-  "b03_prose_activated":false,
+  "si0015":{"before":"DEVELOPMENT_CONTRACT_READY","after":"READY_FOR_PILOT","verified_current":false,"main_readback":"PASS","next_gate":"REAL_PROJECT_PILOT_PLUS_HEALTHY_CONTROL_PLUS_FALSE_POSITIVE_REVIEW"},
+  "drive":{"folder_id":"12BCR8tiattwoBUFNCE9kBcwJkZ1gIM2W","reconciliation_id":"10n9T5oPFo8Igojv0-Ky3jFtO5Um8ZjkeYFKLhCRiQFo","closure_id":"1SsCHWfii9yVzqd7jNC_x5v5VWcCCgoB3d0HxZTSkd60","readback":"PASS"},
+  "story_canon_changes_by_this_run":"NONE",
+  "d01":{"lock_issued_by_this_run":false,"controlling_main_state":"FOUNDER_LOCKED","authority_file":"PROJECTS/THE_WIFE_AT_HIS_WEDDING/FOUNDER_STORY_LOCK_AND_RECORDING_AUTHORITY_v1.0.md","authority_drive_id":"1eueZnnYaUGktaSXCcMIiOAUUcINmCTV6xATBdZ9B9UA","e121_generated":false},
+  "b03":{"prose_activated_by_this_run":false,"next_allowed_frontier":"FRESH_AUTHORITY_AND_CONTINUITY_RECONCILIATION_BEFORE_PROSE"},
   "new_si_id":null,
   "evidence_ceiling":"ENGINEERING_AND_BOUNDED_REAL_PROJECT_CANARY_NOT_LITERARY_HUMAN_PROVIDER_LEGAL_ECONOMICS_MARKET_PROOF"
 }
