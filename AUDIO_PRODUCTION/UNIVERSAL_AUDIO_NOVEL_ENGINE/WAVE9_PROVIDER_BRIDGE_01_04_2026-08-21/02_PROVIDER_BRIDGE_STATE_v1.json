@@ -1,0 +1,37 @@
+{
+  "schema_version": "ivdivo.audio_novel.provider_bridge_state/1.0",
+  "status": "CODE_READY_CI_PENDING_EXTERNAL_CREDENTIAL_HOLD",
+  "current_frontier": "AUTHENTICATED_READ_ONLY_PROVIDER_SNAPSHOT",
+  "architecture_refrozen_elsewhere": true,
+  "narrow_delta_justification": "Existing controlled dispatch accepted status=PASS capability files without verifying schema/authentication/provenance/hash/freshness. This patch closes only that demonstrated boundary defect.",
+  "implemented_modules": [
+    "audio/studio/runtime/provider_snapshot_contract.py",
+    "audio/studio/provider_snapshot_contract.py",
+    "audio/studio/elevenlabs_snapshot_acquirer.py"
+  ],
+  "modified_modules": [
+    "audio/studio/controlled_provider_dispatch.py",
+    "audio/studio/tests/test_controlled_provider_dispatch.py"
+  ],
+  "new_tests": [
+    "audio/studio/tests/test_provider_snapshot_contract.py"
+  ],
+  "live_dispatch_policy": {
+    "snapshot_max_age_seconds": 21600,
+    "snapshot_schema_required": true,
+    "authenticated_capture_required": true,
+    "source_coverage_required": true,
+    "snapshot_hash_required": true,
+    "secret_fields_forbidden": true,
+    "credential_persisted_must_be_false": true,
+    "missing_voice_or_model_blocks": true,
+    "auto_substitution": false
+  },
+  "evidence_boundary": {
+    "real_provider_snapshot": false,
+    "real_provider_calls": 0,
+    "paid_calls": 0,
+    "fresh_ci": "PENDING",
+    "authority_promotion": false
+  }
+}
