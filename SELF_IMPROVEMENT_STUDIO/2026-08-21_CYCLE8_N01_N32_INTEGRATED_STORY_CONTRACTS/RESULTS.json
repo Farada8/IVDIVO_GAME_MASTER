@@ -1,11 +1,16 @@
 {
-  "schema_version":"0.3",
-  "status":"LOCAL_INTEGRATED_PASS_PENDING_PR_CI_AND_DRIVE_RECONCILIATION_READBACK",
+  "schema_version":"0.4",
+  "status":"LOCAL_INTEGRATED_PASS_PENDING_PR_CI_AND_DRIVE_FINAL_READBACK",
   "n01_n32":"32_OF_32_EXECUTED_OR_DISPOSITIONED",
-  "parallel_main_story_pilot":{"path":"SELF_IMPROVEMENT_STUDIO/2026-08-21_CYCLE8_STORY_ADAPTER_REAL_PILOT/","real_project_canaries":"13/13_PASS","warm":"24/24_PASS","cold":"24/24_PASS","disposition":"REUSE_MAIN_NO_DUPLICATE_RUNTIME"},
+  "parallel_main_story_pilot":{
+    "path":"SELF_IMPROVEMENT_STUDIO/2026-08-21_CYCLE8_STORY_ADAPTER_REAL_PILOT/",
+    "stage1":{"real_project_canaries":"13/13_PASS","warm":"24/24_PASS","cold":"24/24_PASS"},
+    "stage2":{"checks":"8/8_CORRECTLY_DISPOSITIONED","pass_like":7,"source_holds":1,"warm":"25/25_PASS","cold":"25/25_PASS","ordinary_life":"INSUFFICIENT_SOURCE_NOT_STORY_DEFECT"},
+    "disposition":"REUSE_MAIN_NO_DUPLICATE_RUNTIME"
+  },
   "integrated_local_regression":{"tests":20,"passed":20,"failed":0},
-  "real_concurrency_events":2,
-  "concurrency_disposition":"REBASE_SALVAGE",
+  "real_concurrency_events":"MULTIPLE_MAIN_ADVANCES_WITH_SEMANTIC_DEDUPE",
+  "concurrency_disposition":"REBASE_SALVAGE_NO_FORCE_OVERWRITE",
   "si0015":{"current_before":"DEVELOPMENT_CONTRACT_READY","proposed_after":"READY_FOR_PILOT","verified_current":false,"next_gate":"REAL_PROJECT_PILOT_PLUS_HEALTHY_CONTROL_PLUS_FALSE_POSITIVE_REVIEW"},
   "story_canon_changes":"NONE",
   "d01_lock_issued":false,
