@@ -1,52 +1,95 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "updated": "2026-08-21",
   "status": "CURRENT_PROJECT_ROUTING_STATE_NOT_STORY_CANON",
   "project_id": "D10",
   "title": "BLOODBOUND",
   "active_engine": "THE_ERASED_DAUGHTERS",
-  "authority_note": "Founder newest instruction and Drive current project authority outrank this routing state. All current BLOODBOUND material remains WORKING until Founder approval.",
+  "authority_note": "Founder newest instruction and Drive current project authority outrank this routing state. Final story/text completion is internally verified, but Founder Lock is NOT silently issued by this machine state.",
   "drive_current_authority": {
     "id": "17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8",
     "title": "00_BLOODBOUND — CURRENT PROJECT AUTHORITY + NEXT ACTION v1.0"
   },
-  "current_phase": "TEXT_COMPLETION_BLOCK_II",
-  "completed_frontier": "E01-E06_CURRENT_WORKING_BRANCH_COMPLETE",
-  "block_i_gate": {
-    "status": "PASS_TO_BLOCK_II",
+  "mode": "FOUNDER_LOCK_DECISION_GATE",
+  "current_phase": "FINAL_STORY_GATE_PASSED_AWAITING_FOUNDER_LOCK",
+  "completed_frontier": "E01-E24_TEXT_COMPLETE",
+  "main_conflict_status": "CLOSED",
+  "final_story_gate": {
+    "status": "PASS",
     "fatal": 0,
     "major": 0,
-    "drive_id": "11qb_ikaXCZIf0pndHAZxhZ00Mbr6PiqnxaLOqBlLvAU",
-    "title": "BLOODBOUND — BLOCK I E01–E06 STORY + HUMAN SCENE GATE v1.0"
+    "blocking_medium": 0,
+    "drive_id": "1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s",
+    "title": "BLOODBOUND — FINAL SEASON STORY GATE v1.0 — TEXT COMPLETE — READY FOR FOUNDER LOCK",
+    "founder_lock": "NOT_YET_ISSUED"
   },
-  "current_episode_sequence": [
-    "E07_THE_MARRIED_NAME",
-    "E08_HOUSE_CORVEN",
-    "E09_WHAT_YOUR_FAMILY_DID",
-    "E10_THE_CLAIMANT",
-    "E11_STABLE_LIE",
-    "E12_THE_MINUTES"
-  ],
-  "next_safe_action": "WRITE_AND_GATE_E07_THROUGH_E12_USING_CURRENT_HUMAN_SCENE_DIALOGUE_AUTHORITY_THEN_RUN_BLOCK_II_STORY_AND_HUMAN_SCENE_REGRESSION",
-  "founder_approval": "PENDING",
-  "performance_validation": "DOWNSTREAM_REAL_TTS_LISTENER_EVIDENCE_NOT_CLAIMED",
+  "block_gates": {
+    "E01_E06": {"status": "PASS", "fatal": 0, "major": 0, "drive_id": "11qb_ikaXCZIf0pndHAZxhZ00Mbr6PiqnxaLOqBlLvAU"},
+    "E07_E12": {"status": "PASS", "fatal": 0, "major": 0, "drive_id": "1rVQdUQHS0woqNv7viP8Zwjf0M0EIVouiYKkurkYNImw"},
+    "E13_E18": {"status": "PASS", "fatal": 0, "major": 0, "drive_id": "1PDBbmy98RkvgDlh_eXByb6FUIR1uCXE1jUUFYSbf1d4"},
+    "E19_E24": {"status": "PASS", "fatal": 0, "major": 0, "drive_id": "1B3ZZUF4uy1cDbkLjil3LoyABsTMj9eO3nixinMkaOB4"}
+  },
+  "corpus_dialogue_regression": {
+    "status": "PASS_AFTER_SELECTIVE_REPAIR",
+    "drive_id": "1AHKdt-RKvXVTl16zjCjkcS_h49sTvV2wE_uPc2ISYUY",
+    "finding": "SCENE_LEVEL_NATURALISM_PASS_DOES_NOT_GUARANTEE_CORPUS_LEVEL_SPEAKER_NARRATOR_SEPARATION",
+    "repair_scope": ["E07", "E08", "E09", "E12"]
+  },
+  "episode_drive_ids": {
+    "E06": "1kRQb4f1tuRPm219FdvtjCXMNCjDyZjCO7QQw_2DcYqQ",
+    "E07": "1E9ihSgHJWxbN2AW8H__WmOcWLXkYykLB73AVYz3xlk4",
+    "E08": "14bO0EG3ULSnmYhjUIDT4BNNVvNRtGoJGDE_gJtru-5Q",
+    "E09": "13Jzsoda5RIdFpKWa0MxeVWMnYXHKfcCZQxYrDcs7hjA",
+    "E10": "13FoY4vF2kVALl3zus_Izuy0KSgp1hhrweIzgxfwS5Lc",
+    "E11": "1xeNeiDZ4d6bQ6ma8PdnsEAw7OgmQWDdj4EG2SqiFu90",
+    "E12": "1dZLso2rbeuH9_K7w3LtZMOkfqf2P8QBd7gMk0Hn1EbM",
+    "E13": "18di0bNT4RU7mnsGnYo23WM0kAo3OMSr7ml_ZeUm9C-U",
+    "E14": "19hkscTlg4zVLOkx2FnJSVHXWKLZxLdtB0ahVmLvxQ3Q",
+    "E15": "1PGZcdEsrUlicDpMexir0YHyege02PS2q7QHkTE3Do8Q",
+    "E16": "1S79uz6gD1M3Yff2jvK1jkH3XX-jqzLijQGChqrsr5dY",
+    "E17": "1vwC-8XMFZEdasGAJu7IonNFnNihu3gyB1RNi811hxMk",
+    "E18": "1Vrg1EhLUoeXJoyI3Hm-nnX_dpsr7aYwoRIRRISBZ8xY",
+    "E19": "1KNWO3vDpis11dXY23STRN9cXR4iLHqfgmEGBU16SWxA",
+    "E20": "1tkqMto20ZlpRovwxAWHumCUmmPeQZj8Hvsu0YOHF9as",
+    "E21": "11yX2qHVAaNJLN8NjDOrFlY9828tRIn9P86rol86tn5I",
+    "E22": "1ZMP_J4v6R32DfJFp9d4m4SGundoW6PMnLvyRNcPft9M",
+    "E23": "1mUexjWwqJ2aZ-iVxCSsO0MXQlBgVg8piBy7LSaJQ13c",
+    "E24": "1zb0aMErYQcEPhcPC3xMit2vpQwWOmVP9qyERB92W9BI"
+  },
+  "story_closure": {
+    "extinction_doctrine": "DELIBERATE_POLITICAL_ADMINISTRATIVE_ERASURE_PROVED",
+    "murder_chain": "CLOSED_BY_CONVERGING_ORDINARY_EVIDENCE_NOT_CONFESSION_OR_MAGIC",
+    "celia": "MANIPULATED_CLAIMANT_TO_WITNESS_NOT_MASTERMIND",
+    "mira": "PROFESSIONAL_AGENCY_PRESERVED_REFUSES_HEREDITARY_RULE",
+    "rian": "MATERIAL_AUTHORITY_SURRENDER_BEFORE_ROMANTIC_ESCALATION",
+    "bloodbond": "OPTIONAL_FUTURE_ADULT_CONSENT_NOT_DESTINY_PROOF"
+  },
+  "performance_validation": "DOWNSTREAM_REAL_TTS_AND_HUMAN_LISTENER_EVIDENCE_NOT_CLAIMED",
   "hard_locks": [
     "NO_MATE_BOND_OR_MAGICAL_COMPULSION_FOR_LOVE_DESIRE_CONSENT_OBEDIENCE",
     "RESONANCE_IS_WARD_INFORMATION_NOT_ROMANCE",
     "NO_ROMANTIC_PHYSICAL_ESCALATION_WHILE_RIAN_RETAINS_CUSTODY_AUTHORITY",
-    "RIAN_AUTHORITY_RELINQUISHMENT_REMAINS_E15",
+    "RIAN_MATERIALLY_RELINGUISHES_AUTHORITY_BEFORE_ROMANTIC_ESCALATION",
     "MAGIC_MAY_POINT_TO_A_QUESTION_BUT_GUILT_AND_POLITICAL_TRUTH_REQUIRE_CONVERGING_EVIDENCE",
+    "MIRA_DOES_NOT_BECOME_HEREDITARY_RULER",
     "DO_NOT_RESTORE_SUPERSEDED_E06_V1_0"
   ],
   "do_not_repeat": [
     "DO_NOT_REBUILD_PHASE_A_B_ENGINE_COMPETITION_WITHOUT_NEW_FATAL_MAJOR_EVIDENCE",
-    "DO_NOT_REOPEN_BLOCK_I_AFTER_PASS_WITHOUT_NEW_EVIDENCE",
-    "DO_NOT_TREAT_HISTORICAL_PILOT_HOLD_AS_CURRENT_TEXT_COMPLETION_BLOCKER",
-    "DO_NOT_CLAIM_REAL_LISTENER_OR_TTS_PASS"
+    "DO_NOT_REOPEN_BLOCK_I_II_III_IV_WITHOUT_NEW_FATAL_MAJOR_EVIDENCE",
+    "DO_NOT_REDRAFT_E07_E24_TO_KEEP_WORK_MOVING",
+    "DO_NOT_RERUN_FINAL_SEASON_STORY_GATE",
+    "DO_NOT_GENERATE_E25",
+    "DO_NOT_CLAIM_REAL_LISTENER_OR_TTS_PASS",
+    "DO_NOT_SILENTLY_FOUNDER_LOCK"
   ],
+  "next_unblocked_obligation": "FOUNDER_EXPLICIT_LOCK_DECISION_FOR_D10",
+  "remaining_to_founder_lock": ["FOUNDER_EXPLICIT_LOCK_DECISION_FOR_D10"],
+  "after_founder_lock": "FRESH_REBASE_D01_THE_WIFE_AT_HIS_WEDDING_FROM_NEWEST_PROJECT_SPECIFIC_STATE_AND_CONTINUE_FINITE_STORY_COMPLETION",
   "provenance": [
     "Drive current authority 17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8",
-    "Drive Block I gate 11qb_ikaXCZIf0pndHAZxhZ00Mbr6PiqnxaLOqBlLvAU",
-    "CURRENT_WORKSTATE_v2.2 Bloodbound rebase"
+    "Drive Final Season Story Gate 1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s",
+    "Drive CURRENT_WORKSTATE_v2.6",
+    "Drive CURRENT_PROMPTS_v2.3"
   ]
 }
