@@ -21,7 +21,7 @@ from typing import Any, Iterable
 SCHEMA_VERSION = "ivdivo.audio.provider_snapshot/1.0"
 FORBIDDEN_KEY_FRAGMENTS = (
     "api_key", "apikey", "access_token", "refresh_token", "password", "passwd",
-    "secret", "authorization", "bearer", "xi-api-key",
+    "client_secret", "secret_key", "authorization", "bearer_token", "xi-api-key",
 )
 
 
@@ -109,6 +109,7 @@ def compile_snapshot(preflight: dict[str, Any], *, inventory_scope: str = "TARGE
         "failures": sorted({str(x) for x in (preflight.get("failures") or [])}),
         "models_request_meta": deepcopy(preflight.get("models_request_meta")),
         "http_status": preflight.get("http_status"),
+        "secret_env_present": bool(preflight.get("secret_env_present")),
     }
     authenticated = volatile["credential"] == "PASS"
     status = "PASS" if authenticated and volatile["preflight_status"] == "PASS" else "HOLD"
