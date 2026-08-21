@@ -1,0 +1,32 @@
+{
+  "candidate_id": "SI-0008",
+  "title": "Project-slice freshness assertion for CURRENT routers",
+  "candidate_type": "PROCESS_OR_ROUTER_RULE_PLUS_EXECUTABLE_CANARY",
+  "status": "DEVELOPMENT_CONTRACT_READY",
+  "scope": "UNIVERSAL_IVDIVO",
+  "updated": "2026-08-21",
+  "source_provenance": [
+    {"source_type":"PRODUCTION_DEFECT","locator":"CURRENT_IVDIVO_HUMAN_SCENE_DIALOGUE_AUTHORITY.md","observation":"Router was CURRENT but embedded BLOODBOUND slice still said E01-E07/E08-next after controlling D10 state had Founder-locked E01-E24."},
+    {"source_type":"PROJECT_ENGINEERING","locator":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32_2026-08-21/CYCLE32_REGISTRY.json","observation":"B03 Cycle32 identified and repaired the stale slice while preserving historical research evidence."}
+  ],
+  "problem_or_opportunity": "A globally CURRENT router can contain a stale embedded project frontier. Cold-start agents may follow the stale local instruction even when a higher project state is correct.",
+  "proposed_mechanism": "For every router section that asserts a current project frontier/next action, resolve the controlling project-state pointer and compare status/frontier. Fail or warn on contradiction. Explicit HISTORICAL/SUPERSEDED/REFERENCE slices are exempt and remain usable as evidence.",
+  "development_contract": {
+    "required_inputs": ["router/project slice","controlling project-state pointer","slice status label"],
+    "required_outputs": ["CURRENT_MATCH","STALE_CURRENT_SLICE","EXEMPT_HISTORICAL_SLICE","UNRESOLVED_POINTER"],
+    "positive_fixture": "BLOODBOUND stale E07/E08 slice vs Founder-locked E01-E24 controlling state",
+    "negative_fixture": "explicitly HISTORICAL/SUPERSEDED BLOODBOUND research example must not be flagged as a current contradiction",
+    "fail_closed": ["unresolved controlling pointer","two competing CURRENT frontiers","silent downgrade from locked/terminal state"],
+    "must_not": ["rewrite story text","delete historical evidence","treat modification date alone as authority"]
+  },
+  "evidence_state": "PRODUCTION_DEFECT_PLUS_MANUAL_REPAIR_EVIDENCE",
+  "pilot_evidence": ["2026-08-21 manual freshness comparison correctly detected and repaired the BLOODBOUND embedded slice"],
+  "red_team_findings": ["Naive detector will produce false positives on intentionally historical examples; status-label exemption is mandatory.","A filename/current timestamp does not prove embedded project claims are fresh."],
+  "promotion_level": "NONE_YET",
+  "application_targets": ["CURRENT_IVDIVO_HUMAN_SCENE_DIALOGUE_AUTHORITY.md","current routers containing project-specific frontiers","future cold-start lint/audit utility"],
+  "protected_authorities": ["Founder newest instruction","project-specific controlling state","locked project canon","historical research evidence"],
+  "owner_role": "A00 Router / Continuity / Self-Improvement",
+  "next_action": "Execute N55 positive canary and N56 historical negative fixture; only then consider central registry promotion/engine integration.",
+  "next_gate": "EXECUTABLE_FRESHNESS_DETECTOR_CANARY_PASS",
+  "notes": "Not yet merged into the one-line central registry because safe write-through requires preserving the full current registry; this candidate file is the durable non-loss artifact."
+}
