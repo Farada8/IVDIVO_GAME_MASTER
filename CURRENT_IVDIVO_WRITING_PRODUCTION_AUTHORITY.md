@@ -16,9 +16,10 @@ Current canonical GitHub entry stack:
 5. `IVDIVO_NARRATIVE_OS/09_UNIVERSAL_BOOK_WORKROOM_BOOT.md`
 6. `IVDIVO_NARRATIVE_OS/12_UNIVERSAL_WORKROOM_CONTINUATION_PROMPT_v1.0.md`
 7. `IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md`
-8. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
-9. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
-10. current book/project overlay + source-of-truth/state/manuscript files.
+8. `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md`
+9. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
+10. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
+11. current book/project overlay + source-of-truth/state/manuscript files.
 
 Google Drive and ChatGPT File Library are required connected working/reference sources when they can materially affect the current decision. Founder newest instruction outranks persisted mirrors until synchronized.
 
@@ -39,6 +40,8 @@ Stop only on a genuine gate: Founder decision, authority/canon ambiguity, unreso
 ## MULTI-MODEL LAW
 
 ChatGPT / Claude / Grok / other models are execution/review backends, not canon authorities.
+
+Use `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md` for bounded new-chat resume, independent Red Team, Character/Relationship/Voice review, Reader/Market review, Reference/Continuity review and Reconciler handoff.
 
 Use bounded packets, preserve independent review when useful, classify external recommendations `ACCEPT / ACCEPT_WITH_MODIFICATION / HOLD_FOR_TEST / REJECT`, apply accepted changes to the actual controlling artifact, and persist the disposition/provenance.
 
