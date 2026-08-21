@@ -1,7 +1,7 @@
 {
   "schema": "NMM_BLIND_WHISTLE_PROTOCOL_v2",
   "trial_set_hash": "6f7a1ed281bcffd8829a4598a9b229c402b1147e2970283c5ad5d6d0a241c1cd",
-  "answer_key_hash": "abca4e19b1c24d0ce0b4d4f393332cd436da59f62687912de54dc4196e653ec6",
+  "answer_key_hash": "f807c59c17e35c53ed3a2c906729f68cf663f0d124b8e41d6a4e49c325d9c600",
   "min_accuracy": 0.75,
   "min_mean_realism": 3.5,
   "allowed_devices": ["HEADPHONES", "PHONE"],
