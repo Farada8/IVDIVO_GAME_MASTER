@@ -1,0 +1,28 @@
+{
+  "artifact": "BODYGUARD_RU_PROTECTION_STAGE_AUDIO_GLOSSARY_v0_2",
+  "status": "WORKING_DECISION_MATRIX_NATIVE_PRO_QA_PENDING",
+  "rules": {
+    "dialogue_naturalness_over_dictionary_literalism": true,
+    "clue_terms_must_remain_immediately_distinguishable": true,
+    "retained_english_allowed_when_real_professionals_use_it": true,
+    "no_term_locked_without_context": true
+  },
+  "terms": [
+    {"en":"bodyguard","ru_candidates":["телохранитель","телохранительница","сотрудник личной охраны"],"status":"CONTEXT_REQUIRED","note":"Threat line must sound natural and immediately intelligible."},
+    {"en":"close protection","ru_candidates":["личная охрана","обеспечение личной безопасности"],"status":"PRO_QA_REQUIRED","note":"Avoid bureaucratic calque in spoken dialogue."},
+    {"en":"principal","ru_candidates":["клиент","охраняемое лицо"],"status":"CONTEXT_REQUIRED","note":"Internal security usage may differ from spoken line."},
+    {"en":"bodypack","ru_candidates":["бодипак","поясной передатчик"],"status":"PRO_QA_REQUIRED","note":"Use actual live-audio usage; consent line must keep equipment specificity."},
+    {"en":"IEM","ru_candidates":["IEM","ушной монитор","внутриканальный монитор"],"status":"PRO_QA_REQUIRED","note":"Likely acronym in professional speech; listener comprehension matters."},
+    {"en":"talkback","ru_candidates":["talkback","служебный голосовой канал","служебная связь"],"status":"PRO_QA_REQUIRED","note":"Critical to mystery path; must not collapse into generic comms."},
+    {"en":"standby","ru_candidates":["standby","приготовиться"],"status":"PRO_QA_REQUIRED","note":"Must remain distinct from acknowledgement and GO."},
+    {"en":"acknowledgement","ru_candidates":["подтверждение","ack"],"status":"PRO_QA_REQUIRED","note":"Cue grammar distinction is clue-critical."},
+    {"en":"GO","ru_candidates":["GO","пуск","команда на запуск"],"status":"PRO_QA_REQUIRED","note":"Do not translate in a way that blurs cue protocol."},
+    {"en":"cue","ru_candidates":["cue","команда","метка"],"status":"PRO_QA_REQUIRED","note":"Stage practice dependent."},
+    {"en":"lift","ru_candidates":["сценическая платформа","подъёмник"],"status":"CONTEXT_REQUIRED","note":"Visual geography and technical speech may prefer different term."},
+    {"en":"stage-left","ru_candidates":["слева по сцене","левая сторона сцены"],"status":"PRO_QA_REQUIRED","note":"Perspective/orientation must remain stable."},
+    {"en":"gateway","ru_candidates":["шлюз","gateway"],"status":"CONTEXT_REQUIRED","note":"Audio/network context."},
+    {"en":"raw playback","ru_candidates":["исходная запись","необработанное воспроизведение"],"status":"CONTEXT_REQUIRED","note":"Use natural spoken form, preserve evidentiary meaning."},
+    {"en":"left channel only","ru_candidates":["только левый канал"],"status":"LOCK_CANDIDATE","note":"Clue-critical and immediately clear."},
+    {"en":"four clicks / two clicks","ru_candidates":["четыре щелчка / два щелчка"],"status":"LOCK_CANDIDATE","note":"Clue-critical contrast."}
+  ]
+}
