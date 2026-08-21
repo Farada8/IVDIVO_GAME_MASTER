@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ivdivo.local/schemas/IVDIVO_INTERRUPTION_LEARNING_EVENT_SCHEMA_v1.json",
+  "title": "IVDIVO Interruption Learning Event",
+  "type": "object",
+  "required": ["event_id", "project_id", "work_unit", "recovery_decision"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "project_id": {"type": "string", "minLength": 1},
+    "work_unit": {"type": "string", "minLength": 1},
+    "recovery_decision": {"enum": ["RESUME_EXACT", "REBASE_FIRST", "RECOVER_VOLATILE_FIRST", "STOP", "QUARANTINE_EXTERNAL_SIDE_EFFECT", "VERIFY_STORE_BEFORE_RETRY"]},
+    "real_interruption": {"type": "boolean"},
+    "false_resume": {"type": "boolean"},
+    "false_stop": {"type": "boolean"},
+    "duplicate_work_units_avoided": {"type": "integer", "minimum": 0},
+    "writes_reconciled": {"type": "integer", "minimum": 0},
+    "checkpoint_bytes": {"type": "integer", "minimum": 0},
+    "checkpoint_tool_calls": {"type": "integer", "minimum": 0},
+    "recovery_tool_calls": {"type": "integer", "minimum": 0},
+    "notes": {"type": "array"}
+  },
+  "additionalProperties": false
+}
