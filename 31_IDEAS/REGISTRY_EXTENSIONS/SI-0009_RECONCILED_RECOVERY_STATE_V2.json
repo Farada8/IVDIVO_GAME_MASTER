@@ -1,0 +1,38 @@
+{
+  "candidate_id": "SI-0009",
+  "title": "Reconciled Recovery State v2 + fail-closed completion gate",
+  "candidate_type": "PROCESS_OR_ROUTER_RULE",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type":"GITHUB","locator":"IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md","version":"1.0","date":"2026-08-21","notes":"Current recovery law"},
+    {"source_type":"GITHUB","locator":"draft PR #67 / system/recovery-state-v2-20260821","version":"candidate","date":"2026-08-21","notes":"v2 state schema + completion gate; 11/11 unit smoke reported on candidate branch"},
+    {"source_type":"GITHUB","locator":"31_IDEAS/TRANSCRIPT_RECOVERY_32_PROMPT_SPRINT_2_2026-08-21/02_EXECUTION_RESULTS_N01_N32.md","version":"1.0","date":"2026-08-21","notes":"Sprint 2 N01-N32 evidence/rebase"}
+  ],
+  "problem_or_opportunity": "The verified v1 transcript extractor intentionally stops at EXTRACTED_UNVERIFIED. A separate semantic state is needed to partition projects, verify claims, resolve authority/currentness, journal writes and prove recovery completion before returning to normal production.",
+  "proposed_mechanism": "Immutable v1 evidence -> Reconciled Recovery State v2 -> project partitions -> claim/evidence verification -> unknown/conflict disposition -> transactional write/readback -> fail-closed RECOVERY_COMPLETE -> normal next-action resolver.",
+  "dedupe_relation": "EXTENSION_OF_SI_0008",
+  "related_candidates": ["SI-0008","SI-0007"],
+  "expected_benefit": "Prevents chat claims from silently becoming current state while allowing a pasted conversation to recover real work and resume from the verified frontier without Founder manual reconstruction.",
+  "evidence_state": "INTERNAL_EVIDENCE",
+  "priority_vector": {"impact":"CRITICAL","recurrence":"SYSTEMIC","effort":"MEDIUM","regression_risk":"MEDIUM","reversibility":"EASY","urgency":"HIGH","affected_surface":"PORTFOLIO"},
+  "development_contract": {
+    "candidate_branch": "system/recovery-state-v2-20260821",
+    "candidate_pr": 67,
+    "unit_gate": "11/11 exact-source candidate smoke PASS",
+    "protected_invariants": ["v1 evidence remains immutable","no transcript self-promotion","material unknown/conflict blocks completion","writes require readback","completion cannot bypass Founder/human/provider gates"]
+  },
+  "pilot_evidence": ["32-prompt Sprint 2 rebase selected EXTEND_EXISTING_CANDIDATE","PR67 unit completion-gate smoke 11/11 PASS as candidate evidence"],
+  "red_team_findings": ["Unit tests do not prove semantic recovery quality on real large corpora","PR67 must remain candidate until real corpus and next-action integration regression","No duplicate v2 authority should be created"],
+  "promotion_level": "NONE",
+  "application_targets": ["draft PR #67","future recovery state schema/tool integration","normal next-action resolver after completion gate"],
+  "verification_evidence": [],
+  "protected_authorities": ["Founder newest instruction","Locked project canon","Current project/domain authority","Human/provider/market evidence firewalls"],
+  "owner_role": "Recovery Reconciler / A00 Router",
+  "next_action": "Run first real large pasted-corpus end-to-end pilot, add evidence-adapter + next-action integration regression, then decide HOLD/PROMOTE/REVISE.",
+  "next_gate": "FIRST_REAL_LARGE_CORPUS_PLUS_NEXT_ACTION_INTEGRATION_GATE",
+  "hold_trigger": null,
+  "terminal_reason": null,
+  "last_movement": "2026-08-21",
+  "notes": "Sprint 2 candidate. PR67 remains draft and not CURRENT."
+}
