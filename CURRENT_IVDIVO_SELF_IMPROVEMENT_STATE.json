@@ -1,10 +1,11 @@
 {
-  "schema_version": "2.5",
+  "schema_version": "2.6",
   "updated": "2026-08-21",
-  "status": "V2_VERIFIED_CURRENT",
+  "status": "V2_VERIFIED_CURRENT_WITH_TRANSCRIPT_RECOVERY_EXTENSION",
   "authority_router": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
   "engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
   "core_kernels": "IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md",
+  "transcript_recovery_protocol": "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md",
   "machine_config": "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json",
   "evaluation_matrix": "SELF_IMPROVEMENT_EVALUATION_MATRIX_v1.json",
   "runtime_verification": "IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-21.md",
@@ -13,12 +14,14 @@
   "primary_loops": {
     "book": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
     "audio_novel": "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md",
-    "self_improvement": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md"
+    "self_improvement": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+    "abrupt_chat_recovery": "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md"
   },
   "learning_stack": {
     "delta_intake": "IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md",
     "reference_learning": "IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md",
     "project_wide_learning": "IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md",
+    "transcript_recovery": "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md",
     "live_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
     "registry_schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
     "learning_ledger": "CURRENT_IVDIVO_LEARNING_LEDGER.json",
@@ -28,32 +31,51 @@
   "kernels": {
     "general_problem_solving": "OUTCOME -> DONE_EVIDENCE -> AUTHORITY/CONSTRAINTS -> ROOT_CAUSE/BOTTLENECK -> RETRIEVE_KNOWN_MECHANISMS -> DISTINCT_OPTIONS -> CHEAPEST_DECISIVE_TEST -> BOUNDED_EXECUTION -> VERIFY -> LEARN",
     "engine_builder": "ENGINE_WORTHINESS -> PURPOSE/IO/AUTHORITY/STATE/DAG/GATES -> MINIMAL_CORE -> FIXTURES -> ADVERSARIAL/REGRESSION -> REAL_PILOT -> PROMOTION -> MONITOR/PRUNE",
-    "research_radar": "DECISION_OR_BOTTLENECK_TRIGGER -> FRESHNESS/UNKNOWN -> TARGETED_SOURCES -> SOURCE_FACT/MECHANISM -> TEST/DECISION -> APPLICATION -> STOP"
+    "research_radar": "DECISION_OR_BOTTLENECK_TRIGGER -> FRESHNESS/UNKNOWN -> TARGETED_SOURCES -> SOURCE_FACT/MECHANISM -> TEST/DECISION -> APPLICATION -> STOP",
+    "full_chat_transcript_recovery": "INGEST -> PARSE -> RECOVER_PROJECT_FRONTIER -> VERIFY_PERSISTED_CLAIMS -> RECOVER_CHAT_ONLY_CANDIDATES -> DEDUPE -> RECONCILE -> PERSIST -> LEARN -> READBACK -> CONTINUE"
   },
   "evidence_separation": {
     "automated_tests_are_literary_proof": false,
     "model_review_is_human_signal": false,
     "dry_run_is_live_provider_evidence": false,
     "source_inspection_is_runtime_execution": false,
-    "predicted_market_score_is_market_behavior": false
+    "predicted_market_score_is_market_behavior": false,
+    "pasted_transcript_is_authority": false,
+    "pasted_transcript_is_recovery_evidence_surface": true
+  },
+  "transcript_recovery": {
+    "status": "FOUNDER_DIRECTIVE_APPLIED_CURRENT",
+    "drive_mirror_id": "1MsB3B0Byh4AlCMLtmPde9rXguzaejwUswBD5qPM8W50",
+    "trigger": "PASTED_EXPORTED_PRIOR_AI_CONVERSATION_OR_GENERATED_BIG_PASTE",
+    "founder_manual_annotation_required": false,
+    "completeness_states": ["FULL_TRANSCRIPT", "PARTIAL_TRANSCRIPT", "UNKNOWN_COMPLETENESS", "MULTI_TRANSCRIPT_BUNDLE"],
+    "claim_states": ["VERIFIED_PERSISTED", "CHAT_ONLY_CANDIDATE", "DISCOVERY_ONLY", "UNRECOVERABLE_CHAT_ONLY", "SUPERSEDED", "CONFLICT"],
+    "must_verify_saved_locked_passed_claims": true,
+    "must_process_final_tail": true,
+    "must_not_invent_missing_exact_details": true,
+    "must_not_persist_secrets": true,
+    "completion_gate": "INGESTION_COMPLETE_AFTER_ALL_MATERIAL_ITEMS_DISPOSITIONED_AND_ACCEPTED_WRITES_READ_BACK",
+    "continuation_after_recovery": true
   },
   "drive_mirrors": {
     "engine_v2": "1TamY1cuiCUGP5zgheF-1nM2LaRt2f5vtZLwfJTJeSaY",
     "current_self_improvement_authority": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
+    "transcript_recovery_protocol": "1MsB3B0Byh4AlCMLtmPde9rXguzaejwUswBD5qPM8W50",
     "learning_ledger": "1Qi-MhGcoup3o5YPy0vKutw7ZWZ0J3UKs2A7nInhaYXE",
     "v1_engine_base": "1lbAaKASLAKFzCiGEF84Xrs-ziwQhCJASwLfDh3UGwSg",
     "improvement_registry_mirror": "1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs",
     "portability_inventory": "1WofqSiO3fBD_VoIveOVDihBybwlpeDE051zVrf1ipVs"
   },
-  "v2_new_capabilities": ["ORDERED_OBJECTIVE_STACK_WITH_BOOKS_AND_AUDIO_FIRST", "THREE_COUPLED_BOOK_AUDIO_META_LOOPS", "PROBLEM_MINING_FROM_RECURRING_FAILURES_AND_SUCCESSES", "BEST_CANDIDATE_ROUTER", "WIP_ANTI_BEDLAM_GUARD", "PROBLEM_DRIVEN_RESEARCH_ENGINE", "BOOK_IMPROVEMENT_SENSORS", "AUDIO_IMPROVEMENT_SENSORS", "PRODUCTIVITY_AND_COST_SENSORS", "MULTI_AI_SELF_IMPROVEMENT_CELL", "PROMOTION_DEPLOYMENT_READBACK_ROLLBACK", "REAL_PRODUCT_FEEDBACK_LOOP", "SELF_REFERENCE_GUARD", "KNOWLEDGE_COMPACTION_AND_PRUNING", "FAILURE_AND_SUCCESS_MEMORY", "OBSERVATION_EXPERIMENT_LEARNING_LEDGER", "GENERAL_PROBLEM_SOLVING_KERNEL", "ENGINE_BUILDER_KERNEL", "RESEARCH_RADAR_KERNEL", "CROSS_DOMAIN_EVALUATION_MATRIX"],
+  "v2_new_capabilities": ["ORDERED_OBJECTIVE_STACK_WITH_BOOKS_AND_AUDIO_FIRST", "THREE_COUPLED_BOOK_AUDIO_META_LOOPS", "PROBLEM_MINING_FROM_RECURRING_FAILURES_AND_SUCCESSES", "BEST_CANDIDATE_ROUTER", "WIP_ANTI_BEDLAM_GUARD", "PROBLEM_DRIVEN_RESEARCH_ENGINE", "BOOK_IMPROVEMENT_SENSORS", "AUDIO_IMPROVEMENT_SENSORS", "PRODUCTIVITY_AND_COST_SENSORS", "MULTI_AI_SELF_IMPROVEMENT_CELL", "PROMOTION_DEPLOYMENT_READBACK_ROLLBACK", "REAL_PRODUCT_FEEDBACK_LOOP", "SELF_REFERENCE_GUARD", "KNOWLEDGE_COMPACTION_AND_PRUNING", "FAILURE_AND_SUCCESS_MEMORY", "OBSERVATION_EXPERIMENT_LEARNING_LEDGER", "GENERAL_PROBLEM_SOLVING_KERNEL", "ENGINE_BUILDER_KERNEL", "RESEARCH_RADAR_KERNEL", "CROSS_DOMAIN_EVALUATION_MATRIX", "FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION"],
   "application_readback": {
-    "writing_router": "PASS",
+    "writing_router": "PASS_TRANSCRIPT_RECOVERY_WIRED",
     "audio_router_feedback_adapter": "PASS",
-    "aggregate_system_state": "PASS_SCHEMA_1_6_OR_NEWER_REBASE_REQUIRED_IF_ADVANCED",
+    "aggregate_system_state": "REBASE_IF_ADVANCED",
     "central_registry_si_0007": "PASS_VERIFIED_CURRENT",
     "central_registry_si_0006": "PASS_SUPERSEDED",
-    "drive_engine_mirror": "PASS",
-    "drive_router_mirror": "PASS_WITH_V2_2_APPEND_REQUIRES_STATUS_SYNC",
+    "drive_engine_mirror": "PASS_TRANSCRIPT_EXTENSION_APPENDED",
+    "drive_router_mirror": "PASS_TRANSCRIPT_EXTENSION_APPENDED",
+    "drive_transcript_recovery_protocol": "PASS_CREATED",
     "drive_audio_feedback_adapter": "PASS",
     "learning_ledger": "PASS_CREATED_AND_DRIVE_MIRRORED",
     "core_kernels": "PASS_CREATED_AND_ROUTED",
@@ -73,17 +95,18 @@
   },
   "promotion_status": {
     "engine_v2": "VERIFIED_CURRENT",
-    "writing_router": "UPDATED_AND_READBACK_VALID",
+    "writing_router": "UPDATED_AND_READBACK_REQUIRED",
+    "transcript_recovery_extension": "FOUNDER_DIRECTIVE_APPLIED_CURRENT",
     "audio_feedback_adapter": "UPDATED",
-    "drive_mirrors": "CREATED_AND_READBACK_VALID_REQUIRES_STATUS_SYNC",
-    "aggregate_system_state": "REBASE_STATUS_SYNC_REQUIRED",
-    "registry_candidate_record": "SI-0007_VERIFIED_CURRENT",
+    "drive_mirrors": "TRANSCRIPT_EXTENSION_CREATED_AND_APPENDED",
+    "aggregate_system_state": "REBASE_STATUS_SYNC_IF_NEEDED",
+    "registry_candidate_record": "SI-0007_VERIFIED_CURRENT_BASE_ENGINE",
     "historical_v1_candidate": "SI-0006_SUPERSEDED",
     "learning_ledger": "ACTIVE",
     "core_kernels": "ACTIVE",
     "evaluation_matrix": "ACTIVE",
-    "next_gate": "ONGOING_OPERATIONAL_MONITORING"
+    "next_gate": "FIRST_REAL_LARGE_TRANSCRIPT_INGESTION_OPERATIONAL_MONITORING"
   },
-  "next_action": "Operate v2 as current self-improvement authority during real book/audio/production work; collect real observations, experiments and external evidence; route future candidates through the registry and learning ledger; rebase aggregate/Drive mirrors when shared state advances.",
+  "next_action": "Operate v2 with full-chat recovery protocol during real book/audio/production work; when Founder pastes an old conversation, recover and persist material deltas before normal continuation; collect real recovery observations into the Learning Ledger and route reusable improvements through the registry.",
   "story_first_guard": "META_IMPROVEMENT_MUST_NOT_STARVE_ACTIVE_BOOK_OR_AUDIO_PRODUCTION_UNLESS_SYSTEM_FATAL_MAJOR_BLOCKS_IT_OR_FOUNDER_SWITCHES_FOCUS"
 }
