@@ -1,0 +1,28 @@
+{
+  "transaction_id":"RUN34-CONTROLLED-GH-DRIVE-001",
+  "checkpoint":"AFTER_A1_BEFORE_A2",
+  "authority_effect":"NONE",
+  "story_canon_effect":"NONE",
+  "actions":[
+    {
+      "action_id":"A1_GITHUB_PAYLOAD",
+      "store":"GITHUB",
+      "effect_class":"REVERSIBLE_WRITE",
+      "side_effect_state":"CONFIRMED",
+      "readback_verified":true,
+      "observed_identity":{"marker":"RUN34_RECOVERY_PAYLOAD_V1","authority_effect":"NONE"},
+      "readback":"turn376"
+    },
+    {
+      "action_id":"A2_DRIVE_PAYLOAD",
+      "store":"DRIVE",
+      "effect_class":"REVERSIBLE_WRITE",
+      "side_effect_state":"NOT_STARTED",
+      "readback_verified":false,
+      "observed_identity":{}
+    }
+  ],
+  "expected_reconciler_decision_if_authority_fresh":"EXECUTE_MISSING_SAFE_ACTIONS",
+  "expected_missing_action":"A2_DRIVE_PAYLOAD",
+  "controlled_interruption_boundary":true
+}
