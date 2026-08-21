@@ -16,9 +16,10 @@ Current canonical GitHub entry stack:
 5. `IVDIVO_NARRATIVE_OS/09_UNIVERSAL_BOOK_WORKROOM_BOOT.md`
 6. `IVDIVO_NARRATIVE_OS/12_UNIVERSAL_WORKROOM_CONTINUATION_PROMPT_v1.0.md`
 7. `IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md`
-8. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
-9. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
-10. current book/project overlay + source-of-truth/state/manuscript files.
+8. `IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md`
+9. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
+10. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
+11. current book/project overlay + source-of-truth/state/manuscript files.
 
 Google Drive and ChatGPT File Library are required connected working/reference sources when they can materially affect the current decision. Founder newest instruction outranks persisted mirrors until synchronized.
 
@@ -49,6 +50,19 @@ Never invent missing external feedback and never let a model self-certify real H
 `SYMPTOM -> ROOT CAUSE -> EARLIEST FAILED LAYER -> SMALLEST EFFECTIVE REPAIR -> SELECTIVE DESCENDANT REGRESSION`
 
 Do not repair structure with prose polish or downstream production defects by reopening locked story without proof that story/text is the failed layer.
+
+## WORKING STORY-ENGINE UPGRADE EVIDENCE
+
+`story_engine/production/RECOVERY_V0_5_INTEGRATION_CANDIDATE.md` records the newest verified Recovery v0.5 engineering delta found outside canonical `main`.
+
+Classification: **WORKING / ENGINEERING UPGRADE CANDIDATE — NOT CURRENT ENGINE AUTHORITY**.
+
+Current evidence to preserve for future integration work:
+- Recovery v0.5 reports `130/130` automated tests PASS and `4/4` production smoke scenarios PASS;
+- transactional upstream repair, semantic delta, rollback, true descendant rebuild, selective Architecture redraft, CANON reapproval boundary and identity protections are integration candidates;
+- Story Discovery/engine recompetition, specialized World/Mystery/protected clue-order repair, full ensemble Relationship Authority, full v4.1 Reference Intelligence runtime and LIVE calibration remain open boundaries.
+
+Do **not** promote v0.5 by filename/version/test count alone. The current accepted IDEA→STORY executable authority remains in force until source/provenance reconciliation, canonical regression, missing-boundary implementation, live calibration and explicit authority promotion occur.
 
 ## HANDOFF LAW
 
