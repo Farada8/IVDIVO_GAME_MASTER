@@ -48,43 +48,19 @@
   "prepared_red_team": {
     "fatal": 0,
     "blocking_major": 1,
-    "closed_major": [
-      "CIVILIAN_CONTINUITY_AND_IRREVERSIBLE_LOSS_UNBOUND -> CLOSED_WORKING_PRE_PROSE",
-      "PRE_DRAFT_VOICE_CALIBRATION_NOT_RUN -> CLOSED_INTERNAL_CALIBRATION_PASS"
-    ],
+    "closed_major": ["CIVILIAN_CONTINUITY_AND_IRREVERSIBLE_LOSS_UNBOUND -> CLOSED_WORKING_PRE_PROSE","PRE_DRAFT_VOICE_CALIBRATION_NOT_RUN -> CLOSED_INTERNAL_CALIBRATION_PASS"],
     "open_major": "SMITH_PERSONAL_FAMILY_CONTINUITY -> FOUNDER_DECISION_REQUIRED_AFTER_B03_ACTIVATION"
   },
   "smith_family_recovery": {
     "result": "RECOVERED_WORKING_OPTION_NOT_CANON",
     "recovered_option": "teenage daughter + living mother + separated/divorced-parent frame",
     "source_status": "all detailed recovered sources explicitly NOT CANON until Founder approval",
-    "founder_options": {
-      "F1": "CANONIZE_DAUGHTER_CORE_ONLY",
-      "F2": "CANONIZE_RECOVERED_FAMILY_FRAME",
-      "F3": "DEFER_FAMILY_CANON_FOR_B03"
-    },
+    "founder_options": {"F1":"CANONIZE_DAUGHTER_CORE_ONLY","F2":"CANONIZE_RECOVERED_FAMILY_FRAME","F3":"DEFER_FAMILY_CANON_FOR_B03"},
     "drive_gate_id": "1IqERJ1ZBYWnCLe4H9VN1TXiP7SLnswZzP21lCxsNChY"
   },
-  "civilian_continuity": {
-    "status": "WORKING_PRE_PROSE_BOUND",
-    "selected_function": "Andrej Košir — hydro-service civilian worker; recurring CH1-29; permanent disabling lower-limb injury class in climax, exact diagnosis not locked",
-    "drive_id": "18959yc9mlDURWOdbsseGdDIVbN2jHTwnxSTlCQF674A"
-  },
-  "voice_calibration": {
-    "status": "INTERNAL_CALIBRATION_PASS",
-    "characters": ["Smith","Jana","Nika","Taren (WORKING placeholder)","narrator"],
-    "human_signal": "NOT_RUN",
-    "drive_id": "1YL22zE4A5aAGVs9jRt73Vb3Rdas9cnFCuydvYiEuHDM"
-  },
+  "civilian_continuity": {"status":"WORKING_PRE_PROSE_BOUND","selected_function":"Andrej Košir — hydro-service civilian worker; recurring CH1-29; permanent disabling lower-limb injury class in climax, exact diagnosis not locked","drive_id":"18959yc9mlDURWOdbsseGdDIVbN2jHTwnxSTlCQF674A"},
+  "voice_calibration": {"status":"INTERNAL_CALIBRATION_PASS","characters":["Smith","Jana","Nika","Taren (WORKING placeholder)","narrator"],"human_signal":"NOT_RUN","drive_id":"1YL22zE4A5aAGVs9jRt73Vb3Rdas9cnFCuydvYiEuHDM"},
   "prose_authorized": false,
-  "do_not": [
-    "DO_NOT_TREAT_B03_PREPARATION_AS_ACTIVE_PORTFOLIO_PROJECT",
-    "DO_NOT_INVENT_SMITH_FAMILY",
-    "DO_NOT_PROMOTE_RECOVERED_DRAFT_TO_CANON",
-    "DO_NOT_BEGIN_CH1_BEFORE_D01_FOUNDER_LOCK_AND_B03_FATAL_0_MAJOR_0",
-    "DO_NOT_GIVE_CONFEDERATION_EARTH_COMMAND_JURISDICTION",
-    "DO_NOT_REVEAL_PRECURSOR_ONTOLOGY",
-    "DO_NOT_MAKE_ENIA_OR_TAREN_SOLVE_CASE"
-  ],
+  "do_not": ["DO_NOT_TREAT_B03_PREPARATION_AS_ACTIVE_PORTFOLIO_PROJECT","DO_NOT_INVENT_SMITH_FAMILY","DO_NOT_PROMOTE_RECOVERED_DRAFT_TO_CANON","DO_NOT_BEGIN_CH1_BEFORE_D01_FOUNDER_LOCK_AND_B03_FATAL_0_MAJOR_0","DO_NOT_GIVE_CONFEDERATION_EARTH_COMMAND_JURISDICTION","DO_NOT_REVEAL_PRECURSOR_ONTOLOGY","DO_NOT_MAKE_ENIA_OR_TAREN_SOLVE_CASE"],
   "next_obligation": "WAIT_FOR_D01_FOUNDER_LOCK. After D01 lock persistence closure, fresh-rebase B03; then Founder selects F1/F2/F3; rerun N24 -> N25-N47 -> CH1 canary only if FATAL=0 and MAJOR=0."
 }
