@@ -1,1 +1,1 @@
-{"status":"PREPARED_NOT_ACTIVE_UNTIL_D01_LOCK","cycle":"CYCLE32_2026-08-21","counts":{"prompts":32,"modules":32,"contracts":32,"proofs":32,"protocols":32,"next_prompts":64},"drive_folder":"1faAfasqcsYCgHCOHAla7tKrpDCgoK9Rp","fatal":0,"major":1,"prose_authorized":false,"next":"D01 Founder Lock decision first"}
+{"status":"PREPARED_NOT_ACTIVE_UNTIL_D01_LOCK","cycle":"CYCLE32_2026-08-21","counts":{"prompts":32,"modules":32,"contracts":32,"proofs":32,"protocols":32,"next":64},"drive":"1faAfasqcsYCgHCOHAla7tKrpDCgoK9Rp","fatal":0,"major":1,"prose":false}
