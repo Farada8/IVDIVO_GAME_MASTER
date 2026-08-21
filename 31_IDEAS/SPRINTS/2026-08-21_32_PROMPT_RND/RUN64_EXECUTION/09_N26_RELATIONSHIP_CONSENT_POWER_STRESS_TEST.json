@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_STRESS_TEST",
+  "cases":[
+    {"case":"ERASED_MEMORY_TIME_LOOP","privileged_knowledge":"A remembers prior intimacy; B does not","power_risk":"A can predict B's vulnerabilities","required_state":"NO_CURRENT_CONSENT until current-timeline B explicitly chooses","result":"PASS_RULE"},
+    {"case":"BOSS_EMPLOYEE","power_risk":"career/schedule/pay influence","required_state":"attraction may exist; consent must be evaluated against employment authority and consequences; no automatic romance escalation","result":"PASS_RULE"},
+    {"case":"RESCUER_RESCUED","power_risk":"dependency/gratitude during acute vulnerability","required_state":"rescue debt is not romantic debt; immediate survival consent does not generalize","result":"PASS_RULE"},
+    {"case":"WEALTHY_POWERFUL_LEAD","power_risk":"housing/legal/financial leverage","required_state":"material dependence must be visible in boundary/choice logic; gifts or rescue do not purchase consent","result":"PASS_RULE"},
+    {"case":"PROFESSIONAL_INVESTIGATIVE","power_risk":"custody/information authority","required_state":"professional access and compelled cooperation are not intimacy authorization","result":"PASS_RULE"}
+  ],
+  "hard_fail":"Any graph or scene that converts privileged knowledge, prior-loop intimacy, rescue, employment/custody power or financial dependence into automatic current consent fails.",
+  "evidence_class":"INTERNAL_RULE_STRESS_TEST",
+  "cannot_prove":"Human scene execution still requires current project relationship authority and actual scene context."
+}
