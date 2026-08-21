@@ -1,1 +1,30 @@
-{"candidate_id":"SI-0015","title":"Project-slice freshness assertion for CURRENT routers","candidate_type":"PROCESS_OR_ROUTER_RULE_PLUS_EXECUTABLE_CANARY","status":"DEVELOPMENT_CONTRACT_READY","scope":"UNIVERSAL_IVDIVO","updated":"2026-08-21","problem_or_opportunity":"CURRENT routers can contain stale embedded project frontiers, and generic RESUME wording can be mistaken for satisfying an explicit Founder approval gate.","proposed_mechanism":"Resolve embedded current project claims against the controlling project state; explicit lock/approval transitions require a matching authority event. RESUME/CONTINUE is insufficient. Explicit HISTORICAL/SUPERSEDED/REFERENCE slices are exempt.","development_contract":{"outputs":["CURRENT_MATCH","STALE_CURRENT_SLICE","EXEMPT_HISTORICAL_SLICE","UNRESOLVED_POINTER","APPROVAL_EVENT_MISSING"],"positive_fixture":"stale BLOODBOUND slice vs locked controlling state","approval_fixture":"D01 NOT_YET_FOUNDER_LOCKED + RESUME shorthand => APPROVAL_EVENT_MISSING","negative_fixture":"historical/superseded example remains exempt","fail_closed":["unresolved controlling pointer","two competing CURRENT frontiers","silent terminal-state downgrade","explicit approval gate without matching authority event"]},"evidence_state":"PRODUCTION_DEFECT_PLUS_MANUAL_REPAIR_EVIDENCE","promotion_level":"NONE_YET","next_action":"Execute freshness/history/approval-event canaries before promotion.","next_gate":"EXECUTABLE_FRESHNESS_AND_APPROVAL_EVENT_CANARY_PASS","notes":"SI-0008 and SI-0014 are occupied by other candidates; SI-0015 is the current candidate identity."}
+{
+  "candidate_id": "SI-0015",
+  "title": "Project-slice freshness assertion for CURRENT routers",
+  "candidate_type": "PROCESS_OR_ROUTER_RULE_PLUS_EXECUTABLE_CANARY",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO_CANDIDATE_NOT_CURRENT_AUTHORITY",
+  "updated": "2026-08-21",
+  "problem_or_opportunity": "CURRENT routers can contain stale embedded project frontiers, and generic RESUME wording can be mistaken for satisfying an explicit Founder approval gate.",
+  "proposed_mechanism": "Resolve embedded current project claims against the controlling project state; explicit lock/approval transitions require a matching authority event. RESUME/CONTINUE is insufficient. Explicit HISTORICAL/SUPERSEDED/REFERENCE slices are exempt.",
+  "development_contract": {
+    "outputs": ["CURRENT_MATCH","STALE_CURRENT_SLICE","EXEMPT_HISTORICAL_SLICE","UNRESOLVED_POINTER","APPROVAL_EVENT_MISSING"],
+    "positive_fixture": "stale BLOODBOUND slice vs locked controlling state",
+    "approval_fixture": "D01 NOT_YET_FOUNDER_LOCKED + RESUME shorthand => APPROVAL_EVENT_MISSING",
+    "negative_fixture": "historical/superseded example remains exempt",
+    "fail_closed": ["unresolved controlling pointer","two competing CURRENT frontiers","silent terminal-state downgrade","explicit approval gate without matching authority event"]
+  },
+  "evidence_state": "EXECUTABLE_CANARIES_LOCAL_7_OF_7_PASS_PLUS_GITHUB_ACTIONS_SUCCESS_PLUS_DRIVE_READBACK_PLUS_MAIN_IMPLEMENTATION",
+  "evidence": {
+    "local_result": "7/7 PASS",
+    "github_actions_run": 32523634608,
+    "github_actions_conclusion": "success",
+    "implementation_commit_on_main": "8a409cae3c6240d2f2051e39fd8d4b8311a5dfec",
+    "drive_readback_document_id": "1QclgnhzIKtSPJKDBzxnJCdg6VIKJLS5XPCbAnhAtrgs"
+  },
+  "promotion_level": "READY_FOR_PILOT_ONLY",
+  "promotion_limits": ["NOT_VERIFIED_CURRENT","NO_STORY_CANON_AUTHORITY","NO_FOUNDER_APPROVAL_INFERENCE","NO_AUTOMATIC_ROUTER_MUTATION"],
+  "next_action": "Run bounded real project-router pilots and healthy historical/superseded controls; measure false positives before any broader promotion.",
+  "next_gate": "REAL_PROJECT_PILOT_PLUS_HEALTHY_CONTROL_PLUS_FALSE_POSITIVE_REVIEW",
+  "notes": "Promotion from DEVELOPMENT_CONTRACT_READY is limited to READY_FOR_PILOT because the recorded executable-canary gate has been satisfied. Universal/current promotion remains unproven."
+}
