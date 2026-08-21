@@ -1,0 +1,21 @@
+{
+  "artifact": "LESSON_ZERO_CANONICAL_PRONUNCIATION_AUDITION_MANIFEST_v1",
+  "status": "READY_DRY_NOT_HEARD",
+  "project": "LESSON_ZERO_RU_AUDIO",
+  "episode": "BOOK1_CH01",
+  "exact_text_mutation_allowed": false,
+  "pronunciation_lock": false,
+  "targets": [
+    {
+      "block_id": "CH01_S02_RB001",
+      "source_hash": "4f41805b6aa5ed0506d8c64f43bf0351993fb6b9de113bbcfaad3c10d1fddf8c",
+      "tokens": ["AOIFE", "CONTACT"]
+    },
+    {
+      "block_id": "CH01_S02_RB003",
+      "source_hash": "425bdf23b2a02cda5f71531ca48bb5e32dfe5de777fd5bbc92c8255a1504a464",
+      "tokens": ["CONTACT"]
+    }
+  ],
+  "evidence_boundary": "NO_PRONUNCIATION_PASS_UNTIL_HEARD_IN_REAL_RENDER"
+}
