@@ -16,5 +16,7 @@ Readback-verified documents:
   - ID: `1AOnld1VEqf07_QVWi-a_LmZ5JkPdJ1CM3vu19iuHbOo`
 - `04_64_NEXT_PROMPTS_WAVE9 — AUDIO NOVEL ENGINE`
   - ID: `1MGhA2W-NAUJx-mfk5wTPtmaMF5LcUElCW10pSfS2KxE`
+- `05_PARALLEL_DEVELOPMENTS_AND_GOVERNOR — WAVE8 AUDIO NOVEL ENGINE`
+  - ID: `13CRbswQzPGH5X4JQ33r06hH34nYFmgrVml3yu68M7-E`
 
 Drive mirror is human-readable. Machine-readable state/fixture/escrow JSON authority is preserved in this GitHub Wave8 package.
