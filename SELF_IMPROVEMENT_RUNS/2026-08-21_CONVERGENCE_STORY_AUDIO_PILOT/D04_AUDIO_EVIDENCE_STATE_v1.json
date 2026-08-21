@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "project_id": "D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE",
+  "status": "DESIGN_READY_EXTERNAL_PROVIDER_REQUIRED",
+  "story_state": "LOCKED_FOR_RECORDING",
+  "voice_lock": false,
+  "real_e01_audio_confirmed": false,
+  "evidence_ladder": [
+    {"stage":"DESIGN_READY","status":"PASS","required_evidence":["recording_master","casting_voice_bible","audition_sides","S0_S1_preflight","transfer_prototype_contract"]},
+    {"stage":"PROVIDER_BOUND","status":"BLOCKED","required_evidence":["real_candidate_voice_ids","provider_model_id","provider_accessible_credential_in_secret_environment"],"blocker":"EXTERNAL_PROVIDER_REQUIRED"},
+    {"stage":"S0_CANARY_PASS","status":"BLOCKED","requires":"PROVIDER_BOUND","required_evidence":["six_decodable_S0_WAVs","request_provenance_sidecars","exact_text_verification","pronunciation_and_intelligibility_QC"]},
+    {"stage":"S1_CAST_SURVIVORS","status":"BLOCKED","requires":"S0_CANARY_PASS","required_evidence":["same_anchor_A_B_C_renders_per_principal","role_specific_scores","fatal_mode_rejections"]},
+    {"stage":"PAIR_GATE_PASS","status":"BLOCKED","requires":"S1_CAST_SURVIVORS","required_evidence":["Lena_Rowan_C1_professional_trust","C2_chosen_intimacy","C3_rupture","pair_disposition"]},
+    {"stage":"TRANSFER_PROTOTYPE_PASS","status":"BLOCKED_LIVE_AUDIO","required_evidence":["stereo_WAV","mono_WAV","ordinary_phone_playback","blind_listener_extra_state_detection"],"design_contract_status":"PASS"},
+    {"stage":"E01_CLEAN_DIALOGUE_PASS","status":"BLOCKED","requires":["PAIR_GATE_PASS","TRANSFER_PROTOTYPE_PASS"],"required_evidence":["assembled_clean_dialogue_WAV","one_listen_comprehension"]},
+    {"stage":"SOUND_MIX_PASS","status":"BLOCKED","requires":"E01_CLEAN_DIALOGUE_PASS","required_evidence":["SFX_Foley_ambience_music_mix","clue_preservation","mono_mobile_QC"]},
+    {"stage":"HUMAN_LISTEN_PASS","status":"BLOCKED","requires":"SOUND_MIX_PASS","required_evidence":["uncoached_one_pass_listener_responses","confusion_points","clue_recall","character_identity","emotional_expectation"]},
+    {"stage":"RELEASE_READY","status":"BLOCKED","requires":"HUMAN_LISTEN_PASS","required_evidence":["release_gate_GO","asset_and_cast_locks","final_QC"]}
+  ],
+  "current_next_action": "BIND_REAL_CANDIDATE_VOICE_IDS_AND_PROVIDER_MODEL_THEN_RUN_S0_SIX_CANARIES",
+  "current_blocker": "EXTERNAL_PROVIDER_REQUIRED",
+  "prohibitions": [
+    "NO_VOICE_LOCK_WITHOUT_REAL_AUDIO",
+    "NO_S1_WITHOUT_S0_PASS",
+    "NO_FULL_E01_BEFORE_CAST_PAIR_AND_TRANSFER_GATES",
+    "NO_HUMAN_SIGNAL_FABRICATION",
+    "NO_LIVE_STATUS_FROM_DESIGN_DOCUMENTS",
+    "NO_STORY_REWRITE_FROM_HYPOTHETICAL_CASTING_FAILURE"
+  ]
+}
