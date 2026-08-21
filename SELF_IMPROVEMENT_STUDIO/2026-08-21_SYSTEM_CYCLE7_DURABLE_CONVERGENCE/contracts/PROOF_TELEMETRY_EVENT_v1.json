@@ -1,0 +1,7 @@
+{
+  "status": "WORKING",
+  "required": ["event_id", "project_id", "kind", "decision", "evidence_class", "source_ref"],
+  "unknown_numeric": "null",
+  "false_zero_forbidden": true,
+  "human_signal_requires": "HUMAN_SIGNAL"
+}
