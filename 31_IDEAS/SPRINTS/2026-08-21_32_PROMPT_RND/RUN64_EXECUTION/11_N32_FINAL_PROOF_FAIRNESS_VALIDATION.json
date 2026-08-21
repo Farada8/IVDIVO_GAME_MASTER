@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_FIXTURE_VALIDATION",
+  "cases":[
+    {"case":"CURRENT_TIMELINE_CONVERGENCE","evidence":["signed access log","camera gap with maintenance ticket","witnessed key handoff","financial transfer independently corroborated"],"protagonist_access":true,"reader_access":true,"author_only_fact":false,"result":"PASS_FAIR_PROOF"},
+    {"case":"ERASED_TIMELINE_MEMORY_ONLY","evidence":["detective remembers weapon from erased timeline"],"protagonist_access":true,"reader_access":"memory only, no current trace","author_only_fact":true,"result":"FAIL_UNFAIR_PROOF"},
+    {"case":"RETROSPECTIVE_REINTERPRETATION_WITH_TRACE","evidence":["earlier odd phrase in public transcript","later chemical result gives phrase new meaning"],"protagonist_access":true,"reader_access":true,"author_only_fact":false,"result":"PASS_IF_CHAIN_EXPLICIT"}
+  ],
+  "hard_gate":"Final proof fails if the conclusion requires an evidence item unavailable in the current timeline or only known to the author, unless a current accessible trace/corroboration independently establishes the same fact.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST",
+  "next_application":"Use schema on completed mystery structures when their exact evidence ledgers are available; do not infer fairness from synopsis alone."
+}
