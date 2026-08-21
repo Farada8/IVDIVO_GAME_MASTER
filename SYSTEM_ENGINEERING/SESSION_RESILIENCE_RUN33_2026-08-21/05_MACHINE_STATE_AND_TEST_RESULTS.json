@@ -1,0 +1,66 @@
+{
+  "schema_version": "ivdivo.session_resilience_run33/1.0",
+  "date": "2026-08-21",
+  "status": "INTEGRATION_IN_PROGRESS",
+  "candidate_id": "SI-0014",
+  "candidate_status": "READY_FOR_PILOT",
+  "run32_merge_commit": "42e08b350c5d2f564ea380d4de8aba57fba90ab9",
+  "run33_pr": 108,
+  "critical_integrity_repair": {
+    "defect": "SESSION_RESILIENCE_PENDING_ID_COLLIDED_WITH_REGISTRY_FAMILY_SI_0010",
+    "preserved": "SI-0010_REGISTRY_SHARD_COMPACTION_TRANSACTION",
+    "migrated_to": "SI-0014_SESSION_RESILIENCE_DURABLE_RECOVERY",
+    "prevention": "FULL_REGISTRY_FAMILY_ID_FRESHNESS_REQUIRED"
+  },
+  "modules": [
+    "tools/ivdivo_durable_write_reconciler.py",
+    "tools/ivdivo_checkpoint_lineage.py",
+    "tools/ivdivo_interruption_learning.py"
+  ],
+  "protocols_and_contracts": [
+    "IVDIVO_NARRATIVE_OS/18D_DURABLE_TRANSACTION_RECONCILIATION_PROTOCOL_v1.0.md",
+    "ENGINEERING_CONTRACTS/DURABLE_MULTI_STORE_TRANSACTION_v1.0.md",
+    "ENGINEERING_CONTRACTS/CHECKPOINT_LINEAGE_RETENTION_v1.0.md",
+    "ENGINEERING_CONTRACTS/INTERRUPTION_LEARNING_EVIDENCE_v1.0.md"
+  ],
+  "schemas": [
+    "schemas/IVDIVO_DURABLE_WRITE_TRANSACTION_SCHEMA_v1.json",
+    "schemas/IVDIVO_CHECKPOINT_LINEAGE_SCHEMA_v1.json",
+    "schemas/IVDIVO_INTERRUPTION_LEARNING_EVENT_SCHEMA_v1.json"
+  ],
+  "deterministic_evidence": {
+    "initial_run33": {"passed": 22, "failed": 0, "status": "PASS"},
+    "run32_checkpoint_ci_on_first_pr108_attempt": {"passed": 10, "failed": 0, "status": "PASS"},
+    "red_team_repairs": [
+      "FAILED_ACTION_PRECEDENCE",
+      "MULTIPLE_ROOT_ACTIVE_HEAD_AND_DUPLICATE_CHECKPOINT_VALIDATION",
+      "REAL_VS_SYNTHETIC_FALSE_STOP_RATE_SEPARATION"
+    ],
+    "expected_run33_after_red_team": {"tests": 27, "status": "CI_PENDING"}
+  },
+  "first_ci_attempt": {
+    "run33_logic": "22/22 PASS",
+    "run32_checkpoint": "10/10 PASS",
+    "registry_transaction": "CI_ENVIRONMENT_FAILURE_MISSING_PYTEST",
+    "repair": "INSTALL_PYTEST_AND_RUN_INHERITED_PYTEST_SUITE",
+    "self_improvement_integrity": "FAILED_ON_STALE_BASE_PROJECT_STATE_COVERAGE_PASS_VS_PASS_FULL",
+    "registry_reference_validation": "PASS_INCLUDED_SI_0014"
+  },
+  "parallel_development": {
+    "pr103": "AUDIO_SPECIFIC_COMPATIBLE",
+    "pr104": "RELATED_CANDIDATE_LOCAL_JOURNAL_LINEAGE_TELEMETRY_NOT_UNIVERSAL_RECOVERY_AUTHORITY",
+    "pr105": "BOOK_ENGINE_DISCOVERY_ONLY",
+    "pr98": "MERGED_REGISTRY_TRANSACTION_REUSED"
+  },
+  "evidence_boundary": [
+    "NO_REAL_LOGOUT_RECOVERY_PILOT_YET",
+    "NO_REAL_PARTIAL_GITHUB_DRIVE_WRITE_PILOT_YET",
+    "NO_PROVIDER_CALL",
+    "NO_CREDIT_SPEND",
+    "NO_IRREVERSIBLE_REPLAY",
+    "NO_HUMAN_EVIDENCE",
+    "NO_CANON_MUTATION",
+    "NO_AUTOMATIC_SELF_IMPROVEMENT_PROMOTION"
+  ],
+  "next_gate": "RUN33_REPORTS_AND_DRIVE_READBACK_THEN_FRESH_MAIN_REBASE_THEN_GREEN_CI_AND_DIFF_RED_TEAM"
+}
