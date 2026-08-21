@@ -10,7 +10,7 @@
 
 Preserve production-specific E02 staging and microphone-choreography work recovered from a Founder-supplied pasted prior conversation so it cannot disappear with chat history.
 
-This record does **not** advance the current ROOM917 execution frontier. Current execution authority remains `AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json`. At recovery time that state is E01 post-render evaluation blocked on accessible real-master bytes plus matching live timing lineage. No E02 batch/live-render action is authorized by this recovery record.
+This record does **not** advance the current ROOM917 execution frontier. Current execution authority remains `AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json`. At initial recovery time the project was in E01 post-render evaluation with master-byte/live-lineage evidence still unresolved; a newer concurrent `main` state later advanced Scene3 lineage and now routes E01 to `P003A_PRE_SCENE3_TARGETED_EVALUATION`. No E02 batch/live-render action is authorized by this recovery record.
 
 ## Source / provenance
 
@@ -116,7 +116,7 @@ Current Drive evidence independently confirms E02 is an **advanced partial v3.3*
 The source conversation ended with an intended E02 continuation:
 `Actor Director Score -> exact Render Block Plan -> Foley Score -> Spatial Automation directives -> ElevenLabs-safe performance requests`.
 
-That is retained only as the historical E02 downstream plan. It is **not** the current ROOM917 project next action because current E01 post-render evidence gates remain unresolved and `CURRENT_EXECUTION_STATE.json` explicitly forbids scaling E02–E24 before the E01 V2 quality gate.
+That is retained only as the historical E02 downstream plan. It is **not** the current ROOM917 project next action because current E01 post-render evaluation gates remain upstream. Current `main` routes to `P003A_PRE_SCENE3_TARGETED_EVALUATION`, with P003B human perceptual listening and additional evidence gates still open; scaling E02–E24 remains forbidden before the E01 V2 quality gate.
 
 ## Reuse / promotion gate
 
@@ -142,8 +142,10 @@ Outcome:
 - E02 staging delta retained as project-specific downstream WORKING evidence;
 - `NO_NEAR-EAR E02`, acoustic-domain ownership, movement↔Foley coupling and anti-overcue logic retained;
 - missing historical standalone manifest names/hashes remain UNKNOWN rather than invented;
-- current E01 frontier remains unchanged;
-- a separate MAJOR operational defect was identified in the ROOM917 machine state: stale blanket `safe + zero_cost + reversible` continuation semantics. That defect is corrected in the candidate project state layer only and does not promote this E02 material.
+- the recovery itself did not advance the E01 frontier;
+- P06 found a stale blanket `safe + zero_cost + reversible` continuation rule in an earlier state snapshot;
+- before merge, a valid concurrent `main` update independently corrected that rule to Autopilot v1.2+ real-gate semantics and advanced Scene3 lineage;
+- the recovery branch accepted the newer state and removed its obsolete same-file patch instead of overwriting sibling progress.
 
 ## Current-frontier firewall
 
