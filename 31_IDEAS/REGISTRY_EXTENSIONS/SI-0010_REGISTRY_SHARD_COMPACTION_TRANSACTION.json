@@ -1,0 +1,37 @@
+{
+  "candidate_id": "SI-0010",
+  "title": "Improvement Registry shard-write + deterministic compaction transaction",
+  "candidate_type": "TOOLING_OR_AUTOMATION",
+  "status": "DEVELOPING",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type":"GITHUB","locator":"31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json","version":"1.0","date":"2026-08-21","notes":"Current base+extensions family pointer"},
+    {"source_type":"GITHUB","locator":"31_IDEAS/TRANSCRIPT_RECOVERY_32_PROMPT_SPRINT_2_2026-08-21/02_EXECUTION_RESULTS_N01_N32.md","version":"1.0","date":"2026-08-21","notes":"N31/N32 selected shard+index + controlled compaction"}
+  ],
+  "problem_or_opportunity": "The monolithic registry is unsafe for concurrent whole-file writes. The current family pointer solved visibility of extensions but still needs a canonical shard-write transaction and reproducible compaction path.",
+  "proposed_mechanism": "Use candidate shards as the concurrent write surface; validate unique IDs across family; update family index with stale-write protection; periodically compile base+extensions into deterministic canonical JSON plus manifest of input SHAs/count/output SHA, readback and rollback snapshot.",
+  "dedupe_relation": "EXTENSION_OF_CURRENT_REGISTRY_FAMILY",
+  "related_candidates": ["SI-0007","SI-0008","SI-0009"],
+  "expected_benefit": "Reduces lost-update risk, avoids risky reconstruction of a minified monolith, and makes registry compaction auditable/reversible.",
+  "evidence_state": "INTERNAL_EVIDENCE",
+  "priority_vector": {"impact":"HIGH","recurrence":"SYSTEMIC","effort":"MEDIUM","regression_risk":"MEDIUM","reversibility":"EASY","urgency":"MEDIUM","affected_surface":"PORTFOLIO"},
+  "development_contract": {
+    "current_family": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json",
+    "extension_directory": "31_IDEAS/REGISTRY_EXTENSIONS/",
+    "required_compaction_manifest": ["base_registry_sha","extension_shas","schema_versions","candidate_count","output_sha","previous_snapshot","readback_status"],
+    "hard_fail": "duplicate candidate_id across base/extensions"
+  },
+  "pilot_evidence": ["Current SI-0008 extension demonstrates shard visibility without rewriting base","Sprint 2 N31/N32 analysis selected shard+index and deterministic compaction"],
+  "red_team_findings": ["Family index update itself must use stale-write/rebase semantics","Compactor must not silently override duplicate IDs","Compacted monolith is a build/read model, not proof that candidates are promoted"],
+  "promotion_level": "NONE",
+  "application_targets": ["31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json","31_IDEAS/REGISTRY_EXTENSIONS/","future registry compaction tool/manifest"],
+  "verification_evidence": [],
+  "protected_authorities": ["Self-Improvement lifecycle authority","No story/canon authority mutation"],
+  "owner_role": "Improvement Registry Maintainer",
+  "next_action": "Implement unique-ID concurrency fixture and deterministic compaction builder with roundtrip/readback regression.",
+  "next_gate": "REGISTRY_COMPACTION_ROUNDTRIP_AND_CONCURRENCY_GATE",
+  "hold_trigger": null,
+  "terminal_reason": null,
+  "last_movement": "2026-08-21",
+  "notes": "Bounded pilot; current registry-family architecture stays CURRENT until candidate proves safe."
+}
