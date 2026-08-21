@@ -1,0 +1,37 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-21",
+  "status":"CURRENT_PROJECT_ROUTING_STATE_NOT_STORY_CANON",
+  "project_id":"D03",
+  "title":"BODYGUARD FOR THE FALLEN IDOL",
+  "authority_note":"Founder newest instruction and the current D03 story/audio authority outrank this routing state. This file prevents text rework and directs future sessions to the current downstream production frontier.",
+  "story_status":"SEASON_ONE_RECORDING_MASTER_COMPLETE",
+  "current_story_authority":{
+    "drive_id":"1blOK7CwpExgKZ4QJriMFY6tMDyJgtiy4GAsGLonrqcE",
+    "title":"BODYGUARD FOR THE FALLEN IDOL — SEASON ONE RECORDING MASTER v1.6 — RECORDING LANGUAGE CLEAN",
+    "status_from_source":"P51/P52/P53 + RECORDING-LANGUAGE COMPLIANCE COMPLETE; HUMAN AUDIO EVIDENCE PENDING"
+  },
+  "current_downstream_stage":{
+    "drive_id":"1hlgc9pVKEESS-xoM0MgwLp01RcVSuwaeOLx3sXF7XZg",
+    "title":"BODYGUARD — PILOT PERFORMED-AUDIO STAGE INDEX v1.0",
+    "status_from_source":"ACTIVE PRODUCTION STAGE",
+    "story_lock_from_source":"STORY / P51 / P52 / P53: PASS / LOCKED",
+    "human_audio_signal_from_source":"NOT YET ACQUIRED"
+  },
+  "additional_current_evidence":[
+    {"drive_id":"1OQuLOrnSGqD5SPwtbU7FQ5MlHxvWRXzN5dNe9jiSt_8","title":"IVDIVO — BODYGUARD — MULTILINGUAL CHARACTER VOICE ARCHITECTURE v2.1"},
+    {"drive_id":"1jvs6jTppbBK0I9zObEAMUcaUSgghsiHRyfvu_N4kr5c","title":"BODYGUARD — MULTILINGUAL VOICE PMV01–PMV24 EXECUTION REPORT v1.1 — CORRECTED"}
+  ],
+  "next_safe_action":"RESUME_FROM_THE_CURRENT_BODYGUARD_PERFORMED_AUDIO_AND_RUNTIME_AUTHORITY; CONTINUE_EVIDENCE_DRIVEN_AUDIO/VOICE_PRODUCTION WITHOUT REOPENING LOCKED STORY TEXT",
+  "blockers":["HUMAN_AUDIO_SIGNAL_NOT_YET_ACQUIRED"],
+  "do_not_repeat":[
+    "DO_NOT_REWRITE_SEASON_ONE_TEXT_TO_PROVE_A_DOWNSTREAM_TOOL",
+    "DO_NOT_USE_SUPERSEDED_RECORDING_MASTER_v1_0_TO_v1_5_AS_CURRENT",
+    "DO_NOT_CLAIM_HUMAN_AUDIO_SIGNAL_FROM_AI_OR_INTERNAL_METRICS",
+    "DO_NOT_LOCK_A_PROVIDER_VOICE_FROM_ONE_ATTRACTIVE_SAMPLE"
+  ],
+  "provenance":[
+    "Drive Recording Master v1.6 ID 1blOK7CwpExgKZ4QJriMFY6tMDyJgtiy4GAsGLonrqcE",
+    "Drive Pilot Performed-Audio Stage Index v1.0 ID 1hlgc9pVKEESS-xoM0MgwLp01RcVSuwaeOLx3sXF7XZg"
+  ]
+}
