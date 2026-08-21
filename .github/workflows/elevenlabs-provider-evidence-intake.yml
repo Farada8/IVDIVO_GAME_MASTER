@@ -1,0 +1,90 @@
+name: ElevenLabs Provider Evidence Intake
+
+on:
+  workflow_run:
+    workflows: ["ElevenLabs Provider Snapshot Evidence"]
+    types: [completed]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate-and-compile:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout trusted default-branch code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Download exact triggering AUTH_PROVIDER artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: elevenlabs-provider-auth-evidence-${{ github.event.workflow_run.id }}-${{ github.event.workflow_run.run_attempt }}
+          path: provider_input
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Locate expected secret-free files only
+        id: locate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t receipts < <(find provider_input -type f -name 'provider_auth_receipt.json' -print)
+          mapfile -t snapshots < <(find provider_input -type f -name 'provider_snapshot.json' -print)
+          if [ "${#receipts[@]}" -ne 1 ] || [ "${#snapshots[@]}" -ne 1 ]; then
+            echo "::error::Expected exactly one provider_auth_receipt.json and one provider_snapshot.json"
+            exit 2
+          fi
+          echo "receipt=${receipts[0]}" >> "$GITHUB_OUTPUT"
+          echo "snapshot=${snapshots[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Independently validate evidence and compile inventory
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p provider_intake
+          python audio/studio/runtime/provider_evidence_intake.py \
+            --receipt "${{ steps.locate.outputs.receipt }}" \
+            --snapshot-file "${{ steps.locate.outputs.snapshot }}" \
+            --repository "${GITHUB_REPOSITORY}" \
+            --run-id "${{ github.event.workflow_run.id }}" \
+            --run-attempt "${{ github.event.workflow_run.run_attempt }}" \
+            --out provider_intake/provider_evidence_intake.json
+
+      - name: Publish validated secret-free intake bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: elevenlabs-provider-intake-${{ github.event.workflow_run.id }}-${{ github.event.workflow_run.run_attempt }}
+          path: provider_intake/provider_evidence_intake.json
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Evidence summary
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          row=json.loads(Path('provider_intake/provider_evidence_intake.json').read_text(encoding='utf-8'))
+          inv=row.get('inventory', {})
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
+              f.write('## Provider evidence intake\n')
+              f.write(f"- status: {row.get('status')}\n")
+              f.write(f"- next_state: {row.get('next_state')}\n")
+              f.write(f"- snapshot_hash: `{row.get('snapshot_hash')}`\n")
+              f.write(f"- model_count: {inv.get('model_count')}\n")
+              f.write(f"- voice_count: {inv.get('voice_count')}\n")
+              f.write('- provider calls in intake: 0\n')
+              f.write('- paid synthesis calls in intake: 0\n')
+              f.write('- voice lock: false\n')
+          PY
