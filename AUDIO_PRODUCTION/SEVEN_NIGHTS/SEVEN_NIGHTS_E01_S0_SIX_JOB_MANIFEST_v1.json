@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "project": "SEVEN NIGHTS BEFORE CODE BLUE",
+  "episode": "E01",
+  "status": "G0_INTERNAL_PASS_G1_EXTERNAL_BINDING_BLOCKED",
+  "dry_run": true,
+  "dispatch_allowed": false,
+  "max_live_jobs": 6,
+  "auto_continue_to_full_episode": false,
+  "source_authority": {
+    "drive_id": "1fewLvu_DpSL8H6dkdy9E5TprUWtgH1Clqq5m_gvNBJ0",
+    "title": "SEVEN NIGHTS BEFORE CODE BLUE — SEASON ONE RECORDING MASTER — E01–E24 — v1.0",
+    "revision_id": "AIroW36JPJ1rzzAZujtra5eMTLoEhRriYrBPOiz8R3rCGOvve7Yi600dwPmDI0GHFmxRdIRObdnoCxJKpJ2w3lL0owGmVyFyobQQyFxVA4E"
+  },
+  "provider": {
+    "name": null,
+    "model_id": null,
+    "authenticated_preflight": false,
+    "credential_persistence_allowed": false
+  },
+  "jobs": [
+    {
+      "job_id": "SN_E01_S0_LENA_A",
+      "role": "LENA_ORTIZ",
+      "candidate": "A",
+      "voice_id": null,
+      "exact_text": "Then don't open it.",
+      "source_start_index": 12566,
+      "source_end_index": 12585,
+      "performance_test": "clinical urgency without panic",
+      "fatal_modes": ["mystical", "prophetic", "panic acting"],
+      "expected_output": "SN_E01_S0_LENA_A_v1.wav"
+    },
+    {
+      "job_id": "SN_E01_S0_ROWAN_A",
+      "role": "ROWAN_SHAW",
+      "candidate": "A",
+      "voice_id": null,
+      "exact_text": "Serial number.",
+      "source_start_index": 49987,
+      "source_end_index": 50001,
+      "performance_test": "surgeon status without macho dominance or flirtation",
+      "fatal_modes": ["alpha caricature", "romantic softness", "erased-cycle emotional carryover"],
+      "expected_output": "SN_E01_S0_ROWAN_A_v1.wav"
+    },
+    {
+      "job_id": "SN_E01_S0_ELIAS_A",
+      "role": "ELIAS_GRANT",
+      "candidate": "A",
+      "voice_id": null,
+      "exact_text": "It is sequence. Reaction requires a person and a reason.",
+      "source_start_index": 61040,
+      "source_end_index": 61096,
+      "performance_test": "technical correction without lecture cadence",
+      "fatal_modes": ["unreadable exposition", "lecture cadence"],
+      "expected_output": "SN_E01_S0_ELIAS_A_v1.wav"
+    },
+    {
+      "job_id": "SN_E01_S0_TESSA_A",
+      "role": "TESSA_WYNN",
+      "candidate": "A",
+      "voice_id": null,
+      "exact_text": "Don't turn one innocence into all innocence.",
+      "source_start_index": 100877,
+      "source_end_index": 100921,
+      "performance_test": "lived experience rather than theme delivery",
+      "fatal_modes": ["moral lecturer", "theme quote"],
+      "expected_output": "SN_E01_S0_TESSA_A_v1.wav"
+    },
+    {
+      "job_id": "SN_E01_S0_MOSS_A",
+      "role": "CALEB_MOSS",
+      "candidate": "A",
+      "voice_id": null,
+      "exact_text": "Hold the second transfer.",
+      "source_start_index": 625,
+      "source_end_index": 650,
+      "performance_test": "ordinary firm operations call",
+      "fatal_modes": ["villain coded", "growl", "whisper menace"],
+      "expected_output": "SN_E01_S0_MOSS_A_v1.wav"
+    },
+    {
+      "job_id": "SN_E01_S0_BELL_A",
+      "role": "MARCUS_BELL",
+      "candidate": "A",
+      "voice_id": null,
+      "exact_text": "Facilities will conduct the scheduled black-start exercise Sunday night. Clinical areas remain operational. No department is expected to suspend normal activity.",
+      "source_start_index": 6190,
+      "source_end_index": 6351,
+      "performance_test": "administrative control without sinister coding",
+      "fatal_modes": ["sinister executive", "murderer coding"],
+      "expected_output": "SN_E01_S0_BELL_A_v1.wav"
+    }
+  ],
+  "pre_dispatch_gates": {
+    "exact_text_coverage": "PASS_6_OF_6",
+    "candidate_voice_ids": "BLOCKED_EXTERNAL",
+    "authenticated_model_access": "BLOCKED_EXTERNAL",
+    "credential_environment_only": "REQUIRED",
+    "request_cap": "PASS_EXACTLY_6",
+    "provenance_sidecars": "REQUIRED",
+    "wav_48k_execution_path": "PASS_AT_PIPELINE_CONTRACT_LIVE_RETURN_UNTESTED",
+    "full_episode_auto_continuation": "FORBIDDEN"
+  },
+  "next_action": "Authenticated read-only inventory -> bind six candidate-A voice IDs/model -> exactly six S0 calls -> persist WAV/provenance/QC -> evaluate; do not continue to S1 or full E01 unless gate passes."
+}
