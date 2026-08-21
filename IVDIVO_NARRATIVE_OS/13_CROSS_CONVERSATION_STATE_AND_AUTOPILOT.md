@@ -1,7 +1,7 @@
 # IVDIVO — CROSS-CONVERSATION STATE & AUTOPILOT
 
 **Status:** CANONICAL OPERATIONAL CONTROL LAYER  
-**Version:** 1.1  
+**Version:** 1.2  
 **Established:** 2026-08-21  
 **Updated:** 2026-08-21  
 **Scope:** all IVDIVO writing/development/revision/reference workflows and all AI sessions that participate in them.  
@@ -242,6 +242,30 @@ Do not clone whole project packets into universal canon. Upstream contracts, not
 
 Before creating a new file, search for an existing current file with the same function. Prefer updating/reconciling one authority over adding another parallel router.
 
+### Semantic anti-echo / evidence-dedupe law
+
+The same claim repeated in sibling chats, summaries, Drive mirrors, GitHub mirrors or several models does not become stronger evidence merely through repetition.
+
+For material deltas:
+- group semantically equivalent findings under one internal `delta_cluster_id` or equivalent;
+- preserve provenance for every source;
+- identify the strongest primary evidence;
+- mark pure repetitions `DUPLICATE` rather than counting them as independent confirmation;
+- do not call two models making the same unsupported inference triangulation.
+
+Independent confirmation requires genuinely independent evidence, method, source or test — not merely a second phrasing of the first claim.
+
+### Learning-promotion test
+
+A project result becomes a universal mechanism only when it plausibly improves a recurring production decision such as causality, character specificity, comprehension, source provenance, relationship truth, execution safety, cost control, QC or originality.
+
+Novelty, elegance, a higher automated score or model enthusiasm alone are not enough.
+
+Disposition for candidate learning:
+`PROJECT_ONLY / UNIVERSALIZE / ACCEPT_WITH_MODIFICATION / HOLD_FOR_TEST / DUPLICATE / SUPERSEDED / REJECT`.
+
+Universalization is incomplete until the smallest sufficient current router/prompt/gate is updated and read back.
+
 ---
 
 ## 10. CROSS-MODEL PERSISTENCE / HANDOFF
@@ -274,6 +298,18 @@ Do not duplicate locked masters into handoff folders and accidentally create par
 References remain mechanisms, never canon.
 
 `REFERENCE -> ABSTRACT MECHANISM -> REMOVE DISTINCTIVE CONTENT -> COMPARE/COMBINE INDEPENDENT SOURCES -> TRANSFORM THROUGH ACTIVE HERO/SETTING/CONFLICT -> ORIGINAL APPLICATION -> SOURCE-DISTANCE CHECK`
+
+Before inferring architecture or mechanism scope, classify source completeness when uncertain:
+- `LIKELY_FULL`;
+- `FRAGMENT_EXPLICIT`;
+- `COLLECTION_UNVERIFIED`;
+- `SCANNED_TEXT_UNAVAILABLE`;
+- `DUPLICATE`.
+
+Never infer whole-book architecture from an opening fragment or partial extraction. A duplicate copy adds zero independent evidence weight.
+
+For a reusable mechanism, distinguish:
+`FUNCTION -> HUMAN EFFECT -> ABSTRACT FORMULA -> CONDITIONS -> FAILURE MODE -> COPY BOUNDARY -> POSSIBLE ACTIVE-PROJECT USE`.
 
 A useful generalized world-through-story mechanism from current orbital work is:
 
