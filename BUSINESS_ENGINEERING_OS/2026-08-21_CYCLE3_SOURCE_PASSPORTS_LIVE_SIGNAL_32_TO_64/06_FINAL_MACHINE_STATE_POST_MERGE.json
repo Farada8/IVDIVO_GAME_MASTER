@@ -1,0 +1,66 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE3_FINAL_STATE_POST_MERGE_v1",
+  "date": "2026-08-21",
+  "status": "PERSISTENCE_CLOSURE_PASS",
+  "constraints": {
+    "no_outreach": true,
+    "new_founder_cash_eur": 0,
+    "public_evidence_ceiling": "E2+",
+    "unknown_economics": null
+  },
+  "library": {
+    "raw_drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "raw_files": 69,
+    "raw_books_duplicated_to_github": false,
+    "canonical_unique_works": null
+  },
+  "engineering": {
+    "modules": "B57-B80",
+    "contracts": "C65-C96",
+    "protocols": 8,
+    "executed_prompts": 32,
+    "run32_disposition": {"KEEP": 32, "MUTATE": 0, "KILL": 0},
+    "next_prompts_designed": 64,
+    "next_prompts_executed": 0,
+    "local_regressions": "27/27_PASS"
+  },
+  "proof": {
+    "knowledge_ladder": "K0-K5",
+    "public_signal_ladder": "S0-S4",
+    "market_ladder": "E0-E7",
+    "non_substitution": true,
+    "market_E3_E4": "NOT_RUN"
+  },
+  "github": {
+    "cycle3_pr": 170,
+    "cycle3_merge_sha": "3637337b9bcbc6058ca2f5373ba86d1281a19f4c",
+    "cycle3_head_ci_run": 32535557752,
+    "cycle3_head_ci_job": 96935667870,
+    "cycle3_head_ci": "SUCCESS",
+    "main_readback": "PASS",
+    "closure_pr": 171,
+    "closure_proof_ci_run": 32535842903,
+    "closure_proof_ci_job": 96936493808,
+    "closure_proof_ci": "SUCCESS"
+  },
+  "drive": {
+    "cycle3_folder_id": "1kNafMWT_H0_MVX7J37aUuhPZ-lWHErVu",
+    "master_document_id": "17MZnI3ORmrtRlepzyJgk4hYHfG2cOKNLThLU8CJOsNk",
+    "engineering_spec_document_id": "1fkm_VKl3Axbf7kOJLEpw0YL1Hqoa0rFtBaqH3nYgr_M",
+    "run32_document_id": "1rkujKCk0-7uED9697zl4oHAx5leCz5kaCm4UbNmnYXM",
+    "next64_document_id": "1qWraMTiPsKMOSMi1I-FKQCVjH-MHFAdtRForlOZ40PY",
+    "final_state_document_id": "1PmLenjNoi8sofvE6CqZFWQiYACA6cvaCzXA2sJ5-sG4",
+    "master_readback": true,
+    "run32_readback": true,
+    "next64_readback": true,
+    "final_state_readback": true
+  },
+  "self_improvement": {
+    "v2": "VERIFIED_CURRENT",
+    "v3_reference_ingest": "CANDIDATE_NOT_PROMOTED",
+    "authority_effect_from_cycle3": "NONE"
+  },
+  "current_constraint": "FRESH_PUBLIC_SIGNALS_TO_32_OPPORTUNITY_OBJECTS_TO_FATAL_ASSUMPTIONS_TO_CHEAPEST_NO_OUTREACH_DECISIVE_TESTS",
+  "next_gate": "CYCLE4_FRESH_PUBLIC_SIGNAL_SCAN",
+  "supersedes": "05_MACHINE_STATE_PRE_CLOSURE.json"
+}
