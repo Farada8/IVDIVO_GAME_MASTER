@@ -1,0 +1,12 @@
+{
+  "schema": "ivdivo.si0012_cycle4_frontier/0.2",
+  "updated": "2026-08-21",
+  "candidate_id": "SI-0012",
+  "status": "PILOTING_SYSTEM_INTEGRATION_NOT_CURRENT_AUTHORITY",
+  "cycle": {"name":"SYSTEM_CYCLE4_INTEGRATION_32_TO_64","runs_executed":32,"status_counts":{"PASS_ENGINEERING":31,"PASS_CONTRACT_HOLD_REAL_DATA":1},"next_prompts_created":64,"next_prompts_auto_authorized":false},
+  "engineering": {"runtime_modules_total":26,"new_cycle4_modules":16,"machine_contracts":12,"warm_regression":"100/100_PASS","cold_unpack_regression":"100/100_PASS","package_sha256":"466d058ff90ec3d2f5b6f6e4f744180ebe14671897d6b782b073f0c444646f28"},
+  "parallel_rebase": {"d10":"FOUNDER_LOCK_DECISION_GATE","d09":"FOUNDER_LOCK_DECISION_GATE","d01_wife":"PR85_FRESHER_WORKING_FRONTIER_E91_E95_MAIN_REMAINS_AUTHORITY","d04":"G4_MACHINE_PASS_HUMAN_LISTENER_PENDING_PROVIDER_GATE_SEPARATE","room917":"POST_RENDER_CURRENT_DO_NOT_RESTART_S0_S1","audio_engine":"ONE_SHARED_RUNTIME_V0_3_CONVERGENCE_TARGET_WAVE5_68_OF_68_PASS"},
+  "post_execution_rebase": {"github_main_observed":"43b1e4db0af9d43563bf244d83bf948781eb3bce","new_parallel_learning":"SI-0009_ROOM917_POST_RENDER_ENGINEERING","disposition":"ACCEPT_PORTABLE_MECHANISM_HOLD_DOMAIN_PROMOTION_UNTIL_SECOND_PROJECT","cycle32_results_changed":false},
+  "next_gate": "GITHUB_DRIVE_WRITE_THROUGH_READBACK_THEN_REAL_PRODUCT_EVIDENCE_AND_BOUNDED_INTEGRATION",
+  "prohibited": ["NO_SECOND_TOP_LEVEL_OS","NO_BLIND_64_PROMPT_EXECUTION","NO_MACHINE_AS_HUMAN_SIGNAL","NO_OLD_ZIP_RELABEL","NO_FORCE_OVERWRITE_CONCURRENT_MAIN"]
+}
