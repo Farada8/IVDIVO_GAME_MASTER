@@ -1,195 +1,215 @@
 # THE WIFE AT HIS WEDDING — NEXT 64 EXECUTION PROMPTS v1.0
 
-Derived from the completed 32-pass finalization analysis. Execute sequentially unless an audit is dependency-independent after its parent draft exists. Preserve E61–90 as CLOSED. All new prose inherits BALANCED Romance Weight + Human Scene & Dialogue Naturalism + fair-play evidence + Mara causal agency.
+Derived from the completed 32-pass research + convergence gate. Sequential unless a prompt explicitly audits a parent artifact that already exists. Always restore newest project authority first. The E91–E120 architecture is **WORKING, not Founder-locked**.
 
-## 01. Fresh authority + stale-work gate before E91 prose
-Re-read current project state, Drive production folder and sibling-dialog frontier. If E91+ has appeared, rebase; do not duplicate. Confirm architecture patch is current and FATAL/MAJOR=0 at pre-prose gate.
+## E91 — establish the second-birth problem
 
-## 02. E91 scene contracts
-Build 3–5 audible scenes: preservation objective, resistance, Mara choice, evidence rule, relationship movement, changed-fact cliff.
+### 01. Fresh authority + stale-work gate
+Re-read E90, 20B, the 32-pass convergence overlay and sibling-dialog deltas. If E91 or a descendant already exists and is newer/valid, reuse it rather than rewriting. Return exact frontier and protected facts.
 
-## 03. E91 draft
-Write 1100–1550 spoken English words. Story/action, not explanatory padding. Mara must cause the episode's decisive event.
+### 02. E91 scene contracts
+Build 3–5 scene contracts for `TWO WRISTBANDS`: body state, immediate want, resistance, known/unknown, tactic, changed state, audio action, clue function and cliff. Preserve breakfast with Evelyn and the Baby B correction-packet cliff.
 
-## 04. E91 runtime word-count gate
-Count spoken words only. Add causal/character action if short; cut redundancy if long.
+### 03. E91 evidence contract
+Specify what the wristbands, weights, discharge traces and single certificate number prove/do not prove. Add chain-of-custody/preservation action without inventing jurisdiction-specific procedure.
 
-## 05. E91 naturalism audit
-Check state, listening, tactic shifts, cleverness density, exposition motive, speaker separability, read-aloud plausibility.
+### 04. E91 draft
+Write record-ready English audio prose using the current WORKING architecture. 1100–1550 spoken words where the established series runtime gate applies; 3–5 audible scenes; Mara causal agency; no reopening fire arc.
 
-## 06. E91 P51/P52/P53 audit
-Verify Mara/Adrian/Evelyn voices, emotional range and correct task-classified relationship handling.
+### 05. E91 runtime gate
+Count spoken English only. If short, add causal/character action, not filler; if long, cut redundancy, not story function.
 
-## 07. E91 audio-first audit
-Check audible actions, point of audition, silence, document fatigue and cliff legibility.
+### 06. E91 naturalism + P51 gate
+Test speaker separation, tactic shifts, listening, exposition motive, cleverness density and read-aloud plausibility. Mara’s precision must roughen under pressure rather than become more elegant.
 
-## 08. E91 continuity/fair-play audit
-Check E1–90 controlling facts and evidence matrix. Repair earliest layer only.
+### 07. E91 P52/P53 + relationship gate
+Map emotional temperature; run P53 only on relationship-bearing beats. Sister friction must be specific and not therapy dialogue. Adrian support, if present, must be bounded and non-possessive.
 
-## 09. E92 scene contracts
-Design physical archive/post-birth evidence episode with practical task, resistance and two independent proof classes.
+### 08. E91 audio/continuity/fair-play gate
+Confirm hearable action, one dominant waiting question, changed-fact cliff and zero contradiction with E1–E90. FATAL/MAJOR must be zero before E92.
 
-## 10. E92 draft
-Write 1100–1550 spoken words with at least one substantial non-desk sequence.
+## E92 — Baby B existed after birth
 
-## 11. E92 runtime gate
-Mechanical spoken-word PASS 1100–1550.
+### 09. E92 scene contracts
+Build the active path to the removed correction packet/protected placement while keeping the dominant question: where did Baby B go?
 
-## 12. E92 naturalism/voice gate
-Prevent expert exposition and Mara/Celeste/Adrian house-style convergence.
+### 10. E92 archive/registry action design
+Create at least one physical/audible investigative action rather than desk exposition: archive seal, registry refusal, transfer ledger handling or equivalent truthful action.
 
-## 13. E93 scene contracts
-Make identity contradiction hit current work/money/credential life.
+### 11. E92 institutional-opposition introduction
+Give the present legal/risk apparatus a rational current objective and concrete leverage. Do not villain-code or make it the original mastermind.
 
-## 14. E93 draft
-Write 1100–1550 spoken words; material consequence, not merely a warning letter.
+### 12. E92 draft
+Write E92 under the retained 20B spine: Baby B left hospital alive, entered protected placement without permanent civil name; cliff `DORMANT IDENTITY SOURCE — QUINN`.
 
-## 15. E93 runtime gate
-Mechanical spoken-word PASS.
+### 13. E92 runtime + naturalism gate
+Run spoken-word, read-aloud, tactic-shift and voice-separation checks. Prevent expert Q&A symmetry.
 
-## 16. E93 work/money realism gate
-Verify concrete professional/financial consequence and plausible character response.
+### 14. E92 evidence + audio gate
+Verify that post-birth evidence disproves stillbirth without yet proving which adult woman Baby B became. Cliff must be audible and causally earned.
 
-## 17. E94 scene contracts
-Build Noah confrontation around immediate need, withheld source and Mara forcing action rather than receiving confession.
+## E93 — the name predates Noah
 
-## 18. E94 draft
-Write 1100–1550 spoken words; Noah mixed responsibility; no clean absolution.
+### 15. E93 scene contracts
+Design the inquiry into why QUINN appears before Noah met either woman. Keep source authentication ahead of emotional accusation.
 
-## 19. E94 Noah causality/naturalism gate
-Check motive, fear, consent contradiction, speech fingerprint and consequence.
+### 16. E93 present-life cost injection
+Introduce a credible work/credential/bank/client friction caused by identity uncertainty as B-plot pressure; do not replace the episode’s provenance clue function.
 
-## 20. E94 evidence matrix gate
-No key conclusion from Noah testimony alone.
+### 17. E93 evidence-source contract
+Separate Bellweather index, sealed identity-theft/flood case, access metadata and inference. State what can prove pre-Noah use and what remains unknown.
 
-## 21. E95 scene contracts
-Trace deceased Mara Elise Quinn identity; end on present-paper jeopardy.
+### 18. E93 draft
+Write toward the changed fact: source record belongs to deceased Mara Elise Quinn. No “Noah created Mara” shortcut.
 
-## 22. E95 draft
-Write 1100–1550 spoken words; block-closing irreversible turn.
+### 19. E93 work/money realism + naturalism gate
+Ensure ordinary consequence is specific, not generic bureaucracy; dialogue remains task-driven and characters do not speak in polished thesis statements.
 
-## 23. E95 block-cliff gate
-Cliff must change Mara's legal/personal options, not announce another file.
+### 20. E93 continuity/fair-play gate
+Check E7–E10 and all later Mara-Quinn claims. The new fact must reinterpret, not invalidate, prior evidence.
 
-## 24. E91–95 five-episode Red Team
-Require causal chain, Mara agency, evidence fairness, sister/romance movement, ordinary-life pressure; FATAL/MAJOR=0.
+## E94 — Noah’s sister and Noah’s responsibility
 
-## 25. E96–100 causal contract
-Lock present institutional opponent, consolidation offer, Evelyn independent access, public/work pressure and E100 midpoint.
+### 21. E94 scene contracts
+Build confrontation around provenance, grief and responsibility. Mara seeks evidence, not confession/forgiveness.
 
-## 26. E96–100 draft batch
-Write five full episodes, each 1100–1550 spoken words, 3–5 audible scenes and its own irreversible turn.
+### 22. E94 Noah causality map
+Separate Bellweather’s earlier unauthorized use, Noah’s later knowledge, Noah’s post-fire reuse of the paper chain, what he withheld and why.
 
-## 27. E96–100 runtime gates
-Count all five episodes separately. No padding.
+### 23. E94 grief/ownership gate
+Noah’s grief over Mara Elise may be specific and costly but cannot give him ownership of current Mara’s name or automatic brother-status.
 
-## 28. E96–100 present-opposition audit
-Opponent must have rational objective, concrete leverage and current action; no abstract 'system' only.
+### 24. E94 draft
+Write the episode so Noah supplies/verifies evidence without trading it for emotional absolution. End on Victoria’s objection to the dormant-child identity use.
 
-## 29. E96–100 sister/romance braid audit
-Sister relationship and Mara/Adrian relationship must both change through conduct without stealing causality.
+### 25. E94 evidence matrix gate
+No dispositive claim rests only on Noah. Require independent file/access corroboration.
 
-## 30. E96–100 audio retention audit
-At least two non-desk scenes; one dominant waiting question/episode; hearable evidence/action.
+### 26. E94 naturalism/audio gate
+Avoid confession monologue. Use interruptions, procedural steps, bodily state and silence only where earned.
 
-## 31. E96–100 fair-play audit
-Midpoint identity proof requires independent evidence classes and clear proof/not-proof boundaries.
+## E95 — Victoria said no
 
-## 32. E91–100 continuity regression
-Check all prior season anchors and identity ontology. Repair true descendants only.
+### 27. E95 scene contracts
+Recover Victoria’s objection and stage present resistance around its consequences. Victoria may clarify intent but cannot solve the whole case.
 
-## 33. E101–105 causal contract
-Lock collapse of 'Mara was legal Evelyn all along', continuous bride chain, authentic adolescent Mara history and blocked Victoria registration effort.
+### 28. E95 Victoria bounded-authority audit
+Define what she knew, what she tried to stop, what she could not safely repair and what ethical compromises remain hers.
 
-## 34. E101–105 draft batch
-Write five episodes at runtime spec with emotional cost from evidence, not twist rhetoric.
+### 29. E95 institutional-counterargument design
+Let current opposition argue that historical correction can destabilize present records/people. Make the argument rational enough to create a real choice.
 
-## 35. E101–105 runtime gates
-Mechanical spoken-word PASS for all five.
+### 30. E95 draft
+Write the turn: Victoria opposed the stolen shell but later defended the teen’s right to keep the chosen name; end on the dual-subject biometric cards.
 
-## 36. E101–105 memory/marriage continuity audit
-No sexual/intimate marital sister substitution; preserve bride evidence and greenhouse clue truth.
+### 31. E95 block-cliff + retention gate
+The biometric-card cliff must promise a new answer (body mapping) and a new danger (identity layers still unresolved), not merely “another file.”
 
-## 37. E101–105 Adrian emotional truth audit
-Adrian must confront split memory/legal history without treating either woman as property/replacement.
+### 32. E91–E95 five-episode Red Team
+Run causality, agency, evidence economy, present-life cost, sister movement, romance weight, audio clarity and continuity. FATAL/MAJOR = 0 before E96.
 
-## 38. E101–105 Mara agency audit
-Mara must cause the central proof/reversal and make a costly response.
+## E96–E100 — body mapping without collapsing relationship identity
 
-## 39. E101–105 naturalism audit
-Prevent perfect thematic dialogue after identity revelations.
+### 33. E96–E100 causal contract
+Preserve 20B order: dual cards → greenhouse exception → no-more-direct-substitutions boundary → bride chain → Lily maternal record. Add present opposition/cost without renumbering clues.
 
-## 40. E91–105 midpoint gate
-Midpoint must materially improve historical truth while worsening Mara's present legal situation. FATAL/MAJOR=0.
+### 34. E96–E100 draft batch
+Draft sequentially with per-episode scene contracts. Do not batch-generate blindly; propagate each episode’s changed state forward.
 
-## 41. E106–110 causal contract
-Lock sisters' joint investigation + divergent remedies, Noah accountability, Adrian cost and proof of knowing single-visible-identity containment.
+### 35. E96–E100 runtime gates
+Count spoken English and repair only with causal/character material.
 
-## 42. E106–110 draft batch
-Write five episodes, full runtime and active opposition.
+### 36. Body-mapping epistemic audit
+For each biometric/fingerprint clue state: proves body continuity; does not automatically prove birth identity, marriage, motherhood, name law or moral entitlement.
 
-## 43. E106–110 runtime gates
-Mechanical PASS per episode.
+### 37. Greenhouse/consent continuity audit
+E97 may pay off the physical scar as Mara’s bounded adolescent interaction. E98 must establish the later no-direct-substitution boundary. No post-marriage sexual substitution.
 
-## 44. E106–110 Noah accountability audit
-Evidence/help does not buy forgiveness. Show lasting consequence.
+### 38. Bride/maternity evidence audit
+E99 supports Evelyn as legal ceremony bride through independent chain. E100 resolves maternal patient through adult medical/security records; Lily remains untested and uninterrogated.
 
-## 45. E106–110 institutional motive audit
-Containment motive must be understandable and condemnable through decisions, not villain speech.
+### 39. Sister/romance braid audit
+Mara/Evelyn must gain and lose ground independently; Adrian cannot treat memory mapping as a romantic entitlement test.
 
-## 46. E106–110 sister conflict audit
-Mara/Evelyn must want materially different remedies for credible reasons.
+### 40. E91–E100 continuity + audio regression
+Check clue order, identities, audible action, waiting questions and two non-desk scenes per five-episode block.
 
-## 47. E106–110 audio/retention audit
-Avoid hearing-room monotony; translate legal consequences into audible action/life.
+## E101–E105 — the clean answer makes Mara’s present life worse
 
-## 48. E91–110 continuity regression
-Full final-arc regression to current point; FATAL/MAJOR=0 before proceeding.
+### 41. E101–E105 causal contract
+Preserve: person with no original number → ordinary civil friction → price of birth certificate → Helena knew → midpoint clean answer gets worse.
 
-## 49. E111–115 causal contract
-Lock the safe/private deal, sisters' rupture, evidence that closes clerical-accident theory, and E115 civil-identity risk.
+### 42. E101–E105 draft batch
+Draft sequentially with present work/housing/bank/licensing cost and rational settlement pressure.
 
-## 50. E111–115 draft batch
-Write five episodes at runtime spec with escalating price and present opposition.
+### 43. E101–E105 runtime gates
+Spoken-word compliance; no filler bureaucracy.
 
-## 51. E111–115 runtime gates
-Mechanical PASS per episode.
+### 44. Legal/administrative plausibility gate
+Use high-level registrar/court logic only. Mark exact jurisdiction rules for specialist review rather than inventing statutes.
 
-## 52. E111–115 settlement-pressure plausibility audit
-Offer must be tempting, concrete and rational; Mara's refusal must carry real price.
+### 45. Settlement ethics gate
+The offer may be materially attractive. Make Mara’s refusal costly; do not make counsel obviously evil or the waiver absurd.
 
-## 53. E111–115 P52/P53 peak audit
-Place earned control breaks; keep professional competence and relationship agency.
+### 46. Helena/Voss origin audit
+Separate initial hospital/transfer defect from later knowing preservation/exploitation. No retroactive “Vale planned the missing certificate at birth” unless new evidence proves it.
 
-## 54. E111–115 Red Team
-Test climax setup, alternatives, motivation and evidence. FATAL/MAJOR=0.
+### 47. Midpoint emotional-truth gate
+Mara’s historical identity becomes clearer while her current papers become less secure. Require a genuine loss of control that does not erase competence.
 
-## 55. E116–120 final-act contract
-Lock confrontation, final offer, Mara choice, separate-record outcome, old-marriage resolution and ordinary-life aftermath.
+### 48. E91–E105 midpoint regression
+FATAL/MAJOR continuity, evidence, marriage, name provenance and legal-magic risks must be zero before E106.
 
-## 56. E116–120 draft batch
-Write final five episodes, 1100–1550 spoken words each. Close main conflict before any series hook.
+## E106–E110 — chosen name, source consent, independent marriage choices
 
-## 57. E116–120 runtime gates
-Mechanical PASS per episode.
+### 49. E106–E110 causal contract
+Preserve: name-on-form problem → Noah source-file consent → informed historical choice → Evelyn motion → Adrian/Evelyn old-marriage answer.
 
-## 58. E116–120 climax-choice gate
-Mara must actively choose separate legal existence at real cost; outcome cannot be awarded without her causal action.
+### 50. E106–E110 draft batch
+Draft sequentially. Mara/Evelyn cooperate but need not want the same remedy.
 
-## 59. E116–120 resolution completeness gate
-Close identity, sisterhood, Adrian, Lily, Noah, Celeste/Richard institutional consequence and practical civil status.
+### 51. Noah accountability audit
+Release of Mara Elise records must cost Noah and cannot purchase forgiveness. Historical teen choice of Mara Quinn must be independently authenticated.
 
-## 60. E116–120 ordinary-life payoff gate
-Prove resolution via documents/payroll/lease/work/home/school routine, not summary speech.
+### 52. Sister remedy-conflict audit
+Give Mara and Evelyn different practical fears/desired outcomes. No artificial fight caused only by withheld information.
 
-## 61. E1–120 full continuity regression
-Check ages, chronology, Cross death, fire facts, identity layers, marriage, Lily, scars, names, evidence order, relationship knowledge and all protected setups/payoffs.
+### 53. Adrian/Evelyn agency gate
+E109–E110 relationship question belongs to Adrian and Evelyn. Mara must not decide their marriage for them and should be absent from the core exchange where appropriate.
 
-## 62. E1–120 Final Story Gate + Reader Advocate
-Ask why turn page, emotional waiting, homework zones, wonder/humor/ordinary life, loss if Mara fails, climax satisfaction. Require FATAL 0 / MAJOR 0.
+### 54. E91–E110 continuity/audio regression
+Check identity layers, sister conflict, romance weight, ordinary action and no return to archive-only storytelling.
 
-## 63. Season text-complete package + status/writeback
-Create the controlling E01–E120 text-complete manifest/index; mark WORKING/READY FOR FOUNDER REVIEW, update current project state, Drive/GitHub pointers and verify readback.
+## E111–E115 — standing, two records, no trade
 
-## 64. Founder review packet + human-signal preparation
-Prepare concise season summary, main conflict closure, character outcomes, unresolved optional series hooks, known MEDIUM/POLISH items and real-human listening plan. Do not simulate Founder approval or Human Signal.
+### 55. E111–E115 causal contract
+Preserve reseal → standing → two records not one correction → no trade → Helena origin closure/final hearing.
+
+### 56. E111–E115 draft batch
+Draft sequentially with concrete legal pressure, privacy stakes and sister disagreement.
+
+### 57. Standing/evidence-chain audit
+Standing must derive cumulatively from birth ledger/wristbands, placement continuity, dual-subject biometrics and historical Mara/current Mara chain. No single magic clue.
+
+### 58. No-trade + governance audit
+Mara rejects personhood-for-waiver exchange; any Vale/board non-opposition must be documented governance, not Adrian’s romantic favor.
+
+### 59. E111–E115 P52/P53 + Red Team
+Peak emotional pressure without melodramatic legal speeches. FATAL/MAJOR = 0 before final act.
+
+## E116–E120 — two people, two records, ordinary-life proof
+
+### 60. E116–E120 final-act contract
+Preserve sworn provenance → Evelyn testimony → climax rejecting collapse/waiver → order → ordinary-life finale.
+
+### 61. E116–E120 draft batch
+Draft sequentially. Climax choice must cost Mara something real; resolution must not magically erase downstream corrections.
+
+### 62. Climax + resolution completeness gate
+Verify separate late registration/current-name recognition, Evelyn’s record remaining hers, marriage/maternity separation, Noah consequence, Celeste future, Lily stability and Mara/Adrian HFN.
+
+### 63. E1–E120 full continuity + Final Story Gate
+Run full-season causality, fair-play, identity ontology, relationship truth, P51/P52/P53 where relevant, audio clarity and Reader Advocate. FATAL/MAJOR must be zero for text-complete promotion.
+
+### 64. Founder review + Human Signal preparation
+Produce a concise Founder packet: what is locked/working, all material changes, unresolved legal/jurisdiction items, listener-test questions and exact release/audio next steps. Do **not** claim Human Signal, market validation or final canon until those gates actually occur.
