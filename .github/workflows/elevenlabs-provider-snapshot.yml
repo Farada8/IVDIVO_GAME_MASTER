@@ -1,0 +1,97 @@
+name: ElevenLabs Provider Snapshot Evidence
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  authenticated-readback:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fail closed if provider secret is unavailable
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          if [ -z "${ELEVENLABS_API_KEY:-}" ]; then
+            echo "::error::Repository secret ELEVENLABS_API_KEY is not configured."
+            exit 2
+          fi
+
+      - name: Acquire authenticated secret-free snapshot
+        id: acquire
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          mkdir -p provider_evidence/source provider_evidence/readback provider_evidence/final
+          written_at="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          echo "written_at=${written_at}" >> "$GITHUB_OUTPUT"
+          python audio/studio/elevenlabs_snapshot_acquirer.py \
+            --out provider_evidence/source/provider_snapshot.json
+
+      - name: Upload source snapshot artifact
+        id: upload_source
+        uses: actions/upload-artifact@v4
+        with:
+          name: elevenlabs-provider-snapshot-${{ github.run_id }}-${{ github.run_attempt }}
+          path: provider_evidence/source/provider_snapshot.json
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Download source snapshot for durable readback
+        uses: actions/download-artifact@v5
+        with:
+          name: elevenlabs-provider-snapshot-${{ github.run_id }}-${{ github.run_attempt }}
+          path: provider_evidence/readback
+
+      - name: Build and validate AUTH_PROVIDER receipt
+        shell: bash
+        run: |
+          python audio/studio/provider_snapshot_receipt.py \
+            --snapshot provider_evidence/source/provider_snapshot.json \
+            --readback-snapshot provider_evidence/readback/provider_snapshot.json \
+            --artifact-id "elevenlabs-provider-snapshot-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --storage-provider GITHUB_ACTIONS_ARTIFACT \
+            --source-ref "https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+            --written-at "${{ steps.acquire.outputs.written_at }}" \
+            --transaction-id "${GITHUB_RUN_ID}:${GITHUB_RUN_ATTEMPT}" \
+            --artifact-digest "${{ steps.upload_source.outputs.digest }}" \
+            --out provider_evidence/final/provider_auth_receipt.json
+
+      - name: Publish secret-free evidence bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: elevenlabs-provider-auth-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            provider_evidence/source/provider_snapshot.json
+            provider_evidence/final/provider_auth_receipt.json
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Evidence summary
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          row=json.loads(Path('provider_evidence/final/provider_auth_receipt.json').read_text(encoding='utf-8'))
+          v=row['_ivdivo_validation']
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
+              f.write('## ElevenLabs AUTH_PROVIDER evidence\n')
+              f.write(f"- status: {v['status']}\n")
+              f.write(f"- snapshot_hash: `{v['snapshot_hash']}`\n")
+              f.write(f"- readback_strength: {v['readback_strength']}\n")
+              f.write('- paid synthesis calls: 0\n')
+              f.write('- credential persisted: false\n')
+          PY
