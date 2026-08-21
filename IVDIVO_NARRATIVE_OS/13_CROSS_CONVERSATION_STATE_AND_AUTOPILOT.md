@@ -1,7 +1,7 @@
 # IVDIVO — CROSS-CONVERSATION STATE & AUTOPILOT
 
 **Status:** CANONICAL OPERATIONAL CONTROL LAYER  
-**Version:** 1.1  
+**Version:** 1.2  
 **Established:** 2026-08-21  
 **Updated:** 2026-08-21  
 **Scope:** all IVDIVO writing/development/revision/reference workflows and all AI sessions that participate in them.  
@@ -14,13 +14,15 @@
 
 A conversation is temporary. Persisted project state is the shared writers' room memory.
 
-Do not treat ChatGPT, Claude, Grok, Codex or any other model session as an isolated workroom. Before substantive work, restore current authority and state from connected project sources when available.
+Do not treat ChatGPT, Claude, Grok, Codex or another model session as an isolated workroom. Before substantive work, restore current authority and state from connected project sources when available.
 
 The Founder must not need to type `и / дальше / продолжай / делай / работай` merely to cause an already-determined next production step to happen.
 
 If the next production obligation is unambiguous, unblocked and executable in the current session, continue to it automatically.
 
-`и / дальше / продолжай / делай / работай` remains an explicit RESUME command, not a required heartbeat.
+`и / дальше / продолжай / делай / работай` remains explicit RESUME shorthand, not a required heartbeat.
+
+A session does not imply invisible background work after it stops. Persisted state makes the next executing session resume correctly.
 
 ---
 
@@ -28,322 +30,359 @@ If the next production obligation is unambiguous, unblocked and executable in th
 
 Before substantive work resolve:
 
-`ACTIVE PROJECT/BOOK -> ACTIVE LINE -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + VERSION + SHA256 -> ACTIVE BRANCH -> MODE/TEXT PROTECTION -> CURRENT PHASE -> BUILD/RUN MANIFEST -> LAST COMPLETED ARTIFACT -> OPEN GATES -> UNRESOLVED FATAL/MAJOR -> NEXT UNBLOCKED OBLIGATION`
+`ACTIVE PROJECT/BOOK -> ACTIVE LINE -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + VERSION + SHA256 -> ACTIVE BRANCH -> MODE/TEXT PROTECTION -> CURRENT PHASE -> BUILD/RUN MANIFEST -> LAST VERIFIED FRONTIER -> LAST COMPLETED ARTIFACT -> OPEN GATES -> UNRESOLVED FATAL/MAJOR -> NEXT UNBLOCKED OBLIGATION`
 
 Required source order when relevant and available:
 1. Founder newest direct instruction / Project context.
 2. GitHub `Farada8/IVDIVO_GAME_MASTER`, branch `main`.
 3. Google Drive current authority / source-of-truth / working mirrors.
 4. ChatGPT File Library and uploaded reference sources.
-5. Session memory only as a convenience, never as silent authority over persisted state.
+5. Session memory only as convenience, never as silent authority over persisted state.
 
-If a required authority/source/version is ambiguous, fail closed as `AUTHORITY_UNRESOLVED` rather than reconstructing canon from memory.
+Authority and freshness are separate questions. A structurally authoritative document may contain an obsolete progress pointer; preserve its law while resolving the newest compatible provenance-valid production frontier.
+
+If a required authority/source/version genuinely conflicts and cannot be reconciled, fail closed as `AUTHORITY_UNRESOLVED` or `FRONTIER_CONFLICT` rather than reconstructing canon from memory.
 
 ---
 
-## 3. PROJECT STATE CONTRACT
+## 3. DELTA-FIRST FRESHNESS LAW
 
-Every active workflow should maintain a machine- or human-readable state record with at least:
+Do not mechanically reread the entire archive on every continuation.
 
+At a substantial project turn:
+1. restore the last verified frontier;
+2. scan material deltas since that frontier across accessible current sources;
+3. deep-read only artifacts that can materially change the current decision;
+4. classify discoveries as `PROJECT_ONLY / GENRE_OVERLAY_CANDIDATE / UNIVERSAL_CANDIDATE / REFERENCE_ONLY / SUPERSEDED / REJECTED`;
+5. reconcile before execution.
+
+For reference work, first reuse the current abstraction stack where valid:
+`Library Audit -> Source Passports -> Mechanism Banks -> Semantic Dedupe -> Source Role Map -> Core Mechanisms -> Crosswalk -> Story Assembly`.
+
+Run a fresh source pass when the problem requires evidence not represented in current extraction, existing extraction is insufficient, or a newer source materially changes the decision.
+
+---
+
+## 4. PROJECT STATE CONTRACT
+
+Every active workflow should maintain equivalent semantics for:
 - `project_id`;
-- `active_book`;
-- `active_line`;
+- `active_book_or_line`;
+- `active_branch`;
 - `mode`;
 - `current_phase`;
-- `authority_sources[]` including path/ID, status, version/revision and hash where available;
-- `current_source` and `current_source_sha256`;
-- `active_branch`;
+- `authority_sources[]` with path/ID, status, version/revision and hash where available;
+- `current_source` and `current_source_sha256` where protected source exists;
 - `canon_mode` / `text_protection_mode`;
+- `last_verified_frontier`;
 - `completed_artifacts[]` with version/hash where possible;
-- `last_completed_artifact` and `last_completed_artifact_hash` where possible;
+- `last_completed_stage`;
+- `last_completed_artifact` and hash where possible;
 - `open_gates[]`;
-- `unresolved_fatal_major[]`;
+- `open_fatal[]`;
+- `open_major[]`;
+- `founder_decision_required`;
+- `locked_invariants[]`;
+- `invalidated_artifacts[]`;
 - `dependency_dag`;
 - `next_unblocked_obligations[]`;
 - `selected_next_action`;
 - `blocked_reasons[]`;
+- `external_dependencies[]`;
 - `external_feedback[]` with provenance;
 - `model_handoffs[]` with provenance;
 - `last_session_log`;
-- `state_revision` or equivalent freshness marker where available;
+- `state_revision` / freshness marker where available;
+- `updated_at` / `updated_by` / provenance;
 - `state_status`.
 
-File existence alone is not proof that an artifact is current. Reuse requires matching authority/source hashes or other explicit freshness evidence.
+File existence alone is not proof that an artifact is current. Reuse requires valid authority, matching upstream versions/hashes where used, no explicit invalidation, and no newer accepted superseding artifact.
 
-Authority rank and progress freshness are separate dimensions: an older source may still own canon locks while a newer compatible artifact owns the current production frontier.
+If valid, reuse it. Do not recreate it because another AI/dialog already did the work.
 
 ---
 
-## 4. AUTOPILOT / DEEP-WORK LAW
+## 5. AUTOPILOT / DEEP-WORK LAW
 
-After completing a stage, compute the dependency DAG and the highest-priority unblocked obligation.
+After completing a stage, compute the dependency DAG and highest-priority unblocked obligation.
 
 Continue automatically in the same work block when all are true:
-- current authority is unambiguous;
-- the next stage follows causally/dependently from already-approved work;
+- authority is unambiguous;
+- next stage follows causally/dependently from approved work;
 - required inputs exist and are freshness-valid;
 - no FATAL/MAJOR blocks progression;
-- the action does not require a new Founder canon/creative choice;
-- the action does not require external human evidence;
-- a required external provider/tool is available, or the stage is internal;
-- executing it does not reopen a locked layer without new evidence.
+- no new Founder canon/creative choice is required;
+- no required external human evidence is missing;
+- required provider/tool exists, or the stage is internal;
+- executing it does not reopen a locked layer without evidence.
 
 Do not stop merely to announce the next step if that step can be completed now.
 
 ### Continuous obligation loop
 
-After each completed and persisted step:
+`RE-READ FRESH STATE -> RECOMPUTE DAG -> SELECT HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VALIDATE -> PERSIST -> VERIFY READBACK -> REPEAT`
 
-`RE-READ FRESH STATE -> RECOMPUTE DAG -> SELECT HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT`
-
-Continue this loop inside the current executable work block until a mandatory stop state is reached. Do not artificially stop at one chapter, one five-episode batch, one audit or one artifact merely because that unit was convenient, unless the unit itself is the defined gate boundary.
+Do not artificially stop at one chapter, one five-episode batch, one audit or one artifact unless that unit is itself a real gate boundary.
 
 ### Mandatory stop states
 Stop and report the exact blocker only on:
-- `DECISION_GATE` — a genuine Founder choice between materially different story/canon directions;
+- `DECISION_GATE` — genuine Founder choice between materially different story/canon directions;
 - `AUTHORITY_UNRESOLVED`;
+- `FRONTIER_CONFLICT`;
 - `CANON_APPROVAL_REQUIRED`;
 - `HUMAN_EVIDENCE_REQUIRED` / Human Signal / human blind-swap;
 - `EXTERNAL_PROVIDER_REQUIRED` when no valid provider exists;
-- unresolved FATAL or MAJOR requiring upstream repair;
-- an irreversible/high-impact action requiring Founder approval;
-- a real tool/runtime limitation;
-- a safety/legal constraint;
+- unresolved FATAL/MAJOR requiring upstream repair;
+- irreversible/high-impact action requiring Founder approval;
+- real tool/runtime/permission limitation;
+- safety/legal constraint;
 - explicit Founder `STOP / HOLD`.
 
 Do not manufacture a question merely to obtain another user turn.
 
-This law governs work while a model/session is actually executing. It does not claim invisible background execution after the session stops.
-
 ---
 
-## 5. CONCURRENT-DIALOG / REBASE LAW
+## 6. CONCURRENT-DIALOG / REBASE LAW
 
-Multiple IVDIVO conversations may advance the same shared project state.
+Multiple IVDIVO conversations may advance shared project state.
 
-Therefore, immediately before any material write, promotion, lock, authority-pointer change or continuation from a cached plan:
-1. re-read the current persisted state/authority;
-2. compare its revision/hash/frontier to the state used to produce the candidate;
+Immediately before a material write, promotion, lock, authority-pointer change or continuation from a cached plan:
+1. re-read current persisted state/authority;
+2. compare revision/hash/frontier with the state used to produce the candidate;
 3. if unchanged, write normally;
 4. if another dialog advanced a compatible independent branch, merge/rebase through artifacts and dependency contracts;
-5. if another dialog advanced the same dependency/frontier, treat the local candidate as stale until reconciled;
-6. never overwrite a newer valid state merely because the local conversation started earlier.
+5. if another dialog advanced the same dependency/frontier, local candidate is stale until reconciled;
+6. never overwrite a newer valid state because the local conversation started earlier.
 
 Use optimistic-concurrency controls where available. A stale write failure is a synchronization signal, not permission to force overwrite.
 
-If two newer artifacts disagree, classify `FRONTIER_CONFLICT` and reconcile authority, source hashes, parent artifacts and gates before further production.
+Parallel model/dialog branches are allowed only when dependency-independent after parent PASS gates. They converge through persisted artifacts, hashes, manifests and evidence, not conversational memory.
 
 ---
 
-## 6. DEPENDENCY-DAG LAW
+## 7. DEPENDENCY-DAG LAW
 
 Stages are dependencies, not a ritual checklist.
 
-Independent branches may run in parallel after their upstream PASS gates. They must converge before a consumer stage that requires both.
-
-Generic writing dependency spine:
-
+Generic writing spine:
 `AUTHORITY/CONTINUITY -> REFERENCE INTELLIGENCE -> STORY DISCOVERY -> STORY CORE -> CHARACTER -> RELATIONSHIP/MYSTERY/WORLD as applicable -> ARCHITECTURE/WEAVE -> STORY GATE -> SCENE CONTRACTS -> PROSE -> DEVELOPMENT -> RED TEAM -> CHARACTER/RELATIONSHIP/VOICE REGRESSION -> READER -> CONTINUITY/SOURCE-DISTANCE -> LINE -> FINAL STORY GATE -> HUMAN/EXTERNAL SIGNAL where applicable -> LOCK`
 
-Do not invalidate all numerically later artifacts by default. Invalidate only true descendants of the changed source contract.
+Independent branches may run in parallel after upstream PASS. They must converge before a consumer that requires both.
+
+When upstream changes, invalidate only true descendants. Preserve unrelated accepted siblings.
 
 ---
 
-## 7. EARLIEST-FAILURE / MINIMUM-REPAIR LAW
+## 8. TARGETED REPAIR / EARLIEST-FAILURE LAW
 
-Generalized from current Narrative OS, women’s-story production, Story Recovery and audio production:
+Current detailed universal repair authority:
+`IVDIVO_NARRATIVE_OS/14_TARGETED_REPAIR_PATCH_CONTRACT_STANDARD_v1.0.md`.
 
-`SYMPTOM -> ROOT CAUSE -> EARLIEST FAILED LAYER -> SMALLEST EFFECTIVE REPAIR -> CANDIDATE -> LOCAL QA -> COMMIT OR ROLLBACK -> SELECTIVE DESCENDANT REBUILD -> REGRESSION`
+General route:
+`SYMPTOM -> ROOT CAUSE -> EARLIEST FAILED LAYER -> PATCH_QUEUE/CONTRACT OR STRUCTURAL ROUTE -> CANDIDATE -> LOCAL QA -> SELECTIVE COMMIT OR ROLLBACK -> TRUE-DESCENDANT INVALIDATION -> REGRESSION`.
 
 Never repair:
 - story failure with line polish;
 - character failure with exposition;
 - relationship-authority failure with invented chemistry;
 - world/technology failure with lore dump;
-- voice/prosody/audio failure by rewriting locked story text unless text is the proven failing layer.
+- voice/prosody/audio failure by rewriting locked story text unless text is proven failing layer.
 
-For every FATAL/MAJOR record:
-- symptom;
-- evidence;
-- root cause;
-- earliest responsible layer;
-- repair scope;
-- what must not break;
-- acceptance test;
-- descendants to invalidate/rerun.
-
-Where the execution environment supports transactional repair, freeze source/hash and unaffected siblings, write a candidate branch first, reject no-effect changes, commit only after repair QA, rollback on failed regression, and rebuild only true descendants.
+Candidate-first. Freeze source/hash and affected scope where supported. Reject no-effect patches. Failed candidates do not mutate accepted bytes. Use finite repair cycles; repeated local failure is evidence to escalate scope.
 
 A Founder-approved CANON repair that changes a global story contract requires explicit reapproval before downstream lock.
 
-If the causal map remains stable, continue prose/development. If the causal map breaks, stop drafting and repair upstream first.
+---
 
-Use milestone/block audits at meaningful causal boundaries; do not interrupt every paragraph with full-system review.
+## 9. ADVERSARIAL REVIEW ROUTING
+
+Current detailed review authority:
+`IVDIVO_NARRATIVE_OS/15_ADVERSARIAL_10_LENS_REVIEW_GATE_v1.0.md`.
+
+Default review uses compact independent lenses rather than ritual headcount. The 100-profession layer remains a deep specialist taxonomy/routing inventory.
+
+Escalate only when a specialist can materially change a decision. Do not average FATAL/MAJOR into reassuring numeric scores. Human Signal remains separate external evidence.
 
 ---
 
-## 8. CROSS-MODEL WORKFLOW
+## 10. CROSS-MODEL WORKFLOW
 
-Models are replaceable specialist backends, not canon authorities.
+Models are replaceable specialist backends, not canon authorities. Choose model/tool by capability and task, not brand prestige.
 
-Default roles when multiple models are actually used:
-- **Primary Integrator / production writer-editor:** integrates authority, executes approved work and writes persisted state.
-- **Independent Architecture/Character/System Reviewer (e.g. Claude):** adversarial review; does not become canon automatically.
-- **Independent Market/Packaging/Alternative-Diagnosis Reviewer (e.g. Grok):** adversarial review; does not become canon automatically.
-- Other models/tools may be assigned bounded specialist roles when they materially improve the decision.
+Possible roles include:
+- Primary Integrator / production writer-editor;
+- Independent structural/architecture adversary;
+- Character/relationship reviewer;
+- Cold Reader / retention adversary;
+- Market/packaging reviewer;
+- specialist factual/domain reviewer;
+- code/automation worker;
+- audio/visual execution worker;
+- schema/continuity validator.
 
-Every external model receives a bounded `AGENT_PACKET` / `RUN_CARD`, not the whole uncontrolled archive:
-- project ID / active project/book/line;
-- active branch;
-- source artifact/version/hash;
-- build/run ID if relevant;
+Where independence matters, prefer a distinct reviewer path and preserve provenance.
+
+Every external model receives a bounded `AGENT_PACKET` / `RUN_CARD`, not the uncontrolled archive:
+- project/book ID and task ID;
+- active line/branch/build;
+- authority sources + versions/hashes;
+- current stage/frontier;
+- exact input artifacts;
 - exact question/task;
-- governing locks;
+- immutable locks;
+- allowed change scope;
 - forbidden changes;
-- parent artifacts;
+- relevant reference mechanisms;
 - open gates/blocker;
-- allowed actions;
-- required evidence;
-- requested output;
-- whether the pass must be independent of prior conclusions.
+- required evidence/provenance;
+- output schema/file names;
+- acceptance gates;
+- exact next consumer stage;
+- whether pass must be independent of prior conclusions.
 
-Every returned recommendation is classified:
+Returned recommendations are candidate evidence until disposition:
 `ACCEPT / ACCEPT_WITH_MODIFICATION / HOLD_FOR_TEST / REJECT`.
 
-Accepted recommendations are not complete until they are applied to the actual authority/artifact and recorded in persisted state.
+Accepted recommendations are not complete until applied to actual authority/artifact, validated and persisted.
 
 Never invent missing Claude/Grok/GPT feedback. Missing evidence = `UNKNOWN / NOT_RECEIVED`.
-
-No model may self-certify:
-- real Human Signal;
-- human P51 blind-swap;
-- market performance;
-- publisher/editor feedback that did not occur.
-
-Parallel model branches are allowed only when they are dependency-independent after their parent gate. Convergence happens through persisted artifacts, hashes, manifests and evidence, not prose memory.
+No model may self-certify Human Signal, human P51 blind-swap, market performance or publisher/editor feedback that did not occur.
 
 ---
 
-## 9. CROSS-DIALOG DELTA HARVEST
+## 11. CROSS-DIALOG DELTA HARVEST / PORTABILITY SCOUT
 
-Before designing a new universal mechanism, prompt, program or production adapter, inspect newer neighboring-work artifacts in GitHub/Drive and relevant Library sources.
+Before designing a new universal mechanism, prompt, program or production adapter, inspect newer neighboring artifacts in GitHub/Drive and relevant Library sources.
 
-If a useful mechanism already exists elsewhere:
+For each stronger mechanism ask:
+`PROJECT ONLY? GENRE OVERLAY? UNIVERSAL? DUPLICATE? REGRESSION RISK?`
 
-`SOURCE PROJECT MECHANISM -> REMOVE project names/story facts/voice IDs/secrets -> ABSTRACT CONTRACT -> RED TEAM -> UNIVERSAL/TEMPLATE LAYER -> REBIND THROUGH ACTIVE PROJECT OVERLAY`
+Promotion path:
+`DISCOVERED -> ABSTRACTED -> COMPARED -> PILOTED/RED-TEAMED AS NEEDED -> ACCEPTED -> CURRENT`.
 
-Promote only mechanisms that:
-- solve a recurring class of problems;
-- have evidence of actual use, tests or a strong production rationale;
-- do not weaken higher authority or project-specific locks;
-- can be stated without importing another project's canon.
+Transformation route:
+`SOURCE PROJECT MECHANISM -> REMOVE project names/story facts/culprit/clue chain/voice IDs/secrets -> ABSTRACT CONTRACT -> COMPARE/RED TEAM -> UNIVERSAL/TEMPLATE LAYER -> REBIND THROUGH ACTIVE PROJECT OVERLAY`.
 
-Do not clone whole project packets into universal canon. Upstream contracts, not project facts.
+Promote only mechanisms that solve a recurring class of problems, have evidence of actual use/tests or strong production rationale, do not weaken higher authority/locks, and can be stated without importing another project's canon.
 
-Before creating a new file, search for an existing current file with the same function. Prefer updating/reconciling one authority over adding another parallel router.
-
----
-
-## 10. CROSS-MODEL PERSISTENCE / HANDOFF
-
-Future-critical state must not exist only in chat.
-
-Persist when materially changed:
-- canon or authority pointer;
-- current phase/frontier;
-- prompts/router/system architecture;
-- FATAL/MAJOR defect register;
-- accepted/rejected external critique;
-- experimental drafts used for comparison;
-- exact next action;
-- locks and unresolved dependencies.
-
-Recommended handoff artifacts:
-- `CURRENT_PROJECT_STATE`;
-- `CURRENT_PROMPTS_AND_SYSTEM_STATE` when system prompts change;
-- provider/model-specific feedback files with provenance;
-- non-authority draft/variant area;
-- timestamped `SESSION_LOG` stating what changed, what is locked, what remains WORKING and the exact next unblocked obligation.
-
-Do not duplicate locked masters into handoff folders and accidentally create parallel canon. Handoff files point to authority; they do not replace it.
+Before creating a new file, search for an existing current file with the same function. Prefer updating/reconciling one authority over adding a parallel router.
 
 ---
 
-## 11. REFERENCE / BOOK INTELLIGENCE ROUTING
+## 12. REFERENCE / BOOK INTELLIGENCE ROUTING
 
-References remain mechanisms, never canon.
+References remain mechanisms, never canon:
+`REFERENCE -> ABSTRACT MECHANISM -> REMOVE DISTINCTIVE CONTENT -> COMPARE/COMBINE INDEPENDENT SOURCES -> TRANSFORM THROUGH ACTIVE HERO/SETTING/CONFLICT -> ORIGINAL APPLICATION -> SOURCE-DISTANCE CHECK`.
 
-`REFERENCE -> ABSTRACT MECHANISM -> REMOVE DISTINCTIVE CONTENT -> COMPARE/COMBINE INDEPENDENT SOURCES -> TRANSFORM THROUGH ACTIVE HERO/SETTING/CONFLICT -> ORIGINAL APPLICATION -> SOURCE-DISTANCE CHECK`
-
-A useful generalized world-through-story mechanism from current orbital work is:
-
-`ORDINARY HUMAN OBJECTIVE -> ENVIRONMENTAL/SOCIAL/SYSTEM CONSTRAINT -> CONSEQUENCE -> CHARACTER CHOICE -> NEW EVIDENCE OR RELATIONSHIP/STATUS CHANGE`
+Useful world-through-story route:
+`ORDINARY HUMAN OBJECTIVE -> ENVIRONMENTAL/SOCIAL/SYSTEM CONSTRAINT -> CONSEQUENCE -> CHARACTER CHOICE -> NEW EVIDENCE OR RELATIONSHIP/STATUS CHANGE`.
 
 Prefer this to:
 `TECHNOLOGY EXPLANATION -> CLEVER OBSERVATION -> PLOT CLUE`.
 
 Craft-source routing:
-- structure/scene/conflict/character diagnostics belong primarily to development/rewrite passes and do not automatically reopen a GREEN Story Core;
-- clarity/cohesion/emphasis/concision mechanisms belong primarily to late Line/Clarity passes and do not outrank story, causality or character truth;
-- dialogue/performance craft is routed as action under pressure, not decorative wit;
+- structure/scene/conflict/character diagnostics primarily serve development/rewrite and do not automatically reopen a GREEN Story Core;
+- clarity/cohesion/emphasis/concision primarily serve late line/clarity work;
+- dialogue/performance craft is action under pressure, not decorative wit;
 - suspense craft tracks emotionally meaningful waiting questions, not arbitrary withholding;
 - audio craft privileges causal listening, point-of-audition, useful silence and story-legible sound over decorative sonic density.
 
 ---
 
-## 12. P51 / P52 / P53 / HUMAN SIGNAL INHERITANCE
+## 13. P51 / P52 / P53 / HUMAN SIGNAL INHERITANCE
 
 Universal applicable fiction inherits:
-- P51 voice differentiation for important speaking characters;
-- P52 emotional dynamic-range checks for major emotional arcs;
-- current P53 inherited control when character/relationship emotion is relevant;
+- P51 voice differentiation;
+- P52 emotional dynamic-range checks;
+- current P53 control when character/relationship emotion is relevant;
 - Human Signal as external-only evidence.
 
-Current P53 routing is task-classified rather than romance-only:
+Current P53 is task-classified:
 - A romance-bearing -> full P53;
 - B relationship-bearing non-romantic -> relational truth without invented romance;
-- C professional/investigative -> preserve competence and hidden personal cost where relevant;
+- C professional/investigative -> competence + hidden/private cost where relevant;
 - D family/friendship -> relational truth;
-- E antagonistic/status -> power/status/relational consequence;
+- E antagonistic/status -> power/status/consequence;
 - F exposition/information -> convert information into action/resistance/choice;
 - G action/rescue/emergency -> after-action emotional consequence;
 - H audio/performance -> emotional beats must be hearable;
-- I visual/marketing -> female-gaze where appropriate plus truthful-promise gate.
+- I visual/marketing -> female-gaze where appropriate + truthful-promise gate.
 
-P53 never outranks story causality, canon, professional truth, character agency, consent/power, declared Romance Weight or established relationship authority. It must not inject romance into a non-romantic scene.
+P53 never outranks causality, canon, professional truth, agency, consent/power, declared Romance Weight or relationship authority. It must not inject romance into a non-romantic scene.
 
 Internal model review may diagnose; it may not impersonate external human validation.
 
 ---
 
-## 13. CONTINUATION COMMAND BEHAVIOR
+## 14. CROSS-DOMAIN HANDOFF LAW
 
-When Founder says `и / дальше / продолжай / делай / работай`:
-1. restore persisted current state;
-2. resolve active book/line and newest verified frontier;
-3. detect concurrent/newer neighbor artifacts;
-4. recompute open gates and dependencies;
-5. execute the highest unblocked obligation;
-6. verify and persist it;
-7. re-read state and continue through further unblocked dependent stages in the same work block;
-8. stop only on a mandatory stop state.
+A locked/current story may hand off downstream without reopening story development:
+`STORY LOCK/CURRENT SOURCE -> AUDIO / VISUAL / TRANSLATION / PUBLISHING / MARKETING ADAPTER`.
 
-Never respond to a recoverable continuation command with generic advice or “what should I do next?”.
+Each adapter restores its own current specialized authority and binds to story source/version/hash.
+
+Downstream production cannot silently rewrite locked story to satisfy a provider unless text itself is the proven failing layer and reopening authority exists.
+
+Project-specific identities, voice IDs, clue chains, relationship timing, signature sounds and obsolete branch facts never transfer merely because a production mechanism is reusable.
+
+For voice/casting, current universal audio standard is `IVDIVO_AUDIO_VOICE_AUDITION_BINDING_STANDARD_v1.0.md`.
 
 ---
 
-## 14. SESSION-END / HANDOFF LAW
+## 15. WRITE-BACK / PERSISTENCE LAW
 
-Before ending a substantive work block, when persistence tools are available:
-1. persist material decisions/results;
+Future-critical state must not exist only in chat.
+
+Material advancement includes: Founder decisions; authority/canon changes; PASS/FAIL/LOCK/SUPERSEDED; accepted architecture/manuscript patches; validated prompt/program/protocol; completed production artifact; changed frontier; new/resolved FATAL/MAJOR; provider/asset/voice/build locks; external-human evidence that changes status.
+
+Write-back order:
+`ARTIFACT/RESULT -> PROJECT CURRENT-STATE POINTER -> RELEVANT CHANGELOG/DECISION RECORD -> DRIVE MIRROR WHERE REQUIRED -> READBACK VERIFICATION`.
+
+Do not rewrite large canon files merely to record volatile local progress. Volatile progress belongs in project state/frontier artifacts; stable reusable laws belong in Narrative OS.
+
+Recommended handoff artifacts:
+- `CURRENT_PROJECT_STATE`;
+- `CURRENT_PROMPTS_AND_SYSTEM_STATE` when system prompts change;
+- provider/model-specific feedback with provenance;
+- non-authority draft/variant area;
+- timestamped session log with exact next obligation/blocker.
+
+Do not duplicate locked masters into handoff folders. Handoff files point to authority; they do not replace it.
+
+---
+
+## 16. CONTINUATION COMMAND BEHAVIOR
+
+When Founder says `и / дальше / продолжай / делай / работай` or opens a recoverable project continuation:
+1. restore persisted authority/state;
+2. resolve newest verified frontier;
+3. delta-scan concurrent/newer neighbor artifacts;
+4. run stale-work/reuse checks;
+5. recompute open gates/DAG;
+6. execute highest unblocked obligation;
+7. validate, persist, verify;
+8. re-read state and continue through further unblocked dependent stages in the same work block;
+9. stop only on a mandatory stop state.
+
+Never respond to a recoverable continuation with generic advice or “what should I do next?”.
+
+---
+
+## 17. SESSION-END CHECKPOINT
+
+Before a substantial work block is considered cross-dialog complete, record where applicable:
+`DONE / ACCEPTED_OR_CANDIDATE / GATE_STATUS / WHAT_CHANGED / WHAT_DID_NOT_CHANGE / CURRENT_FRONTIER / EXACT_NEXT_UNBLOCKED_OBLIGATION / BLOCKERS / SOURCE_PROVENANCE`.
+
+Before claiming synchronization:
+1. persist material results;
 2. update current state/frontier;
-3. record external-model feedback disposition;
-4. record unresolved FATAL/MAJOR and open gates;
-5. record exact next unblocked obligation or exact blocker;
-6. verify the write before claiming synchronization;
-7. if a newer sibling-dialog state appeared during the work block, rebase/reconcile before claiming the project synchronized.
+3. record external-model disposition;
+4. record open FATAL/MAJOR and gates;
+5. record exact next obligation/blocker;
+6. verify readback;
+7. if a newer sibling-dialog state appeared, rebase/reconcile first.
 
-If persistence is unavailable, state that fact. Never claim a save that did not happen.
+If persistence is unavailable, say so. Never claim a save that did not happen.
 
 ---
 
@@ -353,4 +392,4 @@ If persistence is unavailable, state that fact. Never claim a save that did not 
 
 **PERSISTED STATE DRIVES THE WORK. REPEATED “И” IS OPTIONAL SHORTHAND, NOT WORKFLOW PLUMBING.**
 
-**CONTINUE UNTIL A REAL GATE STOPS THE EXECUTABLE WORK — NOT UNTIL THE CHAT NEEDS ANOTHER TURN.**
+**RESTORE ONCE, EXECUTE FORWARD, VALIDATE, PERSIST, REBASE WHEN NEEDED, AND CONTINUE UNTIL A REAL GATE STOPS EXECUTABLE WORK.**
