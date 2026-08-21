@@ -1,8 +1,15 @@
 import unittest
 import sys
+from datetime import datetime, timezone
+from hashlib import sha256
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "runtime"))
+from external_evidence_trust import (
+    DurableArtifactReceipt, ReadbackStrength, ReviewerAttestationReceipt,
+    TransactionRecoveryReceipt,
+)
+from provider_snapshot_contract import SCHEMA_VERSION, seal_snapshot
 from studio_evidence import (
     AUDIO_MODES, QUALITY_DIMENSIONS, EconomicsRecord, PerformanceEvidence,
     build_benchmark_manifest, compare_benchmark, compress_human_review,
@@ -14,6 +21,11 @@ from studio_evidence import (
 class StudioEvidenceTests(unittest.TestCase):
     TEXT = "hello world"
     HASH = text_hash(TEXT)
+    NOW = datetime(2026, 8, 21, 18, 0, tzinfo=timezone.utc)
+
+    @staticmethod
+    def h(value):
+        return sha256(value.encode("utf-8")).hexdigest()
 
     def variants(self, assets=True):
         return [
@@ -36,6 +48,125 @@ class StudioEvidenceTests(unittest.TestCase):
             manual_minutes=6,
             manual_hourly_cost=20,
         )
+
+    def durable(self, *, kind="RAW_AUDIO", content_hash=None, metadata=None, strength=None, artifact_id="A1"):
+        content_hash = content_hash or self.h(artifact_id)
+        return DurableArtifactReceipt(
+            artifact_id=artifact_id,
+            artifact_kind=kind,
+            storage_provider="GOOGLE_DRIVE",
+            source_ref=f"gdrive://{artifact_id}",
+            content_hash=content_hash,
+            size_bytes=128,
+            written_at="2026-08-21T17:00:00+00:00",
+            readback_at="2026-08-21T17:01:00+00:00",
+            readback_hash=content_hash,
+            readback_strength=strength or ReadbackStrength.CONTENT_HASH_VERIFIED.value,
+            transaction_id="TX1",
+            metadata=metadata or {},
+        )
+
+    def human_receipt(self, scope, *, candidate_hash=None, suffix="1"):
+        submission_hash = self.h(f"submission:{scope}:{suffix}")
+        return ReviewerAttestationReceipt(
+            reviewer_ref=f"reviewer://human-{suffix}",
+            reviewer_identity_class="TRUSTED_HUMAN_REVIEWER",
+            submission_ref=f"form://submission-{scope}-{suffix}",
+            submission_hash=submission_hash,
+            task_pack_hash=self.h(f"task:{scope}"),
+            artifact_hash=self.h("audio"),
+            candidate_hash=candidate_hash or self.h("candidate"),
+            decision="PASS",
+            submitted_at="2026-08-21T17:02:00+00:00",
+            review_scope=scope,
+            synthetic_fixture=False,
+            durable_receipt=self.durable(
+                kind="HUMAN_ATTESTATION",
+                content_hash=submission_hash,
+                artifact_id=f"H-{scope}-{suffix}",
+            ),
+        )
+
+    def provider_payload(self):
+        snapshot = seal_snapshot({
+            "schema_version": SCHEMA_VERSION,
+            "provider": "generic-provider",
+            "status": "PASS",
+            "authentication": {"state": "AUTHENTICATED", "method": "RUNTIME_AUTH", "credential_persisted": False},
+            "provenance": {
+                "captured_at": "2026-08-21T17:30:00+00:00",
+                "capture_method": "DIRECT_AUTHENTICATED_READ_ONLY_API",
+                "capture_engine": "test-provider-acquirer/1.0",
+                "source": [{"path": "/capabilities", "http_status": 200}],
+            },
+            "account": {"fingerprint_sha256": self.h("account")},
+            "voices": {"v1": {"name": "Voice"}},
+            "models": {"m1": {"name": "Model"}},
+        })
+        return {
+            "snapshot": snapshot,
+            "durable_receipt": self.durable(
+                kind="PROVIDER_SNAPSHOT", content_hash=snapshot["snapshot_hash"], artifact_id="PROVIDER"
+            ),
+        }
+
+    def valid_release_evidence(self):
+        live = self.durable(
+            kind="RAW_AUDIO",
+            artifact_id="LIVE",
+            metadata={
+                "project_id": "P1",
+                "request_hash": self.h("request"),
+                "provider_response_hash": self.h("response"),
+            },
+        )
+        alignment = self.durable(
+            kind="ALIGNMENT",
+            artifact_id="ALIGN",
+            metadata={"audio_hash": live.content_hash, "source_hash": self.h("source"), "coverage_complete": True},
+        )
+        economics = self.durable(
+            kind="ECONOMICS_LEDGER",
+            artifact_id="ECON",
+            metadata={
+                "measured": True,
+                "provider_charge_refs": ["provider://charge-1"],
+                "manual_minutes_source_ref": "log://human-minutes",
+            },
+        )
+        cross = self.durable(
+            kind="CROSS_PROJECT_LIVE_REPORT",
+            artifact_id="CROSS",
+            metadata={
+                "project_ids": ["P1", "P2"],
+                "live_evidence_hashes": [self.h("live-p1"), self.h("live-p2")],
+            },
+        )
+        recovery = TransactionRecoveryReceipt(
+            transaction_id="TX1",
+            recovered_at="2026-08-21T17:10:00+00:00",
+            recovered_content_hashes=[live.content_hash, alignment.content_hash],
+            durable_readback_strength=ReadbackStrength.TRANSACTION_RECOVERABLE.value,
+            duplicate_provider_calls=0,
+            duplicate_charges=0,
+            unresolved_ambiguities=0,
+            recovery_manifest_ref="gdrive://recovery-1",
+            recovery_manifest_hash=self.h("recovery"),
+            synthetic_fixture=False,
+        )
+        return {
+            "locked_source_identity": True,
+            "production_control_on_main": True,
+            "provider_preflight_pass": self.provider_payload(),
+            "live_render_provenance": live,
+            "real_alignment_timeline": alignment,
+            "performance_human_pass": self.human_receipt("PERFORMANCE"),
+            "blind_listener_pass": self.human_receipt("BLIND_LISTENER", suffix="2"),
+            "measured_economics": economics,
+            "durable_raw_assets": live,
+            "durable_recovery": recovery,
+            "cross_project_live_portability": cross,
+        }
 
     def test_manifest_pass(self):
         out = build_benchmark_manifest(source_id="x", source_hash="source", exact_text=self.TEXT, variants=self.variants())
@@ -95,10 +226,28 @@ class StudioEvidenceTests(unittest.TestCase):
     def test_performance_hold(self):
         self.assertEqual(performance_evidence_gate(PerformanceEvidence("c", "r"))["status"], "HOLD")
 
-    def test_performance_eligible_not_locked(self):
+    def test_performance_booleans_alone_do_not_authorize(self):
         evidence = PerformanceEvidence("c", "r", True, True, True, True, human_scores={"natural": 4})
         out = performance_evidence_gate(evidence)
+        self.assertEqual(out["status"], "HOLD")
+        self.assertIn("trusted_human_review_evidence", out["missing"])
+        self.assertFalse(out["production_authoritative"])
+
+    def test_performance_trusted_receipts_make_candidate_eligible_not_locked(self):
+        candidate_hash = text_hash("r:c")
+        receipts = {
+            "multi_state": self.human_receipt("MULTI_STATE", candidate_hash=candidate_hash, suffix="ms"),
+            "pronunciation": self.human_receipt("PRONUNCIATION", candidate_hash=candidate_hash, suffix="pr"),
+            "fatigue": self.human_receipt("FATIGUE", candidate_hash=candidate_hash, suffix="ft"),
+            "human_review": self.human_receipt("PERFORMANCE", candidate_hash=candidate_hash, suffix="hr"),
+        }
+        evidence = PerformanceEvidence(
+            "c", "r", True, True, True, True,
+            human_scores={"natural": 4}, trusted_human_evidence=receipts,
+        )
+        out = performance_evidence_gate(evidence)
         self.assertEqual(out["status"], "ELIGIBLE_FOR_HUMAN_LOCK_DECISION")
+        self.assertTrue(out["production_authoritative"])
         self.assertFalse(out["voice_lock"])
 
     def test_pair_required(self):
@@ -151,13 +300,25 @@ class StudioEvidenceTests(unittest.TestCase):
     def test_release_holds(self):
         self.assertEqual(studio_release_evidence_matrix({})["status"], "HOLD")
 
-    def test_release_complete_still_needs_founder(self):
+    def test_release_all_true_booleans_are_not_external_evidence(self):
         keys = ("locked_source_identity", "production_control_on_main", "provider_preflight_pass",
                 "live_render_provenance", "real_alignment_timeline", "performance_human_pass",
-                "blind_listener_pass", "measured_economics", "durable_raw_assets",
+                "blind_listener_pass", "measured_economics", "durable_raw_assets", "durable_recovery",
                 "cross_project_live_portability")
         out = studio_release_evidence_matrix({key: True for key in keys})
+        self.assertEqual(out["status"], "HOLD")
+        self.assertIn("provider_preflight_pass", out["missing"])
+        self.assertFalse(out["production_ready"])
+
+    def test_release_complete_receipts_still_need_founder(self):
+        out = studio_release_evidence_matrix(
+            self.valid_release_evidence(),
+            expected_provider="generic-provider",
+            provider_max_age_seconds=3600,
+            now=self.NOW,
+        )
         self.assertEqual(out["status"], "GO_FOR_FOUNDER_RELEASE_DECISION")
+        self.assertEqual(out["missing"], [])
         self.assertFalse(out["production_ready"])
         self.assertFalse(out["machine_may_declare_production_ready"])
 
