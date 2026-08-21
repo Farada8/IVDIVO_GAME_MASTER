@@ -1,8 +1,11 @@
 {
   "schema": "absolute_math.run4.cas_probe/1.0",
-  "phase": "FRESH_SHA_UPDATE_CONFIRMED",
+  "phase": "REPAIRED_AFTER_STALE_SHA_REJECTION",
   "base_main_sha": "e3047a227552477c39c7d6af549208d18afc3fcc",
   "branch": "absolute-math-run4-amsi177-208-2026-08-21",
-  "sequence": 2,
-  "purpose": "reversible branch-only stale-SHA and readback pilot"
+  "sequence": 3,
+  "stale_attempt_status": 409,
+  "drive_probe_file_id": "1rzq7s2D-BIiyeup5n4hUVaMDCU0Ti56N",
+  "drive_probe_sha256": "9fa1a7580242ef7b3d6f59e07a242c6e2223cf1e8db8fb1846f4fd30447a28f7",
+  "recovery": "fresh blob SHA + verified Drive readback; no force overwrite"
 }
