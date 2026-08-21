@@ -1,8 +1,9 @@
 # IVDIVO — CROSS-CONVERSATION STATE & AUTOPILOT
 
 **Status:** CANONICAL OPERATIONAL CONTROL LAYER  
-**Version:** 1.0  
+**Version:** 1.1  
 **Established:** 2026-08-21  
+**Updated:** 2026-08-21  
 **Scope:** all IVDIVO writing/development/revision/reference workflows and all AI sessions that participate in them.  
 **Parent authorities:** Founder newest instruction -> `IVDIVO_WRITING_PRODUCTION_CANON.md` -> locked book/saga canon -> `00_NARRATIVE_OS_CANON.md`.  
 **Purpose:** make persisted project state, not repeated Founder nudges or chat memory, drive continuation.
@@ -53,7 +54,8 @@ Every active workflow should maintain a machine- or human-readable state record 
 - `current_source` and `current_source_sha256`;
 - `active_branch`;
 - `canon_mode` / `text_protection_mode`;
-- `completed_artifacts[]`;
+- `completed_artifacts[]` with version/hash where possible;
+- `last_completed_artifact` and `last_completed_artifact_hash` where possible;
 - `open_gates[]`;
 - `unresolved_fatal_major[]`;
 - `dependency_dag`;
@@ -63,6 +65,7 @@ Every active workflow should maintain a machine- or human-readable state record 
 - `external_feedback[]` with provenance;
 - `model_handoffs[]` with provenance;
 - `last_session_log`;
+- `state_revision` or equivalent freshness marker where available;
 - `state_status`.
 
 File existence alone is not proof that an artifact is current. Reuse requires matching authority/source hashes or other explicit freshness evidence.
@@ -87,6 +90,14 @@ Continue automatically in the same work block when all are true:
 
 Do not stop merely to announce the next step if that step can be completed now.
 
+### Continuous obligation loop
+
+After each completed and persisted step:
+
+`RE-READ FRESH STATE -> RECOMPUTE DAG -> SELECT HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT`
+
+Continue this loop inside the current executable work block until a mandatory stop state is reached. Do not artificially stop at one chapter, one five-episode batch, one audit or one artifact merely because that unit was convenient, unless the unit itself is the defined gate boundary.
+
 ### Mandatory stop states
 Stop and report the exact blocker only on:
 - `DECISION_GATE` — a genuine Founder choice between materially different story/canon directions;
@@ -95,14 +106,36 @@ Stop and report the exact blocker only on:
 - `HUMAN_EVIDENCE_REQUIRED` / Human Signal / human blind-swap;
 - `EXTERNAL_PROVIDER_REQUIRED` when no valid provider exists;
 - unresolved FATAL or MAJOR requiring upstream repair;
+- an irreversible/high-impact action requiring Founder approval;
 - a real tool/runtime limitation;
-- a safety/legal constraint.
+- a safety/legal constraint;
+- explicit Founder `STOP / HOLD`.
 
 Do not manufacture a question merely to obtain another user turn.
 
+This law governs work while a model/session is actually executing. It does not claim invisible background execution after the session stops.
+
 ---
 
-## 5. DEPENDENCY-DAG LAW
+## 5. CONCURRENT-DIALOG / REBASE LAW
+
+Multiple IVDIVO conversations may advance the same shared project state.
+
+Therefore, immediately before any material write, promotion, lock, authority-pointer change or continuation from a cached plan:
+1. re-read the current persisted state/authority;
+2. compare its revision/hash/frontier to the state used to produce the candidate;
+3. if unchanged, write normally;
+4. if another dialog advanced a compatible independent branch, merge/rebase through artifacts and dependency contracts;
+5. if another dialog advanced the same dependency/frontier, treat the local candidate as stale until reconciled;
+6. never overwrite a newer valid state merely because the local conversation started earlier.
+
+Use optimistic-concurrency controls where available. A stale write failure is a synchronization signal, not permission to force overwrite.
+
+If two newer artifacts disagree, classify `FRONTIER_CONFLICT` and reconcile authority, source hashes, parent artifacts and gates before further production.
+
+---
+
+## 6. DEPENDENCY-DAG LAW
 
 Stages are dependencies, not a ritual checklist.
 
@@ -116,11 +149,11 @@ Do not invalidate all numerically later artifacts by default. Invalidate only tr
 
 ---
 
-## 6. EARLIEST-FAILURE / MINIMUM-REPAIR LAW
+## 7. EARLIEST-FAILURE / MINIMUM-REPAIR LAW
 
-Generalized from current Narrative OS, women’s-story production and audio production:
+Generalized from current Narrative OS, women’s-story production, Story Recovery and audio production:
 
-`SYMPTOM -> ROOT CAUSE -> EARLIEST FAILED LAYER -> SMALLEST EFFECTIVE REPAIR -> SELECTIVE DESCENDANT REGRESSION`
+`SYMPTOM -> ROOT CAUSE -> EARLIEST FAILED LAYER -> SMALLEST EFFECTIVE REPAIR -> CANDIDATE -> LOCAL QA -> COMMIT OR ROLLBACK -> SELECTIVE DESCENDANT REBUILD -> REGRESSION`
 
 Never repair:
 - story failure with line polish;
@@ -139,13 +172,17 @@ For every FATAL/MAJOR record:
 - acceptance test;
 - descendants to invalidate/rerun.
 
+Where the execution environment supports transactional repair, freeze source/hash and unaffected siblings, write a candidate branch first, reject no-effect changes, commit only after repair QA, rollback on failed regression, and rebuild only true descendants.
+
+A Founder-approved CANON repair that changes a global story contract requires explicit reapproval before downstream lock.
+
 If the causal map remains stable, continue prose/development. If the causal map breaks, stop drafting and repair upstream first.
 
 Use milestone/block audits at meaningful causal boundaries; do not interrupt every paragraph with full-system review.
 
 ---
 
-## 7. CROSS-MODEL WORKFLOW
+## 8. CROSS-MODEL WORKFLOW
 
 Models are replaceable specialist backends, not canon authorities.
 
@@ -155,13 +192,18 @@ Default roles when multiple models are actually used:
 - **Independent Market/Packaging/Alternative-Diagnosis Reviewer (e.g. Grok):** adversarial review; does not become canon automatically.
 - Other models/tools may be assigned bounded specialist roles when they materially improve the decision.
 
-Every external model receives a bounded `AGENT_PACKET`, not the whole uncontrolled archive:
-- active project/book/line;
+Every external model receives a bounded `AGENT_PACKET` / `RUN_CARD`, not the whole uncontrolled archive:
+- project ID / active project/book/line;
+- active branch;
 - source artifact/version/hash;
-- exact question;
+- build/run ID if relevant;
+- exact question/task;
 - governing locks;
 - forbidden changes;
-- evidence schema;
+- parent artifacts;
+- open gates/blocker;
+- allowed actions;
+- required evidence;
 - requested output;
 - whether the pass must be independent of prior conclusions.
 
@@ -178,9 +220,31 @@ No model may self-certify:
 - market performance;
 - publisher/editor feedback that did not occur.
 
+Parallel model branches are allowed only when they are dependency-independent after their parent gate. Convergence happens through persisted artifacts, hashes, manifests and evidence, not prose memory.
+
 ---
 
-## 8. CROSS-MODEL PERSISTENCE / HANDOFF
+## 9. CROSS-DIALOG DELTA HARVEST
+
+Before designing a new universal mechanism, prompt, program or production adapter, inspect newer neighboring-work artifacts in GitHub/Drive and relevant Library sources.
+
+If a useful mechanism already exists elsewhere:
+
+`SOURCE PROJECT MECHANISM -> REMOVE project names/story facts/voice IDs/secrets -> ABSTRACT CONTRACT -> RED TEAM -> UNIVERSAL/TEMPLATE LAYER -> REBIND THROUGH ACTIVE PROJECT OVERLAY`
+
+Promote only mechanisms that:
+- solve a recurring class of problems;
+- have evidence of actual use, tests or a strong production rationale;
+- do not weaken higher authority or project-specific locks;
+- can be stated without importing another project's canon.
+
+Do not clone whole project packets into universal canon. Upstream contracts, not project facts.
+
+Before creating a new file, search for an existing current file with the same function. Prefer updating/reconciling one authority over adding another parallel router.
+
+---
+
+## 10. CROSS-MODEL PERSISTENCE / HANDOFF
 
 Future-critical state must not exist only in chat.
 
@@ -205,7 +269,7 @@ Do not duplicate locked masters into handoff folders and accidentally create par
 
 ---
 
-## 9. REFERENCE / BOOK INTELLIGENCE ROUTING
+## 11. REFERENCE / BOOK INTELLIGENCE ROUTING
 
 References remain mechanisms, never canon.
 
@@ -219,41 +283,56 @@ Prefer this to:
 `TECHNOLOGY EXPLANATION -> CLEVER OBSERVATION -> PLOT CLUE`.
 
 Craft-source routing:
-- Linda Seger-style structure/scene/conflict/character diagnostics belong primarily to development/rewrite passes; they do not automatically reopen a GREEN Story Core.
-- Joseph Williams/Bizup clarity/cohesion/emphasis/concision mechanisms belong primarily to late Line/Clarity passes; they do not outrank story, causality or character truth.
+- structure/scene/conflict/character diagnostics belong primarily to development/rewrite passes and do not automatically reopen a GREEN Story Core;
+- clarity/cohesion/emphasis/concision mechanisms belong primarily to late Line/Clarity passes and do not outrank story, causality or character truth;
+- dialogue/performance craft is routed as action under pressure, not decorative wit;
+- suspense craft tracks emotionally meaningful waiting questions, not arbitrary withholding;
+- audio craft privileges causal listening, point-of-audition, useful silence and story-legible sound over decorative sonic density.
 
 ---
 
-## 10. P51 / P52 / P53 / HUMAN SIGNAL INHERITANCE
+## 12. P51 / P52 / P53 / HUMAN SIGNAL INHERITANCE
 
 Universal applicable fiction inherits:
 - P51 voice differentiation for important speaking characters;
 - P52 emotional dynamic-range checks for major emotional arcs;
-- P53 only when relationship authority permits; no invented romance;
+- current P53 inherited control when character/relationship emotion is relevant;
 - Human Signal as external-only evidence.
 
-P53 never outranks story causality, canon, professional truth, consent/power or established relationship authority.
+Current P53 routing is task-classified rather than romance-only:
+- A romance-bearing -> full P53;
+- B relationship-bearing non-romantic -> relational truth without invented romance;
+- C professional/investigative -> preserve competence and hidden personal cost where relevant;
+- D family/friendship -> relational truth;
+- E antagonistic/status -> power/status/relational consequence;
+- F exposition/information -> convert information into action/resistance/choice;
+- G action/rescue/emergency -> after-action emotional consequence;
+- H audio/performance -> emotional beats must be hearable;
+- I visual/marketing -> female-gaze where appropriate plus truthful-promise gate.
+
+P53 never outranks story causality, canon, professional truth, character agency, consent/power, declared Romance Weight or established relationship authority. It must not inject romance into a non-romantic scene.
 
 Internal model review may diagnose; it may not impersonate external human validation.
 
 ---
 
-## 11. CONTINUATION COMMAND BEHAVIOR
+## 13. CONTINUATION COMMAND BEHAVIOR
 
 When Founder says `и / дальше / продолжай / делай / работай`:
 1. restore persisted current state;
 2. resolve active book/line and newest verified frontier;
-3. recompute open gates and dependencies;
-4. execute the highest unblocked obligation;
-5. continue through further unblocked dependent stages in the same work block;
-6. persist materially changed state;
-7. stop only on a mandatory stop state.
+3. detect concurrent/newer neighbor artifacts;
+4. recompute open gates and dependencies;
+5. execute the highest unblocked obligation;
+6. verify and persist it;
+7. re-read state and continue through further unblocked dependent stages in the same work block;
+8. stop only on a mandatory stop state.
 
 Never respond to a recoverable continuation command with generic advice or “what should I do next?”.
 
 ---
 
-## 12. SESSION-END / HANDOFF LAW
+## 14. SESSION-END / HANDOFF LAW
 
 Before ending a substantive work block, when persistence tools are available:
 1. persist material decisions/results;
@@ -261,7 +340,8 @@ Before ending a substantive work block, when persistence tools are available:
 3. record external-model feedback disposition;
 4. record unresolved FATAL/MAJOR and open gates;
 5. record exact next unblocked obligation or exact blocker;
-6. verify the write before claiming synchronization.
+6. verify the write before claiming synchronization;
+7. if a newer sibling-dialog state appeared during the work block, rebase/reconcile before claiming the project synchronized.
 
 If persistence is unavailable, state that fact. Never claim a save that did not happen.
 
@@ -271,4 +351,6 @@ If persistence is unavailable, state that fact. Never claim a save that did not 
 
 **STORY FIRST. CHARACTER SECOND. WORLD THROUGH STORY. SAGA THROUGH COMPLETED BOOKS.**
 
-**CONTINUE UNTIL A REAL GATE STOPS THE WORK — NOT UNTIL THE CHAT NEEDS ANOTHER “И”.**
+**PERSISTED STATE DRIVES THE WORK. REPEATED “И” IS OPTIONAL SHORTHAND, NOT WORKFLOW PLUMBING.**
+
+**CONTINUE UNTIL A REAL GATE STOPS THE EXECUTABLE WORK — NOT UNTIL THE CHAT NEEDS ANOTHER TURN.**
