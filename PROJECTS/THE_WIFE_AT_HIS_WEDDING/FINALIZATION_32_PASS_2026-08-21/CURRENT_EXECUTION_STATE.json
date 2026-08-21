@@ -2,7 +2,7 @@
   "project": "THE WIFE AT HIS WEDDING",
   "date": "2026-08-21",
   "scope": "E91-E120_FINAL_ARC",
-  "status": "E91_E96_WORKING_COMPLETE_GO_TO_E97_AFTER_GATE",
+  "status": "E91_E97_WORKING_COMPLETE_GO_TO_E98_AFTER_GATE",
   "founder_locked": false,
   "upstream": {
     "E61_E90_story_block": "CLOSED_PASS",
@@ -31,22 +31,35 @@
   },
   "wave3": {
     "source_queue": "WAVE2_32_EXECUTIONS_E91_95_2026-08-21/04_WAVE3_64_NEXT_PROMPTS_v1.0.md",
-    "freshness_descendant_reuse_gate": "PASS_NO_NEWER_VALID_E96_LOCATED_BEFORE_DRAFT",
-    "episodes_completed": ["E96"],
-    "episode_frontier": "E96",
+    "freshness_descendant_reuse_gate": "PASS_RECHECK_BEFORE_EACH_NEW_EPISODE",
+    "episodes_completed": ["E96","E97"],
+    "episode_frontier": "E97",
+    "runtime_spoken_words": {"E96":1138,"E97":1134},
     "e96": {
       "title": "THE TWO CARDS",
       "status": "WORKING_COMPLETE",
-      "runtime_spoken_words": 1138,
-      "runtime_gate": "PASS_1100_1550",
       "red_team": {"fatal":0,"major":0},
       "drive_folder_id": "11aNNQU3FcitB_BoJUUHzY-DcsnMiHVD-",
       "drive_script_id": "14VXqWzC72DmLaQNgzghYjHupFACXe0Wnfco-rRGAAV8",
       "drive_gate_id": "1-njMR1lIBmcl_ljQ_hEaBXxGCfuYXBdDaIRozmsX_5g",
-      "github_folder": "WAVE3_EXECUTION_E96_2026-08-21/",
       "story_answer": "HISTORICAL_MARA_QUINN_CARD_MAPS_TO_CURRENT_MARA_AND_HISTORICAL_EVELYN_CARD_MAPS_TO_CURRENT_EVELYN_AT_TEENAGE_INTAKE",
-      "explicit_non_answer": "BODY_MAPPING_DOES_NOT_PROVE_BABY_B_BIRTH_CIVIL_MARRIAGE_MATERNITY_PROPERTY_OR_NAME_ENTITLEMENT",
-      "next_clue": "HAWTHORNE_GREENHOUSE_ROUTE_AND_INJURY_RECORD"
+      "explicit_non_answer": "BODY_MAPPING_DOES_NOT_PROVE_BABY_B_BIRTH_CIVIL_MARRIAGE_MATERNITY_PROPERTY_OR_NAME_ENTITLEMENT"
+    },
+    "e97": {
+      "title": "THE GIRL ADRIAN_MET",
+      "status": "WORKING_COMPLETE",
+      "runtime_spoken_words": 1134,
+      "runtime_gate": "PASS_1100_1550",
+      "red_team": {"fatal":0,"major":0},
+      "drive_folder_id": "1Wx6AQPZ8gOnbBr4YTKVPns_6om0NCp0W",
+      "drive_script_id": "1guIw2O1b4uSTNOOzCE9CePexyIa4Nrg-6cOuEmn8ZQw",
+      "drive_gate_id": "1OQYFPIyQAuwvUld9rE3lW5B0m909P4Ga2E9AX5amZDc",
+      "github_folder": "WAVE3_EXECUTION_E97_2026-08-21/",
+      "story_answer": "CURRENT_MARA_IS_THE_HISTORICAL_MARA_QUINN_SUBJECT_WHO_PHYSICALLY_OCCUPIED_AN_EXPOSED_EVELYN_ROUTE_DURING_THE_GREENHOUSE_INCIDENT",
+      "evidence_classes": ["WITNESSED","REMEMBERED","DOCUMENT_DERIVED","RECONSTRUCTED"],
+      "adrian_memory_role": "CORROBORATIVE_EMOTIONAL_EVIDENCE_NOT_IDENTITY_AUTHORITY",
+      "required_boundary_closed": "NO_DESTINY_OR_ROMANTIC_ENTITLEMENT_FROM_GREENHOUSE_MEMORY",
+      "cliff": "VICTORIA_ORDER_NO_MORE_DIRECT_ADRIAN_SUBSTITUTIONS"
     }
   },
   "architecture": {
@@ -67,6 +80,9 @@
     "historical_teen_informed_choice_of_mara_quinn": "SUPPORTED",
     "dual_historical_biometric_cards": "AUTHENTICATED_AND_COMPARISON_COMPLETE",
     "adult_body_mapping": "CURRENT_MARA_EQUALS_HISTORICAL_TEEN_MARA_QUINN_CURRENT_EVELYN_EQUALS_HISTORICAL_TEEN_EVELYN",
+    "greenhouse_body_route_mapping": "CURRENT_MARA_EQUALS_HISTORICAL_MARA_QUINN_SUBJECT_ON_TEMPORARY_EVELYN_ROUTE_DURING_GREENHOUSE_INCIDENT",
+    "adrian_greenhouse_memory": "CORROBORATIVE_NOT_DISPOSITIVE",
+    "victoria_post_greenhouse_order": "NO_MORE_DIRECT_ADRIAN_SUBSTITUTIONS_AUTHENTICATED_ORDER_COMPLIANCE_NOT_YET_PROVED",
     "newborn_to_teen_mapping": "UNRESOLVED",
     "mara_current_professional_credential": "ACTIVE_UNDER_REVIEW",
     "mara_client_work": "ONE_PREVIOUSLY_PAUSED_STREAM_PARTIALLY_RESTARTED",
@@ -81,6 +97,7 @@
     "lily_is_evidence": false,
     "post_marriage_sister_sexual_substitution": false,
     "adrian_memory_is_civil_identity_proof": false,
+    "adrian_memory_creates_romantic_entitlement_or_destiny": false,
     "biometric_card_is_birth_marriage_maternity_or_civil_identity_shortcut": false,
     "original_missing_certificate_is_locked_as_grand_plot": false,
     "human_signal_run": false,
@@ -92,16 +109,15 @@
     "REAL_LISTENER_AUDIO_VALIDATION"
   ],
   "next_queue": "WAVE2_32_EXECUTIONS_E91_95_2026-08-21/04_WAVE3_64_NEXT_PROMPTS_v1.0.md",
-  "highest_unblocked_obligation": "E97_EPISTEMIC_CONTRACT_AND_SOURCE_AUTHENTICATION_THEN_DRAFT_GATE_THE_GIRL_ADRIAN_MET",
+  "highest_unblocked_obligation": "E98_COMPLIANCE_SCOPE_AND_RELATIONSHIP_CONSENT_CONTINUITY_THEN_DRAFT_GATE_NO_MORE_DIRECT_SUBSTITUTIONS",
   "next_episode_contract": {
-    "episode": "E97",
-    "title": "THE GIRL ADRIAN MET",
-    "required_evidence_classes": ["WITNESSED","REMEMBERED","DOCUMENT_DERIVED","RECONSTRUCTED"],
-    "required_independent_source": "HAWTHORNE_SECURITY_OR_EVENT_ROUTE_EVIDENCE",
-    "adrian_memory_role": "EMOTIONAL_EVIDENCE_NOT_DISPOSITIVE_IDENTITY_PROOF",
-    "required_turn": "INDEPENDENT_ROUTE_EVIDENCE_SUPPORTS_CURRENT_MARA_PHYSICALLY_OCCUPIED_ONE_EXPOSED_EVELYN_ROUTE_DURING_GREENHOUSE_INCIDENT_AT_SEVENTEEN",
-    "required_boundary": "NO_DESTINY_OR_ROMANTIC_ENTITLEMENT_FROM_MEMORY",
-    "required_cliff": "VICTORIA_NOTE_NO_MORE_DIRECT_ADRIAN_SUBSTITUTIONS"
+    "episode": "E98",
+    "title": "NO MORE DIRECT SUBSTITUTIONS",
+    "required_question": "DID_VICTORIA_POST_GREENHOUSE_ORDER_ACTUALLY_STOP_DIRECT_ADRIAN_SUBSTITUTIONS",
+    "required_evidence": "DOWNSTREAM_ROUTE_COMPLIANCE_AND_PRIVATE_CONTACT_RECORDS_NOT_VICTORIA_MEMO_ALONE",
+    "required_turn": "LATER_DIRECT_PRIVATE_AND_MARITAL_INTERACTIONS_REMAIN_WITH_HISTORICAL_EVELYN_WHILE_MARA_LATER_ROTATIONS_ARE_PUBLIC_MEDICAL_OR_CONTROLLED",
+    "required_relationship_boundary": "CONSENT_CONTINUITY_PROTECTED_NO_RETROACTIVE_SISTER_SUBSTITUTION_IN_PRIVATE_OR_SEXUAL_RELATIONSHIP",
+    "required_cliff": "PRE_WEDDING_IDENTITY_VERIFICATION_BECOMES_DECISIVE"
   },
   "prohibited": [
     "REOPEN_E61_E90_FIRE_ARC_WITHOUT_NEW_DEMONSTRATED_EVIDENCE",
@@ -109,6 +125,8 @@
     "USE_LILY_OR_DNA_AS_IDENTITY_SHORTCUT",
     "USE_BIOMETRIC_CARD_AS_AUTOMATIC_BIRTH_MARRIAGE_MATERNITY_OR_CIVIL_PROOF",
     "USE_ADRIAN_MEMORY_AS_CIVIL_IDENTITY_PROOF",
+    "USE_GREENHOUSE_MEMORY_AS_DESTINY_OR_ROMANTIC_ENTITLEMENT",
+    "USE_VICTORIA_ORDER_AS_PROOF_OF_COMPLIANCE_WITHOUT_DOWNSTREAM_RECORDS",
     "MAKE_ONE_WITNESS_OR_ONE_DOCUMENT_DISPOSITIVE",
     "RENUMBER_20B_EPISODE_MAP_FROM_RESEARCH_OPTION_ALONE"
   ],
