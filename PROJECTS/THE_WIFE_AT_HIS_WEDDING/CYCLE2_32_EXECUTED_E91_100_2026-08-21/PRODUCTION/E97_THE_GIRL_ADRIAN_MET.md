@@ -44,6 +44,9 @@ MARA: That sounds like you.
 ADRIAN: You laughed at it.
 MARA: That sounds less like me.
 ADRIAN: You were seventeen.
+ADRIAN: I told you sixteen when you first walked into the wedding. I remembered the age wrong. The event log puts it after your seventeenth birthday.
+MARA: Wrong age. Same event.
+ADRIAN: Yes.
 MARA: Fair.
 ADRIAN: I kept the handkerchief.
 MARA: Of course you did.
