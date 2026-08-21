@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_COMPARATIVE_FIXTURE",
+  "variant_earth_school_in_space":{"features":["ordinary classroom conflict","generic hallway gossip","parents drive decisions","space visible mainly through windows"],"habitat_economics_changes_choice":false,"transport_changes_independence":false,"maintenance_changes_work":false,"mixed_species_or_ai_changes_social_life":false,"result":"FAIL_TRANSPLANTED_EARTH_SCHOOL"},
+  "variant_genuinely_orbital":{"features":["shared housing allocation affects privacy and dating","spin-sector transit closures decide whether a teen can reach work","maintenance certification creates first-job status","vacuum/pressure rules change sport and risk","AI/synthetic/nonhuman neighbors alter etiquette and friendship","family cannot simply collect a teen by car","money is tied to transit, berth and apprenticeship access"],"habitat_economics_changes_choice":true,"transport_changes_independence":true,"maintenance_changes_work":true,"mixed_species_or_ai_changes_social_life":true,"result":"PASS_ORBITAL_ADOLESCENCE"},
+  "conclusion":"Orbital civilization passes only when habitat economics, transport, maintenance, jobs, mixed-species/AI context and physical constraints materially alter adolescence, independence and relationships.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST"
+}
