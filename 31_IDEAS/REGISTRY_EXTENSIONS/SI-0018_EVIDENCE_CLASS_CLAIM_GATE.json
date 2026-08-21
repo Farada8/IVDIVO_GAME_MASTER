@@ -1,0 +1,41 @@
+{
+  "candidate_id": "SI-0018",
+  "title": "Evidence-Class + Claim Satisfaction Gate",
+  "candidate_type": "TOOLING_OR_AUTOMATION",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type":"FOUNDER","locator":"2026-08-21 directive: concrete engineering modules/contracts/proofs/protocols with Self-Improvement","date":"2026-08-21"},
+    {"source_type":"GOOGLE_DRIVE","locator":"Cycle 5 synthesis 05_SYNTHESIS_AND_PATH_TO_GOAL.md","date":"2026-08-21","notes":"Human Evidence Firewall, Evidence Family Law and Proof Ledger explicitly require evidence classes and block cross-class substitution"},
+    {"source_type":"GITHUB","locator":"PR #103 audio post-render hardening","date":"2026-08-21","notes":"Concrete domain evidence: provider, machine, human and promotion stages must remain separate"},
+    {"source_type":"GITHUB","locator":"PR #105 Book Engine Milestone F DISCOVERY_ONLY bridge","date":"2026-08-21","notes":"Project sensors submit typed evidence, not global authority or literary superiority"}
+  ],
+  "problem_or_opportunity": "As engineering coverage increases, machine tests, AI reviews, source hashes, provider artifacts, human listens, specialist reviews, market results and Founder decisions can be accidentally conflated into a generic 'verified' label.",
+  "proposed_mechanism": "Represent evidence with explicit orthogonal class and root provenance family; represent claims with required evidence classes and optional minimum independent families; fail closed on missing class, cross-class impersonation or pseudo-independence; never authorize promotion/lock merely because a claim packet passes.",
+  "dedupe_relation": "EXTENSION_OF_SI_0012_EVIDENCE_LINEAGE_AND_SELF_IMPROVEMENT_GOVERNOR",
+  "related_candidates": ["SI-0007","SI-0009","SI-0012","SI-0015","SI-0016","SI-0017"],
+  "expected_benefit": "Prevents evidence inflation, false human/provider/market claims, accidental Founder-lock inference and model-report-count pseudo-replication.",
+  "evidence_state": "INTERNAL_ENGINEERING_EVIDENCE_PLUS_CROSS_DOMAIN_PRODUCTION_REQUIREMENTS",
+  "priority_vector": {"impact":"CRITICAL","recurrence":"SYSTEMIC","effort":"LOW_MEDIUM","regression_risk":"LOW","reversibility":"EASY","urgency":"HIGH","affected_surface":"PORTFOLIO"},
+  "development_contract": {
+    "implementation":"tools/ivdivo_evidence_class_gate.py",
+    "tests":"tests/test_evidence_class_gate.py",
+    "schema":"schemas/IVDIVO_EVIDENCE_CLAIM_PACKET_SCHEMA_v1.json",
+    "engineering_contract":"ENGINEERING_CONTRACTS/EVIDENCE_CLASS_AND_CLAIM_SATISFACTION_v1.0.md",
+    "evidence_classes":["DETERMINISTIC_MACHINE","INTERNAL_AI_REVIEW","SOURCE_PROVENANCE","PRODUCTION_OBSERVATION","PROVIDER","HUMAN_SIGNAL","SPECIALIST","MARKET","FOUNDER_AUTHORITY"],
+    "hard_firewall":"EVIDENCE_CLASSES_ARE_ORTHOGONAL_NOT_A_TOTAL_RANKING",
+    "promotion_requirements":["cross-domain pilot on book + audio claim packets","negative regressions remain fail-closed","real human/provider/specialist/market classes only when actually observed"]
+  },
+  "pilot_evidence": ["Local deterministic anti-inflation smoke: AI review cannot satisfy HUMAN_SIGNAL","Negative regression suite covers machine/provider, provenance/market, story-machine/specialist, pseudo-independent provenance families, Founder authority","Positive fixture requires exact requested class and independent families"],
+  "red_team_findings": ["An evidence gate can verify class satisfaction but cannot itself grant authority","Evidence independence follows root provenance, not report/model count","Prepared human-listener packet is not HUMAN_SIGNAL until actually performed","Unknown spend/time/duration must remain null rather than zero"],
+  "promotion_level": "NONE",
+  "application_targets": ["Self-Improvement proof ledger","Book Engine observation bridge","Audio release/casting/human-listen gates","Project specialist holds","CURRENT promotion proof packets"],
+  "verification_evidence": ["tests/test_evidence_class_gate.py","Cycle 5 Drive synthesis","PR #103 and PR #105 evidence-boundary requirements"],
+  "protected_authorities": ["Founder newest instruction","Human Signal protocol","Provider evidence","Specialist review","Market evidence","Story/project canon"],
+  "owner_role": "Evidence Integrity / Self-Improvement Governor",
+  "next_action": "Compile representative book/audio/system claim packets and run class-gate regression; attach output to proof ledger without inferring promotion.",
+  "next_gate": "CROSS_DOMAIN_EVIDENCE_PACKET_PILOT",
+  "hold_trigger": "Any requested substitution between evidence classes without an explicit controlling contract.",
+  "terminal_reason": null,
+  "last_movement": "2026-08-21"
+}
