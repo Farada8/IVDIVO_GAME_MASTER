@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "status": "CANDIDATE_RECORDS_ONLY_NOT_CURRENT_NOT_REGISTRY_WRITE_THROUGH",
+  "candidates": [
+    {
+      "candidate_id": "SI-0012",
+      "title": "Recovery Operational Pilot Harness",
+      "candidate_type": "PROGRAM_OR_CODE",
+      "status": "PROPOSED",
+      "scope": "UNIVERSAL_IVDIVO",
+      "dedupe_relation": "EXTENSION_OF_SI_0008_AND_SI_0009",
+      "problem_or_opportunity": "The verified v1 extractor and semantic v2 candidate still need a real-corpus, connector-aware, transactional end-to-end pilot harness before semantic recovery can be promoted.",
+      "proposed_mechanism": "Bind immutable corpus intake, v1 extraction, semantic/project partitioning, typed claim verification, GitHub/Drive evidence adapters, chat-only candidate persistence, transactional readback, idempotent rerun, completion gate and next-action handoff into one candidate pilot harness.",
+      "evidence_state": "DESIGN_EVIDENCE_ONLY",
+      "dependencies": ["SI-0008", "SI-0009", "connector verification adapters", "transactional write/readback", "real large transcript corpus"],
+      "protected_authorities": ["Founder newest instruction", "project canon/source-of-truth", "transcript is recovery evidence not canon", "no secret persistence"],
+      "owner_role": "Transcript Recovery / Operational Reconciler",
+      "next_action": "Implement bounded harness and run adversarial synthetic fixtures; then run first genuine large transcript without promoting candidate semantics beforehand.",
+      "next_gate": "FIRST_REAL_LARGE_TRANSCRIPT_END_TO_END_PILOT",
+      "promotion_level": "UNIVERSAL_EXTENSION_CANDIDATE",
+      "application_targets": ["18B recovery path", "SI-0009 candidate integration", "next-action resolver", "Learning Ledger"],
+      "hold_trigger": "No real corpus or connector/runtime integration evidence"
+    },
+    {
+      "candidate_id": "SI-0013",
+      "title": "Research Cycle Dedupe + Information-Gain Gate",
+      "candidate_type": "ENGINE_POLICY_OR_ROUTER_EXTENSION",
+      "status": "PROPOSED",
+      "scope": "UNIVERSAL_IVDIVO",
+      "dedupe_relation": "EXTENSION_OF_SELF_IMPROVEMENT_V2_WIP_AND_ROUTING_POLICY",
+      "problem_or_opportunity": "Parallel 32→64 research cycles can generate duplicate mechanisms, stale-base branches and more integration debt than evidence gain.",
+      "proposed_mechanism": "Before another meta-research cycle, evaluate scope overlap, new evidence, unique unimplemented mechanisms, external dependency, integration queue, invention queue and expected information gain. Default HOLD when the decisive dependency is external and proposed work mostly restates existing candidates. Direct Founder instruction may override scheduling but never upgrades evidence class.",
+      "evidence_state": "REPOSITORY_PATTERN_OBSERVATION_PLUS_DESIGN_EVIDENCE",
+      "dependencies": ["Self-Improvement v2", "current WIP/priority policy", "candidate/prompt inventory"],
+      "protected_authorities": ["Founder may explicitly switch focus or authorize another cycle", "Story-first priority when Founder has not switched focus"],
+      "owner_role": "Self-Improvement Orchestrator / Dedupe Editor",
+      "next_action": "Pilot on current open 32→64 branches and compare KEEP/MERGE/HOLD/PRUNE recommendations against manual review.",
+      "next_gate": "MULTI_BRANCH_DEDUPE_PILOT_PLUS_FALSE_HOLD_FALSE_RUN_REVIEW",
+      "promotion_level": "UNIVERSAL_POLICY_CANDIDATE",
+      "application_targets": ["Self-Improvement Meta Engine", "prompt router", "portfolio WIP policy", "Learning Ledger"],
+      "hold_trigger": "No independent pilot showing reduced duplication without suppressing useful distinct work"
+    }
+  ],
+  "registry_write_law": "Do not add these IDs to CURRENT registry family until exact-current freshness read, uniqueness validation, lifecycle schema validation and accepted integration/readback. Candidate file presence is not registration or promotion."
+}
