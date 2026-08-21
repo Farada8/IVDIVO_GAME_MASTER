@@ -1,0 +1,7 @@
+{
+  "schema":"NMM_LEARNING_BRIDGE_CONTRACT_v1",
+  "target":"audio/studio/runtime/learning_registry.py",
+  "record_flow":"DEFECT -> ROOT_CAUSE -> REPAIR -> RETEST -> RESULT -> REUSE_CONDITIONS",
+  "universalization_requires":["project_identity_stripped","exact_clue_text_stripped","asset_identity_stripped","human_evidence_where_claim_depends_on_listening","cross_project_replication_before_domain_promotion","explicit_review"],
+  "auto_promote":false
+}
