@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "CURRENT_PROJECT_ROUTING_STATE_NOT_STORY_CANON",
+  "project_id": "D10",
+  "title": "BLOODBOUND",
+  "active_engine": "THE_ERASED_DAUGHTERS",
+  "authority_note": "Founder newest instruction and Drive current project authority outrank this routing state. All current BLOODBOUND material remains WORKING until Founder approval.",
+  "drive_current_authority": {
+    "id": "17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8",
+    "title": "00_BLOODBOUND — CURRENT PROJECT AUTHORITY + NEXT ACTION v1.0"
+  },
+  "current_phase": "TEXT_COMPLETION_BLOCK_II",
+  "completed_frontier": "E01-E06_CURRENT_WORKING_BRANCH_COMPLETE",
+  "block_i_gate": {
+    "status": "PASS_TO_BLOCK_II",
+    "fatal": 0,
+    "major": 0,
+    "drive_id": "11qb_ikaXCZIf0pndHAZxhZ00Mbr6PiqnxaLOqBlLvAU",
+    "title": "BLOODBOUND — BLOCK I E01–E06 STORY + HUMAN SCENE GATE v1.0"
+  },
+  "current_episode_sequence": [
+    "E07_THE_MARRIED_NAME",
+    "E08_HOUSE_CORVEN",
+    "E09_WHAT_YOUR_FAMILY_DID",
+    "E10_THE_CLAIMANT",
+    "E11_STABLE_LIE",
+    "E12_THE_MINUTES"
+  ],
+  "next_safe_action": "WRITE_AND_GATE_E07_THROUGH_E12_USING_CURRENT_HUMAN_SCENE_DIALOGUE_AUTHORITY_THEN_RUN_BLOCK_II_STORY_AND_HUMAN_SCENE_REGRESSION",
+  "founder_approval": "PENDING",
+  "performance_validation": "DOWNSTREAM_REAL_TTS_LISTENER_EVIDENCE_NOT_CLAIMED",
+  "hard_locks": [
+    "NO_MATE_BOND_OR_MAGICAL_COMPULSION_FOR_LOVE_DESIRE_CONSENT_OBEDIENCE",
+    "RESONANCE_IS_WARD_INFORMATION_NOT_ROMANCE",
+    "NO_ROMANTIC_PHYSICAL_ESCALATION_WHILE_RIAN_RETAINS_CUSTODY_AUTHORITY",
+    "RIAN_AUTHORITY_RELINQUISHMENT_REMAINS_E15",
+    "MAGIC_MAY_POINT_TO_A_QUESTION_BUT_GUILT_AND_POLITICAL_TRUTH_REQUIRE_CONVERGING_EVIDENCE",
+    "DO_NOT_RESTORE_SUPERSEDED_E06_V1_0"
+  ],
+  "do_not_repeat": [
+    "DO_NOT_REBUILD_PHASE_A_B_ENGINE_COMPETITION_WITHOUT_NEW_FATAL_MAJOR_EVIDENCE",
+    "DO_NOT_REOPEN_BLOCK_I_AFTER_PASS_WITHOUT_NEW_EVIDENCE",
+    "DO_NOT_TREAT_HISTORICAL_PILOT_HOLD_AS_CURRENT_TEXT_COMPLETION_BLOCKER",
+    "DO_NOT_CLAIM_REAL_LISTENER_OR_TTS_PASS"
+  ],
+  "provenance": [
+    "Drive current authority 17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8",
+    "Drive Block I gate 11qb_ikaXCZIf0pndHAZxhZ00Mbr6PiqnxaLOqBlLvAU",
+    "CURRENT_WORKSTATE_v2.2 Bloodbound rebase"
+  ]
+}
