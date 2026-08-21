@@ -1,0 +1,16 @@
+{
+  "artifact": "BODYGUARD_RU_STAGE_PROTOCOL_STATE_MACHINE_v0_1",
+  "status": "CANDIDATE_PRACTITIONER_LOCK_PENDING",
+  "states": [
+    {"id":"STANDBY","meaning":"prepare but do not execute","must_not_equal":["ACK","GO"]},
+    {"id":"ACK","meaning":"recipient confirms standby/request","must_not_equal":["STANDBY","GO"]},
+    {"id":"GO","meaning":"execute cue now","must_not_equal":["STANDBY","ACK"]}
+  ],
+  "transitions": [
+    {"from":"STANDBY","to":"ACK","evidence":"operator acknowledgement"},
+    {"from":"ACK","to":"GO","evidence":"show caller execution command"}
+  ],
+  "clue_invariant": "E01 failure contains GO/execution without valid prior standby+ack chain.",
+  "lexical_candidates": {"STANDBY":["готовность","стэндбай","standby"],"ACK":["готов","принято","ack"],"GO":["гоу","GO"]},
+  "lock_requirements": ["validated STAGE reviewer response","all three states lexically distinct in practitioner speech","clue invariant remains understandable"]
+}

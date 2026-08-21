@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.audio.post_render.artifact_evidence/1.0",
+  "title": "IVDIVO Post-Render Artifact Evidence",
+  "type": "object",
+  "required": ["artifact_id", "sha256", "schema_version", "status", "verified"],
+  "properties": {
+    "artifact_id": {"type": "string", "minLength": 1},
+    "sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+    "schema_version": {"type": "string", "minLength": 1},
+    "status": {"type": "string", "minLength": 1},
+    "verified": {"const": true},
+    "source_ref": {"type": "string"},
+    "verified_at": {"type": "string"}
+  },
+  "additionalProperties": true,
+  "x-ivdivo-law": "A path or filename is not PASS evidence. Bytes/hash/schema/semantic status must be verified."
+}

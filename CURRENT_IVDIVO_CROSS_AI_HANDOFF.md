@@ -4,8 +4,11 @@
 **Updated:** 2026-08-21  
 **Machine state:** `CURRENT_IVDIVO_SYSTEM_STATE.json`  
 **Portfolio overlay:** `CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json`  
+**Coverage index:** `PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json`  
 **D10 project state:** `PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json`  
-**D01 freshest working state:** `PROJECTS/THE_WIFE_AT_HIS_WEDDING/FINALIZATION_32_PASS_2026-08-21/CURRENT_EXECUTION_STATE.json` on branch `wife/wave2-e91-95-32x64-2026-08-21` / PR #85  
+**D01 current state:** `PROJECTS/THE_WIFE_AT_HIS_WEDDING/CURRENT_STATE.md`  
+**D01 historical pre-prose state:** `PROJECTS/THE_WIFE_AT_HIS_WEDDING/FINALIZATION_32_PASS_2026-08-21/CURRENT_EXECUTION_STATE.json` — SUPERSEDED ARCHIVE POINTER  
+**Persistence closure:** `PERSISTENCE_CLOSURE_PASS_2026-08-21.json`  
 **Machine execution:** `CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json`
 
 ## Primary law
@@ -13,20 +16,9 @@
 Do not make the Founder restate recoverable work and do not wait for another `и` when the next obligation is already authorized, unambiguous, unblocked and executable.
 
 Before substantive work:
-`CURRENT AUTHORITY -> IF PRIOR CHAT TRANSCRIPT IS PASTED THEN FULL-CHAT RECOVERY -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> CURRENT_IVDIVO_SYSTEM_STATE.json -> PORTFOLIO DELTA FOR PORTFOLIO SLICE -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY + LEARNING LEDGER -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> READBACK -> REPEAT UNTIL REAL GATE`.
+`CURRENT AUTHORITY -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> PORTFOLIO DELTA -> COVERAGE INDEX -> FRESHNESS SWEEP -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> READBACK -> PERSISTENCE CLOSURE CHECK -> CONTINUE UNTIL REAL GATE`.
 
-A sibling-chat statement is discovery context only until its actual result/persisted artifact/status/version/gates are located and verified. Rebase stale writes; do not force-overwrite a newer sibling frontier.
-
-## Full-chat emergency recovery
-
-Current protocol: `IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md`.  
-Drive mirror: `1MsB3B0Byh4AlCMLtmPde9rXguzaejwUswBD5qPM8W50`.
-
-Founder workflow `OLD CHAT -> Ctrl+A -> Ctrl+C -> NEW CHAT -> paste -> продолжай` is supported. The pasted transcript is recovery corpus, not canon. Recover directives, artifact claims and fully present unsaved work; verify persistence claims; dedupe/reconcile; exclude secrets; persist accepted material; then continue from the reconciled frontier.
-
-## Current portfolio directive
-
-Finish active unfinished text projects to legitimate text/story lock first. Do not reopen locked prose merely because the production OS improved. After the active text portfolio is complete, batch locked works through Audio Novel Studio.
+A sibling-chat statement is discovery context only until its actual result/persisted artifact/status/version/gates are located and verified. `artifact persisted != shutdown transaction complete`; a handoff is complete only after all CURRENT/HANDOFF/COVERAGE/ROUTER pointers are reconciled or explicitly marked superseded.
 
 ## D10 BLOODBOUND — FOUNDER LOCK ISSUED
 
@@ -38,46 +30,33 @@ Finish active unfinished text projects to legitimate text/story lock first. Do n
 **Founder Lock artifact Drive:** `1Fp0vPbvt8JaGxGIvfxwyN4LuA4BXo8Ia1Rcp2Qk8hDA`  
 **Current project authority Drive:** `17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8`
 
-The Founder explicitly approved recording the lock on 2026-08-21. Do not generate E25 or reopen D10 story text without new FATAL/MAJOR evidence or a new Founder instruction.
+Do not generate E25 or reopen D10 story text without new FATAL/MAJOR evidence or a new Founder instruction. This story lock does not claim real provider/TTS output, blind human listener validation, release-stage legal/factual review, economics or market response.
 
-Hard locks remain: magic is not guilt/legal/political/romantic proof; Anika/Sabine closes through converging ordinary evidence; Celia is witness, not mastermind; Mira refuses hereditary rule; Rian materially relinquishes authority before romantic escalation; Bloodbond is an optional future adult-consent choice.
+## D01 THE WIFE AT HIS WEDDING — TEXT COMPLETE / FOUNDER DECISION GATE
 
-This story lock does **not** claim real provider/TTS output, blind human listener validation, release-stage legal/factual review, economics or market response.
+**Current controlling GitHub state:** `PROJECTS/THE_WIFE_AT_HIS_WEDDING/CURRENT_STATE.md`  
+**Status:** E01–E120 TEXT COMPLETE / FINAL STORY GATE PASS / READY FOR FOUNDER LOCK DECISION / NOT YET FOUNDER-LOCKED.  
+**Main conflict:** CLOSED.  
+**Final Story Gate Drive:** `1C-VzyTORtauuDFZToJ4bx5Nic9dOwsrPfRudL3dAOcM` — PASS / FATAL 0 / MAJOR 0 / BLOCKING MEDIUM 0.  
+**Season regression Drive:** `1-kXiIx3utxWTmIlPUuudiWVsXLfCHbBTOAADrrLrGF8` — PASS / FATAL 0 / MAJOR 0.  
+**Canonical final block Drive:** `14ImsRm8aIZhAgVXYnfs3ZSeZnSQQaNIMNZ-wMhWrlxo` — E116–E120 PASS.
 
-## Current active text frontier — D01 THE WIFE AT HIS WEDDING
+The former `FINALIZATION_32_PASS_2026-08-21/CURRENT_EXECUTION_STATE.json` pre-prose queue is now explicitly `SUPERSEDED_ARCHIVE_POINTER`. Do not resume E91/E96/E97 drafting from it and do not run its old 64-prompt queue as a current obligation.
 
-D01 has been fresh-rebased beyond the historical E51+/E61–90 aggregate snapshots. E61–E90 remains CLOSED/PASS and must not be reopened without demonstrated FATAL/MAJOR evidence.
+**Exact next obligation:** FOUNDER EXPLICIT LOCK DECISION FOR D01.  
+Do not self-lock. Do not generate E121. Do not reopen E01–E120 without new FATAL/MAJOR evidence or explicit Founder direction.
 
-Freshest working branch: `wife/wave2-e91-95-32x64-2026-08-21` / draft PR #85. This is WORKING and not silently main/canon.
+External/downstream gates still NOT RUN / NOT SIMULATED: Human Signal, full-season listener/audio validation, jurisdiction-specific legal specialist review, real provider/TTS performance, market response.
 
-E91–E95 are WORKING-COMPLETE with prior Red Team FATAL 0 / MAJOR 0. Current Drive script: `1BGbN9Mlz4I9-uxMAfoJ-sYM4QgwFIFQr3yzu_D4uWjg`. Do not use Drive ID `1YZgSpNWSvg54vZGsjGM31sJJ-6pT1cxha3Ss3zqjQXM` as current master; it was later renamed `ARCHIVE_SIBLING_ALT_22_EPISODES_91-95_PRE_REBASE_GRACE_KELLAN`.
-
-### E96 — THE TWO CARDS
-
-**Status:** WORKING-COMPLETE / PASS TO E97  
-**Runtime:** 1138 spoken English words / gate 1100–1550 PASS  
-**FATAL:** 0  
-**MAJOR:** 0  
-**Drive folder:** `11aNNQU3FcitB_BoJUUHzY-DcsnMiHVD-`  
-**Drive script:** `14VXqWzC72DmLaQNgzghYjHupFACXe0Wnfco-rRGAAV8`  
-**Drive gate:** `1-njMR1lIBmcl_ljQ_hEaBXxGCfuYXBdDaIRozmsX_5g`  
-**GitHub branch folder:** `.../WAVE3_EXECUTION_E96_2026-08-21/`
-
-E96 answer: historical teen card `Mara Quinn` maps to current Mara; historical teen card `Evelyn` maps to current Evelyn. This establishes **teenage-body continuity only**. It does NOT prove newborn/Baby-B identity, birth/civil identity, marriage, maternity, property or name entitlement.
-
-E96 preserves ordinary-life pressure and independent sister agency: Evelyn files the narrow two-birth notice; one paused client partially restarts work. The episode exits by opening the Hawthorne greenhouse route question, not an unrelated shock.
-
-**Exact next obligation:** E97 — `THE GIRL ADRIAN MET`. Build the epistemic contract first: WITNESSED / REMEMBERED / DOCUMENT_DERIVED / RECONSTRUCTED. Require independent Hawthorne security/event route evidence to place current Mara on one exposed Evelyn route during the greenhouse incident. Adrian memory may carry emotional truth but is NOT dispositive civil identity proof. No destiny/romantic-entitlement shortcut. Required cliff: Victoria boundary `NO MORE DIRECT ADRIAN SUBSTITUTIONS`.
-
-External D01 gates still NOT RUN: Human Signal; jurisdiction-specific legal specialist review; real listener/audio validation.
+If Founder locks D01: persist Founder Story Lock / Recording Authority, update all current state/handoff/portfolio pointers, then fresh-rebase IVDIVO Book 3 / SMITH and continue full-novel production under current Human Scene/Dialogue authority.
 
 ## Pending Founder decision gate
 
-D09 `THE MAN WHO CAME BACK` remains E01–E24 TEXT COMPLETE / Final Season Story Gate PASS / FATAL 0 / MAJOR 0 / NOT YET FOUNDER-LOCKED. Do not create E25 or rerun its reconciliation/final gate.
+D09 `THE MAN WHO CAME BACK` remains E01–E24 TEXT COMPLETE / Final Season Story Gate PASS / FATAL 0 / MAJOR 0 / NOT YET FOUNDER-LOCKED. Do not create E25 or rerun its final gate absent new evidence.
 
-## Queue after D01 completion
+## Queue after D01 Founder Lock
 
-1. IVDIVO Book 3 / SMITH — authority reconciliation -> complete architecture -> Human Scene/Dialogue calibration -> full novel -> Narrative OS gates -> lock.
+1. IVDIVO Book 3 / SMITH — fresh authority reconciliation -> Human Scene/Dialogue calibration -> complete architecture -> full novel -> Narrative OS gates -> lock.
 2. IVDIVO Book 4 — only after Book 3 consequences lock.
 3. Whole-portfolio text-lock audit.
 4. Audio Novel Studio batch ingest/adaptation/production for locked works.
@@ -86,19 +65,17 @@ D09 `THE MAN WHO CAME BACK` remains E01–E24 TEXT COMPLETE / Final Season Story
 
 Current production law: `SCENE-LEVEL NATURALISM PASS != CORPUS-LEVEL SPEAKER/NARRATOR SEPARATION` and `LINE CAUSALITY -> SCENE HUMAN TRUTH -> CORPUS RHETORICAL REGRESSION`.
 
-Use `CURRENT_IVDIVO_HUMAN_SCENE_DIALOGUE_AUTHORITY.md`: contrastive-syntax fingerprint, acknowledgement-function matrix, register distance, vocabulary/metaphor provenance, tactic-vs-surface separability, emotional latency and listening trace. Do not turn these diagnostics into automatic bulk rewriting.
+Use `CURRENT_IVDIVO_HUMAN_SCENE_DIALOGUE_AUTHORITY.md`. Do not turn static corpus diagnostics into automatic bulk rewriting; repair only demonstrated defects and preserve locked story causality.
 
 ## Cross-model execution contract
 
-Current verified architecture = 26 functions: `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md` v1.2 + `IVDIVO_NARRATIVE_OS/19_MULTI_MODEL_EXECUTION_PROMPTS_EXPANSION_v1.0.md`.
-
-Same source/version/hash when comparing models. Separate diagnosis from proposed fix. No model voting. External output is evidence, not canon. Reusable findings return through Improvement Registry/Learning Ledger after semantic dedupe.
+External models are evidence/review workers, not canon authorities. Same source/version/hash when comparing models. Separate diagnosis from proposed fix. No model voting. Reusable findings return through Improvement Registry/Learning Ledger after semantic dedupe.
 
 ## Self-improvement / anti-loss engine
 
 Current router: `CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md`.  
 Engine: `IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md`.  
-Transcript recovery: `18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md`.  
+Transcript recovery: `IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md`.  
 Registry: `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json`.  
 Learning ledger: `CURRENT_IVDIVO_LEARNING_LEDGER.json`.
 
@@ -114,10 +91,10 @@ Fresh-unzip regression: **290/290 pytest PASS**.
 
 ## ROOM917 product evidence frontier
 
-ROOM917 is post-render, not S0/S1. Do not restart historical prelive canaries, blanket-fill silence/ambience/music, reapply obsolete Scene 3 fixes, or regenerate missing critical source assets from summaries/metrics. Human perceptual evidence remains a real gate.
+ROOM917 is post-render, not S0/S1. Do not restart historical prelive canaries or regenerate critical source assets from summaries. Resolve from `AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json` and actual post-render evidence.
 
 ## Stop conditions
 
 Stop only at a real authority conflict, Founder creative/canon decision, required human evidence, unavailable external provider/critical bytes, unresolved FATAL/MAJOR, irreversible approval gate, real tool limitation, or safety/legal constraint.
 
-Otherwise: **continue -> verify -> persist -> read back -> continue again.**
+Otherwise: **continue -> verify -> persist -> read back -> reconcile pointers -> close persistence transaction -> continue again.**

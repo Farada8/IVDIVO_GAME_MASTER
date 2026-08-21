@@ -1,0 +1,13 @@
+{
+  "artifact": "BODYGUARD_REVIEW_REQUEST_REGISTRY_v1",
+  "authority": "CURRENT v8 / PMV177-180 reviewer packets",
+  "roles": {
+    "NATIVE_RU": {"packet":"BODYGUARD_PMV177_RU_NATIVE_REVIEWER_PACKET_v1_0.md","domain":["spoken_naturalness","translationese","register","character_voice"],"allowed_item_ids":["BG_E01_S1_028","BG_E01_S1_032","BG_E01_S1_061","BG_E01_S2_087","BG_E01_S2_088","BG_E01_S2_106","BG_E01_S2_111","BG_E01_S3_120","BG_E01_S3_121","BG_E01_S3_122","BG_E01_S3_143","BG_E01_S3_160","BG_E01_S3_161","BG_E01_S3_166","BG_E01_S3_180","BG_E01_S3_186","BG_E01_S3_188","BG_E01_S3_190"],"required_min_items":8},
+    "STAGE": {"packet":"BODYGUARD_PMV178_RU_STAGE_PRACTITIONER_PACKET_v1_0.md","domain":["standby","acknowledgement","GO","cue","lift","stage_left","show_height"],"allowed_item_ids":["STAGE_STANDBY","STAGE_ACK","STAGE_GO","STAGE_FINAL_DESCENT","STAGE_DENIAL_GO"],"required_min_items":5},
+    "LIVE_AUDIO": {"packet":"BODYGUARD_PMV179_RU_AUDIO_PRACTITIONER_PACKET_v1_0.md","domain":["IEM","talkback","bodypack","channel_routing"],"allowed_item_ids":["AUDIO_IEM","AUDIO_TALKBACK_RIGHT","AUDIO_BAND_CLICK_LEFT","AUDIO_SECURITY_ROUTE","AUDIO_BODYPACK"],"required_min_items":5},
+    "CLOSE_PROTECTION": {"packet":"BODYGUARD_PMV180_RU_PROTECTION_PRACTITIONER_PACKET_v1_0.md","domain":["route","client_term","emergency_command","consent_power","evidence_custody"],"allowed_item_ids":["CP_ROUTE","CP_THREAT_INFO","CP_EMERGENCY_AUTHORITY","CP_MOVE_COMMAND","CP_EVIDENCE_CUSTODY"],"required_min_items":5}
+  },
+  "decision_values": ["KEEP","PATCH","HOLD"],
+  "confidence_range": [0,100],
+  "hard_rules": ["reviewer role must be one registered role","item ids must belong to that role's packet","PATCH requires non-empty replacement_text","HOLD cannot be converted to PASS downstream","reviewer response never edits canon directly"]
+}

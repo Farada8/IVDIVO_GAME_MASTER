@@ -1,0 +1,53 @@
+{
+  "schema": "ivdivo.self_improvement.cycle5/1.0",
+  "updated": "2026-08-21",
+  "status": "CYCLE5_EXECUTED_PROOFS_PROTOCOLS_PILOT_NOT_CURRENT_AUTHORITY",
+  "governing_authority": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+  "fresh_main_before_branch": "58f434d7582a193ab3e120491159ccdec349717e",
+  "cycle": {
+    "runs_executed": 32,
+    "pass_engineering": 27,
+    "bounded_evidence_holds": 5,
+    "next_run_cards_created": 64,
+    "next_run_cards_auto_authorized": false
+  },
+  "regression": {
+    "warm": "64/64_PASS",
+    "cold_unpack": "64/64_PASS"
+  },
+  "package": {
+    "name": "IVDIVO_SELF_IMPROVEMENT_CYCLE5_PROOFS_PROTOCOLS_v0.1.zip",
+    "sha256": "ff25f78b1debb6d1c0136627f97c75f807e23c7c9536c33c001d5cee66e2e8ca",
+    "drive_file_id": "1J_MF8jBk0F-TCZpb4j1Nnbqub5a31RrV",
+    "drive_folder_id": "1hgDSbsq9W0QLNwq7Zqg-CbOSXxagZeN_"
+  },
+  "parallel_rebase": {
+    "PR108": "SESSION_RESILIENCE_SI0014_CANDIDATE; duplicate SI-0010 history exposed; full-family ID freshness law accepted as candidate input",
+    "PR105": "BOOK_ENGINE_MF_C01_C02_C03_DISCOVERY_ONLY; cross-book evidence still required",
+    "D01": "E01_E120_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_FOUNDER_LOCK_DECISION; Human Signal/cross-model/legal/audio external gates not run",
+    "AUDIO_WAVE7": "MERGED_CURRENT_WITH_DRIVE_READBACK; no parallel Audio OS justified"
+  },
+  "candidate_identity": {
+    "new_si_id_allocated": false,
+    "reason": "FAIL_CLOSED_FULL_REGISTRY_FAMILY_COMPLETENESS_NOT_PROVEN_WITH_PARALLEL_PR108_SI0014_RESERVATION",
+    "current_main_family_known": "SI-0001..SI-0013 via base + known extensions",
+    "parallel_reserved_candidate": "SI-0014 in PR108",
+    "next_id": "UNALLOCATED_UNTIL_FRESH_COMPLETE_FAMILY_CHECK"
+  },
+  "highest_value_real_next": [
+    "D01_OR_D04_REAL_HUMAN_SIGNAL",
+    "MF_C03_SECOND_BOOK_TRANSFER_WITH_HEALTHY_NO_CHANGE_CONTROL",
+    "SI0009_SECOND_LOCKED_AUDIO_PROJECT_REPLICATION",
+    "SI0014_SI0012_TRANSACTION_INTERFACE_DEDUPE",
+    "MEASURED_AUDIO_ECONOMICS_CANARY"
+  ],
+  "prohibited": [
+    "NO_SECOND_SELF_IMPROVEMENT_OS",
+    "NO_MODEL_AS_HUMAN_SIGNAL",
+    "NO_BLIND_64_EXECUTION",
+    "NO_FORCE_OVERWRITE",
+    "NO_PACKAGE_RELABEL",
+    "NO_STALE_D01_EPISODE_RESUME",
+    "NO_NEW_SI_ID_FROM_PARTIAL_REGISTRY_VISIBILITY"
+  ]
+}

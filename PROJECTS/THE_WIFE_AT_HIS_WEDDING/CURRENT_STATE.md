@@ -23,6 +23,35 @@ E116–E120 runtime/scene gate: PASS; spoken counts 1272 / 1129 / 1122 / 1134 / 
 
 Any duplicate `ARCHIVE_EMPTY_SIBLING_*` E106–E110 or E116–E120 placeholder is non-authoritative and must not be restored.
 
+## Post-text-complete finalization delta — 2026-08-21
+
+A bounded post-regression repair and new 32×64 finalization package now exists.
+
+GitHub package: `PROJECTS/THE_WIFE_AT_HIS_WEDDING/POST_TEXT_COMPLETE_32X64_2026-08-21/`  
+Drive mirror folder: `22_POST_TEXT_COMPLETE_32X64_FINALIZATION_2026-08-21`  
+Drive folder ID: `1NzGs3OiXzpTKuWFTfUywgE-v7Tmiw3pj`
+
+Package status:
+- 32/32 post-text-complete prompts EXECUTED;
+- 64 evidence-driven next prompts DESIGNED / READY / NOT EXECUTED;
+- story verdict remains **FATAL 0 / MAJOR 0**;
+- no new prose authorized;
+- E121 remains prohibited absent new evidence/Founder direction;
+- external Human Signal / legal-specialist / real listening / provider / market gates remain NOT RUN.
+
+Post-regression continuity repair:
+- defect: early Adrian memory implied greenhouse event at age sixteen while later documentary chronology places the event after Mara’s seventeenth birthday;
+- earliest-cause repair: E97 now explicitly records that Adrian remembered the age wrong, not the event;
+- GitHub repair commit: `7224959e8088936e9bc70abca3eaecf9fc416278`;
+- no descendant story redesign is required; greenhouse ownership, consent history, marriage/maternity chain, Baby-B proof and final remedy remain unchanged.
+
+Parallel Wife PR disposition:
+- PR #73 `research/wife-final-arc-32x64` = **STALE_PROVENANCE / RESEARCH ONLY**; it predates completed E01–E120 prose.
+- PR #85 `wife/wave2-e91-95-32x64-2026-08-21` = **STALE_PROVENANCE / RESEARCH ONLY**; its `next E96` pointer is obsolete.
+- Do not merge either branch state over current `main` as a story frontier.
+
+Reusable mechanisms extracted by the package remain CANDIDATE ONLY: `POST_REGRESSION_DELTA_GATE`, `STALE_STORY_BRANCH_ANTI_REGRESSION`, `MEMORY_VS_DOCUMENT_CONTINUITY_REPAIR`, `LOCK_READINESS_MATRIX`, `CORPUS_BEFORE_BULK_REWRITE`. They are not global authority until separately tested/promoted.
+
 ## Locked story result pending Founder approval
 
 The season resolves the two-live-births / one-original-certificate conflict without erasing either adult woman:

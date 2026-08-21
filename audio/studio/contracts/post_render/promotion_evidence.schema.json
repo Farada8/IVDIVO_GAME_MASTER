@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.audio.post_render.promotion_evidence/1.0",
+  "title": "IVDIVO Post-Render Domain Promotion Evidence",
+  "type": "object",
+  "required": ["project_id", "synthetic_only", "locked_source", "real_audio_bytes", "real_defect_caught", "selective_repair_regression_pass", "human_listen_pass"],
+  "properties": {
+    "project_id": {"type": "string", "minLength": 1},
+    "synthetic_only": {"type": "boolean"},
+    "locked_source": {"type": "boolean"},
+    "real_audio_bytes": {"type": "boolean"},
+    "real_defect_caught": {"type": "boolean"},
+    "selective_repair_regression_pass": {"type": "boolean"},
+    "human_listen_pass": {"type": "boolean"},
+    "source_master_sha256": {"type": "string"},
+    "repair_master_sha256": {"type": "string"},
+    "false_positive_count": {"type": ["integer", "null"], "minimum": 0},
+    "manual_override_count": {"type": ["integer", "null"], "minimum": 0}
+  },
+  "additionalProperties": true,
+  "x-ivdivo-law": "Domain promotion needs two independent real projects. Synthetic fixtures, duplicate evidence families, or machine-only review cannot satisfy the promotion requirement."
+}

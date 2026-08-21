@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.audio.post_render.human_listen/1.0",
+  "title": "IVDIVO Human Post-Render Listen Evidence",
+  "type": "object",
+  "required": ["status", "reviewer_type", "artifact_sha256", "reviewed_at"],
+  "properties": {
+    "status": {"enum": ["PASS", "FAIL", "HOLD"]},
+    "reviewer_type": {"enum": ["HUMAN_LISTENER", "HUMAN_ENGINEER", "HUMAN_DIRECTOR"]},
+    "artifact_sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+    "reviewed_at": {"type": "string", "minLength": 1},
+    "timecoded_findings": {"type": "array"},
+    "causal_story_regression": {"type": ["boolean", "null"]},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": true,
+  "x-ivdivo-law": "Machine review plans may compress attention but may never fabricate or replace the human listen evidence required by the release/promotion gate."
+}
