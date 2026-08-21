@@ -1,0 +1,22 @@
+{
+  "project": "IVDIVO_AUDIO_NOVEL_ENGINE",
+  "phase": "WAVE4_INTERNAL_STUDIO_SPRINT_1",
+  "date": "2026-08-21",
+  "base_branch": "audio-novel-engine/32x-wave3-2026-08-21",
+  "new_tests": {"run": 35, "passed": 35, "failed": 0, "errors": 0},
+  "prior_wave3_tests_recorded": {"run": 44, "passed": 44, "failed": 0, "errors": 0},
+  "cumulative_recorded_deterministic_passes": 79,
+  "provider_calls_this_sprint": 0,
+  "human_listening_claims_this_sprint": 0,
+  "story_mutations": 0,
+  "authenticated_provider_connector_available": false,
+  "studio_intelligence": "GO_FOR_REVIEW",
+  "automatic_director": "GO_FOR_REVIEW",
+  "performance_intelligence": "GO_FOR_REVIEW",
+  "human_review_compressor": "GO_FOR_REVIEW",
+  "economics_engine": "GO_FOR_REVIEW",
+  "lesson_zero_abc_benchmark": "HOLD_FOR_LIVE_RENDER_EVIDENCE",
+  "studio_v1": "HOLD",
+  "exact_next_external_action": "authenticated inventory -> Narrator/Ethan/Aoife auditions -> pronunciation/pair gate -> exactly 3 live LESSON ZERO canary requests -> raw WAV/alignment -> A/B/C benchmark renders -> human and cost evidence",
+  "exact_next_internal_action": "designate one canonical runtime code location, reconcile Wave3 plus Studio Intelligence there without parallel implementations, add golden/negative CI fixtures, then consume real canary evidence when available"
+}
