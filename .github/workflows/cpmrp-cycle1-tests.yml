@@ -1,0 +1,27 @@
+name: CPMRP Cycle1 Tests
+
+on:
+  pull_request:
+    paths:
+      - '31_IDEAS/SPRINTS/2026-08-21_CPMRP_CREATIVE_PROVENANCE_MICROROYALTY_CYCLE1/**'
+      - '.github/workflows/cpmrp-cycle1-tests.yml'
+  push:
+    branches:
+      - 'rnd/cpmrp-cycle1-32to64-2026-08-21'
+    paths:
+      - '31_IDEAS/SPRINTS/2026-08-21_CPMRP_CREATIVE_PROVENANCE_MICROROYALTY_CYCLE1/**'
+      - '.github/workflows/cpmrp-cycle1-tests.yml'
+
+jobs:
+  deterministic-contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run CPMRP deterministic proof suite
+        env:
+          PYTHONPATH: 31_IDEAS/SPRINTS/2026-08-21_CPMRP_CREATIVE_PROVENANCE_MICROROYALTY_CYCLE1/runtime
+        run: >-
+          python 31_IDEAS/SPRINTS/2026-08-21_CPMRP_CREATIVE_PROVENANCE_MICROROYALTY_CYCLE1/tests/test_cpmrp_core.py
