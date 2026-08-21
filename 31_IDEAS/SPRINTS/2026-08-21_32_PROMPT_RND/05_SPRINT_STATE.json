@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-21",
+  "status": "SPRINT_EXECUTED_RESULTS_SYNTHESIZED_NEXT_PROMPTS_READY",
+  "scope": "IVDIVO_WRITING_DRAMA_AUDIO_MULTI_AI_RND",
+  "founder_instruction": "32 prompts -> sequential execution -> analysis/structure -> persist GitHub+Drive -> derive 64 prompts",
+  "authority_protection": [
+    "NO_SILENT_STORY_CANON_CHANGE",
+    "D09_FOUNDER_LOCK_NOT_ISSUED",
+    "REFERENCE_ONLY_SOURCES",
+    "NO_NEW_EVIDENCE_NO_GLOBAL_REWRITE"
+  ],
+  "baseline": {
+    "system_state_schema": "1.9",
+    "self_improvement_state_schema": "2.7"
+  },
+  "counts": {
+    "prompts_executed": 32,
+    "next_prompts_derived": 64
+  },
+  "highest_priority_gaps": [
+    "SI_0008_REGISTRY_STATE_DRIFT",
+    "PROJECT_STATE_COVERAGE",
+    "TRANSCRIPT_RECOVERY_NOT_IN_PROMOTED_V11_2_ZIP",
+    "OPPOSITION_ADAPTATION_LEDGER",
+    "RELATIONSHIP_AUTHORITY_GRAPH",
+    "UNIVERSAL_EVIDENCE_LEDGER",
+    "BLOCKED_FRONTIER_PARALLEL_SCHEDULER"
+  ],
+  "recommended_first_next_prompts": ["N05", "N06", "N57", "N58", "N03", "N04", "N19", "N25"],
+  "next_gate": "RUN_BEST_CANDIDATE_ROUTER_THEN_EXECUTE_HIGHEST_VALUE_BOUNDED_TRANCHE",
+  "do_not_do": [
+    "DO_NOT_AUTO_RUN_ALL_64_WITHOUT_REBASE",
+    "DO_NOT_LOCK_D09",
+    "DO_NOT_GENERATE_D09_E25",
+    "DO_NOT_CREATE_DUPLICATE_UNIVERSAL_ROUTER",
+    "DO_NOT_REREAD_FULL_LIBRARY_WITHOUT_DECISION_TRIGGER"
+  ]
+}
