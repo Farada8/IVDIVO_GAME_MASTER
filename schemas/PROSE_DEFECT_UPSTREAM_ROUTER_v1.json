@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.prose_defect_router/1.0",
+  "title":"IVDIVO Prose Defect Upstream Router",
+  "type":"object",
+  "required":["passage_id","observed_symptom","scene_function_check","paragraph_topic_chain_check","reader_state_continuity_check","inner_outer_tempo_check","earliest_failed_layer","authorized_repair_layer"],
+  "properties":{
+    "passage_id":{"type":"string"},
+    "observed_symptom":{"type":"array","items":{"type":"string","enum":["CHOPPINESS","REPETITION","STOCK_PHRASING","GENERATED_SYMMETRY","OVER_EXPLANATION","VOICE_CONVERGENCE","UNCLEAR_REFERENCE","RHYTHM_FLATNESS","OTHER"]}},
+    "scene_function_check":{"type":"string","enum":["PASS","FAIL","UNKNOWN"]},
+    "paragraph_topic_chain_check":{"type":"string","enum":["PASS","FAIL","UNKNOWN"]},
+    "reader_state_continuity_check":{"type":"string","enum":["PASS","FAIL","UNKNOWN"]},
+    "inner_outer_tempo_check":{"type":"string","enum":["PASS","FAIL","UNKNOWN"]},
+    "earliest_failed_layer":{"type":"string","enum":["STORY","CHARACTER","SCENE","PARAGRAPH_TOPIC_CHAIN","READER_STATE_CONTINUITY","INNER_OUTER_TEMPO","SENTENCE_LINE","PERFORMANCE_ADAPTATION","TRANSLATION","NO_PROVEN_DEFECT"]},
+    "authorized_repair_layer":{"type":"string"},
+    "mechanical_sentence_smoothing_authorized":{"type":"boolean"},
+    "protected_voice_or_story_functions":{"type":"array","items":{"type":"string"}}
+  }
+}
