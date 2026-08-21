@@ -17,6 +17,10 @@ Drive ID: `1B_iDVPXR0JgyKFb6mMohXnzzrkEGnZRptE4s_z1nM_E`
 `IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md`  
 Drive ID: `1ZG15kNcGjUKR_OKHQoXcqfrfVddlX6ma`
 
+### Current Drive studio index
+`00 — IVDIVO AUDIO STUDIO INDEX v3.3 CURRENT`  
+Drive ID: `1dq5lBirQtQ7uiPgqzokc09WUpEYHVL09vNpYxotbBvY`
+
 This v3.3 consolidated release is the current universal audio-production authority discovered on 2026-08-21. Earlier v1/v2/v3.0–v3.2 documents remain base/history only where the current authority explicitly retains them.
 
 `IVDIVO_AUDIO_PRODUCTION_CANON_AND_BOOT_OS_v1.0.md` is a historical/base layer, **not** the current top router.
@@ -53,7 +57,10 @@ The pipeline is a dependency DAG. Independent branches may run in parallel after
 
 ## Project overlay requirement
 
-Instantiate `IVDIVO_AUDIO_PROJECT_OVERLAY_TEMPLATE_v1.0.md` or a newer equivalent for each active project before large-scale rendering.
+Instantiate `IVDIVO_AUDIO_PROJECT_OVERLAY_TEMPLATE_v1.1.md` or a later current equivalent for each active project before large-scale rendering.
+
+Drive mirror: `01 — IVDIVO AUDIO PROJECT OVERLAY TEMPLATE v1.1`  
+Drive ID: `1Stx3R6qP4bIoyrRpivCLhrgU7rvz-xg9Df0jMZ9N-io`
 
 The overlay binds universal process to one project’s:
 - story authority and protected text;
