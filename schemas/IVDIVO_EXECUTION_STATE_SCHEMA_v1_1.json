@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.execution_state/1.1",
+  "title": "IVDIVO Persisted Project Execution State",
+  "description": "Machine-readable companion to IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md v1.1. Authority rank and production freshness remain separate dimensions.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "active_project",
+    "active_line",
+    "active_branch",
+    "mode",
+    "current_phase",
+    "authority_sources",
+    "current_source",
+    "completed_artifacts",
+    "last_completed_artifact",
+    "open_gates",
+    "unresolved_fatal_major",
+    "dependency_dag",
+    "next_unblocked_obligations",
+    "selected_next_action",
+    "blocked_reasons",
+    "state_revision",
+    "state_status"
+  ],
+  "properties": {
+    "schema_version": {"const": "ivdivo.execution_state/1.1"},
+    "updated_at": {"type": ["string", "null"]},
+    "project_id": {"type": "string", "minLength": 1},
+    "active_project": {"type": "string", "minLength": 1},
+    "active_book": {"type": ["string", "null"]},
+    "active_episode": {"type": ["string", "null"]},
+    "active_line": {"type": "string", "minLength": 1},
+    "active_branch": {"type": "string", "minLength": 1},
+    "mode": {"type": "string", "minLength": 1},
+    "delivery_mode": {"type": ["string", "null"]},
+    "current_phase": {"type": "string", "minLength": 1},
+    "build_id": {"type": ["string", "null"]},
+    "authority_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["ref", "status"],
+        "properties": {
+          "ref": {"type": "string", "minLength": 1},
+          "status": {"type": "string", "minLength": 1},
+          "version": {"type": ["string", "null"]},
+          "revision": {"type": ["string", "null"]},
+          "sha256": {"type": ["string", "null"], "pattern": "^(?:[0-9a-fA-F]{64})?$"},
+          "authority_rank": {"type": ["integer", "null"], "minimum": 1}
+        },
+        "additionalProperties": true
+      }
+    },
+    "current_source": {
+      "type": "object",
+      "required": ["ref", "status"],
+      "properties": {
+        "ref": {"type": "string", "minLength": 1},
+        "status": {"type": "string", "minLength": 1},
+        "version": {"type": ["string", "null"]},
+        "sha256": {"type": ["string", "null"], "pattern": "^(?:[0-9a-fA-F]{64})?$"},
+        "text_protection_mode": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "canon_mode": {"type": ["string", "null"]},
+    "text_protection_mode": {"type": ["string", "null"]},
+    "completed_artifacts": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {"type": "string"},
+          {
+            "type": "object",
+            "required": ["artifact", "status"],
+            "properties": {
+              "artifact": {"type": "string", "minLength": 1},
+              "status": {"type": "string", "minLength": 1},
+              "version": {"type": ["string", "null"]},
+              "sha256": {"type": ["string", "null"], "pattern": "^(?:[0-9a-fA-F]{64})?$"}
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "last_completed_artifact": {"type": ["string", "object", "null"]},
+    "last_completed_artifact_hash": {"type": ["string", "null"], "pattern": "^(?:[0-9a-fA-F]{64})?$"},
+    "open_gates": {"type": "array", "items": {"type": ["string", "object"]}},
+    "unresolved_fatal_major": {"type": "array", "items": {"type": ["string", "object"]}},
+    "dependency_dag": {"type": ["object", "array"]},
+    "next_unblocked_obligations": {"type": "array", "items": {"type": ["string", "object"]}},
+    "selected_next_action": {
+      "type": "object",
+      "required": [
+        "stage",
+        "freshness_valid",
+        "authority_unambiguous",
+        "dependencies_pass",
+        "executable_here",
+        "requires_new_founder_choice",
+        "requires_human_evidence",
+        "requires_external_provider",
+        "reopens_locked_layer",
+        "irreversible_high_impact"
+      ],
+      "properties": {
+        "stage": {"type": "string", "minLength": 1},
+        "action": {"type": ["string", "null"]},
+        "launcher": {"type": ["string", "null"]},
+        "freshness_valid": {"type": "boolean"},
+        "authority_unambiguous": {"type": "boolean"},
+        "dependencies_pass": {"type": "boolean"},
+        "executable_here": {"type": "boolean"},
+        "requires_new_founder_choice": {"type": "boolean"},
+        "requires_human_evidence": {"type": "boolean"},
+        "requires_external_provider": {"type": "boolean"},
+        "external_provider_available": {"type": ["boolean", "null"]},
+        "reopens_locked_layer": {"type": "boolean"},
+        "locked_layer_reopen_authorized": {"type": ["boolean", "null"]},
+        "irreversible_high_impact": {"type": "boolean"},
+        "approval_present": {"type": ["boolean", "null"]},
+        "reason": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "blocked_reasons": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {"type": "string"},
+          {
+            "type": "object",
+            "required": ["type", "description"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "DECISION_GATE",
+                  "AUTHORITY_UNRESOLVED",
+                  "CANON_APPROVAL_REQUIRED",
+                  "HUMAN_EVIDENCE_REQUIRED",
+                  "EXTERNAL_PROVIDER_REQUIRED",
+                  "FATAL_MAJOR_UNRESOLVED",
+                  "IRREVERSIBLE_APPROVAL_REQUIRED",
+                  "TOOL_RUNTIME_LIMITATION",
+                  "SAFETY_LEGAL_CONSTRAINT",
+                  "EXPLICIT_HOLD",
+                  "FRONTIER_CONFLICT",
+                  "OTHER"
+                ]
+              },
+              "description": {"type": "string"}
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "external_feedback": {"type": "array", "items": {"type": ["string", "object"]}},
+    "model_handoffs": {"type": "array", "items": {"type": ["string", "object"]}},
+    "last_session_log": {"type": ["string", "object", "null"]},
+    "state_revision": {"type": ["string", "integer"], "minLength": 1},
+    "state_status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "BLOCKED",
+        "AUTHORITY_UNRESOLVED",
+        "FRONTIER_CONFLICT",
+        "CANON_APPROVAL_REQUIRED",
+        "HUMAN_EVIDENCE_REQUIRED",
+        "EXTERNAL_PROVIDER_REQUIRED",
+        "HOLD",
+        "COMPLETE"
+      ]
+    },
+    "secret_policy": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}
