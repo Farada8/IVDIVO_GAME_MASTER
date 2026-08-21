@@ -1,0 +1,49 @@
+{
+  "schema": "ivdivo.si0012_runtime_frontier/0.1",
+  "updated": "2026-08-21",
+  "candidate_id": "SI-0012",
+  "status": "PILOTING_NOT_CURRENT_AUTHORITY",
+  "latest_candidate_package": {
+    "version": "0.1.1",
+    "sha256": "530e2d3414bdc7fa8e1b6ef4909d826389cf947d46451cad6820fbb84808e287",
+    "drive_zip_id": "1oacUip8tDABFePzjdAx-8Xn-7BJDLSYM",
+    "drive_folder_id": "1Z8vbvdpsSbTXYWoCPryFMOonr659tzsb",
+    "warm_regression": "40/40_PASS",
+    "cold_regression": "40/40_PASS"
+  },
+  "historical_candidate_package": {
+    "version": "0.1",
+    "sha256": "845e9cc4e8136f28e1b6a79c8e0fc9704030b6ff34d0468f55718659c7f3a331",
+    "drive_zip_id": "1Ilere_iPbzM6cK-FsSHE-Zuey2JQFd_T",
+    "status": "IMMUTABLE_SUPERSEDED_BY_V0_1_1_FOR_LIVE_SCHEMA_COMPATIBILITY"
+  },
+  "completed": {
+    "minimum_compat_runtime": true,
+    "authority_work_frontier_split": true,
+    "state_adapter": true,
+    "shared_fact_contract": true,
+    "obligation_dag": true,
+    "prompt_ir": true,
+    "pre_execution_guards": true,
+    "transaction_primitives": true,
+    "telemetry_bus_baseline": true,
+    "real_routing_pilots": ["D09", "D10", "D01_WIFE", "D04", "ROOM917"],
+    "live_schema_drift_self_repair": "D04_1_1_TO_1_4_TRIGGERED_V0_1_1"
+  },
+  "current_project_gates": {
+    "D09": "FOUNDER_DECISION_REQUIRED",
+    "D10": "FOUNDER_DECISION_REQUIRED",
+    "D01_WIFE": "FRESHER_PR85_WORKING_FRONTIER_RUN_FRESHNESS_BEFORE_E96",
+    "D04": "HUMAN_EVIDENCE_REQUIRED_FOR_G4; AUTHENTICATED_PROVIDER_INVENTORY_SEPARATELY_BLOCKED",
+    "ROOM917": "P003A2_TOOL_OR_MASTER_BYTES_EVIDENCE_REQUIRED"
+  },
+  "remaining_system_gates": [
+    "TWO_MODEL_PARITY_OR_EQUIVALENCE_ON_BOUNDED_PROMPT_IR",
+    "NORMALIZED_DURATION_RETRY_PROVIDER_SPEND_HUMAN_TIME_TELEMETRY",
+    "REAL_HUMAN_READER_LISTENER_EVIDENCE",
+    "LIVE_PROVIDER_EVIDENCE",
+    "MARKET_EVIDENCE_WHERE_PROMOTION_CLAIM_DEPENDS_ON_IT",
+    "NEW_ENGINE_PACKAGE_BUILD_REQUIRED_BEFORE_POST_V11_2_MAIN_EXTENSIONS_CAN_ADVANCE_PACKAGE_POINTER"
+  ],
+  "next_action": "Do not create another OS or another bulk prompt cycle. Run the smallest available external/production evidence pilots; re-run freshness immediately before every action. Two-model parity is the next internal system gate if a second model surface is available."
+}
