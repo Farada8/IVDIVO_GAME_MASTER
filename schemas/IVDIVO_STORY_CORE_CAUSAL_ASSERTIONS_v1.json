@@ -1,0 +1,36 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.story_core_causality/1.0",
+  "title":"IVDIVO Story Core Causal Assertions",
+  "type":"object",
+  "required":["hero","want","why_now","opposition","wrong_strategy","price","midpoint","climax_choice","resolution","causal_edges"],
+  "properties":{
+    "hero":{"type":"string","minLength":1},
+    "want":{"type":"string","minLength":1},
+    "why_now":{"type":"string","minLength":1},
+    "opposition":{"type":"string","minLength":1},
+    "wrong_strategy":{"type":"string","minLength":1},
+    "price":{"type":"string","minLength":1},
+    "midpoint":{"type":"string","minLength":1},
+    "climax_choice":{"type":"string","minLength":1},
+    "resolution":{"type":"string","minLength":1},
+    "series_hook":{"type":["string","null"]},
+    "causal_edges":{
+      "type":"array",
+      "minItems":8,
+      "items":{
+        "type":"object",
+        "required":["from","to","because"],
+        "properties":{
+          "from":{"type":"string","enum":["WHY_NOW","WANT","HERO_ACTION","OPPOSITION","WRONG_STRATEGY","PRICE","MIDPOINT","CLIMAX_CHOICE","RESOLUTION"]},
+          "to":{"type":"string","enum":["WANT","HERO_ACTION","OPPOSITION","WRONG_STRATEGY","PRICE","MIDPOINT","CLIMAX_CHOICE","RESOLUTION"]},
+          "because":{"type":"string","minLength":8}
+        }
+      }
+    },
+    "climax_caused_by_hero":{"type":"boolean"},
+    "resolution_closes_main_conflict":{"type":"boolean"},
+    "series_hook_after_resolution":{"type":"boolean"}
+  },
+  "additionalProperties":true
+}
