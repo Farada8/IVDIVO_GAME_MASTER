@@ -1,0 +1,87 @@
+{
+  "schema": "ivdivo.production_proof_next64_pilot/1.0",
+  "date": "2026-08-21",
+  "status": "R01_R08_EXECUTED_REAL_FRONTIER_PROOF_PILOT",
+  "authority_boundary": "CANDIDATE_ENGINEERING_EVIDENCE_ONLY_NO_STORY_OR_DOMAIN_PROMOTION",
+  "sources_fresh_read": {
+    "D01_git_state_sha": "ae03e3e1dde6f8cdd16d9da5c8811a240433aba3",
+    "D01_final_gate_drive_id": "1C-VzyTORtauuDFZToJ4bx5Nic9dOwsrPfRudL3dAOcM",
+    "D10_git_state_sha": "2a0f65e42ac2d39f38c5e019dc0fe95c4a4d3795",
+    "D10_founder_lock_drive_id": "1Fp0vPbvt8JaGxGIvfxwyN4LuA4BXo8Ia1Rcp2Qk8hDA",
+    "D09_git_state_sha": "0f8f96d199af359f8d40f9f733491f547f314c41",
+    "D09_final_gate_drive_id": "1IZfae96Y4gS7JDqFrVxv-2O53zFwoWVOYzOV7zoDXL0",
+    "D04_git_state_sha": "a76eb5e1c868ba73dcf895f232b872c530de35d8",
+    "ROOM917_git_state_sha": "ac80ae9cc0c317ee6353e03ad7aaac23afc88e57",
+    "B02_final_gate_git_sha": "1d805e6fd8f366aa0c2de13b0b4b5ee585f78904"
+  },
+  "results": {
+    "R01_D01_FOUNDER_DECISION_PROOF": {
+      "status": "HOLD",
+      "expected": "HOLD_FOUNDER",
+      "proof_id": "c85cf9fc25e5635eca725511bb33ca7c386bad8dfa96e71c0da638847296d485",
+      "finding": "Internal E01-E120 completion is supported, but Founder lock is absent. No E121 and no SMITH activation from this gate."
+    },
+    "R02_D10_LOCK_REPLAY": {
+      "status": "PASS",
+      "expected": "PASS_LOCK_REPLAY",
+      "proof_id": "99b3ff6449b39be74469a7250614e22b1a797d79b72b23e69c9dcbc9633354ac",
+      "finding": "Persisted D10 Founder lock remains supported; downstream human/provider/market evidence is not implied."
+    },
+    "R03_D09_FOUNDER_GATE": {
+      "status": "HOLD",
+      "expected": "HOLD_FOUNDER",
+      "proof_id": "623e0d787a6156a520550eac0fcaee0456afb57eea6dc13e693da25715bbb70c",
+      "finding": "D09 Final Story Gate PASS does not self-convert to Founder lock; E25 remains prohibited."
+    },
+    "R04_D04_PROVIDER_GATE": {
+      "status": "HOLD",
+      "expected": "HOLD_PROVIDER",
+      "proof_id": "43afbff96c71991cbe7ad62f0e77c3f86862b24543da772e1db1d27900ca07aa",
+      "finding": "Machine/project-state evidence does not satisfy live provider evidence. D04 also independently retains a real Human Signal gate."
+    },
+    "R05_ROOM917_POST_RENDER_GATE": {
+      "status": "HOLD",
+      "expected": "HOLD_MASTER_BYTES_OR_TIMING",
+      "proof_id": "0d1c44e09d435004cfe35899f4fdbd6695292765f5c531b5dab0bf26ba08e402",
+      "finding": "P003A2 cannot advance without exact immutable full-master bytes or a trusted exact interval/timing map; no tooling redesign is justified."
+    },
+    "R06_B02_EXTERNAL_FEEDBACK_STOP": {
+      "status": "HOLD",
+      "expected": "HOLD_EXTERNAL_FEEDBACK",
+      "proof_id": "8402eda36c1e463070d79d4b303c4c156db312ca0e00d00cfaeee002c3f3fd35",
+      "finding": "B02 internal development is complete; next valid evidence is Founder/external reader/editor/publisher feedback, not Chapter 37 or broad rewrite."
+    },
+    "R07_PROOF_ID_DETERMINISM": {
+      "status": "PASS",
+      "identical": true,
+      "proof_id_a": "c85cf9fc25e5635eca725511bb33ca7c386bad8dfa96e71c0da638847296d485",
+      "proof_id_b": "c85cf9fc25e5635eca725511bb33ca7c386bad8dfa96e71c0da638847296d485"
+    },
+    "R08_FALSIFIED_PROOF_ADVERSARIAL": {
+      "status": "PASS",
+      "expected_fail_closed": {
+        "FALSE_PASS_MISSING_FOUNDER": true,
+        "ARTIFACT_HASH_MISMATCH": true,
+        "DUPLICATE_EVIDENCE": true,
+        "FAIL_EVIDENCE_DECLARED_PASS": true
+      }
+    }
+  },
+  "value_refresh": {
+    "candidate_id": "PROOF_CHAIN_V1",
+    "real_project_pilots": 6,
+    "unsafe_or_unauthorized_actions_blocked": 5,
+    "measurement_state": "PARTIAL",
+    "disposition": "HOLD_FOR_MEASUREMENT",
+    "note": "Pilot count increased, but no time/precision/human telemetry is invented; therefore promotion remains blocked."
+  },
+  "aggregate": {
+    "cards_executed": 8,
+    "project_frontiers_tested": 6,
+    "expected_gate_semantics_matched": 6,
+    "determinism_pass": true,
+    "adversarial_cases_fail_closed": 4,
+    "candidate_promotion": "NONE"
+  },
+  "next_recommended_group": "R09_R16_MIRROR_INTEGRITY_AND_MULTI_STORE_RECOVERY_WITH_SI0014_COMPOSITION"
+}
