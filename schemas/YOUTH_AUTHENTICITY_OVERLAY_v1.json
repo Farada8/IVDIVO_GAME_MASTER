@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.youth_authenticity/1.0",
+  "title":"IVDIVO Youth Authenticity Overlay",
+  "type":"object",
+  "required":["project_id","youth_character_id","domains","setting_specific_pressures","adult_policy_committee_risk"],
+  "properties":{
+    "project_id":{"type":"string"},
+    "youth_character_id":{"type":"string"},
+    "domains":{"type":"object","required":["friends","attraction","jealousy_or_comparison","embarrassment","family","school_or_work","money","housing","hobbies_or_sport","parties_or_social_life","status","boredom","exclusion","independence","bad_decisions"],"additionalProperties":{"type":"string"}},
+    "setting_specific_pressures":{"type":"array","minItems":2,"items":{"type":"object","required":["pressure","changes_choice"],"properties":{"pressure":{"type":"string"},"changes_choice":{"type":"boolean"}}}},
+    "adult_policy_committee_risk":{"type":"string","enum":["LOW","MEDIUM","HIGH"]},
+    "ordinary_life_present":{"type":"boolean"},
+    "youth_mistake_has_price":{"type":"boolean"}
+  }
+}
