@@ -1,3 +1,5 @@
+import Std.Tactic
+
 namespace AbsoluteMathRun5
 
 universe u v w
@@ -32,7 +34,7 @@ theorem feasible_set_monotonicity
     (defect : A → Nat)
     (ε₁ ε₂ : Nat)
     (hε : ε₁ ≤ ε₂) :
-    {a : A | defect a ≤ ε₁} ⊆ {a : A | defect a ≤ ε₂} := by
+    ∀ a : A, defect a ≤ ε₁ → defect a ≤ ε₂ := by
   intro a ha
   exact Nat.le_trans ha hε
 
