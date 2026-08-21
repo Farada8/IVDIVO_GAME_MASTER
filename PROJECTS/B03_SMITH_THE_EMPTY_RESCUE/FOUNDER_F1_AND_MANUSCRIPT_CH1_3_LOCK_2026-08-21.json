@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "project_id": "IVDIVO_BOOK_3_SMITH",
+  "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+  "authority": "FOUNDER_DIRECT_DECISION",
+  "founder_decision": {
+    "selection": "F1",
+    "canon": [
+      "Smith has a teenage daughter in the current saga period."
+    ],
+    "working": [
+      "daughter age 16-17 pending timeline normalization"
+    ],
+    "unknown_do_not_invent": [
+      "daughter name",
+      "mother name",
+      "exact marital history",
+      "custody or household structure",
+      "occupations",
+      "contact schedule"
+    ],
+    "law": "Do not reopen daughter-existence question unless a newer Founder instruction changes it. Later engine-created UNKNOWN/OPTION cannot silently erase prior Founder authority."
+  },
+  "final_pre_prose_gate": {
+    "fatal": 0,
+    "blocking_major": 0,
+    "prose_authorized": true,
+    "drive_id": "1EkmIwNmE9kkZ6RBfeMZzQ6L-AbLKaPIcT5r8mU_PsU0"
+  },
+  "manuscript": {
+    "CH01": {
+      "title": "WRONG ADDRESS",
+      "status": "DRAFTED_CANARY_LOCAL_GATE_PASS",
+      "drive_id": "197ikUS2gfyyXBykIMsgnPmCY8NphIVDLBLw0yZWx0PU",
+      "gate_drive_id": "1qptvT8sh-kMxQsMVeaDmt8maDfw4wk4nr30rjShAvO0"
+    },
+    "CH02": {
+      "title": "THE CALL THAT WORKS",
+      "status": "DRAFTED_CH1_2_REGRESSION_PASS",
+      "drive_id": "1Tx7jRTOJaiEA-YT_VGyIPWTDNKKQAb5PBHrj2wcDUaw",
+      "regression_drive_id": "15AUI_GLem0VPkCHIBeJKZfVHxCqWZdFC_aTiX1nr29E"
+    },
+    "CH03": {
+      "title": "THE THIRD DEPLOYMENT",
+      "status": "DRAFTED_MINI_BLOCK_GATE_PASS",
+      "drive_id": "13fCfIg3mA0KTRfDvj4grmQGNW5tA6poImI4Ml2JiRsA",
+      "mini_block_gate_drive_id": "1ToOyjGnfhuQC7cjmNl0Ihlhb9XaetrbPiI6c8hH5HY0"
+    }
+  },
+  "mini_block_gate": {
+    "fatal": 0,
+    "major": 0,
+    "warning_functions": {
+      "CH01": "later-confirmed precursor scene",
+      "CH02": "prevented scene / bounded rescue value",
+      "CH03": "useful warning plus response-exposure casualty"
+    },
+    "oes_activation": "legacy audio signature activates OES review after Luka Petric responder fatality",
+    "next_story_frontier": "CH04_DUBLIN"
+  },
+  "next_obligation": "Draft CH04 DUBLIN: Smith ordinary life, F1 daughter continuity without inventing unknown family details, Enia practical interaction without case answer, OES triage and narrow case acceptance."
+}
