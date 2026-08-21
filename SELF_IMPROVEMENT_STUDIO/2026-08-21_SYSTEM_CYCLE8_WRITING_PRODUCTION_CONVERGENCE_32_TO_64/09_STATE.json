@@ -1,17 +1,19 @@
 {
-  "schema_version":"0.2",
+  "schema_version":"0.3",
   "cycle_id":"SYSTEM_CYCLE8_WRITING_PRODUCTION_CONVERGENCE_32_TO_64_2026-08-21",
-  "status":"WORKING_GITHUB_BRANCH_PERSISTED_DRIVE_PERSISTED_PR_PENDING",
+  "status":"PERSISTENCE_CLOSURE_PASS_BOUNDED_ENGINEERING_PACKAGE_MERGED",
   "story_canon_changes":"NONE",
   "d01_lock_issued_by_this_cycle":false,
   "b03_activated_by_this_cycle":false,
   "main_observed_at_cycle_start":"e3047a227552477c39c7d6af549208d18afc3fcc",
   "freshness_rebase_before_github_persistence":"8a409cae3c6240d2f2051e39fd8d4b8311a5dfec",
-  "branch":"self-improvement/cycle8-writing-production-convergence-32to64-2026-08-21",
-  "drive":{"folder_id":"1x_zlMvfftZ0JYL4Yfzid7umNwXBmnW1n","readback":"PASS_SIX_DOCUMENTS_PRESENT","documents":{"master":"1ixd-4igxqbOQ4SLxpzbpMhF3_Mgo2HHvNp-ToWjRTxg","prompts32":"1rsQhOkh7WpANpJJJ9TuRN__mWugFNq6YEggveFFjEcU","registry32x4":"1Rf0brX_bYsuFxLa7RbDR4jgGKjNb5R_1j9EA1b6eZq0","canary":"1OEplN1hEpOodgZhDPh4hN55s2lZo2dN9GoZPi4YwqGY","next64":"1CAusgo5z3XQolSD8i_dpFIRuVKdmY5z6A0Ji4LPmZR4","state":"1HDhy3UQWbaunkp-D00wMQurAhUIlyAqXMRsJWsVybvg"}},
+  "independent_main_advance_before_pr":"00ac3c91014ee5099cc40db36cfe5edc5dce065c",
+  "integration":{"pr":148,"status":"MERGED","merge_sha":"132149b052e9d29faf6695d9659aaaf59ec082d2","changed_files":7,"deletions":0,"main_readback":"PASS"},
+  "drive":{"folder_id":"1x_zlMvfftZ0JYL4Yfzid7umNwXBmnW1n","readback":"PASS","documents":{"master":"1ixd-4igxqbOQ4SLxpzbpMhF3_Mgo2HHvNp-ToWjRTxg","prompts32":"1rsQhOkh7WpANpJJJ9TuRN__mWugFNq6YEggveFFjEcU","registry32x4":"1Rf0brX_bYsuFxLa7RbDR4jgGKjNb5R_1j9EA1b6eZq0","canary":"1OEplN1hEpOodgZhDPh4hN55s2lZo2dN9GoZPi4YwqGY","next64":"1CAusgo5z3XQolSD8i_dpFIRuVKdmY5z6A0Ji4LPmZR4","state":"1HDhy3UQWbaunkp-D00wMQurAhUIlyAqXMRsJWsVybvg","closure":"1vlecaX9ZxWnJF_wFgk1bvuw5JXYAfl-_eh0hgLzK9hc"}},
   "counts":{"prompts_executed":32,"modules":32,"contracts":32,"proof_obligations":32,"protocols":32,"new_bounded_adapter_specs":12,"reused_or_adapted_mechanisms":20,"canary_fixtures":18,"canary_passed":18,"next_prompts_designed":64},
   "new_si_id_allocated":false,
   "parallel_dispositions":{"cycle7_main":"REUSE","pr_133":"OVERLAP_SALVAGE_UNIQUE_ONLY","pr_143":"REDUNDANT_INTEGRATION_SURFACE_UNTIL_FRESH_DIFF","pr_141":"IMPLEMENTATION_PRESENT_ON_MAIN_REUSE_NO_DUPLICATION_PROMOTION_UNCHANGED","pr_139":"AUTHORITY_CONFLICT_HOLD"},
   "evidence_ceiling":"ENGINEERING_FIXTURE_AND_PERSISTED_STATE_READBACK_ONLY_NOT_LITERARY_HUMAN_PROVIDER_LEGAL_MARKET_PROOF",
-  "next_gate":"FRESH_MAIN_COMPARE_CREATE_DRAFT_PR_READBACK_THEN_PERSISTENCE_CLOSURE"
+  "current_return_gate":"D01_FOUNDER_EXPLICIT_LOCK_DECISION_UNLESS_NEWER_CONTROLLING_AUTHORITY_SUPERSEDES",
+  "next64_execution_mode":"SELECT_BY_DEPENDENCY_AND_INFORMATION_VALUE_NOT_BLIND_AUTOPLAY"
 }

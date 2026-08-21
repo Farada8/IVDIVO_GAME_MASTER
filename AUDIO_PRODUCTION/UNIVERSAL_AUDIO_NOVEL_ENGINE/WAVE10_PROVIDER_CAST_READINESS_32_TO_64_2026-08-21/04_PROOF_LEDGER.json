@@ -1,18 +1,19 @@
 {
-  "schema_version": "ivdivo.audio.wave10.proof_ledger/1.0",
+  "schema_version": "ivdivo.audio.wave10.proof_ledger/1.1",
   "date": "2026-08-21",
+  "status": "WAVE10_32_OF_32_DISPOSITIONED_MERGED_CURRENT_EXTERNAL_EVIDENCE_HOLD",
   "proofs": [
     {
       "id": "W10-PROOF-001",
       "class": "AUTHORITY_READBACK",
-      "claim": "Wave10 branch was cut from fresh main e3047a227552477c39c7d6af549208d18afc3fcc.",
+      "claim": "Wave10 integration was tested against exact pre-merge main 132149b052e9d29faf6695d9659aaaf59ec082d2 and merged to dcaba52b8956087d3792164acc7f0b861c775db7.",
       "status": "PASS_REAL_INPUT",
       "external_truth": false
     },
     {
       "id": "W10-PROOF-002",
       "class": "PARALLEL_DEDUPE",
-      "claim": "PR143 is diverged and behind current main; Cycle7 already exists on main, so no blind merge or duplicate recovery runtime is authorized.",
+      "claim": "Parallel Cycle7/NMM/writing-production advances were inspected; no Wave10/audio-studio path overlap invalidated final merge-ref CI, and duplicate provider/recovery/human-evidence runtimes were rejected.",
       "status": "PASS_REAL_INPUT",
       "external_truth": false
     },
@@ -20,25 +21,57 @@
       "id": "W10-PROOF-003",
       "class": "CODE_CONTRACT",
       "claim": "ProviderSnapshot repeatability distinguishes account identity, capability inventory drift and volatile usage; auto substitution is always false.",
-      "status": "CODED_CI_PENDING",
+      "status": "PASS_FRESH_MERGE_REF_CI",
+      "ci_run_id": 32526277958,
+      "ci_merge_ref": "e0510205d56dd81bbbd1fdf148e22daf6136ca6a",
       "external_truth": false
     },
     {
       "id": "W10-PROOF-004",
       "class": "CODE_CONTRACT",
-      "claim": "Provider inventory compiler accepts only a fresh validated ProviderSnapshot and emits real IDs from that snapshot without artistic selection or lock.",
-      "status": "CODED_CI_PENDING",
+      "claim": "Provider inventory compiler accepts only a fresh validated ProviderSnapshot, including explicit stale-snapshot failure, and emits IDs only from that snapshot without artistic selection or lock.",
+      "status": "PASS_FRESH_MERGE_REF_CI",
       "external_truth": false
     },
     {
       "id": "W10-PROOF-005",
       "class": "CODE_CONTRACT",
       "claim": "Cast readiness requires NARRATOR/ETHAN/AOIFE candidate IDs from the same inventory, explicit TTS model binding and real-audio human evidence before lock eligibility.",
-      "status": "CODED_CI_PENDING",
+      "status": "PASS_FRESH_MERGE_REF_CI",
       "external_truth": false
     },
     {
       "id": "W10-PROOF-006",
+      "class": "CI_REGRESSION",
+      "claim": "Final PR merge-ref passes Audio Novel runtime and complete Audio Studio regression discovery.",
+      "status": "PASS",
+      "run_number": 148,
+      "run_id": 32526277958,
+      "job_id": 96908865842,
+      "runtime_tests": "4/4 PASS",
+      "audio_studio_tests": "218/218 PASS",
+      "wave10_tests": "11/11 PASS",
+      "external_truth": false
+    },
+    {
+      "id": "W10-PROOF-007",
+      "class": "DRIVE_CONTENT_READBACK",
+      "claim": "Dedicated Wave10 Drive folder contains master, 32-result ledger, engineering/proof/protocol document and 64-prompt bank; native document contents were read back after persistence.",
+      "status": "PASS_CONTENT_READBACK",
+      "folder_id": "1ygBs3dEo4ghGn4boePvMuestqDiD3aO2",
+      "byte_exact_hash_verified": false,
+      "external_truth": false
+    },
+    {
+      "id": "W10-PROOF-008",
+      "class": "GITHUB_MERGE_READBACK",
+      "claim": "PR #146 merged with expected-head guard and Wave10 runtime was read back from main.",
+      "status": "PASS",
+      "merge_commit": "dcaba52b8956087d3792164acc7f0b861c775db7",
+      "external_truth": false
+    },
+    {
+      "id": "W10-PROOF-009",
       "class": "PROVIDER",
       "claim": "A real authenticated current provider account snapshot exists for this execution block.",
       "status": "HOLD_EXTERNAL",
@@ -46,7 +79,7 @@
       "observed_events": 0
     },
     {
-      "id": "W10-PROOF-007",
+      "id": "W10-PROOF-010",
       "class": "HUMAN_REVIEW",
       "claim": "Real candidates pass pronunciation/multi-state/pair/fatigue/performance human evidence.",
       "status": "HOLD_HUMAN_AUDIO",
@@ -54,7 +87,7 @@
       "observed_events": 0
     },
     {
-      "id": "W10-PROOF-008",
+      "id": "W10-PROOF-011",
       "class": "LIVE_AUDIO",
       "claim": "LESSON ZERO RB001/RB002/RB003 were rendered with durable live lineage.",
       "status": "HOLD_DEPENDENCY",
@@ -62,7 +95,7 @@
       "observed_events": 0
     },
     {
-      "id": "W10-PROOF-009",
+      "id": "W10-PROOF-012",
       "class": "MEASURED_ECONOMICS",
       "claim": "Measured provider/manual economics exists for the accepted Lesson Zero canary.",
       "status": "HOLD_DEPENDENCY",
@@ -70,5 +103,5 @@
       "observed_events": 0
     }
   ],
-  "law": "Engineering/CI proofs may prove deterministic mechanics only. They cannot satisfy provider, human, live-audio, alignment, economics, market or Founder authority classes."
+  "law": "Engineering/CI/Drive/GitHub persistence proofs may prove deterministic mechanics and persistence only. They cannot satisfy provider, human, live-audio, alignment, economics, market or Founder authority classes."
 }
