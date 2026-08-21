@@ -1,6 +1,8 @@
 # IVDIVO AUDIO NOVEL ENGINE — WAVE7 32 EXECUTIONS
 
-Status: EXECUTED TO CURRENT EVIDENCE BOUNDARY
+Status: **MERGED_CURRENT / EXECUTED TO CURRENT EVIDENCE BOUNDARY**
+Wave7 PR: `#109`
+Wave7 merge: `fdc5a162e87b34116b1270b3cd6b1531bdfd8b2d`
 Branch: `audio-novel-engine/wave7-empirical-readiness-32x64-2026-08-21`
 Start authority: GitHub `main` at `0219586858797bf646ca2e7f020bf6a9ff662fc0`.
 
@@ -25,6 +27,9 @@ The generic internal architecture is now frozen unless real evidence exposes a c
 5. `05_STATE.json`
 6. `06_DRIVE_POINTERS.md`
 7. `07_PR103_CI_REPAIR_AND_MERGE_READBACK.md`
+
+## Engineering evidence
+PR #103 code merge-result: dedicated runtime **4/4 PASS**, full Audio Studio **158/158 PASS**. Wave7 PR #109 itself changed only research/state artifacts; no separate Audio Studio workflow was observed on its head, so no additional CI PASS is claimed.
 
 ## Evidence boundary
 No provider credentials were available to this ChatGPT execution environment. Wave7 made zero new provider calls, zero human-listening claims, zero voice/pronunciation locks and zero story mutations. Engineering, GitHub CI and repository/Drive readbacks are reported separately from provider/human/audio evidence.
