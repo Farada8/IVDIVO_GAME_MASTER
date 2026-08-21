@@ -1,7 +1,7 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "updated": "2026-08-21",
-  "status": "CURRENT_CANDIDATE_MACHINE_CONFIG",
+  "status": "CURRENT_APPLIED_UNVERIFIED_MACHINE_CONFIG",
   "authority": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
   "primary_objective_order": [
     "P0_AUTHORITY_SAFETY_INTEGRITY",
@@ -30,6 +30,8 @@
       "reference_learning": "IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md",
       "registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
       "registry_schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
+      "learning_ledger": "CURRENT_IVDIVO_LEARNING_LEDGER.json",
+      "learning_ledger_schema": "LEARNING_LEDGER_SCHEMA_v1.json",
       "utility": "tools/ivdivo_self_improvement.py"
     }
   },
@@ -48,6 +50,12 @@
     "MONITOR",
     "RETAIN_NARROW_MERGE_ROLLBACK_SUPERSEDE"
   ],
+  "evidence_model": {
+    "observation_types": ["DEFECT", "SUCCESS", "REPAIR", "REWORK", "DELAY", "COST", "CONFUSION", "QUALITY", "PROVIDER", "HUMAN", "MARKET", "CONCURRENCY", "TOOL_LIMIT", "OTHER"],
+    "experiment_states": ["PLANNED", "RUNNING", "PASS", "FAIL", "INCONCLUSIVE", "BLOCKED"],
+    "learning_output": "SOURCE_OR_PRODUCTION_EVIDENCE -> OBSERVATION -> CANDIDATE_OR_EXPERIMENT -> RESULT -> REUSABLE_LEARNING -> APPLICATION",
+    "source_inspection_is_runtime_evidence": false
+  },
   "priority_classes": {
     "A": "PRODUCTION_BLOCKER_OR_MAJOR_LEVER",
     "B": "HIGH_REUSE_HIGH_QUALITY_LEVER",
@@ -172,8 +180,8 @@
     "monitor_useful_candidates_stuck": true
   },
   "current_acceptance": {
-    "non_runtime_operating_system": "CANDIDATE_PENDING_READBACK_AND_ROUTER_SYNC",
+    "non_runtime_operating_system": "APPLIED_AND_POINTER_READBACK_GREEN",
     "utility_runtime": "PROVISIONAL_UNTIL_EXACT_CHECKOUT_SMOKE",
-    "next_gate": "SYNC_CURRENT_POINTERS_DRIVE_MIRROR_READBACK_THEN_PROMOTION_REVIEW"
+    "next_gate": "FINAL_PROMOTION_REVIEW_AFTER_RUNTIME_SMOKE_OR_EXPLICIT_MODULAR_RUNTIME_CLASSIFICATION"
   }
 }
