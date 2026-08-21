@@ -11,6 +11,7 @@ Status: WORKING R&D EVIDENCE. No story canon change.
 - Drive BLOODBOUND current authority / Block I gate.
 - Drive D04 Seven Nights recording master + S0/S1 live audition preflight.
 - Prior RUN32/RUN64 execution artifacts and current N-series commits.
+- Concurrent main advanced into dialogue, audio, finalization, multilingual voice and recovery work while this cycle ran; the final review branch was rebuilt from a fresh-main parent using exact Git blob identities.
 
 ## 1. What the 32 prompts actually proved
 
