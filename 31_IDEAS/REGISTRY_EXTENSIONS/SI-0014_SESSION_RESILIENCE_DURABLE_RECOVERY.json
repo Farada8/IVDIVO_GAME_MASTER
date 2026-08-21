@@ -8,6 +8,7 @@
     {"source_type": "FOUNDER", "locator": "2026-08-21 instruction to solve abrupt page/session loss for future, integrate into engines/self-improvement, add engineering modules/contracts/proofs/protocols", "date": "2026-08-21"},
     {"source_type": "PRODUCTION_INCIDENT", "locator": "2026-08-21 abrupt ChatGPT logout/page-loss during active IVDIVO work", "date": "2026-08-21"},
     {"source_type": "GITHUB", "locator": "PR #100 / merge 42e08b350c5d2f564ea380d4de8aba57fba90ab9", "date": "2026-08-21", "notes": "18C checkpoint tool/schema/tests and Run32 evidence merged"},
+    {"source_type": "GITHUB", "locator": "PR #108 / merge e5f1a50d2960941840687d16939def3b61b5fb57", "date": "2026-08-21", "notes": "Run33 durable reconciliation stack merged after green CI and compatibility Red Team"},
     {"source_type": "GITHUB", "locator": "ENGINEERING_CONTRACTS/SELF_IMPROVEMENT_REGISTRY_TRANSACTION_v1.0.md", "date": "2026-08-21", "notes": "Existing registry transaction authority reused; no parallel registry writer"},
     {"source_type": "GITHUB", "locator": "IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md", "date": "2026-08-21"}
   ],
@@ -16,11 +17,11 @@
   "dedupe_relation": "EXTENDS_18C_AND_REUSES_EXISTING_REGISTRY_TRANSACTION",
   "related_candidates": ["SI-0008", "SI-0010", "SI-0012", "SI-0013"],
   "expected_benefit": "Prevents duplicate GitHub/Drive/provider work after interruption, quarantines ambiguous paid/irreversible side effects, preserves checkpoint lineage without transcript bloat, and gives Self-Improvement measurable recovery evidence instead of anecdotal claims.",
-  "evidence_state": "INTERNAL_ENGINEERING_EVIDENCE_PLUS_DURABLE_READBACK",
+  "evidence_state": "INTERNAL_ENGINEERING_EVIDENCE_PLUS_CONTROLLED_MULTI_STORE_INTEGRATION",
   "priority_vector": {"impact": "HIGH", "recurrence": "RECURRING", "effort": "MEDIUM", "regression_risk": "MEDIUM", "reversibility": "EASY", "urgency": "HIGH", "affected_surface": "PORTFOLIO"},
   "development_contract": {
     "protected_invariants": ["Founder/project/story authority outranks recovery state", "No secret persistence", "No automatic replay of paid or irreversible effects", "No checkpoint/transaction ledger as canon", "No automatic Self-Improvement promotion", "No parallel registry transaction engine"],
-    "acceptance_conditions": ["Run33 deterministic suite green", "Repository CI green", "Full registry family has unique candidate IDs", "GitHub + Drive write/readback evidence", "At least one real interruption or controlled partial-write recovery before promotion beyond pilot", "Zero false-resume evidence"],
+    "acceptance_conditions": ["Run33 deterministic suite green", "Repository CI green", "Full registry family has unique candidate IDs", "GitHub + Drive write/readback evidence", "Controlled reversible partial-write recovery passes without duplicate replay", "Genuine interruption evidence still required before promotion review", "Zero false-resume evidence"],
     "rollback": "Remove SI-0014 Run33 modules/protocol references and retain merged 18C; do not roll back unrelated registry transaction, project-state, audio or story authorities."
   },
   "pilot_evidence": [
@@ -29,10 +30,12 @@
     "Run33 deterministic suite: 27/27 PASS after Red Team repairs",
     "Run33 inherited checkpoint regression: 10/10 PASS",
     "Run33 registry transaction regression: 7/7 PASS",
-    "Run33 fresh-main synthetic merge CI: Session Resilience Run33 Tests PASS, Session Resilience Tests PASS, Self-Improvement Integrity PASS",
+    "Run33 final compatibility head CI: Session Resilience Run33 Tests PASS, Session Resilience Tests PASS, Self-Improvement Integrity PASS",
     "Run33 semantic rebase preserved 67 parallel main commits and reduced portfolio coverage delta to one stale claim field rather than overwriting recovered D01 state",
-    "Google Drive folder SESSION_RESILIENCE_RUN33_2026-08-21 id 1CCIXde5_2k57yHHIOENgO7staWyyZ1yv contains 7/7 nonempty mirror documents; content readback found prompt 32, prompt 64 and explicit REAL PRODUCTION PILOT NOT YET SATISFIED boundary",
-    "Run33 full-registry freshness sweep detected and corrected erroneous pending SI-0010 identity"
+    "Google Drive folder SESSION_RESILIENCE_RUN33_2026-08-21 id 1CCIXde5_2k57yHHIOENgO7staWyyZ1yv passed nonempty content readback",
+    "Run33 full-registry freshness sweep detected and corrected erroneous pending SI-0010 identity",
+    "Controlled partial-write pilot RUN33-CONTROLLED-PARTIAL-001: GitHub artifact reconciled first, Drive NOT_STARTED, reconciler returned EXECUTE_MISSING_SAFE_ACTIONS for DRIVE-PILOT-EVIDENCE only; GitHub replay count remained 0; Drive executed once and exact content readback passed; final decision TRANSACTION_COMPLETE; transaction SHA256 3639df8027c59070781a4c54af820483202ceee358e302482517a68d988e5666",
+    "Controlled pilot learning event explicitly records real_interruption=false and contributes zero to genuine-interruption promotion threshold"
   ],
   "red_team_findings": [
     "Partial candidate-ID visibility is insufficient; always inspect full registry family before assigning IDs",
@@ -41,8 +44,9 @@
     "STARTED_UNKNOWN paid/irreversible action must quarantine rather than retry",
     "Identity mismatch after confirmed write is STOP, not repair-in-place",
     "Checkpoint lineage must reject multiple roots, multiple ACTIVE heads and duplicate checkpoint hashes",
-    "Synthetic fixtures may block unsafe promotion but cannot inflate real production evidence",
-    "Retention must preserve incident evidence but garbage-collect superseded routine checkpoints"
+    "Synthetic or controlled fixtures may block unsafe promotion but cannot inflate real production evidence",
+    "Retention must preserve incident evidence but garbage-collect superseded routine checkpoints",
+    "Shared machine pointer evolution must be additive/backward-compatible unless a breaking migration is explicitly authorized"
   ],
   "application_targets": [
     "IVDIVO_NARRATIVE_OS/18C_VOLATILE_SESSION_CHECKPOINT_AND_RECOVERY_PROTOCOL_v1.0.md",
@@ -55,13 +59,15 @@
   "verification_evidence": [
     "SYSTEM_ENGINEERING/SESSION_RESILIENCE_RUN32_2026-08-21/05_MACHINE_STATE_AND_TEST_RESULTS.json",
     "SYSTEM_ENGINEERING/SESSION_RESILIENCE_RUN33_2026-08-21/05_MACHINE_STATE_AND_TEST_RESULTS.json",
-    "GitHub Actions runs 32516926109 / 32516926107 / 32516926112",
-    "Google Drive SESSION_RESILIENCE_RUN33_2026-08-21 folder 1CCIXde5_2k57yHHIOENgO7staWyyZ1yv"
+    "SYSTEM_ENGINEERING/SESSION_RESILIENCE_RUN33_2026-08-21/08_CONTROLLED_PARTIAL_WRITE_PILOT_FINAL.json",
+    "SYSTEM_ENGINEERING/SESSION_RESILIENCE_RUN33_2026-08-21/09_INTERRUPTION_LEARNING_EVENT_CONTROLLED.json",
+    "GitHub Actions final Run33 compatibility head: 32517285494 / 32517285548 / 32517285452",
+    "Google Drive controlled pilot document 12_eH5DDRJ6A73tNIFDbnI26RsHV3Qiivm2CzdB5dP_0 with final marker RUN33-PILOT-TRANSACTION-COMPLETE-001"
   ],
   "protected_authorities": ["Cross-Conversation Autopilot v1.3", "Asset Escrow v17", "Transcript Recovery 18B", "Self-Improvement v2", "Registry Transaction Contract v1.0", "project-specific current state"],
   "owner_role": "System Reliability / Self-Improvement Reconciler",
-  "next_action": "Merge Run33 after final freshness/diff gate, then execute a controlled reversible GitHub-Drive partial-write recovery pilot and record it as real integration evidence without treating it as a genuine involuntary outage.",
-  "next_gate": "MERGE_READBACK_THEN_CONTROLLED_PARTIAL_WRITE_PILOT_THEN_REAL_INTERRUPTION_EVIDENCE",
+  "next_action": "Collect genuine interruption/restart evidence during normal project work without manufacturing outages. Each event must preserve exact project authority, store identities, replay decisions and readback evidence, and must be classified real_interruption=true only when an actual interruption occurred.",
+  "next_gate": "AT_LEAST_3_GENUINE_INTERRUPTION_RECOVERIES_ACROSS_AT_LEAST_2_PROJECTS_WITH_ZERO_FALSE_RESUME_THEN_PROMOTION_REVIEW",
   "hold_trigger": "Any false resume, secret leak, duplicate paid/irreversible side effect, registry ID collision, stale overwrite, or checkpoint/transaction overhead that materially harms production.",
   "last_movement": "2026-08-21",
   "terminal_reason": null
