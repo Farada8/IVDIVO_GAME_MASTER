@@ -1,0 +1,9 @@
+{
+  "sources": {
+    "D01_CURRENT_STATE": {"ref":"GitHub main PROJECTS/THE_WIFE_AT_HIS_WEDDING/CURRENT_STATE.md","sha":"ae03e3e1dde6f8cdd16d9da5c8811a240433aba3","role":"ROUTING_STATE"},
+    "D10_CURRENT_STATE": {"ref":"GitHub main PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json","sha":"2a0f65e42ac2d39f38c5e019dc0fe95c4a4d3795","role":"ROUTING_STATE"},
+    "D10_FINAL_GATE": {"ref":"Drive 1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s","role":"FINAL_GATE_SUMMARY"},
+    "B03_FAMILY_GATE": {"ref":"Drive 1IqERJ1ZBYWnCLe4H9VN1TXiP7SLnswZzP21lCxsNChY","role":"PARTIAL_AUTHORITY_SUMMARY"}
+  },
+  "evidence_boundary":"No story/canon mutation; summaries may be inadequate for architecture-level claims. Missing summary fields are not literary defects."
+}
