@@ -1,0 +1,21 @@
+{
+  "project": "THE_WIFE_AT_HIS_WEDDING",
+  "cycle": 2,
+  "episodes": "91-100",
+  "status": "PASS_WORKING",
+  "fatal": 0,
+  "major": 0,
+  "human_signal": "NOT_RUN",
+  "episodes_qc": [
+    {"episode":91,"spoken_words":1143,"audible_scenes":5,"word_gate":"PASS","scene_gate":"PASS","sha256":"d8f78f355b60490dae9759cf083b2b41da570b3aead3bdda2b2940b9bb36d286"},
+    {"episode":92,"spoken_words":1149,"audible_scenes":5,"word_gate":"PASS","scene_gate":"PASS","sha256":"4c81188adc1f9167ada5aaf386827a6cb2a50038541f44fcfe23c001830a62df"},
+    {"episode":93,"spoken_words":1113,"audible_scenes":5,"word_gate":"PASS","scene_gate":"PASS","sha256":"4e9900efd4ede790cba29936198b3347664218b333b7cd71973dc3a4a7e734d8"},
+    {"episode":94,"spoken_words":1144,"audible_scenes":5,"word_gate":"PASS","scene_gate":"PASS","sha256":"be0eb2bde4f163a6eec4b90eba6b78ca2857265a1a07ad8ff27451de7a34ed82"},
+    {"episode":95,"spoken_words":1141,"audible_scenes":5,"word_gate":"PASS","scene_gate":"PASS","sha256":"e1bdd473fc2a1d468b33491b34bfdda07d0e7e0cf37a0e76413cc92d78c003d3"},
+    {"episode":96,"spoken_words":1161,"audible_scenes":5,"word_gate":"PASS","scene_gate":"PASS","sha256":"1c15543fe0bbeeebd4259a365d31015ae8a67d398c3e5698ee6fb2a6698c996f"},
+    {"episode":97,"spoken_words":1159,"audible_scenes":5,"word_gate":"PASS","scene_gate":"PASS","sha256":"af73a1d053b2869f9d74ac14345d3394044839f0dba9ea38df1832d27328b3e5"},
+    {"episode":98,"spoken_words":1153,"audible_scenes":5,"word_gate":"PASS","scene_gate":"PASS","sha256":"fe52fb4cf773412331d329b6dbf29fb9e0f6e856aa166ba71b178c531efccdba"},
+    {"episode":99,"spoken_words":1146,"audible_scenes":5,"word_gate":"PASS","scene_gate":"PASS","sha256":"0a510121c4d7c526aaaaa822bc34cffbffeaf507d9f55e29604ff2a181d477d9"},
+    {"episode":100,"spoken_words":1148,"audible_scenes":5,"word_gate":"PASS","scene_gate":"PASS","sha256":"a63000973efc5ba6c038b4b6dc4f19f5ba775e1de31297469247debae39de6f5"}
+  ]
+}
