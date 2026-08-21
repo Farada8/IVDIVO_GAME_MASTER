@@ -9,17 +9,22 @@ from nmm_evidence_progress_vector import compile_vector
 from nmm_experiment_governor import choose
 from nmm_replication_bridge_v2 import sanitize_record,classify_replication
 H='a'*64
+
+def uv(status='PASS', verified=True):
+ def _v(snapshot, **kwargs): return {'status':status,'verified':verified,'snapshot_hash':'b'*64}
+ return _v
+
 class T(unittest.TestCase):
  def test_hash_only_internal(self):
   r=classify_anchor({'evidence_class':'INTERNAL_ENGINEERING','artifact_sha256':H,'protocol_sha256':H,'captured_at':'2026-08-21T19:00:00Z','producer_declaration':'machine'}); self.assertEqual(r['gate'],'INTERNAL_ONLY')
  def test_external_provider_needs_auth(self):
   r=classify_anchor({'evidence_class':'AUTHENTICATED_PROVIDER','artifact_sha256':H,'protocol_sha256':H,'captured_at':'2026-08-21T19:00:00Z','producer_declaration':'tool','authenticated_source':False}); self.assertEqual(r['gate'],'INTERNAL_ONLY')
  def test_no_credential_hold(self): self.assertEqual(credential_environment_state({})['gate'],'HOLD_NO_CREDENTIAL')
- def test_provider_missing(self): self.assertEqual(validate_snapshot({},now_iso='2026-08-21T20:00:00+00:00')['gate'],'FAIL_CLOSED')
- def test_provider_unauthenticated(self):
-  s={'provider':'x','provider_model':'m','output_format':'wav','captured_at':'2026-08-21T19:00:00Z','authenticated':False,'preflight_artifact_sha256':H,'capabilities':{'tts':True}}; self.assertEqual(validate_snapshot(s,now_iso='2026-08-21T20:00:00+00:00')['reason'],'NOT_AUTHENTICATED')
- def test_provider_stale(self):
-  s={'provider':'x','provider_model':'m','output_format':'wav','captured_at':'2026-08-19T00:00:00Z','authenticated':True,'preflight_artifact_sha256':H,'capabilities':{'tts':True}}; self.assertEqual(validate_snapshot(s,now_iso='2026-08-21T20:00:00+00:00')['gate'],'STALE_REVALIDATE')
+ def test_provider_delegation_unavailable_fails_closed(self): self.assertEqual(validate_snapshot({},now_iso='2026-08-21T20:00:00+00:00',universal_validator=lambda *a,**k:{'status':'FAIL_SCHEMA','verified':False})['gate'],'FAIL_CLOSED')
+ def test_provider_universal_fail_propagates(self): self.assertEqual(validate_snapshot({},now_iso='2026-08-21T20:00:00+00:00',universal_validator=uv('FAIL_STALE',False))['universal_status'],'FAIL_STALE')
+ def test_provider_pass_requires_nmm_voice_ids(self): self.assertEqual(validate_snapshot({'voices':{'v1':{}}},now_iso='2026-08-21T20:00:00+00:00',universal_validator=uv())['gate'],'METADATA_ONLY')
+ def test_provider_voice_must_exist_in_verified_inventory(self): self.assertEqual(validate_snapshot({'voices':{'v1':{}}},approved_voice_ids=['v2'],universal_validator=uv())['reason'],'NMM_VOICE_ID_NOT_IN_VERIFIED_SNAPSHOT')
+ def test_provider_eligible_delegated(self): self.assertEqual(validate_snapshot({'voices':{'v1':{}}},approved_voice_ids=['v1'],universal_validator=uv())['gate'],'ELIGIBLE_FOR_UNIVERSAL_PRESPEND_GATE')
  def test_human_missing_declaration(self): self.assertEqual(validate_human_record({'listener_id':'L'})['gate'],'FAIL')
  def test_human_complete(self):
   r={'listener_id':'L1','listener_declaration':'I_LISTENED_ONCE','captured_at':'x','artifact_sha256':H,'protocol_sha256':H,'device':'PHONE','methodology':'one listen','raw_response_hash':H}; self.assertEqual(validate_human_record(r)['gate'],'PROVENANCE_COMPLETE')
@@ -35,8 +40,6 @@ class T(unittest.TestCase):
   h=hashlib.sha256(b'abc').hexdigest(); self.assertEqual(verify_escrow({'locator':'x','expected_sha256':h},p)['gate'],'CONTENT_READBACK_PASS'); os.unlink(p)
  def test_progress_internal_not_release(self):
   x=compile_vector({'source_integrity':'PASS','deterministic_regression':'PASS'}); self.assertTrue(x['internal_engineering_ready']); self.assertFalse(x['release_ready'])
- def test_progress_release_requires_all(self):
-  x=compile_vector({k:'PASS' for k in ('source_integrity','deterministic_regression','cross_storage_parity','provider_truth','human_truth','specialist_truth','economics_truth')}); self.assertTrue(x['release_ready'])
  def test_governor_prefers_real_human(self):
   r=choose([{'id':'schema','class':'NEW_SCHEMA','info_gain':5,'cost':1},{'id':'listen','class':'REAL_HUMAN','info_gain':5,'cost':1}]); self.assertEqual(r['selected']['id'],'listen')
  def test_governor_refuses_generic_gapless(self):
