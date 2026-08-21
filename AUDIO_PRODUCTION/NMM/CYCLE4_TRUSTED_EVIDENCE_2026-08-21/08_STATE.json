@@ -2,7 +2,7 @@
   "schema": "NMM_CYCLE4_TRUSTED_EVIDENCE_STATE_v1.1",
   "date": "2026-08-21",
   "github_reconciled_main_sha": "e3047a227552477c39c7d6af549208d18afc3fcc",
-  "fresh_rebase_commit": "45f6cbf74de84df90119f7510d79029b9c36f2e1",
+  "fresh_rebase_source_commit": "45f6cbf74de84df90119f7510d79029b9c36f2e1",
   "cycle3_reused": true,
   "executed_prompts": 32,
   "next_prompts": 64,

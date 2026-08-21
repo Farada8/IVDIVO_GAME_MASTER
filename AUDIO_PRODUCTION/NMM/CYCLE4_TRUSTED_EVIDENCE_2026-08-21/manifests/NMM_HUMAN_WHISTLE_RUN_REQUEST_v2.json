@@ -1,0 +1,9 @@
+{
+  "schema": "NMM_HUMAN_WHISTLE_RUN_REQUEST_v2",
+  "status": "READY_FOR_REAL_LISTENER",
+  "listener_pack_sha256": "8f3c9de2a8270859956f9785d7f520751f9e65c46ccbd22f24e21341de8095ac",
+  "protocol_sha256": "34fe8b7c43eca3fef5c03ffe499599a02f29b71479271bb55d1236be45c3b2ee",
+  "raw_answers_template": "RAW_ANSWERS.csv",
+  "result_status": "PENDING_REAL",
+  "answer_key_separation": true
+}

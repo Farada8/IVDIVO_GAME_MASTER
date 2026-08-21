@@ -1,0 +1,51 @@
+{
+  "schema": "NMM_CYCLE4_CONTRACT_BUNDLE_v1",
+  "contracts": {
+    "NMM_BLIND_WHISTLE_TEST_CONTRACT_v2.json": {
+      "schema": "NMM_BLIND_WHISTLE_TEST_CONTRACT_v2",
+      "predeclare": ["trial_set_hash","answer_key_hash","min_accuracy","min_mean_realism","allowed_devices","one_listen_rule"],
+      "mutation_law": "threshold/protocol changes after seal invalidate the run",
+      "master_law": "blind PASS is necessary but not sufficient for story-master lock"
+    },
+    "NMM_CROSS_PROJECT_REPLICATION_CONTRACT_v2.json": {
+      "schema": "NMM_CROSS_PROJECT_REPLICATION_CONTRACT_v2",
+      "one_project": "DISCOVERY_ONLY",
+      "two_projects": "CANDIDATE_FOR_REVIEW at most",
+      "auto_promotion": false,
+      "leakage_fields_forbidden": ["exact_text","asset_id","project character names","project clue identity"]
+    },
+    "NMM_ESCROW_CONTENT_READBACK_CONTRACT_v1.json": {
+      "schema": "NMM_ESCROW_CONTENT_READBACK_CONTRACT_v1",
+      "required": ["locator","expected_sha256","readback_method"],
+      "pass_requires": "materialized bytes and matching sha256",
+      "metadata_only": "never PASS"
+    },
+    "NMM_EVIDENCE_PROGRESS_VECTOR_CONTRACT_v1.json": {
+      "schema": "NMM_EVIDENCE_PROGRESS_VECTOR_CONTRACT_v1",
+      "dimensions": ["source_integrity","deterministic_regression","cross_storage_parity","provider_truth","human_truth","specialist_truth","economics_truth"],
+      "unknown_policy": "UNKNOWN remains UNKNOWN"
+    },
+    "NMM_EXPERIMENT_GOVERNOR_CONTRACT_v1.json": {
+      "schema": "NMM_EXPERIMENT_GOVERNOR_CONTRACT_v1",
+      "priority": ["REAL_PROVIDER","REAL_HUMAN","SPECIALIST","MEASURED_ECONOMICS","DETERMINISTIC_GAP","NEW_SCHEMA","GENERIC_ARCHITECTURE"],
+      "generic_change_requires": "demonstrated cross-project/runtime gap"
+    },
+    "NMM_HUMAN_REVIEW_PROVENANCE_CONTRACT_v2.json": {
+      "schema": "NMM_HUMAN_REVIEW_PROVENANCE_CONTRACT_v2",
+      "required": ["listener_id","listener_declaration","captured_at","artifact_sha256","protocol_sha256","device","methodology","raw_response_hash"],
+      "law": "record provenance is auditable but cannot independently prove subjective experience"
+    },
+    "NMM_PROVIDER_SNAPSHOT_PROVENANCE_CONTRACT_v1.json": {
+      "schema": "NMM_PROVIDER_SNAPSHOT_PROVENANCE_CONTRACT_v1",
+      "required": ["provider","provider_model","output_format","captured_at","authenticated","preflight_artifact_sha256","capabilities"],
+      "max_age_hours": 24,
+      "forbidden": ["api_key","secret","password"],
+      "lock_law": "availability != voice_lock != take_lock"
+    },
+    "NMM_TRUST_ANCHOR_CONTRACT_v1.json": {
+      "schema": "NMM_TRUST_ANCHOR_CONTRACT_v1",
+      "required": ["evidence_class","artifact_sha256","protocol_sha256","captured_at","producer_declaration"],
+      "law": "INTEGRITY != EXTERNAL_TRUTH; external truth requires an eligible evidence class and source-specific authentication/declaration."
+    }
+  }
+}
