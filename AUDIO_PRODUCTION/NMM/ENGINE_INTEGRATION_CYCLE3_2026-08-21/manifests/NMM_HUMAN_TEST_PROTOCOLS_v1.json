@@ -1,0 +1,6 @@
+[
+  {"schema":"NMM_HUMAN_PROTOCOL_v1","protocol_id":"NMM_WHISTLE_DEVICE_BLIND_v1","question_ids":["short_vs_long_order"],"threshold_predeclared":0.8333333333333334,"status":"READY_NOT_RUN","raw_answers":[],"stimulus_hashes_count":12},
+  {"schema":"NMM_HUMAN_PROTOCOL_v1","protocol_id":"NMM_TEMPORAL_CONFESSION_ONE_LISTEN_v1","question_ids":["confession_time","discovery_time","why_impossible"],"threshold_predeclared":0.8,"status":"READY_NOT_RUN","raw_answers":[]},
+  {"schema":"NMM_HUMAN_PROTOCOL_v1","protocol_id":"NMM_VIVIAN_SPOILER_NEUTRALITY_v1","question_ids":["free_suspicion_inference"],"threshold_predeclared":0.0,"status":"READY_NOT_RUN","raw_answers":[]},
+  {"schema":"NMM_HUMAN_PROTOCOL_v1","protocol_id":"NMM_SPEAKER_DIFFERENTIATION_v1","question_ids":["speaker_count","speaker_distinction"],"threshold_predeclared":0.8,"status":"READY_NOT_RUN","raw_answers":[]}
+]
