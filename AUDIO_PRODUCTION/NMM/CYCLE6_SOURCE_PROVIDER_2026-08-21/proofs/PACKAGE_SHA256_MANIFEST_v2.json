@@ -1,0 +1,18 @@
+{
+  "schema": "NMM_CYCLE6_PACKAGE_SHA256_MANIFEST_v2",
+  "file_count": 22,
+  "files": {
+    "03_32_EXECUTION_REPORT.md": {"sha256": "745977b9378012378f09852c06d41825eab65e18783e55c4aaf127b3a198c366", "bytes": 1997},
+    "06_SYNTHESIS_AND_PATH_TO_GOAL.md": {"sha256": "a7d659ae6bbb77dd2ec9c7a6cfc395d9f4488d3509703c89c885a1caaed633a9", "bytes": 1044},
+    "07_NEXT_64_PROMPTS_CYCLE7.md": {"sha256": "7ffd9686062cabbef82a8972384a23ef2b01d641eec8c406cb5e9614720220b1", "bytes": 4852},
+    "runtime/nmm_source_authority.py": {"sha256": "ba18b0b1e3b2a2518bf844b1bbfdd4efc8b011f1583be1993053229d44061234", "bytes": 1302},
+    "runtime/nmm_provider_execution_gate.py": {"sha256": "eee0d2e06d1f0b42eff50187c927ea13c9a5ec140dd0ccd1bf8125be188e2c9c", "bytes": 4267},
+    "runtime/nmm_canary_evidence.py": {"sha256": "872d88e6706b1920234f9dfd067c0881d2ccafcde08396361b5db70950bd0610", "bytes": 3022},
+    "runtime/nmm_cycle6_orchestrator.py": {"sha256": "d3d45e77894b9b81cd13b9ab17e24ac2780eb03b24ccc3b897d4b131a7c9997d", "bytes": 1208},
+    "tests/test_nmm_cycle6.py": {"sha256": "fc26660ba67743460fd60968c3c18243d1d53b06f1658d5541f09106a1485043", "bytes": 5535},
+    "contracts/NMM_CYCLE6_CONTRACT_BUNDLE_v1.json": {"sha256": "7bef864a45055c7bd4b047b247834f6a693b50905112d5d657d35fc816c1af9d", "bytes": 1736},
+    "protocols/NMM_CYCLE6_PROTOCOL_BUNDLE_v1.md": {"sha256": "547e303f8b37e33e37784fa43284954a63237b5723a0e5b259be6d22772e2771", "bytes": 782},
+    "self_improvement/NMM_CYCLE6_SELF_IMPROVEMENT_DISCOVERY_v1.json": {"sha256": "56d13685bce9ff28f9d1da5b58c6486e8dd71289a4a77975b755d44b911be677", "bytes": 511}
+  },
+  "note": "Compact GitHub checksum index; complete v2 manifest is persisted in Drive clean package."
+}
