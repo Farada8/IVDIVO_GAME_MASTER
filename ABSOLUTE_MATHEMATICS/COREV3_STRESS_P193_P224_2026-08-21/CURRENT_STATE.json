@@ -1,0 +1,27 @@
+{
+  "project": "ABSOLUTE MATHEMATICS",
+  "batch": "COREV3_STRESS_P193_P224_2026-08-21",
+  "completed_prompt_range": "P193-P224",
+  "completed_prompts": 32,
+  "status_counts": {
+    "DERIVED": 22,
+    "KNOWN": 5,
+    "COUNTEREXAMPLE": 4,
+    "NOVELTY_UNVERIFIED": 1
+  },
+  "formal_core": "FORMAL_CORE_v4.md",
+  "formal_results": "FORMAL_RESULTS_P193_P224.md",
+  "next_prompt_range": "P225-P288",
+  "next_prompt_count": 64,
+  "primary_next_front": ["P225","P233","P241","P249","P257","P265","P273","P281"],
+  "authority_rules": [
+    "Finite Markov exact Promotion is not renamed novelty: use lumpability/bisimulation terminology.",
+    "Context family includes interventions when control use is claimed.",
+    "Approximate closure always reports normalized metric, horizon and stability.",
+    "Finite upper state may fail to exist.",
+    "Order is admissibility-relative and flattenable under composition closure.",
+    "G-Rise is language-relative unless invariance is proved.",
+    "Genesis normal forms require confluence.",
+    "FAIL/counterexamples remain authority."
+  ]
+}
