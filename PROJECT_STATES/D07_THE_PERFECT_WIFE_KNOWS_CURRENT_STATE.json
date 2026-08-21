@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "CURRENT_PROJECT_ROUTING_STATE_NOT_STORY_CANON",
+  "project_id": "D07",
+  "title": "THE PERFECT WIFE KNOWS",
+  "authority_note": "Founder newest instruction and the current D07 authority/final story gate outrank this routing state. The 2026-08-21 completion update supersedes the older pilot-only stop in the same document.",
+  "story_status": "E01_E24_TEXT_COMPLETE_STORY_LOCKED",
+  "current_project_authority": {
+    "drive_id": "1_HTWw-mZzOlEKP04Xr95pIEOAt63NQgiwcd6EmigTfQ",
+    "title": "00_THE PERFECT WIFE KNOWS — CURRENT PROJECT AUTHORITY + NEXT ACTION v1.0",
+    "current_routing_from_source": "E01–E24 TEXT COMPLETE / STORY LOCKED"
+  },
+  "final_story_gate": {
+    "drive_id": "1bBJjd9A0BXi_bdFIIHn3-D7ofVBbAW_jSNG-kh0fRmc",
+    "title": "THE PERFECT WIFE KNOWS — FINAL SEASON STORY GATE v1.0 — TEXT COMPLETE — STORY LOCKED",
+    "status": "PASS_STORY_LOCKED"
+  },
+  "downstream_stage": "LOCKED_TEXT_QUEUED_FOR_AUDIO_AFTER_ACTIVE_TEXT_PORTFOLIO; COMMERCIAL_RELEASE_SPECIALIST_HOLD",
+  "specialist_release_hold": [
+    "FINANCE_REVIEW",
+    "LEGAL_REVIEW",
+    "REGULATORY_REVIEW"
+  ],
+  "next_safe_action": "PRESERVE_LOCKED_TEXT; AFTER_ACTIVE_TEXT_PORTFOLIO_COMPLETION_ROUTE_TO_AUDIO_NOVEL_STUDIO; BEFORE_COMMERCIAL_RELEASE_OBTAIN_SPECIALIST_FINANCE_LEGAL_REGULATORY_CLEARANCE",
+  "blockers": [
+    "ACTIVE_TEXT_PORTFOLIO_NOT_YET_CLOSED_FOR_BATCH_AUDIO",
+    "SPECIALIST_FINANCE_LEGAL_REGULATORY_REVIEW_REQUIRED_BEFORE_COMMERCIAL_RELEASE"
+  ],
+  "do_not_repeat": [
+    "DO_NOT_RETURN_TO_HISTORICAL_E01_E03_PILOT_STOP",
+    "DO_NOT_WRITE_E25_OR_REOPEN_LOCKED_E01_E24_WITHOUT_NEW_QUALIFYING_EVIDENCE_OR_FOUNDER_INSTRUCTION",
+    "DO_NOT_ADD_SECOND_FAMILY",
+    "DO_NOT_USE_MIRACLE_HACKER_OR_CONFESSION_ONLY_SOLUTION",
+    "DO_NOT_CLEANLY_EXONERATE_DANIEL",
+    "DO_NOT_TREAT_DANIELS_UNAUTHORIZED_USE_OF_CLAIRE_LINKED_ENTITIES_AS_JUSTIFIED_BY_LOVE",
+    "DO_NOT_REMOVE_CLAIRE_AGENCY",
+    "DO_NOT_USE_CHILDREN_AS_RECURRING_DANGER_BAIT"
+  ],
+  "provenance": [
+    "Drive authority ID 1_HTWw-mZzOlEKP04Xr95pIEOAt63NQgiwcd6EmigTfQ",
+    "Drive final story gate ID 1bBJjd9A0BXi_bdFIIHn3-D7ofVBbAW_jSNG-kh0fRmc"
+  ]
+}
