@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.character_contradiction/1.0",
+  "title":"IVDIVO Character Behavioral Contradiction Card",
+  "type":"object",
+  "required":["character_id","competing_values_or_desires","pressure_events"],
+  "properties":{
+    "character_id":{"type":"string"},
+    "competing_values_or_desires":{"type":"array","minItems":2,"items":{"type":"string"}},
+    "private_rehearsal_biography":{"type":["string","null"],"description":"Private craft support; not manuscript exposition by default."},
+    "pressure_events":{"type":"array","minItems":1,"items":{"type":"object","required":["trigger","available_actions","chosen_action","cost","self_justification_or_lie","observable_contradiction","later_pattern"],"properties":{
+      "trigger":{"type":"string"},
+      "available_actions":{"type":"array","minItems":2,"items":{"type":"string"}},
+      "chosen_action":{"type":"string"},
+      "cost":{"type":"string"},
+      "self_justification_or_lie":{"type":"string"},
+      "observable_contradiction":{"type":"boolean"},
+      "later_pattern":{"type":"string","enum":["REPEATS","INTENSIFIES","ADAPTS","BREAKS_PATTERN","UNRESOLVED"]}
+    }}}
+  }
+}
