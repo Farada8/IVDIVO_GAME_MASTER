@@ -1,13 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ivdivo.audio.human_review_event/1.0",
+  "$id": "ivdivo.audio.human_review_event/1.1",
   "title": "IVDIVO Human Review Evidence Event",
   "type": "object",
-  "required": ["schema_version", "candidate_id", "role_id", "evidence_family", "reviewer_type", "reviewer_ref", "artifact_sha256", "source_sha256", "reviewed_at", "decision", "scores", "hard_fails", "machine_generated", "event_sha256"],
+  "required": ["schema_version", "candidate_id", "role_id", "candidate_binding_sha256", "evidence_family", "reviewer_type", "reviewer_ref", "artifact_sha256", "source_sha256", "reviewed_at", "decision", "scores", "hard_fails", "machine_generated", "event_sha256"],
   "properties": {
-    "schema_version": {"const": "ivdivo.audio.human_review_event/1.0"},
+    "schema_version": {"const": "ivdivo.audio.human_review_event/1.1"},
     "candidate_id": {"type": "string", "minLength": 1},
     "role_id": {"type": "string", "minLength": 1},
+    "candidate_binding_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "evidence_family": {"enum": ["PRONUNCIATION", "MULTI_STATE", "PAIR", "FATIGUE", "BLIND_LISTEN", "TECHNICAL_QC"]},
     "reviewer_type": {"enum": ["HUMAN_LISTENER", "HUMAN_DIRECTOR", "LANGUAGE_REVIEWER", "AUDIO_ENGINEER", "FOUNDER"]},
     "reviewer_ref": {"type": "string", "minLength": 1},
@@ -21,5 +22,5 @@
     "event_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
   },
   "additionalProperties": true,
-  "x-ivdivo-law": "Human review evidence is provenance-bound and append-only. Review may create eligibility for an authorized human/Founder lock decision; machine_may_auto_lock is always false."
+  "x-ivdivo-law": "Review evidence is bound to an exact candidate voice/model/settings binding. Different binding revisions may not be silently combined. Complete evidence creates only eligibility for authorized human/Founder lock; machine auto-lock is forbidden."
 }
