@@ -1,84 +1,50 @@
 {
-  "schema_version": "1.2",
-  "updated": "2026-08-21",
-  "project_id": "IVDIVO_BOOK_3_SMITH",
-  "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
-  "status": "ACTIVE_MANUSCRIPT_CH04_FRONTIER",
-  "authority": {
-    "founder_newest_instruction": "OLD EARTH SECURITY ↔ NEW CONFEDERATION SECURITY; neither side automatically right; story first",
-    "founder_family_decision": "F1_CANONIZE_DAUGHTER_CORE_ONLY",
-    "saga_bible_drive_id": "18boeup_cforR4zZ4Pc291WpG_T85OEklPH-t1YMlE6s",
-    "working_architecture_drive_id": "1g_pHEJBsc4dQRTa7lVJ8wc0nub33JUQteUVIEwQN5vA",
-    "scene_cards_ch1_12_drive_id": "1Dm0Nw5I-uWcSUPhangGMjPSIAMpHWw-c-dz7gGv222A",
-    "cycle32_story_rebase_ch13_29_drive_id": "1bCII388mfUgzbC9hZVodvS1sJLn9pzF1_nIjTqUQEy4",
-    "founder_f1_final_gate_drive_id": "1EkmIwNmE9kkZ6RBfeMZzQ6L-AbLKaPIcT5r8mU_PsU0",
-    "github_f1_ch1_3_lock": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_F1_AND_MANUSCRIPT_CH1_3_LOCK_2026-08-21.json"
+  "schema_version":"1.3",
+  "updated":"2026-08-21",
+  "project_id":"IVDIVO_BOOK_3_SMITH",
+  "title":"SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+  "status":"ACTIVE_MANUSCRIPT_PART_II_CH07_FRONTIER",
+  "authority":{
+    "founder_family_decision":"F1_CANONIZE_DAUGHTER_CORE_ONLY",
+    "saga_bible_drive_id":"18boeup_cforR4zZ4Pc291WpG_T85OEklPH-t1YMlE6s",
+    "working_architecture_drive_id":"1g_pHEJBsc4dQRTa7lVJ8wc0nub33JUQteUVIEwQN5vA",
+    "scene_cards_ch1_12_drive_id":"1Dm0Nw5I-uWcSUPhangGMjPSIAMpHWw-c-dz7gGv222A",
+    "cycle32_story_rebase_ch13_29_drive_id":"1bCII388mfUgzbC9hZVodvS1sJLn9pzF1_nIjTqUQEy4",
+    "founder_f1_final_gate_drive_id":"1EkmIwNmE9kkZ6RBfeMZzQ6L-AbLKaPIcT5r8mU_PsU0"
   },
-  "case_engine": "predictive distress trace -> rescue response -> response changes causal state -> new predictive trace -> recursive intervention",
-  "completed_frontier": "MANUSCRIPT_CH1_CH3_PLUS_LOCAL_AND_MINIBLOCK_GATES",
-  "story_core": {
-    "hero": "Smith",
-    "want": "Stop deadly precursor-driven deployments while preserving real rescue capability during a worsening storm.",
-    "wrong_strategy": "Treat precursor information as an external anomalous input that can be isolated/suppressed; later risk replacing OES certainty with Confederation predictive certainty.",
-    "midpoint": "Bounded dummy-response metadata appears in later precursor content, proving response architecture is inside the warning state.",
-    "climax_choice": "Regain centralized predictive control or accept bounded loss of central control and trust distributed professional judgment with incomplete information.",
-    "resolution": "Major emergency contained; precursor coherence decays; OES doctrine amended; Morgen Pass concealment reopened; local authority restored; no permanent crossover team."
+  "smith_family":{
+    "status":"FOUNDER_CANON_F1",
+    "canon":["Smith has a teenage daughter in the current saga period"],
+    "working":["age 16-17 pending timeline normalization"],
+    "unknown_do_not_invent":["daughter name","mother name","exact marital history","custody or household structure","occupations","contact schedule"]
   },
-  "smith_family": {
-    "status": "FOUNDER_CANON_F1",
-    "canon": ["Smith has a teenage daughter in the current saga period"],
-    "working": ["age 16-17 pending timeline normalization"],
-    "unknown_do_not_invent": ["daughter name","mother name","exact marital history","custody or household structure","occupations","contact schedule"],
-    "authority_law": "Do not ask Founder again whether Smith has a daughter unless newer Founder instruction changes it. Distinguish lost authority from missing authority."
+  "pre_prose_gate":{"fatal":0,"blocking_major":0,"prose_authorized":true},
+  "manuscript":{
+    "CH01":{"title":"WRONG ADDRESS","status":"PASS","drive_id":"197ikUS2gfyyXBykIMsgnPmCY8NphIVDLBLw0yZWx0PU"},
+    "CH02":{"title":"THE CALL THAT WORKS","status":"PASS","drive_id":"1Tx7jRTOJaiEA-YT_VGyIPWTDNKKQAb5PBHrj2wcDUaw"},
+    "CH03":{"title":"THE THIRD DEPLOYMENT","status":"PASS","drive_id":"13fCfIg3mA0KTRfDvj4grmQGNW5tA6poImI4Ml2JiRsA"},
+    "CH04":{"title":"DUBLIN","status":"PASS","drive_id":"1Wvi1BtS949USSXln49_zIlPowSU4BSa9mvlvvTwCWJs","gate_drive_id":"1a_N1bIYgDe2cUu7X7hpK8DHD6WQ9CZN2YcG6e6j0JBU"},
+    "CH05":{"title":"WHAT HAPPENED BEFORE THE CALL?","status":"PASS","drive_id":"1Jh8MlUyp6nXzhGA4xhmk3d4YP0BHEzI3GLvHqV8mIck","gate_drive_id":"1kcvvoxHxufSrqwfVUDqjqN65XDKnl4cdcVk7fYUycWU"},
+    "CH06":{"title":"FIRST PRECURSOR DOCTRINE","status":"PASS_FALSE_VICTORY","drive_id":"1P7dyxjnvcGzbpdltV2yoSa6JhZRJr8FbPiKuUKKDArE","block_gate_drive_id":"1BsEXW5XnFu469VqvgQnLjsrgVM-ZC6TaLGNBQQQEd90"}
   },
-  "oes_confederation_reconciliation": {
-    "status": "WORKING_PROJECT_BINDING_VALIDATED",
-    "old_earth_security_knows": ["historical precursor cases","Morgen Pass","suppression doctrine","human casualty history","legacy signatures"],
-    "confederation_counterpart_knows": ["broader response-coupled phenomenon class","relational topology","branching-state/model risks"],
-    "confederation_jurisdiction_on_earth": false,
-    "confederation_hard_contribution_cap": ["phenomenon class","test discriminant","topology/coherence risk"],
-    "local_authority_owns": ["terrain","rescue duty","people/resources","lawful operational command"],
-    "law": "knowledge != jurisdiction; forced cooperation without sovereignty transfer"
+  "part_i_result":{
+    "fatal":0,
+    "major":0,
+    "false_victory":"EARNED",
+    "smith_initial_model":"external precursor / unverified; full predictive content is hazardous input that can alter deployment before ordinary evidence exists",
+    "doctrine":"quarantine full precursor content; preserve raw source; verify present hazard independently; deploy on present evidence rather than predicted scene",
+    "evidence_of_success":["false deployments stop","ordinary rescue remains functional","precursor recurrence decreases after information-path restriction; causation not established"],
+    "jurisdiction":"local rescue authority remains local"
   },
-  "pre_prose_gate": {
-    "fatal": 0,
-    "blocking_major": 0,
-    "prose_authorized": true,
-    "n24_delta": "PASS_AFTER_F1",
-    "n47_delta": "PASS_AFTER_F1"
+  "oes_confederation_reconciliation":{
+    "confederation_jurisdiction_on_earth":false,
+    "law":"knowledge != jurisdiction; forced cooperation without sovereignty transfer"
   },
-  "manuscript": {
-    "CH01": {"title":"WRONG ADDRESS","status":"PASS","drive_id":"197ikUS2gfyyXBykIMsgnPmCY8NphIVDLBLw0yZWx0PU","gate_drive_id":"1qptvT8sh-kMxQsMVeaDmt8maDfw4wk4nr30rjShAvO0"},
-    "CH02": {"title":"THE CALL THAT WORKS","status":"PASS","drive_id":"1Tx7jRTOJaiEA-YT_VGyIPWTDNKKQAb5PBHrj2wcDUaw","regression_drive_id":"15AUI_GLem0VPkCHIBeJKZfVHxCqWZdFC_aTiX1nr29E"},
-    "CH03": {"title":"THE THIRD DEPLOYMENT","status":"PASS","drive_id":"13fCfIg3mA0KTRfDvj4grmQGNW5tA6poImI4Ml2JiRsA","mini_block_gate_drive_id":"1ToOyjGnfhuQC7cjmNl0Ihlhb9XaetrbPiI6c8hH5HY0"}
+  "civilian_continuity":{
+    "status":"SEEDED_IN_MANUSCRIPT",
+    "selected_function":"Andrej Košir — hydro-service civilian worker and independent chronology source; later permanent disabling lower-limb injury class remains working"
   },
-  "ch1_3_gate": {
-    "fatal": 0,
-    "major": 0,
-    "warning_function_diversity": "PASS",
-    "causal_escalation": "PASS",
-    "mystery_fairness": "PASS",
-    "character_pressure": "PASS",
-    "oes_activation": "legacy audio signature after Luka Petric responder fatality",
-    "medium_watches": ["Smith enters immediately in CH04","Smith first model must be reasonable and incomplete","Jana grief stays behavioral","OES signature is evidence trigger not ontology proof"]
-  },
-  "civilian_continuity": {
-    "status": "WORKING_PRE_PROSE_BOUND_AND_SEEDED_IN_MANUSCRIPT",
-    "selected_function": "Andrej Košir — hydro-service civilian worker; recurring; independent chronology source; permanent disabling lower-limb injury class later, exact diagnosis not locked",
-    "drive_id": "18959yc9mlDURWOdbsseGdDIVbN2jHTwnxSTlCQF674A"
-  },
-  "voice_calibration": {
-    "status": "INTERNAL_CALIBRATION_PASS_PLUS_CH1_3_CORPUS_SEED_PASS",
-    "human_signal": "NOT_RUN"
-  },
-  "prose_authorized": true,
-  "do_not": [
-    "DO_NOT_INVENT_SMITH_FAMILY_BEYOND_F1",
-    "DO_NOT_GIVE_CONFEDERATION_EARTH_COMMAND_JURISDICTION",
-    "DO_NOT_REVEAL_PRECURSOR_ONTOLOGY",
-    "DO_NOT_MAKE_ENIA_OR_TAREN_SOLVE_CASE",
-    "DO_NOT_REPEAT_CYCLE32",
-    "DO_NOT_ADD_MORE_LOCAL_PRELUDE_BEFORE_SMITH"
-  ],
-  "next_obligation": "CH04_DUBLIN: introduce Smith immediately; ordinary life; F1 daughter continuity without inventing unknown details; Enia practical interaction without case answer; OES triage; narrow case acceptance; local rescue authority remains local."
+  "do_not":["DO_NOT_INVENT_SMITH_FAMILY_BEYOND_F1","DO_NOT_GIVE_CONFEDERATION_EARTH_COMMAND_JURISDICTION","DO_NOT_REVEAL_PRECURSOR_ONTOLOGY","DO_NOT_MAKE_ENIA_OR_TAREN_SOLVE_CASE","DO_NOT_REPEAT_CYCLE32"],
+  "github_false_victory_lock":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/MANUSCRIPT_CH4_6_FALSE_VICTORY_LOCK_2026-08-21.json",
+  "next_obligation":"CH07 OUT OF THE SYSTEM: short Dublin return/ordinary routine; Smith says he took the signal out of the system; Enia pressures only what else changed when relation was removed, without solving case. Then CH08 blocked warning -> CH09 causally earned cost."
 }
