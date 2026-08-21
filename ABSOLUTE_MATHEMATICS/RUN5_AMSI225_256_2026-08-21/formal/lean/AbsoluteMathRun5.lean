@@ -24,9 +24,9 @@ theorem point_separating_injective
     (preserve : ∀ x y : X, B x = B y → ∀ k : K, obs k x = obs k y) :
     Function.Injective B := by
   intro x y hB
-  by_contra hxy
-  obtain ⟨k, hk⟩ := sep x y hxy
-  exact hk (preserve x y hB k)
+  exact Classical.byContradiction (fun hxy => by
+    obtain ⟨k, hk⟩ := sep x y hxy
+    exact hk (preserve x y hB k))
 
 /-- P3: a candidate feasible at a stricter natural-number defect threshold remains feasible at a weaker threshold. -/
 theorem feasible_set_monotonicity
@@ -74,9 +74,8 @@ theorem no_breakpoint_same_feasibility
   · intro h
     exact Nat.le_trans h hε
   · intro h₂
-    by_contra hnot
-    have hlt : ε₁ < defect a := Nat.lt_of_not_ge hnot
-    exact hgap a ⟨hlt, h₂⟩
+    exact Classical.byContradiction (fun hnot =>
+      hgap a ⟨Nat.lt_of_not_ge hnot, h₂⟩)
 
 /--
 Signature-extension revocation core lemma.
