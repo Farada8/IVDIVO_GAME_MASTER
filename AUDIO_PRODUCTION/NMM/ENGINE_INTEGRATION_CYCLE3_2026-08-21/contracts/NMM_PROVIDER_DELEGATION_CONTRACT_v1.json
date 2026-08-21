@@ -1,0 +1,6 @@
+{
+  "schema":"NMM_PROVIDER_DELEGATION_CONTRACT_v1",
+  "delegates_to":["audio/studio/provider_preflight.py","audio/studio/controlled_provider_dispatch.py","audio/studio/elevenlabs_adapter.py","audio/studio/alignment_normalizer.py"],
+  "must_provide":["source_fingerprint","authenticated_capability_snapshot","explicit_voice_binding","exact_text_hash","request_purpose","spend_authorization"],
+  "must_not":["store_secret","auto_substitute_voice","invent_provider_result","treat_provider_acceptance_as_take_lock"]
+}
