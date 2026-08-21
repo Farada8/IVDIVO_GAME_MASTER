@@ -131,6 +131,20 @@ When E02 production is legitimately resumed:
 8. run current choreography/Foley/acoustic/render validation;
 9. persist the promoted E02 package with hashes and readback.
 
+## 16-pass recovery audit execution
+
+This artifact has now been re-evaluated with `IVDIVO_NARRATIVE_OS/19_CROSS_DIALOG_RECOVERY_AND_DELTA_PROMPT_PACK_v1.0.md`.
+
+Execution record: `IVDIVO_NARRATIVE_OS/CROSS_DIALOG_RECOVERY_EXECUTION_REPORT_2026-08-21.md`.
+
+Outcome:
+- universal duplicate/superseded material correctly excluded from re-promotion;
+- E02 staging delta retained as project-specific downstream WORKING evidence;
+- `NO_NEAR-EAR E02`, acoustic-domain ownership, movement↔Foley coupling and anti-overcue logic retained;
+- missing historical standalone manifest names/hashes remain UNKNOWN rather than invented;
+- current E01 frontier remains unchanged;
+- a separate MAJOR operational defect was identified in the ROOM917 machine state: stale blanket `safe + zero_cost + reversible` continuation semantics. That defect is corrected in the candidate project state layer only and does not promote this E02 material.
+
 ## Current-frontier firewall
 
 This recovered record MUST NOT:
