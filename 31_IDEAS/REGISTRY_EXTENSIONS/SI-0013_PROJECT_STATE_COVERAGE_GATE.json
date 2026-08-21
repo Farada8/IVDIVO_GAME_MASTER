@@ -1,0 +1,58 @@
+{
+  "candidate_id": "SI-0013",
+  "title": "Durable Project-State Coverage / Portfolio Resumability Gate",
+  "candidate_type": "TOOLING_OR_AUTOMATION",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type":"GITHUB","locator":"31_IDEAS/SPRINTS/2026-08-21_G01_G32_PROMOTION_PILOT/06_NEXT_GENERATION_PROMPTS_H01_H64.md#H09-H16","version":"1.0","date":"2026-08-21","notes":"H09 selected durable project-state coverage as a portfolio gate"},
+    {"source_type":"GITHUB","locator":"PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json","version":"1.1","date":"2026-08-21","notes":"Prior index exposed D06-D08 recovery gaps and did not represent D01 explicitly"},
+    {"source_type":"GITHUB","locator":"ENGINEERING_CONTRACTS/PROJECT_STATE_COVERAGE_GATE_v1.0.md","version":"1.0","date":"2026-08-21","notes":"Fail-closed portfolio resumability contract"},
+    {"source_type":"GOOGLE_DRIVE","locator":"D06/D07/D08 current project authority + completion updates","version":"2026-08-21","date":"2026-08-21","notes":"Exact authorities recovered for D06-D08 instead of inferring from aggregate labels"}
+  ],
+  "problem_or_opportunity": "Portfolio-level routers can say a project is complete/locked while a new conversation still lacks an exact durable state pointer, causing repeated work, stale pilot routing or guessed next actions.",
+  "proposed_mechanism": "Maintain required_project_ids; require each required project to resolve either to a durable PASS-like state pointer or an explicit BLOCKED_RECOVERY record with reason; derive PASS_FULL vs PASS_WITH_BLOCKED_RECOVERY mechanically; validate cold-start routing without treating coverage as story quality or Founder lock.",
+  "dedupe_relation": "EXTENSION_OF_PROJECT_WIDE_CONTINUATION_AND_COLD_START_ROUTING",
+  "related_candidates": ["SI-0001","SI-0002","SI-0007","SI-0012"],
+  "expected_benefit": "Prevents silent portfolio gaps, stale project resurrection and invented continuation while allowing independent projects to proceed when one project remains authority-blocked.",
+  "evidence_state": "INTERNAL_EVIDENCE",
+  "priority_vector": {"impact":"HIGH","recurrence":"SYSTEMIC","effort":"LOW","regression_risk":"LOW","reversibility":"EASY","urgency":"HIGH","affected_surface":"PORTFOLIO"},
+  "development_contract": {
+    "coverage_index":"PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json",
+    "validator":"tools/validate_project_state_coverage.py",
+    "tests":"tests/test_project_state_coverage.py",
+    "engineering_contract":"ENGINEERING_CONTRACTS/PROJECT_STATE_COVERAGE_GATE_v1.0.md",
+    "claim_states":["PASS_FULL","PASS_WITH_BLOCKED_RECOVERY"],
+    "blocked_state":"BLOCKED_RECOVERY",
+    "non_claims":["story quality","Founder lock","commercial release readiness","audio readiness","specialist clearance"]
+  },
+  "pilot_evidence": [
+    "D03/D05/Book1 prior durable recovery prevented chat-memory dependency",
+    "H13-H15 recovered D06/D07/D08 exact Drive authority and superseded stale pilot-only routing",
+    "H09 coverage fixture design fails on missing required project, false full claim and routed+blocked contradiction"
+  ],
+  "red_team_findings": [
+    "Coverage is routing completeness only and must never become a story-completion score",
+    "A blocked project must not stop dependency-independent safe work elsewhere",
+    "State pointers themselves can become stale and require a future staleness detector/freshness sweep",
+    "D01 remains explicit BLOCKED_RECOVERY until exact authority is persisted"
+  ],
+  "promotion_level": "NONE",
+  "application_targets": [
+    "PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json",
+    "tools/validate_project_state_coverage.py",
+    "tests/test_project_state_coverage.py",
+    "CURRENT_IVDIVO_SYSTEM_STATE.json boot/resume path after promotion"
+  ],
+  "verification_evidence": [
+    "DETERMINISTIC_COVERAGE_FIXTURE_DESIGN_COMPLETED_PENDING_REPOSITORY_CI_AND_COLD_START_READBACK"
+  ],
+  "protected_authorities": ["Founder newest instruction","Project-specific authority","Story canon/locks","Human/provider/specialist evidence boundaries"],
+  "owner_role": "Portfolio Router / Self-Improvement Engine",
+  "next_action": "Run repository CI, cold-start D06-D08 from only their durable state files, keep D01 explicitly blocked, then decide PILOT_PASS or repair.",
+  "next_gate": "PORTFOLIO_COLD_START_REGRESSION_GATE",
+  "hold_trigger": null,
+  "terminal_reason": null,
+  "last_movement": "2026-08-21",
+  "notes": "Candidate gate; no authority promotion from internal fixtures alone."
+}
