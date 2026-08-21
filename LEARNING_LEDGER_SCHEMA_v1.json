@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "IVDIVO_LEARNING_LEDGER_SCHEMA_v1",
+  "title": "IVDIVO Self-Improvement Learning Ledger",
+  "type": "object",
+  "required": ["schema_version", "updated", "observations", "experiments", "learnings"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "updated": {"type": "string"},
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["observation_id", "date", "domain", "signal_type", "description", "evidence", "status"],
+        "properties": {
+          "observation_id": {"type": "string"},
+          "date": {"type": "string"},
+          "domain": {"enum": ["BOOK", "AUDIO", "PRODUCTIVITY", "ENGINE", "RESEARCH", "MULTI_AI", "VISUAL", "MARKET", "OTHER"]},
+          "project_id": {"type": ["string", "null"]},
+          "stage": {"type": ["string", "null"]},
+          "signal_type": {"enum": ["DEFECT", "SUCCESS", "REPAIR", "REWORK", "DELAY", "COST", "CONFUSION", "QUALITY", "PROVIDER", "HUMAN", "MARKET", "CONCURRENCY", "TOOL_LIMIT", "OTHER"]},
+          "severity": {"enum": ["FATAL", "MAJOR", "MEDIUM", "POLISH", "INFO"]},
+          "description": {"type": "string"},
+          "evidence": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "source_artifact": {"type": ["string", "null"]},
+          "source_hash_or_revision": {"type": ["string", "null"]},
+          "earliest_failed_layer": {"type": ["string", "null"]},
+          "candidate_id": {"type": ["string", "null"]},
+          "generalization_hypothesis": {"type": ["string", "null"]},
+          "status": {"enum": ["RECORDED", "CLUSTERED", "CANDIDATE_CREATED", "EXPLAINED", "CLOSED"]}
+        }
+      }
+    },
+    "experiments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["experiment_id", "candidate_id", "status", "baseline", "treatment", "acceptance_gate"],
+        "properties": {
+          "experiment_id": {"type": "string"},
+          "candidate_id": {"type": "string"},
+          "domain": {"enum": ["BOOK", "AUDIO", "PRODUCTIVITY", "ENGINE", "RESEARCH", "MULTI_AI", "VISUAL", "MARKET", "OTHER"]},
+          "project_id": {"type": ["string", "null"]},
+          "status": {"enum": ["PLANNED", "RUNNING", "PASS", "FAIL", "INCONCLUSIVE", "BLOCKED"]},
+          "baseline": {"type": "string"},
+          "treatment": {"type": "string"},
+          "scope": {"type": ["string", "null"]},
+          "protected_invariants": {"type": "array", "items": {"type": "string"}},
+          "evidence_plan": {"type": "array", "items": {"type": "string"}},
+          "acceptance_gate": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "result_evidence": {"type": "array", "items": {"type": "string"}},
+          "decision": {"type": ["string", "null"]},
+          "regressions": {"type": "array", "items": {"type": "string"}},
+          "next_action": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "learnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["learning_id", "statement", "scope", "evidence_refs", "disposition"],
+        "properties": {
+          "learning_id": {"type": "string"},
+          "statement": {"type": "string"},
+          "scope": {"enum": ["PROJECT_ONLY", "BOOK_OR_SERIES", "GENRE_OR_DOMAIN", "UNIVERSAL_IVDIVO", "REFERENCE_ONLY"]},
+          "evidence_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "candidate_id": {"type": ["string", "null"]},
+          "disposition": {"enum": ["APPLY", "PILOT_ELSEWHERE", "HOLD", "REJECT", "SUPERSEDED"]},
+          "application_targets": {"type": "array", "items": {"type": "string"}},
+          "confidence_basis": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}
