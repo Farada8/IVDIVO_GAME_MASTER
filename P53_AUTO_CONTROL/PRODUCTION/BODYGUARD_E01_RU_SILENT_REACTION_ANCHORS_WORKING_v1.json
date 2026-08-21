@@ -1,0 +1,47 @@
+{
+  "artifact": "BODYGUARD_E01_RU_SILENT_REACTION_ANCHORS_WORKING_v1",
+  "status": "WORKING_NO_ABSOLUTE_TIMESTAMPS",
+  "source_authority": "EN Recording Master v1.6 + P53 E01 performance logic",
+  "anchors": [
+    {
+      "anchor_id": "BG_E01_SR01_AFTER_SAFE_DECK",
+      "semantic_after_block": "BG_E01_S3_122",
+      "characters": ["ELI_KWON", "NAOMI_PARK"],
+      "trigger": "both have cleared the seam and immediate mechanical danger is controlled",
+      "silent_action": "Eli one breath reset; Naomi functional contact has already ended; she shifts into condition check",
+      "listener_may_feel": "private fracture + competence + release",
+      "suppress": ["romantic lingering touch", "pre-safety eye contact", "music swell"],
+      "spoken_text_change": false
+    },
+    {
+      "anchor_id": "BG_E01_SR02_AFTER_ACCUSATION_RECOGNITION",
+      "semantic_after_block": "BG_E01_S3_143",
+      "characters": ["ELI_KWON", "NAOMI_PARK"],
+      "trigger": "Eli states that the voice accused Naomi",
+      "silent_action": "short protected silence; both register the contradiction before returning to evidence",
+      "listener_may_feel": "private recognition without public alliance",
+      "suppress": ["comfort line", "possessive defense", "flirtation"],
+      "spoken_text_change": false
+    },
+    {
+      "anchor_id": "BG_E01_SR03_AFTER_PERMISSION",
+      "semantic_after_block": "BG_E01_S3_161",
+      "characters": ["NAOMI_PARK", "ELI_KWON"],
+      "trigger": "Eli grants permission to remove equipment",
+      "silent_action": "functional equipment handling only; no intimacy coding",
+      "listener_may_feel": "trust through consent and procedure",
+      "suppress": ["prolonged contact", "breathy chemistry"],
+      "spoken_text_change": false
+    },
+    {
+      "anchor_id": "BG_E01_SR04_BEFORE_RAW_PLAYBACK",
+      "semantic_before_block": "BG_E01_S3_180",
+      "characters": ["ELI_KWON"],
+      "trigger": "Eli chooses to hear the raw evidence before others define his memory",
+      "silent_action": "brief public-mask drop / controlled breath before decision",
+      "listener_may_feel": "agency reclaimed through private cost",
+      "suppress": ["helplessness", "trauma exhibition"],
+      "spoken_text_change": false
+    }
+  ]
+}
