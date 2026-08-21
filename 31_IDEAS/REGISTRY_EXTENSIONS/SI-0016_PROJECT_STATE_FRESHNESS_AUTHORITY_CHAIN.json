@@ -1,0 +1,40 @@
+{
+  "candidate_id": "SI-0016",
+  "title": "Project-State Freshness + Authority Version-Chain Gate",
+  "candidate_type": "TOOLING_OR_AUTOMATION",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type":"FOUNDER","locator":"2026-08-21 directive: continue engineering modules/contracts/proofs/protocols with parallel GitHub/Drive analysis and Self-Improvement","date":"2026-08-21"},
+    {"source_type":"GOOGLE_DRIVE","locator":"CURRENT_WORKSTATE_v2.8 and current D06/D07/D08 authority/final gates","date":"2026-08-21","notes":"Rapid same-day frontier changes exposed stale-pointer risk"},
+    {"source_type":"GITHUB","locator":"PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json","date":"2026-08-21","notes":"Durable coverage exists but does not prove provider freshness"},
+    {"source_type":"GITHUB_WORKING_HISTORY","locator":"system/2026-08-21-h17-h18-freshness-chain","date":"2026-08-21","notes":"Earlier stale branch provided bounded prototype; implementation was rebased rather than merged as-is"}
+  ],
+  "problem_or_opportunity": "Durable project states can become stale after parallel Drive/GitHub authority changes. Coverage proves a pointer exists, not that its controlling source is still the latest authority.",
+  "proposed_mechanism": "Persist bounded authority snapshots with provider revision/locator/rank/disposition; compare with live observations; validate exactly one highest-rank CURRENT and acyclic supersession; return PASS_FRESH, REVIEW_REQUIRED, STALE_REBASE_REQUIRED or FAIL_CONTRACT; any stale result requires semantic reread and never mechanically changes canon.",
+  "dedupe_relation": "EXTENSION_OF_SI_0013_PROJECT_STATE_COVERAGE",
+  "related_candidates": ["SI-0001","SI-0002","SI-0012","SI-0013"],
+  "expected_benefit": "Prevents stale continuation, resurrection of superseded instructions and silent assumption that a durable state remains current after parallel development.",
+  "evidence_state": "INTERNAL_ENGINEERING_EVIDENCE_PLUS_REAL_PROVIDER_BASELINE_PENDING_CROSS_FAMILY_PILOT",
+  "priority_vector": {"impact":"HIGH","recurrence":"SYSTEMIC","effort":"LOW_MEDIUM","regression_risk":"LOW","reversibility":"EASY","urgency":"HIGH","affected_surface":"PORTFOLIO"},
+  "development_contract": {
+    "implementation":["tools/ivdivo_project_state_freshness.py","tools/validate_authority_version_chain.py"],
+    "schema":"schemas/IVDIVO_AUTHORITY_FRESHNESS_SNAPSHOT_SCHEMA_v1.json",
+    "tests":"tests/test_project_state_freshness.py",
+    "engineering_contract":"ENGINEERING_CONTRACTS/PROJECT_STATE_FRESHNESS_AND_AUTHORITY_CHAIN_v1.0.md",
+    "hard_boundary":"REVISION_CHANGED != CANON_CHANGED",
+    "promotion_requirements":["CI PASS","real unchanged provider observation","real changed-revision observation","semantic reread/rebase proof","second independent project-family replication"]
+  },
+  "pilot_evidence": ["Deterministic unchanged/stale/new-current/missing-observation/chain-cycle fixtures implemented","D06/D07/D08 live Drive revisions are being persisted as provider baseline"],
+  "red_team_findings": ["Provider metadata only proves possible change, not semantic meaning","Unavailable provider observation must be REVIEW_REQUIRED","A stale aggregate router must not reopen locked story","Cross-family replication remains required"],
+  "promotion_level": "NONE",
+  "application_targets": ["PROJECT_STATES/*","Cross-Conversation Autopilot freshness stage","Self-Improvement pre-execution guards"],
+  "verification_evidence": ["tests/test_project_state_freshness.py","Run32 provider baseline/readback report pending"],
+  "protected_authorities": ["Founder newest instruction","Project-specific authority","Locked story/canon","Provider evidence boundary"],
+  "owner_role": "Portfolio Router / Authority Reconciler",
+  "next_action": "Capture fresh Drive/GitHub provider baselines, run repository CI, then exercise unchanged and changed-revision rebase behavior on independent project families.",
+  "next_gate": "REAL_PROVIDER_FRESHNESS_AND_CROSS_FAMILY_REBASE_PILOT",
+  "hold_trigger": "Any evidence of false stale detection causing unnecessary locked-story reopening or missed newer authority.",
+  "terminal_reason": null,
+  "last_movement": "2026-08-21"
+}
