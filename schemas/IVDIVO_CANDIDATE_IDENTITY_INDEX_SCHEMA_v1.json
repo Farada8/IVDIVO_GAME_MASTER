@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "IVDIVO_CANDIDATE_IDENTITY_INDEX_SCHEMA_v1",
+  "title": "IVDIVO Candidate Identity Index",
+  "type": "object",
+  "required": ["schema_version", "generated_from", "candidate_records", "redirects", "collisions", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "generated_from": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    },
+    "candidate_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["candidate_id", "source_path", "semantic_sha256"],
+        "properties": {
+          "candidate_id": {"type": "string", "pattern": "^SI-[0-9]{4}$"},
+          "source_path": {"type": "string", "minLength": 1},
+          "semantic_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "redirects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["old_candidate_id", "new_candidate_id", "reason"],
+        "properties": {
+          "old_candidate_id": {"type": "string", "pattern": "^SI-[0-9]{4}$"},
+          "new_candidate_id": {"type": "string", "pattern": "^SI-[0-9]{4}$"},
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "collisions": {"type": "array"},
+    "tracked_migration_debt": {"type": "array"},
+    "status": {"enum": ["PASS", "PASS_WITH_TRACKED_DEBT", "FAIL"]},
+    "promotion_eligible": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}
