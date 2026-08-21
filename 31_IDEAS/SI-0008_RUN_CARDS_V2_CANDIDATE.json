@@ -1,67 +1,11 @@
 {
-  "candidate_id": "SI-0008",
-  "title": "Prompt Router / Meta-Orchestrator execution layer derived from 32→64 cycles",
-  "candidate_type": "PROMPT_ORCHESTRATION_AND_EXECUTION_LAYER",
-  "status": "PILOTING",
-  "scope": "UNIVERSAL_IVDIVO",
-  "source_provenance": [
-    {"source_type":"FOUNDER","locator":"2026-08-21 directives: develop/execute 32 prompts, analyze, persist, derive 64; system-wide not book/audio-only","date":"2026-08-21","notes":"Direct Founder instruction"},
-    {"source_type":"GITHUB","locator":"SELF_IMPROVEMENT_STUDIO/2026-08-21_SYSTEM_CYCLE2_32_TO_64/","version":"Cycle2","hash":"merge:850085a8b26a517e82b1f3654c8ce054d8322d0c","date":"2026-08-21","notes":"Merged PR #77 whole-system Cycle 2 evidence"},
-    {"source_type":"GOOGLE_DRIVE","locator":"1WjrET2saDfF6_Dv8hP7qXLD9glBYG0Fn","version":"Cycle2","hash":"cfa2a79c41ad66aefba007639aaa70dfd9cfe17a14a87251a77e42ef04a01dd9","date":"2026-08-21","notes":"Cycle 2 folder; full ZIP ID 136MgcY2K733pVnmbAypfgrwAGuJe1WSP"},
-    {"source_type":"GITHUB","locator":"IVDIVO_NARRATIVE_OS/19_SELF_IMPROVEMENT_NEXT_32_RUN_CARDS_v2.0_MANIFEST.md + tools/ivdivo_prompt_router.py","date":"2026-08-21","notes":"Cycle 1 prompt/router base"}
-  ],
-  "problem_or_opportunity": "IVDIVO has strong authorities, prompts and domain engines, but material execution still requires repeated state normalization, manual task packaging, repeated guard prose and fragmented evidence/write-through. Good prompts alone do not create a durable self-improving factory.",
-  "proposed_mechanism": "Extend Self-Improvement v2/current machine execution with CURRENT Surface Manifest -> heterogeneous State Adapter -> Shared Fact Contracts -> Obligation DAG -> Prompt IR -> pre-tool guards -> execution -> post-tool readback -> transactional persistence -> unified telemetry/evidence -> learning -> rebase -> next route. Keep books P1 and book-to-audio P2 while applying the same improvement architecture to multi-AI, code, research, economics and operations.",
-  "dedupe_relation": "EXTENSION_OF_SI_0007_AND_PRIOR_SI_0008",
-  "related_candidates": ["SI-0007","SI-0003","SI-0004"],
-  "expected_benefit": "Reduce manual routing/context duplication and stale writes; make system learning evidence-based and durable while preventing recursive meta-work from starving real book/audio production.",
-  "evidence_state": "ENGINEERING_AND_PRODUCTION_ROUTING_EVIDENCE",
-  "priority_vector": {"impact":"CRITICAL","recurrence":"SYSTEMIC","effort":"HIGH","regression_risk":"MEDIUM","reversibility":"MODERATE","urgency":"HIGH","affected_surface":"PORTFOLIO"},
-  "development_contract": {
-    "cycle2_completed_runs": 32,
-    "bounded_engineering_tests": "12/12 PASS",
-    "required_real_pilots": [
-      "State Adapter real book/audio/engine/research pilots",
-      "Prompt IR migration + context A/B",
-      "tool-guardrail transactional live workflow",
-      "one human reader/listener evidence protocol",
-      "one live-provider/casting/audio evidence ladder",
-      "unified telemetry before productivity/cost claims"
-    ],
-    "external_blockers": ["fresh Founder idea for live Idea→Story calibration","human evidence","live provider evidence","market evidence"]
-  },
-  "pilot_evidence": [
-    "Cycle 1 Prompt Router deterministic fixtures: 10/10 expected behavior PASS.",
-    "Cycle 2 bounded engineering suite: 12/12 PASS for State Adapter fail-closed/D09 gate, causality signal, Prompt IR validation, registry invariants and transactional stale/no-effect/rollback/commit.",
-    "Cycle 2 real persisted-state finding: D09 correctly remains READY_FOR_FOUNDER rather than auto-lock/rewrite.",
-    "Concurrent-dialog operation repeatedly demonstrated need for freshness/rebase and transactional write-through.",
-    "Merged PR #77 preserved newer sibling-dialog progress while adding Cycle 2 in a dedicated folder."
-  ],
-  "red_team_findings": [
-    "Do not promote the whole Cycle 2 package because engineering tests pass.",
-    "Do not equate provider documentation with casting/audio quality evidence.",
-    "Do not equate model review with human signal or market evidence.",
-    "Do not recursively multiply prompts without new production evidence; Starvation Guard requires return to P1/P2 or real integration pilots.",
-    "Package v11.2 remains immutable and diverges from verified post-package main extensions; build a new package only after selected integration + cold regression."
-  ],
-  "promotion_level": "NONE",
-  "application_targets": [
-    "current machine-execution compatibility layer after bounded module pilots",
-    "State Adapter / Prompt IR / transactional persistence modules",
-    "Unified telemetry/evidence bridge",
-    "Prompt/Context compaction only after equivalence canaries"
-  ],
-  "verification_evidence": [
-    "GitHub PR #77 merged at 850085a8b26a517e82b1f3654c8ce054d8322d0c and main readback of Cycle 2 synthesis succeeded.",
-    "Google Drive Cycle 2 full ZIP stored as 136MgcY2K733pVnmbAypfgrwAGuJe1WSP; SHA-256 cfa2a79c41ad66aefba007639aaa70dfd9cfe17a14a87251a77e42ef04a01dd9.",
-    "Cycle 2 deterministic engineering tests 12/12 PASS."
-  ],
-  "protected_authorities": ["Founder newest instruction","Story-first/P1 priority","locked book/project canon","Current Audio authority","human/provider/market evidence firewalls","no parallel top-level engine authority"],
-  "owner_role": "Meta-Showrunner / A00 Router / Execution Architect",
-  "next_action": "Run Cycle 3 integration and real-evidence pilots beginning with State Adapter Book/Audio/Engine/Research pilots, Prompt IR migration, transactional tool-guard workflow and unified telemetry; return resources to P1/P2 between bounded meta pilots.",
-  "next_gate": "REAL_INTEGRATION_AND_EXTERNAL_EVIDENCE_PILOT_GATE",
-  "hold_trigger": null,
-  "terminal_reason": null,
-  "last_movement": "2026-08-21",
-  "notes": "Semantic-deduped: Cycle 2 extends existing SI-0008 rather than creating a new top-level self-improvement candidate. Central CURRENT_IMPROVEMENT_REGISTRY merge remains an explicit C3-38 transaction so it can be done with the new Registry Transaction API rather than unsafe manual one-line JSON surgery."
+  "status": "SUPERSEDED_ID_COLLISION_MIGRATED",
+  "historical_file": "31_IDEAS/SI-0008_RUN_CARDS_V2_CANDIDATE.json",
+  "reason": "SI-0008 was already assigned to the verified Full Chat Transcript Recovery extension. Reusing the ID for the later Prompt Router / Meta-Orchestrator candidate violated registry-family uniqueness.",
+  "replacement_candidate_id": "SI-0012",
+  "replacement_path": "31_IDEAS/REGISTRY_EXTENSIONS/SI-0012_META_ORCHESTRATOR_CYCLE2_CANDIDATE.json",
+  "do_not_load_as_candidate": true,
+  "authority_effect": "NONE_STORY_OR_ENGINE_CANON",
+  "migrated": "2026-08-21",
+  "note": "Historical path retained for audit/provenance only."
 }
