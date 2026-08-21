@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "date": "2026-08-21",
   "status": "PERSISTENCE_CLOSURE_PASS",
   "type": "OPERATIONAL_PERSISTENCE_VERIFICATION_NOT_STORY_CANON",
@@ -52,11 +52,24 @@
     {
       "drive_id": "1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w",
       "result": "CURRENT_WORKSTATE_INTERNAL_HEADER_CORRECTED_TO_V2_8"
+    },
+    {
+      "drive_id": "1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w",
+      "result": "FINAL_READBACK_CAUGHT_STALE_D01_E86_E90_61_90_INTERMEDIATE_NEXT_ACTION_AND_MARKED_IT_HISTORICAL_SUPERSEDED"
     }
   ],
   "drive_closure_artifact": {
     "id": "16LbQvRF8_SzrBtPcVXfOyLorvLS2Bh2fIG6dws8lQqE",
-    "title": "IVDIVO — PERSISTENCE CLOSURE PASS — 2026-08-21"
+    "title": "IVDIVO — PERSISTENCE CLOSURE PASS — 2026-08-21",
+    "readback_verified": true
+  },
+  "readback_result": {
+    "coverage_index": "PASS_NO_BLOCKED_RECOVERY",
+    "historical_d01_execution_state": "PASS_SUPERSEDED_ARCHIVE_POINTER",
+    "cross_ai_handoff": "PASS_D01_E01_E120_TERMINAL_FRONTIER",
+    "drive_workstate_header": "PASS_V2_8",
+    "drive_workstate_intermediate_d01_pointer": "PASS_EXPLICITLY_HISTORICAL_SUPERSEDED",
+    "closure_artifact": "PASS_CREATED_AND_RE_READ"
   },
   "closure_law": "WORK -> AUTHORITY_STATUS -> PERSIST -> READBACK -> PROJECT_STATE -> HANDOFF -> COVERAGE_ROUTER_RECONCILIATION -> STALE_POINTER_SCAN -> SUPERSEDE_OBSOLETE_STATES -> FINAL_READBACK -> PERSISTENCE_CLOSURE_PASS",
   "failure_conditions": [
