@@ -1,0 +1,40 @@
+{
+  "candidate_id": "SI-0008",
+  "title": "Full chat transcript recovery and ingestion — executable extension",
+  "candidate_type": "PROGRAM_OR_CODE",
+  "status": "VERIFIED_CURRENT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type":"GITHUB","locator":"IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md","version":"1.0","date":"2026-08-21","notes":"Current protocol"},
+    {"source_type":"GITHUB","locator":"tools/ivdivo_transcript_recovery.py","version":"post-v11.2 extension","date":"2026-08-21","notes":"Merged through PR #59"},
+    {"source_type":"GITHUB","locator":"schemas/IVDIVO_TRANSCRIPT_RECOVERY_LEDGER_SCHEMA_v1.json","version":"1.0","date":"2026-08-21","notes":"Machine ledger schema"},
+    {"source_type":"GITHUB","locator":"IVDIVO_NARRATIVE_OS/TRANSCRIPT_RECOVERY_RUNTIME_VERIFICATION_2026-08-21.md","version":"1.0","date":"2026-08-21","notes":"5/5 runtime verification + exact Git blob identity"}
+  ],
+  "problem_or_opportunity": "Large prior-chat results can be lost or misremembered; deterministic extraction must be separated from persisted-claim verification, canon disposition and ingestion completion.",
+  "proposed_mechanism": "INGEST -> PARSE -> RECOVER_PROJECT_FRONTIER -> VERIFY_PERSISTED_CLAIMS -> RECOVER_CHAT_ONLY_CANDIDATES -> DEDUPE -> RECONCILE -> PERSIST -> LEARN -> READBACK -> CONTINUE, with fail-closed completeness and no invented missing details.",
+  "dedupe_relation": "EXTENSION",
+  "related_candidates": ["SI-0001","SI-0002","SI-0004","SI-0007"],
+  "expected_benefit": "Recovers material sibling-dialog work without treating chat memory as authority and prevents false saved/locked/pass claims.",
+  "evidence_state": "PRODUCTION_ENGINEERING_EVIDENCE",
+  "priority_vector": {"impact":"HIGH","recurrence":"SYSTEMIC","effort":"MEDIUM","regression_risk":"MEDIUM","reversibility":"EASY","urgency":"HIGH","affected_surface":"PORTFOLIO"},
+  "development_contract": {
+    "runtime_tool": "tools/ivdivo_transcript_recovery.py",
+    "schema": "schemas/IVDIVO_TRANSCRIPT_RECOVERY_LEDGER_SCHEMA_v1.json",
+    "tests": "tests/test_transcript_recovery.py",
+    "known_open_gate": "FIRST_REAL_LARGE_TRANSCRIPT_INGESTION_OPERATIONAL_MONITORING",
+    "packaging_gap": "VERIFIED_POST_PACKAGE_EXTENSION_NOT_YET_INCLUDED_IN_PROMOTED_V11_2_ZIP"
+  },
+  "pilot_evidence": ["Exact Git blob identity verification", "pytest 5 passed / 0 failed", "PR #59 merged"],
+  "red_team_findings": ["Deterministic extraction cannot certify persisted claims or canon", "INGESTION_COMPLETE forbidden until all material items are dispositioned and accepted writes read back", "Secrets must not be persisted"],
+  "promotion_level": "UNIVERSAL",
+  "application_targets": ["CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json","CURRENT_IVDIVO_SYSTEM_STATE.json","IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md","tools/ivdivo_transcript_recovery.py","schemas/IVDIVO_TRANSCRIPT_RECOVERY_LEDGER_SCHEMA_v1.json","next full machine-execution package"],
+  "verification_evidence": ["IVDIVO_NARRATIVE_OS/TRANSCRIPT_RECOVERY_RUNTIME_VERIFICATION_2026-08-21.md","PR #59 merge commit 1e3bd068771135f8f1bf470269f2e9243af8f797"],
+  "protected_authorities": ["Founder newest instruction","Locked project canon","Persisted source-of-truth","Human Signal firewall","Secrets policy"],
+  "owner_role": "Transcript Recovery / Reconciler",
+  "next_action": "Operate on first real large transcript; then package verified extension into next full engine release with fresh-unzip regression.",
+  "next_gate": "FIRST_REAL_LARGE_TRANSCRIPT_INGESTION_THEN_N57_PACKAGE_PROMOTION",
+  "hold_trigger": null,
+  "terminal_reason": null,
+  "last_movement": "2026-08-21",
+  "notes": "N05 write-through record. Base CURRENT_IMPROVEMENT_REGISTRY.json must either absorb this record or the registry contract must explicitly route extensions; N06 invariant test prevents silent drift."
+}
