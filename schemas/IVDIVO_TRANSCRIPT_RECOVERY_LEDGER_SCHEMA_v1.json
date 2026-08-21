@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.transcript_recovery_ledger/1.0",
+  "title": "IVDIVO Transcript Recovery Ledger",
+  "description": "First-pass fail-closed recovery ledger. Never by itself proves canon, persistence, PASS, LOCK, provider execution, Human Signal, or market evidence.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "recovery_status",
+    "source",
+    "secret_firewall",
+    "founder_directives",
+    "work_completed_claims",
+    "canon_or_authority_claims",
+    "artifact_references",
+    "next_action_claims",
+    "system_improvement_candidates",
+    "verification_queue",
+    "completion_gate"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "recovery_status": {"enum": ["EXTRACTED_UNVERIFIED", "RECONCILING", "INGESTION_COMPLETE", "FAIL_CLOSED"]},
+    "source": {
+      "type": "object",
+      "required": ["completeness", "sha256", "bytes", "turns_detected", "final_tail_processed"],
+      "properties": {
+        "model": {"type": ["string", "null"]},
+        "chat": {"type": ["string", "null"]},
+        "date": {"type": ["string", "null"]},
+        "completeness": {"enum": ["FULL_TRANSCRIPT", "PARTIAL_TRANSCRIPT", "UNKNOWN_COMPLETENESS", "MULTI_TRANSCRIPT_BUNDLE"]},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "turns_detected": {"type": "integer", "minimum": 1},
+        "final_tail_processed": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "secret_firewall": {
+      "type": "object",
+      "required": ["secrets_detected", "secrets_persisted"],
+      "properties": {
+        "secrets_detected": {"type": "integer", "minimum": 0},
+        "secrets_persisted": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "founder_directives": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+    "work_completed_claims": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+    "canon_or_authority_claims": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+    "artifact_references": {"type": "array", "items": {"$ref": "#/$defs/artifact"}},
+    "next_action_claims": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+    "system_improvement_candidates": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+    "verification_queue": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "reference", "required_action"],
+        "properties": {
+          "kind": {"type": "string"},
+          "reference": {"type": "string"},
+          "required_action": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "hard_fails": {"type": "array", "items": {"type": "string"}},
+    "completion_gate": {
+      "type": "object",
+      "required": ["ingestion_complete", "reason"],
+      "properties": {
+        "ingestion_complete": {"type": "boolean"},
+        "reason": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "required": ["turn", "role", "excerpt"],
+      "properties": {
+        "turn": {"type": "integer", "minimum": 1},
+        "role": {"type": "string"},
+        "excerpt": {"type": "string"},
+        "authority_status": {"type": "string"},
+        "claim_status": {"type": "string"},
+        "candidate_status": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "artifact": {
+      "type": "object",
+      "required": ["turn", "role", "reference", "verification_status"],
+      "properties": {
+        "turn": {"type": "integer", "minimum": 1},
+        "role": {"type": "string"},
+        "reference": {"type": "string", "minLength": 1},
+        "verification_status": {"enum": ["UNVERIFIED", "VERIFIED_PERSISTED", "MISSING", "SUPERSEDED", "CONFLICT"]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
