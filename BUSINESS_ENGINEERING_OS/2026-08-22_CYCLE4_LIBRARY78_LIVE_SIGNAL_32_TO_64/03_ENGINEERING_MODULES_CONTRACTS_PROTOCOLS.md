@@ -1,0 +1,81 @@
+# CYCLE4 ENGINEERING MODULES / CONTRACTS / PROTOCOLS
+
+## Modules B81–B112
+- B81 ParallelAuthorityReconciler
+- B82 Library78DeltaPromoter
+- B83 LiveSignalTaxonomy
+- B84 SourceAuthorityHierarchy
+- B85 SignalFreshnessSLA
+- B86 SignalIndependenceDetector
+- B87 SignalCorrelationClusterer
+- B88 SignalSupersessionResolver
+- B89 WhyNowCompilerV2
+- B90 BuyerWorkloadCompilerV2
+- B91 MicroMarketHardGateV2
+- B92 FatalAssumptionRankerV2
+- B93 PublicOnlyExperimentCatalogV2
+- B94 ValueOfInformationRouterV2
+- B95 CostOfDelayRouterBusiness
+- B96 OpportunityHalfLifeEngine
+- B97 EvidenceCeilingEnforcer
+- B98 FounderCashGapTimelineV3
+- B99 CustomerFundingTopologyRouter
+- B100 SupplierTermsTopologyRouter
+- B101 GrantBridgeRealityGate
+- B102 CreateBrokerAcquireRouterV2
+- B103 RecurringValueGate
+- B104 EconomicRentRealityGate
+- B105 AcquisitionDownsideGate
+- B106 PolicyResistanceRedTeamBusiness
+- B107 DoubleLoopFailureTrigger
+- B108 MetaWIPBusinessPortfolio
+- B109 TripwireDecisionEngine
+- B110 OpportunityPortfolioParetoMap
+- B111 PredictorCalibrationLedger
+- B112 SelfImprovementBusinessBridgeV2
+
+## Contracts C97–C128
+- C97 CURRENT_RAW_LIBRARY_COUNT_REQUIRES_PERSISTED_DELTA
+- C98 RAW_COPYRIGHTED_BINARIES_DRIVE_ONLY
+- C99 EXACT_DUPLICATE_ONE_EVIDENCE_WEIGHT
+- C100 FILE_ID_NEQ_WORK_ID
+- C101 OFFICIAL_SOURCE_BEFORE_SECONDARY_SIGNAL
+- C102 SIGNAL_FRESHNESS_REQUIRED
+- C103 SYNDICATED_COPIES_ONE_SIGNAL
+- C104 SUPERSEDED_SIGNAL_FAILS_CLOSED
+- C105 PUBLIC_SIGNAL_NEQ_BUYER_COMMITMENT
+- C106 S4_MAX_E2_PLUS
+- C107 WTP_NULL_WITHOUT_MARKET_EVIDENCE
+- C108 FATAL_ASSUMPTION_BEFORE_BUILD
+- C109 CHEAPEST_DECISIVE_TEST_FIRST
+- C110 NO_OUTREACH_TEST_CASH_ZERO
+- C111 MEASUREMENT_NAMES_DECISION
+- C112 VOI_BEFORE_MEASUREMENT
+- C113 COST_OF_DELAY_WITHOUT_FAKE_PRECISION
+- C114 OPPORTUNITY_HALF_LIFE_REQUIRED
+- C115 FOUNDER_CASH_TIMELINE_FIRST_CLASS
+- C116 ZERO_FOUNDER_CASH_NEQ_ZERO_TOTAL_CAPITAL
+- C117 GRANT_REIMBURSEMENT_NEQ_ZERO_CASH
+- C118 CUSTOMER_FUNDING_REQUIRES_REAL_COMMITMENT
+- C119 SUPPLIER_TERMS_REQUIRE_REAL_TERMS
+- C120 UNKNOWN_ECONOMICS_NULL
+- C121 NO_MAGIC_TOTAL_SCORE
+- C122 CREATE_BROKER_ACQUIRE_VECTOR_PRESERVED
+- C123 RECURRING_REVENUE_REQUIRES_RECURRING_VALUE
+- C124 BENEFIT_WITHOUT_BARRIER_NEQ_POWER
+- C125 POLICY_RESISTANCE_REVIEW_ON_SCALE
+- C126 THREE_SAME_FAMILY_FAILURES_TRIGGER_DOUBLE_LOOP
+- C127 ACTIVE_WIP_ONE_PRIMARY_TWO_PILOTS_MAX
+- C128 SELF_IMPROVEMENT_CANDIDATE_NEQ_AUTHORITY
+
+## Protocols
+- P1 Authority Restore + Delta Reconcile
+- P2 Library Promotion/Quarantine
+- P3 Live Signal Ingest
+- P4 Source Independence + Freshness
+- P5 Opportunity Compile
+- P6 Fatal Assumption + VOI Test Selection
+- P7 Zero-Cash Capital Topology
+- P8 Route CREATE/BROKER/ACQUIRE
+- P9 Portfolio WIP + Tripwires
+- P10 Learning/Prediction Calibration + Persistence

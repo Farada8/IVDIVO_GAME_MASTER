@@ -1,0 +1,23 @@
+name: Business Engineering OS Cycle4
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_LIBRARY78_LIVE_SIGNAL_32_TO_64/**'
+      - '.github/workflows/business-engineering-os-cycle4.yml'
+
+jobs:
+  cycle4-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Extract and run Cycle4 business signal canaries
+        run: |
+          rm -rf /tmp/cycle4
+          mkdir -p /tmp/cycle4
+          unzip -q BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_LIBRARY78_LIVE_SIGNAL_32_TO_64/BUSINESS_ENGINEERING_OS_CYCLE4_LIBRARY78_RUN32_NEXT64_v1.zip -d /tmp/cycle4
+          cd /tmp/cycle4
+          python -m unittest engine/test_business_signal_engine_v4.py -v
