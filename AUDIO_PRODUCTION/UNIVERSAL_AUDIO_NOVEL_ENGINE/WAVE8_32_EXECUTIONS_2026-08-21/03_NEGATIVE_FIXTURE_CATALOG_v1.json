@@ -1,0 +1,33 @@
+{
+  "schema_version": "ivdivo.audio.wave8.negative_fixture_catalog/1.0",
+  "status": "PASS_STATIC_CATALOG",
+  "current_main_sha": "58f434d7582a193ab3e120491159ccdec349717e",
+  "law": "Each listed safety gate requires a positive fixture and an expected-fail/hold fixture before byte-touch or paid-provider promotion.",
+  "fixtures": [
+    {"gate":"MASTER_IDENTITY","pass":"matching 64-char SHA256","expected_fail":"mismatch or malformed SHA","expected":"MASTER_IDENTITY_MISMATCH/INVALID"},
+    {"gate":"ASSET_BINDING","pass":"asset id + sha + 48k + 1/2ch + gain + cleared rights","expected_fail":"missing field/non-48k/uncleared rights","expected":"ASSET_* HOLD/FAIL"},
+    {"gate":"HEADROOM","pass":"worst-case coherent predicted peak <= ceiling","expected_fail":"unsafe/invalid peak","expected":"HOLD_HEADROOM"},
+    {"gate":"PROTECTED_TIMING","pass":"all protected ranges have accepted alignment/live timing","expected_fail":"unresolved protected range","expected":"HOLD"},
+    {"gate":"PATCH_CLASSIFICATION","pass":"patchable classification + patch_candidate","expected_fail":"unpatchable or not nominated","expected":"HOLD"},
+    {"gate":"PATCH_TIMED_BLOCK","pass":"overlaps accepted timed block","expected_fail":"no accepted timed block","expected":"HOLD"},
+    {"gate":"PATCH_BED_DOMAIN","pass":"one required bed domain","expected_fail":"crosses multiple bed domains","expected":"HOLD"},
+    {"gate":"PATCH_PROTECTED_OVERLAP","pass":"no overlap","expected_fail":"overlap protected range","expected":"HOLD"},
+    {"gate":"PATCH_LEDGER_IDENTITY","pass":"same patch/auth/master identity","expected_fail":"identity drift","expected":"HOLD_IDENTITY_DRIFT"},
+    {"gate":"PATCH_STATE_MACHINE","pass":"allowed transition","expected_fail":"illegal/terminal mutation","expected":"PATCH_TRANSITION_INVALID/IMMUTABLE"},
+    {"gate":"ARTIFACT_EXISTENCE_HASH","pass":"file exists and expected hash matches","expected_fail":"missing/hash drift","expected":"BLOCKED_MISSING/FAIL_HASH_DRIFT"},
+    {"gate":"ARTIFACT_SCHEMA_STATUS","pass":"schema prefix + pass semantic state","expected_fail":"wrong schema/HOLD state","expected":"FAIL_SCHEMA/HOLD_SEMANTIC_STATUS"},
+    {"gate":"REGRESSION_AUTHORIZED_RANGE","pass":"all changes inside authorized range","expected_fail":"change outside range","expected":"UNAUTHORIZED_CHANGE"},
+    {"gate":"REGRESSION_PROTECTED_RANGE","pass":"no protected bytes changed","expected_fail":"protected overlap","expected":"PROTECTED_RANGE_CHANGED"},
+    {"gate":"PCM_CANONICAL_FORMAT","pass":"48k PCM WAV, mono/stereo, 16/24-bit","expected_fail":"compressed/non-48k/unsupported width/channels","expected":"PCM_QC_*"},
+    {"gate":"PCM_CLIPPING","pass":"zero samples >= threshold","expected_fail":"clipped sample","expected":"FAIL_CLIPPING"},
+    {"gate":"PCM_PATCH_BOUNDARY","pass":"boundary jump <= threshold","expected_fail":"abrupt discontinuity","expected":"HOLD_BOUNDARY_DISCONTINUITY"},
+    {"gate":"HUMAN_LISTEN_PROVENANCE","pass":"human reviewer type + artifact sha + reviewed_at + valid status","expected_fail":"machine-only/missing provenance","expected":"HUMAN_LISTEN_* INVALID"},
+    {"gate":"DOMAIN_PROMOTION","pass":"two independent qualified real projects","expected_fail":"one/synthetic/incomplete project","expected":"HOLD; never auto-authority"},
+    {"gate":"PROJECT_LEAKAGE","pass":"no forbidden project facts in universal mechanism","expected_fail":"forbidden token","expected":"FAIL_PROJECT_LEAKAGE"},
+    {"gate":"LIVE_IDENTITY_CAPABILITY","pass":"identity fixture + PASS authenticated capability snapshot","expected_fail":"either absent","expected":"NO_DISPATCH_LIVE_GATES"},
+    {"gate":"VOICE_CAPABILITY","pass":"all bound voices present","expected_fail":"one voice absent","expected":"NO_DISPATCH_CAPABILITY; auto_substitution=false"},
+    {"gate":"SPEND_IDEMPOTENCY","pass":"accepted request hash reused","expected_fail":"blind resend after restart","expected":"REUSE_ACCEPTED/no dispatch"},
+    {"gate":"POST_AMBIGUITY","pass":"confirmed provider rejection or accepted response","expected_fail":"connectivity/5xx after POST","expected":"HOLD_AMBIGUOUS"},
+    {"gate":"PROVIDER_ACCEPTANCE_VS_TAKE","pass":"provider bytes persisted, take_lock false until production/human gates","expected_fail":"provider acceptance treated as artistic lock","expected":"FORBIDDEN"}
+  ]
+}
