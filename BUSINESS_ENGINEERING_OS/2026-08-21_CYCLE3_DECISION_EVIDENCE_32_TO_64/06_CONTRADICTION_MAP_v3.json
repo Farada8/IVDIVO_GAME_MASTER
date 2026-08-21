@@ -1,0 +1,11 @@
+{
+  "artifact": "BUSINESS_MECHANISM_CONTRADICTION_MAP_v3",
+  "objects": [
+    {"id":"X01","tension":"The New Business Road Test pre-market domain screening vs Lean Startup rapid MVP learning","route":"Use domain screening when structural/fatal market risk is cheap to assess first; use MVP when uncertainty is behavioral/usage and a small test can cheaply change the decision.","do_not_average":true},
+    {"id":"X02","tension":"Customer statements vs experiment behavior","route":"Mom Test/qualitative conversation generates hypotheses; commitment/advancement and behavior-based experiments carry stronger market evidence. Compliments never upgrade E-grade.","do_not_average":true},
+    {"id":"X03","tension":"Speed of experimentation vs WIP/queue overload","route":"Fast cycles require bounded WIP and smaller batches; more simultaneous experiments can slow evidence throughput.","do_not_average":true},
+    {"id":"X04","tension":"Early exploration vs 7 Powers durable advantage","route":"Do not demand full Power before problem/market evidence; after repeatable value emerges, require Benefit+Barrier before scale-stage graduation.","do_not_average":true},
+    {"id":"X05","tension":"Create vs Broker vs Acquire","route":"Compare as vectors: founder cash gap, time-to-proof, control, regulatory burden, execution capability, downside, financing dependency. No magic total score.","do_not_average":true},
+    {"id":"X06","tension":"Local metric gain vs system improvement","route":"Sterman policy-resistance scan + guardrail regression; repeated local failure triggers double-loop model/boundary review.","do_not_average":true}
+  ]
+}
