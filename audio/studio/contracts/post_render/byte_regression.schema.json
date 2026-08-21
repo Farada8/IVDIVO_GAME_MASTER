@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.audio.post_render.byte_regression/1.0",
+  "title": "IVDIVO Post-Render Byte Regression Evidence",
+  "type": "object",
+  "required": ["before_sha256", "after_sha256", "authorized_ranges", "protected_ranges", "changed_ranges", "status"],
+  "properties": {
+    "before_sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+    "after_sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+    "authorized_ranges": {"type": "array", "items": {"$ref": "canonical_interval.schema.json"}},
+    "protected_ranges": {"type": "array", "items": {"$ref": "canonical_interval.schema.json"}},
+    "changed_ranges": {"type": "array", "items": {"$ref": "canonical_interval.schema.json"}},
+    "status": {"enum": ["PASS", "FAIL"]}
+  },
+  "additionalProperties": true,
+  "x-ivdivo-law": "No project-specific Scene3 timestamp is universal authority. Every immutable/protected range is data in the project overlay."
+}
