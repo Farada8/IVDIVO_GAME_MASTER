@@ -1,0 +1,41 @@
+{
+  "candidate_id": "SI-0017",
+  "title": "Global Self-Improvement Candidate Identity + Namespace Gate",
+  "candidate_type": "TOOLING_OR_AUTOMATION",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type":"FOUNDER","locator":"2026-08-21 directive: parallel GitHub/Drive analysis, concrete engineering, Self-Improvement, 32 sequential prompts -> 64 next","date":"2026-08-21"},
+    {"source_type":"GITHUB_PRODUCTION_DEFECT","locator":"31_IDEAS/REGISTRY_EXTENSIONS/SI-0009_RECONCILED_RECOVERY_STATE_V2.json vs 31_IDEAS/PENDING/SI-0009_EVIDENCE_GATED_POST_RENDER_REPAIR_COMPILER.json","date":"2026-08-21","notes":"Different mechanisms shared SI-0009"},
+    {"source_type":"GITHUB_PRODUCTION_DEFECT","locator":"31_IDEAS/REGISTRY_EXTENSIONS/SI-0010_REGISTRY_SHARD_COMPACTION_TRANSACTION.json vs 31_IDEAS/PENDING/SI-0010_VOLATILE_SESSION_CHECKPOINT_EXTENSION.json","date":"2026-08-21","notes":"Different mechanisms shared SI-0010"},
+    {"source_type":"GOOGLE_DRIVE","locator":"Cycle 5 synthesis 05_SYNTHESIS_AND_PATH_TO_GOAL.md","date":"2026-08-21","notes":"Complete Registry Identity Law requires full-family visibility before allocation"}
+  ],
+  "problem_or_opportunity": "Parallel candidate creation can allocate the same SI identity to different mechanisms because current family validation does not treat every candidate-bearing root as one namespace.",
+  "proposed_mechanism": "Scan base registry + all extension shards + PENDING + configured roots; fingerprint candidate semantics; classify unique, same-mechanism duplicate, true ID collision, tracked migration debt and redirects; compute next-free ID only from complete visibility; require provenance-preserving migration and re-audit before promotion.",
+  "dedupe_relation": "EXTENSION_OF_SELF_IMPROVEMENT_REGISTRY_INTEGRITY",
+  "related_candidates": ["SI-0007","SI-0010","SI-0012","SI-0013","SI-0014","SI-0015"],
+  "expected_benefit": "Prevents semantic identity corruption, unsafe registry compaction, cross-dialog candidate overwrite and false lifecycle continuity.",
+  "evidence_state": "REAL_PRODUCTION_DEFECT_PLUS_INTERNAL_ENGINEERING_REPAIR",
+  "priority_vector": {"impact":"CRITICAL","recurrence":"SYSTEMIC","effort":"LOW_MEDIUM","regression_risk":"LOW","reversibility":"EASY","urgency":"CRITICAL","affected_surface":"PORTFOLIO"},
+  "development_contract": {
+    "implementation":"tools/ivdivo_candidate_identity.py",
+    "tests":"tests/test_candidate_identity.py",
+    "schema":"schemas/IVDIVO_CANDIDATE_IDENTITY_INDEX_SCHEMA_v1.json",
+    "engineering_contract":"ENGINEERING_CONTRACTS/SELF_IMPROVEMENT_CANDIDATE_IDENTITY_NAMESPACE_v1.0.md",
+    "migration_debt":"31_IDEAS/CANDIDATE_IDENTITY_MIGRATION_DEBT.json",
+    "hard_failures":["untracked different-mechanism ID collision","dangling redirect","malformed candidate ID","unexpected collision source-set drift"],
+    "promotion_blocker":"SI-0010 collision remains tracked until PR108/equivalent repair lands and full repository readback is clean"
+  },
+  "pilot_evidence": ["Real SI-0009 collision detected and migrated to SI-0015 with redirect","Real SI-0010 collision detected independently by this cycle and PR108; duplicate repair intentionally avoided","Negative fixtures cover collision, tracked debt, redirect, dangling redirect and unindexed extension"],
+  "red_team_findings": ["Scanning only registry family is insufficient when PENDING can allocate global IDs","Tracked debt must not be interpreted as clean PASS","Semantic fingerprint is an identity aid, not proof that two subtly different candidates should merge","ID migration must not inflate candidate status/scope"],
+  "promotion_level": "NONE",
+  "application_targets": ["31_IDEAS candidate-bearing roots","registry compaction preflight","Self-Improvement candidate capture/allocation","Cross-dialog autopilot write guards"],
+  "verification_evidence": ["SI-0009 -> SI-0015 migration readback","tests/test_candidate_identity.py","PR108 tracked-debt dependency"],
+  "protected_authorities": ["Founder newest instruction","Self-Improvement lifecycle","Story/project canon","Existing canonical candidate ownership"],
+  "owner_role": "Self-Improvement Registry Identity Maintainer",
+  "next_action": "Run real repository audit after current branch changes and again after PR108 merge/rebase; only clean global namespace can unlock promotion eligibility.",
+  "next_gate": "GLOBAL_REPOSITORY_IDENTITY_AUDIT_PLUS_PR108_REPAIR_READBACK",
+  "hold_trigger": "Any newly discovered candidate-bearing root or collision not covered by the configured scan.",
+  "terminal_reason": null,
+  "last_movement": "2026-08-21"
+}
