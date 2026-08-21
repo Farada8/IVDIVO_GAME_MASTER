@@ -1,1 +1,1 @@
-{"status":"PERSISTED_LEARNING_DELTA","learnings":["recover viable engine before recompetition","detail does not equal canon","embedded current slices need freshness checks","internal calibration != Human Signal","SI IDs need full-family JIT read","RESUME does not satisfy explicit Founder approval/lock gates"],"candidate":"SI-0015"}
+{"status":"PERSISTED","candidate":"SI-0015","learnings":["RESUME != explicit Founder lock","CURRENT embedded slices need freshness checks","SI IDs require JIT full-family read","internal calibration != Human Signal"]}
