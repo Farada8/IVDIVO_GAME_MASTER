@@ -1,0 +1,14 @@
+{
+  "schema":"NMM_ENGINE_INTEGRATION_CYCLE3_STATE_v1.1",
+  "package_reconciled_against_wave7":true,
+  "persistence_branch_base_main_sha":"75544f22010ae11713cfd67a367f7762cba486a8",
+  "source":{"document_id":"1j_WPuSFVwPWzWHDvXqCAsNPM3-O6bSHMJgYH-7CLNrI","revision_id":"5","export_sha256":"5c3d86b271524614ad7adf37c71bafba74f9f63a292ada46ad567ff75e88a1c0","e01_sha256":"f95871c17cd2501c6a3ca36fe1d0dd850ebae2118fe2ca1de75274a53c75de9b","occurrence_ledger_sha256":"7128bb3b74289533b9e8be279958c8a9dfb40564c7255e9b0e11306c988bae5a","spoken_occurrences":269,"canonical_tokens":1494},
+  "executed_prompts":32,
+  "next_prompts":64,
+  "modules":8,
+  "contracts":8,
+  "local_tests":"7/7 PASS",
+  "audio_derivatives":{"normalized_whistles":8,"blind_headphone_trials":12,"blind_phone_proxy_trials":12,"environment_copies":6},
+  "gates":{"generic_runtime_fork":"PROHIBITED_UNLESS_REAL_GAP","source_integrity":"PASS","mutation_proofs":"PASS","asset_technical":"PASS","provider_snapshot":"PENDING_REAL","voice_cast":"PENDING_REAL","human_asset_gate":"PENDING_REAL","hard_pilot":"PENDING_REAL","specialist":"OPEN","economics":"OPEN","release":"NO_GO"},
+  "next_frontier":"AUTHENTICATED_PROVIDER_SNAPSHOT + REAL_HUMAN_WHISTLE_TEST_IN_PARALLEL"
+}
