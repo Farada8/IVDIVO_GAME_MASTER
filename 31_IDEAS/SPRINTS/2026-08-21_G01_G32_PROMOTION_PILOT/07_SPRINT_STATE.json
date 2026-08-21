@@ -1,7 +1,7 @@
 {
-  "schema_version":"1.0",
+  "schema_version":"1.1",
   "updated":"2026-08-21",
-  "status":"G01_G32_EXECUTED_H01_H64_DERIVED_PENDING_PR_INTEGRATION",
+  "status":"MERGED_CURRENT_RND_EVIDENCE",
   "source_queue":"31_IDEAS/SPRINTS/2026-08-21_NEXT32_IMPLEMENTATION/19_NEXT_GENERATION_PROMPTS_64.md",
   "prompts_executed":32,
   "next_prompts_derived":64,
@@ -9,6 +9,18 @@
     "pass_or_candidate_or_limited":23,
     "partial":1,
     "blocked_or_dependency":8
+  },
+  "github_integration":{
+    "pull_request":91,
+    "merge_sha":"91fa438c18f2de97e0c9dc8eddfaa014e55e4375",
+    "path":"31_IDEAS/SPRINTS/2026-08-21_G01_G32_PROMOTION_PILOT/",
+    "merge_result":"PASS"
+  },
+  "drive_mirror":{
+    "folder_id":"1GCEdkiI0EDBk9nWO6dXEXDA8cTvAJmVG",
+    "title":"10_RND_G01_G32_PROMOTION_PILOT_2026-08-21",
+    "readback":"PASS_8_NATIVE_DOCS",
+    "central_index_id":"1blfo8AlMgc98oZHWwVmlKCCqK61gC3XicC2Au5J5lCw"
   },
   "durable_state_writes":[
     "PROJECT_STATES/D03_BODYGUARD_FOR_THE_FALLEN_IDOL_CURRENT_STATE.json",
