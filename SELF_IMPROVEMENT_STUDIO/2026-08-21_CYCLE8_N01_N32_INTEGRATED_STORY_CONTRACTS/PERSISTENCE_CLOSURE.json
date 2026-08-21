@@ -1,0 +1,18 @@
+{
+  "schema_version":"0.2",
+  "status":"PERSISTENCE_CLOSURE_PASS",
+  "run":"CYCLE8_N01_N32_INTEGRATED_STORY_CONTRACTS_2026-08-21",
+  "functional_integration":{"pr":157,"merge_sha":"66080b6760ec3b5c21186f5c3cbf0c8adab4fd07","changed_paths":7,"story_or_canon_paths_changed":0,"main_readback":true},
+  "ci_evidence":[
+    {"name":"Cycle8 Integrated Story Contracts","run":32531130052,"conclusion":"success"},
+    {"name":"Session Resilience Run33 Tests","run":32531130035,"conclusion":"success"},
+    {"name":"Self-Improvement Integrity","run":32531129995,"conclusion":"success"}
+  ],
+  "story_adapter_reuse":{"stage1":"13/13 real-project + 24/24 warm + 24/24 cold PASS","stage2":"8/8 correctly dispositioned; 7 pass-like + 1 source hold; 25/25 warm + 25/25 cold PASS","source_adequacy_gate":true,"duplicate_runtime_merged":false},
+  "si0015":{"status":"READY_FOR_PILOT","verified_current":false,"registry_family_agrees":true,"next_gate":"REAL_PROJECT_PILOT_PLUS_HEALTHY_CONTROL_PLUS_FALSE_POSITIVE_REVIEW"},
+  "drive":{"cycle8_root":"1x_zlMvfftZ0JYL4Yfzid7umNwXBmnW1n","n01_n32_folder":"12BCR8tiattwoBUFNCE9kBcwJkZ1gIM2W","master":"1fEaZyKzcLvKqt1DABlWNP-H8hbwew0UEFjdeDUj-dY8","execution_report":"1G-Dj3eAJvsyX64TMKCES0qi8i5wHOYTz0jy7wsnM39c","results":"1L32d1s6X_WZwJmi_-DakIo0nRcy1jpfxD_JQv_X3sBc","reconciliation":"10n9T5oPFo8Igojv0-Ky3jFtO5Um8ZjkeYFKLhCRiQFo","closure":"1SsCHWfii9yVzqd7jNC_x5v5VWcCCgoB3d0HxZTSkd60","readback":true},
+  "authority_supersession":{"observed_after_functional_merge":true,"d01_before":"NOT_YET_FOUNDER_LOCKED","d01_after":"FOUNDER_LOCKED","authority_file":"PROJECTS/THE_WIFE_AT_HIS_WEDDING/FOUNDER_STORY_LOCK_AND_RECORDING_AUTHORITY_v1.0.md","authority_drive_id":"1eueZnnYaUGktaSXCcMIiOAUUcINmCTV6xATBdZ9B9UA","closure_rebased_instead_of_overwriting":true},
+  "story_boundaries":{"story_canon_changes_by_this_run":"NONE","d01_lock_issued_by_this_run":false,"d01_current_state":"FOUNDER_LOCKED","e121_generated":false,"b03_prose_activated":false,"b03_next_allowed_frontier":"FRESH_AUTHORITY_AND_CONTINUITY_RECONCILIATION_BEFORE_PROSE","new_si_id":null},
+  "evidence_ceiling":"ENGINEERING_AND_BOUNDED_REAL_PROJECT_CANARY_ONLY",
+  "closure_law":"EXECUTE -> DEDUPE -> FRESH MAIN -> CI -> DRIVE READBACK -> MERGE -> MAIN READBACK -> AUTHORITY RECHECK -> REBASE CLOSURE IF SUPERSEDED -> FINAL MACHINE STATE -> PERSISTENCE_CLOSURE_PASS"
+}
