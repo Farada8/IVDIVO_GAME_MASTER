@@ -31,6 +31,18 @@ class ControlledProviderDispatchTests(unittest.TestCase):
         path.write_text(json.dumps(obj, ensure_ascii=False), encoding="utf-8")
         return str(path)
 
+    def live_gates(self, root):
+        # Minimal generic identity fixture for wrapper tests. Project fixtures such
+        # as Lesson Zero freeze much richer scalar/block identity.
+        manifest = self.write(root, "manifest.json", {"blocks": {}})
+        fixture = self.write(root, "fixture.json", {"scalar_fields": {}, "blocks": {}})
+        snap = self.write(root, "snap.json", {
+            "status": "PASS",
+            "voices": {"v1": {}, "v2": {}},
+            "models": {"eleven_v3": {}},
+        })
+        return manifest, fixture, snap
+
     def test_default_is_dry_no_dispatch(self):
         with tempfile.TemporaryDirectory() as d:
             block = self.write(d, "block.json", ttd_block())
@@ -38,6 +50,16 @@ class ControlledProviderDispatchTests(unittest.TestCase):
                 out = cpd.execute(block, str(Path(d)/"out"), str(Path(d)/"ledger.json"))
             self.assertEqual(out["status"], "DRY_PASS")
             self.assertFalse(out["dispatch"])
+            dispatch.assert_not_called()
+
+    def test_new_live_dispatch_requires_identity_and_authenticated_capability(self):
+        with tempfile.TemporaryDirectory() as d:
+            block = self.write(d, "block.json", ttd_block())
+            with patch.object(cpd.adapter, "dispatch") as dispatch:
+                out = cpd.execute(block, str(Path(d)/"out"), str(Path(d)/"ledger.json"), live=True)
+            self.assertEqual(out["status"], "NO_DISPATCH_LIVE_GATES")
+            self.assertIn("IDENTITY_FIXTURE", out["missing"])
+            self.assertIn("AUTHENTICATED_CAPABILITY_SNAPSHOT", out["missing"])
             dispatch.assert_not_called()
 
     def test_capability_missing_voice_blocks(self):
@@ -64,9 +86,13 @@ class ControlledProviderDispatchTests(unittest.TestCase):
     def test_connectivity_after_post_quarantines_ambiguous(self):
         with tempfile.TemporaryDirectory() as d:
             block_path = self.write(d, "block.json", ttd_block())
+            manifest, fixture, snap = self.live_gates(d)
             error = RuntimeError(json.dumps({"failure":"FAIL_PROVIDER_CONNECTIVITY"}))
             with patch.object(cpd.adapter, "dispatch", side_effect=error):
-                out = cpd.execute(block_path, str(Path(d)/"out"), str(Path(d)/"ledger.json"), live=True)
+                out = cpd.execute(
+                    block_path, str(Path(d)/"out"), str(Path(d)/"ledger.json"), live=True,
+                    manifest_path=manifest, fixture_path=fixture, capability_snapshot_path=snap,
+                )
             self.assertEqual(out["status"], "HOLD_AMBIGUOUS")
             ledger = SpendLedger(Path(d)/"ledger.json")
             state = next(iter(ledger.snapshot().values()))["state"]
@@ -75,13 +101,39 @@ class ControlledProviderDispatchTests(unittest.TestCase):
     def test_4xx_rejection_marks_rejected_not_ambiguous(self):
         with tempfile.TemporaryDirectory() as d:
             block_path = self.write(d, "block.json", ttd_block())
+            manifest, fixture, snap = self.live_gates(d)
             error = RuntimeError(json.dumps({"failure":"FAIL_PROVIDER_REQUEST","http_status":400}))
             with patch.object(cpd.adapter, "dispatch", side_effect=error):
-                out = cpd.execute(block_path, str(Path(d)/"out"), str(Path(d)/"ledger.json"), live=True)
+                out = cpd.execute(
+                    block_path, str(Path(d)/"out"), str(Path(d)/"ledger.json"), live=True,
+                    manifest_path=manifest, fixture_path=fixture, capability_snapshot_path=snap,
+                )
             self.assertEqual(out["status"], "PROVIDER_REJECTED")
             ledger = SpendLedger(Path(d)/"ledger.json")
             state = next(iter(ledger.snapshot().values()))["state"]
             self.assertEqual(state, "REJECTED")
+
+    def test_provider_acceptance_is_not_take_lock_and_mp3_holds_canonical_ingest(self):
+        with tempfile.TemporaryDirectory() as d:
+            block_path = self.write(d, "block.json", ttd_block())
+            manifest, fixture, snap = self.live_gates(d)
+            out_dir = Path(d) / "out"
+            out_dir.mkdir()
+            audio_path = out_dir / "RB001__audio.mp3"
+            audio_path.write_bytes(b"fake-mp3-provider-evidence")
+            evidence = {"audio_artifact": str(audio_path), "audio_sha256": "abc"}
+            with patch.object(cpd.adapter, "dispatch", return_value=({"audio_base64":"unused"},{"provider_request_id":"p1"})), \
+                 patch.object(cpd.adapter, "persist", return_value=evidence):
+                out = cpd.execute(
+                    block_path, str(out_dir), str(Path(d)/"ledger.json"), live=True,
+                    manifest_path=manifest, fixture_path=fixture, capability_snapshot_path=snap,
+                )
+            self.assertEqual(out["status"], "LIVE_PROVIDER_ACCEPTED")
+            self.assertFalse(out["take_lock"])
+            self.assertEqual(out["production_asset_gate"]["status"], "HOLD_EXPLICIT_UPSTREAM_CONVERSION_REQUIRED")
+            ledger = SpendLedger(Path(d)/"ledger.json")
+            state = next(iter(ledger.snapshot().values()))["state"]
+            self.assertEqual(state, "ACCEPTED")
 
     def test_identity_drift_blocks_before_dispatch(self):
         with tempfile.TemporaryDirectory() as d:
