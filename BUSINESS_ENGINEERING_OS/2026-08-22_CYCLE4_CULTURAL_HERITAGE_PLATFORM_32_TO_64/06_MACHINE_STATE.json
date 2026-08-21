@@ -1,0 +1,13 @@
+{
+  "schema": "0.1",
+  "project": "IVDIVO_CULTURAL_HERITAGE_PLATFORM",
+  "cycle": "BUSINESS_ENGINEERING_CYCLE4_2026-08-22",
+  "status": "WORKING_INTEGRATION_CANDIDATE",
+  "source_rule": "CONFIRMED/HYPOTHESIS/TEST_REQUIRED/REJECTED",
+  "run32": {"created": 32, "executed": 32},
+  "next64": {"created": 64, "execute_policy": "smallest_decisive_subset"},
+  "visual_assets": {"available_container_count": 34, "library_persisted": true, "raw_drive_duplication_verified": false, "raw_github_duplication_verified": false},
+  "primary_next_gate": "buyer proof + real quote stack + paid concept test",
+  "anti_bedlam": {"primary": "buyer evidence and paid concept validation", "pilot_a": "five flagship case pages", "pilot_b": "fabrication quote stack"},
+  "self_improvement": "reuse IVDIVO v2 lifecycle; no separate authority fork"
+}
