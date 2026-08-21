@@ -1,0 +1,22 @@
+{
+  "artifact": "BODYGUARD_ELEVENLABS_ADAPTER_v2_0_DISCOVERED_2026_08_21",
+  "status": "DESIGN_READY_AUTHENTICATED_PREFLIGHT_PENDING",
+  "capabilities": {
+    "voice_design_preview": "POST /v1/text-to-voice/design",
+    "voice_design_create": "POST /v1/text-to-voice",
+    "tts_with_timestamps": "POST /v1/text-to-speech/{voice_id}/with-timestamps",
+    "ttd_with_timestamps": "POST /v1/text-to-dialogue/with-timestamps",
+    "model_discovery": "GET /v1/models"
+  },
+  "model_policy": {
+    "voice_design_candidates": ["eleven_ttv_v3","eleven_multilingual_ttv_v2"],
+    "warning": "Voice Design v3 is experimental; compare evidence."
+  },
+  "render_modes": {
+    "TTD_BLOCK": "candidate multi-speaker continuity mode",
+    "ISOLATED_TTS": "clue/post-chain/pronunciation/critical/selective-regeneration",
+    "PERFORMANCE_SOUND": "non-speech"
+  },
+  "credential_policy": "environment only",
+  "live_preflight_required": true
+}
