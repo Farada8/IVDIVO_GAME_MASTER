@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.final_story_gate_aftermath/1.0",
+  "title":"IVDIVO Final Story Gate — Aftermath & Irreversibility",
+  "type":"object",
+  "required":["main_conflict_closed","climax_choice_caused_resolution","irreversible_consequence","ordinary_life_aftershock","relationship_state_after","world_or_institution_state_after","series_hook_after_main_resolution"],
+  "properties":{
+    "main_conflict_closed":{"type":"boolean"},
+    "climax_choice_caused_resolution":{"type":"boolean"},
+    "irreversible_consequence":{"type":"string","minLength":1},
+    "ordinary_life_aftershock":{"type":"string","minLength":1},
+    "relationship_state_after":{"type":"string","minLength":1},
+    "world_or_institution_state_after":{"type":"string","minLength":1},
+    "hero_change_visible_in_action":{"type":"string"},
+    "series_hook":{"type":["string","null"]},
+    "series_hook_after_main_resolution":{"type":"boolean"},
+    "false_continuation_risk":{"type":"string","enum":["LOW","MEDIUM","HIGH"]}
+  }
+}
