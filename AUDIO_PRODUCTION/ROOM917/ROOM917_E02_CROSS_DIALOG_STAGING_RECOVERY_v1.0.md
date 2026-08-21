@@ -10,7 +10,7 @@
 
 Preserve production-specific E02 staging and microphone-choreography work recovered from a Founder-supplied pasted prior conversation so it cannot disappear with chat history.
 
-This record does **not** advance the current ROOM917 execution frontier. Current execution authority remains `AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json`. At recovery time that state is E01 post-render evaluation blocked on accessible real-master bytes plus matching live timing lineage. No E02 batch/live-render action is authorized by this recovery record.
+This record does **not** advance the current ROOM917 execution frontier. Current execution authority remains `AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json`. At initial recovery time the project was in E01 post-render evaluation with master-byte/live-lineage evidence still unresolved; newer concurrent `main` work subsequently advanced E01 post-render evidence. No E02 batch/live-render action is authorized by this recovery record.
 
 ## Source / provenance
 
@@ -48,8 +48,6 @@ The recovered conversation includes listener-centered audio, selective Foley rea
 The conversation reports an earlier integration into `IVDIVO_ENGINE_v11_CURRENT` with `236/236` tests after a normalizer repair. Preserve this only as historical engineering context. Current machine execution is newer IVDIVO Engine v11.2 / `IVDIVO-ENGINE/6.2.0-continuous-execution` with its own current verification record. Do not downgrade routing to the older test-count milestone.
 
 ## UNIQUE RECOVERED E02 STAGING DELTA
-
-The following episode-specific blocking is the material delta worth preserving.
 
 ### Scene 1 — arrival / fourth-note confrontation
 
@@ -116,7 +114,7 @@ Current Drive evidence independently confirms E02 is an **advanced partial v3.3*
 The source conversation ended with an intended E02 continuation:
 `Actor Director Score -> exact Render Block Plan -> Foley Score -> Spatial Automation directives -> ElevenLabs-safe performance requests`.
 
-That is retained only as the historical E02 downstream plan. It is **not** the current ROOM917 project next action because current E01 post-render evidence gates remain unresolved and `CURRENT_EXECUTION_STATE.json` explicitly forbids scaling E02–E24 before the E01 V2 quality gate.
+That is retained only as the historical E02 downstream plan. It is **not** the current ROOM917 project next action. Current E01 post-render evidence gates remain upstream; scaling E02–E24 remains forbidden before the E01 V2 quality gate. Always reload the newest `CURRENT_EXECUTION_STATE.json` before deciding the actual next E01 step.
 
 ## Reuse / promotion gate
 
@@ -130,6 +128,22 @@ When E02 production is legitimately resumed:
 7. regenerate only missing/superseded downstream production artifacts;
 8. run current choreography/Foley/acoustic/render validation;
 9. persist the promoted E02 package with hashes and readback.
+
+## 16-pass recovery audit execution
+
+This artifact has been re-evaluated with `IVDIVO_NARRATIVE_OS/19_CROSS_DIALOG_RECOVERY_AND_DELTA_PROMPT_PACK_v1.0.md`.
+
+Execution record: `IVDIVO_NARRATIVE_OS/CROSS_DIALOG_RECOVERY_EXECUTION_REPORT_2026-08-21.md`.
+
+Outcome:
+- universal duplicate/superseded material correctly excluded from re-promotion;
+- E02 staging delta retained as project-specific downstream WORKING evidence;
+- `NO NEAR-EAR E02`, acoustic-domain ownership, movement↔Foley coupling and anti-overcue logic retained;
+- missing historical standalone manifest names/hashes remain UNKNOWN rather than invented;
+- recovery itself did not advance the E01 frontier;
+- P06 found a stale blanket `safe + zero_cost + reversible` continuation rule in an earlier state snapshot;
+- before integration, valid concurrent `main` work independently corrected real-gate semantics and advanced E01 evidence;
+- the final recovery integration carries no project-state replacement and therefore cannot roll back that newer work.
 
 ## Current-frontier firewall
 
