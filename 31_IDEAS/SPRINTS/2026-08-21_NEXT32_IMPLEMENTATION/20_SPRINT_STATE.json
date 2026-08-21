@@ -1,0 +1,35 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-21",
+  "status":"N01_N32_EXECUTED_SYNTHESIZED_G01_G64_READY",
+  "source_queue":"31_IDEAS/SPRINTS/2026-08-21_32_PROMPT_RND/04_NEXT_GENERATION_PROMPTS_64.md",
+  "executed_range":"N01-N32",
+  "counts":{"prompts_executed":32,"full_pass_or_candidate":23,"pass_with_limit_or_superseded":7,"blocked_real_input":2,"next_prompts_derived":64},
+  "blocked":[
+    {"prompt":"N11","reason":"real large exported/pasted prior AI transcript not available as ingestable artifact in this sprint"},
+    {"prompt":"N12","reason":"depends on N11 real ingestion"}
+  ],
+  "highest_priority_open_gaps":[
+    "SI_0008_CENTRAL_REGISTRY_WRITE_THROUGH_AND_INVARIANT",
+    "EVIDENCE_CLASS_CONTRACT_RUNTIME_INTEGRATION",
+    "PROJECT_STATE_GAPS_D03_D05_D06_D07_D08_BOOK1",
+    "REAL_TRANSCRIPT_INGESTION_AND_INDEPENDENT_AUDIT",
+    "INDEPENDENT_BLIND_CALIBRATION_FOR_STORY_CORE_AND_DIALOGUE",
+    "REAL_PROJECT_PILOTS_FOR_CAUSALITY_RELATIONSHIP_SCENE_EVIDENCE_STACKS",
+    "TRANSCRIPT_RECOVERY_NEXT_PACKAGE_INTEGRATION"
+  ],
+  "strongest_candidate_mechanisms":[
+    "EVIDENCE_AWARE_GATE_CONTRACT",
+    "STORY_CORE_CAUSAL_CONTRACT",
+    "PROTAGONIST_STATE_CHANGE_LEDGER",
+    "OPPOSITION_ADAPTATION_LEDGER",
+    "RELATIONSHIP_AUTHORITY_GRAPH",
+    "PAIR_STATE_DIALOGUE_CARD",
+    "SCENE_DELETE_SWAP_AUDIT",
+    "UNIVERSAL_EVIDENCE_LEDGER"
+  ],
+  "recommended_first_third_generation_tranche":["G01","G02","G15","G16","G07","G09","G21","G29"],
+  "authority_protection":["NO_D09_FOUNDER_LOCK_INFERENCE","NO_D09_E25","NO_LOCKED_STORY_REWRITE_FOR_TOOL_VALIDATION","NO_INTERNAL_MODEL_REVIEW_AS_HUMAN_SIGNAL","NO_SYNTHETIC_TRANSCRIPT_AS_REAL_INGESTION"],
+  "next_gate":"FRESHNESS_REBASE_THEN_BEST_CANDIDATE_ROUTER_ON_G01_G64",
+  "drive_folder_id":"1y_8BWoeFWoEF0jOKXSeCKfZhDVWJhcDG"
+}

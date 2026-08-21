@@ -1,0 +1,34 @@
+{
+  "schema_version": "room917.current_premium_quality_pointer/1.0",
+  "updated": "2026-08-21T17:21:00+01:00",
+  "project": "ROOM917",
+  "episode": "E01",
+  "story_status": "LOCKED",
+  "current_execution_state_authority": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
+  "package": {
+    "github_path": "AUDIO_PRODUCTION/ROOM917/E01_PQ32_PREMIUM_QUALITY_TO_PQ64_v1/",
+    "drive_folder_id": "1kjvvfcZDvhMmb6bGOJZfS2RtvwmI_3Kg",
+    "drive_folder_name": "ROOM917_E01_PQ32_PREMIUM_QUALITY_TO_PQ64_v1",
+    "pq32_executed": 32,
+    "pq64_created": 64
+  },
+  "new_direct_evidence": {
+    "master_library_file_id": "file_000000002c8081f58d0e656cdc0e7267",
+    "master_library_path": "/IVDIVO — SAGA WRITERS' STUDIO/ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "master_size_bytes": 189558764,
+    "library_pointer_verified": true,
+    "raw_byte_materialization_attempted": true,
+    "raw_byte_materialization_result": "HTTP_403_FORBIDDEN",
+    "byte_fetch_verified": false
+  },
+  "quality_conclusion": "CURRENT_E01_BOTTLENECK_IS_POST_RENDER_PERSISTENCE_PLUS_PHYSICAL_WORLD_PLUS_SELECTIVE_REPAIR_PLUS_HUMAN_VALIDATION_NOT_NEW_STORY_OR_WHOLE_EPISODE_TTS_REGENERATION",
+  "next_machine_action": "RECOVER_OR_CONTROLLED_ESCROW_MASTER_BYTES_THEN_RUN_P003A2_EXACT_INTERVAL_LOCALIZATION",
+  "protected": [
+    "LOCKED_STORY",
+    "SCENE3_V1_3E_LINEAGE",
+    "D003_AGGREGATE_MAJOR_NO_BLANKET_FILL",
+    "D004_REMAINS_CANDIDATE_UNTIL_DIRECT_AUDIO_EVIDENCE",
+    "D005_REMAINS_COMMERCIAL_HYPOTHESIS_UNTIL_HUMAN_ABC_TEST"
+  ],
+  "scale_permission": "NO_SCALE_UNTIL_E01_V2_PROVEN"
+}

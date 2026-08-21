@@ -1,0 +1,31 @@
+{
+  "candidate_id":"SI-0008",
+  "title":"Full chat transcript recovery and ingestion extension",
+  "candidate_type":"PROGRAM_OR_CODE",
+  "status":"VERIFIED_CURRENT_EXTENSION_REGISTRY_WRITE_THROUGH_MISSING",
+  "scope":"UNIVERSAL_IVDIVO",
+  "source_provenance":[
+    {"source_type":"GITHUB","locator":"IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md","date":"2026-08-21"},
+    {"source_type":"GITHUB","locator":"tools/ivdivo_transcript_recovery.py","hash":"79b9cd9f9b8e60f65a7ec156dc23689a194233a6","date":"2026-08-21"},
+    {"source_type":"GITHUB","locator":"schemas/IVDIVO_TRANSCRIPT_RECOVERY_LEDGER_SCHEMA_v1.json","date":"2026-08-21"},
+    {"source_type":"GITHUB","locator":"CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json","version":"2.7","date":"2026-08-21"}
+  ],
+  "problem_or_opportunity":"Self-Improvement state requires the transcript-recovery extension to be registered, but central Improvement Registry search does not resolve SI-0008.",
+  "proposed_mechanism":"Deterministic first-pass recovery of pasted/exported prior AI conversations into a ledger with secret redaction, claim states, reconciliation requirements and persisted-source verification before promotion.",
+  "dedupe_relation":"EXTENSION_OF_SI_0007",
+  "related_candidates":["SI-0007"],
+  "expected_benefit":"Makes chat-only discoveries recoverable without granting pasted transcripts automatic authority.",
+  "evidence_state":"RUNTIME_VERIFIED_INTERNAL_EVIDENCE",
+  "pilot_evidence":["5/5 pytest PASS recorded in current Self-Improvement state","exact Git blob identity PASS","PR 59 merged"],
+  "red_team_findings":["A pasted transcript is recovery evidence, not canon","First-pass extraction cannot mark INGESTION_COMPLETE","Real large-transcript production monitoring remains open","Extension is not yet packaged inside promoted v11.2 ZIP"],
+  "promotion_level":"UNIVERSAL_EXTENSION",
+  "application_targets":["CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json","31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json","CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json","future tested engine package"],
+  "verification_evidence":["IVDIVO_NARRATIVE_OS/TRANSCRIPT_RECOVERY_RUNTIME_VERIFICATION_2026-08-21.md","tool blob SHA 79b9cd9f9b8e60f65a7ec156dc23689a194233a6","5/5 exact-source smoke"],
+  "protected_authorities":["Founder newest instruction","Persisted project canon","No pasted transcript as authority","No secrets persistence"],
+  "owner_role":"Self-Improvement Reconciler / Transcript Recovery",
+  "next_action":"Apply this record to the exact-current central Improvement Registry using a stale-write-safe mutation, then run the registry-reference invariant and read back SI-0008 from main.",
+  "next_gate":"CENTRAL_REGISTRY_WRITE_THROUGH_PLUS_INVARIANT_PASS",
+  "hold_trigger":null,
+  "terminal_reason":null,
+  "notes":"This file is a patch candidate, not proof that the central registry has already been mutated."
+}

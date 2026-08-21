@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-21",
+  "evidence_class": "PERSISTED_PRODUCTION_ROUTING_PLUS_ENGINEERING_PILOT",
+  "runs": {
+    "C3-01": {
+      "status": "PASS_FINDING_MAJOR",
+      "baseline": [
+        "CURRENT_IVDIVO_SYSTEM_STATE.json schema 1.9",
+        "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json schema 1.1",
+        "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json 2.7 family",
+        "Cycle2 merge 850085a8b26a517e82b1f3654c8ce054d8322d0c",
+        "Drive Cycle2 folder 1WjrET2saDfF6_Dv8hP7qXLD9glBYG0Fn"
+      ],
+      "findings": [
+        "Aggregate CURRENT system routing state predates Cycle2 integration evidence and does not yet expose Cycle2/Cycle3 frontier directly.",
+        "Drive CURRENT_PROMPTS_v2.2 and CURRENT_WORKSTATE_v2.2 metadata predate the Cycle2 merge and therefore require compatibility pointer refresh rather than authority promotion.",
+        "Immutable engine package v11.2 and GitHub-main post-package extensions are intentionally divergent; divergence must remain explicit."
+      ],
+      "decision": "REFRESH_ROUTING_POINTERS_AFTER_CYCLE3_SYNTHESIS; DO_NOT_RELABEL_PACKAGE"
+    },
+    "C3-02": {
+      "status": "PASS_REAL_BOOK_STATE_PILOT",
+      "project": "D10 BLOODBOUND",
+      "input": "PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json",
+      "normalized": {
+        "authority_rank": "FOUNDER_AND_DRIVE_PROJECT_AUTHORITY_ABOVE_ROUTING_STATE",
+        "phase": "TEXT_COMPLETION_BLOCK_II",
+        "frontier": "E01-E06_CURRENT_WORKING_BRANCH_COMPLETE",
+        "next_obligation": "E07-E12_THEN_BLOCK_II_GATE",
+        "founder_approval": "PENDING",
+        "hard_stop_preserved": "NO_ROMANTIC_PHYSICAL_ESCALATION_WHILE_RIAN_RETAINS_CUSTODY_AUTHORITY"
+      },
+      "authority_loss_detected": false
+    },
+    "C3-03": {
+      "status": "PASS_REAL_AUDIO_STATE_PILOT_WITH_EXTERNAL_BYTE_BLOCKER_PRESERVED",
+      "project": "ROOM917",
+      "input": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json schema 3.3",
+      "normalized": {
+        "story_status": "LOCKED",
+        "phase": "POST_RENDER_EVALUATION_AND_SELECTIVE_REPAIR",
+        "real_master_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+        "real_master_duration_seconds": 658.190,
+        "proven_major": "D003_PRE_SCENE3_ROOM_BED_CONTINUITY_UNDERCOVERAGE",
+        "next_obligation": "P003A2_PRE_SCENE3_INTERVAL_LOCALIZATION",
+        "blocker": "MASTER_BYTES_OR_INTERVAL_MAP_NOT_MATERIALIZED_ON_CURRENT_TOOL_SURFACE"
+      },
+      "source_hash_preserved": true,
+      "text_lock_preserved": true,
+      "forbidden_regression_preserved": "DO_NOT_RESTART_S0_S1"
+    },
+    "C3-04": {
+      "status": "PASS_REAL_ENGINE_STATE_PILOT",
+      "input": "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json",
+      "normalized": {
+        "package": "IVDIVO_ENGINE_v11_2_CONTINUOUS_EXECUTION_CURRENT.zip",
+        "package_sha256": "d7985036fc97b74019aa74bf422d03f2f6cbe2d5f6e30736bb70032fc399ff4f",
+        "package_regression": "290/290 PASS",
+        "post_package_extension": "TRANSCRIPT_RECOVERY_VERIFIED_CURRENT_EXTENSION_NOT_IN_V11_2_ZIP",
+        "next_package_gate": "NEW_PACKAGE_ONLY_AFTER_SELECTED_EXTENSION_INTEGRATION_AND_FULL_REGRESSION"
+      },
+      "package_identity_mutated": false
+    },
+    "C3-05": {
+      "status": "PASS_RESEARCH_STATE_PILOT",
+      "research_surface": "Cycle2 Fresh Tech Radar",
+      "normalized": {
+        "claim": "code-first guarded orchestration/durable replay/provider capabilities are candidates for bounded pilots",
+        "evidence_class": "CURRENT_EXTERNAL_RESEARCH_REFERENCE_ONLY",
+        "decision": "PILOT_NOT_AUTO_ADOPT",
+        "stopping_rule": "STOP_WHEN_ADDITIONAL_SOURCE_DOES_NOT_CHANGE_PILOT_DECISION"
+      },
+      "research_mistaken_for_runtime_proof": false
+    },
+    "C3-06": {
+      "status": "PASS_REAL_BOOK_AUDIO_SHARED_FACT_PILOT",
+      "project": "D04 SEVEN NIGHTS BEFORE CODE BLUE",
+      "shared_facts": [
+        {
+          "fact_id": "D04_RADIO_SECOND_TRANSFER_LINE",
+          "assertion_grade": "SOURCE_EXPLICIT_PROTECTED",
+          "value": "Hold the second transfer.",
+          "consumers": ["RECORDING_MASTER", "PERFORMANCE_DIRECTION", "DIALOGUE_RENDER", "SUBTITLE_TRANSCRIPT", "QC"]
+        },
+        {
+          "fact_id": "D04_TRANSFER_CONTRAST",
+          "assertion_grade": "CONTINUITY_REQUIRED",
+          "value": "NORMAL_TRANSFER_MUST_DIFFER_FROM_SECOND_TRANSFER_IN_MONO_AND_PHONE_PLAYBACK",
+          "consumers": ["SFX", "MIX", "MONO_MOBILE_QC"]
+        }
+      ],
+      "semantic_drift_allowed": false
+    },
+    "C3-07": {
+      "status": "PASS_ENGINEERING_CONFLICT_CANARY",
+      "fixture": {
+        "current_fact": "Hold the second transfer.",
+        "stale_conflicting_copy": "Stop the second transfer.",
+        "authority": "CURRENT_D04_PROTECTED_AUDIO_FACT",
+        "expected": "REJECT_STALE_BRANCH"
+      },
+      "result": "REJECT_STALE_BRANCH",
+      "reason": "newer/alternate wording cannot override source-explicit protected exact line"
+    },
+    "C3-08": {
+      "status": "PASS_REAL_SPLIT_BRAIN_CASE",
+      "project": "D10 BLOODBOUND",
+      "case": "historical pilot HOLD on E04-E06 listener evidence vs newer Founder-directed text-completion routing",
+      "resolution": {
+        "text_completion_scope": "NEWER_FOUNDER_ROUTING_OVERRIDE_ALLOWS_CONTINUED_TEXT_COMPLETION",
+        "downstream_performance_scope": "HISTORICAL_LISTENER_TTS_GATE_REMAINS_REQUIRED_BEFORE_CLAIMING_PERFORMANCE_VALIDATION",
+        "canon_effect": "NONE"
+      },
+      "rule": "NEWER_COMPATIBLE_PROGRESS_EXTENDS_SCOPE; IT_DOES_NOT_ERASE_HIGHER_AUTHORITY_OR_UNRELATED_DOWNSTREAM_GATES"
+    }
+  },
+  "what_this_does_not_prove": [
+    "literary quality",
+    "human reader/listener preference",
+    "live provider quality",
+    "market demand",
+    "cost savings"
+  ]
+}

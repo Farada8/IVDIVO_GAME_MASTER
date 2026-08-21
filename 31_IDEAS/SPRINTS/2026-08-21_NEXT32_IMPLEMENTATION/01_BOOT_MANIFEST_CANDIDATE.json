@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "status": "CANDIDATE_BOOT_MANIFEST_NOT_CANON",
+  "updated": "2026-08-21",
+  "github": {
+    "system_state": {"path":"CURRENT_IVDIVO_SYSTEM_STATE.json","role":"ROUTING_AUTHORITY","observed_schema":"1.9"},
+    "writing_authority": {"path":"CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md","role":"DOMAIN_AUTHORITY"},
+    "cross_conversation": {"path":"IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md","role":"AUTHORITY"},
+    "self_improvement_state": {"path":"CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json","role":"ROUTING_AUTHORITY","observed_schema":"2.7"},
+    "self_improvement_authority": {"path":"CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md","role":"DOMAIN_AUTHORITY"},
+    "reference_mechanism_upgrade": {"path":"IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md","role":"DOMAIN_OVERLAY"},
+    "project_state_index": {"path":"PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json","role":"ROUTING_INDEX"},
+    "d04_state": {"path":"PROJECT_STATES/D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE_CURRENT_STATE.json","role":"PROJECT_STATE"},
+    "d09_state": {"path":"PROJECT_STATES/D09_THE_MAN_WHO_CAME_BACK_CURRENT_STATE.json","role":"PROJECT_STATE"},
+    "d10_state": {"path":"PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json","role":"PROJECT_STATE"},
+    "room917_state": {"path":"AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json","role":"PROJECT_STATE_NONSTANDARD_LOCATION"}
+  },
+  "drive": {
+    "prompt_authority_index": {"id":"1wTpFLza7x5wB39sDWDpHXQBVLqaYyzzEO27YvOppcgM","title":"00_CURRENT_PROMPT_AUTHORITY_INDEX v1.1","role":"DRIVE_ENTRYPOINT_MIRROR"},
+    "current_prompts": {"id":"1mlUAkQVLH41CfdMa2ZDa8gR3MN7eNi-w3ZC705_b03g","title":"CURRENT_PROMPTS_v2.2","role":"CURRENT_PROMPT_MIRROR"},
+    "current_workstate": {"id":"1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w","title":"CURRENT_WORKSTATE_v2.2","role":"CURRENT_WORKSTATE_MIRROR"},
+    "mandatory_router": {"id":"1Ia2ATX0ILxuQur8FTkBwY1dqLV9D5uGNhRs2slGTVog","title":"00A_READ_ME_FIRST_MANDATORY_STUDIO_ROUTER_v5.3","role":"DRIVE_ROUTER"},
+    "prompt_router": {"id":"1aaA9QKXtX1_L7MnNISHu-WqDo5X-RmIOspXVj25IVDc","title":"03_PROMPT_ROUTER_P01_P53_MASTER_COMMANDS_v5.3","role":"DOMAIN_OVERLAY"},
+    "cross_conversation_router": {"id":"1fGd_bmx96yrRFmsuE5mrS-Zvh1o2c1APWhK8E2wGTjs","title":"00 IVDIVO — START HERE — Cross-Conversation Router v1.2","role":"DRIVE_ENTRYPOINT"},
+    "multi_model_memory": {"id":"12iRI7otqwVAcqXI1pDFDtxNFMsl9kziu7qjgX0joAI0","title":"00_START_HERE — MULTI-MODEL PRODUCTION MEMORY PROTOCOL v1.1","role":"MULTI_MODEL_ENTRYPOINT"},
+    "supplemental_legacy_map": {"id":"1hCeAG6P5ph9WliKh4BqIAD1gMvDca-YiZ2cpT2pD4yo","title":"SUPPLEMENTAL — CURRENT_PROMPTS_AND_SYSTEM_STATE_v1.3 — 2026-08-21","role":"COMPATIBILITY_HISTORY_NOT_PRIMARY"}
+  },
+  "cold_start_assertions": [
+    "D09 resolves to FINAL_STORY_GATE_PASSED_AWAITING_FOUNDER_APPROVAL and never E25",
+    "D04 resolves to story complete plus audio/visual downstream work without reopening text",
+    "ROOM917 resolves from its project execution state rather than generic aggregate prose",
+    "compatibility/history files cannot outrank current authority/state",
+    "chat memory is never required to identify the next gate when a durable state exists"
+  ]
+}
