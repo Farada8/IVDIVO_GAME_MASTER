@@ -1,16 +1,10 @@
 #!/usr/bin/env python3
 """Authenticated, secret-free provider snapshot contract.
 
-A snapshot is evidence about provider capability, not a credential container.
-It may authorize downstream capability checks only when:
-- the snapshot is explicitly PASS and AUTHENTICATED;
-- provenance identifies when/how it was captured;
-- model/voice inventories are explicit;
-- no secret-bearing fields are persisted;
-- its canonical content hash matches;
-- optional freshness limits are satisfied.
-
-This module performs no network calls and never reads provider secrets.
+This is a provenance/integrity contract for capability snapshots. It prevents
+accidental/stale/weak snapshot files from authorizing paid provider dispatch.
+It is not a cryptographic proof that an operator could never forge a file; the
+trusted production path is the paired read-only snapshot acquirer.
 """
 from __future__ import annotations
 
@@ -19,9 +13,18 @@ from datetime import datetime, timezone
 from hashlib import sha256
 from typing import Any
 import json
+import string
 
 SCHEMA_VERSION = "ivdivo.provider_snapshot/1.0"
-AUTH_STATES = {"AUTHENTICATED"}
+PRODUCTION_CAPTURE_METHOD = "DIRECT_AUTHENTICATED_READ_ONLY_API"
+ELEVENLABS_AUTH_METHOD = "XI_API_KEY_RUNTIME_ENV"
+ELEVENLABS_CAPTURE_ENGINE = "ivdivo.elevenlabs_snapshot_acquirer/1.0"
+ELEVENLABS_REQUIRED_SOURCE_PATHS = {
+    "/v1/user",
+    "/v1/user/subscription",
+    "/v1/models",
+    "/v2/voices",
+}
 FORBIDDEN_KEY_TOKENS = {
     "api_key", "apikey", "authorization", "bearer", "cookie", "password",
     "secret", "token", "xi-api-key", "xi_api_key",
@@ -63,6 +66,14 @@ def _parse_utc(value: str) -> datetime:
     if parsed.tzinfo is None:
         raise ValueError("PROVIDER_SNAPSHOT_CAPTURED_AT_TZ_REQUIRED")
     return parsed.astimezone(timezone.utc)
+
+
+def _is_sha256(value: Any) -> bool:
+    return (
+        isinstance(value, str)
+        and len(value) == 64
+        and all(char in string.hexdigits for char in value)
+    )
 
 
 def seal_snapshot(payload: dict[str, Any]) -> dict[str, Any]:
@@ -118,19 +129,19 @@ def validate_provider_snapshot(
         }
 
     authentication = snapshot.get("authentication")
-    if not isinstance(authentication, dict) or authentication.get("state") not in AUTH_STATES:
+    if not isinstance(authentication, dict) or authentication.get("state") != "AUTHENTICATED":
         return {
             "status": "FAIL_NOT_AUTHENTICATED",
             "verified": False,
             "authentication_state": authentication.get("state") if isinstance(authentication, dict) else None,
         }
-    if not authentication.get("method"):
-        return {"status": "FAIL_AUTH_METHOD_MISSING", "verified": False}
+    if authentication.get("credential_persisted") is not False:
+        return {"status": "FAIL_CREDENTIAL_PERSISTENCE_UNPROVEN", "verified": False}
 
     provenance = snapshot.get("provenance")
     if not isinstance(provenance, dict):
         return {"status": "FAIL_PROVENANCE_MISSING", "verified": False}
-    required_provenance = ("captured_at", "capture_method", "source")
+    required_provenance = ("captured_at", "capture_method", "capture_engine", "source")
     missing_provenance = [key for key in required_provenance if not provenance.get(key)]
     if missing_provenance:
         return {
@@ -163,6 +174,57 @@ def validate_provider_snapshot(
                 "max_age_seconds": max_age_seconds,
             }
 
+    source = provenance.get("source")
+    if not isinstance(source, list) or not source:
+        return {"status": "FAIL_SOURCE_EVIDENCE_MISSING", "verified": False}
+    invalid_source_rows = [
+        row for row in source
+        if not isinstance(row, dict)
+        or not isinstance(row.get("path"), str)
+        or row.get("http_status") != 200
+    ]
+    if invalid_source_rows:
+        return {
+            "status": "FAIL_SOURCE_EVIDENCE",
+            "verified": False,
+            "invalid_source_count": len(invalid_source_rows),
+        }
+
+    if provider.lower() == "elevenlabs":
+        if authentication.get("method") != ELEVENLABS_AUTH_METHOD:
+            return {
+                "status": "FAIL_AUTH_METHOD",
+                "verified": False,
+                "expected_auth_method": ELEVENLABS_AUTH_METHOD,
+                "actual_auth_method": authentication.get("method"),
+            }
+        if provenance.get("capture_method") != PRODUCTION_CAPTURE_METHOD:
+            return {
+                "status": "FAIL_CAPTURE_METHOD",
+                "verified": False,
+                "expected_capture_method": PRODUCTION_CAPTURE_METHOD,
+                "actual_capture_method": provenance.get("capture_method"),
+            }
+        if provenance.get("capture_engine") != ELEVENLABS_CAPTURE_ENGINE:
+            return {
+                "status": "FAIL_CAPTURE_ENGINE",
+                "verified": False,
+                "expected_capture_engine": ELEVENLABS_CAPTURE_ENGINE,
+                "actual_capture_engine": provenance.get("capture_engine"),
+            }
+        source_paths = {row["path"] for row in source}
+        missing_paths = sorted(ELEVENLABS_REQUIRED_SOURCE_PATHS - source_paths)
+        if missing_paths:
+            return {
+                "status": "FAIL_SOURCE_COVERAGE",
+                "verified": False,
+                "missing_paths": missing_paths,
+            }
+
+    account = snapshot.get("account")
+    if not isinstance(account, dict) or not _is_sha256(account.get("fingerprint_sha256")):
+        return {"status": "FAIL_ACCOUNT_FINGERPRINT", "verified": False}
+
     voices = snapshot.get("voices")
     models = snapshot.get("models")
     if not isinstance(voices, dict) or not isinstance(models, dict):
@@ -174,7 +236,7 @@ def validate_provider_snapshot(
         }
 
     supplied_hash = snapshot.get("snapshot_hash")
-    if not isinstance(supplied_hash, str) or len(supplied_hash) != 64:
+    if not _is_sha256(supplied_hash):
         return {"status": "FAIL_HASH_MISSING", "verified": False}
     actual_hash = snapshot_content_hash(snapshot)
     if supplied_hash.lower() != actual_hash:
@@ -194,4 +256,5 @@ def validate_provider_snapshot(
         "voice_count": len(voices),
         "model_count": len(models),
         "secret_fields_present": False,
+        "production_capture_contract": True,
     }
