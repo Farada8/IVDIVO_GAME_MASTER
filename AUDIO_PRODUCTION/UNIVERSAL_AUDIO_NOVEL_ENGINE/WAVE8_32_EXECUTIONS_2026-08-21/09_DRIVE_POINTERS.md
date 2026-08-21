@@ -1,0 +1,20 @@
+# WAVE8 — GOOGLE DRIVE MIRROR POINTERS
+
+Folder:
+- `WAVE8_32_EXECUTIONS_2026-08-21`
+- ID: `1ytMxCtllxyVfqiRTyRb_wjgfRbppcw0y`
+- URL: https://drive.google.com/drive/folders/1ytMxCtllxyVfqiRTyRb_wjgfRbppcw0y
+
+Readback-verified documents:
+- `00_START_HERE — WAVE8 AUDIO NOVEL ENGINE 32 EXECUTIONS`
+  - ID: `12akqS-XfyI_dMxYE6rfm3kmeb38masuZa4PET-ceeYc`
+- `01_WAVE8_PROMPTS_01_32_EXECUTION_REPORT — AUDIO NOVEL ENGINE`
+  - ID: `1vPnNS38xd6S5tiCbNeBw74JGS8d9Ar8Y1bH0NpKkJCI`
+- `02_ENGINEERING_CONTRACTS_AND_SELF_IMPROVEMENT — WAVE8 AUDIO NOVEL ENGINE`
+  - ID: `1Wx1n4QqmcBw-B0WVZsafoLNDV_5Q4Vrv1F8nIR6tbIs`
+- `03_SYNTHESIS_AND_PATH_TO_V1 — WAVE8 AUDIO NOVEL ENGINE`
+  - ID: `1AOnld1VEqf07_QVWi-a_LmZ5JkPdJ1CM3vu19iuHbOo`
+- `04_64_NEXT_PROMPTS_WAVE9 — AUDIO NOVEL ENGINE`
+  - ID: `1MGhA2W-NAUJx-mfk5wTPtmaMF5LcUElCW10pSfS2KxE`
+
+Drive mirror is human-readable. Machine-readable state/fixture/escrow JSON authority is preserved in this GitHub Wave8 package.
