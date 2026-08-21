@@ -12,130 +12,118 @@
 6. `tools/dialogue_naturalism_audit.py`
 7. `IVDIVO_NARRATIVE_OS/LESSON_ZERO_DIALOGUE_NATURALISM_FORENSIC_2026-08-21.md`
 8. Cycle 1: `IVDIVO_NARRATIVE_OS/research/HUMAN_SCENE_DIALOGUE_32_TO_64_2026-08-21/`
-9. **Cycle 2 CURRENT RESEARCH FRONTIER:** `IVDIVO_NARRATIVE_OS/research/HUMAN_SCENE_DIALOGUE_CYCLE2_32_EXECUTED_TO_64_2026-08-21/`
+9. Cycle 2: `IVDIVO_NARRATIVE_OS/research/HUMAN_SCENE_DIALOGUE_CYCLE2_32_EXECUTED_TO_64_2026-08-21/`
+10. **Cycle 3 CURRENT RESEARCH FRONTIER:** `IVDIVO_NARRATIVE_OS/research/HUMAN_SCENE_DIALOGUE_CYCLE3_32_EXECUTED_TO_64_CYCLE4_2026-08-21/`
    - `01_SOURCE_EVIDENCE_MATRIX.md`
-   - `02_32_PROMPTS_EXECUTED_CYCLE2.md`
-   - `03_SYNTHESIS_AND_ENGINE_DELTAS.md`
-   - `04_64_NEXT_PROMPTS_CYCLE3.md`
+   - `02_32_PROMPTS_EXECUTED_CYCLE3.md`
+   - `03_SYNTHESIS_AND_ENGINE_DELTAS_CYCLE3.md`
+   - `04_64_NEXT_PROMPTS_CYCLE4.md`
    - `05_APPLICATION_AND_PROMOTION_PLAN.md`
 
 ## Status discipline
+Cycle 1: 32 EXECUTED; derived 64 designed.
+Cycle 2: next 32 EXECUTED; synthesis N01–N16 complete; Cycle-3 64 designed.
+Cycle 3: first 32 Cycle-3 prompts **EXECUTED 32/32** on LESSON ZERO representative/corpus evidence + complete BLOODBOUND E07 + McKee/Truby + current engine; synthesis C3M01–C3M16 COMPLETE; Cycle-4 64 prompts **DESIGNED / READY / NOT EXECUTED**.
 
-Cycle 1:
-- 32 prompts: EXECUTED;
-- derived 64: designed as prior next-stage stack.
-
-Cycle 2:
-- prompts 01–32 from that 64-stack: **EXECUTED 32/32** on LESSON ZERO representative evidence + BLOODBOUND E06/E07 + McKee/Truby + current engine;
-- synthesis: **COMPLETE**;
-- mechanisms N01–N16: current candidates/quality controls;
-- Cycle-3 64 prompts: **DESIGNED / READY / NOT EXECUTED**.
-
-Never convert a designed prompt list into an executed status without actual scene/text/audio evidence.
+Never convert a designed prompt list into executed status without actual scene/text/audio evidence.
 
 ## Drive mirrors
+### Cycle 3 current folder
+`IVDIVO — HUMAN SCENE & DIALOGUE — CYCLE 3 — 32 EXECUTED → 64 NEXT — 2026-08-21`  
+Folder ID: `1ItHtvr8fe2qBnARUVB6opHB4PQAM1ApJ`
+- index: `1I_kU4UlBsPmfB9HnL5F-Gc4z1dx3Jf18I7AqdkfL0hk`
+- source evidence: `15Bo5KAfuNJE9FIpXLIUOZlrFF-wdaTRAfpxSsupn9IE`
+- 32 prompts executed: `1zBaYcuXkRjIubepUxAjObDum4f44OP1lRlAjs9e1OS0`
+- synthesis C3M01–C3M16: `1EoL-WlQ7SeW8KwHlIOrvIUUEUvpUu3xgBWo5VB3cSCg`
+- 64 Cycle-4 prompts: `1q0aoJiixB4t_A2P_ekuI7I0tEcLAhL4XsXTGg3a8MHM`
+- application plan: `1Eeu1PHPPtkgww0bsznIFwvQQ8HGVkL-oSnk3H4g8G88`
 
-### Cycle 2 current folder
-`IVDIVO — HUMAN SCENE & DIALOGUE — CYCLE 2 — 32 EXECUTED → 64 NEXT — 2026-08-21`  
-Folder ID: `114zobjBnA30cwx_6aV_0zK77zteZkzZT`
+### Prior folders
+Cycle 2 folder: `114zobjBnA30cwx_6aV_0zK77zteZkzZT`.
+Cycle 1 folder: `1xe9sDPFG27SyteFSBdjoIx0bgzbP5Z3B`.
 
-- index: `1LTLvvDp6jhH7vmLqHyleZNJvaX-X-5AUQp17OEgn_GM`
-- source evidence: `1O-xz8KwKx4TQ4452IS0DcWK0VZdYLBm5rzNLD5mHYCE`
-- 32 prompts executed: `1fKGdhYblyqiWAEbgDQ4HnShxa1Tr2_mjPC7I3XH80Y4`
-- synthesis N01–N16: `188cjELQxLO6ZCIV80kwmnjd5wOmokwNo4qjTdVFLqQs`
-- 64 Cycle-3 prompts: `1XlCaPhX76Kha4fSTi1TlGaOYTmxY1o-RFM9w_lmQTMk`
-- application plan: `15E7SdsKFlrCj6yECyQRu5q-SPrqIguj5f2bjZMMfRZo`
+## Current production law
+`PERSON -> BODY/EMOTION -> SOURCE PROVENANCE -> EPISTEMIC MODALITY -> ACTIVE ATTENTION -> PERCEPTION -> INTERPRETATION / INTERPRETATION DEBT -> WANT/RISK -> LIVE TRIGGER -> TACTIC -> LATENCY/ACTION -> REGISTER -> WORDS -> PARTNER RESPONSE -> CONSEQUENCE -> RHETORICAL FINGERPRINT -> NARRATOR/SPEAKER SEPARATION -> CORPUS REGRESSION -> PERFORMANCE -> HUMAN BELIEF`.
 
-### Cycle 1 folder
-Folder ID: `1xe9sDPFG27SyteFSBdjoIx0bgzbP5Z3B`.
+## Prior N01–N16 retained
+Cycle-2 mechanisms remain active, especially N09 `CORPUS_RHETORICAL_FINGERPRINT`, N10 `REGISTER_STATE_MACHINE`, N13 `DIALOGUE_IDENTITY_TRIAD`, N15 `PERMISSION + EXIT_GEOMETRY`, N16 `ENSEMBLE_ATTENTION_TOPOLOGY`.
 
-## Current law
+## Cycle-3 mechanisms C3M01–C3M16
+C3M01 `EPISTEMIC_MODALITY_COMPILER` — FACT / STRONG_INFERENCE / WEAK_INFERENCE / BELIEF / RHETORICAL_CONFIDENCE / WRONG_CONFIDENCE.
 
-Refined production chain:
+C3M02 `POV_INTERPRETATION_DEBT_LEDGER` — OPEN / CONFIRMED / REVISED / WRONG / ABANDONED.
 
-`PERSON -> CURRENT BODY/EMOTION -> KNOWLEDGE -> ACTIVE ATTENTION -> PERCEPTION -> INTERPRETATION -> FALSE BELIEF / RELATIONSHIP HISTORY -> WANT -> RISK -> TACTIC -> LATENCY / ACTION -> WORDS -> PARTNER RESPONSE -> CONSEQUENCE -> PERFORMANCE -> HUMAN BELIEF`.
+C3M03 `DISCONFIRMING_CUE_BUDGET` — important judgments retain plausible weakening evidence unless certainty is earned.
 
-## Cycle-2 mechanisms N01–N16
+C3M04 `SOURCE_PROVENANCE_GRAPH` — SOURCE -> VERSION -> RECIPIENT -> BIAS/TRUST -> CURRENT CONFIDENCE.
 
-N01 `EPISTEMIC_STATE_TAG` — basis/confidence for important claims.
+C3M05 `DISTRIBUTED_CONFIDENCE_MAP` — same evidence may produce different confidence levels across characters.
 
-N02 `POV_PERCEPTION_FIREWALL` — observable cue vs interpretation vs confidence.
+C3M06 `RETRIEVAL_TRIGGER_CONTRACT` — delayed knowledge use needs WHY_NOT_NOW + LATER_TRIGGER.
 
-N03 `ATTENTION_BUDGET` — characters cannot retrieve all known information on demand.
+C3M07 `MEMORY_TYPE_LABEL` — WITNESSED / REMEMBERED / RETOLD / INHERITED_NARRATIVE / DOCUMENT_DERIVED / RECONSTRUCTED.
 
-N04 `RECALL_FRICTION` — retrieval delay/completeness/confidence/contamination under pressure.
+C3M08 `COGNITIVE_LOAD_VOICE_DEFORMATION_PROFILE` — provisional until calm/crisis multi-scene evidence exists.
 
-N05 `FALSE_BELIEF_LANGUAGE_CONSEQUENCE` — false belief changes questions, omissions, perception and phrasing.
+C3M09 `LIVE_TRIGGER_COVERAGE` — major line must originate in partner/object/event/internal processing/unresolved business; OUTLINE_ONLY fails.
 
-N06 `LIVE_TRIGGER / CAUSE_TO_LINE_GRAPH` — important replies must be caused by live person/environment stimulus.
+C3M10 `EMOTIONAL_LATENCY_TRAJECTORY` — BODY -> TACTIC -> LEAK -> PRIVATE_RECOGNITION -> EXPLICIT_LANGUAGE.
 
-N07 `EMOTIONAL_LATENCY_CURVE` — response may be immediate/delayed/displaced/suppressed/action-first/private.
+C3M11 `REPAIR_CEILING + ACTION_REQUIREMENT` — words cannot erase material betrayal/status/history beyond a bounded immediate delta.
 
-N08 `REPAIR_STYLE + REPAIR_CEILING` — character-specific repair plus maximum believable relationship improvement before material action.
+C3M12 `CONTRASTIVE_SYNTAX_FINGERPRINT` — chapter/block scan for `not X/Y`, `that is not`, semantic correction ladders, mirrored reframes. **Highest-priority current corpus gate.**
 
-N09 `CORPUS_RHETORICAL_FINGERPRINT` — chapter/block/book regression for correction syntax, acknowledgments, reversals, questions, disagreement, jokes, metaphors and narrator cadence. **Highest-priority new cross-scene gate.**
+C3M13 `ACKNOWLEDGMENT_FUNCTION_MATRIX` — phrase + function + register + speaker for `I know / okay / fine / right / sure / exactly`.
 
-N10 `REGISTER_STATE_MACHINE` — professional/peer/intimate/defensive/public/family/private/command/exhausted voice states.
+C3M14 `REGISTER_DISTANCE_MATRIX` — professional/intimate/defensive/public/family/peer qualitative distance.
 
-N11 `VOCABULARY + METAPHOR_PROVENANCE` — unusual language must have plausible life source or be flagged author-owned.
+C3M15 `VOCABULARY + METAPHOR_PROVENANCE` — BIOGRAPHY_SUPPORTED / SHARED_CULTURE / CONTEXT_GENERATED / AUTHOR_OWNED_CANDIDATE.
 
-N12 `STRESS_DEFORMATION_PROFILE` — person-specific linguistic deformation under pressure.
+C3M16 `TACTIC_VS_SURFACE_SEPARABILITY` — distinct tactics may still collapse into one authorial syntax; blind-test questions/disagreement separately from sentence shape.
 
-N13 `DIALOGUE_IDENTITY_TRIAD` — question style + disagreement style + repair/apology style.
+## Key Cycle-3 conclusion
+**Scene-level Naturalism PASS does not guarantee corpus-level speaker/narrator separation.**
 
-N14 `RELATIONSHIP_SEMANTIC_LEDGER` — shorthand age + debt + misread + status + absent-third-party pressure.
+Independent evidence now exists in two lines:
+- LESSON ZERO forensic baseline: repeated correction/reframe patterns, acknowledgement and narrator-house-style recurrence;
+- BLOODBOUND E07: despite prior Human Scene upgrade and an explicit house-style watch, repeated contrastive/corrective syntax still appears across narrator + multiple speakers, and `I know` collides between characters.
 
-N15 `PERMISSION + EXIT_GEOMETRY` — formal authority, refusal/interruption/exit/continuation/touch/disclosure rights and cost of saying no. Hard gate in power-asymmetric scenes.
+Therefore the current law is:
+`LINE CAUSALITY -> SCENE HUMAN TRUTH -> CHARACTER REGISTER -> CORPUS RHETORICAL FINGERPRINT -> NARRATOR/SPEAKER SEPARATION -> PERFORMANCE/HUMAN BELIEF`.
 
-N16 `ENSEMBLE_ATTENTION_TOPOLOGY` — intended target, actual listeners, task focus, side-signals and missed information for 3+ character scenes.
-
-## Key Cycle-2 conclusion
-
-**Local Naturalism PASS does not guarantee corpus-level rhetorical separation.**
-
-Evidence pattern:
-- LESSON ZERO forensic baseline already found cross-character correction/reframe and narrator-house-style recurrence;
-- BLOODBOUND E06 v1.0 was superseded for one similar polished cluster;
-- BLOODBOUND E07 is behaviorally stronger, yet some compact semantic correction syntax still reappears.
-
-Therefore new production law:
-
-`LINE CAUSALITY -> SCENE HUMAN TRUTH -> CORPUS RHETORICAL REGRESSION`.
-
-A scene may not be considered fully dialogue-clean merely because each line is locally plausible.
+Do not make characters less intelligent to solve this. Restore rhetorical ownership.
 
 ## Locked-text law
-
 Do not rewrite a locked/development-complete book because flat TTS or one listening impression sounds artificial. First classify the earliest failed layer.
 
 ## LESSON ZERO
-
-No bulk rewrite. Next diagnostic remains a representative 45–60 minute exact-text premium performance sample plus text-only/corpus analysis. Use Cycle-3 prompts especially 01–08, 25–32 and 57–64. `failing investment bank` remains performance-sensitive / vocabulary-provenance watch until page and properly directed audio evidence converge.
+No bulk rewrite. Next evidence step remains a representative 45–60 minute exact-text premium performance diagnostic plus text-only/corpus analysis. Cycle-4 priority prompts: 33–61. `failing investment bank` remains a performance-sensitive + metaphor-provenance canary until page and properly directed audio evidence converge.
 
 ## BLOODBOUND
+Current verified frontier: E01–E07 written; Block I E01–E06 Human Scene Gate PASS, FATAL 0 / MAJOR 0; E07 `THE MARRIED NAME` current Block-II text; E08 `HOUSE CORVEN` is next.
 
-Current verified frontier in this router: E01–E07 written; Block I E01–E06 Human Scene Gate PASS, FATAL 0 / MAJOR 0. E07 `THE MARRIED NAME` is current Block-II text.
+For E08–E12:
+- explicitly trigger Rian's family-archive retrieval;
+- preserve distributed confidence and source provenance;
+- preserve Mira/Rian question-family separation;
+- avoid `not X / Y` becoming default intelligence syntax;
+- preserve custody/power and relationship latency.
 
-For E08–E12, actively load N01/N06/N07/N09/N15. At E12 run a **corpus rhetoric regression across E06–E12** before Block-II PASS. Do not impulsively patch E07 merely because a watch exists; compare the full block unless a FATAL/MAJOR is found.
+At E12 run one E06–E12 corpus gate: contrastive syntax fingerprint, acknowledgement matrix, question/disagreement blind tests, register distance, metaphor/vocabulary provenance, source/knowledge regression. Apply minimal repairs only after block evidence.
 
 ## SMITH BOOK 3
-
-Before substantial prose drafting, load N01–N16 for first interactions, institutional/mystery interviews, intimate conflict, ensemble decisions, midpoint relationship turns, climax and final emotional resolution.
-
-First major Smith scenes are calibration pilots. Do not scale if different principals still sound like one rhetorically intelligent author.
+Before substantial prose drafting, create major-character and narrator rhetorical fingerprints, register matrices, source-provenance habits, confidence thresholds, metaphor domains, question/disagreement families and provisional stress-deformation profiles. First major scenes are calibration pilots; do not scale if principals still sound like one rhetorically intelligent author.
 
 ## Doramas
-
-Prioritize N07/N08/N10/N13/N14/N15/N16 plus localization/performance triage. Romantic credibility is fail-closed when dialogue pretends structural equality that does not exist.
+At 6-episode gates include corpus-rhetoric regression, apology/repair ceiling, relationship/permission review, question/disagreement separability and polished-line underplay canary.
 
 ## Research-to-production law
-
-Do not create another generic theory-only escalation simply to increase prompt count. Cycle-3 64 prompts should now execute against real material:
-- BLOODBOUND live drafting;
-- LESSON ZERO premium text/audio diagnosis;
-- SMITH pre-draft calibration.
+Cycle-4 64 prompts are READY, not executed. Do not keep increasing prompt counts abstractly. Next evidence must come from:
+- BLOODBOUND E08–E12 live drafting + E06–E12 corpus gate;
+- LESSON ZERO premium text/audio diagnostic;
+- SMITH pre-draft voice calibration.
 
 Then:
-`REAL SCENE -> PROMPT/TEST -> EVIDENCE -> PATCH OR KEEP -> CORPUS REGRESSION -> HUMAN/PERFORMANCE SIGNAL -> PROMOTE / HOLD / REJECT`.
+`REAL SCENE -> PROMPT/TEST -> EVIDENCE -> KEEP/PATCH -> CORPUS REGRESSION -> PERFORMANCE/HUMAN SIGNAL -> PROMOTE/HOLD/REJECT`.
 
 **CHARACTER CAUSES THE LINE. CORPUS TESTS THE VOICE. AUDIO TESTS THE PERFORMANCE. HUMAN SIGNAL DECIDES AMBIGUOUS NATURALNESS.**
