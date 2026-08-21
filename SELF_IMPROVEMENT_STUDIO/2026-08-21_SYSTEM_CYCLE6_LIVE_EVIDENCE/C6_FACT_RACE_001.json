@@ -1,0 +1,12 @@
+{
+  "transaction_id": "C6-FACT-RACE-001",
+  "fact_id": "C6_SHARED_FACT_001",
+  "value": "ALPHA",
+  "value_hash": "73ab66a033c267e00b7429bb256f6deb2734ebc4cd4ff5b564a8c9f9b2c8a719",
+  "version": 1,
+  "lock_owner": null,
+  "authority_effect": "NONE",
+  "story_canon_effect": "NONE",
+  "scope": "SELF_IMPROVEMENT_SANDBOX_NON_CANON",
+  "status": "READY_FOR_RACE"
+}
