@@ -1,24 +1,32 @@
 # CURRENT — IVDIVO SELF-IMPROVEMENT AUTHORITY
 
-**Status:** CURRENT ROUTER CANDIDATE — FOUNDER DIRECTIVE  
+**Status:** CURRENT ROUTER — v2 OPERATING CANDIDATE  
 **Updated:** 2026-08-21  
 **Scope:** whole-project improvement, with primary priority on BOOK PRODUCTION and LOCKED BOOK → AUDIO NOVEL PRODUCTION.
 
 ## 1. CURRENT STACK
 
 1. Founder newest direct instruction.
-2. `IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md` — current v2 candidate governing engine.
+2. `IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md` — governing v2 operating candidate.
 3. `SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json` — machine configuration.
-4. `IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md` — delta intake, dedupe, universalization firewall.
-5. `IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md` — reference/book learning route.
-6. `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md` — cross-conversation learning/continuation.
-7. `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json` — live candidate memory.
-8. `31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json` — current registry schema until superseded.
-9. `tools/ivdivo_self_improvement.py` — registry/audit/queue utility; exact runtime remains PROVISIONAL until checkout smoke.
-10. `CURRENT_IVDIVO_SYSTEM_STATE.json` — aggregate current pointer.
+4. `CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json` — machine-readable v2 state/frontier.
+5. `IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md` — delta intake/dedupe/universalization firewall.
+6. `IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md` — reference/book learning route.
+7. `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md` — cross-conversation learning/continuation.
+8. `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json` — live candidate memory.
+9. `31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json` — current registry schema until superseded.
+10. `tools/ivdivo_self_improvement.py` — registry/audit/queue utility; exact checkout runtime remains PROVISIONAL until smoke-tested.
+11. `CURRENT_IVDIVO_SYSTEM_STATE.json` — aggregate project pointer; rebase rather than overwrite when sibling dialogs advance it.
 
 Historical/base:
 `IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md`.
+
+Drive mirrors:
+- v2 engine: `18 — IVDIVO SELF-IMPROVEMENT META ENGINE v2.0 CURRENT CANDIDATE`, ID `1TamY1cuiCUGP5zgheF-1nM2LaRt2f5vtZLwfJTJeSaY`;
+- current router: `CURRENT — IVDIVO SELF-IMPROVEMENT AUTHORITY`, ID `1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0`;
+- v1 base: ID `1lbAaKASLAKFzCiGEF84Xrs-ziwQhCJASwLfDh3UGwSg`;
+- improvement registry mirror: ID `1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs`;
+- portability inventory: ID `1WofqSiO3fBD_VoIveOVDihBybwlpeDE051zVrf1ipVs`.
 
 ## 2. PRIMARY OBJECTIVE ORDER
 
@@ -34,7 +42,7 @@ Follow:
 - `CURRENT_IVDIVO_WRITING_STUDIO_AUTHORITY.md`;
 - active project/book authority and source-of-truth.
 
-The Self-Improvement Engine observes defects/successes and promotes reusable mechanisms; it does not replace story production.
+The Self-Improvement Engine observes recurring defects/successes and promotes reusable mechanisms; it does not replace story production.
 
 ### Book → Audio
 Follow:
@@ -70,21 +78,9 @@ Primary story/audio production outranks meta-work unless a system FATAL/MAJOR bl
 
 ## 7. LEARNING SOURCES
 
-Learn from:
-- books/scripts/craft/reference sources;
-- sibling Project conversations;
-- GitHub/Drive deltas;
-- Story Engine mechanisms;
-- Development/Red Team/Reader/continuity failures;
-- successful books/scenes;
-- audio canaries/QC/re-render causes;
-- provider/API/tool changes;
-- external AI reviews with provenance;
-- real human/market/publisher evidence;
-- cycle-time/cost/duplication signals;
-- engine's own mistakes.
+Learn from books/scripts/craft/reference; sibling Project conversations; GitHub/Drive deltas; Story Engine mechanisms; Development/Red Team/Reader/continuity failures; successful books/scenes; audio canaries/QC/re-render causes; provider/API/tool changes; external AI reviews with provenance; real human/market/publisher evidence; production cycle-time/cost/duplication; and the engine's own errors/overhead.
 
-Research must be problem-driven and end in a decision/test/hold/reject, not endless collection.
+Research is problem-driven and ends in decision/test/hold/reject, not endless collection.
 
 ## 8. PROMOTION LAW
 
@@ -94,18 +90,24 @@ Newer is not automatically better. Model votes do not create authority. Higher t
 
 ## 9. SELF-REFERENCE LAW
 
-Changes to this engine must pass this engine's own lifecycle. It may simplify itself and remove obsolete rules.
+Changes to this engine pass this engine's own lifecycle. It may simplify itself and remove obsolete rules.
 
 ## 10. CURRENT ACCEPTANCE STATUS
 
-v2 operating architecture/config are implemented in GitHub as a candidate upgrade.
+Already applied:
+- v2 governing architecture in GitHub;
+- v2 machine config;
+- dedicated v2 machine state;
+- Writing router points to v2;
+- Drive engine/router mirrors created and populated;
+- book/audio/productivity/research sensor systems defined;
+- Best-Candidate and WIP anti-bedlam laws defined.
 
-Before `VERIFIED_CURRENT`:
-- sync current Writing/System pointers;
-- create/verify Drive mirrors;
-- register v2 candidate/lifecycle state;
+Still required before full `VERIFIED_CURRENT`:
+- reconcile v2 into the central improvement registry lifecycle;
+- safely rebase aggregate `CURRENT_IVDIVO_SYSTEM_STATE.json` to point to v2 without destroying sibling progress;
 - read back all controlling pointers;
-- run exact utility runtime smoke when a runnable checkout/runtime is available.
+- exact checkout runtime smoke of current utility when a runnable repository checkout/runtime is available.
 
 Until exact utility smoke, CLI runtime remains PROVISIONAL; this does not permit false claims that it was executed.
 
