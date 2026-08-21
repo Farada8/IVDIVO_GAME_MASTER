@@ -1,8 +1,9 @@
 # IVDIVO — CROSS-CONVERSATION STATE & AUTOPILOT
 
 **Status:** CANONICAL OPERATIONAL CONTROL LAYER  
-**Version:** 1.0  
+**Version:** 1.1  
 **Established:** 2026-08-21  
+**Updated:** 2026-08-21  
 **Scope:** all IVDIVO writing/development/revision/reference workflows and all AI sessions that participate in them.  
 **Parent authorities:** Founder newest instruction -> `IVDIVO_WRITING_PRODUCTION_CANON.md` -> locked book/saga canon -> `00_NARRATIVE_OS_CANON.md`.  
 **Purpose:** make persisted project state, not repeated Founder nudges or chat memory, drive continuation.
@@ -21,6 +22,8 @@ If the next production obligation is unambiguous, unblocked and executable in th
 
 `и / дальше / продолжай / делай / работай` remains an explicit RESUME command, not a required heartbeat.
 
+This law governs continuation **during active user turns**. It does not claim autonomous background/asynchronous work between turns unless a separate scheduled automation explicitly exists.
+
 ---
 
 ## 2. UNIVERSAL PROJECT BOOT
@@ -37,6 +40,29 @@ Required source order when relevant and available:
 5. Session memory only as a convenience, never as silent authority over persisted state.
 
 If a required authority/source/version is ambiguous, fail closed as `AUTHORITY_UNRESOLVED` rather than reconstructing canon from memory.
+
+### 2.1 DELTA BOOT — WHAT CHANGED SINCE THE LAST FRONTIER
+
+After current authority/frontier is restored, inspect **material deltas since the latest accepted handoff/state**, not the whole archive by default.
+
+When relevant and accessible, compare:
+- newer Founder / Project-conversation instructions;
+- GitHub current authority, changelog and project status changes;
+- Google Drive current authority, handoffs and recently modified project/system artifacts;
+- newly uploaded File Library engine/craft/reference material;
+- downstream production authority for the active phase.
+
+Do not reread every book, reference or production file mechanically. Start with the delta. Deep-retrieve older sources only when the current decision requires them.
+
+Classify each material new item before integration:
+- `PROJECT_ONLY`;
+- `GENRE_OVERLAY_CANDIDATE`;
+- `UNIVERSAL_CANDIDATE`;
+- `REFERENCE_ONLY`;
+- `SUPERSEDED`;
+- `REJECTED`.
+
+A newer timestamp is not enough to override higher authority.
 
 ---
 
@@ -62,6 +88,8 @@ Every active workflow should maintain a machine- or human-readable state record 
 - `blocked_reasons[]`;
 - `external_feedback[]` with provenance;
 - `model_handoffs[]` with provenance;
+- `accepted_portable_mechanisms[]`;
+- `candidate_portable_mechanisms[]`;
 - `last_session_log`;
 - `state_status`.
 
@@ -99,6 +127,8 @@ Stop and report the exact blocker only on:
 - a safety/legal constraint.
 
 Do not manufacture a question merely to obtain another user turn.
+
+On a project-relevant user turn, satisfy the immediate request and then continue directly dependent unblocked obligations. Explicit continuation shorthand is optional.
 
 ---
 
@@ -143,6 +173,14 @@ If the causal map remains stable, continue prose/development. If the causal map 
 
 Use milestone/block audits at meaningful causal boundaries; do not interrupt every paragraph with full-system review.
 
+For post-draft bounded repair, use the current universal standard:
+`14_TARGETED_REPAIR_PATCH_CONTRACT_STANDARD_v1.0.md`.
+
+Its core chain is:
+`ISSUE -> PATCH_QUEUE -> PATCH_CONTRACT -> CANDIDATE -> LOCAL_QA -> SELECTIVE_COMMIT -> DOWNSTREAM_INVALIDATION -> REGRESSION`.
+
+A recovery/adaptor implementation may supply a proven mechanism without becoming the higher Narrative OS authority itself.
+
 ---
 
 ## 7. CROSS-MODEL WORKFLOW
@@ -151,9 +189,12 @@ Models are replaceable specialist backends, not canon authorities.
 
 Default roles when multiple models are actually used:
 - **Primary Integrator / production writer-editor:** integrates authority, executes approved work and writes persisted state.
-- **Independent Architecture/Character/System Reviewer (e.g. Claude):** adversarial review; does not become canon automatically.
-- **Independent Market/Packaging/Alternative-Diagnosis Reviewer (e.g. Grok):** adversarial review; does not become canon automatically.
-- Other models/tools may be assigned bounded specialist roles when they materially improve the decision.
+- **Independent Architecture/Character/System Reviewer:** adversarial review; does not become canon automatically.
+- **Independent Market/Packaging/Alternative-Diagnosis Reviewer:** adversarial review; does not become canon automatically.
+- **Bounded Domain Specialist:** medicine, law, science, sociology, audio, youth, etc., only when domain evidence can change the decision.
+- **Human Signal:** separate external evidence class; never simulated by AI.
+
+Claude, Grok, GPT or another model may occupy different bounded roles in different tasks. The role contract matters more than the model brand.
 
 Every external model receives a bounded `AGENT_PACKET`, not the whole uncontrolled archive:
 - active project/book/line;
@@ -178,6 +219,30 @@ No model may self-certify:
 - market performance;
 - publisher/editor feedback that did not occur.
 
+### 7.1 PORTABILITY SCOUT — LEARN FROM NEIGHBORING PROJECTS WITHOUT CANON LEAK
+
+Whenever a project/dialog produces a materially stronger mechanism, the Integrator must ask:
+1. Is this story/project-specific?
+2. Is it reusable only inside a genre/format overlay?
+3. Is it a universal production improvement?
+4. Does an equal or stronger current mechanism already exist?
+5. What regression risk would promotion create?
+
+Promotion path:
+`DISCOVERED -> ABSTRACTED -> COMPARED -> PILOTED/VALIDATED -> ACCEPTED -> CURRENT`.
+
+Only the **abstract mechanism** may cross projects. Never silently transfer:
+- project canon;
+- character names/relationships;
+- culprit/solution;
+- distinctive clue chain;
+- signature sound motif;
+- chronology;
+- provider voice IDs;
+- obsolete branch facts.
+
+If another conversation already promoted an equivalent or stronger universal mechanism, reconcile to that current authority instead of creating a duplicate file/version.
+
 ---
 
 ## 8. CROSS-MODEL PERSISTENCE / HANDOFF
@@ -191,6 +256,7 @@ Persist when materially changed:
 - FATAL/MAJOR defect register;
 - accepted/rejected external critique;
 - experimental drafts used for comparison;
+- accepted/rejected portability decisions;
 - exact next action;
 - locks and unresolved dependencies.
 
@@ -222,9 +288,18 @@ Craft-source routing:
 - Linda Seger-style structure/scene/conflict/character diagnostics belong primarily to development/rewrite passes; they do not automatically reopen a GREEN Story Core.
 - Joseph Williams/Bizup clarity/cohesion/emphasis/concision mechanisms belong primarily to late Line/Clarity passes; they do not outrank story, causality or character truth.
 
+Reference Intelligence should be queried by the current problem. Do not mechanically reread the full reference library when the current delta/problem can be resolved by targeted retrieval.
+
 ---
 
-## 10. P51 / P52 / P53 / HUMAN SIGNAL INHERITANCE
+## 10. REVIEW ORCHESTRATION / P51 / P52 / P53 / HUMAN SIGNAL
+
+The 100-person production layer remains a **deep specialist catalog / role taxonomy**, not evidence that one hundred independent opinions occurred.
+
+Default major internal review should use the current compact operational gate:
+`15_ADVERSARIAL_10_LENS_REVIEW_GATE_v1.0.md`.
+
+Escalate from a lens to deeper specialists only when the domain result can materially change a decision.
 
 Universal applicable fiction inherits:
 - P51 voice differentiation for important speaking characters;
@@ -243,13 +318,16 @@ Internal model review may diagnose; it may not impersonate external human valida
 When Founder says `и / дальше / продолжай / делай / работай`:
 1. restore persisted current state;
 2. resolve active book/line and newest verified frontier;
-3. recompute open gates and dependencies;
-4. execute the highest unblocked obligation;
-5. continue through further unblocked dependent stages in the same work block;
-6. persist materially changed state;
-7. stop only on a mandatory stop state.
+3. run material delta boot;
+4. recompute open gates and dependencies;
+5. execute the highest unblocked obligation;
+6. continue through further unblocked dependent stages in the same work block;
+7. persist materially changed state;
+8. stop only on a mandatory stop state.
 
-Never respond to a recoverable continuation command with generic advice or “what should I do next?”.
+The same progression rule applies after any substantive project-relevant user turn when the next dependent obligation is already known and unblocked.
+
+Never respond to a recoverable continuation with generic advice or “what should I do next?”.
 
 ---
 
@@ -259,9 +337,10 @@ Before ending a substantive work block, when persistence tools are available:
 1. persist material decisions/results;
 2. update current state/frontier;
 3. record external-model feedback disposition;
-4. record unresolved FATAL/MAJOR and open gates;
-5. record exact next unblocked obligation or exact blocker;
-6. verify the write before claiming synchronization.
+4. record accepted/rejected portable mechanisms when relevant;
+5. record unresolved FATAL/MAJOR and open gates;
+6. record exact next unblocked obligation or exact blocker;
+7. verify the write before claiming synchronization.
 
 If persistence is unavailable, state that fact. Never claim a save that did not happen.
 
