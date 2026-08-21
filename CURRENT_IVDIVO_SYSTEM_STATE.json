@@ -1,13 +1,13 @@
 {
-  "schema_version": "1.9",
+  "schema_version": "2.0",
   "updated": "2026-08-21",
   "status": "CURRENT_ROUTING_STATE_NOT_STORY_CANON",
-  "purpose": "Machine-readable resume pointer for cross-conversation and cross-model IVDIVO work. This file routes work; it never overrides locked project canon or project-specific source-of-truth files.",
+  "purpose": "Machine-readable resume pointer for cross-conversation and cross-model IVDIVO work. This file routes work; it never overrides Founder authority, locked project canon, project-specific source-of-truth or stronger terminal gates.",
   "authority_order": [
     "FOUNDER_NEWEST_DIRECT_INSTRUCTION",
     "LOCKED_PROJECT_OR_BOOK_CANON_AND_SOURCE_OF_TRUTH",
     "CURRENT_DOMAIN_AUTHORITY",
-    "PROJECT_SPECIFIC_EXECUTION_STATE_OR_DRAFT_STATUS",
+    "PROJECT_SPECIFIC_EXECUTION_STATE_OR_TERMINAL_GATE",
     "CURRENT_IVDIVO_SYSTEM_STATE",
     "CURRENT_PROMPTS_AND_WORKSTATE_MIRRORS",
     "EXTERNAL_MODEL_HANDOFF_WITH_DISPOSITION",
@@ -25,85 +25,74 @@
     "self_improvement_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
     "self_improvement_config": "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json",
     "improvement_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
-    "improvement_registry_schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
     "learning_ledger": "CURRENT_IVDIVO_LEARNING_LEDGER.json",
-    "learning_ledger_schema": "LEARNING_LEDGER_SCHEMA_v1.json",
-    "self_improvement_utility": "tools/ivdivo_self_improvement.py",
-    "self_improvement_runtime_verification": "IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-21.md",
     "multi_model_prompts": "IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md",
     "cross_ai_handoff": "CURRENT_IVDIVO_CROSS_AI_HANDOFF.md",
     "engine_machine_execution": "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json",
-    "book_chat_starter": "IVDIVO_NARRATIVE_OS/11_BOOK_CHAT_STARTER.md",
     "runtime_craft_addendum": "IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md",
     "reference_mechanism_upgrade": "IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md",
-    "agent_continuous_sync": "IVDIVO_NARRATIVE_OS/16_AGENT_PROMPTS_CONTINUOUS_SYNC_SUPPLEMENT_v1.0.md",
     "audio": "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md"
   },
   "resume_algorithm": [
     "FRESHNESS_SWEEP",
     "CONCURRENT_DIALOG_REBASE_CHECK",
+    "IF_PASTED_PRIOR_CHAT_THEN_FULL_CHAT_RECOVERY",
+    "PROJECT_SPECIFIC_SOURCE_OF_TRUTH_AND_TERMINAL_GATE_CHECK",
     "CHAT_ONLY_DISCOVERY_AND_INGESTION_GATE",
-    "IMPROVEMENT_REGISTRY_SWEEP",
-    "LEARNING_LEDGER_SWEEP",
-    "SELF_IMPROVEMENT_PRIORITY_REBASE",
+    "IMPROVEMENT_REGISTRY_AND_LEARNING_LEDGER_SWEEP",
     "STALE_WORK_GATE",
     "RECOMPUTE_DEPENDENCY_DAG",
     "SELECT_HIGHEST_UNBLOCKED_OBLIGATION",
     "EXECUTE",
     "VERIFY",
     "PERSIST",
-    "REREAD_STATE_AND_REPEAT_UNTIL_REAL_GATE"
+    "READBACK_AND_REPEAT_UNTIL_REAL_GATE"
   ],
   "cross_dialog_policy": {
     "repeated_short_command_required": false,
-    "short_commands_are_resume_shorthand": ["и", "дальше", "продолжай", "делай", "работай"],
+    "short_commands_are_resume_shorthand": ["и", "дальше", "продолжай", "делай", "работай", "действуй"],
     "neighbor_chat_claim_without_persisted_artifact": "DISCOVERY_ONLY",
-    "chat_only_statuses": ["DISCOVERY_ONLY", "CHAT_ONLY_CANDIDATE", "UNRECOVERABLE_CHAT_ONLY"],
-    "chat_only_ingestion_flow": "DISCOVER_CHAT_ONLY_RESULT -> IDENTIFY_SOURCE_CONVERSATION_PROJECT_DATE_TASK -> RETRIEVE_ACTUAL_RESULT_IF_ACCESSIBLE -> EXTRACT_MATERIAL_DELTA -> RECORD_PROVENANCE -> COMPARE_AGAINST_CURRENT_AUTHORITY -> VALIDATE_CANON_VERSION_HASH_GATES -> CLASSIFY -> PERSIST_CANDIDATE_ARTIFACT -> RUN_REQUIRED_QA_RED_TEAM_REGRESSION -> PROMOTE_OR_HOLD_OR_REJECT -> UPDATE_CURRENT_STATE_HANDOFF_POINTERS -> READBACK_VERIFY",
-    "chat_only_retrieval_rule": "IF_SOURCE_CONVERSATION_IS_ACCESSIBLE_RETRIEVE_IT_BEFORE_ASKING_FOUNDER_TO_REPEAT",
-    "chat_only_missing_detail_rule": "DO_NOT_RECONSTRUCT_MISSING_DETAILS_FROM_SUMMARY_OR_MEMORY",
     "chat_only_default_authority": "NONE_UNTIL_PERSISTED_AND_VERIFIED",
-    "chat_only_success_condition": "REMOVE_CHAT_ONLY_CONDITION_AFTER_PERSISTENCE_VALIDATION_AND_READBACK",
-    "chat_only_failure_condition": "RECORD_GAP_AND_CONTINUE_FROM_VERIFIED_PERSISTED_STATE",
-    "promotion_flow": "DISCOVER -> LOCATE_OR_RETRIEVE_ACTUAL_RESULT -> VERIFY_STATUS_VERSION_HASH_GATES -> COMPARE_AUTHORITY_AND_FRESHNESS -> SEMANTIC_DEDUPE -> CLASSIFY -> QA_OR_RED_TEAM_AS_NEEDED -> PROMOTE_OR_HOLD_OR_REJECT -> WRITE_THROUGH -> UPDATE_POINTERS -> READBACK_VERIFY",
+    "chat_only_retrieval_rule": "IF_SOURCE_CONVERSATION_IS_ACCESSIBLE_RETRIEVE_ACTUAL_RESULT_BEFORE_ASKING_FOUNDER_TO_REPEAT",
     "stale_write_policy": "REBASE_DO_NOT_FORCE_OVERWRITE",
     "duplicate_evidence_weight": 0,
     "model_agreement_without_independent_evidence_is_validation": false,
-    "stop_only_on": ["DECISION_GATE", "AUTHORITY_UNRESOLVED", "CANON_APPROVAL_REQUIRED", "HUMAN_EVIDENCE_REQUIRED", "EXTERNAL_PROVIDER_REQUIRED", "UNRESOLVED_FATAL_OR_MAJOR", "IRREVERSIBLE_HIGH_IMPACT_ACTION_REQUIRING_APPROVAL", "REAL_TOOL_RUNTIME_LIMITATION", "SAFETY_OR_LEGAL_CONSTRAINT", "FOUNDER_STOP_OR_HOLD"]
+    "stop_only_on": [
+      "DECISION_GATE",
+      "AUTHORITY_UNRESOLVED",
+      "CANON_APPROVAL_REQUIRED",
+      "HUMAN_EVIDENCE_REQUIRED",
+      "EXTERNAL_PROVIDER_REQUIRED",
+      "UNRESOLVED_FATAL_OR_MAJOR",
+      "IRREVERSIBLE_HIGH_IMPACT_ACTION_REQUIRING_APPROVAL",
+      "REAL_TOOL_RUNTIME_LIMITATION",
+      "SAFETY_OR_LEGAL_CONSTRAINT",
+      "FOUNDER_STOP_OR_HOLD"
+    ]
   },
   "self_improvement": {
     "engine_status": "V2_VERIFIED_CURRENT",
     "authority_router": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
     "engine_authority": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
-    "engine_config": "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json",
     "engine_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
-    "runtime_verification": "IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-21.md",
-    "historical_base": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
-    "delta_intake_authority": "IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md",
-    "reference_learning_authority": "IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md",
     "machine_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
-    "schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
     "learning_ledger": "CURRENT_IVDIVO_LEARNING_LEDGER.json",
-    "learning_ledger_schema": "LEARNING_LEDGER_SCHEMA_v1.json",
-    "utility": "tools/ivdivo_self_improvement.py",
-    "priority_order": ["P0_AUTHORITY_SAFETY_INTEGRITY", "P1_WRITE_STRONG_COMPLETE_BOOKS", "P2_LOCKED_BOOK_TO_HIGH_QUALITY_AUDIO_NOVEL", "P3_PRODUCTION_RELIABILITY_SPEED_REUSE_COST", "P4_ENGINE_TOOL_PROMPT_PROGRAM_QUALITY", "P5_RESEARCH_LEARNING", "P6_BROADER_IVDIVO_CAPABILITY"],
-    "primary_loops": ["BOOK_PRODUCTION", "LOCKED_BOOK_TO_AUDIO_NOVEL", "SELF_IMPROVEMENT_LEARNING"],
-    "drive_engine_v2_mirror_id": "1TamY1cuiCUGP5zgheF-1nM2LaRt2f5vtZLwfJTJeSaY",
-    "drive_current_router_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
-    "drive_v1_engine_base_id": "1lbAaKASLAKFzCiGEF84Xrs-ziwQhCJASwLfDh3UGwSg",
-    "drive_registry_mirror_id": "1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs",
-    "drive_portability_inventory_id": "1WofqSiO3fBD_VoIveOVDihBybwlpeDE051zVrf1ipVs",
-    "anti_loss_invariants": ["ACTIVE_CANDIDATE_REQUIRES_PROVENANCE", "ACTIVE_CANDIDATE_REQUIRES_OWNER_ROLE", "ACTIVE_CANDIDATE_REQUIRES_NEXT_ACTION", "ACTIVE_CANDIDATE_REQUIRES_NEXT_GATE", "PROMOTED_OR_APPLIED_REQUIRES_APPLICATION_TARGETS", "VERIFIED_CURRENT_REQUIRES_VERIFICATION_EVIDENCE", "HOLD_WITH_TRIGGER_REQUIRES_REOPEN_TRIGGER", "REJECTED_SUPERSEDED_ROLLED_BACK_REQUIRES_REASON"],
-    "best_candidate_router": "QUALITATIVE_PRIORITY_BANDS_A_TO_E_WITH_BOOK_AUDIO_IMPACT_FIRST",
+    "priority_order": [
+      "P0_AUTHORITY_SAFETY_INTEGRITY",
+      "P1_WRITE_STRONG_COMPLETE_BOOKS",
+      "P2_LOCKED_BOOK_TO_HIGH_QUALITY_AUDIO_NOVEL",
+      "P3_PRODUCTION_RELIABILITY_SPEED_REUSE_COST",
+      "P4_ENGINE_TOOL_PROMPT_PROGRAM_QUALITY",
+      "P5_RESEARCH_LEARNING",
+      "P6_BROADER_IVDIVO_CAPABILITY"
+    ],
     "wip_guard": "ONE_PRIMARY_META_INTEGRATION_PLUS_UP_TO_TWO_INDEPENDENT_BOUNDED_PILOTS",
-    "research_mode": "PROBLEM_DRIVEN_WITH_STOPPING_RULE_AND_APPLICATION_TARGET",
-    "current_candidate": "SI-0007",
-    "current_candidate_status": "VERIFIED_CURRENT",
-    "application_readback": "GREEN_VERIFIED_CURRENT",
-    "runtime_status": "UTILITY_RUNTIME_VERIFIED_EXACT_GIT_BLOB_IDENTITY_EXECUTION",
-    "runtime_evidence": {"utility_blob_sha": "0805fd0596a05c2b1f9cdd14bf6f2ce03a6cf358", "registry_blob_sha_tested": "fe1605a13da9d3b83e9005971f79bb99d6a39999", "audit": "PASS_7_CANDIDATES", "queue_next": "SI_0007_SELECTED_FOR_BOOK_AUDIO_PRODUCTION", "negative_fixture": "EXPECTED_BLOCK_EXIT_1"},
-    "remaining_acceptance": [],
-    "story_first_guard": "META_IMPROVEMENT_MUST_NOT_STARVE_ACTIVE_BOOK_OR_AUDIO_PRODUCTION_UNLESS_SYSTEM_FATAL_MAJOR_BLOCKS_IT_OR_FOUNDER_SWITCHES_FOCUS"
+    "story_first_guard": "META_IMPROVEMENT_MUST_NOT_STARVE_ACTIVE_BOOK_OR_AUDIO_PRODUCTION_UNLESS_SYSTEM_FATAL_MAJOR_BLOCKS_IT_OR_FOUNDER_SWITCHES_FOCUS",
+    "transcript_recovery": {
+      "current_first_pass": "IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md + tools/ivdivo_transcript_recovery.py",
+      "semantic_candidate": "SI-0009 / Reconciled Recovery State v2 / NOT_CURRENT",
+      "decisive_promotion_gate": "FIRST_REAL_LARGE_TRANSCRIPT_END_TO_END_PILOT"
+    }
   },
   "machine_execution": {
     "current_pointer": "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json",
@@ -112,41 +101,80 @@
     "release_name": "IVDIVO_ENGINE_v11_2_CONTINUOUS_EXECUTION_CURRENT.zip",
     "drive_id": "1xsZ6SrhHQpEMu_xhC9e-M6QUTO5dIfc3",
     "sha256": "d7985036fc97b74019aa74bf422d03f2f6cbe2d5f6e30736bb70032fc399ff4f",
-    "size_bytes": 279417,
     "fresh_unzip_regression": "290_290_PYTEST_PASS",
-    "integration_report_drive_id": "1Q7ewWz7-Mt-Ss39a6_r15m48nodzmjiO",
-    "checksum_drive_id": "1-aZXa53KSqsRBJjqdr_s0TvnwBXl60U8",
-    "fresh_unzip_log_drive_id": "17FmrAuQ4p1lg54RqrFQFrQBPP7I8iD4l",
-    "scope": "EXECUTABLE_IMPLEMENTATION_BELOW_CURRENT_NARRATIVE_AUDIO_SELF_IMPROVEMENT_AUTHORITIES",
-    "primary_new_contracts": ["FAIL_CLOSED_CONTINUATION", "CHAT_ONLY_RESULT_INGESTION", "SEMANTIC_DELTA_DEDUPE", "CROSS_MODEL_TASK_GUARDS", "RUN_CARD_VALIDATION", "ASSET_ESCROW", "SHARED_MUSICAL_FACT_VERIFICATION", "STAGED_VOICE_AUDITION_BINDING", "SELF_IMPROVEMENT_V2_COMPATIBILITY_BRIDGE"]
+    "scope": "EXECUTABLE_IMPLEMENTATION_BELOW_CURRENT_NARRATIVE_AUDIO_SELF_IMPROVEMENT_AUTHORITIES"
   },
   "portfolio_policy": "FINISH_ALL_ACTIVE_TEXTS_TO_LEGITIMATE_LOCK_THEN_MASS_AUDIO_NOVEL_STUDIO",
   "portfolio_frontier": {
-    "text_locked_or_text_complete": ["IVDIVO_BOOK_1_LESSON_ZERO", "IVDIVO_BOOK_2_ORBITAL_YOUTH", "D02_ROOM_917", "D03_BODYGUARD_FOR_THE_FALLEN_IDOL", "D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE", "D05_NINETY_MISSING_MINUTES_TEXT_COMPLETE_STORY_LOCKED_PUBLICATION_SPECIALIST_HOLD", "D06_SHE_STOLE_MY_NAME", "D07_THE_PERFECT_WIFE_KNOWS", "D08_SHE_FIRED_THE_BILLIONAIRE", "D09_THE_MAN_WHO_CAME_BACK_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK"],
+    "text_locked_or_text_complete": [
+      "IVDIVO_BOOK_1_LESSON_ZERO",
+      "IVDIVO_BOOK_2_ORBITAL_YOUTH",
+      "D02_ROOM_917",
+      "D03_BODYGUARD_FOR_THE_FALLEN_IDOL",
+      "D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE",
+      "D05_NINETY_MISSING_MINUTES_TEXT_COMPLETE_STORY_LOCKED_PUBLICATION_SPECIALIST_HOLD",
+      "D06_SHE_STOLE_MY_NAME",
+      "D07_THE_PERFECT_WIFE_KNOWS",
+      "D08_SHE_FIRED_THE_BILLIONAIRE",
+      "D09_THE_MAN_WHO_CAME_BACK_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK",
+      "D10_BLOODBOUND_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK"
+    ],
     "active_project": {
-      "project_id": "D09",
-      "title": "THE MAN WHO CAME BACK",
-      "line": "THE_DIVORCE_LEDGER",
+      "project_id": "D10",
+      "title": "BLOODBOUND",
+      "line": "THE_ERASED_DAUGHTERS",
+      "project_state": "PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json",
       "mode": "FOUNDER_LOCK_DECISION_GATE",
-      "current_phase": "FINAL_STORY_GATE_PASSED_AWAITING_FOUNDER_APPROVAL",
-      "last_completed_artifact": "FINAL_SEASON_STORY_GATE_v1.0",
-      "last_completed_drive_id": "1IZfae96Y4gS7JDqFrVxv-2O53zFwoWVOYzOV7zoDXL0",
-      "completed_episode_frontier": "E01-E24_ONE_CURRENT_BRANCH_PER_EPISODE_TEXT_COMPLETE",
-      "version_reconciliation_status": "CLOSED",
+      "current_phase": "FINAL_STORY_GATE_PASSED_AWAITING_FOUNDER_LOCK",
+      "completed_episode_frontier": "E01-E24_TEXT_COMPLETE",
       "main_conflict_status": "CLOSED",
-      "final_story_gate": {"status": "PASS", "fatal": 0, "major": 0, "drive_id": "1IZfae96Y4gS7JDqFrVxv-2O53zFwoWVOYzOV7zoDXL0", "founder_lock": "NOT_YET_ISSUED"},
-      "next_unblocked_obligation": "FOUNDER_APPROVAL_OR_LOCK_D09_SEASON",
-      "remaining_to_text_lock": ["FOUNDER_APPROVAL_OR_LOCK_D09_SEASON"],
-      "hard_locks": ["ETHAN_CANNOT_PHYSICALLY_CAUSE_SIMON_DISAPPEARANCE_UNDER_LOCKED_TIMELINE", "SIMON_FOUND_ALIVE_WITHOUT_MEMORY_GIMMICK", "SIMON_TESTIMONY_CORROBORATES_BUT_DOES_NOT_SINGLE_HANDEDLY_PROVE", "MARA_OWN_DIVORCE_IS_KEY_EVIDENCE", "ETHAN_IS_NOT_SAVIOR_OR_SUBSTITUTE_FATHER", "RUBY_IS_NOT_MATCHMAKER_OR_CLUE_MACHINE", "NO_INSTANT_ROMANTIC_REUNION", "E24_IS_ONE_DATE_NOT_DESTINY_OR_INSTANT_FAMILY"],
-      "verified_final_act": {
-        "gate_drive_id": "1ku4gAbBCub8sahK-RhPiaWKIdozH88MqoojbilITezE", "status": "PASS", "fatal": 0, "major": 0,
-        "episodes": {"E19": "1sfmtMGR8LNU5v6YolXAoBkgE4KgCrbWkOEvsxp2-Fcg", "E20": "1f0EtqaePk1r8tGJbey7WhTRT8Vq4okUuSqiwq2F2Whg", "E21": "1J_KLlg6NmxOxHaeHQbSrIrIZKYxmF8xiLpnG3Usbr-o", "E22": "1IfuSZSgMjFb0VQwvGgigF8-tHErqDtPpnoTyJ9hRw7A", "E23": "15LvlG4XDvew5MyxYMw2oRuJkX1sUrkfQvyqqj_umxXg", "E24": "1zgt2rOrLS4QNpSQvCJ8pU_hDEkz2cjQ9Uait1hb-At0"}
+      "final_story_gate": {
+        "status": "PASS",
+        "fatal": 0,
+        "major": 0,
+        "blocking_medium": 0,
+        "drive_id": "1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s",
+        "founder_lock": "NOT_YET_ISSUED"
       },
-      "current_clean_branch": {"E12": "1KYGkD--RIAWPOVhSrb6YUiLHyg3keDpdUaYKqgrZiw4", "E13": "1X8Y6ICUeVql9QQ_ZYe-SpSZUsAf3TMQYh43llLWO4Y0", "E14": "1NVnSy-UcdjBO2iWjNqts3VlEwPW0fdWb9FjPT7jVUBs", "E15": "1QgOlbUOUF1MTkKblq0l6LTb7Yk-36uqOfCIiALTK47s"},
-      "downstream_external_gates_not_simulated": ["REAL_PERFORMANCE_AND_BLIND_LISTENER_VALIDATION", "NARROW_RELEASE_STAGE_LEGAL_FINANCE_FACT_REVIEW_WHERE_REQUIRED"],
-      "do_not_repeat": ["E07_E12_VERSION_RECONCILIATION", "SEASON_WIDE_FINAL_STORY_GATE", "E25_GENERATION"]
+      "current_project_authority_drive_id": "17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8",
+      "next_unblocked_obligation": "FOUNDER_EXPLICIT_LOCK_DECISION_FOR_D10",
+      "do_not_repeat": [
+        "E07_E12_BLOCK_II",
+        "E13_E18_BLOCK_III",
+        "E19_E24_BLOCK_IV",
+        "WHOLE_SEASON_FINAL_STORY_GATE",
+        "E25_GENERATION"
+      ]
     },
-    "queue_after_active": ["D10_BLOODBOUND_E04_E24_AND_STORY_LOCK", "D01_THE_WIFE_AT_HIS_WEDDING_AUTHORITY_RECONCILIATION_AND_FINITE_STORY_COMPLETION", "IVDIVO_BOOK_3_SMITH_FULL_NOVEL", "IVDIVO_BOOK_4_AFTER_BOOK_3_LOCK", "WHOLE_PORTFOLIO_TEXT_LOCK_AUDIT", "AUDIO_NOVEL_STUDIO_BATCH_INGEST_AND_PRODUCTION"]
+    "pending_founder_decision_gates": [
+      {
+        "project_id": "D09",
+        "title": "THE MAN WHO CAME BACK",
+        "status": "E01-E24_TEXT_COMPLETE_FINAL_STORY_GATE_PASS",
+        "gate_drive_id": "1IZfae96Y4gS7JDqFrVxv-2O53zFwoWVOYzOV7zoDXL0",
+        "fatal": 0,
+        "major": 0,
+        "founder_lock": "NOT_YET_ISSUED",
+        "next_action": "FOUNDER_APPROVAL_OR_REFUSAL_OF_D09_STORY_LOCK"
+      },
+      {
+        "project_id": "D10",
+        "title": "BLOODBOUND",
+        "status": "E01-E24_TEXT_COMPLETE_FINAL_STORY_GATE_PASS",
+        "gate_drive_id": "1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s",
+        "fatal": 0,
+        "major": 0,
+        "founder_lock": "NOT_YET_ISSUED",
+        "next_action": "FOUNDER_APPROVAL_OR_REFUSAL_OF_D10_STORY_LOCK"
+      }
+    ],
+    "queue_after_d10_lock": [
+      "D01_THE_WIFE_AT_HIS_WEDDING_FRESH_REBASE_AND_FINITE_STORY_COMPLETION",
+      "IVDIVO_BOOK_3_SMITH_FULL_NOVEL",
+      "IVDIVO_BOOK_4_AFTER_BOOK_3_LOCK",
+      "WHOLE_PORTFOLIO_TEXT_LOCK_AUDIT",
+      "AUDIO_NOVEL_STUDIO_BATCH_INGEST_AND_PRODUCTION"
+    ]
   },
   "project_downstream_frontiers": {
     "D04": {
@@ -155,56 +183,55 @@
       "project_state": "PROJECT_STATES/D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE_CURRENT_STATE.json",
       "story_status": "SEASON_ONE_STORY_COMPLETE_FINAL_STORY_GATE_PASS",
       "recording_master_drive_id": "1fewLvu_DpSL8H6dkdy9E5TprUWtgH1Clqq5m_gvNBJ0",
-      "audio_production_pack_drive_folder_id": "1wV-Zxcf4BsY_SWwVbsNXM2xd0thT9TYY",
-      "release_market_pack_drive_folder_id": "1IKKKYYphTvSkMxO5ilvB_lPl__5owcRr",
       "live_audio_status": "NOT_CLAIMED_NOT_YET_PROVEN",
-      "voice_binding_status": "UNLOCKED_NO_PROVIDER_VOICE_IDS_CANONIZED",
-      "visual_identity_status": "PROMPT_AND_MOODBOARD_STAGE_NO_FINAL_CHARACTER_IDENTITY_LOCK_RECORDED",
-      "next_unblocked_obligation": "RUN_PROVIDER_NEUTRAL_CASTING_AUDITIONS_AND_ZERO_COST_AUDIO_PREFLIGHT_FROM_LOCKED_RECORDING_MASTER; IN_PARALLEL ESTABLISH_FINAL_VISUAL_IDENTITY_LOCK BEFORE_SCALING_KEY_ART_OR_RUNWAY_ASSETS"
+      "voice_binding_status": "UNLOCKED_NO_PROVIDER_VOICE_IDS_CANONIZED"
     }
   },
   "idea_to_story_engine": {
     "current_execution_core": "IDEA_TO_STORY_ENGINE_v1.0.0",
-    "current_execution_core_evidence": "Library ACCEPTANCE_REPORT reports GO and 15/15 automated tests PASS; real literary/provider quality remains provider dependent.",
     "recovery_upgrade_candidate": "v0.5",
     "recovery_status": "WORKING_UPGRADE_CANDIDATE_NOT_CURRENT_AUTHORITY",
-    "candidate_mechanisms_allowed_for_bounded_inheritance": ["PATCH_QUEUE_AND_PATCH_CONTRACT", "STAGE_REGEN_REQUEST_AND_STAGE_REPAIR_CONTRACT", "SEMANTIC_CANDIDATE_DELTA", "SEPARATE_REPAIR_QA", "TRANSACTION_SNAPSHOT_AND_ROLLBACK", "TRUE_SELECTIVE_DESCENDANT_REBUILD", "GLOBAL_BEFORE_LOCAL_REPAIR_ORDER", "CANON_REAPPROVAL_BOUNDARY", "IDENTITY_AND_UNKNOWN_CHARACTER_PROTECTION", "NO_EFFECT_REJECTION"],
-    "promotion_blockers": ["EXECUTABLE_STORY_DISCOVERY_OR_ENGINE_RECOMPETITION_REPAIR", "SPECIALIZED_WORLD_MYSTERY_AND_PROTECTED_CLUE_ORDER_REPAIR", "FULL_ENSEMBLE_RELATIONSHIP_AUTHORITY_GRAPH", "FULL_STORY_ENGINE_v4_1_REFERENCE_INTELLIGENCE_RUNTIME_INTEGRATION", "LIVE_CALIBRATION_01", "EXTERNAL_P51_BLIND_SWAP_AND_HUMAN_SIGNAL_WHERE_REQUIRED"],
-    "verification_note": "This sweep re-verified v1.0.0 acceptance evidence and v0.4/v0.3 recovery provenance in Library. Persisted Drive workstate records v0.5 at 130/130 as a WORKING candidate, but promotion remains blocked by the listed evidence gaps."
+    "verification_note": "Current execution core remains v1.0.0. Recovery v0.5 mechanisms may be inherited only through bounded validated repair paths until explicit promotion gates close."
   },
   "runtime_craft": {
     "current_internal_version": "1.3",
     "current_authority": "IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md",
-    "newly_promoted_mechanisms": ["SCENE_QUESTION_OUTCOME_INTEGRITY", "TRANSFORMATION_SCALE_STABLE_CORE_SERIES", "STRICT_CRAFT_LIFECYCLE_ACTION_TEMPO_EVIDENCE_ANTI_OVERFIT"],
-    "one_listen_causal_comprehension_status": "CURRENT_UNIVERSAL_AUDIO",
-    "source_reference_status": "REFERENCE_ONLY_MECHANISMS_ABSTRACTED_AND_SOURCE_DISTANCE_PRESERVED",
-    "strict_research_checkpoint": "CORE_STRICT_LIFECYCLE_LEDGER_v21_PASS_140_31_OF_40_CORE_AT_INSPECTED_CHECKPOINT"
+    "current_mechanisms": [
+      "SCENE_QUESTION_OUTCOME_INTEGRITY",
+      "TRANSFORMATION_SCALE_STABLE_CORE_SERIES",
+      "STRICT_CRAFT_LIFECYCLE_ACTION_TEMPO_EVIDENCE_ANTI_OVERFIT",
+      "ONE_LISTEN_CAUSAL_COMPREHENSION"
+    ]
   },
   "audio_system": {
     "current_studio_router": "v3.3",
     "machine_execution_pointer": "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json",
-    "microphone_choreography_integrated": true,
     "provider_canary_contract": "AUDIO_PRODUCTION/IVDIVO_AUDIO_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE_v1.0.md",
-    "casting_cascade": "ZERO_COST_PREFLIGHT -> S0_TECHNICAL_CANARY -> S1_FAIR_ANCHOR_COMPARISON -> S2_SECONDARY_DISCRIMINATION -> S3_SPECIAL_STRESS -> S4_PAIR_ENSEMBLE -> PROVISIONAL_VOICE_LOCK -> HARD_PILOT -> SCALED_RENDER",
-    "cross_dialog_audio_boot_drive_id": "1ui02P9RH_B62DxDE6OjxCLrkB6fMOfZF0WcRtRtvOoU",
     "shared_musical_fact_contract": "AUDIO_PRODUCTION/IVDIVO_AUDIO_SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT_v1.0.md",
-    "shared_musical_fact_status": "INTEGRATED_CURRENT_UNIVERSAL_AUDIO_CONSISTENCY_GATE",
-    "shared_musical_fact_reason": "Forensic ROOM917 evidence proved that plot-relevant pitched events routed independently through performance-sound, TTS and music can become musically inconsistent without a shared pitch/interval/rhythm identity contract."
+    "live_provider_or_human_evidence_must_not_be_simulated": true
   },
   "multi_ai": {
     "one_shared_state": true,
     "parallel_work": "ONLY_INDEPENDENT_PASS_GATED_DAG_BRANCHES",
     "canonical_prompt_pack": "IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md",
     "canonical_prompt_pack_version": "1.2",
-    "drive_run_card_template": "MULTI_MODEL_AGENT_RUN_CARD_TEMPLATE v1.1 / 13qXjDsHD903j6RcdnOoy4-qmKggWzYOiMDuV_N0Ri_U",
     "same_source_comparison_required_when_claiming_model_comparison": true,
     "diagnosis_and_fix_separated": true,
-    "system_learning_return_contract": true,
-    "handoff_required_fields": ["SOURCE_MODEL", "DATE", "PROJECT", "SOURCE_ARTIFACTS_AND_HASHES_WHERE_AVAILABLE", "TASK", "FINDINGS", "SEVERITY", "EVIDENCE", "PROPOSED_REPAIR", "DISPOSITION", "CHANGED_ARTIFACTS", "TESTS_AND_GATES", "BLOCKERS", "NEXT_ACTION"],
-    "recommendation_dispositions": ["ACCEPT", "ACCEPT_WITH_MODIFICATION", "HOLD_FOR_TEST", "REJECT"],
-    "superseded_candidate_pr": {"pr": 45, "status": "CLOSED_NOT_MERGED_SUPERSEDED_BY_NEWER_MAIN", "do_not_promote": true}
+    "system_learning_return_contract": true
   },
-  "recent_verified_main_integration": ["CROSS_CONVERSATION_STATE_AND_AUTOPILOT_v1.2", "PROJECT_WIDE_CONTINUATION_LAW_v1.1_CHAT_ONLY_INGESTION", "CONTINUOUS_DELTA_AND_LEARNING_REGISTRY", "REFERENCE_MECHANISM_UPGRADE_PACK_v1.1_STRICT_CRAFT_LIFECYCLE", "AGENT_PROMPTS_CONTINUOUS_SYNC_SUPPLEMENT", "CURRENT_WRITING_PRODUCTION_AUTHORITY_ROUTER", "MULTI_MODEL_HANDOFF_PROMPTS_v1.2_SYSTEM_LEARNING_RETURN", "BOOK_CHAT_STARTER_AUTOPILOT_ROUTING", "RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.3", "SCENE_QUESTION_OUTCOME_INTEGRITY", "TRANSFORMATION_SCALE_STABLE_CORE_SERIES", "STRICT_CRAFT_ACTION_TEMPO_EVIDENCE_ANTI_OVERFIT_LEARNING", "ONE_LISTEN_CAUSAL_COMPREHENSION_CURRENT", "D04_DOWNSTREAM_PROJECT_STATE_POINTER", "DUPLICATE_AUTOPILOT_PROTOCOL_RECONCILED_AS_SUPERSEDED", "UNIVERSAL_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE", "CURRENT_IVDIVO_SYSTEM_STATE", "CURRENT_IVDIVO_CROSS_AI_HANDOFF", "IVDIVO_ENGINE_v11_2_CONTINUOUS_EXECUTION_VERIFIED_MACHINE_POINTER", "SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT", "SELF_IMPROVEMENT_ENGINE_v1.0_SUPERSEDED", "CURRENT_IMPROVEMENT_REGISTRY_v1.0", "SELF_IMPROVEMENT_META_ENGINE_v2_VERIFIED_CURRENT", "SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026_08_21", "SELF_IMPROVEMENT_LEARNING_LEDGER_v1.0"],
-  "pending_system_upgrade": {"name": "SELF_IMPROVEMENT_META_ENGINE_v2", "status": "VERIFIED_CURRENT_NO_PENDING_PROMOTION_GATE"},
-  "state_status": "D09_READY_FOR_FOUNDER_LOCK_DECISION_GATE; D04_DOWNSTREAM_FRONTIER_PERSISTED; ENGINE_V11_2_MACHINE_EXECUTION_ROUTED_VERIFIED"
+  "recent_verified_main_integration": [
+    "D10_PROJECT_STATE_FINAL_STORY_GATE_REBASE",
+    "D10_FINAL_SEASON_STORY_GATE_DRIVE_VERIFIED",
+    "D10_E01_E24_TEXT_COMPLETE",
+    "CROSS_AI_HANDOFF_D10_FOUNDER_LOCK_GATE",
+    "FULL_CHAT_TRANSCRIPT_RECOVERY_CURRENT_FIRST_PASS",
+    "SELF_IMPROVEMENT_META_ENGINE_v2_VERIFIED_CURRENT",
+    "IVDIVO_ENGINE_v11_2_MACHINE_EXECUTION_VERIFIED",
+    "RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.3"
+  ],
+  "pending_system_upgrade": {
+    "name": "RECONCILED_RECOVERY_STATE_v2",
+    "status": "WORKING_CANDIDATE_AWAITING_REAL_LARGE_TRANSCRIPT_PILOT_AND_INTEGRATION_REGRESSION"
+  },
+  "state_status": "D10_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK_DECISION; D09_ALSO_PENDING_FOUNDER_LOCK; NO_E25; D04_DOWNSTREAM_FRONTIER_PERSISTED; ENGINE_V11_2_MACHINE_EXECUTION_ROUTED_VERIFIED"
 }
