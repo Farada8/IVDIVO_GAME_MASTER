@@ -6,48 +6,47 @@
 
 ## Current entry points
 
-Google Drive root router:
-`CURRENT — IVDIVO AUDIO PRODUCTION AUTHORITY`  
+Google Drive root router: `CURRENT — IVDIVO AUDIO PRODUCTION AUTHORITY`  
 Drive ID: `1B_iDVPXR0JgyKFb6mMohXnzzrkEGnZRptE4s_z1nM_E`
 
-Current Drive studio index:
-`00 — IVDIVO AUDIO STUDIO INDEX v3.3 CURRENT`  
+Current Drive studio index: `00 — IVDIVO AUDIO STUDIO INDEX v3.3 CURRENT`  
 Drive ID: `1dq5lBirQtQ7uiPgqzokc09WUpEYHVL09vNpYxotbBvY`
 
-Current new-chat boot:
-`02 — IVDIVO AUDIO PRODUCTION NEW-CHAT BOOT v3.3`  
-Drive ID: `15A8-QZD3uMcJLnIardDZKlrPJGkpyD74_luTPngarJc`  
-GitHub: `IVDIVO_AUDIO_NEW_CHAT_BOOT_v3.3.md`
+Current resumed/cross-dialog audio boot:  
+`IVDIVO_AUDIO_NEW_CHAT_BOOT_v3.4_CROSS_DIALOG.md`  
+Drive mirror: `02 — IVDIVO AUDIO PRODUCTION NEW-CHAT BOOT v3.4 CROSS-DIALOG`, ID `1ui02P9RH_B62DxDE6OjxCLrkB6fMOfZF0WcRtRtvOoU`
 
-Current project overlay template:
-`01 — IVDIVO AUDIO PROJECT OVERLAY TEMPLATE v1.1`  
-Drive ID: `1Stx3R6qP4bIoyrRpivCLhrgU7rvz-xg9Df0jMZ9N-io`  
-GitHub: `IVDIVO_AUDIO_PROJECT_OVERLAY_TEMPLATE_v1.1.md`
+Base audio boot v3.3 remains historical/current-base where not superseded by the v3.4 continuation wrapper.
 
-Future work must check the Drive root router for a newer authority before assuming this GitHub pointer is still current.
+Current project overlay base: `IVDIVO_AUDIO_PROJECT_OVERLAY_TEMPLATE_v1.1.md`.
+
+Current universal continuous-studio protocol:  
+`IVDIVO_NARRATIVE_OS/13_CONTINUOUS_MULTI_MODEL_STUDIO_PROTOCOL_v1.0.md`  
+Drive candidate mirror: `CURRENT CANDIDATE — IVDIVO CONTINUOUS MULTI-MODEL STUDIO PROTOCOL v1.0`, ID `1bNf26QMiOoj_SrrPLVQOe2lHFCYRNmurArWC212Ac_g`.
+
+Current machine-oriented multi-AI handoff: `IVDIVO_MULTI_AI_RUN_CARD_PROMPT_v1.0.md`.
+
+Current machine execution-state contract: `schemas/IVDIVO_EXECUTION_STATE_SCHEMA_v1.json`.
+Read-only auto-continuation resolver: `tools/ivdivo_next_action.py`.
+
+Future work must check the Drive root router before assuming any GitHub pointer remains current.
 
 ## Authority order
 
 1. Founder’s newest direct instruction.
 2. Locked story/project canon and current project authority.
-3. Current consolidated universal audio authority:
+3. Current consolidated universal audio production authority:
    - `IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md`
-   - Google Drive file ID: `1ZG15kNcGjUKR_OKHQoXcqfrfVddlX6ma`
-   - Source status: CURRENT CONSOLIDATED UNIVERSAL AUDIO PRODUCTION AUTHORITY — AUDITED + MICROPHONE CHOREOGRAPHY INTEGRATED.
-4. `00 — IVDIVO AUDIO STUDIO INDEX v3.2 AUDITED` as audited base router where not superseded by v3.3.
-   - Drive ID: `1laR1lLJ8FbqOz3Xbt493DTTPgFx63kYV-i_QdoO0qRo`
-5. `00 — IVDIVO AUDIO PRODUCTION INDEX v2.3` where still referenced by current v3.x authority.
-6. Microphone choreography system:
-   - `IVDIVO_MICROPHONE_CHOREOGRAPHY_ENGINE_v1.0.md` — Drive ID `1XT8KKdMPlrHC8vYIPuohcDlApAX316J9`
-   - `IVDIVO_MICROPHONE_CHOREOGRAPHY_PROMPT_STACK_v1.0.md` — Drive ID `1GW8f0rOgu1aqg24SgxxXIQU4VFqGKvRO`
-   - `IVDIVO_MICROPHONE_CHOREOGRAPHY_QC_v1.0.md` — Drive ID `1escUUTwztAd0L3hI5ELd-Jns53YLpull`
-7. Current machine/provider contracts, normalized alignment law, provider preflight, voice-binding ledger, acoustic-identity ledger, stereo-intent law, artifact templates and QC/release gates referenced by current v3.x authority.
-8. Universal voice audition/binding evidence standard:
-   - `IVDIVO_AUDIO_VOICE_AUDITION_BINDING_STANDARD_v1.0.md`
-   - exact-text audition sides, SHA256 where supported, dry/loudness-matched comparisons, natural + directed-change takes, multi-state test, lead pair gate, blind speaker differentiation, long-form fatigue gate, role-specific hard fails and provisional-vs-season lock separation.
-9. Project-specific audio overlay.
-10. Current Director Score / render plan / cue sheets / manifests / accepted assets / takes / timelines / mixes / QC.
-11. Archive/superseded material only when explicitly referenced as a base mechanism.
+   - Drive ID: `1ZG15kNcGjUKR_OKHQoXcqfrfVddlX6ma`
+4. Current Continuous Multi-Model Studio continuation/sync law. It changes resume/execution behavior but does not overwrite story canon or v3.3 audio production law.
+5. `00 — IVDIVO AUDIO STUDIO INDEX v3.2 AUDITED` as audited base where not superseded.
+6. `00 — IVDIVO AUDIO PRODUCTION INDEX v2.3` where still referenced by current v3.x authority.
+7. Microphone choreography system: Engine / Prompt Stack / QC v1.0.
+8. Current machine/provider contracts, normalized alignment law, provider preflight, voice-binding ledger, acoustic-identity ledger, stereo-intent law, artifact templates and QC/release gates.
+9. Universal voice audition/binding evidence standard: `IVDIVO_AUDIO_VOICE_AUDITION_BINDING_STANDARD_v1.0.md`.
+10. Project-specific audio overlay + persisted execution state.
+11. Current Director Score / render plan / cue sheets / manifests / accepted assets / takes / timelines / mixes / QC.
+12. Archive/superseded only when explicitly retained as base/reference.
 
 ## Universal scope
 
@@ -57,7 +56,7 @@ Universal audio authority governs production **process**, not project story cont
 
 ## Required project boot
 
-`ACTIVE PROJECT -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + SHA256 -> ACTIVE BRANCH -> DELIVERY MODE -> TEXT PROTECTION MODE -> PROJECT AUDIO OVERLAY -> VOICE_BINDING_LEDGER -> PRONUNCIATION LOCKS -> ACOUSTIC_IDENTITY_LEDGER -> BUILD_ID/MANIFEST -> LAST COMPLETED ARTIFACT -> NEXT UNBLOCKED OBLIGATION`
+`ACTIVE PROJECT -> CURRENT PROJECT AUTHORITY -> CURRENT SOURCE + SHA256 -> ACTIVE BRANCH -> STORY STATUS -> DELIVERY MODE -> TEXT PROTECTION -> PROJECT AUDIO OVERLAY -> VOICE_BINDING_LEDGER -> PRONUNCIATION LOCKS -> ACOUSTIC_IDENTITY_LEDGER -> BUILD -> CURRENT_EXECUTION_STATE -> LAST COMPLETED ARTIFACT -> NEWER DRIVE/GITHUB DELTAS -> OPEN GATES -> BLOCKER -> HIGHEST UNBLOCKED NEXT OBLIGATION`
 
 Fail closed if branch, source version/hash, protected text, cast/voice binding, clue causality, project overlay, LIVE/DRY_RUN/MIXED state or cross-build provenance is ambiguous.
 
@@ -65,49 +64,55 @@ Fail closed if branch, source version/hash, protected text, cast/voice binding, 
 
 `LOCKED STORY -> AUTHORITY + BUILD MANIFEST -> SCENE/SPOKEN UNIT MAP -> LISTENER CONTRACT -> DRAMATIC FORCE MAP -> AUDIO STAGING -> CAST/VOICE BINDING -> PERFORMANCE DIRECTOR SCORE -> PAUSE/BREATH/LISTENING/OVERLAP -> SILENT REACTION ANCHORS -> MICROPHONE CHOREOGRAPHY/BLOCKING/PROXIMITY -> ACOUSTIC/P.O.A./STEREO INTENT -> FOLEY/BODY -> SFX/CLUE/PROCEDURAL + ACOUSTIC IDENTITY -> AMBIENCE -> MUSIC DRAMATURGY -> RENDER BLOCK COMPILATION -> PROVIDER DRY RUN -> PROVIDER PREFLIGHT -> HARD PILOT -> PARALLEL DIALOGUE+ASSET PRODUCTION -> DIALOGUE/ASSET LOCKS -> EDIT-FIRST -> RAW ALIGNMENT -> NORMALIZED ALIGNMENT -> RESOLVED TIMELINE -> MIX ACTION/CAUSAL OVERLAP/STEREO QC -> MIX/PREMASTER -> MASTERING -> MACHINE QC -> REVIEW PRIORITY -> HUMAN LISTEN/MANUAL REVIEW -> SELECTIVE REPAIR -> RELEASE GO/NO-GO -> MASTER LOCK`
 
-Dependency-DAG law: independent branches may run in parallel after their upstream PASS gates and must converge before consumer stages requiring both.
+Dependency-DAG law: independent branches may run in parallel after upstream PASS and must converge before dependent consumer stages.
 
 ### Voice-lock evidence law
 
-No major voice may be locked from one attractive sample. Before season lock, require representative multi-state evidence and long-form/fatigue evidence. Initial comparisons should be dry and loudness-matched. Any role-defined hard fail overrides numeric scoring. Relationship-pair chemistry must survive without flirtation tricks or music. Replayed evidence/source voices must preserve canonical source identity rather than being independently regenerated on every occurrence.
+No major voice may be locked from one attractive sample. Require representative multi-state evidence and long-form/fatigue evidence before season lock. Initial comparisons are dry and loudness-matched. Role-defined hard fail overrides numeric score. Relationship chemistry must survive without flirtation tricks/music. Replayed evidence/source voices preserve canonical source identity.
+
+## Cross-dialog / multi-model law
+
+On substantial project work, load the persisted project frontier and scan only material deltas first. A neighboring project mechanism may cross only after project-specific content is stripped and the mechanism is classified/tested for portability.
+
+All models restore the same RUN CARD before production. AI brand is not authority. Parallel AI work is limited to independent PASS-gated DAG branches; converge through explicit artifacts/hashes/manifests.
+
+## Execution-state law
+
+Where compatible, project state follows `schemas/IVDIVO_EXECUTION_STATE_SCHEMA_v1.json`.
+
+For automatic continuation the next-action flags are explicit: `safe / zero_cost / reversible / tool_executable_here`. Missing flags fail closed. `tools/ivdivo_next_action.py` is read-only and never calls providers or spends credits.
+
+Every material action updates the project resume pointer: `last_completed_artifact / completed_action / open_gates / current_blocker / next_action / required_evidence / hard_stops / working_downstream_artifacts`.
 
 ## Release law
 
-No DRY_RUN build can release. Required live/reused evidence must be provenance-valid. Mandatory MANUAL_REVIEW must be resolved. Open `FATAL = 0` and `MAJOR = 0`. Provider-specific raw alignment may never bypass the normalized internal schema.
+No DRY_RUN build can release. Required live/reused evidence must be provenance-valid. Mandatory MANUAL_REVIEW must resolve. Open `FATAL = 0`, `MAJOR = 0`. Provider raw alignment may never bypass normalized internal schema.
 
 ## Cross-project law
 
-Never transfer names, provider voice IDs, culprit/solution, distinctive clue chains, signature sound motifs, relationship timing, chronology or obsolete branch facts between projects without explicit authority.
+Never transfer names, provider voice IDs, culprit/solution, distinctive clue chains, signature sound motifs, relationship timing, chronology or obsolete branch facts.
 
-`REFERENCE -> ABSTRACT MECHANISM -> REMOVE PROJECT-SPECIFIC CONTENT -> TRANSFORM FOR ACTIVE PROJECT -> REBIND THROUGH PROJECT OVERLAY`
-
-A stronger production mechanism discovered in one project should be evaluated for portability. If universal, abstract project content and promote through the universal authority/change-control path rather than leaving the improvement trapped in one project folder.
+`PROJECT MECHANISM -> REMOVE PROJECT-SPECIFIC CONTENT -> ABSTRACT -> COMPARE/RED-TEAM -> PILOT -> ACCEPT -> REBIND THROUGH ACTIVE PROJECT OVERLAY`.
 
 ## Provider law
 
-ElevenLabs and other providers are replaceable execution backends, not canon authority. API keys/secrets must never be stored in canon or production documents.
+ElevenLabs and other providers are replaceable execution backends, not canon authority. API keys/secrets never enter canon, prompts, Drive/GitHub artifacts or handoffs.
 
 ## Narrative OS handoff
 
-For books/saga work entering audio, load:
-`IVDIVO_NARRATIVE_OS/12_AUDIO_PRODUCTION_ROUTING_CURRENT.md`.
+For books/saga work entering audio, load `IVDIVO_NARRATIVE_OS/12_AUDIO_PRODUCTION_ROUTING_CURRENT.md` and `IVDIVO_NARRATIVE_OS/13_CONTINUOUS_MULTI_MODEL_STUDIO_PROTOCOL_v1.0.md`.
 
-Book/story authority remains higher for protected text and story facts. Audio production must not silently reopen locked development.
-
-Cross-conversation system continuation additionally follows:
-`IVDIVO_NARRATIVE_OS/13_CONTINUOUS_MULTI_MODEL_STUDIO_PROTOCOL_v1.0.md`.
-
-## Historical/base layer
-
-`IVDIVO_AUDIO_PRODUCTION_CANON_AND_BOOT_OS_v1.0.md` remains a historical/base layer only where not superseded by the current v3.3 authority. It is not the top router.
+Book/story authority remains higher for protected text and story facts. Audio production may not silently reopen locked development.
 
 ## Continuation law
 
-Explicit `и / дальше / продолжай / делай / работай / AUDIO CONTINUE` commands remain valid but are not required merely to move an unblocked active pipeline forward.
+Explicit `и / дальше / продолжай / делай / работай / AUDIO CONTINUE` remains valid but is not required merely to move an already-authorized active pipeline forward.
 
-On any project-relevant user turn, after satisfying the immediate request, restore current universal + project authority, identify the last completed artifact/open gates, and continue the highest unblocked dependent production obligation in the same work block until a real blocker, external evidence dependency, Founder decision or completed requested unit is reached.
+On any project-relevant user turn, after satisfying the immediate request, restore current authority + persisted project state + material deltas. Continue directly dependent **SAFE + ZERO-COST + REVERSIBLE + TOOL-EXECUTABLE** unblocked work in the same work block.
 
-This is not permission to perform background/asynchronous work between user turns.
+Stop for a real Founder decision, unresolved authority, unavailable external/human/provider evidence, authenticated/paid action unavailable here, user-side credential step, hard lock/release gate, FATAL blocker or hard tool/permission boundary.
+
+This is not permission for background/asynchronous work between user turns.
 
 Do not restart locked story development without new evidence.
 
