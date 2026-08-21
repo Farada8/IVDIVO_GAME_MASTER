@@ -1,0 +1,30 @@
+{
+  "registry_committed": [
+    "SI-0008",
+    "SI-0009",
+    "SI-0010",
+    "SI-0011",
+    "SI-0012",
+    "SI-0013",
+    "SI-0014",
+    "SI-0015"
+  ],
+  "reservation_collision": ["SI-0015"],
+  "partial_write": {"github": "COMMITTED_READBACK", "drive": "MISSING"},
+  "paid_unknown": {"provider": "STARTED_UNKNOWN"},
+  "stale_checkpoint": {"checkpoint_main_sha": "old", "current_main_sha": "new"},
+  "stale_d01_episodes": [96, 113],
+  "terminal_d01_episode": 120,
+  "evidence_family_roots": ["A", "A", "B"],
+  "economics_cases": [
+    {"value": 0, "measured": false},
+    {"value": null, "measured": false}
+  ],
+  "lock_case": {
+    "provider_accepted": true,
+    "production_accepted": false,
+    "take_locked": false,
+    "voice_locked": false,
+    "release_locked": false
+  }
+}
