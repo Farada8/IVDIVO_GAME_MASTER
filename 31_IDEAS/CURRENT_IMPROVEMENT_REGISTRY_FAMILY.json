@@ -19,34 +19,10 @@
   "merge_law": "candidate_id must be unique across base and extensions; duplicate IDs fail closed; extensions are first-class machine registry records but may not override a base record.",
   "write_law": "Concurrent candidate writes should use validated extension shards. Transactional writer must stale-check, snapshot, atomically write, read back and rollback on incomplete mutation. Base monolith remains compatibility/read model until deterministic compaction is independently promoted.",
   "candidate_id_freshness_law": "Before assigning any new SI candidate ID, read the complete current registry family (base + every extension shard), not only PENDING files or recent dialogue memory. The next ID must be proven unused across the full family. Partial visibility is DISCOVERY_ONLY.",
-  "c3_38_integrity_repair": {
-    "defect": "DUPLICATE_SI_0008_IDENTITY",
-    "kept": "SI-0008 = Full chat transcript recovery and ingestion executable extension",
-    "migrated": "Prompt Router / Meta-Orchestrator candidate -> SI-0012",
-    "historical_redirect": "31_IDEAS/SI-0008_RUN_CARDS_V2_CANDIDATE.json",
-    "result": "RESOLVED_IN_REGISTRY_FAMILY"
-  },
-  "run33_integrity_repair": {
-    "defect": "PENDING_SI_0010_COLLIDED_WITH_EXISTING_REGISTRY_FAMILY_SI_0010",
-    "kept": "SI-0010 = Registry shard compaction transaction candidate",
-    "migrated": "Volatile Session Checkpoint / Durable Recovery candidate -> SI-0014",
-    "historical_source": "31_IDEAS/PENDING/SI-0010_VOLATILE_SESSION_CHECKPOINT_EXTENSION.json",
-    "result": "MIGRATED_TO_UNIQUE_REGISTRY_EXTENSION; GREEN_CI_AND_DRIVE_READBACK; PRODUCTION_PILOT_PENDING"
-  },
-  "b03_cycle32_integrity_repair": {
-    "defect": "FRESHNESS_CANDIDATE_COLLIDED_FIRST_WITH_SI_0008_THEN_WITH_CONCURRENTLY_ALLOCATED_SI_0014",
-    "kept": ["SI-0008 = Full Chat Transcript Recovery","SI-0014 = Session Resilience / Durable Recovery"],
-    "migrated": "Project-slice freshness assertion -> SI-0015",
-    "historical_redirect": "31_IDEAS/SI-0008_PROJECT_SLICE_FRESHNESS_ASSERTION_CANDIDATE.json",
-    "result": "RESOLVED_BEFORE_MAIN_MERGE",
-    "new_rule": "Re-read the full registry family immediately before candidate ID allocation and again before merge if main advanced."
-  },
-  "h_generation_delta": {
-    "SI-0010": "READY_FOR_PILOT — atomic shard transaction + rollback + deterministic compaction implementation and CI pending",
-    "SI-0013": "READY_FOR_PILOT — durable project-state coverage / portfolio resumability gate; all 12 required projects currently have PASS-like durable routes; portfolio claim is PASS_FULL",
-    "SI-0014": "READY_FOR_PILOT — session checkpoint + durable multi-store recovery stack; 27/27 Run33 tests, inherited checkpoint/registry regressions, fresh-main CI and Drive readback PASS; controlled/realtime recovery evidence still required",
-    "SI-0015": "DEVELOPMENT_CONTRACT_READY — CURRENT-router embedded project-slice freshness assertion; positive/negative executable canaries pending"
-  },
+  "c3_38_integrity_repair": {"defect":"DUPLICATE_SI_0008_IDENTITY","kept":"SI-0008 = Full chat transcript recovery and ingestion executable extension","migrated":"Prompt Router / Meta-Orchestrator candidate -> SI-0012","historical_redirect":"31_IDEAS/SI-0008_RUN_CARDS_V2_CANDIDATE.json","result":"RESOLVED_IN_REGISTRY_FAMILY"},
+  "run33_integrity_repair": {"defect":"PENDING_SI_0010_COLLIDED_WITH_EXISTING_REGISTRY_FAMILY_SI_0010","kept":"SI-0010 = Registry shard compaction transaction candidate","migrated":"Volatile Session Checkpoint / Durable Recovery candidate -> SI-0014","historical_source":"31_IDEAS/PENDING/SI-0010_VOLATILE_SESSION_CHECKPOINT_EXTENSION.json","result":"MIGRATED_TO_UNIQUE_REGISTRY_EXTENSION; GREEN_CI_AND_DRIVE_READBACK; PRODUCTION_PILOT_PENDING"},
+  "b03_cycle32_integrity_repair": {"defect":"FRESHNESS_CANDIDATE_COLLIDED_FIRST_WITH_SI_0008_THEN_WITH_CONCURRENTLY_ALLOCATED_SI_0014","kept":["SI-0008 = Full Chat Transcript Recovery","SI-0014 = Session Resilience / Durable Recovery"],"migrated":"Project-slice freshness assertion -> SI-0015","historical_redirect":"31_IDEAS/SI-0008_PROJECT_SLICE_FRESHNESS_ASSERTION_CANDIDATE.json","result":"RESOLVED_BEFORE_MAIN_MERGE","new_rule":"Re-read the full registry family immediately before candidate ID allocation and again before merge if main advanced."},
+  "h_generation_delta": {"SI-0010":"READY_FOR_PILOT — atomic shard transaction + rollback + deterministic compaction implementation and CI pending","SI-0013":"READY_FOR_PILOT — durable project-state coverage / portfolio resumability gate; all 12 required projects currently have PASS-like durable routes; portfolio claim is PASS_FULL","SI-0014":"READY_FOR_PILOT — session checkpoint + durable multi-store recovery stack; 27/27 Run33 tests, inherited checkpoint/registry regressions, fresh-main CI and Drive readback PASS; controlled/realtime recovery evidence still required","SI-0015":"DEVELOPMENT_CONTRACT_READY — CURRENT-router embedded project-slice freshness assertion; positive/negative executable canaries pending"},
   "migration_note": "The monolithic base registry is a compatibility/read model until a deterministic compaction build validates all base+extension IDs, emits input/output hashes, passes roundtrip/readback regression, and switches pointers transactionally. Candidate shard visibility does not promote candidate status.",
   "authority_note": "Registry records govern self-improvement lifecycle only; they never outrank Founder/project/story authority. SI-0009/0010/0011/0012/0013/0014/0015 are candidates/pilots unless their own lifecycle state says otherwise."
 }
