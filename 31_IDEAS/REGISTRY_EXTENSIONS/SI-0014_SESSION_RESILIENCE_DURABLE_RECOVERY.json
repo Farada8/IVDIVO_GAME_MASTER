@@ -16,7 +16,7 @@
   "dedupe_relation": "EXTENDS_18C_AND_REUSES_EXISTING_REGISTRY_TRANSACTION",
   "related_candidates": ["SI-0008", "SI-0010", "SI-0012", "SI-0013"],
   "expected_benefit": "Prevents duplicate GitHub/Drive/provider work after interruption, quarantines ambiguous paid/irreversible side effects, preserves checkpoint lineage without transcript bloat, and gives Self-Improvement measurable recovery evidence instead of anecdotal claims.",
-  "evidence_state": "INTERNAL_ENGINEERING_EVIDENCE_PLUS_DURABLE_READBACK",
+  "evidence_state": "INTERNAL_ENGINEERING_EVIDENCE_PLUS_DURABLE_READBACK_PLUS_CONTROLLED_MULTI_STORE_PILOT",
   "priority_vector": {"impact": "HIGH", "recurrence": "RECURRING", "effort": "MEDIUM", "regression_risk": "MEDIUM", "reversibility": "EASY", "urgency": "HIGH", "affected_surface": "PORTFOLIO"},
   "development_contract": {
     "protected_invariants": ["Founder/project/story authority outranks recovery state", "No secret persistence", "No automatic replay of paid or irreversible effects", "No checkpoint/transaction ledger as canon", "No automatic Self-Improvement promotion", "No parallel registry transaction engine"],
@@ -32,7 +32,12 @@
     "Run33 fresh-main synthetic merge CI: Session Resilience Run33 Tests PASS, Session Resilience Tests PASS, Self-Improvement Integrity PASS",
     "Run33 semantic rebase preserved 67 parallel main commits and reduced portfolio coverage delta to one stale claim field rather than overwriting recovered D01 state",
     "Google Drive folder SESSION_RESILIENCE_RUN33_2026-08-21 id 1CCIXde5_2k57yHHIOENgO7staWyyZ1yv contains 7/7 nonempty mirror documents; content readback found prompt 32, prompt 64 and explicit REAL PRODUCTION PILOT NOT YET SATISFIED boundary",
-    "Run33 full-registry freshness sweep detected and corrected erroneous pending SI-0010 identity"
+    "Run33 full-registry freshness sweep detected and corrected erroneous pending SI-0010 identity",
+    "Controlled real integration pilot SI0014-CTRL-PILOT-001 used current Run33 reconciler blob 93f1d4e8a5f44897ccb0341b1fbcafc7d1e697f2 against stable main e5f1a50d2960941840687d16939def3b61b5fb57",
+    "Partial state with GitHub CONFIRMED+readback and Drive NOT_STARTED returned EXECUTE_MISSING_SAFE_ACTIONS for A2_DRIVE only; no duplicate GitHub action was replayed",
+    "Drive A2 executed once and exact-text readback matched shared payload SHA256 7c50155866b239a38fdfa5be348c9e263995557af52f92d37af91a3183c6e1ee",
+    "Recovered state returned TRANSACTION_COMPLETE with transaction SHA256 12ec9b484acb7b77911246b0ea5b8115f10d1db3adc25bf7a76baf1f3a673564",
+    "Final fresh-head check remained e5f1a50d2960941840687d16939def3b61b5fb57; controlled partial-write gate closed without claiming genuine outage evidence"
   ],
   "red_team_findings": [
     "Partial candidate-ID visibility is insufficient; always inspect full registry family before assigning IDs",
@@ -56,12 +61,15 @@
     "SYSTEM_ENGINEERING/SESSION_RESILIENCE_RUN32_2026-08-21/05_MACHINE_STATE_AND_TEST_RESULTS.json",
     "SYSTEM_ENGINEERING/SESSION_RESILIENCE_RUN33_2026-08-21/05_MACHINE_STATE_AND_TEST_RESULTS.json",
     "GitHub Actions runs 32516926109 / 32516926107 / 32516926112",
-    "Google Drive SESSION_RESILIENCE_RUN33_2026-08-21 folder 1CCIXde5_2k57yHHIOENgO7staWyyZ1yv"
+    "Google Drive SESSION_RESILIENCE_RUN33_2026-08-21 folder 1CCIXde5_2k57yHHIOENgO7staWyyZ1yv",
+    "SYSTEM_ENGINEERING/SI0014_CONTROLLED_PARTIAL_WRITE_PILOT_2026-08-21/00_PILOT_REPORT.md",
+    "SYSTEM_ENGINEERING/SI0014_CONTROLLED_PARTIAL_WRITE_PILOT_2026-08-21/01_TRANSACTION_PLAN_AND_RESULTS.json",
+    "Google Drive controlled payload 1LLVtur10_W2yD59np1Tm3jgJEmbyZE_MFMLXHrJnIp0"
   ],
   "protected_authorities": ["Cross-Conversation Autopilot v1.3", "Asset Escrow v17", "Transcript Recovery 18B", "Self-Improvement v2", "Registry Transaction Contract v1.0", "project-specific current state"],
   "owner_role": "System Reliability / Self-Improvement Reconciler",
-  "next_action": "Merge Run33 after final freshness/diff gate, then execute a controlled reversible GitHub-Drive partial-write recovery pilot and record it as real integration evidence without treating it as a genuine involuntary outage.",
-  "next_gate": "MERGE_READBACK_THEN_CONTROLLED_PARTIAL_WRITE_PILOT_THEN_REAL_INTERRUPTION_EVIDENCE",
+  "next_action": "Wait for or ingest the first genuine abrupt-session/restart incident and measure persisted before/after frontier, duplicated work avoided, recovery minutes and any manual Founder intervention. Do not substitute a same-session simulation or controlled partial-write pilot for that evidence.",
+  "next_gate": "REAL_INTERRUPTION_EVIDENCE_THEN_RECOVERY_COST_BASELINE_AND_SCOPE_PROMOTION_REVIEW",
   "hold_trigger": "Any false resume, secret leak, duplicate paid/irreversible side effect, registry ID collision, stale overwrite, or checkpoint/transaction overhead that materially harms production.",
   "last_movement": "2026-08-21",
   "terminal_reason": null
