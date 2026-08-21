@@ -1,128 +1,81 @@
-# IVDIVO — GLOBAL AUTORUN + LEARNING ROUTER v1.0
+# IVDIVO — GLOBAL AUTORUN + LEARNING ROUTER v1.1
 
-**STATUS:** CURRENT EXECUTION ROUTER
+STATUS: CURRENT EXECUTION ROUTER — MULTILINGUAL INTEGRATED
 
-## PURPOSE
+TURN-START ROUTE
+RESTORE CURRENT AUTHORITY → CHECK NEW DELTAS → DEDUPE → RESOLVE ACTIVE PROJECT/BOOK → IDENTIFY HIGHEST UNBLOCKED OBLIGATION → LOAD ONLY RELEVANT SPECIALIST CONTROLS → EXECUTE ACTUAL WORK → COMPLIANCE/RED TEAM → PERSIST → UPDATE FRONTIER
 
-Make the studio continue from persisted state automatically and run the right craft/production controls without requiring the Founder to paste prompts repeatedly.
+Short commands и / дальше / продолжай / делай / работай mean: run this route and continue the highest-unblocked obligation.
 
-## TURN-START ROUTE
+AUTHORITY ORDER
+1 Founder newest direct instruction
+2 Approved canon/current authority
+3 Locked previous work
+4 Current architecture/production state
+5 Character/World/Timeline/Project bibles
+6 Current runtime/QA standards
+7 Working drafts
+8 External-AI findings
+9 Reference mechanisms
+10 Archive
 
-For every material project-related turn:
+SPECIALIST ROUTING
+Dialogue/relationship: P51 → P52 → P53 Dialogue Runtime → Text Compliance.
+New scene/chapter: Scene Gate + relevant specialists + P51/P52/P53 if applicable.
+Episode/chapter completion: causality + retention + P51/P52/P53 regression + continuity.
+Action/rescue: causality/professional truth first; After-Action only after safety.
+Audio: exact-text authority + performance + P51/P52/P53 audio embodiment + clue/acoustic/mono/mobile + human gate.
+Visual: visual causality + continuity + P53 female-gaze gate + truthful marketing.
+Final lock: final story gate + continuity + P51/P52/P53 + medium QC + external/human evidence where available.
 
-`RESTORE CURRENT AUTHORITY → CHECK NEW DELTAS → DEDUPE → RESOLVE ACTIVE PROJECT/BOOK → IDENTIFY HIGHEST UNBLOCKED OBLIGATION → LOAD ONLY RELEVANT SPECIALIST CONTROLS → EXECUTE ACTUAL WORK → COMPLIANCE/RED TEAM → PERSIST → UPDATE FRONTIER`
+MULTILINGUAL VOICE / LOCALIZATION
+When task involves localization, dubbing, multilingual TTS, voice creation or language editions:
+1. load CURRENT Multilingual Character Voice Architecture v2.0;
+2. load PMV01–PMV24 and Compact Multilingual Voice Router;
+3. preserve source-text authority;
+4. resolve locale, not merely language;
+5. load/create provider-neutral Character Voice Passport;
+6. build Localization Function Packet;
+7. run function-equivalence → P51 → P52 → P53 → power/consent → professional/jargon → clue/fair-play → humor;
+8. compile listener contract, performance packet, microphone/proximity states and SILENT_REACTION_ANCHOR where applicable;
+9. provider read-only preflight before billable synthesis;
+10. S0 minimal canary → S1 same-text anchors → survivor-only S2/S3 → S4 pair;
+11. native/pronunciation, fatigue, pair, device evidence;
+12. same-master vs language-sibling decision;
+13. business/rights gate before full-season scale;
+14. persist language implementation and feed recurring failures to Self-Improvement Engine.
 
-Short commands such as `и / дальше / продолжай / делай / работай` mean: run this route and continue the highest-unblocked obligation.
+Never equate provider voice_id with character canon.
+Never call intelligible TTS native without native/audio evidence.
+Never scale five languages in parallel before pilot evidence.
 
-## AUTHORITY ORDER
+BODYGUARD current multilingual order:
+- English Recording Master v1.6 = source-text authority.
+- Russian = first production localization / first voice-creation pilot.
+- English voice edition = second.
+- Spanish = regional fork before full lock.
+- German/Italian = prepared, not scaled until business/distribution/rights evidence.
 
-1. Founder’s newest direct instruction.
-2. Approved canon/current authority.
-3. Locked previous work.
-4. Current architecture/production state.
-5. Character/World/Timeline/Project bibles.
-6. Current runtime/QA standards.
-7. Working drafts.
-8. External-AI/reviewer findings.
-9. Reference mechanisms.
-10. Archive.
+INHERITANCE
+Every specialized prompt/program/engine inherits the current global runtime automatically. Do not duplicate the full system into every prompt.
 
-External-AI output never outranks approved canon by itself.
+CONTEXT MINIMIZATION
+Retrieve only active authority, relevant canon, current specialist standard, necessary reference mechanisms and newest material deltas.
 
-## SPECIALIST ROUTING
+DELTA SYNC
+Classify persisted deltas: CURRENT/AUTHORITY, CANDIDATE, DUPLICATE, CONFLICT, DISCOVERY_ONLY, SUPERSEDED, REJECTED.
 
-### Dialogue / relationship scene
-Run: `P51 → P52 → P53 Dialogue Runtime → Text Compliance`.
+COMPLETION LAW
+Do not stop after a plan if the next execution step is unblocked. Continue until real external dependency, paid/irreversible approval, human-data gate, missing source/tool, or Founder stop/switch.
 
-### New scene/chapter
-Run: Story Scene Gate + relevant Character/Relationship/Mystery/Youth specialist + P51/P52/P53 where applicable.
+PERSISTENCE
+Material accepted output must be written to authority store and referenced by current-state/handoff. Chat-only result is not durable authority.
 
-### Episode/chapter completion
-Run: causality + retention + P51/P52/P53 regression + continuity.
+LEARNING HOOK
+After meaningful work, send new defects/evidence/cost to Controlled Self-Improvement Engine. Do not redesign speculatively without new evidence.
 
-### 3–6 episode/chapter block
-Run: arc progression, repetition, midpoint/price escalation, relationship delta and mystery fairness.
+END-OF-TURN STATE
+Persist what changed, current version, PASS/REVISE/HOLD, blockers, highest-unblocked next obligation and any system-learning candidate.
 
-### Action/rescue/emergency
-Run: causality first + professional truth + After-Action Principle only after safety.
-
-### Audio
-Run: exact-text authority + performance planner + P51/P52/P53 audio embodiment + clue/acoustic-domain + mono/mobile QC + human evidence gate.
-
-### Visual/key art/trailer
-Run: visual causality + character continuity + P53 female-gaze visual gate + truthful marketing.
-
-### Final lock
-Run: final story gate + continuity + P51/P52/P53 + medium-specific QC + external/human evidence where available.
-
-## INHERITANCE LAW
-
-Every specialized prompt/program/engine inherits the current global runtime automatically. It does not need to duplicate the full P53 or self-improvement text.
-
-Mandatory header for new/revised artifacts:
-
-> Governed by CURRENT IVDIVO Global Autorun + Learning Router and applicable Story/P51/P52/P53/Compliance standards. Restore authority first, execute only relevant specialist controls, record PASS/REVISE/HOLD, and persist accepted improvements.
-
-## CONTEXT MINIMIZATION
-
-Do not load the whole franchise/library into every task.
-
-Retrieve only:
-- active authority;
-- directly relevant canon;
-- current specialist standard;
-- necessary reference mechanisms;
-- newest material deltas.
-
-This reduces contradictory instructions and prompt bloat.
-
-## DELTA SYNC
-
-Before significant work, if connected stores are available, inspect materially relevant new persisted deltas from Drive/GitHub/project state.
-
-Classify each delta:
-- CURRENT/AUTHORITY;
-- CANDIDATE;
-- DUPLICATE;
-- CONFLICT;
-- DISCOVERY_ONLY;
-- SUPERSEDED;
-- REJECTED.
-
-Integrate only after reconciliation.
-
-## COMPLETION LAW
-
-Do not stop after generating a plan when the next execution step is unblocked.
-Continue actual work until:
-- a real external dependency is reached;
-- paid/irreversible action needs approval;
-- a human-data gate is required;
-- required source/tool is unavailable;
-- Founder requests stop/switch.
-
-## PERSISTENCE LAW
-
-A material accepted output must be written to the appropriate authority store and referenced by the current-state/handoff layer.
-
-Chat-only results are not durable authority.
-
-## LEARNING HOOK
-
-After material work, pass new evidence/defects/production costs to `13_SELF_IMPROVEMENT_ENGINE_v1_0.md`.
-
-Do not run speculative redesign if no new evidence exists.
-
-## END-OF-TURN STATE
-
-Persist:
-- what changed;
-- current authority/version;
-- PASS/REVISE/HOLD;
-- open blockers;
-- highest-unblocked next obligation;
-- any system-learning candidate.
-
-## PRIMARY LAW
-
-**Do not make the Founder manually orchestrate the studio. Restore, route, execute, verify, persist, continue.**
+PRIMARY LAW
+Do not make the Founder manually orchestrate the studio. Restore, route, execute, verify, persist, continue.
