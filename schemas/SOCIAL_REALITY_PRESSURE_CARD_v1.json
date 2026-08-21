@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.social_reality_pressure/1.0",
+  "title":"IVDIVO Social Reality Pressure Card",
+  "type":"object",
+  "required":["scene_or_unit_id","ordinary_objective","pressures","choice_consequence"],
+  "properties":{
+    "scene_or_unit_id":{"type":"string"},
+    "ordinary_objective":{"type":"string"},
+    "pressures":{"type":"array","items":{"type":"object","required":["domain","specific_constraint","changes"],"properties":{
+      "domain":{"type":"string","enum":["MONEY","WORK","HOUSING","CLASS_STATUS","FAMILY_OBLIGATION","BUREAUCRACY","LAW","COMMUNITY_NORM","INSTITUTIONAL_INCENTIVE","EDUCATION","TRANSPORT","HEALTHCARE_ACCESS","OTHER"]},
+      "specific_constraint":{"type":"string"},
+      "changes":{"type":"array","minItems":1,"items":{"type":"string","enum":["STRATEGY","ACCESS","RISK","RELATIONSHIP","STATUS","TIME","PRICE"]}},
+      "exposition_only":{"type":"boolean"}
+    }}}
+    ,"choice_consequence":{"type":"string"},
+    "world_reveal_by_action":{"type":"boolean"}
+  }
+}
