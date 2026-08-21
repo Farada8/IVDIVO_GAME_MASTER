@@ -12,8 +12,8 @@ Run4 executes exactly 32 high-information tasks across four fronts:
 ## Regression
 
 - warm: **99/99 PASS**;
-- final cold ZIP replay: **99/99 PASS**;
-- final ZIP SHA256: `4d4d6aa89b49dd4696dcc06e2268a5934db721e69330203dae8bffa37236ab49`.
+- post-publication-identity final cold ZIP replay: **99/99 PASS**;
+- final ZIP SHA256: `278fb21f1491092cbc49c59fd6a518fc4b22fe4e47eb58d036a8ff8dcabfb3f6`.
 
 ## Major negative result
 
@@ -75,4 +75,4 @@ Priority front: `225, 233, 241, 249, 257, 265, 273, 281`.
 
 Google Drive full package folder:
 `ENGINE_RUN4_AMSI177_208_REAL_SELF_IMPROVEMENT_FORMAL_SCIENCE_2026-08-21`
-(folder ID `1glNILD5L8Pj3M1wG1wls3EoOmfNArfA4`).
+(folder ID `1glNILD5L8Pj3M1wG1wls3EoOmfNArfA4`, ZIP file ID `1uoOcwD4PGfPdkC-gfaqzoUskD-JtF9HI`).
