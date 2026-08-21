@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "R01_R07_EXECUTED_WORKING_RECONCILIATION",
+  "authority_rule": "FOUNDER_NEWEST > LOCKED_PROJECT_AUTHORITY > MASTER_SAGA_BIBLE/CURRENT_NARRATIVE_OS > SAGA100_WORKING_LAYER > HISTORICAL_SEEDS",
+  "identity_rule": "PROJECT_ID_IS_DURABLE; SAGA_SLOT_ID_IS_A_SEPARATE_LONG_HORIZON_COORDINATE",
+  "projects": [
+    {
+      "project_id": "B01",
+      "title": "LESSON ZERO",
+      "current_status": "DEVELOPMENT_LOCKED_PUBLISHER_EXTERNAL_FEEDBACK",
+      "current_function": "FOUNDATION_BOOK",
+      "candidate_saga100_role": "PRE_CYCLE_FOUNDATION",
+      "candidate_slot": null,
+      "mapping_confidence": "HIGH",
+      "mapping_status": "CANDIDATE_NON_DESTRUCTIVE",
+      "durable_consequences_required": ["load Book1 canon before any later-book continuity decision"],
+      "rewrite_policy": "NO_STRUCTURAL_REWRITE_WITHOUT_FOUNDER_OR_CONCRETE_EXTERNAL/CONTINUITY_EVIDENCE",
+      "authority_sources": [
+        "PROJECT_STATES/IVDIVO_BOOK_1_LESSON_ZERO_CURRENT_STATE.json",
+        "IVDIVO_NARRATIVE_OS/00_NARRATIVE_OS_CANON.md",
+        "Drive IVDIVO MASTER SAGA BIBLE v1.0 (18boeup_cforR4zZ4Pc291WpG_T85OEklPH-t1YMlE6s)"
+      ]
+    },
+    {
+      "project_id": "B02",
+      "title": "ORBITAL YOUTH",
+      "current_status": "STORY_COMPLETE_DEVELOPMENT_DRAFT_GREEN_NOT_FINAL_LINE_LOCK",
+      "current_function": "ORBITAL_CIVILIZATION_FROM_INSIDE",
+      "candidate_saga100_role": "ORBITAL",
+      "candidate_slot": "S100-C01-O",
+      "mapping_confidence": "HIGH_FUNCTION_MEDIUM_SEQUENCE",
+      "mapping_status": "CANDIDATE",
+      "durable_consequences_required": [
+        "Ring Six remains partially inhabited/not falsely fully commissioned",
+        "bounded/supervised professional authority is materially distinct from technical insight",
+        "housing/migration/safety tradeoffs remain civic rather than purely technical",
+        "ensemble relationships and independent lives do not reset",
+        "no superseded OES franchise tail is restored into Book2 ending"
+      ],
+      "saga100_proof_value": ["OrbitalTransitionEngine", "CivilizationDeltaProofEngine", "BookIndependenceGate"],
+      "authority_sources": [
+        "IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/GATES/BOOK2_ORBITAL_YOUTH_FINAL_STORY_GATE_2026-08-17.md",
+        "IVDIVO_NARRATIVE_OS/BOOKS/B02_ORBITAL_YOUTH/DRAFT_STATUS.md"
+      ]
+    },
+    {
+      "project_id": "B03",
+      "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+      "current_status": "PREPARED_PRE_PROSE_NOT_ACTIVE_UNTIL_PORTFOLIO_PRECONDITION",
+      "current_function": "SMITH_OES_PROFESSIONAL_LINE",
+      "candidate_saga100_role": "SMITH_OES",
+      "candidate_slot": "S100-C01-S",
+      "mapping_confidence": "HIGH_FUNCTION_MEDIUM_SEQUENCE",
+      "mapping_status": "CANDIDATE_DEPLOYMENT_HOLD",
+      "open_gate": "SMITH_PERSONAL_FAMILY_CONTINUITY_AFTER_ACTIVATION",
+      "prose_authorized": false,
+      "professional_matrix_candidate": [
+        "classify",
+        "establish lawful local authority",
+        "separate legacy knowledge from current jurisdiction",
+        "test inherited procedure against present evidence",
+        "determine rights/danger/obligations",
+        "choose intervention and pay institutional/personal price",
+        "record failure/learning without making Confederation automatically supreme"
+      ],
+      "saga100_proof_value": ["ProfessionalMatrixEngine", "JurisdictionCapabilityMatrix", "PhilosophyThroughActionProof"],
+      "authority_sources": ["PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json"]
+    },
+    {
+      "project_id": "B04",
+      "title": "UNRESOLVED CURRENT ASSIGNMENT",
+      "current_status": "AUTHORITY_CONFLICT_HOLD",
+      "historical_function": "FIRST_MAJOR_CROSSING",
+      "candidate_saga100_role": null,
+      "candidate_slot": null,
+      "mapping_confidence": "LOW",
+      "mapping_status": "HOLD",
+      "conflict": "Current Narrative OS/Book overlay still describes B04 as First Major Crossing, while newer Founder B08 override explicitly establishes B08 as FIRST CROSSING. The override changes B08 routing and does not supply a replacement B04 function.",
+      "fail_closed_rule": "DO_NOT_INVENT_B04_REPLACEMENT_AND_DO_NOT_USE_B04_AS_ACTIVE_CROSSING_UNTIL_FOUNDER/CURRENT_AUTHORITY_RECONCILES_THE_CONFLICT",
+      "authority_sources": [
+        "IVDIVO_NARRATIVE_OS/00_NARRATIVE_OS_CANON.md",
+        "IVDIVO_NARRATIVE_OS/10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md",
+        "Drive 11 IVDIVO New Chat Starters Copy Paste v1.0"
+      ]
+    },
+    {
+      "project_id": "B05",
+      "title": "POST-CROSSING ORBITAL-YOUTH SLOT (historical/default)",
+      "current_status": "WORKING_DEFAULT_ONLY",
+      "current_function": "POSSIBLE_ORBITAL_YOUTH_II",
+      "candidate_saga100_role": "ORBITAL",
+      "candidate_slot": null,
+      "mapping_confidence": "LOW",
+      "mapping_status": "HOLD_UNTIL_ACTUAL_ASSIGNMENT_AND_UPSTREAM_CONSEQUENCES",
+      "fail_closed_rule": "DO_NOT_PROMOTE_DEFAULT_OVERLAY_TO_PROJECT_CANON",
+      "authority_sources": ["IVDIVO_NARRATIVE_OS/10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md"]
+    },
+    {
+      "project_id": "B06",
+      "title": "POST-CROSSING SMITH SLOT / B07 refers to THE LAST HUMAN DISTANCE / ENIA'S RETURN",
+      "current_status": "SOURCE_RECOVERY_REQUIRED",
+      "current_function": "POSSIBLE_SMITH_II_OR_UPSTREAM_ENIA_CONTINUITY",
+      "candidate_saga100_role": "SMITH_OES",
+      "candidate_slot": null,
+      "mapping_confidence": "LOW",
+      "mapping_status": "HOLD",
+      "evidence": "Book-specific overlay defines B06 only as WORKING DEFAULT Smith II. B07 dossier names an upstream B06 THE LAST HUMAN DISTANCE / ENIA'S RETURN, but repository search did not recover a separate current GitHub authority package under that title.",
+      "fail_closed_rule": "REFERENCE_FROM_B07_IS_NOT_SUFFICIENT_TO_CANONIZE_B06_STORY_OR_EXACT_CONSEQUENCES",
+      "authority_sources": [
+        "IVDIVO_NARRATIVE_OS/10_BOOK_SPECIFIC_WORKROOM_OVERLAYS.md",
+        "Drive B07 THE UNLISTED CITY Full-Book Working Dossier v1.0 (1WYYslFJ6wCQN-wH9ZUKS-wCn4aABqfR9Kd5EE1tTDTs)"
+      ]
+    },
+    {
+      "project_id": "B07",
+      "title": "THE UNLISTED CITY",
+      "current_status": "WORKING_FOUNDER_APPROVAL_REQUIRED_GREEN_FOR_STORY_APPROVAL_NOT_CANON_LOCK",
+      "current_function": "FIRST_FULL_INSIDE_CONFEDERATION_NOVEL",
+      "candidate_saga100_role": "CONFEDERATION_FRONTIER",
+      "candidate_slot": "S100-C01-C",
+      "mapping_confidence": "HIGH_FUNCTION_MEDIUM_SEQUENCE",
+      "mapping_status": "CANDIDATE_WITH_CONTINUITY_PORTS",
+      "prose_frontier": "CH01_CH06_DRAFTED_OPENING_RED_TEAM_FATAL0_MAJOR0",
+      "continuity_ports": ["elapsed_time_after_B06", "Contact_program_exact_name_structure", "Seya/Taal_trace", "continuity_lattice/service_body_terminology"],
+      "durable_consequences_candidate": [
+        "local provisional civic continuity status for CAM-4 rather than universal personhood law",
+        "Kaira loses current Human Contact placement/certification cycle",
+        "CAM-4 loses part of memory/continuity while remaining continuous",
+        "Confederation institutions are competent, bounded and internally disputable",
+        "cadet knowledge/action remains distinct from civilization-wide sovereign authority"
+      ],
+      "saga100_proof_value": ["ConfederationPossibilityEngine", "AntiUtopiaContract", "TechnologyAccessLadder", "BookIndependenceGate"],
+      "authority_sources": ["Drive B07 THE UNLISTED CITY Full-Book Working Dossier v1.0 (1WYYslFJ6wCQN-wH9ZUKS-wCn4aABqfR9Kd5EE1tTDTs)"]
+    },
+    {
+      "project_id": "B08",
+      "title": "FIRST CROSSING",
+      "current_status": "STRUCTURAL_GREEN_CONDITIONAL_WORKING_NOT_CANON_NOT_FROZEN",
+      "current_function": "FIRST_CROSSING",
+      "candidate_saga100_role": "CROSSING",
+      "candidate_slot": "S100-C01-X",
+      "mapping_confidence": "HIGH_FUNCTION_MEDIUM_SEQUENCE",
+      "mapping_status": "CANDIDATE_UPSTREAM_SUBSTITUTION_HOLD",
+      "crossing_dependencies": [
+        "actual B02-B07 consequences",
+        "hero identity/age/career",
+        "relationship R1 identity/status",
+        "orbital employment/certification/housing systems",
+        "Contact status",
+        "Smith/OES institutional state",
+        "normalized technologies",
+        "habitat/location/detachment architecture"
+      ],
+      "crossing_non_substitutable_functions": [
+        "orbital hero/local operations and liability",
+        "lawful orbital security director with whole-habitat responsibility",
+        "Smith authenticates legacy empirical evidence and OES wrongdoing but cannot command orbital operations",
+        "Confederation provides one bounded correction/prediction without automatic jurisdiction"
+      ],
+      "saga100_proof_value": ["CrossingNecessityCompiler", "ContinuitySubstitutionMatrix", "JurisdictionCapabilityMatrix", "ConsequenceLedger"],
+      "authority_sources": ["docs/saga/B08_FIRST_CROSSING_CURRENT_STATE.md"]
+    }
+  ],
+  "R07_numbering_conflict_result": {
+    "destructive_renumbering": "FAIL",
+    "reason": "Existing Bxx identifiers carry durable repository/Drive/project-state authority and current B04/B08 routing conflict is unresolved.",
+    "approved_identity_pattern": "PROJECT_ID + independent SAGA_SLOT_ID",
+    "unknowns_are_first_class": true
+  }
+}

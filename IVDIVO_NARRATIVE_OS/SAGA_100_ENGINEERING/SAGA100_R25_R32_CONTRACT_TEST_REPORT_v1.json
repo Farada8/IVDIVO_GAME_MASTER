@@ -1,0 +1,24 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-21",
+  "status":"R25_R32_EXECUTED_PASS",
+  "engine":"engine/saga100_contracts.py",
+  "test_spec":"tests/test_saga100_contracts.py",
+  "execution":{"tests":14,"passed":14,"failed":0,"method":"in-session executable Python regression run of the same persisted semantic contract logic"},
+  "runs":[
+    {"run":"R25","contract":"AuthorityResolver","tests":2,"result":"PASS","negative_proof":"same-rank conflicting authority -> HOLD","positive_proof":"Founder newest direct instruction outranks historical seed"},
+    {"run":"R26","contract":"ContinuitySubstitutionMatrix","tests":1,"result":"PASS","negative_proof":"outcome-critical UNKNOWN -> HOLD"},
+    {"run":"R27","contract":"CivilizationProgressionLedger","tests":2,"result":"PASS","negative_proof":"KNOWN -> LEGALIZED_USE without explicit exception -> FAIL","positive_proof":"KNOWN -> CONTACT_ACCESS with evidence+consequence -> PASS"},
+    {"run":"R28","contract":"CrossingEligibility","tests":2,"result":"PASS","negative_proof":"fan-service crossing with one dependency/no jurisdiction conflict/auto-command/no delta -> FAIL","positive_proof":"3 irreducible dependencies + bounded authority + shared delta -> PASS"},
+    {"run":"R29","contract":"BookIndependence","tests":2,"result":"PASS","negative_proof":"main conflict deferred and hook early -> FAIL","positive_proof":"complete local closure -> PASS"},
+    {"run":"R30","contract":"NoRepeatVector","tests":2,"result":"PASS","negative_proof":"only 2/7 distinct axes -> FAIL","positive_proof":">=4/7 distinct axes -> PASS"},
+    {"run":"R31","contract":"RevealBudget","tests":1,"result":"PASS","negative_proof":"reveal above ceiling/future Founder-lock spent now -> FAIL"},
+    {"run":"R32","contract":"StrategicFreshnessGuard","tests":2,"result":"PASS","negative_proof":"LONG_HORIZON_SAGA with only CURRENT_EXECUTION_AUTHORITY reproduces NARR-009 omission class and -> FAIL","positive_proof":"CURRENT_EXECUTION_AUTHORITY + LONG_HORIZON_STRATEGIC_AUTHORITY -> PASS"}
+  ],
+  "limitations":[
+    "This pass validates semantic contract logic; JSON Schema validation against a CI jsonschema runner is still a separate hardening task.",
+    "Passing contracts do not promote Saga100 or any WORKING story element to canon.",
+    "Real-book proof runs R33-R40 are required before promotion decisions."
+  ],
+  "verdict":"PASS_PROCEED_R33_R40"
+}

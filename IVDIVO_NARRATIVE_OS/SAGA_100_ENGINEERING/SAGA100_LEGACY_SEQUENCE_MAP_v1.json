@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "R08_EXECUTED_CANDIDATE_MAP_FAIL_CLOSED",
+  "mapping_law": "MAP_FUNCTION_WITHOUT_RENAMING_PROJECTS; UNKNOWN_OR_CONFLICTED_SEQUENCE_REMAINS_HOLD",
+  "project_to_candidate_slot": [
+    {"project_id":"B01","candidate_slot":"PRE-CYCLE-FOUNDATION","role":"FOUNDATION","confidence":"HIGH","status":"CANDIDATE"},
+    {"project_id":"B02","candidate_slot":"S100-C01-O","role":"ORBITAL","confidence":"HIGH_FUNCTION_MEDIUM_SEQUENCE","status":"CANDIDATE"},
+    {"project_id":"B03","candidate_slot":"S100-C01-S","role":"SMITH_OES","confidence":"HIGH_FUNCTION_MEDIUM_SEQUENCE","status":"CANDIDATE_DEPLOYMENT_HOLD"},
+    {"project_id":"B04","candidate_slot":null,"role":null,"confidence":"LOW","status":"AUTHORITY_CONFLICT_HOLD"},
+    {"project_id":"B05","candidate_slot":null,"role":"ORBITAL_DEFAULT_ONLY","confidence":"LOW","status":"HOLD"},
+    {"project_id":"B06","candidate_slot":null,"role":"SMITH_OES_DEFAULT_OR_UPSTREAM_ENIA_CONTINUITY","confidence":"LOW","status":"SOURCE_RECOVERY_HOLD"},
+    {"project_id":"B07","candidate_slot":"S100-C01-C","role":"CONFEDERATION_FRONTIER","confidence":"HIGH_FUNCTION_MEDIUM_SEQUENCE","status":"CANDIDATE_WITH_PORTS"},
+    {"project_id":"B08","candidate_slot":"S100-C01-X","role":"CROSSING","confidence":"HIGH_FUNCTION_MEDIUM_SEQUENCE","status":"CANDIDATE_UPSTREAM_SUBSTITUTION_HOLD"}
+  ],
+  "cycle_01_candidate": {
+    "slot_S": {"project_id":"B03","status":"CANDIDATE"},
+    "slot_O": {"project_id":"B02","status":"CANDIDATE"},
+    "slot_C": {"project_id":"B07","status":"CANDIDATE_SEQUENCE_DEPENDS_ON_B04_B06_RECONCILIATION"},
+    "slot_X": {"project_id":"B08","status":"CANDIDATE_SEQUENCE_DEPENDS_ON_B02_B07_CONSEQUENCES"},
+    "ordering_note": "Saga100 role ordering is a logical cycle coordinate, not permission to reorder publication/project numbers or rewrite chronology. Exact chronological/publication sequence remains governed by current project authorities and continuity."
+  },
+  "unresolved": [
+    {
+      "id":"SEQ-001",
+      "severity":"BLOCKING_FOR_DESTRUCTIVE_RENUMBERING_NOT_BLOCKING_FOR_ENGINEERING",
+      "problem":"B04 remains labeled First Major Crossing in current Narrative OS/overlay while newer B08 Founder override establishes B08 as FIRST CROSSING.",
+      "required_resolution":"Founder/current saga authority must assign or retire B04 function explicitly before any canonical long-order map treats B04 as a specific SAGA100 slot."
+    },
+    {
+      "id":"SEQ-002",
+      "severity":"BLOCKING_FOR_B05_CANON_MAPPING",
+      "problem":"B05 is only a WORKING DEFAULT Orbital Youth II overlay.",
+      "required_resolution":"Recover/create actual B05 authority after upstream consequences."
+    },
+    {
+      "id":"SEQ-003",
+      "severity":"BLOCKING_FOR_B06_CANON_MAPPING",
+      "problem":"B06 is only a WORKING DEFAULT Smith II overlay in GitHub; B07 references THE LAST HUMAN DISTANCE / ENIA'S RETURN without a recovered separate current authority package.",
+      "required_resolution":"Recover B06 source-of-truth or explicitly re-authorize/reconstruct it from verified provenance."
+    },
+    {
+      "id":"SEQ-004",
+      "severity":"BLOCKING_FOR_B08_PROSE_NOT_FOR_SAGA100_MODULE_TESTING",
+      "problem":"B08 exact identities, relationships, technology, institutions and chronology require B02-B07 substitution.",
+      "required_resolution":"ContinuitySubstitutionMatrix after upstream authorities mature."
+    }
+  ],
+  "safe_now": [
+    "Use B02 as real OrbitalTransition proof corpus",
+    "Use B03 as ProfessionalMatrix proof corpus without authorizing prose",
+    "Use B07 as ConfederationPossibility/anti-utopia proof corpus while preserving WORKING status",
+    "Use B08 as CrossingNecessity/jurisdiction proof corpus without resolving upstream UNKNOWNs",
+    "Treat B01 as protected foundation",
+    "Continue R09-R32 engineering because sequence unknowns do not block generic schemas/tests"
+  ],
+  "unsafe_now": [
+    "rename B02/B03/B07/B08",
+    "declare B04 cancelled or give it a new plot without authority",
+    "canonize B05/B06 defaults",
+    "lock publication chronology from SAGA_SLOT IDs",
+    "rewrite existing books to make a clean 3+1 numbering pattern"
+  ],
+  "R08_verdict": "PASS_FOR_NON_DESTRUCTIVE_MAPPING; FAIL_FOR_CANONICAL_RENUMBERING"
+}

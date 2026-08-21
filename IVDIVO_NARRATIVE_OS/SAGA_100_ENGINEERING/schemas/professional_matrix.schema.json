@@ -1,0 +1,26 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/saga100/schemas/professional_matrix.schema.json",
+  "title":"IVDIVO Saga100 Professional Matrix",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["project_id","profession_system","classification","authority","evidence","procedure","intervention","rights","institutional_memory","blind_spot","failure_mode","price","earned_upgrade","proof_status"],
+  "properties":{
+    "project_id":{"type":"string","minLength":2},
+    "profession_system":{"type":"string","minLength":3},
+    "classification":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "authority":{"type":"object","required":["lawful_scope","out_of_scope"],"properties":{"lawful_scope":{"type":"array","minItems":1,"items":{"type":"string"}},"out_of_scope":{"type":"array","items":{"type":"string"}},"source_refs":{"type":"array","items":{"type":"string"}}}},
+    "evidence":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "procedure":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "intervention":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "rights":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "secrecy":{"type":"array","items":{"type":"string"}},
+    "institutional_memory":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "blind_spot":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "failure_mode":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "price":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "earned_upgrade":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "philosophy_through_action":{"type":"array","items":{"type":"string"}},
+    "proof_status":{"enum":["PASS","FAIL","HOLD","NOT_RUN"]}
+  }
+}

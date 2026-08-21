@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/saga100/schemas/no_repeat_vector.schema.json",
+  "title":"IVDIVO Saga100 No-Repeat Vector",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["project_id","primary_human_problem","protagonist_social_position","arena","genre_emphasis","ivdivo_amplifier","closure_type","relationship_configuration","comparison_window","result"],
+  "properties":{
+    "project_id":{"type":"string"},
+    "primary_human_problem":{"type":"string"},
+    "protagonist_social_position":{"type":"string"},
+    "arena":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "genre_emphasis":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "ivdivo_amplifier":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "closure_type":{"type":"string"},
+    "relationship_configuration":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "comparison_window":{"type":"array","items":{"type":"string"}},
+    "distinct_axes_count":{"type":"integer","minimum":0,"maximum":7},
+    "minimum_distinct_axes_required":{"type":"integer","minimum":4,"maximum":7,"default":4},
+    "result":{"enum":["PASS","FAIL","HOLD","NOT_RUN"]},
+    "notes":{"type":"array","items":{"type":"string"}}
+  }
+}
