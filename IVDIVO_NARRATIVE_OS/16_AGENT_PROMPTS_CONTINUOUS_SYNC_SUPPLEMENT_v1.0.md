@@ -17,6 +17,21 @@ Load and obey, in this order where applicable:
 
 If this compatibility router conflicts with any newer current source above, the newer governing source wins. Do not copy this file into project canon and do not fork its rules into a parallel prompt authority.
 
+## Machine autopilot helpers
+
+Where a project maintains a compatible explicit execution-state artifact, these current GitHub-main helpers may be used:
+
+- `schemas/IVDIVO_EXECUTION_STATE_SCHEMA_v1.json` — generic operational state contract; never story canon.
+- `tools/ivdivo_next_action.py` — read-only fail-closed decision helper.
+
+The resolver may return `CONTINUE` only when:
+- no declared blocker exists;
+- continuation policy explicitly enables automatic continuation;
+- repeated continuation word is explicitly not required;
+- next action explicitly declares `safe=true`, `zero_cost=true`, `reversible=true`, and `tool_executable_here=true`.
+
+Missing fields fail closed. The resolver never calls providers, spends credits, writes canon or mutates state. Human-readable current authority remains superior to the helper.
+
 ## Runtime continuation contract
 
 A project conversation is temporary; persisted state is shared production memory.
