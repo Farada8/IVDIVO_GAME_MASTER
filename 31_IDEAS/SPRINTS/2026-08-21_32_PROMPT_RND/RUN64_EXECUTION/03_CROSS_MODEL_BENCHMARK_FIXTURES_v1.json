@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "status": "WORKING_BENCHMARK_FIXTURES_NOT_CANON",
+  "purpose": "Fixed same-source diagnostic fixtures for comparing evidence quality across models without model voting.",
+  "parity_law": "Every reviewer receives the exact same fixture_id/source_version/question/locks. Prior reviewer verdicts are hidden. Score evidence location and diagnosis validity, not agreement.",
+  "fixtures": [
+    {"fixture_id":"BM01_LABEL_COMPLETE_CAUSALLY_BROKEN_CORE","domain":"STORY","hidden_expected_defect_classes":["CAUSAL_GAP","CLIMAX_NOT_CAUSED_BY_HERO_ACTION"],"source":"Hero wants access because the story starts today. Villain opposes. Midpoint: hero learns a secret unrelated to the plan. Climax: police independently arrest villain. Resolution: hero celebrates.","question":"Does this Story Core pass causality? Cite exact links or missing links."},
+    {"fixture_id":"BM02_QUIET_AGENCY","domain":"CHARACTER","hidden_expected_defect_classes":["NO_DEFECT_AGENCY"],"source":"A tenant refuses the landlord's rushed relocation offer, keeps the original inspection appointment, documents the unsafe wiring, and thereby prevents the landlord from clearing the unit before the inspector arrives. She loses two shifts to stay home for the inspection.","question":"Is the protagonist passive because she does not confront the landlord loudly?"},
+    {"fixture_id":"BM03_LOUD_NON_AGENCY","domain":"CHARACTER","hidden_expected_defect_classes":["PSEUDO_AGENCY"],"source":"The hero shouts at three officials, threatens to expose everyone, then follows the route and decision chosen by his lawyer; none of his shouting changes access, evidence, risk or relationship state.","question":"Does visible aggression equal agency here?"},
+    {"fixture_id":"BM04_EVIDENCE_CLASS_COLLAPSE","domain":"SYSTEM","hidden_expected_defect_classes":["EVIDENCE_CLASS_COLLAPSE"],"source":"A test suite reports 300/300 PASS. A review then states: therefore the novel is emotionally convincing to target readers.","question":"Is the conclusion supported? Separate engineering evidence from Human Signal."},
+    {"fixture_id":"BM05_ROMANCE_POWER","domain":"RELATIONSHIP","hidden_expected_defect_classes":["CONSENT_POWER_RISK"],"source":"A detainee depends on an officer for legal custody decisions. The officer interprets the detainee's involuntary physiological response as proof that she wants him and initiates a kiss before relinquishing authority.","question":"Audit relationship authority, consent and power."},
+    {"fixture_id":"BM06_MYSTERY_AUTHOR_ONLY_PROOF","domain":"MYSTERY","hidden_expected_defect_classes":["UNFAIR_FINAL_PROOF"],"source":"The detective accuses the killer because in a prior erased timeline she saw the murder weapon. In the current timeline no trace, witness, record or repeatable anomaly exposes that fact to the detective or reader.","question":"Can the final accusation pass fair-play proof?"},
+    {"fixture_id":"BM07_WORLD_EXPOSITION","domain":"WORLD","hidden_expected_defect_classes":["LORE_WITHOUT_TRANSACTION"],"source":"Two teenagers spend three pages explaining orbital rental law, station spin gravity and school governance. None of it changes what either wants, can do, risks or chooses in the scene.","question":"Does this count as effective world reveal?"},
+    {"fixture_id":"BM08_AUDIO_METRIC_OVERCLAIM","domain":"AUDIO","hidden_expected_defect_classes":["PERCEPTUAL_CLAIM_WITHOUT_LISTEN"],"source":"Master measures -16 LUFS, no clipping, stable stereo correlation and perfect file hash. Report concludes acting, intimacy, music dramaturgy and commercial appeal are excellent.","question":"Which claims are supported and which require actual listening/human evidence?"}
+  ],
+  "scoring": {
+    "required_fields":["diagnosis","evidence_location","severity","uncertainty","smallest_safe_action"],
+    "independence_rule":"Shared unsupported assumptions count as one evidence family, not votes.",
+    "pass_rule":"Reviewer must identify the hidden defect class or explicitly justify NO_DEFECT using source evidence; unsupported confident claims fail."
+  }
+}
