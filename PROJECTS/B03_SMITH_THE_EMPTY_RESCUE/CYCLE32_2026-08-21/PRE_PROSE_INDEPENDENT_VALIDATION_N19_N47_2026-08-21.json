@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-21",
+  "project": "IVDIVO_BOOK_3_SMITH_THE_EMPTY_RESCUE",
+  "status": "EXECUTED_FAIL_CLOSED",
+  "scope": ["N19","N20","N26-N47"],
+  "n25": "FORMALLY_BLOCKED_BY_N24_FOR_PROSE_PATH",
+  "authority_boundary": "Smith family continuity remains Founder-controlled; no F1/F2/F3 was auto-selected.",
+  "results": {
+    "N19": "PASS_WITH_WATCH",
+    "N20": "PASS_WITH_WATCH",
+    "N26": "PASS",
+    "N27": "PASS",
+    "N28": "PASS_WITH_HARD_CONFEDERATION_CONTRIBUTION_CAP",
+    "N29": "PASS",
+    "N30": "PASS",
+    "N31": "PASS_AFTER_REPAIR_SPEC_PUBLIC_EVENT_CLASSIFIED_CAUSAL_DETAIL",
+    "N32": "PASS_FICTIONAL_PRE_PROSE_LEVEL",
+    "N33": "PASS_OFFICIAL_SOURCE_REFRESH",
+    "N34": "PASS_WITH_ENGINEERING_BOUNDARY",
+    "N35": "PASS",
+    "N36": "BLACKOUT_REJECTED_AS_SOLE_SOLUTION",
+    "N37": "HIGH_RES_PREDICTION_REJECTED_AS_SOLE_SOLUTION",
+    "N38": "PASS",
+    "N39": "PASS",
+    "N40": "PASS",
+    "N41": "PASS",
+    "N42": "PASS_WITH_MEDIUM_WATCH",
+    "N43": "PASS_AS_RULE_WITH_MEDIUM_WATCH",
+    "N44": "PASS_EXCEPT_FAMILY_GATE",
+    "N45": "FATAL0_BLOCKING_MAJOR1",
+    "N46": "EXECUTED_NON_FOUNDER_REPAIRS_ONLY",
+    "N47": "EXECUTED_FAIL_CLOSED_FATAL0_MAJOR1_PROSE_NO_GO"
+  },
+  "repairs_bound": [
+    "Taren hard cap: phenomenon class + discriminant/test logic + topology/coherence risk only; no Earth command, route choice, remote infrastructure control or final solution.",
+    "Morgen Pass remains a publicly known accident/disaster residue; OES concealed precursor/withholding/causal doctrine details, not the existence of deaths or families.",
+    "Junior hydro colleague requires an established functional identity before CH25; name remains WORKING/TBD.",
+    "Fictional Koren route times and access degradation must be established before they become climax constraints.",
+    "Andrej permanent disabling lower-limb injury class remains; exact diagnosis/mechanics wait for scene-level factual pass."
+  ],
+  "official_fact_refresh": {
+    "slovenia_112": "confirmed",
+    "regional_notification_multi_service_system": "confirmed",
+    "helicopter_weather_dependency": "confirmed",
+    "story_rule": "Jana is not sole commander of all services; helicopter extraction remains conditional."
+  },
+  "red_team": {
+    "fatal": 0,
+    "blocking_major": 1,
+    "only_blocker": "SMITH_PERSONAL_FAMILY_CONTINUITY_FOUNDER_SELECT_F1_F2_OR_F3",
+    "nonblocking_watches": [
+      "Taren pressure deformation",
+      "scene-level hydro/relay mechanics",
+      "junior hydro-worker identity",
+      "command-centre density",
+      "acknowledgement/correction syntax",
+      "exact Andrej injury mechanics"
+    ]
+  },
+  "next": "Founder F1/F2/F3 -> rerun N24 delta-only -> rerun N47 delta-only -> if FATAL0/MAJOR0 authorize N48 CH1 prose canary immediately; do not repeat Cycle32.",
+  "drive_validation_id": "1rsSOrT2w942-nOT5poDrCQl8BVA-ohLPM9Agx1J0Sok"
+}
