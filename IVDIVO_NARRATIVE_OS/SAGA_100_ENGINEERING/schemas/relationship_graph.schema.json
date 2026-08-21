@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://ivdivo.local/saga100/schemas/relationship_graph.schema.json",
+  "title":"IVDIVO Saga100 Relationship Bridge Graph",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["graph_id","nodes","edges"],
+  "properties":{
+    "graph_id":{"type":"string"},
+    "nodes":{"type":"array","minItems":2,"items":{"type":"object","additionalProperties":false,"required":["node_id","kind","home_line"],"properties":{"node_id":{"type":"string"},"kind":{"enum":["CHARACTER","FAMILY","INSTITUTION","COMMUNITY","SYNTHETIC_OR_NONHUMAN_ACTOR"]},"home_line":{"enum":["SMITH_OES","ORBITAL","CONFEDERATION_FRONTIER","CROSSING_SHARED","FOUNDATION","OTHER"]},"authority_status":{"enum":["CANON","LOCKED","WORKING","OPTION","UNKNOWN"]}}}},
+    "edges":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["edge_id","a","b","relationship_type","state_before","state_after","material_effect","reset_forbidden"],"properties":{"edge_id":{"type":"string"},"a":{"type":"string"},"b":{"type":"string"},"relationship_type":{"enum":["FAMILY","FRIENDSHIP","ROMANCE","MENTORSHIP","RIVALRY","PROFESSIONAL","CIVIC_DEPENDENCY","OTHER"]},"state_before":{"type":"string"},"state_after":{"type":"string"},"material_effect":{"type":"array","minItems":1,"items":{"type":"string"}},"reset_forbidden":{"type":"boolean"},"source_refs":{"type":"array","items":{"type":"string"}}}}
+  }
+}
