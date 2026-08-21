@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ivdivo.local/schemas/IVDIVO_CHECKPOINT_LINEAGE_SCHEMA_v1.json",
+  "title": "IVDIVO Checkpoint Lineage Ledger",
+  "type": "object",
+  "required": ["entries"],
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["entry_id", "work_unit", "checkpoint_id", "checkpoint_sha256", "generation", "status"],
+        "properties": {
+          "entry_id": {"type": "string", "minLength": 1},
+          "work_unit": {"type": "string", "minLength": 1},
+          "checkpoint_id": {"type": "string", "minLength": 1},
+          "checkpoint_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "parent_entry_id": {"type": ["string", "null"]},
+          "generation": {"type": "integer", "minimum": 0},
+          "status": {"enum": ["ACTIVE", "SUPERSEDED", "INCIDENT_EVIDENCE", "GC_ELIGIBLE"]},
+          "repo_main_sha": {"type": ["string", "null"]},
+          "state_revision": {"type": ["string", "null"]},
+          "incident_id": {"type": ["string", "null"]},
+          "notes": {"type": "array"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
