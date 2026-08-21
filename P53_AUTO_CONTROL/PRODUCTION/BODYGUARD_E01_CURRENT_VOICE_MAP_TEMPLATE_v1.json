@@ -1,0 +1,110 @@
+{
+  "artifact": "BODYGUARD_E01_CURRENT_VOICE_MAP_TEMPLATE_v1",
+  "status": "UNBOUND",
+  "authority": {
+    "request_manifest": "BODYGUARD_E01_ELEVENLABS_ROUGH_RENDER_REQUESTS_v1.json",
+    "spoken_sequence_sha256": "2af60ca3b58bc90a2863e8f6dbee2bf7541d6b1f2315e78704f12ca214da9149",
+    "exact_text_locked": true
+  },
+  "selection_law": {
+    "voice_ids_must_remain_null_until_audition": true,
+    "judge_with_loudness_matched_no_music_samples": true,
+    "lead_pair_test_required": true,
+    "no_voice_selected_because_of_celebrity_resemblance": true,
+    "no_villain_coding_in_casting": true,
+    "temporary_pilot_cast_is_not_permanent_season_lock": true
+  },
+  "roles": {
+    "NAOMI_PARK": {
+      "voice_id": null,
+      "provider": "ElevenLabs",
+      "model_id": null,
+      "selection_status": "PENDING_AUDITION",
+      "candidate_A": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_B": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_C": {"voice_id": null, "score": null, "hard_fail": null},
+      "audition_block_ids": ["BG_E01_S1_028","BG_E01_S2_088","BG_E01_S2_111","BG_E01_S3_122","BG_E01_S3_160","BG_E01_S3_171"],
+      "voice_brief": "Grounded precise low-mezzo/alto; danger increases clarity, not volume; emotional exposure gets quieter.",
+      "pair_tests": ["ELI_KWON","CAL_MERCER","TALIA_WYNN"],
+      "lock": {"pilot_lock": false, "season_lock": false, "approved_by": null, "approved_at": null}
+    },
+    "ELI_KWON": {
+      "voice_id": null,
+      "provider": "ElevenLabs",
+      "model_id": null,
+      "selection_status": "PENDING_AUDITION",
+      "candidate_A": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_B": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_C": {"voice_id": null, "score": null, "hard_fail": null},
+      "audition_block_ids": ["BG_E01_S1_018","BG_E01_S1_035","BG_E01_S2_087","BG_E01_S2_106","BG_E01_S3_121","BG_E01_S3_180","BG_E01_S3_190"],
+      "voice_brief": "Public polish / private economy; musician rhythm; vulnerability without helplessness.",
+      "pair_tests": ["NAOMI_PARK"],
+      "lock": {"pilot_lock": false, "season_lock": false, "approved_by": null, "approved_at": null}
+    },
+    "CAL_MERCER": {
+      "voice_id": null,
+      "provider": "ElevenLabs",
+      "model_id": null,
+      "selection_status": "PENDING_AUDITION",
+      "candidate_A": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_B": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_C": {"voice_id": null, "score": null, "hard_fail": null},
+      "audition_block_ids": ["BG_E01_S1_002","BG_E01_S1_038","BG_E01_S3_138","BG_E01_S3_157"],
+      "voice_brief": "Practical field-security register; clipped but human; no thug or villain coding.",
+      "pair_tests": ["NAOMI_PARK"],
+      "lock": {"pilot_lock": false, "season_lock": false, "approved_by": null, "approved_at": null}
+    },
+    "TALIA_WYNN": {
+      "voice_id": null,
+      "provider": "ElevenLabs",
+      "model_id": null,
+      "selection_status": "PENDING_AUDITION",
+      "candidate_A": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_B": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_C": {"voice_id": null, "score": null, "hard_fail": null},
+      "audition_block_ids": ["BG_E01_S1_008","BG_E01_S1_054","BG_E01_S3_119","BG_E01_S3_135"],
+      "voice_brief": "Stage/cue authority; habitual production rhythm; no guilt coding.",
+      "pair_tests": ["NAOMI_PARK"],
+      "lock": {"pilot_lock": false, "season_lock": false, "approved_by": null, "approved_at": null}
+    },
+    "CREW_UTILITY": {
+      "voice_id": null,
+      "provider": "ElevenLabs",
+      "model_id": null,
+      "selection_status": "PENDING_AUDITION",
+      "candidate_A": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_B": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_C": {"voice_id": null, "score": null, "hard_fail": null},
+      "audition_block_ids": ["BG_E01_S1_009","BG_E01_S2_114"],
+      "voice_brief": "Neutral working crew; short protocol responses.",
+      "pair_tests": [],
+      "lock": {"pilot_lock": false, "season_lock": false, "approved_by": null, "approved_at": null}
+    },
+    "MEDIA_REPORTER": {
+      "voice_id": null,
+      "provider": "ElevenLabs",
+      "model_id": null,
+      "selection_status": "PENDING_AUDITION",
+      "candidate_A": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_B": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_C": {"voice_id": null, "score": null, "hard_fail": null},
+      "audition_block_ids": ["BG_E01_S3_165"],
+      "voice_brief": "Clean compressed broadcast certainty; no tabloid sneer.",
+      "pair_tests": [],
+      "lock": {"pilot_lock": false, "season_lock": false, "approved_by": null, "approved_at": null}
+    },
+    "THREAT_VOICE": {
+      "voice_id": null,
+      "provider": "ElevenLabs",
+      "model_id": null,
+      "selection_status": "PENDING_AUDITION",
+      "candidate_A": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_B": {"voice_id": null, "score": null, "hard_fail": null},
+      "candidate_C": {"voice_id": null, "score": null, "hard_fail": null},
+      "audition_block_ids": ["BG_E01_S3_120"],
+      "voice_brief": "Neutral human voice; controlled and precise; no monster effect, whisper or theatrical menace.",
+      "pair_tests": [],
+      "lock": {"pilot_lock": false, "season_lock": false, "approved_by": null, "approved_at": null}
+    }
+  }
+}
