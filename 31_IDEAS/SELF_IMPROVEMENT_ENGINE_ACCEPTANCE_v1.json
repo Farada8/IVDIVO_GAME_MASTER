@@ -1,0 +1,88 @@
+{
+  "artifact": "IVDIVO_SELF_IMPROVEMENT_ENGINE_ACCEPTANCE_v1",
+  "date": "2026-08-21",
+  "engine_authority": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
+  "registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+  "schema": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json",
+  "utility": "tools/ivdivo_self_improvement.py",
+  "checks": [
+    {
+      "gate": "EXISTING_LEARNING_LAYER_RECONCILIATION",
+      "status": "PASS",
+      "evidence": "Existing 14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY and 15_REFERENCE_MECHANISM_UPGRADE_PACK were discovered before finalization. Self-Improvement Engine is defined as lifecycle/application layer above delta intake, not a replacement."
+    },
+    {
+      "gate": "CANONICAL_ENGINE_LAW_PERSISTED",
+      "status": "PASS",
+      "evidence": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md committed to GitHub main."
+    },
+    {
+      "gate": "MACHINE_SCHEMA_PERSISTED",
+      "status": "PASS",
+      "evidence": "31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json committed to GitHub main."
+    },
+    {
+      "gate": "LIVE_REGISTRY_INITIALIZED",
+      "status": "PASS",
+      "evidence": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json initialized with six real current/candidate mechanisms and explicit next actions."
+    },
+    {
+      "gate": "ANTI_LOSS_LIVE_REGISTRY_RELEVANT_AUDIT",
+      "status": "PASS",
+      "evidence": "Relevant invariant audit found zero orphan/provenance/promotion-integrity defects in the six initialized records."
+    },
+    {
+      "gate": "ADVERSARIAL_ORPHAN_TEST",
+      "status": "PASS",
+      "evidence": "Fixture with active candidate missing next_action triggers ORPHAN_NO_NEXT_ACTION."
+    },
+    {
+      "gate": "ADVERSARIAL_PROMOTION_TARGET_TEST",
+      "status": "PASS",
+      "evidence": "Fixture promoted without application_targets triggers PROMOTED_WITHOUT_TARGET."
+    },
+    {
+      "gate": "ADVERSARIAL_VERIFICATION_EVIDENCE_TEST",
+      "status": "PASS",
+      "evidence": "Fixture VERIFIED_CURRENT without verification_evidence triggers VERIFIED_WITHOUT_EVIDENCE."
+    },
+    {
+      "gate": "ADVERSARIAL_HOLD_TRIGGER_TEST",
+      "status": "PASS",
+      "evidence": "Fixture HOLD_WITH_TRIGGER without hold_trigger triggers HOLD_WITHOUT_TRIGGER."
+    },
+    {
+      "gate": "CURRENT_WRITING_ROUTER_INTEGRATION",
+      "status": "PASS",
+      "evidence": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md now includes the engine, live registry and IMPROVEMENT REGISTRY SWEEP in universal boot."
+    },
+    {
+      "gate": "CURRENT_MACHINE_STATE_INTEGRATION",
+      "status": "PASS",
+      "evidence": "CURRENT_IVDIVO_SYSTEM_STATE.json schema v1.3 includes self_improvement pointers, anti-loss invariants and resume_algorithm IMPROVEMENT_REGISTRY_SWEEP."
+    },
+    {
+      "gate": "DRIVE_MIRROR_ENGINE",
+      "status": "PASS",
+      "evidence": "Drive ID 1lbAaKASLAKFzCiGEF84Xrs-ziwQhCJASwLfDh3UGwSg created and populated."
+    },
+    {
+      "gate": "DRIVE_MIRROR_REGISTRY",
+      "status": "PASS",
+      "evidence": "Drive ID 1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs created and populated."
+    },
+    {
+      "gate": "EXACT_GITHUB_UTILITY_RUNTIME_SMOKE",
+      "status": "NOT_RUN",
+      "evidence": "Current connector can read/write GitHub content but does not mount repository files into the local execution container; byte-for-byte utility runtime was not fabricated."
+    }
+  ],
+  "verdict": {
+    "operational_self_improvement_routing_and_registry": "GO",
+    "machine_registry_anti_loss_contract": "GO",
+    "executable_cli_utility": "PROVISIONAL_UNTIL_RUNTIME_SMOKE",
+    "candidate_SI_0006": "APPLIED_UNVERIFIED"
+  },
+  "exact_next_action": "In an environment with the repository checked out, run `python tools/ivdivo_self_improvement.py audit` and negative lifecycle fixtures; if green, record evidence in SI-0006 and promote SI-0006 to VERIFIED_CURRENT.",
+  "no_claim_boundary": "Do not say the exact GitHub utility has executed successfully until the runtime smoke actually occurs."
+}
