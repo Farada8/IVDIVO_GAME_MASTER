@@ -2,7 +2,8 @@
 
 **Status:** CURRENT OPERATIONAL HANDOFF — NOT STORY CANON  
 **Updated:** 2026-08-21  
-**Machine state:** `CURRENT_IVDIVO_SYSTEM_STATE.json`
+**Machine state:** `CURRENT_IVDIVO_SYSTEM_STATE.json`  
+**Machine execution pointer:** `CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json`
 
 ## Primary law
 
@@ -10,7 +11,7 @@ Do not make the Founder restate recoverable work and do not wait for another `и
 
 Before substantive work:
 
-`CURRENT AUTHORITY -> CURRENT_IVDIVO_SYSTEM_STATE.json -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY SWEEP -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT UNTIL REAL GATE`
+`CURRENT AUTHORITY -> CURRENT_IVDIVO_SYSTEM_STATE.json -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY + LEARNING LEDGER SWEEP -> SELF-IMPROVEMENT PRIORITY REBASE -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT UNTIL REAL GATE`
 
 A sibling-chat statement is discovery context only until its actual result/persisted artifact/status/version/gates are located and verified. If accessible, recover actual chat-only work before asking the Founder to repeat it.
 
@@ -80,29 +81,70 @@ Every Claude/Grok/GPT/other-model job receives one bounded RUN CARD:
 
 For comparative review, models receive the same locked source/version and protected invariants. Separate DIAGNOSIS from PROPOSED FIX. Repeated agreement from models sharing the same source/assumption is one evidence family, not triangulation.
 
-Every result is classified `ACCEPT / ACCEPT_WITH_MODIFICATION / HOLD_FOR_TEST / REJECT` (plus duplicate/conflict labels when routing requires them). A recommendation is not integrated until the controlling artifact/state is actually changed and verified.
+Every result is classified `ACCEPT / ACCEPT_WITH_MODIFICATION / HOLD_FOR_TEST / REJECT` plus duplicate/conflict labels when routing requires them. A recommendation is not integrated until the controlling artifact/state is actually changed and verified.
 
 If an external AI discovers a reusable prompt/process/program/craft mechanism, return it as an improvement candidate with scope, evidence family, dedupe check, pilot, regression risk, application targets and rollback path. External AI does not self-promote it.
 
 Parallel models may work only on independent PASS-gated dependency branches. Merge through artifacts/hashes/manifests, never conversational consensus.
 
-## Self-improvement / anti-loss engine
+## Self-improvement / anti-loss engine — CURRENT v2
 
-Canonical engine: `IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md`.
-Machine registry: `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json`.
-Schema: `31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json`.
+Current router: `CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md`.
+Current governing engine: `IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md`.
+Core kernels: `IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md`.
+Machine state: `CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json`.
+Machine config: `SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json`.
+Improvement registry: `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json`.
+Registry schema: `31_IDEAS/IMPROVEMENT_REGISTRY_SCHEMA_v1.json`.
+Learning ledger: `CURRENT_IVDIVO_LEARNING_LEDGER.json`.
+Learning schema: `LEARNING_LEDGER_SCHEMA_v1.json`.
 Utility: `tools/ivdivo_self_improvement.py`.
+Historical/base only: `IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md`.
 
-Lifecycle:
-`DISCOVER -> CAPTURE -> DEDUPE -> CLASSIFY -> DEVELOP -> EVIDENCE -> PILOT/CANARY -> RED TEAM/REGRESSION -> PROMOTION DECISION -> APPLY -> VERIFY -> MONITOR -> RETAIN/ROLLBACK`.
+Current status: **v2 VERIFIED_CURRENT**. SI-0007 is VERIFIED_CURRENT; SI-0006 is SUPERSEDED historical/base. The utility was verified against exact current Git blob identity; the current state records registry audit PASS, best-candidate routing, and negative lifecycle fixtures correctly failing invalid promotion/verification states.
 
-A useful idea is not saved merely because it is mentioned. Non-terminal candidates require provenance, owner, next action and next gate. Promotion must name application targets and survive write-through/readback. The engine may also merge/narrow/supersede obsolete rules; more rules are not automatically better.
+Priority order:
+`P0 AUTHORITY/INTEGRITY -> P1 STRONG COMPLETE BOOKS -> P2 LOCKED BOOK TO HIGH-QUALITY AUDIO -> P3 PRODUCTION PERFORMANCE -> P4 ENGINES/TOOLS/PROMPTS -> P5 RESEARCH/LEARNING -> P6 BROADER IVDIVO`.
 
-Current engine status remains initial acceptance / applied-unverified until its executable registry utility smoke and pointer readbacks are green. Do not falsely mark that evidence complete.
+Operating loop:
+`RESTORE -> DELTA/FRESHNESS -> IMPROVEMENT REGISTRY -> LEARNING LEDGER -> BOTTLENECK -> RETRIEVE KNOWN GOOD MECHANISMS -> EXECUTE PRIMARY PRODUCTION -> RECORD REAL DEFECTS/SUCCESSES -> ADVANCE ONE JUSTIFIED IMPROVEMENT -> PILOT/RED TEAM -> APPLY -> VERIFY -> PERSIST -> CONTINUE`.
+
+WIP guard: one primary meta-integration at a time; up to two dependency-independent bounded pilots. Meta-work must not starve story/audio production unless it blocks P0–P2 or Founder explicitly switches focus.
+
+Evidence classes stay separate: automated tests do not prove literary quality; model review is not Human Signal; dry run is not live provider proof; predicted market quality is not real market behavior.
+
+A useful idea is not saved merely because it is mentioned. Non-terminal candidates require provenance, owner, next action and next gate. Promotion requires application targets; VERIFIED_CURRENT requires verification evidence; HOLD requires a trigger; terminal states require reasons where applicable.
+
+## Verified machine execution implementation — v11.2
+
+Current machine pointer: `CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json`.
+
+Current package: `IVDIVO_ENGINE_v11_2_CONTINUOUS_EXECUTION_CURRENT.zip`.
+Drive ID: `1xsZ6SrhHQpEMu_xhC9e-M6QUTO5dIfc3`.
+Runtime version: `IVDIVO-ENGINE/6.2.0-continuous-execution`.
+SHA-256: `d7985036fc97b74019aa74bf422d03f2f6cbe2d5f6e30736bb70032fc399ff4f`.
+Fresh-unzip regression: **290/290 pytest PASS**.
+Integration report Drive ID: `1Q7ewWz7-Mt-Ss39a6_r15m48nodzmjiO`.
+Checksum Drive ID: `1-aZXa53KSqsRBJjqdr_s0TvnwBXl60U8`.
+Fresh-unzip log Drive ID: `17FmrAuQ4p1lg54RqrFQFrQBPP7I8iD4l`.
+
+This is executable implementation below the current Narrative/Audio/Self-Improvement authorities, not a parallel canon. It adds tested machine contracts for:
+- fail-closed persisted-state continuation;
+- explicit no-heartbeat continuation gates;
+- chat-only sibling-result ingestion and persistence;
+- semantic delta dedupe/universalization screening;
+- cross-model task-assignment guards;
+- bounded Run Card validation;
+- future-critical asset escrow;
+- shared musical-fact verification;
+- provider-neutral staged voice-audition/binding evidence;
+- Self-Improvement v2 WIP/research/engine-maturity/evidence/lifecycle compatibility checks.
+
+The read-only continuation resolver may return CONTINUE only when no blocker exists, continuation is explicitly enabled, repeated continuation is explicitly not required, and the declared next action explicitly has `safe=true`, `zero_cost=true`, `reversible=true`, `tool_executable_here=true`. Missing fields fail closed. It does not call providers, spend credits or mutate canon.
 
 ## Runtime craft deltas from current reference sweep
 
-Current Runtime Craft Addendum internal v1.3 now includes:
+Current Runtime Craft Addendum internal v1.3 includes:
 - **Scene-Question / Outcome Integrity:** a scene outcome must answer or causally transform the same immediate question created by the active goal; an unrelated shock is not a legitimate scene turn.
 - **Transformation-Scale / Stable-Core Series:** completed story needs non-resettable consequence, not mandatory personality reversal; recurring leads can remain recognizably themselves while knowledge, relationships, status, obligations and world consequences accumulate.
 - **One-Listen Causal Comprehension:** current universal audio evidence-object/source-identity law for information-heavy scenes.
@@ -113,7 +155,7 @@ These are abstract mechanisms from REFERENCE ONLY craft sources and must not reo
 
 When a newer mechanism is found in another project/dialog:
 
-`DISCOVER -> VERIFY/RECOVER ACTUAL RESULT -> SEMANTIC DEDUPE -> ABSTRACT PROJECT-NEUTRAL CONTRACT -> RED TEAM/PILOT AS NEEDED -> CLASSIFY -> PROMOTE / PROJECT-SPECIFIC / HOLD / REJECT -> WRITE THROUGH -> UPDATE ROUTERS + MACHINE STATE -> READBACK VERIFY`
+`DISCOVER -> VERIFY/RECOVER ACTUAL RESULT -> SEMANTIC DEDUPE -> ABSTRACT PROJECT-NEUTRAL CONTRACT -> RED TEAM/PILOT AS NEEDED -> CLASSIFY -> PROMOTE / PROJECT-SPECIFIC / HOLD / REJECT -> WRITE THROUGH -> UPDATE ROUTERS + MACHINE STATE -> READBACK VERIFY`.
 
 Never promote merely because a filename is newer, a test count is larger or several models prefer it.
 
@@ -127,6 +169,8 @@ PR #45 `continuous-studio-merge` is CLOSED / NOT MERGED / SUPERSEDED BY NEWER MA
 
 A real stale-SHA collision occurred during the 2026-08-21 synchronization pass because a sibling dialog advanced GitHub main with the Self-Improvement Engine while another worker was preparing the old D09 state update. The stale write was rejected and the worker rebased instead of force-overwriting. Treat this as production evidence that `CONCURRENT_DIALOG_REBASE + STALE_WORK_GATE` is required and functioning.
 
+This v11.2 integration itself also rebased after the persisted system advanced to Project-Wide Continuation v1.1 and Self-Improvement v2; the release was rebuilt and re-regressed instead of publishing the pre-rebase candidate.
+
 ## Audio inheritance
 
 Current audio authority = v3.3 process chain plus current provider/casting canary. Microphone Choreography is integrated.
@@ -134,7 +178,7 @@ Current audio authority = v3.3 process chain plus current provider/casting canar
 Current universal pitched-story consistency gate:
 `AUDIO_PRODUCTION/IVDIVO_AUDIO_SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT_v1.0.md`.
 
-Audio new-chat boot Drive ID `1ui02P9RH_B62DxDE6OjxCLrkB6fMOfZF0WcRtRtvOoU` now also inherits Project-Wide Continuation v1.1, Self-Improvement Engine, Runtime Craft v1.3 and multi-model Run Card v1.1.
+Audio new-chat boot Drive ID `1ui02P9RH_B62DxDE6OjxCLrkB6fMOfZF0WcRtRtvOoU` inherits Project-Wide Continuation v1.1, Self-Improvement v2, Runtime Craft v1.3, multi-model Run Card v1.1 and current machine execution routing.
 
 If a listener must recognize one musical fact across hum/voice, performance-sound, SFX/procedural and music paths, all those events must inherit one shared musical identity contract and be verified post-render. Do not independently generate clue-bearing versions and merely hope they match.
 
