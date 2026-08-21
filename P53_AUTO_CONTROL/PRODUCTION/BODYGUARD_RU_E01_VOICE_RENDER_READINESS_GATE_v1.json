@@ -1,0 +1,31 @@
+{
+  "artifact": "BODYGUARD_RU_E01_VOICE_RENDER_READINESS_GATE_v1",
+  "verdict": "NO_GO_FOR_PAID_S1",
+  "passes": {
+    "source_authority_restored": true,
+    "ru_anchor_exact_source_integrity": true,
+    "p51_p52_p53_design_invariants_available": true,
+    "lead_voice_passports_v2_available": true,
+    "ru_voice_design_candidate_briefs_available": true,
+    "S0_S4_test_architecture_available": true
+  },
+  "holds": {
+    "ru_native_language_review": true,
+    "ru_stage_audio_security_terminology_review": true,
+    "authenticated_provider_preflight": true,
+    "real_candidate_audio": true,
+    "pair_audio": true,
+    "native_blind_listener_evidence": true
+  },
+  "next_unlock_sequence": [
+    "RU native/professional review v0.3 anchors + glossary v0.2",
+    "promote audited anchors to RU audition-anchor v1.0",
+    "provider read-only preflight",
+    "S0B two-job technical canary",
+    "S1 fair anchors",
+    "real listening + P51/P52/P53",
+    "S2/S3 survivors",
+    "S4 pair",
+    "provisional RU pilot lock"
+  ]
+}
