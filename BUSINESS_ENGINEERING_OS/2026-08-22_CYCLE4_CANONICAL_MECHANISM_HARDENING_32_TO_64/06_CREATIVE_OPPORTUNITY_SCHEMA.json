@@ -1,0 +1,10 @@
+{
+  "$schema":"IVDIVO.BusinessEngineering.CreativeOpportunity.v1",
+  "identity":{"opportunity_id":"string","title":"string","opportunity_type":"grant|bursary|residency|commission|public_art|film|heritage|international","issuer":"string"},
+  "authority":{"official_source_url":"string|null","source_status":"DISCOVERY_ONLY|OFFICIAL","verified_at":"iso8601|null","evidence_family_id":"string|null"},
+  "facts":{"deadline":"date|null","budget_total_eur":"number|null","artist_fee_eur":"number|null","living_support_eur":"number|null","production_budget_eur":"number|null","eligibility":"object|null"},
+  "gates":{"deadline_verified":"bool","budget_verified":"bool","eligibility_verified":"bool","geography_verified":"bool","partner_required":"bool|null","professional_status_required":"string|null"},
+  "economics":{"application_hours":"number|null","match_funding_eur":"number|null","cash_timing":"object|null","tax_effect":"null","net_artist_income_eur":"null"},
+  "state":"DISCOVERY|OFFICIAL_FOUND|ELIGIBILITY_CHECKED|BUDGET_CHECKED|DEADLINE_CHECKED|FIT_TESTED|READY|HOLD|REJECT",
+  "constraints":["no total_score","unknown values stay null","project budget != artist income","official-source freshness required"]
+}
