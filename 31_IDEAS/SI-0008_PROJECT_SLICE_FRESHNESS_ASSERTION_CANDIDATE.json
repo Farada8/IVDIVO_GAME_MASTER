@@ -1,12 +1,12 @@
 {
-  "candidate_id": "INVALID_HISTORICAL_SI-0008_COLLISION",
+  "candidate_id": "INVALID_HISTORICAL_ID_COLLISION",
   "title": "SUPERSEDED ID COLLISION — Project-slice freshness assertion",
-  "status": "SUPERSEDED_ID_COLLISION",
+  "status": "SUPERSEDED_ID_COLLISION_REDIRECT_ONLY",
   "updated": "2026-08-21",
-  "reason": "SI-0008 is already the durable identity of Full Chat Transcript Recovery in the current improvement registry family. This file was created during B03 Cycle32 before the family registry was re-read.",
-  "correct_candidate_id": "SI-0014",
-  "correct_path": "31_IDEAS/REGISTRY_EXTENSIONS/SI-0014_PROJECT_SLICE_FRESHNESS_ASSERTION.json",
+  "reason": "The freshness candidate was first assigned SI-0008 before a full registry-family read. SI-0008 already belongs to Full Chat Transcript Recovery. During fresh-main rebase, SI-0014 was also found to have been concurrently allocated to Session Resilience / Durable Recovery. Neither identity may be reused.",
+  "correct_candidate_id": "SI-0015",
+  "correct_path": "31_IDEAS/REGISTRY_EXTENSIONS/SI-0015_PROJECT_SLICE_FRESHNESS_ASSERTION.json",
   "authority": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json",
-  "must_not": ["treat this redirect as a registry candidate","reuse SI-0008 for project-slice freshness","delete this provenance record until all old pointers are migrated"],
-  "learning": "Candidate ID allocation is itself a freshness/registry-integrity operation. Re-read the registry family immediately before assigning a new candidate ID."
+  "must_not": ["treat this redirect as a registry candidate","reuse SI-0008 or SI-0014 for project-slice freshness","delete this provenance record until old pointers are migrated"],
+  "learning": "Candidate ID allocation and merge are freshness-sensitive registry transactions. Re-read the full registry family before allocation and again before merge whenever main advanced."
 }
