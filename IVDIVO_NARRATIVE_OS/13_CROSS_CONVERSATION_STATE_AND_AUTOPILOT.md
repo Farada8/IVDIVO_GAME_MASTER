@@ -1,7 +1,7 @@
 # IVDIVO — CROSS-CONVERSATION STATE & AUTOPILOT
 
 **Status:** CANONICAL OPERATIONAL CONTROL LAYER  
-**Version:** 1.2  
+**Version:** 1.3  
 **Established:** 2026-08-21  
 **Updated:** 2026-08-21  
 **Scope:** all IVDIVO writing/development/revision/reference workflows and all AI sessions that participate in them.  
@@ -24,6 +24,8 @@ If the next production obligation is unambiguous, unblocked and executable in th
 
 A session does not imply invisible background work after it stops. Persisted state makes the next executing session resume correctly.
 
+If a previous conversation ends abruptly and the Founder pastes/copies that conversation into a new one, invoke `18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md` before normal continuation.
+
 ---
 
 ## 2. UNIVERSAL PROJECT BOOT
@@ -42,6 +44,10 @@ Required source order when relevant and available:
 Authority and freshness are separate questions. A structurally authoritative document may contain an obsolete progress pointer; preserve its law while resolving the newest compatible provenance-valid production frontier.
 
 If a required authority/source/version genuinely conflicts and cannot be reconciled, fail closed as `AUTHORITY_UNRESOLVED` or `FRONTIER_CONFLICT` rather than reconstructing canon from memory.
+
+### Pasted-transcript boot override
+
+If the input contains a copied/exported prior conversation or generated big-paste transcript, first classify it as `FULL_TRANSCRIPT / PARTIAL_TRANSCRIPT / UNKNOWN_COMPLETENESS / MULTI_TRANSCRIPT_BUNDLE`, run the transcript Recovery Ledger, verify any “saved/locked/passed” claims against persisted stores, recover substantive chat-only outputs as candidates, then resume normal project boot from the reconciled frontier.
 
 ---
 
@@ -95,6 +101,18 @@ Every active workflow should maintain equivalent semantics for:
 - `state_revision` / freshness marker where available;
 - `updated_at` / `updated_by` / provenance;
 - `state_status`.
+
+When recovering from a pasted conversation, also preserve equivalent semantics for:
+- `recovery_id`;
+- transcript completeness;
+- chunks processed/final tail processed;
+- recovered Founder directives;
+- artifact claims checked;
+- verified persisted artifacts;
+- `CHAT_ONLY_CANDIDATE / DISCOVERY_ONLY / UNRECOVERABLE_CHAT_ONLY` items;
+- unresolved conflicts/unknowns;
+- system-improvement candidates;
+- recovery write/readback status.
 
 File existence alone is not proof that an artifact is current. Reuse requires valid authority, matching upstream versions/hashes where used, no explicit invalidation, and no newer accepted superseding artifact.
 
@@ -354,17 +372,26 @@ Do not duplicate locked masters into handoff folders. Handoff files point to aut
 ## 16. CONTINUATION COMMAND BEHAVIOR
 
 When Founder says `и / дальше / продолжай / делай / работай` or opens a recoverable project continuation:
-1. restore persisted authority/state;
-2. resolve newest verified frontier;
-3. delta-scan concurrent/newer neighbor artifacts;
-4. run stale-work/reuse checks;
-5. recompute open gates/DAG;
-6. execute highest unblocked obligation;
-7. validate, persist, verify;
-8. re-read state and continue through further unblocked dependent stages in the same work block;
-9. stop only on a mandatory stop state.
+1. if a pasted/exported previous transcript is present, run `18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md` first;
+2. restore persisted authority/state;
+3. resolve newest verified frontier;
+4. delta-scan concurrent/newer neighbor artifacts;
+5. run stale-work/reuse checks;
+6. recompute open gates/DAG;
+7. execute highest unblocked obligation;
+8. validate, persist, verify;
+9. re-read state and continue through further unblocked dependent stages in the same work block;
+10. stop only on a mandatory stop state.
 
 Never respond to a recoverable continuation with generic advice or “what should I do next?”.
+
+### Full-chat emergency transfer
+
+Founder workflow `OLD CHAT -> Ctrl+A -> Ctrl+C -> NEW CHAT -> paste -> продолжай` is explicitly supported.
+
+The receiving session owns extraction, verification, dedupe, persistence and continuation. The Founder should not need to annotate the copied conversation manually unless a real authority ambiguity remains after recovery.
+
+Do not dump the entire transcript into canon. Persist the material deltas, recovered artifacts/state and reusable learnings on their correct controlling surfaces.
 
 ---
 
@@ -380,7 +407,8 @@ Before claiming synchronization:
 4. record open FATAL/MAJOR and gates;
 5. record exact next obligation/blocker;
 6. verify readback;
-7. if a newer sibling-dialog state appeared, rebase/reconcile first.
+7. if a newer sibling-dialog state appeared, rebase/reconcile first;
+8. if this session recovered a pasted transcript, verify `RECOVERY_STATUS = INGESTION_COMPLETE` or record exactly what recovery gap remains.
 
 If persistence is unavailable, say so. Never claim a save that did not happen.
 
@@ -391,5 +419,7 @@ If persistence is unavailable, say so. Never claim a save that did not happen.
 **STORY FIRST. CHARACTER SECOND. WORLD THROUGH STORY. SAGA THROUGH COMPLETED BOOKS.**
 
 **PERSISTED STATE DRIVES THE WORK. REPEATED “И” IS OPTIONAL SHORTHAND, NOT WORKFLOW PLUMBING.**
+
+**A COPIED OLD CHAT IS A RECOVERY CORPUS: VERIFY, RECOVER, DEDUPE, PERSIST, LEARN, THEN CONTINUE.**
 
 **RESTORE ONCE, EXECUTE FORWARD, VALIDATE, PERSIST, REBASE WHEN NEEDED, AND CONTINUE UNTIL A REAL GATE STOPS EXECUTABLE WORK.**
