@@ -1,0 +1,42 @@
+{
+  "schema_version": "ivdivo.durable_write_transaction.pilot_evidence/1.0",
+  "transaction_id": "SI0014-CTRL-PILOT-001",
+  "project_id": "SELF_IMPROVEMENT",
+  "work_unit": "CONTROLLED_PARTIAL_GITHUB_DRIVE_RECOVERY",
+  "authority_snapshot_at_execution": {
+    "repo_main_sha": "e5f1a50d2960941840687d16939def3b61b5fb57",
+    "state_revision": "39cccc520dc6e8b6db3c693d5572ebf8437c063b",
+    "reconciler_blob_sha": "93f1d4e8a5f44897ccb0341b1fbcafc7d1e697f2"
+  },
+  "payload_sha256": "7c50155866b239a38fdfa5be348c9e263995557af52f92d37af91a3183c6e1ee",
+  "idempotency_keys": {
+    "A1_GITHUB": "ivdtx:d4902c86e5457a4a448f605dd36bd130382b0c45112217ba47ca612dc55ecccd",
+    "A2_DRIVE": "ivdtx:3c9ef6cc15b12009f1588318d5ab2b9ebc2c9e96d42cd12f5254afad3efa3729"
+  },
+  "partial_state": {
+    "A1_GITHUB": {"side_effect_state": "CONFIRMED", "readback_verified": true, "external_reference": "git_blob:5651e33379d3921b8a77713ad875f119ea45bacb"},
+    "A2_DRIVE": {"side_effect_state": "NOT_STARTED", "readback_verified": false},
+    "reconcile_result": {"decision": "EXECUTE_MISSING_SAFE_ACTIONS", "reason": "ONLY_SAFE_ACTIONS_REMAIN", "action_ids": ["A2_DRIVE"]}
+  },
+  "recovered_state": {
+    "A1_GITHUB": {"side_effect_state": "CONFIRMED", "readback_verified": true, "payload_sha256": "7c50155866b239a38fdfa5be348c9e263995557af52f92d37af91a3183c6e1ee"},
+    "A2_DRIVE": {
+      "side_effect_state": "CONFIRMED",
+      "readback_verified": true,
+      "payload_sha256": "7c50155866b239a38fdfa5be348c9e263995557af52f92d37af91a3183c6e1ee",
+      "drive_document_id": "1LLVtur10_W2yD59np1Tm3jgJEmbyZE_MFMLXHrJnIp0",
+      "drive_revision_id": "AIroW35xgVi6I3_WUTB5VUtV-liS2t2fgy3jCOBsDkhWJigLf6rkPQ_mxby-Cz4PjO1KuoA8PDhHiKmk4JrWfJUktKwRfRMp_zUwdTDLr70"
+    },
+    "reconcile_result": {
+      "decision": "TRANSACTION_COMPLETE",
+      "reason": "ALL_ACTIONS_TERMINAL_AND_READBACK_VERIFIED",
+      "transaction_sha256": "12ec9b484acb7b77911246b0ea5b8115f10d1db3adc25bf7a76baf1f3a673564"
+    }
+  },
+  "final_execution_fresh_head_check": "PASS_MAIN_STILL_e5f1a50d2960941840687d16939def3b61b5fb57",
+  "post_pilot_rebase_branch_base": "9ecb752dced8055b11c520ebd89c21c6daff7867",
+  "evidence_class": "PERSISTED_READBACK_CONTROLLED_REAL_INTEGRATION",
+  "genuine_abrupt_session_evidence": false,
+  "authority_effect": "NONE",
+  "story_canon_effect": "NONE"
+}
