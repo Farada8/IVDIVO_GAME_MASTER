@@ -1,0 +1,35 @@
+{
+  "transaction_id":"RUN34-CONTROLLED-GH-DRIVE-001",
+  "status":"TRANSACTION_COMPLETE_AFTER_REBASE",
+  "authority_effect":"NONE",
+  "story_canon_effect":"NONE",
+  "initial_main_sha":"e5f1a50d2960941840687d16939def3b61b5fb57",
+  "recovery_main_sha":"e7b1825141561f9d781e114407e311c4a8790246",
+  "main_drift_commits":11,
+  "rebase_decision":"REBASE_FIRST_THEN_SCOPE_DELTA_SAFE",
+  "actions":[
+    {
+      "action_id":"A1_GITHUB_PAYLOAD",
+      "store":"GITHUB",
+      "side_effect_state":"CONFIRMED",
+      "readback_verified":true,
+      "marker":"RUN34_RECOVERY_PAYLOAD_V1"
+    },
+    {
+      "action_id":"A2_DRIVE_PAYLOAD",
+      "store":"DRIVE",
+      "side_effect_state":"CONFIRMED",
+      "readback_verified":true,
+      "marker":"RUN34_RECOVERY_PAYLOAD_V1",
+      "drive_file_id":"1IS7pZwClUGqWWWORw__sQGJEqSmbZafKCBRxgdTkUm4",
+      "drive_revision_id":"AIroW369MKQaZM6GRuqoG4MhHH0IK6cmuvRaOyHrk7GAqwJa0nIk4vrMpG7VXuDzellpBCASUF370T2iUzsQsmJXRry1OuuEQZgOC_pd0sg"
+    }
+  ],
+  "duplicate_write_count":0,
+  "force_overwrite_used":false,
+  "paid_or_irreversible_actions":0,
+  "false_resume_observed":false,
+  "evidence_class":"CONTROLLED_REAL_MULTI_STORE_RECOVERY_WITH_REAL_CONCURRENT_MAIN_DRIFT",
+  "does_not_claim":["INVOLUNTARY_OUTAGE_RECOVERY","HUMAN_SIGNAL","PROVIDER_EVIDENCE","MARKET_EVIDENCE","CANON_PROMOTION","SELF_IMPROVEMENT_PROMOTION"],
+  "next_gate":"FIRST_REAL_INVOLUNTARY_INTERRUPTION_RECOVERY_EVIDENCE"
+}
