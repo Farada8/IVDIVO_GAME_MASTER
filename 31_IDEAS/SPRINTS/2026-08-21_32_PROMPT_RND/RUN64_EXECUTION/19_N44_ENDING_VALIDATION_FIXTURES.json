@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_ENDING_FIXTURES",
+  "cases":[
+    {"type":"COMPLETE_ENDING","main_conflict_closed":true,"irreversible_consequence":"hero loses office but secures public evidence process","ordinary_aftershock":"moves into smaller home and returns to ordinary work under new terms","relationship_after":"bounded reconciliation, not reset","series_hook_after_resolution":true,"result":"PASS"},
+    {"type":"CLIFFHANGER_AS_ENDING","main_conflict_closed":false,"irreversible_consequence":"none","series_hook_after_resolution":false,"result":"FAIL_UNRESOLVED_MAIN_STORY"},
+    {"type":"EXPOSITION_EPILOGUE","main_conflict_closed":true,"ordinary_aftershock":"narrator explains what everyone learned but no changed behavior is shown","result":"REVISE_AFTERSHOCK_NOT_DRAMATIZED"},
+    {"type":"FRANCHISE_TEASER_ENDING","main_conflict_closed":true,"resolution":"current case closed","series_hook":"new anomaly appears after closure","series_hook_after_resolution":true,"result":"PASS_IF_CURRENT_PAYOFF_COMPLETE"},
+    {"type":"TEASER_REPLACES_CLIMAX","main_conflict_closed":false,"series_hook":"bigger villain revealed","series_hook_after_resolution":false,"result":"FAIL_FRANCHISE_REPLACES_STORY"}
+  ],
+  "hard_gate":"No final gate PASS when the current main conflict remains open. Aftermath must show permanent change in ordinary life/relationship/world, not only summarize theme. Series hook comes after resolution.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST"
+}
