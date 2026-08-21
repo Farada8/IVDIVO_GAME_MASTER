@@ -40,14 +40,19 @@ class ControlledProviderDispatchTests(unittest.TestCase):
             "status": "PASS",
             "authentication": {
                 "state": "AUTHENTICATED",
-                "method": "TEST_AUTHENTICATED_FIXTURE",
+                "method": "XI_API_KEY_RUNTIME_ENV",
                 "credential_persisted": False,
             },
             "provenance": {
                 "captured_at": datetime.now(timezone.utc).isoformat(),
-                "capture_method": "TEST_FIXTURE",
-                "capture_engine": "test_controlled_provider_dispatch",
-                "source": [{"path": "fixture", "http_status": 200}],
+                "capture_method": "DIRECT_AUTHENTICATED_READ_ONLY_API",
+                "capture_engine": "ivdivo.elevenlabs_snapshot_acquirer/1.0",
+                "source": [
+                    {"path": "/v1/user", "http_status": 200},
+                    {"path": "/v1/user/subscription", "http_status": 200},
+                    {"path": "/v1/models", "http_status": 200},
+                    {"path": "/v2/voices", "http_status": 200},
+                ],
             },
             "account": {"fingerprint_sha256": "a" * 64},
             "voices": voices if voices is not None else {"v1": {}, "v2": {}},
