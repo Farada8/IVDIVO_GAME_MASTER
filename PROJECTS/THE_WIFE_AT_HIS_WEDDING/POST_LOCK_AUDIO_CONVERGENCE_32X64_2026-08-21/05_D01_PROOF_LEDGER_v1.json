@@ -1,0 +1,25 @@
+{
+  "schema": "ivdivo.d01_post_lock_proof_ledger/1.0",
+  "date": "2026-08-21",
+  "internal_claims": [
+    {"id":"D01_LOCK","claim":"Founder Story Lock + Recording Authority issued","state":"PASS","evidence":"Drive 1eueZnnYaUGktaSXCcMIiOAUUcINmCTV6xATBdZ9B9UA"},
+    {"id":"E01_SOURCE","claim":"Exact source container retrieved and fingerprinted","state":"PASS","sha256":"df93823aff722d708f84488a75bbaaabb56c8537968de1db52125f8807913d82"},
+    {"id":"CAST_PORTABILITY_DEFECT","claim":"Wave10 cast readiness hard-coded Lesson Zero project roles","state":"CONFIRMED","evidence":"audio/studio/runtime/cast_readiness.py pre-patch"},
+    {"id":"CAST_SPEC_PATCH","claim":"Shared cast readiness accepts project-specific roles/terms/pair/fatigue while retaining defaults","state":"PASS_LOCAL_CANDIDATE","targeted_tests":"6/6 PASS"}
+  ],
+  "external_gates": [
+    {"gate":"AUTHENTICATED_PROVIDER_SNAPSHOT","state":"HOLD","evidence":null},
+    {"gate":"D01_REAL_VOICE_IDS","state":"HOLD","evidence":null},
+    {"gate":"D01_HUMAN_AUDITION","state":"HOLD","evidence":null},
+    {"gate":"D01_PRONUNCIATION_LOCK","state":"HOLD","evidence":null},
+    {"gate":"D01_LIVE_SMOKE_S01_S07","state":"HOLD","evidence":null},
+    {"gate":"D01_REAL_ALIGNMENT","state":"HOLD","evidence":null},
+    {"gate":"D01_BLIND_LISTENER","state":"HOLD","evidence":null},
+    {"gate":"D01_MEASURED_ECONOMICS","state":"HOLD","evidence":null}
+  ],
+  "fabricated_external_evidence": 0,
+  "story_mutations": 0,
+  "live_provider_calls_this_cycle": 0,
+  "paid_synthesis_this_cycle": 0,
+  "promotion_to_global_authority": "NOT_CLAIMED"
+}
