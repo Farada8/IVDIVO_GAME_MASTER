@@ -1,0 +1,134 @@
+{
+  "schema_version": "ivdivo.room917.e02_mc32_to_mc64_package/3.0",
+  "status": "COMPLETE_WORKING_PACKAGE_NOT_LIVE_RENDER_AUTHORITY",
+  "project": "ROOM 917 CALLS AT MIDNIGHT",
+  "episode": "E02 — LENI-BIRD",
+  "story_branch": "THE_INSURABLE_FIRE",
+  "source": {
+    "episode_words": 1409,
+    "scene_count": 3,
+    "authority": "current Phase D E01–03 story authority",
+    "current_execution_state": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
+    "frontier_at_build": "E01_POST_RENDER_EVALUATION_AND_SELECTIVE_REPAIR",
+    "scale_gate": "NO_SCALE_UNTIL_E01_V2_PROVEN"
+  },
+  "executed_prompt_stack": {
+    "name": "IVDIVO_MICROPHONE_CHOREOGRAPHY_PROMPT_STACK_v2.0",
+    "range": "MC-00..MC-31",
+    "prompt_count": 32,
+    "sequential_execution_complete": true,
+    "result_counts": {
+      "pass_or_pass_with_constraint": 26,
+      "not_applicable_currently": 2,
+      "rejected_by_story": 1,
+      "blocked_on_future_live_evidence_or_frontier": 3
+    },
+    "special_results": {
+      "MC-06": "NOT_APPLICABLE_CURRENTLY_REAL_STAGE",
+      "MC-09": "ELENA_JULIAN_NEAR_EAR_REJECTED_BY_STORY",
+      "MC-13": "NOT_APPLICABLE_CURRENTLY_REAL_STAGE_REHEARSAL",
+      "MC-29": "BLOCKED_ON_E02_LIVE_ALIGNMENT",
+      "MC-30": "BLOCKED_NO_DEMONSTRATED_E02_RENDER_DEFECT",
+      "MC-31": "BLOCKED_BY_LIVE_EVIDENCE_AND_CURRENT_E01_FRONTIER"
+    }
+  },
+  "evidence_grade_model": [
+    "SCRIPT_EXPLICIT",
+    "CONTINUITY_REQUIRED",
+    "DIRECTORIAL_INFERENCE",
+    "UNSUPPORTED"
+  ],
+  "corrected_staging_examples": [
+    {
+      "claim": "Julian opens alcove door and sets down two coffees",
+      "grade": "SCRIPT_EXPLICIT"
+    },
+    {
+      "claim": "Julian physically advances and stops on fourth-note confrontation",
+      "grade": "DIRECTORIAL_INFERENCE"
+    },
+    {
+      "claim": "Mina intends to go to the office",
+      "grade": "SCRIPT_EXPLICIT"
+    },
+    {
+      "claim": "Mina physically begins departing before Elena stops her",
+      "grade": "DIRECTORIAL_INFERENCE"
+    },
+    {
+      "claim": "Elena slides sealed envelope across wood",
+      "grade": "SCRIPT_EXPLICIT"
+    },
+    {
+      "claim": "Mina travels from old-board zone to reception",
+      "grade": "SCRIPT_EXPLICIT"
+    },
+    {
+      "claim": "Mina returns close enough to visually confirm hidden terminal digit",
+      "grade": "CONTINUITY_REQUIRED"
+    },
+    {
+      "claim": "Julian closes distance and occupies Elena work path at terminal reveal",
+      "grade": "DIRECTORIAL_INFERENCE"
+    }
+  ],
+  "synthesis": {
+    "primary_upgrade": "EVIDENCE_AWARE_SCENE_EMBODIMENT_ENGINE",
+    "key_new_mechanisms": [
+      "evidence grade on every staging assertion",
+      "motion economy and functional stillness",
+      "narrative POV separated from point of audition",
+      "causal geography",
+      "continuous body path as story logic",
+      "person identity separated from media identity",
+      "relationship authority controls spatial intimacy",
+      "object ownership/custody geometry",
+      "unknown geometry remains unknown",
+      "performance-body-space plausibility",
+      "musical fact passport",
+      "formal clue masking budget",
+      "absolute time derived from accepted alignment",
+      "defect-provenance selective repair",
+      "human listen remains non-simulatable"
+    ]
+  },
+  "next_prompt_stack": {
+    "name": "IVDIVO MICROPHONE CHOREOGRAPHY / SCENE EMBODIMENT ENGINE — 64-PROMPT STACK v3.0 CANDIDATE",
+    "prompt_count": 64,
+    "range": "MC-00..MC-63",
+    "status": "WORKING_CANDIDATE_NOT_UNIVERSAL_AUTHORITY",
+    "families": {
+      "A": "AUTHORITY_EVIDENCE_PROVENANCE",
+      "B": "DRAMATURGY_RELATIONSHIP_LISTENER_INFERENCE",
+      "C": "GEOMETRY_BODY_OBJECT_CONTINUITY",
+      "D": "PERFORMANCE_VOICE_PHYSICAL_PLAUSIBILITY",
+      "E": "MEDIA_ACOUSTIC_MUSICAL_IDENTITY",
+      "F": "FOLEY_EDIT_TIMING_MIX",
+      "G": "QC_HUMAN_COMPREHENSION_SELECTIVE_REPAIR",
+      "H": "PRODUCTION_SCALE_HANDOFF_LEARNING"
+    },
+    "promotion_requires": [
+      "sequential execution on at least one suitable locked scene",
+      "second materially different validation scene/project",
+      "semantic dedupe and redundancy removal",
+      "proof of added production value vs v2",
+      "no silent story rewrite",
+      "no simulated human evidence"
+    ]
+  },
+  "files": [
+    "00_INDEX_AND_AUTHORITY.md",
+    "01_MC00_MC07_EXECUTION.md",
+    "02_MC08_MC15_EXECUTION.md",
+    "03_MC16_MC23_EXECUTION.md",
+    "04_MC24_MC31_EXECUTION.md",
+    "05_CROSS_PROMPT_SYNTHESIS_AND_CONCLUSIONS.md",
+    "06_MC64_NEXT_PROMPT_STACK_v3.0_CANDIDATE.md",
+    "07_NEXT_EXECUTION_ROADMAP.md",
+    "MANIFEST.json"
+  ],
+  "next_safe_action": "PERSIST_AND_REVIEW_PACKAGE; ROOM917 production frontier remains E01 CURRENT_EXECUTION_STATE",
+  "live_provider_calls": 0,
+  "story_text_modified": false,
+  "current_execution_state_modified": false
+}
