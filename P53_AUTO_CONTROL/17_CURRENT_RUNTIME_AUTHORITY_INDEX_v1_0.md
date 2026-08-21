@@ -1,4 +1,4 @@
-# IVDIVO — CURRENT RUNTIME AUTHORITY INDEX v1.0
+# IVDIVO — CURRENT RUNTIME AUTHORITY INDEX v1.1
 
 **STATUS:** CURRENT
 
@@ -22,9 +22,25 @@ Use this index to restore the active writing/production control stack in a new o
 11. `10_ACTIVE_TEXT_COMPLIANCE_LOG.md`
 12. `11_RETROACTIVE_TEXT_COMPLIANCE_AUDIT_QUEUE_v1_0.md`
 
+## MULTILINGUAL VOICE / LOCALIZATION CONTROL
+
+13. `21_MULTILINGUAL_CHARACTER_VOICE_ARCHITECTURE_v2_0.md` — CURRENT multilingual authority; v1.0 superseded.
+14. `22_MULTILINGUAL_VOICE_PROMPT_SUITE_PMV01_PMV24_v2_0.md` — 24 executable multilingual voice/localization routines.
+15. `23_MULTILINGUAL_VOICE_COMPACT_AUTORUN_ROUTER_v1_0.md` — short routing layer.
+16. `AUDITS/BODYGUARD_MULTILINGUAL_VOICE_24_PROMPT_EXECUTION_REPORT_v1_0.md` — first 24-pass case execution.
+17. `PRODUCTION/BODYGUARD_MULTILINGUAL_VOICE_CURRENT_EXECUTION_STATE_v1.json` — current project frontier.
+18. `PRODUCTION/BODYGUARD_LEAD_CHARACTER_VOICE_PASSPORTS_v2.json` — provider-neutral Naomi/Eli identity.
+
+Multilingual law:
+- BODYGUARD English Recording Master remains source-text authority.
+- Russian is first production localization / first voice-creation pilot.
+- voice identity is the Character Voice Passport, not a provider voice ID.
+- localization must rerun P51/P52/P53 and professional/clue/consent gates.
+- do not scale multiple languages before pilot + business/rights evidence.
+
 ## RESTORE RULE
 
-A new chat should not ask the Founder to paste P53 again when these authorities are accessible.
+A new chat should not ask the Founder to paste P53 or multilingual voice rules again when these authorities are accessible.
 
 Restore the current project/book authority, then inherit this runtime automatically.
 
