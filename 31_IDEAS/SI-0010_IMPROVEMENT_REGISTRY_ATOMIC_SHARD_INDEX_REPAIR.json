@@ -1,0 +1,26 @@
+{
+  "candidate_id": "SI-0010",
+  "title": "Improvement Registry atomic shard/index repair",
+  "candidate_type": "TOOLING_OR_AUTOMATION",
+  "status": "READY_FOR_PILOT",
+  "scope": "UNIVERSAL_IVDIVO",
+  "source_provenance": [
+    {"source_type": "GITHUB", "locator": "31_IDEAS/TRANSCRIPT_RECOVERY_32_PROMPT_SPRINT_2026-08-21/02_32_EXECUTIONS_AND_FINDINGS_v1.0.md#P24", "date": "2026-08-21"},
+    {"source_type": "GITHUB", "locator": "31_IDEAS/SI-0008_FULL_CHAT_TRANSCRIPT_RECOVERY_EXTENSION.json", "date": "2026-08-21", "notes": "SI-0008 records central registry safe-compaction limitation"}
+  ],
+  "problem_or_opportunity": "The canonical Improvement Registry is stored as a large minified whole-file JSON. Safe connector writes may require complete replacement, so SI-0008 was preserved as a separate shard rather than risking loss of existing candidates. This creates a divergence risk between central index and candidate shards.",
+  "proposed_mechanism": "Evaluate and pilot a shard+index registry or transactional registry builder that loads canonical data, merges candidate shards, audits invariants, writes to a temporary artifact, validates IDs/references, and replaces current registry only after complete validation/readback. Never manually reconstruct the monolithic registry from summaries.",
+  "dedupe_relation": "NEW_SUPPORTING_MECHANISM",
+  "related_candidates": ["SI-0007", "SI-0008", "SI-0009"],
+  "expected_benefit": "Strengthens anti-loss guarantees and makes future self-improvement capture atomic, concurrency-safe and easier to audit.",
+  "evidence_state": "INTERNAL_EVIDENCE",
+  "priority_vector": {"impact": "HIGH", "recurrence": "SYSTEMIC", "effort": "MEDIUM", "regression_risk": "MEDIUM", "reversibility": "EASY", "urgency": "MEDIUM", "affected_surface": "PORTFOLIO"},
+  "owner_role": "Self-Improvement Registry Maintainer",
+  "next_action": "Execute N31-N32: compare monolithic, shard+index and transactional builder approaches; select smallest safe migration; test with a copy/fixture before touching canonical registry.",
+  "next_gate": "REGISTRY_ATOMICITY_PILOT_PASS",
+  "application_targets": [],
+  "verification_evidence": [],
+  "protected_authorities": ["31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json existing candidate content", "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md"],
+  "last_movement": "2026-08-21",
+  "notes": "BOUNDED PILOT A under ANTI-BEDLAM. No canonical registry rewrite until fixture validation and readback prove zero data loss."
+}
