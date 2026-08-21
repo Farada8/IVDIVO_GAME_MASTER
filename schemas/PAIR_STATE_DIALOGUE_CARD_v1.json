@@ -1,0 +1,26 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"ivdivo.pair_state_dialogue/1.0",
+  "title":"IVDIVO Pair-State Dialogue Card",
+  "type":"object",
+  "required":["scene_id","speaker_a","speaker_b","objective_a","objective_b","resistance","status_asymmetry","withheld_fact","tactic_sequence","listening_behavior","interruption_pressure","subtext","final_state_delta"],
+  "properties":{
+    "scene_id":{"type":"string"},
+    "speaker_a":{"type":"string"},
+    "speaker_b":{"type":"string"},
+    "objective_a":{"type":"string"},
+    "objective_b":{"type":"string"},
+    "resistance":{"type":"string"},
+    "status_asymmetry":{"type":"string"},
+    "withheld_fact":{"type":"string"},
+    "tactic_sequence":{"type":"array","minItems":2,"items":{"type":"object","required":["speaker","tactic","trigger_for_change"],"properties":{"speaker":{"type":"string"},"tactic":{"type":"string"},"trigger_for_change":{"type":"string"}}}},
+    "listening_behavior":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "interruption_pressure":{"type":"string"},
+    "subtext":{"type":"string"},
+    "final_state_delta":{"type":"string"},
+    "p51_required":{"type":"boolean"},
+    "p52_required":{"type":"boolean"},
+    "p53_class":{"type":["string","null"],"enum":["A","B","C","D","E","F","G","H","I",null]},
+    "relationship_authority_ref":{"type":["string","null"]}
+  }
+}
