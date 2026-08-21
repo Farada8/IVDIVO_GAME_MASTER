@@ -1,0 +1,41 @@
+{
+  "artifact": "BODYGUARD_MULTILINGUAL_VOICE_CURRENT_EXECUTION_STATE_v2",
+  "updated": "2026-08-21",
+  "architecture": "v2.0",
+  "prompt_suite": "PMV01-PMV24_v2.0",
+  "execution_report": "v1.1_CORRECTED",
+  "prompts_executed": 24,
+  "source_text_authority": "EN_RECORDING_MASTER_v1.6",
+  "first_production_localization": "RU",
+  "first_voice_creation_pilot": "RU",
+  "ru_anchor_artifact": "BODYGUARD_E01_RU_LOCALIZATION_ANCHORS_WORKING_v0.2.json",
+  "ru_terminology": "BODYGUARD_RU_PROTECTION_STAGE_AUDIO_TERMINOLOGY_WORKING_v0.1.md",
+  "silent_reactions": "BODYGUARD_E01_RU_SILENT_REACTION_ANCHORS_WORKING_v1.json",
+  "ru_s1_manifest": "BODYGUARD_E01_RU_S1_FAIR_ANCHOR_MANIFEST_WORKING_v1.json",
+  "lead_voice_passports": "BODYGUARD_LEAD_CHARACTER_VOICE_PASSPORTS_v2.json",
+  "localization_correction": {
+    "v1_execution_report": "SUPERSEDED",
+    "reason": "function-equivalence drift detected in 6 working RU anchors before lock",
+    "corrected": "YES",
+    "ru_text_lock": "NO"
+  },
+  "second_voice_edition": "EN",
+  "third_stage": "SPANISH_REGIONAL_FORK",
+  "prepared_not_scaled": ["DE", "IT"],
+  "voice_identity_model": "PROVIDER_NEUTRAL_CHARACTER_VOICE_PASSPORT",
+  "same_voice_id_across_languages": "OPTIONAL_ONLY_IF_ALL_LOCALE_GATES_PASS",
+  "current_unblocked": [
+    "native/professional RU terminology review",
+    "RU Naomi/Eli anchor lock after QA",
+    "provider-neutral RU voice design candidate specs"
+  ],
+  "current_external_gate": "ELEVENLABS_AUTHENTICATED_READ_ONLY_PREFLIGHT_THEN_RU_S0",
+  "prohibited": [
+    "use superseded execution report v1.0 as authority",
+    "full five-language season generation before pilot evidence",
+    "voice lock from metadata/descriptions",
+    "treat RU as source story canon",
+    "automatic same-voice mandate across locales",
+    "fake native-listener or audio PASS"
+  ]
+}
