@@ -1,0 +1,12 @@
+{
+  "ru_spoken_lines_v03": 190,
+  "semantic_static_verdict": "PASS",
+  "render_plan_v02_blocks": 57,
+  "render_plan_coverage": {"expected":190,"covered":190,"unique":190,"ordered":true,"pass":true},
+  "audio_qc_fixture_results": [
+    {"fixture":"clean","sample_rate":48000,"clip_samples":0,"verdict":"PASS"},
+    {"fixture":"intentionally_clipped","sample_rate":48000,"clip_samples":12000,"verdict":"FAIL"}
+  ],
+  "note": "Audio results are synthetic program fixtures only; no project voice WAV is implied.",
+  "next_prompt_count": 32
+}
