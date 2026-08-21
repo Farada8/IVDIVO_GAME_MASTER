@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ivdivo.local/schemas/IVDIVO_CURRENT_SYSTEM_STATE_SCHEMA_v1_2.json",
+  "title": "IVDIVO Current Cross-Conversation System State",
+  "description": "Machine-readable routing/resume state. This schema validates continuity metadata; it never outranks project canon or current source-of-truth artifacts.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "updated",
+    "status",
+    "purpose",
+    "authority_order",
+    "repository",
+    "current_routers",
+    "resume_algorithm",
+    "cross_dialog_policy",
+    "portfolio_frontier",
+    "idea_to_story_engine",
+    "audio_system",
+    "multi_ai",
+    "state_status"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.2"},
+    "updated": {"type": "string"},
+    "status": {"type": "string"},
+    "purpose": {"type": "string", "minLength": 1},
+    "authority_order": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    },
+    "repository": {
+      "type": "object",
+      "required": ["full_name", "branch"],
+      "properties": {
+        "full_name": {"type": "string"},
+        "branch": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "current_routers": {
+      "type": "object",
+      "required": ["writing", "autopilot", "audio"],
+      "properties": {
+        "writing": {"type": "string"},
+        "autopilot": {"type": "string"},
+        "multi_model_prompts": {"type": "string"},
+        "cross_ai_handoff": {"type": "string"},
+        "book_chat_starter": {"type": "string"},
+        "runtime_craft_addendum": {"type": "string"},
+        "research_lifecycle_bridge": {"type": "string"},
+        "audio": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "resume_algorithm": {
+      "type": "array",
+      "minItems": 5,
+      "items": {"type": "string"}
+    },
+    "cross_dialog_policy": {
+      "type": "object",
+      "required": ["repeated_short_command_required", "stale_write_policy", "stop_only_on"],
+      "properties": {
+        "repeated_short_command_required": {"type": "boolean", "const": false},
+        "short_commands_are_resume_shorthand": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "neighbor_chat_claim_without_persisted_artifact": {"type": "string"},
+        "promotion_flow": {"type": "string"},
+        "stale_write_policy": {"type": "string"},
+        "stop_only_on": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "portfolio_policy": {"type": "string"},
+    "portfolio_frontier": {
+      "type": "object",
+      "required": ["active_project"],
+      "properties": {
+        "text_locked_or_text_complete": {"type": "array", "items": {"type": "string"}},
+        "active_project": {"$ref": "#/$defs/projectFrontier"},
+        "queue_after_active": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "project_downstream_frontiers": {
+      "type": "object",
+      "additionalProperties": {"$ref": "#/$defs/downstreamFrontier"}
+    },
+    "research_library": {
+      "type": "object",
+      "properties": {
+        "strict_lifecycle_ledger": {"type": "string"},
+        "strict_complete_core": {"type": "integer", "minimum": 0},
+        "core_total": {"type": "integer", "minimum": 1},
+        "latest_pass": {"type": "integer", "minimum": 0},
+        "runtime_bridge": {"type": "string"},
+        "blocked_sources": {"type": "array", "items": {"type": "string"}},
+        "standing_laws": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "idea_to_story_engine": {
+      "type": "object",
+      "required": ["current_execution_core", "recovery_status"],
+      "properties": {
+        "current_execution_core": {"type": "string"},
+        "current_execution_core_evidence": {"type": "string"},
+        "recovery_upgrade_candidate": {"type": "string"},
+        "recovery_status": {"type": "string"},
+        "candidate_mechanisms_allowed_for_bounded_inheritance": {"type": "array", "items": {"type": "string"}},
+        "promotion_blockers": {"type": "array", "items": {"type": "string"}},
+        "verification_note": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "audio_system": {
+      "type": "object",
+      "properties": {
+        "current_studio_router": {"type": "string"},
+        "microphone_choreography_integrated": {"type": "boolean"},
+        "provider_canary_contract": {"type": "string"},
+        "casting_cascade": {"type": "string"},
+        "cross_dialog_audio_boot_drive_id": {"type": "string"},
+        "shared_musical_fact_contract": {"type": "string"},
+        "shared_musical_fact_status": {"type": "string"},
+        "shared_musical_fact_reason": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "multi_ai": {
+      "type": "object",
+      "required": ["one_shared_state", "parallel_work", "handoff_required_fields", "recommendation_dispositions"],
+      "properties": {
+        "one_shared_state": {"type": "boolean", "const": true},
+        "parallel_work": {"type": "string"},
+        "canonical_prompt_pack": {"type": "string"},
+        "handoff_required_fields": {"type": "array", "items": {"type": "string"}},
+        "recommendation_dispositions": {"type": "array", "items": {"type": "string"}},
+        "superseded_candidate_pr": {"type": "object"}
+      },
+      "additionalProperties": true
+    },
+    "recent_verified_main_integration": {"type": "array", "items": {"type": "string"}},
+    "state_status": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "projectFrontier": {
+      "type": "object",
+      "required": ["project_id", "title", "current_phase", "next_unblocked_obligation"],
+      "properties": {
+        "project_id": {"type": "string"},
+        "title": {"type": "string"},
+        "line": {"type": "string"},
+        "mode": {"type": "string"},
+        "current_phase": {"type": "string"},
+        "last_completed_artifact": {"type": "string"},
+        "last_completed_drive_id": {"type": "string"},
+        "completed_episode_frontier": {"type": "string"},
+        "main_conflict_status": {"type": "string"},
+        "next_unblocked_obligation": {"type": "string"},
+        "remaining_to_text_lock": {"type": "array", "items": {"type": "string"}},
+        "hard_locks": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "downstreamFrontier": {
+      "type": "object",
+      "required": ["project_id", "story_status", "next_unblocked_obligation"],
+      "properties": {
+        "project_id": {"type": "string"},
+        "title": {"type": "string"},
+        "story_status": {"type": "string"},
+        "recording_master": {"type": "object", "additionalProperties": true},
+        "audio_production_pack": {"type": "object", "additionalProperties": true},
+        "release_market_pack": {"type": "object", "additionalProperties": true},
+        "live_audio_status": {"type": "string"},
+        "voice_binding_status": {"type": "string"},
+        "visual_identity_status": {"type": "string"},
+        "next_unblocked_obligation": {"type": "string"},
+        "hard_stops": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
