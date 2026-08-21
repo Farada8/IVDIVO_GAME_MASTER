@@ -4,7 +4,14 @@ on:
   push:
     paths:
       - 'audio/studio/runtime/**'
-      - 'audio/studio/tests/test_audio_novel_runtime.py'
+      - 'audio/studio/*.py'
+      - 'audio/studio/tests/**'
+      - '.github/workflows/audio-studio-runtime-tests.yml'
+  pull_request:
+    paths:
+      - 'audio/studio/runtime/**'
+      - 'audio/studio/*.py'
+      - 'audio/studio/tests/**'
       - '.github/workflows/audio-studio-runtime-tests.yml'
   workflow_dispatch:
 
