@@ -65,7 +65,7 @@ Supply E96 and E120 frontiers in same logical mirror set; require stronger autho
 Output: evidence-backed disposition + changed artifacts + exact next gate.
 
 ### R15 — Interrupted multi-store transaction recovery
-Compose mirror-integrity checks with SI-0012 transaction primitives/Session Checkpoint after one store succeeds and the other does not.
+Compose mirror-integrity checks with current Run33/SI-0014 durable-write reconciler + checkpoint lineage after one store succeeds and the other does not. DO NOT create a second transaction-recovery engine.
 Output: evidence-backed disposition + changed artifacts + exact next gate.
 
 ### R16 — Mirror promotion gate
