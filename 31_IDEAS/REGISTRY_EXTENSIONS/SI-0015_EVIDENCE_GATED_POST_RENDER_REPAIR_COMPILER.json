@@ -1,0 +1,38 @@
+{
+  "candidate_id": "SI-0015",
+  "title": "Evidence-gated post-render repair compiler + executable persistence enforcement",
+  "candidate_type": "TOOLING_OR_AUTOMATION",
+  "status": "PILOT_PASS",
+  "scope": "GENRE_OR_DOMAIN",
+  "source_provenance": [
+    {"source_type":"FOUNDER","locator":"2026-08-21 directive: add concrete engineering modules/contracts and connect self-improvement engine","date":"2026-08-21","notes":"Direct Founder instruction"},
+    {"source_type":"GITHUB","locator":"AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/","version":"2.0","date":"2026-08-21","notes":"Executable ROOM917 project pilot"},
+    {"source_type":"GITHUB","locator":"IVDIVO_NARRATIVE_OS/17_CHAT_LOCAL_ASSET_PERSISTENCE_AND_ESCROW_v1.0.md","version":"1.0","date":"2026-08-21","notes":"Existing persistence law; candidate extends enforcement, not policy"},
+    {"source_type":"GITHUB_MIGRATION","locator":"31_IDEAS/PENDING/SI-0009_EVIDENCE_GATED_POST_RENDER_REPAIR_COMPILER.json","date":"2026-08-21","notes":"Identity migrated from colliding SI-0009 after full-family audit; canonical SI-0009 remains Reconciled Recovery State v2"}
+  ],
+  "problem_or_opportunity": "Correct persistence and selective-repair laws existed, but the E01 full master pointer could not reacquire bytes and downstream post-render work lacked a single schema-versioned executable chain from cue lineage through selective repair regression.",
+  "proposed_mechanism": "At critical-master acceptance enforce byte/readback escrow; for post-render repair use semantic cue lineage -> accepted/live timing -> signal intervals -> evidence classification -> selective repair plan -> explicit asset/gain patch render -> byte-level regression -> real human listen.",
+  "dedupe_relation": "EXTENSION",
+  "related_candidates": ["SI-0003","SI-0007","SI-0009"],
+  "expected_benefit": "Makes audio repair deterministic, fail-closed, auditable and reusable while reducing blanket fixes and protecting locked story/accepted audio.",
+  "evidence_state": "PRODUCTION_EVIDENCE",
+  "priority_vector": {"impact":"HIGH","recurrence":"RECURRING","effort":"MEDIUM","regression_risk":"MEDIUM","reversibility":"EASY","urgency":"HIGH","affected_surface":"DOMAIN"},
+  "development_contract": {
+    "identity_migration": "SI-0009 -> SI-0015; semantic mechanism preserved; old ID remains owned by recovery-state candidate",
+    "promotion_blocker":"SECOND_INDEPENDENT_LOCKED_AUDIO_PROJECT_REPLICATION",
+    "success_tests":["same schemas/modules operate without ROOM917-specific code changes","real bounded repair produced","positive regression PASS","unauthorized-change negative test FAIL","human listen shows no causal/story regression"]
+  },
+  "pilot_evidence": ["13 production-grounded E01 Scene1/2 semantic blocks compile with no invented timestamps","5 unit tests PASS","synthetic chain authorized exactly one room-bed patch and held two non-authorized intervals","room-bed renderer changed only authorized range with explicit asset+gain","positive byte-level regression PASS","deliberate unauthorized change FAIL as required","integration exposed and repaired two schema/interface mismatches"],
+  "red_team_findings": ["Project success must not auto-promote to domain law","Level alone cannot prove missing Foley or authorize patch","Human P003B cannot be simulated","Canonical module interfaces require schema-versioning and backward-compatible read boundaries","Candidate ID uniqueness is global across registry and pending surfaces"],
+  "promotion_level": "NONE",
+  "application_targets": ["AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/","AUDIO_PRODUCTION/ROOM917/CURRENT_POST_RENDER_ENGINEERING_POINTER.json","audio/studio/runtime/post_render_*"],
+  "verification_evidence": ["AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/VALIDATION_REPORT_v1.json","PR #103 merged universal post-render hardening"],
+  "protected_authorities": ["Locked story","Current Audio authority","Scene3 v1.3E lineage","Human evidence firewall","No-scale-until-second-project-proven"],
+  "owner_role": "Audio Engineering / Self-Improvement Reconciler",
+  "next_action": "Replicate unchanged core mechanism on a second independent locked audio project; require real human listen and regression evidence before domain promotion.",
+  "next_gate": "SECOND_PROJECT_REPLICATION_AND_DOMAIN_PROMOTION_REVIEW",
+  "hold_trigger": "Second suitable audio project with immutable master bytes, explicit cue contracts and human listen available.",
+  "terminal_reason": null,
+  "last_movement": "2026-08-21",
+  "notes": "Identity repair only. PILOT_PASS evidence is preserved; no scope promotion is implied by the new ID."
+}
