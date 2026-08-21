@@ -1,0 +1,66 @@
+{
+  "schema_version": "ivdivo.audio.wave9.trust_evidence/1.0",
+  "date": "2026-08-21",
+  "status": "WAVE9_01_08_ENGINEERING_COMPLETE_FRESH_CI_PASS_MERGE_PENDING",
+  "canonical_runtime": "audio/studio/runtime",
+  "branch_base_main_sha": "0a3fcaa37b7774382013230e5eacc26b61e175c1",
+  "pr": 132,
+  "external_evidence_module": "audio/studio/runtime/external_evidence_trust.py",
+  "wave9": {
+    "01": "PASS_ENGINEERING",
+    "02": "PASS_ENGINEERING",
+    "03": "PASS_BOUNDED",
+    "04": "PASS_ENGINEERING_CI",
+    "05": "PASS_ENGINEERING_CI",
+    "06": "PASS_ENGINEERING_CI",
+    "07": "PASS_ENGINEERING_CI",
+    "08": "PASS_FRESH_MERGE_RESULT_CI",
+    "09_plus": "HOLD_EXTERNAL"
+  },
+  "ci": {
+    "workflow": "Audio Studio Runtime Tests",
+    "run_id": 32521002618,
+    "run_number": 117,
+    "job_id": 96892943790,
+    "merge_result_sha": "f1248e3feacf7cd00f8113c8ab31e39d2d32a499",
+    "dedicated_runtime": "4/4 PASS",
+    "full_audio_studio": "186/186 PASS"
+  },
+  "readback_strength_order": [
+    "POINTER_PRESENT",
+    "POINTER_READABLE",
+    "CONTENT_HASH_VERIFIED",
+    "TRANSACTION_RECOVERABLE"
+  ],
+  "external_classes": [
+    "AUTH_PROVIDER",
+    "HUMAN_REVIEW",
+    "LIVE_AUDIO",
+    "REAL_ALIGNMENT",
+    "MEASURED_ECONOMICS",
+    "DURABLE_RAW_ASSET",
+    "DURABLE_RECOVERY",
+    "CROSS_PROJECT_LIVE"
+  ],
+  "evidence_ceiling": {
+    "provider_account_reads_this_block": 0,
+    "paid_synthesis_calls": 0,
+    "real_human_review_claims": 0,
+    "real_voice_locks": 0,
+    "pronunciation_locks": 0,
+    "real_lesson_zero_live_audio_created": false,
+    "real_lesson_zero_alignment_created": false,
+    "measured_lesson_zero_economics": false,
+    "cross_project_live_replication_claimed": false,
+    "story_mutations": 0
+  },
+  "exact_next_dependency": "AUTHENTICATED_PROVIDER_ACCESS_AND_FIRST_REAL_SECRET_FREE_SNAPSHOT",
+  "forbidden": [
+    "SECOND_AUDIO_ENGINE",
+    "CALLER_BOOLEAN_AS_EXTERNAL_TRUTH",
+    "VERIFIED_TRUE_WITHOUT_CLASS_VALIDATOR",
+    "POINTER_ONLY_DURABILITY_AS_PASS",
+    "SYNTHETIC_HUMAN_AS_HUMAN_REVIEW",
+    "ENGINEERING_CI_AS_PROVIDER_OR_HUMAN_PROOF"
+  ]
+}
