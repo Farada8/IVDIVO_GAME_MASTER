@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_CROSS_SETTING_FIXTURES",
+  "cases":[
+    {"setting":"ORBITAL_HABITAT","ordinary_objective":"teen needs cheap route home before rent-shared meal shift","constraint":"spin-sector maintenance closes the usual radial transfer and priority transit costs money","choice":"take a maintenance corridor escort, risking lateness at work and social embarrassment","world_reveal":"transport geometry, maintenance labor and household economics are learned through consequence","result":"PASS"},
+    {"setting":"OLD_EARTH_SECURITY","ordinary_objective":"Smith wants to remove one sealed object before public handover","constraint":"old compact grants custody while Confederation biosafety law requires joint sampling","choice":"admit a Confederation scientist and reveal an old OES archive clause","world_reveal":"jurisdiction and institutional history alter access and trust","result":"PASS"},
+    {"setting":"COMMERCIAL_HOSPITAL","ordinary_objective":"nurse wants to stay through a patient's transfer","constraint":"agency shift rules and staffing ratios make unpaid overrun threaten next week's hours","choice":"trade a later shift with a rival colleague","world_reveal":"work/money/bureaucracy enter as action rather than policy speech","result":"PASS"},
+    {"setting":"LORE_CONTROL","ordinary_objective":"none","constraint":"none","choice":"characters explain government and technology","world_reveal":"terminology only","result":"FAIL_EXPOSITION_ONLY"}
+  ],
+  "conclusion":"Civilization is legible when ordinary objectives collide with setting-specific constraints and force choices. Terminology without changed action/reader model fails.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST"
+}
