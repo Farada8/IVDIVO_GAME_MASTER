@@ -25,10 +25,11 @@ Restore this stack in new/adjacent chats. Founder does not need to paste P53 or 
 14. `25_MULTILINGUAL_VOICE_PROMPT_SUITE_PMV25_PMV48_v1_0.md` — mandatory PMV25–48 extension; total system = 48 passes.
 15. `23_MULTILINGUAL_VOICE_COMPACT_AUTORUN_ROUTER_v1_0.md`
 16. `AUDITS/BODYGUARD_MULTILINGUAL_VOICE_PMV25_PMV48_EXECUTION_REPORT_v1_0.md`
-17. `PRODUCTION/BODYGUARD_E01_RU_LOCALIZATION_ANCHORS_WORKING_v0_2.json` — existing corrected machine source; native/pro QA pending.
-18. `PRODUCTION/BODYGUARD_RU_PROTECTION_STAGE_AUDIO_GLOSSARY_v0_1.md`
-19. `PRODUCTION/BODYGUARD_LEAD_CHARACTER_VOICE_PASSPORTS_v1.json`
-20. `PRODUCTION/BODYGUARD_MULTILINGUAL_VOICE_CURRENT_STATE_v3.json`
+17. `PRODUCTION/BODYGUARD_E01_RU_LOCALIZATION_ANCHORS_WORKING_v0_3.json` — current reconciled working audition-anchor source; native/pro QA pending.
+18. `PRODUCTION/BODYGUARD_E01_RU_LOCALIZATION_ANCHORS_WORKING_v0_2.json` — historical working predecessor; do not use for new paid audition input.
+19. `PRODUCTION/BODYGUARD_RU_PROTECTION_STAGE_AUDIO_GLOSSARY_v0_1.md`
+20. `PRODUCTION/BODYGUARD_LEAD_CHARACTER_VOICE_PASSPORTS_v1.json`
+21. `PRODUCTION/BODYGUARD_MULTILINGUAL_VOICE_CURRENT_STATE_v3.json`
 
 ## MULTILINGUAL ENFORCEMENT
 English Recording Master v1.6 remains BODYGUARD source-text authority. Russian is first production localization/voice pilot. Before any localized audition or voice design:
@@ -38,6 +39,9 @@ English Recording Master v1.6 remains BODYGUARD source-text authority. Russian i
 Fluent wording is not enough. Lost clue/consent/professional/humor/status/relationship function = REVISE.
 
 Rollout: RU → EN → Spanish regional fork → DE/IT only when quality + distribution + rights evidence supports scale.
+
+## CURRENT BODYGUARD FRONTIER
+RU v0.3 anchors + RU glossary native/professional QA → freeze RU audition-anchor v1.0 → RU Naomi/Eli design candidates → read-only provider preflight → minimal S0 → S1 fair anchors → real listening/P51/P52/P53 → S3/S4 → RU E01 rough.
 
 ## PRIMARY COMMAND
 `RESTORE → DELTA SYNC → ROUTE → EXECUTE → COMPLIANCE → LEARN → PERSIST → CONTINUE`
