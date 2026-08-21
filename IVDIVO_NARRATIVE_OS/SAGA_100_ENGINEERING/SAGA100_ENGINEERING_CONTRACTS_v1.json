@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "WORKING_INTEGRATION_CANDIDATE",
+  "authority_rule": [
+    "FOUNDER_NEWEST_DIRECT_INSTRUCTION",
+    "LOCKED_PROJECT_AUTHORITY",
+    "MASTER_SAGA_BIBLE_AND_CURRENT_NARRATIVE_OS",
+    "SAGA100_ENGINEERING_LAYER",
+    "HISTORICAL_SEED_BANKS"
+  ],
+  "target": {
+    "universe": "IVDIVO",
+    "max_cycles": 25,
+    "books_per_cycle": 4,
+    "max_book_capacity": 100,
+    "padding_forbidden": true,
+    "default_cycle_roles": ["SMITH_OES", "ORBITAL", "CONFEDERATION_FRONTIER", "CROSSING"]
+  },
+  "identity": {
+    "project_id_rule": "PRESERVE_EXISTING_DURABLE_PROJECT_IDS",
+    "saga_slot_format": "S100-C{cycle:02d}-{S|O|C|X}",
+    "renumber_existing_projects": false,
+    "mapping_requires": "LEGACY_SEQUENCE_RECONCILIATION_PLUS_AUTHORITY_ACCEPTANCE"
+  },
+  "capability_ladder": [
+    "EXISTS_ELSEWHERE",
+    "KNOWN",
+    "CONTACT_ACCESS",
+    "RESTRICTED_USE",
+    "LOCAL_PROTOTYPE",
+    "LEGALIZED_USE",
+    "SCALABLE_MANUFACTURE",
+    "ORDINARY_LIFE"
+  ],
+  "book_state_machine": [
+    "IDEA",
+    "DISCOVERY",
+    "ARCHITECTURE",
+    "STORY_GATE",
+    "PROSE",
+    "DEVELOPMENT",
+    "FINAL_GATE",
+    "LOCK",
+    "DOWNSTREAM"
+  ],
+  "cycle_state_machine": [
+    "QUESTION_SELECTED",
+    "LINE_S_PLANNED",
+    "LINE_O_PLANNED",
+    "LINE_C_PLANNED",
+    "LINE_BOOKS_LOCALLY_CLOSED",
+    "CROSSING_ELIGIBLE",
+    "CROSSING_CLOSED",
+    "CIVILIZATION_DELTA_LOCKED",
+    "NEXT_CYCLE_ELIGIBLE"
+  ],
+  "modules": [
+    {"id":"M01","name":"AuthorityResolver","fail_closed":true},
+    {"id":"M02","name":"LegacySequenceReconciler","fail_closed":true},
+    {"id":"M03","name":"SagaCycleCompiler"},
+    {"id":"M04","name":"LineFunctionRouter"},
+    {"id":"M05","name":"CivilizationProgressionLedger"},
+    {"id":"M06","name":"PhilosophicalQuestionCompiler"},
+    {"id":"M07","name":"ProfessionalMatrixEngine"},
+    {"id":"M08","name":"OrbitalTransitionEngine"},
+    {"id":"M09","name":"ConfederationPossibilityEngine"},
+    {"id":"M10","name":"CrossingNecessityCompiler"},
+    {"id":"M11","name":"HumanProblemSelector"},
+    {"id":"M12","name":"BookIndependenceGate"},
+    {"id":"M13","name":"ConsequenceLedger"},
+    {"id":"M14","name":"ContinuitySubstitutionMatrix"},
+    {"id":"M15","name":"RelationshipBridgeGraph"},
+    {"id":"M16","name":"JurisdictionCapabilityMatrix"},
+    {"id":"M17","name":"TechnologyAccessLadder"},
+    {"id":"M18","name":"RevealBudgetManager"},
+    {"id":"M19","name":"GenerationalHandoffManager"},
+    {"id":"M20","name":"NoRepeatVectorizer"},
+    {"id":"M21","name":"CivilizationDeltaProofEngine"},
+    {"id":"M22","name":"CrossingRegressionGate"},
+    {"id":"M23","name":"BookStateMachine"},
+    {"id":"M24","name":"CycleStateMachine"},
+    {"id":"M25","name":"PortfolioScheduler"},
+    {"id":"M26","name":"ReferenceMechanismMinerAdapter"},
+    {"id":"M27","name":"ProofPackager"},
+    {"id":"M28","name":"RegressionRunner"},
+    {"id":"M29","name":"PersistenceMirrorProtocol"},
+    {"id":"M30","name":"CrossConversationFreshnessGuard"},
+    {"id":"M31","name":"SelfImprovementEvidenceBridge","auto_promotion":false},
+    {"id":"M32","name":"LongHorizonDriftDetector"}
+  ],
+  "contracts": {
+    "C_S100_01_CYCLE": {
+      "required_inputs": ["cycle_id","civilization_question","continuity_snapshot","consequence_ledger","jurisdiction_capability_state","relationship_graph","reveal_ceiling"],
+      "required_outputs": ["S_brief","O_brief","C_brief","X_dependency_spec","proof_obligations","no_repeat_vectors"],
+      "fail_if": ["EXPOSITION_ONLY_QUESTION","LINE_FUNCTION_DUPLICATION","FAN_SERVICE_CROSSING","OUTCOME_DEPENDS_ON_UNKNOWN_AUTHORITY"]
+    },
+    "C_S100_02_BOOK_INDEPENDENCE": {
+      "required": ["hero","want","why_now","opposition","wrong_strategy","price","midpoint","climax_choice","resolution","change"],
+      "fail_if": ["MAIN_CONFLICT_DEFERRED_TO_NEXT_BOOK"]
+    },
+    "C_S100_03_CIVILIZATION_PROGRESSION": {
+      "rule": "CAPABILITY_STATE_MAY_ADVANCE_ONLY_WITH_STORY_EVIDENCE_AND_RECORDED_CONSEQUENCE",
+      "skip_requires_exception_record": true
+    },
+    "C_S100_04_CROSSING_ELIGIBILITY": {
+      "requires": ["PREREQUISITE_LINE_CLOSURE","REAL_UPSTREAM_CONSEQUENCES_LOADED","TWO_OR_MORE_IRREDUCIBLE_LINE_DEPENDENCIES","ONE_RIGHTS_OR_JURISDICTION_CONFLICT","NO_ADVANCED_ACTOR_AUTO_COMMAND","SHARED_CIVILIZATION_DELTA"]
+    },
+    "C_S100_05_SELF_IMPROVEMENT_BRIDGE": {
+      "pipeline": ["OBSERVATION","CANDIDATE","EVIDENCE","PROOF_RUN","REGRESSION","ACCEPT_OR_HOLD_OR_REJECT","PROMOTION"],
+      "forbidden": ["AUTO_CANONIZATION","MODEL_AGREEMENT_AS_PROOF","DUPLICATE_ECHO_AS_INDEPENDENT_EVIDENCE"]
+    }
+  },
+  "proofs": [
+    "P_S100_BI_BOOK_INDEPENDENCE",
+    "P_S100_HP_HUMAN_PROBLEM_FIRST",
+    "P_S100_PM_PROFESSIONAL_MATRIX",
+    "P_S100_OT_ORBITAL_NEXT_STEP",
+    "P_S100_CP_CONFEDERATION_POSSIBILITY_LIMIT",
+    "P_S100_XN_CROSSING_NECESSITY",
+    "P_S100_JC_JURISDICTION_CAPABILITY_SEPARATION",
+    "P_S100_CD_CIVILIZATION_DELTA",
+    "P_S100_CC_CONSEQUENCE_CARRY",
+    "P_S100_NR_NO_REPETITION",
+    "P_S100_RB_RELATIONSHIP_BRIDGE",
+    "P_S100_PH_PHILOSOPHY_THROUGH_ACTION",
+    "P_S100_RG_SELECTIVE_REGRESSION",
+    "P_S100_PS_PERSISTENCE_READBACK"
+  ],
+  "stop_conditions": [
+    "FOUNDER_DECISION_REQUIRED",
+    "AUTHORITY_AMBIGUITY",
+    "UNRESOLVED_FATAL_OR_MAJOR",
+    "UPSTREAM_CONSEQUENCE_REQUIRED_FOR_OUTCOME",
+    "REQUIRED_HUMAN_OR_EXTERNAL_EVIDENCE_MISSING",
+    "REQUIRED_SOURCE_UNAVAILABLE"
+  ]
+}
