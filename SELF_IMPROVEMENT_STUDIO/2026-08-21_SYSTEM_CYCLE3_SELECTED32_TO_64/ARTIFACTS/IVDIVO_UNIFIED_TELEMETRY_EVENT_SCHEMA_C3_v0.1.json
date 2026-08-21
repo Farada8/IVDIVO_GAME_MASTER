@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.telemetry_event/c3-0.1",
+  "title": "IVDIVO Unified Telemetry Event",
+  "type": "object",
+  "required": ["event_id","domain","project_id","operation","status","evidence_class","source_refs","claim","what_this_cannot_prove"],
+  "properties": {
+    "event_id": {"type":"string"},
+    "timestamp": {"type":["string","null"]},
+    "domain": {"enum":["STORY","BOOK","AUDIO","CODE","RESEARCH","MULTI_AI","BUSINESS","SYSTEM"]},
+    "project_id": {"type":"string"},
+    "run_id": {"type":["string","null"]},
+    "operation": {"type":"string"},
+    "status": {"enum":["PASS","FAIL","PARTIAL","BLOCKED","HOLD","REJECTED","REPAIR_REQUIRED"]},
+    "evidence_class": {"type":"string"},
+    "source_refs": {"type":"array","items":{"type":"string"}},
+    "source_hashes": {"type":"array","items":{"type":"string"}},
+    "claim": {"type":"string"},
+    "what_this_cannot_prove": {"type":"array","items":{"type":"string"}},
+    "duration_seconds": {"type":["number","null"],"minimum":0},
+    "attempts": {"type":["integer","null"],"minimum":0},
+    "retries": {"type":["integer","null"],"minimum":0},
+    "provider_spend": {"type":["number","null"],"minimum":0},
+    "human_minutes": {"type":["number","null"],"minimum":0},
+    "root_cause_class": {"type":["string","null"]},
+    "next_gate": {"type":["string","null"]}
+  },
+  "additionalProperties": true,
+  "pilot_examples": [
+    {"event_id":"C3-D09-GATE","domain":"STORY","project_id":"D09","operation":"FINAL_STORY_GATE_READBACK","status":"PASS","evidence_class":"PERSISTED_EDITORIAL_GATE","source_refs":["Drive:1IZfae96Y4gS7JDqFrVxv-2O53zFwoWVOYzOV7zoDXL0"],"claim":"Final Story Gate PASS FATAL0 MAJOR0; Founder lock not issued","what_this_cannot_prove":["Founder approval","market success"]},
+    {"event_id":"C3-R917-P003A","domain":"AUDIO","project_id":"ROOM917","operation":"PRE_SCENE3_DENSITY_EVALUATION","status":"PARTIAL","evidence_class":"REAL_MASTER_AGGREGATE_TECHNICAL_MEASUREMENT","source_refs":["AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json"],"source_hashes":["231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8"],"claim":"D003 room-bed undercoverage proven at aggregate segment level; exact intervals unresolved","what_this_cannot_prove":["acting quality","music preference","commercial sellability"],"next_gate":"P003A2"},
+    {"event_id":"C3-GH-STALE","domain":"CODE","project_id":"SYSTEM_CYCLE3","operation":"STALE_SHA_MUTATION_CANARY","status":"PASS","evidence_class":"LIVE_GITHUB_TOOL_EXECUTION","source_refs":["C3_31_GUARDRAIL_LIVE_FIXTURE.json"],"claim":"old-SHA mutation rejected HTTP409 and correct committed bytes preserved","what_this_cannot_prove":["all connector failure modes","literary quality"]},
+    {"event_id":"C3-REF-CLAUDE","domain":"MULTI_AI","project_id":"ROOM917","operation":"PERSISTED_EXTERNAL_REPORT_RECONCILIATION","status":"PASS","evidence_class":"PERSISTED_EXTERNAL_MODEL_REPORT_PLUS_CURRENT_AUTHORITY_REVIEW","source_refs":["Drive:16zX-jPA0axsYYRqreSDc3WHKxzoGXdEIYg45t7eUhFE"],"claim":"historical Claude mechanisms dispositioned without reopening stale ROOM917 text authority","what_this_cannot_prove":["independent human signal","two-model parity"]}
+  ]
+}
