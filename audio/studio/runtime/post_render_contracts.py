@@ -155,8 +155,6 @@ def validate_asset_binding(binding: dict[str, Any]) -> dict[str, Any]:
     if int(binding["channels"]) not in (1, 2):
         raise ValueError("ASSET_CHANNELS_UNSUPPORTED")
     gain = _finite(binding["gain_db"], "gain_db")
-    if gain > 0:
-        raise ValueError("POSITIVE_PATCH_GAIN_FORBIDDEN")
     if binding["rights_status"] not in RIGHTS_PASS:
         raise ValueError("ASSET_RIGHTS_NOT_CLEARED")
     return {
@@ -167,15 +165,40 @@ def validate_asset_binding(binding: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def validate_headroom(*, source_true_peak_dbfs: float, predicted_added_peak_db: float, ceiling_dbfs: float = -1.0) -> dict[str, Any]:
-    """Pre-render guard. Silent clipping is forbidden; uncertain headroom is HOLD."""
-    source = _finite(source_true_peak_dbfs, "source_true_peak_dbfs")
-    added = _finite(predicted_added_peak_db, "predicted_added_peak_db")
+def validate_headroom(
+    *,
+    source_peak_dbfs: float,
+    added_signal_peak_dbfs: float,
+    ceiling_dbfs: float = -1.0,
+) -> dict[str, Any]:
+    """Conservative worst-case coherent peak-sum guard in the amplitude domain.
+
+    This is not a true-peak meter. It consumes measured/estimated peak evidence and
+    assumes worst-case phase alignment. Silent clipping is forbidden; uncertain or
+    unsafe headroom is HOLD.
+    """
+    source_db = _finite(source_peak_dbfs, "source_peak_dbfs")
+    added_db = _finite(added_signal_peak_dbfs, "added_signal_peak_dbfs")
     ceiling = _finite(ceiling_dbfs, "ceiling_dbfs")
-    predicted = source + max(0.0, added)
-    if predicted > ceiling:
-        return {"status": "HOLD_HEADROOM", "predicted_peak_dbfs": predicted, "ceiling_dbfs": ceiling}
-    return {"status": "PASS", "predicted_peak_dbfs": predicted, "ceiling_dbfs": ceiling}
+    if source_db > 0 or added_db > 0:
+        return {
+            "status": "HOLD_HEADROOM",
+            "reason": "INPUT_PEAK_ABOVE_0_DBFS",
+            "source_peak_dbfs": source_db,
+            "added_signal_peak_dbfs": added_db,
+            "ceiling_dbfs": ceiling,
+        }
+    source_amp = 10.0 ** (source_db / 20.0)
+    added_amp = 10.0 ** (added_db / 20.0)
+    predicted_amp = source_amp + added_amp
+    predicted_db = 20.0 * math.log10(max(predicted_amp, 1e-12))
+    status = "PASS" if predicted_db <= ceiling else "HOLD_HEADROOM"
+    return {
+        "status": status,
+        "prediction_model": "WORST_CASE_COHERENT_AMPLITUDE_SUM",
+        "predicted_peak_dbfs": predicted_db,
+        "ceiling_dbfs": ceiling,
+    }
 
 
 @dataclass(frozen=True)
@@ -197,8 +220,8 @@ def authorize_patch(
     source_master_actual_sha256: str,
     asset_binding: dict[str, Any],
     patch_id: str,
-    source_true_peak_dbfs: float,
-    predicted_added_peak_db: float,
+    source_peak_dbfs: float,
+    added_signal_peak_dbfs: float,
 ) -> PatchAuthorization:
     """Classifier nominates; this gate authorizes. Any missing evidence => HOLD."""
     reasons: list[str] = []
@@ -220,8 +243,8 @@ def authorize_patch(
         reasons.append(str(exc))
         binding = None
     headroom = validate_headroom(
-        source_true_peak_dbfs=source_true_peak_dbfs,
-        predicted_added_peak_db=predicted_added_peak_db,
+        source_peak_dbfs=source_peak_dbfs,
+        added_signal_peak_dbfs=added_signal_peak_dbfs,
     )
     if headroom["status"] != "PASS":
         reasons.append("HEADROOM_NOT_PROVEN")
@@ -283,7 +306,7 @@ def validate_human_listen_evidence(evidence: dict[str, Any]) -> dict[str, Any]:
 
 
 def promotion_gate(project_results: Iterable[dict[str, Any]]) -> dict[str, Any]:
-    """Universalization requires two independent real projects and human evidence."""
+    """Universalization eligibility requires two independent real projects and human evidence."""
     qualified: list[str] = []
     holds: list[str] = []
     for result in project_results:
@@ -304,9 +327,10 @@ def promotion_gate(project_results: Iterable[dict[str, Any]]) -> dict[str, Any]:
             holds.append(f"{project_id}:EVIDENCE_INCOMPLETE")
     unique = sorted(set(qualified))
     return {
-        "status": "DOMAIN_PROMOTED" if len(unique) >= 2 else "HOLD",
+        "status": "DOMAIN_PROMOTION_ELIGIBLE" if len(unique) >= 2 else "HOLD",
         "qualified_projects": unique,
         "holds": holds,
         "minimum_independent_projects": 2,
         "no_project_story_fact_transfer": True,
+        "machine_may_change_current_authority": False,
     }
