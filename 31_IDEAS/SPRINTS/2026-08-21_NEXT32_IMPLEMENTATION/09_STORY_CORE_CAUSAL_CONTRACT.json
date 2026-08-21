@@ -1,0 +1,23 @@
+{
+  "schema_version":"1.0",
+  "status":"CANDIDATE_CAUSAL_CONTRACT",
+  "required_nodes":["HERO","WANT","WHY_NOW","OPPOSITION","WRONG_STRATEGY","PRICE","MIDPOINT","CLIMAX_CHOICE","RESOLUTION"],
+  "required_edges":[
+    {"from":"WHY_NOW","to":"WANT","test":"urgency materially activates pursuit now"},
+    {"from":"WANT","to":"ACTION","test":"hero takes at least one goal-directed action rather than only receives events"},
+    {"from":"ACTION","to":"OPPOSITION","test":"opposition resists or changes the cost/constraint"},
+    {"from":"WRONG_STRATEGY","to":"PRICE","test":"hero's approach causes or deepens a meaningful cost"},
+    {"from":"PRICE","to":"MIDPOINT","test":"accumulated consequences force changed objective/theory/strategy"},
+    {"from":"MIDPOINT","to":"CLIMAX_CHOICE","test":"midpoint makes the climax decision necessary and different from the opening strategy"},
+    {"from":"CLIMAX_CHOICE","to":"RESOLUTION","test":"resolution is caused by the hero's choice plus established consequences, not an external rescue"}
+  ],
+  "anti_permutability_tests":[
+    "swap midpoint and climax-choice: must break causality",
+    "remove price: must weaken/alter climax necessity",
+    "remove hero action: main conflict cannot still resolve identically",
+    "replace opposition with generic difficulty: adaptive resistance should disappear and gate should fail or downgrade"
+  ],
+  "fail_codes":["LABEL_ONLY_CORE","PASSIVE_PROTAGONIST","WHY_NOW_NOT_CAUSAL","WRONG_STRATEGY_NO_PRICE","MIDPOINT_NOT_TRANSFORMATIVE","CLIMAX_NOT_CHOICE","RESOLUTION_EXTERNAL_RESCUE","PERMUTABLE_CORE"],
+  "n15_result":"PASS_CANDIDATE_CONTRACT_CREATED",
+  "n16_limit":"Independent blind false-PASS rate cannot be claimed from this single-model session; controlled fixtures may be built, but independent reviewer evidence remains open."
+}
