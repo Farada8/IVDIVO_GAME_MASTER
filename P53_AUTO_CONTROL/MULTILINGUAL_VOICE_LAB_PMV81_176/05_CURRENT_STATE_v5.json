@@ -1,0 +1,35 @@
+{
+  "artifact": "BODYGUARD_MULTILINGUAL_VOICE_CURRENT_STATE_v5",
+  "date": "2026-08-21",
+  "source_authority": "EN Recording Master v1.6",
+  "architecture": "Multilingual Voice v2.1 + PMV112 evidence layer",
+  "executed_prompts": "PMV01-PMV112",
+  "future_prompts": "PMV113-PMV176 v2 designed not executed",
+  "ru_full_e01": "v0.2 WORKING AI-linguistic repaired, 190 lines",
+  "ru_audition_anchors": "v0.4 CANDIDATE NOT LOCKED",
+  "ru_glossary": "v0.3 evidence-integrated, stage protocol HOLD",
+  "voice_passports": "v2 CURRENT perceptual identity",
+  "provider_adapter": "v2.0 discovered from current official docs; authenticated account preflight pending",
+  "ru_voice_design_preview_requests": "6 candidate manifests ready, 0 live previews",
+  "api_key_present_current_environment": false,
+  "billable_calls_this_run": 0,
+  "ru_render_block_plan": "v0.1 compiled: 72 blocks / 35 TTD candidates / 37 isolated / 190-line coverage PASS",
+  "ru_voice_lock": false,
+  "en_voice_lock": false,
+  "current_gate": "RU_NATIVE_AND_PROFESSIONAL_TEXT_LOCK",
+  "next_live_sequence": [
+    "qualified/native review",
+    "stage/protection/audio terminology adjudication",
+    "RU audition anchors v1.0 lock",
+    "authenticated provider preflight",
+    "Voice Design previews/S0B/S1/S2/S3/S4"
+  ],
+  "prohibited": [
+    "claim native/pro PASS from AI/web alone",
+    "paid S1 before RU text lock",
+    "voice lock without audio",
+    "full season render before E01 evidence",
+    "generic Spanish lock",
+    "use TTD everywhere without A/B proof"
+  ]
+}
