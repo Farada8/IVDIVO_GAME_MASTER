@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0",
+  "status":"PASS_INTERNAL_CROSS_DOMAIN_FIXTURES",
+  "cases":[
+    {"domain":"COMMERCIAL_ROMANCE","ordinary_objective":"keep a hospital shift while hiding a family crisis","constraint":"missing the shift loses agency hours and jeopardizes rent; asking the romantic lead for help creates unwanted debt","action_consequence":"heroine trades a weekend shift with a rival colleague and loses access to a social event","result":"PASS_ACTION_PRESSURE"},
+    {"domain":"ORBITAL_YOUTH","ordinary_objective":"reach apprenticeship after school","constraint":"habitat transit maintenance closes the cheap radial route; family cannot pay repeated priority transfers","action_consequence":"teen accepts a maintenance escort, exposing a side job to peers and changing status","result":"PASS_SETTING_SPECIFIC_PRESSURE"},
+    {"domain":"SMITH_OES","ordinary_objective":"inspect a sealed site","constraint":"old Earth agreement grants access while Confederation biosafety law forbids unmonitored entry","action_consequence":"Smith accepts joint custody and exposes an archive clause he wanted private","result":"PASS_JURISDICTION_AS_ACTION"},
+    {"domain":"EXPOSITION_CONTROL","ordinary_objective":"none","constraint":"characters explain tax law for two pages","action_consequence":"none","result":"FAIL_EXPOSITION_ONLY"}
+  ],
+  "conclusion":"Social reality earns page/scene time only when it changes strategy, access, risk, status, relationship, time or price. Setting information alone does not pass.",
+  "evidence_class":"INTERNAL_FIXTURE_TEST"
+}
