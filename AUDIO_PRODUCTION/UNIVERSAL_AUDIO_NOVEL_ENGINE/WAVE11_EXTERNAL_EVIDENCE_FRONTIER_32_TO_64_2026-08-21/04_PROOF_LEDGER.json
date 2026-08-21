@@ -1,0 +1,119 @@
+{
+  "schema": "ivdivo.audio.wave11_proof_ledger/1.0",
+  "date": "2026-08-21",
+  "base_main_sha": "888e3c2e87e691905cd420535dfcadd7fecf6107",
+  "authority_scope": "ENGINEERING_ONLY",
+  "prompt_execution": {
+    "requested": 32,
+    "dispositioned": 32,
+    "external_passes": 0,
+    "first_external_hold_prompt": 1
+  },
+  "proofs": [
+    {
+      "id": "W11-P01",
+      "claim": "Wave11 prompt graph is exactly 01-32 and causal",
+      "evidence": ["tools/wave11_frontier_evaluator.py", "tests/test_wave11_frontier.py"],
+      "status": "CODED_CI_REQUIRED",
+      "external_truth": false
+    },
+    {
+      "id": "W11-P02",
+      "claim": "Illegal completion ordering fails closed",
+      "evidence": ["test_illegal_completion_order_holds", "DEPENDENCY_FRONTIER_CONTRACT_v1"],
+      "status": "CODED_CI_REQUIRED",
+      "external_truth": false
+    },
+    {
+      "id": "W11-P03",
+      "claim": "Routing evaluator cannot grant voice lock, release GO or provider dispatch authority",
+      "evidence": ["test_router_never_grants_external_authority"],
+      "status": "CODED_CI_REQUIRED",
+      "external_truth": false
+    },
+    {
+      "id": "W11-P04",
+      "claim": "A current real authenticated provider snapshot is available",
+      "evidence": [],
+      "status": "HOLD_EXTERNAL_AUTH_PROVIDER_NOT_OBSERVED",
+      "external_truth": true
+    },
+    {
+      "id": "W11-P05",
+      "claim": "Two current provider snapshots belong to the same account and have classified capability drift",
+      "evidence": ["audio/studio/runtime/provider_snapshot_diff.py"],
+      "status": "BLOCKED_W11_P04",
+      "external_truth": true
+    },
+    {
+      "id": "W11-P06",
+      "claim": "Real provider inventory is source-hash bound and has explicit TTS capability",
+      "evidence": ["audio/studio/runtime/provider_inventory_compiler.py"],
+      "status": "BLOCKED_W11_P04",
+      "external_truth": true
+    },
+    {
+      "id": "W11-P07",
+      "claim": "NARRATOR/ETHAN/AOIFE provisional candidates are from the same real inventory",
+      "evidence": ["audio/studio/runtime/cast_readiness.py"],
+      "status": "BLOCKED_W11_P06",
+      "external_truth": true
+    },
+    {
+      "id": "W11-P08",
+      "claim": "Pronunciation, multi-state, pair, fatigue and performance evidence is real and human-attested",
+      "evidence": ["audio/studio/runtime/external_evidence_trust.py", "audio/studio/runtime/human_review_ledger.py"],
+      "status": "BLOCKED_W11_P07",
+      "external_truth": true
+    },
+    {
+      "id": "W11-P09",
+      "claim": "Voice/model lock is explicit and hash-bound",
+      "evidence": [],
+      "status": "BLOCKED_W11_P08",
+      "external_truth": true
+    },
+    {
+      "id": "W11-P10",
+      "claim": "RB001/RB002/RB003 pre-spend manifest is current and authorized",
+      "evidence": [],
+      "status": "BLOCKED_W11_P09",
+      "external_truth": true
+    },
+    {
+      "id": "W11-P11",
+      "claim": "RB001 has durable paid request/result/spend/raw lineage",
+      "evidence": ["audio/studio/runtime/live_lineage_escrow.py"],
+      "status": "BLOCKED_W11_P10",
+      "external_truth": true
+    },
+    {
+      "id": "W11-P12",
+      "claim": "RB002/RB003 cannot dispatch before RB001 human sanity passes",
+      "evidence": ["tools/wave11_frontier_evaluator.py", "tests/test_wave11_frontier.py"],
+      "status": "CODED_ROUTING_CI_REQUIRED_REAL_EXECUTION_BLOCKED",
+      "external_truth": false
+    }
+  ],
+  "evidence_ceiling": {
+    "provider_account_reads": 0,
+    "paid_synthesis_calls": 0,
+    "real_human_reviews": 0,
+    "real_audio_assets_created": 0,
+    "real_alignment": false,
+    "measured_economics": false,
+    "voice_locks": 0,
+    "pronunciation_locks": 0,
+    "story_mutations": 0
+  },
+  "forbidden_inference": [
+    "CI_SUCCESS_AS_AUTH_PROVIDER",
+    "PUBLIC_DOCS_AS_ACCOUNT_INVENTORY",
+    "CALLER_BOOLEAN_AS_EXTERNAL_TRUTH",
+    "REMEMBERED_VOICE_ID_AS_CURRENT",
+    "SYNTHETIC_HUMAN_REVIEW",
+    "PROVIDER_ACCEPTANCE_AS_TAKE_LOCK",
+    "DOWNSTREAM_EXECUTION_PAST_MISSING_DEPENDENCY",
+    "AUTOMATIC_PAID_REPLAY"
+  ]
+}
