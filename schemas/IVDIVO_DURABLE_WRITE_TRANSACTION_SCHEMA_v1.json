@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ivdivo.local/schemas/IVDIVO_DURABLE_WRITE_TRANSACTION_SCHEMA_v1.json",
+  "title": "IVDIVO Durable Write Transaction",
+  "type": "object",
+  "required": ["transaction_id", "project_id", "work_unit", "authority_snapshot", "actions"],
+  "properties": {
+    "transaction_id": {"type": "string", "minLength": 1},
+    "project_id": {"type": "string", "minLength": 1},
+    "work_unit": {"type": "string", "minLength": 1},
+    "authority_snapshot": {
+      "type": "object",
+      "required": ["repo_main_sha", "state_revision"],
+      "properties": {
+        "repo_main_sha": {"type": "string", "minLength": 1},
+        "state_revision": {"type": "string", "minLength": 1},
+        "source_hash": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "blockers": {"type": "array"},
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["action_id", "artifact_id", "store", "operation", "effect_class", "side_effect_state"],
+        "properties": {
+          "action_id": {"type": "string", "minLength": 1},
+          "artifact_id": {"type": "string", "minLength": 1},
+          "store": {"enum": ["GITHUB", "DRIVE", "FILE_LIBRARY", "PROVIDER", "LOCAL"]},
+          "operation": {"type": "string", "minLength": 1},
+          "effect_class": {"enum": ["READ_ONLY", "REVERSIBLE_WRITE", "PAID_WRITE", "IRREVERSIBLE_WRITE"]},
+          "idempotency_key": {"type": ["string", "null"]},
+          "side_effect_state": {"enum": ["NOT_STARTED", "STARTED_UNKNOWN", "CONFIRMED", "RECONCILED", "SUPERSEDED", "FAILED"]},
+          "readback_verified": {"type": "boolean"},
+          "intended_identity": {"type": ["object", "null"]},
+          "observed_identity": {"type": ["object", "null"]},
+          "external_reference": {},
+          "notes": {"type": "array"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence_boundary": {"type": "array"}
+  },
+  "additionalProperties": false
+}
