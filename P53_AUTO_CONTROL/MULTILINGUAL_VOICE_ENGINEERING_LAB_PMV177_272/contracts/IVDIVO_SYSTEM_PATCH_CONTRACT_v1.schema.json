@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"IVDIVO System Patch Contract v1",
+  "type":"object",
+  "required":["patch_id","problem","earliest_failure_layer","evidence","protected_invariants","minimal_change","test","rollback","decision"],
+  "properties":{
+    "patch_id":{"type":"string"},
+    "problem":{"type":"string"},
+    "earliest_failure_layer":{"type":"string"},
+    "evidence":{"type":"array","items":{"type":"string"}},
+    "protected_invariants":{"type":"array","items":{"type":"string"}},
+    "minimal_change":{"type":"string"},
+    "test":{"type":"array","items":{"type":"string"}},
+    "rollback":{"type":"string"},
+    "decision":{"enum":["CANDIDATE","ACCEPT","ACCEPT_WITH_MODIFICATION","HOLD","REJECT","SUPERSEDED"]},
+    "write_through_targets":{"type":"array","items":{"type":"string"}}
+  }
+}
