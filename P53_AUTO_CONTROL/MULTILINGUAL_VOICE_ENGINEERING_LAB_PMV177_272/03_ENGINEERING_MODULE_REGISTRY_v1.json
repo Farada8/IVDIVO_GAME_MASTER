@@ -1,0 +1,14 @@
+{
+  "artifact": "IVDIVO_MULTILINGUAL_VOICE_ENGINEERING_MODULE_REGISTRY_v1",
+  "modules": [
+    {"id":"M01","file":"ru_audition_lock_compiler.py","contract":"four external reviewer roles + performed timing required; fail closed","stage":"TEXT_LOCK"},
+    {"id":"M02","file":"credential_safe_provider_preflight.py","contract":"no secret persistence; dry-run default; authenticated capability facts only","stage":"PROVIDER_PREFLIGHT"},
+    {"id":"M03","file":"voice_cost_telemetry_ingest.py","contract":"ingest request/cost sidecars; no invented prices","stage":"TELEMETRY"},
+    {"id":"M04","file":"expected_information_gain_router.py","contract":"rank only unblocked work by uncertainty reduction/downstream unlock/cost/irreversibility/authority","stage":"AUTOROUTER"},
+    {"id":"M05","file":"evidence_weighted_patch_promoter.py","contract":"universal rule promotion requires independent high-authority evidence","stage":"SELF_IMPROVEMENT"},
+    {"id":"M06","file":"BODYGUARD_NATIVE_QA_REVIEWER_REGISTRY_v1.json","contract":"privacy-minimal reviewer evidence registry","stage":"HUMAN_EVIDENCE"},
+    {"id":"M07","file":"IVDIVO_EVIDENCE_CONTRACT_v1.schema.json","contract":"all evidence has provenance/status/authority/decision impact","stage":"ALL"},
+    {"id":"M08","file":"IVDIVO_GATE_CONTRACT_v1.schema.json","contract":"every irreversible/cost gate declares requirements/hard fails/next action","stage":"ALL"},
+    {"id":"M09","file":"IVDIVO_SYSTEM_PATCH_CONTRACT_v1.schema.json","contract":"self-improvement patch must name earliest failure, protected invariants, test and rollback","stage":"LEARNING"}
+  ]
+}
