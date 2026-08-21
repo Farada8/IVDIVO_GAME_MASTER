@@ -3,16 +3,58 @@
   "wave": "WAVE5_CONVERGENCE",
   "date": "2026-08-21",
   "purpose": "Converge parallel audio runtime/studio/research lines into one evidence-driven path without creating a new engine.",
-  "parallel_sources": {
-    "github_prs": [82, 83, 84, 86, 74, 69, 66, 60, 77, 78, 59],
-    "existing_runtime_commits": ["1f648852e1b961ecf6b34f335af949afb68f49c6", "eeff151b3097a9e20a85d44f10f50b089407f015", "88cf235e79b64545be7573648d9adabae38f040e", "7545528ee0f141ca7325d6d478e1c3122174ee46", "2a9d0ccabbe2486449447ad3d2071a120807e332", "abdc9d41fca19484a4fe01c945bd0f5c314e4c92", "9fcb7b199eed66a2c7cac9a3ee5d948ed72598b0", "9904bc1187a071ea0e916d223dab9cce6ea2a093", "4c1f16989e31b0404e2aa3364f7cb250ee1ad466", "8f8360de74affa596bcb4222aa3e958392ac621f", "e3fad84f8af699cb5f7604656732db13ec38de79", "1e7ea45c3bad99293fc89df6bad9c82b0571a169"],
-    "drive_wave4_main_rebased_folder": "11TOuH060LNSUfb1IeGK_fLAa7GLJiENS",
-    "drive_wave4_studio_intelligence_folder": "1y67N8KEOpPQiUQpydtQ0qDBefxvYVuwo"
-  },
   "prompts_executed": 32,
-  "tests": {"new_wave5_convergence": {"run": 68, "passed": 68, "failed": 0, "errors": 0}},
-  "evidence_boundary": {"provider_calls": 0, "human_listening_claims": 0, "voice_locks": 0, "pronunciation_locks": 0, "live_lz_alignment": false, "measured_provider_economics": false, "story_mutations": 0},
-  "decisions": {"new_parallel_runtime_allowed": false, "canonical_integration_target": "audio/studio/runtime", "current_runtime_status": "WORKING_v0.3", "v1_status": "HOLD", "next_prompts_derived": 64},
-  "next_internal_action": "Fresh-reconcile current-main audio/studio/runtime vs PR82/PR86/PR84 function-by-function; port unique deltas only; run current-main CI.",
-  "next_external_action": "Authenticated provider inventory -> LZ Narrator/Ethan/Aoife auditions/pronunciation -> exact 3-request live canary -> durable WAV/alignment -> real benchmark/human/economics."
+  "wave5_tests": {"run": 68, "passed": 68, "failed": 0, "errors": 0},
+  "promotion_results": {
+    "production_control": {
+      "status": "MERGED_CURRENT_MAIN",
+      "source_pr": 94,
+      "merge_commit": "49a4d0e455b62dfd68932bf7c60ca4dee7df7b68",
+      "full_audio_studio_ci_at_promotion": "88/88 PASS",
+      "old_pr82": "CLOSED_SUPERSEDED"
+    },
+    "studio_evidence": {
+      "status": "MERGED_CURRENT_MAIN",
+      "source_pr": 97,
+      "merge_commit": "6929402fe8b299b1b715b473853e6ae73504c754",
+      "local_candidate_tests": "24/24 PASS",
+      "full_audio_studio_ci": "112/112 PASS",
+      "dedicated_runtime_ci": "4/4 PASS",
+      "old_pr84": "CLOSED_SUPERSEDED"
+    },
+    "old_pr86": "CLOSED_SUPERSEDED_AS_INTEGRATION_TARGET"
+  },
+  "current_main_unique_capabilities": [
+    "existing WORKING v0.3 scene/runtime compilers",
+    "provider preflight + ElevenLabs adapter + alignment normalizer",
+    "restart-safe spend/idempotency + ambiguous-response reconciliation",
+    "identity + authenticated capability paid-dispatch gates",
+    "controlled provider dispatch",
+    "strict canonical 48 kHz ingest and provider-vs-production acceptance separation",
+    "earliest-cause audio repair routing",
+    "same-source NARRATED/MULTI_VOICE/DRAMATIZED benchmark",
+    "human-gated performance evidence with no machine voice lock",
+    "advisory human-review compression",
+    "measured economics / cost per accepted minute",
+    "Founder-routed release evidence matrix"
+  ],
+  "evidence_boundary": {
+    "provider_calls_in_wave5": 0,
+    "human_listening_claims": 0,
+    "voice_locks": 0,
+    "pronunciation_locks": 0,
+    "live_lesson_zero_alignment": false,
+    "measured_provider_economics": false,
+    "story_mutations": 0
+  },
+  "decisions": {
+    "new_parallel_runtime_allowed": false,
+    "canonical_runtime_target": "audio/studio/runtime",
+    "production_control_convergence": "CLOSED_ON_MAIN",
+    "studio_evidence_convergence": "CLOSED_ON_MAIN",
+    "v1_status": "HOLD_EMPIRICAL_EVIDENCE",
+    "next_prompts_derived": 64
+  },
+  "next_internal_action": "Fresh-read main and execute only unique Wave6 items that produce empirical readiness or cross-project portability; no further generic architecture expansion without demonstrated failure.",
+  "next_external_action": "Authenticated provider inventory -> Narrator/Ethan/Aoife -> Ифа/Контакт -> multi-state/pair -> exactly 3 live Lesson Zero requests -> durable WAV/alignment -> resolved timeline/mini-mix -> three-mode benchmark -> blind human -> measured economics -> cross-project live portability -> Founder v1 decision."
 }
