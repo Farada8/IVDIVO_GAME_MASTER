@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "CURRENT_PORTFOLIO_ROUTING_DELTA_NOT_STORY_CANON",
+  "purpose": "Non-destructive portfolio-frontier overlay for CURRENT_IVDIVO_SYSTEM_STATE.json. Apply only to portfolio routing; project-specific authority/state remains higher. Created because the large aggregate state had concurrent independent deltas and its D09/D10 portfolio slice was stale.",
+  "supersedes_aggregate_fields": [
+    "portfolio_frontier.text_locked_or_text_complete",
+    "portfolio_frontier.active_project",
+    "portfolio_frontier.queue_after_active",
+    "state_status"
+  ],
+  "authority_order_note": "FOUNDER_NEWEST_DIRECT_INSTRUCTION > PROJECT_SOURCE_OF_TRUTH > PROJECT_SPECIFIC_STATE > THIS_PORTFOLIO_DELTA > AGGREGATE_SYSTEM_STATE_PORTFOLIO_SLICE",
+  "text_complete_or_locked": [
+    "IVDIVO_BOOK_1_LESSON_ZERO",
+    "IVDIVO_BOOK_2_ORBITAL_YOUTH",
+    "D02_ROOM_917",
+    "D03_BODYGUARD_FOR_THE_FALLEN_IDOL",
+    "D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE",
+    "D05_NINETY_MISSING_MINUTES_TEXT_COMPLETE_STORY_LOCKED_PUBLICATION_SPECIALIST_HOLD",
+    "D06_SHE_STOLE_MY_NAME",
+    "D07_THE_PERFECT_WIFE_KNOWS",
+    "D08_SHE_FIRED_THE_BILLIONAIRE",
+    "D09_THE_MAN_WHO_CAME_BACK_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK",
+    "D10_BLOODBOUND_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK"
+  ],
+  "active_project": {
+    "project_id": "D10",
+    "title": "BLOODBOUND",
+    "project_state": "PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json",
+    "mode": "FOUNDER_LOCK_DECISION_GATE",
+    "completed_frontier": "E01-E24_TEXT_COMPLETE",
+    "main_conflict_status": "CLOSED",
+    "final_story_gate": {
+      "status": "PASS",
+      "fatal": 0,
+      "major": 0,
+      "blocking_medium": 0,
+      "drive_id": "1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s",
+      "founder_lock": "NOT_YET_ISSUED"
+    },
+    "next_unblocked_obligation": "FOUNDER_EXPLICIT_LOCK_DECISION_FOR_D10",
+    "do_not_repeat": ["E07_E24_DRAFTING", "BLOCK_II_III_IV_GATES", "CORPUS_REGRESSION", "FINAL_SEASON_STORY_GATE", "E25_GENERATION"]
+  },
+  "parallel_founder_decision_gates": [
+    {
+      "project_id": "D09",
+      "title": "THE MAN WHO CAME BACK",
+      "mode": "FOUNDER_LOCK_DECISION_GATE",
+      "completed_frontier": "E01-E24_TEXT_COMPLETE",
+      "final_story_gate_drive_id": "1IZfae96Y4gS7JDqFrVxv-2O53zFwoWVOYzOV7zoDXL0",
+      "founder_lock": "NOT_YET_ISSUED",
+      "do_not_generate": "E25"
+    }
+  ],
+  "queue_after_d10_founder_lock": [
+    "D01_THE_WIFE_AT_HIS_WEDDING_FRESH_REBASE_FROM_NEWEST_PROJECT_SPECIFIC_STATE_AND_FINITE_STORY_COMPLETION",
+    "IVDIVO_BOOK_3_SMITH_AUTHORITY_RECONCILIATION_HUMAN_SCENE_CALIBRATION_FULL_NOVEL_AND_LOCK",
+    "IVDIVO_BOOK_4_AFTER_BOOK_3_CONSEQUENCES_LOCK",
+    "WHOLE_PORTFOLIO_TEXT_LOCK_AUDIT",
+    "AUDIO_NOVEL_STUDIO_BATCH_INGEST_AND_PRODUCTION"
+  ],
+  "d01_freshness_warning": "Do not revert D01 to historical E51+/E61-90 aggregate snapshots. Drive CURRENT_WORKSTATE_v2.6 records later finalization work including E91-E95 WORKING-COMPLETE; always fresh-rebase the newest D01 project-specific state before continuation.",
+  "drive_mirrors": {
+    "workstate": {"id": "1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w", "title": "CURRENT_WORKSTATE_v2.6"},
+    "prompts": {"id": "1mlUAkQVLH41CfdMa2ZDa8gR3MN7eNi-w3ZC705_b03g", "title": "CURRENT_PROMPTS_v2.3"},
+    "portfolio_router": {"id": "1lGIt1ewXQeECsKheP7uH9bf4Gdz3rQ54llOOxuqXLvY", "title": "00 IVDIVO — ALL ACTIVE BOOKS COMPLETION ROUTER — 2026-08-20"}
+  },
+  "state_status": "D10_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK_DECISION; D09_READY_FOR_FOUNDER_LOCK_DECISION; NEXT_AFTER_D10_LOCK_D01_FRESH_REBASE"
+}
