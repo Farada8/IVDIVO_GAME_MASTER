@@ -1,0 +1,37 @@
+{
+  "schema": "NMM_CYCLE4_TRUSTED_EVIDENCE_STATE_v1.1",
+  "date": "2026-08-21",
+  "github_reconciled_main_sha": "e3047a227552477c39c7d6af549208d18afc3fcc",
+  "fresh_rebase_commit": "45f6cbf74de84df90119f7510d79029b9c36f2e1",
+  "cycle3_reused": true,
+  "executed_prompts": 32,
+  "next_prompts": 64,
+  "modules": 8,
+  "contracts": 8,
+  "protocols": 5,
+  "deterministic_tests": "21/21 PASS_LOCAL_PRE_REBASE; FRESH_PR_CI_REQUIRED",
+  "blind_stimuli": 24,
+  "blind_trial_set_sha256": "6f7a1ed281bcffd8829a4598a9b229c402b1147e2970283c5ad5d6d0a241c1cd",
+  "parallel_reconciliation": {
+    "universal_provider_snapshot_contract": "REUSE_CURRENT_MAIN",
+    "si0014_session_resilience": "REUSE_READY_FOR_PILOT_NOT_PROMOTED",
+    "si0015_project_slice_freshness": "OBSERVED_ON_MAIN; DO_NOT_DUPLICATE",
+    "cycle7_durable_convergence": "OBSERVED_ON_MAIN; NMM_REBASE_REQUIRED"
+  },
+  "external_gates": {
+    "provider_snapshot": "PENDING_REAL",
+    "voice_cast": "PENDING_REAL",
+    "human_whistle": "PENDING_REAL",
+    "hard_pilot": "PENDING_REAL",
+    "specialist": "PENDING_REAL",
+    "economics": "PENDING_REAL"
+  },
+  "cross_storage_parity": "DRIVE_PRESENT; GITHUB_FRESH_PR_CI_PENDING",
+  "release": "NO_GO",
+  "next_frontier": "CLOSE_CYCLE4_PR_CI_THEN_EXECUTE_CYCLE5_32",
+  "generic_runtime_architecture": "FROZEN_UNLESS_DEMONSTRATED_GAP",
+  "credential_environment_observation": {
+    "ELEVENLABS_API_KEY_present": false,
+    "secret_persisted": false
+  }
+}
