@@ -1,0 +1,121 @@
+{
+  "schema_version": "ivdivo.continuous_sync_state/1.0",
+  "status": "CURRENT_WORKING_STATE",
+  "last_sync_at": "2026-08-21T12:00:00+01:00",
+  "scope": "SYSTEM_WIDE_IVDIVO",
+  "active_project": "SYSTEM_INTEGRATION",
+  "github_main_authority_sha_observed": "f47736860ee4b7afd8ef221938b54f1c24b1bc67",
+  "authority_stack": [
+    "IVDIVO_NARRATIVE_OS/00_NARRATIVE_OS_CANON.md",
+    "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
+    "IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md",
+    "IVDIVO_NARRATIVE_OS/01_NARRATIVE_OS_CONFIG.yaml",
+    "IVDIVO_NARRATIVE_OS/16_AGENT_PROMPTS_CONTINUOUS_SYNC_SUPPLEMENT_v1.0.md"
+  ],
+  "drive_authority_ids": [
+    "1fGd_bmx96yrRFmsuE5mrS-Zvh1o2c1APWhK8E2wGTjs",
+    "1MfjOu7fgo9rjY8L_1UHakxDgNgxP0bDnzwP4xrVq8Dw",
+    "111NONfp2VfNNnYAdCIre2RqwiERZJLiNzlMWNSaqoqo",
+    "1ZC4e8l6Yv2p54-yMWQ5U_OUaKdLpQN0qBK5Lx6pTC0I",
+    "1B_iDVPXR0JgyKFb6mMohXnzzrkEGnZRptE4s_z1nM_E",
+    "1ZG15kNcGjUKR_OKHQoXcqfrfVddlX6ma",
+    "1w7QszZotX1pVqcQBFic7GnHFI50t5p_ODn-PwFIwagw",
+    "1OwQTL2VMNlSoO9-TB__XNi5BX_DMSqip"
+  ],
+  "delta_clusters": [
+    {
+      "delta_cluster_id": "D20260821_AUTOPILOT",
+      "class": "PROMPT_PROGRAM_UPGRADE",
+      "disposition": "ADOPT_PROJECT_AND_UNIVERSALIZE",
+      "summary": "Persisted state, not repeated Founder nudges, drives continuation; explicit resume tokens are shortcuts, not heartbeat.",
+      "provenance": [
+        "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
+        "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md"
+      ]
+    },
+    {
+      "delta_cluster_id": "D20260821_DELTA_SYNC",
+      "class": "PROMPT_PROGRAM_UPGRADE",
+      "disposition": "UNIVERSALIZE",
+      "summary": "Add bounded cross-conversation/GitHub/Drive/Library/external-evidence delta scan, semantic dedupe and write-through learning registry.",
+      "provenance": [
+        "system integration pass 2026-08-21",
+        "Multi-Model Memory",
+        "IDEA->STORY v1.1 authority freshness/invalidation contracts"
+      ]
+    },
+    {
+      "delta_cluster_id": "D20260821_CROSS_MODEL_PARITY",
+      "class": "PROMPT_PROGRAM_UPGRADE",
+      "disposition": "UNIVERSALIZE",
+      "summary": "Model agreement does not validate a finding without source parity/independent evidence; diagnosis and proposed rewrite are separate decisions.",
+      "provenance": [
+        "docs/13_AI_RESULTS/CROSS_MODEL_AUDIT_PROTOCOL_v0.1_DRAFT.md",
+        "CURRENT_SESSION_HANDOFF — MULTI-MODEL MEMORY BOOTSTRAP + NMM v1.0"
+      ]
+    },
+    {
+      "delta_cluster_id": "D20260821_P51_SHARED_CONSTRUCTION",
+      "class": "UNIVERSAL_MECHANISM_CANDIDATE",
+      "disposition": "UNIVERSALIZE",
+      "summary": "P51 must scan shared rhetorical construction geometry across speakers, not only vocabulary/voice surface.",
+      "provenance": [
+        "IVDIVO IDEA -> STORY ENGINE v1.1 Integration Hardening Spec C02",
+        "Orbital Youth + ROOM 917 cross-project recurrence"
+      ]
+    },
+    {
+      "delta_cluster_id": "D20260821_P53_TWO_AXIS",
+      "class": "PROMPT_PROGRAM_UPGRADE",
+      "disposition": "UNIVERSALIZE",
+      "summary": "P53 routing resolves inherited relationship-authority state separately from current scene function.",
+      "provenance": [
+        "IVDIVO IDEA -> STORY ENGINE v1.1 Integration Hardening Spec C04"
+      ]
+    },
+    {
+      "delta_cluster_id": "D20260821_AUDIO_CASTING",
+      "class": "UNIVERSAL_MECHANISM_CANDIDATE",
+      "disposition": "UNIVERSALIZE",
+      "summary": "Dry/loudness-matched casting, direction-change responsiveness, pair underplay, device translation, provisional vs season lock, long-form fatigue.",
+      "provenance": [
+        "BODYGUARD E01 provisional voice lock/casting scorecard",
+        "current audio live-provider canary cascade"
+      ]
+    },
+    {
+      "delta_cluster_id": "D20260821_AUDIO_ONE_LISTEN",
+      "class": "UNIVERSAL_MECHANISM_CANDIDATE",
+      "disposition": "UNIVERSALIZE",
+      "summary": "Evidence-heavy audio requires one-listen causal comprehension; repair performance/spacing/source identity/mix/edit before protected text rewrite.",
+      "provenance": [
+        "NMM E10-E11 one-listen audio comprehension stress pack"
+      ]
+    },
+    {
+      "delta_cluster_id": "D20260821_REFERENCE_MECHANISMS",
+      "class": "REFERENCE_LEARNING",
+      "disposition": "UNIVERSALIZE",
+      "summary": "Promote abstract Story Engine v4.1 mechanism families with fragment/full/duplicate source discipline and originality firewall.",
+      "provenance": [
+        "03_IVDIVO_STORY_ENGINE_v4_1_Professional_Framework"
+      ]
+    }
+  ],
+  "project_only_changes": [],
+  "held_for_test": [
+    "IDEA->STORY v1.1 executable patch remains unimplemented until source package integration is verified",
+    "Human Signal remains external-only and cannot be internally marked PASS"
+  ],
+  "duplicates_rejected": [
+    "do not create a second competing cross-conversation autopilot authority; extend the existing 13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT layer"
+  ],
+  "invalidated_artifacts": [],
+  "last_completed_artifact": "continuous sync protocol/config/prompt/reference integration branch",
+  "open_gates": [
+    "merge/approve GitHub integration branch",
+    "Drive mirror/readback verification"
+  ],
+  "highest_unblocked_next_obligation": "mirror continuous sync authority into Google Drive and update current routers/prompt-state pointers",
+  "provenance_note": "This state records integration decisions, not story canon. Project-specific authority remains higher for project facts."
+}
