@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "status": "WORKING_CANDIDATE_CONTRACTS_NOT_CURRENT",
+  "scope": "FULL_CHAT_TRANSCRIPT_RECOVERY_OPERATIONALIZATION",
+  "contracts": {
+    "source_completeness": {
+      "required": [
+        "supplied_input_tail_processed",
+        "supplied_corpus_coverage",
+        "original_conversation_completeness",
+        "completeness_basis",
+        "truncation_indicators"
+      ],
+      "supplied_corpus_coverage": ["COMPLETE_AS_SUPPLIED", "PARTIAL_AS_SUPPLIED", "UNKNOWN"],
+      "original_conversation_completeness": ["PROVEN_FULL", "KNOWN_PARTIAL", "UNKNOWN"],
+      "law": "COMPLETE_AS_SUPPLIED_DOES_NOT_PROVE_HISTORICAL_CHAT_COMPLETE"
+    },
+    "source_unit_partition": {
+      "boundary_confidence": ["PROVIDER_EXPLICIT", "USER_EXPLICIT", "STRUCTURALLY_INFERRED", "UNKNOWN"],
+      "project_material_class": ["PROJECT_SPECIFIC", "PORTABLE_MECHANISM", "UNIVERSAL_CANDIDATE"],
+      "law": "NO_CROSS_PROJECT_LEAKAGE_WITHOUT_EXPLICIT_CLASSIFICATION"
+    },
+    "claim_evidence": {
+      "persistence_claim_states": [
+        "VERIFIED_PERSISTED",
+        "NOT_FOUND",
+        "AMBIGUOUS_MULTIPLE_MATCHES",
+        "STALE_OR_SUPERSEDED_COPY",
+        "ACCESS_UNVERIFIABLE",
+        "CONFLICT",
+        "UNKNOWN"
+      ],
+      "founder_decision_states": [
+        "DIRECT_APPROVAL",
+        "DIRECT_REJECTION",
+        "DIRECT_REVISION_REQUEST",
+        "NO_DECISION_EVIDENCE",
+        "AMBIGUOUS_SCOPE",
+        "SUPERSEDED_DECISION"
+      ],
+      "runtime_minimum": ["exact_source_identity", "exact_test_or_harness_identity", "runner_or_command_identity", "output_summary", "exit_status"],
+      "non_substitution": [
+        "MODEL_SAVED_CLAIM_IS_NOT_PERSISTENCE_EVIDENCE",
+        "DRY_RUN_IS_NOT_LIVE_PROVIDER_RENDER",
+        "MODEL_REVIEW_IS_NOT_HUMAN_SIGNAL",
+        "MODEL_SPECIALIST_PROSE_IS_NOT_SPECIALIST_REVIEW",
+        "PREDICTED_MARKET_SCORE_IS_NOT_MARKET_BEHAVIOR"
+      ]
+    },
+    "material_unknown_conflict": {
+      "terminal_blockers": ["MATERIAL_UNKNOWN", "MATERIAL_CONFLICT", "PARTITION_UNRESOLVED", "AUTHORITY_UNRESOLVED"],
+      "law": "MATERIALITY_IS_RELATIVE_TO_AUTHORITY_CANON_PERSISTENCE_OR_NEXT_LEGAL_ACTION_NOT_CONVENIENCE"
+    },
+    "secret_firewall": {
+      "persist_secret_value": false,
+      "ledger_marker": "REDACTED_SECRET_PRESENT",
+      "allowed_metadata": ["source_range_or_locator", "secret_category", "redaction_fingerprint_if_safe"],
+      "law": "SECRETS_NEVER_ENTER_RECOVERY_WRITES_PROMPT_PACKS_OR_LEARNING_ARTIFACTS"
+    },
+    "recovery_write_transaction": {
+      "required": [
+        "recovery_id",
+        "operation_id",
+        "target_store",
+        "target_locator",
+        "expected_pre_identity",
+        "intended_delta_hash",
+        "idempotency_key",
+        "reversibility",
+        "apply_status",
+        "post_readback_identity",
+        "verification_status",
+        "rollback_status"
+      ],
+      "states": [
+        "NOT_ATTEMPTED",
+        "APPLIED_UNVERIFIED",
+        "READBACK_PASS",
+        "READBACK_MISMATCH",
+        "ROLLBACK_REQUIRED",
+        "MANUAL_REPAIR_REQUIRED"
+      ],
+      "law": "API_SUCCESS_ALONE_NEVER_CLOSES_MATERIAL_WRITE"
+    },
+    "recovery_idempotency": {
+      "key_fields": [
+        "source_sha256",
+        "source_unit_id",
+        "project_partition_id",
+        "material_item_fingerprint",
+        "target_locator",
+        "operation_kind"
+      ],
+      "source_change_behavior": "NEW_LINEAGE_SUPERSEDES_OLD_RECOVERY_ID_NO_SILENT_CHECKPOINT_REUSE"
+    },
+    "large_corpus_resume": {
+      "required_chunk_identity": ["source_sha256", "chunk_id", "ordered_range", "findings_hash", "tail_membership"],
+      "resume_rule": "SOURCE_IDENTITY_AND_CHUNK_LINEAGE_MUST_MATCH",
+      "mutation_state": "SOURCE_CHANGED_RECONCILIATION_REQUIRED"
+    },
+    "connector_verification_adapter": {
+      "outcomes": [
+        "FOUND_EXACT",
+        "FOUND_MULTIPLE",
+        "NOT_FOUND",
+        "ACCESS_DENIED_OR_UNAVAILABLE",
+        "CONTENT_UNREADABLE",
+        "IDENTITY_MISMATCH",
+        "READBACK_MATCH",
+        "READBACK_MISMATCH"
+      ],
+      "github_identity": ["repository", "path", "ref", "blob_or_commit_identity"],
+      "drive_identity": ["file_id", "revision_or_modified_identity", "parent_context", "content_or_metadata_readback"],
+      "implementation_status": "CONTRACT_ONLY_IN_THIS_SPRINT"
+    },
+    "recovery_handoff": {
+      "required": [
+        "active_project",
+        "authority",
+        "last_verified_completed",
+        "open_real_gate",
+        "next_legal_action",
+        "requires_founder",
+        "requires_human",
+        "requires_provider",
+        "requires_external_fact",
+        "do_not_repeat"
+      ],
+      "law": "INGESTION_COMPLETE_PERMITS_HANDOFF_NOT_GATE_BYPASS"
+    },
+    "cycle_dedupe_information_gain": {
+      "pre_cycle_fields": [
+        "scope_overlap",
+        "new_evidence_available",
+        "unimplemented_unique_mechanisms",
+        "external_dependency",
+        "integration_queue_size",
+        "invention_queue_size",
+        "expected_information_gain"
+      ],
+      "default_stop_when": [
+        "DECISIVE_DEPENDENCY_IS_EXTERNAL",
+        "NO_NEW_SOURCE_OR_RUNTIME_SURFACE",
+        "PROPOSED_PROMPTS_MOSTLY_RESTATE_EXISTING_CANDIDATES",
+        "INTEGRATION_OR_PRUNING_QUEUE_EXCEEDS_INVENTION_QUEUE"
+      ],
+      "founder_override": "DIRECT_FOUNDER_INSTRUCTION_MAY_AUTHORIZE_NEW_CYCLE_BUT_DOES_NOT_UPGRADE_EVIDENCE_CLASS"
+    }
+  }
+}
