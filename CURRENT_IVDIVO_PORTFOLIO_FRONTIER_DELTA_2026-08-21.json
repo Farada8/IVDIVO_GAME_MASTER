@@ -1,15 +1,8 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "updated": "2026-08-21",
   "status": "CURRENT_PORTFOLIO_ROUTING_DELTA_NOT_STORY_CANON",
-  "purpose": "Non-destructive portfolio-frontier overlay for CURRENT_IVDIVO_SYSTEM_STATE.json. Apply only to portfolio routing; project-specific authority/state remains higher. D10 Founder lock is recorded and D01 has now been fresh-rebased through E96 on its working branch/Drive frontier.",
-  "supersedes_aggregate_fields": [
-    "portfolio_frontier.text_locked_or_text_complete",
-    "portfolio_frontier.active_project",
-    "portfolio_frontier.pending_founder_decision_gates.D10",
-    "portfolio_frontier.queue_after_active",
-    "state_status"
-  ],
+  "purpose": "Non-destructive portfolio-frontier overlay for CURRENT_IVDIVO_SYSTEM_STATE.json. Project-specific authority/state remains higher. D10 is Founder-locked; D01 E01-E120 is text-complete and at Founder Lock decision gate.",
   "authority_order_note": "FOUNDER_NEWEST_DIRECT_INSTRUCTION > PROJECT_SOURCE_OF_TRUTH > PROJECT_SPECIFIC_STATE > THIS_PORTFOLIO_DELTA > AGGREGATE_SYSTEM_STATE_PORTFOLIO_SLICE",
   "text_complete_or_locked": [
     "IVDIVO_BOOK_1_LESSON_ZERO",
@@ -22,51 +15,57 @@
     "D07_THE_PERFECT_WIFE_KNOWS",
     "D08_SHE_FIRED_THE_BILLIONAIRE",
     "D09_THE_MAN_WHO_CAME_BACK_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK",
-    "D10_BLOODBOUND_FOUNDER_LOCKED_E01_E24_RECORDING_AUTHORITY_ISSUED"
+    "D10_BLOODBOUND_FOUNDER_LOCKED_E01_E24_RECORDING_AUTHORITY_ISSUED",
+    "D01_THE_WIFE_AT_HIS_WEDDING_E01_E120_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK"
   ],
   "d10_founder_lock": {
     "project_id": "D10",
     "title": "BLOODBOUND",
-    "engine": "THE_ERASED_DAUGHTERS",
     "status": "FOUNDER_LOCKED",
     "locked_frontier": "SEASON_ONE_E01_E24_STORY_TEXT",
     "recording_authority": "ISSUED",
     "project_state": "PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json",
-    "current_project_authority_drive_id": "17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8",
     "founder_lock_artifact_drive_id": "1Fp0vPbvt8JaGxGIvfxwyN4LuA4BXo8Ia1Rcp2Qk8hDA",
     "final_story_gate_drive_id": "1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s",
-    "final_story_gate": {"status": "PASS", "fatal": 0, "major": 0, "blocking_medium": 0},
-    "main_conflict_status": "CLOSED",
-    "reopen_rule": "ONLY_NEW_FATAL_MAJOR_EVIDENCE_OR_NEW_FOUNDER_INSTRUCTION",
-    "downstream_evidence_not_implied": [
-      "REAL_TTS_OR_PROVIDER_EXECUTION",
-      "BLIND_HUMAN_LISTENER_PERFORMANCE_VALIDATION",
-      "RELEASE_STAGE_LEGAL_OR_FACT_REVIEW_WHERE_REQUIRED",
-      "MEASURED_ECONOMICS",
-      "MARKET_RESPONSE"
-    ]
+    "reopen_rule": "ONLY_NEW_FATAL_MAJOR_EVIDENCE_OR_NEW_FOUNDER_INSTRUCTION"
   },
   "active_project": {
     "project_id": "D01",
     "title": "THE WIFE AT HIS WEDDING",
-    "arc": "THE_SECOND_BIRTH_THE_GIRL_WITHOUT_A_CERTIFICATE",
-    "mode": "ACTIVE_WORKING_FINAL_ARC",
-    "main_state_path": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/FINALIZATION_32_PASS_2026-08-21/CURRENT_EXECUTION_STATE.json",
-    "freshest_working_branch": "wife/wave2-e91-95-32x64-2026-08-21",
-    "working_pr": 85,
-    "branch_status": "WORKING_NOT_MERGED_TO_MAIN",
-    "upstream_E61_E90": "CLOSED_PASS",
-    "completed_frontier": "E91-E96_WORKING_COMPLETE",
-    "e91_e95_drive_script_id": "1BGbN9Mlz4I9-uxMAfoJ-sYM4QgwFIFQr3yzu_D4uWjg",
-    "e96_drive_folder_id": "11aNNQU3FcitB_BoJUUHzY-DcsnMiHVD-",
-    "e96_drive_script_id": "14VXqWzC72DmLaQNgzghYjHupFACXe0Wnfco-rRGAAV8",
-    "e96_gate_drive_id": "1-njMR1lIBmcl_ljQ_hEaBXxGCfuYXBdDaIRozmsX_5g",
-    "e96_gate": {"status":"PASS","fatal":0,"major":0,"runtime_spoken_words":1138},
-    "current_story_answer": "HISTORICAL_TEEN_MARA_QUINN_CARD_MAPS_TO_CURRENT_MARA_AND_HISTORICAL_TEEN_EVELYN_CARD_MAPS_TO_CURRENT_EVELYN",
-    "current_evidence_boundary": "BODY_MAPPING_ONLY_NOT_NEWBORN_BIRTH_CIVIL_MARRIAGE_MATERNITY_PROPERTY_OR_NAME_ENTITLEMENT",
-    "next_unblocked_obligation": "E97_EPISTEMIC_CONTRACT_AND_SOURCE_AUTHENTICATION_THEN_DRAFT_GATE_THE_GIRL_ADRIAN_MET",
-    "freshness_warning": "Do not revert to historical E51+/E61-90 snapshots or regenerate E91-E96. Re-read the working branch + Drive before E97 in case sibling work advances the frontier.",
-    "do_not_repeat": ["E61_E90_FIRE_ARC", "E91_E95_WAVE2", "E96_THE_TWO_CARDS"]
+    "project_state_path": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/CURRENT_STATE.md",
+    "mode": "FOUNDER_LOCK_DECISION_GATE",
+    "completed_frontier": "E01-E120_TEXT_COMPLETE",
+    "main_conflict_status": "CLOSED",
+    "season_regression": {
+      "status": "PASS",
+      "fatal": 0,
+      "major": 0,
+      "drive_id": "1-kXiIx3utxWTmIlPUuudiWVsXLfCHbBTOAADrrLrGF8"
+    },
+    "final_story_gate": {
+      "status": "PASS",
+      "fatal": 0,
+      "major": 0,
+      "blocking_medium": 0,
+      "drive_id": "1C-VzyTORtauuDFZToJ4bx5Nic9dOwsrPfRudL3dAOcM",
+      "founder_lock": "NOT_YET_ISSUED"
+    },
+    "canonical_final_block_drive_id": "14ImsRm8aIZhAgVXYnfs3ZSeZnSQQaNIMNZ-wMhWrlxo",
+    "next_unblocked_obligation": "FOUNDER_EXPLICIT_LOCK_DECISION_FOR_D01",
+    "do_not_repeat": [
+      "E91_E120_DRAFTING",
+      "E1_E120_FINAL_REGRESSION",
+      "FINAL_STORY_GATE",
+      "E121_GENERATION",
+      "ARCHIVED_SIBLING_PLACEHOLDER_RESTORATION"
+    ],
+    "downstream_evidence_not_simulated": [
+      "HUMAN_SIGNAL",
+      "FULL_SEASON_LISTENER_AUDIO_VALIDATION",
+      "JURISDICTION_SPECIFIC_LEGAL_SPECIALIST_REVIEW",
+      "REAL_PROVIDER_TTS_PERFORMANCE",
+      "MARKET_RESPONSE"
+    ]
   },
   "parallel_founder_decision_gates": [
     {
@@ -79,16 +78,15 @@
       "do_not_generate": "E25"
     }
   ],
-  "queue_after_d01_completion": [
-    "IVDIVO_BOOK_3_SMITH_AUTHORITY_RECONCILIATION_HUMAN_SCENE_CALIBRATION_FULL_NOVEL_AND_LOCK",
+  "queue_after_d01_founder_lock": [
+    "IVDIVO_BOOK_3_SMITH_FRESH_AUTHORITY_RECONCILIATION_HUMAN_SCENE_DIALOGUE_CALIBRATION_COMPLETE_ARCHITECTURE_FULL_NOVEL_AND_LOCK",
     "IVDIVO_BOOK_4_AFTER_BOOK_3_CONSEQUENCES_LOCK",
     "WHOLE_PORTFOLIO_TEXT_LOCK_AUDIT",
     "AUDIO_NOVEL_STUDIO_BATCH_INGEST_AND_PRODUCTION"
   ],
   "drive_mirrors": {
-    "workstate": {"id": "1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w", "title": "CURRENT_WORKSTATE_v2.8"},
-    "prompts": {"id": "1mlUAkQVLH41CfdMa2ZDa8gR3MN7eNi-w3ZC705_b03g", "title": "CURRENT_PROMPTS_v2.3"},
+    "workstate": {"id": "1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w", "title": "CURRENT_WORKSTATE_v2.8_PLUS_D01_FINAL_DELTA"},
     "portfolio_router": {"id": "1lGIt1ewXQeECsKheP7uH9bf4Gdz3rQ54llOOxuqXLvY", "title": "00 IVDIVO — ALL ACTIVE BOOKS COMPLETION ROUTER — 2026-08-20"}
   },
-  "state_status": "D10_FOUNDER_LOCKED_E01_E24_RECORDING_AUTHORITY_ISSUED; D01_ACTIVE_E96_WORKING_COMPLETE_NEXT_E97; D09_READY_FOR_FOUNDER_LOCK_DECISION"
+  "state_status": "D10_FOUNDER_LOCKED; D01_E01_E120_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK_DECISION; D09_READY_FOR_FOUNDER_LOCK_DECISION"
 }
