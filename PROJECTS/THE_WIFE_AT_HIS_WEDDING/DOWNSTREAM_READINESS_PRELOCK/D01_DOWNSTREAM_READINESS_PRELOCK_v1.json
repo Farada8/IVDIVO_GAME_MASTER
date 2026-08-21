@@ -1,0 +1,133 @@
+{
+  "schema_version": "ivdivo.d01_downstream_readiness_prelock/1.0",
+  "updated": "2026-08-21",
+  "status": "PRELOCK_CONDITIONAL_READINESS_NOT_RECORDING_AUTHORITY",
+  "project_id": "D01",
+  "title": "THE WIFE AT HIS WEDDING",
+  "story_frontier": "E01-E120_TEXT_COMPLETE_FINAL_STORY_GATE_PASS",
+  "founder_lock": "NOT_YET_ISSUED",
+  "authority_sources": {
+    "github_current_state": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/CURRENT_STATE.md",
+    "final_story_gate_drive_id": "1C-VzyTORtauuDFZToJ4bx5Nic9dOwsrPfRudL3dAOcM",
+    "season_regression_drive_id": "1-kXiIx3utxWTmIlPUuudiWVsXLfCHbBTOAADrrLrGF8",
+    "final_block_drive_id": "14ImsRm8aIZhAgVXYnfs3ZSeZnSQQaNIMNZ-wMhWrlxo",
+    "workstate_drive_id": "1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w"
+  },
+  "R41_lock_decision_parity": {
+    "status": "PASS",
+    "github_current_state_next_gate": "FOUNDER_EXPLICIT_LOCK_DECISION",
+    "final_story_gate_next_gate": "FOUNDER_EXPLICIT_LOCK_DECISION",
+    "drive_workstate_next_gate": "FOUNDER_EXPLICIT_LOCK_DECISION",
+    "self_lock_allowed": false
+  },
+  "R42_no_change_validation": {
+    "status": "PASS_NO_CHANGE",
+    "new_fatal_major_evidence_found": false,
+    "story_repair_authorized": false,
+    "known_post_gate_delta": "E97_MEMORY_VS_DOCUMENT_AGE_REPAIR_ALREADY_INTEGRATED_WITH_NO_DESCENDANT_REBUILD_REQUIRED",
+    "prohibited": ["GLOBAL_REWRITE", "E121", "REOPEN_E01_E120_FROM_TOOL_NOVELTY"]
+  },
+  "R43_locked_source_audio_ingest_plan": {
+    "status": "READY_CONDITIONAL_ON_FOUNDER_LOCK",
+    "recording_authority_issued_by_this_plan": false,
+    "required_before_ingest": [
+      "FOUNDER_LOCK_D01",
+      "PERSIST_FOUNDER_STORY_LOCK_AND_RECORDING_AUTHORITY",
+      "BIND_EXACT_LOCKED_SOURCE_IDENTITY_AND_REVISION",
+      "REJECT_STALE_PR73_PR85_STORY_FRONTIERS"
+    ],
+    "ingest_outputs_after_lock": [
+      "EPISODE_SOURCE_MANIFEST_E01_E120",
+      "EXACT_TEXT_OR_NORMALIZED_SOURCE_HASHES",
+      "CHARACTER_VOICE_MAP_PLACEHOLDERS",
+      "PRONUNCIATION_LEXICON",
+      "PERFORMANCE_BLOCK_MANIFEST",
+      "AUDIO_QC_GATE_MAP"
+    ]
+  },
+  "R44_whole_season_runtime_normalization": {
+    "status": "PLAN_READY_CONDITIONAL_ON_LOCK",
+    "scope": "E01-E120_MECHANICAL_ONLY",
+    "known_gap": "E01-E60_NOT_FRESHLY_MECHANICALLY_RECOUNTED_IN_FINAL_SEASON_REGRESSION",
+    "checks": [
+      "episode_presence_and_order",
+      "spoken_word_count_by_episode",
+      "scene_count_and_audible_scene_boundaries",
+      "speaker_label_normalization",
+      "stage_direction_SFX_music_marker_separation",
+      "exact_text_source_identity",
+      "duplicate_or_archive_branch_exclusion",
+      "format_encoding_and_punctuation_normalization_without_semantic_rewrite"
+    ],
+    "story_rewrite_on_format_failure": false,
+    "repair_order": "FORMAT_OR_ADAPTATION_FIRST; TEXT_ONLY_IF_CONCRETE_TEXT_DEFECT_PROVED"
+  },
+  "R45_legal_specialist_review_packet": {
+    "status": "QUESTIONS_READY_NOT_REVIEWED",
+    "human_expert_evidence": "NOT_RUN",
+    "questions": [
+      "Does the late-birth-registration remedy as dramatized have a plausible jurisdictional analogue, and what terminology should be localized rather than presented as universal law?",
+      "Which procedural steps involving civil records, identity correction, evidentiary preservation, marriage/maternity/property separation, and damages require jurisdiction-specific caveats?",
+      "Does any scene imply that biological evidence alone determines civil identity, marriage, maternity, property or legal name contrary to plausible procedure?",
+      "Are the records-retention and audit-trail consequences plausible at story level, and which details should be corrected locally if not?",
+      "Do any professional/legal characters perform an impossible act that would break causality rather than merely compress procedure for drama?"
+    ],
+    "repair_law": "LOCAL_FACTUAL_OR_PROCEDURAL_REPAIR_ONLY_UNLESS_SPECIALIST_EVIDENCE_PROVES_CAUSAL_CONTRADICTION"
+  },
+  "R46_human_listener_packet": {
+    "status": "QUESTIONS_READY_NOT_RUN",
+    "human_signal": "NOT_RUN",
+    "target_questions": [
+      "After one listen, can the listener distinguish Mara, Evelyn, the historical Mara Elise Quinn identity, and the chosen-name issue without rereading?",
+      "Can the listener explain why Mara receives a separate late registration rather than Evelyn's certificate being reassigned?",
+      "Does the final identity solution feel earned by accumulated evidence rather than a last-minute legal trick?",
+      "Are Mara and Evelyn emotionally distinct people rather than two functions in an identity puzzle?",
+      "Does the Mara/Adrian ending feel like a present-choice HFN rather than restored-wife destiny?",
+      "Where, if anywhere, do legal/institutional passages become difficult to follow in audio only?",
+      "Which repeated precision/correction or acknowledgement patterns become audible enough to distract?",
+      "Does E120 feel like a completed ending without requiring E121?"
+    ],
+    "model_substitution_allowed": false
+  },
+  "R47_story_protection_firewall": {
+    "status": "READY_CONDITIONAL_ON_LOCK",
+    "protected_story_elements": [
+      "E01_E120_CAUSAL_ORDER_AND_COMPLETED_MAIN_CONFLICT",
+      "MARA_IS_CONTINUOUS_SECOND_LIVE_BORN_PERSON",
+      "SEPARATE_LATE_BIRTH_REGISTRATION_REMEDY",
+      "EVELYN_CERTIFICATE_MARRIAGE_AND_MATERNITY_CHAIN_REMAIN_HERS",
+      "MARA_QUINN_IS_CURRENT_CHOSEN_NAME_NOT_DECEASED_MARA_ELISE_QUINN_IDENTITY",
+      "FIRE_CAUSATION_CLOSED_BEFORE_IDENTITY_ARC_AND_DELIBERATE_IGNITION_UNPROVED",
+      "SIMON_CROSS_DECEASED_CURRENT_TIMELINE",
+      "LILY_NEVER_IDENTITY_EVIDENCE",
+      "NOAH_DID_NOT_CREATE_ORIGINAL_QUINN_SHELL",
+      "ELEANOR_PRICE_NOT_SECRET_MASTERMIND",
+      "MARA_ADRIAN_PRESENT_CHOICE_HFN_SEPARATE_HOMES_NO_PROPOSAL",
+      "E120_COMPLETE_ORDINARY_LIFE_ENDING_NO_NEW_CONSPIRACY_HOOK"
+    ],
+    "allowed_downstream_changes_without_story_reopen": [
+      "PERFORMANCE_DIRECTION",
+      "PAUSE_AND_SPACING",
+      "SOURCE_IDENTITY_CUES",
+      "MIX_FOCUS",
+      "PRONUNCIATION",
+      "NON_SEMANTIC_FORMAT_NORMALIZATION",
+      "JURISDICTION_LOCALIZATION_AFTER_SPECIALIST_EVIDENCE",
+      "PLATFORM_METADATA_AND_MARKETING_COPY"
+    ],
+    "text_change_gate": "NEW_CONCRETE_FATAL_MAJOR_CONTINUITY_FACTUAL_OR_LISTENING_EVIDENCE_OR_EXPLICIT_FOUNDER_DIRECTION"
+  },
+  "R48_downstream_handoff": {
+    "status": "HOLD_FOUNDER_LOCK_REQUIRED",
+    "recording_authority": "NOT_ISSUED",
+    "smith_activation": "PROHIBITED_UNTIL_D01_FOUNDER_LOCK",
+    "next_gate": "FOUNDER_EXPLICIT_LOCK_DECISION_FOR_D01"
+  },
+  "evidence_not_claimed": [
+    "FOUNDER_LOCK_D01",
+    "HUMAN_SIGNAL",
+    "LEGAL_SPECIALIST_PASS",
+    "REAL_PROVIDER_TTS",
+    "MARKET_PERFORMANCE"
+  ]
+}
