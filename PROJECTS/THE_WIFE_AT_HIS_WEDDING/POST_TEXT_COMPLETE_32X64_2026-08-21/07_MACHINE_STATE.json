@@ -1,0 +1,37 @@
+{
+  "project": "THE WIFE AT HIS WEDDING",
+  "date": "2026-08-21",
+  "package": "POST_TEXT_COMPLETE_32X64_FINALIZATION",
+  "status": "INTERNAL_FINALIZATION_COMPLETE_FOUNDER_LOCK_PENDING",
+  "story_text": "E01-E120_TEXT_COMPLETE",
+  "final_story_gate": {
+    "status": "PASS",
+    "fatal": 0,
+    "major": 0,
+    "blocking_medium": 0,
+    "drive_id": "1C-VzyTORtauuDFZToJ4bx5Nic9dOwsrPfRudL3dAOcM"
+  },
+  "final_regression_drive_id": "1-kXiIx3utxWTmIlPUuudiWVsXLfCHbBTOAADrrLrGF8",
+  "final_block_drive_id": "14ImsRm8aIZhAgVXYnfs3ZSeZnSQQaNIMNZ-wMhWrlxo",
+  "post_regression_delta": {
+    "issue": "GREENHOUSE_REMEMBERED_AGE_MISMATCH",
+    "repair": "E97_MEMORY_AGE_CORRECTION",
+    "github_commit": "7224959e8088936e9bc70abca3eaecf9fc416278",
+    "descendant_rebuild_required": false,
+    "status": "PASS"
+  },
+  "prompts_executed": 32,
+  "next_prompts_designed": 64,
+  "new_prose_authorized": false,
+  "e121_required": false,
+  "founder_lock": false,
+  "external_gates": {
+    "human_signal": "NOT_RUN",
+    "full_listening": "NOT_RUN",
+    "jurisdiction_legal_specialist": "NOT_RUN",
+    "provider_tts_performance": "NOT_RUN",
+    "market": "NOT_RUN"
+  },
+  "exact_next_authority_action": "FOUNDER_EXPLICIT_LOCK_DECISION",
+  "after_lock": "ISSUE_STORY_LOCK_RECORDING_AUTHORITY_THEN_AUDIO_PRODUCTION"
+}
