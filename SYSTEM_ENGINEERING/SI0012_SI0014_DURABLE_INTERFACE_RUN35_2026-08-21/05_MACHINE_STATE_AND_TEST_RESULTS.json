@@ -1,0 +1,69 @@
+{
+  "schema_version": "ivdivo.durable_interface_run35/1.0",
+  "date": "2026-08-21",
+  "status": "CI_GREEN_DRIVE_READBACK_PASS_FRESH_MAIN_REBASE_PENDING",
+  "pr": 133,
+  "branch": "system/si0012-si0014-durable-interface-run35-2026-08-21",
+  "authority_boundary": {
+    "si0012": "PILOTING_UNCHANGED",
+    "si0014": "READY_FOR_PILOT_UNCHANGED",
+    "automatic_promotion": false,
+    "story_or_canon_mutation": false
+  },
+  "interface": {
+    "version": "ivdivo.durable_transaction_interface/1.0",
+    "tool": "tools/ivdivo_durable_transaction_interface.py",
+    "schema": "schemas/IVDIVO_DURABLE_TRANSACTION_INTERFACE_SCHEMA_v1.json",
+    "contract": "ENGINEERING_CONTRACTS/DURABLE_TRANSACTION_INTERFACE_v1.0.md",
+    "mode": "ADDITIVE_FACADE_NOT_THIRD_RUNTIME"
+  },
+  "ci": {
+    "workflow_run": 32521664174,
+    "result": "PASS",
+    "run35": {"passed": 17, "failed": 0},
+    "run33": {"passed": 27, "failed": 0},
+    "run32_checkpoint": {"passed": 10, "failed": 0},
+    "registry_transaction": {"passed": 7, "failed": 0},
+    "registry_refs": "PASS",
+    "portfolio_resumability": "PASS_FULL",
+    "schema_json": "PASS",
+    "failure_history": [
+      "RUN1_TEST_HARNESS_DYNAMIC_IMPORT_PYTHON312_REPAIRED",
+      "RUN2_INVENTED_INHERITED_TEST_PATH_REPAIRED_FROM_AUTHORITY"
+    ]
+  },
+  "drive": {
+    "folder_id": "1vXrVeO0xjhxExaWwqoPy_HPu1BTsvclf",
+    "folder_name": "SI0012_SI0014_DURABLE_INTERFACE_RUN35_2026-08-21",
+    "files_expected": 6,
+    "files_nonempty": 6,
+    "semantic_readbacks": 6,
+    "status": "PASS"
+  },
+  "parallel_fatal_repair": {
+    "pr": 130,
+    "defect": "PROJECT_SLICE_FRESHNESS_REUSED_LIVE_SI0014_FROM_STALE_REGISTRY_VIEW",
+    "severity": "FATAL",
+    "preserved": "SI-0014_SESSION_RESILIENCE_DURABLE_RECOVERY",
+    "migrated": "PROJECT_SLICE_FRESHNESS_TO_SI-0015",
+    "repair_status": "PATCHED_ON_PR130_BRANCH_BEFORE_MERGE",
+    "story_gate_unchanged": true
+  },
+  "evidence_qualification": {
+    "raw_real_interruption_self_verifying": false,
+    "controlled_counts_as_real": false,
+    "synthetic_counts_as_real": false,
+    "incomplete_claim_counts_as_real": false,
+    "external_reference_existence_verified_by_interface": false,
+    "remaining_limitation": "SOURCE_REF_VERIFIER_ADAPTER_REQUIRED_BEFORE_PROMOTION_REVIEW"
+  },
+  "freshness": {
+    "run35_branch_origin_main": "0a3fcaa37b7774382013230e5eacc26b61e175c1",
+    "latest_main_observed": "f9e5d17cf95a8ce7f16118a14f3da58a49975acc",
+    "main_commits_since_origin": 11,
+    "path_overlap": 0,
+    "main_delta_scope": "WAVE9_TRUST_EVIDENCE_AUDIO_ONLY",
+    "next_action": "BLOB_EXACT_SEMANTIC_REBASE_THEN_LATEST_HEAD_CI_AND_DIFF_RED_TEAM"
+  },
+  "next_gate": "FRESH_MAIN_REBASE_THEN_LATEST_HEAD_CI_THEN_MERGE_READBACK_IF_CLEAN"
+}
