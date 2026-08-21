@@ -1,30 +1,36 @@
 {
-  "schema_version": "ivdivo.audio.wave9.trust_evidence/1.1",
+  "schema_version": "ivdivo.audio.wave9.trust_evidence/1.2",
   "date": "2026-08-21",
-  "status": "WAVE9_01_08_ENGINEERING_COMPLETE_MERGED_CURRENT_LINEAGE_BOUND_09_PLUS_EXTERNAL_HOLD",
+  "status": "WAVE9_INTERNAL_TRUST_CONTROL_PLANE_MERGED_CURRENT_PROVIDER_RUN_EXTERNAL_HOLD",
   "canonical_runtime": "audio/studio/runtime",
-  "current_merge_sha": "fef2f4cb3af9d167cc0e6d7ca25e21b5057bef7a",
+  "current_state_update_sha_parent": "221d0b2f206c0ad3429ef8df05530c9ee16b435a",
   "trust_pr": 132,
   "lineage_cross_binding_pr": 134,
+  "provider_snapshot_contract_pr": 122,
+  "provider_access_bridge_pr": 136,
+  "human_ledger_live_escrow_pr": 137,
   "external_evidence_module": "audio/studio/runtime/external_evidence_trust.py",
   "release_evidence_module": "audio/studio/runtime/studio_evidence.py",
+  "human_review_history_module": "audio/studio/runtime/human_review_ledger.py",
+  "live_exact_escrow_module": "audio/studio/runtime/live_lineage_escrow.py",
+  "provider_snapshot_workflow": ".github/workflows/elevenlabs-provider-snapshot.yml",
   "wave9": {
-    "01": "PASS_ENGINEERING",
-    "02": "PASS_ENGINEERING",
-    "03": "PASS_BOUNDED",
-    "04": "PASS_ENGINEERING_CI_MERGED",
-    "05": "PASS_ENGINEERING_CI_MERGED",
-    "06": "PASS_ENGINEERING_CI_MERGED",
-    "07": "PASS_ENGINEERING_CI_MERGED",
-    "08": "PASS_FRESH_MERGE_RESULT_CI_MERGED",
-    "09_plus": "HOLD_EXTERNAL"
+    "01": "PASS_ENGINEERING_MERGED",
+    "02": "PASS_ENGINEERING_DEDUPE_MERGED",
+    "03": "PASS_SECRET_TRUST_BOUNDARY_MERGED",
+    "04": "PASS_EXTERNAL_CLASS_SOURCE_VALIDATION_MERGED",
+    "05": "PASS_HUMAN_ATTESTATION_CONTRACT_MERGED",
+    "06": "PASS_CONTENT_HASH_READBACK_CONTRACT_MERGED",
+    "07": "PASS_PROVIDER_PREFLIGHT_SOURCE_BINDING_AND_PROVIDER_WORKFLOW_MERGED",
+    "08": "PASS_CURRENT_MAIN_MERGE_RESULT_CI_207_OF_207",
+    "09": "HOLD_EXTERNAL_REPOSITORY_SECRET_AND_MANUAL_PROVIDER_SNAPSHOT_RUN",
+    "10_plus": "WAIT_DEPENDENCY_09"
   },
   "ci": {
     "trust_boundary": {
       "run_id": 32521002618,
       "run_number": 117,
       "job_id": 96892943790,
-      "merge_result_sha": "f1248e3feacf7cd00f8113c8ab31e39d2d32a499",
       "dedicated_runtime": "4/4 PASS",
       "full_audio_studio": "186/186 PASS"
     },
@@ -32,9 +38,18 @@
       "run_id": 32521663376,
       "run_number": 125,
       "job_id": 96894946118,
-      "merge_result_sha": "594e70c2d13ccd667919a6b1fe64f651fbd60d74",
       "dedicated_runtime": "4/4 PASS",
       "full_audio_studio": "190/190 PASS"
+    },
+    "human_ledger_live_escrow_current_main": {
+      "run_id": 32522252057,
+      "run_number": 139,
+      "job_id": 96896763921,
+      "tested_merge_ref_sha": "883a9f6e11e53578bbf131951f340a856a701906",
+      "tested_main_sha": "fd15c0812a001a89ead13b9da4ea535c0774acb4",
+      "tested_head_sha": "75e47b783c16d4a0edeca190e7dc051a9a7240cf",
+      "dedicated_runtime": "4/4 PASS",
+      "full_audio_studio": "207/207 PASS"
     }
   },
   "readback_strength_order": [
@@ -63,8 +78,21 @@
       "CROSS_PROJECT_LIVE includes current project identity and current LIVE_AUDIO hash"
     ]
   },
+  "additional_merged_invariants": [
+    "HUMAN REVIEW PASS FAIL HOLD HISTORY IS APPEND ONLY",
+    "PASS PLUS FAIL IN ONE REQUIRED HUMAN REVIEW SCOPE HOLDS CONFLICT",
+    "OTHER CANDIDATE HASH CANNOT FILL CURRENT CANDIDATE REVIEW COVERAGE",
+    "EXACT N PAID LINEAGE REQUIRED",
+    "LIVE AUDIO BINDS EXACT REQUEST AND PROVIDER RESULT HASH",
+    "ALIGNMENT BINDS EXACT LIVE AUDIO AND SOURCE HASH",
+    "RECOVERY MUST COVER EVERY LINEAGE CONTENT HASH",
+    "INVALID RECOVERY RECEIPT WITH KNOWN TRANSACTION ID IS INVALID NOT MISSING",
+    "PROVIDER ACCEPTANCE IS NOT PRODUCTION TAKE ACCEPTANCE",
+    "NO AUTOMATIC PAID REPLAY"
+  ],
   "evidence_ceiling": {
-    "provider_account_reads_this_block": 0,
+    "real_authenticated_provider_workflow_run": false,
+    "provider_account_reads_claimed": 0,
     "paid_synthesis_calls": 0,
     "real_human_review_claims": 0,
     "real_voice_locks": 0,
@@ -72,10 +100,17 @@
     "real_lesson_zero_live_audio_created": false,
     "real_lesson_zero_alignment_created": false,
     "measured_lesson_zero_economics": false,
+    "real_transaction_recovery_claimed": false,
     "cross_project_live_replication_claimed": false,
     "story_mutations": 0
   },
-  "exact_next_dependency": "AUTHENTICATED_PROVIDER_ACCESS_AND_FIRST_REAL_SECRET_FREE_SNAPSHOT",
+  "exact_next_dependency": "CONFIGURE_ELEVENLABS_API_KEY_AS_REPOSITORY_ACTIONS_SECRET_OUTSIDE_CHAT_THEN_MANUALLY_RUN_ELEVENLABS_PROVIDER_SNAPSHOT_WORKFLOW_AND_REQUIRE_AUTH_PROVIDER_RECEIPT_PASS",
+  "after_dependency_09": [
+    "READ_BACK_SECRET_FREE_PROVIDER_SNAPSHOT_ARTIFACT",
+    "VERIFY_PROVIDER_ACCOUNT_AND_MODEL_CAPABILITIES",
+    "VERIFY_REAL_VOICE_IDS_WITHOUT_AUTO_SWAP",
+    "BEGIN_BASELINE_FIRST_CASTING_AND_HUMAN_ATTESTED_AUDITIONS"
+  ],
   "forbidden": [
     "SECOND_AUDIO_ENGINE",
     "CALLER_BOOLEAN_AS_EXTERNAL_TRUTH",
@@ -83,6 +118,9 @@
     "UNRELATED_VALID_RECEIPTS_AS_ONE_RELEASE_LINEAGE",
     "POINTER_ONLY_DURABILITY_AS_PASS",
     "SYNTHETIC_HUMAN_AS_HUMAN_REVIEW",
-    "ENGINEERING_CI_AS_PROVIDER_OR_HUMAN_PROOF"
+    "ENGINEERING_CI_AS_PROVIDER_OR_HUMAN_PROOF",
+    "MERGE_OLD_PR_111",
+    "AUTO_VOICE_LOCK",
+    "AUTO_PAID_REPLAY"
   ]
 }
