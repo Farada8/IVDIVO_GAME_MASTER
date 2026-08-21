@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated": "2026-08-21",
   "status": "CURRENT_PORTFOLIO_ROUTING_DELTA_NOT_STORY_CANON",
-  "purpose": "Non-destructive portfolio-frontier overlay for CURRENT_IVDIVO_SYSTEM_STATE.json. Apply only to portfolio routing; project-specific authority/state remains higher. This overlay now records the explicit Founder lock for D10 BLOODBOUND and supersedes stale aggregate D10 lock-gate fields.",
+  "purpose": "Non-destructive portfolio-frontier overlay for CURRENT_IVDIVO_SYSTEM_STATE.json. Apply only to portfolio routing; project-specific authority/state remains higher. D10 Founder lock is recorded and D01 has now been fresh-rebased through E96 on its working branch/Drive frontier.",
   "supersedes_aggregate_fields": [
     "portfolio_frontier.text_locked_or_text_complete",
     "portfolio_frontier.active_project",
@@ -49,10 +49,24 @@
   "active_project": {
     "project_id": "D01",
     "title": "THE WIFE AT HIS WEDDING",
-    "mode": "FRESH_PROJECT_SPECIFIC_REBASE_REQUIRED",
-    "current_phase": "DO_NOT_INFER_FROM_STALE_AGGREGATE",
-    "next_unblocked_obligation": "FRESH_REBASE_D01_FROM_NEWEST_PROJECT_SPECIFIC_STATE_THEN_CONTINUE_FINITE_STORY_COMPLETION",
-    "freshness_warning": "Drive CURRENT_WORKSTATE records D01 later than historical E61-E90 snapshots, including E91-E95 WORKING-COMPLETE in a newer finalization wave. Re-resolve the newest D01 authority before drafting."
+    "arc": "THE_SECOND_BIRTH_THE_GIRL_WITHOUT_A_CERTIFICATE",
+    "mode": "ACTIVE_WORKING_FINAL_ARC",
+    "main_state_path": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/FINALIZATION_32_PASS_2026-08-21/CURRENT_EXECUTION_STATE.json",
+    "freshest_working_branch": "wife/wave2-e91-95-32x64-2026-08-21",
+    "working_pr": 85,
+    "branch_status": "WORKING_NOT_MERGED_TO_MAIN",
+    "upstream_E61_E90": "CLOSED_PASS",
+    "completed_frontier": "E91-E96_WORKING_COMPLETE",
+    "e91_e95_drive_script_id": "1BGbN9Mlz4I9-uxMAfoJ-sYM4QgwFIFQr3yzu_D4uWjg",
+    "e96_drive_folder_id": "11aNNQU3FcitB_BoJUUHzY-DcsnMiHVD-",
+    "e96_drive_script_id": "14VXqWzC72DmLaQNgzghYjHupFACXe0Wnfco-rRGAAV8",
+    "e96_gate_drive_id": "1-njMR1lIBmcl_ljQ_hEaBXxGCfuYXBdDaIRozmsX_5g",
+    "e96_gate": {"status":"PASS","fatal":0,"major":0,"runtime_spoken_words":1138},
+    "current_story_answer": "HISTORICAL_TEEN_MARA_QUINN_CARD_MAPS_TO_CURRENT_MARA_AND_HISTORICAL_TEEN_EVELYN_CARD_MAPS_TO_CURRENT_EVELYN",
+    "current_evidence_boundary": "BODY_MAPPING_ONLY_NOT_NEWBORN_BIRTH_CIVIL_MARRIAGE_MATERNITY_PROPERTY_OR_NAME_ENTITLEMENT",
+    "next_unblocked_obligation": "E97_EPISTEMIC_CONTRACT_AND_SOURCE_AUTHENTICATION_THEN_DRAFT_GATE_THE_GIRL_ADRIAN_MET",
+    "freshness_warning": "Do not revert to historical E51+/E61-90 snapshots or regenerate E91-E96. Re-read the working branch + Drive before E97 in case sibling work advances the frontier.",
+    "do_not_repeat": ["E61_E90_FIRE_ARC", "E91_E95_WAVE2", "E96_THE_TWO_CARDS"]
   },
   "parallel_founder_decision_gates": [
     {
@@ -65,17 +79,16 @@
       "do_not_generate": "E25"
     }
   ],
-  "queue_after_d10_founder_lock": [
-    "D01_THE_WIFE_AT_HIS_WEDDING_FRESH_REBASE_FROM_NEWEST_PROJECT_SPECIFIC_STATE_AND_FINITE_STORY_COMPLETION",
+  "queue_after_d01_completion": [
     "IVDIVO_BOOK_3_SMITH_AUTHORITY_RECONCILIATION_HUMAN_SCENE_CALIBRATION_FULL_NOVEL_AND_LOCK",
     "IVDIVO_BOOK_4_AFTER_BOOK_3_CONSEQUENCES_LOCK",
     "WHOLE_PORTFOLIO_TEXT_LOCK_AUDIT",
     "AUDIO_NOVEL_STUDIO_BATCH_INGEST_AND_PRODUCTION"
   ],
   "drive_mirrors": {
-    "workstate": {"id": "1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w", "title": "CURRENT_WORKSTATE_v2.6"},
+    "workstate": {"id": "1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w", "title": "CURRENT_WORKSTATE_v2.8"},
     "prompts": {"id": "1mlUAkQVLH41CfdMa2ZDa8gR3MN7eNi-w3ZC705_b03g", "title": "CURRENT_PROMPTS_v2.3"},
     "portfolio_router": {"id": "1lGIt1ewXQeECsKheP7uH9bf4Gdz3rQ54llOOxuqXLvY", "title": "00 IVDIVO — ALL ACTIVE BOOKS COMPLETION ROUTER — 2026-08-20"}
   },
-  "state_status": "D10_FOUNDER_LOCKED_E01_E24_RECORDING_AUTHORITY_ISSUED; D09_READY_FOR_FOUNDER_LOCK_DECISION; ACTIVE_TEXT_QUEUE_D01_FRESH_REBASE_REQUIRED"
+  "state_status": "D10_FOUNDER_LOCKED_E01_E24_RECORDING_AUTHORITY_ISSUED; D01_ACTIVE_E96_WORKING_COMPLETE_NEXT_E97; D09_READY_FOR_FOUNDER_LOCK_DECISION"
 }
