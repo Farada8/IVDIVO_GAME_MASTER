@@ -2,7 +2,7 @@
   "project": "THE WIFE AT HIS WEDDING",
   "date": "2026-08-21",
   "scope": "E91-E120_FINAL_ARC",
-  "status": "E91_E95_WORKING_COMPLETE_GO_TO_E96_AFTER_FRESH_GATE",
+  "status": "E91_E96_WORKING_COMPLETE_GO_TO_E97_AFTER_GATE",
   "founder_locked": false,
   "upstream": {
     "E61_E90_story_block": "CLOSED_PASS",
@@ -24,10 +24,30 @@
     "runtime_spoken_words": {"E91":1176,"E92":1104,"E93":1138,"E94":1100,"E95":1101},
     "red_team": {"fatal":0,"major":0,"medium":3},
     "new_wave3_prompts_created": 64,
-    "new_wave3_prompts_executed": 0,
     "github_folder": "WAVE2_32_EXECUTIONS_E91_95_2026-08-21/",
     "drive_folder_id": "1Uy8zd8MwZ13P3aImqDYhMFjz-LF3Kqdw",
-    "drive_production_master_id": "1YZgSpNWSvg54vZGsjGM31sJJ-6pT1cxha3Ss3zqjQXM"
+    "drive_e91_e95_current_script_id": "1BGbN9Mlz4I9-uxMAfoJ-sYM4QgwFIFQr3yzu_D4uWjg",
+    "superseded_or_archive_pointer_note": "Drive ID 1YZgSpNWSvg54vZGsjGM31sJJ-6pT1cxha3Ss3zqjQXM was later renamed ARCHIVE_SIBLING_ALT_22_EPISODES_91-95_PRE_REBASE_GRACE_KELLAN and must not be treated as the current production master."
+  },
+  "wave3": {
+    "source_queue": "WAVE2_32_EXECUTIONS_E91_95_2026-08-21/04_WAVE3_64_NEXT_PROMPTS_v1.0.md",
+    "freshness_descendant_reuse_gate": "PASS_NO_NEWER_VALID_E96_LOCATED_BEFORE_DRAFT",
+    "episodes_completed": ["E96"],
+    "episode_frontier": "E96",
+    "e96": {
+      "title": "THE TWO CARDS",
+      "status": "WORKING_COMPLETE",
+      "runtime_spoken_words": 1138,
+      "runtime_gate": "PASS_1100_1550",
+      "red_team": {"fatal":0,"major":0},
+      "drive_folder_id": "11aNNQU3FcitB_BoJUUHzY-DcsnMiHVD-",
+      "drive_script_id": "14VXqWzC72DmLaQNgzghYjHupFACXe0Wnfco-rRGAAV8",
+      "drive_gate_id": "1-njMR1lIBmcl_ljQ_hEaBXxGCfuYXBdDaIRozmsX_5g",
+      "github_folder": "WAVE3_EXECUTION_E96_2026-08-21/",
+      "story_answer": "HISTORICAL_MARA_QUINN_CARD_MAPS_TO_CURRENT_MARA_AND_HISTORICAL_EVELYN_CARD_MAPS_TO_CURRENT_EVELYN_AT_TEENAGE_INTAKE",
+      "explicit_non_answer": "BODY_MAPPING_DOES_NOT_PROVE_BABY_B_BIRTH_CIVIL_MARRIAGE_MATERNITY_PROPERTY_OR_NAME_ENTITLEMENT",
+      "next_clue": "HAWTHORNE_GREENHOUSE_ROUTE_AND_INJURY_RECORD"
+    }
   },
   "architecture": {
     "detailed_source": "20B_EPISODES_91-120_FINAL_ARC_ARCHITECTURE_v1.0",
@@ -44,22 +64,24 @@
     "quinn_source_subject": "DECEASED_MARA_ELISE_QUINN",
     "noah_original_source_mining": "NOT_SUPPORTED",
     "noah_later_withholding_and_post_fire_reuse": "SUPPORTED",
-    "historical_teen_informed_choice_of_mara_quinn": "SUPPORTED_BUT_NOT_ADULT_MAPPING",
-    "dual_historical_biometric_cards": "AUTHENTICATED_OBJECTS_PENDING_COMPARISON",
-    "adult_body_mapping": "UNRESOLVED_UNTIL_E96",
+    "historical_teen_informed_choice_of_mara_quinn": "SUPPORTED",
+    "dual_historical_biometric_cards": "AUTHENTICATED_AND_COMPARISON_COMPLETE",
+    "adult_body_mapping": "CURRENT_MARA_EQUALS_HISTORICAL_TEEN_MARA_QUINN_CURRENT_EVELYN_EQUALS_HISTORICAL_TEEN_EVELYN",
+    "newborn_to_teen_mapping": "UNRESOLVED",
     "mara_current_professional_credential": "ACTIVE_UNDER_REVIEW",
-    "mara_client_work": "ONE_STREAM_PAUSED",
-    "mara_evelyn_remedy_conflict": "ACTIVE"
+    "mara_client_work": "ONE_PREVIOUSLY_PAUSED_STREAM_PARTIALLY_RESTARTED",
+    "mara_evelyn_remedy_conflict": "ACTIVE_WITH_INDEPENDENT_EVELYN_ACTION"
   },
   "medium_watches": [
-    "DOCUMENT_ARCHIVE_DENSITY",
-    "MARA_ACKNOWLEDGEMENT_IMPERATIVE_AND_INSTITUTIONAL_CORPUS_RHETORIC",
-    "JURISDICTION_SPECIFIC_LEGAL_PROCEDURE"
+    "DOCUMENT_ARCHIVE_AND_EVIDENCE_LANGUAGE_DENSITY",
+    "MARA_ACKNOWLEDGEMENT_CORRECTION_AND_INSTITUTIONAL_CORPUS_RHETORIC",
+    "JURISDICTION_SPECIFIC_LEGAL_AND_EVIDENTIARY_PROCEDURE"
   ],
   "protected": {
     "lily_is_evidence": false,
     "post_marriage_sister_sexual_substitution": false,
     "adrian_memory_is_civil_identity_proof": false,
+    "biometric_card_is_birth_marriage_maternity_or_civil_identity_shortcut": false,
     "original_missing_certificate_is_locked_as_grand_plot": false,
     "human_signal_run": false,
     "market_validation_claimed": false
@@ -70,16 +92,28 @@
     "REAL_LISTENER_AUDIO_VALIDATION"
   ],
   "next_queue": "WAVE2_32_EXECUTIONS_E91_95_2026-08-21/04_WAVE3_64_NEXT_PROMPTS_v1.0.md",
-  "highest_unblocked_obligation": "RUN_WAVE3_PROMPT_01_FRESHNESS_DESCENDANT_REUSE_GATE",
-  "after_no_newer_E96_found": "EXECUTE_WAVE3_PROMPTS_02_13_AND_DRAFT_GATE_E96_THE_TWO_CARDS",
+  "highest_unblocked_obligation": "E97_EPISTEMIC_CONTRACT_AND_SOURCE_AUTHENTICATION_THEN_DRAFT_GATE_THE_GIRL_ADRIAN_MET",
+  "next_episode_contract": {
+    "episode": "E97",
+    "title": "THE GIRL ADRIAN MET",
+    "required_evidence_classes": ["WITNESSED","REMEMBERED","DOCUMENT_DERIVED","RECONSTRUCTED"],
+    "required_independent_source": "HAWTHORNE_SECURITY_OR_EVENT_ROUTE_EVIDENCE",
+    "adrian_memory_role": "EMOTIONAL_EVIDENCE_NOT_DISPOSITIVE_IDENTITY_PROOF",
+    "required_turn": "INDEPENDENT_ROUTE_EVIDENCE_SUPPORTS_CURRENT_MARA_PHYSICALLY_OCCUPIED_ONE_EXPOSED_EVELYN_ROUTE_DURING_GREENHOUSE_INCIDENT_AT_SEVENTEEN",
+    "required_boundary": "NO_DESTINY_OR_ROMANTIC_ENTITLEMENT_FROM_MEMORY",
+    "required_cliff": "VICTORIA_NOTE_NO_MORE_DIRECT_ADRIAN_SUBSTITUTIONS"
+  },
   "prohibited": [
     "REOPEN_E61_E90_FIRE_ARC_WITHOUT_NEW_DEMONSTRATED_EVIDENCE",
     "SILENTLY_PROMOTE_WORKING_TO_CANON_OR_LOCKED",
     "USE_LILY_OR_DNA_AS_IDENTITY_SHORTCUT",
     "USE_BIOMETRIC_CARD_AS_AUTOMATIC_BIRTH_MARRIAGE_MATERNITY_OR_CIVIL_PROOF",
+    "USE_ADRIAN_MEMORY_AS_CIVIL_IDENTITY_PROOF",
     "MAKE_ONE_WITNESS_OR_ONE_DOCUMENT_DISPOSITIVE",
     "RENUMBER_20B_EPISODE_MAP_FROM_RESEARCH_OPTION_ALONE"
   ],
   "drive_lab_folder_id": "1qW4EuQsKwsPNtIxG2KNytIL_p_Jo89mo",
-  "github_main_path": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/FINALIZATION_32_PASS_2026-08-21/"
+  "github_main_path": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/FINALIZATION_32_PASS_2026-08-21/",
+  "working_branch": "wife/wave2-e91-95-32x64-2026-08-21",
+  "working_pr": 85
 }
