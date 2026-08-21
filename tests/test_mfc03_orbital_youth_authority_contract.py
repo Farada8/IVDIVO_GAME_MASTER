@@ -13,7 +13,7 @@ def check_route(authority_state: str, p53_mode: str):
     return findings
 
 
-class MFCO3OrbitalYouthAuthorityContractTests(unittest.TestCase):
+class MFC03OrbitalYouthAuthorityContractTests(unittest.TestCase):
     """Bounded replication fixture; this is a contract test, not a new engine."""
 
     def test_known_positive_c02_route_is_flagged_once(self):
