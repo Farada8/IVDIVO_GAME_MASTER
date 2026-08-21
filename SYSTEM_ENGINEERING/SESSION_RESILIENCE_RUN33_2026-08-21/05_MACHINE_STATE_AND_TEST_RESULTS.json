@@ -1,13 +1,14 @@
 {
-  "schema_version": "ivdivo.session_resilience_run33/1.1",
+  "schema_version": "ivdivo.session_resilience_run33/1.2",
   "date": "2026-08-21",
-  "status": "CI_GREEN_DRIVE_READBACK_PASS_MERGE_GATE",
+  "status": "CONTROLLED_PARTIAL_WRITE_PILOT_PASS_REAL_INTERRUPTION_PENDING",
   "candidate_id": "SI-0014",
   "candidate_status": "READY_FOR_PILOT",
   "run32_merge_commit": "42e08b350c5d2f564ea380d4de8aba57fba90ab9",
   "run33_pr": 108,
+  "run33_merge_commit": "e5f1a50d2960941840687d16939def3b61b5fb57",
   "fresh_main_rebase": {
-    "main_sha": "55c69de4f19aec1c2b408020c1447cbd38beef5b",
+    "main_sha_before_run33_merge": "55c69de4f19aec1c2b408020c1447cbd38beef5b",
     "semantic_merge_commit": "96e1a15f613209f55f47d5c22f7cebfe34fa9cf6",
     "parallel_commits_preserved": 67,
     "post_rebase_relation": "HEAD_AHEAD_MAIN_BEHIND_0",
@@ -18,7 +19,8 @@
     "defect": "SESSION_RESILIENCE_PENDING_ID_COLLIDED_WITH_REGISTRY_FAMILY_SI_0010",
     "preserved": "SI-0010_REGISTRY_SHARD_COMPACTION_TRANSACTION",
     "migrated_to": "SI-0014_SESSION_RESILIENCE_DURABLE_RECOVERY",
-    "prevention": "FULL_REGISTRY_FAMILY_ID_FRESHNESS_REQUIRED"
+    "prevention": "FULL_REGISTRY_FAMILY_ID_FRESHNESS_REQUIRED",
+    "status": "MERGED_AND_READBACK_PASS"
   },
   "modules": [
     "tools/ivdivo_durable_write_reconciler.py",
@@ -45,31 +47,71 @@
       "MULTIPLE_ROOT_ACTIVE_HEAD_AND_DUPLICATE_CHECKPOINT_VALIDATION",
       "REAL_VS_SYNTHETIC_FALSE_STOP_RATE_SEPARATION",
       "FULL_REGISTRY_ID_FRESHNESS",
-      "STALE_D01_PORTFOLIO_CLAIM_RECONCILIATION"
+      "STALE_D01_PORTFOLIO_CLAIM_RECONCILIATION",
+      "SHARED_MACHINE_POINTER_BACKWARD_COMPATIBILITY"
     ]
   },
   "ci_evidence": {
-    "session_resilience_run33": {"run_id": 32516926109, "status": "PASS"},
-    "session_resilience": {"run_id": 32516926107, "status": "PASS"},
-    "self_improvement_integrity": {"run_id": 32516926112, "status": "PASS"},
+    "final_run33_head": "022bd3c69d703d33b5ce9c1d0e7dd5fbf05ca758",
+    "session_resilience_run33": {"run_id": 32517285494, "status": "PASS"},
+    "session_resilience": {"run_id": 32517285548, "status": "PASS"},
+    "self_improvement_integrity": {"run_id": 32517285452, "status": "PASS"},
     "earlier_failures_classified": [
       "MISSING_PYTEST_IN_NEW_WORKFLOW_ENVIRONMENT",
       "INVALID_VALIDATE_REGISTRY_CLI_ARGUMENT",
       "STALE_PORTFOLIO_RESUMABILITY_CLAIM"
     ],
-    "all_repaired": true
+    "all_repaired": true,
+    "all_required_green": true
   },
   "drive_readback": {
     "folder": "SESSION_RESILIENCE_RUN33_2026-08-21",
     "folder_id": "1CCIXde5_2k57yHHIOENgO7staWyyZ1yv",
-    "files_expected": 7,
-    "files_nonempty": 7,
-    "content_markers_verified": [
+    "pre_pilot_files_expected": 7,
+    "pre_pilot_files_nonempty": 7,
+    "pre_pilot_content_markers_verified": [
       "32 SYNTHESIZE/PERSIST",
       "prompt 64 final SI-0014 decision",
       "REAL PRODUCTION PILOT: NOT YET SATISFIED"
     ],
+    "pre_pilot_status": "PASS",
+    "current_files_expected": 8,
+    "current_files_nonempty": 8,
+    "controlled_pilot_document_id": "12_eH5DDRJ6A73tNIFDbnI26RsHV3Qiivm2CzdB5dP_0",
+    "controlled_pilot_final_marker": "RUN33-PILOT-TRANSACTION-COMPLETE-001",
+    "controlled_pilot_readback": "PASS",
     "status": "PASS"
+  },
+  "controlled_partial_write_pilot": {
+    "pilot_id": "RUN33-CONTROLLED-PARTIAL-001",
+    "classification": "CONTROLLED_INTEGRATION_EVIDENCE_NOT_GENUINE_INTERRUPTION",
+    "real_interruption": false,
+    "transaction_id": "RUN33-PILOT-TX-001",
+    "authority_main_sha": "e5f1a50d2960941840687d16939def3b61b5fb57",
+    "phase1": {
+      "github_action_state": "RECONCILED_READBACK_VERIFIED",
+      "github_commit": "23eeea8575316558bb97482dc6e82aeb0c3fe8bb",
+      "drive_action_state": "NOT_STARTED",
+      "reconciler_decision": "EXECUTE_MISSING_SAFE_ACTIONS",
+      "authorized_action_ids": ["DRIVE-PILOT-EVIDENCE"],
+      "github_replay_authorized": false
+    },
+    "phase2": {
+      "drive_execution_count": 1,
+      "drive_readback_verified": true,
+      "github_replay_count": 0
+    },
+    "final_decision": "TRANSACTION_COMPLETE",
+    "transaction_sha256": "3639df8027c59070781a4c54af820483202ceee358e302482517a68d988e5666",
+    "duplicate_writes": 0,
+    "status": "PASS"
+  },
+  "learning_evidence": {
+    "event_path": "SYSTEM_ENGINEERING/SESSION_RESILIENCE_RUN33_2026-08-21/09_INTERRUPTION_LEARNING_EVENT_CONTROLLED.json",
+    "real_interruption": false,
+    "promotion_threshold_contribution": 0,
+    "false_resume": false,
+    "false_stop": false
   },
   "parallel_development": {
     "pr103": "AUDIO_SPECIFIC_COMPATIBLE",
@@ -78,8 +120,9 @@
     "pr98": "MERGED_REGISTRY_TRANSACTION_REUSED"
   },
   "evidence_boundary": [
-    "CONTROLLED_PARTIAL_WRITE_PILOT_NOT_YET_EXECUTED",
-    "GENUINE_NEW_INTERRUPTION_RECOVERY_NOT_YET_OBSERVED",
+    "CONTROLLED_PARTIAL_WRITE_PILOT_EXECUTED_AND_PASS",
+    "CONTROLLED_PILOT_IS_NOT_GENUINE_INTERRUPTION",
+    "GENUINE_NEW_INTERRUPTION_RECOVERY_NOT_YET_OBSERVED_AFTER_RUN33_MERGE",
     "NO_PROVIDER_CALL",
     "NO_CREDIT_SPEND",
     "NO_IRREVERSIBLE_REPLAY",
@@ -87,5 +130,5 @@
     "NO_CANON_MUTATION",
     "NO_AUTOMATIC_SELF_IMPROVEMENT_PROMOTION"
   ],
-  "next_gate": "FINAL_FRESHNESS_DIFF_CHECK_THEN_PR108_MERGE_READBACK_THEN_CONTROLLED_REVERSIBLE_GITHUB_DRIVE_PARTIAL_WRITE_PILOT"
+  "next_gate": "AT_LEAST_3_GENUINE_INTERRUPTION_RECOVERIES_ACROSS_AT_LEAST_2_PROJECTS_WITH_ZERO_FALSE_RESUME_THEN_PROMOTION_REVIEW"
 }

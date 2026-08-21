@@ -1,0 +1,59 @@
+{
+  "schema_version": "ivdivo.controlled_partial_write_pilot/1.0",
+  "pilot_id": "RUN33-CONTROLLED-PARTIAL-001",
+  "classification": "CONTROLLED_INTEGRATION_EVIDENCE_NOT_GENUINE_INTERRUPTION",
+  "transaction_id": "RUN33-PILOT-TX-001",
+  "project_id": "IVDIVO_SYSTEM_ENGINEERING",
+  "work_unit": "RUN33-CONTROLLED-PARTIAL-001",
+  "authority_snapshot": {
+    "repo_main_sha": "e5f1a50d2960941840687d16939def3b61b5fb57",
+    "state_revision": "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION/1.3@13b37c8318a52ecfbb8882a3a45d1adeed4f9bd6"
+  },
+  "purpose": "Prove that after one reversible durable action succeeds and the second has not started, reconciliation authorizes only the missing safe action and does not replay the completed action.",
+  "phase_at_authorship": "BEFORE_GITHUB_CREATE_COMPLETES",
+  "actions": [
+    {
+      "action_id": "GH-PILOT-EVIDENCE",
+      "artifact_id": "RUN33_CONTROLLED_PARTIAL_WRITE_PILOT",
+      "store": "GITHUB",
+      "operation": "create-file",
+      "effect_class": "REVERSIBLE_WRITE",
+      "idempotency_key": "ivdtx:82156ae410e91240f4731b0a51ad83b4b2fb43a25adad8a7a7d2840e4870fc19",
+      "side_effect_state": "NOT_STARTED",
+      "readback_verified": false,
+      "intended_identity": {
+        "path": "SYSTEM_ENGINEERING/SESSION_RESILIENCE_RUN33_2026-08-21/07_CONTROLLED_PARTIAL_WRITE_PILOT_PHASE1.json",
+        "branch": "system/run33-controlled-partial-write-pilot-2026-08-21"
+      }
+    },
+    {
+      "action_id": "DRIVE-PILOT-EVIDENCE",
+      "artifact_id": "RUN33_CONTROLLED_PARTIAL_WRITE_PILOT",
+      "store": "DRIVE",
+      "operation": "create-document",
+      "effect_class": "REVERSIBLE_WRITE",
+      "idempotency_key": "ivdtx:4ae4b405ce3ac094c08944cce5ca27388fac3e0d7bc06d1ab41ad20d19460632",
+      "side_effect_state": "NOT_STARTED",
+      "readback_verified": false,
+      "intended_identity": {
+        "parent_folder_id": "1CCIXde5_2k57yHHIOENgO7staWyyZ1yv",
+        "title": "07_CONTROLLED_PARTIAL_WRITE_PILOT — SESSION RESILIENCE RUN33"
+      }
+    }
+  ],
+  "controlled_sequence": [
+    "1. Create this GitHub artifact and read it back.",
+    "2. Do not create the Drive artifact yet.",
+    "3. Reconcile observed state: GitHub RECONCILED+readback, Drive NOT_STARTED.",
+    "4. Expected decision: EXECUTE_MISSING_SAFE_ACTIONS for DRIVE-PILOT-EVIDENCE only.",
+    "5. Create Drive artifact once, read it back, then reconcile both actions to TRANSACTION_COMPLETE."
+  ],
+  "evidence_boundary": [
+    "NOT_A_GENUINE_OUTAGE",
+    "REAL_INTERRUPTION_FALSE",
+    "NO_PROVIDER_CALL",
+    "NO_CREDIT_SPEND",
+    "NO_IRREVERSIBLE_ACTION",
+    "NO_SELF_IMPROVEMENT_PROMOTION"
+  ]
+}

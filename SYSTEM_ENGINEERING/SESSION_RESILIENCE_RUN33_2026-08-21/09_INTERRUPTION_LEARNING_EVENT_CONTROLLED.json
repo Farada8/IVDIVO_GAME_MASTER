@@ -1,0 +1,20 @@
+{
+  "event_id": "RUN33-CONTROLLED-PARTIAL-001-EVENT",
+  "project_id": "IVDIVO_SYSTEM_ENGINEERING",
+  "work_unit": "RUN33-CONTROLLED-PARTIAL-001",
+  "recovery_decision": "RECOVER_VOLATILE_FIRST",
+  "real_interruption": false,
+  "false_resume": false,
+  "false_stop": false,
+  "duplicate_work_units_avoided": 1,
+  "writes_reconciled": 2,
+  "checkpoint_bytes": 0,
+  "checkpoint_tool_calls": 0,
+  "recovery_tool_calls": 2,
+  "notes": [
+    "CONTROLLED_INTEGRATION_EVIDENCE_NOT_GENUINE_INTERRUPTION",
+    "GitHub action was already reconciled; reconciler authorized Drive action only.",
+    "Final transaction decision TRANSACTION_COMPLETE.",
+    "This event contributes zero genuine-interruption evidence toward SI-0014 promotion review."
+  ]
+}
