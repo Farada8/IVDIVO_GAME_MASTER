@@ -1,0 +1,12 @@
+{
+  "schema_version": "ivdivo.room917.p003a2_cue_map/1.0",
+  "cues": [
+    {
+      "id": "EXAMPLE_PROTECTED_SILENCE",
+      "start_seconds": 0.0,
+      "end_seconds": 0.45,
+      "classification": "PROTECTED_AUTHORED_PAUSE",
+      "notes": "Replace example time with accepted live lineage only. Never promote synthetic timing."
+    }
+  ]
+}
