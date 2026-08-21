@@ -1,21 +1,14 @@
 {
-  "schema_version": "2.3",
+  "schema_version": "2.4",
   "updated": "2026-08-21",
   "status": "V2_APPLIED_UNVERIFIED_RUNTIME_PROVISIONAL",
   "authority_router": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
   "engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
   "core_kernels": "IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md",
   "machine_config": "SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json",
+  "evaluation_matrix": "SELF_IMPROVEMENT_EVALUATION_MATRIX_v1.json",
   "historical_base": "IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md",
-  "priority_order": [
-    "P0_AUTHORITY_SAFETY_INTEGRITY",
-    "P1_WRITE_STRONG_COMPLETE_BOOKS",
-    "P2_LOCKED_BOOK_TO_HIGH_QUALITY_AUDIO_NOVEL",
-    "P3_PRODUCTION_RELIABILITY_SPEED_REUSE_COST",
-    "P4_ENGINE_TOOL_PROMPT_PROGRAM_QUALITY",
-    "P5_RESEARCH_LEARNING",
-    "P6_BROADER_IVDIVO_CAPABILITY"
-  ],
+  "priority_order": ["P0_AUTHORITY_SAFETY_INTEGRITY", "P1_WRITE_STRONG_COMPLETE_BOOKS", "P2_LOCKED_BOOK_TO_HIGH_QUALITY_AUDIO_NOVEL", "P3_PRODUCTION_RELIABILITY_SPEED_REUSE_COST", "P4_ENGINE_TOOL_PROMPT_PROGRAM_QUALITY", "P5_RESEARCH_LEARNING", "P6_BROADER_IVDIVO_CAPABILITY"],
   "primary_loops": {
     "book": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
     "audio_novel": "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md",
@@ -36,6 +29,13 @@
     "engine_builder": "ENGINE_WORTHINESS -> PURPOSE/IO/AUTHORITY/STATE/DAG/GATES -> MINIMAL_CORE -> FIXTURES -> ADVERSARIAL/REGRESSION -> REAL_PILOT -> PROMOTION -> MONITOR/PRUNE",
     "research_radar": "DECISION_OR_BOTTLENECK_TRIGGER -> FRESHNESS/UNKNOWN -> TARGETED_SOURCES -> SOURCE_FACT/MECHANISM -> TEST/DECISION -> APPLICATION -> STOP"
   },
+  "evidence_separation": {
+    "automated_tests_are_literary_proof": false,
+    "model_review_is_human_signal": false,
+    "dry_run_is_live_provider_evidence": false,
+    "source_inspection_is_runtime_execution": false,
+    "predicted_market_score_is_market_behavior": false
+  },
   "drive_mirrors": {
     "engine_v2": "1TamY1cuiCUGP5zgheF-1nM2LaRt2f5vtZLwfJTJeSaY",
     "current_self_improvement_authority": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
@@ -44,35 +44,18 @@
     "improvement_registry_mirror": "1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs",
     "portability_inventory": "1WofqSiO3fBD_VoIveOVDihBybwlpeDE051zVrf1ipVs"
   },
-  "v2_new_capabilities": [
-    "ORDERED_OBJECTIVE_STACK_WITH_BOOKS_AND_AUDIO_FIRST",
-    "THREE_COUPLED_BOOK_AUDIO_META_LOOPS",
-    "PROBLEM_MINING_FROM_RECURRING_FAILURES_AND_SUCCESSES",
-    "BEST_CANDIDATE_ROUTER",
-    "WIP_ANTI_BEDLAM_GUARD",
-    "PROBLEM_DRIVEN_RESEARCH_ENGINE",
-    "BOOK_IMPROVEMENT_SENSORS",
-    "AUDIO_IMPROVEMENT_SENSORS",
-    "PRODUCTIVITY_AND_COST_SENSORS",
-    "MULTI_AI_SELF_IMPROVEMENT_CELL",
-    "PROMOTION_DEPLOYMENT_READBACK_ROLLBACK",
-    "REAL_PRODUCT_FEEDBACK_LOOP",
-    "SELF_REFERENCE_GUARD",
-    "KNOWLEDGE_COMPACTION_AND_PRUNING",
-    "FAILURE_AND_SUCCESS_MEMORY",
-    "OBSERVATION_EXPERIMENT_LEARNING_LEDGER",
-    "GENERAL_PROBLEM_SOLVING_KERNEL",
-    "ENGINE_BUILDER_KERNEL",
-    "RESEARCH_RADAR_KERNEL"
-  ],
+  "v2_new_capabilities": ["ORDERED_OBJECTIVE_STACK_WITH_BOOKS_AND_AUDIO_FIRST", "THREE_COUPLED_BOOK_AUDIO_META_LOOPS", "PROBLEM_MINING_FROM_RECURRING_FAILURES_AND_SUCCESSES", "BEST_CANDIDATE_ROUTER", "WIP_ANTI_BEDLAM_GUARD", "PROBLEM_DRIVEN_RESEARCH_ENGINE", "BOOK_IMPROVEMENT_SENSORS", "AUDIO_IMPROVEMENT_SENSORS", "PRODUCTIVITY_AND_COST_SENSORS", "MULTI_AI_SELF_IMPROVEMENT_CELL", "PROMOTION_DEPLOYMENT_READBACK_ROLLBACK", "REAL_PRODUCT_FEEDBACK_LOOP", "SELF_REFERENCE_GUARD", "KNOWLEDGE_COMPACTION_AND_PRUNING", "FAILURE_AND_SUCCESS_MEMORY", "OBSERVATION_EXPERIMENT_LEARNING_LEDGER", "GENERAL_PROBLEM_SOLVING_KERNEL", "ENGINE_BUILDER_KERNEL", "RESEARCH_RADAR_KERNEL", "CROSS_DOMAIN_EVALUATION_MATRIX"],
   "application_readback": {
     "writing_router": "PASS",
+    "audio_router_feedback_adapter": "PASS",
     "aggregate_system_state": "PASS_SCHEMA_1_6",
     "central_registry_si_0007": "PASS_APPLIED_UNVERIFIED",
     "drive_engine_mirror": "PASS",
     "drive_router_mirror": "PASS_WITH_V2_2_APPEND",
+    "drive_audio_feedback_adapter": "PASS",
     "learning_ledger": "PASS_CREATED_AND_DRIVE_MIRRORED",
     "core_kernels": "PASS_CREATED_AND_ROUTED",
+    "evaluation_matrix": "PASS_CREATED",
     "concurrent_sibling_progress_preserved": true
   },
   "runtime_status": {
@@ -86,13 +69,15 @@
   "promotion_status": {
     "engine_v2": "APPLIED_UNVERIFIED",
     "writing_router": "UPDATED_AND_READBACK_VALID",
+    "audio_feedback_adapter": "UPDATED",
     "drive_mirrors": "CREATED_AND_READBACK_VALID",
     "aggregate_system_state": "UPDATED_AND_READBACK_VALID",
     "registry_candidate_record": "SI-0007_APPLIED_UNVERIFIED",
     "learning_ledger": "ACTIVE",
     "core_kernels": "ACTIVE",
+    "evaluation_matrix": "ACTIVE",
     "next_gate": "UTILITY_RUNTIME_SMOKE_THEN_FINAL_VERIFIED_CURRENT_REVIEW"
   },
-  "next_action": "Use v2 during active book/audio/production work and collect real observations/experiments. When a runnable repository checkout is available, execute the exact utility runtime smoke: audit live registry, queue/next with book-audio query, negative lifecycle fixture. Then perform final VERIFIED_CURRENT review.",
+  "next_action": "Use v2 during active book/audio/production work; collect actual observations, experiments and external evidence; evaluate improvements with the cross-domain matrix. When a runnable repository checkout is available, execute exact utility runtime smoke and perform final VERIFIED_CURRENT review.",
   "story_first_guard": "META_IMPROVEMENT_MUST_NOT_STARVE_ACTIVE_BOOK_OR_AUDIO_PRODUCTION_UNLESS_SYSTEM_FATAL_MAJOR_BLOCKS_IT_OR_FOUNDER_SWITCHES_FOCUS"
 }
