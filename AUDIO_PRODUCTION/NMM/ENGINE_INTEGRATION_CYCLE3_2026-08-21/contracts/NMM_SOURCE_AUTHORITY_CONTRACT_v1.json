@@ -1,0 +1,14 @@
+{
+  "schema": "NMM_SOURCE_AUTHORITY_CONTRACT_v1",
+  "required": {
+    "document_id": "1j_WPuSFVwPWzWHDvXqCAsNPM3-O6bSHMJgYH-7CLNrI",
+    "revision_id": "5",
+    "export_sha256": "5c3d86b271524614ad7adf37c71bafba74f9f63a292ada46ad567ff75e88a1c0",
+    "e01_sha256": "f95871c17cd2501c6a3ca36fe1d0dd850ebae2118fe2ca1de75274a53c75de9b",
+    "occurrence_ledger_sha256": "7128bb3b74289533b9e8be279958c8a9dfb40564c7255e9b0e11306c988bae5a",
+    "spoken_occurrences": 269,
+    "canonical_tokens": 1494
+  },
+  "fail_closed": ["SOURCE_HASH_MISMATCH","E01_HASH_MISMATCH","OCCURRENCE_LEDGER_MISMATCH","OCCURRENCE_COUNT_MISMATCH","TOKEN_COUNT_MISMATCH","FORBIDDEN_BRANCH_IDENTIFIER"],
+  "historical_metadata": {"spoken_word_count_line":1496,"audio_compiler_override":1494,"prose_mutation_allowed":false}
+}
