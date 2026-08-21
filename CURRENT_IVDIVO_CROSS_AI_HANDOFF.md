@@ -3,6 +3,7 @@
 **Status:** CURRENT OPERATIONAL HANDOFF — NOT STORY CANON  
 **Updated:** 2026-08-21  
 **Machine state:** `CURRENT_IVDIVO_SYSTEM_STATE.json`  
+**Project-specific D10 state:** `PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json`  
 **Machine execution pointer:** `CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json`
 
 ## Primary law
@@ -10,7 +11,7 @@
 Do not make the Founder restate recoverable work and do not wait for another `и` when the next obligation is already authorized, unambiguous, unblocked and executable.
 
 Before substantive work:
-`CURRENT AUTHORITY -> IF PRIOR CHAT TRANSCRIPT IS PASTED THEN FULL-CHAT RECOVERY -> CURRENT_IVDIVO_SYSTEM_STATE.json -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY + LEARNING LEDGER SWEEP -> SELF-IMPROVEMENT PRIORITY REBASE -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT UNTIL REAL GATE`.
+`CURRENT AUTHORITY -> IF PRIOR CHAT TRANSCRIPT IS PASTED THEN FULL-CHAT RECOVERY -> PROJECT-SPECIFIC SOURCE OF TRUTH / EXECUTION STATE -> CURRENT_IVDIVO_SYSTEM_STATE.json -> FRESHNESS SWEEP -> CONCURRENT-DIALOG REBASE -> CHAT-ONLY INGESTION IF RELEVANT -> IMPROVEMENT REGISTRY + LEARNING LEDGER SWEEP -> SELF-IMPROVEMENT PRIORITY REBASE -> STALE-WORK GATE -> HIGHEST UNBLOCKED OBLIGATION -> EXECUTE -> VERIFY -> PERSIST -> REPEAT UNTIL REAL GATE`.
 
 A sibling-chat statement is discovery context only until its actual result/persisted artifact/status/version/gates are located and verified. If accessible, recover actual chat-only work before asking the Founder to repeat it.
 
@@ -25,30 +26,42 @@ Founder workflow `OLD CHAT -> Ctrl+A -> Ctrl+C -> NEW CHAT -> paste -> прод�
 
 Finish all active unfinished text projects to legitimate text/story lock first. Do not reopen locked books merely because the production OS improved. After the active text portfolio is complete, batch every locked book/season through the current Audio Novel Studio.
 
-## Current active frontier
+## Current active frontier — D10 BLOODBOUND
 
-**Project:** D09 — `THE MAN WHO CAME BACK`  
-**Line:** THE DIVORCE LEDGER  
+**Project:** D10 — `BLOODBOUND`  
+**Line/engine:** THE ERASED DAUGHTERS  
+**Project machine state:** `PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json`  
 **Current mode:** FOUNDER LOCK DECISION GATE  
-**Completed frontier:** E01–E24 one current branch per episode / text complete  
-**Version reconciliation:** CLOSED  
+**Completed frontier:** E01–E24 / text complete  
 **Main conflict:** CLOSED  
-**Last verified gate:** `THE MAN WHO CAME BACK — FINAL SEASON STORY GATE v1.0 — TEXT COMPLETE — READY FOR FOUNDER LOCK`  
-**Drive ID:** `1IZfae96Y4gS7JDqFrVxv-2O53zFwoWVOYzOV7zoDXL0`  
-**Gate result:** PASS / FATAL 0 / MAJOR 0  
+**Last verified gate:** `BLOODBOUND — FINAL SEASON STORY GATE v1.0 — TEXT COMPLETE — READY FOR FOUNDER LOCK`  
+**Drive ID:** `1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s`  
+**Gate result:** PASS / FATAL 0 / MAJOR 0 / BLOCKING MEDIUM 0  
 **Founder lock:** NOT YET ISSUED  
-**Next actual obligation:** Founder approval/lock decision for D09.
+**Next actual obligation:** Founder explicit lock decision for D10.
 
-Do NOT repeat E07–E12 reconciliation, season-wide final gate, or generate E25. Do not silently Founder-lock the season.
+Do NOT repeat E07–E12, Block II/III/IV drafting, corpus regression, Final Season Story Gate, or generate E25. Do not silently Founder-lock the season.
 
-## Queue after D09
+The completed season preserves these hard locks: magic is not guilt proof; Anika/Sabine chain closes through converging ordinary evidence; Celia becomes witness rather than mastermind; Mira refuses hereditary rule; Rian materially relinquishes authority before romantic escalation; Bloodbond remains an optional future adult-consent choice.
 
-1. D10 `BLOODBOUND` — complete E04–E24 + gates + lock.
-2. D01 `THE WIFE AT HIS WEDDING` — reconcile working E51+ against current authority, establish finite story-earned ending, finish only required episodes.
-3. IVDIVO Book 3 / SMITH — authority reconciliation -> complete architecture -> full novel -> Narrative OS gates -> lock.
-4. IVDIVO Book 4 — only after Book 3 consequences lock.
-5. Whole-portfolio text-lock audit.
-6. Audio Novel Studio batch ingest/adaptation/production for every locked work.
+## Other pending Founder decision gate
+
+D09 `THE MAN WHO CAME BACK` remains E01–E24 TEXT COMPLETE with Final Season Story Gate PASS / FATAL 0 / MAJOR 0 and is also NOT YET FOUNDER-LOCKED. Do not create E25 or rerun its reconciliation/final gate.
+
+## Queue after D10 Founder Lock
+
+1. D01 `THE WIFE AT HIS WEDDING` — fresh-rebase from newest project-specific state. Aggregate Drive already records a newer finalization frontier with E91–E95 WORKING-COMPLETE; do not revert to the older E51+/E61–90 snapshot.
+2. IVDIVO Book 3 / SMITH — authority reconciliation -> complete architecture -> Human Scene/Dialogue calibration -> full novel -> Narrative OS gates -> lock.
+3. IVDIVO Book 4 — only after Book 3 consequences lock.
+4. Whole-portfolio text-lock audit.
+5. Audio Novel Studio batch ingest/adaptation/production for every locked work.
+
+## Dialogue / Human Scene learning from BLOODBOUND
+
+BLOODBOUND provided real production evidence for the rule:
+`SCENE-LEVEL NATURALISM PASS != CORPUS-LEVEL SPEAKER/NARRATOR SEPARATION`.
+
+Use current `CURRENT_IVDIVO_HUMAN_SCENE_DIALOGUE_AUTHORITY.md`, especially corpus-rhetoric, contrastive-syntax, acknowledgement-function, register-distance, vocabulary/metaphor provenance and tactic-vs-surface separability checks. Preserve this learning for D01/SMITH/future books, but do not reopen completed D10 without new FATAL/MAJOR evidence.
 
 ## Cross-model execution contract — VERIFIED 26-FUNCTION ARCHITECTURE
 
@@ -58,11 +71,7 @@ Current reconciled execution audit: `IVDIVO_NARRATIVE_OS/22_PROMPTS_01_26_EXECUT
 Drive reconciled audit: `IVDIVO — PROMPTS 01–26 EXECUTION AUDIT v2 — RECONCILED — 2026-08-21`, Drive ID `1tsGiNBAm1JyTWgkr7P7vGe51SSDZ7_GA3X4ltllCntY`.
 Human/Drive execution card: `MULTI_MODEL_AGENT_RUN_CARD_TEMPLATE v1.2`, Drive ID `13qXjDsHD903j6RcdnOoy4-qmKggWzYOiMDuV_N0Ri_U`.
 
-The requested doubling has already been executed and reconciled: **13 -> 26 operational functions**. Functions 14–26 cover authority/freshness/frontier, router/bootstrap consistency, asset persistence/escrow, concurrent writes/rebase, semantic dedupe/drift, cross-AI provenance, project-state completeness/next action, story-first factory-drift, audio perceptual/commercial quality, provider spend/canary economics, release reproducibility, secret/privacy audit and disaster-resume recovery.
-
-Do **not** create a parallel alternate numbering scheme or more prompts merely to appear busy. The executed audit concluded that further prompt proliferation is lower value than the real product-evidence gate unless a new systemic defect appears.
-
-Every external model job still receives one bounded RUN CARD. Source parity and independence are required where independent confirmation is claimed. External output is evidence, not canon. Reusable findings return through the Improvement Registry/Learning Ledger after semantic dedupe.
+The requested doubling has already been executed and reconciled: **13 -> 26 operational functions**. Do not create a parallel alternate numbering scheme or more prompts merely to appear busy. External output is evidence, not canon. Reusable findings return through the Improvement Registry/Learning Ledger after semantic dedupe.
 
 ## Self-improvement / anti-loss engine — CURRENT v2
 
@@ -73,7 +82,6 @@ Transcript recovery module: `IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVE
 Machine state: `CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json`.
 Improvement registry: `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json`.
 Learning ledger: `CURRENT_IVDIVO_LEARNING_LEDGER.json`.
-Historical/base only: `IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md`.
 
 Priority: `P0 AUTHORITY/INTEGRITY -> P1 STRONG COMPLETE BOOKS -> P2 LOCKED BOOK TO HIGH-QUALITY AUDIO -> P3 PRODUCTION PERFORMANCE -> P4 ENGINES/TOOLS/PROMPTS -> P5 RESEARCH/LEARNING -> P6 BROADER IVDIVO`.
 
@@ -88,16 +96,9 @@ Runtime version: `IVDIVO-ENGINE/6.2.0-continuous-execution`.
 SHA-256: `d7985036fc97b74019aa74bf422d03f2f6cbe2d5f6e30736bb70032fc399ff4f`.
 Fresh-unzip regression: **290/290 pytest PASS**.
 
-## ROOM917 product evidence frontier from reconciled 26-prompt audit
+## ROOM917 product evidence frontier
 
-The system-hardening objective is complete enough to stop expanding meta-prompts. ROOM917 is not at S0/S1. Current project evidence records a full E01 evaluation master identity and post-render analysis.
-
-Current exact product obligation from the reconciled audit:
-`P003A2 PRE-SCENE3 EXACT LOW-LEVEL INTERVAL LOCALIZATION + DURABLE MASTER ACCESS`, with parallel `P003B HUMAN PERCEPTUAL LISTEN`.
-
-Do not blanket-fill silence, ambience or music. Do not reapply the old Scene 3 repair campaign. Do not spend on E02–E24 scale rendering before E01 quality proof. Do not regenerate a missing master from summaries/metrics.
-
-If exact master bytes are inaccessible in the current tool surface, this is a real asset-persistence/tool blocker, not permission to invent evidence or create more prompts.
+ROOM917 is not at S0/S1. Current product obligation remains project-state-driven post-render evaluation/selective repair. Do not blanket-fill silence, ambience or music; do not reapply obsolete Scene 3 fixes; do not regenerate missing source assets from summaries/metrics. Human perceptual evidence remains a real gate.
 
 ## Improvement / promotion law
 
