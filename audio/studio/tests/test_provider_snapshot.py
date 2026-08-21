@@ -1,4 +1,3 @@
-import copy
 import sys
 import unittest
 from pathlib import Path
@@ -6,13 +5,7 @@ from pathlib import Path
 RUNTIME = Path(__file__).resolve().parents[1] / "runtime"
 sys.path.insert(0, str(RUNTIME))
 
-from provider_snapshot import (
-    assert_secret_free,
-    compare_stable_snapshots,
-    compile_snapshot,
-    dispatch_capability_gate,
-    verify_snapshot,
-)
+from provider_snapshot import compare_stable_snapshots, compile_snapshot, dispatch_capability_gate, verify_snapshot
 
 
 def preflight(**overrides):
@@ -47,18 +40,23 @@ class ProviderSnapshotTests(unittest.TestCase):
         self.assertFalse(snap["secret_persisted"])
 
     def test_actual_api_key_field_is_rejected(self):
-        row = preflight()
-        row["api_key"] = "do-not-store"
+        row = preflight(); row["api_key"] = "do-not-store"
         with self.assertRaisesRegex(ValueError, "SECRET_LIKE_FIELD_FORBIDDEN"):
             compile_snapshot(row)
 
     def test_targeted_snapshot_is_not_account_inventory(self):
         snap = compile_snapshot(preflight(), inventory_scope="TARGETED")
         self.assertFalse(snap["stable"]["account_inventory_complete"])
+        self.assertEqual(snap["stable"]["inventory_method"], "TARGETED_LOOKUP")
         self.assertFalse(snap["machine_may_infer_unlisted_voices"])
 
-    def test_account_wide_scope_must_be_explicit(self):
-        snap = compile_snapshot(preflight(), inventory_scope="ACCOUNT_WIDE")
+    def test_caller_cannot_upgrade_targeted_to_account_wide(self):
+        with self.assertRaisesRegex(ValueError, "ACCOUNT_WIDE_SCOPE_NOT_PROVEN_BY_SOURCE"):
+            compile_snapshot(preflight(), inventory_scope="ACCOUNT_WIDE")
+
+    def test_account_wide_requires_source_enumeration_proof(self):
+        row = preflight(inventory_scope="ACCOUNT_WIDE", account_inventory_complete=True, inventory_method="ACCOUNT_WIDE_ENUMERATION")
+        snap = compile_snapshot(row, inventory_scope="ACCOUNT_WIDE")
         self.assertTrue(snap["stable"]["account_inventory_complete"])
 
     def test_volatile_change_does_not_create_stable_drift(self):
@@ -72,8 +70,7 @@ class ProviderSnapshotTests(unittest.TestCase):
 
     def test_voice_capability_drift_holds_without_swap(self):
         a = compile_snapshot(preflight())
-        b_row = preflight()
-        b_row["voices"]["voice_a"]["status"] = "FAIL"
+        b_row = preflight(); b_row["voices"]["voice_a"]["status"] = "FAIL"
         b = compile_snapshot(b_row)
         out = compare_stable_snapshots(a, b)
         self.assertEqual(out["status"], "HOLD_STABLE_CAPABILITY_DRIFT")
