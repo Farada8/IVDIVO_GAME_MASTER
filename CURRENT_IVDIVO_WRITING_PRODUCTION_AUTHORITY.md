@@ -20,9 +20,10 @@ Current canonical GitHub entry stack:
 9. `CURRENT_IVDIVO_CROSS_AI_HANDOFF.md`
 10. `IVDIVO_NARRATIVE_OS/14_MULTI_MODEL_HANDOFF_PROMPTS.md`
 11. `IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md`
-12. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
-13. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
-14. current book/project overlay + source-of-truth/state/manuscript files.
+12. `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md`
+13. `IVDIVO_NARRATIVE_OS/08_100_PERSON_VIRTUAL_PRODUCTION_STUDIO_OPERATING_LAYER.md`
+14. `IVDIVO_NARRATIVE_OS/02_AGENT_PROMPTS_MASTER.md`
+15. current book/project overlay + source-of-truth/state/manuscript files.
 
 Google Drive and ChatGPT File Library are required connected working/reference sources when they can materially affect the current decision. Founder newest instruction outranks persisted mirrors until synchronized.
 
@@ -47,6 +48,22 @@ Founder shorthand `и / дальше / продолжай / делай / раб�
 Stop only on a genuine gate: Founder decision, authority/canon ambiguity, unresolved FATAL/MAJOR, human-only evidence, unavailable required provider/tool, irreversible/high-impact external action requiring approval, or another real blocker.
 
 Before every material write, re-read the current state/frontier. If another dialog advanced the same dependency, rebase/reconcile rather than overwriting it.
+
+## PROJECT-WIDE CONTINUATION / LEARNING LAW
+
+Founder-approved authority: `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md`.
+
+Any substantial result produced in one IVDIVO Project conversation is a candidate for project-wide system improvement.
+
+At the next substantive work session, the Router must inspect relevant newer sibling Project conversations and persisted artifacts for stronger decisions, mechanisms, prompts, programs, procedures, tests, repair laws and cross-model workflows.
+
+If a discovered result is demonstrably stronger, compatible with higher authority and reusable beyond its source context, it must be considered for integration into the relevant CURRENT prompts / engine / programs / procedures / handoff state / machine-readable project state.
+
+Promotion route:
+
+`DISCOVER -> LOCATE PERSISTED ARTIFACT -> VERIFY STATUS/VERSION/HASH/GATES -> COMPARE AGAINST CURRENT -> ABSTRACT PROJECT-SPECIFIC CONTENT -> RED TEAM/REGRESSION AS NEEDED -> CLASSIFY -> PROMOTE / PROJECT-SPECIFIC / HOLD / REJECT -> UPDATE CURRENT POINTERS`.
+
+A sibling-chat statement without persisted evidence is `DISCOVERY_ONLY`, never automatic authority. Do not create parallel routers when an existing CURRENT authority can be upgraded.
 
 ## CROSS-DIALOG DELTA HARVEST
 
@@ -101,6 +118,8 @@ Verify writes before claiming synchronization.
 If the active stage is audio, hand off to `CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md`. Writing/story authority remains higher for protected source text and story facts.
 
 **STORY FIRST. CHARACTER SECOND. WORLD THROUGH STORY. SAGA THROUGH COMPLETED BOOKS.**
+
+**THE PROJECT LEARNS ACROSS ITS CONVERSATIONS.**
 
 **PERSISTED STATE DRIVES THE WORK. REPEATED “И” IS OPTIONAL SHORTHAND, NOT WORKFLOW PLUMBING.**
 
