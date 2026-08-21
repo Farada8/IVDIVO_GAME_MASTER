@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.1",
+  "date": "2026-08-21",
+  "status": "ENGINEERING_FIXTURE_PASS_READY_FOR_REAL_PILOT",
+  "total_cases": 10,
+  "passed_expected_behavior": 10,
+  "cases": [
+    {"case":"book_founder_gate","expected":"STOP FOUNDER_DECISION_REQUIRED","result":"PASS"},
+    {"case":"book_prose","expected":"ROUTE Prompt 06","result":"PASS"},
+    {"case":"audio_ingest","expected":"ROUTE Prompt 09","result":"PASS"},
+    {"case":"engine_design","expected":"ROUTE Prompt 20","result":"PASS"},
+    {"case":"research_fresh","expected":"ROUTE Prompt 27","result":"PASS"},
+    {"case":"meta_suppressed_by_book","expected":"suppress unrelated meta while P1/P2 open","result":"PASS"},
+    {"case":"meta_direct_prereq","expected":"allow Prompt 25 as direct prerequisite","result":"PASS"},
+    {"case":"authority_dirty","expected":"ROUTE Prompt 02","result":"PASS"},
+    {"case":"parallel_audio_research","expected":"primary Prompt 09 + independent Prompt 27","result":"PASS"},
+    {"case":"invalid_domain","expected":"FAIL INVALID_DOMAIN exit 1","result":"PASS"}
+  ],
+  "limitations": [
+    "Engineering fixtures are not real production pilot evidence.",
+    "A normalized-state adapter from arbitrary CURRENT project state is still required.",
+    "The 32-prompt pack remains WORKING CANDIDATE until one real book, one book-to-audio, one engine/tool and one research/evidence pilot pass."
+  ],
+  "next_action": "Build CURRENT-state adapter and run first real P1 book-routing pilot without changing story authority."
+}
