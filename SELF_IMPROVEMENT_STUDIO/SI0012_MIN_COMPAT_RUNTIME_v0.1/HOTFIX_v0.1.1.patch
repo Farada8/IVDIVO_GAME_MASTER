@@ -1,0 +1,41 @@
+--- a/ivdivo_compat/state_adapter.py
++++ b/ivdivo_compat/state_adapter.py
+@@
+-    next_obligation = (
+-        state.get("highest_unblocked_obligation")
+-        or state.get("next_unblocked_obligation")
+-        or (state.get("next_action") or {}).get("stage")
+-        or state.get("next_queue")
+-    )
++    raw_next = state.get("next_action")
++    if isinstance(raw_next, dict):
++        next_from_action = raw_next.get("stage") or raw_next.get("action")
++    elif isinstance(raw_next, str):
++        next_from_action = raw_next
++    else:
++        next_from_action = None
++    next_obligation = (
++        state.get("highest_unblocked_obligation")
++        or state.get("next_unblocked_obligation")
++        or next_from_action
++        or state.get("next_queue")
++    )
+@@
+-        if (state.get("next_action") or {}).get("tool_executable_here") is False:
+-            stop_reason = "TOOL_RUNTIME_LIMITATION"
++        blocker_upper = str(label).upper()
++        raw_next_for_gate = state.get("next_action")
++        if isinstance(raw_next_for_gate, dict) and raw_next_for_gate.get("tool_executable_here") is False:
++            stop_reason = "TOOL_RUNTIME_LIMITATION"
++        elif "HUMAN" in blocker_upper or "LISTENER" in blocker_upper:
++            stop_reason = "HUMAN_EVIDENCE_REQUIRED"
++        elif "PROVIDER" in blocker_upper:
++            stop_reason = "EXTERNAL_PROVIDER_REQUIRED"
++        elif "AUTHORITY" in blocker_upper:
++            stop_reason = "AUTHORITY_UNRESOLVED"
+
+# Added regression cases
+# 37: D04 v1.4 string next_action is accepted.
+# 38: D04 v1.4 HUMAN blocker -> HUMAN_EVIDENCE_REQUIRED.
+# 39: machine PASS cannot become Human Signal.
+# 40: exact line `Hold the second transfer.` remains protected.
