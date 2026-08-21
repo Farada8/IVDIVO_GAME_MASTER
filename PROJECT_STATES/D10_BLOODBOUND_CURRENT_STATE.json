@@ -1,18 +1,32 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated": "2026-08-21",
   "status": "CURRENT_PROJECT_ROUTING_STATE_NOT_STORY_CANON",
   "project_id": "D10",
   "title": "BLOODBOUND",
   "active_engine": "THE_ERASED_DAUGHTERS",
-  "authority_note": "Founder newest instruction and Drive current project authority outrank this routing state. Final story/text completion is internally verified, but Founder Lock is NOT silently issued by this machine state.",
+  "authority_note": "Founder explicitly approved the D10 story lock in the current conversation. Drive current project authority and Founder Lock artifact are now controlling for D10 story/text status. This routing state does not claim downstream TTS, human-listener, provider, legal, economics or market evidence.",
   "drive_current_authority": {
     "id": "17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8",
     "title": "00_BLOODBOUND — CURRENT PROJECT AUTHORITY + NEXT ACTION v1.0"
   },
-  "mode": "FOUNDER_LOCK_DECISION_GATE",
-  "current_phase": "FINAL_STORY_GATE_PASSED_AWAITING_FOUNDER_LOCK",
-  "completed_frontier": "E01-E24_TEXT_COMPLETE",
+  "founder_lock": {
+    "status": "ISSUED",
+    "date": "2026-08-21",
+    "artifact_drive_id": "1Fp0vPbvt8JaGxGIvfxwyN4LuA4BXo8Ia1Rcp2Qk8hDA",
+    "artifact_title": "BLOODBOUND — FOUNDER STORY LOCK + RECORDING AUTHORITY v1.0",
+    "scope": "SEASON_ONE_E01_E24_STORY_TEXT_AND_RECORDING_AUTHORITY",
+    "downstream_evidence_not_implied": [
+      "REAL_TTS_OR_PROVIDER_EXECUTION",
+      "BLIND_HUMAN_LISTENER_PERFORMANCE_VALIDATION",
+      "RELEASE_STAGE_LEGAL_OR_FACT_REVIEW_WHERE_REQUIRED",
+      "MEASURED_ECONOMICS",
+      "MARKET_RESPONSE"
+    ]
+  },
+  "mode": "FOUNDER_LOCKED",
+  "current_phase": "STORY_TEXT_LOCKED_READY_FOR_DOWNSTREAM_PRODUCTION",
+  "completed_frontier": "E01-E24_TEXT_COMPLETE_AND_FOUNDER_LOCKED",
   "main_conflict_status": "CLOSED",
   "final_story_gate": {
     "status": "PASS",
@@ -21,7 +35,7 @@
     "blocking_medium": 0,
     "drive_id": "1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s",
     "title": "BLOODBOUND — FINAL SEASON STORY GATE v1.0 — TEXT COMPLETE — READY FOR FOUNDER LOCK",
-    "founder_lock": "NOT_YET_ISSUED"
+    "founder_lock": "ISSUED"
   },
   "block_gates": {
     "E01_E06": {"status": "PASS", "fatal": 0, "major": 0, "drive_id": "11qb_ikaXCZIf0pndHAZxhZ00Mbr6PiqnxaLOqBlLvAU"},
@@ -76,20 +90,20 @@
   ],
   "do_not_repeat": [
     "DO_NOT_REBUILD_PHASE_A_B_ENGINE_COMPETITION_WITHOUT_NEW_FATAL_MAJOR_EVIDENCE",
-    "DO_NOT_REOPEN_BLOCK_I_II_III_IV_WITHOUT_NEW_FATAL_MAJOR_EVIDENCE",
+    "DO_NOT_REOPEN_BLOCK_I_II_III_IV_WITHOUT_NEW_FATAL_MAJOR_EVIDENCE_OR_NEW_FOUNDER_INSTRUCTION",
     "DO_NOT_REDRAFT_E07_E24_TO_KEEP_WORK_MOVING",
     "DO_NOT_RERUN_FINAL_SEASON_STORY_GATE",
     "DO_NOT_GENERATE_E25",
-    "DO_NOT_CLAIM_REAL_LISTENER_OR_TTS_PASS",
-    "DO_NOT_SILENTLY_FOUNDER_LOCK"
+    "DO_NOT_CLAIM_REAL_LISTENER_OR_TTS_PASS"
   ],
-  "next_unblocked_obligation": "FOUNDER_EXPLICIT_LOCK_DECISION_FOR_D10",
-  "remaining_to_founder_lock": ["FOUNDER_EXPLICIT_LOCK_DECISION_FOR_D10"],
+  "next_unblocked_obligation": "FRESH_REBASE_D01_THE_WIFE_AT_HIS_WEDDING_FROM_NEWEST_PROJECT_SPECIFIC_STATE",
+  "remaining_to_founder_lock": [],
   "after_founder_lock": "FRESH_REBASE_D01_THE_WIFE_AT_HIS_WEDDING_FROM_NEWEST_PROJECT_SPECIFIC_STATE_AND_CONTINUE_FINITE_STORY_COMPLETION",
   "provenance": [
+    "Founder explicit lock approval in current conversation 2026-08-21",
+    "Drive Founder Lock artifact 1Fp0vPbvt8JaGxGIvfxwyN4LuA4BXo8Ia1Rcp2Qk8hDA",
     "Drive current authority 17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8",
     "Drive Final Season Story Gate 1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s",
-    "Drive CURRENT_WORKSTATE_v2.6",
-    "Drive CURRENT_PROMPTS_v2.3"
+    "Drive CURRENT_WORKSTATE_v2.6"
   ]
 }
