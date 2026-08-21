@@ -1,0 +1,48 @@
+{
+  "schema": "absolute_math.publication_handoff/1.0",
+  "project": "ABSOLUTE MATHEMATICS",
+  "batch": "ENGINE_RUN3_AMSI65_96_2026-08-21",
+  "github": {
+    "repository": "Farada8/IVDIVO_GAME_MASTER",
+    "base_main_sha": "a1ef1dc8e7f44d71f57a7774aa40cde9f28b4834",
+    "branch": "absolute-math-run3-amsi65-96-2026-08-21",
+    "pr_number": 129,
+    "pr_url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/129",
+    "head_sha": "0b284c17c69c74b3527eae62e4ead9f1b8972b78",
+    "authority_status": "DRAFT_NOT_CURRENT"
+  },
+  "drive": {
+    "parent_absolute_mathematics_id": "1kp3CQIAg5IaqK60VaV-qG-iIx4DZmYiA",
+    "run3_folder_id": "1U1B9aVsrNVkAp0FNMFIq2P67vQvBpSRd",
+    "run3_folder_url": "https://drive.google.com/drive/folders/1U1B9aVsrNVkAp0FNMFIq2P67vQvBpSRd",
+    "zip_file_id": "1Si23hLlKYyu_e-vJb2xcu20SyNDrf4kW",
+    "cold_attestation_file_id": "1rWA59ghuQ2xdL6NV-_vqdMsU6mld-jSS"
+  },
+  "artifact": {
+    "zip_name": "ABSOLUTE_MATH_ENGINE_RUN3_AMSI65_96_NEXT64.zip",
+    "zip_sha256": "06ccc26b268841b7b3d4a07732155eed15dbf14860b71a694d872c9a0296fe09",
+    "warm_tests": "67/67 PASS",
+    "final_cold_replay": "67/67 PASS",
+    "executed_prompts": "AMSI-65..96",
+    "new_prompt_bank": "AMSI-161..224",
+    "preserved_prompt_bank": "AMSI-97..160"
+  },
+  "research_state": {
+    "active_core": "FORMAL_CORE_v7_MINIMAL",
+    "contribution_class": "BENCHMARK_PROTOCOL_PLUS_ENGINEERING_SYNTHESIS",
+    "strong_release": "HOLD",
+    "formal_verification": "NOT_DONE",
+    "external_review": "NOT_DONE",
+    "novelty": "UNVERIFIED_INTEGRATION_CANDIDATE"
+  },
+  "prohibited_stale_routes": [
+    "Do not resume intrinsic scalar Ord(W) as current core.",
+    "Do not claim context-free generator novelty.",
+    "Do not claim intrinsic genesis complexity.",
+    "Do not treat Lean targets containing sorry as formal proofs.",
+    "Do not convert synthetic self-improvement evidence into real-agent metaproductivity.",
+    "Do not treat draft PRs as CURRENT authority."
+  ],
+  "next_priority": ["AMSI-161","AMSI-169","AMSI-177","AMSI-185","AMSI-193","AMSI-201","AMSI-209","AMSI-217"],
+  "sha256": "d3b0609b79dd9462410ebf3bf2225ff860bd4fd9f7c3c99800eb82e7db894b9c"
+}
