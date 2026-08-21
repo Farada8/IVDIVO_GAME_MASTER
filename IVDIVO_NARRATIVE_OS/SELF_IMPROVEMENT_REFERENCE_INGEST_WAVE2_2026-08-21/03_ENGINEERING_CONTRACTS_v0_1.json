@@ -1,0 +1,20 @@
+{
+  "artifact": "IVDIVO_SELF_IMPROVEMENT_V3_ENGINEERING_CONTRACTS_v0_1",
+  "status": "CANDIDATE_NOT_CURRENT",
+  "contracts": [
+    {"id":"C1_DECISION_RELEVANCE","must":"Every measurement/experiment names the decision it can change.","source_mechanism":"Hubbard"},
+    {"id":"C2_CAUSAL_MODEL","must":"Material engine changes state intended effects, guardrails, feedback/compensating responses and relevant delays.","source_mechanism":"Sterman"},
+    {"id":"C3_UNCERTAINTY","must":"Unknowns remain explicit; evidence reduces uncertainty but does not become certainty by formatting.","source_mechanism":"Hubbard"},
+    {"id":"C4_VALUE_OF_INFORMATION","must":"Prefer evidence whose expected decision value exceeds its acquisition cost/latency.","source_mechanism":"Hubbard + existing EIG router"},
+    {"id":"C5_WIP_CONTROL","must":"Bound active meta-experiments; captured backlog does not authorize parallel execution.","source_mechanism":"Reinertsen + Anti-Bedlam"},
+    {"id":"C6_SMALL_BATCH","must":"Prefer the smallest reversible canary that can discriminate between meaningful alternatives.","source_mechanism":"Reinertsen"},
+    {"id":"C7_FEEDBACK_SPEED","must":"Shorten feedback loops when doing so does not destroy evidence quality or story truth.","source_mechanism":"Reinertsen + SRE"},
+    {"id":"C8_POLICY_RESISTANCE","must":"Check whether the system can compensate for or defeat the proposed intervention.","source_mechanism":"Sterman"},
+    {"id":"C9_EVIDENCE_INTERVIEW","must":"Human interviews avoid compliments/hypotheticals as proof; capture concrete past behavior, constraints and commitment where relevant.","source_mechanism":"The Mom Test"},
+    {"id":"C10_COMPLEXITY_FAILURE","must":"Before consequential change, inspect goal substitution, event-only reasoning, hidden dynamics, delay blindness and mistaken hypotheses.","source_mechanism":"Dörner"},
+    {"id":"C11_ROLLBACK","must":"A reversible change defines rollback trigger and rollback target before canary.","source_mechanism":"SRE + Reinertsen"},
+    {"id":"C12_DOUBLE_LOOP","must":"Repeated failure after local repair triggers problem/model/boundary review.","source_mechanism":"Sterman"},
+    {"id":"C13_HYPE_FIREWALL","must":"Internal enthusiasm, repeated model agreement, or document volume cannot count as independent supporting evidence.","source_mechanism":"Chancellor REFERENCE ONLY + existing evidence firewall"},
+    {"id":"C14_SELF_APPLICATION","must":"Changes to the Self-Improvement Engine pass the same candidate→pilot→evidence→promotion lifecycle.","source_mechanism":"existing v2 law"}
+  ]
+}
