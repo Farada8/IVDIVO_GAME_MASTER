@@ -1,29 +1,30 @@
-# D01 POST-LOCK AUDIO — NEXT 64 EVIDENCE-DRIVEN RUN CARDS v1.0
+# D01 POST-LOCK AUDIO — NEXT 64 EVIDENCE-DRIVEN RUN CARDS v1.1
 
-Status: DESIGNED / READY / NOT EXECUTED.
+Status: DESIGNED / READY / NOT EXECUTED.  
+Fresh-main rebase: integrates Cycle8 D01 Founder-lock routing and merged Audio Wave11 provider-evidence intake.  
 Law: execute in dependency order; external/provider/human cards remain HOLD until real evidence exists. Do not run all 64 merely for count.
 
 ## A — authority/source immutability
 
-01. Cold-read D01 Founder Lock + GitHub/Drive current state and fail on lock-status divergence.
-02. Patch D01 GitHub CURRENT_STATE routing-only to Founder-locked without touching story text.
+01. Cold-read D01 Founder Lock + current GitHub `main` + Drive project state and fail on authority divergence.
+02. Verify GitHub D01 `CURRENT_STATE.md` still says FOUNDER-LOCKED / Recording Authority issued; if a fresher main already has it, REUSE rather than patch.
 03. Create/verify E01 exact-source container hash readback from durable storage.
 04. Build episode-level lexical fingerprint for E01 from the locked source without normalizing away punctuation.
 05. Extend source manifest from E01 to controlling E01–E120 block masters.
 06. Run stale-branch scan for any D01 branch that still routes to prose or prelock status.
-07. Verify first-render/dry/live-smoke documents all inherit Founder Recording Authority.
-08. Run cold-resume from persisted D01 state with chat context removed.
+07. Verify first-render/dry/live-smoke documents explicitly inherit Founder Recording Authority without story mutation.
+08. Run cold-resume from persisted D01 audio state with chat context removed.
 
-## B — provider snapshot and project cast readiness
+## B — Wave11 provider evidence intake + D01 cast readiness
 
-09. Run authenticated secret-free ElevenLabs ProviderSnapshot acquisition.
-10. Repeat the provider snapshot and classify account/capability/volatile drift.
-11. Compile verified provider inventory and record model/voice metadata hashes.
-12. Select candidate voice IDs for NARRATOR from actual inventory only.
-13. Select candidate voice IDs for MARA from actual inventory only.
-14. Select candidate voice IDs for ADRIAN from actual inventory only.
-15. Select candidate voice IDs for LILY and CELESTE from actual inventory only.
-16. Compile D01 cast-readiness manifest using the project spec; stop on any HOLD/FAIL.
+09. Resolve current Wave11 provider execution state; if no admissible AUTH_PROVIDER evidence exists, route to the already-merged read-only provider snapshot workflow rather than inventing a local provider path.
+10. Consume the exact Wave11 secret-free AUTH_PROVIDER artifact, validating workflow run/attempt/source lineage and freshness.
+11. If Wave11 requires repeatability, acquire the second read-only snapshot and classify capability/account/volatile drift before cast binding.
+12. Compile/accept only the Wave11-normalized verified provider inventory; record model/voice metadata hashes.
+13. Select candidate voice IDs for NARRATOR and MARA from that inventory only.
+14. Select candidate voice IDs for ADRIAN, LILY and CELESTE from that inventory only.
+15. Compile D01 `cast_readiness` v1.1 using the project spec; verify no Lesson-Zero role/term leakage and stop on any HOLD/FAIL.
+16. Pass the D01 cast-readiness result through `provider_execution_state.py`; machine may route only to real audition preparation, never lock/spend/dispatch.
 
 ## C — human audition / voice lock
 
@@ -83,7 +84,7 @@ Law: execute in dependency order; external/provider/human cards remain HOLD unti
 ## H — scale / self-improvement / productization
 
 57. Apply the parameterized cast-readiness surface to a third project with different roles.
-58. Run full existing Audio Studio CI and compare pre/post patch regression.
+58. Run full existing Audio Studio CI against a merge-ref that includes current Wave11 main and compare pre/post patch regression.
 59. Collect false-positive/false-negative/overhead telemetry for project-spec validation.
 60. Submit generalized casting-spec patch to Self-Improvement review; no new SI ID unless registry requires.
 61. Promote only if multi-project evidence shows reduced manual bypass without regressions.
