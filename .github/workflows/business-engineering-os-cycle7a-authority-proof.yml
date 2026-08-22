@@ -1,0 +1,21 @@
+name: Business Engineering OS Cycle7A Authority Proof
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7A_AUTHORITY_PROOF_EXTENSION/**'
+      - '.github/workflows/business-engineering-os-cycle7a-authority-proof.yml'
+  workflow_dispatch:
+
+jobs:
+  cycle7a-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile runtime
+        run: python -m py_compile BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7A_AUTHORITY_PROOF_EXTENSION/engine/proof_transition_engine.py
+      - name: Run 32 deterministic canaries
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7A_AUTHORITY_PROOF_EXTENSION/tests/test_proof_transition_engine.py
