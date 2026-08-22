@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "date": "2026-08-22",
-  "status": "PERSISTENCE_CLOSURE_PASS_PENDING_CLOSURE_PR_MERGE_READBACK",
+  "status": "PERSISTENCE_CLOSURE_PASS_PENDING_THIS_CLOSURE_PR_MERGE_READBACK",
   "authority": {
     "self_improvement": "V2_VERIFIED_CURRENT",
     "v3": "CANDIDATE_HOLD",
@@ -17,7 +17,9 @@
     "cycle10r_original_pr": 221,
     "cycle10r_original_merge": "e13996f0d345f5c8fca401c01ed72ea58a0647a5",
     "cycle10r_manifest_finalize_commit": "59001bb865fe385cac2331d7821146c41497d64d",
-    "fresh_main_at_closure_branch_cut": "0f9538f8f064fb17d1481c6a9aa0963796b1f16d",
+    "cycle10_current_library_refresh_commit": "c8765b6a8f33b44d734bdd85d59d73174081eb28",
+    "cycle10_pointer_repair_commit": "7ace10ec03a120f3fdbb9b8ee29801eab18d0813",
+    "fresh_main_at_closure_rebase": "a0c609ccf2cebe1bbad89eb6c2089cbf6314b19b",
     "convergence_ci_run": 32550415859,
     "convergence_ci_result": "SUCCESS",
     "expected_head_no_force_merge_used": true
@@ -32,7 +34,7 @@
   },
   "main_artifacts": {
     "source_registry": "SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/SOURCE_REGISTRY.json",
-    "source_registry_target_schema": "1.3",
+    "source_registry_schema_readback": "1.3",
     "cycle10_run32": "SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64/02_RUN32_EXECUTION_RESULTS.md",
     "cycle10r_machine_state": "SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/05_MACHINE_STATE.json",
     "cycle10r_next64": "SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/06_NEXT64_CYCLE11.md",
@@ -53,7 +55,13 @@
     "false_resume_observed": 0,
     "promotion_authorized": false
   },
+  "parallel_reconciliation": {
+    "newer_current_library_schema_1_3_preserved": true,
+    "newer_cycle10_cross_store_pointer_repair_preserved": true,
+    "newer_business_and_public_art_parallel_commits_preserved": true,
+    "stale_registry_overwrite_avoided": true
+  },
   "evidence_ceiling": "PERSISTENCE_AND_DETERMINISTIC_ENGINEERING_ONLY_NOT_HUMAN_PROVIDER_LITERARY_LEGAL_MARKET_PROOF",
   "next64_policy": "DEPENDENCY_INDEXED_BACKLOG_NOT_AUTO_WIP",
-  "next_action_after_closure": "SELECT_HIGHEST_INFORMATION_REAL_LIBRARY_OR_PRODUCTION_CANARY_AND_RETURN_FROM_META_RECURSION"
+  "next_action_after_closure": "SELECT_HIGHEST_INFORMATION_REAL_LIBRARY_NORMALIZATION_OR_PRODUCTION_CANARY_AND_RETURN_FROM_META_RECURSION"
 }

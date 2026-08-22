@@ -2,7 +2,7 @@
   "schema_version": "1.3",
   "updated": "2026-08-22",
   "library": "IVDIVO_SELF_IMPROVEMENT_ENGINEERING_LIBRARY",
-  "status": "CURRENT_INDEX_WITH_PRIVATE_RAW_POINTERS_AND_MERGED_CANDIDATE_EVIDENCE",
+  "status": "CURRENT_INDEX_WITH_PRIVATE_RAW_POINTERS_AND_CANDIDATE_EVIDENCE",
   "current_authority": {
     "github_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
     "github_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
@@ -42,7 +42,6 @@
       "handling": "DERIVED_INDEX_AND_PRIVATE_UPLOAD_POINTER_LIBRARY",
       "raw_user_upload_folder_id": "1zppqxY_YD2fnWdhWM89sUrXYtduBrEZd",
       "engineering_reference_folder_id": "1quQTeBsTaskht1eGmnYQSNm6FSJpRZNE",
-      "current_index_doc_id": "1-2Qpt0TFq2dQiH7LzXJHD89SdCsVVbz3z9HbhwAWH_M",
       "authority_effect": "NONE"
     }
   ],
@@ -76,31 +75,28 @@
       "cycle": "Cycle10 Decision / Evidence Yield",
       "drive_library_root": "1NUe4Ge-A2DAqa-1BeF6dETLpUiq7mqgQ",
       "drive_cycle_id": "1l99ycTCvdP1HLwMkAoTTW3qPePUEUObd",
-      "original_pr": 217,
-      "original_pr_state": "CLOSED_SUPERSEDED_PROVENANCE",
-      "convergence_pr": 235,
-      "convergence_merge": "be23512b715f587d8d3511f9640722491e1b5214",
-      "status": "MERGED_CANDIDATE_PACKAGE_NO_AUTHORITY_PROMOTION",
+      "original_github_pr": 217,
+      "convergence_github_pr": 235,
+      "convergence_merge_commit": "be23512b715f587d8d3511f9640722491e1b5214",
+      "status": "INTEGRATED_CANDIDATE_ENGINEERING_VIA_CONVERGENCE_PR235",
       "run32": "EXECUTED_32_OF_32",
-      "tests": "32_OF_32_LOCAL_DETERMINISTIC_PASS_REPORTED_AND_CONVERGENCE_CI_PASS",
       "next64": "DESIGNED_NOT_BLINDLY_AUTHORIZED",
       "authority_effect": "NONE"
     },
     {
       "cycle": "Cycle10R Recovery / Persistence Convergence",
       "drive_id": "19BbmeqbZpQWfhvMgymblOb1GEGzCOho-",
-      "original_pr": 221,
-      "original_pr_merge": "e13996f0d345f5c8fca401c01ed72ea58a0647a5",
-      "convergence_pr": 235,
-      "convergence_merge": "be23512b715f587d8d3511f9640722491e1b5214",
-      "status": "MERGED_CANDIDATE_PACKAGE_NO_AUTHORITY_PROMOTION",
+      "github_pr": 221,
+      "github_merge_commit": "e13996f0d345f5c8fca401c01ed72ea58a0647a5",
+      "convergence_github_pr": 235,
+      "status": "MERGED_CROSS_STORE_COMPLETE_RESIDUAL_RECOVERY_PERSISTENCE",
       "run32": "EXECUTED_32_OF_32",
+      "ci_run_id": 32550134102,
+      "ci_result": "32_OF_32_PASS_COMPILE_PASS_RUN33_REGRESSION_PASS",
       "next64": "DESIGNED_NOT_BLINDLY_AUTHORIZED",
       "closure_doc_id": "1AtUY1e1TdYB7HW-5gsr9R5VBt-Qk2ZT5OQP_TQq4Lx4",
-      "cross_store_manifest": "SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/07_CROSS_STORE_MANIFEST.json",
-      "cross_store_manifest_schema": "1.1",
-      "drive_readback": "PASS_6_OF_6",
-      "closure_state": "PERSISTENCE_CLOSURE_PASS",
+      "drive_content_readback": "PASS_6_OF_6",
+      "closure_state": "MERGED_CROSS_STORE_COMPLETE_POST_MERGE_READBACK_PASS",
       "authority_effect": "NONE"
     },
     {
@@ -146,16 +142,6 @@
       "05_MACHINE_STATE.json",
       "06_NEXT64_PROMPTS.md"
     ]
-  },
-  "closure": {
-    "status": "PERSISTENCE_CLOSURE_PASS_PENDING_THIS_PATCH_MERGE_READBACK",
-    "convergence_pr": 235,
-    "convergence_merge": "be23512b715f587d8d3511f9640722491e1b5214",
-    "cycle10r_merge": "e13996f0d345f5c8fca401c01ed72ea58a0647a5",
-    "cycle10r_manifest_finalize_commit": "59001bb865fe385cac2331d7821146c41497d64d",
-    "convergence_ci_run": 32550415859,
-    "drive_current_index": "1-2Qpt0TFq2dQiH7LzXJHD89SdCsVVbz3z9HbhwAWH_M",
-    "drive_cycle10r_closure": "1AtUY1e1TdYB7HW-5gsr9R5VBt-Qk2ZT5OQP_TQq4Lx4"
   },
   "copyright_boundary": "Do not copy raw copyrighted book binaries into public GitHub; store metadata/pointers/provenance/derived mechanisms only.",
   "persistence_law": "WRITE_CLAIM != PERSISTED_ARTIFACT; material persistence requires destination plus non-empty semantic readback."
