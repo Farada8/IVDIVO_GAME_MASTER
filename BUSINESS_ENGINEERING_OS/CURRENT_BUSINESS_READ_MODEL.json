@@ -1,5 +1,5 @@
 {
-  "schema": "ivdivo.business.current_read_model/1.1",
+  "schema": "ivdivo.business.current_read_model/1.2",
   "date": "2026-08-22",
   "status": "CURRENT_LOCAL_RELIABILITY_CONTRACT",
   "authority_effect": "RESTORE_AND_PRECEDENCE_RULES_ONLY",
@@ -45,11 +45,13 @@
   "current_execution": {
     "full_completed_run32_ranges": ["P97-P128", "P129-P160", "P161-P192", "P193-P224"],
     "completed_engineering_subsets": ["P257-P264", "P265-P272"],
-    "completed_engineering_cards_inside_parent_backlog": 16,
+    "completed_reconciliation_cards": ["P288"],
+    "completed_cards_inside_parent_backlog": 17,
     "parent_backlog": "P225-P288",
     "parent_backlog_count": 64,
-    "remaining_unexecuted_count": 48,
-    "remaining_ranges": ["P225-P256", "P273-P288"],
+    "remaining_unexecuted_count": 47,
+    "remaining_ranges": ["P225-P256", "P273-P287"],
+    "dependency_blocked_not_executed_ranges": ["P273-P287"],
     "highest_information_real_gates": [225, 235]
   },
   "proof_frontier": {
@@ -67,8 +69,17 @@
     "ROOT_BLOCKER_CHANGE_REQUIRES_CORE_RECONCILIATION",
     "TEST_FIXTURE_DOES_NOT_EQUAL_ACTUAL_BIDDER",
     "NOT_FOUND_IN_CONNECTED_SOURCES_DOES_NOT_EQUAL_DOCUMENT_DOES_NOT_EXIST",
-    "ENGINEERING_READINESS_DOES_NOT_EQUAL_MARKET_PROOF"
+    "ENGINEERING_READINESS_DOES_NOT_EQUAL_MARKET_PROOF",
+    "DEPENDENCY_BLOCKED_PROMPTS_ARE_NOT_FAILED_OR_EXECUTED",
+    "FRESH_PR_RECONCILIATION_BEFORE_CURRENT_PROMOTION"
   ],
+  "p288": {
+    "status": "PASS_RECONCILIATION",
+    "github_artifact": "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE10_P288_FRESH_READ_RECONCILIATION/00_P288_RECONCILIATION.md",
+    "drive_document_id": "1zIQDq5J3tKVjfXySfwzjJ_oNqxeM1fUUxlEPBuuuY4c",
+    "root_change": false,
+    "proof_promotion": false
+  },
   "self_improvement": {
     "scope": "BUSINESS_LOCAL_RELIABILITY_IMPROVEMENT",
     "new_global_si_id": null,
