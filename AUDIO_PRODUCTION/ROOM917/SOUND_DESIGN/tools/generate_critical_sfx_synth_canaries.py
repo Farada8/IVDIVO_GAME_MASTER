@@ -41,7 +41,6 @@ def click(dur=0.18,body=420,pan=0,peak=0.28):
     return norm(stereo_pan(x,pan,0),peak)
 
 def old_double_ring(v):
-    # Exactly one double-ring event = two countable electromechanical bell pulses.
     y=np.zeros((int(1.55*SR),2)); f1,f2,dec=[(835,1030,0.23),(780,990,0.27),(900,1110,0.20)][v]
     for s in [0.24,0.62]:
         p=metal_ping(0.48,[(f1,1.0),(f2,0.65),(2*f1,0.16)],dec,pan=(-0.05+0.05*v),peak=0.23); a=int(s*SR); y[a:a+len(p)]+=p
@@ -63,19 +62,15 @@ def copper_hiss(v):
     return norm(stereo_pan(x,[0.0,-0.04,0.03][v],0),0.07)
 
 def line_cut(v):
-    # Two distinct events: recoverable first contact break, then final disconnect into absence.
-    n=int(2.30*SR); x=band_noise(n,450,3900); x=x/(np.std(x)+1e-12)*0.018
+    n=int(2.30*SR); x=band_noise(n,450,3900); x=x/(np.std(x)+1e-12)*0.015
     a1=[1.05,1.10,1.15][v]; a2=[1.42,1.46,1.52][v]
-    i1=int(a1*SR); gap1=int([0.070,0.055,0.085][v]*SR)
-    # Event 1: dry contact snap + short line loss + recovery.
-    L1=int(0.075*SR); t1=np.arange(L1)/SR
-    snap1=band_noise(L1,900,6500)*np.exp(-t1/0.009)*0.075 + np.sin(2*np.pi*(620+70*v)*t1)*np.exp(-t1/0.018)*0.030
-    x[i1:i1+gap1]*=0.02; x[i1:i1+L1]+=snap1
-    # Event 2: different lower mechanical snap, then hard absence.
+    i1=int(a1*SR); gap1=int([0.070,0.055,0.085][v]*SR); L1=int(0.075*SR); t1=np.arange(L1)/SR
+    snap1=band_noise(L1,900,6500)*np.exp(-t1/0.009)*0.12 + np.sin(2*np.pi*(620+70*v)*t1)*np.exp(-t1/0.018)*0.045
+    x[i1:i1+gap1]*=0.015; x[i1:i1+L1]+=snap1
     i2=int(a2*SR); L2=int(0.090*SR); t2=np.arange(L2)/SR
-    snap2=band_noise(L2,120,2600)*np.exp(-t2/0.013)*0.085 + np.sin(2*np.pi*(250+35*v)*t2)*np.exp(-t2/0.022)*0.038
+    snap2=band_noise(L2,120,2600)*np.exp(-t2/0.013)*0.14 + np.sin(2*np.pi*(250+35*v)*t2)*np.exp(-t2/0.022)*0.055
     x[i2:i2+L2]+=snap2; x[i2+L2:]=0
-    return norm(stereo_pan(x,[0.0,0.02,-0.02][v],0),0.10)
+    return norm(stereo_pan(x,[0.0,0.02,-0.02][v],0),0.11)
 
 def transformer(v):
     n=int(3.5*SR); t=np.arange(n)/SR; x=np.sin(2*np.pi*50*t)*0.018 + np.sin(2*np.pi*100*t)*[0.004,0.006,0.003][v]; rise=int([0.8,1.1,0.6][v]*SR); env=np.ones(n); env[:rise]=np.linspace(0,1,rise); x*=env; x += band_noise(n,30,180)*0.0015
@@ -100,7 +95,7 @@ makers={
  'S17_COPPER_HISS':copper_hiss,
  'S19_TWO_PART_LINE_CUT':line_cut,
 }
-receipt={'schema_version':'room917.critical_sfx_synthetic_canary_receipt/2.0','date':'2026-08-22','seed':SEED,'rng_policy':'PER_CANDIDATE_SHA256_DERIVED_SEED','status':'CANDIDATE_HOLD_NOT_PRODUCTION_BOUND','assets':[],'machine_design_fixes':['S13_EXACTLY_TWO_COUNTABLE_RING_PULSES','S19_STRONGER_FIRST_CONTACT_BREAK_AND_DISTINCT_FINAL_DISCONNECT'],'laws':['NO_STORY_CHANGE','NO_PROVIDER_SPEND','HUMAN_AUDITION_REQUIRED','IDENTITY_GATE_REQUIRED_BEFORE_BINDING']}
+receipt={'schema_version':'room917.critical_sfx_synthetic_canary_receipt/2.0','date':'2026-08-22','seed':SEED,'rng_policy':'PER_CANDIDATE_SHA256_DERIVED_SEED','status':'CANDIDATE_HOLD_NOT_PRODUCTION_BOUND','assets':[],'machine_design_fixes':['S13_EXACTLY_TWO_COUNTABLE_RING_PULSES','S19_TARGET_EVENTS_ABOVE_LINE_BED_WITH_MECHANICALLY_DISTINCT_FINAL_DISCONNECT'],'laws':['NO_STORY_CHANGE','NO_PROVIDER_SPEND','HUMAN_AUDITION_REQUIRED','IDENTITY_GATE_REQUIRED_BEFORE_BINDING']}
 for aid,maker in makers.items():
     for v in range(3):
         rng=np.random.default_rng(candidate_seed(aid,v)); y=maker(v); name=f'{aid}_CANDIDATE_SYNTH0{v+1}'; p=OUT/f'{name}.wav'; sf.write(p,y,SR,subtype='PCM_24'); data=p.read_bytes(); receipt['assets'].append({'contract_asset_id':aid,'candidate_id':name,'filename':p.name,'sha256':hashlib.sha256(data).hexdigest(),'size_bytes':len(data),'duration_seconds':len(y)/SR,'sample_rate_hz':SR,'bit_depth':24,'channels':2,'origin':'PROCEDURAL_SYNTHETIC_REFERENCE_ONLY','audition_status':'HOLD','production_binding':False})
