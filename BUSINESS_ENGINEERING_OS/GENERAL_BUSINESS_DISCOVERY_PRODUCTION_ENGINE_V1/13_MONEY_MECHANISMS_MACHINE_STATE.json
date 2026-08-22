@@ -1,7 +1,7 @@
 {
   "schema": "ivdivo.business.money_mechanisms_run32/1.0",
   "date": "2026-08-22",
-  "status": "RUN32_COMPLETE_PENDING_CI_AND_DRIVE_READBACK",
+  "status": "RUN32_COMPLETE_DRIVE_READBACK_PASS_PENDING_CI",
   "parent_engine": "GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1",
   "purpose": "correct public-signal/procurement discovery bias and compare diverse money mechanisms",
   "run32": {
@@ -52,9 +52,11 @@
     "failure_mode": "PUBLIC_SIGNAL_EVIDENCE_AVAILABILITY_BIAS"
   },
   "drive": {
-    "folder_id": null,
-    "run32_document_id": null,
-    "next64_document_id": null,
-    "readback_status": "PENDING"
+    "folder_id": "1QM7DKxwmEGDHUkcIqkxgGfaZi1NqoATV",
+    "run32_document_id": "1ZBUqsaePrslxPLIsfMC1B6FFrz4Rk2d-r0zZyzZo2q8",
+    "next64_document_id": "12pbEAq4LcuYpV50oSu5gXU8RYS9LG0clvxf0gG1rpAE",
+    "run32_readback_marker": "GENERAL-BUSINESS-MONEY-MECHANISMS-RUN32-TOP10-20260822",
+    "next64_readback_marker": "GENERAL-BUSINESS-MONEY-MECHANISMS-NEXT64-SOURCES-20260822",
+    "readback_status": "PASS_2_OF_2"
   }
 }
