@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 
 from core.bootstrap import bootstrap
+from memory.store import MemoryStore
 from projects.manager import ProjectStateManager
 
 
@@ -31,6 +32,33 @@ def build_parser() -> argparse.ArgumentParser:
     next_task = project_sub.add_parser("next", help="Return the next actionable task")
     next_task.add_argument("project_id")
 
+    memory = sub.add_parser("memory", help="Auditable local memory operations")
+    memory_sub = memory.add_subparsers(dest="memory_command", required=True)
+
+    put = memory_sub.add_parser("put", help="Persist a memory record")
+    put.add_argument("content")
+    put.add_argument("--kind", default="NOTE")
+    put.add_argument("--source")
+    put.add_argument("--id", dest="record_id")
+    put.add_argument("--metadata", default="{}", help="JSON object")
+
+    search = memory_sub.add_parser("search", help="Search local memory")
+    search.add_argument("query")
+    search.add_argument("--kind")
+    search.add_argument("--include-invalid", action="store_true")
+    search.add_argument("--limit", type=int, default=20)
+
+    update = memory_sub.add_parser("update", help="Update an active memory record")
+    update.add_argument("record_id")
+    update.add_argument("content")
+
+    invalidate = memory_sub.add_parser("invalidate", help="Invalidate a memory record")
+    invalidate.add_argument("record_id")
+    invalidate.add_argument("--reason", required=True)
+
+    trace = memory_sub.add_parser("trace", help="Show a memory record audit trail")
+    trace.add_argument("record_id")
+
     return parser
 
 
@@ -55,6 +83,37 @@ def main() -> int:
             result = {"project_id": args.project_id, "next_task": manager.get_next_task(args.project_id)}
         else:  # pragma: no cover - argparse enforces choices
             raise RuntimeError("unsupported project command")
+    elif args.command == "memory":
+        store = MemoryStore(home / "runtime" / "state.db")
+        if args.memory_command == "put":
+            metadata = json.loads(args.metadata)
+            if not isinstance(metadata, dict):
+                raise ValueError("--metadata must decode to a JSON object")
+            result = store.store(
+                args.content,
+                kind=args.kind,
+                source=args.source,
+                metadata=metadata,
+                record_id=args.record_id,
+            )
+        elif args.memory_command == "search":
+            result = {
+                "query": args.query,
+                "results": store.search(
+                    args.query,
+                    kind=args.kind,
+                    include_invalid=args.include_invalid,
+                    limit=args.limit,
+                ),
+            }
+        elif args.memory_command == "update":
+            result = store.update(args.record_id, content=args.content)
+        elif args.memory_command == "invalidate":
+            result = store.invalidate(args.record_id, args.reason)
+        elif args.memory_command == "trace":
+            result = {"memory_id": args.record_id, "events": store.trace(args.record_id)}
+        else:  # pragma: no cover - argparse enforces choices
+            raise RuntimeError("unsupported memory command")
     else:  # pragma: no cover - argparse enforces choices
         raise RuntimeError("unsupported command")
 
