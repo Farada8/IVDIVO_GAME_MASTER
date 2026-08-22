@@ -9,6 +9,7 @@ on:
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_support_sfx_synth_canaries.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json'
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py'
 
 permissions:
@@ -39,10 +40,10 @@ jobs:
             --package-id ROOM917_E01_ROOM_BEDS_BLIND_001 \
             --seed 91720260822 \
             --room-bed-mode
-      - name: Build critical SFX A/B/C blind package
+      - name: Build critical SFX A/B/C blind package from authoritative v2.1 identities
         run: |
           python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py \
-            --receipt ROOM917_CRITICAL_SFX_CANARIES/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json \
+            --receipt AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json \
             --canary-dir ROOM917_CRITICAL_SFX_CANARIES \
             --outdir ROOM917_BLIND_CRITICAL_SFX \
             --package-id ROOM917_E01_CRITICAL_SFX_BLIND_003 \
@@ -100,7 +101,8 @@ jobs:
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
           ## ROOM917 E01 blind sound-asset audition
           - room beds: blind X/Y
-          - critical SFX: corrected v2.1, 8 functions x 3 variants
+          - critical SFX: authoritative static v2.1 identities, 8 functions x 3 variants
+          - critical runtime generation receipt is deliberately not identity authority
           - support SFX/music: 13 functions x 3 variants
           - public artifacts contain no identity key file
           - sealed identity keys are separate
