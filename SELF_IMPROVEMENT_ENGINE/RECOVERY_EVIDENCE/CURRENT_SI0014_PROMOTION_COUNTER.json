@@ -1,0 +1,79 @@
+{
+  "schema_version": "ivdivo.interruption_learning/1.1",
+  "decision": "ADVISORY_ONLY",
+  "promotion_recommendation": "CONTINUE_PILOT",
+  "reason": "INSUFFICIENT_GENUINE_INCIDENT_OR_PROJECT_DIVERSITY_EVIDENCE",
+  "promotion_progress": {
+    "genuine_incidents": 1,
+    "required_genuine_incidents": 3,
+    "distinct_projects": 2,
+    "required_distinct_projects": 2,
+    "zero_false_resume": true,
+    "promotion_authorized": false
+  },
+  "metrics": {
+    "event_count": 2,
+    "real_interruption_count": 1,
+    "real_project_count": 2,
+    "projects": [
+      "BUSINESS_ENGINEERING",
+      "IVDIVO_SELF_IMPROVEMENT"
+    ],
+    "recovery_slice_count": 2,
+    "real_interruption_row_count": 2,
+    "qualifying_recovery_slice_count": 2,
+    "incident_count_all": 1,
+    "real_incident_count_observed": 1,
+    "qualified_real_incident_count": 1,
+    "qualified_real_incidents": [
+      "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001"
+    ],
+    "false_resume_count_all": 0,
+    "false_resume_count_real": 0,
+    "false_stop_count_all": 0,
+    "false_stop_count_real": 0,
+    "real_false_stop_rate": 0.0,
+    "duplicate_work_units_avoided": null,
+    "writes_reconciled": null,
+    "checkpoint_tool_calls": null,
+    "recovery_tool_calls": null,
+    "checkpoint_bytes_total": null,
+    "checkpoint_bytes_mean": null,
+    "telemetry_known_rows": {
+      "duplicate_work_units_avoided": 0,
+      "writes_reconciled": 0,
+      "checkpoint_bytes": 0,
+      "checkpoint_tool_calls": 0,
+      "recovery_tool_calls": 0
+    }
+  },
+  "incident_rollup": [
+    {
+      "incident_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
+      "real_interruption": true,
+      "recovery_slice_count": 2,
+      "qualifying_recovery_slice_count": 2,
+      "projects": [
+        "BUSINESS_ENGINEERING",
+        "IVDIVO_SELF_IMPROVEMENT"
+      ],
+      "recovery_ids": [
+        "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001::BUSINESS_ENGINEERING",
+        "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001::IVDIVO_SELF_IMPROVEMENT"
+      ],
+      "false_resume_present": false,
+      "false_stop_present": false
+    }
+  ],
+  "events_sha256": "d2dfa0d208a6b0c1d2dc48db781f85071bc634b1a6260459bbf1307fc8d87362",
+  "evidence_boundary": [
+    "NO_AUTOMATIC_PROMOTION",
+    "NO_FOUNDER_APPROVAL_INFERRED",
+    "NO_HUMAN_QUALITY_EVIDENCE_INFERRED",
+    "ONE_PHYSICAL_INTERRUPTION_COUNTS_ONCE_EVEN_WITH_MULTIPLE_PROJECT_SLICES",
+    "UNKNOWN_TELEMETRY_REMAINS_NULL_NOT_ZERO",
+    "SYNTHETIC_EVENTS_MAY_BLOCK_FOR_SAFETY_BUT_CANNOT_SATISFY_REAL_EVIDENCE_THRESHOLD"
+  ],
+  "generated_from": "SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/CURRENT_SI0014_INTERRUPTION_LEDGER.json",
+  "authority_effect": "NONE"
+}
