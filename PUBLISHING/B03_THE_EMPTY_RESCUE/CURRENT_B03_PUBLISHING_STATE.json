@@ -1,0 +1,58 @@
+{
+  "artifact": "CURRENT_B03_PUBLISHING_STATE",
+  "updated": "2026-08-22",
+  "project": "B03 — THE EMPTY RESCUE",
+  "story_authority": "FOUNDER_LOCKED_CH01-29",
+  "locked_text_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
+  "word_count": 62300,
+  "language": "English",
+  "stage": "PUBLISHER_PACKAGE_MASTER_READY / COMMERCIAL_IDENTIFIERS_OPEN",
+  "publisher_prep_gate": "GO",
+  "commercial_release_gate": "NO_GO",
+  "working_positioning": {
+    "audience": "Adult",
+    "genre": "science-fiction procedural thriller / speculative emergency-response thriller",
+    "thema_main": "FH",
+    "thema_secondary": "FL"
+  },
+  "drive_authority": {
+    "folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+    "package_zip_id": "1dLT-zW1850_61IxUwp7-IS7iHhQzafMx",
+    "metadata_master_id": "19G3K6BC5vk8hVnfrBFtWU7kN5AxceCrO",
+    "isbn_checklist_id": "1PjBvHQqapKXKoj8NNLpEqOzBEOjt1nG5",
+    "cover_brief_id": "1IDeyQ1F1flVeXx8YB--SqeFZhoL0o-FM",
+    "private_marketing_and_full_synopsis_id": "1cvz0NwFB1ShqF4uxXrV_W9RdMcDeoEBF",
+    "submission_index_id": "1oyNbfhZR0ny8A0n4FYlXuBjUIX9rk9VH",
+    "qc_gate_id": "1LDqYMJLl5ONbrMrjKiUgONwg_v0z6ZQi",
+    "state_id": "1cghjyA431VKyWAa3ThQf5Ng1WwSnfGIL"
+  },
+  "open_required_decisions": [
+    "AUTHOR_DISPLAY_NAME",
+    "PUBLISHER_LEGAL_NAME",
+    "IMPRINT",
+    "PUBLIC_SERIES_TITLE_AND_NUMBER",
+    "PRODUCT_FORMS",
+    "ISBN_MAP",
+    "PUBLICATION_DATE",
+    "PRICE_CURRENCY",
+    "TERRITORIAL_RIGHTS",
+    "DISTRIBUTOR_SUPPLIER",
+    "TRIM_BINDING_PAPER",
+    "FINAL_COVER",
+    "AUTHOR_BIO",
+    "RECIPIENT_SPECIFIC_SUBMISSION_GUIDELINES"
+  ],
+  "next_routes": {
+    "traditional": "select target agents/editors and derive recipient-specific query packages from the locked publisher master",
+    "indie": "lock publisher/imprint/product forms -> obtain ISBN block -> lock manufacture/distribution -> compile retailer/ONIX records"
+  },
+  "prohibited": [
+    "manuscript rewrite without new authority",
+    "CH30",
+    "invented author/publisher/ISBN",
+    "invented Andrej diagnosis or prognosis",
+    "solved precursor ontology",
+    "unauthorized public series label",
+    "final spine width derived from current 236-page production PDF"
+  ]
+}
