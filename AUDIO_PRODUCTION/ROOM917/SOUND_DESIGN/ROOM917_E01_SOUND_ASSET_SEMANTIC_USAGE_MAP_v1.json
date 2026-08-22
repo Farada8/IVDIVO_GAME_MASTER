@@ -1,0 +1,61 @@
+{
+  "schema_version": "room917.e01_sound_asset_semantic_usage/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "SEMANTIC_ONLY_NO_PRODUCTION_TIMECODES",
+  "authority_law": "This map states causal/semantic placement only. It does not authorize absolute timing, patching, or reopening protected Scene3.",
+  "chains": [
+    {
+      "chain_id": "ARRIVAL_PHYSICAL_REALITY",
+      "order": ["S01_REVOLVING_DOOR_GROAN","S02_JULIAN_MEASURED_STEPS_STONE","S03_KEYRING_PLACED_ON_DESK","S04_FLIGHT_CASE_OPEN"],
+      "law": "Each cue must be triggered by the depicted physical action; no ornamental repetition."
+    },
+    {
+      "chain_id": "SWITCHBOARD_NORMAL_GRAMMAR",
+      "order": ["S05_WOOD_SWITCHBOARD_CABINET_OPEN","S06_DRY_TOGGLE_CLICKS","S07_TRANSFORMER_WAKE","S08_RELAY_RIPPLE","S09_CONDUIT_WIND_SCRATCH","S10_SELECTOR_916","S11_GLASS_LAMP_916_PING","S12_PROBE_CONTACT_CLICKS"],
+      "law": "Teach ordinary system grammar before impossible system behavior."
+    },
+    {
+      "chain_id": "IMPOSSIBLE_EVENT_AND_EVIDENCE",
+      "order": ["S13_INTERNAL_DOUBLE_RING_OLD","S14_UNMARKED_GLASS_LAMP_PING","S15_FIELD_RECORDER_START","S16_HEADSET_PLUG_SEAT","S17_COPPER_HISS","S18_THREE_SHALLOW_BREATHS","S19_TWO_PART_LINE_CUT","S20_FAST_JULIAN_STEPS_AND_DOOR","S21_DEAD_LINE_HISS"],
+      "law": "Mystery comes from causal contradiction, not supernatural processing. S18 remains a performance-layer asset owned by the cast stream."
+    },
+    {
+      "chain_id": "END_BUTTON",
+      "order": ["M01_END_LOW_PIANO_CHORD"],
+      "law": "One restrained end button only after the final spoken event; no resolution swell."
+    }
+  ],
+  "anchors": {
+    "S01_REVOLVING_DOOR_GROAN": {"anchor_id":"ACTION_REVOLVING_DOOR_MOVES","relation":"SYNC","multiplicity":"ONCE_PER_DEPICTED_ACTION","timing_status":"UNRESOLVED"},
+    "S02_JULIAN_MEASURED_STEPS_STONE": {"anchor_id":"ACTION_JULIAN_APPROACHES_ON_STONE","relation":"FOLLOW_PHYSICAL_STEPS","multiplicity":"ACTION_BOUND","timing_status":"UNRESOLVED"},
+    "S03_KEYRING_PLACED_ON_DESK": {"anchor_id":"ACTION_KEYRING_PLACED_NOT_TOSSED","relation":"SYNC","multiplicity":"ONCE","timing_status":"UNRESOLVED"},
+    "S04_FLIGHT_CASE_OPEN": {"anchor_id":"ACTION_FLIGHT_CASE_OPENED","relation":"SYNC_LATCH_TO_LID","multiplicity":"ONCE","timing_status":"UNRESOLVED"},
+    "S05_WOOD_SWITCHBOARD_CABINET_OPEN": {"anchor_id":"ACTION_SWITCHBOARD_CABINET_OPENED","relation":"SYNC","multiplicity":"ONCE","timing_status":"UNRESOLVED"},
+    "S06_DRY_TOGGLE_CLICKS": {"anchor_id":"ACTION_NORMAL_SWITCHBOARD_TOGGLES","relation":"SYNC_PER_TOGGLE","multiplicity":"ONLY_OBSERVED_TOGGLES","timing_status":"UNRESOLVED"},
+    "S07_TRANSFORMER_WAKE": {"anchor_id":"SYSTEM_NORMAL_POWER_WAKE","relation":"AFTER_CAUSAL_SWITCH_ACTION","multiplicity":"ONCE_PER_WAKE","timing_status":"UNRESOLVED"},
+    "S08_RELAY_RIPPLE": {"anchor_id":"SYSTEM_NORMAL_RELAY_RESPONSE","relation":"AFTER_S07","multiplicity":"ONE_SHORT_SEQUENCE","timing_status":"UNRESOLVED"},
+    "S09_CONDUIT_WIND_SCRATCH": {"anchor_id":"SYSTEM_CABLE_WEATHER_SIGNATURE","relation":"UNDER_OR_BETWEEN_NORMAL_SYSTEM_ACTIONS","multiplicity":"SPARSE","timing_status":"UNRESOLVED"},
+    "S10_SELECTOR_916": {"anchor_id":"ACTION_SELECT_916","relation":"SYNC","multiplicity":"ONCE_PER_SELECTION","timing_status":"UNRESOLVED"},
+    "S11_GLASS_LAMP_916_PING": {"anchor_id":"SYSTEM_916_LAMP_RESPONSE","relation":"AFTER_S10","multiplicity":"ONCE","timing_status":"UNRESOLVED"},
+    "S12_PROBE_CONTACT_CLICKS": {"anchor_id":"ACTION_PROBE_SCAN","relation":"SYNC_LEFT_TO_RIGHT","multiplicity":"ONE_SCAN_SEQUENCE","timing_status":"UNRESOLVED"},
+    "S13_INTERNAL_DOUBLE_RING_OLD": {"anchor_id":"EVENT_IMPOSSIBLE_INTERNAL_DOUBLE_RING","relation":"FOREGROUND_EVENT","multiplicity":"ONE_DOUBLE_RING_EVENT","timing_status":"UNRESOLVED"},
+    "S14_UNMARKED_GLASS_LAMP_PING": {"anchor_id":"EVENT_UNMARKED_LAMP_RESPONSE","relation":"CAUSALLY_LINKED_TO_S13","multiplicity":"ONCE","timing_status":"UNRESOLVED","dependency":"S11 material identity must already be established"},
+    "S15_FIELD_RECORDER_START": {"anchor_id":"ACTION_FIELD_RECORDER_STARTED","relation":"SYNC","multiplicity":"ONCE","timing_status":"UNRESOLVED"},
+    "S16_HEADSET_PLUG_SEAT": {"anchor_id":"ACTION_HEADSET_ROUTE_CONNECTED","relation":"SYNC","multiplicity":"ONCE","timing_status":"UNRESOLVED"},
+    "S17_COPPER_HISS": {"anchor_id":"STATE_OLD_COPPER_ROUTE_ACTIVE","relation":"UNDER_HUMAN_CALL_ROUTE_ONLY","multiplicity":"BED_DURING_ROUTE","timing_status":"UNRESOLVED"},
+    "S18_THREE_SHALLOW_BREATHS": {"anchor_id":"PERFORMANCE_THREE_SHALLOW_BREATHS","relation":"PERFORMANCE_SYNC","multiplicity":"EXACTLY_THREE","timing_status":"UNRESOLVED","owner":"ROOM917_ELEVENLABS_CAST_RU_EN"},
+    "S19_TWO_PART_LINE_CUT": {"anchor_id":"EVENT_TWO_PART_LINE_DISCONNECT","relation":"AFTER_CALL_CONTENT","multiplicity":"EXACTLY_ONE_TWO_PART_EVENT","timing_status":"UNRESOLVED"},
+    "S20_FAST_JULIAN_STEPS_AND_DOOR": {"anchor_id":"ACTION_JULIAN_RETURNS_BECAUSE_BOARD_LIVE","relation":"CAUSAL_PHYSICAL_RETURN","multiplicity":"ONE_RETURN_SEQUENCE","timing_status":"UNRESOLVED"},
+    "S21_DEAD_LINE_HISS": {"anchor_id":"STATE_POST_CALL_DEAD_LINE","relation":"AFTER_S19","multiplicity":"SHORT_AFTERSTATE_ONLY","timing_status":"UNRESOLVED"},
+    "M01_END_LOW_PIANO_CHORD": {"anchor_id":"END_AFTER_FINAL_SPOKEN_EVENT","relation":"AFTER_FINAL_DIALOGUE_AND_REQUIRED_AIR","multiplicity":"ONCE","timing_status":"UNRESOLVED"}
+  },
+  "forbidden_resolution": [
+    "DO_NOT_MAP_FROM_LEGACY_MARA_CUE_SHEET",
+    "DO_NOT_USE_SYNTHETIC_71_SECOND_ALIGNMENT_AS_PRODUCTION_TIMING",
+    "DO_NOT_INFER_TIMES_FROM_LOW_RMS",
+    "DO_NOT_PLACE_M01_BEFORE_FINAL_SPOKEN_EVENT",
+    "DO_NOT_PROMOTE_S18_FROM_SOUND_SFX_STREAM"
+  ]
+}
