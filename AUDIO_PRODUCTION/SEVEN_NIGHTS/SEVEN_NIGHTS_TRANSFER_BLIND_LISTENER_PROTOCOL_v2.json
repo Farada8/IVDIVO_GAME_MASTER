@@ -1,0 +1,70 @@
+{
+  "schema_version": "2.0",
+  "project": "SEVEN NIGHTS BEFORE CODE BLUE",
+  "gate": "G4_TRANSFER_EXTRA_STATE_PERCEPTUAL_SCREEN",
+  "status": "READY_FOR_3_INDEPENDENT_LISTENERS",
+  "source_v1_packet": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_PACKET_v1.json",
+  "supersedes_for_human_pass_claim": true,
+  "v1_disposition": "PRELIMINARY_SINGLE_LISTENER_METHOD_ONLY_NOT_SUFFICIENT_FOR_RELIABLE_HUMAN_PASS",
+  "test_scope": "INTERNAL_REPLICATED_PRODUCTION_SCREEN_NOT_ITU_COMPLIANCE",
+  "method_source_pass": "BOOK_INTELLIGENCE_ENGINE/16_ITU_BS1116_AUDIO_SUBJECTIVE_TEST_SOURCE_PASS_v1.0.md",
+  "source_method_boundary": "Uses transferable bias-control principles only; does not claim BS.1116-3 conformance, formal panel size, laboratory conditions, or statistical validation.",
+  "audio_assets_changed": false,
+  "provider_calls": 0,
+  "story_changes": 0,
+  "listener_count_required": 3,
+  "independence_rule": "Each listener completes their own folder without seeing another listener's responses or the internal key.",
+  "session_rules": [
+    "SET_COMFORTABLE_VOLUME_BEFORE_T01",
+    "KEEP_VOLUME_FIXED_FOR_ALL_SCORED_TRIALS",
+    "USE_SAME_PLAYBACK_DEVICE_PATH_FOR_SESSION",
+    "COMPLETE_T01_BEFORE_T02_AND_T02_BEFORE_T03",
+    "NO_FEEDBACK_BETWEEN_TRIALS",
+    "MAX_TWO_PLAYS_PER_FILE_PER_TRIAL",
+    "NO_WAVEFORM_METADATA_SPECTROGRAM_OR_MEASUREMENT_INSPECTION",
+    "RESPONSE_OPTIONS_A_B_CANT_TELL",
+    "PLAIN_LANGUAGE_DESCRIPTION_REQUIRED",
+    "CINEMATIC_OR_HORROR_INTERPRETATION_RECORDED"
+  ],
+  "counterbalance": {
+    "modality_order_varies_across_listeners": true,
+    "visible_A_B_assignment_varies_across_listeners": true,
+    "answer_key_hidden": true,
+    "neutral_visible_file_names": "T01_A.wav/T01_B.wav ..."
+  },
+  "drive": {
+    "parent_folder_id": "11DuG5frwv9jFyT0boD0bVOuQgIdkF65C",
+    "listeners": {
+      "LISTENER_01": {
+        "folder_id": "1jKvaK2xWq4D5c7FGzLJn3fmpuLnVjSX2",
+        "instruction_doc_id": "19Sk8wMF1EMgi2pkJnNV6G1m9gdY_-Qieq2vSCaefhts"
+      },
+      "LISTENER_02": {
+        "folder_id": "17dmI6pUznDgVDRGF_vgE0EiZcsvPY5Xn",
+        "instruction_doc_id": "1qIcUPWA4bpRjYQnbF99nK-Ziwbv_Yprj7w3FGHPMVzU"
+      },
+      "LISTENER_03": {
+        "folder_id": "1lahjeVPpjDJM9UcnxZlhvrWDLjnZgbyq",
+        "instruction_doc_id": "1_gJewEK-mliPJpKEX2rHW4DzDpoondUbxT3g-FIf068"
+      }
+    }
+  },
+  "evidence_taxonomy": {
+    "one_listener": "SINGLE_LISTENER_OBSERVATION_ONLY",
+    "three_listener_pass": "PASS_REPLICATED_INTERNAL_SCREEN",
+    "three_listener_borderline": "BORDERLINE_REQUIRES_SELECTIVE_REPAIR_OR_MORE_EVIDENCE",
+    "three_listener_fail": "FAIL_PERCEPTUAL_SCREEN",
+    "formal_standard_validation": "NOT_CLAIMED"
+  },
+  "internal_pass_rule": {
+    "description": "Production rule, not an ITU standard and not formal statistical proof.",
+    "listener_level": "At least 2 of 3 independent listeners must correctly identify the extra state in all three trials.",
+    "modality_level": "For each underlying modality, at least 2 of 3 listeners must identify the extra state correctly.",
+    "cant_tell": "CAN'T TELL counts as not-correct for pass scoring but is preferable to forced guessing.",
+    "semantic_hard_fail": "If the primary interpretation across listeners is cinematic/horror sting rather than ordinary equipment/load-state behavior, do not PASS even if A/B identification is high.",
+    "no_single_listener_promotion": true
+  },
+  "human_result": "PENDING_REAL_LISTENER_RESPONSES",
+  "machine_result": "UNCHANGED_G4_MACHINE_PASS",
+  "next_action": "RUN_LISTENER_01_02_03_INDEPENDENTLY_THEN_SCORE_WITH_INTERNAL_KEY_V2"
+}
