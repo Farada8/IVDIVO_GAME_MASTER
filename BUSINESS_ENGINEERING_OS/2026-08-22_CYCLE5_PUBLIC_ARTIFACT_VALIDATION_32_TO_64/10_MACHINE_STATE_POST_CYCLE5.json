@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "date": "2026-08-22",
   "cycle": "CYCLE5_PUBLIC_ARTIFACT_VALIDATION_32_TO_64",
   "authority_state": "MERGED_TO_MAIN",
@@ -9,6 +9,12 @@
     "merged": true,
     "merge_commit": "470a8aea93385ef8624b47688dbf4cf21090c058",
     "merged_at": "2026-08-22T00:20:54+01:00"
+  },
+  "postmerge_closure": {
+    "pull_request": 188,
+    "pull_request_url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/188",
+    "purpose": "metadata/readback closure only",
+    "recorded": true
   },
   "upstream_main_before_cycle": "e41408aec56839585bfcff9a0fbfb0224cada25d",
   "library": {
@@ -89,9 +95,9 @@
   },
   "current_gate": "PA3 -> PA4 independent validation -> real target-user decision use -> PA5/E3 only on real interaction",
   "persistence": {
-    "github_main": "MERGED_VERIFIED",
+    "github_main_pr185": "MERGED_VERIFIED",
     "drive": "VERIFIED_FOLDER_READBACK",
-    "postmerge_closure_repair": "IN_PROGRESS",
-    "readback_required": true
+    "postmerge_closure_repair": "RECORDED_IN_PR188",
+    "readback_required": false
   }
 }
