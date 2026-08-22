@@ -10,7 +10,8 @@ Accepted evidence classes:
    timing may resolve, but P003A2 still requires master bytes unless exact signal
    intervals are also recovered.
 3. Exact P003A2 signal interval output from the same immutable master plus a trusted
-   provenance sidecar -> interval classification may run without reacquiring WAV.
+   provenance sidecar -> signal analysis can be recovered without reacquiring WAV,
+   but classification still requires accepted/live semantic timing.
 """
 from __future__ import annotations
 
@@ -210,6 +211,20 @@ def validate_interval_map(path: Path, provenance_path: Path, master_spec: dict[s
     return {"status": "PASS" if all(c["pass"] for c in checks) else "FAIL", "checks": checks, "interval_count": len(intervals)}
 
 
+def decide_route(master_pass: bool, timing_pass: bool, intervals_pass: bool) -> str:
+    # Signal intervals are not self-classifying. Classification requires both the
+    # exact recovered signal intervals and trusted accepted/live semantic timing.
+    if intervals_pass and timing_pass:
+        return "EVIDENCE_CLASSIFICATION"
+    if master_pass:
+        return "P003A2_SIGNAL_INTERVALS"
+    if intervals_pass:
+        return "INTERVAL_ANALYSIS_RECOVERED__ACCEPTED_LIVE_TIMING_REQUIRED"
+    if timing_pass:
+        return "LINEAGE_TIMING_RESOLUTION__P003A2_STILL_WAITS_FOR_MASTER_BYTES"
+    return "HOLD_RECOVERY__CONTINUE_INDEPENDENT_SAFE_FRONTIER"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--master", type=Path)
@@ -238,15 +253,7 @@ def main() -> int:
     timing_pass = results.get("accepted_timing", {}).get("status") == "PASS"
     intervals_pass = results.get("signal_intervals", {}).get("status") == "PASS"
 
-    if intervals_pass:
-        route = "EVIDENCE_CLASSIFICATION"
-    elif master_pass:
-        route = "P003A2_SIGNAL_INTERVALS"
-    elif timing_pass:
-        route = "LINEAGE_TIMING_RESOLUTION__P003A2_STILL_WAITS_FOR_MASTER_BYTES"
-    else:
-        route = "HOLD_RECOVERY__CONTINUE_INDEPENDENT_SAFE_FRONTIER"
-
+    route = decide_route(master_pass, timing_pass, intervals_pass)
     status = "PASS" if (master_pass or timing_pass or intervals_pass) else "HOLD"
     out = {
         "schema_version": "room917.recovery_intake_gate/1.0",
