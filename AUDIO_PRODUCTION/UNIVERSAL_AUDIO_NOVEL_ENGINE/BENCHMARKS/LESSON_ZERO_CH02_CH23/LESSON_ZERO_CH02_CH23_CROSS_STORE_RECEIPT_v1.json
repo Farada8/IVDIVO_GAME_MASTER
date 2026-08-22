@@ -1,0 +1,54 @@
+{
+  "schema_version": "ivdivo.cross_store_benchmark_receipt/1.0",
+  "created": "2026-08-22",
+  "project": "LESSON_ZERO",
+  "scope": "CH02-CH23",
+  "status": "PERSISTED_BOTH_STORES_VERIFIED_POINTERS",
+  "ground_truth_status": "PENDING_INDEPENDENT_BLIND_ANNOTATION",
+  "universal_promotion_authorized": false,
+  "candidate_counts": {
+    "PRONOUN_GRAMMATICAL_SUBJECT_TRACKER": 86,
+    "SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION": 53,
+    "unique_candidates": 139
+  },
+  "drive_folder_id": "1zpgCYoh9w-Pc2KRcjR6BWjaE1lNkzaHk",
+  "github_repo": "Farada8/IVDIVO_GAME_MASTER",
+  "github_path": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/BENCHMARKS/LESSON_ZERO_CH02_CH23",
+  "artifacts": [
+    {
+      "name": "LESSON_ZERO_CH02_CH23_BLIND_ANNOTATION_INSTRUCTIONS_v1.md",
+      "size_bytes": 873,
+      "sha256": "a3117ed85e2fc7e3b8fb3c6f82f267e59fbb1b8904578c559ce82d87c3796bfe",
+      "drive_file_id": "1555WNLQ9uovjznJTgBlJKiWaT7bWAV-z"
+    },
+    {
+      "name": "LESSON_ZERO_CH02_CH23_BLIND_BENCHMARK_FREEZE_v1.json",
+      "size_bytes": 7759,
+      "sha256": "ac3b0456afb57e804dcf000654657323717c9c1dc35c235d92b4a27ce351cf34",
+      "drive_file_id": "1h7N4suslISEKLfnluNCf812JJDpMSTgG"
+    },
+    {
+      "name": "LESSON_ZERO_CH02_CH23_BLIND_SPEAKER_ANNOTATION_PACKET_v1.csv",
+      "size_bytes": 46478,
+      "sha256": "5b7b31f0c8a56137f0325a8f51437d2b930e8065f085ba8d50644f4985952b56",
+      "drive_file_id": "1JaAvDbC3Med_R0ngEXON-7sE8RUpq70f"
+    },
+    {
+      "name": "LESSON_ZERO_CH02_CH23_BLIND_SPEAKER_ANNOTATION_PACKET_v1.jsonl",
+      "size_bytes": 67562,
+      "sha256": "c38d2e70f2fa35f7e7c9994d19c0e4cd5dd616e33f229725c86b9540f0143f7b",
+      "drive_file_id": "1PEq1RPM0xLl8sGX_W_XMAYQckHoNa4J4"
+    }
+  ],
+  "github": {
+    "repo": "Farada8/IVDIVO_GAME_MASTER",
+    "pr": 480,
+    "merge_commit": "877105177338cf38671d65308b1d13f3a81c0418",
+    "main_paths": [
+      "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/BENCHMARKS/LESSON_ZERO_CH02_CH23/LESSON_ZERO_CH02_CH23_BLIND_ANNOTATION_INSTRUCTIONS_v1.md",
+      "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/BENCHMARKS/LESSON_ZERO_CH02_CH23/LESSON_ZERO_CH02_CH23_BLIND_BENCHMARK_FREEZE_v1.json"
+    ],
+    "payload_storage_law": "GitHub stores the immutable benchmark control plane; original CSV/JSONL payload bytes are stored in Drive and bound here by Drive IDs + SHA-256."
+  },
+  "claim_boundary": "No independent ground truth has been filled yet. No rule promotion, voice-map authorization, provider dispatch, or story-text mutation follows from persistence."
+}
