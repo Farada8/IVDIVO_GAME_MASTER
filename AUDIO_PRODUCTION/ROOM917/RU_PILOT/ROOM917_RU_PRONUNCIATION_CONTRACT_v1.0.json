@@ -1,0 +1,175 @@
+{
+  "schema_version": "ivdivo.room917_ru_pronunciation_contract/1.0",
+  "created": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "status": "READY_FOR_PROVIDER_DICTIONARY_CREATION_AFTER_AUTH",
+  "story_or_dialogue_change": false,
+  "provider": {
+    "name": "ElevenLabs",
+    "primary_model_id": "eleven_v3",
+    "phoneme_dictionary_supported_for_model": true,
+    "non_english_phoneme_requires_eleven_v3": true,
+    "alias_rules_supported": true,
+    "max_dictionary_locators_per_tts_request": 3,
+    "dictionary_id": null,
+    "dictionary_version_id": null,
+    "dictionary_ids_must_never_be_invented": true
+  },
+  "authority": {
+    "manifest": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_E02_ELEVENLABS_V3_MANIFEST_v1.0.json",
+    "e01_script": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md",
+    "e02_script": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E02_LENI_BIRD_RECORDING_SCRIPT_v1.0.md",
+    "rule": "THIS_FILE_CONTROLS_PRONUNCIATION_ONLY_AND_MUST_NOT_REWRITE_DIALOGUE"
+  },
+  "strategy": {
+    "default": "ALIAS_FIRST",
+    "reason": "Use deterministic surface substitution before introducing voice-specific IPA. IPA overrides are created only when an authenticated chosen voice still mispronounces a critical token in canary listening.",
+    "ipa_status": "VOICE_SPECIFIC_CANARY_REQUIRED_BEFORE_LOCK",
+    "cmu_for_ru": "NOT_USED",
+    "case_variants": "ADD_EXPLICIT_VARIANTS_WHEN_PROVIDER_MATCHING_REQUIRES_THEM",
+    "test_with_selected_voice_and_model": true
+  },
+  "locked_terms": [
+    {
+      "id": "PRON_GREYHAVEN",
+      "semantic_identity": "Greyhaven",
+      "surface_variants": ["Greyhaven", "GREYHAVEN", "Грейхейвен"],
+      "spoken_ru": "Грейхейвен",
+      "alias_rules": [
+        {"type": "alias", "string_to_replace": "Greyhaven", "alias": "Грейхейвен"},
+        {"type": "alias", "string_to_replace": "GREYHAVEN", "alias": "Грейхейвен"}
+      ],
+      "ru_surface_passthrough": "Грейхейвен",
+      "criticality": "HIGH"
+    },
+    {
+      "id": "PRON_ASHCROFT",
+      "semantic_identity": "Ashcroft",
+      "surface_variants": ["Ashcroft", "ASHCROFT", "Эшкрофт"],
+      "spoken_ru": "Эшкрофт",
+      "alias_rules": [
+        {"type": "alias", "string_to_replace": "Ashcroft", "alias": "Эшкрофт"},
+        {"type": "alias", "string_to_replace": "ASHCROFT", "alias": "Эшкрофт"}
+      ],
+      "ru_surface_passthrough": "Эшкрофт",
+      "criticality": "HIGH"
+    },
+    {
+      "id": "PRON_LENI_BIRD",
+      "semantic_identity": "Leni-bird",
+      "surface_variants": ["Leni-bird", "Leni bird", "Лени-бёрд", "Лени-бёрд..."],
+      "spoken_ru": "Лени-бёрд",
+      "semantic_translation_forbidden": true,
+      "alias_rules": [
+        {"type": "alias", "string_to_replace": "Leni-bird", "alias": "Лени-бёрд"},
+        {"type": "alias", "string_to_replace": "Leni bird", "alias": "Лени-бёрд"}
+      ],
+      "ru_surface_passthrough": "Лени-бёрд",
+      "criticality": "FATAL_IF_WRONG",
+      "ipa_override": null,
+      "ipa_rule_status": "HOLD_UNTIL_SELECTED_VOICE_CANARY_PROVES_NEEDED"
+    },
+    {
+      "id": "PRON_ROOM_916",
+      "semantic_identity": "room_or_selector_916",
+      "surface_variants": ["916"],
+      "spoken_ru": "девятьсот шестнадцать",
+      "alias_rules": [
+        {"type": "alias", "string_to_replace": "916", "alias": "девятьсот шестнадцать"}
+      ],
+      "criticality": "HIGH"
+    },
+    {
+      "id": "PRON_ROOM_917",
+      "semantic_identity": "room_or_selector_917",
+      "surface_variants": ["917"],
+      "spoken_ru": "девятьсот семнадцать",
+      "alias_rules": [
+        {"type": "alias", "string_to_replace": "917", "alias": "девятьсот семнадцать"}
+      ],
+      "criticality": "HIGH"
+    },
+    {
+      "id": "PRON_TIME_1_17",
+      "semantic_identity": "time_1_17",
+      "surface_variants": ["1:17"],
+      "spoken_ru": "один семнадцать",
+      "alias_rules": [
+        {"type": "alias", "string_to_replace": "1:17", "alias": "один семнадцать"}
+      ],
+      "criticality": "MEDIUM"
+    },
+    {
+      "id": "PRON_TIME_01_17_12",
+      "semantic_identity": "e01_event_time_01_17_12",
+      "surface_variants": ["01:17:12"],
+      "spoken_ru": "один семнадцать и двенадцать секунд",
+      "alias_rules": [
+        {"type": "alias", "string_to_replace": "01:17:12", "alias": "один семнадцать и двенадцать секунд"}
+      ],
+      "criticality": "FATAL_IF_WRONG"
+    },
+    {
+      "id": "PRON_50_HZ",
+      "semantic_identity": "50_hertz",
+      "surface_variants": ["50 Hz", "50Hz"],
+      "spoken_ru": "пятьдесят герц",
+      "alias_rules": [
+        {"type": "alias", "string_to_replace": "50 Hz", "alias": "пятьдесят герц"},
+        {"type": "alias", "string_to_replace": "50Hz", "alias": "пятьдесят герц"}
+      ],
+      "criticality": "HIGH"
+    },
+    {
+      "id": "PRON_38_MS",
+      "semantic_identity": "38_milliseconds",
+      "surface_variants": ["38 ms", "38ms"],
+      "spoken_ru": "тридцать восемь миллисекунд",
+      "alias_rules": [
+        {"type": "alias", "string_to_replace": "38 ms", "alias": "тридцать восемь миллисекунд"},
+        {"type": "alias", "string_to_replace": "38ms", "alias": "тридцать восемь миллисекунд"}
+      ],
+      "criticality": "FATAL_IF_WRONG"
+    },
+    {
+      "id": "PRON_12_V",
+      "semantic_identity": "12_volts",
+      "surface_variants": ["12 V", "12V"],
+      "spoken_ru": "двенадцать вольт",
+      "alias_rules": [
+        {"type": "alias", "string_to_replace": "12 V", "alias": "двенадцать вольт"},
+        {"type": "alias", "string_to_replace": "12V", "alias": "двенадцать вольт"}
+      ],
+      "criticality": "HIGH"
+    }
+  ],
+  "dictionary_build_policy": {
+    "include_alias_rules_only_at_first": true,
+    "phoneme_rule_requires": [
+      "SELECTED_VOICE_ID",
+      "ELEVEN_V3",
+      "FAILED_ALIAS_OR_NATIVE_PRONUNCIATION_CANARY",
+      "HUMAN_RUSSIAN_LISTENER_CONFIRMATION",
+      "RECORDED_REASON"
+    ],
+    "never_use_pronunciation_rule_to_change_wording": true,
+    "never_semantically_translate_leni_bird": true,
+    "dictionary_version_must_be_recorded_in_every_take": true,
+    "dictionary_locator_count_limit": 3
+  },
+  "pronunciation_qc": {
+    "fatal_tokens": ["Лени-бёрд", "01:17:12", "38 ms"],
+    "pass_rule": "NO_CRITICAL_TOKEN_MISPRONUNCIATION_IN_SELECTED_TAKE",
+    "rerender_scope": "TOKEN_OR_MINIMUM_PHRASE_FIRST",
+    "whole_block_rerender_after_single_token_failure": false,
+    "whole_episode_rerender": false
+  },
+  "provider_documentation_snapshot": {
+    "checked": "2026-08-22",
+    "phoneme_tags_supported_models": ["eleven_flash_v2", "eleven_v3"],
+    "non_english_phoneme_model": "eleven_v3",
+    "create_speech_dictionary_locator_limit": 3,
+    "ssml_breaks_in_v3": false
+  }
+}
