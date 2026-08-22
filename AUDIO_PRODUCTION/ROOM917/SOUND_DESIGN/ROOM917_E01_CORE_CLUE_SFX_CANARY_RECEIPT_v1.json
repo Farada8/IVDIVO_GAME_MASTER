@@ -1,0 +1,69 @@
+{
+  "schema_version": "room917.core_clue_sfx_canary_receipt/1.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "CANDIDATE_HOLD_HUMAN_BLIND_AUDITION_REQUIRED",
+  "generator": {
+    "path": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_core_clue_sfx_canaries.py",
+    "commit": "08c6ceac949b6c1d29fa1c71c8c662cf49ddcd76",
+    "seed": 91720260822,
+    "provider_calls": 0,
+    "paid_synthesis_calls": 0,
+    "story_changed": false
+  },
+  "session_zip": {
+    "filename": "ROOM917_E01_CORE_CLUE_SFX_CANARIES_v1.zip",
+    "sha256": "a721a4a0ffa46b867906147b10038aa7562ffa2a5b501f6675ae56f7eb785d77",
+    "contains": "12 candidate WAV + MP3 previews + four blind reels + receipt + listening index"
+  },
+  "variants": {
+    "M01_917_DOUBLE_INTERNAL_RING": [
+      {"variant":"A","duration_s":0.92,"wav_sha256":"9db766f9825dabb67cc31f7290c84263ac083a1c436e465b61870c40e106a1c2","mp3_sha256":"8a2b19a41d8c0f36b525793710dca18d7b11eb837e8a650cbc3b6dddb8fffa25","peak_dbfs":-9.8},
+      {"variant":"B","duration_s":1.02,"wav_sha256":"159f06548bdfae4a24cceb9b7230f872c590b9c81f25d635d8db43b2d474ccc1","mp3_sha256":"c4a3ffde2d16e6475ca97ccb186186d99fcee42dde0c0fb8163469ad84aa86e7","peak_dbfs":-9.2},
+      {"variant":"C","duration_s":1.12,"wav_sha256":"2d43bb044cf5091eef740ecd24e9d04c781e7fb4309a7ab3ca31f7102f2d349d","mp3_sha256":"865b1f646dfa0a4d52de5cf79987e7120a325c3a009277e1131c3ae5a7511aed","peak_dbfs":-10.1}
+    ],
+    "M02_GLASS_LAMP_PING": [
+      {"variant":"A","duration_s":0.24,"wav_sha256":"8bfb84e6c29cc0ae0679e3acef4ca927a3307cfb36bdcda8b28ab758e95e0a65","mp3_sha256":"aef2413ac79a9c44f7155e00d45e1742a8055322df0b2c2b64f12735865388b7","peak_dbfs":-18.0},
+      {"variant":"B","duration_s":0.2899791667,"wav_sha256":"4cb2f56600ee64642c5b9eb79504d9ad601f693d8778ec8c8b11bbfe2a5aa8de","mp3_sha256":"d5c8fd5258a12a61b46f11ea45b9449de72981f3a6ba62f5aaec896d9a8fe234","peak_dbfs":-17.0},
+      {"variant":"C","duration_s":0.34,"wav_sha256":"2378a382f48842f825b3d7e58ba926f97e98fe7a9ba4909f46c630121a847059","mp3_sha256":"6cc3a06c27120284f8124808b97817f0421e803066c7192a0144273b78adcad1","peak_dbfs":-18.5}
+    ],
+    "M03_COPPER_HISS_BED": [
+      {"variant":"A","duration_s":20.0,"wav_sha256":"1084bf00a51c9002add74d30ee96152748e26ccef96d3cd04810a852c3d51d1f","mp3_sha256":"80092c6f55c74c3cc4044aa754e7072e0b119335e26723ed131c109c3976ebc2","peak_dbfs":-26.0,"seam_vs_internal_diff_rms_db_lr":[-5.5701,-1.2365]},
+      {"variant":"B","duration_s":20.0,"wav_sha256":"be9a5bb73f216c12d2921b46f2a8f31b665917cfbcdb26caa22f6f98362617e0","mp3_sha256":"231ced49b68f1fd7ca78dffe3b8a588db4e7a88d6ed1bffb54d4bc7a073db2fc","peak_dbfs":-27.0,"seam_vs_internal_diff_rms_db_lr":[-3.4278,-6.4758]},
+      {"variant":"C","duration_s":20.0,"wav_sha256":"2aa26dfc73639e6ceb73f3abef8d7b8ad2acf4f30b1be2f35501d540ba29bb61","mp3_sha256":"067f2f0a831a7677e6e2ed0adb65c114008e305e6ffc11acd75348e9d1c9e6d0","peak_dbfs":-25.5,"seam_vs_internal_diff_rms_db_lr":[-4.9127,-7.9743]}
+    ],
+    "M05_TWO_PART_ANALOGUE_CUT": [
+      {"variant":"A","duration_s":0.48,"wav_sha256":"fc6c5e5a711732e5e83a236bb9e555c6f9892ff7dfc8d93483da870f527322ce","mp3_sha256":"2a20a2c734d0a4ac50b3010f7f766003b1f708f235eec674eb8627ac997ee529","peak_dbfs":-12.0},
+      {"variant":"B","duration_s":0.5799791667,"wav_sha256":"22620086121720d8b81c73ee8401c41063140c12bb1a524702d4f4376a2f7969","mp3_sha256":"d7266a8cd68ee5de9c81ee0646321cef366a8912a8b0d915f64b129e2a533a91","peak_dbfs":-11.2},
+      {"variant":"C","duration_s":0.66,"wav_sha256":"59dcb926fa1dd39c3317aaf03e69114caf13426b8d746182c5ae4f0df101ca2b","mp3_sha256":"327d731d6a5db66b8cd18fa4ed44a8deac98bcf77c7dd4714e9367b1c8bd044b","peak_dbfs":-12.8}
+    ]
+  },
+  "blind_reels": {
+    "M01":"ce4af6fc58f510f333af3b6fc27221970618bbe8caa3cad4307fca9477b6c3d9",
+    "M02":"cf275495bd0e814f49388708e3fa9fd77f7c41a856ea08adec55002572efc873",
+    "M03":"7057c04cfe9d067068819eec61ff99b95cf0c3ac2c0ed7aed3ac0256d3d27a2d",
+    "M05":"e2fb4b981ec87e08c92b263bfa5d5ec8b66750572a45e40b39f1e1c0f0d7d6d3"
+  },
+  "machine_preflight": {
+    "all_duration_specs_pass": true,
+    "all_clip_free": true,
+    "sample_rate_hz": 48000,
+    "bit_depth": 24,
+    "channels": 2,
+    "m03_loop_seam_has_no_hard_spike": true,
+    "human_false_clue_and_category_test_still_required": true
+  },
+  "m04_lullaby": {
+    "generated": false,
+    "reason": "PITCH_LOCK_AND_CATE_PERFORMANCE_IDENTITY_GATE_REMAINS_OPEN"
+  },
+  "binding_law": [
+    "NO_CANARY_IS_PRODUCTION_MASTER",
+    "NO_VARIANT_LOCK_WITHOUT_HUMAN_BLIND_CATEGORY_TEST",
+    "M03_REQUIRES_LOOP_MONO_PHONE_AUDITION",
+    "BYTE_SHARED_EN_RU_ONLY_AFTER_ACCEPTED_SHA256_BINDING",
+    "CANARY_EXISTENCE_DOES_NOT_AUTHORIZE_SCENE3_PATCH_OR_RELEASE"
+  ]
+}
