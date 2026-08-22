@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Compile a ROOM917 RU bindings *candidate* from completed human review.
+"""Compile ROOM917 RU pre-canary voice bindings candidate.
 
-This tool cannot authorize paid synthesis. Its strongest possible output status
-is READY_FOR_PAID_CANARY_AUTHORIZATION with founder_paid_canary_authorized=false.
-A separate explicit authorization step is still required before the existing
-paid S0 workflow will accept bindings.
+This stage deliberately uses provider snapshot + shortlist + human provider-preview
+review only. It does NOT require or claim acting, pronunciation-on-script, pair
+chemistry, repeat-take, or Founder cast-credibility evidence; those facts can only
+exist after bounded canary audio has been generated and listened to.
+
+The strongest output is READY_FOR_PAID_CANARY_AUTHORIZATION. A separate explicit
+spend authorization remains required, and CAST LOCK remains false.
 """
 from __future__ import annotations
 
@@ -15,22 +18,11 @@ from pathlib import Path
 from typing import Any
 
 ROLES = ("ELENA", "JULIAN", "MINA", "CATE")
-PAIR_TESTS = (
-    "RU_PAIR_01_ELENA_MINA_LOBBY",
-    "RU_PAIR_02_ELENA_JULIAN_DOORS",
-    "RU_PAIR_03_ELENA_JULIAN_STATUS",
-    "RU_PAIR_04_CATE_LINE_VS_CASSETTE",
-)
-ROLE_PASS_FIELDS = (
+PRE_CANARY_PASS_FIELDS = (
     "preview_listen",
     "provider_identity_check",
-    "native_ru_pronunciation",
-    "age_character_fit",
-    "naturalism",
-    "microemotion_subtext",
-    "precision_under_pressure",
-    "repeat_take_identity_consistency",
-    "founder_credibility",
+    "provider_durability_check",
+    "plausible_for_canary",
 )
 
 
@@ -44,7 +36,7 @@ def sha256(path: Path) -> str:
 
 def require(condition: bool, message: str) -> None:
     if not condition:
-        raise SystemExit("FAIL_RU_CAST_REVIEW_GATE: " + message)
+        raise SystemExit("FAIL_RU_PRE_CANARY_BINDING_GATE: " + message)
 
 
 def role_candidates(shortlist: dict[str, Any], role: str) -> dict[str, dict[str, Any]]:
@@ -59,7 +51,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--provider-snapshot", type=Path, required=True)
     ap.add_argument("--shortlist", type=Path, required=True)
-    ap.add_argument("--review", type=Path, required=True)
+    ap.add_argument("--review", type=Path, required=True, help="PRE-CANARY provider-preview review")
     ap.add_argument("--out", type=Path, required=True)
     args = ap.parse_args()
 
@@ -76,17 +68,21 @@ def main() -> int:
     require(snapshot.get("status") == "PASS_CANDIDATES_FOUND", "provider snapshot must PASS_CANDIDATES_FOUND")
     require(shortlist.get("status") == "READY_FOR_PREVIEW_LISTEN_NOT_BINDINGS", "shortlist must be READY_FOR_PREVIEW_LISTEN_NOT_BINDINGS")
     require(shortlist.get("provider_snapshot", {}).get("sha256") == snapshot_hash, "shortlist/provider snapshot hash mismatch")
-    require(review.get("status") == "REVIEW_COMPLETE", "review status must be REVIEW_COMPLETE")
+    require(review.get("status") == "PRE_CANARY_REVIEW_COMPLETE", "review status must be PRE_CANARY_REVIEW_COMPLETE")
     require(review.get("provider_snapshot_sha256") == snapshot_hash, "review/provider snapshot hash mismatch")
     require(review.get("shortlist_proposal_sha256") == shortlist_hash, "review/shortlist hash mismatch")
-    require(review.get("pronunciation_gate") == "PASS", "pronunciation_gate must PASS")
     require(review.get("all_selected_voice_ids_unique") == "PASS", "all_selected_voice_ids_unique must PASS")
+    require(review.get("acting_evidence_complete") is False, "pre-canary review must not claim acting evidence complete")
     require(review.get("paid_s0_authorized") is False, "review must not contain paid authorization")
     require(review.get("cast_lock") is False, "review must not claim CAST LOCK")
     require(review.get("full_e01_render_allowed") is False, "review must not claim full E01 permission")
 
-    for pair_id in PAIR_TESTS:
-        require((review.get("pair_tests") or {}).get(pair_id) == "PASS", f"pair test {pair_id} must PASS")
+    # These gates are impossible before canary audio exists; reject any attempt to
+    # smuggle a post-canary PASS upstream into the provider-preview review.
+    require(review.get("pronunciation_canary_gate") in (None, "NOT_RUN_YET"), "pronunciation canary gate must not be pre-passed")
+    require(review.get("pair_tests") in (None, "NOT_RUN_YET"), "pair tests must not be pre-passed")
+    require(review.get("repeat_take_identity_consistency") in (None, "NOT_RUN_YET"), "repeat-take consistency must not be pre-passed")
+    require(review.get("founder_cast_credibility") in (None, "NOT_RUN_YET"), "Founder cast credibility must not be pre-passed")
 
     selected: dict[str, dict[str, Any]] = {}
     selected_ids: list[str] = []
@@ -98,14 +94,13 @@ def main() -> int:
         require(voice_id in shortlist_rows, f"{role}: selected voice absent from sealed shortlist")
         candidate = shortlist_rows[voice_id]
 
-        for field in ROLE_PASS_FIELDS:
+        for field in PRE_CANARY_PASS_FIELDS:
             require(review_row.get(field) == "PASS", f"{role}: {field} must PASS")
-        score = review_row.get("score_0_30")
-        require(isinstance(score, (int, float)) and not isinstance(score, bool), f"{role}: score_0_30 missing")
-        require(float(score) >= 24.0, f"{role}: score {score} below 24/30")
-        require(review_row.get("hard_reject") is False, f"{role}: hard_reject must be false")
-        require(candidate.get("ru_verified") is True, f"{role}: shortlist candidate no longer carries ru_verified=true")
+        require(candidate.get("ru_verified") is True, f"{role}: shortlist candidate does not carry ru_verified=true")
         require(candidate.get("binding_eligible") is False, f"{role}: shortlist must remain non-binding review artifact")
+        notice = candidate.get("notice_period")
+        require(isinstance(notice, (int, float)) and not isinstance(notice, bool) and float(notice) >= 365, f"{role}: notice period below 365 or missing")
+        require(candidate.get("disable_at_unix") in (None, 0, "", "0"), f"{role}: active disable_at_unix blocks canary binding")
 
         selected_ids.append(voice_id)
         selected[role] = {
@@ -113,16 +108,18 @@ def main() -> int:
             "provider_name": candidate.get("provider_name") or review_row.get("provider_name"),
             "preview_listen": "PASS",
             "provider_identity_check": "PASS",
-            "selection_note": f"Human review PASS {score}/30; Founder credibility PASS; binding candidate only, paid authorization still false.",
-            "review_score_0_30": score,
-            "provider_notice_period": candidate.get("notice_period"),
+            "provider_durability_check": "PASS",
+            "plausible_for_canary": "PASS",
+            "provider_notice_period": notice,
             "provider_disable_at_unix": candidate.get("disable_at_unix"),
+            "canary_binding_only": True,
+            "acting_evidence": "NOT_YET_GENERATED",
         }
 
     require(len(set(selected_ids)) == len(ROLES), "selected voice IDs must be unique across four roles")
 
     out = {
-        "schema_version": "ivdivo.room917_ru_s0_native_bindings/1.1",
+        "schema_version": "ivdivo.room917_ru_s0_native_bindings_candidate/2.0",
         "status": "READY_FOR_PAID_CANARY_AUTHORIZATION",
         "project_id": "ROOM917",
         "locale": "ru-RU",
@@ -132,18 +129,29 @@ def main() -> int:
         "provider_snapshot_sha256": snapshot_hash,
         "shortlist_path": str(args.shortlist),
         "shortlist_sha256": shortlist_hash,
-        "review_path": str(args.review),
-        "review_sha256": sha256(args.review),
+        "pre_canary_review_path": str(args.review),
+        "pre_canary_review_sha256": sha256(args.review),
         "roles": selected,
-        "all_pair_tests": "PASS",
-        "pronunciation_gate": "PASS",
-        "founder_credibility_gate": "PASS",
+        "pre_canary_binding_gate": "PASS",
+        "canary_binding_only": True,
+        "acting_evidence_complete": False,
+        "pronunciation_gate": "NOT_RUN_YET",
+        "pair_tests": "NOT_RUN_YET",
+        "founder_credibility_gate": "NOT_RUN_YET",
         "founder_paid_canary_authorized": False,
         "paid_s0_authorized": False,
         "cast_lock": False,
         "full_episode_render_allowed": False,
-        "authorization_rule": "A separate explicit founder spend authorization must create the final PAID_S0_AUTHORIZED bindings artifact. This compiler cannot do so.",
-        "next": "EXPLICIT_FOUNDER_PAID_CANARY_AUTHORIZATION_OR_STOP"
+        "authorization_rule": "A separate explicit founder spend authorization may authorize bounded S0 canary generation only. Acting evidence and CAST LOCK occur downstream after real canary audio and human listening.",
+        "next": "EXPLICIT_FOUNDER_PAID_CANARY_AUTHORIZATION_OR_STOP",
+        "hard_rules": [
+            "PRE_CANARY_BINDING_IS_NOT_CAST_APPROVAL",
+            "NO_ACTING_SCORE_BEFORE_CANARY_AUDIO",
+            "NO_PAIR_PASS_BEFORE_PAIR_AUDIO",
+            "NO_FOUNDER_CAST_PASS_BEFORE_CANARY_LISTEN",
+            "NO_CAST_LOCK",
+            "NO_FULL_EPISODE_RENDER"
+        ]
     }
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
@@ -151,6 +159,8 @@ def main() -> int:
     print(json.dumps({
         "status": out["status"],
         "roles": {role: out["roles"][role]["voice_id"] for role in ROLES},
+        "pre_canary_binding_gate": "PASS",
+        "acting_evidence_complete": False,
         "founder_paid_canary_authorized": False,
         "cast_lock": False,
         "out": str(args.out)
