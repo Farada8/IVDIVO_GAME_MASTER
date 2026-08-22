@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "updated": "2026-08-22",
   "library": "IVDIVO_SELF_IMPROVEMENT_ENGINEERING_LIBRARY",
-  "status": "CURRENT_INDEX_WITH_PRIVATE_RAW_POINTERS_AND_CANDIDATE_EVIDENCE",
+  "status": "CURRENT_INDEX_WITH_PRIVATE_RAW_POINTERS_NORMALIZED_SYSTEMS_LIBRARY_AND_CANDIDATE_EVIDENCE",
   "current_authority": {
     "github_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
     "github_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
@@ -11,16 +11,28 @@
     "drive_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
     "authority_effect_of_this_registry_update": "NONE"
   },
-  "identity_law": "PHYSICAL_FILE != BYTE_HASH != CANONICAL_WORK != DERIVED_MECHANISM != AUTHORITY",
+  "identity_law": "PHYSICAL_FILE != BYTE_HASH != CANONICAL_WORK != WORK_FAMILY != DERIVED_MECHANISM != AUTHORITY",
   "private_uploaded_source_pointers": [
     {
       "title": "systems / self-improvement books",
       "drive_folder_id": "1F_21NJ9YXB63ctOS5KPrkeDlcYKkUTVv",
-      "handling": "PRIVATE_RAW_REFERENCE",
+      "handling": "PRIVATE_RAW_REFERENCE_NORMALIZED",
       "physical_entries_observed": 35,
-      "unique_work_count": null,
-      "byte_hash_dedup_complete": false,
-      "note": "35 is a physical-entry observation only; duplicates, alternate formats and small/broken placeholders are not silently treated as unique valid works."
+      "sha256_coverage": "35_of_35",
+      "structurally_valid_physical": 26,
+      "quarantined_physical": 9,
+      "unique_byte_hashes_total": 30,
+      "unique_valid_byte_hashes": 26,
+      "unique_broken_payload_hashes": 4,
+      "exact_duplicate_hash_groups": 2,
+      "canonical_work_count": 24,
+      "work_family_count": 23,
+      "unresolved_valid_canonical_entries": 0,
+      "byte_hash_dedup_complete": true,
+      "normalization_github_path": "SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/NORMALIZATION_2026-08-22/",
+      "normalization_drive_folder_id": "1RaXEX2fWWNPXNs434esrRcZfrnvGTCLa",
+      "normalization_merge_commit": "8302d10c67b1f43f8f5f97c975d720e8fc352bda",
+      "note": "Counts are evidence-separated: physical files, byte hashes, canonical works and work families are not interchangeable. Nine broken/placeholder entries remain quarantine evidence and are not silently counted as valid works."
     },
     {
       "title": "business books",
@@ -119,6 +131,15 @@
         "ASSET_REGISTRY_VALIDATION"
       ],
       "authority_effect": "NONE"
+    },
+    {
+      "cycle": "Systems RAW Normalization N09-N16",
+      "drive_id": "1RaXEX2fWWNPXNs434esrRcZfrnvGTCLa",
+      "github_pr": 292,
+      "github_merge_commit": "8302d10c67b1f43f8f5f97c975d720e8fc352bda",
+      "status": "MERGED_NORMALIZATION_EVIDENCE_LAYER",
+      "gates": "N09_N15_PASS_N16_CURRENT_REGISTRY_WRITE",
+      "authority_effect": "NONE_V2_REMAINS_CURRENT"
     }
   ],
   "known_private_and_generated_assets": [
