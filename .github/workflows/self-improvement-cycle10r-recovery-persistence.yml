@@ -1,0 +1,33 @@
+name: Self-Improvement Cycle10R Recovery Persistence
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/**'
+      - '.github/workflows/self-improvement-cycle10r-recovery-persistence.yml'
+  push:
+    branches:
+      - 'self-improvement/cycle10-recovery-persistence-promotion-32x64-20260822'
+
+permissions:
+  contents: read
+
+jobs:
+  cycle10r-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Cycle10R exact 32 canaries
+        run: >-
+          python -m unittest discover
+          -s SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/tests
+          -p 'test_*.py' -v
+      - name: Compile Cycle10R runtime
+        run: python -m compileall -q SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/engine
+      - name: Inherited Run33 session-resilience regression
+        run: PYTHONPATH=. python tests/test_session_resilience_run33.py
