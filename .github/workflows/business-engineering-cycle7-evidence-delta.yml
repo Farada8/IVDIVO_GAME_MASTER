@@ -1,0 +1,28 @@
+name: Business Engineering OS Cycle7 Evidence Delta
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_EVIDENCE_DELTA/**'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
+      - '.github/workflows/business-engineering-cycle7-evidence-delta.yml'
+  push:
+    branches:
+      - 'business-engineering/cycle7-evidence-delta-freshmain-2026-08-22'
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_EVIDENCE_DELTA/**'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
+      - '.github/workflows/business-engineering-cycle7-evidence-delta.yml'
+
+jobs:
+  evidence-delta-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run bounded evidence-delta guards
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_EVIDENCE_DELTA/tests/test_evidence_delta_guards.py
+      - name: Compile evidence-delta runtime
+        run: python -m compileall BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_EVIDENCE_DELTA/engine
