@@ -1,0 +1,50 @@
+{
+  "schema_version": "ivdivo.room917_ru_cast_lock_receipt/1.0",
+  "date": null,
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "status": "UNLOCKED",
+  "roles": {
+    "ELENA": null,
+    "JULIAN": null,
+    "MINA": null,
+    "CATE": null
+  },
+  "role_payload_schema": {
+    "role": "string",
+    "provider": "ElevenLabs",
+    "voice_id": "string",
+    "provider_voice_name": "string",
+    "verified_language": "ru",
+    "category": "string",
+    "notice_period_days": "integer",
+    "disable_at": "null_or_unix",
+    "model_id": "eleven_v3",
+    "voice_settings": "object",
+    "accepted_canary_ids": "array",
+    "accepted_canary_sha256": "array",
+    "individual_score_raw": "0-30",
+    "naturalism_score": "0-5",
+    "pronunciation_score": "0-5",
+    "pair_tests": "object",
+    "founder_credibility": "YES|NO|BORDERLINE",
+    "provider_identity_verified_at": "iso8601",
+    "locked_at": "iso8601"
+  },
+  "global_lock_gate": {
+    "all_four_roles_locked": false,
+    "provider_snapshot_status": "PASS_CANDIDATES_FOUND_REQUIRED",
+    "all_provider_ids_resolve": false,
+    "all_required_pair_tests_pass": false,
+    "all_founder_credibility_yes": false,
+    "full_e01_dialogue_render_allowed": false
+  },
+  "invariants": [
+    "NO_STORY_EDIT",
+    "NO_MIX_EDIT",
+    "NO_FULL_E01_BEFORE_GLOBAL_LOCK",
+    "NO_UNVERIFIED_PROVIDER_ID",
+    "NO_LOCK_FROM_SINGLE_TAKE",
+    "NO_LOCK_WITH_HARD_REJECT_FLAG"
+  ]
+}
