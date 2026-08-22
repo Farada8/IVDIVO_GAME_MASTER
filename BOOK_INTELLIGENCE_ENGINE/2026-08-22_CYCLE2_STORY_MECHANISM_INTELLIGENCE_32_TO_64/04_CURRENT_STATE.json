@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1",
+  "updated": "2026-08-22",
+  "candidate_id": "BOOK-MECH-C01",
+  "status": "ENGINEERING_CANDIDATE_LOCAL_TESTS_PASS_PARALLEL_PILOT2_REUSED_STORY_QUALITY_PILOT_PENDING",
+  "parent_authority": "BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.0.md",
+  "runtime": "tools/ivdivo_story_mechanism_intelligence.py",
+  "tests": "tests/test_story_mechanism_intelligence.py",
+  "local_tests": {"passed": 24, "failed": 0, "status": "PASS"},
+  "cycle2_prompts": {"executed": 32, "pass_engineering_or_pending": 28, "shadow_pass": 1, "evidence_hold": 3, "fabricated_pass": 0},
+  "upstream_business_pilot2": {
+    "status": "REUSED_FROM_CURRENT_MAIN",
+    "result": "PASS_CROSS_DOMAIN_SAFETY_REPLICATION_NO_INCREMENTAL_DECISION_GAIN",
+    "promotion": "HOLD"
+  },
+  "upstream_nasa_deep_pass": {
+    "status": "REUSED_AS_CANDIDATE_EVIDENCE",
+    "mechanisms": ["VERIFY_VALIDATE_SPLIT", "BIDIRECTIONAL_TRACEABILITY_GRAPH", "CHANGE_IMPACT_SET", "DECISION_FIRST_RESEARCH_DEPTH"]
+  },
+  "b03_control": {
+    "status": "LOCKED_SHADOW_ONLY",
+    "text_mutation_authorized": false,
+    "founder_locked_chapters": "CH01-CH29"
+  },
+  "promotion_effect": "NONE",
+  "self_improvement_v2": "REMAINS_VERIFIED_CURRENT",
+  "self_improvement_v3": "NOT_PROMOTED",
+  "next_gate": "REAL_OPEN_STORY_BASELINE_CANDIDATE_PILOT_WITH_OBSERVED_OUTCOME_AND_NO_FATAL_MAJOR_REGRESSION",
+  "next_prompt_bank": 64
+}
