@@ -1,0 +1,111 @@
+name: ROOM917 RU E01 Block Planner
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/room917-ru-e01-block-planner.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_BLOCK_BOUNDARY_POLICY_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/plan_ru_e01_controlled_blocks.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_plan_ru_e01_controlled_blocks.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_e01_dialogue_units.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/room917-ru-e01-block-planner.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_BLOCK_BOUNDARY_POLICY_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/plan_ru_e01_controlled_blocks.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_plan_ru_e01_controlled_blocks.py'
+
+permissions:
+  contents: read
+
+jobs:
+  plan-real-e01:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_plan_ru_e01_controlled_blocks.py -v
+
+      - name: Compile immutable E01 dialogue units from locked script
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _room917_ru_e01_blocks
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_e01_dialogue_units.py \
+            --script AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md \
+            --out _room917_ru_e01_blocks/ROOM917_RU_E01_DIALOGUE_UNITS.json
+
+      - name: Plan controlled editorial blocks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/plan_ru_e01_controlled_blocks.py \
+            --units _room917_ru_e01_blocks/ROOM917_RU_E01_DIALOGUE_UNITS.json \
+            --policy AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_BLOCK_BOUNDARY_POLICY_v1.0.json \
+            --out _room917_ru_e01_blocks/ROOM917_RU_E01_CONTROLLED_BLOCK_PLAN.json
+
+      - name: Validate live E01 block invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          units=json.loads(Path('_room917_ru_e01_blocks/ROOM917_RU_E01_DIALOGUE_UNITS.json').read_text(encoding='utf-8'))
+          plan=json.loads(Path('_room917_ru_e01_blocks/ROOM917_RU_E01_CONTROLLED_BLOCK_PLAN.json').read_text(encoding='utf-8'))
+          policy=json.loads(Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_BLOCK_BOUNDARY_POLICY_v1.0.json').read_text(encoding='utf-8'))
+          if units.get('unit_count') != 152:
+              raise SystemExit(f"locked E01 unit count drift: {units.get('unit_count')}")
+          if plan.get('dialogue_unit_count') != 152:
+              raise SystemExit('block plan did not preserve all 152 units')
+          if plan.get('provider_calls') != 0 or plan.get('paid_synthesis_calls') != 0:
+              raise SystemExit('planner must remain zero-spend')
+          if plan.get('story_or_dialogue_changed') is not False:
+              raise SystemExit('planner changed dialogue')
+          if plan.get('full_episode_single_pass_allowed') is not False:
+              raise SystemExit('full-episode single-pass guard failed')
+
+          unit_by_id={u['unit_id']:u for u in units['units']}
+          flat=[]
+          for block in plan['blocks']:
+              flat.extend(block['unit_ids'])
+              scenes={unit_by_id[uid]['scene'] for uid in block['unit_ids']}
+              if len(scenes)!=1:
+                  raise SystemExit(f"block crosses scene: {block['block_id']}")
+              if block['estimated_seconds_reference_only'] > 80.0:
+                  raise SystemExit(f"block over 80s: {block['block_id']}")
+              if block['protected'] and len(block['unit_ids']) != 1:
+                  raise SystemExit(f"protected block not isolated: {block['block_id']}")
+          expected=[u['unit_id'] for u in units['units']]
+          if flat != expected:
+              raise SystemExit('dialogue order drift')
+
+          protected=set(policy['protected_exact_text_units'])
+          protected_units=[u for u in units['units'] if u['text'] in protected]
+          if len(protected_units) != len(protected):
+              missing=protected-{u['text'] for u in protected_units}
+              raise SystemExit(f'protected exact text does not resolve 1:1: missing={missing}')
+          protected_ids={u['unit_id'] for u in protected_units}
+          isolated={b['unit_ids'][0] for b in plan['blocks'] if b['protected']}
+          if isolated != protected_ids:
+              raise SystemExit(f'protected isolation mismatch expected={protected_ids} got={isolated}')
+          print(f"ROOM917 RU E01 BLOCK PLAN PASS units=152 blocks={plan['block_count']} protected={len(protected_ids)}")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_RU_E01_CONTROLLED_BLOCK_PLAN
+          path: _room917_ru_e01_blocks/
+          if-no-files-found: error
+          retention-days: 14
