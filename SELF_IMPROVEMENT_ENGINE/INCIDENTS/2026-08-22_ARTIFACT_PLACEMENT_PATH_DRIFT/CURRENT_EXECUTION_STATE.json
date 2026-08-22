@@ -1,54 +1,52 @@
 {
-  "schema": "artifact_placement_incident_state_v4",
+  "schema": "artifact_placement_incident_state_v5",
   "date": "2026-08-22",
   "issue": 356,
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "LIVE_INTERCEPTION_CAPTURE_ARMED",
+  "candidate_status": "PRODUCTION_ADOPTION_HARDENING_PENDING_CI",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "runtime": {
     "receipt_module": "personal-ai/core/artifact_placement.py",
     "provider_adapter_module": "personal-ai/core/artifact_placement_adapters.py",
     "completion_gate": "personal-ai/projects/artifact_completion.py",
+    "task_state_module": "personal-ai/projects/manager.py",
+    "agent_executor_module": "personal-ai/agents/executor.py",
+    "cli_module": "personal-ai/run.py",
     "atomic_recovery_contract": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/ATOMIC_COMPLETION_RECOVERY_CONTRACT_v1.md",
     "live_interception_contract": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/LIVE_INTERCEPTION_EVIDENCE_CONTRACT_v1.md",
+    "production_adoption_contract": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/PRODUCTION_ADOPTION_CONTRACT_v1.md",
     "ci_workflow": ".github/workflows/artifact-placement-runtime.yml",
-    "done_rule": "external-artifact task routed through artifact completion gate may become DONE only when placement receipt status is PLACEMENT_VERIFIED and status+receipt are persisted atomically"
+    "done_rule": "artifact-producing task with requires_artifact_placement_receipt=true may become DONE only through the placement gate with PLACEMENT_VERIFIED evidence"
   },
   "proof": {
     "runtime_merge_pr": 388,
     "runtime_merge_commit": "b8265fe897a29147844591919fa4853aa3ba5a2c",
-    "provider_adapters_implemented": true,
-    "provider_adapter_targets": ["GOOGLE_DRIVE", "GITHUB"],
-    "provider_adapter_regression": "PASS",
-    "prospective_cross_project_canaries": 2,
-    "prospective_canary_status": "2/2 PLACEMENT_VERIFIED",
-    "real_post_merge_failure_issue": 395,
-    "real_post_merge_failure_class": "TOOL_ROUTE_MISMATCH / RESOURCE_TYPE_MISMATCH",
-    "real_post_merge_failure_repair_pr": 401,
-    "real_post_merge_failure_repair_merge": "e277ecb7f91fd3b9ce55464758bc531e789e2be9",
-    "real_post_merge_failure_qualifies_as_future_guard_interception": false,
-    "reason_not_promotion_evidence": "issue #395 triggered the resource-type repair; canonical PR401 receipt still requires future real traffic where the installed guard catches the next failure before false DONE",
-    "resource_type_negative_canary": "PASS",
+    "resource_type_guard_pr": 401,
+    "resource_type_guard_merge": "e277ecb7f91fd3b9ce55464758bc531e789e2be9",
     "atomic_completion_fix_pr": 409,
     "atomic_completion_merge_commit": "654399a29324408cb0be75cae239587102090632",
-    "reopen_recovery_regression": "PASS",
-    "atomic_recovery_all_related_workflows": "10/10 PASS",
     "live_interception_capture_pr": 411,
-    "live_interception_capture_validation_head": "073444b5d30d4f54faedd1bba189046c8feb62cf",
     "live_interception_capture_merge_commit": "e9eb2614a1448d026762360165a815a29160be25",
-    "live_interception_runtime_ci_run": 32570077658,
-    "live_interception_regression": "PASS",
-    "live_interception_all_related_workflows": "10/10 PASS",
-    "live_interception_capture_armed": true,
-    "live_interception_history_mode": "APPEND_ONLY_PER_TASK",
-    "live_interception_atomic_with_blocked_state": true,
-    "live_interception_auto_promotion": false,
-    "live_interception_provider_confirmation_required": true
+    "production_adoption_gap_found": true,
+    "production_adoption_gap": [
+      "BoundedAgentExecutor.run called ProjectStateManager.complete_task directly",
+      "BoundedAgentExecutor.execute called ProjectStateManager.complete_task directly",
+      "personal-ai/run.py exposed no artifact-gated task completion route"
+    ],
+    "guard_implemented_before_adoption_fix": true,
+    "guard_mandatory_on_canonical_agent_completion_before_adoption_fix": false,
+    "task_policy_added": "requires_artifact_placement_receipt",
+    "direct_complete_rejects_marked_artifact_task": true,
+    "compatibility_agent_gate_adoption": "IMPLEMENTED_PENDING_CI",
+    "strict_agent_gate_adoption": "IMPLEMENTED_PENDING_CI",
+    "cli_artifact_completion_route": "IMPLEMENTED_PENDING_CI",
+    "production_adoption_regression": "PENDING_EXACT_HEAD_CI"
   },
   "required_sequence": [
+    "DECLARE_ARTIFACT_TASK_POLICY",
     "CREATE_OR_IMPORT",
     "PLACE_IN_CANONICAL_PROJECT_LOCATION",
     "READBACK_ACTUAL_PARENT_AND_RESOURCE_TYPE",
@@ -57,19 +55,21 @@
     "SCAN_DUPLICATE_OR_LEGACY_TITLE_CONFLICT",
     "VERIFY_CROSS_STORE_POINTER_IF_REQUIRED",
     "EMIT_PLACEMENT_RECEIPT",
+    "ROUTE_ARTIFACT_TASK_COMPLETION_THROUGH_GATE",
     "ATOMICALLY_PERSIST_STATUS_AND_RECEIPT",
     "IF_BLOCKED_WITH_RECEIPT_APPEND_INTERCEPTION_CANDIDATE_ATOMICALLY",
     "ALLOW_DONE_ONLY_IF_PLACEMENT_VERIFIED_AND_OTHER_GATES_PASS"
   ],
   "promotion_gate": {
-    "status": "HOLD_ARMED_FOR_LIVE_EVIDENCE",
+    "status": "HOLD_ADOPTION_HARDENING",
     "completed_requirements": [
-      "provider adapters construct receipts from Google Drive and GitHub provider observations with normalization and fail-closed regression coverage",
-      "atomic status+receipt persistence and restart/reopen regression passed and merged through PR #409",
-      "append-only interception candidate capture is installed, atomic, restart-safe, exact-head tested and merged through PR #411 without auto-promotion"
+      "provider adapters construct receipts from Google Drive and GitHub observations",
+      "atomic status+receipt persistence and restart/reopen regression merged through PR #409",
+      "append-only interception candidate capture merged through PR #411 without auto-promotion"
     ],
     "remaining_requirements": [
-      "observe future real traffic where the installed placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback; runtime interception candidates never self-certify as promotion proof"
+      "merge and verify mandatory placement-gate adoption across marked ProjectState tasks, compatibility Agent Executor, strict Agent Executor and CLI artifact completion routes",
+      "then observe future real traffic where the already-installed and adopted guard catches a new real persistence failure before any false DONE claim, with independent provider origin/readback confirmation"
     ]
   }
 }
