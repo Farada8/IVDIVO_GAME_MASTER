@@ -28,6 +28,14 @@ https://drive.google.com/file/d/11asZAvB3I0E3PPq6ckAH2LAZYrr2BpAc/view?usp=drive
 Manifest:
 https://drive.google.com/file/d/130ZUsCe-qfCq9VFYQNdlCCXRbJqVhrO8/view?usp=drivesdk
 
+## Integrity / SHA-256
+- `Shillelagh_FULL_ARCHIVE_2026-08-22.zip` — `b1883ef6be0fc946e1574a9651aad69cded9fcf2ef850a0632df45b7e06dd131`
+- `Shillelagh_Complete_Expression_of_Interest_Yaromyr_Farada_v2.pdf` — `3e02f6294bfb1f8b04fb2cfe9adcb9f2bc881e272fdced63abcd2e2a1f6e6152`
+- `Shillelagh_Complete_Expression_of_Interest_Yaromyr_Farada_v2.docx` — `e9c93854f93fc396d7b261e03705a0bdfb3d859d575fa7b61e84a5d3484d7769`
+- `FINAL_EMAIL_TO_CIARAN.txt` — `965b6dbcfb730395ed5df27e31323173456685925125f0576390bda8edf55f2a`
+- `HANDOFF_2026-08-22.md` — `793f6ada935647f40ee33e23bd9288f8098b9e56a30305d345cf9ff390ad9e25`
+- `MANIFEST.txt` — `74d50e5b91439fb36e770a8db4da55e0961eb7c15960198351d0ec63e29954ec`
+
 ## Artist positioning
 Yaromyr Farada — Visual & Monumental Artist, Dublin.
 
