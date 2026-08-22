@@ -15,6 +15,16 @@ from pathlib import Path
 import wave
 
 
+HUMAN_GATES = (
+    "ROOM_IDENTITY",
+    "LOOP_SEAM",
+    "FALSE_CLUE_AUDIT",
+    "MONO_TRANSLATION",
+    "PHONE_PROXY_TRANSLATION",
+    "DIALOGUE_UNDERLAY",
+)
+
+
 def run(cmd: list[str]) -> None:
     subprocess.run(cmd, check=True)
 
@@ -156,14 +166,7 @@ def main() -> int:
                 "phone": {"path": str(phone), "sha256": sha256_file(phone)},
             },
             "machine_status": "PREPARED_FOR_HUMAN_AUDITION",
-            "human_required": [
-                "ROOM_IDENTITY",
-                "LOOP_SEAM",
-                "FALSE_CLUE_AUDIT",
-                "MONO_TRANSLATION",
-                "PHONE_PROXY_TRANSLATION",
-                "DIALOGUE_UNDERLAY",
-            ],
+            "human_required": list(HUMAN_GATES),
             "production_binding_authorized": False,
         }
         rows.append(machine)
@@ -189,7 +192,7 @@ def main() -> int:
         pending_by_asset.setdefault(cand["asset_id"], []).append(pending)
 
     report={
-        "schema_version": "ivdivo.room917_a01_a02_machine_qc/1.0",
+        "schema_version": "ivdivo.room917_a01_a02_machine_qc/1.1",
         "project": "ROOM917",
         "episode": "E01",
         "status": "PREPARED_FOR_HUMAN_AUDITION_NOT_BOUND",
@@ -197,9 +200,10 @@ def main() -> int:
         "rows": rows,
         "machine_may_award_artistic_pass": False,
         "production_binding_authorized": False,
-        "next": "HUMAN_BLIND_AUDITION_THEN_ONE_WINNER_OR_HOLD_PER_ASSET__EXPLICIT_GAIN_IN_CONTEXT__EXISTING_SOUND_ASSET_BINDING_GATE",
+        "next": "HUMAN_BLIND_AUDITION_FORM_THEN_FAIL_CLOSED_COMPILER_THEN_EXISTING_SOUND_ASSET_BINDING_GATE",
     }
     (args.outdir / "ROOM917_E01_A01_A02_MACHINE_QC.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n",encoding="utf-8")
+
     pending={
         "schema_version":"room917.e01_sound_asset_candidates_pending_human/1.0",
         "status":"MULTIPLE_CANDIDATES_PENDING_HUMAN_SELECTION_NOT_BINDABLE",
@@ -207,7 +211,49 @@ def main() -> int:
         "law":"Do not pass this multi-candidate file directly to sound_asset_binding_gate. Human review must select at most one candidate per asset and fill PASS/HOLD/REJECT plus explicit gain before compiling the binding input.",
     }
     (args.outdir / "ROOM917_E01_A01_A02_PENDING_HUMAN_CANDIDATES.json").write_text(json.dumps(pending, ensure_ascii=False, indent=2)+"\n",encoding="utf-8")
-    print(json.dumps({"status":report["status"],"candidate_count":len(rows),"outdir":str(args.outdir)}))
+
+    # Pre-populated review packet: the human reviewer changes only decisions,
+    # selected candidate id/SHA, explicit tested gain and gate statuses. The
+    # structure itself is generated from the actual candidate evidence.
+    review_assets = {}
+    for asset_id, asset_candidates in pending_by_asset.items():
+        review_assets[asset_id] = {
+            "decision": "HOLD",
+            "selected_candidate_id": None,
+            "selected_sha256": None,
+            "gain_db": None,
+            "gates": {gate: "HOLD" for gate in HUMAN_GATES},
+            "candidate_reference": [
+                {
+                    "candidate_id": c["candidate_id"],
+                    "sha256": c["sha256"],
+                    "normalized_path": c["path"],
+                    "qc_previews": c["qc_previews"],
+                }
+                for c in asset_candidates
+            ],
+            "notes": "",
+        }
+    review_form = {
+        "schema_version": "room917.e01_a01_a02_human_audition_review/1.0",
+        "project": "ROOM917",
+        "episode": "E01",
+        "fixture_only": False,
+        "human_review_attested": False,
+        "reviewer": "",
+        "reviewed_at": "",
+        "assets": review_assets,
+        "instructions": [
+            "Blind-listen candidate sources/previews before selecting.",
+            "For SELECT, copy one candidate_id and sha256 from candidate_reference exactly.",
+            "Set an explicit gain_db only after dialogue-underlay audition.",
+            "Every required gate must be PASS for a selected candidate; any HOLD suppresses the entire A01/A02 binding input.",
+            "Set human_review_attested=true only after the actual human listen. Machine preparation cannot do this.",
+        ],
+    }
+    (args.outdir / "ROOM917_E01_A01_A02_HUMAN_AUDITION_REVIEW.json").write_text(json.dumps(review_form, ensure_ascii=False, indent=2)+"\n",encoding="utf-8")
+
+    print(json.dumps({"status":report["status"],"candidate_count":len(rows),"outdir":str(args.outdir),"human_review_form":"ROOM917_E01_A01_A02_HUMAN_AUDITION_REVIEW.json"}))
     return 0
 
 
