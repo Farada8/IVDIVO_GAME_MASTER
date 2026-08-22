@@ -1,0 +1,116 @@
+{
+  "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "authority": "THE_INSURABLE_FIRE",
+  "status": "WAITING_FOR_AUDIO",
+  "purpose": "Record only audible Listener-QC failures from an identifiable assembled master and compile them into smallest-scope selective repairs.",
+  "source_identity": {
+    "required": true,
+    "file_name": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "expected_duration_seconds": 658.190,
+    "expected_sample_rate_hz": 48000,
+    "expected_bit_depth": 24,
+    "expected_channels": 2,
+    "expected_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "observed_sha256": null,
+    "identity_status": "UNVERIFIED"
+  },
+  "protected_authority": {
+    "scene3_v1_3e_window": {
+      "start_seconds": 444.980,
+      "end_seconds": 658.190,
+      "technical_lineage_status": "PROTECTED_PASS",
+      "reopen_only_on_new_direct_audible_regression": true
+    },
+    "pre_scene3_d003": {
+      "window_start_seconds": 0.0,
+      "window_end_seconds": 444.980,
+      "status": "PROVEN_AGGREGATE_MAJOR_EXACT_INTERVALS_UNRESOLVED",
+      "blanket_fill_forbidden": true
+    }
+  },
+  "blind_listen": {
+    "pass_a_story_free": "NOT_RUN",
+    "pass_b_targeted_verification": "NOT_RUN",
+    "pass_c_translation_playback": {
+      "stereo_headphones": "NOT_RUN",
+      "ordinary_speakers_or_mono": "NOT_RUN",
+      "mobile_proxy": "NOT_RUN"
+    }
+  },
+  "question_classes": [
+    "ACTOR_BELIEF",
+    "AI_AUDIBLE",
+    "DEAD_SCENE",
+    "GEOGRAPHY",
+    "MYSTERY",
+    "SFX_MASKING"
+  ],
+  "failure_layers": [
+    "PERFORMANCE",
+    "EDIT",
+    "MIX",
+    "SOUND_ASSET",
+    "UNKNOWN"
+  ],
+  "severity": [
+    "FATAL",
+    "MAJOR",
+    "MEDIUM",
+    "POLISH"
+  ],
+  "defects": [],
+  "defect_record_contract": {
+    "required_fields": [
+      "defect_id",
+      "start_seconds",
+      "end_seconds",
+      "question_class",
+      "severity",
+      "confidence",
+      "heard",
+      "scene_failure",
+      "failure_layer",
+      "smallest_repair_scope",
+      "minimal_fix",
+      "do_not_touch",
+      "regression_tests",
+      "status"
+    ],
+    "allowed_status": [
+      "KEEP",
+      "REPAIR",
+      "HOLD"
+    ]
+  },
+  "repair_compiler": {
+    "rules": [
+      "NO_PATCH_FROM_TASTE_ALONE",
+      "NO_PATCH_FROM_LOW_RMS_ALONE",
+      "NO_WHOLE_SCENE_RERENDER_WHEN_LOCAL_REPAIR_EXISTS",
+      "DIALOGUE_RERENDER_ONLY_FOR_PROVEN_PERFORMANCE_OR_PRONUNCIATION_FAILURE",
+      "MIX_REPAIR_FIRST_FOR_SPACING_MASKING_ROOM_CONTINUITY_OR_PLACEMENT",
+      "SFX_REGEN_ONLY_IF_ASSET_ITSELF_IS_WRONG",
+      "STORY_TEXT_LOCKED_UNLESS_REAL_CONTINUITY_ERROR_AND_FOUNDER_REOPENS_WRITING"
+    ],
+    "compiled_repairs": []
+  },
+  "open_release_gates": {
+    "scene3_fourth_note_perceptual_lock": "OPEN",
+    "mina_human_cast_approval": "OPEN",
+    "cate_human_cast_approval": "OPEN",
+    "assembled_master_human_listen": "OPEN"
+  },
+  "final_verdict": {
+    "believability": null,
+    "release_status": "HOLD",
+    "allowed_release_status": [
+      "GO",
+      "NO_GO",
+      "REPAIR",
+      "HOLD"
+    ],
+    "reason": "Audio bytes not yet verified/listened in this result artifact."
+  }
+}
