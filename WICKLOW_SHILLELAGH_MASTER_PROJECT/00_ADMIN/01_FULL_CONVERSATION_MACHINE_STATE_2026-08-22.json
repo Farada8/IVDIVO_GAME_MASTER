@@ -1,0 +1,69 @@
+{
+  "closure_type": "FULL_CONVERSATION_HANDOFF",
+  "closed_at_local": "2026-08-22T15:00:00+01:00",
+  "project": "WICKLOW_SHILLELAGH_MASTER_PROJECT",
+  "drive_master_root_id": "1qcpyix-tTCk57cEkPtWgX61PnX1LJgxj",
+  "github_repository": "Farada8/IVDIVO_GAME_MASTER",
+  "creative_phase": {
+    "shillelagh": "ARCHIVED_AS_CONCEPT_BANK_AND_CASE_STUDY",
+    "primary_style_stack": "GIULIO_ROMANO_40_POZZO_25_STO_MONUMENTAL_20_TIEPOLO_15",
+    "modern_systems_retained": 12,
+    "stored_shillelagh_png_assets": 7
+  },
+  "business_engineering": {
+    "initial_mural_vertical": "PROVENANCE_ONLY_WHERE_GLOBAL_NAMESPACE_COLLIDES",
+    "run32_initial": {
+      "executed": 32,
+      "keep": 27,
+      "hold": 5,
+      "kill": 0
+    },
+    "application_readiness_plane": "A0_A6_DISCOVERY_PILOT_LOGIC",
+    "global_rule": "FRESH_MAIN_BEFORE_GLOBAL_AUTHORITY"
+  },
+  "cluain": {
+    "status": "HOLD_EVIDENCE_RECOVERY",
+    "submission_ready_prior_project_records": "0/3",
+    "do_not_invent_budget_or_client": true
+  },
+  "inis_cealtra": {
+    "status": "KEEP_PREPARE",
+    "go_to_submit": false,
+    "deadline_date": "2026-09-17",
+    "deadline_exact_time": null,
+    "budget_eur_all_in": 21500,
+    "artist_fee_eur": 6000,
+    "artist_fee_pct": 27.9,
+    "primary_concept": "THE_LAKE_HOLDS_THE_LIGHT",
+    "preferred_site": "SITE_2_CONDITIONAL",
+    "protected_structure_rps": "464",
+    "drive_deliverables_folder_id": "1yZi4pIBJPW-SODGUmsamUDYxlr3jRTIj",
+    "proposal_v2_id": "1dIgNe_ktIdXf2cbwpks2xfFwhPBNCbNJ",
+    "artist_cv_id": "122DWkHFfS0rmELoVLwVZrvLjZAHXjuGU",
+    "previous_works_id": "1aD1sGq17CE-lr_XyfZhz7W44g1UzCcP6",
+    "combined_readback_pack_v2_id": "1QbqXrLyi-z4WV6KWyd5siGD9FPUOdg4n",
+    "concept_hero_id": "1FwjlCCBFedoE2cNZgE9y950wtd3FFN5f",
+    "master_dashboard_v3_id": "1aWkyN8DeVP4SGMFB2KAa7efa5lu4ar5v",
+    "master_dashboard_sha256": "6535d8c19f854c879fb2d2a7c98dbfa4372684aab365ecc32f94c72842898069",
+    "remaining_gates": [
+      "LANDSCAPE_MASTERPLAN_OR_EXPLICIT_UNAVAILABLE",
+      "SUPPLIER_OUTREACH_AUTHORIZATION",
+      "FABRICATION_FOUNDATION_INSTALL_QUOTE_SANITY",
+      "PORTAL_PREFLIGHT",
+      "EXACT_CLOSING_TIME_IF_RECOVERABLE",
+      "FINAL_READBACK",
+      "EARLY_SUBMISSION",
+      "SUBMISSION_RECEIPT_PROOF"
+    ]
+  },
+  "gmail": {
+    "coordinator": "Rachel Macmanus",
+    "clarification_text_prepared": true,
+    "sent": false,
+    "specific_draft_confirmed": false
+  },
+  "github_case_branch": "public-art/inis-cealtra-submission-pack-20260822",
+  "github_case_pr": 274,
+  "expired_attachment_boundary": "SOME_OLDER_CHAT_ATTACHMENTS_EXPIRED; REUPLOAD_IF_NOT_PERSISTED_ELSEWHERE",
+  "resume_instruction": "READ_CLOSURE_DRIVE_CASE_STATE_AND_FRESH_MAIN_THEN_CONTINUE_EXTERNAL_GATES"
+}
