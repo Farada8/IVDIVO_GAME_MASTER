@@ -1,0 +1,58 @@
+{
+  "schema": "ivdivo.business.bidder_primary_evidence_machine_state/1.0",
+  "date": "2026-08-22",
+  "parent_authority": "CYCLE8_P161_P192_EVIDENCE_ACQUISITION_MERGED",
+  "delta_state": "PARTIAL_PRIMARY_EVIDENCE_RECOVERED",
+  "supplier_state": "PARTIAL_IDENTITY_PLUS_CORE_SCREEN_PLUS_TAX_ACCOUNT_EVIDENCE_PLUS_SELF_ISSUED_EWI_RECORDS",
+  "company": {
+    "registration_number_evidence": "OFFICIAL_SCREEN_PRESENT",
+    "screen_status_value": "NORMAL",
+    "screen_status_freshness": "UNVERIFIED_CAPTURE_TIMESTAMP",
+    "current_certified_cro_extract": false
+  },
+  "tax": {
+    "registration_account_evidence": true,
+    "historical_ros_statement_as_of": "2026-08-07T20:19:00+01:00",
+    "tax_clearance_certificate": false,
+    "current_clearance": "UNKNOWN"
+  },
+  "delivery": {
+    "invoice_families": 3,
+    "distinct_counterparty_groups_min": 2,
+    "scope": "EWI_EXTERNAL_INSULATION_AND_FINISHING",
+    "self_issued_records_present": true,
+    "third_party_completion_evidence": false,
+    "payment_evidence": false,
+    "may_invoice_version_conflict": true
+  },
+  "insurance": {
+    "certificate_present": false,
+    "status": "UNKNOWN"
+  },
+  "target_case": {
+    "case_id": "PROC-BALLYBUNION-8872468",
+    "complete_target_pack": false,
+    "explicit_bidder_designation": false,
+    "supplier_capability_packet_complete": false,
+    "atomic_join_unlocked": false,
+    "bid_decision_authorized": false
+  },
+  "proof": {
+    "public_ceiling": "E2_PLUS",
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "E4": false,
+    "paid_revenue_claim": false
+  },
+  "next": [
+    "ACQUIRE_AUTHENTICATED_CURRENT_TENDER_PACK",
+    "EXPLICITLY_DESIGNATE_BIDDER_OR_KEEP_UNDESIGNATED",
+    "ACQUIRE_CURRENT_CERTIFIED_CRO_RECORD_IF_REQUIRED",
+    "ACQUIRE_CURRENT_TAX_CLEARANCE_EVIDENCE_IF_REQUIRED",
+    "ACQUIRE_INSURANCE_HS_CAPACITY_EVIDENCE_IF_REQUIRED",
+    "ACQUIRE_THIRD_PARTY_REFERENCE_OR_COMPLETION_EVIDENCE",
+    "SEARCH_PAYMENT_EVIDENCE_ONLY_IF_NEEDED_FOR_COMMERCIAL_PROOF"
+  ],
+  "stop_rule": "NO_NEW_ADMISSIBLE_EVIDENCE_THEN_PROTECT_NO_CHANGE"
+}

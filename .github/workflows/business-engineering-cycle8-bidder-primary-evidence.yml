@@ -1,0 +1,35 @@
+name: Business Engineering Cycle8 Bidder Primary Evidence
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_BIDDER_PRIMARY_EVIDENCE_DELTA/**'
+      - '.github/workflows/business-engineering-cycle8-bidder-primary-evidence.yml'
+  push:
+    branches:
+      - 'business-engineering/cycle8-bidder-primary-evidence-delta-r2-20260822'
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_BIDDER_PRIMARY_EVIDENCE_DELTA/**'
+      - '.github/workflows/business-engineering-cycle8-bidder-primary-evidence.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  primary-evidence-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run primary evidence guards
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_BIDDER_PRIMARY_EVIDENCE_DELTA/tests/test_primary_evidence_guards.py
+      - name: Compile runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_BIDDER_PRIMARY_EVIDENCE_DELTA/engine
+      - name: Parse redacted evidence state
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_BIDDER_PRIMARY_EVIDENCE_DELTA/01_REDACTED_EVIDENCE_STATE.json >/dev/null
+      - name: Parse machine state
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_BIDDER_PRIMARY_EVIDENCE_DELTA/03_MACHINE_STATE.json >/dev/null
