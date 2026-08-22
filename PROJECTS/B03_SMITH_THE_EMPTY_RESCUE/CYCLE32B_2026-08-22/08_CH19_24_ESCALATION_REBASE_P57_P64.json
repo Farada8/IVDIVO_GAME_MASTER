@@ -1,0 +1,33 @@
+{
+  "schema_version":"1.0",
+  "project":"B03_SMITH_THE_EMPTY_RESCUE",
+  "range":"P57-P64",
+  "status":"EXECUTED_PASS_FATAL0_MAJOR0",
+  "drive_rebase_id":"1GsELpV6PqpKKKguLzOAzDCouOYxhOIWVsSdf9K9rk-4",
+  "entry_state":{
+    "upper_gorge":"CLOSED_TO_EMERGENCY_TRANSIT",
+    "lower_cell_lead":"Maja Rojc",
+    "storm":"CONVENTIONAL_MULTI_SITE_EMERGENCY_ALREADY_ACTIVE",
+    "precursor":"RESPONSE_DEPENDENT_UNDER_CURRENT_EVIDENCE_ONTOLOGY_UNKNOWN"
+  },
+  "bindings":{
+    "andrej":"civilian hydro mechanical competence; ordinary duty drives exposure",
+    "tina":"existing hydro colleague now fills less-experienced-but-competent junior field function; no new cast member required",
+    "maja":"lower-valley duty lead; owns local tactics after delegation",
+    "sara":"light ordinary-life support only"
+  },
+  "chapter_functions":{
+    "CH19":"make storm/resource split bodily and geographic; seed normal failover before it becomes hazardous",
+    "CH20":"professionally defensible OES blackout vs bounded Taren signal-loss risk; Jana defines operational acceptance criterion",
+    "CH21":"separate UNVERIFIED OBSERVATION from CURRENT and RESPONSE; objectives/thresholds instead of predicted scripts",
+    "CH22":"distributed run produces one real local success and one real efficiency/time price",
+    "CH23":"normal failover re-centralizes communication graph; specificity correlation rises; hydro withdrawal pressure begins",
+    "CH24":"central models diverge; local/OES specialist identifies physical relay need; Smith owns relay action; Jana delegates before clarity loss"
+  },
+  "hard_caps":{
+    "taren_allowed":["topology/coherence risk","confidence limits","alternative explanations"],
+    "taren_forbidden":["Earth command","route assignment","remote infrastructure action","casualty optimization","final strategy selection"]
+  },
+  "red_team":{"fatal":0,"blocking_major":0,"medium_watch":["scene-local relay/network plausibility","later injury mechanics factual hold","command-centre density","Taren oracle risk","Maja/Tina personhood","precursor specificity cannot become perfect meter"]},
+  "next":"Draft and gate CH19-24 from this rebase; do not jump to P65 before CH24 prose block is closed."
+}
