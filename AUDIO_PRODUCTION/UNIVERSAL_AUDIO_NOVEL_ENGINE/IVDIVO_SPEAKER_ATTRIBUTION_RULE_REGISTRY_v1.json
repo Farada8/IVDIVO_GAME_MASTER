@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated": "2026-08-22",
   "authority": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/IVDIVO_SPEAKER_ATTRIBUTION_EVIDENCE_CONTRACT_v2.md",
   "runtime": "tools/ivdivo_speaker_attribution.py",
-  "default_promotion_gate": {"min_n": 30, "min_precision": 0.98, "min_wilson_95_lower": 0.90},
+  "default_promotion_gate": {"min_n":30,"min_precision":0.98,"min_wilson_95_lower":0.90},
   "rules": [
     {"id":"PRE_DIRECT_TAG","scope":"UNIVERSAL_SYNTACTIC","mode":"AUTO_FAIL_CLOSED","basis":"explicit named/role grammatical speech tag"},
     {"id":"POST_DIRECT_TAG","scope":"UNIVERSAL_SYNTACTIC","mode":"AUTO_FAIL_CLOSED","b03_validation":{"successes":99,"total":99,"precision":1.0,"wilson_95_lower":0.9626}},
@@ -16,7 +16,27 @@
     {"id":"NEAREST_NAME_OR_GENDER_ONLY_PRONOUN","scope":"REVIEW_ONLY","mode":"NO_AUTO_ON_AMBIGUITY"}
   ],
   "semantic_gate": {"law":"QUOTE_BOUNDARY_NEQ_SPOKEN_DIALOGUE","b03_quote_boundaries":3718,"b03_non_spoken_overrides":3,"b03_spoken_candidates":3715},
-  "b03_current": {"assigned":599,"unknown":3116,"coverage_pct":16.12,"status":"RECONCILED_CANDIDATE_PENDING_EXACT_REPO_CI","voice_map_authorized":false,"story_text_changes":0,"supersedes_working_candidate_661":true},
+  "b03_current": {
+    "base_corrected_v2":518,
+    "verified_engine_delta":81,
+    "corrected_existing_assignments":1,
+    "assigned":599,
+    "unknown":3116,
+    "coverage_pct":16.12,
+    "status":"VERIFIED_EXACT_REPO_CI_PASS",
+    "voice_map_authorized":false,
+    "story_text_changes":0,
+    "supersedes_working_candidate_661":true
+  },
+  "verification": {
+    "github_pr":436,
+    "tested_pr_head":"016d24c655ba0c710ff01a3dab83aa7acc0a37d9",
+    "tested_merge_ref":"bea3fdb86f793988f47d5868ab2bcf396b092a8b",
+    "workflow_run_id":32571914177,
+    "job_id":97028433852,
+    "pytest":"22_PASSED",
+    "py_compile":"PASS"
+  },
   "new_regressions": [
     {"id":"REPORTING_CLAUSE_MENTION_NEQ_REPORTING_SUBJECT","fixture":"B03_CH01_S0172","input":"The caller on Nika’s line said,","forbidden_assignment":"NIKA","expected_generic":"UNKNOWN","independent_authority":"CH01 REAL_COLLISION_CALLER"}
   ]
