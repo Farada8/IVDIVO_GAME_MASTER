@@ -1,0 +1,64 @@
+name: ROOM917 Critical SFX Synth Canaries
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/room917-critical-sfx-synth-canaries.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py'
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deterministic audio dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy soundfile
+      - name: Generate 24 critical SFX canaries
+        run: python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py
+      - name: Machine identity/format preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json, hashlib, soundfile as sf, numpy as np
+          root=Path('ROOM917_CRITICAL_SFX_CANARIES')
+          rec=json.loads((root/'ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json').read_text())
+          rows=rec['assets']
+          if len(rows)!=24: raise SystemExit(f'expected 24 assets, got {len(rows)}')
+          for row in rows:
+              p=root/row['filename']
+              if not p.is_file(): raise SystemExit(f'missing {p}')
+              if hashlib.sha256(p.read_bytes()).hexdigest()!=row['sha256']: raise SystemExit(f'hash drift {p}')
+              y,sr=sf.read(p,always_2d=True)
+              if sr!=48000 or y.shape[1]!=2 or not np.isfinite(y).all(): raise SystemExit(f'format/finite fail {p}')
+          print('PASS: 24 hashes + 48k stereo finite PCM decoded. Human audition remains mandatory.')
+          PY
+      - name: Upload listening artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_E01_CRITICAL_SFX_SYNTH_CANARIES
+          path: ROOM917_CRITICAL_SFX_CANARIES/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Summary
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## ROOM917 E01 critical SFX canaries
+          - S07/S08/S10/S11/S13/S14/S17/S19: 3 variants each
+          - total: 24 WAV candidates
+          - 48 kHz / 24-bit / stereo
+          - provider calls: 0
+          - paid synthesis: 0
+          - status: CANDIDATE / HOLD
+          - final binding forbidden until human audition + mono/phone + identity gates
+          EOF
