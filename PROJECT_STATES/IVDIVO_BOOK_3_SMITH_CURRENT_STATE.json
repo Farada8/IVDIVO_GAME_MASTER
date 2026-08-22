@@ -1,9 +1,9 @@
 {
-  "schema_version":"2.0",
+  "schema_version":"2.1",
   "updated":"2026-08-22",
   "project_id":"IVDIVO_BOOK_3_SMITH",
   "title":"SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
-  "status":"ACTIVE_MANUSCRIPT_CH13_18_PASS_CH19_24_REBASE_FRONTIER",
+  "status":"ACTIVE_MANUSCRIPT_CH19_PASS_CH20_BLACKOUT_FRONTIER",
   "authority":{
     "founder_family_decision":"F1_CANONIZE_DAUGHTER_CORE_ONLY",
     "saga_bible_drive_id":"18boeup_cforR4zZ4Pc291WpG_T85OEklPH-t1YMlE6s",
@@ -11,6 +11,7 @@
     "scene_cards_ch1_12_drive_id":"1Dm0Nw5I-uWcSUPhangGMjPSIAMpHWw-c-dz7gGv222A",
     "legacy_cycle32_ch13_29_drive_id":"1bCII388mfUgzbC9hZVodvS1sJLn9pzF1_nIjTqUQEy4",
     "current_ch13_18_rebase_drive_id":"1-z3sHJPBKxoZXwuPkuug4x3P2IWOJiweiLgQmMIcWAs",
+    "current_ch19_24_rebase_drive_id":"1GsELpV6PqpKKKguLzOAzDCouOYxhOIWVsSdf9K9rk-4",
     "founder_f1_final_gate_drive_id":"1EkmIwNmE9kkZ6RBfeMZzQ6L-AbLKaPIcT5r8mU_PsU0",
     "cycle32b_drive_folder_id":"1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
     "cycle32b_github":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/00_INDEX_CURRENT_STATE.md"
@@ -35,24 +36,36 @@
     "CH15":{"title":"WE ARE IN THE RECORDING","status":"PASS_MIDPOINT_AFTER_TARGETED_REPAIR","drive_id":"1zAyfsND9CnKuH8_22qi_DPNFTHla6YXdbUfKYiwbe8w"},
     "CH16":{"title":"MORGEN PASS","status":"PASS_AFTER_RHETORICAL_REPAIR","drive_id":"1jVE3fCliyZToiprmPYfDjJnpmyaWtbAvE7h9_JsUYCo"},
     "CH17":{"title":"THE PEOPLE REMOVED FROM THE REPORT","status":"PASS_AFTER_RHETORICAL_REPAIR","drive_id":"1Oim0q1BOH3oeKBOp0ASVrKOLSWXAi7eCgGbibghWE4A"},
-    "CH18":{"title":"TWO FUTURES","status":"PASS_POINT_OF_NO_RETURN_AFTER_TARGETED_REPAIR","drive_id":"1_76QmjVfd2QOsEdi2nHSLE0xLdiKB4tPNnlY4PX5bWI","block_gate_drive_id":"15VHNFSF5lBDoNnyJIeI_S9TNAawKlwJ0w4AK_vlCmxA"}
+    "CH18":{"title":"TWO FUTURES","status":"PASS_POINT_OF_NO_RETURN_AFTER_TARGETED_REPAIR","drive_id":"1_76QmjVfd2QOsEdi2nHSLE0xLdiKB4tPNnlY4PX5bWI","block_gate_drive_id":"15VHNFSF5lBDoNnyJIeI_S9TNAawKlwJ0w4AK_vlCmxA"},
+    "CH19":{"title":"THE REAL STORM","status":"PASS_AFTER_TARGETED_NARRATOR_REPAIR","drive_id":"1ngQwNpSTTawUxz7DkWMiYOdM4DBRL49QpCT_HqOMfXw","gate_drive_id":"1msrexw4D6Vu_hViQDHkdcm8J7emER6KUgMAaaNSAG24"}
   },
   "corpus_regression_ch01_12":{"status":"PASS_AFTER_MINIMAL_REPAIR","fatal":0,"blocking_major":0,"drive_id":"1OAzxho9Uxe9iOeq2XKp9m3hqGsWfLbrdNjd47MRS9DE","github":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/06_CH01_12_CORPUS_REGRESSION_P41_P48.json"},
   "ch13_18_block_gate":{"status":"PASS_AFTER_TARGETED_REPAIR","fatal":0,"blocking_major":0,"drive_id":"15VHNFSF5lBDoNnyJIeI_S9TNAawKlwJ0w4AK_vlCmxA","github":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/07_CH13_18_MIDPOINT_HISTORY_P49_P56.json","midpoint":"CLOSED_EARNED","point_of_no_return":"CLOSED_EARNED"},
+  "ch19_24_rebase":{"status":"P57_P64_EXECUTED_PASS_FATAL0_MAJOR0","drive_id":"1GsELpV6PqpKKKguLzOAzDCouOYxhOIWVsSdf9K9rk-4","github":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/08_CH19_24_ESCALATION_REBASE_P57_P64.json","manuscript_frontier":"CH19_PASS_CH20_NEXT"},
   "current_model":{
     "superseded_as_sufficient":"PRECURSOR = EXTERNAL HAZARDOUS INFORMATION",
-    "observed":["Source B was bound before CH11 meter-case placement under current forensic evidence","MOSS selected after source receipt appeared twice in later precursor source","precursor content changed after active response architecture changed","later source reflected lower-cell tactical route outside central route script"],
+    "observed":["Source B was bound before CH11 meter-case placement under current forensic evidence","MOSS selected after source receipt appeared twice in later precursor source","precursor content changed after active response architecture changed","later source reflected lower-cell tactical route outside central route script","CH19 hydro-adjacent source was preserved without response change while conventional conditions continued to worsen"],
     "current_strong_inference":"PRECURSOR CONTENT IS RESPONSE-DEPENDENT UNDER CURRENT EVIDENCE; PURE EXTERNAL-INPUT MODEL IS OPERATIONALLY INSUFFICIENT",
     "open_alternatives":["ordinary/unknown information leak","undetected compromise","fraud/manipulation","predictive/relational mechanism not understood"],
     "unknown":["mechanism","origin","ontology","fixed versus branching future","exact causal topology"]
   },
   "dummy_response_test":{"status":"EXECUTED_POSITIVE_FOR_RESPONSE_DEPENDENCE_NOT_ORIGIN","labels":["LARK","CINDER","MOSS","GLASS"],"selected":"MOSS","selection_after_source_receipt":true,"unused_labels_sealed_during_live_test":true,"operational_change_from_label":false,"result":"MOSS appeared twice in later precursor source; ordinary leak alternatives remain open"},
   "morgen_pass":{"status":"HISTORICAL_CONTEXT_RECONNECTED","public_event_and_casualties_hidden":false,"working_historical_people":["Milan Radeš — electrical maintenance contractor — fatal","Petra Voss — road-control technician — fatal","Jonas Keller — cable driver — severe permanent injury survivor"],"professional_success":"suppression plausibly kept a 27-person main response force and heavy vehicles outside lower cascade exposure","institutional_failure":"targeted warning for three people already inside was withheld; unresolved cost/decision branch deliberately removed from short operational doctrine to maximize compliance; restricted case history retained it"},
-  "civilian_continuity":{"status":"ACTIVE_IN_MANUSCRIPT","andrej":"Andrej Košir — hydro-service civilian worker; independent chronology/source; later permanent disabling lower-limb injury class remains WORKING","tina":"Tina Vidmar — hydro-service field colleague; survives east drainage event and remains working hydro continuity","maja":"Maja Rojc — lower-valley duty lead introduced CH18; owns local route choices after valley split and must persist through distributed-response escalation"},
-  "cycle32b":{"status":"32_INITIAL_PROMPTS_PLUS_P33_P56_EXECUTED","drive_folder_id":"1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv","github_root":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/","prompts_executed_initial":32,"modules":32,"contracts":32,"proof_obligations":32,"protocols":32,"next_prompts_designed":64,"next_prompts_executed":24,"next_prompts_remaining":40,"next64_state":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/04_NEXT_64_PROMPTS_STATE.json","business_engine":"LOCAL_CANDIDATE_HOLD_FOR_REAL_LOCKED_PRODUCT_PILOT","new_si_id":null},
-  "self_improvement_cycle32c":{"status":"EXECUTED_32_OF_32_LOCAL_PILOT_PERSISTED","drive_folder_id":"15ojNluyoYLFYgTrfbs3QjJ2Ceah9Qmtd","github_root":"SELF_IMPROVEMENT_DELTAS/CYCLE32C_2026-08-22/","local_profile":"DECISION_EVIDENCE_YIELD_CONTROL_PROFILE","profile_status":"HOLD_LOCAL_CANDIDATE","new_si_id":null,"v3_promotion":false,"registry_race":"PR147 already contains SI-0016 while main registry-family visible frontier was SI-0015; no new ID allocated","production_return_target":"B03 P57-P64 CH19-24 escalation"},
+  "civilian_continuity":{"status":"ACTIVE_IN_MANUSCRIPT","andrej":"Andrej Košir — hydro-service civilian worker; independent chronology/source; later permanent disabling lower-limb injury class remains WORKING","tina":"Tina Vidmar — existing hydro field colleague; less-experienced than Andrej in local field work but competent; now binds old junior-colleague function and remains mobile later","maja":"Maja Rojc — lower-valley duty lead; owns local route/resource choices after valley split","sara":"Sara Košir — light bakery/bridge ordinary-life function only; no hostage mechanics"},
+  "storm_state_after_CH19":{
+    "time_frontier":"approximately 02:11",
+    "upper_gorge":"closed; north heavy road/hydro resources cannot simply cross",
+    "lower_valley_medical":"no true ambulance reserve at CH19 exit",
+    "underpass":"volunteer pump working but labor-intensive/manual strainer clearing",
+    "bridge":"low approach flooding; businesses closed; uphill buildings not yet evacuated",
+    "hydro":"upper screen crossed first intervention threshold; Andrej/Tina safe access still open; local isolation objective requested; hard withdrawal thresholds remain explicit",
+    "communications":"hydro primary link failures repeatedly restored by normal mountain repeater fallback; central cross-link restoration capability established before CH23",
+    "precursor":"02:05 hydro-adjacent source marked UNVERIFIED OBSERVATION / NO RESPONSE CHANGE; another flagged source flashes at final CH19 beat"
+  },
+  "cycle32b":{"status":"32_INITIAL_PROMPTS_PLUS_P33_P64_EXECUTED_CH19_PASS","drive_folder_id":"1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv","github_root":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/","prompts_executed_initial":32,"modules":32,"contracts":32,"proof_obligations":32,"protocols":32,"next_prompts_designed":64,"next_prompts_executed":32,"next_prompts_remaining":32,"next64_state":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/04_NEXT_64_PROMPTS_STATE.json","business_engine":"LOCAL_CANDIDATE_HOLD_FOR_REAL_LOCKED_PRODUCT_PILOT","new_si_id":null},
+  "self_improvement_cycle32c":{"status":"EXECUTED_32_OF_32_LOCAL_PILOT_PERSISTED","drive_folder_id":"15ojNluyoYLFYgTrfbs3QjJ2Ceah9Qmtd","github_root":"SELF_IMPROVEMENT_DELTAS/CYCLE32C_2026-08-22/","local_profile":"DECISION_EVIDENCE_YIELD_CONTROL_PROFILE","profile_status":"HOLD_LOCAL_CANDIDATE","new_si_id":null,"v3_promotion":false,"registry_race":"PR147 already contains SI-0016 while main registry-family visible frontier was SI-0015; no new ID allocated","production_return_target":"B03 CH20-24 manuscript"},
   "oes_confederation_reconciliation":{"confederation_jurisdiction_on_earth":false,"taren_hard_cap":["broader observer/response-coupled phenomenon class","discriminant/test logic and confidence limits","topology/coherence risk"],"law":"knowledge != jurisdiction; forced cooperation without sovereignty transfer"},
-  "do_not":["DO_NOT_INVENT_SMITH_FAMILY_BEYOND_F1","DO_NOT_GIVE_CONFEDERATION_EARTH_COMMAND_JURISDICTION","DO_NOT_REVEAL_PRECURSOR_ONTOLOGY","DO_NOT_MAKE_ENIA_OR_TAREN_SOLVE_CASE","DO_NOT_RETCON_MOSS_AS_PROOF_OF_SUPERNATURAL_ORIGIN","DO_NOT_ERASE_MOSS_LEAK_ALTERNATIVES","DO_NOT_TREAT_MORGEN_PASS_PUBLIC_DISASTER_AS_HIDDEN_FROM_PUBLIC","DO_NOT_DROP_MAJA_AFTER_CH18","DO_NOT_REPEAT_CH12_OR_CH15_PROOF_FUNCTION","DO_NOT_CLAIM_HUMAN_MARKET_PROVIDER_OR_LEGAL_EVIDENCE_NOT_RUN"],
-  "next_obligation":"Execute P57-P64 CH19-24 escalation rebase from actual CH18 state: conventional emergency first, distributed rescue under real cost, local authority integrity, Taren overreach guard, Morgen Pass consequence use, Andrej/Tina/Maja continuity, reader waiting-state, then block gate. After PASS draft CH19 THE REAL STORM.",
-  "next_prompt_pointer":"P57_THEN_P64"
+  "do_not":["DO_NOT_INVENT_SMITH_FAMILY_BEYOND_F1","DO_NOT_GIVE_CONFEDERATION_EARTH_COMMAND_JURISDICTION","DO_NOT_REVEAL_PRECURSOR_ONTOLOGY","DO_NOT_MAKE_ENIA_OR_TAREN_SOLVE_CASE","DO_NOT_RETCON_MOSS_AS_PROOF_OF_SUPERNATURAL_ORIGIN","DO_NOT_ERASE_MOSS_LEAK_ALTERNATIVES","DO_NOT_TREAT_MORGEN_PASS_PUBLIC_DISASTER_AS_HIDDEN_FROM_PUBLIC","DO_NOT_DROP_MAJA_AFTER_CH18","DO_NOT_REPEAT_CH12_OR_CH15_PROOF_FUNCTION","DO_NOT_TREAT_PRECURSOR_SPECIFICITY_AS_PERFECT_METER","DO_NOT_JUMP_TO_P65_BEFORE_CH20_24_MANUSCRIPT_BLOCK_CLOSES","DO_NOT_CLAIM_HUMAN_MARKET_PROVIDER_OR_LEGAL_EVIDENCE_NOT_RUN"],
+  "next_obligation":"Draft CH20 BLACKOUT from the CH19 exit state. OES must make a professionally defensible blackout case; Taren may identify bounded total-signal-loss/topology risk without Earth command; Jana defines a usable operational acceptance criterion. Keep live hydro/medical/road work interrupting the dispute. Gate CH20 locally, then continue CH21 OBJECTIVES, NOT SCRIPTS.",
+  "next_prompt_pointer":"CH20_BLACKOUT"
 }
