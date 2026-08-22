@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -38,6 +39,19 @@ _REQUIRED_DIRS = (
     "final",
 )
 
+_CONTINUITY_INPUT_FILES = (
+    "canon.md",
+    "characters.json",
+    "locations.json",
+    "timeline.json",
+    "plot.json",
+)
+
+_CONTINUITY_INPUT_DIRS = (
+    "chapters",
+    "drafts",
+)
+
 
 class BookProductionError(RuntimeError):
     pass
@@ -69,6 +83,35 @@ def _safe_title(value: str | None, project_id: str) -> str:
     if "\n" in title or "\r" in title:
         raise ValueError("book title must be a single line")
     return title
+
+
+def _continuity_content_sha256(root: Path) -> str:
+    """Hash all story/manuscript inputs that a continuity PASS authorizes."""
+    candidates: list[Path] = []
+    for name in _CONTINUITY_INPUT_FILES:
+        path = root / name
+        if not path.is_file():
+            raise BookProductionError(f"continuity input missing: {name}")
+        candidates.append(path)
+    for dirname in _CONTINUITY_INPUT_DIRS:
+        directory = root / dirname
+        if not directory.is_dir():
+            raise BookProductionError(f"continuity input directory missing: {dirname}")
+        candidates.extend(path for path in directory.rglob("*") if path.is_file())
+
+    digest = hashlib.sha256()
+    for path in sorted(candidates, key=lambda item: item.relative_to(root).as_posix()):
+        if path.is_symlink():
+            raise BookProductionError(
+                f"continuity input symlink is forbidden: {path.relative_to(root).as_posix()}"
+            )
+        relative = path.relative_to(root).as_posix().encode("utf-8")
+        payload = path.read_bytes()
+        digest.update(len(relative).to_bytes(8, "big"))
+        digest.update(relative)
+        digest.update(len(payload).to_bytes(8, "big"))
+        digest.update(payload)
+    return digest.hexdigest()
 
 
 class BookProductionCore:
@@ -118,6 +161,7 @@ class BookProductionCore:
             "continuity_gate": {
                 "status": "NOT_RUN",
                 "evidence": None,
+                "content_sha256": None,
                 "updated_at": None,
             },
             "history": [
@@ -191,10 +235,18 @@ class BookProductionCore:
             raise BookProductionError(
                 f"stage skipping is forbidden: current={current}, expected={expected}, requested={target}"
             )
-        if target == "FINAL" and state["continuity_gate"]["status"] != "PASS":
-            raise ContinuityGateError(
-                "FINAL is blocked until continuity_gate.status == PASS"
-            )
+        if target == "FINAL":
+            gate = state["continuity_gate"]
+            if gate["status"] != "PASS":
+                raise ContinuityGateError(
+                    "FINAL is blocked until continuity_gate.status == PASS"
+                )
+            reviewed_hash = gate.get("content_sha256")
+            current_hash = _continuity_content_sha256(root)
+            if not reviewed_hash or reviewed_hash != current_hash:
+                raise ContinuityGateError(
+                    "FINAL is blocked because continuity PASS is stale for current book content"
+                )
 
         now = _utc_now()
         state["stage"] = target
@@ -243,6 +295,7 @@ class BookProductionCore:
         state["continuity_gate"] = {
             "status": status,
             "evidence": clean_evidence,
+            "content_sha256": _continuity_content_sha256(root),
             "updated_at": now,
         }
         state["updated_at"] = now
