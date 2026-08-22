@@ -25,7 +25,7 @@ jobs:
           core = (root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md').read_text()
           overlay = (root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md').read_text()
           core_lower = core.lower()
-          assert model['schema'] == 'ivdivo.business.current_read_model/1.1'
+          assert model['schema'] == 'ivdivo.business.current_read_model/1.2'
           assert model['core']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
           assert model['mandatory_evidence_overlay']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
           assert model['mandatory_evidence_overlay']['may_change_root_blockers_silently'] is False
@@ -33,16 +33,26 @@ jobs:
           assert model['mandatory_evidence_overlay']['may_authorize_external_action'] is False
           assert model['current_roots']['ROOT_A'] == 'TARGET_PACK_NOT_ACQUIRED'
           assert model['current_roots']['ROOT_B'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
-          assert model['current_execution']['completed_engineering_subsets'] == ['P257-P264','P265-P272']
-          assert model['current_execution']['completed_engineering_cards_inside_parent_backlog'] == 16
-          assert model['current_execution']['remaining_unexecuted_count'] == 48
-          assert model['current_execution']['remaining_ranges'] == ['P225-P256','P273-P288']
+          ex = model['current_execution']
+          assert ex['completed_engineering_subsets'] == ['P257-P264','P265-P272']
+          assert ex['completed_reconciliation_cards'] == ['P288']
+          assert ex['completed_cards_inside_parent_backlog'] == 17
+          assert ex['remaining_unexecuted_count'] == 47
+          assert ex['remaining_ranges'] == ['P225-P256','P273-P287']
+          assert ex['p288_disposition'] == 'PROTECT_NO_CHANGE'
+          assert ex['p288_merge'] == '751ed2ecb2a85da35de70b50952f49ff86d7cbe3'
+          assert ex['p288_drive_marker'] == 'BUSINESS-P288-FRESH-READ-PROTECT-NO-CHANGE-17OF64-47REMAIN'
+          dep = model['dependency_state']
+          assert dep['P273-P280'] == 'BLOCKED_FROZEN_TARGET_AND_BIDDER_PACKETS_REQUIRED'
+          assert dep['P281-P283'] == 'BLOCKED_REAL_INDEPENDENT_REVIEW_REQUIRED'
+          assert dep['P284-P287'] == 'BLOCKED_EXPLICIT_EXTERNAL_AUTHORIZATION_AND_REAL_USE_REQUIRED'
           assert model['proof_frontier'] == {'public_derived_ceiling':'E2_PLUS','artifact_plane':'PA3','PA4':False,'PA5':False,'E3':False,'E4':False}
           assert 'CORE_CURRENT + MANDATORY_EVIDENCE_OVERLAY = CURRENT_BUSINESS_READ_MODEL' in core
-          assert 'P265–P272' in core
-          assert 'remaining unexecuted = **48**' in core_lower
+          assert 'P288' in core
+          assert 'remaining unexecuted = **47**' in core_lower
           assert 'ROOT_A = TARGET_PACK_NOT_ACQUIRED' in core
           assert 'ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET' in core
+          assert 'PROTECT_NO_CHANGE' in core
           assert 'NOT_FOUND_IN_CONNECTED_SOURCES != DOCUMENT_DOES_NOT_EXIST' in overlay
           print('CURRENT_BUSINESS_READ_MODEL: PASS')
           PY
