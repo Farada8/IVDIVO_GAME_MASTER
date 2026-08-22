@@ -1,11 +1,11 @@
 {
-  "schema": "artifact_placement_incident_state_v7",
+  "schema": "artifact_placement_incident_state_v8",
   "date": "2026-08-22",
   "issue": 356,
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "PROJECT_DONE_SCOPE_HARDENING_PENDING_CI",
+  "candidate_status": "LIVE_INTERCEPTION_CAPTURE_ARMED_PRODUCTION_ADOPTED_SCOPE_HARDENED",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "runtime": {
@@ -27,16 +27,23 @@
     "live_interception_capture_pr": 411,
     "production_adoption_pr": 417,
     "production_adoption_merge_commit": "7f9f7c58d9febba0ac9585a81e318e9718d7454b",
-    "production_adoption_all_triggered_workflows": "14/14 PASS",
-    "completion_surface_audit_base_main": "3fe685436dc6a230db9d70f7116dcd28f75fa7de",
+    "completion_scope_hardening_pr": 441,
+    "completion_scope_hardening_head": "b7be25a459ad2a48a8de32ea31714fb445211b15",
+    "completion_scope_hardening_merge_commit": "74ae2afc2b897baa0a65bd0ea1fd0bc099922c5f",
+    "completion_scope_hardening_all_triggered_workflows": "14/14 PASS",
+    "completion_scope_artifact_placement_ci_run": 32572140553,
+    "completion_scope_pl08_ci_run": 32572140520,
+    "completion_scope_freshness_checked_main": "cca976093a4b6678cd33bf6406a1cc8b258aaaa5",
+    "completion_scope_freshness_overlap": "NONE",
     "completion_surfaces_audited": 15,
     "new_external_artifact_done_bypass_found_after_pr417": false,
     "internal_project_done_ambiguity_found": true,
     "internal_project_done_surface": "BookProductionCore FINAL -> parent ProjectState DONE",
     "registered_pl08_done_route_preserved": true,
-    "candidate_completion_scope": "INTERNAL_BOOK_PRODUCTION",
-    "candidate_external_artifact_completion": "NOT_ASSERTED",
-    "candidate_scope_regression": "PENDING_EXACT_HEAD_CI",
+    "internal_project_completion_scope": "INTERNAL_BOOK_PRODUCTION",
+    "internal_project_external_artifact_completion": "NOT_ASSERTED",
+    "project_done_does_not_complete_separate_artifact_task_regression": "PASS",
+    "completion_scope_regression": "PASS_MERGED",
     "live_interception_capture_armed": true,
     "live_interception_auto_promotion": false,
     "live_interception_provider_confirmation_required": true
@@ -58,14 +65,14 @@
     "ALLOW_EXTERNAL_ARTIFACT_DONE_ONLY_IF_PLACEMENT_VERIFIED_AND_OTHER_GATES_PASS"
   ],
   "promotion_gate": {
-    "status": "HOLD_SCOPE_HARDENING_PENDING_CI",
+    "status": "HOLD_ARMED_FOR_LIVE_EVIDENCE",
     "completed_requirements": [
       "provider adapters, atomic recovery, durable interception capture and production adoption are merged",
-      "current Personal AI completion surfaces were classified and no additional external-artifact DONE bypass was found after PR #417"
+      "current Personal AI completion surfaces were classified and no additional external-artifact DONE bypass was found after PR #417",
+      "registered PL-08 FINAL -> project DONE route is explicitly scoped as INTERNAL_BOOK_PRODUCTION with external_artifact_completion=NOT_ASSERTED; exact-head 14/14 PASS and merged through PR #441"
     ],
     "remaining_requirements": [
-      "pass and merge the bounded internal project-DONE scope regression without changing the registered PL-08 FINAL route",
-      "observe future real traffic where the installed and production-adopted placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback"
+      "observe future real traffic where the installed and production-adopted placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback; tests, replays and synthetic fixtures cannot satisfy this requirement"
     ]
   }
 }
