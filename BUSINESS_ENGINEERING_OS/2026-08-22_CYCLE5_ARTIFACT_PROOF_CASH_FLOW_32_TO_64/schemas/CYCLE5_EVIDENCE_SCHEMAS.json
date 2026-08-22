@@ -1,0 +1,29 @@
+{
+  "schema": "ivdivo.business_cycle5.schema_bundle/1.0",
+  "schemas": {
+    "CASH_TIMELINE_SCHEMA_v1.json": {
+      "schema": "ivdivo.cash_timeline/1.0",
+      "fields": ["day", "inflow", "outflow", "label", "evidence_grade", "source"],
+      "derived": ["cumulative_cash", "minimum_cash_position", "required_bridge"],
+      "null_safe": true
+    },
+    "E3_CONVERSATION_EVIDENCE_SCHEMA_v1.json": {
+      "schema": "ivdivo.market_evidence.e3/1.0",
+      "required": ["participant_role", "recent_problem_example", "existing_workaround", "cost_or_consequence", "captured_at", "consent_or_voluntary_context"],
+      "forbidden_promotions": ["payment_proof", "repeatability_proof"]
+    },
+    "E4_PAYMENT_PROOF_SCHEMA_v1.json": {
+      "schema": "ivdivo.market_evidence.e4/1.0",
+      "allowed_instruments": ["DEPOSIT", "PAID_PILOT", "PURCHASE_ORDER", "SIGNED_PAID_ORDER"],
+      "required": ["payer_identity_bound", "scope_bound", "amount_eur", "instrument", "receipt_or_po_reference"],
+      "forbidden": ["verbal_interest_as_payment", "hypothetical_price_as_payment"]
+    },
+    "PRICING_EXPERIMENT_SCHEMA_v1.json": {
+      "schema": "ivdivo.pricing_experiment/1.0",
+      "price_eur": null,
+      "external_signal": null,
+      "state": "NULL_UNTIL_EXTERNAL_SIGNAL",
+      "law": "Public competitor price may create a hypothesis; only buyer/payment evidence can validate price."
+    }
+  }
+}
