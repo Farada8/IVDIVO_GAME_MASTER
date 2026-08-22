@@ -8,6 +8,7 @@ from pathlib import Path
 from core.bootstrap import bootstrap
 from memory.store import MemoryStore
 from projects.manager import ProjectStateManager
+from providers import ProviderRequest, ProviderUnavailableError, default_registry
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -76,6 +77,24 @@ def build_parser() -> argparse.ArgumentParser:
     )
     source_trace.add_argument("record_id")
     source_trace.add_argument("--max-depth", type=int, default=20)
+
+    provider = sub.add_parser("provider", help="AI provider abstraction operations")
+    provider_sub = provider.add_subparsers(dest="provider_command", required=True)
+
+    provider_sub.add_parser("list", help="List provider configuration without exposing secrets")
+
+    provider_run = provider_sub.add_parser("run", help="Run one provider request")
+    provider_run.add_argument("provider_name")
+    provider_run.add_argument("prompt")
+    provider_run.add_argument("--model")
+    provider_run.add_argument("--system")
+    provider_run.add_argument("--max-output-tokens", type=int, default=512)
+    provider_run.add_argument("--temperature", type=float)
+    provider_run.add_argument(
+        "--allow-network",
+        action="store_true",
+        help="Explicitly authorize a network/provider call for this invocation.",
+    )
 
     return parser
 
@@ -153,6 +172,29 @@ def main() -> int:
             result = store.trace_source(args.record_id, max_depth=args.max_depth)
         else:  # pragma: no cover - argparse enforces choices
             raise RuntimeError("unsupported memory command")
+    elif args.command == "provider":
+        registry = default_registry()
+        if args.provider_command == "list":
+            result = {"providers": registry.describe_all()}
+        elif args.provider_command == "run":
+            selected = registry.get(args.provider_name)
+            descriptor = selected.describe()
+            if descriptor.network_required and not args.allow_network:
+                raise ProviderUnavailableError(
+                    f"{descriptor.name} requires explicit --allow-network for this invocation"
+                )
+            response = selected.generate(
+                ProviderRequest(
+                    prompt=args.prompt,
+                    model=args.model,
+                    system=args.system,
+                    max_output_tokens=args.max_output_tokens,
+                    temperature=args.temperature,
+                )
+            )
+            result = response.to_dict()
+        else:  # pragma: no cover - argparse enforces choices
+            raise RuntimeError("unsupported provider command")
     else:  # pragma: no cover - argparse enforces choices
         raise RuntimeError("unsupported command")
 

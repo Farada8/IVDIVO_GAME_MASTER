@@ -1,0 +1,25 @@
+name: Personal AI PL-04 Provider Abstraction
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl04-provider-abstraction.yml'
+
+jobs:
+  pl04-provider-abstraction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prove provider metadata path is offline
+        run: |
+          unset OPENAI_API_KEY ANTHROPIC_API_KEY OPENAI_MODEL ANTHROPIC_MODEL OLLAMA_MODEL
+          python personal-ai/run.py provider list
+          python personal-ai/run.py provider run mock 'CI mock request'
+      - name: Run PL-04 provider tests
+        run: python -m unittest personal-ai/tests/test_providers.py -v
+      - name: Run full Personal AI regression suite
+        run: python -m unittest discover -s personal-ai/tests -v
