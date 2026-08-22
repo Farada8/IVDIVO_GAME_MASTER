@@ -1,87 +1,93 @@
 # B03 — SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE
 
-**Status:** WORKING PRE-PROSE / FOUNDER DECISION GATE  
-**Updated:** 2026-08-21  
+**Status:** ACTIVE MANUSCRIPT / PART II / CH10 FRONTIER  
+**Updated:** 2026-08-22  
 **Machine state:** `PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json`
 
 ## Current frontier
 
-The existing `THE EMPTY RESCUE` engine survived fresh recompetition/rebase and remains the strongest current B03 direction. Working scene architecture now covers **CH1–CH29**: prior Drive CH1–12 plus Cycle32 CH13–29.
+The project is no longer at a Founder family decision or pre-prose gate. Founder selected **F1** and prose is authorized.
 
-Case engine: `warning -> rescue response -> response changes causal state -> new warning includes response -> recursive intervention`.
+Manuscript completed/passed through **CH09**. Current next chapter is **CH10 — JANA'S LINE**.
 
-The main novel is not a generic monster hunt. The live opposition is the precursor phenomenon + real rescue duty + incomplete OES doctrine + legitimate local authority + a limited Confederation security/science model that is useful but has **no Earth command jurisdiction**.
+- CH01 `WRONG ADDRESS` — PASS.
+- CH02 `THE CALL THAT WORKS` — PASS.
+- CH03 `THE THIRD DEPLOYMENT` — PASS.
+- CH04 `DUBLIN` — PASS.
+- CH05 `WHAT HAPPENED BEFORE THE CALL?` — PASS.
+- CH06 `FIRST PRECURSOR DOCTRINE` — PASS / earned false victory.
+- CH07 `OUT OF THE SYSTEM` — PASS after corpus repair.
+- CH08 `THE BLOCKED CALL` — PASS after knowledge-boundary + corpus repair.
+- CH09 `WHAT SILENCE COST` — PASS after causal/corpus repair.
 
-## OES ↔ Confederation reconciliation
+CH07–09 gate: **FATAL 0 / BLOCKING MAJOR 0**.
 
-Founder newest instruction requires the OES / new Confederation security dialectic. Current Saga Bible prevents early-contact sovereignty inflation. B03 therefore uses this binding:
+## Smith family — Founder F1
 
-- OES knows historical precursor cases, Morgen Pass, legacy signatures, suppression successes and institutional crimes.
-- The Confederation counterpart understands a broader response-coupled phenomenon class and model/topology risks better.
-- Local responders know people, roads, weather, rescue obligations and lawful command.
-- Confederation expertise may improve the model but may not order Earth actors.
-- No side can solve the case alone; no side is automatically morally or epistemically superior.
+CANON: Smith has a teenage daughter in the current saga period.
 
-Working counterpart name `Taren Sor` is **WORKING / replaceable / not canon**.
+WORKING: age 16–17 pending timeline normalization.
 
-## Cycle32 engineering package
+UNKNOWN / DO NOT INVENT: daughter name, mother name, exact marital history, custody/household structure, occupations, contact schedule.
 
-Drive folder: `1faAfasqcsYCgHCOHAla7tKrpDCgoK9Rp`  
-GitHub registry: `CYCLE32_2026-08-21/CYCLE32_REGISTRY.json`
+## Case engine
 
-Cycle32 contains:
-- 32/32 research prompts executed;
-- 32 engineering modules specified;
-- 32 engineering contracts;
-- 32 declared proof/result obligations with evidence classes;
-- 32 protocols;
-- 64 next prompts designed dependency-first;
-- CH13–29 story rebase;
-- civilian/loss binding;
-- pre-draft voice calibration;
-- Smith family authority recovery + Founder decision packet.
+`predictive distress trace -> rescue response -> response changes causal state -> new predictive trace -> recursive intervention`
 
-`SPECIFIED` does not mean executable code. Static/model evidence does not become Human Signal/runtime/provider/legal/market evidence.
+Smith's initial strategy is reasonable, not foolish: quarantine full predictive content, preserve raw evidence, independently verify present hazard, and deploy on present evidence rather than the predicted scene. It produces a real false victory: false deployments stop and ordinary rescue remains functional.
 
-## Current Red Team
+The cost is now proven. In CH08 a warning naming Davor arrives before the work. Independent engineering checks pass, controls are strengthened and the heavy north truck is removed. In CH09 the road fails anyway and Davor dies. Suppression influenced the decision path but is not asserted to have physically caused the collapse. Counterfactual prevention remains unproved.
 
-**FATAL: 0.**  
-**Blocking MAJOR: 1.**
+## Cycle32B — 2026-08-22
 
-Closed:
-1. `CIVILIAN_CONTINUITY_AND_IRREVERSIBLE_LOSS_UNBOUND` -> CLOSED WORKING PRE-PROSE. Andrej Košir function now runs through CH1–29 and leaves a permanent disabling injury class rather than adding another decorative death. Exact diagnosis remains for factual scene pass.
-2. `PRE_DRAFT_VOICE_CALIBRATION_NOT_RUN` -> CLOSED INTERNAL CALIBRATION PASS for Smith / Jana / Nika / Taren / narrator. Human Signal remains NOT RUN.
+Drive folder: `1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv`  
+GitHub: `PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/`
 
-Open:
-3. `SMITH_PERSONAL_FAMILY_CONTINUITY` -> **FOUNDER DECISION REQUIRED**.
+Cycle32B:
+- reconciled B03 against newer shared engines on `main` without a blind merge;
+- found active branch divergence: 28 commits ahead / 338 behind main;
+- executed 32/32 prompts;
+- specified 32 modules, 32 contracts, 32 evidence/proof obligations and 32 protocols;
+- found and repaired a CH08 MAJOR knowledge leak;
+- found and repaired CH07–09 corpus rhetorical convergence;
+- created Writers' Studio Business Production Engine v0.1 as a **LOCAL CANDIDATE**, not VERIFIED_CURRENT;
+- created 64 next prompts P33–P96, DESIGNED / NOT EXECUTED;
+- allocated no new SI ID because evidence does not justify universal promotion yet.
 
-## Smith family recovery
+## Human Scene / Dialogue current law applied
 
-Earlier family development was recovered and is not lost, but every detailed source explicitly says **NOT CANON UNTIL FOUNDER APPROVAL**. The current Saga Bible retains Smith’s daughter as an OPTION, and B08 warns against forcing the daughter into unrelated engines.
+The current `main` Cycle-3 Human Scene mechanisms are applied to B03 where compatible: source provenance, epistemic modality, distributed confidence, contrastive syntax fingerprint, acknowledgment-function matrix, register distance and narrator/speaker separation.
 
-Recovered WORKING frame: teenage daughter + living mother + separated/divorced-parent structure. Provisional old names are not inherited.
+The live proof was concrete: local chapter viability had not caught the CH07–09 shared correction/reframe grammar, while the corpus gate did.
 
-Founder choices are deliberately minimal:
-- **F1 — CANONIZE_DAUGHTER_CORE_ONLY:** Smith has a teenage daughter; other family details stay unknown/working.
-- **F2 — CANONIZE_RECOVERED_FAMILY_FRAME:** teenage daughter + living mother + separated/divorced/separate-household structural frame; names/occupations/exact custody remain working.
-- **F3 — DEFER_FAMILY_CANON_FOR_B03:** explicitly keep family off-page/unknown in this book; daughter remains OPTION; ordinary life comes through Dublin routine, Enia/Synthesis, colleagues and non-case life.
+## OES / local / Confederation law
 
-Full recovery packet Drive: `1IqERJ1ZBYWnCLe4H9VN1TXiP7SLnswZzP21lCxsNChY`.
+- OES has historical signatures, suppression doctrine, Morgen Pass and legacy case knowledge.
+- Local responders own terrain, people, rescue duty and lawful operations.
+- Confederation may later contribute broader phenomenon-class/model knowledge, but **has no automatic Earth command jurisdiction**.
+- Knowledge is not jurisdiction.
+- Enia changes Smith's questions, not the case answer.
 
-## Prose gate
+## CH10 contract
 
-**PROSE NO-GO.**
+CH10 must not repeat CH09's audit.
 
-No CH1 manuscript drafting until Founder selects F1/F2/F3 and N24 / full pre-prose gate returns `FATAL=0, MAJOR=0`.
+Smith wants a protocol that reduces response-feedback risk. Jana needs warnings she can use before people die. Luka and Davor provide casualty evidence supporting opposite policies. Another call can arrive before theory is solved.
 
-After that the queue is N25–N47 validation, then **CH1 canary only**, followed by local/corpus regression before scaling.
+The scene must end with a shared evidence method and changed working relationship:
+- less information asymmetry;
+- local operational authority preserved;
+- raw precursor evidence preserved;
+- response-induced changes logged as evidence;
+- bounded action remains possible under defined conditions;
+- trust is **not** magically restored; cooperation is.
 
-## Do not
+No ontology reveal. No permanent crossover team. No Enia solution. No Confederation deus ex.
 
-- do not invent Smith family facts;
-- do not silently canonize recovered old drafts;
-- do not make Taren/Confederation a commander or deus ex machina;
-- do not reveal precursor ontology;
-- do not let Enia solve the case;
-- do not reopen the main engine merely because more prompts exist;
-- do not claim Human Signal or final literary proof from internal calibration.
+## Business Production Engine boundary
+
+The Cycle32B Business Engine is downstream of story authority. B03 is still WORKING and is not a locked commercial pilot. The first pilot must use an actually locked/authorized product and real evidence. No provider, legal, Human Signal or market result is claimed in Cycle32B.
+
+## Next
+
+`P33 CH10 live-objective plan -> P34 tactic/subtext map -> P35 draft CH10 -> P36 local gate`, then CH11 and CH12. At CH12 run a block/corpus regression before scaling.
