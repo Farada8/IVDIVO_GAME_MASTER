@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.sound_design_pointer/1.6",
+  "schema_version": "room917.sound_design_pointer/1.7",
   "project": "ROOM917",
   "episode": "E01",
   "status": "ACTIVE_POST_RENDER_SOUND_EXECUTION",
@@ -9,7 +9,7 @@
   "current_proven_sound_failure": "D003_PRE_SCENE3_ROOM_BED_CONTINUITY_UNDERCOVERAGE_AGGREGATE_ONLY",
   "current_blockers": [
     "EXACT_MASTER_BYTES_OR_TRUSTED_EXACT_PRE_SCENE3_INTERVAL_TIMING_REQUIRED",
-    "REAL_A01_A02_ROOM_BED_CANDIDATE_BYTES_REQUIRED_FOR_D003_REPAIR"
+    "PRODUCTION_ACCEPTED_A01_A02_ROOM_BED_BYTES_REQUIRED_FOR_D003_REPAIR"
   ],
   "scene3_policy": "PRESERVE_V1_3E_TECHNICAL_LINEAGE_UNLESS_NEW_DIRECT_REGRESSION_EVIDENCE",
   "next_machine_stage": "P003A2_PRE_SCENE3_INTERVAL_LOCALIZATION",
@@ -23,7 +23,7 @@
     "pipeline_preflight": "ENFORCED"
   },
   "sound_asset_identity": {
-    "status": "SPEC_READY_REAL_ASSET_BYTES_UNBOUND",
+    "status": "SPEC_READY_CANARY_EVIDENCE_EXISTS_PRODUCTION_BINDING_OPEN",
     "contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
     "candidate_template": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_CANDIDATES_TEMPLATE_v1.json",
     "generation_and_audition_queue": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json",
@@ -33,8 +33,36 @@
     "renderer_law": "REQUIRE_IDENTITY_GATE_PASS_AND_RECHECK_BOUND_ASSET_SHA256_BEFORE_MIX",
     "d003_bindable_beds": ["A01_GREYHAVEN_LOBBY_30S_LOOP","A02_SWITCHBOARD_ALCOVE_30S_LOOP"],
     "scene3_bed": "A03_0117_NIGHT_ROOMTONE_30S_LOOP_PROTECTED_NOT_D003_BINDABLE",
-    "real_a01_drive_audio": "NOT_FOUND",
-    "real_a02_drive_audio": "NOT_FOUND"
+    "controlled_drive_a01_audio": "NOT_FOUND",
+    "controlled_drive_a02_audio": "NOT_FOUND"
+  },
+  "synthetic_room_bed_canaries": {
+    "status": "CANDIDATE_HOLD_NOT_PRODUCTION_BOUND",
+    "receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_ROOM_BED_SYNTHETIC_CANARY_RECEIPT_v2.json",
+    "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py",
+    "workflow": ".github/workflows/room917-room-bed-synth-canaries.yml",
+    "provider_calls": 0,
+    "paid_synthesis_calls": 0,
+    "a01": {
+      "candidate_id": "A01_GREYHAVEN_LOBBY_30S_LOOP_CANDIDATE_SYNTH02",
+      "sha256": "9ca06999c727571f18ac8003a61f69a1d18bb46072713f45c7aab3deb86828b3",
+      "duration_seconds": 30.0,
+      "sample_rate_hz": 48000,
+      "bit_depth": 24,
+      "channels": 2,
+      "audition_status": "HOLD"
+    },
+    "a02": {
+      "candidate_id": "A02_SWITCHBOARD_ALCOVE_30S_LOOP_CANDIDATE_SYNTH02",
+      "sha256": "f977e467ba9dd915a46956523045b87ffd0f40063a22630d9de84728b327edc0",
+      "duration_seconds": 30.0,
+      "sample_rate_hz": 48000,
+      "bit_depth": 24,
+      "channels": 2,
+      "audition_status": "HOLD"
+    },
+    "required_before_binding": ["FOUNDER_OR_BLIND_LISTENER_AUDITION","FALSE_CLUE_AUDIT","LOOP_SEAM_AUDITION","MONO_CHECK","PHONE_PROXY_CHECK","IDENTITY_GATE_PASS"],
+    "law": "CANARY_BYTES_OR_RECEIPT_DO_NOT_AUTHORIZE_D003_PATCH_OR_RELEASE"
   },
   "derived_candidate_provenance": {
     "contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_DERIVED_MASTER_PROVENANCE_CONTRACT_v1.json",
