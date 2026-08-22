@@ -6,9 +6,9 @@
   "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
   "locked_book_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
   "ch01_source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
-  "last_completed_artifact": "108_B03_CH01_SPEAKER_PROVENANCE_RECONCILIATION_v1",
-  "current_stage": "PROVIDER_BRIDGE_READY / LIVE EVIDENCE REQUIRED",
-  "prelive_design": "COMPLETE",
+  "last_completed_artifact": "146_B03_DRY_RENDER_MANIFEST_v1.2_RECONCILED",
+  "current_stage": "FULL_BOOK_OFFLINE_AUDIO_ROUTING_RECONCILED / CASTING EVIDENCE REQUIRED",
+  "prelive_design": "FULL_BOOK_DRY_PIPELINE_RECONCILED",
   "provider": {
     "name": "ElevenLabs",
     "voices": "GET /v2/voices",
@@ -20,38 +20,70 @@
     "account_access_in_this_execution_context": false,
     "live_calls_performed": false
   },
-  "dry_compile": {
-    "spoken_units": 281,
-    "quoted_turns": 142,
-    "scenes": 6,
-    "render_blocks": 16,
-    "provider_dry_requests": 16,
-    "source_reconstruction_pass": true,
-    "all_voice_ids_null": true,
-    "all_requests_fail_closed": true
+  "speaker_authority": {
+    "production_actual_speech": 3714,
+    "assigned": 3714,
+    "unknown": 0,
+    "engine_verified_subset": 599,
+    "claim_3714_as_engine_verified": false,
+    "full_gate_drive_id": "1lFmVbEZJSMnCZMn65nAEV5U-rESC-qFX",
+    "router_drive_id": "1SF30eK_uoJDFgeR6GyODfGUrIaig-ZWa",
+    "rebuilt_manifest_drive_id": "1qry9Pr2iW3qtlu19PAe-lm14tue4QC2T",
+    "stale_120_diff_drive_id": "1FkYxNZW3rEHZwqWj84zVhyp5YDRtHMUR"
   },
-  "speaker_provenance_reconciliation": {
-    "status": "PASS_142_OF_142",
-    "private_ch01_map_drive_id": "1aw17696W4KOLVgCcnOkKxpaOJE15YRMg",
-    "reconciliation_json_drive_id": "10WMtxygCb24N2XnBZeL6z0-B0PJUZZFY",
-    "reconciliation_md_drive_id": "1ofWRzJoeWpidY0BkOGJsOqQKHMMnygLC",
-    "speaker_conflicts_found": 0,
-    "provider_bridge_preserved": true,
-    "whole_book_rejected_speaker_maps_must_not_seed_ch02_ch29": true,
-    "whole_book_current_rebased_state_path": "AUDIO_PRODUCTION/B03/CURRENT_SPEAKER_ATTRIBUTION_STATE.json"
+  "voice_roster": {
+    "status": "PASS",
+    "acoustic_speaker_ids": 119,
+    "cast_slots": 28,
+    "ensemble_slot_collisions": 0,
+    "voice_ids_assigned": 0,
+    "architecture_drive_id": "13Go1HxW86AmYf7dfptH8o1QzihCqexSL",
+    "gate_drive_id": "1p2A29eLYryoAKE3DAOjNMbYj8DVGxDs9",
+    "package_drive_id": "1L_EjMpS-RrjI9pKjrHZBF4RbcMwN1ztw",
+    "package_sha256": "376d75e7aa80fe0d54f75f03f28bf572c9f7da32bb2ba8b942c16a2ce463fe11"
   },
-  "prelive_artifacts_complete": [
-    "voice/casting/pronunciation/S0 dry stack",
-    "project overlay/listener contract",
-    "acoustic passport + identity ledger",
-    "microphone choreography",
-    "12-cue sound asset plan",
-    "sound-asset canary + acceptance ledger",
-    "Hard Pilot assembly + QC contract",
-    "provider execution bridge",
-    "CH01 speaker provenance reconciliation"
-  ],
+  "performance_chain": {
+    "status": "PASS_RECONCILED",
+    "speaker_fields_repaired": 291,
+    "slot_fields_repaired": 287,
+    "performance_profile_fields_repaired": 88,
+    "delivery_mode_fields_repaired": 73,
+    "exact_text_changes": 0,
+    "baseline_drive_id": "1GRn1qMGtRlXIh7U-ILkLQu2RbtqeB4CM",
+    "manifest_drive_id": "1cagXHO9RYgClgb9J193tNl6vYQ_0OITh",
+    "gate_drive_id": "1nH0qdcKr3l-ki5HT49pDuhzxwXEIYSbg",
+    "package_drive_id": "1flgkma50KX9efc5rBOfbosGcNsmXSRRq",
+    "package_sha256": "a8702f3f03dda46d409f7eef9b0ff0d9fbffc0dfde0e3b53e09270a9b8abe0e2"
+  },
+  "sound_and_asset_chain": {
+    "status": "PASS_RECONCILED",
+    "sfx_architecture_drive_id": "1anh7qx2GpVv5bNJaNl07hWop1SrBpizm",
+    "asset_acoustic_manifest_drive_id": "1E_qiZgVExCOdMt3HvhvON1EfRo2Zf8Dw",
+    "note": "SFX and acoustic semantics were preserved where speaker-independent; production pointers were rebound to current speaker/roster authority."
+  },
+  "dry_render": {
+    "status": "PASS_RECONCILED",
+    "total_units": 7465,
+    "speech_units": 3714,
+    "narration_units": 3751,
+    "hash_mismatches": 0,
+    "unmapped_cast_slots": 0,
+    "manifest_drive_id": "16N5TX8c5NBOX7hC0F7zvX5QQKB5Rqr-b",
+    "gate_drive_id": "1tL8pvpB_F6feFB4SoBTRyh_vDEJjIHk-",
+    "package_drive_id": "1Y6t6QE0DTLGUDrLbKehy3TO7Lhz1piyE",
+    "package_sha256": "6574f2ed49acdcf9662aa552cf8eb91aaf9063d934ce0dc5927924bedf6db7cc"
+  },
+  "stale_production_routing": {
+    "120_full_speaker_manifest": "SUPERSEDED",
+    "121_voice_map_architecture": "SUPERSEDED",
+    "122_performance_baseline": "SUPERSEDED",
+    "123_segment_performance": "SUPERSEDED",
+    "126_dry_render_manifest": "SUPERSEDED",
+    "policy": "Historical artifacts remain for provenance but must not seed production routing."
+  },
   "critical_identity_locks": {
+    "ch24_packet_1_vs_packet_2": "distinct source identities; relationship UNKNOWN",
+    "ch27_taren_message": "Taren is source author; Smith is acoustic reader where read aloud",
     "drainage_flap": "same four-impact physical/rhythmic family with natural variation; never musicalized or sample-perfect",
     "unknown_caller_playback": "must derive from same accepted first-call source/take; filtering allowed; independent regeneration forbidden"
   },
@@ -69,24 +101,18 @@
   },
   "drive_authority": {
     "folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
-    "prelive_bundle_106_id": "164d9_qtXnkSr7fxMMJ6PHB21d3flbQ3Z",
-    "provider_bridge_105_id": "1sIQNV0p12f1XRtwSRQCnps2kBMB6DTTl",
-    "provider_ready_state_107_id": "10S56-gNk4Z2S9gZrTbJB4q2KGPQNs7vW",
-    "ch01_speaker_reconciliation_json_108_id": "10WMtxygCb24N2XnBZeL6z0-B0PJUZZFY",
-    "ch01_speaker_reconciliation_md_108_id": "1ofWRzJoeWpidY0BkOGJsOqQKHMMnygLC",
-    "policy": "Full exact-text payload remains in Drive; public GitHub mirrors contracts/hashes/state only."
+    "policy": "Full exact-text and large manifests remain in Drive; GitHub mirrors contracts, hashes, state and Drive IDs."
   },
-  "next_exact_action": "Connect/authorize a real ElevenLabs execution context without storing secrets in project files. Enumerate actual workspace voices/models -> bind temporary S0 candidates -> immediate source/exact-text hash recheck -> execute only four S0 TTS jobs -> persist raw audio+alignment+provenance -> PASS/FAIL. In parallel execute only SFX canaries C0-C2 through /v1/sound-generation; C3 waits for the accepted first-caller take.",
-  "parallel_nonblocking_action": "Continue whole-book speaker attribution for CH02-29 only from the corrected rebased v2 map; do not use rejected Tier1/Tier2 cumulative maps.",
-  "stop_rule": "Do not create more abstract CH01 audio-engine design until live S0/asset evidence exposes a concrete defect.",
+  "next_exact_action": "Create 147_B03_CASTING_MANIFEST with 28 cast slots and voice_id=null plus a Slovenian pronunciation adjudication queue. Only after that, enumerate real provider voices/models without storing secrets, bind temporary S0 candidates, recheck source hashes, and run bounded S0 auditions. No bulk render.",
+  "stop_rule": "No bulk TTS or production rendering until casting evidence, pronunciation adjudication and bounded S0 evidence pass.",
   "prohibited": [
     "story rewrite",
     "CH30",
     "precursor ontology invention",
     "Andrej diagnosis/prognosis invention",
-    "bulk render before canary evidence",
+    "bulk render before casting and S0 evidence",
     "fabricated provider/listen/alignment claims",
-    "rejected speaker-map reuse for CH02-29",
+    "stale 120-126 production routing",
     "API keys or secrets in GitHub/Drive"
   ]
 }
