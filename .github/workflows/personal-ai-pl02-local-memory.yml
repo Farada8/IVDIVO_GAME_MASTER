@@ -1,0 +1,27 @@
+name: Personal AI PL-02 Local Memory
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl02-local-memory.yml'
+
+jobs:
+  pl02-local-memory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exercise persistent memory CLI
+        run: |
+          export PERSONAL_AI_HOME="$RUNNER_TEMP/personal-ai-pl02"
+          python personal-ai/run.py memory put "CI persistent memory" --kind evidence --source ci --id ci-memory --metadata '{"scope":"pl02"}'
+          python personal-ai/run.py memory search "persistent memory"
+          python personal-ai/run.py memory update ci-memory "CI updated memory"
+          python personal-ai/run.py memory invalidate ci-memory --reason superseded
+          python personal-ai/run.py memory trace ci-memory
+          test -f "$PERSONAL_AI_HOME/runtime/state.db"
+      - name: Run full Personal AI regression suite
+        run: python -m unittest discover -s personal-ai/tests -v
