@@ -23,6 +23,15 @@ def _single_parent(parents: Sequence[str] | None) -> str | None:
     return normalized[0]
 
 
+def _drive_locator(value: str | None) -> str | None:
+    if value is None:
+        return None
+    value = str(value).strip()
+    if not value:
+        return None
+    return value if value.startswith("drive:") else f"drive:{value}"
+
+
 def receipt_from_drive_observation(
     *,
     intent: PlacementIntent,
@@ -34,22 +43,23 @@ def receipt_from_drive_observation(
 ) -> ArtifactPlacementReceipt:
     """Compile provider-observed Google Drive metadata into the common receipt.
 
-    `artifact_metadata` is intentionally a provider result, not a guessed path.
-    Expected fields: id plus `parent_ids`/`parents` from Drive metadata readback.
-    Multiple parents fail closed by producing `actual_parent=None`.
+    Drive connector/API observations normally return raw file IDs in `id` and
+    `parent_ids`/`parents`. This adapter normalizes them to `drive:<id>` locators
+    before comparing with the canonical PlacementIntent. Multiple parents fail
+    closed by producing `actual_parent=None`.
     """
-    artifact_id = str(artifact_metadata.get("id", "")).strip()
+    artifact_raw_id = str(artifact_metadata.get("id", "")).strip()
     parents = artifact_metadata.get("parent_ids")
     if parents is None:
         parents = artifact_metadata.get("parents")
-    actual_parent = _single_parent(parents if isinstance(parents, (list, tuple)) else None)
+    raw_parent = _single_parent(parents if isinstance(parents, (list, tuple)) else None)
     return ArtifactPlacementReceipt(
-        artifact_id=f"drive:{artifact_id}" if artifact_id else "",
+        artifact_id=_drive_locator(artifact_raw_id) or "",
         provider="GOOGLE_DRIVE",
         project_root=intent.project_root,
         expected_parent=intent.expected_parent,
-        actual_parent=actual_parent,
-        artifact_exists=bool(artifact_id),
+        actual_parent=_drive_locator(raw_parent),
+        artifact_exists=bool(artifact_raw_id),
         start_here_ref=intent.start_here_ref,
         start_here_readback_ok=start_here_readback_ok,
         start_here_mentions_artifact=start_here_mentions_artifact,
