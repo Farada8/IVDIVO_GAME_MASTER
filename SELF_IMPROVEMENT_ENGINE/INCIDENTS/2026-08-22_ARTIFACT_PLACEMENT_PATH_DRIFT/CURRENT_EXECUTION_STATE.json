@@ -10,6 +10,7 @@
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "runtime": {
     "receipt_module": "personal-ai/core/artifact_placement.py",
+    "provider_adapter_module": "personal-ai/core/artifact_placement_adapters.py",
     "completion_gate": "personal-ai/projects/artifact_completion.py",
     "ci_workflow": ".github/workflows/artifact-placement-runtime.yml",
     "done_rule": "external-artifact task routed through artifact completion gate may become DONE only when placement receipt status is PLACEMENT_VERIFIED"
@@ -18,10 +19,21 @@
     "real_d09_incident": true,
     "drive_incident_parent_readback": "PASS",
     "drive_start_here_readback": "PASS",
-    "runtime_ci_run_id": 32561883676,
+    "runtime_ci_run_id": 32562443278,
+    "runtime_ci_head": "610bdeb67a1274f1a022d074fd41f024fec62148",
     "runtime_ci": "PASS",
     "targeted_runtime_regression": "PASS",
     "existing_project_state_regression": "PASS",
+    "provider_adapters_implemented": true,
+    "provider_adapter_targets": [
+      "GOOGLE_DRIVE",
+      "GITHUB"
+    ],
+    "provider_adapter_regression": "PASS",
+    "provider_adapter_drive_id_normalization": "PASS",
+    "provider_adapter_fail_closed_wrong_parent": "PASS",
+    "provider_adapter_fail_closed_multiple_parents": "PASS",
+    "provider_adapter_github_path_observation": "PASS",
     "prospective_cross_project_canaries": 2,
     "prospective_projects": [
       "D09 THE MAN WHO CAME BACK",
@@ -47,8 +59,10 @@
   ],
   "promotion_gate": {
     "status": "HOLD",
+    "completed_requirements": [
+      "provider adapters construct receipts from Google Drive and GitHub provider observations with normalization and fail-closed regression coverage"
+    ],
     "remaining_requirements": [
-      "provider adapters that construct receipts directly from provider metadata/index readback",
       "prospective observation of at least one new real placement failure caught before a false completion claim",
       "regression against future current persistence/recovery contracts"
     ]
