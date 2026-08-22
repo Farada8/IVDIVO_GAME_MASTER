@@ -23,6 +23,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
 
       - uses: actions/setup-python@v5
         with:
@@ -37,8 +38,7 @@ jobs:
       - name: Compile synchronization code
         run: python -m py_compile SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_FOUNDER_LOCK_SYNC_2026-08-22/apply_sync.py SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_FOUNDER_LOCK_SYNC_2026-08-22/test_sync.py tools/ivdivo_preexecution_resume_guard.py
 
-      - name: Commit synchronized state on branch push
-        if: github.event_name == 'push'
+      - name: Commit exact synchronized state to head branch
         shell: bash
         run: |
           if git diff --quiet -- PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json CURRENT_IVDIVO_SYSTEM_STATE.json CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json; then
@@ -49,4 +49,8 @@ jobs:
           git config user.email 'actions@users.noreply.github.com'
           git add PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json CURRENT_IVDIVO_SYSTEM_STATE.json CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json
           git commit -m 'Synchronize SMITH Founder lock across machine routers [skip ci]'
-          git push
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git push origin HEAD:${{ github.head_ref }}
+          else
+            git push
+          fi
