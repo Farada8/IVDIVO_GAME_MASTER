@@ -1,7 +1,7 @@
 {
   "schema": "ivdivo.general_business.early_wave_radar_delta03/1.0",
   "date": "2026-08-22",
-  "status": "DELTA03_COMPLETE_PROTECT_NO_CHANGE_NO_WIP_PROMOTION",
+  "status": "DELTA03_COMPLETE_DRIVE_VERIFIED_CI_PENDING_PROTECT_NO_CHANGE_NO_WIP_PROMOTION",
   "parent_current_merge": "9223c05a24d644d98b1ade3f5ab5662090527619",
   "wip": {
     "count": 3,
@@ -11,93 +11,14 @@
     "delta03_promotion": false
   },
   "candidates": [
-    {
-      "rank": 1,
-      "id": "EW-D03-01",
-      "candidate": "CRA_INCIDENT_VULNERABILITY_REPORTING_WORKFLOW",
-      "score": 72,
-      "forcing_function": "REPORTING_APPLIES_2026-09-11",
-      "native_substitution": ["ENISA_SRP", "ENISA_OPERATIONAL_GUIDANCE"],
-      "incumbent_substitution": ["CRA_SCOPE_OPEN_SOURCE", "CRA_READY", "CRATRUST", "CRA_TOOLKITS"],
-      "residual_watch": "SRP_SCHEMA_GUIDANCE_DRIFT_REGRESSION",
-      "route": "KILL_GENERIC_BUILD_WATCH_ONLY",
-      "advance_to_smallest_proof": false
-    },
-    {
-      "rank": 2,
-      "id": "EW-D03-02",
-      "candidate": "CBAM_SUPPLIER_EMISSIONS_EVIDENCE_REGISTRY_PRECHECK",
-      "score": 70,
-      "forcing_function": "DEFINITIVE_REGIME_ACTIVE_2026",
-      "native_substitution": ["CBAM_REGISTRY", "AMM", "DRMC", "O3CI"],
-      "incumbent_substitution": ["CARBONCHAIN", "GREENLY"],
-      "route": "KILL_GENERIC_BUILD",
-      "advance_to_smallest_proof": false
-    },
-    {
-      "rank": 3,
-      "id": "EW-D03-03",
-      "candidate": "MACHINERY_DIGITAL_INSTRUCTIONS_DOC_QA",
-      "score": 67,
-      "forcing_function": "REGULATION_APPLIES_2027-01-20",
-      "native_substitution": [],
-      "incumbent_substitution": ["CEM4", "SAFETY_SOFTWARE", "NORMAN", "SOPX"],
-      "residual_watch": "INDEPENDENT_LINK_VERSION_LANGUAGE_DOWNLOAD_RETENTION_REGRESSION",
-      "route": "WATCH_NO_BUILD",
-      "advance_to_smallest_proof": false
-    },
-    {
-      "rank": 4,
-      "id": "EW-D03-04",
-      "candidate": "CONSTRUCTION_PRODUCT_DPP",
-      "score": 65,
-      "forcing_function": "DPP_REGISTRY_LIVE_CPR_DELEGATED_LAYER_EXPECTED_Q2_2027",
-      "native_substitution": ["EU_DPP_REGISTRY", "DPP_STANDARDS"],
-      "overlap": "CF-03_DPP",
-      "route": "WATCH_DELEGATED_LAYER_NO_NEW_WIP",
-      "advance_to_smallest_proof": false
-    },
-    {
-      "rank": 5,
-      "id": "EW-D03-05",
-      "candidate": "PPWR_PACKAGING_COMPLIANCE",
-      "score": 61,
-      "forcing_function": "REGULATION_APPLIES_2026-08-12",
-      "incumbent_substitution": ["PPWR_CONNECT", "PPWRIFY", "VERDLYNX", "PPWR_TOOLKIT", "ATROPIM", "DCYCLE"],
-      "route": "KILL_GENERIC_BUILD",
-      "advance_to_smallest_proof": false
-    },
-    {
-      "rank": 6,
-      "id": "EW-D03-06",
-      "candidate": "RIGHT_TO_REPAIR_MANUFACTURER_READINESS",
-      "score": 57,
-      "forcing_function": "RULES_APPLY_2026-07-31_FOR_SPECIFIED_PRODUCT_SCOPE",
-      "native_substitution": ["EU_NATIONAL_REPAIR_PLATFORM_INFRASTRUCTURE"],
-      "incumbent_substitution": ["FIXFIRST"],
-      "route": "KILL_GENERIC_BUILD",
-      "advance_to_smallest_proof": false
-    },
-    {
-      "rank": 7,
-      "id": "EW-D03-07",
-      "candidate": "EMPOWERING_CONSUMERS_GREEN_CLAIMS_EVIDENCE",
-      "score": 55,
-      "forcing_function": "IRELAND_APPLICATION_2026-09-27",
-      "specialist_burden": "LEGAL_CONTEXTUAL_MARKETING_CLAIM_ASSESSMENT",
-      "route": "HOLD_LEGAL_HEAVY_NO_TECHNICAL_PROOF",
-      "advance_to_smallest_proof": false
-    },
-    {
-      "rank": 8,
-      "id": "EW-D03-08",
-      "candidate": "EUDR_DUE_DILIGENCE_GEOLOCATION",
-      "score": 52,
-      "forcing_function": "REVISED_FUTURE_APPLICATION_WAVE",
-      "incumbent_substitution": ["DEDICATED_EUDR_SUPPLIER_GEOLOCATION_DDS_PLATFORMS"],
-      "route": "KILL_GENERIC_BUILD",
-      "advance_to_smallest_proof": false
-    }
+    {"rank":1,"id":"EW-D03-01","candidate":"CRA_INCIDENT_VULNERABILITY_REPORTING_WORKFLOW","score":72,"forcing_function":"REPORTING_APPLIES_2026-09-11","native_substitution":["ENISA_SRP","ENISA_OPERATIONAL_GUIDANCE"],"incumbent_substitution":["CRA_SCOPE_OPEN_SOURCE","CRA_READY","CRATRUST","CRA_TOOLKITS"],"residual_watch":"SRP_SCHEMA_GUIDANCE_DRIFT_REGRESSION","route":"KILL_GENERIC_BUILD_WATCH_ONLY","advance_to_smallest_proof":false},
+    {"rank":2,"id":"EW-D03-02","candidate":"CBAM_SUPPLIER_EMISSIONS_EVIDENCE_REGISTRY_PRECHECK","score":70,"forcing_function":"DEFINITIVE_REGIME_ACTIVE_2026","native_substitution":["CBAM_REGISTRY","AMM","DRMC","O3CI"],"incumbent_substitution":["CARBONCHAIN","GREENLY"],"route":"KILL_GENERIC_BUILD","advance_to_smallest_proof":false},
+    {"rank":3,"id":"EW-D03-03","candidate":"MACHINERY_DIGITAL_INSTRUCTIONS_DOC_QA","score":67,"forcing_function":"REGULATION_APPLIES_2027-01-20","native_substitution":[],"incumbent_substitution":["CEM4","SAFETY_SOFTWARE","NORMAN","SOPX"],"residual_watch":"INDEPENDENT_LINK_VERSION_LANGUAGE_DOWNLOAD_RETENTION_REGRESSION","route":"WATCH_NO_BUILD","advance_to_smallest_proof":false},
+    {"rank":4,"id":"EW-D03-04","candidate":"CONSTRUCTION_PRODUCT_DPP","score":65,"forcing_function":"DPP_REGISTRY_LIVE_CPR_DELEGATED_LAYER_EXPECTED_Q2_2027","native_substitution":["EU_DPP_REGISTRY","DPP_STANDARDS"],"overlap":"CF-03_DPP","route":"WATCH_DELEGATED_LAYER_NO_NEW_WIP","advance_to_smallest_proof":false},
+    {"rank":5,"id":"EW-D03-05","candidate":"PPWR_PACKAGING_COMPLIANCE","score":61,"forcing_function":"REGULATION_APPLIES_2026-08-12","incumbent_substitution":["PPWR_CONNECT","PPWRIFY","VERDLYNX","PPWR_TOOLKIT","ATROPIM","DCYCLE"],"route":"KILL_GENERIC_BUILD","advance_to_smallest_proof":false},
+    {"rank":6,"id":"EW-D03-06","candidate":"RIGHT_TO_REPAIR_MANUFACTURER_READINESS","score":57,"forcing_function":"RULES_APPLY_2026-07-31_FOR_SPECIFIED_PRODUCT_SCOPE","native_substitution":["EU_NATIONAL_REPAIR_PLATFORM_INFRASTRUCTURE"],"incumbent_substitution":["FIXFIRST"],"route":"KILL_GENERIC_BUILD","advance_to_smallest_proof":false},
+    {"rank":7,"id":"EW-D03-07","candidate":"EMPOWERING_CONSUMERS_GREEN_CLAIMS_EVIDENCE","score":55,"forcing_function":"IRELAND_APPLICATION_2026-09-27","specialist_burden":"LEGAL_CONTEXTUAL_MARKETING_CLAIM_ASSESSMENT","route":"HOLD_LEGAL_HEAVY_NO_TECHNICAL_PROOF","advance_to_smallest_proof":false},
+    {"rank":8,"id":"EW-D03-08","candidate":"EUDR_DUE_DILIGENCE_GEOLOCATION","score":52,"forcing_function":"REVISED_FUTURE_APPLICATION_WAVE","incumbent_substitution":["DEDICATED_EUDR_SUPPLIER_GEOLOCATION_DDS_PLATFORMS"],"route":"KILL_GENERIC_BUILD","advance_to_smallest_proof":false}
   ],
   "decision": {
     "advance_to_smallest_proof": null,
@@ -118,6 +39,13 @@
     "EXPLICIT_EXTERNAL_BUYER_TEST_AUTHORIZATION_PLUS_BUDGETED_RESIDUAL_PAIN",
     "CURRENT_WIP_SLOT_DELIBERATELY_RETIRED"
   ],
+  "drive": {
+    "folder_id": "1OmItqAQOC1_LZa-Uds3GsClMKW_DXXR4",
+    "document_id": "17KiIi-_3HXa78HH_Ll4UuX_P3P-GUNXJl5oX5FYTXXU",
+    "revision_id": "AIroW34wAlzKUxIn0tSvjoH-JUTvH37eYNupcwtTmB5z4YORgONbwYx1q04XdjE2PjXM9XsPYYByI_pzhmJcLz_q73OIu7l1wWV1HwsAi2s",
+    "semantic_readback": "PASS",
+    "readback_marker": "EARLY-WAVE-RADAR-DELTA03-PROTECT-NO-CHANGE-CRA-CBAM-PPWR-MACHINERY-SUBSTITUTION-NO-WIP-20260822"
+  },
   "proof_boundary": {
     "public_evidence_ceiling": "E2_PLUS_ENGINEERING",
     "buyer_demand": "UNPROVEN",
@@ -129,5 +57,6 @@
     "wip_promotion": false,
     "external_action_authorized": false
   },
+  "ci_status": "PENDING",
   "readback_marker": "EARLY-WAVE-RADAR-DELTA03-PROTECT-NO-CHANGE-CRA-CBAM-PPWR-MACHINERY-SUBSTITUTION-NO-WIP-20260822"
 }
