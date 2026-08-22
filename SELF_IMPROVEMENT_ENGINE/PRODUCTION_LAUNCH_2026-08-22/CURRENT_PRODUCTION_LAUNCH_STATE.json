@@ -1,0 +1,49 @@
+{
+  "schema": "ivdivo.production_launch.current_state/0.1",
+  "date": "2026-08-22",
+  "authority_effect": "NONE",
+  "self_improvement_authority": "V2_VERIFIED_CURRENT",
+  "base_queue": "PRODUCTION_LAUNCH_QUEUE_v0.1.json",
+  "overlay_law": "CURRENT status_overrides and current_frontier supersede status/frontier fields in the base queue; dependency edges and acceptance text remain owned by the base queue",
+  "status_overrides": {
+    "PL-03": "DONE_VERIFIED",
+    "PL-07": "READY",
+    "PL-13": "DONE_VERIFIED",
+    "PL-14": "READY"
+  },
+  "current_frontier": "PL-07",
+  "newly_closed": ["PL-03","PL-13"],
+  "newly_unlocked": ["PL-07","PL-14"],
+  "inherited_verified": ["PL-00","PL-01","PL-02","PL-04","PL-05","PL-06","PL-08","PL-09","PL-11"],
+  "proof": {
+    "PL-03": {
+      "implementation_pr": 416,
+      "merge_sha": "8ef8195cb4d3d3d7562aa9d85812dc6d2244a720",
+      "verified_head": "5da828c8df9092cc38927d3486aeaa703c9ee360",
+      "cumulative_ci": "11/11 SUCCESS",
+      "drive_folder_id": "1zHpSwi5seVuAMIHs4CxyGonGkKLC_prK",
+      "drive_document_id": "1fUypA9XcvAgzEQME73IiAKaMBqhRHJIyD7aD5yA93Cg",
+      "drive_marker": "PERSONAL-AI-PL03-DONE-VERIFIED-PR416-CI11OF11-EXPLICIT-VERIFICATION-EVENT"
+    },
+    "PL-09": {
+      "source": "base queue + PL09_VERIFICATION_RECEIPT.json on main",
+      "implementation_pr": 408,
+      "merge_sha": "dc4ade0a99ce42c541a21c79a4d3326368ade2e1"
+    },
+    "PL-13": {
+      "implementation_pr": 423,
+      "merge_sha": "b5cd70364b0b17c040bd8263a33e872c9819264e",
+      "verified_head": "ebe802fff8d09a4a75f3988bc0d8ea51ae38aab2",
+      "cumulative_ci": "12/12 SUCCESS",
+      "drive_folder_id": "1JG1GPNMmf-MhF4GhFpuSnb5rHeqqaFVq",
+      "drive_document_id": "1oVGGn5VeApDxq-g5aZIhC3oBcVmtfcv3d0ingH8lKWc",
+      "drive_marker": "PERSONAL-AI-PL13-DONE-VERIFIED-PR423-CI12OF12-HASH-REPRESENT-DEDUPE"
+    }
+  },
+  "evidence_boundaries": [
+    "PL-03 source presence is not proof of source correctness; confidence is not verification; explicit verification must still be evidence-backed.",
+    "PL-09 zero detected issues is not automatic continuity PASS; manual/independent review remains required.",
+    "PL-13 ingestion proves identity/persistence/provenance for supported files, not truth, completeness, OCR, embeddings or semantic understanding/search.",
+    "No card in this overlay promotes global Self-Improvement version authority."
+  ]
+}

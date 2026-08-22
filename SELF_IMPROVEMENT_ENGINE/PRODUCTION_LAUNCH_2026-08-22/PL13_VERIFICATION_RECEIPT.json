@@ -1,0 +1,41 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.1",
+  "card": "PL-13",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 423,
+    "merge_sha": "b5cd70364b0b17c040bd8263a33e872c9819264e",
+    "verified_head": "ebe802fff8d09a4a75f3988bc0d8ea51ae38aab2"
+  },
+  "exact_head_ci": {
+    "count": 12,
+    "all_success": true,
+    "runs": [32571231202,32571231193,32571231194,32571231189,32571231187,32571231188,32571231176,32571231181,32571231207,32571231200,32571231205,32571231178]
+  },
+  "acceptance": {
+    "supported_extensions": [".txt",".md",".json",".csv"],
+    "raw_sha256": true,
+    "deterministic_representation_sha256": true,
+    "content_addressed_raw_persistence": true,
+    "raw_checksum_readback": true,
+    "project_scoped_source_document_provenance": true,
+    "manifest_persisted": true,
+    "same_project_same_content_handler_deduplicated": true,
+    "cross_project_provenance_separated": true,
+    "same_bytes_different_handler_not_collapsed": true,
+    "duplicate_integrity_reverified": true,
+    "unsupported_invalid_empty_oversized_symlink_inputs_fail_closed": true,
+    "raw_object_tamper_detected": true,
+    "manifest_tamper_detected": true,
+    "cli_roundtrip": true
+  },
+  "drive": {
+    "folder_id": "1JG1GPNMmf-MhF4GhFpuSnb5rHeqqaFVq",
+    "document_id": "1oVGGn5VeApDxq-g5aZIhC3oBcVmtfcv3d0ingH8lKWc",
+    "verified_marker": "PERSONAL-AI-PL13-DONE-VERIFIED-PR423-CI12OF12-HASH-REPRESENT-DEDUPE"
+  },
+  "new_ready_cards": ["PL-14"],
+  "current_frontier_after_closure": "PL-07",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION",
+  "evidence_boundary": "PL-13 proves bounded local text-file hashing, deterministic representation, raw persistence, provenance and deduplication only. It does not prove OCR/PDF understanding, semantic search, truth, completeness or semantic understanding."
+}

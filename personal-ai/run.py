@@ -10,6 +10,7 @@ from benchmarks import run_suite
 from books import BOOK_STAGES, BookProductionCore, ContinuityChecker
 from business import BusinessQuoteService
 from core.bootstrap import bootstrap
+from ingestion import FileIngestionService
 from memory.store import MemoryStore
 from projects.artifact_completion import complete_task_with_artifact_gate
 from projects.manager import ProjectStateManager
@@ -151,6 +152,14 @@ def build_parser() -> argparse.ArgumentParser:
     business_quote.add_argument("project_id")
     business_quote.add_argument("request_json", help="Path to quote request JSON")
 
+    ingest = sub.add_parser("ingest", help="Bounded file ingestion operations")
+    ingest_sub = ingest.add_subparsers(dest="ingest_command", required=True)
+    ingest_file = ingest_sub.add_parser(
+        "file", help="Hash, represent, persist and deduplicate one supported local file"
+    )
+    ingest_file.add_argument("project_id")
+    ingest_file.add_argument("input_path")
+
     book = sub.add_parser("book", help="Book production state operations")
     book_sub = book.add_subparsers(dest="book_command", required=True)
 
@@ -244,7 +253,7 @@ def main() -> int:
             )
             if result["status"] != "DONE":
                 exit_code = 2
-        else:  # pragma: no cover - argparse enforces choices
+        else:
             raise RuntimeError("unsupported project command")
     elif args.command == "memory":
         store = MemoryStore(home / "runtime" / "state.db")
@@ -289,7 +298,7 @@ def main() -> int:
             result = {"memory_id": args.record_id, "versions": store.versions(args.record_id)}
         elif args.memory_command == "source-trace":
             result = store.trace_source(args.record_id, max_depth=args.max_depth)
-        else:  # pragma: no cover - argparse enforces choices
+        else:
             raise RuntimeError("unsupported memory command")
     elif args.command == "provider":
         registry = default_registry()
@@ -312,7 +321,7 @@ def main() -> int:
                 )
             )
             result = response.to_dict()
-        else:  # pragma: no cover - argparse enforces choices
+        else:
             raise RuntimeError("unsupported provider command")
     elif args.command == "agent":
         if args.agent_command == "run":
@@ -337,22 +346,27 @@ def main() -> int:
             ).to_dict()
             if result["status"] == "BLOCKED":
                 exit_code = 2
-        else:  # pragma: no cover - argparse enforces choices
+        else:
             raise RuntimeError("unsupported agent command")
     elif args.command == "benchmark":
         if args.benchmark_command == "run":
             result = run_suite(Path(args.suite), home)
             if args.enforce and result["status"] != "PASS":
                 exit_code = 2
-        else:  # pragma: no cover - argparse enforces choices
+        else:
             raise RuntimeError("unsupported benchmark command")
     elif args.command == "business":
         if args.business_command == "quote":
             result = BusinessQuoteService(home).create_quote(
                 args.project_id, _json_file(args.request_json)
             )
-        else:  # pragma: no cover - argparse enforces choices
+        else:
             raise RuntimeError("unsupported business command")
+    elif args.command == "ingest":
+        if args.ingest_command == "file":
+            result = FileIngestionService(home).ingest(args.project_id, Path(args.input_path))
+        else:
+            raise RuntimeError("unsupported ingest command")
     elif args.command == "book":
         core = BookProductionCore(home)
         if args.book_command == "init":
@@ -374,9 +388,9 @@ def main() -> int:
                 passed=args.pass_gate,
                 evidence=args.evidence,
             )
-        else:  # pragma: no cover - argparse enforces choices
+        else:
             raise RuntimeError("unsupported book command")
-    else:  # pragma: no cover - argparse enforces choices
+    else:
         raise RuntimeError("unsupported command")
 
     print(json.dumps(result, indent=2, sort_keys=True))

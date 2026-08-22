@@ -1,0 +1,34 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.1",
+  "card": "PL-03",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 416,
+    "merge_sha": "8ef8195cb4d3d3d7562aa9d85812dc6d2244a720",
+    "verified_head": "5da828c8df9092cc38927d3486aeaa703c9ee360"
+  },
+  "exact_head_ci": {
+    "count": 11,
+    "all_success": true,
+    "runs": [32570576552,32570576578,32570576589,32570576583,32570576570,32570576594,32570576577,32570576619,32570576554,32570576581,32570576534]
+  },
+  "acceptance": {
+    "registered_claim_types": ["FACT","SOURCE_CLAIM","USER_DECISION","AI_INFERENCE","HYPOTHESIS","TEST_RESULT"],
+    "claim_source_document_project_trace": true,
+    "explicit_verification_event_required": true,
+    "unverified_ai_inference_to_verified_fact_denied": true,
+    "derived_fact_preserves_original_claim": true,
+    "immutable_versions": true,
+    "cross_project_provenance_denied": true,
+    "idempotent_fact_emission": true
+  },
+  "drive": {
+    "folder_id": "1zHpSwi5seVuAMIHs4CxyGonGkKLC_prK",
+    "document_id": "1fUypA9XcvAgzEQME73IiAKaMBqhRHJIyD7aD5yA93Cg",
+    "verified_marker": "PERSONAL-AI-PL03-DONE-VERIFIED-PR416-CI11OF11-EXPLICIT-VERIFICATION-EVENT"
+  },
+  "new_ready_cards": ["PL-07"],
+  "current_frontier_after_closure": "PL-07",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION",
+  "evidence_boundary": "PL-03 proves provenance/verification-state enforcement only; a source existing does not prove the source or claim is true."
+}

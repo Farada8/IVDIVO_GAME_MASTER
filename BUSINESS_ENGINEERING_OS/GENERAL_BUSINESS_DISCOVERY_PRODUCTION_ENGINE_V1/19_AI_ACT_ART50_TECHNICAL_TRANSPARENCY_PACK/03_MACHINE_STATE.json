@@ -1,11 +1,17 @@
 {
-  "schema": "ivdivo.general_business.pew03_article50_pack/1.1",
+  "schema": "ivdivo.general_business.pew03_article50_pack/1.3",
   "date": "2026-08-22",
   "gate": "P-EW03",
   "lane": "CF-01",
   "status": "ENGINEERING_PASS_CI_SUCCESS_M1_ELIGIBLE_NOT_WTP_PROVEN",
   "source_baseline": {
-    "article50_applicable_from": "2026-08-02",
+    "article50_general_application_from": "2026-08-02",
+    "digital_omnibus_ai_regulation": "EU_2026_1744",
+    "digital_omnibus_ai_in_force": "2026-07-27",
+    "a50_2_legacy_market_placement_cutoff": "2026-08-02",
+    "a50_2_transition_deadline": "2026-12-02",
+    "a50_2_transition_scope": "PROVIDER_GENERATIVE_SYSTEM_PLACED_ON_MARKET_BEFORE_2026_08_02_ONLY",
+    "general_article50_grace_period": false,
     "commission_guidelines_published": "2026-07-20",
     "transparency_code_final_published": "2026-06-10",
     "commission_ai_board_code_adequacy_confirmed": true,
@@ -16,12 +22,14 @@
   "coverage": [
     "A50_1_PROVIDER_DIRECT_INTERACTION",
     "A50_2_PROVIDER_MACHINE_READABLE_MARKING",
+    "A50_2_LEGACY_MARKET_PLACEMENT_TRANSITION",
     "A50_3_DEPLOYER_EMOTION_BIOMETRIC_NOTICE",
     "A50_4_DEPLOYER_DEEPFAKE_DISCLOSURE",
     "A50_4_DEPLOYER_PUBLIC_INTEREST_TEXT",
     "A50_5_PRESENTATION_ACCESSIBILITY"
   ],
   "synthetic_cases": 6,
+  "regulatory_drift_transition_canaries": 3,
   "real_customer_cases": 0,
   "engineering_proof": {
     "pr": 367,
@@ -32,9 +40,41 @@
     "canaries": 14,
     "m1_technical_diagnostic_spec_eligible": true
   },
+  "regulatory_drift_patch": {
+    "reason": "REGULATION_EU_2026_1744_ADDED_NARROW_A50_2_TRANSITION_AFTER_ORIGINAL_PACK_BASELINE",
+    "runtime_transition_state": "APPLIES_TRANSITIONAL_DEADLINE",
+    "transition_is_exemption": false,
+    "transition_is_general_article50_delay": false,
+    "missing_transition_evidence_policy": "FAIL_CLOSED_UNKNOWN",
+    "derived_transition_canaries": 3,
+    "p_ew05_route_changed": false,
+    "m1_route_changed": false,
+    "market_rank_changed": false,
+    "external_action_authorized": false,
+    "verification": "MERGED_IMPLEMENTATION_VERIFIED",
+    "implementation_pr": 412,
+    "implementation_head": "0fc63534eceba746d0ef43cc93552905d2c6b38e",
+    "implementation_merge_sha": "e340213a88b9a59513209819ba966aa3cb7faad6",
+    "exact_head_ci": {
+      "all_success": true,
+      "count": 7,
+      "runs": {
+        "article50_pack": 32570316435,
+        "p_ew05_compatibility": 32570316420,
+        "discovery_engine": 32570316412,
+        "buyer_evidence": 32570316384,
+        "fatal_tests": 32570316398,
+        "offer_engineering": 32570316408,
+        "opp37_ai_vs_seo": 32570316421
+      }
+    }
+  },
   "core_guards": [
     "PROVIDER_OBLIGATION_NEQ_DEPLOYER_OBLIGATION",
     "MACHINE_MARKING_NEQ_HUMAN_DISCLOSURE",
+    "A50_2_TRANSITION_NEQ_EXEMPTION",
+    "A50_2_TRANSITION_NEQ_GENERAL_ARTICLE50_GRACE_PERIOD",
+    "LEGACY_MARKET_PLACEMENT_WITHOUT_ASSESSMENT_DATE_FAILS_CLOSED",
     "CREATIVE_CONTEXT_NEQ_NO_DISCLOSURE",
     "HUMAN_REVIEW_NEQ_EDITORIAL_RESPONSIBILITY",
     "CODE_SIGNATORY_NEQ_AUTOMATIC_COMPLIANCE",
@@ -47,8 +87,10 @@
     "customer_demand_proven": false,
     "wtp_proven": false,
     "transaction_proven": false,
-    "profitability_proven": false
+    "profitability_proven": false,
+    "transition_route_is_compliance_proof": false
   },
   "external_action_authorized": false,
-  "next_gate": "P-EW05_INTERNAL_COMPARISON_THEN_BUYER_EVIDENCE_ONLY_IF_AUTHORIZED"
+  "current_general_business_authority": "P_EW05_ALL_WIP3_M1_NO_WTP",
+  "next_gate": "INTERNAL_REGULATORY_PROTOCOL_DRIFT_MONITOR_UNLESS_EXTERNAL_TESTING_IS_EXPLICITLY_AUTHORIZED"
 }
