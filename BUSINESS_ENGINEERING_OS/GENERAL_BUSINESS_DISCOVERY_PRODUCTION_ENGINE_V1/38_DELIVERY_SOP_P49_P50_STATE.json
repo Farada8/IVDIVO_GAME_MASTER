@@ -1,0 +1,104 @@
+{
+  "schema": "ivdivo.business.money_mechanisms_p49_p50_delivery_qa/1.0",
+  "status": "PASS_ENGINEERING_DELIVERY_SOP_QA_NO_REAL_DELIVERY",
+  "run": {
+    "prompts": "P49-P50",
+    "executed": 2,
+    "pass_engineering": 2,
+    "real_delivery_evidence_created": false,
+    "market_proof_created": false
+  },
+  "authority": {
+    "next64_source": "05_NEXT64.md",
+    "current_strategic_wip_count": 3,
+    "lanes": ["OW-01", "CF-01", "CF-03"],
+    "external_action_authorized": false
+  },
+  "delivery_state_machine": [
+    "SCOPE_FREEZE",
+    "INPUT_MANIFEST",
+    "EVIDENCE_CLASSIFY",
+    "RUN_DIAGNOSTIC",
+    "HUMAN_REVIEW",
+    "UNRESOLVED_REGISTER",
+    "PACKAGE",
+    "QA_GATE",
+    "DELIVERY_READY"
+  ],
+  "qa_dimensions": [
+    "SCOPE_FIDELITY",
+    "EVIDENCE_TRACEABILITY",
+    "DETERMINISTIC_REPRODUCIBILITY",
+    "BOUNDARY_FIDELITY",
+    "FRESHNESS_VERSION_FIDELITY",
+    "UNCERTAINTY_FIDELITY",
+    "PACKAGE_COMPLETENESS"
+  ],
+  "qa_dispositions": [
+    "QA_PASS_DELIVERY_READY",
+    "QA_RETURN_FOR_CORRECTION",
+    "QA_HOLD_SCOPE_OR_EVIDENCE",
+    "QA_ABORT_UNSAFE_OR_OUT_OF_SCOPE"
+  ],
+  "customer_acceptance_states": [
+    "NOT_DELIVERED",
+    "DELIVERED_AWAITING_REVIEW",
+    "ACCEPTED_AS_SCOPED_TECHNICAL_DELIVERABLE",
+    "RETURNED_FOR_CORRECTION",
+    "REJECTED_SCOPE_OR_VALUE"
+  ],
+  "lane_contracts": {
+    "OW-01": {
+      "ruleset_pinning_required": true,
+      "finding_states": ["PASS", "FAIL", "UNKNOWN", "NOT_APPLICABLE"],
+      "generic_ai_ready_advice_is_failure": true,
+      "platform_approval_claim_allowed": false
+    },
+    "CF-01": {
+      "provider_deployer_separation_required": true,
+      "design_only_is_implemented": false,
+      "legal_advice_or_certification_allowed": false,
+      "transition_is_exemption": false
+    },
+    "CF-03": {
+      "product_specific_mapping_source_required": true,
+      "registry_metadata_equals_full_payload": false,
+      "preflight_equals_registry_acceptance": false,
+      "live_registry_action_allowed": false
+    }
+  },
+  "observed": {
+    "real_deliveries": 0,
+    "actual_delivery_hours": null,
+    "actual_delivery_cost": null,
+    "customer_acceptance_events": 0,
+    "payments": 0,
+    "repeat_deliveries": 0
+  },
+  "guards": {
+    "delivery_sop_ready_is_delivery_occurred": false,
+    "qa_spec_ready_is_customer_acceptance": false,
+    "silence_is_acceptance": false,
+    "accepted_technical_deliverable_is_compliance_certification": false,
+    "acceptance_is_payment": false,
+    "payment_is_repeatability": false,
+    "synthetic_runtime_is_actual_delivery_hours": false
+  },
+  "blocked_prompts": {
+    "P51": "REQUIRES_FIRST_REAL_DELIVERY_ACTUAL_HOURS_AND_COST",
+    "P52": "REQUIRES_OBSERVED_DELIVERY_BOTTLENECK_OR_CAPACITY_DATA",
+    "P53": "REQUIRES_OBSERVED_REPEAT_OR_RENEWAL_SIGNAL",
+    "P54": "REQUIRES_REAL_RECURRING_VALUE_EVIDENCE",
+    "P55": "REQUIRES_REAL_REFERRAL_OR_EXPANSION_EVIDENCE",
+    "P56": "REQUIRES_ECONOMICS_PLUS_DELIVERY_PLUS_DEMAND_EVIDENCE"
+  },
+  "proof_boundary": {
+    "delivery_proven": false,
+    "customer_acceptance_proven": false,
+    "actual_delivery_economics_proven": false,
+    "repeatability_proven": false,
+    "scale_readiness_proven": false,
+    "external_action_authorized": false
+  },
+  "next_dependency": "REAL_DELIVERY_REQUIRED_BEFORE_P51_P56"
+}

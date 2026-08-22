@@ -48,7 +48,10 @@ jobs:
           assert obs['wtp'] is None and obs['cac'] is None and obs['conversion'] is None
           assert obs['repeatability'] is False
           assert all(v is False for v in s['proof_boundary'].values())
-          assert mm['next64']['executed']==48 and mm['next64']['remaining']==16
+          executed=mm['next64']['executed']
+          remaining=mm['next64']['remaining']
+          assert 48 <= executed <= 64
+          assert remaining == 64 - executed
           assert mm['route_to_market_prep']['targets_contacted']==0
           assert mm['route_to_market_prep']['messages_sent']==0
           assert mm['route_to_market_prep']['transactions']==0
@@ -56,7 +59,7 @@ jobs:
           assert mm['evidence_boundary']['businesses_proven']==0
           assert mm['evidence_boundary']['external_action_authorized'] is False
           assert mm['strategic_coexistence']['do_not_overwrite_current_early_wave_wip'] is True
-          print('P41-P48 ROUTE PREP: PASS / 48OF64 INTERNAL / ZERO EXTERNAL ACTION / NO MARKET PROOF')
+          print(f'P41-P48 ROUTE PREP: PASS / {executed}OF64 INTERNAL / ZERO EXTERNAL ACTION / NO MARKET PROOF')
           PY
       - name: Compile JSON
         run: python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/13_MONEY_MECHANISMS_MACHINE_STATE.json >/dev/null && python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/35_ROUTE_TO_MARKET_P41_P48_STATE.json >/dev/null
