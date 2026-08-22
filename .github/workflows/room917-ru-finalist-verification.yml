@@ -1,0 +1,174 @@
+name: ROOM917 RU Finalist Verification
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_spend:
+        description: 'Type YES to authorize the already sealed finalist verification plan'
+        required: true
+        default: 'NO'
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  finalist-verification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Guard explicit spend confirmation
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.confirm_spend }}" != "YES" ]; then
+            echo "::error::Finalist verification blocked. Re-run with confirm_spend=YES."
+            exit 2
+          fi
+
+      - name: Fail closed if ElevenLabs secret missing
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${ELEVENLABS_API_KEY:-}" ]; then
+            echo "::error::Repository secret ELEVENLABS_API_KEY is not configured."
+            exit 3
+          fi
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate sealed finalist authorization
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_FINALIST_VERIFICATION_AUTHORIZED.json')
+          if not p.exists():
+              raise SystemExit('Finalist verification blocked: sealed authorization artifact is missing')
+          row=json.loads(p.read_text(encoding='utf-8'))
+          if row.get('status') != 'PAID_FINALIST_VERIFICATION_AUTHORIZED':
+              raise SystemExit('Finalist authorization status mismatch')
+          auth=row.get('authorization') or {}
+          if auth.get('scope') != 'ROOM917_RU_FINALIST_VERIFICATION_ONLY':
+              raise SystemExit('Finalist authorization scope mismatch')
+          required=int(row.get('required_block_count') or 0)
+          authorized=int(row.get('authorized_block_count') or 0)
+          nested=int(auth.get('authorized_block_count') or 0)
+          blocks=row.get('blocks') or []
+          ids=row.get('selected_block_ids') or []
+          if required not in (6,7,8):
+              raise SystemExit(f'Unexpected required block count {required}')
+          if authorized != required or nested != required:
+              raise SystemExit('Authorization count must exactly equal minimal plan count')
+          if len(blocks) != required or len(ids) != required or len(set(ids)) != required:
+              raise SystemExit('Authorized block payload does not exactly match required count')
+          if [b.get('block_id') for b in blocks] != ids:
+              raise SystemExit('Authorized block order/identity differs from selected_block_ids')
+          if row.get('cast_lock') is not False or row.get('full_e01_render_allowed') is not False:
+              raise SystemExit('Finalist authorization cannot grant CAST LOCK or full E01')
+          print(f'PASS_FINALIST_AUTHORIZATION exact_blocks={required}')
+          PY
+
+      - name: Materialize exact authorized block set
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _room917_ru_finalist_blocks _room917_ru_finalist_verification
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          src=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_FINALIST_VERIFICATION_AUTHORIZED.json')
+          row=json.loads(src.read_text(encoding='utf-8'))
+          out=Path('_room917_ru_finalist_blocks')
+          for i,b in enumerate(row['blocks'],1):
+              p=out/f'{i:02d}__{b["block_id"]}.json'
+              p.write_text(json.dumps(b,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          plan={
+              'schema_version':'ivdivo.room917_ru_finalist_live_plan/1.0',
+              'authorization_path':str(src),
+              'authorized_block_count':row['authorized_block_count'],
+              'selected_block_ids':row['selected_block_ids'],
+              'runtime_voice_bindings':row.get('runtime_voice_bindings'),
+              'cast_lock':False,
+              'full_episode_render_forbidden':True,
+          }
+          Path('_room917_ru_finalist_verification/LIVE_FINALIST_PLAN.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+
+      - name: Render exact finalist verification blocks
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r block; do
+            base="$(basename "$block" .json)"
+            mkdir -p "_room917_ru_finalist_verification/$base"
+            (
+              cd audio/studio
+              python elevenlabs_adapter.py "$GITHUB_WORKSPACE/$block" --out-dir "$GITHUB_WORKSPACE/_room917_ru_finalist_verification/$base"
+            )
+          done < <(find _room917_ru_finalist_blocks -maxdepth 1 -type f -name '*.json' | sort)
+
+      - name: Build secret-free finalist receipt
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          root=Path('_room917_ru_finalist_verification')
+          plan=json.loads((root/'LIVE_FINALIST_PLAN.json').read_text(encoding='utf-8'))
+          audio=[]
+          for p in sorted(root.rglob('*__audio.*')):
+              data=p.read_bytes()
+              audio.append({'path':str(p.relative_to(root)),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
+          required=int(plan['authorized_block_count'])
+          if len(audio) < required:
+              raise SystemExit(f'Expected at least {required} audio files, got {len(audio)}')
+          receipt={
+              'schema_version':'ivdivo.room917_ru_finalist_verification_receipt/1.0',
+              'generated_at':datetime.now(timezone.utc).isoformat().replace('+00:00','Z'),
+              'provider':'ElevenLabs',
+              'secret_persisted':False,
+              'authorized_block_count':required,
+              'selected_block_ids':plan['selected_block_ids'],
+              'audio_files':audio,
+              'human_listen_required':True,
+              'cast_locked':False,
+              'full_episode_rendered':False,
+              'promotion_rule':'NO_CAST_LOCK_UNTIL_POST_CANARY_REVIEW_AND_FOUNDER_FINAL_CREDIBILITY_PASS'
+          }
+          (root/'FINALIST_VERIFICATION_RECEIPT.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(f'finalist_audio_files={len(audio)} exact_authorized_blocks={required}')
+          PY
+
+      - name: Upload finalist listening artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_RU_FINALIST_VERIFICATION
+          path: _room917_ru_finalist_verification/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Summary
+        shell: bash
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## ROOM917 RU Finalist Verification
+          - manual explicit spend confirmation required
+          - sealed authorization count must exactly equal the coverage-minimal plan
+          - renders only missing finalist evidence
+          - no automatic CAST LOCK
+          - no full E01 render
+          - next gate: post-canary human review + Founder final credibility + cast-lock receipt validation
+          EOF
