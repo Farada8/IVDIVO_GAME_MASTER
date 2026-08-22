@@ -1,0 +1,102 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE4_INTEGRATED_STATE_v1",
+  "date": "2026-08-22",
+  "status": "CROSS_STORE_CLOSURE_PENDING_CI",
+  "main_before_closure": "cfaf10d14c974a8221c17d799ad52632d7b05fda",
+  "constraints": {
+    "no_outreach": true,
+    "new_founder_cash_eur": 0,
+    "public_evidence_ceiling": "E2+",
+    "unknown_economics": null,
+    "raw_copyrighted_books_public_git": false
+  },
+  "library": {
+    "raw_drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "historical_full_baseline_files": 69,
+    "partial_concurrent_pointer_files": 71,
+    "partial_pointer_status": "SUPERSEDED_AS_CURRENT_RETAINED_AS_HISTORY",
+    "current_physical_raw_files": 78,
+    "post_69_physical_delta": 9,
+    "post_69_unique_valid_hashes": 8,
+    "post_69_exact_byte_duplicates": 1,
+    "canonical_unique_works": null,
+    "current_pointer": "BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_LIBRARY_AUTHORITY_78_2026-08-22.md"
+  },
+  "cycle4_parallel_streams": {
+    "library78_sector_capital_stream": {
+      "executions": 32,
+      "shortlist": 16,
+      "probe": 14,
+      "hold": 2,
+      "market_winners_claimed": 0,
+      "evidence_ceiling": "E2+",
+      "local_runtime_regression": "40/40_PASS"
+    },
+    "regulatory_public_signal_stream": {
+      "executions": 32,
+      "keep_or_keep_with_gate": 28,
+      "hold": 4,
+      "kill": 0,
+      "market_winners_claimed": 0,
+      "evidence_ceiling": "E2_LIKE_PUBLIC_ONLY",
+      "historical_library_input_files": 71,
+      "historical_library_input_status": "SUPERSEDED_BY_78_FOR_CURRENT_LIBRARY_ONLY"
+    }
+  },
+  "integration": {
+    "parallel_execution_streams": 2,
+    "total_execution_records_before_dedupe": 64,
+    "deduped_unique_opportunity_count": null,
+    "known_overlap_clusters": [
+      "AI_IMPLEMENTATION_AND_EVIDENCE",
+      "BUILDING_ENERGY_ORCHESTRATION",
+      "GRANT_DIGITAL_ADMIN_WORKFLOWS",
+      "DATA_ACCESS_AND_COMPLIANCE"
+    ],
+    "law": "PARALLEL_EXECUTION_COUNT_NEQ_INDEPENDENT_EVIDENCE_COUNT",
+    "next_action": "ROOT_WORKLOAD_CORRELATION_AND_DEDUPE_BEFORE_PORTFOLIO_SELECTION"
+  },
+  "engineering": {
+    "library78_modules": "B81-B112",
+    "library78_contracts": "C97-C128",
+    "library78_protocols": 10,
+    "regulatory_stream_modules": "B81-B112_PARALLEL_IMPLEMENTATION",
+    "regulatory_stream_contracts": "C97-C128_PARALLEL_IMPLEMENTATION",
+    "candidate_mechanism": "ParallelEvidenceConvergenceGate",
+    "candidate_mechanism_status": "BOUNDED_BUSINESS_OS_CANDIDATE_NOT_GLOBAL_SI_AUTHORITY"
+  },
+  "prompt_backlogs": {
+    "library78_run32_executed": 32,
+    "library78_next64_designed": 64,
+    "library78_next64_executed": 0,
+    "regulatory_run32_executed": 32,
+    "regulatory_next64_designed": 64,
+    "regulatory_next64_executed": 0,
+    "governor": "DO_NOT_EXECUTE_128_RITUALLY_DEDUPE_THEN_RUN_SMALLEST_DECISION_CHANGING_SUBSET"
+  },
+  "proof": {
+    "market_E3_E4": "NOT_RUN",
+    "buyer_willingness_to_pay": false,
+    "profitability_proven": false,
+    "financing_proven": false,
+    "K_S_E_non_substitution": true
+  },
+  "self_improvement": {
+    "v2": "VERIFIED_CURRENT",
+    "v3_reference_ingest": "CANDIDATE_NOT_PROMOTED",
+    "cycle4_parallelism_learning": "PARALLEL_COVERAGE_CAN_IMPROVE_RECALL_BUT_REQUIRES_CURRENT_POINTER_AND_EVIDENCE_DEDUPE_GATES",
+    "global_authority_effect": "NONE"
+  },
+  "drive": {
+    "cycle4_library78_folder_id": "1tOZgIXaZLbtNMEbk0YKVN7Y0UPE24Y5h",
+    "master_id": "1U5UgxcDP44xtptG9Hf8GVu_dQZ2EN9-UwscKPgFY6EQ",
+    "library_engineering_id": "1HBJwgoGu37uwpXI2B9zBBd71PoHTqfcbuf0PJ6lMiBI",
+    "source_objects_id": "1X0e8VLJ5uxRBpnT0hBu0hM3wxkwXsy6dB1y8Uz-wRDQ",
+    "run32_id": "1F0n8Le1Biq8UuRrhGMECCu9fn7CKiPdySRJt029HOnk",
+    "synthesis_id": "1QRMPLoWhPwSv-7Yx5rjoeYuST8EjBbaO6YYEJzTsas8",
+    "next64_id": "1sx0CIFTxR-bpcQfSxfoR39cO5_MIK3s1yaptYgaWi7I",
+    "readback": "PENDING"
+  },
+  "current_constraint": "CORRELATE_AND_DEDUPE_TWO_CYCLE4_STREAMS_TO_ROOT_WORKLOADS_THEN_SELECT_ONE_PRIMARY_PLUS_MAX_TWO_BOUNDED_PILOTS_BY_FATAL_ASSUMPTION_AND_VOI",
+  "next_gate": "CYCLE5_PORTFOLIO_SELECTION_AND_MANUAL_PROOF_PACKS_WITHOUT_OUTREACH"
+}
