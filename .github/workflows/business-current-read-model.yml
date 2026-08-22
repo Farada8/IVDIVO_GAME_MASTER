@@ -8,6 +8,7 @@ on:
       - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json'
       - 'BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/**'
       - 'BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/**'
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_P225_BOUNDED_ACQUISITION_NONFINDING/**'
       - 'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/**'
       - '.github/workflows/business-current-read-model.yml'
 
@@ -31,6 +32,7 @@ jobs:
           rc = model['resume_control']
           intake = (root/rc['unlock_intake_path']).read_text()
           fixture = json.loads((root/rc['resume_gate_fixture']).read_text())
+          negative_control = (root/rc['calibration']['latest_negative_control']).read_text()
           runtime_path = root/rc['resume_gate_runtime']
           spec = importlib.util.spec_from_file_location('business_resume_gate', runtime_path)
           gate = importlib.util.module_from_spec(spec)
@@ -76,6 +78,19 @@ jobs:
           assert rc['generic_continuation_is_not_evidence_event'] is True
           assert rc['route_may_authorize_external_action'] is False
           assert rc['route_may_promote_proof_grade'] is False
+          cal = rc['calibration']
+          assert cal['synthetic_deterministic_suite'] == 'PASS_16_OF_16'
+          assert cal['real_negative_control_count'] == 1
+          assert cal['real_positive_root_event_count'] == 0
+          assert cal['latest_negative_control_result'] == 'PASS_ROOT_UNCHANGED_ROUTE_PROTECT_NO_CHANGE'
+          assert cal['local_promotion_state'] == 'NEGATIVE_CONTROL_PASS_POSITIVE_ROOT_EVENT_PENDING'
+          assert cal['broader_or_global_promotion'] is False
+          assert 'Disposition:** `BOUNDED_NONFINDING / PROTECT_NO_CHANGE`' in negative_control
+          assert '`P225_EXECUTED = FALSE`' in negative_control
+          assert '`TARGET_PACK_ACQUIRED = FALSE`' in negative_control
+          assert '`ROOT_A = TARGET_PACK_NOT_ACQUIRED`' in negative_control
+          assert '`BOUNDED_NONFINDING != P225_EXECUTION`' in negative_control
+
           assert fixture['unlock_intake_path'] == rc['unlock_intake_path']
           assert fixture['expected_route'] == rc['current_route']
           assert 'AWAITING_AUTHORIZED_INPUT' in intake
@@ -104,5 +119,5 @@ jobs:
           assert 'ROOT_A = TARGET_PACK_NOT_ACQUIRED' in core
           assert 'ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET' in core
           assert 'NOT_FOUND_IN_CONNECTED_SOURCES != DOCUMENT_DOES_NOT_EXIST' in overlay
-          print('CURRENT_BUSINESS_READ_MODEL 1.3: PASS — resume control restored, 17/64 executed, 47 remaining')
+          print('CURRENT_BUSINESS_READ_MODEL 1.3: PASS — resume control + real negative control, 17/64 executed, 47 remaining')
           PY
