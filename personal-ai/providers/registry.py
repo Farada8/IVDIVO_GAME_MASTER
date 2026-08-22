@@ -3,8 +3,8 @@ from __future__ import annotations
 import os
 from collections.abc import Mapping
 
-from providers.adapters import AnthropicMessagesProvider, OllamaChatProvider, OpenAIResponsesProvider
-from providers.base import AIProvider, ProviderRequest, ProviderResponse
+from providers.base import AIProvider, ProviderConfig, ProviderRequest, ProviderResponse
+from providers.canonical import AnthropicProvider, OllamaProvider, OpenAIProvider
 from providers.http import JsonTransport
 from providers.mock import MockProvider
 
@@ -34,6 +34,68 @@ class ProviderRegistry:
     def generate(self, provider_name: str, request: ProviderRequest) -> ProviderResponse:
         return self.get(provider_name).generate(request)
 
+    def analyze(
+        self,
+        provider_name: str,
+        request: ProviderRequest,
+        *,
+        instruction: str | None = None,
+    ) -> ProviderResponse:
+        return self.get(provider_name).analyze(request, instruction=instruction)
+
+    def classify(
+        self,
+        provider_name: str,
+        request: ProviderRequest,
+        *,
+        labels: list[str] | tuple[str, ...],
+    ) -> ProviderResponse:
+        return self.get(provider_name).classify(request, labels=labels)
+
+    def extract(
+        self,
+        provider_name: str,
+        request: ProviderRequest,
+        *,
+        schema: Mapping[str, object] | str,
+    ) -> ProviderResponse:
+        return self.get(provider_name).extract(request, schema=schema)
+
+
+def provider_from_config(
+    config: ProviderConfig,
+    *,
+    env: Mapping[str, str] | None = None,
+    transport: JsonTransport | None = None,
+) -> AIProvider:
+    source = os.environ if env is None else env
+    name = config.provider.strip().lower()
+    if name == "mock":
+        return MockProvider()
+    if name == "openai":
+        secret_name = config.secret_env or "OPENAI_API_KEY"
+        return OpenAIProvider(
+            api_key=source.get(secret_name),
+            default_model=config.model,
+            endpoint=config.endpoint or "https://api.openai.com/v1/responses",
+            transport=transport,
+        )
+    if name == "anthropic":
+        secret_name = config.secret_env or "ANTHROPIC_API_KEY"
+        return AnthropicProvider(
+            api_key=source.get(secret_name),
+            default_model=config.model,
+            endpoint=config.endpoint or "https://api.anthropic.com/v1/messages",
+            transport=transport,
+        )
+    if name == "ollama":
+        return OllamaProvider(
+            base_url=config.endpoint or "http://localhost:11434",
+            default_model=config.model,
+            transport=transport,
+        )
+    raise KeyError(f"unknown provider: {config.provider}")
+
 
 def default_registry(
     *,
@@ -44,26 +106,37 @@ def default_registry(
     registry = ProviderRegistry()
     registry.register(MockProvider())
     registry.register(
-        OpenAIResponsesProvider(
-            api_key=source.get("OPENAI_API_KEY"),
-            default_model=source.get("OPENAI_MODEL"),
-            endpoint=source.get("OPENAI_RESPONSES_URL", "https://api.openai.com/v1/responses"),
+        provider_from_config(
+            ProviderConfig(
+                provider="openai",
+                model=source.get("OPENAI_MODEL"),
+                endpoint=source.get("OPENAI_RESPONSES_URL"),
+                secret_env="OPENAI_API_KEY",
+            ),
+            env=source,
             transport=transport,
         )
     )
     registry.register(
-        AnthropicMessagesProvider(
-            api_key=source.get("ANTHROPIC_API_KEY"),
-            default_model=source.get("ANTHROPIC_MODEL"),
-            endpoint=source.get("ANTHROPIC_MESSAGES_URL", "https://api.anthropic.com/v1/messages"),
-            api_version=source.get("ANTHROPIC_API_VERSION", "2023-06-01"),
+        provider_from_config(
+            ProviderConfig(
+                provider="anthropic",
+                model=source.get("ANTHROPIC_MODEL"),
+                endpoint=source.get("ANTHROPIC_MESSAGES_URL"),
+                secret_env="ANTHROPIC_API_KEY",
+            ),
+            env=source,
             transport=transport,
         )
     )
     registry.register(
-        OllamaChatProvider(
-            base_url=source.get("OLLAMA_BASE_URL", "http://localhost:11434"),
-            default_model=source.get("OLLAMA_MODEL"),
+        provider_from_config(
+            ProviderConfig(
+                provider="ollama",
+                model=source.get("OLLAMA_MODEL"),
+                endpoint=source.get("OLLAMA_BASE_URL"),
+            ),
+            env=source,
             transport=transport,
         )
     )
