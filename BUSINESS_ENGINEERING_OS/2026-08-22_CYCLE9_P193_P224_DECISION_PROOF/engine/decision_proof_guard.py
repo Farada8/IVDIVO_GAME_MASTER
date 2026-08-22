@@ -98,7 +98,6 @@ def residual_job_gate(job_components: Iterable[str], covered_components: Iterabl
 
 
 def proof_grade_guard(source_grade: str, polished: bool = False, ci_green: bool = False) -> str:
-    # Presentation/CI cannot upgrade semantic evidence grade.
     return source_grade
 
 
@@ -130,3 +129,31 @@ def next_frontier(target_pack_acquired: bool, bidder_packet_acquired: bool, pa4:
     if not pa5:
         return "RUN_SMALLEST_REAL_DECISION_USE_TEST"
     return "DERIVE_FROM_NEW_EVIDENCE"
+
+
+def planned_award_date_guard(
+    workspace_status: Optional[str],
+    contract_award_date: Optional[str],
+    award_notice_or_binding_award_proven: bool = False,
+) -> Dict[str, Any]:
+    """Do not convert a planned/admin award-date field into evidence that award occurred."""
+    if award_notice_or_binding_award_proven:
+        return {
+            "awarded": True,
+            "status": "AWARD_PROVEN_BY_SEPARATE_AUTHORITY",
+            "workspace_status": workspace_status,
+            "contract_award_date": contract_award_date,
+        }
+    if contract_award_date:
+        return {
+            "awarded": False,
+            "status": "PLANNED_AWARD_DATE_NEQ_AWARDED_CONTRACT",
+            "workspace_status": workspace_status,
+            "contract_award_date": contract_award_date,
+        }
+    return {
+        "awarded": False,
+        "status": "NO_AWARD_EVIDENCE",
+        "workspace_status": workspace_status,
+        "contract_award_date": None,
+    }
