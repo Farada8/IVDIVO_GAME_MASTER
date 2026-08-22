@@ -1,14 +1,15 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "cycle": "CYCLE4_DESIGN_PUBLIC_ART_HOSPITALITY",
   "date": "2026-08-22",
-  "status": "PERSISTED_READBACK_VERIFIED_PARALLEL_RECONCILED",
+  "status": "PERSISTED_READBACK_VERIFIED_PARALLEL_RECONCILED_OFFICIAL_BRIEFS_READ",
   "github": {
     "repository": "Farada8/IVDIVO_GAME_MASTER",
     "base_branch": "main",
     "base_sha_observed": "be100f75ef5c7136513cfe5a1a931d3beeb49d75",
     "working_branch": "cycle4-design-business-engine-2026-08-22",
     "cycle_path": "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_DESIGN_PUBLIC_ART_HOSPITALITY_32_TO_64",
+    "draft_pr": 172,
     "readback_verified": true
   },
   "drive": {
@@ -27,7 +28,10 @@
     "library_engineering_spec": "18-cszxDGuubjqu6703j5DXqMVDbtOIFg9E-9zZd_eco",
     "run32": "14lZinp2qQSHQgsahjlV9g1kcqY11X5yfoJxBLTWaECs",
     "next64": "1YyDjJUUb-VOQ9NN_hn3IJnhm0rOvXxehQKTuZD8OjTM",
-    "machine_state_proofs": "1u1cvjCiofmi3NYXf9dh05IDjOs6vrrj4Tn_HPbXutQk"
+    "machine_state_proofs": "1u1cvjCiofmi3NYXf9dh05IDjOs6vrrj4Tn_HPbXutQk",
+    "parallel_reconciliation": "19iWJC2nstRzrQ79wvJKRUGknPSRGbg002OV2SfqVUv4",
+    "shillelagh_pilot_bridge": "1-E0XPl0PO-nlI9GOHMwcoqSqVqTgIm6ULLD3ko1auCU",
+    "official_brief_readback": "1mqYZrSCx6zgVQ5JYmMugNjsS7sfwJLZc4q6uQJj6deA"
   },
   "parallel_reconciliation": {
     "detected": true,
@@ -58,27 +62,66 @@
     "copyright_policy": "RAW_COPYRIGHTED_SOURCES_PRIVATE_DRIVE_ONLY"
   },
   "execution": {
-    "prompts_executed": 32,
+    "cycle4_prompts_executed": 32,
     "keep": 29,
     "mutate": 3,
     "kill": 0,
     "next_prompts_derived": 64,
-    "next_prompts_executed": 0
+    "next_prompts_executed": 0,
+    "post_cycle_parallel_reconciliation": true,
+    "post_cycle_official_brief_readback": true
   },
+  "official_live_calls_verified": [
+    {
+      "id": "CLUAIN_NA_COILLTE_MONKSLAND_2026",
+      "authority": "Roscommon County Council official page + Artist Brief",
+      "budget_including_vat_eur": 112500,
+      "deadline_local": "2026-09-07T16:00:00",
+      "type": "permanent_public_artwork_or_suite",
+      "priority": "HIGH",
+      "evidence_ceiling": "E2_PLUS_PUBLIC_CALL_NOT_BUYER_COMMITMENT"
+    },
+    {
+      "id": "SHANNON_VALLEY_BALLAGHADERREEN_2026",
+      "authority": "Roscommon County Council official page + Artist Brief",
+      "budget_including_vat_eur": 40500,
+      "artist_in_residence_allocation_eur": 15000,
+      "artwork_allocation_eur": 25500,
+      "deadline_local": "2026-09-07T16:00:00",
+      "type": "artist_in_residence_plus_permanent_public_artwork",
+      "priority": "CONDITIONAL_HOLD_PENDING_ENGAGEMENT_CAPABILITY",
+      "evidence_ceiling": "E2_PLUS_PUBLIC_CALL_NOT_BUYER_COMMITMENT"
+    },
+    {
+      "id": "INIS_CEALTRA_VISITOR_EXPERIENCE_2026",
+      "authority": "Clare County Council official commission page",
+      "budget_including_taxes_eur": 21500,
+      "deadline_date": "2026-09-17",
+      "type": "site_specific_visitor_experience_public_art",
+      "priority": "HIGH",
+      "evidence_ceiling": "E2_PLUS_PUBLIC_CALL_NOT_BUYER_COMMITMENT"
+    }
+  ],
+  "recommended_real_pilots": [
+    "CLUAIN_NA_COILLTE_MONKSLAND_2026",
+    "INIS_CEALTRA_VISITOR_EXPERIENCE_2026"
+  ],
   "proof_system": {
     "proof_planes": ["K0-K5", "D0-D6", "T0-T6", "E0-E7"],
     "non_substitution": "K != D != T != E",
-    "knowledge": "MIXED_UPSTREAM_K_GRADES_DESIGN_INGEST_PENDING",
-    "design": "D0_GENERAL_ENGINE_ARCHITECTURE_ONLY",
-    "technical": "T0_GENERAL_ENGINE_NO_MAPPED_REAL_SITE_PILOT",
-    "market": "NO_NEW_E3_E4_EVIDENCE",
-    "parallel_shillelagh_proof_import": "NOT_YET_MAPPED_INTO_GENERAL_D_T_E_OBJECTS"
+    "general_engine_design": "D0_ARCHITECTURE",
+    "general_engine_technical": "T0_WITH_PROTOCOLS",
+    "shillelagh_mapping": "D1_PROVISIONAL_T1_CONSTRAINT_INVENTORY_ONLY",
+    "shillelagh_specific_market": "E0_UNLESS_STRONGER_PERSISTED_BUYER_ARTIFACT_APPEARS",
+    "live_public_call_market_signal": "E2_PLUS_MAX"
   },
   "claims": {
     "buyer_intent_claimed": false,
     "profitability_claimed": false,
     "legal_or_code_compliance_claimed": false,
-    "structural_approval_claimed": false
+    "structural_approval_claimed": false,
+    "eligibility_claimed": false,
+    "submission_made": false
   },
   "self_improvement": {
     "verified_authority": "v2",
@@ -88,13 +131,7 @@
     "new_rule": "NAMESPACE_COLLISION_GATE",
     "promotion_rule": "REAL_PILOT_NET_GAIN_WITH_REGRESSION_PASS_REQUIRED"
   },
-  "current_constraint": "MAP_SHILLELAGH_VERTICAL_TO_GENERAL_BDES_OBJECTS + INGEST_FIRST_DESIGN_SOURCES -> VERIFY_REAL_SITE/BRIEF -> D_T_RED_TEAM -> PROTOTYPE_OR_SUBMISSION_PACK -> REAL_OUTCOME",
-  "next_acceptance_target": {
-    "design_grade": "D3_PLUS",
-    "technical_grade": "T2_PLUS",
-    "fatal_red_team": 0,
-    "market_grade_auto_upgrade": false
-  },
+  "current_constraint": "FOR_TWO_RECOMMENDED_LIVE_CALLS: OFFICIAL_BRIEF_PASSPORT -> ELIGIBILITY -> SITE_CONTEXT -> DESIGN_BRIEF -> D2_DESIGN -> T1_T2_ATTEMPT -> BID_ECONOMICS -> PROPOSAL_PROOF_PACK -> RED_TEAM -> SUBMISSION_DECISION",
   "anti_hallucination": {
     "unknown_dimensions": "NULL_OR_TBD",
     "unknown_structure": "NULL_OR_TBD",
