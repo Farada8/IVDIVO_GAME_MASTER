@@ -1,0 +1,44 @@
+name: General Business P17-P24 Fatal Tests
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/**'
+      - '.github/workflows/general-business-p17-p24-fatal-tests.yml'
+
+jobs:
+  fatal-test-portfolio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run fatal-test router regression
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_fatal_test_router.py
+      - name: Compile runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
+      - name: Validate P17-P24 artifacts and accounting
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          doc = (root/'09_P17_P24_FATAL_ASSUMPTION_PORTFOLIO.md').read_text()
+          st = json.loads((root/'10_P17_P24_MACHINE_STATE.json').read_text())
+          current = json.loads((root/'06_MACHINE_STATE.json').read_text())
+          assert all(f'P{i}' in doc for i in range(17,25))
+          assert all(f'OPP-{i}' in doc for i in (33,36,37))
+          assert st['next64']['executed_count'] == 16
+          assert st['next64']['unexecuted_count'] == 48
+          assert st['portfolio']['wip_count'] == 3
+          assert st['portfolio']['wip_max'] == 3
+          assert st['portfolio']['go_to_market'] is False
+          assert st['external_action']['authorized'] is False
+          assert st['evidence']['willingness_to_pay'] is None
+          assert current['next64']['executed'] == 16
+          assert current['next64']['remaining'] == 48
+          assert current['next64']['executed_ranges'] == ['P01-P08','P17-P24']
+          assert current['next64']['next_admissible_block'] == 'P09-P16_TARGETED_TO_CURRENT_3_WIP'
+          print('GENERAL_BUSINESS_P17_P24: PASS — 16/64 executed, 48 remaining, WIP=3')
+          PY

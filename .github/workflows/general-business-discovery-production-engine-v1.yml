@@ -18,7 +18,7 @@ jobs:
         run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_business_production_router.py
       - name: Compile runtime
         run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
-      - name: Validate architecture and P01-P08 artifacts
+      - name: Validate architecture and executed General Business blocks
         run: |
           python - <<'PY'
           import json
@@ -29,6 +29,8 @@ jobs:
           nxt = (root/'05_NEXT64.md').read_text()
           p0108 = (root/'07_P01_P08_DISCOVERY_REFRESH.md').read_text()
           src = (root/'08_P01_P08_SOURCE_LEDGER.md').read_text()
+          p1724 = (root/'09_P17_P24_FATAL_ASSUMPTION_PORTFOLIO.md').read_text()
+          fatal_state = json.loads((root/'10_P17_P24_MACHINE_STATE.json').read_text())
           state = json.loads((root/'06_MACHINE_STATE.json').read_text())
           assert all(f'BDP{i:02d}' in spec for i in range(1,33))
           assert all(f'CDP{i:02d}' in spec for i in range(1,33))
@@ -36,17 +38,25 @@ jobs:
           assert '**MUTATE:** 11' in run
           assert all(f'P{i:02d}' in nxt for i in range(1,65))
           assert 'Prompt count never substitutes for evidence' in (root/'00_MASTER.md').read_text()
-          assert state['next64']['executed'] == 8
-          assert state['next64']['executed_range'] == 'P01-P08'
-          assert state['next64']['remaining'] == 56
+          # Preserve the already verified P01-P08 discovery block.
           assert state['discovery_refresh']['fresh_non_procurement_signals'] == 10
           assert state['discovery_refresh']['wip_count'] == 3
           assert state['discovery_refresh']['willingness_to_pay'] is None
           assert state['discovery_refresh']['unit_economics'] is None
-          assert state['external_action']['authorized'] is False
           assert 'OPP-33' in p0108 and 'OPP-36' in p0108 and 'OPP-37' in p0108
           assert 'WILLINGNESS_TO_PAY = UNKNOWN' in p0108
           assert 'OFFICIAL_SUPPORT_EXISTENCE != BUYER_WTP' in src
           assert all(f'SRC-GEN-{i:02d}' in src for i in range(1,12))
-          print('GENERAL_BUSINESS_ENGINE_P01_P08: PASS — 8/64 executed, 56 remaining, WIP=3')
+          # New non-contiguous causal execution: P17-P24 follows fatal-first ordering.
+          assert state['next64']['executed'] == 16
+          assert state['next64']['executed_ranges'] == ['P01-P08', 'P17-P24']
+          assert state['next64']['remaining'] == 48
+          assert state['next64']['next_admissible_block'] == 'P09-P16_TARGETED_TO_CURRENT_3_WIP'
+          assert fatal_state['next64']['executed_count'] == 16
+          assert fatal_state['portfolio']['wip_count'] == 3
+          assert fatal_state['external_action']['authorized'] is False
+          assert all(f'OPP-{i}' in p1724 for i in (33,36,37))
+          assert 'INTERNAL_NEGATIVE_CONTROL_READY' in p1724
+          assert state['external_action']['authorized'] is False
+          print('GENERAL_BUSINESS_ENGINE: PASS — 16/64 executed (P01-P08 + P17-P24), 48 remaining, WIP=3')
           PY
