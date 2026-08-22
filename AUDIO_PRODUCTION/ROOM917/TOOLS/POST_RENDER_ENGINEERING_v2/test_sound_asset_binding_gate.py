@@ -49,9 +49,10 @@ def candidate(asset_id: str, path: Path, *, audition: str = "PASS", mono: str = 
     }
 
 
-def run_gate(candidates: dict, work: Path) -> tuple[subprocess.CompletedProcess[str], dict, dict]:
+def run_gate(candidates: dict, work: Path) -> tuple[subprocess.CompletedProcess[str], dict, dict, dict]:
     cpath = work / "candidates.json"
     out = work / "bindings.json"
+    shared_out = work / "shared_bindings.json"
     report = work / "report.json"
     cpath.write_text(json.dumps({"candidates": candidates}, indent=2) + "\n", encoding="utf-8")
     proc = subprocess.run(
@@ -62,12 +63,21 @@ def run_gate(candidates: dict, work: Path) -> tuple[subprocess.CompletedProcess[
             "--candidates", str(cpath),
             "--out-bindings", str(out),
             "--report", str(report),
-            "--identity-map", str(IDENTITY),
+            "--shared-map", str(IDENTITY),
+            "--out-shared-bindings", str(shared_out),
         ],
         text=True,
         capture_output=True,
     )
-    return proc, json.loads(out.read_text(encoding="utf-8")), json.loads(report.read_text(encoding="utf-8"))
+    assert out.exists(), proc.stdout + proc.stderr
+    assert report.exists(), proc.stdout + proc.stderr
+    assert shared_out.exists(), proc.stdout + proc.stderr
+    return (
+        proc,
+        json.loads(out.read_text(encoding="utf-8")),
+        json.loads(report.read_text(encoding="utf-8")),
+        json.loads(shared_out.read_text(encoding="utf-8")),
+    )
 
 
 def test_atomic_hold_blocks_all_renderer_bindings() -> None:
@@ -81,13 +91,15 @@ def test_atomic_hold_blocks_all_renderer_bindings() -> None:
             "S10_SELECTOR_916": candidate("S10_SELECTOR_916", a),
             "S13_INTERNAL_DOUBLE_RING_OLD": candidate("S13_INTERNAL_DOUBLE_RING_OLD", b, audition="HOLD"),
         }
-        proc, bindings, report = run_gate(payload, work)
+        proc, bindings, report, shared = run_gate(payload, work)
         assert proc.returncode != 0, proc.stdout + proc.stderr
         assert report["status"] == "HOLD"
         assert bindings == {}, "atomic gate leaked partial renderer bindings"
+        assert shared == {}, "shared identity leaked while source binding set was HOLD"
         statuses = {row["asset_id"]: row["status"] for row in report["rows"]}
         assert statuses["S10_SELECTOR_916"] == "PASS"
         assert statuses["S13_INTERNAL_DOUBLE_RING_OLD"] == "HOLD"
+        assert report["renderer_bindings_suppressed_on_hold"] is True
 
 
 def test_shared_identity_emitted_only_after_atomic_pass() -> None:
@@ -101,16 +113,17 @@ def test_shared_identity_emitted_only_after_atomic_pass() -> None:
             "S10_SELECTOR_916": candidate("S10_SELECTOR_916", a),
             "S13_INTERNAL_DOUBLE_RING_OLD": candidate("S13_INTERNAL_DOUBLE_RING_OLD", b),
         }
-        proc, bindings, report = run_gate(payload, work)
+        proc, bindings, report, shared = run_gate(payload, work)
         assert proc.returncode == 0, proc.stdout + proc.stderr
         assert report["status"] == "PASS"
         assert "S10_SELECTOR_916" in bindings
         assert "S13_INTERNAL_DOUBLE_RING_OLD" in bindings
-        shared = report.get("bilingual_shared_bindings") or {}
         assert "NORMAL_916_SELECTOR_CLACK" in shared
         assert "IMPOSSIBLE_INTERNAL_DOUBLE_RING" in shared
         assert shared["NORMAL_916_SELECTOR_CLACK"]["sha256"] == bindings["S10_SELECTOR_916"]["sha256"]
         assert shared["IMPOSSIBLE_INTERNAL_DOUBLE_RING"]["sha256"] == bindings["S13_INTERNAL_DOUBLE_RING_OLD"]["sha256"]
+        assert "NORMAL_916_SELECTOR_CLACK" in report["shared_byte_bindings_emitted"]
+        assert "IMPOSSIBLE_INTERNAL_DOUBLE_RING" in report["shared_byte_bindings_emitted"]
 
 
 def main() -> int:
