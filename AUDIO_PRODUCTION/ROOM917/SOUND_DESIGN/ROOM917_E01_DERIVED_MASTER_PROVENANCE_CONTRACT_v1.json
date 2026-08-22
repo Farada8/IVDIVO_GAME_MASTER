@@ -1,0 +1,50 @@
+{
+  "schema_version": "room917.derived_master_provenance_contract/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "purpose": "Allow technical QC of an authorized derived E01 candidate without pretending its SHA must equal the immutable source master SHA.",
+  "immutable_source": {
+    "filename": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "duration_seconds": 658.190,
+    "sample_rate_hz": 48000,
+    "bit_depth": 24,
+    "channels": 2
+  },
+  "required_provenance_fields": [
+    "schema_version",
+    "build_id",
+    "candidate_sha256",
+    "parent_source_sha256",
+    "repair_stage",
+    "patch_plan",
+    "render_report",
+    "regression_report"
+  ],
+  "allowed_repair_stage": ["P004A_SELECTIVE_REPAIR"],
+  "required_evidence_for_each_file_ref": ["path", "sha256"],
+  "derived_candidate_laws": [
+    "PARENT_SOURCE_SHA256_MUST_EQUAL_IMMUTABLE_SOURCE_SHA256",
+    "CANDIDATE_SHA256_MUST_EQUAL_OBSERVED_CANDIDATE_BYTES",
+    "PATCH_PLAN_FILE_MUST_EXIST_AND_MATCH_DECLARED_SHA256",
+    "EVERY_PATCH_SOURCE_MASTER_SHA256_MUST_EQUAL_IMMUTABLE_SOURCE_SHA256",
+    "RENDER_REPORT_FILE_MUST_EXIST_MATCH_SHA256_AND_CONTAIN_ONLY_APPLIED_PATCHES_FROM_PATCH_PLAN",
+    "REGRESSION_REPORT_FILE_MUST_EXIST_MATCH_SHA256_AND_STATUS_PASS",
+    "REGRESSION_MUST_PASS_FORMAT_DURATION_STABILITY_SCENE3_BYTES_UNCHANGED_UNAUTHORIZED_RANGES_UNCHANGED_AUTHORIZED_PATCH_RANGE_CHANGED",
+    "DERIVED_FORMAT_DURATION_SAMPLE_RATE_BIT_DEPTH_CHANNELS_MUST_MATCH_SOURCE_PROFILE",
+    "NO_DERIVED_CANDIDATE_BECOMES_RELEASE_MASTER_FROM_MACHINE_QC_ALONE",
+    "P003B_HUMAN_LISTEN_REMAINS_REQUIRED"
+  ],
+  "template": {
+    "schema_version": "room917.derived_master_provenance/1.0",
+    "build_id": "TODO_UNIQUE_BUILD_ID",
+    "candidate_sha256": "TODO_64_HEX",
+    "parent_source_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "repair_stage": "P004A_SELECTIVE_REPAIR",
+    "patch_plan": {"path": "TODO", "sha256": "TODO_64_HEX"},
+    "render_report": {"path": "TODO", "sha256": "TODO_64_HEX"},
+    "regression_report": {"path": "TODO", "sha256": "TODO_64_HEX"},
+    "notes": "Machine-readable provenance only. Human listening/release decision is separate."
+  }
+}
