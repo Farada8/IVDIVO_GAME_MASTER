@@ -24,7 +24,7 @@ A prompt becomes engineering only when its required artifact, test, state transi
 ## Wave order
 
 1. Wave 1 / Foundation: PL-00, PL-01, PL-02, PL-04, PL-05, PL-11.
-2. Wave 2 / Real production: PL-06, PL-08, PL-09, PL-13, PL-14.
+2. Wave 2 / Real production: PL-06, PL-07, PL-08, PL-09, PL-13, PL-14.
 3. Wave 3 / Reliability: PL-03, PL-10, PL-12, PL-16, PL-17, PL-18.
 4. Wave 4 / Optimization: PL-15, PL-19, PL-20.
 5. Wave 5 / Real pilots + release: PL-21, PL-22, PL-23, PL-24.
