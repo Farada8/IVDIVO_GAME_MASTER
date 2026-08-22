@@ -72,7 +72,8 @@ jobs:
               raise SystemExit('paid_s0_authorized must be false')
           if row.get('full_e01_render_allowed') is not False:
               raise SystemExit('full_e01_render_allowed must be false')
-          print(f"status={row.get('status')} role_counts={{k:len(v) for k,v in row.get('roles',{}).items()}}")
+          role_counts={k:len(v) for k,v in row.get('roles',{}).items()}
+          print(f"status={row.get('status')} role_counts={role_counts}")
           PY
 
       - name: Upload CI proposal evidence
