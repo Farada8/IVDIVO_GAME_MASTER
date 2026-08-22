@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-22",
+  "cycle": "CYCLE5_PUBLIC_ARTIFACT_VALIDATION_32_TO_64",
+  "branch": "studio/business-engineering-cycle5-artifact-validation-2026-08-22",
+  "upstream_main_at_start": "e41408aec56839585bfcff9a0fbfb0224cada25d",
+  "library": {
+    "private_raw_drive_folder": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "physical_files": 78,
+    "valid_files": 68,
+    "unique_valid_byte_hashes": 58,
+    "raw_copyrighted_to_public_github": false
+  },
+  "portfolio": {
+    "wip_limit": 3,
+    "primary": "tender_procurement_decision_intelligence",
+    "pilots": ["retrofit_qualification_orchestration", "sme_ai_workflow_implementation"]
+  },
+  "proof_planes": {
+    "knowledge": "K",
+    "public_signal": "S",
+    "public_artifact": "PA0-PA5",
+    "market": "E0-E7",
+    "public_market_ceiling": "E2+",
+    "non_substitution": true
+  },
+  "run32": {
+    "executed": 32,
+    "keep": 30,
+    "mutate": 2,
+    "kill": 0,
+    "deterministic_regression_pass": 32,
+    "deterministic_regression_total": 32
+  },
+  "artifacts": [
+    {
+      "id": "PA-PROC-001",
+      "lane": "procurement",
+      "pa_grade": "PA3",
+      "sample_source": "eTenders resource 8872468",
+      "decision": "PROCEED_TO_FULL_DOCUMENT_REVIEW",
+      "eligibility": "NOT_PROVEN"
+    },
+    {
+      "id": "PA-RETRO-001",
+      "lane": "retrofit",
+      "pa_grade": "PA3",
+      "decision": "INPUTS_REQUIRED_BEFORE_ROUTE",
+      "property_eligibility": "NOT_PROVEN"
+    },
+    {
+      "id": "PA-AI-001",
+      "lane": "sme_ai",
+      "pa_grade": "PA3",
+      "decision": "POST_DFB_IMPLEMENTATION_HYPOTHESIS",
+      "leo_approval": "NOT_PROVEN",
+      "paid_demand": "NOT_PROVEN"
+    }
+  ],
+  "pa4": 0,
+  "pa5": 0,
+  "e3_or_higher": 0,
+  "new_founder_cash_eur": 0,
+  "next64": {
+    "designed": 64,
+    "executed": 0,
+    "range": "P33-P96",
+    "preferred_first_block": "P33-P48 procurement full-pack and PA4 validation"
+  },
+  "self_improvement": {
+    "v2": "CURRENT",
+    "v3": "CANDIDATE_ONLY",
+    "new_candidate_rules": [
+      "SCALAR_SCORE_OVER_UNKNOWN_EVIDENCE_FORBIDDEN",
+      "FREE_PUBLIC_ALTERNATIVE_SUBSTITUTION_CHECK",
+      "ARTIFACT_DECISION_DELTA_REQUIRED",
+      "PA_PROOF_NEQ_MARKET_PROOF",
+      "CONCURRENT_PERSISTENCE_READ_BEFORE_WRITE"
+    ],
+    "authority_promotion": false
+  },
+  "current_gate": "PA3 -> PA4 independent validation -> real target-user decision use -> PA5/E3 only on real interaction",
+  "persistence": {
+    "github": "IN_PROGRESS",
+    "drive": "IN_PROGRESS",
+    "readback_required": true
+  }
+}
