@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_en_ru_parallel_production/1.1",
+  "schema_version": "ivdivo.room917_en_ru_parallel_production/1.2",
   "date": "2026-08-22",
   "project": "ROOM917",
   "episode": "E01",
@@ -106,14 +106,14 @@
       "music": "NONE_UNTIL_AUTHORIZED_FINAL_BUTTON",
       "required_evidence_order": [
         "IMPOSSIBLE_INTERNAL_DOUBLE_RING",
-        "ORIENT_TO_PANEL",
+        "ACTORS_ORIENT_TO_PANEL",
         "FIELD_RECORDER_START",
         "TIME_01_17_12",
         "EXTERNAL_TRUNK_PHYSICALLY_OPEN",
         "UNMARKED_LAMP_ACTIVE_BEYOND_916",
         "MINA_INDEPENDENT_CONFIRMATION",
         "COPPER_LINE_MEDIUM",
-        "CATE_CLEAN_HUMAN_SOURCE_THROUGH_POST_CHAIN",
+        "CATE_CLEAN_HUMAN_SOURCE_THROUGH_TRANSMISSION_POST",
         "LENI_BIRD_EXACT",
         "FOUR_NOTE_LULLABY_DAMAGED_AFTER_NOTE_3",
         "TWO_PART_LINE_CUT",
@@ -184,6 +184,8 @@
   },
   "current_execution": {
     "ru_zero_spend_discovery_retrigger_commit": "3d969b2e012c5dd9702b1b653d33a17f41e2b5ff",
+    "ru_current_assembly_authority_commit": "b8bce42eb967aa7f9be26ebeb76137b663e1063d",
+    "concurrent_authority_sync_rule": "BILINGUAL_CONTROL_FOLLOWS_CURRENT_RU_ASSEMBLY_MACHINE_IDS",
     "en_master_drive_duplicate_found": false,
     "en_master_rerender_forbidden": true,
     "paid_ru_s0_not_authorized_by_this_control_file": true,
