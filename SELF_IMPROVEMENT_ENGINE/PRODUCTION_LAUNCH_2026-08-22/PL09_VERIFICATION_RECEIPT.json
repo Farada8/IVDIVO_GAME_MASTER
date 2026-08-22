@@ -1,0 +1,50 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.2",
+  "card": "PL-09",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 408,
+    "merge_sha": "dc4ade0a99ce42c541a21c79a4d3326368ade2e1",
+    "verified_head": "ae6b905357d3c64940825be9e553c7b3b5279b9e"
+  },
+  "exact_head_ci": [
+    {"workflow":"Personal AI PL-00 Bootstrap","run_id":32569790834,"conclusion":"success"},
+    {"workflow":"Personal AI PL-01 Project State","run_id":32569790805,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Local Memory","run_id":32569790807,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Memory Contract Hardening","run_id":32569790868,"conclusion":"success"},
+    {"workflow":"Personal AI PL-04 Provider Abstraction","run_id":32569790803,"conclusion":"success"},
+    {"workflow":"Personal AI PL-05 Agent Executor","run_id":32569790839,"conclusion":"success"},
+    {"workflow":"Personal AI PL-06 Business Core","run_id":32569790801,"conclusion":"success"},
+    {"workflow":"Personal AI PL-08 Book Production Core","run_id":32569790809,"conclusion":"success"},
+    {"workflow":"Personal AI PL-09 Continuity Checker","run_id":32569790797,"conclusion":"success"},
+    {"workflow":"Personal AI PL-11 Test Benchmark Runner","run_id":32569790802,"conclusion":"success"}
+  ],
+  "acceptance": {
+    "known_fixture_detected": true,
+    "severity_set_exact": true,
+    "severity_tagged_issues": true,
+    "two_structured_evidence_refs_per_issue": true,
+    "stable_issue_ids": true,
+    "supported_domains": ["NAME","AGE","APPEARANCE","RELATIONSHIP","DATE_TIME","LOCATION","PROP","EVENT_ORDER","KNOWLEDGE","COMPLETED_EVENT"],
+    "json_report_persisted": true,
+    "markdown_report_persisted": true,
+    "pl02_output_memory_persisted": true,
+    "book_content_hash_bound": true,
+    "input_hash_bound": true,
+    "wrong_stage_fails_closed": true,
+    "unsupported_category_fails_closed": true,
+    "blocking_enforce_exit_nonzero": true,
+    "automatic_pass_forbidden": true,
+    "pl08_gate_not_mutated_by_checker": true,
+    "drive_readback": true
+  },
+  "drive": {
+    "folder_id": "1X2oAc8aR7T8TqPPkg40dN2jhzq9q-AuM",
+    "document_id": "1InysDSD8w0U5STMo2rk6CcqFh9Q_UXDYMbmRmNuLqpM",
+    "verified_marker": "PERSONAL-AI-PL09-DONE-VERIFIED-PR408-CI10OF10-EVIDENCE-PAIRS-NO-AUTO-PASS"
+  },
+  "new_ready_cards": [],
+  "current_frontier_after_closure": "PL-13",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION",
+  "evidence_boundary": "PL-09 proves deterministic contradiction detection only over supplied normalized structured evidence. It does not prove exhaustive manuscript extraction, arbitrary-prose semantic understanding, manuscript quality, or authorize automatic continuity PASS."
+}
