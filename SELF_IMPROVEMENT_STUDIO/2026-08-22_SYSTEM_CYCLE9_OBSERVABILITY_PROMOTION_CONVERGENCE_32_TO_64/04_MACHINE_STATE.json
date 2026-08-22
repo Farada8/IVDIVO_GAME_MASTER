@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "cycle": "SYSTEM_CYCLE9_OBSERVABILITY_PROMOTION_CONVERGENCE_32_TO_64_2026-08-22",
+  "status": "BOUNDED_CANDIDATE_PACKAGE_NO_GLOBAL_PROMOTION",
+  "governing_authority": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+  "governing_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+  "new_top_level_engine": false,
+  "new_si_id": null,
+  "run32": {
+    "executed": 32,
+    "total": 32,
+    "pass_like_reuse_accept": 30,
+    "mutate": 1,
+    "reject_duplicate_runtime": 1,
+    "pending": 0
+  },
+  "runtime": {
+    "path": "SELF_IMPROVEMENT_STUDIO/2026-08-22_SYSTEM_CYCLE9_OBSERVABILITY_PROMOTION_CONVERGENCE_32_TO_64/runtime/cycle9_control.py",
+    "scope": "BOUNDED_CONTROL_ADAPTERS",
+    "may_mutate_current_authority": false,
+    "may_execute_durable_multistore_transaction": false,
+    "may_auto_promote": false
+  },
+  "deterministic_canaries": {
+    "declared": 17,
+    "ci_status": "PENDING_FRESH_PR_RUN",
+    "proof_class": "ENGINEERING_MACHINE_ONLY"
+  },
+  "module_families": [
+    "AUTHORITY_SNAPSHOT_AND_FRESHNESS",
+    "SOURCE_SURFACE_INDEX",
+    "SEMANTIC_CANDIDATE_DEDUPE",
+    "PROMOTION_ELIGIBILITY",
+    "EVIDENCE_CLASS_FIREWALL",
+    "EVIDENCE_FAMILY_NORMALIZATION",
+    "NEGATIVE_EVIDENCE_RETENTION",
+    "MISSING_AUTHORITY_HOLD",
+    "IMPROVEMENT_OBSERVABILITY",
+    "CANARY_AND_REPLICATION_EVIDENCE",
+    "ENGINE_WORTHINESS",
+    "META_WORK_BUDGET",
+    "COMPACTION_AND_SUPERSESSION",
+    "PROMPT_IR_SEMANTIC_PARITY",
+    "SELF_REFERENCE_GUARD"
+  ],
+  "current_parallel_evidence": {
+    "main_snapshot_after_run32": "ac28b1fca1b38d08cfebb73b83e5ebcabf572f04",
+    "event": "SI0014_BUSINESS_RECOVERY_SLICE_EVENT_001_MERGED",
+    "genuine_recovery_events": 1,
+    "genuine_recovery_target": 3,
+    "projects_observed": 2,
+    "false_resume_count": 0,
+    "promotion_effect": "NONE"
+  },
+  "evidence_firewall": {
+    "engineering_test_is_human_signal": false,
+    "model_summary_is_human_signal": false,
+    "source_inspection_is_provider_evidence": false,
+    "public_artifact_is_buyer_evidence": false,
+    "buyer_interest_is_payment": false,
+    "test_count_is_verified_current": false
+  },
+  "hard_reuse": {
+    "durable_transaction_owner": "SI0014_CYCLE7_EXISTING",
+    "freshness_owner": "SI0015_EXISTING",
+    "registry_owner": "CURRENT_IMPROVEMENT_REGISTRY_EXISTING",
+    "learning_owner": "CURRENT_LEARNING_LEDGER_EXISTING"
+  },
+  "next_gate": "FRESH_PR_CI_PLUS_DRIVE_READBACK_PLUS_CURRENT_MAIN_COMPARE",
+  "after_engineering_gate": "MEASURE_REAL_FAILURE_PREVENTION_AND_OVERHEAD_BEFORE_ANY_PROMOTION_REVIEW",
+  "story_first_guard": "META_WORK_RETURNS_TO_HIGHER_PRIORITY_PRODUCT_WORK_WHEN_NOT_A_DIRECT_PREREQUISITE_OR_EXPLICIT_FOUNDER_FOCUS"
+}
