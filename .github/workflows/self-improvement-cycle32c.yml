@@ -1,0 +1,19 @@
+name: Self-Improvement Cycle32C
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE32C_CURRENT_SURFACE_CONVERGENCE_32_TO_64/**'
+      - '.github/workflows/self-improvement-cycle32c.yml'
+  workflow_dispatch:
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Cycle32C regressions
+        run: python SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE32C_CURRENT_SURFACE_CONVERGENCE_32_TO_64/tests/test_cycle32c.py
+      - name: Validate pre-merge state JSON
+        run: python -m json.tool SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE32C_CURRENT_SURFACE_CONVERGENCE_32_TO_64/06_STATE_PRE_MERGE.json > /dev/null
