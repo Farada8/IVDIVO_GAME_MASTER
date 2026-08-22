@@ -40,15 +40,17 @@ assert "mono.wav" not in serialized_public
 assert "pass_b_candidate" not in serialized_public
 assert public["question_classes"] == EXPECTED_CLASSES
 assert public["questions"] == EXPECTED_QUESTIONS
+assert any("P003B_UNSEAL_GATE" in rule for rule in public["listener_rules"])
 
 pass_c = mod.build_pass_c_manifest(
     "TEST_PACKAGE",
     {"mono_folddown":{"file":"R917_BLIND_E01_MONO.wav"},"phone_band_mono":{"file":"R917_BLIND_E01_PHONE_PROXY.wav"}},
     "PASS_MACHINE_QC",
 )
-assert pass_c["status"] == "SEALED_UNTIL_PASS_A_NOTES_FROZEN"
-assert pass_c["open_only_after"] == "PASS_A_NOTES_FROZEN"
+assert pass_c["status"] == "SEALED_UNTIL_P003B_UNSEAL_GATE"
+assert "PASS_B_COMPLETE" in pass_c["open_only_after"]
+assert "NO_OPEN_REPAIR" in pass_c["open_only_after"]
 assert pass_c["machine_qc_status"] == "PASS_MACHINE_QC"
 assert "mono_folddown" in pass_c["files"] and "phone_band_mono" in pass_c["files"]
 
-print("PASS P003B six-question contract and blind firewall")
+print("PASS P003B six-question contract and blind/Pass-C firewall")

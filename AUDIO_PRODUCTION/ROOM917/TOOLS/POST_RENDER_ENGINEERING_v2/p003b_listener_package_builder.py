@@ -35,14 +35,14 @@ def verify_ref(ref,label,errors):
 
 def build_public_manifest(package_id:str, stereo_record:dict)->dict:
     return {
-        "schema_version":"room917.p003b_blind_listener_package/1.2",
+        "schema_version":"room917.p003b_blind_listener_package/1.3",
         "package_id":package_id,
         "status":"READY_FOR_PASS_A",
         "listener_rules":[
             "LISTEN_ONCE_WITHOUT_STORY_NOTES",
             "DO_NOT_OPEN_INTERNAL_IDENTITY_KEY",
             "FREEZE_PASS_A_NOTES_BEFORE_TARGETED_PASS_B",
-            "DO_NOT_OPEN_SEALED_PASS_C_BEFORE_PASS_A_NOTES_FROZEN",
+            "DO_NOT_OPEN_SEALED_PASS_C_BEFORE_P003B_UNSEAL_GATE",
             "ANSWER_ONLY_THE_SIX_LOCKED_LISTENER_QC_QUESTIONS"
         ],
         "files":{"stereo_target":stereo_record},
@@ -54,13 +54,13 @@ def build_public_manifest(package_id:str, stereo_record:dict)->dict:
 
 def build_pass_c_manifest(package_id:str, files:dict, qc_status:str|None)->dict:
     return {
-        "schema_version":"room917.p003b_pass_c_sealed/1.0",
+        "schema_version":"room917.p003b_pass_c_sealed/1.1",
         "package_id":package_id,
-        "status":"SEALED_UNTIL_PASS_A_NOTES_FROZEN",
-        "open_only_after":"PASS_A_NOTES_FROZEN",
+        "status":"SEALED_UNTIL_P003B_UNSEAL_GATE",
+        "open_only_after":"PASS_A_FREEZE_VERIFIED__PASS_B_COMPLETE__NO_OPEN_REPAIR_OR_POST_REPAIR_RELISTEN_RECEIPT",
         "files":files,
         "machine_qc_status":qc_status,
-        "purpose":"Stereo/mono/phone translation playback only after blind Pass A notes are frozen."
+        "purpose":"Stereo/mono/phone translation playback only after the explicit P003B Pass-C unseal gate."
     }
 
 def main()->int:
@@ -102,7 +102,7 @@ def main()->int:
     for key,outname in (("mono_folddown","R917_BLIND_E01_MONO.wav"),("phone_band_mono","R917_BLIND_E01_PHONE_PROXY.wav")):
         src=proxies.get(key)
         if src and Path(src).is_file():
-            dst=sealed_pass_c/outname; shutil.copy2(src,dst); pass_c_files[key]={"file":dst.name,"sha256":sha256_file(dst),"playback":"PASS_C_ONLY_AFTER_PASS_A_NOTES_FROZEN"}
+            dst=sealed_pass_c/outname; shutil.copy2(src,dst); pass_c_files[key]={"file":dst.name,"sha256":sha256_file(dst),"playback":"PASS_C_ONLY_AFTER_P003B_UNSEAL_GATE"}
     (sealed_pass_c/"PASS_C_MANIFEST_SEALED.json").write_text(json.dumps(build_pass_c_manifest(a.package_id,pass_c_files,qc.get("status")),indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
 
     (a.outdir/"LISTENER_MANIFEST.json").write_text(json.dumps(build_public_manifest(a.package_id,stereo_record),indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
