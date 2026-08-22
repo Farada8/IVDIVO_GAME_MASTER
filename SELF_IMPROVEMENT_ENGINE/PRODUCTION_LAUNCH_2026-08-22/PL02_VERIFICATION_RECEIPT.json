@@ -1,0 +1,37 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.1",
+  "card": "PL-02",
+  "status": "DONE_VERIFIED",
+  "implementation_path": "personal-ai/memory/",
+  "baseline_pr": 299,
+  "baseline_merge_sha": "5a9337f2a416edbacdf4a85f02efdc1e27511bf9",
+  "hardening_pr": 309,
+  "hardening_merge_sha": "d82020c7967c2c3dc1b22e4469974757d7aaf0bc",
+  "verified_head": "7e947cee84fefb5467aa154546f648077aec0bbe",
+  "exact_head_ci": [
+    {"workflow": "Personal AI PL-00 Bootstrap", "run_id": 32555281797, "conclusion": "success"},
+    {"workflow": "Personal AI PL-01 Project State", "run_id": 32555281872, "conclusion": "success"},
+    {"workflow": "Personal AI PL-02 Local Memory", "run_id": 32555281799, "conclusion": "success"},
+    {"workflow": "Personal AI PL-02 Memory Contract Hardening", "run_id": 32555281777, "conclusion": "success"}
+  ],
+  "acceptance": {
+    "shared_sqlite_persistence": true,
+    "required_typed_tables": ["projects", "tasks", "documents", "facts", "decisions", "sources", "outputs", "events"],
+    "sha256_content_hash": true,
+    "immutable_version_history": true,
+    "versioned_invalidation": true,
+    "source_trace": true,
+    "legacy_migration_without_content_loss": true,
+    "baseline_cli_compatibility": true,
+    "claim_verification_semantics": false
+  },
+  "drive": {
+    "folder_id": "1mH8SQPfR9IPjAltLGVa8EPALkB3s07n2",
+    "verification_document_id": "1IYlQfZOt7yI4GaQVBjDuL36yuIjvIPe9GFEO8HsAt5w",
+    "marker": "PERSONAL-AI-PL02-DONE-VERIFIED-PR309-CI4OF4"
+  },
+  "new_ready_cards": ["PL-03", "PL-06", "PL-13", "PL-15", "PL-16"],
+  "selected_next_frontier": "PL-04",
+  "superseded_prs": [300, 311],
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION"
+}
