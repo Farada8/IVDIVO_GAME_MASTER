@@ -7,8 +7,8 @@
   "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
   "locked_book_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
   "ch01_source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
-  "last_completed_artifact": "B03_CH01_S0_S4_CASTING_CASCADE_PLAN_v1",
-  "current_stage": "ZERO_COST_PREFLIGHT_API_CONTRACT_PASS / ACCOUNT_VOICE_ACCESS_BLOCKED",
+  "last_completed_artifact": "95_B03_AUDIO_EXECUTION_STATE_AFTER_PREFLIGHT_v1",
+  "current_stage": "PRELIVE_PREPARATION_COMPLETE / ELEVENLABS_ACCOUNT_EXECUTION_CONTEXT_REQUIRED",
   "dry_compile": {
     "spoken_units": 281,
     "quoted_turns": 142,
@@ -39,8 +39,8 @@
   },
   "casting_cascade": {
     "zero_cost_preflight": "API_CONTRACT_PASS / ACCOUNT_AUTH_AND_VOICE_ENUMERATION_OPEN",
-    "S0_technical_canary": "PLAN_READY_4_JOBS / NOT_RUN",
-    "S1_fair_anchor_comparison": "PLAN_READY / NOT_RUN",
+    "S0_technical_canary": "DRY_MANIFEST_READY_4_JOBS / NOT_RUN",
+    "S1_fair_anchor_comparison": "PLAN+SCORECARD_READY / NOT_RUN",
     "S2_secondary_discrimination": "PLAN_READY / NOT_RUN",
     "S3_forbidden_mode_stress": "PLAN_READY / NOT_RUN",
     "S4_pair_ensemble_test": "PLAN_READY / NOT_RUN",
@@ -48,10 +48,15 @@
     "hard_pilot": "NOT_REACHED",
     "scaled_render": "BLOCKED"
   },
+  "pronunciation_gate": {
+    "protocol_ready": true,
+    "phonetic_locks": 0,
+    "status": "OPEN_FAIL_CLOSED"
+  },
   "open_gates": [
     "ELEVENLABS_ACCOUNT_EXECUTION_CONTEXT",
     "REAL_PROVIDER_VOICE_CANDIDATE_IDS",
-    "SLOVENIAN_PRONUNCIATION_AUDITION_AND_LOCK",
+    "SLOVENIAN_PRONUNCIATION_LISTENING_OR_LOCAL_REFERENCE",
     "HUMAN_CAST_APPROVAL",
     "EXPLICIT_PROVIDER_SPEND_AUTHORIZATION",
     "IMMEDIATE_PRE_DISPATCH_EXACT_TEXT_HASH_RECHECK"
@@ -74,7 +79,11 @@
     "drive_ch01_execution_pack_zip_id": "1Acu_vzczRnj29ylbVbDJ1wpRwZoFDWYM",
     "drive_zero_cost_preflight_id": "1cNHAb89jYe7GYpBkUh3TuCYBrFgqtMCZ",
     "drive_casting_cascade_plan_id": "1aNmcN6LwMo2htV2wMDzrTNk_TCjH4I0r",
+    "drive_s0_dry_manifest_id": "1mLZrrYqEJEDHdMWPDndJ4BTPmGg-wtlR",
+    "drive_pronunciation_protocol_id": "1LguuPXSj361nRsYsh6jbIbXQauMY2KNB",
+    "drive_casting_scorecard_id": "1TGmEEgnrq55VE0NZB6Sz0D2ugA5Fabds",
+    "drive_current_state_id": "1kJtyuL6SmXpq_k1TlyG-d7TO3SV50Z8C",
     "policy": "Full exact-text segmentation/director/provider payload remains in Drive; public GitHub mirrors contracts, hashes and execution state only."
   },
-  "next_unblocked_obligation": "OBTAIN ELEVENLABS ACCOUNT EXECUTION CONTEXT, ENUMERATE ACTUAL AVAILABLE VOICES, BIND TEMPORARY S0 IDS; THEN RUN S0 ONLY AFTER EXPLICIT PROVIDER-SPEND AUTHORIZATION."
+  "next_unblocked_obligation": "WHEN ELEVENLABS ACCOUNT EXECUTION CONTEXT EXISTS: ENUMERATE ACTUAL VOICES -> BIND TEMPORARY S0 IDS -> REHASH EXACT_TEXT -> RUN FOUR S0 CALLS -> RECORD PROVENANCE/ALIGNMENT -> PASS/FAIL TO S1A."
 }
