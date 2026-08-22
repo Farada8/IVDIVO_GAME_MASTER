@@ -1,6 +1,6 @@
 {
-  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.4",
-  "updated": "2026-08-22T18:11:00+01:00",
+  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.5",
+  "updated": "2026-08-22T18:22:00+01:00",
   "project": "ROOM917",
   "episode": "E01",
   "authority": "THE_INSURABLE_FIRE",
@@ -37,6 +37,30 @@
       "pass_a_visible": ["OPAQUE_STEREO_TARGET", "SIX_LOCKED_LISTENER_QC_QUESTIONS"],
       "sealed_until_pass_a_notes_frozen": ["MACHINE_QC_STATUS", "MONO_FOLDDOWN", "PHONE_PROXY", "PASS_B_TARGETED_CANDIDATES", "TARGET_IDENTITY_KEY"],
       "forbidden_pass_a_contamination": ["RETENTION", "MARKET_APPEAL", "NEXT_EPISODE_INTENT", "KNOWN_DEFECT_HINTS"]
+    },
+    "p003b_selective_repair_compiler": {
+      "path": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_repair_compiler.py",
+      "merge_sha": "805d7bdf92065d0c7e16050aed5a11f53ee8964e",
+      "workflow_run_id": 32587428383,
+      "result": "PASS",
+      "requires": ["VERIFIED_TARGET_IDENTITY", "PASS_A_NOTES_FROZEN", "PASS_B_EXECUTED", "EXACT_INTERVAL", "ONE_OF_SIX_QC_CLASSES", "DIAGNOSED_FAILURE_LAYER", "REGRESSION_TESTS"],
+      "routes": {
+        "PERFORMANCE": "SELECTIVE_DIALOGUE_RERENDER",
+        "EDIT": "LOCAL_EDIT_TIMING_PATCH",
+        "MIX": "LOCAL_MIX_PATCH",
+        "SOUND_ASSET": "SELECTIVE_SOUND_ASSET_REPLACEMENT_OR_REGEN",
+        "UNKNOWN": "HOLD"
+      },
+      "hard_guards": ["NO_FATAL_AUTO_PATCH", "NO_WHOLE_OR_FULL_SCENE_EPISODE_RERENDER", "NO_STORY_REWRITE_AUTHORITY", "NO_RELEASE_AUTHORITY"],
+      "ru_performance_downstream": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_selective_repair_plan.py"
+    },
+    "sfx_blind_machine_preflight": {
+      "path": "AUDIO_PRODUCTION/ROOM917/ROOM917_SFX_BLIND_PACK_MACHINE_PREFLIGHT_v1.json",
+      "commit_sha": "41eeb5c8631a7460dcb9fcd5667a6343b4e30863",
+      "status": "PASS_WITH_OBSERVATIONS_NO_HUMAN_SELECTION",
+      "blind_pack_drive_file_id": "1f_CyKbptuLinX35fln6sB8klZOEpO7Lc",
+      "blind_pack_sha256": "8b66af4cf3a3fe728e476d83a9227be1d4bd1e3576f748212acaafefe80ebfdc",
+      "law": "MACHINE_PREFLIGHT_MAY_REJECT_IMPOSSIBLE_CANDIDATE_BUT_MAY_NOT_CHOOSE_X_Y_OR_APPROVE_AUDIO_CANON"
     }
   },
   "drive": {
@@ -74,7 +98,7 @@
     "older_named_master": "ROOM917_E01_SCENE3_MASTER_24BIT_48K.wav",
     "historical_binary_analysis_proven": true,
     "current_drive_audio_mime_search": "NO_ROOM917_AUDIO_FILES_FOUND",
-    "current_drive_zip_search": "NO_ROOM917_ZIP_FILES_FOUND",
+    "current_drive_zip_search": "NO_ROOM917_ZIP_FILES_FOUND_FOR_SCENE3_OR_FULL_MASTER",
     "current_file_library_pointer_search": "POINTER_METADATA_FOUND_IN_TOOLKIT_BUT_BINARY_OBJECT_NOT_RETURNED",
     "authority_documents": [
       "RED_TEAM_SCENE3_FORENSIC (1).md",
@@ -146,7 +170,10 @@
     "candidate_count": 0,
     "paid_synthesis_calls": 0,
     "human_listen_available": false,
-    "full_e01_render_allowed": false
+    "full_e01_render_allowed": false,
+    "performance_parity_contract": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PERFORMANCE_PARITY_CONTRACT_v1.0.json",
+    "selective_repair_downstream": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_selective_repair_plan.py",
+    "routing": "GENERIC_P003B_PERFORMANCE_DEFECT_THEN_RU_SPECIFIC_MAPPING_AND_SEPARATE_SPEND_GATE"
   },
   "repair_law": "NO_PATCH_FROM_TASTE_OR_METRICS_ALONE; ONLY VERIFIED_AUDIBLE_DEFECT -> SMALLEST_REPAIR -> REGRESSION",
   "story_rewrite": "FORBIDDEN_UNLESS_REAL_STORY_CONTINUITY_ERROR_AND_FOUNDER_REOPENS"
