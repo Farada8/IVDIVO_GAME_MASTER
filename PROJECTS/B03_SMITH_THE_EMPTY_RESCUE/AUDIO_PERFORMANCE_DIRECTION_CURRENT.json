@@ -1,0 +1,65 @@
+{
+  "schema": "ivdivo.b03.audio_performance_direction/1.0",
+  "updated": "2026-08-22",
+  "project": "B03 — THE EMPTY RESCUE",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "text_policy": "IMMUTABLE_EXACT_TEXT",
+  "status": "PERFORMANCE_DIRECTION_PASS_PROVIDER_INDEPENDENT_CAST_CARDINALITY_HOLD",
+  "authority": {
+    "full_speaker_gate_drive_id": "1adRFcqDWEpOjklzs8eklpIV_t3R_mUz6",
+    "speech_turns": 3714,
+    "unknown_speaker_ownership": 0,
+    "segmentation_drive_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
+    "segmentation_sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
+    "drive_performance_gate_id": "1O53P_iMiNSTNB39xXWhqphf3hTaZY44dXHGqnueq5zM",
+    "drive_machine_state_id": "1p1bReQ9wegjehOVV27ggwjwPWlwphdnr239fUXgWtLw",
+    "pre_quarantine_voice_architecture_drive_id": "17-qqoV4qutXRMV6SlxUqJFhO55VK3r9d",
+    "textual_speaker_ids_after_quarantine": null,
+    "max_cast_slots_after_quarantine": null,
+    "cast_architecture_rebase_required": true
+  },
+  "performance_states": [
+    "OBSERVATIONAL_BASELINE",
+    "CONTROLLED_URGENCY",
+    "FIELD_STRAIN",
+    "AFTERMATH_RESTRAINT",
+    "PRIVATE_LOW",
+    "INSTITUTIONAL_FORMAL",
+    "RECORDED_CHANNEL",
+    "READ_ALOUD_DOCUMENT",
+    "ANALYTIC_ADVISORY",
+    "EVIDENCE_REVIEW"
+  ],
+  "source_identity_quarantine": {
+    "packet_1": "PRECURSOR_SOURCE_CH24_PACKET_1",
+    "packet_2": "PRECURSOR_SOURCE_CH24_PACKET_2",
+    "inter_packet_identity": "UNKNOWN",
+    "metadata_merge_allowed": false,
+    "same_performer_later_implies_same_identity": false
+  },
+  "provider_evidence": {
+    "provider_access_verified": false,
+    "inventory": "NOT_RUN",
+    "candidate_voices": "NOT_RUN",
+    "human_audition": "NOT_RUN",
+    "pronunciation_audition": "NOT_RUN",
+    "voice_lock": "NOT_RUN",
+    "paid_synthesis": "NOT_RUN",
+    "wav": "NOT_RUN",
+    "alignment": "NOT_RUN",
+    "mix_master_qc": "NOT_RUN"
+  },
+  "routing": {
+    "live_casting_frontier_from_current_audio_state": "PRESERVE",
+    "provider_independent_parallel_gate": "SFX_AMBIENCE_MUSIC_AND_ACOUSTIC_PASSPORT_GATE"
+  },
+  "do_not": [
+    "DO_NOT_MUTATE_LOCKED_PROSE",
+    "DO_NOT_WRITE_CH30",
+    "DO_NOT_INVENT_ACCENT_OR_IPA",
+    "DO_NOT_ASSIGN_VOICE_ID_WITHOUT_CASTING_EVIDENCE",
+    "DO_NOT_COLLAPSE_CH24_PACKET_SOURCE_IDENTITIES",
+    "DO_NOT_TREAT_CAST_REUSE_AS_IDENTITY_PROOF",
+    "DO_NOT_REASSERT_PRE_QUARANTINE_CAST_CARDINALITY_WITHOUT_REBASE"
+  ]
+}
