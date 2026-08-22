@@ -1,0 +1,94 @@
+name: ROOM917 RU Native Discovery PR Probe
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/room917-ru-native-discovery-pr-probe.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/discover_ru_voice_candidates.py'
+
+permissions:
+  contents: read
+
+jobs:
+  discover-native-ru:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fail closed if ElevenLabs secret missing
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${ELEVENLABS_API_KEY:-}" ]; then
+            echo "::error::Repository secret ELEVENLABS_API_KEY is not configured for this same-repo PR run."
+            exit 2
+          fi
+
+      - name: Discover durable native-Russian professional voices
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _room917_ru_native_probe
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/discover_ru_voice_candidates.py \
+            --out _room917_ru_native_probe/RU_NATIVE_VOICE_DISCOVERY.json \
+            --min-notice-days 365 \
+            --page-size 100 \
+            --max-pages 3
+
+      - name: Add probe receipt
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          p=Path('_room917_ru_native_probe/RU_NATIVE_VOICE_DISCOVERY.json')
+          data=p.read_bytes()
+          row=json.loads(data.decode('utf-8'))
+          receipt={
+              'schema_version':'ivdivo.room917_ru_native_discovery_probe_receipt/1.0',
+              'provider':'ElevenLabs',
+              'tts_calls':0,
+              'paid_synthesis_calls':0,
+              'secret_persisted':False,
+              'candidate_count':row.get('candidate_count'),
+              'snapshot_sha256':hashlib.sha256(data).hexdigest(),
+              'policy':row.get('query_policy'),
+          }
+          Path('_room917_ru_native_probe/PROBE_RECEIPT.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+
+      - name: Upload sanitized native-RU discovery artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_RU_NATIVE_DISCOVERY_PROBE
+          path: _room917_ru_native_probe/
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Summary
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          row=json.loads(Path('_room917_ru_native_probe/RU_NATIVE_VOICE_DISCOVERY.json').read_text(encoding='utf-8'))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
+              f.write('## ROOM917 RU native discovery probe\n')
+              f.write(f"- native RU professional voices: {row['candidate_count']}\n")
+              f.write('- minimum notice period: 365 days\n')
+              f.write('- paid synthesis calls: 0\n')
+              f.write('- secret persisted: false\n')
+              f.write('- artifact: ROOM917_RU_NATIVE_DISCOVERY_PROBE\n')
+          PY
