@@ -1,0 +1,35 @@
+{
+  "schema": "ivdivo.general_business.agent_commerce_scanner/0.1",
+  "date": "2026-08-22",
+  "prompt": "P-EW01",
+  "status": "IMPLEMENTED_PENDING_EXACT_HEAD_CI_AND_DRIVE_READBACK",
+  "parent_candidate": "OW-01_AGENTIC_COMMERCE_MERCHANT_READINESS",
+  "ruleset_version": "2026-08-22.1",
+  "deliverables": {
+    "spec": "00_SPEC.md",
+    "runtime": "scanner.py",
+    "tests": "tests/test_scanner.py",
+    "workflow": ".github/workflows/general-business-agent-commerce-scanner-v0.yml"
+  },
+  "rule_families": {
+    "openai_feed": ["OAI-FEED-00", "OAI-FEED-01", "OAI-FEED-02", "OAI-FEED-03", "OAI-FEED-04", "OAI-FEED-05", "OAI-FEED-06"],
+    "ucp": ["UCP-00", "UCP-01", "UCP-02", "UCP-03", "UCP-04", "UCP-05", "UCP-06", "UCP-07", "UCP-08", "UCP-09", "UCP-10", "UCP-11"]
+  },
+  "canary_count": 8,
+  "exact_head_ci": null,
+  "drive": {
+    "document_id": null,
+    "semantic_readback": false
+  },
+  "p_ew01_executed": false,
+  "p_ew02_executed": false,
+  "proof_boundary": {
+    "public_evidence_ceiling": "E2_PLUS",
+    "platform_approval": false,
+    "wtp": "UNKNOWN",
+    "transaction": "NONE",
+    "profitability": "UNPROVEN"
+  },
+  "external_action_authorized": false,
+  "next_gate": "EXACT_HEAD_CI_THEN_DRIVE_READBACK_THEN_P-EW01_CLOSE"
+}
