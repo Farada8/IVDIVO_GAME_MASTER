@@ -1,1 +1,67 @@
-{"schema_version":"1.1","updated":"2026-08-21","project_id":"IVDIVO_BOOK_3_SMITH","title":"SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE","status":"PREPARED_PRE_PROSE_NOT_ACTIVE_UNTIL_D01_FOUNDER_LOCK","portfolio_precondition":{"active_project":"D01_THE_WIFE_AT_HIS_WEDDING","required_event":"FOUNDER_EXPLICIT_LOCK_FOR_D01_PLUS_PERSISTENCE_READBACK"},"prepared_frontier":"WORKING_SCENE_CARDS_CH1_CH29_PLUS_CYCLE32_ENGINEERING","cycle32":{"drive_folder_id":"1faAfasqcsYCgHCOHAla7tKrpDCgoK9Rp","prompts_executed":32,"modules":32,"contracts":32,"proofs":32,"protocols":32,"next_prompts_designed":64},"prepared_red_team":{"fatal":0,"blocking_major":1,"open_major":"SMITH_PERSONAL_FAMILY_CONTINUITY_AFTER_B03_ACTIVATION"},"prose_authorized":false,"next_obligation":"WAIT_FOR_D01_FOUNDER_LOCK. After D01 lock persistence closure, fresh-rebase B03; resolve remaining Founder gate; rerun N24-N47; CH1 only if FATAL=0 and MAJOR=0."}
+{
+  "schema_version": "2.1",
+  "updated": "2026-08-22",
+  "project_id": "IVDIVO_BOOK_3_SMITH",
+  "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+  "status": "ACTIVE_WORKING_PROSE_CH19_PASS_CH20_AUTHORIZED",
+  "story_lock": false,
+  "activation": {
+    "d01_founder_lock_precondition": "CLOSED",
+    "d01_state": "FOUNDER_LOCKED_E01_E120_RECORDING_AUTHORITY_ISSUED"
+  },
+  "founder_f1": {
+    "authority_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_F1_CANON_LOCK_AND_PREPROSE_GATE_v1.0.md",
+    "drive_id": "1EkmIwNmE9kkZ6RBfeMZzQ6L-AbLKaPIcT5r8mU_PsU0",
+    "canon": "SMITH_HAS_A_TEENAGE_DAUGHTER_IN_CURRENT_SAGA_PERIOD",
+    "working_age": "16_17_PENDING_TIMELINE_NORMALIZATION",
+    "unknown_do_not_invent": ["DAUGHTER_NAME","MOTHER_NAME","EXACT_MARITAL_HISTORY","CUSTODY_OR_HOUSEHOLD_STRUCTURE","OCCUPATIONS","CONTACT_SCHEDULE"]
+  },
+  "pre_prose_gate": {"fatal":0,"blocking_major":0,"prose_authorized":true},
+  "drive": {
+    "cycle32_folder_id": "1faAfasqcsYCgHCOHAla7tKrpDCgoK9Rp",
+    "cycle32b_story_production_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+    "ch13_ch18_block_gate_id": "15VHNFSF5lBDoNnyJIeI_S9TNAawKlwJ0w4AK_vlCmxA",
+    "ch19_ch24_rebase_gate_id": "1GsELpV6PqpKKKguLzOAzDCouOYxhOIWVsSdf9K9rk-4",
+    "ch19_manuscript_id": "1ngQwNpSTTawUxz7DkWMiYOdM4DBRL49QpCT_HqOMfXw",
+    "ch19_local_gate_id": "1XCid-Pzagb0oV9V0ljs4kVy9e3Vfph-pQlvGxFNzf50"
+  },
+  "verified_block_state": {
+    "ch13_ch18": {"status":"PASS_AFTER_TARGETED_RHETORICAL_REPAIR","fatal":0,"blocking_major":0},
+    "ch19_ch24_rebase": {"status":"PASS_FOR_PROSE","fatal":0,"blocking_major":0},
+    "ch19_local_gate": {"status":"PASS_AFTER_TARGETED_CAUSAL_FUNCTION_REPAIR","initial_blocking_major":1,"repaired_major":"CH23_FUNCTION_SPENT_EARLY","fatal":0,"blocking_major":0}
+  },
+  "manuscript_frontier": {
+    "completed_with_drive_evidence": "CH01_CH19",
+    "latest_passed": "CH19_THE_REAL_STORM",
+    "latest_passed_drive_id": "1ngQwNpSTTawUxz7DkWMiYOdM4DBRL49QpCT_HqOMfXw",
+    "ch20_authorized": true,
+    "ch20_title": "BLACKOUT"
+  },
+  "hard_invariants": [
+    "LOCAL_SLOVENIAN_RESCUE_AUTHORITY_REMAINS_LOCAL",
+    "CONFEDERATION_KNOWLEDGE_NEQ_EARTH_JURISDICTION",
+    "ONTOLOGY_REMAINS_UNKNOWN",
+    "PRECURSOR_CONTENT_IS_UNVERIFIED_OBSERVATION_NOT_COMMAND",
+    "FAILOVER_RECENTRALIZATION_PAYOFF_RESERVED_FOR_CH23",
+    "DISTRIBUTED_RESCUE_MUST_SHOW_BENEFIT_AND_PRICE",
+    "ANDREJ_TINA_MAJA_ARE_MANUSCRIPT_CONTINUITY_NOT_PLACEHOLDERS",
+    "SMITH_DAUGHTER_CONTINUITY_OBEYS_F1_LIMITS"
+  ],
+  "ch20_hard_conditions": [
+    "OES_BLACKOUT_CASE_MUST_BE_GENUINELY_DEFENSIBLE",
+    "TAREN_MAY_IDENTIFY_SYSTEM_RISK_BUT_NOT_COMMAND_EARTH_OR_PRICE_CASUALTIES",
+    "JANA_MUST_SET_OPERATIONAL_ACCEPTANCE_CRITERION",
+    "NO_EQUAL_AIRTIME_EXPERT_PANEL",
+    "KEEP_HYDRO_AND_RESOURCE_PRESSURE_ACTIVE",
+    "DO_NOT_SPEND_CH23_FAILOVER_PAYOFF"
+  ],
+  "next_obligation": "DRAFT_CH20_BLACKOUT_FROM_ACTUAL_CH19_PASS_FRONTIER",
+  "next_after_draft": "RUN_CH20_LOCAL_STORY_HUMAN_SCENE_CONTINUITY_GATE",
+  "do_not": [
+    "DO_NOT_REVERT_TO_WAIT_FOR_D01_LOCK",
+    "DO_NOT_REOPEN_F1_WITHOUT_NEWER_FOUNDER_INSTRUCTION",
+    "DO_NOT_RESET_STORM_OR_RESOURCE_MAP",
+    "DO_NOT_DRAFT_FROM_STALE_GITHUB_CARDS",
+    "DO_NOT_BULK_REWRITE_PASSED_CHAPTERS_WITHOUT_NEW_FATAL_MAJOR_EVIDENCE"
+  ]
+}
