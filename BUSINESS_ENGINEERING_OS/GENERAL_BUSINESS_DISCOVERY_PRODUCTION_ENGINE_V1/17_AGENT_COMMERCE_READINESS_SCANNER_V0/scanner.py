@@ -7,13 +7,12 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
-RULESET_VERSION = "2026-08-22.1"
+RULESET_VERSION = "2026-08-22.2"
 KNOWN_UCP_VERSIONS = {"2026-04-08", "2026-01-23"}
+UCP_TRANSPORTS = {"rest", "mcp", "a2a", "embedded"}
 EVIDENCE_STATES = {"OBSERVED_PUBLIC", "PROBED_PUBLIC", "MERCHANT_DECLARED", "UNKNOWN", "NOT_APPLICABLE"}
 OUTCOMES = {"PASS", "FAIL", "UNKNOWN", "NOT_APPLICABLE"}
 
-# OpenAI Agentic Commerce product-feed fields that are required in the current
-# non-Ads file-upload product schema, plus geo fields marked Required.
 OAI_REQUIRED = (
     "is_eligible_search", "is_eligible_checkout",
     "item_id", "title", "description", "url", "brand", "image_url",
@@ -64,13 +63,11 @@ def check_feed(snapshot: dict[str, Any]) -> list[Finding]:
         if not isinstance(product, dict):
             out.append(finding("OAI-FEED-02", "FAIL", "OPENAI_FEED", f"{tag} is not an object.", state))
             continue
-
         missing = [key for key in OAI_REQUIRED if product.get(key) in (None, "", [])]
-        if missing:
-            out.append(finding("OAI-FEED-02", "FAIL", "OPENAI_FEED", f"{tag} missing required fields: {', '.join(missing)}.", state))
-        else:
-            out.append(finding("OAI-FEED-02", "PASS", "OPENAI_FEED", f"{tag} contains scanner-required OpenAI feed fields.", state))
-
+        out.append(finding(
+            "OAI-FEED-02", "FAIL" if missing else "PASS", "OPENAI_FEED",
+            f"{tag} missing required fields: {', '.join(missing)}." if missing else f"{tag} contains scanner-required OpenAI feed fields.", state,
+        ))
         if product.get("is_eligible_checkout") is True and product.get("is_eligible_search") is not True:
             out.append(finding("OAI-FEED-03", "FAIL", "OPENAI_FEED", f"{tag} checkout=true requires search=true.", state))
         else:
@@ -95,23 +92,46 @@ def check_feed(snapshot: dict[str, Any]) -> list[Finding]:
 
         if product.get("is_eligible_checkout") is True:
             missing_policy = [key for key in ("seller_privacy_policy", "seller_tos") if not product.get(key)]
-            if missing_policy:
-                out.append(finding("OAI-FEED-06", "FAIL", "OPENAI_FEED", f"{tag} checkout=true missing {', '.join(missing_policy)}.", state))
-            else:
-                out.append(finding("OAI-FEED-06", "PASS", "OPENAI_FEED", f"{tag} checkout seller policy links present.", state))
+            out.append(finding(
+                "OAI-FEED-06", "FAIL" if missing_policy else "PASS", "OPENAI_FEED",
+                f"{tag} checkout=true missing {', '.join(missing_policy)}." if missing_policy else f"{tag} checkout seller policy links present.", state,
+            ))
         else:
             out.append(finding("OAI-FEED-06", "NOT_APPLICABLE", "OPENAI_FEED", f"{tag} not marked checkout eligible.", state))
-
     return out
 
 
-def _shopping_service(profile: dict[str, Any]) -> dict[str, Any] | None:
-    services = ((profile.get("ucp") or {}).get("services") or {}).get("dev.ucp.shopping")
-    if isinstance(services, list) and services:
-        return services[0] if isinstance(services[0], dict) else None
-    if isinstance(services, dict):
-        return services
-    return None
+def _shopping_services(profile: dict[str, Any]) -> list[dict[str, Any]]:
+    raw = ((profile.get("ucp") or {}).get("services") or {}).get("dev.ucp.shopping")
+    if isinstance(raw, dict):
+        return [raw]
+    if isinstance(raw, list):
+        return [item for item in raw if isinstance(item, dict)]
+    return []
+
+
+def _validate_service_binding(service: dict[str, Any]) -> list[str]:
+    transport = service.get("transport")
+    missing: list[str] = []
+    for key in ("version", "spec", "transport"):
+        if not service.get(key):
+            missing.append(key)
+    if transport not in UCP_TRANSPORTS:
+        missing.append(f"supported_transport({transport!r})")
+        return missing
+    # UCP 2026-04-08 transport-specific profile requirements:
+    # REST/MCP need schema+endpoint; A2A needs endpoint; Embedded needs schema.
+    if transport in {"rest", "mcp"}:
+        for key in ("schema", "endpoint"):
+            if not service.get(key):
+                missing.append(key)
+    elif transport == "a2a":
+        if not service.get("endpoint"):
+            missing.append("endpoint")
+    elif transport == "embedded":
+        if not service.get("schema"):
+            missing.append("schema")
+    return missing
 
 
 def check_ucp(snapshot: dict[str, Any]) -> list[Finding]:
@@ -125,7 +145,6 @@ def check_ucp(snapshot: dict[str, Any]) -> list[Finding]:
     status = block.get("well_known_http_status")
     profile = block.get("profile")
     out: list[Finding] = []
-
     if status != 200:
         out.append(finding("UCP-01", "FAIL" if status is not None else "UNKNOWN", "UCP", f"/.well-known/ucp HTTP status={status!r}; public 200 required for discovery.", state))
         return out
@@ -139,7 +158,8 @@ def check_ucp(snapshot: dict[str, Any]) -> list[Finding]:
         out.append(finding("UCP-03", "FAIL", "UCP", "HTTP 200 observed but no parsed UCP profile object supplied.", state))
         return out
 
-    version = (profile.get("ucp") or {}).get("version")
+    ucp = profile.get("ucp") or {}
+    version = ucp.get("version")
     if not version:
         out.append(finding("UCP-04", "FAIL", "UCP", "UCP profile has no version.", state))
     elif version in KNOWN_UCP_VERSIONS:
@@ -147,68 +167,101 @@ def check_ucp(snapshot: dict[str, Any]) -> list[Finding]:
     else:
         out.append(finding("UCP-04", "UNKNOWN", "UCP", f"UCP version {version} not in ruleset allowlist; refresh spec before judging.", state))
 
-    service = _shopping_service(profile)
-    if not service:
-        out.append(finding("UCP-05", "FAIL", "UCP", "No dev.ucp.shopping service declared.", state))
+    services = _shopping_services(profile)
+    if not services:
+        out.append(finding("UCP-05", "FAIL", "UCP", "No dev.ucp.shopping service binding declared.", state))
+        transports: set[str] = set()
     else:
-        missing = [key for key in ("version", "spec", "schema", "endpoint") if not service.get(key)]
-        if service.get("transport") not in ("rest", None):
-            missing.append("supported_transport(rest)")
-        detail = "missing/invalid: " + ", ".join(missing) if missing else "declares version/spec/schema/endpoint."
-        out.append(finding("UCP-05", "FAIL" if missing else "PASS", "UCP", "Shopping service " + detail, state))
+        invalid: list[str] = []
+        transports = set()
+        for idx, service in enumerate(services):
+            transport = service.get("transport")
+            if isinstance(transport, str):
+                transports.add(transport)
+            missing = _validate_service_binding(service)
+            if missing:
+                invalid.append(f"binding[{idx}] {','.join(missing)}")
+        out.append(finding(
+            "UCP-05", "FAIL" if invalid else "PASS", "UCP",
+            "Invalid shopping bindings: " + "; ".join(invalid) if invalid else f"Valid shopping transport bindings: {', '.join(sorted(transports))}.", state,
+        ))
 
-    capabilities = (profile.get("ucp") or {}).get("capabilities") or {}
+    if "payment_handlers" not in ucp:
+        out.append(finding("UCP-05P", "FAIL", "UCP", "ucp.payment_handlers registry is required even when empty.", state))
+    elif not isinstance(ucp.get("payment_handlers"), dict):
+        out.append(finding("UCP-05P", "FAIL", "UCP", "ucp.payment_handlers must be an object registry.", state))
+    else:
+        out.append(finding("UCP-05P", "PASS", "UCP", "ucp.payment_handlers registry is present.", state))
+
+    capabilities = ucp.get("capabilities") or {}
     checkout = "dev.ucp.shopping.checkout" in capabilities
-    out.append(finding("UCP-06", "PASS" if checkout else "FAIL", "UCP", "Checkout capability " + ("declared." if checkout else "not declared."), state))
+    out.append(finding("UCP-06", "PASS" if checkout else "FAIL", "UCP", "Checkout capability " + ("declared." if checkout else "not declared for checkout-readiness target."), state))
 
-    if checkout:
+    if checkout and "rest" in transports:
         endpoints = block.get("checkout_endpoints") or {}
         required = ("create", "update", "complete")
         values = [endpoints.get(key) for key in required]
         if any(value is False for value in values):
             failed = [key for key in required if endpoints.get(key) is False]
-            out.append(finding("UCP-07", "FAIL", "UCP", f"Checkout endpoint probe failed: {', '.join(failed)}.", state))
+            out.append(finding("UCP-07", "FAIL", "UCP", f"REST checkout endpoint probe failed: {', '.join(failed)}.", state))
         elif any(value is None for value in values):
             unknown = [key for key in required if endpoints.get(key) is None]
-            out.append(finding("UCP-07", "UNKNOWN", "UCP", f"Checkout endpoints unprobed: {', '.join(unknown)}.", state))
+            out.append(finding("UCP-07", "UNKNOWN", "UCP", f"REST checkout endpoints unprobed: {', '.join(unknown)}.", state))
         else:
-            out.append(finding("UCP-07", "PASS", "UCP", "Create/update/complete checkout endpoints observed available.", state))
+            out.append(finding("UCP-07", "PASS", "UCP", "REST create/update/complete checkout endpoints observed available.", state))
+    elif checkout:
+        out.append(finding("UCP-07", "NOT_APPLICABLE", "UCP", "REST endpoint probes are not applicable to non-REST-only service bindings.", state))
     else:
         out.append(finding("UCP-07", "NOT_APPLICABLE", "UCP", "Checkout endpoint checks require checkout capability.", state))
 
     identity = block.get("identity_path")
     if identity == "guest":
-        out.append(finding("UCP-08", "PASS", "UCP", "Guest checkout path declared.", state))
+        out.append(finding("UCP-08", "PASS", "UCP", "Guest checkout path declared/observed by admissible input.", state))
     elif identity == "identity_linking":
         oauth = block.get("oauth_metadata_public")
         outcome = "PASS" if oauth is True else ("FAIL" if oauth is False else "UNKNOWN")
         out.append(finding("UCP-08", outcome, "UCP", "Identity linking requires public OAuth authorization-server metadata.", state))
     elif identity is None:
-        out.append(finding("UCP-08", "UNKNOWN", "UCP", "User identification path not supplied.", state))
+        out.append(finding("UCP-08", "UNKNOWN", "UCP", "User identification path not supplied; public profile alone may not resolve it.", state))
     else:
         out.append(finding("UCP-08", "FAIL", "UCP", f"Unrecognized identity_path={identity!r}.", state))
 
     order = "dev.ucp.shopping.order" in capabilities
     if order:
-        events = set(block.get("order_events") or [])
-        required_events = {"created", "shipped", "delivered"}
-        missing_events = sorted(required_events - events)
-        detail = f"missing events: {', '.join(missing_events)}." if missing_events else "covers created/shipped/delivered."
-        out.append(finding("UCP-09", "FAIL" if missing_events else "PASS", "UCP", "Order lifecycle " + detail, state))
+        if "order_events" not in block:
+            out.append(finding("UCP-09", "UNKNOWN", "UCP", "Order lifecycle events are not proven by the supplied evidence.", state))
+        else:
+            events = set(block.get("order_events") or [])
+            required_events = {"created", "shipped", "delivered"}
+            missing_events = sorted(required_events - events)
+            out.append(finding(
+                "UCP-09", "FAIL" if missing_events else "PASS", "UCP",
+                f"Order lifecycle missing events: {', '.join(missing_events)}." if missing_events else "Order lifecycle covers created/shipped/delivered.", state,
+            ))
 
-        keys = profile.get("keys") or profile.get("signing_keys")
-        out.append(finding("UCP-10", "PASS" if keys else "FAIL", "UCP", "Signing key material " + ("declared." if keys else "missing from supplied profile."), state))
-
-        signed = block.get("order_request_signing")
-        outcome = "PASS" if signed is True else ("FAIL" if signed is False else "UNKNOWN")
-        out.append(finding("UCP-11", outcome, "UCP", "Order webhook request-signing probe/declaration.", state))
+        webhook = block.get("order_webhook_enabled")
+        if webhook is True:
+            keys = profile.get("keys") or profile.get("signing_keys")
+            out.append(finding("UCP-10", "PASS" if keys else "FAIL", "UCP", "Signing key material " + ("declared." if keys else "missing for declared webhook flow."), state))
+            signed = block.get("order_request_signing")
+            outcome = "PASS" if signed is True else ("FAIL" if signed is False else "UNKNOWN")
+            out.append(finding("UCP-11", outcome, "UCP", "Order webhook request-signing probe/declaration.", state))
+        elif webhook is False:
+            out.extend([
+                finding("UCP-10", "NOT_APPLICABLE", "UCP", "Signing-key webhook check not applicable: webhook flow marked disabled.", state),
+                finding("UCP-11", "NOT_APPLICABLE", "UCP", "Webhook signing check not applicable: webhook flow marked disabled.", state),
+            ])
+        else:
+            out.extend([
+                finding("UCP-10", "UNKNOWN", "UCP", "Order capability observed but webhook delivery mode is unproven.", state),
+                finding("UCP-11", "UNKNOWN", "UCP", "Order capability observed but webhook signing state is unproven.", state),
+            ])
     else:
         out.extend([
             finding("UCP-09", "NOT_APPLICABLE", "UCP", "Order capability not declared.", state),
-            finding("UCP-10", "NOT_APPLICABLE", "UCP", "Order signing-key check requires order capability.", state),
-            finding("UCP-11", "NOT_APPLICABLE", "UCP", "Order signing probe requires order capability.", state),
+            finding("UCP-10", "NOT_APPLICABLE", "UCP", "Order signing-key check requires a relevant order webhook flow.", state),
+            finding("UCP-11", "NOT_APPLICABLE", "UCP", "Order signing probe requires a relevant order webhook flow.", state),
         ])
-
     return out
 
 
@@ -227,7 +280,7 @@ def scan(snapshot: dict[str, Any]) -> dict[str, Any]:
     findings = check_feed(snapshot) + check_ucp(snapshot)
     counts = {key: sum(item.outcome == key for item in findings) for key in sorted(OUTCOMES)}
     return {
-        "schema": "ivdivo.agent_commerce.readiness_scan/0.1",
+        "schema": "ivdivo.agent_commerce.readiness_scan/0.2",
         "ruleset_version": RULESET_VERSION,
         "merchant_id": snapshot.get("merchant_id"),
         "disposition": classify(findings),
@@ -237,6 +290,7 @@ def scan(snapshot: dict[str, Any]) -> dict[str, Any]:
             "readiness_not_platform_approval": True,
             "machine_readable_not_checkout_ready": True,
             "public_observation_not_merchant_declaration": True,
+            "transport_binding_specific_requirements": True,
             "unknown_not_fail": True,
             "unknown_not_pass": True,
         },
