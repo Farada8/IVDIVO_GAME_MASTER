@@ -1,0 +1,33 @@
+{
+  "schema_version": "room917.sfx_asset_factory/2.0",
+  "status": "MACHINE_QC_PASS_HUMAN_BLIND_GATE_PENDING",
+  "authority": {
+    "S13_INTERNAL_DOUBLE_RING_OLD": "sharp ordinary old internal telephone double ring; no horror processing",
+    "S14_UNMARKED_GLASS_LAMP_PING": "same material family as 916, spatially distinct",
+    "S17_COPPER_HISS": "narrow intimate low-voltage old-line texture; authentic line has no steady 50 Hz hum",
+    "S19_TWO_PART_LINE_CUT": "two mechanically distinct interruptions, then silence"
+  },
+  "continuity_rule": "S13/S14 reuse byte-identical A02 candidates; no regeneration drift.",
+  "format": "48 kHz / 24-bit PCM WAV",
+  "records": [
+    {"asset_id":"S13_INTERNAL_DOUBLE_RING_OLD","candidate":1,"sha256":"4d09c08641653a2b51fa7dcb58ac0886982cf3d7646b3f17e261ef1211f90ec3","duration_s":1.75,"peak_dbfs":-5.5,"rms_dbfs":-21.324,"machine_qc":"PASS","provenance":"BYTE_IDENTICAL_ALIAS_OF:A02_M01_917_DOUBLE_INTERNAL_RING"},
+    {"asset_id":"S13_INTERNAL_DOUBLE_RING_OLD","candidate":2,"sha256":"c0a49109874361cfe92731815d9bf4b44416bf2b9085b41181d25384d2791c35","duration_s":1.75,"peak_dbfs":-5.5,"rms_dbfs":-21.691,"machine_qc":"PASS","provenance":"BYTE_IDENTICAL_ALIAS_OF:A02_M01_917_DOUBLE_INTERNAL_RING"},
+    {"asset_id":"S14_UNMARKED_GLASS_LAMP_PING","candidate":1,"sha256":"f2ab1c2a7d0310786317fdce646900a7a8506f3c03b46b9c693fdac2d8f998d9","duration_s":0.72,"peak_dbfs":-9.501,"rms_dbfs":-28.032,"machine_qc":"PASS","provenance":"BYTE_IDENTICAL_ALIAS_OF:A02_M02_UNMARKED_GLASS_LAMP_PING"},
+    {"asset_id":"S14_UNMARKED_GLASS_LAMP_PING","candidate":2,"sha256":"4df58f742340c5e9a16108f6bd82ca10e1125cb92c7cf803385e5fb4b890527b","duration_s":0.72,"peak_dbfs":-9.856,"rms_dbfs":-27.75,"machine_qc":"PASS","provenance":"BYTE_IDENTICAL_ALIAS_OF:A02_M02_UNMARKED_GLASS_LAMP_PING"},
+    {"asset_id":"S17_COPPER_HISS","candidate":1,"sha256":"87786a1e4e7cba5702798434c5da1d731b58c61f7a8cc060f1c1f5fd44b33e56","duration_s":2.4,"peak_dbfs":-11.0,"rms_dbfs":-23.861,"machine_qc":"PASS","provenance":"NEW_PROCEDURAL_CANDIDATE","50hz_vs_hiss_band_db":-120.02,"no_steady_50hz_qc":"PASS"},
+    {"asset_id":"S17_COPPER_HISS","candidate":2,"sha256":"7b152b60e88dcd1025d28a16aea132f64dd98d0272ad4a1d670e995fa31cd176","duration_s":2.4,"peak_dbfs":-11.0,"rms_dbfs":-24.174,"machine_qc":"PASS","provenance":"NEW_PROCEDURAL_CANDIDATE","50hz_vs_hiss_band_db":-122.84,"no_steady_50hz_qc":"PASS"},
+    {"asset_id":"S19_TWO_PART_LINE_CUT","candidate":1,"sha256":"87392b10aef53771097502819949267775fb0664a71f342aa6e7c3a30a675eb7","duration_s":1.55,"peak_dbfs":-6.5,"rms_dbfs":-31.46,"machine_qc":"PASS","provenance":"NEW_PROCEDURAL_CANDIDATE","post_cut_peak_dbfs":-999,"hard_silence_qc":"PASS"},
+    {"asset_id":"S19_TWO_PART_LINE_CUT","candidate":2,"sha256":"a6cadfb87583d8b344a628c748deb65dbf75fabe8a91e3eeddb71fb3c4eb7827","duration_s":1.55,"peak_dbfs":-6.5,"rms_dbfs":-32.925,"machine_qc":"PASS","provenance":"NEW_PROCEDURAL_CANDIDATE","post_cut_peak_dbfs":-999,"hard_silence_qc":"PASS"}
+  ],
+  "alias_registry": [
+    {"canonical_cue_id":"S13_INTERNAL_DOUBLE_RING_OLD","source_asset_id":"A02_M01_917_DOUBLE_INTERNAL_RING","candidate":1,"byte_identity":"PASS","sha256":"4d09c08641653a2b51fa7dcb58ac0886982cf3d7646b3f17e261ef1211f90ec3"},
+    {"canonical_cue_id":"S13_INTERNAL_DOUBLE_RING_OLD","source_asset_id":"A02_M01_917_DOUBLE_INTERNAL_RING","candidate":2,"byte_identity":"PASS","sha256":"c0a49109874361cfe92731815d9bf4b44416bf2b9085b41181d25384d2791c35"},
+    {"canonical_cue_id":"S14_UNMARKED_GLASS_LAMP_PING","source_asset_id":"A02_M02_UNMARKED_GLASS_LAMP_PING","candidate":1,"byte_identity":"PASS","sha256":"f2ab1c2a7d0310786317fdce646900a7a8506f3c03b46b9c693fdac2d8f998d9"},
+    {"canonical_cue_id":"S14_UNMARKED_GLASS_LAMP_PING","source_asset_id":"A02_M02_UNMARKED_GLASS_LAMP_PING","candidate":2,"byte_identity":"PASS","sha256":"4df58f742340c5e9a16108f6bd82ca10e1125cb92c7cf803385e5fb4b890527b"}
+  ],
+  "lamp_family_discriminability": [
+    {"candidate":1,"marked_916_centroid_hz":3857.6,"unmarked_917_centroid_hz":4232.1,"centroid_delta_hz":374.5,"peak_delta_db":3.0,"machine_distinctness_qc":"PASS"},
+    {"candidate":2,"marked_916_centroid_hz":3935.1,"unmarked_917_centroid_hz":4340.0,"centroid_delta_hz":404.9,"peak_delta_db":3.24,"machine_distinctness_qc":"PASS"}
+  ],
+  "human_acceptance": "PENDING"
+}
