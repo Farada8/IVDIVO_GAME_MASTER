@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.post_render_engineering_manifest/2.2",
+  "schema_version": "room917.post_render_engineering_manifest/2.4",
   "status": "PROJECT_PILOT_PASS_DOMAIN_PROMOTION_HOLD",
   "project": "ROOM917",
   "episode": "E01",
@@ -12,6 +12,9 @@
     "sound_asset_binding_gate.py",
     "room_bed_patch_renderer.py",
     "regression_gate.py",
+    "build_derived_master_provenance.py",
+    "release_translation_qc.py",
+    "p003b_listener_package_builder.py",
     "post_render_pipeline.py",
     "post_render_router.py",
     "self_improvement_adapter.py"
@@ -21,29 +24,53 @@
     "contract": "AUTHORITY_HYGIENE_CONTRACT_v1.json",
     "integration": ["cue_lineage_compiler.py","post_render_pipeline.py"],
     "targeted_tests": "5 PASS",
-    "tested_cases": [
-      "CURRENT_EXACT_ID_REVISION_TITLE_PASS",
-      "CURRENT_CONTENT_MARKERS_PASS",
-      "LEGACY_MARA_50HZ_CONFLICT_QUARANTINE",
-      "SAME_ID_CHANGED_REVISION_HOLD",
-      "UNKNOWN_SOURCE_HOLD"
-    ]
+    "tested_cases": ["CURRENT_EXACT_ID_REVISION_TITLE_PASS","CURRENT_CONTENT_MARKERS_PASS","LEGACY_MARA_50HZ_CONFLICT_QUARANTINE","SAME_ID_CHANGED_REVISION_HOLD","UNKNOWN_SOURCE_HOLD"]
   },
   "sound_asset_identity": {
     "contract": "../../SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
     "candidate_template": "../../SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_CANDIDATES_TEMPLATE_v1.json",
+    "generation_queue": "../../SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json",
     "gate": "sound_asset_binding_gate.py",
     "renderer": "room_bed_patch_renderer.py",
     "recommended_runner": "RUN_P004A_IDENTITY_GATED_PATCH_AND_REGRESSION.ps1",
     "renderer_defense_in_depth": "REQUIRES_IDENTITY_GATE_PASS_AND_RECHECKS_SHA256",
-    "synthetic_targeted_checks": "2 EXPECTED OUTCOMES PASS: VALID_48K_24BIT_STEREO_IDENTITY=>PASS; SHA_OR_FALSE_CLUE_AUDIT_FAILURE=>HOLD",
-    "current_production_assets": "UNBOUND_UNTIL_REAL_CANDIDATE_BYTES_AUDITIONED"
+    "synthetic_targeted_checks": "VALID_IDENTITY_PASS; TAMPER_OR_FALSE_CLUE_AUDIT=>HOLD",
+    "current_production_assets": "A01_A02_REAL_BYTES_NOT_FOUND_AND_UNBOUND"
+  },
+  "derived_candidate_provenance": {
+    "contract": "../../SOUND_DESIGN/ROOM917_E01_DERIVED_MASTER_PROVENANCE_CONTRACT_v1.json",
+    "builder": "build_derived_master_provenance.py",
+    "schema": "room917.derived_master_provenance/1.1",
+    "source_requirement": "EXACT_SOURCE_BYTES_MUST_HASH_TO_231C501E...F88A8",
+    "direct_evidence": "BUILDER_REPEATS_BYTE_REGRESSION_INDEPENDENTLY_OF_REGRESSION_REPORT",
+    "required_direct_checks": ["FORMAT_DURATION_STABILITY","SCENE3_BYTES_UNCHANGED","UNAUTHORIZED_RANGES_UNCHANGED","AUTHORIZED_PATCH_RANGE_CHANGED"]
+  },
+  "release_translation_qc": {
+    "profile": "../../SOUND_DESIGN/ROOM917_E01_RELEASE_TRANSLATION_QC_PROFILE_v1.json",
+    "tool": "release_translation_qc.py",
+    "schema": "room917.release_translation_machine_qc/1.3",
+    "source_mode": "EXACT_SOURCE_SHA_REQUIRED",
+    "derived_mode": "PROVENANCE_1_1_PLUS_ACCESSIBLE_EXACT_SOURCE_PLUS_DIRECT_BYTE_REGRESSION_REQUIRED",
+    "translation_outputs": ["MONO_FOLDDOWN_QC_PROXY","PHONE_BAND_MONO_QC_PROXY"],
+    "stereo_law": "HIGH_CORRELATION_IS_DIAGNOSTIC_NOT_AUTOMATIC_FAILURE",
+    "human_substitution_forbidden": true
+  },
+  "p003b_human_gate": {
+    "result_contract": "../../ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json",
+    "contract_schema": "ivdivo.room917_p003b_listener_qc_result/1.2",
+    "package_builder": "p003b_listener_package_builder.py",
+    "blind_package": "OPAQUE_STEREO_TARGET_PLUS_PASS_C_MONO_AND_PHONE_PROXY_WHEN_AVAILABLE",
+    "sealed_identity_key": true,
+    "pass_a_firewall": "FREEZE_STORY_FREE_NOTES_BEFORE_PASS_B_OR_TRANSLATION_FILES"
+  },
+  "negative_smoke_validation_2026_08_22": {
+    "release_qc_foreign_wav": "FAIL_AS_REQUIRED_MASTER_SHA_DURATION_AND_PROFILE",
+    "p003b_foreign_wav": "HOLD_AS_REQUIRED_NO_BLIND_PACKAGE",
+    "strict_json_report": "PASS_NO_NAN_INFINITY",
+    "real_master_positive_run": "BLOCKED_ON_REAL_MASTER_BYTES"
   },
   "dependency": "AUDIO_PRODUCTION/ROOM917/TOOLS/P003A2_MASTER_ESCROW_v1/p003a2_interval_analyzer.py",
-  "real_production_frontier": "P003A2_BLOCKED_ON_EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP",
-  "unit_tests": "5 PASS (existing validated core suite)",
-  "synthetic_selective_repair_chain": "PASS_PRE_ASSET_IDENTITY_UPGRADE; REVALIDATE_FULL_CHAIN_WHEN_REAL_OR_SYNTHETIC_IDENTITY_GATED_BINDING_IS_SUPPLIED",
-  "negative_unauthorized_change_gate": "FAIL_AS_REQUIRED",
+  "real_production_frontier": "P003A2_BLOCKED_ON_EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP; D003_PATCH_ALSO_REQUIRES_REAL_A01_A02_ASSET_BYTES",
   "domain_promotion_gate": "SECOND_PROJECT_REPLICATION",
   "prohibited": [
     "INVENT_PRODUCTION_TIMECODES",
@@ -52,6 +79,8 @@
     "INGEST_UNVERIFIED_SEARCH_RESULT_AS_AUTHORITY",
     "BIND_SOUND_ASSET_BY_FILENAME_ONLY",
     "RENDER_PATCH_FROM_UNVERIFIED_ASSET_BYTES",
+    "ACCEPT_DERIVED_MASTER_WITHOUT_EXACT_PARENT_SOURCE_BYTES",
+    "OPEN_BLIND_LISTEN_PACKAGE_WITH_IDENTITY_FAILURES",
     "SCALE_E02_E24"
   ]
 }
