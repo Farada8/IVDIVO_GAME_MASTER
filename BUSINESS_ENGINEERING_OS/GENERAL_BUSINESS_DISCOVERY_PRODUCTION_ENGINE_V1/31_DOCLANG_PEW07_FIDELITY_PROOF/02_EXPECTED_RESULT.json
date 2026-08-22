@@ -1,26 +1,37 @@
 {
-  "schema": "ivdivo.general_business.doclang_pew07_expected/1.0",
-  "official_xsd_validation": {
-    "good.dclg.xml": "PASS_EXPECTED",
-    "semantic_drift.dclg.xml": "PASS_EXPECTED"
-  },
-  "independent_fidelity": {
+  "schema": "ivdivo.general_business.doclang_pew07_expected/2.0",
+  "orthogonality_control": {
     "good.dclg.xml": {
-      "fidelity_pass": true,
-      "mismatch_count": 0
+      "official_xsd": "PASS_EXPECTED",
+      "fidelity_pass": true
     },
     "semantic_drift.dclg.xml": {
+      "official_xsd": "PASS_EXPECTED",
       "fidelity_pass": false,
-      "mismatch_count": 1,
-      "expected": "Peter Thomas & Christian Johnston",
-      "actual": "Peter Thomas and Christian Johnston"
-    }
+      "classification": "MANUALLY_INJECTED_DRIFT_CONTROL_ONLY"
+    },
+    "maximum_allowed_conclusion": "PASS_ORTHOGONALITY_CONTROL"
   },
-  "pass_condition": "BOTH_OFFICIAL_XSD_PASS_AND_ONLY_DRIFT_FIXTURE_FAILS_FIDELITY",
-  "maximum_allowed_conclusion": "PASS_MECHANISM_ORTHOGONAL_TO_SCHEMA",
+  "real_roundtrip": {
+    "runtime": "docling==2.121.0",
+    "source_fixture": "fixtures/roundtrip_stress.html",
+    "baseline": "DOCLING_JSON_LOSSLESS_BASELINE",
+    "path": "SOURCE_TO_DOCLING_DOCUMENT_TO_DOCLANG_TO_DOCLING_DOCUMENT",
+    "official_generated_doclang_xsd": "PASS_REQUIRED",
+    "result_is_data_dependent": true,
+    "allowed_routes": [
+      "PASS_REAL_FIDELITY_GAP_TECHNICAL_ONLY",
+      "HOLD_NO_REAL_GAP_IN_BOUNDED_FIXTURES",
+      "HOLD_TEST_INFRASTRUCTURE_OR_COMPATIBILITY_FAILURE"
+    ],
+    "promotion_rule": "NO_MARKET_OR_WIP_PROMOTION_FROM_ANY_INTERNAL_ROUTE"
+  },
   "commercial_result": "HOLD_COMMERCIAL_UNPROVEN",
   "wip_promotion": false,
   "buyer_demand": "UNPROVEN",
   "wtp": "UNKNOWN",
+  "price": null,
+  "transactions": 0,
+  "profitability": "UNPROVEN",
   "external_action_authorized": false
 }
