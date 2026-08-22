@@ -3,7 +3,7 @@
   "date": "2026-08-22",
   "base_main_sha": "29c6b68782869be6602063d0b4ecaaa4fb01174d",
   "branch": "symmetry-discovery-absolute-elements-20260822",
-  "tests": "12/12 PASS local + cold replay",
+  "tests": "14/14 PASS local + cold replay",
   "formal_relation_count_n4": 15,
   "results": {
     "S4": {"group_size": 24, "relation_types": 4, "task_min": 2, "universal_state_hint": 4},
@@ -11,11 +11,20 @@
     "IDENTITY": {"group_size": 1, "relation_types": 15, "task_min": 4, "universal_state_hint": 4},
     "D4_CYCLE_TASK": {"group_size": 8, "relation_types": 5, "task_min": 1}
   },
+  "intervention_refinement": {
+    "PASSIVE_S4": {"group_size": 24, "relation_types": 4},
+    "ONE_ADDRESSABLE_S3": {"group_size": 6, "relation_types": 7},
+    "TWO_ADDRESSABLE_S2": {"group_size": 2, "relation_types": 11},
+    "ALL_ADDRESSABLE_IDENTITY": {"group_size": 1, "relation_types": 15}
+  },
   "laws": [
     "formal relation count != relation-type count != task-sufficient count != intrinsic state dimension",
     "task-family expansion cannot reduce the minimum sufficient feature count",
-    "UNIVERSAL promotion and TASK promotion are distinct contracts"
+    "UNIVERSAL promotion and TASK promotion are distinct contracts",
+    "operational symmetry = task symmetry intersect intervention symmetry",
+    "if H is a subgroup of G, relation orbit count under H cannot be smaller than under G",
+    "promotion is invalidated or must be revalidated when tasks/interventions refine the symmetry group"
   ],
   "status": "ENGINEERING_SYNTHESIS_NOVELTY_UNVERIFIED",
-  "next": "intervention-aware symmetry discovery + separating-invariant search for UNIVERSAL promotion"
+  "next": "separating-invariant search for UNIVERSAL promotion + recursive promotion under changing intervention sets"
 }
