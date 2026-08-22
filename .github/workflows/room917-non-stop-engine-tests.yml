@@ -10,7 +10,9 @@ on:
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/post_render_router.py'
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py'
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/compile_sound_asset_audition_result.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/apply_context_gain_lock.py'
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_non_stop_continuation.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_context_gain_lock.py'
 
 permissions:
   contents: read
@@ -24,17 +26,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Run targeted non-stop engine tests
+      - name: Run non-stop router and blind audition tests
         working-directory: AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2
         run: python test_non_stop_continuation.py
+      - name: Run context gain lock tests
+        working-directory: AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2
+        run: python test_context_gain_lock.py
       - name: Summary
         run: |
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
           ## ROOM917 fail-closed non-stop policy
-          Expected targeted result: 5/5 PASS.
+          Expected targeted results: 5/5 non-stop tests + 3/3 context-gain tests.
           - blocked mainline selects independent safe work
           - exhausted secondary work returns to recovery search
           - continuation policy is BLOCKED_IS_NOT_STOP
           - blind package verifies byte hashes and rejects tamper
           - audition compiler never invents production gain
+          - context gain is numeric and explicit or HOLD
+          - dialogue/function/mono/phone context failures block promotion
           EOF
