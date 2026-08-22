@@ -106,7 +106,7 @@
       "music": "NONE_UNTIL_AUTHORIZED_FINAL_BUTTON",
       "required_evidence_order": [
         "IMPOSSIBLE_INTERNAL_DOUBLE_RING",
-        "ACTORS_ORIENT_TO_PANEL",
+        "ORIENT_TO_PANEL",
         "FIELD_RECORDER_START",
         "TIME_01_17_12",
         "EXTERNAL_TRUNK_PHYSICALLY_OPEN",
