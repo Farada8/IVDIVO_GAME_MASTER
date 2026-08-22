@@ -1,0 +1,62 @@
+name: General Business Money Mechanisms P41-P48 Route Prep
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/13_MONEY_MECHANISMS_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/34_ROUTE_TO_MARKET_P41_P48_EXECUTION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/35_ROUTE_TO_MARKET_P41_P48_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/36_ROUTE_TO_MARKET_P41_P48_SOURCE_LEDGER.md'
+      - '.github/workflows/general-business-money-mechanisms-p41-p48-route-prep.yml'
+  workflow_dispatch:
+
+jobs:
+  validate-route-prep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate P41-P48 evidence ceiling and no-action boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          s=json.loads((root/'35_ROUTE_TO_MARKET_P41_P48_STATE.json').read_text())
+          mm=json.loads((root/'13_MONEY_MECHANISMS_MACHINE_STATE.json').read_text())
+          assert s['status']=='PASS_ENGINEERING_PREP_ONLY_NO_EXTERNAL_ACTION'
+          assert s['run']['executed']==8 and s['run']['pass_engineering']==8
+          assert s['run']['market_proof_created'] is False
+          assert s['authority']['current_strategic_wip_count']==3
+          assert s['authority']['money_mechanisms_comparison_wip_does_not_override_current_wip'] is True
+          assert s['target_spec']['named_contact_list_created'] is False
+          assert s['target_spec']['max_qualified_targets_per_lane_if_authorized']==12
+          assert s['target_spec']['stages']==[4,4,4]
+          assert s['messages']['variants_prepared']==3 and s['messages']['sent']==0
+          assert s['authorization_gate']['founder_explicit_authorization_required'] is True
+          assert s['authorization_gate']['external_action_authorized'] is False
+          assert s['authorization_gate']['default_experiment_spend_eur']==0
+          assert all(s['authorization_gate'][k] is False for k in ['outreach_authorized','ads_authorized','listing_authorized','tender_submission_authorized','quote_authorized','registry_action_authorized'])
+          assert len(s['evidence_ladder'])==11
+          assert s['evidence_ladder'][9]=='E9_DEPOSIT_OR_PAYMENT_RECEIVED'
+          assert s['experiment']['only_e9_is_transaction_evidence'] is True
+          assert s['experiment']['e10_required_for_repeatability_claim'] is True
+          obs=s['observed']
+          assert all(obs[k]==0 for k in ['targets_contacted','messages_sent','qualified_replies','meetings','quotes','deposits','transactions'])
+          assert obs['wtp'] is None and obs['cac'] is None and obs['conversion'] is None
+          assert obs['repeatability'] is False
+          assert all(v is False for v in s['proof_boundary'].values())
+          assert mm['next64']['executed']==48 and mm['next64']['remaining']==16
+          assert mm['route_to_market_prep']['targets_contacted']==0
+          assert mm['route_to_market_prep']['messages_sent']==0
+          assert mm['route_to_market_prep']['transactions']==0
+          assert mm['route_to_market_prep']['external_action_authorized'] is False
+          assert mm['evidence_boundary']['businesses_proven']==0
+          assert mm['evidence_boundary']['external_action_authorized'] is False
+          assert mm['strategic_coexistence']['do_not_overwrite_current_early_wave_wip'] is True
+          print('P41-P48 ROUTE PREP: PASS / 48OF64 INTERNAL / ZERO EXTERNAL ACTION / NO MARKET PROOF')
+          PY
+      - name: Compile JSON
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/13_MONEY_MECHANISMS_MACHINE_STATE.json >/dev/null && python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/35_ROUTE_TO_MARKET_P41_P48_STATE.json >/dev/null
