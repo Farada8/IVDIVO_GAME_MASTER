@@ -5,7 +5,7 @@
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "PROMOTION_REVIEW_PENDING_RECOVERY_CI",
+  "candidate_status": "RECOVERY_HARDENING_PENDING_CI",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "runtime": {
@@ -17,9 +17,6 @@
     "done_rule": "external-artifact task routed through artifact completion gate may become DONE only when placement receipt status is PLACEMENT_VERIFIED and status+receipt are persisted atomically"
   },
   "proof": {
-    "real_d09_incident": true,
-    "drive_incident_parent_readback": "PASS",
-    "drive_start_here_readback": "PASS",
     "runtime_merge_pr": 388,
     "runtime_merge_commit": "b8265fe897a29147844591919fa4853aa3ba5a2c",
     "provider_adapters_implemented": true,
@@ -32,10 +29,12 @@
     "real_post_merge_failure_observation": "document persistence intent produced 18 Google Drive FOLDER objects; provider readback rejected them as successful document persistence",
     "real_post_merge_failure_repair_pr": 401,
     "real_post_merge_failure_repair_merge": "e277ecb7f91fd3b9ce55464758bc531e789e2be9",
-    "real_failure_caught_before_false_completion_claim": true,
+    "real_post_merge_failure_qualifies_as_future_guard_interception": false,
+    "reason_not_promotion_evidence": "issue #395 triggered the resource-type repair; canonical PR401 receipt still requires observing future real traffic where the installed guard catches the next failure before false DONE",
     "resource_type_negative_canary": "PASS",
     "atomic_completion_defect_found": true,
     "atomic_completion_defect": "previous completion gate could persist DONE/BLOCKED before receipt in a separate write",
+    "atomic_completion_fix_pr": 409,
     "atomic_completion_fix_branch": "self-improvement/artifact-placement-atomic-recovery-20260822",
     "reopen_recovery_regression": "PENDING_EXACT_HEAD_CI"
   },
@@ -52,13 +51,13 @@
     "ALLOW_DONE_ONLY_IF_PLACEMENT_VERIFIED_AND_OTHER_GATES_PASS"
   ],
   "promotion_gate": {
-    "status": "HOLD_PENDING_EXACT_HEAD_RECOVERY_CI",
+    "status": "HOLD",
     "completed_requirements": [
-      "provider adapters construct receipts from Google Drive and GitHub provider observations with normalization and fail-closed regression coverage",
-      "new real post-merge provider failure observed: document intent created FOLDER resources and incorrect objects were rejected before being accepted as successful document persistence"
+      "provider adapters construct receipts from Google Drive and GitHub provider observations with normalization and fail-closed regression coverage"
     ],
     "remaining_requirements": [
-      "exact-head regression proving atomic status+receipt persistence and successful reopen against current ProjectState persistence/recovery contract"
+      "exact-head regression proving atomic status+receipt persistence and successful reopen against current ProjectState persistence/recovery contract",
+      "observe future real traffic where the installed placement/resource-type guard catches a new real persistence failure before any false DONE claim"
     ]
   }
 }
