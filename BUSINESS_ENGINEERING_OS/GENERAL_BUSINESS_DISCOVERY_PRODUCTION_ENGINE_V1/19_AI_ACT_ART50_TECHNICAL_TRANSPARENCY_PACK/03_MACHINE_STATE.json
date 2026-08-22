@@ -1,9 +1,9 @@
 {
-  "schema": "ivdivo.general_business.pew03_article50_pack/1.0",
+  "schema": "ivdivo.general_business.pew03_article50_pack/1.1",
   "date": "2026-08-22",
   "gate": "P-EW03",
   "lane": "CF-01",
-  "status": "SAMPLE_PACK_BUILT_CI_PENDING",
+  "status": "ENGINEERING_PASS_CI_SUCCESS_M1_ELIGIBLE_NOT_WTP_PROVEN",
   "source_baseline": {
     "article50_applicable_from": "2026-08-02",
     "commission_guidelines_published": "2026-07-20",
@@ -23,6 +23,15 @@
   ],
   "synthetic_cases": 6,
   "real_customer_cases": 0,
+  "engineering_proof": {
+    "pr": 367,
+    "merge_sha": "3f65b522c59a7cdc988cbae893c1d54651eab6e6",
+    "head_sha": "5a2db19731aeb23eac7c15c2da374cdaea3023a5",
+    "dedicated_ci_run": 32561576738,
+    "dedicated_ci": "SUCCESS",
+    "canaries": 14,
+    "m1_technical_diagnostic_spec_eligible": true
+  },
   "core_guards": [
     "PROVIDER_OBLIGATION_NEQ_DEPLOYER_OBLIGATION",
     "MACHINE_MARKING_NEQ_HUMAN_DISCLOSURE",
@@ -41,5 +50,5 @@
     "profitability_proven": false
   },
   "external_action_authorized": false,
-  "next_if_ci_passes": "P-EW03_PASS_ENGINEERING_THEN_RUN_P-EW04_AND_COMPARE_IMPLEMENTATION_DELTA"
+  "next_gate": "P-EW05_INTERNAL_COMPARISON_THEN_BUYER_EVIDENCE_ONLY_IF_AUTHORIZED"
 }
