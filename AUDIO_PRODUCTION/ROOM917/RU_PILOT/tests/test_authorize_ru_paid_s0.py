@@ -27,18 +27,24 @@ class PaidAuthorizationTests(unittest.TestCase):
                 "provider_name": f"Voice {role}",
                 "preview_listen": "PASS",
                 "provider_identity_check": "PASS",
+                "provider_durability_check": "PASS",
+                "plausible_for_canary": "PASS",
+                "canary_binding_only": True,
             }
         write(source, {
-            "schema_version": "ivdivo.room917_ru_s0_native_bindings/1.1",
+            "schema_version": "ivdivo.room917_ru_s0_native_bindings_candidate/2.0",
             "status": "READY_FOR_PAID_CANARY_AUTHORIZATION",
             "project_id": "ROOM917",
             "locale": "ru-RU",
             "provider": "ElevenLabs",
             "model_id": "eleven_v3",
             "roles": roles,
-            "all_pair_tests": "PASS",
-            "pronunciation_gate": "PASS",
-            "founder_credibility_gate": "PASS",
+            "pre_canary_binding_gate": "PASS",
+            "canary_binding_only": True,
+            "acting_evidence_complete": False,
+            "pair_tests": "NOT_RUN_YET",
+            "pronunciation_gate": "NOT_RUN_YET",
+            "founder_credibility_gate": "NOT_RUN_YET",
             "founder_paid_canary_authorized": False,
             "paid_s0_authorized": False,
             "cast_lock": False,
@@ -71,21 +77,35 @@ class PaidAuthorizationTests(unittest.TestCase):
             self.assertNotEqual(proc.returncode, 0)
             self.assertFalse(out.exists())
 
-    def test_explicit_authorization_only_writes_artifact(self) -> None:
+    def test_explicit_authorization_only_writes_canary_artifact(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             source, out = self.fixture(Path(td))
             proc = self.call(source, out, confirm="YES", blocks=4)
-            self.assertEqual(proc.returncode, 0, proc.stderr)
+            self.assertEqual(proc.returncode, 0, proc.stderr + proc.stdout)
             row = json.loads(out.read_text(encoding="utf-8"))
             self.assertEqual(row["status"], "PAID_S0_AUTHORIZED")
             self.assertTrue(row["founder_paid_canary_authorized"])
             self.assertTrue(row["paid_s0_authorized"])
             self.assertEqual(row["authorized_max_blocks"], 4)
+            self.assertTrue(row["canary_binding_only"])
+            self.assertFalse(row["acting_evidence_complete"])
+            self.assertEqual(row["pair_tests"], "NOT_RUN_YET")
             self.assertFalse(row["authorization"]["provider_call_made"])
             self.assertFalse(row["authorization"]["provider_spend_made"])
             self.assertFalse(row["authorization"]["workflow_auto_dispatched"])
             self.assertFalse(row["cast_lock"])
             self.assertFalse(row["full_episode_render_allowed"])
+
+    def test_fake_prepassed_cast_evidence_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            source, out = self.fixture(Path(td))
+            row = json.loads(source.read_text(encoding="utf-8"))
+            row["pair_tests"] = "PASS"
+            write(source, row)
+            proc = self.call(source, out, confirm="YES")
+            self.assertNotEqual(proc.returncode, 0)
+            self.assertIn("must not pre-pass pair tests", proc.stderr + proc.stdout)
+            self.assertFalse(out.exists())
 
 
 if __name__ == "__main__":
