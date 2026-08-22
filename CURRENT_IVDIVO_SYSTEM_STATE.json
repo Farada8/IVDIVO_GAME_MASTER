@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.3",
+  "schema_version": "2.4",
   "updated": "2026-08-22",
   "status": "CURRENT_ROUTING_STATE_NOT_STORY_CANON",
   "purpose": "Machine-readable resume pointer for cross-conversation and cross-model IVDIVO work. This file routes work; it never overrides Founder authority, locked project canon, project-specific source-of-truth or stronger terminal gates.",
@@ -14,7 +14,10 @@
     "WORKING_CANDIDATES",
     "REFERENCE_ONLY"
   ],
-  "repository": {"full_name": "Farada8/IVDIVO_GAME_MASTER", "branch": "main"},
+  "repository": {
+    "full_name": "Farada8/IVDIVO_GAME_MASTER",
+    "branch": "main"
+  },
   "current_routers": {
     "writing": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
     "autopilot": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
@@ -55,7 +58,14 @@
   ],
   "cross_dialog_policy": {
     "repeated_short_command_required": false,
-    "short_commands_are_resume_shorthand": ["и", "дальше", "продолжай", "делай", "работай", "действуй"],
+    "short_commands_are_resume_shorthand": [
+      "и",
+      "дальше",
+      "продолжай",
+      "делай",
+      "работай",
+      "действуй"
+    ],
     "neighbor_chat_claim_without_persisted_artifact": "DISCOVERY_ONLY",
     "chat_only_default_authority": "NONE_UNTIL_PERSISTED_AND_VERIFIED",
     "chat_only_retrieval_rule": "IF_SOURCE_CONVERSATION_IS_ACCESSIBLE_RETRIEVE_ACTUAL_RESULT_BEFORE_ASKING_FOUNDER_TO_REPEAT",
@@ -146,42 +156,42 @@
       "D08_SHE_FIRED_THE_BILLIONAIRE",
       "D09_THE_MAN_WHO_CAME_BACK_TEXT_COMPLETE_FINAL_STORY_GATE_PASS_READY_FOR_FOUNDER_LOCK",
       "D10_BLOODBOUND_FOUNDER_LOCKED_STORY_AND_RECORDING_AUTHORITY",
-      "D01_THE_WIFE_AT_HIS_WEDDING_FOUNDER_LOCKED_E01_E120_RECORDING_AUTHORITY_ISSUED"
+      "D01_THE_WIFE_AT_HIS_WEDDING_FOUNDER_LOCKED_E01_E120_RECORDING_AUTHORITY_ISSUED",
+      "IVDIVO_BOOK_3_SMITH_FOUNDER_LOCKED_CH01_CH29_MANUSCRIPT_AUTHORITY"
     ],
-    "development_complete_not_locked": [
-      "IVDIVO_BOOK_3_SMITH_CH01_CH29_FACTUAL_LINE_LOCK_PENDING"
-    ],
+    "development_complete_not_locked": [],
     "recent_founder_lock": {
-      "project_id": "D10",
-      "title": "BLOODBOUND",
+      "project_id": "IVDIVO_BOOK_3_SMITH",
+      "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
       "status": "FOUNDER_LOCKED",
-      "date": "2026-08-21",
-      "project_state": "PROJECT_STATES/D10_BLOODBOUND_CURRENT_STATE.json",
-      "founder_lock_drive_id": "1Fp0vPbvt8JaGxGIvfxwyN4LuA4BXo8Ia1Rcp2Qk8hDA",
-      "current_authority_drive_id": "17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8",
-      "final_gate_drive_id": "1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s",
+      "date": "2026-08-22",
+      "locked_frontier": "CH01_CH29_STORY_MANUSCRIPT",
+      "project_state": "PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json",
+      "founder_lock_authority": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_LOCK_RECEIPT_2026-08-22.md",
+      "human_current_state": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CURRENT_STATE.md",
+      "ch30_authorized": false,
+      "reopen_rule": "ONLY_EXPLICIT_FOUNDER_UNLOCK_OR_CHANGE_ORDER_FOR_SUBSTANTIVE_CHANGE",
       "downstream_live_human_provider_evidence_not_implied": true
     },
     "active_project": {
       "project_id": "IVDIVO_BOOK_3_SMITH",
       "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
-      "mode": "DEVELOPMENT_COMPLETE_FACTUAL_LINE_LOCK_PENDING",
+      "mode": "FOUNDER_LOCKED_MANUSCRIPT_ASSEMBLY_COPY_FORMAT_EXPORT",
       "project_state_path": "PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json",
-      "current_full_novel_gate_drive_id": "1FW7GVQGk-StW6VmySA4MPFbZxsADFn_T1TrZKydtLtw",
-      "current_late_corpus_gate_drive_id": "1-sWl1c5U0ahyEteteAmr8_1d_9th602JVMpKTY6ySXY",
-      "manuscript_frontier": "CH01_CH29_COMPLETE",
-      "fatal": 0,
-      "blocking_major": 0,
-      "founder_lock": "NOT_YET_ISSUED",
-      "next_unblocked_obligation": "MEDICAL_FACTUAL_TERMINOLOGY_CHECK_CH25_CH29_THEN_RELAY_NETWORK_FACTUAL_CHECK_CH23_CH29_THEN_FULL_MANUSCRIPT_LINE_CORPUS_CONTINUITY_LOCK",
-      "authority_boundary": "NO_CH30_NO_PROSE_EXPANSION_UNLESS_NEW_FATAL_MAJOR_CAUSAL_CONTINUITY_EVIDENCE; FOUNDER_LOCK_REQUIRED_BEFORE_DOWNSTREAM_AUDIO_PACKAGING",
+      "manuscript_frontier": "CH01_CH29_LOCKED",
+      "story_lock": true,
+      "founder_lock": "ISSUED",
+      "next_unblocked_obligation": "ASSEMBLE_LOCKED_CH01_CH29_MANUSCRIPT_FROM_CURRENT_AUTHORITY_FILES_THEN_RUN_FINAL_COPY_FORMAT_EXPORT_GATE",
+      "authority_boundary": "NO_CH30_NO_STORY_DEVELOPMENT_WITHOUT_FOUNDER_UNLOCK_OR_CHANGE_ORDER; LOCKED_MANUSCRIPT_ASSEMBLY_COPY_FORMAT_EXPORT_ONLY",
       "do_not_repeat": [
         "B03_CH25_DRAFT",
         "B03_CH26_DRAFT",
         "B03_CH27_DRAFT",
         "B03_CH28_DRAFT",
         "B03_CH29_DRAFT",
-        "B03_P72_STORY_DEVELOPMENT_GATE"
+        "B03_CH30_DRAFT",
+        "B03_P72_STORY_DEVELOPMENT_GATE",
+        "B03_FOUNDER_LOCK_DECISION"
       ]
     },
     "pending_founder_decision_gates": [
@@ -200,7 +210,8 @@
       "IVDIVO_BOOK_4_AFTER_BOOK_3_LOCK",
       "WHOLE_PORTFOLIO_TEXT_LOCK_AUDIT",
       "AUDIO_NOVEL_STUDIO_BATCH_INGEST_AND_PRODUCTION"
-    ]
+    ],
+    "state_status": "D10_FOUNDER_LOCKED; D01_FOUNDER_LOCKED_E01_E120; B03_SMITH_FOUNDER_LOCKED_CH01_CH29; B03_LOCKED_MANUSCRIPT_ASSEMBLY_NEXT; D09_PENDING_FOUNDER_LOCK"
   },
   "project_downstream_frontiers": {
     "D04": {
@@ -266,5 +277,5 @@
     "name": "RECONCILED_RECOVERY_STATE_v2",
     "status": "WORKING_CANDIDATE_AWAITING_REAL_LARGE_TRANSCRIPT_PILOT_AND_INTEGRATION_REGRESSION"
   },
-  "state_status": "BOOK_INTELLIGENCE_v1_PILOT1_B03_PASS_AWAITING_SECOND_INDEPENDENT_PILOT; B03_CH01_CH29_DEVELOPMENT_COMPLETE_FACTUAL_LINE_LOCK_PENDING; D10_FOUNDER_LOCKED; D01_FOUNDER_LOCKED_E01_E120; D09_PENDING_FOUNDER_LOCK; NO_B03_CH30; ENGINE_V11_2_MACHINE_EXECUTION_ROUTED_VERIFIED"
+  "state_status": "D10_FOUNDER_LOCKED; D01_FOUNDER_LOCKED_E01_E120; B03_SMITH_FOUNDER_LOCKED_CH01_CH29; B03_LOCKED_MANUSCRIPT_ASSEMBLY_NEXT; D09_PENDING_FOUNDER_LOCK"
 }
