@@ -1,12 +1,13 @@
 # CURRENT — BUSINESS ENGINEERING OS AUTHORITY
 
 **DATE:** 2026-08-22  
-**STATUS:** CYCLE7 CROSS-LANE READINESS COMPILER MERGED / MARKET PROOF FAIL-CLOSED  
+**STATUS:** CYCLE7 READINESS + P97–P128 AUTHORITY RECOVERY MERGED / MARKET PROOF FAIL-CLOSED  
 **CYCLE5 MERGE:** PR #185 -> `470a8aea93385ef8624b47688dbf4cf21090c058`  
 **CYCLE6 PROCUREMENT MERGE:** PR #191 -> `a8776edcdee14ba67e9fa68c61b3e4f66c10cee3`  
 **CYCLE6 CROSS-LANE RECONCILED MERGE:** PR #202 -> `2238eb296c09bc49523724fd5c15cf0e45a6fcc9`  
 **CYCLE6 PUBLIC-ART REAL PILOTS MERGE:** `1239792fd733526d6b636dd6e7e88172d0197a07`  
-**CYCLE7 CORE MERGE:** PR #203 -> `ddf7864eadb4c3addba535690e936a77d76b0c1f`
+**CYCLE7 CORE MERGE:** PR #203 -> `ddf7864eadb4c3addba535690e936a77d76b0c1f`  
+**CYCLE7 P97–P128 MERGE:** PR #207 -> `f45f07cb6a78733fa1a123d5e11a35dfb43913c5`
 
 ## Library
 Private RAW Drive: `1X6mo94Qo103HheyDry4P3dcQkv5qZg6N`  
@@ -14,26 +15,24 @@ Current pointer: `BUSINESS_ENGINEERING_OS/LIBRARY/00_START_HERE_CURRENT_LIBRARY.
 Physical authority: `BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_LIBRARY_AUTHORITY_78_2026-08-22.md`  
 Counts: **78 physical / 68 valid / 58 unique valid byte hashes / 5 broken-quarantined / 8 exact duplicate groups**.
 
-Raw copyrighted binaries remain Drive-only. Cycle7 repaired stale operational prose in the library START_HERE without changing source counts or physical authority.
+Raw copyrighted binaries remain Drive-only. Library counts are unchanged by Cycle7 authority recovery.
 
 ## Uploaded current-chat handoff
 The current-conversation Business Engineering handoff remains accounted for without raw GitHub duplication:
 - original Drive doc: `12mnDFWMFxfMsd5sioDDDtbwj-5LrgN32h1ChGSK87aI`;
 - SHA-256: `ad4a0b44b0c35dbed4697bc98b66e8e1ad03f7ebb8c3c774ca7e86fd393dc3f8`;
 - GitHub provenance: `BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE6_PROCUREMENT_PA4_HARDENING/06_UPLOADED_HANDOFF_PROVENANCE.json`;
-- Cycle7 Drive folder copy: `1437rMeetYUMc2GnWmDkSVg7LfFieg1XJxUpsNHoyT_0`.
+- Cycle7 Drive handoff copy: `1437rMeetYUMc2GnWmDkSVg7LfFieg1XJxUpsNHoyT_0`.
 
 ## Retained Cycle6 procurement foundation
-Cycle6 procurement remains the PRIMARY real decision-intelligence foundation. Its governing law remains valid:
+Cycle6 procurement remains the PRIMARY real decision-intelligence foundation. Governing law:
 
 `NO_FULL_OFFICIAL_PACK -> NO_TENDER_SPECIFIC_QUALIFICATION_ASSERTION -> NO_BID_NO_BID_DECISION`.
 
-For Ballybunion eTenders resource `8872468`, public evidence confirms the opportunity exists, but the complete official tender pack and verified supplier profile remain missing. Therefore the current procurement case remains `HOLD_MISSING_AUTHORITY`; no BID/NO-BID eligibility assertion is promoted.
+For Ballybunion eTenders resource `8872468`, public evidence confirms the opportunity exists, but the complete official tender pack and verified supplier profile remain missing. The case remains `HOLD_MISSING_AUTHORITY` / `HOLD_INSUFFICIENT_AUTHORITY`; no BID/NO-BID eligibility assertion is promoted.
 
 ## Reconciled Cycle6 cross-lane safeguards
-A stale cross-lane PR was found 38 commits behind main and was **not** merged blindly. Useful work was replayed onto fresh main, reconciled with later public-art work, a zero-residual substitute-routing defect was repaired, canaries were expanded, CI passed, and PR #202 merged as `2238eb296c09bc49523724fd5c15cf0e45a6fcc9`. Old PR #197 was closed as superseded.
-
-Retained cross-lane laws include:
+PR #202 merged the fresh-main replay of P81–P96. Retained laws include:
 - missing/unknown evidence fails closed;
 - polish cannot upgrade proof;
 - free/public/vendor/internal substitutes are evaluated before differentiation;
@@ -43,20 +42,20 @@ Retained cross-lane laws include:
 - real target-user decision-use is required for PA5/E3.
 
 ## Parallel public-art evidence
-The merged real public-art pilot cycle remains a bounded real-brief evidence lane, not a competing market authority. It contains 32 sequential official-brief runs for Clúain na Coillte and Inis Cealtra plus a separate 64-card backlog.
+The merged real public-art pilot cycle remains a bounded real-brief evidence lane, not a competing market authority. It contains 32 sequential official-brief runs for Clúain na Coillte and Inis Cealtra plus its evidence backlog.
 
-Prospective terminology is normalized:
+Prospective terminology:
 - `SOURCE_ARTIFACT_VALIDATED` = official source/brief structurally validated;
 - `INDEPENDENT_PA4` = same-input blinded independent review.
 
 Official-brief validation does not prove applicant readiness, award probability, buyer interaction or market evidence.
 
-## Cycle7 — current engineering authority
+## Cycle7 core readiness authority
 Path: `BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_CROSS_LANE_READINESS_32_TO_64/`  
 Merged PR: `#203`  
 Merge SHA: `ddf7864eadb4c3addba535690e936a77d76b0c1f`
 
-Cycle7 completed:
+Cycle7 core completed:
 - **32/32** sequential prompts C7-01–C7-32;
 - **16 modules** C7M01–C7M16;
 - **24 contracts** C7C01–C7C24;
@@ -64,23 +63,54 @@ Cycle7 completed:
 - **10 protocols** C7R01–C7R10;
 - executable `Opportunity Readiness Compiler`;
 - local regression **22/22 PASS**;
-- GitHub Actions Cycle7 readiness run `32548728990` SUCCESS;
-- shared regression run `32548728958` SUCCESS;
-- evidence-derived **Next64 C8-01–C8-64**, designed / not blind-auto-authorized.
+- GitHub Actions readiness and shared regressions SUCCESS.
 
-### Cycle7 Drive authority
+### Cycle7 core Drive authority
 Folder: `1J7NbU_m4Hz-Vz_5yH4a5ioZTTmN5nd2A`  
 MASTER: `1NEZ8LrxvvCXnFs6_kzZG2XVPjr_vhngC-WwxBPNq5gQ`  
 RUN32 + engineering: `1ex_6ICFmcG99rQgM23L3_0Vf2AyeITmXvMwhvT5FSdE`  
 NEXT64: `1KuhZ_yklWZQThtSu9IMqz6Sp59FGSZeQEKNd6WL2MA8`  
 Machine state + parallel reconciliation: `12lidIvNFx9aGOvawouvqPmRThY-GXT9Is1ID1JMRQFY`  
-Post-merge closure: `1wXMgIQ1MLmNoaML9jjkt4Cy3-3QrutMvGPM3UBbFlUE`  
-Current-chat handoff copy: `1437rMeetYUMc2GnWmDkSVg7LfFieg1XJxUpsNHoyT_0`.
+Post-merge closure: `1wXMgIQ1MLmNoaML9jjkt4Cy3-3QrutMvGPM3UBbFlUE`.
 
-Drive folder listing, MASTER text and machine-state text were read back successfully before core merge closure.
+## Cycle7 P97–P128 authority-recovery extension — CURRENT ADDITIVE LAYER
+Path: `BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P97_P128_AUTHORITY_RECOVERY/`  
+Merged PR: `#207`  
+Merge SHA: `f45f07cb6a78733fa1a123d5e11a35dfb43913c5`  
+Post-merge closure: `06_POST_MERGE_CLOSURE.md`.
+
+Executed exactly **P97–P128 = 32/32**:
+- 14 PASS / PASS_SCHEMA / PASS_POLICY / PROTECT_NO_CHANGE;
+- 18 HOLD / BLOCKED / PARTIAL / EXTERNAL_REQUIRED;
+- 0 BID/NO-BID assertions;
+- 0 PA4/PA5/E3/E4 promotions;
+- no outreach; EUR 0 new founder cash.
+
+Engineering adds target attachment authority, `AuthorityGapCertificate`, tender lineage + `NonCarryoverGuard`, benchmark-pack isolation, critical-path dates, supplier-claim provenance, requirement joins/gap routing, independent-PA4 packet identity, real PA5/E3/E4 evidence gates and CURRENT freshness control.
+
+Final-head GitHub Actions run `32548973081` = SUCCESS. At merge gate: 0 submitted reviews and 0 unresolved review threads.
+
+### P97–P128 Drive evidence
+Detailed mirror folder: `1au403z349CmJSDuQY16CVkEfVD6XIwGI`.  
+Pre-merge control folder: `1L2PW1Zd7XLEVE53oEKWO4UclSCMENfWT`.  
+Control document: `154NhUZFLsXGVE6l6oEubeb6fyctK8i7arD8z8CDiIQY`.  
+Readback marker: `BUSINESS-C7-P97-P128-RUN32-NEXT64-P192`.
+
+Current verified public timing for `8872468` includes:
+- clarification cutoff `2026-08-31 14:00 IST`;
+- submission `2026-09-02 17:00 IST`;
+- opening `2026-09-02 17:30 IST`;
+- estimated value EUR 1,600,000;
+- duration 9 months.
+
+The official document route exists, but **route existence != acquired full pack**.
+
+Earlier same-authority resource `8176962` is `BENCHMARK_FIXTURE_ONLY`. Related resources `7039079 -> 8176962 -> 8872468` are `POSSIBLE_PROJECT_LINEAGE` only. No requirement carries over from prior resources.
+
+Parallel PR #209 Cycle7A was closed without merge as superseded by #207 after semantic reconciliation. Its apparent authority/proof mechanisms are already represented in merged #207 and the P129–P192 backlog; branch/Drive material remains supporting provenance only.
 
 ## Cycle7 readiness engine
-The current cross-lane pipeline is:
+Current pipeline:
 
 `OPPORTUNITY -> AUTHORITY COMPLETENESS -> CAPABILITY/APPLICANT EVIDENCE -> REQUIREMENT JOIN -> GAP STATE -> TECHNICAL PACKAGE -> INDEPENDENT_PA4 -> REAL DECISION-USE TEST`.
 
@@ -96,25 +126,24 @@ Typed readiness states include:
 No opaque readiness score is authoritative.
 
 ### Real fixture results
-- `PROC-BALLYBUNION-8872468` -> `HOLD_MISSING_AUTHORITY`.
+- `PROC-BALLYBUNION-8872468` -> `HOLD_MISSING_AUTHORITY` / `HOLD_INSUFFICIENT_AUTHORITY`.
 - `ART-CLUAIN-2026` -> `HOLD_CAPABILITY_AND_TECHNICAL_PACKAGE`.
 - `ART-INIS-2026` -> `HOLD_CAPABILITY_AND_TECHNICAL_PACKAGE`.
 
-These HOLDs mean the opportunity may be real while the current decision packet is not yet sufficiently evidenced. They are not negative market verdicts.
+These HOLDs mean the opportunities may be real while the current decision packets are not sufficiently evidenced. They are not negative market verdicts.
 
-## Scoped Self-Improvement promotion
+## Self-Improvement
 Global Self-Improvement **v2 remains CURRENT** and v3 remains **CANDIDATE ONLY**.
 
-Cycle7 promotes one rule only within `BUSINESS_ENGINEERING` scope because the defect repeated across distinct real cases and now has regression protection:
-
+Business Engineering scoped rule remains:
 `MISSING_REQUIRED_AUTHORITY -> EXPLICIT_TYPED_HOLD -> NEXT_EVIDENCE_ACTION`.
 
-This scoped promotion does not claim global portability outside Business Engineering.
+P97–P128 adds candidates `BENCHMARK_MUST_NOT_FILL_TARGET_GAP`, `AUTHORITY_POINTER_LAG_GATE`, and `AUTHENTICATED_EVIDENCE_DEPENDENCY_SHOULD_STOP_META_EXPANSION`; none is globally promoted by this cycle.
 
 ## Proof boundary
 `K != S != PA != E`.
 
-Public-only research ceiling remains **E2+**. Current market proof remains:
+Public-only research ceiling remains **E2+**. Current market proof:
 - independent market PA4: 0;
 - PA5: 0;
 - E3: 0;
@@ -128,13 +157,20 @@ PILOT: retrofit route qualification — blocked on a real property packet.
 PILOT: post-Digital-for-Business SME workflow implementation — blocked on a real workflow/report.  
 Maximum current WIP = 3.
 
-Public-art is retained as a bounded real-brief/application-readiness fixture lane and does not silently become a fourth market-authority product lane.
+Public-art remains a bounded real-brief/application-readiness fixture lane and does not silently become a fourth market-authority product lane.
+
+## CURRENT NEXT64
+Post-P97 frontier is `P129–P192`, **DESIGNED / NOT EXECUTED**. Dependency gates override numbering.
+
+Highest-information steps are:
+1. acquire the complete current official Ballybunion pack;
+2. acquire a verified SupplierCapabilityPacket;
+3. perform atomic requirement-to-evidence join and categorical gap routing;
+4. only then freeze packet hashes and run a real blind independent PA4 reviewer;
+5. only after PA4 run the smallest real target-user decision-use test;
+6. E4 only from cash received plus binding transaction evidence.
 
 ## CURRENT GATE
-`CASE -> AUTHORITY -> PROFILE -> REQUIREMENT-BY-REQUIREMENT JOIN -> GAP ROUTING -> TECHNICAL/PROPOSAL PACKAGE -> INDEPENDENT_PA4 -> REAL TARGET-USER DECISION USE -> PA5/E3 ONLY ON REAL INTERACTION`.
+`TARGET FULL PACK + VERIFIED SUPPLIER PACKET -> REQUIREMENT-BY-REQUIREMENT JOIN -> GAP ROUTING -> BLIND INDEPENDENT PA4 -> REAL TARGET-USER DECISION USE -> PA5/E3 ONLY ON REAL INTERACTION -> TRANSACTION-ONLY E4`.
 
-Highest-value real next evidence is one of:
-1. **complete Ballybunion official tender pack + verified SupplierCapabilityProfile**, or
-2. **verified public-art applicant/portfolio packet + minimum proposal/technical packet**.
-
-The C8-01–C8-64 backlog is designed, but dependencies override prompt count. Without new real evidence, `PROTECT_NO_CHANGE` is preferable to another generic meta-cycle or generic business-book ingestion pass.
+If the decisive external evidence is unavailable, return `PROTECT_NO_CHANGE` rather than restart broad market scanning, generic book ingestion, or another ritual meta-cycle.
