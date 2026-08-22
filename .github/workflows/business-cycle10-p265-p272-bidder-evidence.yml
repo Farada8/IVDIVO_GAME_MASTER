@@ -1,0 +1,25 @@
+name: Business Cycle10 P265-P272 Bidder Evidence Hardening
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE10_P265_P272_BIDDER_EVIDENCE_HARDENING/**'
+      - '.github/workflows/business-cycle10-p265-p272-bidder-evidence.yml'
+  push:
+    branches:
+      - 'business-engineering/cycle10-p265-p272-bidder-evidence-hardening-20260822'
+
+jobs:
+  bidder-evidence-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Cycle10 P257-P264 inherited ingest regression
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE10_P257_P264_PACK_INGEST_HARDENING/tests/test_authenticated_pack_ingest.py
+      - name: Cycle10 P265-P272 exact 16 bidder-evidence canaries
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE10_P265_P272_BIDDER_EVIDENCE_HARDENING/tests/test_bidder_evidence_hardening.py
+      - name: Compile Cycle10 bidder-evidence runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE10_P265_P272_BIDDER_EVIDENCE_HARDENING/engine
