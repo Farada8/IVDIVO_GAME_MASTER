@@ -1,0 +1,29 @@
+{
+  "case_id": "INIS_CEALTRA_2026_SUBMISSION_ENGINE",
+  "date": "2026-08-22",
+  "commissioner": "Clare County Council",
+  "budget_eur_all_in": 21500,
+  "deadline_authority": "2026-09-17",
+  "stale_deadline_seen": "2027-09-17 on one general programme page; not controlling",
+  "process": "ONE_STAGE_OPEN_COMPETITION",
+  "site": {
+    "site_1": "adjacent to exit into Aistear maze",
+    "site_2": "lower segment of Rectory garden",
+    "preferred": "SITE_2_CONDITIONAL"
+  },
+  "primary_concept": "THE_LAKE_HOLDS_THE_LIGHT",
+  "portfolio_strategy": "6_VERIFIED_PHYSICAL_WORKS",
+  "artist_fee_eur": 6000,
+  "artist_fee_pct": 27.9,
+  "go_to_submit": false,
+  "current_gate": [
+    "GENERATE_IN_SITU_HERO_VISUAL",
+    "FINALIZE_3_PAGE_CV",
+    "ASSEMBLE_6_IMAGE_PORTFOLIO_PDF",
+    "ASSEMBLE_PROPOSAL_PDF",
+    "QUOTE_SANITY_CHECK",
+    "FINAL_READBACK"
+  ],
+  "cluain_parallel_state": "HOLD_0_OF_3_PROJECT_LEVEL_RECORDS",
+  "proof_boundary": "NO_AWARD_PROBABILITY_OR_ELIGIBILITY_CLEARANCE_CLAIM"
+}
