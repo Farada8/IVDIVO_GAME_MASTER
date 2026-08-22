@@ -1,0 +1,46 @@
+{
+  "candidate_id": "UNASSIGNED_ACTIVE_FRONTIER_HIJACK_2026-08-22",
+  "id_status": "WITHHELD_GLOBAL_SI_ID",
+  "id_reason": "Open PR #147 already reserves SI-0016; do not create a colliding global candidate ID.",
+  "title": "Active Frontier Hijack Guard",
+  "candidate_type": "ROUTER_RULE_PLUS_EXECUTABLE_CANARY",
+  "status": "DEVELOPMENT_CONTRACT_READY",
+  "scope": "UNIVERSAL_IVDIVO_CANDIDATE_NOT_CURRENT_AUTHORITY",
+  "updated": "2026-08-22",
+  "source_provenance": [
+    {
+      "source_type": "PRODUCTION_DEFECT",
+      "locator": "Business Engineering continuation: discovery of artist-CV/public-art evidence caused an unauthorized switch from the controlling Business Engineering frontier into a sibling public-art evidence lane.",
+      "date": "2026-08-22"
+    },
+    {
+      "source_type": "FOUNDER_CORRECTION",
+      "locator": "Founder asked why the artist CV was present and instructed the system to return to its work and route the defect into Self-Improvement.",
+      "date": "2026-08-22"
+    }
+  ],
+  "question_to_self_improvement_engine": "How do we guarantee that GitHub/Drive/Gmail/File-Library discovery can enrich the active task without silently changing the active project or causal frontier when the discovered material is not a proven dependency of the current next gate?",
+  "problem_or_opportunity": "Semantic relevance from a sibling project can accidentally outrank the active current authority and hijack execution. The current state may be fresh, so project-slice freshness alone does not prevent the error.",
+  "proposed_mechanism": "Maintain an explicit ActiveFrontierLock. Discovered material is classified against the current next gate before use. Semantic relevance alone is SUPPORTING_ONLY. A frontier switch requires either an explicit user switch event or a proven REQUIRED_DEPENDENCY relation. Cross-lane dependency work receives a RETURN_TOKEN pointing to the original frontier and must return after the bounded dependency is resolved or held.",
+  "core_laws": [
+    "DISCOVERED_RELEVANCE_NEQ_FRONTIER_SWITCH_AUTHORITY",
+    "SIBLING_PROJECT_EVIDENCE_DEFAULTS_TO_SUPPORTING_ONLY",
+    "ACTIVE_FRONTIER_CHANGES_REQUIRE_EXPLICIT_SWITCH_OR_REQUIRED_DEPENDENCY",
+    "CROSS_LANE_DEPENDENCY_REQUIRES_RETURN_TOKEN",
+    "UNKNOWN_SCOPE_FAILS_CLOSED_AND_PRESERVES_CURRENT_FRONTIER",
+    "FOUND_MATERIAL_MAY_ENRICH_BUT_NOT_REWRITE_CURRENT_NEXT_GATE"
+  ],
+  "development_contract": {
+    "required_inputs": ["active_project", "active_next_gate", "discovered_material_project", "relation_to_current_gate", "explicit_user_switch"],
+    "outputs": ["USE_IN_CURRENT_FRONTIER", "SUPPORTING_ONLY_KEEP_FRONTIER", "CROSS_LANE_DEPENDENCY_WITH_RETURN_TOKEN", "SWITCH_AUTHORIZED", "HOLD_AMBIGUOUS_SCOPE_KEEP_FRONTIER", "HOLD_NO_ACTIVE_FRONTIER"],
+    "fail_closed": ["no active frontier loaded", "unknown relation", "sibling material with semantic relevance only", "attempted switch without explicit user event or required dependency"],
+    "return_invariant": "A bounded cross-lane dependency may not become the new default frontier; after completion/HOLD, resume the return_token frontier unless the user explicitly switches."
+  },
+  "positive_fixture": "Business Engineering P225/P235 frontier + artist CV/public-art evidence => SUPPORTING_ONLY_KEEP_FRONTIER.",
+  "dependency_fixture": "Current gate explicitly requires a record from another project => CROSS_LANE_DEPENDENCY_WITH_RETURN_TOKEN.",
+  "explicit_switch_fixture": "User explicitly says switch to public-art application => SWITCH_AUTHORIZED.",
+  "promotion_level": "NONE",
+  "promotion_limits": ["NOT_VERIFIED_CURRENT", "NO_GLOBAL_SI_ID_ASSIGNED", "NO_AUTOMATIC_ROUTER_MUTATION", "NO_FOUNDER_INTENT_INFERENCE"],
+  "next_action": "Run executable canaries and one real cross-project pilot; measure false-positive blocking before assigning a global SI ID or promoting the law.",
+  "next_gate": "EXECUTABLE_CANARIES_PLUS_REAL_CROSS_PROJECT_PILOT_PLUS_FALSE_POSITIVE_REVIEW"
+}
