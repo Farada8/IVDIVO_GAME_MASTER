@@ -1,0 +1,84 @@
+name: ROOM917 RU Cast Shortlist Compiler
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/room917-ru-shortlist-compiler.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_cast_shortlist.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_prepare_ru_cast_shortlist.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/room917-ru-shortlist-compiler.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_cast_shortlist.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_prepare_ru_cast_shortlist.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json'
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run shortlist compiler unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_prepare_ru_cast_shortlist.py -v
+
+      - name: Compile shortlist proposal from current provider snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _room917_ru_shortlist_ci
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_cast_shortlist.py \
+            --snapshot AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json \
+            --out _room917_ru_shortlist_ci/ROOM917_RU_CAST_SHORTLIST_PROPOSAL.json \
+            --max-per-role 3
+
+      - name: Assert fail-closed or review-only state
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('_room917_ru_shortlist_ci/ROOM917_RU_CAST_SHORTLIST_PROPOSAL.json')
+          row=json.loads(p.read_text(encoding='utf-8'))
+          allowed={
+              'HOLD_PROVIDER_AUTH_REQUIRED',
+              'HOLD_NO_NATIVE_DURABLE_CANDIDATES',
+              'HOLD_UNSUPPORTED_PROVIDER_SNAPSHOT_STATUS',
+              'HOLD_PROVIDER_POLICY_MISMATCH',
+              'HOLD_INCOMPLETE_ROLE_SHORTLIST',
+              'READY_FOR_PREVIEW_LISTEN_NOT_BINDINGS',
+          }
+          if row.get('status') not in allowed:
+              raise SystemExit(f"unexpected status: {row.get('status')}")
+          if row.get('auto_cast') is not False:
+              raise SystemExit('auto_cast must be false')
+          if row.get('cast_lock') is not False:
+              raise SystemExit('cast_lock must be false')
+          if row.get('paid_s0_authorized') is not False:
+              raise SystemExit('paid_s0_authorized must be false')
+          if row.get('full_e01_render_allowed') is not False:
+              raise SystemExit('full_e01_render_allowed must be false')
+          print(f"status={row.get('status')} role_counts={{k:len(v) for k,v in row.get('roles',{}).items()}}")
+          PY
+
+      - name: Upload CI proposal evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_RU_CAST_SHORTLIST_CI
+          path: _room917_ru_shortlist_ci/
+          if-no-files-found: error
+          retention-days: 7
