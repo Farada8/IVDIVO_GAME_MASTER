@@ -1,9 +1,29 @@
 {
-  "schema": "ivdivo.business.opp37_offer_engineering/1.1",
+  "schema": "ivdivo.business.opp37_offer_engineering/1.2",
   "date": "2026-08-22",
-  "status": "P25_P32_INTERNAL_ENGINEERING_COMPLETE_PENDING_CI",
+  "status": "P25_P32_INTERNAL_ENGINEERING_COMPLETE_FOUNDER_RESREEN_PASS_PENDING_CI",
   "opportunity_id": "OPP-37",
-  "dependency": {"test37": "MERGED_PASS_2_OF_3", "test37_pr": 329, "test37_merge_sha": "8a75f6abe2c4b82b0d673ad7a1a1280a99ecc02a"},
+  "dependency": {
+    "test37": "MERGED_PASS_2_OF_3",
+    "test37_pr": 329,
+    "test37_merge_sha": "8a75f6abe2c4b82b0d673ad7a1a1280a99ecc02a",
+    "founder_profile_authority": "PR334_MERGED_MANDATORY_RESCREEN"
+  },
+  "founder_profile_rescreen": {
+    "remote_first_pass": true,
+    "founder_cash_at_risk_eur_current_phase": 0,
+    "founder_cash_default_ceiling_eur": 3000,
+    "founder_physical_load": "NONE_LOW",
+    "test_before_build_spend": true,
+    "wave_stage": "EXPANDING",
+    "competition_density_generic_ai_audit": "HIGH",
+    "early_wave_priority": false,
+    "optionality_next_primary": false,
+    "portfolio_primary": false,
+    "disposition": "NORMAL_CASHFLOW_CANDIDATE",
+    "cheapest_way_to_be_wrong": "MANUAL_BOUNDED_PACK_BEFORE_SAAS_OR_INFRASTRUCTURE",
+    "rescreen_marker": "GENERAL-BUSINESS-OPP37-FOUNDER-RESCREEN-NORMAL-CASHFLOW-REMOTE0-PASS"
+  },
   "offer": {
     "generic_ai_seo_audit": "KILL_AS_DIFFERENTIATED_CORE",
     "working_name": "FIRST_PARTY_FACT_CONSISTENCY_AND_ANSWERABILITY_DECISION_PACK",
@@ -53,6 +73,7 @@
     "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
     "document_id": "1R4R3gWsPwD7ipXdIgt1H-JTX58Rblp-nhuDt1lac71s",
     "readback_marker": "GENERAL-BUSINESS-OPP37-P25-P32-OFFER-ENGINEERING-32OF64-NO-MARKET-PROOF",
+    "founder_rescreen_readback_marker": "GENERAL-BUSINESS-OPP37-FOUNDER-RESCREEN-NORMAL-CASHFLOW-REMOTE0-PASS",
     "readback_status": "PASS"
   },
   "github": {"pr": null, "exact_head": null, "ci_runs": [], "merge_sha": null}
