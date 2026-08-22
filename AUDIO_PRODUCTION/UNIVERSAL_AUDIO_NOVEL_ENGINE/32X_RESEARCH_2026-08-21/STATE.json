@@ -1,0 +1,59 @@
+{
+  "schema": "ivdivo.audio_novel_engine.research_wave_state/1.0",
+  "date": "2026-08-21",
+  "branch": "audio-novel-engine/32x-research-2026-08-21",
+  "status": "RELEASE_CANDIDATE_LIVE_PORTABILITY_GATE_OPEN",
+  "authority": {
+    "audio_canon": "IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md",
+    "program_contract": "IVDIVO AUDIO ENGINE — PROGRAM CONTRACT v2.0",
+    "workstate": "CURRENT_WORKSTATE_v2.2"
+  },
+  "research_wave": {
+    "prompts_executed": 32,
+    "accepted_or_proven_areas": 26,
+    "next_prompts_defined": 64
+  },
+  "fixtures": {
+    "room917": {
+      "role": "LIVE_REFERENCE_IMPLEMENTATION",
+      "proves": [
+        "live_dialogue_provider",
+        "live_sfx_music_provider",
+        "alignment_timeline",
+        "six_stem_automix",
+        "post_render_red_team",
+        "selective_remix_without_new_provider_calls"
+      ]
+    },
+    "lesson_zero_ch01_ru": {
+      "role": "SECOND_PROJECT_PORTABILITY_FIXTURE",
+      "spoken_units": 146,
+      "spoken_units_covered_once": 146,
+      "render_blocks": 11,
+      "dry_provider_requests": 11,
+      "sound_cues": 14,
+      "live_canary": {
+        "requests": 3,
+        "spoken_units": 36,
+        "characters": 2163,
+        "roles": ["NARRATOR", "ETHAN", "AOIFE"],
+        "status": "READY_AFTER_PROVISIONAL_VOICE_BINDING"
+      }
+    }
+  },
+  "open_v1_blockers": [
+    "LESSON_ZERO_THREE_REQUEST_LIVE_CANARY",
+    "SECOND_PROJECT_REAL_ALIGNMENT_RESOLVED_TIMELINE_MINI_MIX",
+    "HUMAN_LISTEN_AND_AI_DISTRACTION_GATE",
+    "MEASURED_COST_PER_ACCEPTED_MINUTE_AND_MANUAL_MINUTES",
+    "ONE_COMMAND_RESUME_SELECTIVE_REPAIR_REGRESSION",
+    "DURABLE_RAW_LIVE_PROVENANCE"
+  ],
+  "do_not_repeat": [
+    "GENERIC_AUDIO_ENGINE_ARCHITECTURE_REWRITE",
+    "ROOM917_S0_S1_PRELIVE_CASCADE",
+    "MILESTONE_D_GENERAL_AUDIT",
+    "ELEVENLABS_GENERIC_CAPABILITY_AUDIT_WITHOUT_CHANGED_EVIDENCE"
+  ],
+  "exact_next_action": "EXECUTE_NEXT_64_FROM_WAVE_A_STARTING_WITH_THREE_VOICE_CANDIDATE_RECOVERY_AND_PRONUNCIATION_MICRO_CANARY"
+}
