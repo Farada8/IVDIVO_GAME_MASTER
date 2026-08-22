@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "project": "THE WIFE AT HIS WEDDING",
+  "project_id": "D01",
+  "date": "2026-08-22",
+  "authority_effect": "WORKING_FRONTIER_ONLY_NOT_FOUNDER_LOCK",
+  "episode": {
+    "id": "E99",
+    "title": "THE BRIDE",
+    "status": "WORKING_COMPLETE",
+    "runtime_spoken_words": 1116,
+    "runtime_gate": "PASS_1100_1550",
+    "red_team": {"fatal": 0, "major": 0, "medium": 2},
+    "github_script": "WAVE3_EXECUTION_E99_2026-08-22/01_E99_THE_BRIDE_v1.0.md",
+    "github_gate": "WAVE3_EXECUTION_E99_2026-08-22/02_E99_LEGAL_BRIDE_SOURCE_INDEPENDENCE_ROMANCE_GATE_v1.0.md",
+    "github_script_commit": "a7692b0ba7d1ab2032ca4f1ff474b0875436f570",
+    "github_gate_commit": "3483e30149fc90f10ddbd7f8a40a35e0d75bf0c6",
+    "drive_folder_id": "1canAWKmCkqiVWTn1O16GDSH4zyJJ9Yu6",
+    "drive_script_id": "13WxVBkhvfEvD1-0BTkxy3MLXi63mM3gVtQey4JqbjcA",
+    "drive_script_revision": "AIroW37HGtsPGZAnqcYETzi-V1GmvL3fcgJkaA_g-XP46SDFtJxB-CyZlmXqNHH4yGrd3CRHjy8--9wIIJT0IIv9VDZCfQHSQ9PxXOCa71Y",
+    "drive_gate_id": "1ZBCs9sQWxfZnjnU80_Ijhv5tri2rBjPbaY9TXAzHBig",
+    "drive_gate_revision": "AIroW36y6nlRD7DYy4GWjQK2CrQlpFsR6og6PWzZwIgnYBy47ae_-nkcQv2eNEF6LnTN98DEEQIsdo_mFQZvjm0HoPqAo3pH1uz2xG82RSo"
+  },
+  "story_answer": "CURRENT_EVELYN_IS_SUPPORTED_AS_THE_PHYSICAL_AND_RECORDED_CEREMONY_BRIDE_BY_THREE_INDEPENDENT_EVIDENCE_CLASSES",
+  "evidence_classes": [
+    "CEREMONY_SECURITY_LIVE_BIOMETRIC_AND_ACCESS",
+    "REGISTRAR_CEREMONY_CONTINUITY",
+    "AUTHENTICATED_PRE_WEDDING_SOURCE_GUARDIAN_PACKET"
+  ],
+  "adversarial_resolution": "B7_B9_CLEARANCE_SUFFIX_DISCREPANCY_RESOLVED_BY_INDEPENDENT_RISK_REISSUE_LOG",
+  "explicit_non_answers": [
+    "NO_PRESENT_ROMANTIC_RESTORATION_DECIDED",
+    "NO_MATERNITY_PROVED",
+    "NO_MARA_BIRTH_OR_CIVIL_IDENTITY_PROVED",
+    "NO_PROPERTY_OR_TRUST_ENTITLEMENT_PROVED",
+    "NO_ROMANTIC_LOSS_BY_MARA"
+  ],
+  "child_integrity": "LILY_NOT_EXAMINED_SAMPLED_QUESTIONED_OR_USED_AS_EVIDENCE",
+  "external_gates": {
+    "human_signal": "NOT_RUN",
+    "jurisdiction_specific_legal_review": "NOT_RUN",
+    "real_listener_audio_validation": "NOT_RUN",
+    "market_validation": "NOT_CLAIMED"
+  },
+  "episode_frontier": "E99",
+  "highest_unblocked_obligation": "E100_MATERNAL_PATIENT_EVIDENCE_CONTRACT_THEN_DRAFT_THE_MOTHER_RECORD",
+  "next_episode_contract": {
+    "episode": "E100",
+    "title": "THE MOTHER RECORD",
+    "required_question": "WHICH_CURRENT_ADULT_MAPS_TO_THE_PREGNANCY_AND_DELIVERY_MATERNAL_PATIENT_CHAIN",
+    "required_evidence": "ADULT_DOCUMENTARY_MEDICAL_SECURITY_RECORDS_WITH_INDEPENDENT_CONTINUITY_NOT_CHILD_TESTING",
+    "required_answer": "CURRENT_EVELYN_MAPS_TO_PREGNANCY_AND_DELIVERY_MATERNAL_PATIENT_CHAIN",
+    "required_child_boundary": "LILY_IS_NEVER_EVIDENCE",
+    "required_mara_boundary": "MARA_NURSERY_NIGHT_ROLE_REMAINS_NON_MATERNAL_PROTECTIVE_CARE",
+    "required_cliff": "VITAL_RECORDS_NOTICE_BODY_MAPPING_DOES_NOT_CREATE_MARA_BIRTH_CERTIFICATE"
+  },
+  "do_not_repeat": ["E96", "E97", "E98", "E99"],
+  "next_action": "FRESHNESS_GATE_THEN_EXECUTE_E100_CONTRACT_AND_DRAFT"
+}
