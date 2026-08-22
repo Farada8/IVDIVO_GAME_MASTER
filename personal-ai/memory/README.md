@@ -1,16 +1,35 @@
 # Local Memory — PL-02
 
-PL-02 uses the same local SQLite database as the PL-00 bootstrap. It adds auditable `memory_records` and `memory_events` tables without requiring a paid service or vector database.
+PL-02 uses the same local SQLite database as the PL-00 bootstrap.
 
-Operations:
+Two interfaces coexist intentionally:
 
-- `store` — persist content with kind/source/metadata;
-- `search` — bounded text/source/metadata search, ACTIVE records only by default;
-- `update` — mutate an ACTIVE record and append an audit event;
-- `invalidate` — preserve the record but remove it from normal retrieval with a reason;
-- `trace` — return STORE/UPDATE/INVALIDATE history in order.
+1. `MemoryStore` — compatibility layer for the already-merged PL-02 CLI (`put/search/update/invalidate/trace`).
+2. `VersionedMemory` — strict implementation of the original PL-02 contract with physical `documents`, `facts`, `decisions`, `sources`, `outputs`, and `events` tables, immutable versions, content hashes, confidence, source IDs, and traceable provenance.
 
-CLI examples:
+The required PL-02 physical table set is therefore:
+
+- `projects`
+- `tasks`
+- `documents`
+- `facts`
+- `decisions`
+- `sources`
+- `outputs`
+- `events`
+
+Every VersionedMemory record stores: logical ID, version, project ID when applicable, UTC timestamp, source, optional source record ID, confidence where supplied, status, content, SHA-256 content hash, current-version flag, and invalidation metadata.
+
+Strict operations:
+
+- `store` — create version 1 and reject accidental overwrite;
+- `search` — search only current records; INVALIDATED is excluded unless explicitly requested;
+- `update` — create a new version while preserving the old content/hash;
+- `invalidate` — create an INVALIDATED audit version rather than deleting history;
+- `trace_source` — follow record -> source record -> parent source chain with missing/cycle/truncation reporting;
+- `versions` — return complete immutable history for one logical record.
+
+Compatibility CLI remains available:
 
 ```bash
 python personal-ai/run.py memory put "fact" --kind evidence --source source-a --id mem-1
@@ -20,4 +39,6 @@ python personal-ai/run.py memory invalidate mem-1 --reason superseded
 python personal-ai/run.py memory trace mem-1
 ```
 
-Invalidated memory cannot be edited and is excluded from default search. PL-02 is persistence/retrieval infrastructure; PL-03 owns evidence-class semantics and must separately prevent unsupported inference from becoming a verified fact.
+The strict VersionedMemory API is exercised directly in regression tests. The original PL-02 prompt requires a CLI search path, not a second incompatible CLI grammar, so the compatibility search path remains canonical for command-line use.
+
+PL-02 is persistence/retrieval infrastructure only. Storing a record does **not** turn an inference into a verified fact. Evidence-class semantics and the `AI_INFERENCE -> VERIFIED_FACT` firewall belong to PL-03.
