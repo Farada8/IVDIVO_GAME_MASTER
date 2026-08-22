@@ -1,0 +1,14 @@
+{
+  "schema":"IVDIVO_SELF_IMPROVEMENT_CYCLE10_STATE_v1.1",
+  "date":"2026-08-22",
+  "status":"ENGINEERING_COMPLETE_DRIVE_READBACK_PASS_GITHUB_PR_PENDING",
+  "authority_effect":"NONE",
+  "current_authority":"Self-Improvement v2 VERIFIED_CURRENT",
+  "execution":{"prompts":32,"modules":16,"contracts":16,"proof_obligations":16,"protocols":8,"tests":"32/32_PASS","next_prompts":64},
+  "parallel":{"cycle9b":"32/32 EXECUTED","si_0014":"READY_FOR_PILOT","si_0015":"READY_FOR_PILOT","si_0016":"OPEN_DRAFT_PR_147_RESERVATION","v3":"HOLD"},
+  "new_si_id_allocated":false,
+  "drive":{"root_folder_id":"1NUe4Ge-A2DAqa-1BeF6dETLpUiq7mqgQ","cycle10_folder_id":"1l99ycTCvdP1HLwMkAoTTW3qPePUEUObd","zip_file_id":"1itgymyI1G29JbvixYW7wPEctDmjB-aYJ","zip_sha256":"d419de55b033d82a1233a7740d86af6dbcfd49de87442ed95da0fc6e2550127e","zip_bytes":18020,"zip_entries":13,"raw_readback":"PASS"},
+  "github":{"branch":"self-improvement/cycle10-decision-evidence-yield-20260822","base_at_branch_creation":"d919a680dea76ce74c6fa99113a1fe36d85f1e81","pr":"PENDING","ci":"PENDING"},
+  "external_evidence":{"human":"NOT_RUN","provider":"NOT_RUN","market":"NOT_RUN"},
+  "production_return":{"required":true,"frontier":"prospective book/audio/business Decision-Evidence-Yield pilots after closure"}
+}
