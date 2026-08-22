@@ -1,0 +1,123 @@
+{
+  "schema": "ivdivo.ai_act.article50.sample_packet/1.0",
+  "date": "2026-08-22",
+  "status": "SYNTHETIC_DESIGN_ONLY_NOT_CUSTOMER_EVIDENCE",
+  "cases": [
+    {
+      "case_id": "A50-DEMO-01-CHATBOT",
+      "role": "PROVIDER",
+      "direct_interaction_with_natural_persons": true,
+      "ai_interaction_obvious": false,
+      "generates_synthetic_content": false,
+      "code_adherence": "UNKNOWN",
+      "designed_controls": {
+        "InteractionDisclosureEvidence": {
+          "status": "DESIGN_ONLY",
+          "plain_language_text": "You are interacting with an AI assistant.",
+          "timing": "FIRST_INTERACTION_START",
+          "accessibility": "PLAIN_TEXT_PLUS_SCREEN_READER_COMPATIBLE",
+          "implementation_evidence_hash": null
+        }
+      }
+    },
+    {
+      "case_id": "A50-DEMO-02-GENERATOR",
+      "role": "PROVIDER",
+      "direct_interaction_with_natural_persons": false,
+      "generates_synthetic_content": true,
+      "content_types": ["IMAGE", "TEXT"],
+      "code_adherence": "NOT_SIGNED",
+      "designed_controls": {
+        "MachineReadableMarkingEvidence": {
+          "status": "DESIGN_ONLY",
+          "mechanism": "TO_BE_SELECTED_AND_EVIDENCE_BOUND",
+          "machine_readability_test": "NOT_TESTED",
+          "interoperability_test": "NOT_TESTED",
+          "robustness_reliability_test": "NOT_TESTED",
+          "known_limitations": ["UNRESOLVED_TECHNICAL_IMPLEMENTATION"],
+          "implementation_evidence_hash": null
+        }
+      }
+    },
+    {
+      "case_id": "A50-DEMO-03-EMOTION",
+      "role": "DEPLOYER",
+      "emotion_recognition": true,
+      "biometric_categorisation": false,
+      "public_interest_text": false,
+      "deepfake": false,
+      "code_adherence": "NOT_SIGNED",
+      "designed_controls": {
+        "ExposureNoticeEvidence": {
+          "status": "DESIGN_ONLY",
+          "notice": "An AI-based emotion recognition system is operating in this area.",
+          "timing": "BEFORE_OR_AT_FIRST_EXPOSURE",
+          "implementation_evidence_hash": null
+        },
+        "SeparatePersonalDataLegalReview": {
+          "status": "REQUIRED_SEPARATE_PLANE"
+        }
+      }
+    },
+    {
+      "case_id": "A50-DEMO-04-DEEPFAKE-CREATIVE",
+      "role": "DEPLOYER",
+      "deepfake": true,
+      "evidently_creative_artistic_satirical_fictional": true,
+      "public_interest_text": false,
+      "code_adherence": "SIGNED",
+      "designed_controls": {
+        "ContentDisclosureEvidence": {
+          "status": "DESIGN_ONLY",
+          "label": "AI-generated or manipulated content",
+          "presentation_mode": "APPROPRIATE_CREATIVE_CONTEXT_DISCLOSURE",
+          "eu_icon": "OPTIONAL",
+          "implementation_evidence_hash": null
+        }
+      }
+    },
+    {
+      "case_id": "A50-DEMO-05-PUBLIC-TEXT-NO-EDITOR",
+      "role": "DEPLOYER",
+      "deepfake": false,
+      "public_interest_text": true,
+      "human_review_or_editorial_control": false,
+      "editorial_responsibility_assumed": false,
+      "code_adherence": "SIGNED",
+      "designed_controls": {
+        "PublicInterestTextDisclosureEvidence": {
+          "status": "DESIGN_ONLY",
+          "label": "This text was generated or manipulated by AI.",
+          "timing": "AT_FIRST_EXPOSURE",
+          "implementation_evidence_hash": null
+        }
+      }
+    },
+    {
+      "case_id": "A50-DEMO-06-PUBLIC-TEXT-EDITORIAL-EXCEPTION",
+      "role": "DEPLOYER",
+      "deepfake": false,
+      "public_interest_text": true,
+      "human_review_or_editorial_control": true,
+      "editorial_responsibility_assumed": true,
+      "code_adherence": "NOT_SIGNED",
+      "designed_controls": {
+        "EditorialExceptionEvidence": {
+          "status": "DESIGN_ONLY",
+          "review_record": "SYNTHETIC_REVIEW_LOG_PLACEHOLDER",
+          "responsible_person_or_entity": "SYNTHETIC_EDITOR_PLACEHOLDER",
+          "publication_version_hash": null
+        }
+      }
+    }
+  ],
+  "proof_boundary": {
+    "real_customer": false,
+    "implementation_complete": false,
+    "legal_compliance_proven": false,
+    "wtp_proven": false,
+    "transaction_proven": false,
+    "profitability_proven": false
+  },
+  "external_action_authorized": false
+}
