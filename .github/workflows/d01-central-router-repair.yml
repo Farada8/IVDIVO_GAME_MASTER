@@ -1,0 +1,29 @@
+name: D01 Central Router Repair Proof
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_D01_ROUTER_REPAIR_2026-08-22/**'
+      - 'CURRENT_IVDIVO_SYSTEM_STATE.json'
+      - 'CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json'
+      - '.github/workflows/d01-central-router-repair.yml'
+  workflow_dispatch:
+jobs:
+  repair-proof:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run bounded repair regression
+        run: python SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_D01_ROUTER_REPAIR_2026-08-22/test_repair.py
+      - name: Generate exact patched routers
+        run: python SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_D01_ROUTER_REPAIR_2026-08-22/apply_repair.py
+      - name: Validate generated JSON
+        run: |
+          python -m json.tool SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_D01_ROUTER_REPAIR_2026-08-22/patched/CURRENT_IVDIVO_SYSTEM_STATE.json >/dev/null
+          python -m json.tool SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_D01_ROUTER_REPAIR_2026-08-22/patched/CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json >/dev/null
+      - uses: actions/upload-artifact@v4
+        with:
+          name: d01-router-patched-json
+          path: SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_D01_ROUTER_REPAIR_2026-08-22/patched/*.json
