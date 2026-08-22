@@ -1,7 +1,7 @@
 {
   "schema": "BUSINESS_ENGINEERING_CYCLE9_P193_P224_v1",
   "date": "2026-08-22",
-  "status": "RUN32_EXECUTED_CI_DRIVE_CLOSURE_PENDING",
+  "status": "RUN32_EXECUTED_CI_GREEN_DRIVE_READBACK_PASS",
   "target": {
     "resource_id": "8872468",
     "official_workspace_reachable": true,
@@ -66,8 +66,23 @@
       "ROOT_BLOCKER_STABILITY_CAN_TRIGGER_PROTECT_NO_CHANGE"
     ]
   },
+  "persistence": {
+    "github_pr": 247,
+    "ci_run": 32550774027,
+    "ci": "SUCCESS",
+    "cycle8_regression": "SUCCESS",
+    "cycle9_exact32": "SUCCESS",
+    "compileall": "SUCCESS",
+    "drive_folder_id": "1s7R6TkVYl1k8zXcAPG3baSNyLlkUjunm",
+    "drive_documents": {
+      "start_here": "17yKF-lJwPFUG1l7b4YUeghiZWUvLxrWGpDrMs6rIWl8",
+      "run32": "1TRxVo_vJPxHu3zVbgBjv9EpX1C_xdwnGjW1L-EQNUow",
+      "engineering": "1_qs716b8JdCqV4KCIqKA0UZCAkNK1C8o5YKOJM81Zok",
+      "next64": "1QncwOrBANab7fAor5yUzU32gu3u5KUF3jERsBkXyQ54",
+      "machine_state": "1NYYT9jICFy9EtIu5gn8NzferVYJEuTCQ0iQDDjTfPBQ"
+    },
+    "drive_readback": "PASS_5_OF_5_SEMANTIC_MARKERS"
+  },
   "current_gate": "ACQUIRE_TARGET_PACK_OR_EXPLICIT_BIDDER_PACKET",
-  "authority_mutation": false,
-  "ci": "PENDING",
-  "drive_readback": "PENDING"
+  "authority_mutation": false
 }
