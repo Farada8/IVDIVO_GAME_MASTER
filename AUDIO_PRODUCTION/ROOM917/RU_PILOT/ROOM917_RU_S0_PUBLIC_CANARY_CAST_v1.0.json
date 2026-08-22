@@ -1,0 +1,39 @@
+{
+  "schema_version": "ivdivo.room917_ru_public_canary_cast/1.0",
+  "date": "2026-08-22",
+  "status": "CANARY_ONLY_NOT_CAST_LOCK",
+  "purpose": "Bounded first-listen Russian performance canary. These IDs are never production voice authority and may route to replacement default voices at provider side.",
+  "provider": "ElevenLabs",
+  "model_id": "eleven_v3",
+  "language_code": "ru",
+  "voice_candidates": {
+    "ELENA": {
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "source_name": "Rachel",
+      "provider_transition_note": "Legacy/default routing may resolve to a newer replacement voice; audit actual returned voice/account state before any lock.",
+      "use": "CANARY_ONLY"
+    },
+    "JULIAN": {
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "source_name": "Adam",
+      "use": "CANARY_ONLY"
+    },
+    "MINA": {
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "source_name": "Matilda",
+      "use": "CANARY_ONLY"
+    },
+    "CATE": {
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "source_name": "Sarah",
+      "use": "CANARY_ONLY"
+    }
+  },
+  "hard_rules": [
+    "DO_NOT_PROMOTE_CANARY_VOICE_TO_CAST_LOCK_WITHOUT_RU_LISTENING_EVIDENCE",
+    "DO_NOT_RENDER_FULL_E01_FROM_PUBLIC_CANARY_CAST",
+    "CANARY_SPEND_ONLY",
+    "CRITICAL_CLUE_LINES_ISOLATED_TTS",
+    "NO_SECRETS_IN_REPOSITORY"
+  ]
+}
