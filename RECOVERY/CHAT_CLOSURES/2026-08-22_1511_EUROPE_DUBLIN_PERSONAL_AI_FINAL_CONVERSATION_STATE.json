@@ -1,0 +1,59 @@
+{
+  "schema": "ivdivo.chat_closure.final_state/0.1",
+  "timestamp_local": "2026-08-22T15:11:00+01:00",
+  "timezone": "Europe/Dublin",
+  "closure_marker": "CHAT-CLOSURE-FINAL-20260822-1511-DUBLIN-PERSONAL-AI-PL10-CURRENT",
+  "supersedes_freshness_of": "CHAT-CLOSURE-20260822-1452-DUBLIN-PERSONAL-AI-PL10-CURRENT",
+  "prior_full_archive": {
+    "markdown": "RECOVERY/CHAT_CLOSURES/2026-08-22_1452_EUROPE_DUBLIN_PERSONAL_AI_FULL_CONVERSATION_CLOSURE.md",
+    "state": "RECOVERY/CHAT_CLOSURES/2026-08-22_1452_EUROPE_DUBLIN_PERSONAL_AI_FULL_CONVERSATION_STATE.json",
+    "drive_receipt": "RECOVERY/CHAT_CLOSURES/2026-08-22_1452_EUROPE_DUBLIN_DRIVE_RECEIPT.json",
+    "github_archive_pr": 491,
+    "github_archive_merge": "3e21c72f4c4ca9d32cff8b67322f5f42f96957ac",
+    "github_drive_receipt_pr": 493,
+    "github_drive_receipt_merge": "07386692b200c7ed27b2108f59bcad1a82c07b9b",
+    "drive_folder_id": "1c557MdC_B3QI2hmRWgfMTQHp5ZjfHuuI",
+    "drive_document_id": "1dnLEViu_sOI4KVJ9MiynBzZW7s70j2p63x4C9yQmZJQ"
+  },
+  "live_observed_main_before_final_archive": "96683e0fc97b016b1cad09b00f940971fd62fb7f",
+  "production_launch": {
+    "authority_effect": "NONE",
+    "self_improvement_authority": "V2_VERIFIED_CURRENT",
+    "current_frontier": "PL-10",
+    "verified_cards_observed": ["PL-00","PL-01","PL-02","PL-03","PL-04","PL-05","PL-06","PL-07","PL-08","PL-09","PL-11","PL-13","PL-14"]
+  },
+  "pl10_wip": {
+    "status": "WIP_NOT_DONE_VERIFIED",
+    "branch": "production-launch/pl10-multi-model-review-20260822",
+    "ahead_by": 10,
+    "behind_by": 110,
+    "direct_merge_forbidden": true,
+    "paths": [
+      "personal-ai/review/README.md",
+      "personal-ai/review/__init__.py",
+      "personal-ai/review/public.py",
+      "personal-ai/review/service.py",
+      "personal-ai/review_cli.py",
+      "personal-ai/tests/test_multi_model_review.py",
+      "personal-ai/tests/test_multi_model_review_cli.py",
+      "personal-ai/tests/test_multi_model_review_integrity.py"
+    ],
+    "restart": [
+      "read live CURRENT_PRODUCTION_LAUNCH_STATE.json",
+      "if frontier remains PL-10, inspect current main and parallel changes",
+      "reconcile eight PL-10 paths",
+      "fresh-main replay minimal delta only",
+      "dedicated PL-10 CI",
+      "full Personal AI regression",
+      "Red Team isolation/tamper/partial-aggregate/provider/network/fake-consensus cases",
+      "freshness + mergeability against tested head",
+      "merge only if clean",
+      "Drive acceptance/readback",
+      "PL10 verification receipt",
+      "advance CURRENT only after evidence"
+    ]
+  },
+  "engineering_law": "Show file, code, input, output and test; missing evidence remains UNKNOWN; prompts/specifications are not a finished engine.",
+  "continuation_law": "Bare continuation inherits Personal AI / Production Launch unless user explicitly switches project.",
+  "final_restart_sentence": "Restore live CURRENT_PRODUCTION_LAUNCH_STATE.json first. The final closure observed PL-14 DONE_VERIFIED and CURRENT frontier PL-10 Multi-Model Review. The old PL-10 branch had real WIP code/tests but was 110 commits behind current main, so do not merge it directly. Reconcile/fresh-replay the minimal PL-10 delta on current main, run dedicated CI + full regression + Red Team, then merge, Drive-readback, receipt, and advance only after evidence."
+}
