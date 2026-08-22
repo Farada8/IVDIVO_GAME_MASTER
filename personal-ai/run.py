@@ -7,7 +7,7 @@ from pathlib import Path
 
 from agents import AgentRunRequest, BoundedAgentExecutor
 from benchmarks import run_suite
-from books import BOOK_STAGES, BookProductionCore
+from books import BOOK_STAGES, BookProductionCore, ContinuityChecker
 from business import BusinessQuoteService
 from core.bootstrap import bootstrap
 from memory.store import MemoryStore
@@ -146,6 +146,18 @@ def build_parser() -> argparse.ArgumentParser:
     book_advance = book_sub.add_parser("advance", help="Advance exactly one production stage")
     book_advance.add_argument("project_id")
     book_advance.add_argument("--to", dest="to_stage", choices=BOOK_STAGES)
+
+    book_check = book_sub.add_parser(
+        "check-continuity",
+        help="Run the PL-09 deterministic checker over structured continuity evidence",
+    )
+    book_check.add_argument("project_id")
+    book_check.add_argument("input_json", help="Path to normalized continuity input JSON")
+    book_check.add_argument(
+        "--enforce",
+        action="store_true",
+        help="Return non-zero exit status when FATAL/MAJOR issues are detected.",
+    )
 
     book_continuity = book_sub.add_parser(
         "continuity", help="Record the explicit continuity gate at CONTINUITY stage"
@@ -301,6 +313,13 @@ def main() -> int:
             result = core.load(args.project_id)
         elif args.book_command == "advance":
             result = core.advance(args.project_id, args.to_stage)
+        elif args.book_command == "check-continuity":
+            result = ContinuityChecker(home).check(
+                args.project_id,
+                _json_file(args.input_json),
+            )
+            if args.enforce and result["blocking_issue_count"] > 0:
+                exit_code = 2
         elif args.book_command == "continuity":
             result = core.set_continuity_gate(
                 args.project_id,

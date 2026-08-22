@@ -1,0 +1,133 @@
+{
+  "observations": [
+    {
+      "id": "loc-a",
+      "category": "LOCATION",
+      "subject": "Maya",
+      "field": "current_location",
+      "scope": "day-7-noon",
+      "value": "Dublin",
+      "chapter": 4,
+      "evidence": "Maya is physically inside the Dublin archive at noon."
+    },
+    {
+      "id": "loc-b",
+      "category": "LOCATION",
+      "subject": "Maya",
+      "field": "current_location",
+      "scope": "day-7-noon",
+      "value": "Galway",
+      "chapter": 5,
+      "evidence": "At the same noon marker Maya is physically present in Galway."
+    },
+    {
+      "id": "age-a",
+      "category": "AGE",
+      "subject": "Samir",
+      "field": "age",
+      "scope": "story-opening",
+      "value": 42,
+      "chapter": 1,
+      "evidence": "Samir says he turned forty-two last month."
+    },
+    {
+      "id": "age-b",
+      "category": "AGE",
+      "subject": "Samir",
+      "field": "age",
+      "scope": "story-opening",
+      "value": 47,
+      "chapter": 3,
+      "evidence": "The dossier lists Samir as forty-seven at the same opening date."
+    },
+    {
+      "id": "look-a",
+      "category": "APPEARANCE",
+      "subject": "Vela",
+      "field": "eye_color",
+      "scope": "stable",
+      "value": "green",
+      "chapter": 2,
+      "evidence": "Vela's eyes are described as green."
+    },
+    {
+      "id": "look-b",
+      "category": "APPEARANCE",
+      "subject": "Vela",
+      "field": "eye_color",
+      "scope": "stable",
+      "value": "brown",
+      "chapter": 6,
+      "evidence": "Vela's unchanged eyes are described as brown."
+    },
+    {
+      "id": "name-a",
+      "category": "NAME",
+      "subject": "Maya",
+      "field": "display_name",
+      "scope": "same-reference",
+      "value": "Maya Chen",
+      "chapter": 1,
+      "evidence": "The file header reads Maya Chen."
+    },
+    {
+      "id": "name-b",
+      "category": "NAME",
+      "subject": "Maya",
+      "field": "display_name",
+      "scope": "same-reference",
+      "value": "  maya   chen ",
+      "chapter": 2,
+      "evidence": "A later header uses spacing/case variation only."
+    }
+  ],
+  "event_order": [
+    {
+      "id": "order-a",
+      "before": "archive-arrival",
+      "after": "security-call",
+      "chapter": 7,
+      "evidence": "The archive arrival happens before the security call."
+    },
+    {
+      "id": "order-b",
+      "before": "security-call",
+      "after": "archive-arrival",
+      "chapter": 8,
+      "evidence": "The security call is said to happen before the archive arrival."
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "know-a",
+      "character": "Maya",
+      "fact": "vault-code",
+      "chapter": 9,
+      "evidence": "Maya enters the vault code without receiving it on page."
+    }
+  ],
+  "reveals": [
+    {
+      "id": "reveal-a",
+      "fact": "vault-code",
+      "chapter": 11,
+      "evidence": "The vault code is first revealed to Maya here."
+    }
+  ],
+  "completions": [
+    {
+      "id": "complete-a",
+      "event": "destroy-only-key",
+      "chapter": 10,
+      "evidence": "The only physical key is destroyed beyond recovery.",
+      "repeatable": false
+    },
+    {
+      "id": "complete-b",
+      "event": "destroy-only-key",
+      "chapter": 12,
+      "evidence": "The same unique key is destroyed again with no restoration event.",
+      "repeatable": false
+    }
+  ]
+}
