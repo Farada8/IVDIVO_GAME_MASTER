@@ -1,5 +1,5 @@
 {
-  "schema": "CYCLE32D_STATE_v0.3",
+  "schema": "CYCLE32D_STATE_v0.4",
   "date": "2026-08-22",
   "authority": "SELF_IMPROVEMENT_V2_VERIFIED_CURRENT",
   "v3": "CANDIDATE_HOLD_FOR_REAL_PRODUCTION_PILOT",
@@ -11,17 +11,21 @@
     "VERIFIED_PERSISTENCE_TRANSACTION",
     "MULTI_SURFACE_FRESHNESS_VECTOR",
     "PROJECT_SOURCE_OF_TRUTH_PRECEDENCE",
-    "STALE_ROUTER_QUARANTINE"
+    "STALE_ROUTER_QUARANTINE",
+    "PRE_EXECUTION_RESUME_GUARD"
   ],
   "real_canaries": {
-    "D01": "POSITIVE_DEFECT_CATCH_STALE_AGGREGATE_ROUTER_VS_E01_E120_TERMINAL_PROJECT_STATE",
-    "D10": "NEGATIVE_REGRESSION_CANARY_NO_FALSE_STORY_REOPEN_OR_FAKE_PROVIDER_EVIDENCE"
+    "D01": "TRUE_POSITIVE_STALE_AGGREGATE_ROUTER_BLOCKED_BEFORE_DUPLICATE_E97_E120_WORK",
+    "D10": "NEGATIVE_REGRESSION_NO_FALSE_STORY_REOPEN_OR_FAKE_PROVIDER_EVIDENCE",
+    "D09": "FOUNDER_DECISION_GATE_PRESERVED_NO_FALSE_CONTINUATION",
+    "D04": "HUMAN_AUDIO_EVIDENCE_BOUNDARY_PRESERVED_NO_FALSE_PASS"
   },
   "runtime_validator": {
     "tool": "SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/tools/cycle32d_stale_router_validator.py",
-    "tests": "SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/tests/test_cycle32d_stale_router_validator.py",
-    "pytest": {"passed":3,"failed":0,"status":"PASS"},
-    "runtime_proof": "SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/09_EXECUTABLE_STALE_ROUTER_VALIDATOR_RUNTIME_PROOF.md"
+    "resume_gate": "tools/ivdivo_resume_guard.py",
+    "tests": "tests/test_ivdivo_resume_guard_cycle32d.py",
+    "pytest": {"passed":5,"failed":0,"status":"PASS"},
+    "integration_spec": "SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/11_V2_RESUME_GATE_INTEGRATION_SPEC.md"
   },
   "known_defects": [
     "Cycle32C claimed Next64 artifact had empty content on readback",
@@ -29,10 +33,15 @@
     "Cross-branch SI identifier reservation remains unresolved",
     "aggregate system router can lag fresher project-specific terminal state"
   ],
+  "resolved_or_narrowed": [
+    "stale aggregate frontier now has executable quarantine candidate",
+    "heterogeneous project-state field names handled by validator",
+    "resume selection now fails closed when project frontier is missing"
+  ],
   "promotion_blockers": [
-    "additional heterogeneous prospective project canaries",
-    "integration regression against current v2 router behavior",
+    "main autopilot not yet modified; candidate integration remains branch-local",
+    "need additional active-project regression after rebase against newest main",
     "cross-branch registry reservation still not transactional"
   ],
-  "next_primary": "run validator across additional heterogeneous project states and classify true-positive false-positive and not-applicable outcomes"
+  "next_primary": "rebase candidate against newest main, run integration regression, then decide whether to promote only PRE_EXECUTION_RESUME_GUARD into canonical autopilot"
 }
