@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "business_raw_authority":{
+    "github_authority":"BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_LIBRARY_AUTHORITY_78_2026-08-22.md",
+    "drive_folder":"1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "physical_files":78,
+    "valid_physical":68,
+    "quarantined":5,
+    "unique_valid_byte_hashes":58,
+    "exact_duplicate_groups":8,
+    "canonical_unique_intellectual_works":null
+  },
+  "design_source_authority":{
+    "drive_folder":"16gVct12QDWRDzzp0Or-_QlmurAdfJdRq",
+    "raw_inbox":"1bR0wWlWuPBK_WXXKbplHlZPuYQ_MYyLM",
+    "state":"INGRESS_READY_SOURCES_REQUIRE_EXACT_READBACK"
+  },
+  "source_states":["CONFIRMED_RAW","CONFIRMED_DERIVED","PLANNED_NOT_CONFIRMED_UPLOADED","QUARANTINED","SUPERSEDED_EDITION_ALIAS"],
+  "identity_law":"physical_file_id != byte_hash != edition_alias != canonical_work_id",
+  "raw_copyrighted_binaries_in_public_github":false,
+  "ingestion_protocol":["UPLOAD","INTEGRITY","PHYSICAL_FILE_ID","BYTE_HASH","CANONICAL_WORK_RESOLUTION","DISCIPLINE_JURISDICTION","SOURCE_PASSPORT","MECHANISM_EXTRACTION","LIMITS_CONFLICTS","FIXTURE","K_GRADE","PROJECT_STAGE_ROUTER","REGRESSION","READBACK"]
+}
