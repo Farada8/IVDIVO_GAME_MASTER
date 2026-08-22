@@ -1,0 +1,41 @@
+name: Money EU Dropship P01-P08
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/14_EU_DROPSHIP_P01_P08_EXECUTION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/15_EU_DROPSHIP_CANDIDATES.json'
+      - '.github/workflows/money-eu-dropship-p01-p08.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate registry and fail-closed economics
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          doc = (root/'14_EU_DROPSHIP_P01_P08_EXECUTION.md').read_text()
+          data = json.loads((root/'15_EU_DROPSHIP_CANDIDATES.json').read_text())
+          assert data['counts']['total'] == 20
+          assert data['counts']['niches'] == 4
+          assert data['counts']['advance_price_ship_check'] == 11
+          assert data['counts']['hold_low_aov'] == 5
+          assert data['counts']['hold_bulk_shipping'] == 2
+          assert data['counts']['hold_long_lead'] == 2
+          assert data['counts']['profit_proven'] == 0
+          assert len(data['candidates']) == 20
+          assert len({x['id'] for x in data['candidates']}) == 20
+          assert all(x['url'].startswith('https://') for x in data['candidates'])
+          assert all(data['economics'][k] is None for k in ['wholesale_cost','shipping_to_ireland','cac','conversion','wtp'])
+          assert 'SCREENING_COMPLETE' in doc
+          assert 'PROFITABLE_SKUS_PROVEN = 0' in doc
+          assert 'No page was published' in doc
+          print('MONEY_EU_DROPSHIP_P01_P08: PASS')
+          PY
