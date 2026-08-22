@@ -1,0 +1,61 @@
+name: General Business P-EW09 OSERA Public Conformance
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/33_OSERA_PEW09_PUBLIC_CONFORMANCE/**'
+      - '.github/workflows/general-business-pew09-osera-public-conformance.yml'
+
+jobs:
+  public-conformance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run frozen-10 live public ref scan
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/33_OSERA_PEW09_PUBLIC_CONFORMANCE/live_scan.py \
+            --sample BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/33_OSERA_PEW09_PUBLIC_CONFORMANCE/frozen_sample.json \
+            --out BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/33_OSERA_PEW09_PUBLIC_CONFORMANCE/runtime/pew09_result.json
+
+      - name: Enforce proof and commercial boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/33_OSERA_PEW09_PUBLIC_CONFORMANCE/runtime/pew09_result.json')
+          r = json.loads(p.read_text(encoding='utf-8'))
+          assert r['sample_size'] == 10
+          assert r['controls_per_repo'] == 6
+          assert r['technical_route'] in {
+              'PASS_TECHNICAL_WEDGE_SURVIVES_M1_ONLY',
+              'KILL_AS_CURRENT_NEW_WIP_WATCH_STANDARD_EVOLUTION',
+          }
+          assert r['buyer_demand'] == 'UNPROVEN'
+          assert r['wtp'] == 'UNKNOWN'
+          assert r['price'] is None
+          assert r['transactions'] == 0
+          assert r['profitability'] == 'UNPROVEN'
+          assert r['wip_promotion'] is False
+          assert r['external_action_authorized'] is False
+          count = r['independent_frozen_public_gap_class_count']
+          if count >= 2:
+              assert r['technical_route'] == 'PASS_TECHNICAL_WEDGE_SURVIVES_M1_ONLY'
+          else:
+              assert r['technical_route'] == 'KILL_AS_CURRENT_NEW_WIP_WATCH_STANDARD_EVOLUTION'
+          # REL-002 is informative only unless this experiment measures actual artifacts.
+          assert r['standards_level_observation_not_counted_as_release_defect']['REL_002_AUTOMATED_ACCEPTANCE_CHECK_NOT_YET_DEFINED'] is True
+          print('P-EW09 CLASSIFICATION:', r['technical_route'])
+          print('P-EW09 GAP CLASSES:', json.dumps(r['gap_classes'], sort_keys=True))
+          PY
+
+      - name: Upload P-EW09 evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: pew09-osera-public-conformance-evidence
+          path: BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/33_OSERA_PEW09_PUBLIC_CONFORMANCE/runtime/pew09_result.json
