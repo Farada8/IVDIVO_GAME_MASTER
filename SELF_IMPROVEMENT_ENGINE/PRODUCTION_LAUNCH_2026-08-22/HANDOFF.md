@@ -16,21 +16,23 @@ Date: 2026-08-22
 ## Verified production frontier
 
 `PL-00 MASTER PRODUCTION BOOTSTRAP = DONE_VERIFIED`.
+- PR #287 merge `2264d7b17ce08811f0037c1ce9fd0ca622442064`.
+- exact-head CI `32553543536` SUCCESS.
+- Drive folder `1NY73gon6bWJRWhmxnJ9MLildINutKLLO`.
 
-Proof:
-- implementation: `personal-ai/` on main;
-- PR #287 merge `2264d7b17ce08811f0037c1ce9fd0ca622442064`;
-- exact-head GitHub Actions `32553543536` = SUCCESS;
-- real CLI path creates SQLite state, demo project/task, persisted readback and log;
-- Drive mirror folder `1NY73gon6bWJRWhmxnJ9MLildINutKLLO` with readback marker.
+`PL-01 PROJECT STATE SYSTEM = DONE_VERIFIED`.
+- PR #294 merge `566fbc00dea63e89257fe6eb4abc26e130e0a663`.
+- PL-00 regression and PL-01 Project State exact-head workflows both SUCCESS.
+- persisted ProjectStateManager + CLI + lifecycle/CLI tests.
+- Drive folder `1kNuZY2ivHEkXHFn9D7HLujQxZf7EvGUO`, marker `PERSONAL-AI-PL01-DONE-VERIFIED-PR294`.
 
-Newly dependency-unlocked cards:
-- `PL-01 Project State System = READY` — canonical next frontier;
-- `PL-02 Local Memory = READY`;
-- `PL-04 AI Provider Abstraction = READY`;
+## Current READY foundation cards
+
+- `PL-02 Local Memory = READY` — canonical next frontier because it unlocks evidence, business, ingestion, knowledge search, daily control and backup paths.
+- `PL-04 AI Provider Abstraction = READY`.
 - `PL-11 Test Benchmark Engine = READY`.
 
-Do not re-execute PL-00 unless a regression or explicit change-control event requires it. Reuse its executable bootstrap as the base for subsequent cards.
+Do not re-execute PL-00 or PL-01 unless a regression or explicit change-control event requires it. Reuse their merged code as the base for subsequent cards.
 
 ## Stop conditions
 
@@ -43,4 +45,4 @@ Stop and mark `BLOCKED` instead of inventing a pass when:
 
 ## Handoff sentence for a new session
 
-`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00 is DONE_VERIFIED; continue from PL-01 unless fresh dependency evidence makes another READY foundation card higher-value. Persist code/state/tests/readback and preserve v2 authority unless a separate promotion gate passes.`
+`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00 and PL-01 are DONE_VERIFIED; continue from PL-02 unless fresh dependency evidence makes another READY foundation card higher-value. Persist code/state/tests/readback and preserve v2 authority unless a separate promotion gate passes.`

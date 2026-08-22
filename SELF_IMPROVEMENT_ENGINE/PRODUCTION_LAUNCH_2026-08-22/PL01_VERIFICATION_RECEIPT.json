@@ -1,0 +1,36 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.1",
+  "card": "PL-01",
+  "status": "DONE_VERIFIED",
+  "implementation_paths": [
+    "personal-ai/projects/manager.py",
+    "personal-ai/run.py",
+    "personal-ai/tests/test_project_state.py",
+    ".github/workflows/personal-ai-pl01-project-state.yml"
+  ],
+  "pr": 294,
+  "merge_sha": "566fbc00dea63e89257fe6eb4abc26e130e0a663",
+  "candidate_head": "de74e2de31835b22e0aa6a44679de8627d7cf8c8",
+  "exact_head_ci": [
+    {"workflow": "Personal AI PL-00 Bootstrap", "run_id": 32553987879, "conclusion": "success"},
+    {"workflow": "Personal AI PL-01 Project State", "run_id": 32553987920, "conclusion": "success"}
+  ],
+  "acceptance": {
+    "required_project_structure": true,
+    "create_load_update": true,
+    "task_add_complete_block": true,
+    "decision_record": true,
+    "next_task": true,
+    "cli_create_status_next": true,
+    "atomic_json_write": true,
+    "path_traversal_rejected": true,
+    "persisted_readback": true
+  },
+  "drive": {
+    "folder_id": "1kNuZY2ivHEkXHFn9D7HLujQxZf7EvGUO",
+    "document_id": "1dC7qp5u9cd57Oq2Ogl-eR-f8sNLCQhfbN2A_4vQ5Xi8",
+    "verified_marker": "PERSONAL-AI-PL01-DONE-VERIFIED-PR294"
+  },
+  "current_frontier_after_closure": "PL-02",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION"
+}

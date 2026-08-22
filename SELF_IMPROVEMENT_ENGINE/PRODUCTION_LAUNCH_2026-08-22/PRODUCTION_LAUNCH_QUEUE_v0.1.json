@@ -4,7 +4,7 @@
   "authority_effect": "NONE",
   "self_improvement_authority": "V2_VERIFIED_CURRENT",
   "queue_status": "FOUNDATION_ACTIVE",
-  "current_frontier": "PL-01",
+  "current_frontier": "PL-02",
   "completion_rule": "DONE_VERIFIED requires persisted implementation plus required tests/readback; prompt execution alone is insufficient",
   "statuses": ["READY", "WAITING_DEPENDENCY", "RUNNING", "BLOCKED", "DONE_VERIFIED", "DESIGN_ONLY", "FAILED"],
   "waves": [
@@ -16,7 +16,7 @@
   ],
   "cards": [
     {"id":"PL-00","title":"Master Production Bootstrap","wave":1,"status":"DONE_VERIFIED","depends_on":[],"acceptance":"python run.py performs a real persisted state action and smoke test passes"},
-    {"id":"PL-01","title":"Project State System","wave":1,"status":"READY","depends_on":["PL-00"],"acceptance":"project CLI create/status/next and unit tests pass"},
+    {"id":"PL-01","title":"Project State System","wave":1,"status":"DONE_VERIFIED","depends_on":["PL-00"],"acceptance":"project CLI create/status/next and unit tests pass"},
     {"id":"PL-02","title":"Local Memory","wave":1,"status":"READY","depends_on":["PL-00"],"acceptance":"SQLite store/search/update/invalidate/trace operations pass tests"},
     {"id":"PL-03","title":"Source Evidence Layer","wave":3,"status":"WAITING_DEPENDENCY","depends_on":["PL-02"],"acceptance":"unverified inference cannot be emitted as VERIFIED_FACT"},
     {"id":"PL-04","title":"AI Provider Abstraction","wave":1,"status":"READY","depends_on":["PL-00"],"acceptance":"provider interface plus mock provider runs without paid API"},
@@ -44,6 +44,7 @@
   "notes": [
     "No card allocates a new global Self-Improvement SI id by itself.",
     "Human/market/provider evidence must remain real and provenance-backed; it cannot be simulated for gate passage.",
-    "PL-00 verified by PR #287 merge 2264d7b17ce08811f0037c1ce9fd0ca622442064; exact-head CI 32553543536 SUCCESS; Drive readback folder 1NY73gon6bWJRWhmxnJ9MLildINutKLLO."
+    "PL-00 verified by PR #287 merge 2264d7b17ce08811f0037c1ce9fd0ca622442064; exact-head CI 32553543536 SUCCESS; Drive readback folder 1NY73gon6bWJRWhmxnJ9MLildINutKLLO.",
+    "PL-01 verified by PR #294 merge 566fbc00dea63e89257fe6eb4abc26e130e0a663; PL-00 regression + PL-01 CI SUCCESS; Drive readback folder 1kNuZY2ivHEkXHFn9D7HLujQxZf7EvGUO."
   ]
 }
