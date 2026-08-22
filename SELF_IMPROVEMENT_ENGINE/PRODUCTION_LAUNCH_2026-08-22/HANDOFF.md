@@ -70,12 +70,23 @@ Date: 2026-08-22
 - exact state route is `IDEA -> CANON -> STORY_BIBLE -> OUTLINE -> CHAPTER_PLAN -> DRAFT -> CRITIQUE -> REWRITE -> CONTINUITY -> FINAL`; stage skipping is rejected.
 - every transition persists history and mirrors `book_stage` into parent project state.
 - continuity gate may only be recorded at `CONTINUITY`; FAIL preserves CONTINUITY and blocks the parent project, explicit PASS unblocks it.
-- PASS/FAIL now stores deterministic `content_sha256` over canon, characters, locations, timeline, plot, chapters and drafts; symlink story inputs are rejected.
+- PASS/FAIL stores deterministic `content_sha256` over canon, characters, locations, timeline, plot, chapters and drafts; symlink story inputs are rejected.
 - immediately before FINAL the reviewed-content digest is recomputed; a missing/mismatching digest blocks FINAL as stale PASS without stage/version/history mutation.
 - explicit re-review after content change refreshes the digest and can authorize FINAL again.
 - corrective cumulative workflows all SUCCESS: PL-00 `32569104979`, PL-01 `32569105056`, PL-02 `32569104990`, PL-02 hardening `32569104989`, PL-04 `32569104967`, PL-05 `32569105030`, PL-06 `32569105020`, PL-11 `32569105112`, PL-08 `32569105007`.
 - Drive folder `15CnYhNSU_zLymx52gUzFf-jeSvWWmdDy`, document `1viqes9vbzS56PtZsGNfXSa-bjyrcZ7MfMu-o7dJjTOU`, marker `PERSONAL-AI-PL08-DONE-VERIFIED-PR386-PR393-CI9OF9-HASH-BOUND-CONTINUITY`.
 - PL-08 still does not perform automatic contradiction detection or prove continuity completeness/manuscript quality; PL-09 owns that detection layer.
+
+`PL-09 CONTINUITY CHECKER = DONE_VERIFIED`.
+- PR #408 merge `dc4ade0a99ce42c541a21c79a4d3326368ade2e1`; verified head `ae6b905357d3c64940825be9e553c7b3b5279b9e`.
+- deterministic structured-evidence rules cover NAME, AGE, APPEARANCE, RELATIONSHIP, DATE_TIME, LOCATION, PROP, EVENT_ORDER, KNOWLEDGE and COMPLETED_EVENT.
+- issues use exact severities `FATAL / MAJOR / MINOR / STYLE`, stable `issue_id`, chapter/category/subject/rule/fix fields and exactly two structured evidence references plus readable excerpts.
+- reports bind to the PL-08 reviewed-content SHA-256 and normalized input SHA-256; JSON + Markdown persist under `book/continuity/` and an OUTPUT record persists in PL-02 memory.
+- checker is admissible only at PL-08 `CONTINUITY`; unsupported categories and wrong-stage runs fail closed; `--enforce` returns non-zero for FATAL/MAJOR findings.
+- checker does not mutate the PL-08 continuity gate and never auto-writes PASS; a no-blocking report remains `MANUAL_REVIEW_REQUIRED`.
+- exact-head cumulative workflows all SUCCESS: PL-00 `32569790834`, PL-01 `32569790805`, PL-02 `32569790807`, PL-02 hardening `32569790868`, PL-04 `32569790803`, PL-05 `32569790839`, PL-06 `32569790801`, PL-08 `32569790809`, PL-09 `32569790797`, PL-11 `32569790802`.
+- Drive folder `1X2oAc8aR7T8TqPPkg40dN2jhzq9q-AuM`, document `1InysDSD8w0U5STMo2rk6CcqFh9Q_UXDYMbmRmNuLqpM`, marker `PERSONAL-AI-PL09-DONE-VERIFIED-PR408-CI10OF10-EVIDENCE-PAIRS-NO-AUTO-PASS`.
+- evidence boundary: PL-09 proves deterministic rules over supplied normalized evidence only; it does not prove exhaustive extraction from arbitrary prose, general semantic understanding, manuscript quality or a continuity PASS.
 
 `PL-11 TEST BENCHMARK RUNNER = DONE_VERIFIED`.
 - PR #345 merge `7480f261e26bd2be58c10f814aa1ea27056e8a69`; refreshed verified head `8d09d5d9171a21cff9e7b8958e6496d0796ba900`.
@@ -92,9 +103,10 @@ All Wave-1 cards are DONE_VERIFIED: `PL-00`, `PL-01`, `PL-02`, `PL-04`, `PL-05`,
 
 ## Current READY graph
 
-Canonical next frontier: `PL-09 Continuity Checker = READY`.
+Canonical next frontier: `PL-13 File Ingestion = READY`.
 
 PL-07 Business Research remains `WAITING_DEPENDENCY` because PL-03 Source Evidence Layer is not yet verified.
+PL-14 Personal Knowledge Search remains `WAITING_DEPENDENCY` until PL-13 is verified.
 
 Also READY:
 - `PL-03 Source Evidence Layer`;
@@ -106,7 +118,7 @@ Also READY:
 - `PL-17 Security`;
 - `PL-18 Cost Control`.
 
-Reason for PL-09 priority: PL-08 is verified and its continuity authorization is now content-version-bound. PL-09 must produce severity-tagged contradiction issues with evidence pairs; only then can a continuity review be grounded in explicit supported rules. PL-07 remains blocked on PL-03; PL-13 remains another ready Wave-2 path but follows PL-09 in the canonical order.
+Reason for PL-13 priority: PL-09 is now verified and the next unresolved Wave-2 card that is dependency-admissible is PL-13. PL-13 must hash, represent and deduplicate supported file inputs before PL-14 Personal Knowledge Search can become admissible. PL-07 remains blocked on PL-03.
 
 Do not re-execute DONE_VERIFIED layers unless a regression or explicit PL-12-style change-control event requires it. Preserve cumulative regression coverage.
 
@@ -121,4 +133,4 @@ Stop and mark `BLOCKED` instead of inventing a pass when:
 
 ## Handoff sentence for a new session
 
-`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. Wave-1 foundation PL-00/01/02/04/05/11 plus PL-06 Business Core and PL-08 Book Production Core (#386 + mandatory hash hardening #393) are DONE_VERIFIED. Continue from PL-09 Continuity Checker; PL-07 remains blocked on PL-03. PL-03/10/12/13/15/16/17/18 remain dependency-admissible READY alternatives. Persist code/state/tests/readback, keep FINAL fail-closed and content-version-bound, and preserve v2 authority unless a separate promotion gate passes.`
+`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. Wave-1 foundation PL-00/01/02/04/05/11 plus PL-06 Business Core, PL-08 Book Production Core (#386 + mandatory hash hardening #393), and PL-09 Continuity Checker (#408) are DONE_VERIFIED. Continue from PL-13 File Ingestion; PL-07 remains blocked on PL-03 and PL-14 remains blocked on PL-13. PL-03/10/12/13/15/16/17/18 remain dependency-admissible READY alternatives. Persist code/state/tests/readback, keep book FINAL fail-closed/content-version-bound, never let PL-09 auto-PASS continuity, and preserve v2 authority unless a separate promotion gate passes.`
