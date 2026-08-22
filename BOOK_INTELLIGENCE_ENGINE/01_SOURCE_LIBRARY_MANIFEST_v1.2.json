@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.2",
+  "updated": "2026-08-22",
+  "status": "CURRENT_BOOK_INTELLIGENCE_SOURCE_REGISTER_OVERLAY",
+  "base_manifest": "BOOK_INTELLIGENCE_ENGINE/01_SOURCE_LIBRARY_MANIFEST_v1.1.json",
+  "overlay_semantics": "MERGE_BY_SOURCE_ID_REPLACE_MATCHING_SOURCE_FIELDS_APPEND_NEW_SOURCE",
+  "effective_source_count": 14,
+  "rules": {
+    "no_false_full_read": true,
+    "read_coverage_and_extraction_stage_are_orthogonal": true,
+    "duplicate_copy_evidence_weight": 0,
+    "raw_copyrighted_book_binaries_in_github": false
+  },
+  "source_overrides": [
+    {
+      "source_id": "OPEN-GOOGLE-SRE-HUB",
+      "title": "Google SRE Books / Site Reliability Engineering official source",
+      "provenance": "Official Google SRE site",
+      "content_locator": "https://sre.google/books/",
+      "rights_status": "ACCESS_ONLY",
+      "independent_source_group": "GOOGLE-SRE-OFFICIAL",
+      "integrity_status": "VERIFIED",
+      "read_coverage": "PARTIAL_TARGETED",
+      "extraction_stage": "MECHANISMS_EXTRACTED",
+      "full_read": false,
+      "source_pass": "BOOK_INTELLIGENCE_ENGINE/13_GOOGLE_SRE_NETWORK_FACTUAL_SOURCE_PASS_v1.0.md",
+      "mechanisms": [
+        "FAILOVER_CHANGES_FAILURE_DOMAIN_AND_LOAD",
+        "PRESERVE_CRITICAL_SERVICE_SHED_NONESSENTIAL_STATE",
+        "DELIVERY_COHERENCE_NEQ_CLOCK_SYNCHRONIZATION"
+      ],
+      "domain_targets": ["OPERATIONS","SELF_IMPROVEMENT","STORY","AUDIO","GENERAL"],
+      "integrity_notes": "Targeted official-source pass used prospectively in B03 Pilot 3. Not a full-book read."
+    }
+  ],
+  "new_sources": [
+    {
+      "source_id": "OPEN-ITU-BS1116-3",
+      "title": "Recommendation ITU-R BS.1116-3 — Methods for the subjective assessment of small impairments in audio systems",
+      "author": "ITU-R",
+      "source_kind": "TECHNICAL_RECOMMENDATION",
+      "provenance": "Official ITU Recommendation page / official PDF",
+      "rights_status": "ACCESS_ONLY",
+      "independent_source_group": "ITU-R-BS1116",
+      "integrity_status": "VERIFIED",
+      "read_coverage": "PARTIAL_TARGETED",
+      "extraction_stage": "MECHANISMS_EXTRACTED",
+      "full_read": false,
+      "source_pass": "BOOK_INTELLIGENCE_ENGINE/16_ITU_BS1116_AUDIO_SUBJECTIVE_TEST_SOURCE_PASS_v1.0.md",
+      "mechanisms": [
+        "ORDER_COUNTERBALANCE",
+        "REPLICATE_BEFORE_RELIABLE",
+        "FIX_LEVEL_WITHIN_SESSION",
+        "EVIDENCE_SCOPE_LABEL"
+      ],
+      "domain_targets": ["AUDIO","RESEARCH","SELF_IMPROVEMENT","GENERAL"],
+      "integrity_notes": "Official recommendation inspected only in sections material to D04 subjective-listening design. D04 does not claim BS.1116 compliance or formal statistical validation."
+    }
+  ],
+  "effective_truth": {
+    "full_read_claims_added_by_v1_2": 0,
+    "prospective_sources_with_project_gain": ["OPEN-GOOGLE-SRE-HUB","OPEN-ITU-BS1116-3"],
+    "copyright_boundary": "Store source passports, claims, mechanisms, locators and tests; do not redistribute ITU raw copyrighted publication."
+  }
+}
