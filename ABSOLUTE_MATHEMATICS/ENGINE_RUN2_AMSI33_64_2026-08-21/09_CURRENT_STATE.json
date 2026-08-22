@@ -1,0 +1,48 @@
+{
+  "project": "ABSOLUTE MATHEMATICS",
+  "batch": "ENGINE_RUN2_AMSI33_64_2026-08-21",
+  "status": "WORKING_ENGINEERING_CANDIDATE",
+  "executed_range": "AMSI-33..64",
+  "executed_count": 32,
+  "result_counts": {
+    "PASS_REFERENCE": 4,
+    "PASS": 17,
+    "PASS_WITH_CAP": 1,
+    "PASS_HEURISTIC": 1,
+    "COUNTEREXAMPLE": 1,
+    "PASS_BOUNDED": 1,
+    "PARTIAL_PROTOTYPE": 1,
+    "PASS_SMALL_SCALE": 1,
+    "PARTIAL": 1,
+    "PASS_CONTRACT": 2,
+    "INCONCLUSIVE": 1,
+    "PASS_PROTOCOL": 1
+  },
+  "engineering_tests": {"passed": 40,"total": 40},
+  "proof_pack": "proofs/PROOF_PACK_v1.md",
+  "formal_core": "reports/FORMAL_CORE_v6_CANDIDATE.md",
+  "continuous_loop": {
+    "local_harness": "daemon/research_loop.py",
+    "verified_jobs_immediate_chain": 5,
+    "deployed_external_agent": false,
+    "note": "External executor/orchestrator required for real continuous AI research."
+  },
+  "parallel_capabilities": {
+    "PR104_SI0012_CYCLE4": "WORKING_NOT_CURRENT",
+    "PR108_RUN33_DURABLE_WRITE": "DRAFT_NOT_CURRENT",
+    "policy": "CAPABILITY_NEGOTIATION_FAIL_CLOSED"
+  },
+  "preserved_queue": "AMSI-65..96",
+  "new_derived_queue": "AMSI-97..160",
+  "new_priority_front": ["AMSI-97","AMSI-105","AMSI-113","AMSI-121","AMSI-129","AMSI-139","AMSI-145","AMSI-153"],
+  "hard_blockers": [
+    "NO_SAMPLE_BASED_GENERAL_RECURSIVE_STATE_LEARNER",
+    "NO_ACTUAL_MILP_SAT_BACKEND",
+    "CONTINUOUS_CMI_PARTIAL",
+    "NO_PROVEN_SUPERMAX_LOCALITY_ARITY_EXAMPLE",
+    "NO_PROOF_ASSISTANT_RUN",
+    "NO_REAL_LONGITUDINAL_SELF_IMPROVEMENT_COMPARISON",
+    "SCIENTIFIC_NOVELTY_UNVERIFIED"
+  ],
+  "authority_promotion": "EXTERNAL_REVIEW_REQUIRED"
+}
