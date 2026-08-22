@@ -1,0 +1,60 @@
+{
+  "schema_version": "ivdivo.room917_ru_provider_auth_gate_receipt/1.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "scope": "ELEVENLABS_PROVIDER_ACCESS_ONLY_NO_STORY_CHANGE",
+  "status": "AUTHENTICATED_PROVIDER_ACCESS_REQUIRED_FOR_RELIABLE_RU_DISCOVERY",
+  "official_documentation": {
+    "shared_voices_endpoint": "https://elevenlabs.io/docs/api-reference/voices/voice-library/get-shared",
+    "voice_library": "https://elevenlabs.io/docs/eleven-creative/voices/voice-library",
+    "documented_header_shape": "xi-api-key is shown as optional by the endpoint reference",
+    "documented_plan_constraint": "Voice Library voices are not available via the API to free tier users"
+  },
+  "live_probe_evidence": [
+    {
+      "github_actions_run_id": 32584347483,
+      "request": "GET /v1/shared-voices with RU/professional/notice filters and no ElevenLabs API key",
+      "result": "HTTP_401",
+      "provider_message": "You must be logged in to use filters."
+    },
+    {
+      "github_actions_run_id": 32584424278,
+      "request": "GET /v1/shared-voices unfiltered with page_size greater than 3 and no ElevenLabs API key",
+      "result": "HTTP_401",
+      "provider_message": "You must be logged in to fetch more than 3 voices."
+    },
+    {
+      "github_actions_run_id": 32584507348,
+      "request": "GET /v1/shared-voices page_size=3 pagination probe and no ElevenLabs API key",
+      "result": "HTTP_401",
+      "provider_message": "Unauthorized"
+    }
+  ],
+  "rejected_experiment": {
+    "pull_request": 505,
+    "merged": false,
+    "reason": "Unauthenticated production discovery assumption was disproved by live provider behavior."
+  },
+  "production_rule": {
+    "reliable_native_ru_discovery_requires": "ELEVENLABS_API_KEY_OR_AUTHENTICATED_PROVIDER_EXPORT",
+    "missing_auth_behavior": "WRITE_HOLD_PROVIDER_AUTH_REQUIRED_RECEIPT",
+    "tts_spend_when_auth_missing": 0,
+    "auto_cast": false,
+    "paid_s0_allowed_without_authenticated_snapshot": false,
+    "full_e01_allowed_without_cast_lock": false,
+    "public_web_voice_names": "REFERENCE_ONLY_NOT_PROVIDER_BINDING_EVIDENCE"
+  },
+  "next_after_authenticated_snapshot": [
+    "PREVIEW_TOP_ROLE_CANDIDATES",
+    "SHORTLIST_UP_TO_3_PER_ROLE",
+    "VERIFY_PROVIDER_IDENTITY_AND_NOTICE_PERIOD",
+    "CREATE_APPROVED_NATIVE_BINDINGS",
+    "BOUNDED_PAID_S0_WITH_EXPLICIT_SPEND_AUTHORIZATION",
+    "MACHINE_QC",
+    "HUMAN_AND_FOUNDER_CREDIBILITY_LISTEN",
+    "CAST_LOCK",
+    "CONTROLLED_E01_RENDER"
+  ],
+  "story_text_changed": false
+}

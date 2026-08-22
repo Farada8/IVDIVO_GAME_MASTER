@@ -1,6 +1,6 @@
 name: ROOM917 RU Voice Discovery
 
-# v1.7 zero-spend discovery; durable artifact + evidence branch before optional main publication
+# v1.8 zero-spend auth-aware discovery; durable artifact + evidence branch before optional main publication
 on:
   push:
     branches:
@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Discover durable native-Russian professional shared voices
+      - name: Build native-Russian provider snapshot or HOLD receipt
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         shell: bash
@@ -77,10 +77,22 @@ jobs:
               raise SystemExit('account inventory unexpectedly reports paid synthesis')
           if n.get('selection_policy',{}).get('auto_cast') is not False:
               raise SystemExit('native discovery must not auto-cast')
+
           required={'ELENA','JULIAN','MINA','CATE'}
           if set((n.get('ranked_role_candidates') or {}).keys()) != required:
               raise SystemExit('native discovery role rankings incomplete')
-          print(f"native_status={n.get('status')} candidates={n.get('candidate_count')} account_status={a.get('status')}")
+
+          status=n.get('status')
+          if status not in {'PASS_CANDIDATES_FOUND','HOLD_NO_NATIVE_DURABLE_CANDIDATES','HOLD_PROVIDER_AUTH_REQUIRED'}:
+              raise SystemExit(f'unexpected native discovery status: {status}')
+
+          if status == 'HOLD_PROVIDER_AUTH_REQUIRED':
+              if n.get('candidate_count') != 0 or n.get('candidates'):
+                  raise SystemExit('auth HOLD must contain zero candidates')
+              if n.get('selection_policy',{}).get('full_e01_render_allowed') is not False:
+                  raise SystemExit('auth HOLD must explicitly block full E01')
+
+          print(f"native_status={status} candidates={n.get('candidate_count')} account_status={a.get('status')}")
           PY
 
       - name: Upload recoverable zero-spend discovery evidence
@@ -158,12 +170,13 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
               f.write('## ROOM917 RU voice discovery\n')
               f.write(f"- native discovery status: {n.get('status')}\n")
-              f.write(f"- native RU professional voices (>=365-day notice): {n.get('candidate_count')}\n")
+              f.write(f"- native RU professional candidates: {n.get('candidate_count')}\n")
               f.write(f"- account inventory status: {a.get('status')}\n")
               f.write(f"- account voices available: {a.get('voice_count')}\n")
               f.write(f"- models returned: {len(a.get('models') or [])}\n")
               f.write('- paid synthesis calls: 0\n')
               f.write('- provider key persisted: false\n')
               f.write(f"- recoverable evidence branch: {os.environ.get('ROOM917_PROVIDER_EVIDENCE_BRANCH','NO_NEW_COMMIT')}\n")
-              f.write('- next: preview native role-ranked candidates, bind up to 3 per role, then bounded Russian canary + pair tests\n')
+              f.write('- missing provider auth produces HOLD_PROVIDER_AUTH_REQUIRED, never a fake shortlist\n')
+              f.write('- paid S0 and full E01 remain blocked until authenticated snapshot + preview evidence + approved bindings\n')
           PY
