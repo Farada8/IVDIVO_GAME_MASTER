@@ -65,15 +65,17 @@ Date: 2026-08-22
 - all test prices/rates/margins are synthetic fixture inputs; current market price, customer acceptance, WTP, payment, profitability, supplier availability and tax/VAT treatment remain unproven.
 
 `PL-08 BOOK PRODUCTION CORE = DONE_VERIFIED`.
-- PR #386 merge `0fde6da5e5af5a388acb905b79b5b21263a15287`; verified head `5c8e1da06374bf87f9e254898c064212ff415b3e`.
+- baseline PR #386 merge `0fde6da5e5af5a388acb905b79b5b21263a15287`; mandatory hash-bound continuity hardening PR #393 merge `9ca32760f21f394d7ef10ca1fe9334b4c298a75c`, corrective head `ba856e93d18ca708b92bd1c43bd1c6b6b2d81883`.
 - registered structure persists `book.yaml`, `canon.md`, `characters.json`, `locations.json`, `timeline.json`, `plot.json`, `chapters/`, `drafts/`, `critique/`, `continuity/`, `final/` plus machine `state.json`.
 - exact state route is `IDEA -> CANON -> STORY_BIBLE -> OUTLINE -> CHAPTER_PLAN -> DRAFT -> CRITIQUE -> REWRITE -> CONTINUITY -> FINAL`; stage skipping is rejected.
 - every transition persists history and mirrors `book_stage` into parent project state.
 - continuity gate may only be recorded at `CONTINUITY`; FAIL preserves CONTINUITY and blocks the parent project, explicit PASS unblocks it.
-- `CONTINUITY -> FINAL` is fail-closed unless a persisted PASS exists; FINAL marks the parent project DONE.
-- exact-head cumulative workflows all SUCCESS: PL-00 `32568862044`, PL-01 `32568862047`, PL-02 `32568862038`, PL-02 hardening `32568862050`, PL-04 `32568862043`, PL-05 `32568862062`, PL-06 `32568862018`, PL-11 `32568862114`, PL-08 `32568862080`.
-- Drive folder `15CnYhNSU_zLymx52gUzFf-jeSvWWmdDy`, document `1viqes9vbzS56PtZsGNfXSa-bjyrcZ7MfMu-o7dJjTOU`, marker `PERSONAL-AI-PL08-DONE-VERIFIED-PR386-CI9OF9-FINAL-FAIL-CLOSED`.
-- PL-08 does not perform automatic continuity analysis and does not prove manuscript quality, completion, factual correctness or publication readiness; PL-09 owns that detection layer.
+- PASS/FAIL now stores deterministic `content_sha256` over canon, characters, locations, timeline, plot, chapters and drafts; symlink story inputs are rejected.
+- immediately before FINAL the reviewed-content digest is recomputed; a missing/mismatching digest blocks FINAL as stale PASS without stage/version/history mutation.
+- explicit re-review after content change refreshes the digest and can authorize FINAL again.
+- corrective cumulative workflows all SUCCESS: PL-00 `32569104979`, PL-01 `32569105056`, PL-02 `32569104990`, PL-02 hardening `32569104989`, PL-04 `32569104967`, PL-05 `32569105030`, PL-06 `32569105020`, PL-11 `32569105112`, PL-08 `32569105007`.
+- Drive folder `15CnYhNSU_zLymx52gUzFf-jeSvWWmdDy`, document `1viqes9vbzS56PtZsGNfXSa-bjyrcZ7MfMu-o7dJjTOU`, marker `PERSONAL-AI-PL08-DONE-VERIFIED-PR386-PR393-CI9OF9-HASH-BOUND-CONTINUITY`.
+- PL-08 still does not perform automatic contradiction detection or prove continuity completeness/manuscript quality; PL-09 owns that detection layer.
 
 `PL-11 TEST BENCHMARK RUNNER = DONE_VERIFIED`.
 - PR #345 merge `7480f261e26bd2be58c10f814aa1ea27056e8a69`; refreshed verified head `8d09d5d9171a21cff9e7b8958e6496d0796ba900`.
@@ -104,7 +106,7 @@ Also READY:
 - `PL-17 Security`;
 - `PL-18 Cost Control`.
 
-Reason for PL-09 priority: PL-08 is now verified, so the Wave-2 continuity dependency is satisfied. PL-09 must now produce severity-tagged contradiction issues with evidence pairs before automatic continuity PASS can be trusted. PL-07 remains blocked on PL-03; PL-13 remains another ready Wave-2 path but follows PL-09 in the canonical order.
+Reason for PL-09 priority: PL-08 is verified and its continuity authorization is now content-version-bound. PL-09 must produce severity-tagged contradiction issues with evidence pairs; only then can a continuity review be grounded in explicit supported rules. PL-07 remains blocked on PL-03; PL-13 remains another ready Wave-2 path but follows PL-09 in the canonical order.
 
 Do not re-execute DONE_VERIFIED layers unless a regression or explicit PL-12-style change-control event requires it. Preserve cumulative regression coverage.
 
@@ -119,4 +121,4 @@ Stop and mark `BLOCKED` instead of inventing a pass when:
 
 ## Handoff sentence for a new session
 
-`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. Wave-1 foundation PL-00/01/02/04/05/11 plus PL-06 Business Core and PL-08 Book Production Core are DONE_VERIFIED. Continue from PL-09 Continuity Checker; PL-07 remains blocked on PL-03. PL-03/10/12/13/15/16/17/18 remain dependency-admissible READY alternatives. Persist code/state/tests/readback, keep FINAL fail-closed, and preserve v2 authority unless a separate promotion gate passes.`
+`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. Wave-1 foundation PL-00/01/02/04/05/11 plus PL-06 Business Core and PL-08 Book Production Core (#386 + mandatory hash hardening #393) are DONE_VERIFIED. Continue from PL-09 Continuity Checker; PL-07 remains blocked on PL-03. PL-03/10/12/13/15/16/17/18 remain dependency-admissible READY alternatives. Persist code/state/tests/readback, keep FINAL fail-closed and content-version-bound, and preserve v2 authority unless a separate promotion gate passes.`
