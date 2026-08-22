@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-22",
+  "status": "RUN32_EXECUTED_ENGINEERING_PASS_MARKET_HOLD",
+  "authority": "WORKING_CYCLE5_CANDIDATE_NOT_MAIN_CURRENT_UNTIL_PROMOTED",
+  "library": {
+    "raw_drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "physical_files": 78,
+    "valid_physical_files": 68,
+    "unique_valid_byte_hashes": 58,
+    "broken_or_quarantined": 5,
+    "exact_duplicate_groups": 8,
+    "raw_binaries_github_forbidden": true
+  },
+  "drive_cycle5_folder_id": "1WQBjFu6wIYcrxs3QnPOeUHtZnMVkNwDf",
+  "portfolio": [
+    {"id": "OP01", "role": "PRIMARY", "name": "tender/procurement decision intelligence", "verdict": "PASS_WITH_HOLD"},
+    {"id": "OP03", "role": "PILOT", "name": "retrofit qualification/route triage", "verdict": "NARROWED_PASS_WITH_HOLD"},
+    {"id": "OP19", "role": "PILOT", "name": "SME AI workflow implementation readiness", "verdict": "NARROWED_PASS_WITH_HOLD"}
+  ],
+  "evidence": {
+    "public_ceiling": "E2+",
+    "wtp": null,
+    "payment": null,
+    "repeatability": null,
+    "unit_economics": null,
+    "procurement_eligibility": null,
+    "legal_clearance": null
+  },
+  "run32": {"executed": 32, "completed": 32},
+  "tests": {"unit_tests": 14, "pass": 14, "fail": 0},
+  "modules": 32,
+  "contracts": 24,
+  "proofs": 12,
+  "protocols": 10,
+  "self_improvement": {
+    "current_engine": "v2",
+    "cycle5_disposition": "CANDIDATE_EVIDENCE_ONLY",
+    "auto_promotion": false
+  },
+  "next64": {"designed": 64, "status": "READY"},
+  "next_gate": "REPEATABLE_ARTIFACT_COMPLETENESS_THEN_INDEPENDENT_UTILITY_THEN_SMALLEST_REAL_BUYER_EVIDENCE_WHEN_ALLOWED",
+  "persistence": {"github": "WRITTEN_BRANCH_READBACK_PENDING", "drive": "FOLDER_CREATED_DOCS_PENDING", "final_readback": "PENDING"}
+}
