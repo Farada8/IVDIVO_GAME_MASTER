@@ -1,0 +1,46 @@
+{
+  "schema_version": "ivdivo.current_autopilot_pointer/1.0",
+  "updated": "2026-08-22T18:22:00+01:00",
+  "status": "ACTIVE_CONTINUOUS_WORK_WITH_LOCAL_GATE_REROUTE",
+  "parent_authority": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
+  "corrective_addendum": "IVDIVO_NARRATIVE_OS/13A_LOCAL_GATE_REROUTE_ADDENDUM_v1.0.md",
+  "executable_router": "IVDIVO_NARRATIVE_OS/tools/local_gate_router.py",
+  "regression_tests": "IVDIVO_NARRATIVE_OS/tests/test_local_gate_router.py",
+  "regression_result": {
+    "tests": 5,
+    "passed": 5,
+    "failed": 0,
+    "result": "PASS"
+  },
+  "primary_law": "LOCAL_GATE_NE_GLOBAL_STOP",
+  "loop": [
+    "RE_READ_FRESH_STATE",
+    "RECOMPUTE_DAG",
+    "CLASSIFY_BLOCKERS_LOCAL_OR_GLOBAL",
+    "MARK_TRUE_DESCENDANTS",
+    "SELECT_HIGHEST_PRIORITY_READY_INDEPENDENT_OBLIGATION",
+    "EXECUTE",
+    "VALIDATE",
+    "PERSIST",
+    "VERIFY_READBACK",
+    "REPEAT"
+  ],
+  "global_stop_examples": [
+    "AUTHORITY_UNRESOLVED",
+    "FRONTIER_CONFLICT",
+    "CANON_APPROVAL_REQUIRED_WHEN_ALL_REMAINING_WORK_DEPENDS_ON_IT",
+    "SAFETY_LEGAL",
+    "EXPLICIT_FOUNDER_STOP"
+  ],
+  "local_block_examples": [
+    "HUMAN_EVIDENCE_REQUIRED",
+    "EXTERNAL_PROVIDER_REQUIRED",
+    "MISSING_INPUT",
+    "TOOL_RUNTIME_LIMITATION_LOCAL",
+    "UNRESOLVED_FATAL_MAJOR_LOCAL"
+  ],
+  "anti_busywork": "REROUTE_ONLY_TO_REAL_DAG_OR_OBSERVED_FAILURE_INFRASTRUCTURE_WORK; DO_NOT_INVENT_FILLER_OR_REDO_PASS_ARTIFACTS",
+  "human_firewall": "REROUTING_MUST_NOT_SIMULATE_HUMAN_LISTEN_OR_OTHER_EXTERNAL_EVIDENCE",
+  "founder_heartbeat_required": false,
+  "resume_words_are_optional_shorthand": true
+}
