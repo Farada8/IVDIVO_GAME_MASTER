@@ -2,102 +2,95 @@
 
 **Date:** 2026-08-22  
 **Authority:** `BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/`  
-**Status:** GENERAL ENGINE MERGED / FOUNDER PROFILE ACTIVE / EARLY-WAVE RADAR RESCREEN COMPLETE / WIP3 SELECTED
+**Status:** FOUNDER PROFILE ACTIVE / EARLY-WAVE WIP3 / P-EW01 AGENT COMMERCE SCANNER CLOSED / P-EW02 NEXT
 
 ## Restore order
 1. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/00_MASTER.md`
 2. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/14_FOUNDER_OPPORTUNITY_PROFILE_AND_EARLY_WAVE_GATE.md`
 3. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/15_EARLY_WAVE_RADAR_2026-08-22.md`
 4. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/16_EARLY_WAVE_RADAR_STATE.json`
-5. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/01_ENGINEERING_SPEC.md`
-6. historical Money Mechanisms and prior opportunity work for provenance only.
-7. Existing current Business evidence authority + relevant vertical state.
-8. Fresh GitHub/Drive reconciliation before mutating authority.
+5. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/01_MACHINE_STATE.json`
+6. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/00_SPEC.md`
+7. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/01_ENGINEERING_SPEC.md`
+8. historical Money Mechanisms/prior opportunity work for provenance only.
+9. current Business evidence authority + relevant vertical state.
+10. fresh GitHub/Drive reconciliation before mutating authority.
 
-## Mandatory Founder opportunity profile
-Default operating target:
-- founder cash at risk: **EUR 0–500 preferred; EUR 3,000 hard default ceiling** unless structurally de-risked;
-- **REMOTE-FIRST** delivery;
-- founder physical participation: **zero or near-zero preferred**;
-- avoid warehouse/equipment/inventory/payroll/large working-capital dependency before proof;
+## Founder opportunity profile
+- **REMOTE-FIRST**;
+- founder physical participation zero/near-zero preferred;
+- founder cash at risk **EUR0–500 preferred / EUR3,000 default hard ceiling** unless structurally de-risked;
 - test before build/spend;
-- continuously monitor newly forming waves where small early actions can compound;
-- hype, price spikes or one-vendor announcements are insufficient.
+- avoid warehouse/equipment/inventory/payroll/large working-capital exposure before proof;
+- maintain separate `CASHFLOW NOW` and `OPTIONALITY NEXT` portfolios;
+- early-wave signal never equals guaranteed winner.
 
-Every candidate must be classified: `PRE_WAVE / EMERGING / EARLY_COMMERCIAL / EXPANDING / CROWDED / LATE_COMMODITIZED`.
-
-Two outputs coexist:
-1. `CASHFLOW NOW` — realistic low-capital remote paths.
-2. `OPTIONALITY NEXT` — cheap early positions in potentially expanding new rails/markets.
-
-## 2026-08-22 re-screen result
-The old experimental `EU dropshipping = PRIMARY` assignment is **retired as strategic PRIMARY**. It remains an ordinary ecommerce mechanism but does not currently show a special early-wave edge.
-
-Physical skilled-service and used-equipment lanes are demoted because founder physical load/inventory weaken Founder fit. POD/Etsy/generic dropshipping are remote and cheap but currently too crowded to qualify as OPTIONALITY NEXT without a proprietary distribution/IP edge.
-
-Generic AI workflow consulting is mutated into narrower new-bottleneck verticals rather than kept as a broad offer.
-
-## CASHFLOW NOW shortlist
-### CF-01 — AI Act Article 50 Technical Transparency Pack
-- stage: `EARLY_COMMERCIAL / LIVE_FORCING_FUNCTION`;
-- fresh trigger: Article 50 transparency obligations apply from 2 August 2026;
-- role: technical inventory, disclosure/label workflow, implementation evidence and regression testing;
-- boundary: no legal opinion/certification.
-
-### CF-02 — CRA Incident-Reporting Readiness Operations
-- stage: `EARLY_COMMERCIAL / DEADLINE_DRIVEN`;
-- fresh trigger: CRA reporting obligations begin 11 September 2026;
-- role: incident evidence/routing/reporting workflow;
-- status: `WATCH_SPECIALIST_REQUIRED` before any external offer.
-
-### CF-03 — DPP Supplier-Data / Registry Readiness
-- stage: `EARLY_COMMERCIAL_BY_PRODUCT_GROUP`;
-- fresh trigger: EU Digital Product Passport Registry/testing environment live in July 2026;
-- role: supplier-data mapping, completeness, schema normalisation, identifier/registry preflight;
-- boundary: product-specific legal applicability must be verified, never assumed.
-
-## OPTIONALITY NEXT shortlist
-### OW-01 — Agentic Commerce Merchant Readiness Layer — **PRIMARY**
-Multi-vendor convergence now exists across OpenAI/Visa, Google AP2/FIDO, Mastercard Agent Pay for Machines, A2A/MCP/AAIF and agent-discovery infrastructure. The thesis is a new commerce distribution rail: merchants may need machine-readable catalog/availability/policy/checkout and agent-discovery/transaction readiness.
-
-Founder fit: FULL REMOTE / near-zero initial cash / no inventory / reusable scanner, test corpus, adapters and vertical schemas can compound.
-
-### OW-02 — EUDI / Age Verification Relying-Party Readiness — WATCH
-End-2026 EUDI rollout, common specs/reference implementation and Ireland as an age-verification frontrunner create a cheap integration/testing option. Do not become an identity provider; focus on relying-party test harnesses and attribute-flow readiness.
-
-### OW-03 — DPP Data Infrastructure / Validation Layer — PILOT OVERLAP CF-03
-Potential service-to-software path from supplier-data preparation into reusable validation/connectors.
-
-### OW-04 — European Business Wallet / EU Inc Interoperability — CHEAP_OPTIONALITY_WATCH
-Pre-wave only. Learn/build a small standards demo; no sales thesis yet.
-
-### OW-05 — Open Agent Discovery / Identity / Interoperability — CHEAP_OPTIONALITY_WATCH
-MCP/A2A/DNS-AID signal a new discovery/trust bottleneck. Open-source learning may compound, but current WTP is unknown.
-
-## Current bounded WIP = 3
+## Current WIP = 3
 **PRIMARY:** `OW-01 Agentic Commerce Merchant Readiness`  
 **PILOT A:** `CF-01 AI Act Article 50 Technical Transparency Pack`  
 **PILOT B:** `CF-03 DPP Supplier-Data / Registry Readiness`
 
-No candidate is proven commercially superior. This is a bounded internal test portfolio.
+## P-EW01 — CLOSED
+Agent Commerce Readiness Scanner v0 is merged via **PR #348**, merge `926964d791f41fbd133a5d7e2247c1226365e15b`.
+
+Delivered:
+- versioned deterministic scanner over normalized provenance-labelled merchant snapshots;
+- OpenAI Agentic Commerce feed rules `OAI-FEED-00..06`;
+- Google UCP rules `UCP-00..11`;
+- PASS / FAIL / UNKNOWN / NOT_APPLICABLE preserved separately;
+- 8/8 synthetic canaries PASS;
+- final-head scanner CI run `32557875241` SUCCESS;
+- inherited General Business regression on final head SUCCESS;
+- Drive mirror `1jQWbGb57Fh9pRlbsQexlKzqJGsle7NMACWGN8HxOyso` with semantic closure readback PASS.
+
+Core scanner laws:
+`READINESS != PLATFORM_APPROVAL`
+`PRODUCT_FEED_READY != UCP_READY`
+`UCP_PROFILE_PRESENT != ENDPOINT_VALID`
+`PUBLIC_PAGE_OBSERVATION != MERCHANT_DECLARATION`
+`UNKNOWN != FAIL`
+`UNKNOWN != PASS`
+`PROTOCOL_SPEC_CHANGE -> VERSIONED_RULESET`
+
+P-EW01 is engineering evidence only. No buyer/WTP/transaction proof was created.
+
+## Current candidate interpretation
+### OW-01 — Agentic Commerce Merchant Readiness — PRIMARY
+Still the strongest early-wave technical candidate because multiple independent rails are converging around agent-readable commerce, merchant discovery, checkout and payment interoperability. The new scanner proves only that a deterministic readiness artifact can exist; it does **not** yet prove merchants have actionable gaps or will pay.
+
+### CF-01 — AI Act Article 50 Technical Transparency — PILOT
+Immediate live forcing function; non-legal technical implementation artifact remains pending P-EW03.
+
+### CF-03 — DPP Supplier-Data / Registry Readiness — PILOT
+Fresh infrastructure/data-operations opportunity; synthetic registry-preflight remains pending P-EW04.
 
 ## Next causal frontier
-Execute internal artifacts only, no outreach/spend required:
-1. `P-EW01` — specify vendor-neutral Agent Commerce Readiness Scanner v0.
-2. `P-EW02` — blind-test scanner on 10 public merchant fixtures; generic-advice output = FAIL.
-3. `P-EW03` — build one Article 50 technical transparency sample pack mapped to current Commission guidance.
-4. `P-EW04` — build one synthetic DPP product/supplier object + registry-preflight + missing-data correction loop.
-5. `P-EW05` — promote/kill based on concrete implementation/decision delta, not narrative enthusiasm.
+### `P-EW02` — TEN REAL PUBLIC MERCHANT BLIND TEST
+Run scanner methodology against 10 genuinely public merchant fixtures. Rules:
+1. predeclare fixture inclusion criteria;
+2. separate `OBSERVED_PUBLIC`, `PROBED_PUBLIC`, `MERCHANT_DECLARED`, `UNKNOWN`;
+3. do not infer private feed/checkout implementation from public pages;
+4. do not turn absence of public evidence into hidden-system FAIL;
+5. measure **actionable deterministic defects vs generic/noisy findings**;
+6. record protocol/site class and avoid cherry-picking only known UCP merchants;
+7. a scanner that mostly emits generic advice or UNKNOWN without useful discrimination FAILS P-EW02;
+8. no outreach, accounts, purchase or transaction required.
+
+Only after P-EW02 may OW-01 be kept, mutated or killed on technical decision value.
+
+P-EW03/P-EW04 remain queued but are not executed merely because P-EW01 closed.
 
 ## Evidence boundary
 `PUBLIC_EVIDENCE_CEILING = E2+`  
 `WILLINGNESS_TO_PAY = UNKNOWN`  
 `CAC = UNKNOWN`  
 `CONVERSION = UNKNOWN`  
-`TRANSACTION = NONE FROM THIS RADAR`  
+`TRANSACTION = NONE`  
 `PROFITABILITY = UNPROVEN`  
-`EARLY_WAVE_WINNER = UNPROVEN`
+`EARLY_WAVE_WINNER = UNPROVEN`  
+`P-EW01 = EXECUTED`  
+`P-EW02 = NOT_EXECUTED`
 
 No autonomous outreach, listings, ads, purchases, speculation, spend, contracts or proof promotion are authorized by this pointer.
 
-READBACK_MARKER: `CURRENT-GENERAL-BUSINESS-EARLY-WAVE-WIP3-OW01-CF01-CF03-20260822`
+READBACK_MARKER: `CURRENT-GENERAL-BUSINESS-PEW01-CLOSED-PEW02-NEXT-20260822`
