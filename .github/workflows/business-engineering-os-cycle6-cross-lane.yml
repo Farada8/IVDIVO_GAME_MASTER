@@ -1,0 +1,22 @@
+name: Business Engineering OS Cycle6 Cross-Lane Safeguards
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE6_PROCUREMENT_PA4_HARDENING/07_CROSS_LANE_P81_P96_EXECUTION_LEDGER.md'
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE6_PROCUREMENT_PA4_HARDENING/08_CROSS_LANE_ENGINEERING_CONTRACTS_PROOFS_PROTOCOLS.md'
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE6_PROCUREMENT_PA4_HARDENING/09_NEXT64_P97_P160.md'
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE6_PROCUREMENT_PA4_HARDENING/10_CROSS_LANE_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE6_PROCUREMENT_PA4_HARDENING/engine/cross_lane_safeguards.py'
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE6_PROCUREMENT_PA4_HARDENING/tests/test_cross_lane_safeguards.py'
+      - '.github/workflows/business-engineering-os-cycle6-cross-lane.yml'
+jobs:
+  cycle6-cross-lane-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Cycle6 cross-lane safeguards
+        working-directory: BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE6_PROCUREMENT_PA4_HARDENING
+        run: python -m unittest -v tests/test_cross_lane_safeguards.py
