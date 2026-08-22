@@ -4,6 +4,7 @@
   "audit_time_local": "2026-08-22T13:32:00+01:00",
   "evidence_replay_time_local": "2026-08-22T13:50:00+01:00",
   "closure_time_local": "2026-08-22T14:27:00+01:00",
+  "full_chat_handoff_time_local": "2026-08-22T15:01:00+01:00",
   "repository": "Farada8/IVDIVO_GAME_MASTER",
   "fresh_replay_main_sha_before_state_update": "6a10faf50ec71844c9a6901cc352dbcb725a3c73",
   "v2_evidence_replay_branch_base_sha": "4e21e26f2bcb2424a1582a306fccb839d6febe5c",
@@ -18,7 +19,8 @@
     "recovered_context_auto_canon": false,
     "resolved_blocker_count_this_delta": 3,
     "remaining_blocker_class_count": 3,
-    "v2_closure_written_github_and_drive": true
+    "v2_closure_written_github_and_drive": true,
+    "full_chat_handoff_written_github_and_drive": true
   },
   "projects": [
     {
@@ -229,7 +231,8 @@
     "RECOVERY/VISUAL_SELECTION_RECOVERY_MANIFEST_20260822.md",
     "RECOVERY/PAINTERS_DUBLIN_RECOVERY_HANDOFF_20260822.md",
     "RECOVERY/RECOVERY_AUDIT_DELTA_20260822_1332.md",
-    "RECOVERY/RECOVERY_V2_CLOSURE_20260822_1427.md"
+    "RECOVERY/RECOVERY_V2_CLOSURE_20260822_1427.md",
+    "RECOVERY/FULL_CHAT_CLOSURE_HANDOFF_20260822_1501.md"
   ],
   "drive_recovery_artifacts": {
     "folder": "1JpT5EQbMlLMRGMiOqfwJBHciQGpbSe1u",
@@ -239,7 +242,8 @@
     "05a_room917_provenance": "1bhvEEuOQoqMy1w-7XTyUvQdJIPDty9MRhuWM9OENC3Q",
     "06_visual_selection": "1vkwwnISf95_NQJue4Bohem-MchY2Tvwf2qvq81w3zYc",
     "07_painters_handoff": "1mr3b0r-5BvRziiYJwnr_-kr7cyPj2BY_lNP07cD7FFI",
-    "08_closure": "1i7MTmG-sbqfnI7FRFk2CTwiyT9RaLONgW5khsd8qvEo"
+    "08_closure": "1i7MTmG-sbqfnI7FRFk2CTwiyT9RaLONgW5khsd8qvEo",
+    "09_full_chat_handoff": "1qLrziPbrcKJk5LczvEp2bpT-ly2hh2i9w3vBVbzmUi8"
   },
   "predecessor_recovery_drive_ids": [
     "1ZVOJLoHK_kkUi5hor66dCxtm_Y4DR3WVnBeCZO4_s2Y",
@@ -254,6 +258,7 @@
     "visual": "VISUAL-RECOVERY-20260822-SHILLELAGH-CLASSIFIED-PRELIMINARY-DUBLIN-PORTALS-FINALITY-ROUTING-OPEN",
     "painters": "PAINTERS-DUBLIN-RECOVERY-20260822-NONSECRET-HANDOFF-PERSISTED-EXACT-EXPORT-NOT-FOUND",
     "room917_provenance": "ROOM917-BINARY-PROVENANCE-20260822-FULLMASTER-HTTP403-SCENE3-MATERIALIZED-CONTROLLED-DRIVE-UNVERIFIED",
-    "closure": "RECOVERY-V2-CLOSURE-20260822-1427-GITHUB-MAIN-366CB172-CI32574376787-DRIVE-1I7MTMGS-3-BLOCKERS"
+    "closure": "RECOVERY-V2-CLOSURE-20260822-1427-GITHUB-MAIN-366CB172-CI32574376787-DRIVE-1I7MTMGS-3-BLOCKERS",
+    "full_chat_handoff": "FULL-CHAT-CLOSURE-20260822-1501-RECOVERY-V2-DURABLE-HANDOFF-3-REAL-BLOCKERS-DELETE-ALL-CHATS-FALSE"
   }
 }
