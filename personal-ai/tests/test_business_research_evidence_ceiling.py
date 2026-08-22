@@ -70,8 +70,9 @@ class BusinessResearchEvidenceCeilingTest(unittest.TestCase):
 
     def test_unknown_claim_cannot_be_laundered_to_inferred_conclusion(self) -> None:
         request = self.base_request()
+        # Keep the UNKNOWN claim source-linked so the base traceability gate
+        # passes and this canary reaches the hardened epistemic-ceiling gate.
         request["claims"][0]["status"] = "UNKNOWN"
-        request["claims"][0]["source_keys"] = []
         request["conclusions"][0]["status"] = "INFERRED"
         with self.assertRaisesRegex(ResearchInputError, "INFERRED requires at least one non-UNKNOWN"):
             self.service.create_research("biz", request)
