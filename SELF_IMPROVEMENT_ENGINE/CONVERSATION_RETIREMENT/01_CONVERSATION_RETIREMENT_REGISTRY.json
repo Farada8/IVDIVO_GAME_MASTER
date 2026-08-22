@@ -1,0 +1,40 @@
+{
+  "schema": "ivdivo.conversation_retirement_registry/0.1",
+  "date": "2026-08-22",
+  "status": "BOOTSTRAPPED_CANDIDATE_NO_GLOBAL_CHAT_ENUMERATION_CLAIM",
+  "authority_effect": "NONE",
+  "parent_authority": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
+  "founder_goal": "Persist material work from important conversations to GitHub and Google Drive so chats can eventually be retired safely.",
+  "coverage_boundary": {
+    "can_guarantee_global_chat_enumeration_from_one_chat": false,
+    "can_retire_supplied_or_current_conversation_after_audit": true,
+    "can_retire_pasted_or_exported_transcript_after_recovery_gate": true,
+    "expired_upload_without_verified_durable_copy_blocks_safe_delete": true
+  },
+  "retirement_gate": {
+    "required": [
+      "SOURCE_COMPLETENESS_CLASSIFIED",
+      "FOUNDER_DIRECTIVES_DISPOSITIONED",
+      "MATERIAL_ARTIFACT_CLAIMS_VERIFIED_OR_MARKED_UNAVAILABLE",
+      "CHAT_ONLY_OUTPUT_DISPOSITIONED",
+      "GITHUB_PERSISTENCE_READBACK",
+      "DRIVE_PERSISTENCE_READBACK",
+      "CURRENT_STATE_OR_HANDOFF_UPDATED_WHEN_MATERIAL",
+      "OPEN_GATES_RECORDED",
+      "UNRESOLVED_ITEMS_EMPTY_OR_EXPLICITLY_BLOCKING"
+    ],
+    "persistence_complete_requires_all": true,
+    "safe_to_delete_requires_persistence_complete": true,
+    "fail_closed": true
+  },
+  "standard_command": "ЗАКРОЙ ЭТОТ РАЗГОВОР НА ХРАНЕНИЕ",
+  "conversation_records": [],
+  "current_counts": {
+    "audited_conversations": 0,
+    "persistence_complete": 0,
+    "safe_to_delete": 0,
+    "do_not_delete": 0
+  },
+  "next_gate": "RUN_REAL_CONVERSATION_RETIREMENT_AUDITS_ONE_ACCESSIBLE_CONVERSATION_OR_SUPPLIED_TRANSCRIPT_AT_A_TIME",
+  "readback_marker": "GLOBAL-CONVERSATION-RETIREMENT-REGISTRY-BOOTSTRAPPED-20260822"
+}
