@@ -1,0 +1,41 @@
+{
+  "schema": "ivdivo.production_launch.current_state/0.1",
+  "date": "2026-08-22",
+  "authority_effect": "NONE",
+  "self_improvement_authority": "V2_VERIFIED_CURRENT",
+  "base_queue": "PRODUCTION_LAUNCH_QUEUE_v0.1.json",
+  "overlay_law": "CURRENT status_overrides and current_frontier supersede status/frontier fields in the immutable base queue; dependencies and acceptance text remain owned by the base queue",
+  "status_overrides": {
+    "PL-03": "DONE_VERIFIED",
+    "PL-07": "READY",
+    "PL-09": "DONE_VERIFIED"
+  },
+  "current_frontier": "PL-07",
+  "newly_closed": ["PL-09", "PL-03"],
+  "newly_unlocked": ["PL-07"],
+  "proof": {
+    "PL-09": {
+      "implementation_pr": 408,
+      "merge_sha": "dc4ade0a99ce42c541a21c79a4d3326368ade2e1",
+      "verified_head": "ae6b905357d3c64940825be9e553c7b3b5279b9e",
+      "cumulative_ci": "10/10 SUCCESS",
+      "drive_folder_id": "1X2oAc8aR7T8TqPPkg40dN2jhzq9q-AuM",
+      "drive_document_id": "1InysDSD8w0U5STMo2rk6CcqFh9Q_UXDYMbmRmNuLqpM",
+      "drive_marker": "PERSONAL-AI-PL09-DONE-VERIFIED-PR408-CI10OF10-EVIDENCE-PAIRS-NO-AUTO-PASS"
+    },
+    "PL-03": {
+      "implementation_pr": 416,
+      "merge_sha": "8ef8195cb4d3d3d7562aa9d85812dc6d2244a720",
+      "verified_head": "5da828c8df9092cc38927d3486aeaa703c9ee360",
+      "cumulative_ci": "11/11 SUCCESS",
+      "drive_folder_id": "1zHpSwi5seVuAMIHs4CxyGonGkKLC_prK",
+      "drive_document_id": "1fUypA9XcvAgzEQME73IiAKaMBqhRHJIyD7aD5yA93Cg",
+      "drive_marker": "PERSONAL-AI-PL03-DONE-VERIFIED-PR416-CI11OF11-EXPLICIT-VERIFICATION-EVENT"
+    }
+  },
+  "evidence_boundaries": [
+    "PL-09 zero detected issues is not automatic continuity PASS; manual/independent review remains required.",
+    "PL-03 source presence is not proof of source correctness; confidence is not verification; explicit verification must still be evidence-backed.",
+    "No card in this overlay promotes global Self-Improvement version authority."
+  ]
+}
