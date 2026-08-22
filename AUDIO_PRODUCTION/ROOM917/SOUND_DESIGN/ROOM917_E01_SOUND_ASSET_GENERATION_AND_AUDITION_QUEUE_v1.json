@@ -1,0 +1,119 @@
+{
+  "schema_version": "room917.e01_sound_asset_generation_queue/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "READY_FOR_EXTERNAL_OR_MANUAL_AUDIO_GENERATION_NO_PROVIDER_CONNECTED",
+  "source_contract": "ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+  "provider_policy": "PROVIDER_NEUTRAL. Do not bake story timing into generated masters. Generate isolated reusable masters first.",
+  "global_generation_laws": [
+    "NO_TEXT_OR_VOICES_IN_AMBIENCE_BEDS",
+    "NO_HORROR_DRONE_OR_SUPERNATURAL_REVERB",
+    "NO_FALSE_CLUE_EVENTS_IN_AMBIENCE",
+    "NO_MUSIC_INSIDE_SFX_OR_AMBIENCE_MASTER",
+    "NO_LOUDNESS_AS_CLUE_IDENTITY",
+    "SAVE_EACH_VARIANT_AS_SEPARATE_IMMUTABLE_FILE",
+    "DO_NOT_RENAME_A_REJECTED_VARIANT_AND_REINTRODUCE_IT",
+    "NORMALIZE_ACCEPTED_CANDIDATES_TO_48K_24BIT_STEREO_BEFORE_BINDING",
+    "FINAL_GAIN_IS_SET_ONLY_IN_CONTEXT_AFTER_IDENTITY_AND_AUDITION_GATES"
+  ],
+  "priority_order": [
+    "A01_GREYHAVEN_LOBBY_30S_LOOP",
+    "A02_SWITCHBOARD_ALCOVE_30S_LOOP",
+    "S13_INTERNAL_DOUBLE_RING_OLD",
+    "S14_UNMARKED_GLASS_LAMP_PING",
+    "S17_COPPER_HISS",
+    "S19_TWO_PART_LINE_CUT",
+    "S07_TRANSFORMER_WAKE",
+    "S08_RELAY_RIPPLE",
+    "S10_SELECTOR_916",
+    "S11_GLASS_LAMP_916_PING"
+  ],
+  "queue": [
+    {
+      "asset_id": "A01_GREYHAVEN_LOBBY_30S_LOOP",
+      "purpose": "D003 Scene1 physical-world bed candidate",
+      "variant_count": 3,
+      "variants": [
+        {"variant":"A","prompt":"Thirty-second seamless documentary ambience of an ageing seaside hotel lobby on the Atlantic coast. Rain presses naturally against tall old windows, distant wind loads the exterior, one stubborn radiator ticks irregularly, sparse far-off staff or cutlery movement suggests a working hotel, and a large stone room has restrained natural resonance. No intelligible voices, no footsteps near microphone, no telephone, no relay clicks, no knocks, no music, no horror tone, no supernatural texture. Real physical room, low drama, loopable."},
+        {"variant":"B","prompt":"Thirty-second seamless interior room tone for a large old coastal hotel lobby, perceived from inside rather than from the storm. Diffuse Atlantic rain on high windows, soft building air pressure, occasional radiator metal tick, very sparse remote practical hotel activity and stone-room tail. Keep event density low but never digitally empty. No voices, no clue-like sounds, no telephone, no music, no ominous drone, no cinematic storm hit. Naturalistic and loopable."},
+        {"variant":"C","prompt":"Thirty-second realistic working Greyhaven-style coastal lobby ambience with slightly stronger weather presence but restrained interior perspective: rain texture at tall glass, soft wind pressure around exterior doors, ageing heating/radiator ticks, one or two distant neutral service sounds, broad stone acoustic. No intelligible chatter, no close luggage, no ring, no electrical cue, no supernatural effect, no score. Seamless loop, documentary realism."}
+      ],
+      "mandatory_audition": ["LOOP_SEAM", "FALSE_CLUE_AUDIT", "DIALOGUE_UNDERLAY", "MONO", "PHONE_PROXY"],
+      "reject_if": ["RING_OR_RELAY_LIKE_EVENT", "KNOCK_OR_WHISPER_READS_AS_EVIDENCE", "HORROR_DRONE", "INTELLIGIBLE_VOICE", "SEAM_CLICK", "ROOM_FEELS_LUXURY_OR_MODERN"]
+    },
+    {
+      "asset_id": "A02_SWITCHBOARD_ALCOVE_30S_LOOP",
+      "purpose": "D003 Scene1-transition/Scene2 physical-world bed candidate",
+      "variant_count": 3,
+      "variants": [
+        {"variant":"A","prompt":"Thirty-second seamless realistic ambience of a smaller carpeted switchboard alcove attached to an old seaside hotel lobby. Atlantic rain is still present but muted and spatially farther away; old wood cabinet and wall materials create a dry close interior; faint building resonance remains underneath. No active relay clicks, no telephone ring, no transformer event, no voices, no music, no horror tone. The space must feel physically connected to the lobby yet clearly smaller and drier. Loopable."},
+        {"variant":"B","prompt":"Thirty-second restrained room tone for an old carpeted hotel switchboard recess: low muted rain filtered through the larger lobby, faint timber cabinet creak or material settling only if non-clue-like, soft structural air/building resonance, close dry acoustic. No deliberate mechanical cue, no ring, no selector, no relay burst, no speech, no score, no ominous drone. Seamless realistic loop."},
+        {"variant":"C","prompt":"Thirty-second natural switchboard-alcove ambience inside a working ageing coastal hotel. Smaller damped acoustic, distant rain and wind pressure through the building, subtle old wood presence, almost no foreground events but continuous material reality. No false telephone evidence, no electrical wake-up event, no footsteps, no voices, no music, no horror language. Seamless loop."}
+      ],
+      "mandatory_audition": ["LOOP_SEAM", "FALSE_CLUE_AUDIT", "ROOM_CONTRAST_VS_A01", "DIALOGUE_UNDERLAY", "MONO", "PHONE_PROXY"],
+      "reject_if": ["RING_OR_RELAY_OR_SELECTOR_EVENT", "TRANSFORMER_WAKE_EVENT", "HORROR_TONE", "INTELLIGIBLE_VOICE", "SEAM_CLICK", "INDISTINGUISHABLE_FROM_A01"]
+    },
+    {
+      "asset_id": "S13_INTERNAL_DOUBLE_RING_OLD",
+      "purpose": "Impossible event ring; ordinary mechanism becomes causally impossible",
+      "variant_count": 3,
+      "variants": [
+        {"variant":"A","prompt":"Isolated old hotel internal analogue telephone double ring from a worn electromechanical bell. Sharp ordinary mechanism, dry front-desk/switchboard character, two clearly identifiable ring pulses, short natural metal decay. No horror processing, no sub-bass, no reverb tail, no modern ringtone, no music."},
+        {"variant":"B","prompt":"Isolated vintage internal telephone bell double-ring, slightly older and drier mechanism with a small amount of realistic metal wear. Two pulses remain unmistakable and countable. Ordinary hotel hardware, not scary. No cinematic impact, no supernatural treatment, no modern phone, no music."},
+        {"variant":"C","prompt":"Isolated electromechanical hotel switchboard double ring, firm transient and restrained bell resonance, realistic aged mechanism, normal operational sound that can become uncanny only because of story context. Two distinct pulses. No horror sting, no bass hit, no echo effect, no music."}
+      ],
+      "mandatory_audition": ["COUNTABILITY", "ORDINARY_NOT_HORROR", "DIALOGUE_MASKING", "MONO", "PHONE_PROXY", "PAIRWISE_DISTINCTION_FROM_S10_S11"],
+      "reject_if": ["MODERN_RINGTONE", "HORROR_CLICHE", "PULSES_NOT_CLEAR", "MASKS_REACTION_LINE"]
+    },
+    {
+      "asset_id": "S14_UNMARKED_GLASS_LAMP_PING",
+      "purpose": "Impossible lamp beyond 916; same material family as normal S11 but spatially distinct",
+      "variant_count": 3,
+      "variants": [
+        {"variant":"A","prompt":"Isolated tiny delicate glass indicator-lamp ping from mid-century hotel switchboard hardware. Same physical material family as an ordinary numbered lamp, but with a subtly different spatial placement to the side rather than a different supernatural timbre. Very short, clear, realistic. No magic shimmer, no horror, no music."},
+        {"variant":"B","prompt":"Isolated faint glass-and-metal indicator ping from aged switchboard lamp hardware, delicate and physically plausible, short dry decay, slightly off-axis spatial impression. Must sound related to another normal lamp asset, not like a new effect family. No chime flourish, no supernatural sparkle, no score."},
+        {"variant":"C","prompt":"Isolated old switchboard glass lamp activation ping, restrained and small, with a tiny material resonance that can be localized beyond the numbered bank. Ordinary hardware sound; mystery comes from location only. No horror sting, no bell melody, no reverb tail, no music."}
+      ],
+      "mandatory_audition": ["PAIR_WITH_ACCEPTED_S11", "SAME_MATERIAL_FAMILY", "SPATIAL_DISTINCTION", "MONO_SURVIVAL", "PHONE_PROXY", "NO_MAGIC_TIMBRE"],
+      "approval_hold": "Cannot receive final PASS until an accepted S11_GLASS_LAMP_916_PING candidate exists for pairwise comparison."
+    },
+    {
+      "asset_id": "S17_COPPER_HISS",
+      "purpose": "Old low-voltage line texture under Cate; impossible route, human source",
+      "variant_count": 3,
+      "variants": [
+        {"variant":"A","prompt":"Isolated narrow-band old copper telephone-line hiss, low-voltage analogue texture, intimate and dry, slight contact instability, no steady dramatic drone, no digital glitch, no voice, no whisper, no supernatural reverb. Neutral transmission damage suitable under a clearly human voice."},
+        {"variant":"B","prompt":"Isolated aged copper pair line noise from old hotel telephone infrastructure: narrow dry hiss, subtle intermittent contact texture, low-voltage analogue character, restrained and realistic. No hidden voices, no horror, no music, no long reverb, no sci-fi artifacts."},
+        {"variant":"C","prompt":"Isolated old analogue line texture with quiet copper hiss and small physical contact instability, narrow bandwidth, ordinary telecommunications failure character. Must support intelligible human speech rather than make it ghostly. No whisper layer, no supernatural shimmer, no score."}
+      ],
+      "mandatory_audition": ["VOICE_UNDERLAY_WITH_CATE_DRY", "WORD_INTELLIGIBILITY", "HUMAN_NOT_SPECTRAL", "MONO", "PHONE_PROXY"],
+      "reject_if": ["HIDDEN_VOICE", "SPECTRAL_WHISPER", "MASKS_LENI_BIRD", "MASKS_IF_THIS_REACHES", "HORROR_DRONE"]
+    },
+    {
+      "asset_id": "S19_TWO_PART_LINE_CUT",
+      "purpose": "Repeatable signal grammar: two mechanically distinct interruptions then silence",
+      "variant_count": 3,
+      "variants": [
+        {"variant":"A","prompt":"Isolated old analogue telephone line ending with two mechanically distinct interruption events in close sequence, first a small contact break and then a firmer physical disconnect, followed immediately by clean silence. Dry realistic telecommunications mechanics, no glitch cliché, no horror, no music."},
+        {"variant":"B","prompt":"Isolated vintage low-voltage line cut grammar: two clearly separate mechanical/contact interruptions, different attack shapes, then no residual event except silence. Ordinary old hardware failure texture, repeatable and countable, no digital stutter, no cinematic hit, no music."},
+        {"variant":"C","prompt":"Isolated two-stage analogue line disconnect from ageing hotel telephone hardware: subtle first interruption, distinct second cut, then hard absence. Mechanical and plausible, not a tape stop and not a supernatural effect. No bass impact, no glitch montage, no score."}
+      ],
+      "mandatory_audition": ["TWO_PART_COUNTABILITY", "MECHANICALLY_DISTINCT_ATTACKS", "NOT_TAPE_EXHAUSTION", "MONO", "PHONE_PROXY"],
+      "reject_if": ["ONE_UNREADABLE_GLITCH", "THREE_OR_MORE_BEATS", "TAPE_STOP_READ", "HORROR_STING"]
+    }
+  ],
+  "tier2_generate_after_tier1": [
+    {"asset_id":"S07_TRANSFORMER_WAKE","constraint":"Ordinary soft 50 Hz transformer system identity; current branch explicitly permits/needs this normal grammar."},
+    {"asset_id":"S08_RELAY_RIPPLE","constraint":"Several neat old mechanical relays, causally after S07."},
+    {"asset_id":"S10_SELECTOR_916","constraint":"One clean selector clack; establishes NORMAL."},
+    {"asset_id":"S11_GLASS_LAMP_916_PING","constraint":"Normal 916 lamp reference required before S14 final approval."}
+  ],
+  "audition_scorecard": {
+    "scale": "0_FAIL / 1_BORDERLINE / 2_PASS",
+    "dimensions": ["PHYSICAL_BELIEVABILITY", "FUNCTION_READABILITY", "NO_FALSE_STORY_FACT", "DIALOGUE_COMPATIBILITY", "MONO_TRANSLATION", "PHONE_TRANSLATION", "SERIES_IDENTITY"],
+    "hard_fail_overrides": ["WRONG_STORY_FACT", "HORROR_CLICHE", "UNINTELLIGIBLE_CLUE", "IDENTITY_COLLISION", "UNTRACEABLE_BYTES"],
+    "selection_rule": "Highest score does not automatically win. All hard gates must pass and source bytes must enter sound_asset_binding_gate before production use."
+  },
+  "next_output_after_generation": "ROOM917_E01_SOUND_ASSET_CANDIDATES_v1.json populated with real paths, hashes, format facts, explicit audition statuses and gains."
+}
