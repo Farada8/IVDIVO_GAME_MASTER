@@ -1,0 +1,38 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-08-22",
+  "project":"B03_SMITH_THE_EMPTY_RESCUE",
+  "range":"P49-P56",
+  "status":"EXECUTED_PASS_FATAL0_MAJOR0_MANUSCRIPT_CH13_18_COMPLETE",
+  "fatal":0,
+  "blocking_major":0,
+  "rebase_drive_id":"1-z3sHJPBKxoZXwuPkuug4x3P2IWOJiweiLgQmMIcWAs",
+  "block_gate_drive_id":"15VHNFSF5lBDoNnyJIeI_S9TNAawKlwJ0w4AK_vlCmxA",
+  "manuscript":{
+    "CH13":{"title":"CALLSIGN","drive_id":"1J7UTb-smc2pdfVCD-pmohf1NxqfwvqBtKXSWwmr6bz0","gate_id":"1h63oqcMuHn7yvbamXgmFm6gSqnkIcUYMdcRYaK5ZKrc","status":"PASS"},
+    "CH14":{"title":"TEST, NOT THEORY","drive_id":"13dWVjRygXFil2sEM4InfUHoKbA247WQBudZlP_mc_xM","status":"PASS_AFTER_NARRATOR_REPAIR"},
+    "CH15":{"title":"WE ARE IN THE RECORDING","drive_id":"1zAyfsND9CnKuH8_22qi_DPNFTHla6YXdbUfKYiwbe8w","status":"PASS_MIDPOINT_AFTER_REPAIR"},
+    "CH16":{"title":"MORGEN PASS","drive_id":"1jVE3fCliyZToiprmPYfDjJnpmyaWtbAvE7h9_JsUYCo","status":"PASS_AFTER_RHETORICAL_REPAIR"},
+    "CH17":{"title":"THE PEOPLE REMOVED FROM THE REPORT","drive_id":"1Oim0q1BOH3oeKBOp0ASVrKOLSWXAi7eCgGbibghWE4A","status":"PASS_AFTER_RHETORICAL_REPAIR"},
+    "CH18":{"title":"TWO FUTURES","drive_id":"1_76QmjVfd2QOsEdi2nHSLE0xLdiKB4tPNnlY4PX5bWI","status":"PASS_POINT_OF_NO_RETURN_AFTER_REPAIR"}
+  },
+  "critical_changes":[
+    "old CH13 impossible-callsign proof superseded because CH12 meter-case proof already consumed that evidentiary function",
+    "MOSS selected after source receipt on a real already-justified hydro inspection with no operational change",
+    "CH14 permits no immediate MOSS payoff and preserves negative-evidence discipline",
+    "CH15 later source contains MOSS twice; response dependence supported while ordinary leak alternatives and ontology remain open",
+    "Smith declares pure external-input model operationally insufficient and opens doctrine-basis archive",
+    "Morgen Pass separates plausible suppression success from deliberately removed targeted-warning cost",
+    "Jana receives material historical decision fact without raw archive/Contact export",
+    "Taren makes a real anonymization blind-spot error; no Earth authority",
+    "CH18 Plan A -> real road crack -> Plan B -> local Maja route creates plan-specific/divergent precursor states without experiment-driven plan switching",
+    "conventional multi-site storm is independently active; non-decision is no longer available"
+  ],
+  "epistemic_state":{
+    "observed":["controlled response metadata MOSS appears in later source","source content changes after response architecture changes","later source reflects local tactical route outside central scripts"],
+    "strong_inference":"precursor content is response-dependent under current evidence; pure external-input model is operationally insufficient",
+    "unknown":["mechanism","origin","ontology","fixed versus branching future","fraud/interception versus predictive/relational mechanism"]
+  },
+  "new_continuity":{"Maja_Rojc":"lower-valley duty lead introduced CH18; must persist as recurring local professional"},
+  "next":"P57-P64_CH19_24_ESCALATION_REBASE"
+}
