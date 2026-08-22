@@ -28,7 +28,18 @@ Transitions are strictly one step at a time. Stage skipping is rejected.
 
 `CONTINUITY -> FINAL` is fail-closed: it is impossible unless the persisted continuity gate is `PASS`. A `FAIL` gate leaves the book at `CONTINUITY` and marks the parent project `BLOCKED`. A later explicit PASS may unblock it.
 
-PL-08 does not claim to perform the continuity analysis itself. PL-09 owns automatic contradiction detection. PL-08 only provides the production structure, state route and enforcement gate.
+## Hash-bound continuity authorization
+
+A PASS is not a timeless flag. When the gate is recorded, PL-08 computes a deterministic SHA-256 over the continuity-relevant book inputs:
+- `canon.md`;
+- `characters.json`, `locations.json`, `timeline.json`, `plot.json`;
+- every file under `chapters/` and `drafts/`, ordered by relative path.
+
+The digest is stored as `continuity_gate.content_sha256`. Immediately before `FINAL`, the digest is recomputed. If any reviewed story/manuscript input has changed, been added or removed, FINAL is rejected as a **stale continuity PASS**. The book remains at `CONTINUITY` and requires an explicit recheck; there is no silent state mutation or automatic re-approval.
+
+`critique/`, `continuity/` and `final/` are intentionally excluded from the reviewed-content digest because they contain review/output artifacts rather than the story/manuscript inputs being authorized.
+
+PL-08 does not claim to perform the continuity analysis itself. PL-09 owns automatic contradiction detection. PL-08 provides the production structure, state route, content-version binding and enforcement gate.
 
 ## CLI
 
