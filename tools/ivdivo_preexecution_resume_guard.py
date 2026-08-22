@@ -18,7 +18,13 @@ def _project_id(project: Dict[str, Any]) -> str | None:
 
 def _project_next(project: Dict[str, Any]) -> str | None:
     terminal = project.get("terminal_frontier") or {}
-    return terminal.get("next_obligation") or project.get("next_safe_action") or project.get("next_action") or project.get("next_unblocked_obligation")
+    return (
+        terminal.get("next_obligation")
+        or project.get("next_obligation")
+        or project.get("next_safe_action")
+        or project.get("next_action")
+        or project.get("next_unblocked_obligation")
+    )
 
 
 def guard_resume(aggregate: Dict[str, Any], project: Dict[str, Any] | None) -> Dict[str, Any]:
