@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_ru_pilot_pointer/1.6",
+  "schema_version": "ivdivo.room917_ru_pilot_pointer/1.7",
   "updated": "2026-08-22",
   "project": "ROOM 917 CALLS AT MIDNIGHT",
   "project_id": "ROOM917",
@@ -8,65 +8,73 @@
   "story_status": "LOCKED",
   "scope": "PARALLEL_RUSSIAN_LOCALIZATION_AND_PERFORMANCE_CREDIBILITY_PILOT",
   "does_not_supersede": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
-  "status": "RU_NATIVE_DISCOVERY_ZERO_SPEND_PENDING_SNAPSHOT__PAID_S0_NATIVE_BINDING_HARD_GATED",
-  "github": {
-    "authority": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PILOT_AUTHORITY_AND_EXECUTION_v1.0.md", "commit": "a8cf4fe597d48c77cab2c6236e8f2a576dee32f8"},
-    "e01_ru_script": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md", "commit": "ff2de4aa6f664742ec958e959ad3ecca54e899ca"},
-    "e02_ru_script": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E02_LENI_BIRD_RECORDING_SCRIPT_v1.0.md", "commit": "8d6ee1fd3096b96e218418c5d24e0d73c12c82d0"},
-    "elevenlabs_manifest": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_E02_ELEVENLABS_V3_MANIFEST_v1.0.json", "commit": "6fd2345e661b759d290fdb8200240d31c40f09c6"},
-    "audition_renderer": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/render_ru_pilot.py", "commit": "f077bbd993dc8a63a0a8f9a035cc0b88f4794219"},
-    "public_canary_cast": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_PUBLIC_CANARY_CAST_v1.0.json", "commit": "7eec83b3679c36963a3cde68f30872875d91516e", "status": "DIAGNOSTIC_ONLY_NOT_PAID_S0_AUTHORITY"},
-    "s0_text_test_template": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_CANARY_BLOCK_BUNDLE_v1.0.json", "commit": "681814aa10125c4d5e159fbe37b02c68b8789c96", "blocks": 6, "status": "TEXT_AND_TEST_GEOMETRY_ONLY_HISTORICAL_IDS_REJECTED_AT_RUNTIME"},
-    "e01_director_sound_map": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_DIRECTOR_SOUND_MAP_v1.0.md", "commit": "113d5c52a27b6284c15da9da25e2173197c6814b"},
-    "e01_assembly_contract": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json", "commit": "7d0d35120842826520b20e8b40786b0819bbc3b9"},
-    "e01_render_block_plan": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_RENDER_BLOCK_PLAN_v1.0.json", "commit": "9bc193f7293e5dab7cb1bb2865d70bedcb4b72be", "status": "READY_AFTER_RU_CAST_LOCK"},
-    "s0_listen_gate": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_LISTEN_GATE_v1.0.json", "commit": "ec064917ad57efcf7c4ab298186df6eb40b2968a"},
-    "s0_artifact_qc": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/validate_ru_s0_artifact.py", "commit": "4c7efb6178023c1d29e42c9488a133b2bf7530ec", "outputs": ["S0_QC_REPORT.json", "S0_LISTENING_INDEX.json"], "cast_lock": false},
-    "provider_freshness_audit": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_CAST_PROVIDER_FRESHNESS_AUDIT_v1.0.json", "commit": "2e31edbdbdd7a7f59fa8c95fc89c5d55c0561868"},
-    "cast_audition_gate": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_CAST_AUDITION_GATE_v1.0.json", "commit": "09df05da9e005041e39928f25e53d0bd655d9bec"},
-    "native_voice_discovery_tool": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/discover_ru_voice_candidates.py", "commit": "f360807af1a3ae20b2cb0ee7565ab9886bf395b9", "tts_spend": 0, "role_ranked": true},
-    "voice_discovery_workflow": {"path": ".github/workflows/room917-ru-voice-discovery.yml", "commit": "ec0e12d43e013451b34ef2b13c7409dc561a9f2d", "paid_synthesis_calls": 0, "public_native_discovery_requires_secret": false, "account_inventory_requires_secret": true, "publication": "CONCURRENCY_SAFE_REBASE_RETRY_NO_FORCE_PUSH", "native_ru_filter": "professional + language=ru + min_notice_period_days>=365"},
-    "native_s0_bindings_template": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_NATIVE_BINDINGS_TEMPLATE_v1.0.json", "commit": "a9b5c9720b9cc6d4a2af2d81e16b700670a1603e", "actual_binding_file": "NOT_CREATED_UNTIL_PROVIDER_SNAPSHOT_AND_PREVIEW_EVIDENCE"},
-    "native_s0_bundle_compiler": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_s0_native_bundle.py", "commit": "af21b1f4fc2d0a1e4bd8bf1cbd5c88daab6330d8", "hard_rejects_historical_ids": true, "snapshot_sha_match_required": true},
-    "s0_canary_workflow": {"path": ".github/workflows/room917-ru-s0-canary.yml", "commit": "6c7c9e99042ab0e341dff167750691cced4e4f4e", "trigger": "workflow_dispatch", "paid_guard": "confirm_spend=YES", "max_blocks": [4, 6], "native_binding_hard_gate": true, "machine_qc_before_artifact": true, "full_episode_render_forbidden": true},
-    "native_discovery_pr_probe": {"path": ".github/workflows/room917-ru-native-discovery-pr-probe.yml", "commit": "0b3265fcf2169a5ef46e1d6eddeb4c5dfa0c27e1", "paid_synthesis_calls": 0, "status": "AVAILABLE_DIAGNOSTIC_PATH_PR504_CLOSED_NO_OBSERVED_RUN"},
-    "english_sound_design_pointer": {"path": "AUDIO_PRODUCTION/ROOM917/CURRENT_SOUND_DESIGN_POINTER.json", "commit": "8e274f7313f5744c16df44fa02719828618616ad", "status": "ACTIVE_POST_RENDER_SOUND_EXECUTION", "note": "EN/master sound-design lineage remains separate authority and must not be overwritten by RU localization work"}
-  },
-  "drive": {
-    "folder": {"title": "12_RUSSIAN_PILOT_E01_E02", "id": "1UIJGRzuNkAYTMfFxjso2lwfyNzqBuvc8"},
-    "authority_doc": {"title": "ROOM917 RU PILOT — AUTHORITY + EXECUTION v1.0 — 2026-08-22", "id": "17SDu7cwabVJypl2dAeOrfy6hKOQ7ajGIvMIpj6GB660"},
-    "e01_ru_script_doc": {"title": "ROOM917 RU E01 — ЛАМПА ПОСЛЕ 916 — RECORDING SCRIPT v1.0", "id": "19qoiFoZgyaqcXVh1I9rfxq_J-o7TMaj1E63ZM0Lrnh8"},
-    "e02_ru_script_doc": {"title": "ROOM917 RU E02 — ЛЕНИ-БЁРД — RECORDING SCRIPT v1.0", "id": "1LdwOJbPRHHWKVCoP3giK-WdwaiauEOIEPdNkXuGIlp4"},
-    "production_update_doc": {"title": "ROOM917 RU PILOT — S0 CANARY + E01 SOUND PRODUCTION UPDATE — 2026-08-22", "id": "1_O5KB093CGI80idkAY7_3Eo2RbWK9Dy_TBXHZ7ggXTo", "readback": "PASS"},
-    "cast_provider_refresh_doc": {"title": "ROOM917 RU CAST — PROVIDER FRESHNESS + NATIVE DISCOVERY GATE — 2026-08-22", "id": "1Fpyt35njISP8a8Iq3NOJs8_KGww-qy4KcC8uyYy7RP8", "parent_folder": "1UIJGRzuNkAYTMfFxjso2lwfyNzqBuvc8", "readback": "PASS_2026_08_22"},
-    "current_frontier_doc": {"title": "ROOM917 RU PILOT — CURRENT FRONTIER v1.5 — 2026-08-22", "id": "1Z-tMYDZQY2b61moqrl4gpsvDsRXlSr9ApXrFsU4WGmY", "parent_folder": "1UIJGRzuNkAYTMfFxjso2lwfyNzqBuvc8", "readback": "PASS"}
+  "status": "RU_PROVIDER_AUTH_HOLD_CONFIRMED__PAID_S0_HARD_GATED",
+  "current_authority": {
+    "ru_pilot_authority": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PILOT_AUTHORITY_AND_EXECUTION_v1.0.md",
+    "e01_script": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md",
+    "e02_script": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E02_LENI_BIRD_RECORDING_SCRIPT_v1.0.md",
+    "e01_assembly": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json",
+    "e01_render_plan": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_RENDER_BLOCK_PLAN_v1.0.json",
+    "bilingual_pointer": "AUDIO_PRODUCTION/ROOM917/CURRENT_EN_RU_AUDIO_PRODUCTION_POINTER.json",
+    "listener_qc_pointer": "AUDIO_PRODUCTION/ROOM917/CURRENT_LISTENER_QC_POINTER.json"
   },
   "provider": {
     "name": "ElevenLabs",
     "primary_model": "eleven_v3",
-    "current_ru_voice_bindings": "NOT_YET_LOCKED",
-    "public_canary_voice_ids": "DIAGNOSTIC_ONLY_PAID_RUNTIME_REJECTS_THEM",
-    "native_shared_voice_discovery_auth": "OPTIONAL_XI_API_KEY",
-    "account_inventory_secret": "ELEVENLABS_API_KEY_IF_CONFIGURED",
-    "current_session_direct_provider_connector": "UNAVAILABLE",
-    "current_session_public_api_direct_fetch": "BLOCKED_BY_RUNTIME_NETWORK_POLICY",
-    "dry_run_default": true,
-    "paid_full_episode_autorender": false,
-    "paid_s0_requires_native_snapshot": true,
-    "paid_s0_requires_approved_binding_file": true,
-    "paid_s0_requires_explicit_confirm_spend_yes": true,
-    "actual_audio_produced_this_pass": false,
-    "production_shared_voice_min_notice_period_days": 365,
-    "production_native_language": "ru"
+    "native_voice_discovery_tool": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/discover_ru_voice_candidates.py",
+    "native_voice_discovery_gate_commit": "9b5aee7a93e9e50a26db8e82a1fe49d49c3a66c5",
+    "discovery_workflow": ".github/workflows/room917-ru-voice-discovery.yml",
+    "recoverable_workflow_hardening_commit": "b3d69f8b6d8ecaf6e14df7434422596796eb23e3",
+    "snapshot_path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json",
+    "snapshot_blob_sha": "8de048aade4f9d1b73d43e99ed8650a845db5a56",
+    "snapshot_generated_at": "2026-08-22T16:37:56.803284+00:00",
+    "snapshot_status": "HOLD_PROVIDER_AUTH_REQUIRED",
+    "snapshot_candidate_count": 0,
+    "snapshot_paid_synthesis_calls": 0,
+    "live_access_evidence": {
+      "filtered_without_auth": "401_YOU_MUST_BE_LOGGED_IN_TO_USE_FILTERS",
+      "unfiltered_over_three": "401_YOU_MUST_BE_LOGGED_IN_TO_FETCH_MORE_THAN_3_VOICES",
+      "page_size_three_pagination": "401_UNAUTHORIZED",
+      "production_conclusion": "AUTHENTICATED_PROVIDER_ACCESS_REQUIRED_FOR_RELIABLE_FILTERED_PAGINATED_DISCOVERY"
+    },
+    "repository_secret_required_for_automated_discovery": "ELEVENLABS_API_KEY",
+    "secure_auth_handoff": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_ELEVENLABS_AUTH_HANDOFF_v1.0.md",
+      "commit": "d54d823ad47090e50fe8366b6ef079825e615672",
+      "status": "ONE_EXTERNAL_MANUAL_AUTH_STEP_REQUIRED"
+    },
+    "secret_policy": "NEVER_PASTE_OR_STORE_KEY_IN_CHAT_REPO_DRIVE_ISSUE_OR_LOG"
   },
-  "provider_freshness_findings": {
-    "ELENA_RACHEL_ID": "LEGACY_ID_AUTO_ROUTES_TO_REPLACEMENT_NO_PAID_S0_OR_PRODUCTION_LOCK",
-    "MINA_MATILDA": "DEFAULT_VOICE_DOCUMENTED_TO_EXPIRE_2026_12_31_NO_PAID_S0_OR_PRODUCTION_LOCK",
-    "CATE_SARAH": "DEFAULT_VOICE_DOCUMENTED_TO_EXPIRE_2026_12_31_NO_PAID_S0_OR_PRODUCTION_LOCK",
-    "JULIAN_ADAM": "DIAGNOSTIC_ONLY_HOLD_UNTIL_CURRENT_PROVIDER_IDENTITY_AND_RU_LISTENING",
-    "PREMADE_OR_GENERATED_RU": "ENGLISH_ORIGIN_NATIVE_RU_PROFESSIONAL_LIBRARY_PREFERRED",
-    "V3_SIMILARITY_AND_SPEAKER_BOOST": "NOT_AVAILABLE_FOR_ELEVEN_V3_DO_NOT_USE_AS_PERFORMANCE_EVIDENCE",
-    "SHARED_VOICE_DISCOVERY_AUTH": "XI_API_KEY_OPTIONAL_PER_CURRENT_API_REFERENCE"
+  "cast": {
+    "status": "NOT_LOCKED",
+    "audition_gate": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_CAST_AUDITION_GATE_v1.0.json",
+    "audition_gate_current_commit": "74c40cdede283dc415bcc75ccf22b1a281076509",
+    "public_legacy_default_ids": "DIAGNOSTIC_ONLY_FORBIDDEN_FOR_PAID_S0_BINDING",
+    "provider_candidate_target": "NATIVE_RU_PROFESSIONAL_NOTICE_PERIOD_GE_365_DAYS",
+    "preview_required": true,
+    "pair_tests_required": true,
+    "founder_credibility_listen_required": true,
+    "eleven_v3_pvc_policy": "AUDITION_FIRST_NOT_AUTO_REJECT; IF_TWO_CORRECTLY_DIRECTED_ATTEMPTS_FAIL_NATURALISM_OR_CHEMISTRY_TEST_NATIVE_RU_IVC_OR_VOICE_DESIGN_FOR_FAILED_ROLE_ONLY",
+    "story_rewrite_for_cast_failure": false
+  },
+  "s0": {
+    "status": "BLOCKED_UNTIL_AUTHENTICATED_PROVIDER_SNAPSHOT_PLUS_APPROVED_BINDINGS_PLUS_EXPLICIT_SPEND_AUTHORIZATION",
+    "template_bundle": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_CANARY_BLOCK_BUNDLE_v1.0.json",
+    "valid_audition_format_commit": "405a94ede8353de913d0a94c65ef9999f7b41b88",
+    "audition_output_format": "mp3_44100_128",
+    "final_master_target": "48K_24BIT_WAV_AFTER_CAST_LOCK_AND_ASSEMBLY",
+    "native_bindings_template": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_NATIVE_BINDINGS_TEMPLATE_v1.0.json",
+    "actual_native_bindings": "NOT_CREATED_UNTIL_AUTHENTICATED_SNAPSHOT_AND_PREVIEW_EVIDENCE",
+    "bundle_compiler": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_s0_native_bundle.py",
+    "bundle_compiler_format_gate_commit": "e1d6fb27ff493f7bd148bc78c62b60c85e8b3d25",
+    "workflow": ".github/workflows/room917-ru-s0-canary.yml",
+    "paid_guard": "confirm_spend=YES",
+    "max_blocks": [4, 6],
+    "four_block_function": "ELENA_JULIAN_MINA_CATE_INDIVIDUAL_CREDIBILITY",
+    "six_block_function": "FOUR_INDIVIDUAL_PLUS_ELENA_MINA_AND_ELENA_JULIAN_CHEMISTRY",
+    "full_episode_render_forbidden": true,
+    "machine_qc_before_human_listen": true,
+    "cast_lock_before_human_listen": false
   },
   "protected_ru_facts": {
     "nickname": "Лени-бёрд",
@@ -93,36 +101,51 @@
     "music_e02": "END_MUTED_4_NOTE_FIGURE_STOPS_BEFORE_LAST_NOTE",
     "mono_phone_survival": true
   },
-  "next_action": {
-    "stage": "RU_NATIVE_DURABLE_DISCOVERY_ZERO_SPEND",
-    "action": "Obtain and read AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json from the current zero-spend public discovery workflow; inspect role-ranked candidates and preview URLs; shortlist candidates by role; do not create paid bindings until provider snapshot and preview evidence exist.",
-    "blocker": "RU_NATIVE_VOICE_DISCOVERY_JSON_NOT_YET_PRESENT_IN_MAIN_AND_DIRECT_PUBLIC_API_FETCH_IS_BLOCKED_IN_CURRENT_RUNTIME",
-    "tts_spend_required": false,
-    "full_e01_before_gate": "FORBIDDEN"
+  "listener_qc": {
+    "exact_question_count": 6,
+    "questions": [
+      "ACTOR_BELIEF",
+      "AI_AUDIBLE",
+      "DEAD_SCENE",
+      "GEOGRAPHY",
+      "MYSTERY",
+      "SFX_MASKING"
+    ],
+    "market_retention_question_outside_p003b": true,
+    "selective_repair_only": true
   },
-  "after_native_snapshot": [
-    "PREVIEW_TOP_ROLE_CANDIDATES",
-    "SHORTLIST_UP_TO_3_CANDIDATES_PER_ROLE",
-    "VERIFY_PROVIDER_IDENTITY_AND_DURABILITY",
-    "CREATE_ROOM917_RU_S0_NATIVE_BINDINGS_JSON_ONLY_AFTER_EVIDENCE",
-    "FOUNDER_EXPLICIT_PAID_CANARY_AUTHORIZATION",
-    "RUN_4_OR_6_GUARDED_S0_BLOCKS",
-    "MACHINE_QC_AND_LISTENING_INDEX",
-    "HUMAN_CREDIBILITY_LISTEN",
-    "SELECTIVE_RECAST_OR_PERFORMANCE_REPAIR",
-    "RU_CAST_LOCK_WITH_PROVIDER_IDENTITY_AND_ACCEPTED_CANARY_HASHES",
-    "RU_E01_CONTROLLED_DIALOGUE_BLOCK_RENDER_FROM_RENDER_BLOCK_PLAN",
-    "DIALOGUE_EDIT_AND_ALIGNMENT",
-    "RESOLVED_MICROPHONE_CHOREOGRAPHY_TIMING",
-    "REUSE_OR_LOCK_CRITICAL_EN_RU_SFX",
-    "CAUSAL_FOLEY_AND_ROOM_BED",
-    "CATE_TRANSMISSION_POST",
-    "PITCH_VERIFIED_LULLABY_INSERTION",
-    "AUTHORIZED_END_MUSIC_ONLY",
-    "MIX_MONO_PHONE_QC",
-    "FOUNDER_CREDIBILITY_LISTEN",
-    "SELECTIVE_REPAIR",
-    "RU_E02_RENDER_IF_E01_PASSES_OR_FOUNDER_OVERRIDES"
-  ],
-  "secret_policy": "API_KEYS_NEVER_IN_GITHUB_OR_DRIVE"
+  "current_blocker": {
+    "type": "EXTERNAL_PROVIDER_AUTHENTICATION",
+    "description": "Reliable filtered/paginated native-RU Voice Library discovery requires authenticated ElevenLabs provider access. Snapshot is present and fail-closed; candidate_count remains zero until authentication succeeds.",
+    "paid_synthesis_required_to_clear": false,
+    "secret_value_must_not_enter_chat": true
+  },
+  "next_action": {
+    "stage": "RU_PROVIDER_AUTHENTICATED_ZERO_SPEND_DISCOVERY",
+    "action": "Configure restricted ELEVENLABS_API_KEY only in GitHub Actions repository secrets or provide a trusted authenticated provider export; rerun zero-spend discovery; require PASS_CANDIDATES_FOUND before any binding or paid canary.",
+    "after_pass": [
+      "PREVIEW_TOP_ROLE_CANDIDATES",
+      "SHORTLIST_UP_TO_3_PER_ROLE",
+      "VERIFY_PROVIDER_IDENTITY_AND_DURABILITY",
+      "CREATE_ROOM917_RU_S0_NATIVE_BINDINGS_JSON",
+      "FOUNDER_EXPLICIT_PAID_CANARY_AUTHORIZATION",
+      "RUN_4_OR_6_GUARDED_S0_BLOCKS",
+      "MACHINE_QC",
+      "HUMAN_CREDIBILITY_LISTEN",
+      "SELECTIVE_RECAST_OR_PERFORMANCE_REPAIR",
+      "RU_CAST_LOCK",
+      "RU_E01_CONTROLLED_DIALOGUE_BLOCK_RENDER",
+      "DIALOGUE_EDIT_AND_ALIGNMENT",
+      "FULL_SOUND_ASSEMBLY_AND_QC"
+    ]
+  },
+  "prohibited": [
+    "NO_KEY_IN_CHAT",
+    "NO_KEY_IN_GITHUB_FILES",
+    "NO_KEY_IN_DRIVE",
+    "NO_PAID_S0_FROM_HOLD_SNAPSHOT",
+    "NO_HISTORICAL_DIAGNOSTIC_VOICE_IDS_IN_PAID_S0",
+    "NO_FULL_E01_BEFORE_CAST_LOCK",
+    "NO_STORY_REWRITE_TO_HIDE_PROVIDER_OR_ACTING_FAILURE"
+  ]
 }
