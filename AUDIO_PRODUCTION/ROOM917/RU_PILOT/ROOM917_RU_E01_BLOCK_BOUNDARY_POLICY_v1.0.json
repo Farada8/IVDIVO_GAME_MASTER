@@ -1,0 +1,50 @@
+{
+  "schema_version": "ivdivo.room917_ru_e01_block_boundary_policy/1.0",
+  "created": "2026-08-22",
+  "project_id": "ROOM917",
+  "episode": "E01",
+  "locale": "ru-RU",
+  "story_status": "LOCKED",
+  "purpose": "Group adjacent immutable dialogue units into controlled editorial render blocks without reordering story or hiding critical clues inside oversized batches.",
+  "duration_reference": {
+    "target_seconds_min": 30.0,
+    "target_seconds_max": 80.0,
+    "estimate_is_authority": false,
+    "real_render_duration_replaces_estimate_after_provider_output": true
+  },
+  "hard_rules": [
+    "NEVER_CROSS_SCENE_BOUNDARY",
+    "NEVER_REORDER_DIALOGUE_UNITS",
+    "NEVER_SPLIT_DIALOGUE_UNIT_TEXT",
+    "NO_WHOLE_EPISODE_SINGLE_PASS",
+    "PROTECTED_CRITICAL_UNIT_MAY_BE_SHORTER_THAN_30_SECONDS",
+    "BLOCK_PLAN_DOES_NOT_AUTHORIZE_PROVIDER_CALL_OR_SPEND"
+  ],
+  "protected_exact_text_units": [
+    "Лени-бёрд...",
+    "Если это дойдёт—",
+    "Не трогайте. Время — один семнадцать и двенадцать секунд. Внешняя телефонная магистраль физически разомкнута. Неотмеченная лампа активна справа от девятьсот шестнадцатой. Мина, подтвердите.",
+    "Тогда откуда вы знаете последнюю ноту?"
+  ],
+  "protected_functions": {
+    "CATE_CLEAN_FRAGMENT": "ISOLATE_FOR_REPLACEABILITY_AND_POST_TRANSMISSION",
+    "EVENT_TIME_AND_OPEN_TRUNK": "KEEP_LOCALLY_REPLACEABLE",
+    "FINAL_QUESTION": "ISOLATE_OR_END_BLOCK_WITHOUT_FOLLOWING_DIALOGUE"
+  },
+  "block_render_mode_law": {
+    "single_character_block": "ISOLATED_TTS_BLOCK_ALLOWED_AFTER_CAST_LOCK",
+    "multi_character_editorial_block": "COMPILE_TO_PER_CHARACTER_OR_PER_UTTERANCE_REQUESTS_THEN_EDIT_IN_ORDER",
+    "text_to_dialogue": "OPTIONAL_ONLY_WHEN_SEPARATE_RELATIONAL_GATE_EXPLICITLY_APPROVES",
+    "multi_speaker_block_is_not_single_tts_request": true
+  },
+  "post_render": {
+    "selected_take_registry_required": true,
+    "real_duration_writeback_required": true,
+    "alignment_required": true,
+    "selective_rerender_references_unit_ids": true,
+    "whole_block_rerender_after_single_line_failure": false
+  },
+  "provider_calls": 0,
+  "paid_synthesis_calls": 0,
+  "story_or_dialogue_changed": false
+}
