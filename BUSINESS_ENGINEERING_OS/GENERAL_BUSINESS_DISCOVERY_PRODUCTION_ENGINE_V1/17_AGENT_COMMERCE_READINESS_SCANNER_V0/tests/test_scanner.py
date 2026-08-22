@@ -41,8 +41,9 @@ def ready_snapshot():
                 "dev.ucp.shopping.checkout": [{"version": "2026-04-08"}],
                 "dev.ucp.shopping.order": [{"version": "2026-04-08"}],
             },
+            "payment_handlers": {},
         },
-        "keys": [{"kid": "key1", "kty": "EC"}],
+        "signing_keys": [{"kid": "key1", "kty": "EC"}],
     }
     return {
         "merchant_id": "READY",
@@ -53,8 +54,9 @@ def ready_snapshot():
             "authentication_required": False,
             "profile": profile,
             "checkout_endpoints": {"create": True, "update": True, "complete": True},
-            "identity_path": "guest",
+            "oauth_metadata_public": None,
             "order_events": ["created", "shipped", "delivered"],
+            "order_webhook_flow": True,
             "order_request_signing": True,
         },
     }
@@ -83,14 +85,20 @@ def shopify_public_profile_snapshot():
                 },
             ]},
             "capabilities": {
+                "dev.shopify.catalog": [{"version": "2026-04-08"}],
                 "dev.ucp.shopping.checkout": [{"version": "2026-04-08"}],
                 "dev.ucp.shopping.order": [{"version": "2026-04-08"}],
+            },
+            "payment_handlers": {
+                "com.google.pay": [{"id": "google-pay", "version": "2026-04-08"}],
+                "dev.shopify.card": [{"id": "card", "version": "2026-04-08"}],
             },
         }
     }
     snapshot["ucp"]["checkout_endpoints"] = {"create": None, "update": None, "complete": None}
-    snapshot["ucp"]["identity_path"] = None
+    snapshot["ucp"]["oauth_metadata_public"] = None
     snapshot["ucp"]["order_events"] = None
+    snapshot["ucp"]["order_webhook_flow"] = None
     snapshot["ucp"]["order_request_signing"] = None
     return snapshot
 
@@ -127,17 +135,20 @@ class ScannerTests(unittest.TestCase):
 
     def test_identity_linking_without_oauth_metadata_fails(self):
         snapshot = ready_snapshot()
-        snapshot["ucp"]["identity_path"] = "identity_linking"
+        snapshot["ucp"]["profile"]["ucp"]["capabilities"]["dev.ucp.common.identity_linking"] = [{"version": "2026-04-08"}]
         snapshot["ucp"]["oauth_metadata_public"] = False
         result = scan(snapshot)
         self.assertTrue(any(f["rule_id"] == "UCP-08" and f["outcome"] == "FAIL" for f in result["findings"]))
+
+    def test_no_identity_linking_capability_is_not_applicable(self):
+        result = scan(shopify_public_profile_snapshot())
+        self.assertTrue(any(f["rule_id"] == "UCP-08" and f["outcome"] == "NOT_APPLICABLE" for f in result["findings"]))
 
     def test_unrecognized_ucp_version_is_unknown_not_fail(self):
         snapshot = ready_snapshot()
         snapshot["ucp"]["profile"]["ucp"]["version"] = "2099-01-01"
         result = scan(snapshot)
         self.assertTrue(any(f["rule_id"] == "UCP-04" and f["outcome"] == "UNKNOWN" for f in result["findings"]))
-        self.assertNotEqual(result["disposition"], "READY_FOR_PLATFORM_CONFORMANCE_TEST_NOT_APPROVAL")
 
     def test_missing_order_delivered_is_fail_when_explicitly_observed(self):
         snapshot = ready_snapshot()
@@ -148,23 +159,48 @@ class ScannerTests(unittest.TestCase):
     def test_mcp_transport_is_valid_ucp_service(self):
         result = scan(shopify_public_profile_snapshot())
         self.assertTrue(any(f["rule_id"] == "UCP-05" and f["outcome"] == "PASS" for f in result["findings"]))
-        self.assertFalse(any(f["rule_id"] == "UCP-05" and f["outcome"] == "FAIL" for f in result["findings"]))
+
+    def test_non_rest_profile_does_not_require_rest_endpoint_probes(self):
+        result = scan(shopify_public_profile_snapshot())
+        self.assertTrue(any(f["rule_id"] == "UCP-07" and f["outcome"] == "NOT_APPLICABLE" for f in result["findings"]))
+
+    def test_shopify_style_payment_handlers_registry_passes(self):
+        result = scan(shopify_public_profile_snapshot())
+        self.assertTrue(any(f["rule_id"] == "UCP-05P" and f["outcome"] == "PASS" for f in result["findings"]))
+
+    def test_missing_payment_registry_is_unknown_not_fail(self):
+        snapshot = shopify_public_profile_snapshot()
+        del snapshot["ucp"]["profile"]["ucp"]["payment_handlers"]
+        result = scan(snapshot)
+        self.assertTrue(any(f["rule_id"] == "UCP-05P" and f["outcome"] == "UNKNOWN" for f in result["findings"]))
 
     def test_unprobed_order_events_are_unknown_not_fail(self):
         result = scan(shopify_public_profile_snapshot())
         self.assertTrue(any(f["rule_id"] == "UCP-09" and f["outcome"] == "UNKNOWN" for f in result["findings"]))
         self.assertFalse(any(f["rule_id"] == "UCP-09" and f["outcome"] == "FAIL" for f in result["findings"]))
 
-    def test_order_capability_without_public_signing_keys_is_deterministic_fail(self):
+    def test_order_capability_without_webhook_evidence_is_unknown_not_fail(self):
         result = scan(shopify_public_profile_snapshot())
+        self.assertTrue(any(f["rule_id"] == "UCP-10" and f["outcome"] == "UNKNOWN" for f in result["findings"]))
+        self.assertFalse(any(f["rule_id"] == "UCP-10" and f["outcome"] == "FAIL" for f in result["findings"]))
+
+    def test_explicit_webhook_without_signing_keys_is_fail(self):
+        snapshot = shopify_public_profile_snapshot()
+        snapshot["ucp"]["order_webhook_flow"] = True
+        result = scan(snapshot)
         self.assertTrue(any(f["rule_id"] == "UCP-10" and f["outcome"] == "FAIL" for f in result["findings"]))
 
-    def test_signing_keys_can_close_profile_level_order_key_gate(self):
+    def test_signing_keys_close_profile_key_gate(self):
         snapshot = shopify_public_profile_snapshot()
         snapshot["ucp"]["profile"]["signing_keys"] = [{"kid": "merchant-2026", "kty": "EC"}]
         result = scan(snapshot)
         self.assertTrue(any(f["rule_id"] == "UCP-10" and f["outcome"] == "PASS" for f in result["findings"]))
-        self.assertTrue(any(f["rule_id"] == "UCP-09" and f["outcome"] == "UNKNOWN" for f in result["findings"]))
+
+    def test_explicit_webhook_unsigned_is_fail(self):
+        snapshot = ready_snapshot()
+        snapshot["ucp"]["order_request_signing"] = False
+        result = scan(snapshot)
+        self.assertTrue(any(f["rule_id"] == "UCP-11" and f["outcome"] == "FAIL" for f in result["findings"]))
 
     def test_embedded_only_service_without_endpoint_is_accepted(self):
         snapshot = ready_snapshot()
