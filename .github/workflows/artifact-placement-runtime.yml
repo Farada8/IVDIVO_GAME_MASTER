@@ -10,6 +10,7 @@ on:
       - 'personal-ai/tests/test_artifact_placement_adapters.py'
       - 'personal-ai/tests/test_artifact_placement_prospective.py'
       - 'SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/**'
+      - 'SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_TOOL_ROUTE_MISMATCH/**'
       - 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/ARTIFACT_PLACEMENT_PATH_DRIFT_CURRENT.md'
       - '.github/workflows/artifact-placement-runtime.yml'
   workflow_dispatch:
