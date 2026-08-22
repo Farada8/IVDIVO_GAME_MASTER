@@ -15,4 +15,4 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run real20 SI-0015 calibration
-        run: python -m unittest SELF_IMPROVEMENT_ENGINE.CYCLE10_SI0015_REAL_SLICE_CALIBRATION_2026-08-22.test_real20 -v
+        run: PYTHONPATH=. python SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_REAL_SLICE_CALIBRATION_2026-08-22/test_real20.py
