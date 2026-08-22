@@ -1,6 +1,5 @@
 name: ROOM917 RU Native Discovery PR Probe
 
-# synchronize refresh 2026-08-22
 on:
   pull_request:
     paths:
@@ -23,17 +22,6 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Fail closed if ElevenLabs secret missing
-        env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [ -z "${ELEVENLABS_API_KEY:-}" ]; then
-            echo "::error::Repository secret ELEVENLABS_API_KEY is not configured for this same-repo PR run."
-            exit 2
-          fi
-
       - name: Discover durable native-Russian professional voices
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -47,7 +35,7 @@ jobs:
             --page-size 100 \
             --max-pages 3
 
-      - name: Add probe receipt
+      - name: Validate and add probe receipt
         shell: bash
         run: |
           set -euo pipefail
@@ -55,10 +43,16 @@ jobs:
           import hashlib, json
           from pathlib import Path
           p=Path('_room917_ru_native_probe/RU_NATIVE_VOICE_DISCOVERY.json')
+          if not p.exists():
+              raise SystemExit('RU_NATIVE_VOICE_DISCOVERY.json missing')
           data=p.read_bytes()
           row=json.loads(data.decode('utf-8'))
+          if row.get('paid_synthesis_calls') != 0:
+              raise SystemExit('unexpected paid synthesis')
+          if row.get('selection_policy',{}).get('auto_cast') is not False:
+              raise SystemExit('auto_cast must remain false')
           receipt={
-              'schema_version':'ivdivo.room917_ru_native_discovery_probe_receipt/1.0',
+              'schema_version':'ivdivo.room917_ru_native_discovery_probe_receipt/1.1',
               'provider':'ElevenLabs',
               'tts_calls':0,
               'paid_synthesis_calls':0,
@@ -87,9 +81,10 @@ jobs:
           row=json.loads(Path('_room917_ru_native_probe/RU_NATIVE_VOICE_DISCOVERY.json').read_text(encoding='utf-8'))
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
               f.write('## ROOM917 RU native discovery probe\n')
-              f.write(f"- native RU professional voices: {row['candidate_count']}\n")
+              f.write(f"- status: {row.get('status')}\n")
+              f.write(f"- native RU professional voices: {row.get('candidate_count')}\n")
               f.write('- minimum notice period: 365 days\n')
               f.write('- paid synthesis calls: 0\n')
-              f.write('- secret persisted: false\n')
+              f.write('- secret required for this endpoint: no\n')
               f.write('- artifact: ROOM917_RU_NATIVE_DISCOVERY_PROBE\n')
           PY
