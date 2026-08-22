@@ -1,0 +1,62 @@
+name: Public Art PAC8 Cluain Gate
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/PUBLIC_ART_CASES/2026-08-22_CLUAIN_CAPABILITY_TECHNICAL/**'
+      - '.github/workflows/public-art-pac8-cluain-gate.yml'
+  push:
+    branches:
+      - 'public-art/cycle8-cluain-capability-technical-20260822-r2'
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/PUBLIC_ART_CASES/2026-08-22_CLUAIN_CAPABILITY_TECHNICAL/**'
+      - '.github/workflows/public-art-pac8-cluain-gate.yml'
+
+jobs:
+  pac8-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate PAC8 state and mandatory artifacts
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('BUSINESS_ENGINEERING_OS/PUBLIC_ART_CASES/2026-08-22_CLUAIN_CAPABILITY_TECHNICAL')
+          state = json.loads((root / 'PAC8_CASE_STATE.json').read_text(encoding='utf-8'))
+
+          assert state['case_id'] == 'PAC8_CLUAIN_CAPABILITY_TECHNICAL'
+          assert state['opportunity']['budget_eur_including_vat'] == 112500
+          assert state['opportunity']['deadline_local'] == '2026-09-07T16:00:00+01:00'
+          assert state['go_to_submit'] is False
+          assert state['proof_ceiling'] == 'E2_PLUS_PUBLIC_OFFICIAL_BRIEF'
+          assert state['design_maturity'].startswith('D2_')
+          assert state['technical_maturity'].startswith('T1_')
+
+          required = [
+              'README.md',
+              'PAC8_CASE_STATE.json',
+              'PAC8_THREE_WORK_EVIDENCE_PACK_v0.1.md',
+              'PAC8_JURY_VISUALS_AND_FINAL_GATE.md',
+              'PAC8_INDICATIVE_TIMELINE.md',
+          ]
+          for name in required:
+              p = root / name
+              assert p.exists() and p.stat().st_size > 100, name
+
+          evidence = (root / 'PAC8_THREE_WORK_EVIDENCE_PACK_v0.1.md').read_text(encoding='utf-8')
+          assert 'DO_NOT_MISREPRESENT' in evidence
+          assert '0/3 verified' in evidence
+
+          gate = (root / 'PAC8_JURY_VISUALS_AND_FINAL_GATE.md').read_text(encoding='utf-8')
+          assert 'Clúain-specific hero visuals: HOLD' in gate
+          assert 'SUBMIT_OR_HOLD' in gate
+
+          timeline = (root / 'PAC8_INDICATIVE_TIMELINE.md').read_text(encoding='utf-8')
+          assert 'INDICATIVE_TIMELINE != CONTRACT_PROGRAMME' in timeline
+          assert 'April 2027' in timeline
+          PY
