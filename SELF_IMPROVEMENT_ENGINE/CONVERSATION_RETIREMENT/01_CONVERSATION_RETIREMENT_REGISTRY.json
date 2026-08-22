@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.conversation_retirement_registry/0.2",
+  "schema": "ivdivo.conversation_retirement_registry/0.3",
   "date": "2026-08-22",
-  "status": "FIRST_REAL_CURRENT_CONVERSATION_AUDIT_RECORDED_FAIL_CLOSED",
+  "status": "FIRST_REAL_CURRENT_CONVERSATION_AUDIT_RECORDED_WITH_CROSS_STORE_RECEIPT_FAIL_CLOSED",
   "authority_effect": "NONE",
   "parent_authority": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
   "founder_goal": "Persist material work from important conversations to GitHub and Google Drive so chats can eventually be retired safely.",
@@ -33,9 +33,7 @@
       "conversation_key": "CURRENT-CHAT-2026-08-22-TOPIC-CONTINUITY-RETIREMENT",
       "audit_date": "2026-08-22",
       "source_completeness": "UNKNOWN_FULLNESS_CURRENT_AVAILABLE_CONTEXT",
-      "projects": [
-        "IVDIVO_SELF_IMPROVEMENT"
-      ],
+      "projects": ["IVDIVO_SELF_IMPROVEMENT"],
       "material_topics": [
         "THREAD_TOPIC_CONTINUITY_GUARD",
         "TWO_LEVEL_THREAD_FRONTIER_ROUTING",
@@ -57,10 +55,14 @@
       "retirement_state": "PERSISTENCE_INCOMPLETE_DO_NOT_DELETE_CHAT",
       "blocking_reason": "SOURCE_COMPLETENESS_NOT_PROVEN_AND_PLATFORM_REPORTS_EXPIRED_PRIOR_UPLOADS_WITHOUT_IDENTIFIERS",
       "github_receipt": "SELF_IMPROVEMENT_ENGINE/CONVERSATION_RETIREMENT/RETIREMENTS/2026-08-22_CURRENT_THREAD_TOPIC_CONTINUITY_AND_RETIREMENT_RECEIPT.md",
+      "github_receipt_readback": true,
+      "drive_receipt_id": "1y9y7Z_e3tS6yEY_rpQI2VlITsoLmW0ZBLcaU_jiAkBI",
+      "drive_receipt_readback": true,
       "drive_retirement_system_id": "1xR2Db3fQ27AjP7HWF8wdDeJDsGBai3870xUICUhmlKE",
       "drive_current_self_improvement_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
       "topic_continuity_machine_state": "SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/01_MACHINE_STATE.json",
-      "next_gate": "FULL_TRANSCRIPT_AND_ATTACHMENT_AUDIT_ONLY_IF_CHAT_DELETION_IS_DESIRED"
+      "next_gate": "FULL_TRANSCRIPT_AND_ATTACHMENT_AUDIT_ONLY_IF_CHAT_DELETION_IS_DESIRED",
+      "readback_marker": "CURRENT-THREAD-RETIREMENT-CROSS-STORE-READBACK-20260822"
     }
   ],
   "current_counts": {
@@ -72,5 +74,5 @@
     "do_not_delete": 1
   },
   "next_gate": "CONTINUE_REAL_RETIREMENT_AUDITS; FOR_THIS_CHAT_ONLY_FULL_TRANSCRIPT_ATTACHMENT_AUDIT_CAN_CLEAR_DELETE_GATE",
-  "readback_marker": "GLOBAL-CONVERSATION-RETIREMENT-REGISTRY-FIRST-REAL-AUDIT-20260822"
+  "readback_marker": "GLOBAL-CONVERSATION-RETIREMENT-REGISTRY-FIRST-REAL-AUDIT-CROSS-STORE-20260822"
 }
