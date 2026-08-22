@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "cycle": "CYCLE9_REAL_INTERRUPTION_PROMOTION_CALIBRATION",
+  "authority_effect": "NONE_CANDIDATE_EVIDENCE_ONLY",
+  "current_engine": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
+  "captured_main_sha": "4d6dc7c5dc24ea77582327254d339e619173558f",
+  "publication_main_sha": "5e406a18cee325e5077af87beb4c69aaac7a2837",
+  "freshness_decision": "PUBLISH_ON_FRESH_MAIN_WITH_CAPTURE_SHA_PRESERVED",
+  "candidate_focus": {"SI-0014":"READY_FOR_PILOT","SI-0015":"READY_FOR_PILOT","V3_REFERENCE_INGEST":"CANDIDATE_HOLD"},
+  "real_incident": {"observed":true,"qualifying_si0014_event":false,"reason":"project slice/store identity/readback/zero-false-resume evidence incomplete"},
+  "run32": {"complete":true,"pass":30,"hold":2,"fail":0,"ledger_sha256":"44eeb4f9184d1e7ac17c456ab240f7ab0bf4a2525e7552ef66a5d313b6d5468e"},
+  "regression": {"warm_tests":33,"warm_status":"PASS","cold_tests":33,"cold_status":"PASS","compileall":"PASS"},
+  "next64":"docs/03_NEXT64_CYCLE10.md",
+  "next64_count":64,
+  "promotion_decision":"NO_NEW_TOP_LEVEL_ENGINE_NO_NEW_SI_ID",
+  "next_gate":"REAL_SI0014_SI0015_PILOT_EVIDENCE_AND_FALSE_POSITIVE_TELEMETRY"
+}
