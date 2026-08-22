@@ -1,0 +1,68 @@
+# NEXT64 — MURAL BUSINESS CYCLE5 BACKLOG
+
+These are dependency-ordered next prompts; **not executed in this cycle**.
+
+- **N01** — Fetch/read back the full official Clúain na Coillte artist brief and enumerate every mandatory field.
+- **N02** — Fetch/read back the full Shannon Valley artist brief and residency obligations.
+- **N03** — Fetch/read back the official DLR Cruinniú na nÓg brief; verify deadline, eligibility, safeguarding and deliverables.
+- **N04** — Fetch/read back the official An Fál Carrach brief; verify deadline, language/Gaeltacht expectations, site and selection criteria.
+- **N05** — Verify whether Clúain permits wall-based/mural work or requires standalone/suite form.
+- **N06** — Verify whether Shannon Valley has suitable walls/sites for permanent mural or hybrid work.
+- **N07** — Extract all mandatory tax/insurance/H&S evidence timing from each selected brief.
+- **N08** — Build contradiction table where VAI listing and official brief differ; official brief wins.
+- **N09** — Acquire site photos/plan/measurements for Clúain candidate locations.
+- **N10** — Acquire site photos/plan/measurements for Shannon Valley candidate locations.
+- **N11** — Create primary-viewpoint map for any wall-based candidate.
+- **N12** — Estimate viewing distances and minimum figure/detail sizes.
+- **N13** — Identify substrate and existing coating system for candidate walls.
+- **N14** — Record drainage/moisture/salt/shade exposure assumptions.
+- **N15** — Build scaffold vs MEWP access comparison for each candidate site.
+- **N16** — Build weather-window and curing risk calendar for exterior execution.
+- **N17** — Obtain zero-cost/indicative paint-system quotations without purchase.
+- **N18** — Obtain zero-cost/indicative access-equipment quotations without booking.
+- **N19** — Obtain indicative public-liability insurance quote and required limits.
+- **N20** — Determine EL requirement for assistants/subcontractors.
+- **N21** — Determine PI requirement from each commissioner/contract.
+- **N22** — Create line-item budget for Clúain with unknowns explicitly null.
+- **N23** — Create line-item budget for Shannon Valley including residency labour.
+- **N24** — Create line-item budget for Inis Cealtra alternative mural/mosaic/sculptural routes.
+- **N25** — Build portfolio evidence matrix against Clúain criteria.
+- **N26** — Build portfolio evidence matrix against Shannon Valley criteria.
+- **N27** — Select 6–10 strongest portfolio images for public-art jury readability.
+- **N28** — Write provenance captions for each selected portfolio image.
+- **N29** — Adapt House of Many Windows mechanism to Clúain without copying Shillelagh iconography.
+- **N30** — Adapt Tree That Remembers mechanism to Shannon Valley community narrative.
+- **N31** — Test Anamorphic Landmark mechanism only where viewpoint/site geometry supports it.
+- **N32** — Develop one non-mural alternative for each active commission to avoid artform tunnel vision.
+- **N33** — Build local-history/source passport for Monksland/Clúain.
+- **N34** — Build local-history/source passport for Ballaghaderreen/Shannon Valley.
+- **N35** — Build Inis Cealtra/Mountshannon source passport from official/local sources.
+- **N36** — Run myth/folklore wording red-team on all historic claims.
+- **N37** — Design community engagement method with decision rights and feedback capture.
+- **N38** — Define youth/safeguarding boundary for any under-18 participation.
+- **N39** — Design accessible participation options for residents unable to attend workshops.
+- **N40** — Create evidence protocol for how community input changes the final design.
+- **N41** — Create Clúain requirement-to-file submission matrix.
+- **N42** — Create Shannon Valley requirement-to-file submission matrix.
+- **N43** — Create versioned CV master for Irish public-art commissions.
+- **N44** — Create reusable 10-image portfolio PDF master.
+- **N45** — Create technical-method master: surface prep, grid/projection, painting, QA, cleanup.
+- **N46** — Create maintenance/conservation master with commissioner-editable fields.
+- **N47** — Create H&S preflight checklist and contractor interface sheet.
+- **N48** — Create submission checksum/readback script and acceptance report.
+- **N49** — Scan current eTenders/VAI/council channels for new public-art/mural opportunities.
+- **N50** — Create source freshness SLA: daily near deadline, weekly normal, monthly long-horizon.
+- **N51** — Build commissioner/county opportunity history dataset from public archives.
+- **N52** — Identify recurring commission types and typical deliverables without inferring win probabilities.
+- **N53** — Create “portfolio gap” backlog from repeated selection criteria.
+- **N54** — Create no-cost evidence plan to improve gaps before next open call.
+- **N55** — Model create/broker/acquire options for large commissions requiring engineers/fabricators.
+- **N56** — Create partner capability matrix without contacting anyone yet.
+- **N57** — Pilot A0–A6 Application Readiness Plane on Clúain.
+- **N58** — Pilot A0–A6 on Shannon Valley.
+- **N59** — Compare omission/rework rate with and without A-plane.
+- **N60** — Run fail-closed regression on expired and missing-deadline fixtures.
+- **N61** — Run budget regression where VAT inclusion changes.
+- **N62** — Run site-risk regression where mural is impossible but public art remains viable.
+- **N63** — If two real pilots show net gain, prepare SI candidate evidence packet; do not auto-promote.
+- **N64** — Close Cycle4 only after GitHub/Drive readback, asset manifest verification, runtime tests and next constraint update.
