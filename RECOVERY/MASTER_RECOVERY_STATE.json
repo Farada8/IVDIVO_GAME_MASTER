@@ -2,8 +2,10 @@
   "schema": "ivdivo.master_recovery_state/1.1",
   "audit_date": "2026-08-22",
   "audit_time_local": "2026-08-22T13:32:00+01:00",
+  "evidence_replay_time_local": "2026-08-22T13:50:00+01:00",
   "repository": "Farada8/IVDIVO_GAME_MASTER",
   "fresh_replay_main_sha_before_state_update": "6a10faf50ec71844c9a6901cc352dbcb725a3c73",
+  "v2_evidence_replay_branch_base_sha": "4e21e26f2bcb2424a1582a306fccb839d6febe5c",
   "state_is_recovery_pointer_not_frozen_project_frontier": true,
   "global_state": {
     "browser_tabs_may_be_closed": true,
@@ -76,19 +78,22 @@
       "drive": [
         "1dsun3R7mdKBEnVIhPcj3Fx9l07zLKJkyDKsaUuHLLHA",
         "1u4yKOIiJwDicsh27nar52bzZ2rM48U0dnlAL5ucWDwo",
-        "1v_A25N-fxI097TqxQh4hgp7db5gdJFaInczUSNWYktY"
+        "1v_A25N-fxI097TqxQh4hgp7db5gdJFaInczUSNWYktY",
+        "1bhvEEuOQoqMy1w-7XTyUvQdJIPDty9MRhuWM9OENC3Q"
       ],
+      "github_binary_manifest": "RECOVERY/BINARY_ASSET_RECOVERY_MANIFEST_20260822.md",
+      "drive_binary_provenance_addendum": "1bhvEEuOQoqMy1w-7XTyUvQdJIPDty9MRhuWM9OENC3Q",
       "deletion_safety": "ARCHIVE_CHECK_REQUIRED",
       "real_binary_blockers": [
         {
           "asset": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
           "sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
           "size_bytes": 189558764,
-          "status": "CONTROLLED_DRIVE_DUPLICATE_NOT_VERIFIED"
+          "status": "CONTROLLED_DRIVE_DUPLICATE_NOT_VERIFIED_PRIOR_REACQUISITION_HTTP403_CONFIRMED"
         },
         {
           "asset": "ROOM917_E01_SCENE3_FINAL_PILOT_v1_FULL.zip",
-          "status": "EXISTED_FORENSICALLY_VERIFIED_CURRENT_DURABLE_BYTES_NOT_LOCATED"
+          "status": "EXISTED_FORENSICALLY_VERIFIED_SCENE3_WAV_PREVIOUSLY_MATERIALIZED_CURRENT_CONTROLLED_DURABLE_BYTES_NOT_LOCATED"
         }
       ]
     },
@@ -135,6 +140,9 @@
       "status": "DURABLE_PARTIAL_BINARY_SELECTION_REQUIRED",
       "drive_shillelagh_image_folder": "1lh6725Bax555GG3l3KdIVLrJt_S3afNR",
       "verified_shillelagh_png_count": 7,
+      "shillelagh_png_class": "PRELIMINARY_APPLICATION_STUDY_NOT_FINAL_MURAL",
+      "github_visual_manifest": "RECOVERY/VISUAL_SELECTION_RECOVERY_MANIFEST_20260822.md",
+      "drive_visual_manifest": "1vkwwnISf95_NQJue4Bohem-MchY2Tvwf2qvq81w3zYc",
       "deletion_safety": "ARCHIVE_CHECK_REQUIRED",
       "remaining_gap": "CROSS_PROJECT_WANTED_FINAL_CURRENT_REJECTED_ARCHIVE_ROUTING_NOT_COMPLETE"
     },
@@ -147,9 +155,12 @@
     {
       "id": "WEB-PAINTERS",
       "name": "painters-dublin.ie",
-      "status": "RECOVERY_REQUIRED",
+      "status": "RECOVERY_REQUIRED_EXACT_EXPORT_MISSING_RECONSTRUCTION_HANDOFF_PERSISTED",
       "deletion_safety": "NOT_SAFE_TO_DELETE_SOURCE_CHAT",
       "current_export_verified": false,
+      "reconstruction_handoff_exists": true,
+      "github_reconstruction_handoff": "RECOVERY/PAINTERS_DUBLIN_RECOVERY_HANDOFF_20260822.md",
+      "drive_reconstruction_handoff": "1mr3b0r-5BvRziiYJwnr_-kr7cyPj2BY_lNP07cD7FFI",
       "credentials_must_not_be_persisted": true
     },
     {
@@ -203,7 +214,7 @@
   "required_before_global_delete": [
     "locate and durably verify ROOM917 real full-master and Scene3 package bytes or explicitly retire those binaries",
     "complete visual wanted-final/current/rejected/archive routing for projects whose source chats would otherwise be deleted",
-    "create painters-dublin current export/config handoff if project remains active, excluding credentials",
+    "recover painters-dublin exact export/config or explicitly retire old site state and authorize reconstruction",
     "rerun recovery audit and change delete gate only from evidence"
   ],
   "recovery_artifacts": [
@@ -211,8 +222,19 @@
     "RECOVERY/CHAT_ONLY_RECOVERY_LEDGER.md",
     "RECOVERY/MATH_CURRENT_RESEARCH_NOTE_20260822.md",
     "RECOVERY/BINARY_ASSET_RECOVERY_MANIFEST_20260822.md",
+    "RECOVERY/VISUAL_SELECTION_RECOVERY_MANIFEST_20260822.md",
+    "RECOVERY/PAINTERS_DUBLIN_RECOVERY_HANDOFF_20260822.md",
     "RECOVERY/RECOVERY_AUDIT_DELTA_20260822_1332.md"
   ],
+  "drive_recovery_artifacts": {
+    "folder": "1JpT5EQbMlLMRGMiOqfwJBHciQGpbSe1u",
+    "03_delta": "1P9TbTXXXBkYrhbsSTmII37ibC6iZ7dcBPiP_hasJPFE",
+    "04_math": "1LJR8NwY1aVILHuO809JyJPuwvwV7LZ4UEz-04SWfJmY",
+    "05_binary": "1yh0pPwuagITbJcy7-7f6cvrA-__4t_nn8Z2AlvdGeOM",
+    "05a_room917_provenance": "1bhvEEuOQoqMy1w-7XTyUvQdJIPDty9MRhuWM9OENC3Q",
+    "06_visual_selection": "1vkwwnISf95_NQJue4Bohem-MchY2Tvwf2qvq81w3zYc",
+    "07_painters_handoff": "1mr3b0r-5BvRziiYJwnr_-kr7cyPj2BY_lNP07cD7FFI"
+  },
   "predecessor_recovery_drive_ids": [
     "1ZVOJLoHK_kkUi5hor66dCxtm_Y4DR3WVnBeCZO4_s2Y",
     "1MsB3B0Byh4AlCMLtmPde9rXguzaejwUswBD5qPM8W50",
@@ -222,6 +244,9 @@
     "master": "IVDIVO-MASTER-RECOVERY-20260822-V2-GLOBAL-DELETE-BLOCKED-3-RESIDUAL-CLASSES",
     "chat_only": "IVDIVO-CHAT-ONLY-RECOVERY-20260822-V2-RECONCILED-3-BLOCKERS-REMAIN",
     "math": "MATH-CURRENT-20260822-MIN-SUFFICIENT-INVARIANTS-G-TASKS-INTERVENTIONS-NO-NOVELTY-CLAIM",
-    "binary": "BINARY-RECOVERY-20260822-EVIDENCE-GATED-NO-FAKE-MISSING-BINARY-CLAIMS"
+    "binary": "BINARY-RECOVERY-20260822-EVIDENCE-GATED-NO-FAKE-MISSING-BINARY-CLAIMS",
+    "visual": "VISUAL-RECOVERY-20260822-SHILLELAGH-CLASSIFIED-PRELIMINARY-DUBLIN-PORTALS-FINALITY-ROUTING-OPEN",
+    "painters": "PAINTERS-DUBLIN-RECOVERY-20260822-NONSECRET-HANDOFF-PERSISTED-EXACT-EXPORT-NOT-FOUND",
+    "room917_provenance": "ROOM917-BINARY-PROVENANCE-20260822-FULLMASTER-HTTP403-SCENE3-MATERIALIZED-CONTROLLED-DRIVE-UNVERIFIED"
   }
 }
