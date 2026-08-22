@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-22",
+  "project_id": "IVDIVO_BOOK_3_SMITH",
+  "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+  "story_lock": true,
+  "founder_lock": true,
+  "source_policy": "EXACT_LOCKED_PROSE_NO_PARAPHRASE",
+  "source_segmentation_package_drive_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
+  "source_segmentation_sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
+  "semantic_quote_exceptions": {
+    "count": 4,
+    "actual_speech_denominator": 3714,
+    "newest_exception": {
+      "segment_id": "B03_CH17_S0002",
+      "text": "“SUPPRESSION WITHOUT COST.”",
+      "disposition": "NARRATOR_INLINE_WRITTEN_SENTENCE_NOT_CAST_SPEECH"
+    }
+  },
+  "independent_strong_manual_baseline": {
+    "status": "RETAINED_SEPARATE_EVIDENCE_LAYER",
+    "current_assignments": 580,
+    "legacy_denominator_before_ch17_exception_reconciliation": 3715,
+    "rule": "DO_NOT_DELETE_OR_TREAT_AS_CURRENT_CONTEXTUAL_FRONTIER"
+  },
+  "chapter_local_contextual_audit": {
+    "status": "CURRENT_CH01_CH21",
+    "reviewed_scope_chapters": "CH01-CH21",
+    "reviewed_actual_speech_turns": 2390,
+    "assigned": 2387,
+    "unknown": 3,
+    "reviewed_scope_coverage_pct": 99.87,
+    "residual_unknown": [
+      "B03_CH03_S0240",
+      "B03_CH03_S0244",
+      "B03_CH03_S0248"
+    ],
+    "full_book_actual_speech_denominator": 3714,
+    "not_yet_context_reviewed_after_ch21": 1324,
+    "exact_text_changes": 0,
+    "voice_ids_assigned": 0
+  },
+  "drive_evidence": {
+    "consolidated_folder_id": "1-bLI-AZLBEEirH1hk9i4pV-m9y0MeZ-u",
+    "consolidated_frontier_doc_id": "1RRY8rWJriYuDKwmPlvHt2ZHJYTi4k72rnyt-XZPz-gk",
+    "ch04_ch06_reaudit_gate_id": "1vZIHiZDcYlKfhRPddJ9Jy73vCykpA_Ej",
+    "ch07_ch09_reaudit_gate_id": "1ewx28qPK7Bd2BpeHZSxed1PsbKKj-Iip",
+    "ch10_ch12_gate_id": "1Q1U6S3yiPEXDKOnbaoDksfqOQ2Es_cAL",
+    "ch13_ch15_gate_id": "1krIKwrK5fiF2Q5JJnpt5VPZNkNCW7hEH",
+    "ch16_ch18_gate_id": "12s4jFCoLN18af33MwO_96JQis5T1X8YX",
+    "ch19_ch21_gate_id": "1VMSzd1eou29mQ56W7lZGcI2X6KQ4--5G"
+  },
+  "forbidden_auto_heuristics": [
+    "ALTERNATING_TURN",
+    "SAME_SPEAKER_SANDWICH",
+    "SINGLE_ACTION_SUBJECT_WITHOUT_CORROBORATION"
+  ],
+  "production_constraints": [
+    "CONTEXT_REVIEWED_NEQ_GENERIC_AUTO_HEURISTIC",
+    "UNKNOWN_IS_VALID_OUTPUT",
+    "ANONYMOUS_OPERATIONAL_SPEAKERS_REMAIN_ROLE_LABELLED",
+    "NO_PERSONAL_IDENTITY_INVENTION",
+    "NO_STORY_TEXT_MUTATION",
+    "VOICE_ID_NULL_UNTIL_FULL_SPEAKER_GATE_AND_CASTING_GATE"
+  ],
+  "full_speaker_gate": "NOT_PASSED",
+  "voice_map_authorized": false,
+  "next_gate": "CH22_CH24_CONTEXTUAL_SPEAKER_REVIEW_EVIDENCE_CONTRACT_V2",
+  "marker": "B03-SPEAKER-CONTEXT-AUDIT-CH01-21-2387OF2390-DENOM3714-NEXT-CH22-24"
+}
