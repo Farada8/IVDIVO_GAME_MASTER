@@ -1,40 +1,41 @@
 # B03 — SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE
 
 **Updated:** 2026-08-22  
-**Status:** DEVELOPMENT-COMPLETE / CH01–29 STORY PASS / FACTUAL + LINE LOCK PENDING  
-**Authority note:** complete working story-development manuscript; **NOT Founder-locked**; do not draft CH30.
+**Status:** FOUNDER-LOCKED / CH01–29 / MANUSCRIPT AUTHORITY  
+**Founder decision:** explicit Founder Lock issued in conversation on 2026-08-22.  
+**Authority note:** CH01–29 is the locked Book One story manuscript. **DO NOT WRITE CH30.** No story, plot, character-role, casualty, ontology, jurisdiction, ending, or causal-chain change is authorized without an explicit Founder Unlock / Change Order.
 
-## Canon / Founder continuity
+## Founder Lock scope
 
-D01 THE WIFE AT HIS WEDDING is **FOUNDER-LOCKED E01–E120 / Recording Authority issued**. `WAIT_FOR_D01_FOUNDER_LOCK` is CLOSED.
+Locked:
+- Book One governing story and CH01–29 chapter chain;
+- main Slovenian incident and resolution;
+- Davor decision accounting;
+- Andrej/Tina consequence;
+- Nika review/reinstatement path;
+- OES interim doctrine correction;
+- Morgen Pass training-context correction;
+- Taren emergency advisory closure;
+- local operational authority and jurisdiction boundaries;
+- unresolved precursor origin/mechanism as intentional series residue;
+- final Dublin/daughter beat, including `BIT?` as an intentional callback to CH04.
 
-Founder F1 authority remains controlling for Smith family continuity:
-- **CANON:** Smith has a teenage daughter in the current saga period.
-- **WORKING:** age 16–17 pending timeline normalization.
-- **UNKNOWN / DO NOT INVENT:** daughter name, mother name, exact marital history, custody/household structure, occupations, contact schedule.
+Not authorized without Founder Unlock:
+- CH30 or artificial cliffhanger;
+- new diagnosis, amputation status, disability percentage or invented medical specifics;
+- new network protocol/vendor architecture that changes existing causal ownership;
+- daughter name, mother name, exact marital/custody/household history;
+- changing local Slovenian authority into OES/Confederation command;
+- converting correlation into proven precursor ontology/mechanism.
 
-## Durable Drive production chain
+## Evidence chain at lock
 
-Cycle32B story-production folder: `1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv`.
-
-Key terminal artifacts:
-- CH19–24 escalation block gate: `1EZ0MaNRWiiXwcEznNV6fMoVkIfXPohkAOxxDSPbUQho` -> **PASS / FATAL 0 / BLOCKING MAJOR 0**.
-- CH25 gate: `1kI78IBxGNhGJbUmzHyDMOdTWCSWrVrCqiUuewFx2Mzg` -> PASS.
-- CH26 gate: `1JNE2tZaHZH1DJrCbQv2rRj32-doDIlQXG4KXZ91CXj4` -> PASS.
-- CH27 gate: `10CM0XzoVYqDZSo-knskDtsQtim155sXC40usq_FvbtQ` -> PASS.
-- CH28 gate: `1YN7qZtt5xMhxFDpTOyz2Bh8FnGqwNrOBOcTPvgdJLPs` -> PASS.
-- CH29 manuscript `WHAT WE DID WITH THE WARNING`: `1LZPRkR89wAkdcWJqUOv6dYdUUSimtDm3b1PpxEUydpM`.
-- CH29 local story + resolution gate: `1fkyOoczhhRKVI8u9WP5naAtcFINnEgfD6Tn5jTjtp0s` -> **PASS / FATAL 0 / BLOCKING MAJOR 0 / MAIN BOOK CONFLICT CLOSED IN PROSE**.
-- CH19–29 corpus + Human Scene regression: `191JzLnEKRhxh_j4Pga18H9PHXPyFzglXW41BKDD9WVM` -> **PASS / FATAL 0 / BLOCKING MAJOR 0**.
-- **P72 FULL-NOVEL STORY + HUMAN SCENE GATE:** `1V7sO8SW3I4_zQFrEHIHKifLZ7kc20rFNmKirjUVLjWU` -> **PASS / FATAL 0 / BLOCKING MAJOR 0 / BOOK STORY DEVELOPMENT COMPLETE**.
-
-## P72 disposition
-
-The CH01–29 manuscript closes the Book One governing problem without solving the precursor ontology by assertion. The causal spine remains cumulative from OES containment logic through response-created evidence, Morgen Pass history, storm/failover, distributed-response cost, Andrej's conventional injury, relay segmentation, the strongest unused warning, the independent third route, and CH29 decision accounting.
-
-The ending closes the live Slovenian incident and ownership, Davor accounting, Andrej/Tina consequence, Nika review/reinstatement path, OES interim doctrine correction, Morgen Pass training-context correction, Taren emergency advisory authorization and local operational handoff **before** the ordinary Dublin/daughter beat.
-
-Origin/mechanism of the precursor recordings remains **UNKNOWN**. This is a legitimate series-level residue, not an unclosed Book One plot obligation.
+- P72 v0.2 POST-CORPUS RECONCILED: Drive `1FW7GVQGk-StW6VmySA4MPFbZxsADFn_T1TrZKydtLtw` -> **PASS / FATAL 0 / BLOCKING MAJOR 0 / BOOK STORY DEVELOPMENT COMPLETE**.
+- CH19–29 corpus + Human Scene regression: Drive `1-sWl1c5U0ahyEteteAmr8_1d_9th602JVMpKTY6ySXY` -> PASS after targeted repair.
+- Medical factual hold: Drive `1qmkYDaJf2lRdC3fjShIqgTF496K2PzPTSCna0uszaaQ` -> **PASS / blocker closed**; no specialist certification claimed.
+- Network / relay factual hold: Drive `1fLh0aprchqpAo62Ji3ysdc9dnsK8JITe7lD0RhiaSRA` -> **PASS AFTER MINIMAL TERMINOLOGY REPAIR / blocker closed**.
+- CH29 current manuscript: Drive `1LZPRkR89wAkdcWJqUOv6dYdUUSimtDm3b1PpxEUydpM`.
+- `BIT?` verified as intentional CH04 callback; not a typo.
 
 ## Hard invariants preserved
 
@@ -47,29 +48,23 @@ Origin/mechanism of the precursor recordings remains **UNKNOWN**. This is a legi
 - Smith does not become a network engineer or single-handed physical solver.
 - Andrej remains civilian hydro competence, not anomaly hero.
 - Tina remains an active competent worker.
-- Andrej's lasting lower-limb consequence is not moral punishment or inspirational reward.
+- Andrej survives with expected lasting lower-limb functional loss; exact diagnosis/degree remain unspecified.
 - Successful rescue does not refund Davor or Andrej's human cost.
-- No CH30 / artificial cliffhanger is authorized by P72.
 
-## Lock-stage factual / line holds
+## Post-lock permitted work
 
-These are **not story blockers**, but they prevent final manuscript/Founder lock until checked:
+Founder Lock closes story development but does **not** imply that all downstream production is complete. Permitted without changing canon:
+1. current-authority manifest / manuscript assembly;
+2. copyedit, typography and formatting;
+3. line edits that do not alter story meaning or locked causal facts;
+4. factual terminology corrections that preserve causal ownership and locked consequences;
+5. packaging/export;
+6. downstream audio/adaptation preparation under separate production gates.
 
-1. **MEDICAL:** verify CH25–29 severe lower-limb injury / expected lasting functional-loss language; preserve permanent consequence; do not add exact diagnosis, percentage, surgery/amputation status without evidence.
-2. **NETWORK:** technical terminology pass on CH23–29 relay/failover/segmentation; preserve Luka/Eva/local engineering ownership and the information-quarantine vs topology-change distinction.
-3. **CORPUS / LINE:** full CH01–29 pass for repeated binary/correction ladders, `Good/Yes/No` rhythms, status syntax, narrator explanation after action and recycled aphoristic contrast.
-4. **CONTINUITY:** final names/times/route/state ledger for Davor, Tina, Andrej, Nika, Maja, Luka/Eva, Morgen Pass and Taren authorization.
-5. **PERSONAL BEAT:** inspect CH29 daughter exchange for possible placeholder/typo `BIT?`; preserve no-invention boundary on daughter/mother/custody history.
+Any proposed substantive change must be logged as `FOUNDER_UNLOCK_REQUIRED` before edit.
 
 ## Exact next obligation
 
-**DO NOT WRITE CH30.**
+**ASSEMBLE THE LOCKED CH01–29 MANUSCRIPT FROM CURRENT AUTHORITY FILES, THEN RUN FINAL COPY/FORMAT/EXPORT GATE.**
 
-Run the lock-stage verification sequence in this order:
-
-1. medical/factual wording review;
-2. relay/network technical terminology review;
-3. full-manuscript CH01–29 line/corpus + continuity lock pass;
-4. Founder review / explicit lock decision.
-
-Only after explicit Founder Lock may downstream manuscript packaging/audio production be treated as authorized. P72 itself is story/Human Scene/continuity evidence; it is **not** specialist certification, copyedit, beta-reader response, market proof or Founder Lock.
+No CH30. No reopening development by default.
