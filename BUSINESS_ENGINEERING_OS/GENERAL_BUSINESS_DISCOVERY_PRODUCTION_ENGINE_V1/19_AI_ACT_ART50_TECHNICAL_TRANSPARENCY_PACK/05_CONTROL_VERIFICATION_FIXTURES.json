@@ -1,0 +1,124 @@
+{
+  "schema": "ivdivo.pew03.control_verification_fixtures/0.1",
+  "date": "2026-08-22",
+  "proof_boundary": {
+    "legal_compliance_proven": false,
+    "customer_demand_proven": false,
+    "wtp_proven": false,
+    "transaction_proven": false
+  },
+  "cases": [
+    {
+      "case_id": "CV_CHATBOT_CONTROLS_PRESENT",
+      "case": {
+        "case_id": "CV_CHATBOT_CONTROLS_PRESENT",
+        "role": "PROVIDER",
+        "direct_interaction_with_natural_persons": true,
+        "ai_interaction_obvious": false,
+        "code_adherence": "UNKNOWN"
+      },
+      "evidence": {
+        "InteractionDisclosureEvidence": true,
+        "PresentationAccessibilityEvidence": true
+      }
+    },
+    {
+      "case_id": "CV_GENERATOR_MACHINE_MARK_PRESENT",
+      "case": {
+        "case_id": "CV_GENERATOR_MACHINE_MARK_PRESENT",
+        "role": "PROVIDER",
+        "generates_synthetic_content": true,
+        "code_adherence": "NOT_SIGNED"
+      },
+      "evidence": {
+        "MachineReadableMarkingEvidence": true,
+        "PresentationAccessibilityEvidence": true
+      }
+    },
+    {
+      "case_id": "CV_DEEPFAKE_MACHINE_MARK_ONLY",
+      "case": {
+        "case_id": "CV_DEEPFAKE_MACHINE_MARK_ONLY",
+        "role": "DEPLOYER",
+        "deepfake": true,
+        "code_adherence": "NOT_SIGNED"
+      },
+      "evidence": {
+        "MachineReadableMarkingEvidence": true,
+        "ContentDisclosureEvidence": false,
+        "PresentationAccessibilityEvidence": true
+      }
+    },
+    {
+      "case_id": "CV_EMOTION_NOTICE_PRESENT",
+      "case": {
+        "case_id": "CV_EMOTION_NOTICE_PRESENT",
+        "role": "DEPLOYER",
+        "emotion_recognition": true,
+        "code_adherence": "UNKNOWN"
+      },
+      "evidence": {
+        "ExposureNoticeEvidence": true,
+        "PresentationAccessibilityEvidence": true
+      }
+    },
+    {
+      "case_id": "CV_PUBLIC_INTEREST_EDITORIAL_EXCEPTION",
+      "case": {
+        "case_id": "CV_PUBLIC_INTEREST_EDITORIAL_EXCEPTION",
+        "role": "DEPLOYER",
+        "public_interest_text": true,
+        "human_review_or_editorial_control": true,
+        "editorial_responsibility_assumed": true,
+        "code_adherence": "UNKNOWN"
+      },
+      "evidence": {
+        "EditorialExceptionEvidence": true
+      }
+    },
+    {
+      "case_id": "CV_CLOSED_LOOP_SCOPE_REVIEW",
+      "case": {
+        "case_id": "CV_CLOSED_LOOP_SCOPE_REVIEW",
+        "role": "PROVIDER",
+        "generates_synthetic_content": true,
+        "closed_loop_pre_final_output_only": true,
+        "code_adherence": "NOT_SIGNED"
+      },
+      "evidence": {
+        "MachineReadableMarkingEvidence": false
+      }
+    },
+    {
+      "case_id": "CV_LEGACY_TRANSITION_CLAIM",
+      "case": {
+        "case_id": "CV_LEGACY_TRANSITION_CLAIM",
+        "role": "PROVIDER",
+        "generates_synthetic_content": true,
+        "code_adherence": "NOT_SIGNED"
+      },
+      "legacy_transition_claim": {
+        "placed_on_market_before_2026_08_02": true,
+        "claimed_transition_deadline": "2026-12-02",
+        "source_status": "AI_OMNIBUS_PROPOSAL_IF_ADOPTED"
+      },
+      "evidence": {
+        "MachineReadableMarkingEvidence": false,
+        "PresentationAccessibilityEvidence": null
+      }
+    },
+    {
+      "case_id": "CV_ACTIVE_CONTROL_UNKNOWN",
+      "case": {
+        "case_id": "CV_ACTIVE_CONTROL_UNKNOWN",
+        "role": "PROVIDER",
+        "generates_synthetic_content": true,
+        "code_adherence": "UNKNOWN"
+      },
+      "evidence": {
+        "MachineReadableMarkingEvidence": null,
+        "PresentationAccessibilityEvidence": null
+      }
+    }
+  ]
+}
