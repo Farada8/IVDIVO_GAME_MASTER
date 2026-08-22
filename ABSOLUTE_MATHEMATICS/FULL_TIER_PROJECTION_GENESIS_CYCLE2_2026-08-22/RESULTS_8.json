@@ -1,0 +1,10 @@
+[
+  {"id":"TIER2-001","status":"KNOWN_DERIVED","conclusion":"Lossless deterministic projection is reparameterization, not strong information genesis."},
+  {"id":"TIER2-002","status":"KNOWN","conclusion":"Viète projection preserves scalar multiset up to permutation."},
+  {"id":"TIER2-003","status":"COUNTEREXAMPLE","conclusion":"Full symmetric projection fails labeled role-sensitive tasks."},
+  {"id":"TIER2-004","status":"KNOWN_DERIVED","conclusion":"Blockwise invariants preserve block roles that full symmetry destroys."},
+  {"id":"TIER2-005","status":"ENGINEERING_SYNTHESIS","conclusion":"Task-sufficiency benchmark distinguishes SUM/VIETA/BLOCK_VIETA/FULL regimes."},
+  {"id":"TIER2-006","status":"KNOWN_DYNAMICS_CONTROL","conclusion":"Viète recursion has fixed-line/stability structure but creates no exogenous information."},
+  {"id":"TIER2-007","status":"LOCAL_KEEP","conclusion":"Adversarial co-moving training roles make SUM look sufficient; hidden role-breaking tests select FULL. Evidence-first projection gate LOCAL_KEEP."},
+  {"id":"TIER2-008","status":"NOVELTY_UNVERIFIED","conclusion":"Genesis Projection Certificate is project engineering synthesis, not established new mathematics."}
+]
