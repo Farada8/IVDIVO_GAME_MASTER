@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Write a secret-free ROOM917 ElevenLabs account voice/model inventory.
 
-This helper is optional. If ELEVENLABS_API_KEY is absent it writes an explicit
-SKIPPED receipt and exits successfully; public native-RU Voice Library discovery
-is handled by discover_ru_voice_candidates.py and does not depend on this key.
+If ELEVENLABS_API_KEY is absent this helper writes an explicit SKIPPED receipt
+and exits successfully. Reliable production native-RU Voice Library discovery
+also requires authenticated provider access; discover_ru_voice_candidates.py
+writes HOLD_PROVIDER_AUTH_REQUIRED when the secret is absent.
 
 No synthesis endpoint is called. No API key is persisted or printed.
 """
@@ -39,7 +40,7 @@ def main() -> int:
     key = os.getenv(KEY_ENV)
     if not key:
         out = {
-            "schema_version": "ivdivo.room917_ru_account_voice_inventory/1.2",
+            "schema_version": "ivdivo.room917_ru_account_voice_inventory/1.3",
             "generated_at": utc_now(),
             "provider": "ElevenLabs",
             "status": "SKIPPED_NO_REPOSITORY_SECRET",
@@ -48,7 +49,7 @@ def main() -> int:
             "voice_count": None,
             "voices": [],
             "models": [],
-            "note": "Native /v1/shared-voices discovery is independent and remains authoritative for the RU casting frontier.",
+            "note": "Account inventory skipped. Native RU production discovery is also fail-closed until authenticated provider access exists.",
         }
         args.out.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(json.dumps({"status": out["status"], "out": str(args.out)}))
@@ -97,7 +98,7 @@ def main() -> int:
         )
 
     out = {
-        "schema_version": "ivdivo.room917_ru_account_voice_inventory/1.2",
+        "schema_version": "ivdivo.room917_ru_account_voice_inventory/1.3",
         "generated_at": utc_now(),
         "provider": "ElevenLabs",
         "status": "PASS_AUTHENTICATED_ACCOUNT_INVENTORY",
@@ -106,7 +107,7 @@ def main() -> int:
         "voice_count": len(voices),
         "voices": voices,
         "models": models,
-        "note": "Account inventory is secondary metadata. Native durable RU shared-voice discovery remains the production casting frontier.",
+        "note": "Authenticated account inventory is secondary metadata; authenticated native-RU shared-voice discovery remains the production casting authority.",
     }
     args.out.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"status": out["status"], "voice_count": len(voices), "models": len(models), "out": str(args.out)}))
