@@ -1,11 +1,15 @@
 import importlib.util
 from pathlib import Path
+import sys
 import unittest
 
 ENGINE = Path(__file__).resolve().parents[1] / "engine" / "recovery_persistence_engine.py"
 spec = importlib.util.spec_from_file_location("c10r_engine", ENGINE)
-mod = importlib.util.module_from_spec(spec)
 assert spec and spec.loader
+mod = importlib.util.module_from_spec(spec)
+# Python 3.12 dataclasses resolve postponed annotations through sys.modules.
+# Register the dynamically loaded module before executing it.
+sys.modules[spec.name] = mod
 spec.loader.exec_module(mod)
 
 
