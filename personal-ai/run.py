@@ -7,6 +7,7 @@ from pathlib import Path
 
 from agents import AgentRunRequest, BoundedAgentExecutor
 from benchmarks import run_suite
+from business import BusinessCore
 from core.bootstrap import bootstrap
 from memory.store import MemoryStore
 from projects.manager import ProjectStateManager
@@ -123,6 +124,18 @@ def build_parser() -> argparse.ArgumentParser:
         help="Return non-zero exit status when the benchmark decision is FAIL.",
     )
 
+    business = sub.add_parser("business", help="Evidence-gated estimate and quote operations")
+    business_sub = business.add_subparsers(dest="business_command", required=True)
+    for document_type in ("estimate", "quote"):
+        command = business_sub.add_parser(document_type, help=f"Create a persisted {document_type}")
+        command.add_argument("project_id")
+        command.add_argument("request", help="Path to business request JSON")
+        command.add_argument(
+            "--enforce-ready",
+            action="store_true",
+            help="Return non-zero exit status when price/tax evidence is incomplete.",
+        )
+
     return parser
 
 
@@ -135,6 +148,13 @@ def _json_object(raw: str) -> dict:
     value = json.loads(raw)
     if not isinstance(value, dict):
         raise ValueError("metadata must decode to a JSON object")
+    return value
+
+
+def _json_file(path: str) -> dict:
+    value = json.loads(Path(path).read_text(encoding="utf-8"))
+    if not isinstance(value, dict):
+        raise ValueError("JSON file must contain an object")
     return value
 
 
@@ -246,6 +266,15 @@ def main() -> int:
                 exit_code = 2
         else:  # pragma: no cover - argparse enforces choices
             raise RuntimeError("unsupported benchmark command")
+    elif args.command == "business":
+        core = BusinessCore(home)
+        result = core.create_document(
+            args.project_id,
+            _json_file(args.request),
+            document_type=args.business_command,
+        )
+        if args.enforce_ready and result["status"] != "READY":
+            exit_code = 2
     else:  # pragma: no cover - argparse enforces choices
         raise RuntimeError("unsupported command")
 
