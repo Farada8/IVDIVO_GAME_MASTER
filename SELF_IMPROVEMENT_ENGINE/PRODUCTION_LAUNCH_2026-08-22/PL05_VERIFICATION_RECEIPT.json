@@ -1,39 +1,69 @@
 {
-  "schema": "ivdivo.production_launch_verification_receipt/0.2",
+  "schema": "ivdivo.production_launch_verification_receipt/0.3",
   "card": "PL-05",
   "status": "DONE_VERIFIED",
-  "implementation": {
-    "pr": 336,
-    "merge_sha": "876d0e4ca7f581be40f88b9be86f4a4da1894928",
-    "verified_head": "d20b104e93e61cc87e1e180d4ea879a5e23f75c5"
+  "authority": {
+    "baseline_pr": 336,
+    "baseline_merge_sha": "876d0e4ca7f581be40f88b9be86f4a4da1894928",
+    "baseline_verified_head": "d20b104e93e61cc87e1e180d4ea879a5e23f75c5",
+    "strict_contract_completion_pr": 366,
+    "strict_contract_completion_head": "604d98bbd029dbe82fa528c1b6607cecea671c3a",
+    "strict_contract_completion_merge_sha": "a3a199e94210a2ca36a69f5cdb69d1303a1bb769"
   },
-  "exact_head_ci": [
-    {"workflow":"Personal AI PL-00 Bootstrap","run_id":32557296842,"conclusion":"success"},
-    {"workflow":"Personal AI PL-01 Project State","run_id":32557296835,"conclusion":"success"},
-    {"workflow":"Personal AI PL-02 Local Memory","run_id":32557296948,"conclusion":"success"},
-    {"workflow":"Personal AI PL-02 Memory Contract Hardening","run_id":32557296930,"conclusion":"success"},
-    {"workflow":"Personal AI PL-04 Provider Abstraction","run_id":32557296830,"conclusion":"success"},
-    {"workflow":"Personal AI PL-05 Agent Executor","run_id":32557296781,"conclusion":"success"}
+  "strict_contract_ci": [
+    {"workflow":"Personal AI PL-00 Bootstrap","run_id":32561512421,"conclusion":"success"},
+    {"workflow":"Personal AI PL-01 Project State","run_id":32561512402,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Local Memory","run_id":32561512414,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Memory Contract Hardening","run_id":32561512406,"conclusion":"success"},
+    {"workflow":"Personal AI PL-04 Provider Abstraction","run_id":32561512407,"conclusion":"success"},
+    {"workflow":"Personal AI PL-05 Agent Executor","run_id":32561512409,"conclusion":"success"},
+    {"workflow":"Personal AI PL-11 Test Benchmark Runner","run_id":32561512408,"conclusion":"success"}
   ],
   "acceptance": {
-    "bounded_steps_1_to_20": true,
-    "task_state_persistence": true,
+    "baseline_bounded_provider_loop_preserved": true,
+    "exact_agent_definition_role_goal_input_tools_memory_max_steps_output_schema": true,
+    "strict_execute_path": true,
+    "tool_registry": true,
+    "per_agent_tool_allowlist": true,
+    "bounded_local_tools_only": true,
+    "project_scoped_memory_context": true,
+    "load_task_and_context_logged": true,
+    "propose_action_logged": true,
+    "call_tool_logged": true,
+    "observation_logged": true,
+    "state_update_logged": true,
+    "hard_max_steps_1_to_20": true,
+    "monotonic_timeout": true,
+    "output_schema_gate_before_persistence": true,
+    "task_and_project_state_persistence": true,
     "output_memory_persistence": true,
-    "jsonl_run_log": true,
-    "continue_protocol_bounded": true,
-    "max_step_fail_closed": true,
-    "provider_failure_persisted": true,
-    "network_authorization_before_task": true,
-    "offline_mock_integration": true,
+    "failure_event_memory_persistence": true,
+    "jsonl_action_log": true,
+    "non_allowlisted_tool_fails_closed": true,
+    "max_step_exhaustion_fails_closed": true,
+    "timeout_fails_closed": true,
+    "output_schema_failure_fails_closed": true,
+    "offline_mock_strict_integration_reopen": true,
     "full_personal_ai_regression": true,
+    "pl11_regression": true,
     "drive_readback": true
+  },
+  "evidence_boundary": {
+    "bounded_allowlisted_local_tool_execution": true,
+    "unrestricted_or_autonomous_tool_use": false,
+    "background_execution": false,
+    "shell_or_arbitrary_code_execution": false,
+    "destructive_actions": false,
+    "live_paid_provider_success": false,
+    "recursive_autonomous_agents": false,
+    "model_weight_training": false,
+    "global_self_improvement_promotion": false
   },
   "drive": {
     "folder_id": "1hhgo94czLN6Qz4p9qNdMjxcZvf0ih0G3",
     "document_id": "1Y0Zww7H003dYjlF-CsCV9vINt76mYZPkTLizcjF7764",
-    "verified_marker": "PERSONAL-AI-PL05-DONE-VERIFIED-PR336-CI6OF6"
+    "verified_marker": "PERSONAL-AI-PL05-DONE-VERIFIED-PR336-PR366-CI7OF7-STRICT-AGENT-CONTRACT"
   },
-  "new_ready_cards": ["PL-10","PL-17"],
-  "current_frontier_after_closure": "PL-11",
+  "current_frontier_after_correction": "PL-06",
   "authority_effect": "NO_GLOBAL_SI_PROMOTION"
 }
