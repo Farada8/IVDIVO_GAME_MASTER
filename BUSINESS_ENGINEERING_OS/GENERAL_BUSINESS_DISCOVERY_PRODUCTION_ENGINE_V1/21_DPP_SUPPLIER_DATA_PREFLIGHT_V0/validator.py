@@ -97,6 +97,8 @@ def validate_record(record: dict[str, Any], legal_applicability: str) -> dict[st
         disposition = "TECHNICAL_DATA_MAP_ONLY_OUT_OF_SCOPE_VERIFIED"
     elif legal_applicability == "UNKNOWN":
         disposition = "TECHNICAL_PREFLIGHT_COMPLETE_LEGAL_SCOPE_UNKNOWN"
+    elif holds:
+        disposition = "IN_SCOPE_PRODUCT_RULE_REQUIREDNESS_UNRESOLVED"
     elif gaps:
         disposition = "IN_SCOPE_TECHNICAL_GAPS_REMAIN"
     else:
