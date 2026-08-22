@@ -75,6 +75,16 @@
       "validated_input_is_authority": false,
       "must_precede_resume_gate_for_new_root_events": true
     },
+    "latest_target_coordinate_state": {
+      "status": "DOCUMENT_COORDINATE_DISCOVERED_PACK_NOT_YET_ACQUIRED",
+      "machine_state_path": "BUSINESS_ENGINEERING_OS/2026-08-22_P225_DOCUMENT_COORDINATE_DISCOVERY/01_MACHINE_STATE.json",
+      "calibration_path": "BUSINESS_ENGINEERING_OS/2026-08-22_P225_DOCUMENT_COORDINATE_DISCOVERY/02_REAL_NEGATIVE_CONTROL_CALIBRATION.md",
+      "drive_document_id": "18qL7O5QFUxlYwhFag7XQIXhXzZ4s-1tLZh_--yzIFvo",
+      "documents_coordinate_discovered": true,
+      "target_pack_acquired": false,
+      "p225_executed": false,
+      "classification": "REAL_NEGATIVE_CONTROL_002"
+    },
     "resume_gate_contract": "BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/00_CONTRACT.md",
     "resume_gate_runtime": "BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/runtime/business_resume_gate.py",
     "resume_gate_fixture": "BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/fixtures/CURRENT_PROC_BALLYBUNION_8872468_RESUME_STATE.json",
@@ -93,11 +103,15 @@
     "calibration": {
       "resume_gate_synthetic_deterministic_suite": "PASS_16_OF_16",
       "input_validator_synthetic_deterministic_suite": "PASS_15_OF_15",
-      "real_negative_control_count": 1,
+      "real_negative_control_count": 2,
       "real_positive_root_event_count": 0,
-      "latest_negative_control": "BUSINESS_ENGINEERING_OS/2026-08-22_P225_BOUNDED_ACQUISITION_NONFINDING/00_NO_LOOP_ACQUISITION_CERTIFICATE.md",
-      "latest_negative_control_result": "PASS_ROOT_UNCHANGED_ROUTE_PROTECT_NO_CHANGE",
-      "local_promotion_state": "NEGATIVE_CONTROL_PASS_POSITIVE_ROOT_EVENT_PENDING",
+      "negative_control_classes": [
+        "BOUNDED_CONNECTED_SOURCE_NONFINDING",
+        "FIRST_PARTY_DOCUMENT_COORDINATE_WITHOUT_PACK_BYTES"
+      ],
+      "latest_negative_control": "BUSINESS_ENGINEERING_OS/2026-08-22_P225_DOCUMENT_COORDINATE_DISCOVERY/02_REAL_NEGATIVE_CONTROL_CALIBRATION.md",
+      "latest_negative_control_result": "PASS_DOCUMENT_COORDINATE_ONLY_ROOT_UNCHANGED_PROTECT_NO_CHANGE",
+      "local_promotion_state": "TWO_NEGATIVE_CONTROLS_PASS_POSITIVE_ROOT_EVENT_PENDING",
       "broader_or_global_promotion": false
     }
   },
@@ -131,7 +145,8 @@
     "CONTINUE_TEXT_DOES_NOT_EQUAL_NEW_EVIDENCE_EVENT",
     "BOUNDED_NONFINDING_DOES_NOT_EQUAL_ROOT_UNLOCK_EVENT",
     "INPUT_VALIDATOR_PRECEDES_RESUME_GATE_FOR_NEW_ROOT_EVENTS",
-    "VALIDATED_INPUT_DOES_NOT_EQUAL_AUTHORITY_UNTIL_PERSISTENCE_READBACK_AND_CORE_RECONCILIATION"
+    "VALIDATED_INPUT_DOES_NOT_EQUAL_AUTHORITY_UNTIL_PERSISTENCE_READBACK_AND_CORE_RECONCILIATION",
+    "DOCUMENT_COORDINATE_DISCOVERED_DOES_NOT_EQUAL_TARGET_PACK_ACQUIRED"
   ],
   "self_improvement": {
     "scope": "BUSINESS_LOCAL_RELIABILITY_IMPROVEMENT",
