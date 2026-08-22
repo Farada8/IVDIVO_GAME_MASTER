@@ -1,6 +1,6 @@
 {
-  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.1",
-  "updated": "2026-08-22T17:19:00+01:00",
+  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.2",
+  "updated": "2026-08-22T17:53:00+01:00",
   "project": "ROOM917",
   "episode": "E01",
   "authority": "THE_INSURABLE_FIRE",
@@ -11,7 +11,20 @@
     "result_contract": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json",
     "scene3_pass_b_queue": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json",
     "en_ru_parallel_control": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json",
-    "en_ru_parity_validator": "AUDIO_PRODUCTION/ROOM917/TOOLS/EN_RU_PARITY_v1/validate_en_ru_parity.py"
+    "en_ru_parity_validator": "AUDIO_PRODUCTION/ROOM917/TOOLS/EN_RU_PARITY_v1/validate_en_ru_parity.py",
+    "shared_sound_identity_map": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_EN_RU_SHARED_SOUND_IDENTITY_MAP_v1.json",
+    "sound_binding_regression": {
+      "merge_sha": "2b8e5aab952e4e4ddc7a3853d2b132b7e98d540d",
+      "workflow": "ROOM917 Sound Binding Regression",
+      "run_id": 32586169680,
+      "result": "PASS",
+      "proved": [
+        "REQUESTED_BINDING_SET_ATOMIC_NO_PARTIAL_RENDERER_BINDINGS_ON_HOLD",
+        "BYTE_SHARED_CANONICAL_IDENTITIES_EMIT_ONLY_AFTER_ATOMIC_PASS",
+        "BYTE_SHARED_SHA256_PRESERVED_FROM_ACCEPTED_SOURCE_BINDING"
+      ],
+      "does_not_prove": "NO_PRODUCTION_SOUND_ASSET_OR_HUMAN_LISTEN_WAS_APPROVED_BY_THIS_TEST"
+    }
   },
   "drive": {
     "folder_id": "1P2mavegKiziTOcdNoRQvHvgEHzySY3OA",
@@ -25,6 +38,20 @@
     "expected_duration_seconds": 658.190,
     "current_byte_access": "UNVERIFIED_UNAVAILABLE_IN_CONTROLLED_DRIVE_FILE_LIBRARY_NAV_SEARCH",
     "rule": "No P003B execution without identifiable accessible assembled audio or trustworthy derived audition audio."
+  },
+  "scene3_audio_recovery": {
+    "known_master_filename": "ROOM917_E01_SCENE3_MASTER_24BIT_48K.wav",
+    "known_package_filename": "ROOM917_E01_SCENE3_FINAL_PILOT_v1_FULL.zip",
+    "known_master_duration_seconds": 213.210,
+    "historical_binary_analysis_proven": true,
+    "current_file_library_binary_returned": false,
+    "current_search_result": "FORENSIC_AND_REVIEW_DOCUMENTS_RETURNED_BUT_ZIP_WAV_BYTES_NOT_NAVIGABLE",
+    "authority_documents": [
+      "RED_TEAM_SCENE3_FORENSIC (1).md",
+      "ROOM917_E01_SCENE3_MASTER_REVIEW_v1.md",
+      "ROOM917_E01_SCENE3_v1_4A_NATURALNESS_AUDIT.md"
+    ],
+    "law": "Historical direct binary analysis may nominate Pass-B verification targets but cannot substitute for a new blind Pass-A listen."
   },
   "procedure": [
     "VERIFY_AUDIO_IDENTITY",
@@ -80,6 +107,13 @@
   "pre_scene3": {
     "D003": "PROVEN_AGGREGATE_MAJOR_EXACT_INTERVALS_UNRESOLVED",
     "blanket_fill": "FORBIDDEN"
+  },
+  "ru_audio_frontier": {
+    "provider_snapshot_status": "HOLD_PROVIDER_AUTH_REQUIRED",
+    "candidate_count": 0,
+    "paid_synthesis_calls": 0,
+    "human_listen_available": false,
+    "full_e01_render_allowed": false
   },
   "repair_law": "NO_PATCH_FROM_TASTE_OR_METRICS_ALONE; ONLY VERIFIED_AUDIBLE_DEFECT -> SMALLEST_REPAIR -> REGRESSION",
   "story_rewrite": "FORBIDDEN_UNLESS_REAL_STORY_CONTINUITY_ERROR_AND_FOUNDER_REOPENS"
