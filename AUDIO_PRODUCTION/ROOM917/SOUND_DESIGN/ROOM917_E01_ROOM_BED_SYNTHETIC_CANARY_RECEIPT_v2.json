@@ -1,0 +1,84 @@
+{
+  "schema_version": "room917.room_bed_synthetic_canary_receipt/2.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "SESSION_AUDIO_CREATED_CANDIDATE_HOLD_NOT_PRODUCTION_BOUND",
+  "purpose": "Provide immediately listenable room-bed canaries while real field/provider asset bytes remain unavailable. These are engineering/listening references only.",
+  "generation": {
+    "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py",
+    "generator_commit": "366b52b8a2a38227f6f094e05306d23bb17a8c2c",
+    "seed": 91720260824,
+    "provider_calls": 0,
+    "paid_synthesis_calls": 0,
+    "story_changed": false
+  },
+  "assets": [
+    {
+      "contract_asset_id": "A01_GREYHAVEN_LOBBY_30S_LOOP",
+      "candidate_id": "A01_GREYHAVEN_LOBBY_30S_LOOP_CANDIDATE_SYNTH02",
+      "session_filename_wav": "A01_GREYHAVEN_LOBBY_30S_LOOP_CANDIDATE_SYNTH02.wav",
+      "session_wav_sha256": "9ca06999c727571f18ac8003a61f69a1d18bb46072713f45c7aab3deb86828b3",
+      "session_wav_size_bytes": 8640044,
+      "session_filename_mp3_preview": "A01_GREYHAVEN_LOBBY_30S_LOOP_CANDIDATE_SYNTH02.mp3",
+      "session_mp3_sha256": "7b93bf6f54af20e58f153b24b771b70fe523af66b20dee707562d842579a555e",
+      "duration_seconds": 30.0,
+      "sample_rate_hz": 48000,
+      "bit_depth": 24,
+      "channels": 2,
+      "true_peak_dbfs_measured": -19.1,
+      "approx_integrated_lufs_measured": -28.0,
+      "seam_vs_internal_diff_rms_db_lr": [-1.0067420085, -2.0071715679],
+      "origin": "PROCEDURAL_SYNTHETIC_REFERENCE_ONLY",
+      "audition_status": "HOLD",
+      "production_binding": false
+    },
+    {
+      "contract_asset_id": "A02_SWITCHBOARD_ALCOVE_30S_LOOP",
+      "candidate_id": "A02_SWITCHBOARD_ALCOVE_30S_LOOP_CANDIDATE_SYNTH02",
+      "session_filename_wav": "A02_SWITCHBOARD_ALCOVE_30S_LOOP_CANDIDATE_SYNTH02.wav",
+      "session_wav_sha256": "f977e467ba9dd915a46956523045b87ffd0f40063a22630d9de84728b327edc0",
+      "session_wav_size_bytes": 8640044,
+      "session_filename_mp3_preview": "A02_SWITCHBOARD_ALCOVE_30S_LOOP_CANDIDATE_SYNTH02.mp3",
+      "session_mp3_sha256": "08e1ca0fbad3f63774e634d4f49a52cc58edb9e4185ab137ffc72b9fdece7cb7",
+      "duration_seconds": 30.0,
+      "sample_rate_hz": 48000,
+      "bit_depth": 24,
+      "channels": 2,
+      "true_peak_dbfs_measured": -29.4,
+      "approx_integrated_lufs_measured": -38.4,
+      "seam_vs_internal_diff_rms_db_lr": [-0.7700791383, -9.8318193559],
+      "origin": "PROCEDURAL_SYNTHETIC_REFERENCE_ONLY",
+      "audition_status": "HOLD",
+      "production_binding": false
+    }
+  ],
+  "external_field_recording_research": [
+    {
+      "source": "Wikimedia Commons — Rain against the window.ogg",
+      "license": "PUBLIC_DOMAIN",
+      "usable_as_future_source": true,
+      "ingested": false,
+      "reason_not_ingested": "Runtime media-download boundary; source page and license verified but bytes not imported."
+    },
+    {
+      "source": "Freesound — Room Tone Small Apartment — artemditkovsky — 2026-07-02",
+      "license": "CC0",
+      "spec": "48kHz 24-bit stereo, 1:50.430, quiet room/HVAC/electrical noise/rain outside",
+      "usable_as_future_source": true,
+      "ingested": false,
+      "reason_not_ingested": "Freesound requires login for download."
+    }
+  ],
+  "required_before_binding": [
+    "FOUNDER_OR_BLIND_LISTENER_AUDITION",
+    "FALSE_CLUE_AUDIT",
+    "LOOP_SEAM_AUDITION",
+    "MONO_CHECK",
+    "PHONE_PROXY_CHECK",
+    "IDENTITY_GATE_PASS",
+    "D003_EXACT_INTERVAL_OR_MASTER_RECOVERY_BEFORE_REPAIR"
+  ],
+  "hard_law": "CANDIDATE_AUDIO_DOES_NOT_AUTHORIZE_PATCHING_OR_RELEASE"
+}
