@@ -1,64 +1,71 @@
 {
-  "schema": "artifact_placement_incident_state_v2",
+  "schema": "artifact_placement_incident_state_v3",
   "date": "2026-08-22",
   "issue": 356,
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "BOUNDED_RUNTIME_PILOT",
+  "candidate_status": "RECOVERY_HARDENING_VERIFIED_PENDING_MERGE",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "runtime": {
     "receipt_module": "personal-ai/core/artifact_placement.py",
     "provider_adapter_module": "personal-ai/core/artifact_placement_adapters.py",
     "completion_gate": "personal-ai/projects/artifact_completion.py",
+    "atomic_recovery_contract": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/ATOMIC_COMPLETION_RECOVERY_CONTRACT_v1.md",
     "ci_workflow": ".github/workflows/artifact-placement-runtime.yml",
-    "done_rule": "external-artifact task routed through artifact completion gate may become DONE only when placement receipt status is PLACEMENT_VERIFIED"
+    "done_rule": "external-artifact task routed through artifact completion gate may become DONE only when placement receipt status is PLACEMENT_VERIFIED and status+receipt are persisted atomically"
   },
   "proof": {
-    "real_d09_incident": true,
-    "drive_incident_parent_readback": "PASS",
-    "drive_start_here_readback": "PASS",
-    "runtime_ci_run_id": 32562443278,
-    "runtime_ci_head": "610bdeb67a1274f1a022d074fd41f024fec62148",
-    "runtime_ci": "PASS",
-    "targeted_runtime_regression": "PASS",
-    "existing_project_state_regression": "PASS",
+    "runtime_merge_pr": 388,
+    "runtime_merge_commit": "b8265fe897a29147844591919fa4853aa3ba5a2c",
     "provider_adapters_implemented": true,
     "provider_adapter_targets": ["GOOGLE_DRIVE", "GITHUB"],
     "provider_adapter_regression": "PASS",
-    "provider_adapter_drive_id_normalization": "PASS",
-    "provider_adapter_fail_closed_wrong_parent": "PASS",
-    "provider_adapter_fail_closed_multiple_parents": "PASS",
-    "provider_adapter_github_path_observation": "PASS",
     "prospective_cross_project_canaries": 2,
-    "prospective_projects": ["D09 THE MAN WHO CAME BACK", "WOMENS AUDIO BUSINESS CONTROL"],
     "prospective_canary_status": "2/2 PLACEMENT_VERIFIED",
-    "baseline_regression_incident": 379,
-    "baseline_regression_root_cause": "Cycle10 privacy guard used brittle pre-WORK_FAMILY identity-law grep against SOURCE_REGISTRY v1.5",
-    "baseline_regression_fix_pr": 380,
-    "baseline_regression_fix_merge": "a07499eed8ebc4d2aa494b923244d64083db9544",
-    "baseline_regression_fix_ci": "PASS"
+    "real_post_merge_failure_issue": 395,
+    "real_post_merge_failure_class": "TOOL_ROUTE_MISMATCH / RESOURCE_TYPE_MISMATCH",
+    "real_post_merge_failure_observation": "document persistence intent produced 18 Google Drive FOLDER objects; provider readback rejected them as successful document persistence",
+    "real_post_merge_failure_repair_pr": 401,
+    "real_post_merge_failure_repair_merge": "e277ecb7f91fd3b9ce55464758bc531e789e2be9",
+    "real_post_merge_failure_qualifies_as_future_guard_interception": false,
+    "reason_not_promotion_evidence": "issue #395 triggered the resource-type repair; canonical PR401 receipt still requires observing future real traffic where the installed guard catches the next failure before false DONE",
+    "resource_type_negative_canary": "PASS",
+    "atomic_completion_defect_found": true,
+    "atomic_completion_defect": "previous completion gate could persist DONE/BLOCKED before receipt in a separate write",
+    "atomic_completion_fix_pr": 409,
+    "atomic_completion_fix_branch": "self-improvement/artifact-placement-atomic-recovery-20260822",
+    "atomic_completion_validation_head": "53bbfbb94bcb14492a967ff8a961fe61cba4be6b",
+    "artifact_placement_runtime_ci_run": 32569720915,
+    "artifact_placement_runtime_ci": "PASS",
+    "current_project_state_regression": "PASS",
+    "current_local_memory_regression": "PASS",
+    "current_memory_contract_hardening_regression": "PASS",
+    "current_provider_abstraction_regression": "PASS",
+    "reopen_recovery_regression": "PASS",
+    "all_related_workflows": "10/10 PASS"
   },
   "required_sequence": [
     "CREATE_OR_IMPORT",
     "PLACE_IN_CANONICAL_PROJECT_LOCATION",
-    "READBACK_ACTUAL_PARENT",
+    "READBACK_ACTUAL_PARENT_AND_RESOURCE_TYPE",
     "UPDATE_START_HERE_OR_CURRENT_INDEX",
     "READBACK_INDEX",
     "SCAN_DUPLICATE_OR_LEGACY_TITLE_CONFLICT",
     "VERIFY_CROSS_STORE_POINTER_IF_REQUIRED",
     "EMIT_PLACEMENT_RECEIPT",
+    "ATOMICALLY_PERSIST_STATUS_AND_RECEIPT",
     "ALLOW_DONE_ONLY_IF_PLACEMENT_VERIFIED_AND_OTHER_GATES_PASS"
   ],
   "promotion_gate": {
     "status": "HOLD",
     "completed_requirements": [
-      "provider adapters construct receipts from Google Drive and GitHub provider observations with normalization and fail-closed regression coverage"
+      "provider adapters construct receipts from Google Drive and GitHub provider observations with normalization and fail-closed regression coverage",
+      "atomic status+receipt persistence and restart/reopen regression passed against current ProjectState, Local Memory, Memory Contract Hardening and Provider Abstraction compatibility suites"
     ],
     "remaining_requirements": [
-      "prospective observation of at least one new real placement failure caught before a false completion claim",
-      "regression against future current persistence/recovery contracts"
+      "observe future real traffic where the installed placement/resource-type guard catches a new real persistence failure before any false DONE claim"
     ]
   }
 }

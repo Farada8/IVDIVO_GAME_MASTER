@@ -76,32 +76,54 @@ class ArtifactPlacementRuntimeTest(unittest.TestCase):
 
     def test_completion_without_receipt_blocks(self):
         with tempfile.TemporaryDirectory() as td:
-            manager = ProjectStateManager(Path(td)); manager.create_project("p"); manager.add_task("p", "Persist master", "t1")
+            home = Path(td)
+            manager = ProjectStateManager(home); manager.create_project("p"); manager.add_task("p", "Persist master", "t1")
             task = complete_task_with_artifact_gate(manager, "p", "t1", None)
             self.assertEqual(task["status"], "BLOCKED")
+            self.assertEqual(task["completion_gate"], "ARTIFACT_PLACEMENT")
+            reopened = ProjectStateManager(home).load_project("p")["tasks"][0]
+            self.assertEqual(reopened["status"], "BLOCKED")
+            self.assertNotIn("artifact_placement_receipt", reopened)
 
-    def test_bad_receipt_blocks_and_persists_receipt(self):
+    def test_bad_receipt_blocks_and_persists_receipt_across_reopen(self):
         with tempfile.TemporaryDirectory() as td:
-            manager = ProjectStateManager(Path(td)); manager.create_project("p"); manager.add_task("p", "Persist master", "t1")
+            home = Path(td)
+            manager = ProjectStateManager(home); manager.create_project("p"); manager.add_task("p", "Persist master", "t1")
             data = good_receipt(); data["actual_parent"] = "drive:wrong"
             task = complete_task_with_artifact_gate(manager, "p", "t1", data)
             self.assertEqual(task["status"], "BLOCKED")
             self.assertEqual(task["artifact_placement_receipt"]["status"], PERSISTED_BUT_MISPLACED)
+            reopened = ProjectStateManager(home).load_project("p")["tasks"][0]
+            self.assertEqual(reopened["status"], "BLOCKED")
+            self.assertEqual(reopened["completion_gate"], "ARTIFACT_PLACEMENT")
+            self.assertEqual(reopened["artifact_placement_receipt"]["status"], PERSISTED_BUT_MISPLACED)
+            self.assertIn("parent_mismatch", reopened["artifact_placement_receipt"]["failures"])
 
-    def test_resource_type_mismatch_blocks_completion(self):
+    def test_resource_type_mismatch_blocks_completion_and_survives_reopen(self):
         with tempfile.TemporaryDirectory() as td:
-            manager = ProjectStateManager(Path(td)); manager.create_project("p"); manager.add_task("p", "Persist document", "t1")
+            home = Path(td)
+            manager = ProjectStateManager(home); manager.create_project("p"); manager.add_task("p", "Persist document", "t1")
             data = good_receipt(); data["expected_resource_type"] = "DOCUMENT"; data["observed_resource_type"] = "FOLDER"
             task = complete_task_with_artifact_gate(manager, "p", "t1", data)
             self.assertEqual(task["status"], "BLOCKED")
             self.assertIn("resource_type_mismatch", task["artifact_placement_receipt"]["failures"])
+            reopened = ProjectStateManager(home).load_project("p")["tasks"][0]
+            self.assertEqual(reopened["status"], "BLOCKED")
+            self.assertEqual(reopened["artifact_placement_receipt"]["expected_resource_type"], "DOCUMENT")
+            self.assertEqual(reopened["artifact_placement_receipt"]["observed_resource_type"], "FOLDER")
+            self.assertIn("resource_type_mismatch", reopened["artifact_placement_receipt"]["failures"])
 
-    def test_good_receipt_completes_and_persists_receipt(self):
+    def test_good_receipt_completes_and_persists_receipt_across_reopen(self):
         with tempfile.TemporaryDirectory() as td:
-            manager = ProjectStateManager(Path(td)); manager.create_project("p"); manager.add_task("p", "Persist master", "t1")
+            home = Path(td)
+            manager = ProjectStateManager(home); manager.create_project("p"); manager.add_task("p", "Persist master", "t1")
             task = complete_task_with_artifact_gate(manager, "p", "t1", good_receipt())
             self.assertEqual(task["status"], "DONE")
             self.assertEqual(task["artifact_placement_receipt"]["status"], PLACEMENT_VERIFIED)
+            reopened = ProjectStateManager(home).load_project("p")["tasks"][0]
+            self.assertEqual(reopened["status"], "DONE")
+            self.assertEqual(reopened["completion_gate"], "ARTIFACT_PLACEMENT")
+            self.assertEqual(reopened["artifact_placement_receipt"]["status"], PLACEMENT_VERIFIED)
 
 
 if __name__ == "__main__":
