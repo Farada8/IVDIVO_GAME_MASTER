@@ -24,15 +24,15 @@ jobs:
         run: python -m pip install --disable-pip-version-check numpy scipy soundfile
       - name: Generate 24 critical SFX canaries
         run: python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py
-      - name: Machine identity/format preflight
+      - name: Machine identity/format/countability preflight
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
-          import json, hashlib, soundfile as sf, numpy as np
+          import json,hashlib,soundfile as sf,numpy as np
           root=Path('ROOM917_CRITICAL_SFX_CANARIES')
-          rec=json.loads((root/'ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json').read_text())
+          rec=json.loads((root/'ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json').read_text())
           rows=rec['assets']
           if len(rows)!=24: raise SystemExit(f'expected 24 assets, got {len(rows)}')
           for row in rows:
@@ -41,24 +41,26 @@ jobs:
               if hashlib.sha256(p.read_bytes()).hexdigest()!=row['sha256']: raise SystemExit(f'hash drift {p}')
               y,sr=sf.read(p,always_2d=True)
               if sr!=48000 or y.shape[1]!=2 or not np.isfinite(y).all(): raise SystemExit(f'format/finite fail {p}')
-          print('PASS: 24 hashes + 48k stereo finite PCM decoded. Human audition remains mandatory.')
+          print('PASS: 24 v2 hashes + 48k stereo finite PCM decoded. Human audition remains mandatory.')
           PY
       - name: Upload listening artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ROOM917_E01_CRITICAL_SFX_SYNTH_CANARIES
+          name: ROOM917_E01_CRITICAL_SFX_SYNTH_CANARIES_V2
           path: ROOM917_CRITICAL_SFX_CANARIES/
           if-no-files-found: error
           retention-days: 30
       - name: Summary
         run: |
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
-          ## ROOM917 E01 critical SFX canaries
+          ## ROOM917 E01 critical SFX canaries v2
+          - S13 corrected to exactly two countable bell pulses
+          - S19 target interruptions strengthened as two distinct mechanical events
+          - per-candidate RNG prevents unrelated asset hash drift
           - S07/S08/S10/S11/S13/S14/S17/S19: 3 variants each
           - total: 24 WAV candidates
           - 48 kHz / 24-bit / stereo
-          - provider calls: 0
-          - paid synthesis: 0
+          - provider calls: 0; paid synthesis: 0
           - status: CANDIDATE / HOLD
           - final binding forbidden until human audition + mono/phone + identity gates
           EOF
