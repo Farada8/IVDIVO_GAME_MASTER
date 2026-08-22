@@ -1,0 +1,40 @@
+{
+  "schema": "ivdivo.b03.audio_dependency_red_team/1.1",
+  "status": "PASS_DEPENDENCY_CLASSIFICATION_REPAIR_OPEN",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "story_text_mutation_bytes": 0,
+  "provider_voice_ids_assigned": 0,
+  "current_roster_drive_id": "13Go1HxW86AmYf7dfptH8o1QzihCqexSL",
+  "source_diff_drive_id": "1FkYxNZW3rEHZwqWj84zVhyp5YDRtHMUR",
+  "proof": {
+    "old_speaker_ids": 120,
+    "current_speaker_ids": 119,
+    "affected_speech_rows": 291,
+    "voice_slot_changes": 287,
+    "same_slot_identity_changes": 4,
+    "slot_class_crossings": 81,
+    "same_class_identity_changes": 210,
+    "unaffected_speech_rows": 3423,
+    "narration_rows_salvageable": 3751,
+    "render_rows_structurally_salvageable_before_repair": 7174
+  },
+  "dispositions": {
+    "121": "REPLACE_BY_143_V1_1",
+    "122": "SALVAGE_PATCH_2_FIXTURE_BINDINGS",
+    "123": "PARTIAL_REBUILD_291_ROWS_81_FULL_PERFORMANCE_RECOMPUTE",
+    "124": "KEEP_CONTENT_REVALIDATE_SOURCE_POINTER",
+    "125": "KEEP_CONTENT",
+    "126": "PARTIAL_REBUILD_291_ROWS_287_SLOT_CHANGES_81_FULL_PERFORMANCE_RECOMPUTE"
+  },
+  "drive_artifacts": {
+    "tribunal_json": "1aJDozMTwrjkE54dY4TLz8U2eAFhVc7JR",
+    "tribunal_md": "13n5qQF1LiP1StPhRSDkRqxgyB7MRHeaS",
+    "performance_baseline_122_revalidated_json": "1MJLR6MQroSDBM8mjKXJeCGqhJoEwdHmT",
+    "performance_baseline_122_gate": "1s6eF9pczwydNpjxZrcD8dncSaDGrQl5k",
+    "performance_123_repair_queue": "1OQG5hxgBL1fozW1A253qDcifL9r75eDV",
+    "dry_render_126_repair_queue": "1pvxTstBU2sfvIynr8zACs-dWYTGFhUC8",
+    "sound_124_revalidation": "18aRJSsCfJGbGlG7EhdKoMUiKp2CUakA4",
+    "asset_125_revalidation": "1wzL9bl27JX07xKCz2SevTYx_Lq57AK9P"
+  },
+  "next_exact_action": "Repair/revalidate 123 affected rows; propagate repaired routing into 126; then audit 127-132 transitively before live provider work."
+}
