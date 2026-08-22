@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-22",
+  "cycle": "SYSTEM_CYCLE9B_PROMOTION_CALIBRATION_32_TO_64",
+  "base_main": "d919a680dea76ce74c6fa99113a1fe36d85f1e81",
+  "authority": {
+    "current": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
+    "v3": "CANDIDATE_HOLD_FOR_MEASURED_NET_GAIN",
+    "authority_effect_of_cycle9": "NONE_CANDIDATE_ENGINEERING_ONLY"
+  },
+  "run32": {
+    "executed": 32,
+    "dispositions": {
+      "KEEP": 20,
+      "MUTATE": 2,
+      "MERGE_WITH_EXISTING": 4,
+      "LOCAL_KEEP": 3,
+      "CANDIDATE_PASS": 2,
+      "HOLD": 1
+    },
+    "test_suite": "32/32 PASS"
+  },
+  "new_si_id_allocated": false,
+  "candidate_pass": ["DoubleLoopTriggerEngine", "MetricDecisionLinkGuard"],
+  "local_keep": ["MissingAuthorityResultCompiler", "UnknownAggregateScoreGuard", "NativeFreeSubstituteBoundary"],
+  "merge_existing": ["ConcurrentReadBeforeWriteGate", "ProofPlaneSeparationGate", "MetaWIPGovernor", "BacklogProgressDeflator"],
+  "next64": {
+    "designed": 64,
+    "executed": 0,
+    "selection_law": "DEPENDENCY_AND_INFORMATION_VALUE_NOT_BLIND_AUTOPLAY"
+  },
+  "current_gate": "MEASURED_V3_NET_GAIN_CANARY -> HEALTHY_CONTROL -> SECOND_DOMAIN_REPLICATION -> REGRESSION -> FOUNDER_PROMOTION_DECISION",
+  "persistence": {
+    "github": "BRANCH_PERSISTENCE_IN_PROGRESS",
+    "drive": "PASS_READBACK",
+    "readback_required": true,
+    "drive_folder_id": "1RvLrulJuXLZCqtPnHdBM66kpwX8WURKh",
+    "github_branch": "self-improvement/cycle9-promotion-calibration-2026-08-22",
+    "drive_zip_id": "1SKYteSbfoejuYpu-BRm8fElv0e1xsewH",
+    "drive_readback": "MASTER_RUN32_NEXT64_STRUCTURE_PASS"
+  },
+  "parallel_cycle9_reconciliation": {
+    "cycle9_real_interruption_branch": "self-improvement/cycle9-real-interruption-convergence-20260822",
+    "drive_folder": "1HExzpVUcs2z7ObkVPYiLRQIZ3N8le4eV",
+    "disposition": "INDEPENDENT_COMPLEMENTARY_SCOPE_DO_NOT_REPLACE_OR_DUPLICATE",
+    "cycle9b_scope": "PROMOTION_CALIBRATION_DOUBLE_LOOP_ONLY"
+  },
+  "fresh_main_reconciliation": {
+    "event": "MAIN_ADVANCED_BEFORE_FIRST_CYCLE9B_GITHUB_WRITE",
+    "new_main": "d919a680dea76ce74c6fa99113a1fe36d85f1e81",
+    "new_evidence": "SI-0014_GENUINE_RECOVERY_EVENT_001",
+    "observed_status": "READY_FOR_PILOT",
+    "replication_progress": {
+      "recoveries": 1,
+      "required_recoveries": 3,
+      "distinct_projects": 1,
+      "required_distinct_projects": 2,
+      "zero_false_resume": true
+    },
+    "promotion_authorized": false,
+    "disposition": "MERGE_EVIDENCE_ONLY",
+    "additional_parallel_main_event": "CYCLE7_P97_P128_AUTHORITY_RECOVERY_CLOSED_NO_CYCLE9B_SCOPE_CONFLICT"
+  }
+}
