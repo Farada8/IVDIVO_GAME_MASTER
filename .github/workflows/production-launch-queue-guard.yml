@@ -1,0 +1,53 @@
+name: Production Launch Queue Guard
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/**'
+      - '.github/workflows/production-launch-queue-guard.yml'
+
+jobs:
+  queue-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate queue invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22')
+          queue = json.loads((root / 'PRODUCTION_LAUNCH_QUEUE_v0.1.json').read_text())
+          cards = queue['cards']
+          by_id = {card['id']: card for card in cards}
+          assert len(cards) == len(by_id), 'duplicate card IDs'
+          assert len(cards) == 25, 'expected PL-00..PL-24 card bank'
+          allowed = set(queue['statuses'])
+
+          for card in cards:
+              assert card['status'] in allowed, f"invalid status {card['id']}"
+              for dep in card['depends_on']:
+                  assert dep in by_id, f"missing dependency {dep} for {card['id']}"
+              if card['status'] in {'READY', 'RUNNING', 'DONE_VERIFIED'}:
+                  unmet = [d for d in card['depends_on'] if by_id[d]['status'] != 'DONE_VERIFIED']
+                  assert not unmet, f"{card['id']} promoted with unmet dependencies: {unmet}"
+
+          frontier = queue['current_frontier']
+          assert frontier in by_id, 'current_frontier missing from card bank'
+          assert by_id[frontier]['status'] in {'READY', 'RUNNING'}, 'current_frontier is not executable'
+
+          receipt_path = root / 'PL00_VERIFICATION_RECEIPT.json'
+          if receipt_path.exists():
+              receipt = json.loads(receipt_path.read_text())
+              assert receipt['card'] == 'PL-00'
+              assert receipt['status'] == 'DONE_VERIFIED'
+              assert receipt['exact_head_ci']['conclusion'] == 'success'
+              assert by_id['PL-00']['status'] == 'DONE_VERIFIED'
+              assert Path('personal-ai/run.py').exists()
+
+          print('PRODUCTION_LAUNCH_QUEUE_GUARD: PASS')
+          PY
