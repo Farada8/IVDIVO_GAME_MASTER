@@ -4,7 +4,7 @@
   "authority_effect": "NONE",
   "self_improvement_authority": "V2_VERIFIED_CURRENT",
   "queue_status": "FOUNDATION_ACTIVE",
-  "current_frontier": "PL-02",
+  "current_frontier": "PL-04",
   "completion_rule": "DONE_VERIFIED requires persisted implementation plus required tests/readback; prompt execution alone is insufficient",
   "statuses": ["READY", "WAITING_DEPENDENCY", "RUNNING", "BLOCKED", "DONE_VERIFIED", "DESIGN_ONLY", "FAILED"],
   "waves": [
@@ -17,21 +17,21 @@
   "cards": [
     {"id":"PL-00","title":"Master Production Bootstrap","wave":1,"status":"DONE_VERIFIED","depends_on":[],"acceptance":"python run.py performs a real persisted state action and smoke test passes"},
     {"id":"PL-01","title":"Project State System","wave":1,"status":"DONE_VERIFIED","depends_on":["PL-00"],"acceptance":"project CLI create/status/next and unit tests pass"},
-    {"id":"PL-02","title":"Local Memory","wave":1,"status":"READY","depends_on":["PL-00"],"acceptance":"SQLite store/search/update/invalidate/trace operations pass tests"},
-    {"id":"PL-03","title":"Source Evidence Layer","wave":3,"status":"WAITING_DEPENDENCY","depends_on":["PL-02"],"acceptance":"unverified inference cannot be emitted as VERIFIED_FACT"},
+    {"id":"PL-02","title":"Local Memory","wave":1,"status":"DONE_VERIFIED","depends_on":["PL-00"],"acceptance":"SQLite store/search/update/invalidate/trace operations pass tests"},
+    {"id":"PL-03","title":"Source Evidence Layer","wave":3,"status":"READY","depends_on":["PL-02"],"acceptance":"unverified inference cannot be emitted as VERIFIED_FACT"},
     {"id":"PL-04","title":"AI Provider Abstraction","wave":1,"status":"READY","depends_on":["PL-00"],"acceptance":"provider interface plus mock provider runs without paid API"},
     {"id":"PL-05","title":"Agent Executor","wave":1,"status":"WAITING_DEPENDENCY","depends_on":["PL-01","PL-02","PL-04"],"acceptance":"bounded demo agent completes integration test with logs/state"},
-    {"id":"PL-06","title":"Business Core","wave":2,"status":"WAITING_DEPENDENCY","depends_on":["PL-01","PL-02"],"acceptance":"client request can produce persisted estimate/quote without invented prices"},
+    {"id":"PL-06","title":"Business Core","wave":2,"status":"READY","depends_on":["PL-01","PL-02"],"acceptance":"client request can produce persisted estimate/quote without invented prices"},
     {"id":"PL-07","title":"Business Research","wave":2,"status":"WAITING_DEPENDENCY","depends_on":["PL-03","PL-04"],"acceptance":"research outputs sources/claims/comparison/conclusions with provenance and freshness"},
     {"id":"PL-08","title":"Book Production Core","wave":2,"status":"WAITING_DEPENDENCY","depends_on":["PL-01","PL-02","PL-04"],"acceptance":"book state machine blocks FINAL until continuity gate passes"},
     {"id":"PL-09","title":"Continuity Checker","wave":2,"status":"WAITING_DEPENDENCY","depends_on":["PL-08"],"acceptance":"known continuity fixtures yield severity-tagged evidence pairs"},
     {"id":"PL-10","title":"Multi-Model Review","wave":3,"status":"WAITING_DEPENDENCY","depends_on":["PL-04","PL-05"],"acceptance":"independent critics remain isolated until aggregation"},
     {"id":"PL-11","title":"Test Benchmark Engine","wave":1,"status":"READY","depends_on":["PL-00"],"acceptance":"baseline/candidate/delta PASS-FAIL runner rejects critical regression"},
     {"id":"PL-12","title":"Change Control","wave":3,"status":"WAITING_DEPENDENCY","depends_on":["PL-11"],"acceptance":"patch lifecycle records tests/benchmark/decision and supports rollback"},
-    {"id":"PL-13","title":"File Ingestion","wave":2,"status":"WAITING_DEPENDENCY","depends_on":["PL-02"],"acceptance":"supported inputs are hashed, represented and deduplicated"},
+    {"id":"PL-13","title":"File Ingestion","wave":2,"status":"READY","depends_on":["PL-02"],"acceptance":"supported inputs are hashed, represented and deduplicated"},
     {"id":"PL-14","title":"Personal Knowledge Search","wave":2,"status":"WAITING_DEPENDENCY","depends_on":["PL-02","PL-13"],"acceptance":"ask command retrieves project/docs/decisions/state with source separation"},
-    {"id":"PL-15","title":"Daily Control Panel","wave":4,"status":"WAITING_DEPENDENCY","depends_on":["PL-01","PL-02"],"acceptance":"today command reports real stored projects/tasks/failures only"},
-    {"id":"PL-16","title":"Backup Recovery","wave":3,"status":"WAITING_DEPENDENCY","depends_on":["PL-01","PL-02"],"acceptance":"backup and checksum-verified restore pass fixture"},
+    {"id":"PL-15","title":"Daily Control Panel","wave":4,"status":"READY","depends_on":["PL-01","PL-02"],"acceptance":"today command reports real stored projects/tasks/failures only"},
+    {"id":"PL-16","title":"Backup Recovery","wave":3,"status":"READY","depends_on":["PL-01","PL-02"],"acceptance":"backup and checksum-verified restore pass fixture"},
     {"id":"PL-17","title":"Security","wave":3,"status":"WAITING_DEPENDENCY","depends_on":["PL-00","PL-05"],"acceptance":"secret leakage/path traversal/destructive-tool security tests pass"},
     {"id":"PL-18","title":"Cost Control","wave":3,"status":"WAITING_DEPENDENCY","depends_on":["PL-04"],"acceptance":"API usage is attributable by provider/model/project/task and budget limits work"},
     {"id":"PL-19","title":"Local Cloud Router","wave":4,"status":"WAITING_DEPENDENCY","depends_on":["PL-04","PL-18"],"acceptance":"routing decisions are logged and policy tests select expected provider tier"},
@@ -45,6 +45,7 @@
     "No card allocates a new global Self-Improvement SI id by itself.",
     "Human/market/provider evidence must remain real and provenance-backed; it cannot be simulated for gate passage.",
     "PL-00 verified by PR #287 merge 2264d7b17ce08811f0037c1ce9fd0ca622442064; exact-head CI 32553543536 SUCCESS; Drive readback folder 1NY73gon6bWJRWhmxnJ9MLildINutKLLO.",
-    "PL-01 verified by PR #294 merge 566fbc00dea63e89257fe6eb4abc26e130e0a663; PL-00 regression + PL-01 CI SUCCESS; Drive readback folder 1kNuZY2ivHEkXHFn9D7HLujQxZf7EvGUO."
+    "PL-01 verified by PR #294 merge 566fbc00dea63e89257fe6eb4abc26e130e0a663; PL-00 regression + PL-01 CI SUCCESS; Drive readback folder 1kNuZY2ivHEkXHFn9D7HLujQxZf7EvGUO.",
+    "PL-02 verified by PR #299 merge 5a9337f2a416edbacdf4a85f02efdc1e27511bf9; PL-00/01/02 exact-head CI SUCCESS; Drive readback folder 1mH8SQPfR9IPjAltLGVa8EPALkB3s07n2."
   ]
 }
