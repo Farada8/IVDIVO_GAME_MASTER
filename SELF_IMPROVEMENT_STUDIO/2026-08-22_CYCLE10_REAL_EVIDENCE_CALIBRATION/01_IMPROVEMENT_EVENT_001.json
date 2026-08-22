@@ -1,0 +1,71 @@
+{
+  "schema": "ivdivo.self_improvement.improvement_event/1.0",
+  "event_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
+  "event_type": "RECOVERY",
+  "real_event": true,
+  "raw_evidence_roots": [
+    {
+      "path": "SELF_IMPROVEMENT_ENGINE/CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22/09_REAL_RECOVERY_EVENT_001_SELF_IMPROVEMENT.json",
+      "commit": "e0ddd5034a98bb409647536674e0aa517fb03ea0"
+    },
+    {
+      "path": "SELF_IMPROVEMENT_ENGINE/CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22/10_REAL_RECOVERY_EVENT_001_BUSINESS_ENGINEERING_SLICE.json",
+      "commit": "5c96aae5bc65181947d26c0681f81b7e0ae52bbe"
+    }
+  ],
+  "incident_provenance": "Founder reported actual browser closure with many ChatGPT dialogs no longer visible in the active browser session.",
+  "recovery_strategy": "RECOVER_PERSISTED_AUTHORITY_FIRST_THEN_FRESHNESS_RECONCILE",
+  "project_slices": [
+    {
+      "project_id": "IVDIVO_SELF_IMPROVEMENT",
+      "frontier_result": "RECOVERED_CURRENT_AND_REJECTED_DUPLICATE_CYCLE8_RERUN",
+      "project_readback_complete": true
+    },
+    {
+      "project_id": "BUSINESS_ENGINEERING",
+      "frontier_result": "RECOVERED_AND_REBASED_TO_NEWER_P97_P128_AUTHORITY",
+      "project_readback_complete": true
+    }
+  ],
+  "genuine_interruption_event_count": 1,
+  "distinct_project_recoveries": 2,
+  "false_resume": false,
+  "observed_decision_delta": "ROUTE_CHANGED_TO_PERSISTED_CURRENT_FRONTIER",
+  "observed_duplicate_work_units_avoided": 1,
+  "observed_rejected_resume_paths": [
+    "RERUN_OLD_CYCLE7_AS_INCOMPLETE",
+    "REVIVE_SUPERSEDED_PR_197",
+    "USE_OLDER_C8_01_C8_64_POINTER_AFTER_P97_P128_MERGE",
+    "BLIND_EXECUTE_P129_P192_WITHOUT_REQUIRED_REAL_INPUT"
+  ],
+  "freshness_effect": {
+    "newer_main_detected_during_business_recovery": "f45f07cb6a78733fa1a123d5e11a35dfb43913c5",
+    "action": "REBASE_FRONTIER_BEFORE_QUALIFICATION"
+  },
+  "measurement": {
+    "operator_minutes": null,
+    "tool_calls_for_recovery": null,
+    "time_saved_minutes": null,
+    "money_saved": null,
+    "productivity_percent": null,
+    "probability_of_failure_without_guard": null
+  },
+  "si0014_progress": {
+    "genuine_events": 1,
+    "required_genuine_events": 3,
+    "distinct_projects": 2,
+    "required_distinct_projects": 2,
+    "false_resume_count": 0,
+    "status": "READY_FOR_PILOT",
+    "promotion_authorized": false
+  },
+  "evidence_classes_not_created": [
+    "HUMAN_SIGNAL",
+    "AUTH_PROVIDER",
+    "BUYER_EVIDENCE",
+    "PAYMENT_EVIDENCE",
+    "ECONOMICS_PROOF"
+  ],
+  "calibration_status": "REAL_OBSERVATION_PARTIAL_METRICS",
+  "next_gate": "TWO_ADDITIONAL_GENUINE_INTERRUPTION_EVENTS_WITH_ZERO_FALSE_RESUME"
+}
