@@ -41,11 +41,12 @@ jobs:
         run: |
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
           ## ROOM917 fail-closed non-stop policy
-          Expected targeted results: 5/5 non-stop + 3/3 context-gain + 3/3 semantic-timing tests.
+          Expected targeted results: 5/5 non-stop + 4/4 context-gain + 3/3 semantic-timing tests.
           - blocked mainline selects independent safe work
           - exhausted secondary work returns to recovery search
           - blind package verifies byte hashes and rejects tamper
           - audition compiler never invents production gain
           - context gain is explicit or HOLD
+          - one failed asset suppresses the entire context-gain candidate set; no partial renderer promotion
           - accepted timing resolves; ambiguous timing HOLD; unaccepted timing FAIL
           EOF
