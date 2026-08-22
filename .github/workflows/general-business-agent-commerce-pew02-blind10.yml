@@ -1,0 +1,57 @@
+name: General Business Agent Commerce P-EW02 Blind10
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_AGENT_COMMERCE_PEW02_BLIND10/**'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/**'
+      - '.github/workflows/general-business-agent-commerce-pew02-blind10.yml'
+
+jobs:
+  blind10:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate frozen blind protocol
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_AGENT_COMMERCE_PEW02_BLIND10/00_BLIND_PROTOCOL.md').read_text()
+          domains = ['decathlon.ie','brownthomas.com','arnotts.ie','elverys.ie','ikea.com','lego.com','patagonia.com','allbirds.com','glossier.com','gymshark.com']
+          assert all(d in p for d in domains)
+          assert 'before' in p.lower() and 'frozen' in p.lower()
+          assert 'do not create carts/orders/accounts' in p
+          print('P-EW02 blind protocol: 10/10 frozen before probe')
+          PY
+      - name: Run read-only public probes and merged scanner
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_AGENT_COMMERCE_PEW02_BLIND10/01_probe_and_scan.py
+      - name: Validate no proof overreach
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          out = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_AGENT_COMMERCE_PEW02_BLIND10/out')
+          s = json.loads((out/'summary.json').read_text())
+          scans = json.loads((out/'scans.json').read_text())
+          assert s['evaluated'] == 10
+          assert len(scans) == 10
+          assert s['generic_advice_outputs'] == 0
+          assert s['false_promotions'] == 0
+          assert s['proof_boundary']['platform_approval_proven'] is False
+          assert s['proof_boundary']['buyer_demand_proven'] is False
+          assert s['proof_boundary']['wtp_proven'] is False
+          assert s['proof_boundary']['transaction_changing_checkout_probes_performed'] is False
+          assert all(x['proof_boundary']['unknown_not_fail'] is True for x in scans)
+          assert all(x['proof_boundary']['unknown_not_pass'] is True for x in scans)
+          print('P-EW02 evidence boundary: PASS')
+          PY
+      - name: Upload P-EW02 public-probe evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-commerce-pew02-blind10-evidence
+          path: BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_AGENT_COMMERCE_PEW02_BLIND10/out/*.json
+          if-no-files-found: error
