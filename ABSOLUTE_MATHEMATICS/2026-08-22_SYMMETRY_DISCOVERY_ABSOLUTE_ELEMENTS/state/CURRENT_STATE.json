@@ -1,0 +1,41 @@
+{
+  "project": "SYMMETRY DISCOVERY ABSOLUTE ELEMENTS",
+  "date": "2026-08-22",
+  "github": {
+    "repo": "Farada8/IVDIVO_GAME_MASTER",
+    "base_main_sha": "366cb172ef94a670df820af7e01889470e720ee4",
+    "branch": "symmetry-discovery-absolute-elements-cycle3-20260822",
+    "pr_number": 478,
+    "pr_url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/478",
+    "pr_draft": true,
+    "pr_mergeable_observed": false,
+    "merge": "NOT_REQUESTED"
+  },
+  "drive": {
+    "folder_id": "1Hjc01p7Lq4cGWVWmtugHOTVWsXXXiu_h",
+    "zip_id": "1oesizWR7ZzqSUQgAf9JmvtCVMdELkamd",
+    "cold_attestation_id": "1f03Sdd3VU_v2Xtb3fxRhwbGR-8LXpFrG",
+    "engine_id": "1mPYtFcISRmsjwxXWLZRCRLKz4MdWboBA",
+    "state_id": "1nz2aOYBa7ibLCcUImIjVCF8DvipNL5cC",
+    "minimal_invariants_id": "1jW7kGSkzKlLEDWxXzoAsA4QtM8jCPLUX",
+    "intervention_refinement_id": "1EzVyFlAxGqUdTmBcvHToEH4Hk-qXENVy",
+    "certificate_id": "1iZZqcCYBL43MwK172xu4bL-g738RJF78",
+    "synthesis_id": "1fEFeihl48OLnlqhtKgec2HNZKb69Hyhz"
+  },
+  "tests": "14/14 PASS locally + cold replay PASS",
+  "claim": "formal relation count != symmetry relation-type count != independent state dimension",
+  "status": "ENGINEERING_SYNTHESIS_NOVELTY_UNVERIFIED",
+  "new_results": {
+    "S4": {"formal":15,"types":4,"task_min":2,"universal_hint":4},
+    "S2xS2": {"formal":15,"types":8,"task_min":4,"universal_hint":4},
+    "IDENTITY": {"formal":15,"types":15,"task_min":4,"universal_hint":4},
+    "D4_TASK": {"formal":15,"types":5,"task_min":1}
+  },
+  "intervention_refinement": {
+    "S4_passive":4,
+    "S3_one_addressable":7,
+    "S2_two_addressable":11,
+    "identity_all_addressable":15
+  },
+  "next": "search separating invariant generators for UNIVERSAL promotion, then test recursive promotion under changing intervention sets"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "absolute_element_certificate/1.0",
+  "required_fields": [
+    "source_peer_count",
+    "formal_relation_count",
+    "symmetry_group",
+    "relation_type_count",
+    "promotion_mode",
+    "candidate_absolute_elements",
+    "hidden_symmetry_breaking_tests",
+    "task_or_reconstruction_residual",
+    "intrinsic_dimension",
+    "resource_gain",
+    "invalidation_rule"
+  ],
+  "promotion_modes": {
+    "UNIVERSAL": "preserve the declared semantic quotient / reconstruction target",
+    "TASK": "preserve only preregistered tasks and interventions"
+  },
+  "claim_ceiling": "A smaller task-sufficient representation is not proof of a new physical dimension or ontology."
+}
