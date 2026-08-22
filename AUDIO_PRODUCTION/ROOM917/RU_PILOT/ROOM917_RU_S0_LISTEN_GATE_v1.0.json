@@ -1,10 +1,11 @@
 {
-  "schema_version": "ivdivo.room917_ru_s0_listen_gate/1.0",
+  "schema_version": "ivdivo.room917_ru_s0_listen_gate/2.0",
   "date": "2026-08-22",
   "status": "HUMAN_LISTEN_REQUIRED",
-  "purpose": "Decide whether the Russian voices feel like believable people before any full E01 render.",
+  "purpose": "Screen Russian audition bindings using real S0 audio before finalist verification. S0 alone cannot CAST LOCK because repeat-take and all final pair evidence are not yet complete.",
   "source_bundle": "ROOM917_RU_S0_CANARY_BLOCK_BUNDLE_v1.0.json",
   "artifact_expected": "ROOM917_RU_S0_CANARY",
+  "stage_semantics": "SCREENING_ONLY_NOT_FINAL_CAST_LOCK",
   "hard_fail_any": [
     "OBVIOUS_AI_TELL_IN_CRITICAL_LINE",
     "TRAILER_OR_ALPHA_JULIAN",
@@ -17,45 +18,28 @@
     "CHARACTER_AGE_OR_SOCIAL_STATUS_FEELS_WRONG"
   ],
   "roles": {
-    "ELENA": {
-      "must_feel": ["working professional", "precise", "dry intelligence", "emotion under control", "not horror narrator"],
-      "reject_if": ["announcer", "audiobook declamation", "cold robot", "mystical foreknowledge", "overacted sarcasm"]
-    },
-    "JULIAN": {
-      "must_feel": ["36-year-old operational responsibility", "restrained pressure", "credible hotel authority", "human not archetype"],
-      "reject_if": ["alpha growl", "romance trailer voice", "villain foreshadowing", "too old", "too polished to be tired"]
-    },
-    "MINA": {
-      "must_feel": ["ordinary competent hotel worker", "socially quick", "warm", "humor without performing jokes"],
-      "reject_if": ["sitcom sidekick", "childish", "hyperactive", "exposition voice"]
-    },
-    "CATE": {
-      "must_feel": ["ordinary mother", "tired human", "same plausible woman for E01 line and E02 cassette"],
-      "reject_if": ["ghost", "whisper actress", "melodramatic plea", "different identity between media"]
-    }
+    "ELENA": {"must_feel":["working professional","precise","dry intelligence","emotion under control","not horror narrator"],"reject_if":["announcer","audiobook declamation","cold robot","mystical foreknowledge","overacted sarcasm"]},
+    "JULIAN": {"must_feel":["36-year-old operational responsibility","restrained pressure","credible hotel authority","human not archetype"],"reject_if":["alpha growl","romance trailer voice","villain foreshadowing","too old","too polished to be tired"]},
+    "MINA": {"must_feel":["ordinary competent hotel worker","socially quick","warm","humor without performing jokes"],"reject_if":["sitcom sidekick","childish","hyperactive","exposition voice"]},
+    "CATE": {"must_feel":["ordinary mother","tired human","plausible clean human source"],"reject_if":["ghost","whisper actress","melodramatic plea"]}
   },
-  "pair_tests": {
-    "RU_S0_ELENA_MINA_RELATION": {
-      "pass_if": ["interruptible human rhythm", "no instant-best-friend acting", "Mina humor lands without comic pause", "Elena remains occupied by work"]
-    },
-    "RU_S0_ELENA_JULIAN_FRICTION": {
-      "pass_if": ["both positions remain credible", "status conflict without villain/hero coding", "no overt flirt", "no synthetic equal-turn cadence"]
-    }
+  "s0_pair_tests_available": {
+    "ELENA_MINA": "RU_S0_ELENA_MINA_RELATION",
+    "ELENA_JULIAN_1": "RU_S0_ELENA_JULIAN_FRICTION"
   },
+  "not_yet_provable_at_s0": [
+    "SECOND_ACCEPTED_TAKE_PER_ROLE",
+    "ELENA_JULIAN_2_STATUS_PAIR",
+    "CATE_IDENTITY_CLEAN_VS_CASSETTE",
+    "FINAL_REPEAT_TAKE_IDENTITY_CONSISTENCY",
+    "GLOBAL_CAST_LOCK"
+  ],
   "scoring": {
     "scale": "0-5",
-    "dimensions": [
-      "BELIEVABILITY",
-      "RUSSIAN_NATURALNESS",
-      "CHARACTER_FIT",
-      "SUBTEXT",
-      "MICRO_RHYTHM",
-      "PAIR_COMPATIBILITY",
-      "NO_AI_TELL"
-    ],
-    "minimum_each_dimension": 4,
+    "dimensions": ["BELIEVABILITY","RUSSIAN_NATURALNESS","CHARACTER_FIT","SUBTEXT","MICRO_RHYTHM","PAIR_COMPATIBILITY","NO_AI_TELL"],
+    "screening_minimum_each_dimension": 4,
     "no_hard_fail": true,
-    "cast_lock_rule": "PASS_ALL_ROLE_CANARIES_AND_PAIR_TESTS_OR_REPLACE_ONLY_FAILED_VOICE_BLOCKS"
+    "s0_pass_rule": "PASS_CURRENT_SCREENING_OR_SELECTIVE_RECAST_REPAIR; NEVER CAST LOCK FROM S0 ALONE"
   },
   "founder_fast_gate": [
     "Верю ли я, что это живой человек?",
@@ -64,9 +48,12 @@
     "Хочу ли я слушать этих людей ещё десять минут?"
   ],
   "outcomes": {
-    "PASS": "Lock current selected voice only after provider identity is confirmed; proceed to controlled E01 dialogue blocks.",
-    "REPAIR": "Change settings or rerender only the failed canary block; do not rerender passed material.",
-    "RECAST": "Replace only the failed character voice and rerun that character plus affected pair tests.",
-    "STOP": "Do not render full E01. Revisit casting/performance direction first."
-  }
+    "PASS_SCREENING": "Keep current audition binding as finalist candidate; proceed to explicitly authorized finalist verification only.",
+    "REPAIR": "Rerender only the failed S0 unit after one bounded direction/settings repair.",
+    "RECAST": "Replace only the failed character audition binding and rerun that character plus affected S0 pair test.",
+    "STOP": "Do not render full E01 and do not claim CAST LOCK."
+  },
+  "next_gate": "FINALIST_VERIFICATION_SECOND_TAKES_PLUS_ELENA_JULIAN_2_PLUS_CATE_IDENTITY",
+  "cast_lock": false,
+  "full_e01_render_allowed": false
 }
