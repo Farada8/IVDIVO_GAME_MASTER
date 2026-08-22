@@ -1,0 +1,39 @@
+{
+  "schema_version": "room917.room_bed_machine_qc_summary/3.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "generator_commit": "366b52b8a2a38227f6f094e05306d23bb17a8c2c",
+  "source_receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_ROOM_BED_SYNTHETIC_CANARY_RECEIPT_v2.json",
+  "exact_reproduction": {"matches": 2, "total": 2, "status": "PASS"},
+  "machine_qc_status": "PASS",
+  "assets": {
+    "A01_GREYHAVEN_LOBBY_30S_LOOP_CANDIDATE_SYNTH02": {
+      "sha256": "9ca06999c727571f18ac8003a61f69a1d18bb46072713f45c7aab3deb86828b3",
+      "loop_seam": "PASS",
+      "false_clue_proxy": "PASS",
+      "mono": "PASS",
+      "phone_proxy": "PASS"
+    },
+    "A02_SWITCHBOARD_ALCOVE_30S_LOOP_CANDIDATE_SYNTH02": {
+      "sha256": "f977e467ba9dd915a46956523045b87ffd0f40063a22630d9de84728b327edc0",
+      "loop_seam": "PASS",
+      "false_clue_proxy": "PASS",
+      "mono": "PASS",
+      "phone_proxy": "PASS"
+    }
+  },
+  "human_gate": {
+    "type": "BLIND_ROLE_ASSIGNMENT",
+    "purpose": "Listener must distinguish GREYHAVEN_LOBBY from SWITCHBOARD_ALCOVE without labels, then pass seam, false-clue, mono and phone listening checks.",
+    "status": "PENDING"
+  },
+  "drive": {
+    "factory_folder_id": "1KNRfv-er5ceOVh9keYhm2ieiVleTPrzf",
+    "role_blind_package_id": "1U8zm4bpeFqkx_JM28wB3aiGFmc3C55h1",
+    "factory_admin_id": "1bKP_6DmxwyMJZSEcX9TyL_cC1sAIDlUm",
+    "role_blind_pipeline_id": "1vGbjHuZ0vkJl8DE32PMSvKQzQAszl36q"
+  },
+  "hard_law": "MACHINE_QC_PASS_AND_ROLE_BLIND_PASS_DO_NOT_AUTHORIZE_D003_PATCH_UNTIL IDENTITY_GATE_PASS AND EXACT_INTERVAL_OR_MASTER_RECOVERY_PASS"
+}
