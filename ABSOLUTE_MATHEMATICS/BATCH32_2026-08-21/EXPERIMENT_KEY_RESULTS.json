@@ -1,0 +1,57 @@
+{
+  "ising_regime": {
+    "b4": {
+      "K1_test_r2": 0.2497,
+      "K2_test_r2": 0.2750,
+      "K3_test_r2": 0.2814,
+      "K2_best_BIC_vs_K1_K3": true,
+      "K2_persistence": 0.9875,
+      "K2_iid_same_label_chance": 0.5918,
+      "K1_residual_acf2": 0.120,
+      "K2_residual_acf2": 0.125,
+      "K3_residual_acf2": 0.108
+    },
+    "b8": {
+      "K1_test_r2": 0.1602,
+      "K2_test_r2": 0.1962,
+      "K3_test_r2": 0.2030,
+      "K2_best_BIC_vs_K1_K3": true,
+      "K2_persistence": 0.9875,
+      "K2_iid_same_label_chance": 0.6023,
+      "K1_residual_acf2": 0.274,
+      "K2_residual_acf2": 0.274,
+      "K3_residual_acf2": 0.240
+    },
+    "permutation_null_K2_b4": {
+      "real_test_r2": 0.27498,
+      "null_mean_r2": 0.24924,
+      "null_max_r2": 0.25335,
+      "empirical_p": 0.01961
+    },
+    "cross_scale": {
+      "b4_classifier_on_b8_test_r2": 0.19832,
+      "b8_classifier_on_b4_test_r2": 0.27418
+    }
+  },
+  "markov_controls": {
+    "exact_6_to_3_lumpability_defect": 0.0,
+    "perturbed_same_compression_defect": 0.05,
+    "exact_nested_8_to_4_defect": 0.0,
+    "exact_nested_4_to_2_defect": 0.0,
+    "direct_8_to_2_defect": 0.0,
+    "compression_memory_examples": {
+      "increase": [0.0, 0.05],
+      "unchanged": [0.0, 0.0],
+      "decrease": [0.10, 0.0]
+    }
+  },
+  "cellular_automaton_rule90": {
+    "trials": 500,
+    "exact_failures": 0,
+    "identity": "B(F^2(x)) = F(B(x)) for even-site decimation B"
+  },
+  "symbolic_mod3": {
+    "prefixes": 61,
+    "future_equivalence_classes": 3
+  }
+}
