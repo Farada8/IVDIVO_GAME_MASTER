@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "project": "THE WIFE AT HIS WEDDING",
+  "project_id": "D01",
+  "date": "2026-08-22",
+  "authority_effect": "WORKING_FRONTIER_ONLY_NOT_FOUNDER_LOCK",
+  "episode": {
+    "id": "E101",
+    "title": "THE PERSON WITH NO ORIGINAL NUMBER",
+    "status": "WORKING_COMPLETE",
+    "runtime_spoken_words": 1182,
+    "runtime_gate": "PASS_1100_1550",
+    "red_team": {"fatal":0,"major":0,"medium":3},
+    "github_script": "WAVE3_EXECUTION_E101_2026-08-22/01_E101_THE_PERSON_WITH_NO_ORIGINAL_NUMBER_v1.0.md",
+    "github_gate": "WAVE3_EXECUTION_E101_2026-08-22/02_E101_CIVIL_STATUS_ORDINARY_LIFE_PROPORTIONALITY_GATE_v1.0.md",
+    "github_script_commit": "1d3350f2b8936b947c69fa732339ffc86904d6af",
+    "github_gate_commit": "539c344e148ed6416aa2bb9a13026ffddbb586b7",
+    "drive_folder_id": "1r_KD3tO195HQSjhz6ACJFo11djXf0y7l",
+    "drive_script_id": "1kINQDyL2uWPv7LgGxqpDEgNg_hb3eR__Mxq_6n2JDg4",
+    "drive_script_revision": "AIroW347hCRwZEbWsARg8ae44HBRUptHN_YGteRpeSNHafOdY9mu4cs6lWfVSM6gqC398T2lKO8t6sjc31x69YsXMz0ku4KbUiKa1W1U4K0",
+    "drive_gate_id": "1jIsicllloAGMR16st9Lc40ZDKCR1N_ZwcLhZHTMjAzA",
+    "drive_gate_revision": "AIroW36bAnFmgg-2K4HORk3dy70n2yWRxzzYucDRFpd3db4GJc4iWwOHU0fBpU0GqP5XiQZul-ZSD6V8a0KXjR60VljyO67luba91XqGkzs"
+  },
+  "story_turn": "HISTORICAL_RECONSTRUCTION_CLEARER_THAN_USABLE_PRESENT_CIVIL_IDENTITY",
+  "institution_fairness": "RECORD_CONSISTENCY_REVIEW_NOT_FRAUD_FINDING",
+  "proportional_stakes": ["SECOND_SIGNATORY","REVIEW_DELAY","TWO_UNBILLED_HOURS","TEMPORARY_FINAL_SIGNATURE_RESTRICTION","POSSIBLE_FUTURE_BANK_MANUAL_REVIEW"],
+  "evelyn_agency_repair": "REFUSES_HERITAGE_BLANKET_ACCESS_TO_HER_CEREMONY_PACKET_FOR_HER_OWN_RECORD_BOUNDARY",
+  "legal_boundary": "REMEDY_OPTIONS_ARE_DRAMATIZED_POSSIBILITIES_NOT_JURISDICTION_SPECIFIC_LAW",
+  "external_gates": {"human_signal":"NOT_RUN","legal_specialist":"NOT_RUN","real_listener":"NOT_RUN","market_validation":"NOT_CLAIMED"},
+  "episode_frontier": "E101",
+  "highest_unblocked_obligation": "FRESH_READ_WAVE3_QUEUE_AND_BRANCH_THEN_E102_ORDINARY_LIFE_FRICTION",
+  "next_episode_direction": {
+    "episode":"E102",
+    "must":"STRONGER_ORDINARY_LIFE_CENTER",
+    "must_not":"NEW_SECRET_ARCHIVE_OR_CONSPIRACY_REVEAL",
+    "stakes":"PROPORTIONATE_AND_CONCRETE",
+    "evelyn":"RETAIN_INDEPENDENT_OBJECTIVE",
+    "mara":"PRESENT_IDENTITY_PROBLEM_ACTS_ON_EXISTING_LIFE_NOT_ONLY_HISTORICAL_DISCOVERY"
+  },
+  "next_action":"FRESHNESS_GATE_PLUS_EXACT_WAVE3_QUEUE_READ_BEFORE_E102"
+}
