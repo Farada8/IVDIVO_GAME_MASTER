@@ -1,0 +1,71 @@
+{
+  "schema_version": "ivdivo.business.cycle5.public_artifact_canaries/1.0",
+  "date": "2026-08-22",
+  "status": "WORKING_30_OF_32_CI_DRIVE_MERGE_PENDING",
+  "branch_base_main_sha": "e41408aec56839585bfcff9a0fbfb0224cada25d",
+  "branch": "business-engineering/cycle5-public-artifact-canaries-32x64-2026-08-22",
+  "canonical_drive_folder_id": "1mZZVSiYPvON-F_yAYeyqfQ_3EEPQaSOI",
+  "orphan_empty_drive_folders": [
+    "1BcgDRVluKjpU86EUZICZkj8VamWlcIo5",
+    "1WQBjFu6wIYcrxs3QnPOeUHtZnMVkNwDf"
+  ],
+  "library": {
+    "raw_private_drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "physical_raw_files": 78,
+    "valid_files": 68,
+    "unique_valid_byte_hashes": 58,
+    "new_file_library_reference_only": {
+      "title": "international-human-resource-management-5nbsped-1398603554-9781398603554_compress.pdf",
+      "file_library_ref": "file_0000000043d881f4b8cc4b7670fa7464",
+      "raw_drive_id": null,
+      "byte_hash": null,
+      "status": "FILE_LIBRARY_REFERENCE_ONLY"
+    }
+  },
+  "wip": {
+    "primary": "OP01",
+    "pilots": ["OP03", "OP19"],
+    "limit": 3
+  },
+  "new_runtime": [
+    "engine/public_artifact_engine.py"
+  ],
+  "new_module_namespace": "B113-B128",
+  "new_contract_namespace": "C153-C176",
+  "new_protocol_namespace": "P11-P16",
+  "run32": {
+    "source_prompts": "Cycle4 N33-N64",
+    "executed_or_dispositioned": 30,
+    "pending_closure": 2,
+    "total": 32,
+    "pending": ["N62_REGRESSION_READBACK", "N63_CROSS_STORE_PERSISTENCE_MERGE"]
+  },
+  "next_prompt_bank": {
+    "cycle": 6,
+    "count": 64,
+    "status": "DESIGNED_DEPENDENCY_ORDERED_NOT_BLINDLY_AUTHORIZED"
+  },
+  "evidence_ceiling": {
+    "public_max": "E2+",
+    "real_buyer_interaction_receipts": 0,
+    "real_payment_deposit_po_receipts": 0,
+    "validated_wtp": null,
+    "measured_unit_economics": null,
+    "repeat_paid_buyers": 0,
+    "outreach_sent": 0,
+    "market_winner_claimed": false
+  },
+  "exact_next_internal_dependency": "PR_TRIGGERED_CI_THEN_FRESH_MAIN_MERGE_REF_THEN_DRIVE_CONTENT_READBACK",
+  "exact_next_external_dependency_after_closure": "FOUNDER_AUTHORIZED_REAL_BUYER_REVIEW_OF_ONE_HASH_BOUND_CANARY",
+  "forbidden": [
+    "PUBLIC_EVIDENCE_PROMOTED_TO_E3_OR_E4",
+    "SYNTHETIC_BUYER_OR_MONEY_PROOF",
+    "RAW_COPYRIGHTED_BOOK_IN_PUBLIC_GITHUB",
+    "FILE_LIBRARY_REFERENCE_TREATED_AS_RAW_DURABLE",
+    "STALE_TENDER_PRESENTED_AS_CURRENT_OPEN",
+    "AUTO_OUTREACH",
+    "AUTO_PRICE_VALIDATION",
+    "AUTO_SELF_IMPROVEMENT_AUTHORITY",
+    "WIP_ABOVE_THREE"
+  ]
+}
