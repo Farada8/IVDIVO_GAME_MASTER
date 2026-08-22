@@ -1,0 +1,27 @@
+{
+  "schema_version":"1.0",
+  "project":"B03_SMITH_THE_EMPTY_RESCUE",
+  "block":"CH19-CH24_ESCALATION_PROSE",
+  "status":"PASS_FATAL0_MAJOR0_CLIMAX_AUTHORIZED",
+  "drive_block_gate_id":"1EZ0MaNRWiiXwcEznNV6fMoVkIfXPohkAOxxDSPbUQho",
+  "chapters":{
+    "CH19":{"title":"THE REAL STORM","drive":"1ngQwNpSTTawUxz7DkWMiYOdM4DBRL49QpCT_HqOMfXw","gate":"1msrexw4D6Vu_hViQDHkdcm8J7emER6KUgMAaaNSAG24"},
+    "CH20":{"title":"BLACKOUT","drive":"1uLnH05DuTV0Tb8QQflMwyE2VhmrROsTvgsJzCSMDNm4","gate":"1EliQrtxoF6I3mFGO-rXy8csdZzIH405lVy6xVjy5by4"},
+    "CH21":{"title":"OBJECTIVES, NOT SCRIPTS","drive":"1N6i68Kp-XsNZaoA3IdMOrfpp-Hlzy_Ztj18qVSiZTHI","gate":"1f_DcJtWkn-eEObFhVO56fe_yAn36V3wmyYoxi42C_I0"},
+    "CH22":{"title":"FIRST DISTRIBUTED RUN","drive":"1gMUVWvxZaDXLl6-3PJ3dfznq-WIBBmBsi2i5Aq4W_Og","gate":"1v41YLd_TPDILAzPI5J4eJjqkqvUBLxW8lUof0z6uB7E"},
+    "CH23":{"title":"FAILOVER","drive":"1hzUC2Hpq8p26YK_YTRzmBlRpjdshvAOBnrWZj2_4LmU","gate":"1ghd8ExmT5Y4FA7v7cxG07XREstcyyZTeRNu-NzRN5GU"},
+    "CH24":{"title":"GO TO THE RELAY","drive":"1r4kteDwkxb5LnQ5pPj2zTtrexCMN-gdzdq_dl6FPCzA","gate":"1lhvTTpYGUDqtS9xwM326cstTrzaXn5vaIlcqaEvr1S0"}
+  },
+  "causal_chain":"storm/resource split -> blackout trade demonstrated -> evidence/response lanes + objective control -> west route diverges from precursor east route with real time/exposure cost -> normal failover restores useful services and re-centralizes graph while source detail rises -> hard hydro withdrawal + failed remote management -> Eva/Luka physical relay plan + Jana delegation + Smith chooses relay trip",
+  "red_team":{"fatal":0,"blocking_major":0},
+  "locked_boundaries":[
+    "Taren has no Earth operational authority",
+    "Eva Kralj owns network engineering plan; Luka Marin owns physical relay interface verification/work; Smith owns OES decision/evidence only",
+    "Andrej/Tina injury has not happened before CH25",
+    "relay segmentation has not happened before CH26",
+    "precursor ontology remains unknown",
+    "specificity/topology relation remains correlation with ordinary shared-path compromise alternative",
+    "local voice/hazard/resource updates are minimum service set before segmentation"
+  ],
+  "climax_next":"P65-P72 then CH25 CASCADE / CH26 THE RELAY / CH27 THE BEST WARNING YET / CH28 THE THIRD ROUTE / CH29 WHAT WE DID WITH THE WARNING"
+}
