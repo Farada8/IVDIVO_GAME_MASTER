@@ -1,0 +1,40 @@
+{
+  "schema": "ivdivo.business.p225_document_coordinate_discovery/1.0",
+  "date": "2026-08-22",
+  "case_id": "PROC-BALLYBUNION-8872468",
+  "resource_id": "8872468",
+  "status": "DOCUMENT_COORDINATE_DISCOVERED_PACK_NOT_YET_ACQUIRED",
+  "authority_effect": "EVIDENCE_ROUTING_ONLY",
+  "official_documents_url": "https://www.etenders.gov.ie/epps/cft/listContractDocuments.do?resourceId=8872468",
+  "official_workspace_url": "https://www.etenders.gov.ie/epps/cft/prepareViewCfTWS.do?resourceId=8872468",
+  "official_participation_url": "https://www.etenders.gov.ie/epps/cft/viewTenders.do?resourceId=8872468",
+  "documents_coordinate_discovered": true,
+  "attachment_inventory_read_back": false,
+  "document_bytes_acquired": false,
+  "p225_executed": false,
+  "target_pack_acquired": false,
+  "root_a": "TARGET_PACK_NOT_ACQUIRED",
+  "root_b": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET",
+  "parent_backlog": {
+    "range": "P225-P288",
+    "count": 64,
+    "executed": 17,
+    "remaining": 47
+  },
+  "resume_route": "PROTECT_NO_CHANGE",
+  "proof_frontier": {
+    "public_derived_ceiling": "E2_PLUS",
+    "artifact_plane": "PA3",
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "E4": false
+  },
+  "laws": [
+    "DOCUMENT_COORDINATE_DISCOVERED_NEQ_TARGET_PACK_ACQUIRED",
+    "DOCUMENTS_URL_KNOWN_NEQ_ATTACHMENT_INVENTORY_READ_BACK",
+    "DOCUMENTS_URL_KNOWN_NEQ_DOCUMENT_BYTES_ACQUIRED",
+    "LINK_DISCOVERY_NEQ_P225_EXECUTION"
+  ],
+  "next_action": "AUTHENTICATED_DOCUMENT_CONTENT_ACQUISITION_THEN_INPUT_VALIDATOR"
+}
