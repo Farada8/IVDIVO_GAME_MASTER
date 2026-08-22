@@ -1,0 +1,94 @@
+{
+  "schema": "IVDIVO_SELF_IMPROVEMENT_CYCLE10R_STATE_v1",
+  "date": "2026-08-22",
+  "status": "RUN32_COMPLETE_RUNTIME_COMMITTED_CI_DRIVE_CLOSURE_PENDING",
+  "authority": {
+    "global_self_improvement": "V2_VERIFIED_CURRENT",
+    "cycle10r_authority_effect": "NONE_AUTOMATIC",
+    "new_global_si_id": null,
+    "branch_base_main": "d919a680dea76ce74c6fa99113a1fe36d85f1e81"
+  },
+  "run32": {
+    "executed_or_dispositioned": 32,
+    "range": "C10R-R01..R32",
+    "fabricated_events": 0,
+    "global_promotions": 0
+  },
+  "runtime": {
+    "module": "engine/recovery_persistence_engine.py",
+    "canaries_defined": 32,
+    "ci_status": "PENDING_PR_MERGE_REF"
+  },
+  "si0014": {
+    "status": "READY_FOR_PILOT",
+    "genuine_recovery_events": 1,
+    "required_events": 3,
+    "distinct_projects": 2,
+    "required_projects": 2,
+    "false_resume_count": 0,
+    "promotion_authorized": false,
+    "next_gate": "TWO_ADDITIONAL_GENUINE_INTERRUPTION_RECOVERY_EVENTS_WITH_ZERO_FALSE_RESUME"
+  },
+  "si0015": {
+    "status": "READY_FOR_PILOT",
+    "real_project_signal": "BUSINESS_ENGINEERING_RECOVERY_CAUGHT_MAIN_ADVANCEMENT_AND_REBASE",
+    "promotion_authorized": false,
+    "remaining": "ADDITIONAL_REAL_PILOT_HEALTHY_CONTROL_FALSE_POSITIVE_REVIEW"
+  },
+  "v3": {
+    "status": "CANDIDATE_HOLD",
+    "global_promotion": false,
+    "rule": "MECHANISM_BY_MECHANISM_TRIBUNAL_ONLY"
+  },
+  "business_recovery": {
+    "project": "BUSINESS_ENGINEERING",
+    "github_latest_branch_cut": "d919a680dea76ce74c6fa99113a1fe36d85f1e81",
+    "drive_control_doc": "154NhUZFLsXGVE6l6oEubeb6fyctK8i7arD8z8CDiIQY",
+    "latest_merged_frontier": "P97_P128_COMPLETE_NEXT_P129_P192",
+    "target": "8872468",
+    "decision_state": "HOLD_INSUFFICIENT_AUTHORITY",
+    "false_resume": false,
+    "counts_as_new_event": false,
+    "counts_as_distinct_project": true
+  },
+  "library": {
+    "systems_raw_drive": "1F_21NJ9YXB63ctOS5KPrkeDlcYKkUTVv",
+    "systems_physical_entries_observed": 35,
+    "systems_unique_valid_works": null,
+    "business_raw_drive": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "business_counts": {
+      "physical": 78,
+      "valid": 68,
+      "unique_valid_byte_hashes": 58,
+      "quarantined": 5,
+      "exact_duplicate_groups": 8
+    },
+    "wave2_derived_ingest_drive": "1RdYaeSJtim_Bvu6U57QpMjJzIvkuOQ0-",
+    "cycle32d_file_library_status": "SUPPORTING_CANDIDATE_REFERENCE_ONLY",
+    "raw_copyrighted_git_copies": 0
+  },
+  "parallel": {
+    "cycle9": "MERGED_EVIDENCE_LAYER",
+    "parallel_cycle10_decision_evidence_yield": "SUPPORTING_NOT_AUTHORITY",
+    "cycle32d_pr206": "OPEN_DRAFT_SALVAGE_UNIQUE_ONLY",
+    "observability_pr211": "OPEN_DRAFT_RECONCILE_BEFORE_ANY_MERGE",
+    "saga100_pr147_si0016": "ACTIVE_RESERVATION_BLOCKS_DUPLICATE_ID",
+    "business_pr209": "CLOSED_SUPERSEDED_PROVENANCE_ONLY"
+  },
+  "drive_cycle10r": {
+    "root": "19BbmeqbZpQWfhvMgymblOb1GEGzCOho-",
+    "status": "FOLDERS_CREATED_DOCUMENT_PERSISTENCE_PENDING"
+  },
+  "external_evidence": {
+    "human": null,
+    "provider": null,
+    "market": null,
+    "economics": null
+  },
+  "next64": {
+    "count": 64,
+    "file": "06_NEXT64_CYCLE11.md",
+    "auto_authorized": false
+  },
+  "production_return_required": true
+}
