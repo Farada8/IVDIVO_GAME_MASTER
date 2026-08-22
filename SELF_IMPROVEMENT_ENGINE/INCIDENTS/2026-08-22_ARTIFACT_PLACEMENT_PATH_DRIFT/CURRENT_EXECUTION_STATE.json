@@ -5,7 +5,7 @@
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "RECOVERY_HARDENING_PENDING_CI",
+  "candidate_status": "RECOVERY_HARDENING_VERIFIED_PENDING_MERGE",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "runtime": {
@@ -36,7 +36,15 @@
     "atomic_completion_defect": "previous completion gate could persist DONE/BLOCKED before receipt in a separate write",
     "atomic_completion_fix_pr": 409,
     "atomic_completion_fix_branch": "self-improvement/artifact-placement-atomic-recovery-20260822",
-    "reopen_recovery_regression": "PENDING_EXACT_HEAD_CI"
+    "atomic_completion_validation_head": "53bbfbb94bcb14492a967ff8a961fe61cba4be6b",
+    "artifact_placement_runtime_ci_run": 32569720915,
+    "artifact_placement_runtime_ci": "PASS",
+    "current_project_state_regression": "PASS",
+    "current_local_memory_regression": "PASS",
+    "current_memory_contract_hardening_regression": "PASS",
+    "current_provider_abstraction_regression": "PASS",
+    "reopen_recovery_regression": "PASS",
+    "all_related_workflows": "10/10 PASS"
   },
   "required_sequence": [
     "CREATE_OR_IMPORT",
@@ -53,10 +61,10 @@
   "promotion_gate": {
     "status": "HOLD",
     "completed_requirements": [
-      "provider adapters construct receipts from Google Drive and GitHub provider observations with normalization and fail-closed regression coverage"
+      "provider adapters construct receipts from Google Drive and GitHub provider observations with normalization and fail-closed regression coverage",
+      "atomic status+receipt persistence and restart/reopen regression passed against current ProjectState, Local Memory, Memory Contract Hardening and Provider Abstraction compatibility suites"
     ],
     "remaining_requirements": [
-      "exact-head regression proving atomic status+receipt persistence and successful reopen against current ProjectState persistence/recovery contract",
       "observe future real traffic where the installed placement/resource-type guard catches a new real persistence failure before any false DONE claim"
     ]
   }
