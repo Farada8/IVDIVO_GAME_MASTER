@@ -11,6 +11,7 @@ from books import BOOK_STAGES, BookProductionCore, ContinuityChecker
 from business import BusinessQuoteService
 from core.bootstrap import bootstrap
 from ingestion import FileIngestionService
+from knowledge import PersonalKnowledgeSearch
 from memory.store import MemoryStore
 from projects.artifact_completion import complete_task_with_artifact_gate
 from projects.manager import ProjectStateManager
@@ -29,17 +30,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     project = sub.add_parser("project", help="Project state operations")
     project_sub = project.add_subparsers(dest="project_command", required=True)
-
     create = project_sub.add_parser("create", help="Create a persisted project")
     create.add_argument("project_id")
     create.add_argument("--name")
-
     status = project_sub.add_parser("status", help="Read project state")
     status.add_argument("project_id")
-
     next_task = project_sub.add_parser("next", help="Return the next actionable task")
     next_task.add_argument("project_id")
-
     complete_artifact = project_sub.add_parser(
         "complete-artifact",
         help="Complete an artifact-producing task using a provider-backed placement receipt JSON",
@@ -50,7 +47,6 @@ def build_parser() -> argparse.ArgumentParser:
 
     memory = sub.add_parser("memory", help="Auditable local memory operations")
     memory_sub = memory.add_subparsers(dest="memory_command", required=True)
-
     put = memory_sub.add_parser("put", help="Persist a memory record")
     put.add_argument("content")
     put.add_argument("--kind", default="NOTE")
@@ -60,14 +56,12 @@ def build_parser() -> argparse.ArgumentParser:
     put.add_argument("--project-id")
     put.add_argument("--source-id")
     put.add_argument("--confidence", type=float)
-
     search = memory_sub.add_parser("search", help="Search local memory")
     search.add_argument("query")
     search.add_argument("--kind")
     search.add_argument("--project-id")
     search.add_argument("--include-invalid", action="store_true")
     search.add_argument("--limit", type=int, default=20)
-
     update = memory_sub.add_parser("update", help="Create a new memory version")
     update.add_argument("record_id")
     update.add_argument("content")
@@ -76,17 +70,13 @@ def build_parser() -> argparse.ArgumentParser:
     update.add_argument("--project-id")
     update.add_argument("--source-id")
     update.add_argument("--confidence", type=float)
-
     invalidate = memory_sub.add_parser("invalidate", help="Invalidate a memory record")
     invalidate.add_argument("record_id")
     invalidate.add_argument("--reason", required=True)
-
     trace = memory_sub.add_parser("trace", help="Show a memory record audit-event trail")
     trace.add_argument("record_id")
-
     versions = memory_sub.add_parser("versions", help="Show immutable memory versions")
     versions.add_argument("record_id")
-
     source_trace = memory_sub.add_parser(
         "source-trace", help="Trace a memory record through source_id provenance"
     )
@@ -95,9 +85,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     provider = sub.add_parser("provider", help="AI provider abstraction operations")
     provider_sub = provider.add_subparsers(dest="provider_command", required=True)
-
     provider_sub.add_parser("list", help="List provider configuration without exposing secrets")
-
     provider_run = provider_sub.add_parser("run", help="Run one provider request")
     provider_run.add_argument("provider_name")
     provider_run.add_argument("prompt")
@@ -152,7 +140,6 @@ def build_parser() -> argparse.ArgumentParser:
     )
     business_quote.add_argument("project_id")
     business_quote.add_argument("request_json", help="Path to quote request JSON")
-
     business_research = business_sub.add_parser(
         "research", help="Create a provenance-first persisted research packet from supplied evidence"
     )
@@ -167,20 +154,24 @@ def build_parser() -> argparse.ArgumentParser:
     ingest_file.add_argument("project_id")
     ingest_file.add_argument("input_path")
 
+    ask = sub.add_parser(
+        "ask",
+        help="Search stored personal knowledge with source separation and optional project scope",
+    )
+    ask.add_argument("query")
+    ask.add_argument("--project", dest="project_id")
+    ask.add_argument("--limit", type=int, default=20)
+
     book = sub.add_parser("book", help="Book production state operations")
     book_sub = book.add_subparsers(dest="book_command", required=True)
-
     book_init = book_sub.add_parser("init", help="Initialize the persisted PL-08 book structure")
     book_init.add_argument("project_id")
     book_init.add_argument("--title")
-
     book_status = book_sub.add_parser("status", help="Read the persisted book production state")
     book_status.add_argument("project_id")
-
     book_advance = book_sub.add_parser("advance", help="Advance exactly one production stage")
     book_advance.add_argument("project_id")
     book_advance.add_argument("--to", dest="to_stage", choices=BOOK_STAGES)
-
     book_check = book_sub.add_parser(
         "check-continuity",
         help="Run the PL-09 deterministic checker over structured continuity evidence",
@@ -192,7 +183,6 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Return non-zero exit status when FATAL/MAJOR issues are detected.",
     )
-
     book_continuity = book_sub.add_parser(
         "continuity", help="Record the explicit continuity gate at CONTINUITY stage"
     )
@@ -378,6 +368,12 @@ def main() -> int:
             result = FileIngestionService(home).ingest(args.project_id, Path(args.input_path))
         else:
             raise RuntimeError("unsupported ingest command")
+    elif args.command == "ask":
+        result = PersonalKnowledgeSearch(home).ask(
+            args.query,
+            project_id=args.project_id,
+            limit=args.limit,
+        )
     elif args.command == "book":
         core = BookProductionCore(home)
         if args.book_command == "init":
