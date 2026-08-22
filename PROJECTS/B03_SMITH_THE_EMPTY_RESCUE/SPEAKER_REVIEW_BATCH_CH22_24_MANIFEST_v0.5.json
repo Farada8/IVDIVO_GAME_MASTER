@@ -1,0 +1,33 @@
+{
+  "project": "B03 — THE EMPTY RESCUE",
+  "artifact": "B03_SPEAKER_REVIEW_BATCH_CH22_24_MANIFEST_v0.5",
+  "status": "PASS_BATCH_AFTER_CH24_SOURCE_QUARANTINE_REPAIR_FULL_SPEAKER_GATE_OPEN",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "story_text_mutation": false,
+  "source_segmentation_package_drive_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
+  "source_segmentation_package_sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
+  "actual_speech_denominator_full_book": 3714,
+  "chapters": {
+    "CH22": {"actual_speech": 163, "assigned": 163, "unknown": 0, "drive_id": "1kZJy91dPNU7dakbXEoYyVLo6mHCnvgex", "authority_status": "UNCHANGED_FROM_V0_4"},
+    "CH23": {"actual_speech": 138, "assigned": 138, "unknown": 0, "drive_id": "1P-UZtTun34pGfK1hpkI0edf-mySB7x4j", "authority_status": "UNCHANGED_FROM_V0_4"},
+    "CH24": {"actual_speech": 207, "assigned": 207, "unknown": 0, "drive_id": "1hzNIm7VyLiiuip2gDiZS4InvEPpzGKqx", "map_sha256": "8c10023044771e420ae0fd59e9f2188a3696b449428a296a18ec66aa37c7c04e", "authority_status": "V0_5_SOURCE_BOUNDARY_REPAIRED"}
+  },
+  "batch": {"actual_speech": 508, "assigned": 508, "unknown": 0, "exact_text_changes": 0, "voice_ids_assigned": 0},
+  "repair": {
+    "class": "UNKNOWN_SOURCE_IDENTITY_MERGE",
+    "replaced_speaker_id": "PRECURSOR_CALLER_CH24_HELD_SOURCE",
+    "packet_1": {"speaker_id": "PRECURSOR_SOURCE_CH24_PACKET_1", "segments": ["B03_CH24_S0152", "B03_CH24_S0154"]},
+    "packet_2": {"speaker_id": "PRECURSOR_SOURCE_CH24_PACKET_2", "segments": ["B03_CH24_S0376", "B03_CH24_S0378", "B03_CH24_S0380"]},
+    "identity_relation": "UNKNOWN",
+    "story_text_changes": 0
+  },
+  "reconciled_cumulative_ch01_24": {"actual_speech": 2898, "assigned": 2898, "unknown": 0, "not_yet_context_reviewed": 816},
+  "drive_artifacts": {
+    "ch24_corrected_map": "1hzNIm7VyLiiuip2gDiZS4InvEPpzGKqx",
+    "repair_gate": "1tl4xYMLOQmnJPT-PIAzDOMNFwrrzpu9L",
+    "manifest_v0_5": "1eGz0wHrkl7owFgXlSlmHec88-5_Fnsth"
+  },
+  "next_exact_action_at_batch_time": "CH25-27_CONTEXTUAL_SPEAKER_REVIEW",
+  "full_speaker_gate": false,
+  "provider_dispatch_allowed": false
+}
