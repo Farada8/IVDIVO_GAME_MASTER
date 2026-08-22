@@ -1,8 +1,8 @@
 # EARLY-WAVE MONETIZATION BRIDGE — OPPORTUNITY × MONEY MECHANISM
 
 **Date:** 2026-08-22  
-**Status:** INTERNAL MONETIZATION ENGINEERING / NO SALES PROOF  
-**Inputs:** current Early-Wave WIP (`OW-01`, `CF-01`, `CF-03`) + Money Mechanisms comparison laboratory + completed Agent Commerce `P-EW01/P-EW02`.
+**Status:** P-EW05 INTERNAL DECISION COMPLETE / ALL WIP3 M1 / NO SALES PROOF  
+**Inputs:** Early-Wave WIP (`OW-01`, `CF-01`, `CF-03`) + merged P-EW01/P-EW02 Agent Commerce + merged P-EW03 Article 50 + merged P-EW04 DPP.
 
 ## Purpose
 Keep two questions separate:
@@ -21,7 +21,7 @@ Do not skip stages because software is easy to build.
 - **M3 — IMPLEMENTATION PROJECT VALIDATED:** at least one paid implementation; does not prove recurring revenue.
 - **M4 — RECURRING MONITORING VALIDATED:** observed repeat need plus at least two paid recurring/renewal cycles; does not prove software market.
 - **M5 — SOFTWARE CANDIDATE:** >=3 independent customer contexts repeatedly require materially the same workflow; not SaaS-proven.
-- **M6 — SOFTWARE BUSINESS VALIDATION:** requires paid usage, retention, support, acquisition and churn/renewal evidence; outside current internal scope.
+- **M6 — SOFTWARE BUSINESS VALIDATION:** paid usage, retention, support, acquisition and churn/renewal evidence.
 
 ## Twelve monetization contracts
 `MMB-01 TECHNICAL_ARTIFACT != WTP`  
@@ -37,81 +37,90 @@ Do not skip stages because software is easy to build.
 `MMB-11 PLATFORM_READINESS != PLATFORM_APPROVAL`  
 `MMB-12 INTERNAL_ENGINEERING != AUTHORIZATION_FOR_OUTREACH_SPEND_OR_CONTRACTING`
 
-# WIP-3 MONETIZATION ROUTING
+# P-EW05 RECONCILIATION
 
-## OW-01 — Agentic Commerce Merchant Readiness
-### Evidence now
-- P-EW01 scanner exists and passed regression.
-- P-EW02 evaluated 10 frozen public merchants.
-- 10/10 outputs were merchant-specific/evidence-bound.
-- generic-advice outputs = 0.
-- false promotions = 0.
-- deterministic public protocol gaps are separated from unobservable internal state.
-- buyer demand/WTP/transaction/profitability remain unproven.
+## ALL THREE WIP LANES ARE NOW M1
 
-### Current route
-`M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN`
+| Candidate | Technical artifact | Non-trivial delta | Buyer role plausible | Paid diagnostic | Route |
+|---|---:|---:|---:|---:|---|
+| OW-01 Agent Commerce | YES | YES — 10-fixture scanner discrimination, 0 false promotions / 0 generic advice | YES, hypothesis | 0 | M1 |
+| CF-01 Article 50 | YES | YES — deterministic obligation/exception/control/evidence routing, 14 canaries | YES, hypothesis | 0 | M1 |
+| CF-03 DPP | YES | YES — machine-readable data-gap chase + correction/revalidation delta | YES, hypothesis | 0 | M1 |
 
-### M1 offer specification — Agent Commerce Readiness Diagnostic
-**Potential buyer roles:** ecommerce owner/operator, head of ecommerce, ecommerce engineering/integration lead, ecommerce infrastructure agency. Hypotheses only.
+**Commercial winner:** `NONE PROVEN`.
 
-**Inputs:** merchant domain; voluntarily supplied platform/integration inventory; public UCP/profile evidence; buyer-supplied product-feed sample; checkout/fulfilment/returns policy metadata.
+**M2 or higher:** `0`.
 
-**Deliverables:**
-1. product/feed completeness report;
-2. public agent-discovery/UCP evidence report;
-3. PASS / FAIL / UNKNOWN findings by rule;
-4. deterministic blockers separated from internal-state UNKNOWNs;
-5. remediation backlog by owner/system;
-6. protocol/version assumptions;
-7. post-change regression checklist.
+**Strategic PRIMARY:** `OW-01 Agentic Commerce Merchant Readiness`, preserved because of Founder-fit + early-wave portfolio logic, **not** because WTP has been observed.
 
-**Exclusions:** platform approval; payment/security certification; legal opinion; transaction testing without separate authorization; inference of private feed/backend state.
+## OW-01 — Agent Commerce Readiness Diagnostic
+Current route: `M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN`.
 
-M2/M3 require real paid evidence. Recurring monitoring is only a hypothesis until repeated paid need is observed. Software candidacy requires materially the same workflow across >=3 independent customer contexts.
+Inputs may include merchant domain, voluntarily supplied platform/integration inventory, buyer-supplied product-feed sample, public UCP/profile evidence, and checkout/fulfilment/returns metadata.
 
-## CF-01 — AI Act Article 50 Technical Transparency Pack
-Current route: `M0_INTERNAL_PROOF_ARTIFACT_REQUIRED`.
+Deliverables: feed completeness, public agent-discovery/UCP evidence, PASS/FAIL/UNKNOWN findings, deterministic blockers vs internal-state unknowns, remediation backlog, protocol assumptions, regression checklist.
 
-P-EW03 must establish a complete sample implementation artifact before any M1 promotion.
+Exclusions: platform approval, payment/security certification, legal opinion, transaction testing without authorization, inference of private state without evidence.
 
-Future M1 hypothesis: `AI Transparency Technical Inventory & Gap Pack`, potentially including system/content inventory, disclosure/label map, technical provenance/marking workflow, chatbot disclosure UX checks, evidence folder, regression checklist, and explicit `TECHNICAL_CHANGE / LEGAL_SCOPE_UNKNOWN / NOT_APPLICABLE` separation.
+## CF-01 — AI Article 50 Technical Transparency Diagnostic
+Current route: `M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN`.
 
-Boundary: no legal determination that a specific system/entity is in scope; no legal opinion; no certification.
+P-EW03 proved an internal technical artifact: role/obligation/exception/control/evidence routing with provider/deployer separation, machine-readable marking vs human disclosure separation, unresolved-scope queue and regression controls.
 
-## CF-03 / OW-03 — DPP Supplier-Data / Registry Readiness
-Current route: `M0_INTERNAL_PROOF_ARTIFACT_REQUIRED`.
+M1 inputs: buyer-declared role context, AI/content inventory, interaction/disclosure surfaces, generation/deployment flow, marking/provenance evidence, deepfake/public-interest flags, exception facts, accessibility evidence.
 
-P-EW04 must create/test a synthetic product/supplier record, missing-data ledger and correction loop without inventing product-specific legal applicability.
+Deliverables: Article 50 technical map, evidence matrix, unresolved legal-scope queue, technical remediation backlog and regression checklist.
 
-Future M1 hypothesis: `DPP Supplier-Data Readiness Diagnostic`, potentially including supplier/source-field map, completeness validation, evidence-source register, identifier/QR/data-flow map, missing-data chase list, registry/test-environment preflight, and correction/retest ledger.
+Exclusions: legal opinion, certification, conformity assessment, automatic compliance claim, GDPR opinion.
 
-Boundary: product-specific DPP obligation/date stays UNKNOWN until authoritative product rule proves it.
+Internal transition: `M0 -> M1`. WTP remains unknown.
 
-## Cross-WIP decision
-| Candidate | Technical artifact | Non-trivial delta | Buyer role plausible | WTP | Current ladder |
-|---|---|---|---|---|---|
-| OW-01 Agent Commerce | YES | YES — blind10 discrimination | YES, hypothesis only | UNKNOWN | M1 spec ready |
-| CF-01 Article 50 | NOT YET / P-EW03 required | UNKNOWN until sample | YES, hypothesis only | UNKNOWN | M0 |
-| CF-03 DPP | NOT YET / P-EW04 required | UNKNOWN until sample | YES, hypothesis only | UNKNOWN | M0 |
+## CF-03 — DPP Supplier-Data Readiness Diagnostic
+Current route: `M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN`.
 
-## Next causal sequence
-1. execute P-EW03 Article 50 sample technical pack;
-2. execute P-EW04 synthetic DPP data/preflight loop;
-3. run the same Monetization Ladder router on all three;
-4. P-EW05 may promote only a candidate with concrete non-trivial delta and plausible buyer role;
-5. external WTP testing requires explicit authorization and a predeclared test contract.
+P-EW04 proved an internal technical artifact: Registry-vs-decentralised-payload separation, product applicability fail-closed, supplier provenance register, machine-readable chase list and correction/revalidation loop.
+
+M1 inputs: product group + authoritative applicability basis if known, operator role/ID, product/import identifiers, product-specific required data model when authoritative, supplier evidence, linkage design, decentralised payload location, any existing test-environment evidence.
+
+Deliverables: applicability boundary, operator/product identity preflight, supplier evidence register, mapping completeness, owner-specific chase list, Registry/payload boundary map, correction ledger and test-environment preflight packet.
+
+Exclusions: declaring an arbitrary product legally in scope, live Registry submission without authorization, Registry acceptance guarantee, certification/conformity assessment.
+
+Internal transition: `M0 -> M1`. WTP remains unknown.
+
+# P-EW05 decision
+
+`NO_COMMERCIAL_WINNER_YET`
+
+- OW-01: preserve strategic PRIMARY, hold at M1.
+- CF-01: promote internally M0 -> M1.
+- CF-03: promote internally M0 -> M1.
+- Kills: none; no internal artifact produced a fatal technical failure.
+- Prices: NULL.
+- WTP: UNKNOWN.
+- Transactions: 0 from this bridge.
+
+## Next decisive evidence
+The internal P-EW01–P-EW05 sequence is complete. More internal architecture cannot create M2.
+
+Any M2 test requires a predeclared evidence contract and explicit authorization before external action:
+- OW-01: merchant-authorized diagnostic using buyer-supplied operational evidence; payment/deposit/contract required for M2.
+- CF-01: independent qualified scope/legal red-team and/or buyer-authorized case; payment/deposit/contract still required for M2.
+- CF-03: authorized DPP test-environment execution or buyer-authorized product-data diagnostic; payment/deposit/contract still required for M2.
 
 ## Evidence boundary
 `BUYER_DEMAND = UNPROVEN`  
 `WTP = UNKNOWN`  
-`PRICE = NULL / HYPOTHESIS ONLY`  
+`PRICE = NULL`  
 `TRANSACTIONS = 0 FROM THIS BRIDGE`  
 `RECURRING_REVENUE = UNPROVEN`  
 `SAAS_DEMAND = UNPROVEN`  
 `EXTERNAL_ACTION_AUTHORIZED = FALSE`
 
-Drive mirror: `1leMlNJPcaMCUtCes-9wftPpp4LnCFh_9V79YhBkuTi8`  
-Semantic readback: PASS.
+`INTERNAL_M1_COMPLETE != WTP`  
+`TECHNICAL_DIAGNOSTIC_SPEC != CUSTOMER`  
+`P-EW05 != AUTHORIZATION_FOR_OUTREACH`
 
-READBACK_MARKER: `EARLY-WAVE-MONETIZATION-BRIDGE-M0-M6-OW01-M1-CF01-M0-CF03-M0-20260822`
+Detailed P-EW05 contract: `21_PEW05_WIP3_MONETIZATION_DECISION.md`.
+
+READBACK_MARKER: `EARLY-WAVE-MONETIZATION-BRIDGE-P-EW05-ALL-M1-NO-COMMERCIAL-WINNER-NO-WTP-20260822`
