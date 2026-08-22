@@ -1,0 +1,55 @@
+name: General Business OPP37 TEST37 AI-vs-SEO
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/**'
+      - '.github/workflows/general-business-opp37-test37-ai-vs-seo.yml'
+
+jobs:
+  test37-negative-control:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run TEST-37 deterministic canaries
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_test37_ai_vs_seo.py
+      - name: Preserve buyer and fatal-test regressions
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_buyer_evidence_router.py
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_fatal_test_router.py
+      - name: Compile runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
+      - name: Validate TEST-37 evidence boundaries and coexistence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          doc = (root/'14_OPP37_TEST37_AI_VS_SEO_NEGATIVE_CONTROL.md').read_text()
+          receipt = json.loads((root/'15_OPP37_TEST37_MACHINE_STATE.json').read_text())
+          current = json.loads((root/'06_MACHINE_STATE.json').read_text())
+          money = json.loads((root/'13_MONEY_MECHANISMS_MACHINE_STATE.json').read_text())
+          assert 'TEST-37 INTERNAL DIFFERENTIAL: PASS' in doc
+          assert 'Count = **2/3**' in doc
+          assert 'GENERAL-BUSINESS-OPP37-TEST37-INTERNAL-PASS-2OF3-NO-BUYER-PROOF' in doc
+          assert receipt['result']['count'] == 2
+          assert receipt['result']['sample'] == 3
+          assert receipt['result']['internal_differential'] == 'PASS'
+          assert receipt['result']['buyer_behavior'] is False
+          assert receipt['result']['willingness_to_pay'] is None
+          assert receipt['result']['transaction'] is None
+          assert receipt['result']['proof_promotion'] is False
+          assert receipt['result']['next64_increment'] == 0
+          assert current['next64']['executed'] == 24
+          assert current['next64']['remaining'] == 40
+          assert current['next64']['next_admissible_block'] == 'P25-P32_OPP37_INTERNAL_OFFER_ENGINEERING'
+          assert current['test37_internal']['count'] == 2
+          assert current['test37_internal']['buyer_behavior'] is False
+          assert current['external_action']['authorized'] is False
+          assert money['coexistence']['old_wip_invalidated'] is False
+          assert current['parallel_overlays']['money_mechanisms_run32']['mutated_by_test37'] is False
+          print('OPP37_TEST37: PASS — internal differential 2/3, 24/64 unchanged, P25-P32 internal route open')
+          PY
