@@ -1,0 +1,23 @@
+name: ROOM917 P003B Pass A Freeze
+
+on:
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_pass_a_freeze.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_pass_a_freeze.py'
+      - '.github/workflows/room917-p003b-pass-a-freeze.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run cryptographic Pass A freeze regressions
+        run: python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_pass_a_freeze.py
