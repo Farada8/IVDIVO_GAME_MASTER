@@ -1,0 +1,27 @@
+name: Business Engineering OS Cycle8 Evidence Acquisition
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_P161_P192_EVIDENCE_ACQUISITION/**'
+      - '.github/workflows/business-engineering-cycle8-evidence-acquisition.yml'
+  push:
+    branches:
+      - 'business-engineering/cycle8-p161-p192-evidence-acquisition-20260822'
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_P161_P192_EVIDENCE_ACQUISITION/**'
+      - '.github/workflows/business-engineering-cycle8-evidence-acquisition.yml'
+
+jobs:
+  exact32-evidence-acquisition:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run exact 32 evidence acquisition canaries
+        working-directory: BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_P161_P192_EVIDENCE_ACQUISITION
+        run: python tests/test_evidence_acquisition.py
+      - name: Compile runtime
+        run: python -m compileall BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_P161_P192_EVIDENCE_ACQUISITION/engine

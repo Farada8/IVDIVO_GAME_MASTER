@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-22",
+  "status": "CURRENT_RECOVERY_SUPPORT_POINTER_UNDER_SELF_IMPROVEMENT_V2",
+  "authority_effect": "NONE",
+  "governing_self_improvement": {
+    "authority_router": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+    "machine_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+    "engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+    "status": "V2_VERIFIED_CURRENT"
+  },
+  "session_resilience": {
+    "candidate_id": "SI-0014",
+    "candidate_status": "READY_FOR_PILOT",
+    "runtime": "tools/ivdivo_interruption_learning.py",
+    "runtime_schema": "ivdivo.interruption_learning/1.1",
+    "runtime_blob_main": "b92cbf74b30ed709d18b3c369b1836822b2088da",
+    "contract": "ENGINEERING_CONTRACTS/SI0014_GENUINE_INTERRUPTION_LEDGER_CONTRACT_v1.0.md",
+    "ledger": "SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/CURRENT_SI0014_INTERRUPTION_LEDGER.json",
+    "counter": "SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/CURRENT_SI0014_PROMOTION_COUNTER.json",
+    "counter_blob_main": "e16d816962158590f01324dfd3a3a4324ac71e45",
+    "cross_store_proof": "SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/SI0014_LEDGER_V11_DRIVE_MIRROR.json",
+    "implementation_merge_commit": "1998ec605d72889d4d2fd11e270298833b846400",
+    "cross_store_closure_merge_commit": "e750315b2fe1c5b79d2313cc15a5ce53a975d4ba"
+  },
+  "identity_contract": {
+    "incident_id": "ONE_PHYSICAL_BROWSER_SESSION_INTERRUPTION",
+    "recovery_id": "ONE_PROJECT_OR_WORK_UNIT_RECOVERY_SLICE_WITHIN_INCIDENT",
+    "counting_law": "COUNT_DISTINCT_QUALIFIED_INCIDENT_ID_NOT_RECOVERY_ROWS",
+    "multiple_project_slices_may_share_incident_id": true,
+    "duplicate_recovery_id_forbidden": true,
+    "real_and_synthetic_may_not_share_incident_id": true
+  },
+  "qualification_contract": {
+    "requires_real_interruption": true,
+    "requires_project_slice_readback_complete": true,
+    "requires_false_resume_false": true,
+    "synthetic_can_satisfy_genuine_threshold": false,
+    "automatic_promotion": false
+  },
+  "telemetry_contract": {
+    "unknown_is_null_not_zero": true,
+    "known_zero_requires_explicit_measurement": true
+  },
+  "current_evidence": {
+    "genuine_incidents": 1,
+    "required_genuine_incidents": 3,
+    "distinct_projects": 2,
+    "required_distinct_projects": 2,
+    "project_diversity_gate_satisfied": true,
+    "zero_false_resume": true,
+    "recommendation": "CONTINUE_PILOT",
+    "promotion_authorized": false,
+    "event_001": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
+    "recovered_project_slices": [
+      "IVDIVO_SELF_IMPROVEMENT",
+      "BUSINESS_ENGINEERING"
+    ]
+  },
+  "drive": {
+    "current_self_improvement_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
+    "current_authority_revision_with_si0014_pointer": "AIroW360L1qN7YTqXAWDKE3HcVEO8dRIW5DdmgTyyVRQjFmTbt2-NVBAVfAkiTv_Kmzxo4zKOZZp9H6GSOi9BfYUwrXKzAhBFp0XBRSio9A",
+    "ledger_v11_support_doc_id": "1l0LZnRJhZsQ-jodnNXMHmVlFMoWCurVlP4EGwdTHlgo",
+    "ledger_v11_support_doc_revision": "AIroW34z28_Le6bHPQYkYFN8YxK61HJodGSX_FA7gOqXN_01oHxOZt-a_IE_QNQEpu-DYFavoBcCdXi_lMpJfuTorqkYiag9gD3MMLXvczc",
+    "readback": "PASS"
+  },
+  "ci": [
+    {"run_id": 32550146277, "name": "SI-0014 Interruption Learning v1.1", "conclusion": "SUCCESS"},
+    {"run_id": 32550146318, "name": "Durable Interface Run35 Tests", "conclusion": "SUCCESS"},
+    {"run_id": 32550146404, "name": "Session Resilience Run33 Tests", "conclusion": "SUCCESS"}
+  ],
+  "restore_order": [
+    "READ_GOVERNING_V2_AUTHORITY",
+    "READ_THIS_CURRENT_RECOVERY_POINTER",
+    "READ_CURRENT_SI0014_LEDGER_AND_COUNTER",
+    "FRESH_MAIN_AND_DRIVE_SWEEP",
+    "RECOVER_PROJECT_SLICES",
+    "APPLY_SI0015_FRESHNESS_AND_SEMANTIC_DEDUPE",
+    "PERSIST_AND_READBACK",
+    "RECOMPUTE_ADVISORY_COUNTER",
+    "PROMOTE_OR_HOLD_BY_EXISTING_GATE",
+    "RETURN_TO_HIGHEST_INFORMATION_PRODUCTION_FRONTIER"
+  ],
+  "next_gate": "AWAIT_NEXT_GENUINE_INTERRUPTION_INCIDENT_DO_NOT_MANUFACTURE",
+  "story_first_guard": "DO_NOT_RUN_GENERIC_META_CYCLES_WHILE_WAITING_FOR_REAL_INTERRUPTION_EVIDENCE"
+}

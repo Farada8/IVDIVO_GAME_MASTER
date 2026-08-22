@@ -1,19 +1,43 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "artifact": "SI0014_GENUINE_INTERRUPTION_LEDGER_V1_1",
   "drive_document": {
     "id": "1l0LZnRJhZsQ-jodnNXMHmVlFMoWCurVlP4EGwdTHlgo",
     "title": "06 — SI-0014 INCIDENT LEDGER v1.1 + PROMOTION COUNTER",
-    "revision": "AIroW37s0af5wRi6YNkuNMZy8Lj951PiDyRHYDEUgW0nwfxKgwMmWQizHLeruApyLBYNExeTmTfKaOo2rbF-rjFff_XZssr66EDnCbYFAfY",
+    "revision": "AIroW34z28_Le6bHPQYkYFN8YxK61HJodGSX_FA7gOqXN_01oHxOZt-a_IE_QNQEpu-DYFavoBcCdXi_lMpJfuTorqkYiag9gD3MMLXvczc",
     "parent_folder": "11iFW2B0lIWT1SiermmL0UqFFbYgEaZ1T",
     "readback": "PASS"
   },
-  "github_runtime": "tools/ivdivo_interruption_learning.py",
-  "github_contract": "ENGINEERING_CONTRACTS/SI0014_GENUINE_INTERRUPTION_LEDGER_CONTRACT_v1.0.md",
-  "github_ledger": "SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/CURRENT_SI0014_INTERRUPTION_LEDGER.json",
-  "github_counter": "SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/CURRENT_SI0014_PROMOTION_COUNTER.json",
+  "github": {
+    "pr": 230,
+    "merge_commit": "1998ec605d72889d4d2fd11e270298833b846400",
+    "final_head": "5280bfc43991f90026377ef067bf76f276aa670d",
+    "runtime": "tools/ivdivo_interruption_learning.py",
+    "runtime_blob_main_readback": "b92cbf74b30ed709d18b3c369b1836822b2088da",
+    "contract": "ENGINEERING_CONTRACTS/SI0014_GENUINE_INTERRUPTION_LEDGER_CONTRACT_v1.0.md",
+    "ledger": "SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/CURRENT_SI0014_INTERRUPTION_LEDGER.json",
+    "counter": "SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/CURRENT_SI0014_PROMOTION_COUNTER.json",
+    "counter_blob_main_readback": "e16d816962158590f01324dfd3a3a4324ac71e45"
+  },
+  "ci": [
+    {"run_id": 32550146277, "name": "SI-0014 Interruption Learning v1.1", "conclusion": "SUCCESS"},
+    {"run_id": 32550146318, "name": "Durable Interface Run35 Tests", "conclusion": "SUCCESS"},
+    {"run_id": 32550146404, "name": "Session Resilience Run33 Tests", "conclusion": "SUCCESS"}
+  ],
   "expected_events_sha256": "d2dfa0d208a6b0c1d2dc48db781f85071bc634b1a6260459bbf1307fc8d87362",
-  "cross_store_status": "DRIVE_WRITTEN_MOVED_READBACK_PASS_GITHUB_PENDING_MERGE",
+  "promotion_progress": {
+    "genuine_incidents": 1,
+    "required_genuine_incidents": 3,
+    "distinct_projects": 2,
+    "required_distinct_projects": 2,
+    "zero_false_resume": true,
+    "recommendation": "CONTINUE_PILOT",
+    "promotion_authorized": false
+  },
+  "cross_store_status": "GITHUB_MERGED_MAIN_READBACK_PASS_DRIVE_FINAL_REVISION_READBACK_PASS",
   "authority_effect": "NONE",
-  "next_gate": "CI_PLUS_FRESH_MAIN_COMPARE_PLUS_MERGE_READBACK"
+  "self_improvement_v2": "CURRENT",
+  "si0014": "READY_FOR_PILOT",
+  "v3": "CANDIDATE",
+  "next_gate": "AWAIT_NEXT_GENUINE_INTERRUPTION_INCIDENT_DO_NOT_MANUFACTURE"
 }
