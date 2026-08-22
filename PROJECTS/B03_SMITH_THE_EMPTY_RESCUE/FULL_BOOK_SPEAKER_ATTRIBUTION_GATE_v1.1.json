@@ -1,0 +1,45 @@
+{
+  "schema": "ivdivo.b03.full_book_speaker_gate/1.1",
+  "date": "2026-08-22",
+  "project": "B03 — THE EMPTY RESCUE",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "status": "PASS_FULL_BOOK_SPEAKER_OWNERSHIP_CLOSED",
+  "story_text_mutation_bytes": 0,
+  "ch30_authorized": false,
+  "source_segmentation": {
+    "drive_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
+    "sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
+    "total_segments": 7465,
+    "quote_spans": 3718,
+    "narrator_inline_quote_exceptions": 4,
+    "actual_speech_denominator": 3714
+  },
+  "chapter_batches": {
+    "CH01_03": {"speech": 376, "assigned": 376, "unknown": 0},
+    "CH04_06": {"speech": 491, "assigned": 491, "unknown": 0},
+    "CH07_09": {"speech": 257, "assigned": 257, "unknown": 0},
+    "CH10_12": {"speech": 490, "assigned": 490, "unknown": 0},
+    "CH13_15": {"speech": 202, "assigned": 202, "unknown": 0},
+    "CH16_18": {"speech": 219, "assigned": 219, "unknown": 0},
+    "CH19_21": {"speech": 355, "assigned": 355, "unknown": 0},
+    "CH22_24": {"speech": 508, "assigned": 508, "unknown": 0, "authority": "v0.5_SOURCE_BOUNDARY_REPAIRED"},
+    "CH25_27": {"speech": 442, "assigned": 442, "unknown": 0},
+    "CH28_29": {"speech": 374, "assigned": 374, "unknown": 0, "drive_gate": "1UmjhMWQapFnyM3ixYWVKGjCSRQdemV3W"}
+  },
+  "totals": {"actual_speech": 3714, "assigned": 3714, "unknown": 0},
+  "ch24_source_quarantine": {
+    "replaced_speaker_id": "PRECURSOR_CALLER_CH24_HELD_SOURCE",
+    "packet_1": {"speaker_id": "PRECURSOR_SOURCE_CH24_PACKET_1", "segments": ["B03_CH24_S0152", "B03_CH24_S0154"]},
+    "packet_2": {"speaker_id": "PRECURSOR_SOURCE_CH24_PACKET_2", "segments": ["B03_CH24_S0376", "B03_CH24_S0378", "B03_CH24_S0380"]},
+    "inter_packet_identity": "UNKNOWN",
+    "corrected_map_drive_id": "1hzNIm7VyLiiuip2gDiZS4InvEPpzGKqx",
+    "repair_gate_drive_id": "1tl4xYMLOQmnJPT-PIAzDOMNFwrrzpu9L",
+    "repaired_manifest_drive_id": "1eGz0wHrkl7owFgXlSlmHec88-5_Fnsth"
+  },
+  "voice_ids_assigned": 0,
+  "provider_dispatch_allowed": false,
+  "full_speaker_gate": true,
+  "supersedes_for_downstream_provenance": "137_B03_FULL_BOOK_SPEAKER_ATTRIBUTION_GATE_v1.0",
+  "next_exact_action": "CASTING_PRONUNCIATION_LIVE_S0_EVIDENCE",
+  "bulk_render_allowed": false
+}
