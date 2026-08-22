@@ -1,0 +1,94 @@
+{
+  "schema": "ivdivo.general_business.early_wave_delta03/1.0",
+  "date": "2026-08-22",
+  "status": "RADAR_COMPLETE_NO_WIP_PROMOTION",
+  "founder_profile": {
+    "remote_first": true,
+    "near_zero_physical_load": true,
+    "preferred_cash_risk_eur_max": 500,
+    "default_cash_ceiling_eur": 3000,
+    "test_before_spend": true
+  },
+  "p_ew08": {
+    "status": "TECHNICAL_GAP_CONFIRMED_COMMERCIAL_WEDGE_KILLED",
+    "pr": 453,
+    "merge": "ba491bb9c11811e4ca7173777c786f6645c3ed19",
+    "dedicated_ci": 32573258186,
+    "technical_route": "PASS_REAL_DEFAULT_NAMESPACE_COMPATIBILITY_GAP_TECHNICAL_ONLY",
+    "minimal_fix": "DocLangParams(include_namespace=True)",
+    "wip_promotion": false
+  },
+  "ranked_candidates": [
+    {
+      "rank": 1,
+      "id": "D03-01_OSERA_RELEASE_EVIDENCE_QA",
+      "score": 84,
+      "route": "SMALLEST_INTERNAL_PROOF_CANDIDATE",
+      "wip": "RADAR_ONLY",
+      "surviving_hypothesis": "OSERA_DRAFT_RELEASE_EVIDENCE_CONFORMANCE_AND_COMPLETENESS_QA"
+    },
+    {
+      "rank": 2,
+      "id": "D03-02_SAFE_FINDINGS_EXCHANGE",
+      "score": 74,
+      "route": "CHEAP_OPTIONALITY_WATCH",
+      "wip": "RADAR_ONLY",
+      "surviving_hypothesis": "SCHEMA_TAXONOMY_DRIFT_WATCH_ONLY"
+    },
+    {
+      "rank": 3,
+      "id": "D03-03_FINOS_GOVERNANCE_AS_CODE_LINEAGE",
+      "score": 69,
+      "route": "WATCH_KILL_GENERIC_VALIDATION",
+      "wip": "RADAR_ONLY"
+    },
+    {
+      "rank": 4,
+      "id": "D03-04_CRA_MACHINE_READABLE_DUE_DILIGENCE",
+      "score": 66,
+      "route": "WATCH_DO_NOT_BUILD_GENERIC_AGGREGATOR",
+      "wip": "RADAR_ONLY"
+    },
+    {
+      "rank": 5,
+      "id": "D03-05_FDC3_MCP_FINANCE_INTEROP",
+      "score": 63,
+      "route": "ADJACENT_WATCH",
+      "wip": "RADAR_ONLY"
+    },
+    {
+      "rank": 6,
+      "id": "D03-06_AI_IAC_GOVERNANCE_DRIFT",
+      "score": 58,
+      "route": "KILL_GENERIC_WEDGE",
+      "wip": "RADAR_ONLY"
+    }
+  ],
+  "next_internal_proof": {
+    "id": "P-EW09_OSERA_PUBLIC_EVIDENCE_CONFORMANCE",
+    "authorized_scope": "PUBLIC_READ_ONLY_INTERNAL_ONLY",
+    "sample_size_target": "8_TO_12_PUBLIC_BACKPATCH_REPOSITORIES",
+    "rule_count_target": "5_TO_7_MACHINE_CHECKABLE_DRAFT_RULES",
+    "states": ["PASS", "FAIL_OBSERVED", "UNKNOWN_NOT_PUBLIC", "NOT_APPLICABLE"],
+    "kill_threshold": "FEWER_THAN_2_INDEPENDENT_NONTRIVIAL_REPRODUCIBLE_EVIDENCE_GAPS_OR_ONLY_COSMETIC_FINDINGS",
+    "pass_ceiling": "PASS_TECHNICAL_GAP_ONLY",
+    "forbidden": [
+      "SECURITY_CERTIFICATION",
+      "LEGAL_COMPLIANCE_DETERMINATION",
+      "VULNERABILITY_REMEDIATION",
+      "PRIVATE_BANK_DATA",
+      "OUTREACH",
+      "SPEND",
+      "WIP_PROMOTION"
+    ]
+  },
+  "buyer_demand": "UNPROVEN",
+  "wtp": "UNKNOWN",
+  "price": null,
+  "transactions": 0,
+  "profitability": "UNPROVEN",
+  "market_winner": null,
+  "wip_promotion": false,
+  "external_action_authorized": false,
+  "readback_marker": "EARLY-WAVE-DELTA03-OSERA84-SAFE74-GOVCODE69-CRA66-FDC363-IAC58-NO-WIP-NO-WTP-20260822"
+}
