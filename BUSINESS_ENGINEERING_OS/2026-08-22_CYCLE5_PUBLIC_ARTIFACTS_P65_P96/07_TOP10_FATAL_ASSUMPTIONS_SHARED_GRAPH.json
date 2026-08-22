@@ -1,0 +1,23 @@
+{
+  "observed": "2026-08-22",
+  "evidence_ceiling": "E2+",
+  "top10": [
+    {"rank":1,"id":"FA01","opportunities":["OP19"],"assumption":"A construction SME will value construction-specific workflow implementation beyond the free/general Digital for Business diagnostic.","status":"UNPROVEN_E3_REQUIRED","public_result":"RESHAPE_GENERIC_DIAGNOSTIC"},
+    {"rank":2,"id":"FA02","opportunities":["OP01"],"assumption":"Decision support provides material value beyond raw eTenders alerts/search.","status":"UNPROVEN_E3_REQUIRED"},
+    {"rank":3,"id":"FA03","opportunities":["OP01"],"assumption":"A useful bid/no-bid pre-screen can be produced from public notice/tender data plus a contractor capability profile without misrepresenting eligibility.","status":"PUBLIC_ARTIFACT_PLAUSIBLE_CAPABILITY_PROFILE_MISSING"},
+    {"rank":4,"id":"FA04","opportunities":["OP03"],"assumption":"Pre-qualification can reduce poor retrofit leads without duplicating a registered OSS/contractor/SEAI role.","status":"PUBLIC_ARTIFACT_PLAUSIBLE_E3_REQUIRED"},
+    {"rank":5,"id":"FA05","opportunities":["OP03"],"assumption":"Lead data needed for eligibility can be collected early enough: MPRN/year/BER/HLI/insulation/measure/route.","status":"PLAUSIBLE_NOT_OBSERVED"},
+    {"rank":6,"id":"FA06","opportunities":["OP03"],"assumption":"Grant cash timing does not create a fatal working-capital/affordability gap.","status":"ROUTE_DEPENDENT_SELF_ROUTE_REIMBURSEMENT_RISK"},
+    {"rank":7,"id":"FA07","opportunities":["OP19"],"assumption":"The quote/job-document workflow has measurable cycle-time/rekey/rework pain.","status":"UNPROVEN_HUMAN_OBSERVATION_REQUIRED"},
+    {"rank":8,"id":"FA08","opportunities":["OP01","OP03","OP19"],"assumption":"Manual sample delivery can be completed at a sustainable service time/cost.","status":"HUMAN_DELIVERY_TIME_NULL"},
+    {"rank":9,"id":"FA09","opportunities":["OP01","OP03","OP19"],"assumption":"The public artifact can be kept current cheaply enough as tender/support rules change.","status":"FRESHNESS_ENGINE_IMPLEMENTED_REAL_MAINTENANCE_COST_UNKNOWN"},
+    {"rank":10,"id":"FA10","opportunities":["OP01","OP03","OP19"],"assumption":"A buyer will pay for the resulting service.","status":"UNPROVEN_E3_E4_REQUIRED"}
+  ],
+  "shared_assumptions": {
+    "public_information_can_be_transformed_into_decision_ready_artifact": ["OP01","OP03","OP19"],
+    "buyer_values_saved_decision_time_or_error_reduction": ["OP01","OP03","OP19"],
+    "free_or_public_alternatives_leave_an_implementation_gap": ["OP01","OP03","OP19"],
+    "manual_delivery_is_capacity_feasible": ["OP01","OP03","OP19"],
+    "freshness_maintenance_cost_is_acceptable": ["OP01","OP03","OP19"]
+  }
+}
