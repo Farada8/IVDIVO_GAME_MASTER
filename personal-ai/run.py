@@ -7,6 +7,7 @@ from pathlib import Path
 
 from agents import AgentRunRequest, BoundedAgentExecutor
 from benchmarks import run_suite
+from business import BusinessQuoteService
 from core.bootstrap import bootstrap
 from memory.store import MemoryStore
 from projects.manager import ProjectStateManager
@@ -123,6 +124,14 @@ def build_parser() -> argparse.ArgumentParser:
         help="Return non-zero exit status when the benchmark decision is FAIL.",
     )
 
+    business = sub.add_parser("business", help="Business operations")
+    business_sub = business.add_subparsers(dest="business_command", required=True)
+    business_quote = business_sub.add_parser(
+        "quote", help="Create a persisted fail-closed quote from explicit JSON inputs"
+    )
+    business_quote.add_argument("project_id")
+    business_quote.add_argument("request_json", help="Path to quote request JSON")
+
     return parser
 
 
@@ -135,6 +144,13 @@ def _json_object(raw: str) -> dict:
     value = json.loads(raw)
     if not isinstance(value, dict):
         raise ValueError("metadata must decode to a JSON object")
+    return value
+
+
+def _json_file(path: str) -> dict:
+    value = json.loads(Path(path).read_text(encoding="utf-8"))
+    if not isinstance(value, dict):
+        raise ValueError("JSON input file must contain an object")
     return value
 
 
@@ -246,6 +262,13 @@ def main() -> int:
                 exit_code = 2
         else:  # pragma: no cover - argparse enforces choices
             raise RuntimeError("unsupported benchmark command")
+    elif args.command == "business":
+        if args.business_command == "quote":
+            result = BusinessQuoteService(home).create_quote(
+                args.project_id, _json_file(args.request_json)
+            )
+        else:  # pragma: no cover - argparse enforces choices
+            raise RuntimeError("unsupported business command")
     else:  # pragma: no cover - argparse enforces choices
         raise RuntimeError("unsupported command")
 
