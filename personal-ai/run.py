@@ -10,6 +10,7 @@ from benchmarks import run_suite
 from books import BOOK_STAGES, BookProductionCore, ContinuityChecker
 from business import BusinessQuoteService
 from core.bootstrap import bootstrap
+from ingestion import FileIngestionService
 from memory.store import MemoryStore
 from projects.manager import ProjectStateManager
 from providers import ProviderRequest, ProviderUnavailableError, default_registry
@@ -132,6 +133,14 @@ def build_parser() -> argparse.ArgumentParser:
     )
     business_quote.add_argument("project_id")
     business_quote.add_argument("request_json", help="Path to quote request JSON")
+
+    ingest = sub.add_parser("ingest", help="Bounded file ingestion operations")
+    ingest_sub = ingest.add_subparsers(dest="ingest_command", required=True)
+    ingest_file = ingest_sub.add_parser(
+        "file", help="Hash, represent, persist and deduplicate one supported local file"
+    )
+    ingest_file.add_argument("project_id")
+    ingest_file.add_argument("input_path")
 
     book = sub.add_parser("book", help="Book production state operations")
     book_sub = book.add_subparsers(dest="book_command", required=True)
@@ -305,6 +314,11 @@ def main() -> int:
             )
         else:  # pragma: no cover - argparse enforces choices
             raise RuntimeError("unsupported business command")
+    elif args.command == "ingest":
+        if args.ingest_command == "file":
+            result = FileIngestionService(home).ingest(args.project_id, Path(args.input_path))
+        else:  # pragma: no cover - argparse enforces choices
+            raise RuntimeError("unsupported ingest command")
     elif args.command == "book":
         core = BookProductionCore(home)
         if args.book_command == "init":

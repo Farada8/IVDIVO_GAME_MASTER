@@ -1,0 +1,20 @@
+name: Personal AI PL-13 File Ingestion
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl13-file-ingestion.yml'
+
+jobs:
+  pl13-file-ingestion:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run PL-13 file ingestion tests
+        run: python -m unittest personal-ai/tests/test_file_ingestion.py -v
+      - name: Run full Personal AI regression suite
+        run: python -m unittest discover -s personal-ai/tests -v
