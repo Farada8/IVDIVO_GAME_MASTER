@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.general_business.article50_pew03/0.1",
+  "schema": "ivdivo.general_business.article50_pew03/0.2",
   "date": "2026-08-22",
-  "status": "P_EW03_ENGINEERING_CANDIDATE_CI_PENDING_DRIVE_VERIFIED",
+  "status": "P_EW03_PASS_ENGINEERING_PRECLOSURE_VERIFIED_CLOSURE_CI_PENDING",
   "parent_candidate": "CF-01_AI_ACT_ARTICLE50_TECHNICAL_TRANSPARENCY",
   "authority_cut": {
     "regulation": "EU_2024_1689_ARTICLE_50",
@@ -23,7 +23,11 @@
     ],
     "legal_compliance_certified": false,
     "market_proof_promoted": false,
-    "ci_status": "PENDING"
+    "verified_engineering_head": "c7538e61963b98f9660bc0697f7b6e5609763fa0",
+    "verified_engineering_ci_run": 32561799531,
+    "verified_engineering_ci_status": "SUCCESS",
+    "verified_engineering_job": 97004403642,
+    "closure_ci_status": "PENDING"
   },
   "drive": {
     "folder_id": "15N2xm8iEYe5MBg7Jp3W1qazgLAdkD9Qp",
@@ -47,5 +51,5 @@
     "contracts": false,
     "legal_representation": false
   },
-  "next_gate_if_verified": "P_EW04_DPP_SYNTHETIC_SUPPLIER_OBJECT_PREFLIGHT"
+  "next_gate_if_closure_verified": "P_EW04_DPP_SYNTHETIC_SUPPLIER_OBJECT_PREFLIGHT"
 }
