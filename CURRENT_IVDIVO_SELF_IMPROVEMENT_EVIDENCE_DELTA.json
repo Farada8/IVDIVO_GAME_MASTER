@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-22",
+  "status": "CURRENT_EVIDENCE_DELTA_NOT_ENGINE_AUTHORITY",
+  "parent_authority": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+  "parent_machine_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+  "precedence_law": "For evidence/frontier facts only, this newer persisted delta supersedes stale evidence fields in the older machine state. It does not change Self-Improvement v2 authority, candidate lifecycle, story canon, Human/provider/market/literary evidence, or Founder gates.",
+  "authority": {
+    "self_improvement_v2": "VERIFIED_CURRENT",
+    "v3": "CANDIDATE_HOLD",
+    "new_global_si_id": null
+  },
+  "si0014": {
+    "status": "READY_FOR_PILOT",
+    "genuine_interruption_incidents": 1,
+    "required_incidents": 3,
+    "distinct_projects_recovered": 2,
+    "required_distinct_projects": 2,
+    "false_resume_count": 0,
+    "promotion_authorized": false,
+    "anti_inflation_law": "SAME_INTERRUPTION_MULTI_PROJECT_NEQ_MULTI_EVENT",
+    "next_gate": "TWO_ADDITIONAL_GENUINE_INTERRUPTION_RECOVERY_EVENTS_WITH_ZERO_FALSE_RESUME",
+    "evidence": [
+      "SELF_IMPROVEMENT_ENGINE/CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22/08_DRIVE_MIRROR_MANIFEST.json",
+      "SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/05_MACHINE_STATE.json",
+      "SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/07_CROSS_STORE_MANIFEST.json"
+    ]
+  },
+  "si0015": {
+    "status": "READY_FOR_PILOT",
+    "real_signal": "BUSINESS_ENGINEERING_RECOVERY_CAUGHT_STALE_POINTER_AND_ROUTED_REBASE_FIRST",
+    "promotion_authorized": false,
+    "remaining_gate": "ADDITIONAL_REAL_PILOT_PLUS_HEALTHY_CONTROL_PLUS_FALSE_POSITIVE_REVIEW"
+  },
+  "cycle10": {
+    "status": "INTEGRATED_CANDIDATE_ENGINEERING_NOT_AUTHORITY",
+    "convergence_pr": 235,
+    "convergence_merge": "be23512b715f587d8d3511f9640722491e1b5214",
+    "real_evidence_calibration_merge": "c436ccc780f68f36139a69e1e4a63dcada9021ef",
+    "decision_evidence_runtime": "SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64/runtime/cycle10_governance.py",
+    "regression_after_unique_salvage": "42_OF_42_PASS"
+  },
+  "cycle10r": {
+    "status": "MERGED_CROSS_STORE_COMPLETE",
+    "pr": 221,
+    "merge": "e13996f0d345f5c8fca401c01ed72ea58a0647a5",
+    "ci_run": 32550134102,
+    "ci": "32_OF_32_PASS_COMPILE_PASS_RUN33_REGRESSION_PASS",
+    "drive_root": "19BbmeqbZpQWfhvMgymblOb1GEGzCOho-",
+    "drive_semantic_readback": "PASS_6_OF_6",
+    "next64": "DESIGNED_NOT_BLINDLY_AUTO_AUTHORIZED"
+  },
+  "cycle32d_convergence": {
+    "pr206": "CLOSED_SUPERSEDED_PROVENANCE_ONLY",
+    "pr218": "CLOSED_SUPERSEDED_BY_PR249_PROVENANCE_ONLY",
+    "salvage_pr": 249,
+    "salvage_merge": "4d3b5755a39dacd176e04ec7121629541a567d46",
+    "salvaged_controls": [
+      "FUNCTIONAL_PROMPT_FINGERPRINT_AND_DEDUPE",
+      "ORDINAL_VALUE_OF_INFORMATION_ROUTER",
+      "COST_OF_DELAY_BANDING",
+      "SELECTIVE_DEPENDENCY_ROLLBACK",
+      "ASSET_REGISTRY_VALIDATION"
+    ],
+    "retained_persistence_law": "WRITE_CLAIM_NEQ_PERSISTED_ARTIFACT"
+  },
+  "library": {
+    "current_registry": "SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/SOURCE_REGISTRY.json",
+    "systems_raw_drive": "1F_21NJ9YXB63ctOS5KPrkeDlcYKkUTVv",
+    "systems_physical_entries_observed": 35,
+    "systems_unique_work_count": null,
+    "business_raw_drive": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "business_counts": "78_PHYSICAL_68_VALID_58_UNIQUE_VALID_BYTE_HASHES_5_QUARANTINE_8_DUPLICATE_GROUPS"
+  },
+  "evidence_boundary": {
+    "human": null,
+    "provider": null,
+    "market": null,
+    "literary_superiority": null,
+    "economics_unmeasured": null
+  },
+  "production_return": "REQUIRED_UNLESS_NEW_REAL_INTEGRITY_OR_EVIDENCE_EVENT_HAS_HIGHER_INFORMATION_VALUE"
+}
