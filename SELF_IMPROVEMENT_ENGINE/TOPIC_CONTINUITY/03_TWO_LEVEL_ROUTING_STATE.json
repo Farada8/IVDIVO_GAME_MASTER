@@ -1,0 +1,47 @@
+{
+  "schema": "ivdivo.self_improvement.thread_frontier_two_level_routing/0.1",
+  "date": "2026-08-22",
+  "status": "TWO_LEVEL_CONVERGENCE_PENDING_CI",
+  "authority_effect": "NONE",
+  "global_si_id": null,
+  "parent_authority": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
+  "thread_topic_guard": {
+    "pr": 448,
+    "merge_sha": "6caea950b47e14943c4e16a1ef28d2ea427affc4",
+    "runtime": "tools/ivdivo_thread_topic_guard.py",
+    "role": "SOLE_PROJECT_SWITCH_AUTHORITY"
+  },
+  "frontier_predecessor": {
+    "pr": 278,
+    "state": "OPEN_DRAFT_NOT_MERGED",
+    "useful_scope": "DISCOVERED_MATERIAL_RELATION_TO_ACTIVE_NEXT_GATE",
+    "rejected_behavior": "FRONTIER_LAYER_DUPLICATES_EXPLICIT_PROJECT_SWITCH_AND_CAN_RETAIN_OLD_PROJECT_GATE"
+  },
+  "frontier_candidate_runtime": "tools/ivdivo_active_frontier_guard.py",
+  "integration_test": "tests/test_thread_frontier_two_level_routing.py",
+  "contract": "ENGINEERING_CONTRACTS/THREAD_FRONTIER_TWO_LEVEL_ROUTING_v0.1.md",
+  "core_laws": [
+    "THREAD_TOPIC_LOCK_PRECEDES_PROJECT_FRONTIER_LOCK",
+    "THREAD_GUARD_IS_SOLE_PROJECT_SWITCH_AUTHORITY",
+    "FRONTIER_GUARD_HAS_NO_PROJECT_SWITCH_AUTHORITY",
+    "NEW_PROJECT_PLUS_OLD_PROJECT_GATE_IS_ROUTING_CORRUPTION",
+    "PROJECT_SWITCH_REQUIRES_TARGET_FRONTIER_RESTORE",
+    "DISCOVERED_RELEVANCE_NEQ_FRONTIER_SWITCH_AUTHORITY",
+    "REQUIRED_DEPENDENCY_REQUIRES_RETURN_TOKEN",
+    "UNKNOWN_FRONTIER_RELATION_FAILS_CLOSED"
+  ],
+  "current_real_pilot_evidence": {
+    "continuation_events": 2,
+    "continuation_events_required": 3,
+    "distinct_project_types": 1,
+    "distinct_project_types_required": 2,
+    "false_project_switches": 0,
+    "explicit_switch_controls": 0,
+    "explicit_switch_controls_required": 2,
+    "side_query_return_controls": 0,
+    "side_query_return_controls_required": 1
+  },
+  "promotion_authorized": false,
+  "next_gate": "PASS_EXACT_HEAD_TWO_LEVEL_CI_THEN_FRESH_MAIN_OVERLAP_CHECK; IF_MERGED_CLOSE_PR278_AS_SUPERSEDED_PROVENANCE_ONLY_WITHOUT_CHANGING_REAL_PILOT_REQUIREMENTS",
+  "readback_marker": "SI-THREAD-FRONTIER-TWO-LEVEL-CONVERGENCE-PENDING-CI-20260822"
+}
