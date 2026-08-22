@@ -1,11 +1,13 @@
 {
-  "schema_version": "1.3",
+  "schema_version": "1.4",
   "updated": "2026-08-22",
   "library": "IVDIVO_SELF_IMPROVEMENT_ENGINEERING_LIBRARY",
   "status": "CURRENT_INDEX_WITH_PRIVATE_RAW_POINTERS_AND_CANDIDATE_EVIDENCE",
   "current_authority": {
     "github_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
     "github_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+    "github_evidence_delta": "CURRENT_IVDIVO_SELF_IMPROVEMENT_EVIDENCE_DELTA.json",
+    "evidence_delta_precedence": "EVIDENCE_AND_FRONTIER_ONLY_NOT_ENGINE_AUTHORITY",
     "drive_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
     "authority_effect_of_this_registry_update": "NONE"
   },
@@ -78,8 +80,10 @@
       "original_github_pr": 217,
       "convergence_github_pr": 235,
       "convergence_merge_commit": "be23512b715f587d8d3511f9640722491e1b5214",
-      "status": "INTEGRATED_CANDIDATE_ENGINEERING_VIA_CONVERGENCE_PR235",
+      "real_evidence_calibration_merge": "c436ccc780f68f36139a69e1e4a63dcada9021ef",
+      "status": "INTEGRATED_CANDIDATE_ENGINEERING_VIA_CONVERGENCE",
       "run32": "EXECUTED_32_OF_32",
+      "regression_after_unique_salvage": "42_OF_42_PASS",
       "next64": "DESIGNED_NOT_BLINDLY_AUTHORIZED",
       "authority_effect": "NONE"
     },
@@ -103,8 +107,17 @@
       "cycle": "Cycle32D Decision Yield / Verified Persistence",
       "drive_id": "1vhdWdbtNeAnMGW9mxmwqwU3w75mHgM_y",
       "github_prs": [206, 218],
-      "status": "REFERENCE_ONLY_SALVAGE_UNIQUE_MECHANISMS",
-      "accepted_mechanism": "WRITE_CLAIM_NEQ_PERSISTED_ARTIFACT",
+      "status": "CLOSED_SUPERSEDED_PROVENANCE_ONLY_AFTER_SEMANTIC_SALVAGE",
+      "salvage_pr": 249,
+      "salvage_merge": "4d3b5755a39dacd176e04ec7121629541a567d46",
+      "accepted_persistence_mechanism": "WRITE_CLAIM_NEQ_PERSISTED_ARTIFACT",
+      "salvaged_controls": [
+        "FUNCTIONAL_PROMPT_FINGERPRINT_AND_DEDUPE",
+        "ORDINAL_VALUE_OF_INFORMATION_ROUTER",
+        "COST_OF_DELAY_BANDING",
+        "SELECTIVE_DEPENDENCY_ROLLBACK",
+        "ASSET_REGISTRY_VALIDATION"
+      ],
       "authority_effect": "NONE"
     }
   ],
