@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_ru_s0_canary_bundle/1.0",
+  "schema_version": "ivdivo.room917_ru_s0_canary_bundle/1.1",
   "date": "2026-08-22",
   "project_id": "ROOM917",
   "locale": "ru-RU",
@@ -7,6 +7,13 @@
   "language_code": "ru",
   "cast_source": "ROOM917_RU_S0_PUBLIC_CANARY_CAST_v1.0.json",
   "status": "BOUNDED_PAID_CANARY_READY_AFTER_FRESH_PROVIDER_SNAPSHOT",
+  "audition_format_policy": {
+    "output_format": "mp3_44100_128",
+    "purpose": "CAST_AND_PERFORMANCE_AUDITION_ONLY",
+    "not_final_master": true,
+    "final_production_master_remains": "48K_24BIT_WAV_AFTER_CAST_LOCK_AND_ASSEMBLY",
+    "reason": "Use an ElevenLabs-supported broadly available MP3 canary format; do not request invalid mp3_48000_192 or confuse audition files with final mastering format."
+  },
   "blocks": [
     {
       "block_id": "RU_S0_ELENA_BOUNDARY",
@@ -14,7 +21,7 @@
       "voice_id": "21m00Tcm4TlvDq8ikWAM",
       "model_id": "eleven_v3",
       "language_code": "ru",
-      "output_format": "mp3_48000_192",
+      "output_format": "mp3_44100_128",
       "exact_text": "Привидений я не сертифицирую. Я подтверждаю, что система может делать, а чего не может. Если ответы кому-то не нравятся — пусть спорят с измерениями.",
       "unit_id": "E01:ELENA:BOUNDARY",
       "text_ref": "RU_E01_SCENE1_ELENA_PROFESSIONAL_BOUNDARY",
@@ -26,7 +33,7 @@
       "voice_id": "pNInz6obpgDQGcFmaJgB",
       "model_id": "eleven_v3",
       "language_code": "ru",
-      "output_format": "mp3_48000_192",
+      "output_format": "mp3_44100_128",
       "exact_text": "Семьдесят два человека узнают, насколько надолго принципов хватает, чтобы в ноябре сохранить работу в приморском городке.",
       "unit_id": "E01:JULIAN:72_STAFF",
       "text_ref": "RU_E01_SCENE1_JULIAN_ECONOMIC_STAKES",
@@ -38,7 +45,7 @@
       "voice_id": "XrExE9yKIg1WjnnlVkGX",
       "model_id": "eleven_v3",
       "language_code": "ru",
-      "output_format": "mp3_48000_192",
+      "output_format": "mp3_44100_128",
       "exact_text": "Ну конечно. Мина Шах. Ночной менеджер, переговорщик по вопросам завтрака и сейчас единственный человек, который знает, какое ведро ставить под какую протечку. В Грейхейвене ведра выше по должности, чем большинство из нас.",
       "unit_id": "E01:MINA:INTRO",
       "text_ref": "RU_E01_SCENE1_MINA_ORDINARY_HUMOR",
@@ -50,7 +57,7 @@
       "voice_id": "EXAVITQu4vr4xnSDxMaL",
       "model_id": "eleven_v3",
       "language_code": "ru",
-      "output_format": "mp3_48000_192",
+      "output_format": "mp3_44100_128",
       "exact_text": "Лени-бёрд... Если это дойдёт—",
       "unit_id": "E01:CATE:LENI_BIRD",
       "text_ref": "RU_E01_SCENE3_CATE_CLEAN_HUMAN_SOURCE",
@@ -61,7 +68,7 @@
       "block_type": "TTD_BLOCK",
       "model_id": "eleven_v3",
       "language_code": "ru",
-      "output_format": "mp3_48000_192",
+      "output_format": "mp3_44100_128",
       "provider_character_ceiling": 900,
       "turns": [
         {"unit_id":"E01:MINA:R1","text_ref":"RU_E01_SCENE1_MINA_R1","voice_id":"XrExE9yKIg1WjnnlVkGX","exact_text":"Элена Рид?"},
@@ -77,7 +84,7 @@
       "block_type": "TTD_BLOCK",
       "model_id": "eleven_v3",
       "language_code": "ru",
-      "output_format": "mp3_48000_192",
+      "output_format": "mp3_44100_128",
       "provider_character_ceiling": 900,
       "turns": [
         {"unit_id":"E01:JULIAN:F1","text_ref":"RU_E01_SCENE2_JULIAN_F1","voice_id":"pNInz6obpgDQGcFmaJgB","exact_text":"За пределы пронумерованного блока ток не подавать. Если найдёте неотмеченную ветку — останавливаетесь."},
