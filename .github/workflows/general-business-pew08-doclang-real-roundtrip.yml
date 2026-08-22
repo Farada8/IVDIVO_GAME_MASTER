@@ -1,0 +1,63 @@
+name: General Business P-EW08 DocLang Real Roundtrip
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/32_DOCLANG_PEW08_REAL_ROUNDTRIP/**'
+      - '.github/workflows/general-business-pew08-doclang-real-roundtrip.yml'
+
+jobs:
+  roundtrip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned current runtimes
+        run: python -m pip install --disable-pip-version-check 'docling==2.121.0' 'doclang==0.7.3'
+      - name: Execute real converter-generated round-trip
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/32_DOCLANG_PEW08_REAL_ROUNDTRIP/roundtrip_gate.py \
+            --source BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/32_DOCLANG_PEW08_REAL_ROUNDTRIP/fixtures/roundtrip_stress.html \
+            --out BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/32_DOCLANG_PEW08_REAL_ROUNDTRIP/runtime
+      - name: Enforce classification and proof boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/32_DOCLANG_PEW08_REAL_ROUNDTRIP/runtime/roundtrip_result.json')
+          r = json.loads(p.read_text(encoding='utf-8'))
+          allowed = {
+              'PASS_REAL_DEFAULT_NAMESPACE_COMPATIBILITY_GAP_TECHNICAL_ONLY',
+              'PASS_REAL_STRUCTURAL_COMPATIBILITY_GAP_TECHNICAL_ONLY',
+              'PASS_REAL_FIDELITY_GAP_TECHNICAL_ONLY',
+              'HOLD_NO_REAL_GAP_IN_BOUNDED_FIXTURES',
+              'HOLD_TEST_INFRASTRUCTURE_FAILURE',
+          }
+          assert r['technical_route'] in allowed
+          assert r['runtime']['docling'] == '2.121.0'
+          assert r['runtime']['doclang'] == '0.7.3'
+          assert r['buyer_demand'] == 'UNPROVEN'
+          assert r['wtp'] == 'UNKNOWN'
+          assert r['transactions'] == 0
+          assert r['wip_promotion'] is False
+          assert r['external_action_authorized'] is False
+          if r['technical_route'].startswith('PASS_REAL_'):
+              assert r['real_converter_generated_gap'] is True
+          if r['technical_route'] == 'PASS_REAL_DEFAULT_NAMESPACE_COMPATIBILITY_GAP_TECHNICAL_ONLY':
+              assert r['official_xsd']['default_export']['returncode'] != 0
+              assert r['official_xsd']['explicit_namespace_control']['returncode'] == 0
+              assert r['serializer_defaults']['DocLangParams.include_namespace_default'] is False
+              assert r['minimal_control_fix'] == 'DocLangParams(include_namespace=True)'
+          if r['technical_route'] == 'HOLD_NO_REAL_GAP_IN_BOUNDED_FIXTURES':
+              assert r['real_converter_generated_gap'] is False
+              assert r['mismatch_count'] == 0
+          print('P-EW08 CLASSIFICATION:', r['technical_route'])
+          print(json.dumps(r, ensure_ascii=False, sort_keys=True))
+          PY
+      - name: Upload P-EW08 evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: pew08-doclang-real-roundtrip-evidence
+          path: BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/32_DOCLANG_PEW08_REAL_ROUNDTRIP/runtime/
