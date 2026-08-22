@@ -163,8 +163,16 @@ class ProjectStateManager:
                 return task
         raise KeyError(f"task not found: {task_id}")
 
+    def start_task(self, project_id: str, task_id: str) -> dict[str, Any]:
+        return self._set_task_status(project_id, task_id, "RUNNING")
+
     def complete_task(self, project_id: str, task_id: str) -> dict[str, Any]:
         return self._set_task_status(project_id, task_id, "DONE")
+
+    def fail_task(self, project_id: str, task_id: str, reason: str) -> dict[str, Any]:
+        if not reason.strip():
+            raise ValueError("failure reason cannot be empty")
+        return self._set_task_status(project_id, task_id, "FAILED", reason.strip())
 
     def block_task(self, project_id: str, task_id: str, reason: str) -> dict[str, Any]:
         if not reason.strip():
