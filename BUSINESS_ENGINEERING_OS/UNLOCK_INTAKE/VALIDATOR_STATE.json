@@ -1,0 +1,38 @@
+{
+  "schema": "ivdivo.business.unlock_intake_validator/1.0",
+  "date": "2026-08-22",
+  "target_case": "PROC-BALLYBUNION-8872468",
+  "status": "ENGINEERING_HELPER_PENDING_CI",
+  "authority_effect": "NONE",
+  "parent_execution_count_before": 17,
+  "parent_execution_count_after": 17,
+  "roots": {
+    "ROOT_A": "TARGET_PACK_NOT_ACQUIRED",
+    "ROOT_B": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET"
+  },
+  "reuses": [
+    "P257-P264_AUTHENTICATED_PACK_INGEST",
+    "P265-P272_BIDDER_DESIGNATION_V2"
+  ],
+  "validator_contracts": [
+    "P225_RESOURCE_BINDING_EXACT",
+    "P225_CREDENTIAL_METADATA_FORBIDDEN",
+    "P225_ACQUISITION_NEQ_COMPLETENESS",
+    "P235_TEST_FIXTURE_NEQ_ACTUAL_BIDDER",
+    "P235_RESOURCE_BINDING_EXACT",
+    "P235_LEGAL_ENTITY_BINDING_EXACT",
+    "P235_INTERNAL_SCOPE_ONLY",
+    "VALIDATED_INPUT_NEQ_AUTHORITY_UNTIL_PERSISTENCE_READBACK_CORE_RECONCILIATION"
+  ],
+  "deterministic_canaries": 13,
+  "proof_frontier": {
+    "public_derived_ceiling": "E2_PLUS",
+    "artifact_plane": "PA3",
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "E4": false
+  },
+  "external_action_authorized": false,
+  "next_real_gates": [225, 235]
+}
