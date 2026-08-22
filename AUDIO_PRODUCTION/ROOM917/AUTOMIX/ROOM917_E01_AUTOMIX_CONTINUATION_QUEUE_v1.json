@@ -1,0 +1,122 @@
+{
+  "schema_version": "ivdivo.room917_automix_continuation_queue/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "scope": "AUTOMIX_POSTPRODUCTION_ONLY",
+  "router": "IVDIVO_NARRATIVE_OS/tools/local_gate_router.py",
+  "law": "LOCAL_HOLDS_DO_NOT_STOP_AUTOMIX_WHILE_ANY_INDEPENDENT_SAFE_READY_OBLIGATION_EXISTS",
+  "obligations": [
+    {
+      "id": "A001_PRODUCTION_D003_PATCH",
+      "priority": 1,
+      "status": "BLOCKED",
+      "gate_type": "DEPENDENCY_BLOCKED",
+      "dependencies": ["A010_EXACT_MASTER_BYTES", "A020_TRUSTED_PRE_SCENE3_TIMING", "A030_A01_A02_PRODUCTION_BINDINGS"],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A010_EXACT_MASTER_BYTES",
+      "priority": 2,
+      "status": "BLOCKED",
+      "gate_type": "MISSING_INPUT",
+      "dependencies": [],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A020_TRUSTED_PRE_SCENE3_TIMING",
+      "priority": 3,
+      "status": "BLOCKED",
+      "gate_type": "MISSING_INPUT",
+      "dependencies": [],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A030_A01_A02_PRODUCTION_BINDINGS",
+      "priority": 4,
+      "status": "BLOCKED",
+      "gate_type": "HUMAN_EVIDENCE_REQUIRED",
+      "dependencies": [],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A040_CRITICAL_SFX_AUDITION_LOCK",
+      "priority": 5,
+      "status": "BLOCKED",
+      "gate_type": "HUMAN_EVIDENCE_REQUIRED",
+      "dependencies": [],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A050_RU_NATIVE_CAST_LOCK",
+      "priority": 6,
+      "status": "BLOCKED",
+      "gate_type": "HUMAN_EVIDENCE_REQUIRED",
+      "dependencies": [],
+      "scope": "ROOM917_E01_RU_AUTOMIX"
+    },
+    {
+      "id": "A100_AUTOMIX_PREFLIGHT_HARDENING",
+      "priority": 20,
+      "status": "DONE",
+      "gate_type": null,
+      "dependencies": [],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A110_AUTOMATION_PLAN_COMPILER",
+      "priority": 21,
+      "status": "DONE",
+      "gate_type": null,
+      "dependencies": ["A100_AUTOMIX_PREFLIGHT_HARDENING"],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A120_RENDER_MANIFEST_MACHINE_QC",
+      "priority": 22,
+      "status": "DONE",
+      "gate_type": null,
+      "dependencies": ["A110_AUTOMATION_PLAN_COMPILER"],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A130_P003B_FULLMIX_IDENTITY_HANDOFF",
+      "priority": 23,
+      "status": "DONE",
+      "gate_type": null,
+      "dependencies": ["A120_RENDER_MANIFEST_MACHINE_QC"],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A140_P003B_AUTOMIX_ELIGIBILITY",
+      "priority": 24,
+      "status": "DONE",
+      "gate_type": null,
+      "dependencies": ["A130_P003B_FULLMIX_IDENTITY_HANDOFF"],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A200_AUTOMIX_STATE_RECONCILIATION",
+      "priority": 30,
+      "status": "READY",
+      "gate_type": null,
+      "dependencies": ["A140_P003B_AUTOMIX_ELIGIBILITY"],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A210_DOWNSTREAM_NO_BYPASS_REGRESSION",
+      "priority": 31,
+      "status": "READY",
+      "gate_type": null,
+      "dependencies": ["A140_P003B_AUTOMIX_ELIGIBILITY"],
+      "scope": "ROOM917_E01_AUTOMIX"
+    },
+    {
+      "id": "A220_DRIVE_GITHUB_DURABLE_SYNC",
+      "priority": 32,
+      "status": "READY",
+      "gate_type": null,
+      "dependencies": ["A140_P003B_AUTOMIX_ELIGIBILITY"],
+      "scope": "ROOM917_E01_AUTOMIX"
+    }
+  ]
+}
