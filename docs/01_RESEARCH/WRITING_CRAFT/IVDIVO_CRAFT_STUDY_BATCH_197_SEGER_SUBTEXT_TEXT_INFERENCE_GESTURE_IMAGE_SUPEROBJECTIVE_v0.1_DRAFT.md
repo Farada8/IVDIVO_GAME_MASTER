@@ -1,7 +1,7 @@
 # IVDIVO CRAFT STUDY — Batch 197
 ## Linda Seger — Subtext · Inference · Gesture · Image · Superobjective
 
-**Pass:** 162  
+**Pass:** 163  
 **Source status:** `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`  
 **Source class:** WIDER specialist
 
