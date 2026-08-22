@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.business.cycle10.pack_ingest_hardening/1.0",
+  "schema": "ivdivo.business.cycle10.pack_ingest_hardening/1.1",
   "date": "2026-08-22",
-  "status": "RUN8_EXECUTED_CI_DRIVE_PENDING",
+  "status": "CORE_MERGED_CI_GREEN_DRIVE_READBACK_PASS_CURRENT_POINTER_CLOSURE_PENDING",
   "executed": {
     "range": "P257-P264",
     "count": 8,
@@ -22,7 +22,9 @@
     "atomic_requirement_join": false,
     "bid_decision_authorized": false,
     "root_a": "TARGET_PACK_NOT_ACQUIRED",
-    "root_b": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_PACKET"
+    "root_b": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_PACKET",
+    "p235_test_fixture_only": true,
+    "p235_real_designation": false
   },
   "proof": {
     "public_derived_ceiling": "E2_PLUS",
@@ -39,13 +41,21 @@
     "executed_subset": [257,258,259,260,261,262,263,264],
     "remaining_count": 56,
     "highest_value_blocked": [225,235],
-    "next_dependency_rule": "TARGET_PACK_OR_EXPLICIT_BIDDER_DESIGNATION_FIRST_WHEN_NEW_EVIDENCE_EXISTS"
+    "next_dependency_rule": "TARGET_PACK_OR_EXPLICIT_REAL_BIDDER_DESIGNATION_FIRST_WHEN_NEW_EVIDENCE_EXISTS"
   },
   "persistence": {
-    "github": "BRANCH_ONLY_PENDING_PR",
-    "ci": "PENDING",
-    "drive": "PENDING",
-    "current_authority_mutation": false
+    "core_pr": 264,
+    "core_merge_sha": "3d9b5d900518ad2b05554e57c92f330883cf993e",
+    "final_head": "b8085b7b177bdf36ba05c8da13165981cb6f68e9",
+    "exact_head_ci_run": 32551674086,
+    "ci": "SUCCESS",
+    "review_threads": 0,
+    "fresh_main_reconciliation": "PASS_TEST_FIXTURE_DOES_NOT_SATISFY_P235",
+    "drive_folder": "1R4VVl1oFNmILpb-mZYL6EpMuaYweW13e",
+    "drive_run8_engineering": "1lKYrj_QwvkGlEhFQN72rBjKfnnFyKaBf8LM_bbwQWXo",
+    "drive_machine": "1d6rLTZdIR_17wh5KjeULhwci_WbVgwy0Y1ED5k9AwPs",
+    "drive_readback": "PASS_2_OF_2",
+    "current_authority_mutation": "PENDING_CLOSURE_PR"
   },
   "stop_rule": "NO_NEW_ADMISSIBLE_EXTERNAL_EVIDENCE_THEN_ENGINEERING_ONLY_OR_PROTECT_NO_CHANGE"
 }
