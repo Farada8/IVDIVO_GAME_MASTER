@@ -1,0 +1,70 @@
+{
+  "schema": "ivdivo.b03.voice_roster_normalization_gate/1.1",
+  "date": "2026-08-22",
+  "project": "B03 — THE EMPTY RESCUE",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "status": "PASS_PROVIDER_AGNOSTIC_REBASED_AFTER_SOURCE_AND_CH29_RECONCILIATION",
+  "source_full_speaker_gate": {
+    "version": "v1.2_SOURCE_AND_CH29_RECONCILED",
+    "drive_id": "1lFmVbEZJSMnCZMn65nAEV5U-rESC-qFX",
+    "authority_package_drive_id": "1qA2DzFdlg-N6v_Wc104PIYDNfQJ5bS00"
+  },
+  "pre_rebase_voice_architecture_drive_id": "1JsWpwwtxdZb0CD3mGRB248zhH8bwxiN2",
+  "normalized_full_roster_drive_id": "1FB_3rqk4ax4HMFykTli6focbZmz6dH-o",
+  "normalization_gate_drive_id": "1RzwTzmagtVHHDEVrm-4gcphCjDBKQO_2au1kovDhKvo",
+  "counts": {
+    "textual_source_or_speaker_ids": 121,
+    "actual_speech_turns": 3714,
+    "narrator_delivery_segments": 3751,
+    "total_delivery_segments": 7465,
+    "dedicated_character_slots": 15,
+    "ensemble_reuse_slots": 12,
+    "narrator_slots": 1,
+    "max_cast_slots_revalidated": 28,
+    "same_chapter_ensemble_collisions": 0,
+    "provider_voice_ids_assigned": 0
+  },
+  "repairs": [
+    {
+      "id": "TAREN_SOR_MESSAGE_CH27",
+      "source_author": "TAREN_SOR",
+      "acoustic_speaker": "SMITH",
+      "delivery_mode": "READ_ALOUD_DOCUMENT",
+      "voice_slot": "V_D01"
+    },
+    {
+      "id": "B03_CH29_S0358",
+      "superseded_acoustic_speaker": "TAREN_SOR",
+      "current_acoustic_speaker": "SMITH"
+    },
+    {
+      "id": "CH24_PACKET_SOURCE_SPLIT",
+      "packet_1": {"speaker_id": "PRECURSOR_SOURCE_CH24_PACKET_1", "speech_segments": 2, "voice_slot": "V_E07"},
+      "packet_2": {"speaker_id": "PRECURSOR_SOURCE_CH24_PACKET_2", "speech_segments": 3, "voice_slot": "V_E01"},
+      "inter_packet_identity": "UNKNOWN"
+    }
+  ],
+  "proof": {
+    "speaker_mapping_count": 121,
+    "speaker_mapping_speech_sum": 3714,
+    "voice_slot_speech_sum": 3714,
+    "total_delivery_sum": 7465,
+    "same_chapter_ensemble_collisions": 0,
+    "provider_voice_id_nonnull_count": 0,
+    "packet_sources_distinct_slots": true,
+    "taren_message_acoustic_slot_is_smith": true
+  },
+  "voice_lock": false,
+  "pronunciation_gate": "OPEN",
+  "provider_access_verified": false,
+  "bulk_render_allowed": false,
+  "next_exact_action": "OBTAIN_LIVE_PROVIDER_INVENTORY_BIND_TEMPORARY_S0_CANDIDATES_RUN_BOUNDED_AUDITIONS_AND_HUMAN_SLOVENIAN_PRONUNCIATION_ADJUDICATION",
+  "hard_laws": [
+    "SOURCE_AUTHOR_NEQ_ACOUSTIC_SPEAKER",
+    "SOURCE_IDENTITY_NEQ_CAST_SLOT",
+    "CAST_REUSE_NEQ_CHARACTER_OR_SOURCE_IDENTITY",
+    "SAME_TOPIC_OR_PACKET_CLASS_NEQ_SAME_SOURCE_IDENTITY",
+    "VOICE_ID_REMAINS_NULL_UNTIL_CASTING_EVIDENCE",
+    "NO_BULK_RENDER_BEFORE_S0_AND_HARD_PILOT_PASS"
+  ]
+}
