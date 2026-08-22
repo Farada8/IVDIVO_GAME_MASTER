@@ -1,0 +1,45 @@
+name: General Business P-EW03 AI Act Article 50 Pack
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/**'
+      - '.github/workflows/general-business-pew03-ai-act-art50.yml'
+  push:
+    branches:
+      - 'business-engineering/pew03-ai-act-art50-pack-20260822'
+
+jobs:
+  art50-pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Run P-EW03 regression suite
+        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/tests/test_router.py
+      - name: Validate synthetic sample and machine state JSON
+        run: |
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/02_SYNTHETIC_SAMPLE_PACKET.json >/dev/null
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/03_MACHINE_STATE.json >/dev/null
+      - name: Execute deterministic six-case router smoke test
+        run: |
+          python - <<'PY'
+          import json, sys
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK')
+          sys.path.insert(0, str(root))
+          import router
+          packet = json.loads((root/'02_SYNTHETIC_SAMPLE_PACKET.json').read_text(encoding='utf-8'))
+          results = router.route_many(packet['cases'])
+          assert len(results) == 6
+          assert all(x['external_action_authorized'] is False for x in results)
+          assert all(x['legal_compliance_proven'] is False for x in results)
+          assert any(x['status'] == 'HOLD_UNRESOLVED_SCOPE_OR_EXCEPTION' for x in results)
+          print('P-EW03 six-case router PASS')
+          PY
+      - name: Compile P-EW03 runtime
+        run: python -m compileall BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK
