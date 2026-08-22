@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.1",
+  "cycle": "CYCLE4_DESIGN_PUBLIC_ART_HOSPITALITY_32_TO_64",
+  "status": "ENGINEERING_COMPLETE_GITHUB_PR_PENDING",
+  "original_base": "be100f75ef5c7136513cfe5a1a931d3beeb49d75",
+  "fresh_main_rebase_observed": "416bf029e0b842b697a3eeeb107faae40e9a12cf",
+  "modules": 32,
+  "prompts_executed": 32,
+  "dispositions": {"KEEP": 29, "MUTATE": 3, "KILL": 0},
+  "warm_regression": "32/32_PASS",
+  "final_exact_cold_regression": "32/32_PASS",
+  "first_failed_build_retained_as_learning": true,
+  "first_failed_build_repairs": [
+    "list-valued source adequacy fields were unhashable; added type-aware unknown handling",
+    "unknowns=[] means no unknowns, not missing brief data"
+  ],
+  "next64": 64,
+  "next64_auto_authorized": false,
+  "raw_business_library": {
+    "authority_file": "BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_LIBRARY_AUTHORITY_78_2026-08-22.md",
+    "drive_id":"1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "physical_files":78,
+    "valid_physical":68,
+    "quarantined":5,
+    "unique_valid_byte_hashes":58,
+    "exact_duplicate_groups":8,
+    "canonical_unique_intellectual_works":null,
+    "public_github_raw_binaries":false
+  },
+  "design_library_authority_drive": "16gVct12QDWRDzzp0Or-_QlmurAdfJdRq",
+  "design_raw_inbox_drive": "1bR0wWlWuPBK_WXXKbplHlZPuYQ_MYyLM",
+  "engineering_archive": {"drive_file_id":"14ohKiONlaC6n3Jx5sjtNnnvEbeU4gMnm","sha256":"9c0e81ed0b60ccbf4c123e9ec8992bfdac50a5c000d01ec9fd0a7b0f239607a2"},
+  "cycle4_package": {"drive_file_id":"1KTjriW0NJidFpipqcrkw-XJ6HZmTbL-_","sha256":"e0746bfe7357056cc0aa3235564d7dfbe4e3a2e7a3ed9be0b8b438ea42105c96"},
+  "evidence_planes": ["K_SOURCE_REFERENCE","D_DESIGN_SITE_FIT","T_TECHNICAL_BUILDABILITY","E_MARKET_BUYER"],
+  "evidence_law": "K != D != T != E",
+  "market_ceiling": "NO_E3_E4_WITHOUT_DIRECT_BUYER_OR_MONEY_EVIDENCE",
+  "self_improvement": "OBSERVE_CAPTURE_DEDUPE_PILOT_ONLY_NO_AUTO_PROMOTION",
+  "next_constraint": "ONE_REAL_IRISH_SITE_PILOT -> COMPLETE_PROJECT_OBJECT -> D/T_RED_TEAM -> COMMISSION_PROOF_PACK -> PUBLIC_SIGNAL_TEST"
+}
