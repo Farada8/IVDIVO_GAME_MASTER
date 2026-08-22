@@ -36,7 +36,7 @@ A reference library does not prove design quality; a render does not prove build
 - Runtime regression: 32/32 warm PASS.
 - Exact package cold regression: 32/32 PASS.
 - 64 next evidence-driven cards generated; not blind-auto-authorized.
-- Final package SHA-256: `5cb08dab3d1f5c31e9ef5c3cc9737178b328683cd1ec0d2e375eed69d4ea61c0`.
+- Final package SHA-256: `eb51f1ae539ec888c694ba26c37271cd7804b6f938b28a8d96e12f46aed98346`.
 
 ## Library policy
 Raw copyrighted books stay private in Drive. GitHub stores metadata, hashes, source passports, derived mechanisms, schemas, tests, provenance pointers and original engine outputs only.
