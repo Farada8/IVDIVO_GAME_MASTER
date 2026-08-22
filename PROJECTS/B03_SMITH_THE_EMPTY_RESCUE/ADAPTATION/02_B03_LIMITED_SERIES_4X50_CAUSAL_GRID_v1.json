@@ -1,0 +1,118 @@
+{
+  "schema": "ivdivo.b03.limited_series_4x50_causal_grid/1.0",
+  "date": "2026-08-22",
+  "status": "WORKING_ADAPTATION_ARCHITECTURE",
+  "source_authority": "FOUNDER_LOCKED_CH01_29",
+  "locked_novel_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
+  "episodes": [
+    {
+      "episode": 1,
+      "working_title": "WRONG ADDRESS",
+      "function": "Hook the precursor problem through Nika/Jana, prove both utility and causal danger, then bring Smith/OES into a case local authority already owns.",
+      "source_span_working": "early locked chapters through Smith arrival / initial OES case entry",
+      "beats": [
+        "Ordinary storm dispatch establishes Nika, Jana, workload and Koren Valley before anomaly terminology.",
+        "Malformed 112 call reports a grey-van crash at Upper Gorge with precise casualty detail and four-impact background clue.",
+        "Bounded check finds no crash; evidence is preserved rather than labeled prophecy or hoax.",
+        "Eighty-five minutes later the grey van crashes; injury details and drainage-flap sound match.",
+        "Second warning names Bus 17; Jana authorizes only reversible hold-and-inspect action.",
+        "Hidden void is found and road edge collapses after bus rerouting; warning appears useful but its predicted scene no longer occurs.",
+        "Confidence pressure grows inside the rescue system.",
+        "Third warning positions volunteer Unit Four near a later real incident.",
+        "Early arrival helps free a civilian, proving real operational benefit.",
+        "Secondary rockfall kills Luka Petric while Unit Four is still exposed; intervention has a human cost.",
+        "The case stops being a puzzle and becomes a command-safety problem.",
+        "Legacy OES signature is triggered.",
+        "Smith is assigned/arrives as evidence specialist, with local operational authority explicitly remaining local.",
+        "Episode closes on the new question: not whether the calls know something, but how to use information that changes the system acting on it."
+      ],
+      "episode_change": "An anomaly that could be treated as isolated evidence becomes a system-level rescue threat; Smith enters after local competence and cost are established.",
+      "emotional_wait": "Can they use the next warning without creating the next casualty?"
+    },
+    {
+      "episode": 2,
+      "working_title": "WE ARE IN THE RECORDING",
+      "function": "Break Smith’s initial suppression certainty by forcing both a suppression-linked loss and an unauthorized disclosure that may save a life, then prove response-coupling.",
+      "source_span_working": "Smith investigation through dummy-response midpoint proof",
+      "beats": [
+        "Smith reconstructs each warning beside the operational response it triggered; he refuses to treat prediction and action as separate logs.",
+        "OES precursor doctrine favors quarantining full content and verifying hazards independently.",
+        "A warning names road supervisor Davor Klemenc before a Lower Gorge inspection.",
+        "Present evidence supports modifying rather than cancelling the work; the culvert fails and Davor dies.",
+        "Smith cannot prove his rule killed Davor and refuses to erase the rule from the causal chain.",
+        "A later warning names Tina Vidmar and a flooding route.",
+        "Nika breaches temporary procedure and gives part of the warning to Andrej Kosir.",
+        "Andrej independently chooses an upper approach, finds Tina and gets her clear before conditions change.",
+        "The disclosure is unauthorized but materially changes the rescue path and may have saved her.",
+        "Jana forces the real question: neither obey nor suppress is sufficient as a universal rule.",
+        "A tightly bounded Confederation advisory contact supplies a response-coupled phenomenon model but no Earth authority.",
+        "The team creates an ethically bounded dummy response identifier/architecture that cannot endanger live crews.",
+        "New precursor content contains the dummy element.",
+        "Midpoint: response architecture is demonstrably part of what the warning can contain.",
+        "Smith withdraws pure suppression as sufficient and opens the deeper OES archive."
+      ],
+      "episode_change": "The external-prophecy model fails; Smith’s doctrine becomes part of the mystery rather than its solution.",
+      "emotional_wait": "What did OES learn before, and what did it remove from the story it tells itself?"
+    },
+    {
+      "episode": 3,
+      "working_title": "MORGEN PASS",
+      "function": "Expose OES institutional memory failure, eliminate the fantasy of one correct future, and force Smith/Jana toward distributed response as the real storm arrives.",
+      "source_span_working": "Morgen Pass reveal through relay/failover commitment",
+      "beats": [
+        "Smith reconstructs Morgen Pass and finds the missing human decision interval behind OES suppression doctrine.",
+        "The old rule is shown to have had a real success and a real concealed cost; OES is neither vindicated nor reduced to villainy.",
+        "Smith gives Jana the causal fact she needs despite institutional resistance, sacrificing secrecy advantage before asking for trust.",
+        "Taren’s broader model is useful but shown to underweight institutional memory and the rescue cost of over-optimization.",
+        "Two legitimate response architectures are held against identical present evidence.",
+        "Precursor output diverges with the response plans; there is no single future that can simply be obeyed.",
+        "Independent weather/terrain evidence confirms a conventional multi-site emergency is forming anyway.",
+        "Jana allocates real resources on present evidence rather than precursor scripts.",
+        "The valley fragments; bounded local cells receive objectives, limits, resources and check-in obligations.",
+        "Communications failover pushes services through shared relay relationships; precursor packets become more complete as the response network re-centralizes.",
+        "OES and Confederation can describe different parts of the problem, but local communications specialists retain engineering ownership.",
+        "Selected relay relationships are isolated without treating the communications system as a magical on/off switch.",
+        "Normal failover begins to reconnect what was segmented, restoring the dangerous central pattern.",
+        "Remote abstraction is no longer enough; a physical/field intervention at the relay becomes necessary under worsening conditions.",
+        "Smith commits to the relay action while Jana delegates bounded objectives before central visibility degrades."
+      ],
+      "episode_change": "Central predictive control is abandoned as the safety ideal at the exact moment the ordinary storm makes central certainty most tempting.",
+      "emotional_wait": "Will distributed judgment save people when the strongest warning arrives—or merely hide a better route?"
+    },
+    {
+      "episode": 4,
+      "working_title": "WHAT WE DID WITH THE WARNING",
+      "function": "Pay the operational and human price, resolve the case through accountable uncertainty rather than prediction victory, then close on Smith’s ordinary life.",
+      "source_span_working": "cascade / relay / Andrej rescue / aftermath / CH29",
+      "beats": [
+        "The real storm produces simultaneous road, hydro, access and evacuation problems independent of precursor behavior.",
+        "Smith and local communications specialists isolate selected relay relationships while useful local emergency cells remain functioning.",
+        "Precursor coherence drops as the response system stops behaving like one centrally scripted graph; central situational awareness also gets worse.",
+        "Andrej becomes trapped at a hydro site and suffers a severe leg injury.",
+        "The strongest warning yet supplies a detailed access sequence that appears operationally valuable.",
+        "OES can read it; Confederation analysis can assess internal coherence; neither is entitled to convert it into field command.",
+        "Jana refuses to use the warning route as an order.",
+        "Local hydro and technical-rescue crews independently verify an old inspection route source-blind from current physical evidence.",
+        "They extract Andrej alive. The warning route is never used, so whether it would have been faster or safer remains unknowable.",
+        "The storm is contained through ordinary rescue plus the new bounded information architecture, not by solving precursor ontology.",
+        "Jana leads a casualty/decision accounting that includes local successes, central failures and Nika’s unauthorized disclosure without moral simplification.",
+        "Nika’s life-safety purpose and weak escalation path are documented; access can return after a revised override drill.",
+        "Smith replaces suppression-as-doctrine with an interim rule separating unverified precursor observation, response topology, lawful disclosure purpose and local command authority.",
+        "OES suspends Morgen Pass as a standalone precedent and restores its omitted branch; Confederation advisory closes without taking jurisdiction.",
+        "Precursor origin remains UNKNOWN. The case is contained rather than cosmologically solved.",
+        "Smith returns to Dublin. Existing F1 daughter relationship closes the story with the terse BIT? callback and his promise: tomorrow, before work."
+      ],
+      "episode_change": "The main conflict closes: information is no longer allowed to become command merely because it is precise. Smith changes doctrine and personal behavior, and the institutions pay recorded consequences.",
+      "series_hook": "After closure only: the source/origin of precursor recordings remains unknown; no new emergency is opened."
+    }
+  ],
+  "compression_laws": [
+    "Do not merge Luka and Davor.",
+    "Do not remove Nika's unauthorized Tina/Andrej disclosure.",
+    "Do not move Smith before local characters establish the case unless a later scene-level test proves no loss of local agency.",
+    "Do not turn Taren into a commander or exposition oracle.",
+    "Do not solve precursor origin.",
+    "Do not make final rescue prove warning obedience or warning rejection.",
+    "Do not add a pre-resolution franchise cliffhanger."
+  ]
+}
