@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_ru_cast_audition_gate/1.0",
+  "schema_version": "ivdivo.room917_ru_cast_audition_gate/1.1",
   "date": "2026-08-22",
   "project_id": "ROOM917",
   "locale": "ru-RU",
@@ -20,6 +20,16 @@
     "provider_snapshot": "REQUIRED_BEFORE_PAID_CANARY",
     "disable_at_unix": "MUST_BE_NULL_OR_OUTSIDE_PRODUCTION_HORIZON",
     "voice_id_resolves_to_itself": "REQUIRED_FOR_CAST_LOCK"
+  },
+  "provider_model_risk": {
+    "eleven_v3_pvc_status": "AUDITION_REQUIRED_NOT_AUTO_REJECT",
+    "evidence_basis": "ElevenLabs current best-practices warn that Professional Voice Clones are not yet fully optimized for Eleven v3 and recommend IVC/designed voices when v3 features are required.",
+    "voice_library_constraint": "Public Voice Library candidates are Professional Voice Clones.",
+    "production_rule": "Do not compensate for a PVC-v3 naturalism failure by stacking tags, rewriting dialogue, or over-processing the mix.",
+    "fallback_trigger": "If a role fails native pronunciation, naturalism, microemotion, or pair chemistry across two correctly directed canary attempts, mark that candidate/voice class failed for the role.",
+    "fallback_path": "TEST_USER_CONTROLLED_NATIVE_RU_IVC_OR_VOICE_DESIGN_CANDIDATE_FOR_FAILED_ROLE_ONLY",
+    "fallback_spend": "SEPARATE_EXPLICIT_AUTHORIZATION_REQUIRED",
+    "story_change": false
   },
   "individual_canary_score": {
     "scale_per_dimension": "0-5",
@@ -43,7 +53,7 @@
   },
   "pronunciation_gate": {
     "critical_tokens": {"Greyhaven": "Грейхейвен", "Ashcroft": "Эшкрофт", "Leni-bird": "Лени-бёрд", "916": "девятьсот шестнадцать", "917": "девятьсот семнадцать", "1:17": "один семнадцать", "50 Hz": "пятьдесят герц", "38 ms": "тридцать восемь миллисекунд"},
-    "v3_dictionary": "USE_IF_ACCOUNT_DICTIONARY_LOCATOR_EXISTS; OTHERWISE USE_LOCKED_RUSSIAN_SPELLING_AND_ISOLATED_CANARY",
+    "v3_dictionary": "USE_IF_ACCOUNT_DICTIONARY_LOCATOR_EXISTS; OTHERWISE_USE_LOCKED_RUSSIAN_SPELLING_AND_ISOLATED_CANARY",
     "fail_policy": "SELECTIVE_RERENDER_OR_DICTIONARY_FIX; NEVER_REWRITE_STORY_FOR_TTS"
   },
   "performance_tag_gate": {
