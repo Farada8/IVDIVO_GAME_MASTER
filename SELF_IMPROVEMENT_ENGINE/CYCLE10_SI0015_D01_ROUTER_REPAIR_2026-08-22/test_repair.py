@@ -1,8 +1,12 @@
-import copy, json, unittest
+import copy, importlib.util, json, unittest
 from pathlib import Path
-from SELF_IMPROVEMENT_ENGINE.CYCLE10_SI0015_D01_ROUTER_REPAIR_2026_08_22.apply_repair import patch_system, patch_portfolio
 
+HERE=Path(__file__).resolve().parent
 ROOT=Path(__file__).resolve().parents[2]
+spec=importlib.util.spec_from_file_location('d01_router_repair',HERE/'apply_repair.py')
+mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+patch_system=mod.patch_system
+patch_portfolio=mod.patch_portfolio
 
 
 def flatten(x,p=''):
@@ -23,12 +27,7 @@ class Repair(unittest.TestCase):
         self.assertNotIn('D01_ACTIVE_E96',after['state_status'])
         b,a=flatten(before),flatten(after)
         changed={k for k in set(b)|set(a) if b.get(k)!=a.get(k)}
-        allowed=(
-          'portfolio_frontier.active_project',
-          'portfolio_frontier.text_locked_or_text_complete',
-          'recent_verified_main_integration',
-          'state_status',
-        )
+        allowed=('portfolio_frontier.active_project','portfolio_frontier.text_locked_or_text_complete','recent_verified_main_integration','state_status')
         self.assertTrue(all(any(k==x or k.startswith(x+'.') for x in allowed) for k in changed),changed)
 
     def test_portfolio_patch_is_bounded_and_records_d01_lock(self):
