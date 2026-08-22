@@ -18,6 +18,7 @@
 - Previous works — 6 physical works; no AI mockups represented as prior commissions.
 - **Combined readback pack v2** — 15 pages; preflight PASS.
 - Clean concept hero PNG — indicative only.
+- **Master dashboard v3** — 1536×1024 visual project summary; not evidence authority.
 
 ## Google Drive authority
 Folder `DELIVERABLES`: `1yZi4pIBJPW-SODGUmsamUDYxlr3jRTIj`
@@ -28,9 +29,15 @@ Canonical current:
 - Previous works: `1aD1sGq17CE-lr_XyfZhz7W44g1UzCcP6`
 - Combined readback pack v2: `1QbqXrLyi-z4WV6KWyd5siGD9FPUOdg4n`
 - Concept hero PNG: `1FwjlCCBFedoE2cNZgE9y950wtd3FFN5f`
+- **Master dashboard v3:** `1aWkyN8DeVP4SGMFB2KAa7efa5lu4ar5v`
 - External gate delta: `1K_xXjhDVtHLjhoBw-8gl2JRbR-RFEMxn`
-- Updated case state v2: `12OuiqQyuPrA43TmkY2c9u4MP88Srznqg`
+- Updated case state v3: `17LO5m_gBdyJioLWz5iqsONW4EdpM7UBk`
 - 5x20 Red Team: `1fWMo67DcLkhM2r28naLh6mMUZ4REt0mK`
+- Persistence receipt: `1ADSxQcJHQq95Kg6m0TTuO9Ggol4xb_aV`
+
+Master dashboard integrity:
+- SHA-256: `6535d8c19f854c879fb2d2a7c98dbfa4372684aab365ecc32f94c72842898069`
+- Interpretation rule: dashboard is a visual summary only; official brief + current case state + verified artifacts override any dashboard text.
 
 Superseded for submission use:
 - Proposal v1: `1i8teEd1dEqYMCOvLn9pRJfBoOX3OM9iA`
@@ -50,11 +57,18 @@ Superseded for submission use:
 
 ## Remaining submission gates
 1. Recover site supporting information or explicitly close it as unavailable.
-2. Preflight the live Clare CoCo Submit portal and any file-size/field constraints.
-3. Verify exact closing time; until then operational target is at least 24 hours before the date deadline.
-4. Obtain indicative sanity checks for architectural body + foundation/install.
-5. Final independent Red Team/readback after any quote/site changes.
-6. Early upload and receipt readback.
+2. Founder authorization before supplier outreach.
+3. Obtain indicative sanity checks for architectural body + foundation/install.
+4. Preflight the live Clare CoCo Submit portal and any file-size/field constraints.
+5. Verify exact closing time; until then operational target is at least 24 hours before the date deadline.
+6. Final independent Red Team/readback after any quote/site changes.
+7. Early upload and receipt readback.
+
+## GitHub persistence
+- Repository: `Farada8/IVDIVO_GAME_MASTER`
+- Branch: `public-art/inis-cealtra-submission-pack-20260822`
+- Draft PR: `#274`
+- Persistence receipt: `15_MASTER_DASHBOARD_PERSISTENCE_2026-08-22.md`
 
 ## Cluain parallel state
 Cluain remains in evidence-recovery mode: professional capability evidence is strong, but `0/3 submission-ready prior-project records` remains the safe count because project-level client/timeframe/budget/photo bindings are incomplete.
