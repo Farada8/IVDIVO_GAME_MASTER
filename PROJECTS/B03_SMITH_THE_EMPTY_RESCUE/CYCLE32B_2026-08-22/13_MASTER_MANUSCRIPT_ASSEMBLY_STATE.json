@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-22",
+  "status":"ASSEMBLY_IN_PROGRESS_NOT_AUTHORITY_YET",
+  "drive_workfile_id":"15697sHvELnHsg5LWQcFX-dSQ7AWRFSo9tiaqg9baNeo",
+  "drive_title":"69_B03 — THE EMPTY RESCUE — MASTER ASSEMBLY WORKFILE CH01-29 v0.1",
+  "assembly_method":"reverse prepend from current chapter authorities; no prose rewrite during assembly",
+  "chapters_required":29,
+  "chapters_inserted":["CH29"],
+  "chapters_remaining":28,
+  "next_chapter_to_prepend":"CH28",
+  "promotion_rule":"Do not rename/promote to AUTHORITATIVE MASTER MANUSCRIPT until CH01-29 are all present in order and chapter-heading coverage/readback passes 29/29.",
+  "next_after_assembly":"full corpus/Human Scene regression, then continuity/timeline/knowledge provenance, medical factual, relay/rescue plausibility, compiled pacing development passes"
+}
