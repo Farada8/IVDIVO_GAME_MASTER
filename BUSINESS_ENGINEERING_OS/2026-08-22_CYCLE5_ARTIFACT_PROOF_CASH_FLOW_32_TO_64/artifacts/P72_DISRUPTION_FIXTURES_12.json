@@ -1,0 +1,17 @@
+{
+  "schema": "ivdivo.business.disruption_fixture/1.0",
+  "fixtures": [
+    {"opportunity_id":"OP01","classification_hypothesis":"NEW_MARKET_NONCONSUMPTION","inputs":{"nonconsumer_blocked":true,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":true,"new_context_job":true},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP02","classification_hypothesis":"NEW_MARKET_NONCONSUMPTION","inputs":{"nonconsumer_blocked":true,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":true,"new_context_job":true},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP03","classification_hypothesis":"NEW_MARKET_NONCONSUMPTION","inputs":{"nonconsumer_blocked":true,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":true,"new_context_job":false},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP04","classification_hypothesis":"NEW_MARKET_NONCONSUMPTION","inputs":{"nonconsumer_blocked":true,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":true,"new_context_job":false},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP05","classification_hypothesis":"SUSTAINING_OR_UNCLEAR","inputs":{"nonconsumer_blocked":false,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":false,"new_context_job":false},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP06","classification_hypothesis":"SUSTAINING_OR_UNCLEAR","inputs":{"nonconsumer_blocked":false,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":false,"new_context_job":false},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP07","classification_hypothesis":"NEW_MARKET_NONCONSUMPTION","inputs":{"nonconsumer_blocked":true,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":true,"new_context_job":false},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP08","classification_hypothesis":"LOW_END_OVERSHOT","inputs":{"nonconsumer_blocked":false,"incumbent_overperformance":true,"simpler_lower_cost_sufficient":true,"new_context_job":false},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP09","classification_hypothesis":"SUSTAINING_OR_UNCLEAR","inputs":{"nonconsumer_blocked":false,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":false,"new_context_job":false},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP10","classification_hypothesis":"NEW_MARKET_NONCONSUMPTION","inputs":{"nonconsumer_blocked":true,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":true,"new_context_job":false},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP11","classification_hypothesis":"NEW_MARKET_NONCONSUMPTION","inputs":{"nonconsumer_blocked":true,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":true,"new_context_job":true},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"},
+    {"opportunity_id":"OP12","classification_hypothesis":"NEW_MARKET_NONCONSUMPTION","inputs":{"nonconsumer_blocked":true,"incumbent_overperformance":false,"simpler_lower_cost_sufficient":true,"new_context_job":true},"evidence_state":"HYPOTHESIS_ONLY_NOT_MARKET_PROOF"}
+  ]
+}

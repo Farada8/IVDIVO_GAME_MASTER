@@ -1,0 +1,1 @@
+{"fixtures":[{"sector":"construction_tender_intelligence","result":{"score":2,"state":"MATERIAL_HYPOTHESIS"}},{"sector":"retrofit_lead_qualification","result":{"score":2,"state":"MATERIAL_HYPOTHESIS"}},{"sector":"cyber_governance","result":{"score":1,"state":"WEAK_OR_UNPROVEN"}}],"evidence_state":"HYPOTHESIS_ONLY"}
