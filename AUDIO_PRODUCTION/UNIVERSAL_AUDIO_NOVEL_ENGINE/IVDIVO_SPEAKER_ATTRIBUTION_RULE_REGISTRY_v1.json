@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "updated": "2026-08-22",
   "authority": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/IVDIVO_SPEAKER_ATTRIBUTION_EVIDENCE_CONTRACT_v2.md",
   "runtime": "tools/ivdivo_speaker_attribution.py",
@@ -23,19 +23,21 @@
     "assigned":599,
     "unknown":3116,
     "coverage_pct":16.12,
-    "status":"VERIFIED_EXACT_REPO_CI_PASS",
+    "status":"VERIFIED_CURRENT_MAIN_READBACK_PASS",
     "voice_map_authorized":false,
     "story_text_changes":0,
     "supersedes_working_candidate_661":true
   },
   "verification": {
     "github_pr":436,
-    "tested_pr_head":"016d24c655ba0c710ff01a3dab83aa7acc0a37d9",
-    "tested_merge_ref":"bea3fdb86f793988f47d5868ab2bcf396b092a8b",
-    "workflow_run_id":32571914177,
-    "job_id":97028433852,
-    "pytest":"22_PASSED",
-    "py_compile":"PASS"
+    "tested_pr_head":"28645a167332cb978c6ce0dedffdbac78680cea0",
+    "tested_merge_ref":"d64d16579c653a131ee2decb105ac28ab6b82143",
+    "workflow_run_id":32572056461,
+    "job_id":97028799073,
+    "pytest":"22_PASSED_IN_0.05S",
+    "py_compile":"PASS",
+    "main_merge_commit":"c53e9c0923041183bc642363ad5d572c1bb2cf77",
+    "main_state_readback":"PASS"
   },
   "new_regressions": [
     {"id":"REPORTING_CLAUSE_MENTION_NEQ_REPORTING_SUBJECT","fixture":"B03_CH01_S0172","input":"The caller on Nika’s line said,","forbidden_assignment":"NIKA","expected_generic":"UNKNOWN","independent_authority":"CH01 REAL_COLLISION_CALLER"}
