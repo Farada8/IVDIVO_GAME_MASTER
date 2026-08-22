@@ -38,18 +38,42 @@ def main() -> None:
         fail("hash coverage must remain 35/35")
 
     si14 = data["si0014_recovery_evidence"]
-    if si14["physical_interruption_incidents"] >= si14["required_incidents"]:
-        if not si14["promotion_authorized"]:
-            fail("event threshold changed; reconciliation must be re-evaluated")
+    if si14["physical_interruption_incidents"] >= si14["required_incidents"] and not si14["promotion_authorized"]:
+        fail("SI-0014 event threshold changed; reconciliation must be re-evaluated")
     if si14["promotion_authorized"]:
         fail("SI-0014 promotion is not authorized")
 
     si15 = data["si0015_routing_calibration"]
-    if si15["independent_human_expected_label_review"] == "PROVEN" and si15["live_operational_routing_telemetry"] == "PROVEN":
-        if not si15["promotion_authorized"]:
-            fail("SI-0015 evidence changed; reconciliation must be re-evaluated")
+    if (
+        si15["independent_human_expected_label_review"] == "PROVEN"
+        and si15["live_operational_routing_telemetry"] == "PROVEN"
+        and not si15["promotion_authorized"]
+    ):
+        fail("SI-0015 evidence changed; reconciliation must be re-evaluated")
     if si15["promotion_authorized"]:
         fail("SI-0015 promotion is not authorized")
+
+    placement = data["artifact_placement_path_drift"]
+    if placement["authority_effect"] != "NONE":
+        fail("artifact-placement candidate cannot change global authority")
+    if placement["platform_middleware_claimed"]:
+        fail("chat connector platform middleware is not installed/proven")
+    if placement["promotion_authorized"]:
+        fail("artifact-placement candidate cannot auto-promote")
+    if placement["chat_connector_live_real_event_count"] != 0:
+        fail("live connector event count changed; reconciliation must be re-evaluated")
+    if placement["wip_class"] != "OBSERVED_ARMED_CANDIDATE_NOT_AUTO_WIP":
+        fail("artifact-placement monitoring must not become auto-WIP")
+
+    topic = data["thread_topic_continuity_guard"]
+    if topic["authority_effect"] != "NONE" or topic["global_si_id"] is not None:
+        fail("topic-continuity candidate cannot change global authority")
+    if topic["promotion_authorized"]:
+        fail("topic-continuity candidate cannot auto-promote")
+    if topic["real_continuation_events"] >= topic["required_real_continuation_events"]:
+        fail("topic-continuity natural-event threshold changed; reconciliation must be re-evaluated")
+    if topic["wip_class"] != "OBSERVED_MERGED_CANDIDATE_NOT_AUTO_WIP":
+        fail("topic-continuity monitoring must not become auto-WIP")
 
     bi = data["book_intelligence"]
     if bi["universal_promotion"]:
@@ -59,6 +83,8 @@ def main() -> None:
     bounded = sum(bool(wip[k]) for k in ("bounded_pilot_1", "bounded_pilot_2"))
     if bounded > 2:
         fail("meta WIP exceeds two bounded pilots")
+    if len(wip.get("observed_not_auto_wip", [])) < 3:
+        fail("observed non-WIP candidates were lost from frontier")
 
     forbidden = set(data["forbidden"])
     required_forbidden = {
@@ -66,6 +92,8 @@ def main() -> None:
         "ALLOCATE_NEW_SI_ID_FROM_CYCLE_COUNT_OR_TEST_COUNT",
         "COUNT_SOURCE_GROUNDED_MODEL_ADJUDICATION_AS_HUMAN_SIGNAL",
         "COUNT_SYNTHETIC_INTERRUPTION_AS_NATURAL_RECOVERY_EVENT",
+        "COUNT_SYNTHETIC_TOPIC_CONTINUATION_AS_NATURAL_REAL_PILOT_EVENT",
+        "COUNT_TEST_OR_REPLAY_AS_CHAT_CONNECTOR_LIVE_PLACEMENT_FAILURE",
         "START_ANOTHER_32_TO_64_META_LOOP_WITHOUT_A_NEW_BOTTLENECK",
     }
     missing = required_forbidden - forbidden
