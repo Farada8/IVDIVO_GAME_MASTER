@@ -1,0 +1,39 @@
+{
+  "bundle_id": "BI-V11-PILOT3-B03-NETWORK-PROSPECTIVE",
+  "requires_end_to_end": true,
+  "purpose": "PROSPECTIVE_REAL_PROJECT_VALIDATION_OF_V1_1",
+  "nodes": [
+    {"id":"SRC-GSRE","type":"SOURCE","label":"Official Google SRE book + RFC 5905 time-sync boundary"},
+    {"id":"SEC-GSRE-NET","type":"SECTION","label":"Cascading Failures / Managing Critical State / NTP clock synchronization"},
+    {"id":"CLAIM-NET-CLOCK","type":"CLAIM","label":"Failover may improve delivery coherence but common transport does not itself synchronize independent clocks"},
+    {"id":"MECH-DELIVERY-NEQ-CLOCK","type":"MECHANISM","label":"DELIVERY_COHERENCE_NEQ_CLOCK_SYNCHRONIZATION"},
+    {"id":"ADAPTER-STORY-NET","type":"ADAPTER","label":"Book Intelligence Story factual adapter"},
+    {"id":"APP-B03-CH23","type":"PROJECT_APPLICATION","label":"Current B03 CH23 network terminology factual review"},
+    {"id":"TEST-CH23-29","type":"TEST","label":"Exact old/new text readback + CH24/26/27/28/29 dependency regression"},
+    {"id":"RESULT-NET-HOLD-CLOSED","type":"RESULT","label":"3/3 clock-causality occurrences repaired; 0 downstream story rewrites; P72 M2 source-based network hold closed"},
+    {"id":"LEARN-V11-PROSPECTIVE","type":"LEARNING","label":"v1.1 targeted traceable source pass can close a factual hold with bounded repair and no false FULL_READ"},
+    {"id":"RULE-V11-ONE-REAL","type":"ENGINE_RULE","label":"v1.1 has one prospective REAL_PROJECT_VALIDATION; second independent prospective validation still required for promotion"}
+  ],
+  "edges": [
+    {"from_id":"SRC-GSRE","to_id":"SEC-GSRE-NET","relation":"SOURCE_HAS_SECTION","locator":"official Google SRE chapters Addressing Cascading Failures / Managing Critical State; RFC 5905"},
+    {"from_id":"SEC-GSRE-NET","to_id":"CLAIM-NET-CLOCK","relation":"SECTION_SUPPORTS_CLAIM","locator":"clock drift/time synchronization and failover/load sections"},
+    {"from_id":"CLAIM-NET-CLOCK","to_id":"MECH-DELIVERY-NEQ-CLOCK","relation":"CLAIM_ABSTRACTS_TO_MECHANISM","locator":"13_GOOGLE_SRE_NETWORK_FACTUAL_SOURCE_PASS_v1.0.md"},
+    {"from_id":"MECH-DELIVERY-NEQ-CLOCK","to_id":"ADAPTER-STORY-NET","relation":"MECHANISM_PACKED_FOR_DOMAIN","locator":"Pilot3 source adapter packet"},
+    {"from_id":"ADAPTER-STORY-NET","to_id":"APP-B03-CH23","relation":"ADAPTER_APPLIED_TO_PROJECT","locator":"Drive CH23 13khiS1NdVndiGNDqQiHY_TRlhsiLme2HRY-2C3-7Zr0"},
+    {"from_id":"APP-B03-CH23","to_id":"TEST-CH23-29","relation":"PROJECT_APPLICATION_TESTED_BY","locator":"atomic 3/3 replacements + old-text absence/new-text presence + downstream chapter inspection"},
+    {"from_id":"TEST-CH23-29","to_id":"RESULT-NET-HOLD-CLOSED","relation":"TEST_PRODUCED_RESULT","locator":"14_PILOT3_B03_NETWORK_FACTUAL_PROSPECTIVE_v1.1.md"},
+    {"from_id":"RESULT-NET-HOLD-CLOSED","to_id":"LEARN-V11-PROSPECTIVE","relation":"RESULT_PROMOTED_TO_LEARNING","locator":"Pilot3 result"},
+    {"from_id":"LEARN-V11-PROSPECTIVE","to_id":"RULE-V11-ONE-REAL","relation":"LEARNING_CHANGED_ENGINE_RULE","locator":"CURRENT_BOOK_INTELLIGENCE_ENGINE_STATE next update"}
+  ],
+  "expected_audit": {"status":"PASS","node_count":10,"edge_count":9,"errors":[]},
+  "evidence_class": "REAL_PROJECT_VALIDATION",
+  "project_id": "IVDIVO_BOOK_3_SMITH",
+  "measurable_gain": true,
+  "metrics": {
+    "factual_defect_classes_found": 1,
+    "textual_occurrences_repaired": 3,
+    "dependent_chapter_rewrites": 0,
+    "story_regressions": 0,
+    "network_factual_hold_closed": true
+  }
+}
