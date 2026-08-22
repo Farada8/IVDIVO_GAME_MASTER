@@ -1,0 +1,42 @@
+{
+  "schema_version": "ivdivo.room917_ru_paid_s0_authorization_contract/1.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "status": "MANUAL_AUTHORIZATION_REQUIRED",
+  "scope": "BOUNDED_RU_S0_CANARY_ONLY",
+  "provider": "ElevenLabs",
+  "allowed_max_blocks": [4, 6],
+  "full_episode_render_allowed": false,
+  "cast_lock_granted_by_authorization": false,
+  "automatic_execution": false,
+  "requirements_before_authorization": [
+    "AUTHENTICATED_PROVIDER_SNAPSHOT_PASS",
+    "NON_BINDING_SHORTLIST_PASS",
+    "HUMAN_REVIEW_COMPLETE",
+    "ALL_ROLE_SCORES_AT_LEAST_24_OF_30",
+    "NO_HARD_REJECTS",
+    "ALL_PAIR_TESTS_PASS",
+    "PRONUNCIATION_GATE_PASS",
+    "FOUNDER_CREDIBILITY_PASS",
+    "BINDINGS_CANDIDATE_STATUS_READY_FOR_PAID_CANARY_AUTHORIZATION"
+  ],
+  "explicit_authorization_inputs": {
+    "confirm_spend": "YES",
+    "scope_phrase": "ROOM917_RU_S0_CANARY_ONLY",
+    "max_blocks": "4_OR_6",
+    "authorization_note": "NON_EMPTY"
+  },
+  "resulting_artifact_status": "PAID_S0_AUTHORIZED",
+  "resulting_founder_paid_canary_authorized": true,
+  "provider_call_made_by_authorization_compiler": false,
+  "provider_spend_made_by_authorization_compiler": false,
+  "next_after_authorization": "MANUAL_GITHUB_ACTIONS_DISPATCH_OF_ROOM917_RU_S0_CANARY_WITH_confirm_spend_EQUALS_YES_AND_MAX_BLOCKS_MATCHING_AUTHORIZATION",
+  "hard_rules": [
+    "DO_NOT_AUTHORIZE_FROM_CHAT_IMPLICATION_OR_SILENCE",
+    "DO_NOT_AUTORUN_PAID_WORKFLOW_AFTER_CREATING_AUTHORIZATION_ARTIFACT",
+    "DO_NOT_RENDER_FULL_E01",
+    "DO_NOT_CAST_LOCK",
+    "DO_NOT_CHANGE_STORY_OR_DIALOGUE"
+  ]
+}
