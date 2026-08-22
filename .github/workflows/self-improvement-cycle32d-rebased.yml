@@ -20,4 +20,6 @@ jobs:
       - name: Install pytest
         run: python -m pip install pytest
       - name: Run rebased resume-guard regression
+        env:
+          PYTHONPATH: .
         run: pytest -q tests/test_ivdivo_preexecution_resume_guard.py
