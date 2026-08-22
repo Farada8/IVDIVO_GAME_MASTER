@@ -1,0 +1,58 @@
+{
+  "schema_version": "room917.current_critical_sfx_canary_pointer/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "V2_1_24_CANDIDATES_BYTE_IDENTITIES_RECORDED__HOLD_HUMAN_AUDITION",
+  "authority": {
+    "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py",
+    "generator_commit": "bcf057a2a43dec21e7f4ba9e8ea4762a96bcae79",
+    "receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json",
+    "receipt_commit": "26544e956ca9d3d5b023325156fd0a34d201d633",
+    "blind_builder": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py",
+    "blind_workflow": ".github/workflows/room917-sound-asset-blind-audition-packages.yml",
+    "blind_package_id": "ROOM917_E01_CRITICAL_SFX_BLIND_003"
+  },
+  "supersedes_for_current_use": [
+    "ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json",
+    "ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json"
+  ],
+  "assets": [
+    "S07_TRANSFORMER_WAKE",
+    "S08_RELAY_RIPPLE",
+    "S10_SELECTOR_916",
+    "S11_GLASS_LAMP_916_PING",
+    "S13_INTERNAL_DOUBLE_RING_OLD",
+    "S14_UNMARKED_GLASS_LAMP_PING",
+    "S17_COPPER_HISS",
+    "S19_TWO_PART_LINE_CUT"
+  ],
+  "variants_per_asset": 3,
+  "candidate_count": 24,
+  "seed": 91720260822,
+  "rng_policy": "PER_CANDIDATE_SHA256_DERIVED_SEED",
+  "provider_calls": 0,
+  "paid_synthesis_calls": 0,
+  "machine_fixes_verified_by_recorded_receipt": [
+    "S13_EXACTLY_TWO_COUNTABLE_RING_PULSES_MACHINE_PRECHECK",
+    "S19_TWO_PART_EVENTS_MACHINE_DISTINCT_HUMAN_CHECK_STILL_REQUIRED",
+    "S11_S14_MATERIAL_SPECTRAL_SIMILARITY_PRESERVED",
+    "S14_MONO_SAFE_POSITIONAL_PAN_WITHOUT_HAAS_DELAY"
+  ],
+  "human_required_before_any_binding": [
+    "BLIND_HUMAN_AUDITION",
+    "S11_S14_PAIRING_CHECK",
+    "S13_COUNTABILITY_HUMAN_CHECK",
+    "S17_VOICE_UNDERLAY_CHECK",
+    "S19_TWO_PART_HUMAN_CHECK",
+    "MONO_CHECK",
+    "PHONE_PROXY_CHECK",
+    "IDENTITY_GATE_PASS"
+  ],
+  "local_reproduction_evidence_2026_08_22": {
+    "all_24_wav_sha256_match_v2_1_recorded_identities": true,
+    "human_audition_performed": false,
+    "production_binding_authorized": false
+  },
+  "hard_law": "V2_1_IS_CURRENT_CANARY_IDENTITY_AUTHORITY_FOR_CRITICAL_SFX; SYNTHETIC CANARY AUDIO DOES NOT AUTHORIZE PATCHING, MIXING OR RELEASE."
+}
