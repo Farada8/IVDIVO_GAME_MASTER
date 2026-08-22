@@ -18,7 +18,7 @@
     {"id":"A130_P003B_FULLMIX_IDENTITY_HANDOFF","priority":23,"status":"DONE","gate_type":null,"dependencies":["A120_RENDER_MANIFEST_MACHINE_QC"],"scope":"ROOM917_E01_AUTOMIX"},
     {"id":"A140_P003B_AUTOMIX_ELIGIBILITY","priority":24,"status":"DONE","gate_type":null,"dependencies":["A130_P003B_FULLMIX_IDENTITY_HANDOFF"],"scope":"ROOM917_E01_AUTOMIX"},
     {"id":"A200_AUTOMIX_STATE_RECONCILIATION","priority":30,"status":"DONE","gate_type":null,"dependencies":["A140_P003B_AUTOMIX_ELIGIBILITY"],"scope":"ROOM917_E01_AUTOMIX"},
-    {"id":"A210_DOWNSTREAM_NO_BYPASS_REGRESSION","priority":31,"status":"READY","gate_type":null,"dependencies":["A140_P003B_AUTOMIX_ELIGIBILITY"],"scope":"ROOM917_E01_AUTOMIX"},
+    {"id":"A210_DOWNSTREAM_NO_BYPASS_REGRESSION","priority":31,"status":"DONE","gate_type":null,"dependencies":["A140_P003B_AUTOMIX_ELIGIBILITY"],"scope":"ROOM917_E01_AUTOMIX"},
     {"id":"A220_DRIVE_GITHUB_DURABLE_SYNC","priority":32,"status":"READY","gate_type":null,"dependencies":["A140_P003B_AUTOMIX_ELIGIBILITY"],"scope":"ROOM917_E01_AUTOMIX"}
   ]
 }
