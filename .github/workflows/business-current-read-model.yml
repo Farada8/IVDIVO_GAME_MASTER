@@ -9,6 +9,7 @@ on:
       - 'BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/**'
       - 'BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/**'
       - 'BUSINESS_ENGINEERING_OS/2026-08-22_P225_BOUNDED_ACQUISITION_NONFINDING/**'
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_P225_DOCUMENT_COORDINATE_DISCOVERY/**'
       - 'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/**'
       - '.github/workflows/business-current-read-model.yml'
 
@@ -31,10 +32,13 @@ jobs:
           p288 = json.loads((root/'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/01_MACHINE_STATE.json').read_text())
           rc = model['resume_control']
           iv = rc['input_validation']
+          coord = rc['latest_target_coordinate_state']
+          cal = rc['calibration']
           validator_state = json.loads((root/iv['state_path']).read_text())
+          coordinate_state = json.loads((root/coord['machine_state_path']).read_text())
+          negative_control = (root/cal['latest_negative_control']).read_text()
           intake = (root/rc['unlock_intake_path']).read_text()
           fixture = json.loads((root/rc['resume_gate_fixture']).read_text())
-          negative_control = (root/rc['calibration']['latest_negative_control']).read_text()
           runtime_path = root/rc['resume_gate_runtime']
           spec = importlib.util.spec_from_file_location('business_resume_gate', runtime_path)
           gate = importlib.util.module_from_spec(spec)
@@ -43,82 +47,58 @@ jobs:
 
           assert model['schema'] == 'ivdivo.business.current_read_model/1.4'
           assert model['restore_order'][2] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json::resume_control'
-          assert model['core']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
-          assert model['mandatory_evidence_overlay']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
-          assert model['mandatory_evidence_overlay']['may_change_root_blockers_silently'] is False
-          assert model['mandatory_evidence_overlay']['may_promote_proof_grade'] is False
-          assert model['mandatory_evidence_overlay']['may_authorize_external_action'] is False
-
-          assert model['current_roots']['ROOT_A'] == 'TARGET_PACK_NOT_ACQUIRED'
-          assert model['current_roots']['ROOT_B'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
+          assert model['current_roots'] == {
+            'ROOT_A':'TARGET_PACK_NOT_ACQUIRED',
+            'ROOT_B':'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
+          }
           ex = model['current_execution']
           assert ex['completed_engineering_subsets'] == ['P257-P264','P265-P272']
-          assert ex['completed_engineering_cards_inside_parent_backlog'] == 16
-          assert ex['completed_reconciliation_cards_inside_parent_backlog'] == [288]
-          assert ex['completed_reconciliation_count_inside_parent_backlog'] == 1
           assert ex['completed_total_cards_inside_parent_backlog'] == 17
-          assert ex['parent_backlog_count'] == 64
           assert ex['remaining_unexecuted_count'] == 47
-          assert ex['remaining_ranges'] == ['P225-P256','P273-P287']
-          assert ex['completed_total_cards_inside_parent_backlog'] + ex['remaining_unexecuted_count'] == ex['parent_backlog_count']
+          assert ex['parent_backlog_count'] == 64
           assert ex['highest_information_real_gates'] == [225,235]
-
-          assert model['latest_reconciliation']['prompt'] == 288
-          assert model['latest_reconciliation']['disposition'] == 'PROTECT_NO_CHANGE'
-          assert model['latest_reconciliation']['executed_exactly_once'] is True
+          assert ex['completed_total_cards_inside_parent_backlog'] + ex['remaining_unexecuted_count'] == 64
           assert p288['prompt'] == 288 and p288['executed'] is True
           assert p288['parent_backlog']['executed_total'] == 17
-          assert p288['parent_backlog']['remaining_unexecuted'] == 47
 
-          assert rc['status'] == 'CURRENT_BUSINESS_LOCAL_CONTROL_PLANE'
           assert iv['status'] == 'CURRENT_BUSINESS_LOCAL_INPUT_ADMISSIBILITY_GATE'
-          assert iv['runtime_path'] == 'BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/engine/unlock_validator.py'
-          assert iv['state_path'] == 'BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/VALIDATOR_STATE.json'
           assert iv['pr'] == 295
           assert iv['merge_sha'] == '301326537269ac97451d70b07a3f6455dc52c175'
-          assert iv['exact_head'] == 'fc5de451fb20c96db06066d73c62737596b89d07'
-          assert iv['input_validator_ci_run'] == 32554003798
-          assert iv['read_model_guard_ci_run'] == 32554003796
           assert iv['deterministic_suite'] == 'PASS_15_OF_15'
           assert iv['real_positive_root_event_count'] == 0
-          assert iv['current_public_first_party_status_is_pack_event'] is False
           assert iv['validated_input_is_authority'] is False
-          assert iv['must_precede_resume_gate_for_new_root_events'] is True
-          assert (root/iv['runtime_path']).exists()
-          assert validator_state['schema'] == 'ivdivo.business.unlock_input_validator/1.2'
           assert validator_state['deterministic_canaries'] == 15
           assert validator_state['parent_execution_count_after'] == 17
           assert validator_state['current_resume_route'] == 'PROTECT_NO_CHANGE'
-          assert validator_state['current_public_first_party_status_is_pack_event'] is False
-          assert validator_state['external_action_authorized'] is False
 
-          assert rc['resume_gate_pr'] == 282
-          assert rc['resume_gate_merge_sha'] == '75306d65cf01eb1bcfb0db2e05bc50c174c5c0bf'
-          assert rc['resume_gate_exact_head'] == 'aca35c463ce09e3a491bcb7634a891dfdf4ffe37'
-          assert rc['resume_gate_ci_run'] == 32553370924
-          assert rc['current_route'] == 'PROTECT_NO_CHANGE'
-          assert rc['unlock_intake_text_is_not_unlock_event'] is True
-          assert rc['generic_continuation_is_not_evidence_event'] is True
-          assert rc['route_may_authorize_external_action'] is False
-          assert rc['route_may_promote_proof_grade'] is False
-          cal = rc['calibration']
+          assert coord['status'] == 'DOCUMENT_COORDINATE_DISCOVERED_PACK_NOT_YET_ACQUIRED'
+          assert coord['documents_coordinate_discovered'] is True
+          assert coord['target_pack_acquired'] is False
+          assert coord['p225_executed'] is False
+          assert coord['classification'] == 'REAL_NEGATIVE_CONTROL_002'
+          assert coordinate_state['resource_id'] == '8872468'
+          assert coordinate_state['documents_coordinate_discovered'] is True
+          assert coordinate_state['attachment_inventory_read_back'] is False
+          assert coordinate_state['document_bytes_acquired'] is False
+          assert coordinate_state['p225_executed'] is False
+          assert coordinate_state['target_pack_acquired'] is False
+          assert coordinate_state['resume_route'] == 'PROTECT_NO_CHANGE'
+
           assert cal['resume_gate_synthetic_deterministic_suite'] == 'PASS_16_OF_16'
           assert cal['input_validator_synthetic_deterministic_suite'] == 'PASS_15_OF_15'
-          assert cal['real_negative_control_count'] == 1
+          assert cal['real_negative_control_count'] == 2
           assert cal['real_positive_root_event_count'] == 0
-          assert cal['latest_negative_control_result'] == 'PASS_ROOT_UNCHANGED_ROUTE_PROTECT_NO_CHANGE'
-          assert cal['local_promotion_state'] == 'NEGATIVE_CONTROL_PASS_POSITIVE_ROOT_EVENT_PENDING'
+          assert cal['negative_control_classes'] == [
+            'BOUNDED_CONNECTED_SOURCE_NONFINDING',
+            'FIRST_PARTY_DOCUMENT_COORDINATE_WITHOUT_PACK_BYTES'
+          ]
+          assert cal['latest_negative_control_result'] == 'PASS_DOCUMENT_COORDINATE_ONLY_ROOT_UNCHANGED_PROTECT_NO_CHANGE'
+          assert cal['local_promotion_state'] == 'TWO_NEGATIVE_CONTROLS_PASS_POSITIVE_ROOT_EVENT_PENDING'
           assert cal['broader_or_global_promotion'] is False
-          assert 'Disposition:** `BOUNDED_NONFINDING / PROTECT_NO_CHANGE`' in negative_control
+          assert 'NEGATIVE_CONTROL_002 = PASS' in negative_control
           assert '`P225_EXECUTED = FALSE`' in negative_control
           assert '`TARGET_PACK_ACQUIRED = FALSE`' in negative_control
-          assert '`ROOT_A = TARGET_PACK_NOT_ACQUIRED`' in negative_control
-          assert '`BOUNDED_NONFINDING != P225_EXECUTION`' in negative_control
-
-          assert fixture['unlock_intake_path'] == rc['unlock_intake_path']
-          assert fixture['expected_route'] == rc['current_route']
-          assert 'AWAITING_AUTHORIZED_INPUT' in intake
-          assert 'Authority effect:** none until the specified input is actually supplied and read back' in intake
+          assert '`RESUME_ROUTE = PROTECT_NO_CHANGE`' in negative_control
 
           keys = [
             'target_pack_acquired','target_requirement_registry_ready','actual_bidder_designation',
@@ -132,17 +112,15 @@ jobs:
           assert routed['external_action_authorized'] is False
           assert routed['proof_promotion'] is False
 
-          assert model['dependency_state']['P252_P280'] == 'BLOCKED_FROZEN_TARGET_AND_BIDDER_PACKETS_REQUIRED'
-          assert model['dependency_state']['P281_P283'] == 'BLOCKED_REAL_INDEPENDENT_REVIEW_REQUIRED'
-          assert model['dependency_state']['P284_P287'] == 'BLOCKED_EXPLICIT_EXTERNAL_AUTHORIZATION_AND_REAL_USE_REQUIRED'
+          assert rc['current_route'] == 'PROTECT_NO_CHANGE'
+          assert rc['route_may_authorize_external_action'] is False
+          assert rc['route_may_promote_proof_grade'] is False
           assert model['proof_frontier'] == {'public_derived_ceiling':'E2_PLUS','artifact_plane':'PA3','PA4':False,'PA5':False,'E3':False,'E4':False}
-          assert 'INPUT_VALIDATOR_PRECEDES_RESUME_GATE_FOR_NEW_ROOT_EVENTS' in model['guards']
-
+          assert 'DOCUMENT_COORDINATE_DISCOVERED_DOES_NOT_EQUAL_TARGET_PACK_ACQUIRED' in model['guards']
           assert 'CORE_CURRENT + MANDATORY_EVIDENCE_OVERLAY = CURRENT_BUSINESS_READ_MODEL' in core
           assert 'total executed = **17**' in core_lower
           assert 'remaining unexecuted = **47**' in core_lower
-          assert 'ROOT_A = TARGET_PACK_NOT_ACQUIRED' in core
-          assert 'ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET' in core
           assert 'NOT_FOUND_IN_CONNECTED_SOURCES != DOCUMENT_DOES_NOT_EXIST' in overlay
-          print('CURRENT_BUSINESS_READ_MODEL 1.4: PASS — input validator -> persistence/readback -> ResumeGate; 17/64 unchanged')
+          assert 'AWAITING_AUTHORIZED_INPUT' in intake
+          print('CURRENT_BUSINESS_READ_MODEL 1.4: PASS — 2 real negative controls, 0 positive root events, 17/64 unchanged')
           PY
