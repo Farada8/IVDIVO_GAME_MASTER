@@ -36,9 +36,10 @@ jobs:
           packet = json.loads((root/'02_SYNTHETIC_SAMPLE_PACKET.json').read_text(encoding='utf-8'))
           results = router.route_many(packet['cases'])
           assert len(results) == 6
+          assert all(x['case_id'] for x in results)
           assert all(x['external_action_authorized'] is False for x in results)
           assert all(x['legal_compliance_proven'] is False for x in results)
-          assert any(x['status'] == 'HOLD_UNRESOLVED_SCOPE_OR_EXCEPTION' for x in results)
+          assert any(any(d['status'] in {router.APPLIES, router.APPLIES_SPECIAL_PRESENTATION} for d in x['decisions']) for x in results)
           print('P-EW03 six-case router PASS')
           PY
       - name: Compile P-EW03 runtime
