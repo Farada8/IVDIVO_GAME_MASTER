@@ -1,11 +1,11 @@
 {
-  "schema_version": "ivdivo.room917_current_automix_postproduction_pointer/1.5",
+  "schema_version": "ivdivo.room917_current_automix_postproduction_pointer/1.6",
   "updated": "2026-08-22",
   "project": "ROOM917",
   "episode": "E01",
   "active_branch": "THE_INSURABLE_FIRE",
   "scope": "AUTOMIX_POSTPRODUCTION_ONLY",
-  "status": "PREFLIGHT__PLAN__RENDER_QC__P003B_IDENTITY__ELIGIBILITY__EXECUTABLE_NONSTOP_ROUTER_READY__PRODUCTION_RENDER_HOLD_ON_REAL_INPUTS",
+  "status": "PREFLIGHT__PLAN__RENDER_QC__P003B_IDENTITY__ELIGIBILITY__EXECUTABLE_NONSTOP_ROUTER_READY__A200_RECONCILED__PRODUCTION_RENDER_HOLD_ON_REAL_INPUTS",
   "release_authority": false,
   "execution_contract": "AUDIO_PRODUCTION/ROOM917/AUTOMIX/ROOM917_E01_AUTOMIX_POSTPRODUCTION_EXECUTION_CONTRACT_v1.json",
   "preflight": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/automix_postproduction_preflight.py",
@@ -20,6 +20,14 @@
   "nonstop_queue": "AUDIO_PRODUCTION/ROOM917/AUTOMIX/ROOM917_E01_AUTOMIX_CONTINUATION_QUEUE_v1.json",
   "nonstop_router_adapter": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/room917_automix_nonstop_route.py",
   "project_wide_router": "IVDIVO_NARRATIVE_OS/tools/local_gate_router.py",
+  "state_reconciliation": "AUDIO_PRODUCTION/ROOM917/AUTOMIX/ROOM917_E01_AUTOMIX_STATE_RECONCILIATION_2026-08-22_v1.json",
+  "state_reconciliation_status": "PASS_WITH_NON_PRODUCTION_REFERENCE_DRIFT",
+  "reference_drift": {
+    "critical_sfx": "CURRENT_SOUND_DESIGN_POINTER_NESTED_V1_IS_STALE_FOR_REFERENCE_ONLY",
+    "current_reference_authority": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/CURRENT_CRITICAL_SFX_CANARY_POINTER.json",
+    "current_canary_receipt": "ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json",
+    "production_effect": "NONE__AUTOMIX_PRODUCTION_REQUIRES_PASS_BINDING_REPORT_NOT_CANARY_RECEIPT"
+  },
   "ci_bridges": [
     "audio/studio/tests/test_room917_automix_postproduction_preflight.py",
     "audio/studio/tests/test_room917_automix_automation_plan.py",
@@ -42,8 +50,6 @@
     "10_P003B_TARGETED_PASS_B_AND_SEALED_PASS_C",
     "11_ONLY_THEN_RELEASE_DECISION"
   ],
-  "identity_law": "THE_AUDIO_BYTES_HEARD_IN_P003B_MUST_HAVE_THE_SAME_SHA256_AS_THE_FULL_MIX_RECORD_REVALIDATED_FROM_THE_SAME_RENDER_MANIFEST_AND_RECEIPT",
-  "eligibility_law": "MANIFEST_SHA256__RECEIPT_SHA256__HANDOFF_SHA256__AND_ACTUAL_AUDIO_SHA256_ARE_BOUND_IN_ONE_AUTOMIX_ELIGIBILITY_RECEIPT",
   "current_known_holds": [
     "EXACT_CURRENT_MASTER_BYTES_NOT_REACQUIRED_FOR_POST_RENDER_PATCH",
     "TRUSTED_EXACT_PRE_SCENE3_TIMING_NOT_YET_AVAILABLE_FOR_D003_LOCALIZATION",
@@ -53,8 +59,8 @@
   ],
   "current_router_expected_decision": {
     "action": "CONTINUE",
-    "selected_id": "A200_AUTOMIX_STATE_RECONCILIATION",
-    "why": "ALL_CURRENT_PRODUCTION_HOLDS_ARE_LOCAL_AND_INDEPENDENT_SAFE_READY_WORK_REMAINS"
+    "selected_id": "A210_DOWNSTREAM_NO_BYPASS_REGRESSION",
+    "why": "A200_IS_DONE; ALL_PRODUCTION_HOLDS_REMAIN_LOCAL; NEXT_READY_SAFE_FRONTIER_EXISTS"
   },
   "protected_rules": [
     "NO_SYNTHETIC_TIMING_AS_PRODUCTION_AUTHORITY",
@@ -72,7 +78,7 @@
   "drive_mirror": {
     "document_id": "1o59M9ZxdMLh7yCAwSSfRBecNXy57vcHS8Xkl0S_8MHI",
     "folder_id": "1P2mavegKiziTOcdNoRQvHvgEHzySY3OA",
-    "readback": "VERIFIED"
+    "readback": "VERIFIED_BUT_CONTENT_LAGS_CURRENT_GITHUB_STATE__A220_READY"
   },
   "non_stop": {
     "policy": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/CONTINUATION_POLICY_v1.json",
@@ -81,6 +87,6 @@
     "queue": "AUDIO_PRODUCTION/ROOM917/AUTOMIX/ROOM917_E01_AUTOMIX_CONTINUATION_QUEUE_v1.json",
     "blocked_mainline_does_not_stop_project": true,
     "global_gate_only_can_force_global_stop": true,
-    "current_safe_frontier": "A200_AUTOMIX_STATE_RECONCILIATION"
+    "current_safe_frontier": "A210_DOWNSTREAM_NO_BYPASS_REGRESSION"
   }
 }
