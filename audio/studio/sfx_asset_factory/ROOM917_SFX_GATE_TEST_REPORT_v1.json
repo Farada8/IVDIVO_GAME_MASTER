@@ -1,0 +1,9 @@
+{
+  "tests": {
+    "manifest_only": {"exit_code":0,"expected":0,"pass":true,"output":{"status":"PASS","errors":[]}},
+    "pending_human_lock": {"exit_code":2,"expected":2,"pass":true,"output":{"status":"HOLD","errors":["HUMAN_BLIND_SELECTIONS_PENDING"]}},
+    "positive_lock_fixture": {"exit_code":0,"expected":0,"pass":true,"output":{"status":"PASS","errors":[]}},
+    "tampered_hash_fixture": {"exit_code":1,"expected":1,"pass":true,"output":{"status":"FAIL","errors":["LOCK_HASH_MISMATCH:S13_INTERNAL_DOUBLE_RING_OLD:1"]}}
+  },
+  "overall": "PASS"
+}
