@@ -1,0 +1,46 @@
+{
+  "schema": "ivdivo.general_business.early_wave_radar/1.0",
+  "date": "2026-08-22",
+  "status": "FOUNDER_PROFILE_RESCREEN_COMPLETE_WIP3_SELECTED",
+  "founder_profile": {
+    "remote_first": true,
+    "preferred_founder_physical_load": "NONE_TO_LOW",
+    "preferred_cash_at_risk_eur_max": 500,
+    "default_hard_cash_at_risk_eur_max": 3000,
+    "test_before_spend": true,
+    "separate_cashflow_now_and_optionality_next": true
+  },
+  "previous_primary": {
+    "candidate": "EU_SUPPLIER_DROPSHIPPING",
+    "status": "RETIRED_AS_STRATEGIC_PRIMARY",
+    "reason": "REMOTE_LOW_CAPITAL_BUT_CROWDED_NO_SPECIAL_EARLY_WAVE_EDGE"
+  },
+  "cashflow_now": [
+    {"id":"CF-01","name":"AI Act Article 50 Technical Transparency Pack","wave_stage":"EARLY_COMMERCIAL","status":"PILOT"},
+    {"id":"CF-02","name":"CRA Incident-Reporting Readiness Operations","wave_stage":"EARLY_COMMERCIAL","status":"WATCH_SPECIALIST_REQUIRED"},
+    {"id":"CF-03","name":"DPP Supplier-Data / Registry Readiness","wave_stage":"EARLY_COMMERCIAL_BY_PRODUCT_GROUP","status":"PILOT"}
+  ],
+  "optionality_next": [
+    {"id":"OW-01","name":"Agentic Commerce Merchant Readiness Layer","wave_stage":"EARLY_COMMERCIAL","status":"PRIMARY"},
+    {"id":"OW-02","name":"EUDI / Age Verification Relying-Party Readiness","wave_stage":"EMERGING_TO_EARLY_COMMERCIAL","status":"WATCH"},
+    {"id":"OW-03","name":"DPP Data Infrastructure / Validation Layer","wave_stage":"EMERGING_TO_EARLY_COMMERCIAL","status":"PILOT_OVERLAP_CF03"},
+    {"id":"OW-04","name":"European Business Wallet / EU Inc Interoperability","wave_stage":"PRE_WAVE","status":"CHEAP_OPTIONALITY_WATCH"},
+    {"id":"OW-05","name":"Open Agent Discovery / Identity / Interoperability","wave_stage":"PRE_WAVE_TO_EMERGING","status":"CHEAP_OPTIONALITY_WATCH"}
+  ],
+  "wip": {
+    "limit": 3,
+    "primary": "OW-01",
+    "pilots": ["CF-01","CF-03"]
+  },
+  "next_internal_gates": ["P-EW01","P-EW02","P-EW03","P-EW04","P-EW05"],
+  "proof_boundary": {
+    "public_evidence_ceiling": "E2_PLUS",
+    "wtp": "UNKNOWN",
+    "transaction": "NONE",
+    "profitability": "UNPROVEN",
+    "early_wave_winner": "UNPROVEN"
+  },
+  "external_action_authorized": false,
+  "source_artifact": "BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/15_EARLY_WAVE_RADAR_2026-08-22.md",
+  "readback_marker": "GENERAL-BUSINESS-EARLY-WAVE-RADAR-STATE-v1-OW01-CF01-CF03"
+}
