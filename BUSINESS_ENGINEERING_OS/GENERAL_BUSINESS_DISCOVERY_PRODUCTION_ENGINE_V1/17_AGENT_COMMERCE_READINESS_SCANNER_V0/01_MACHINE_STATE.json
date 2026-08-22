@@ -1,20 +1,21 @@
 {
-  "schema": "ivdivo.general_business.agent_commerce_scanner/0.2",
+  "schema": "ivdivo.general_business.agent_commerce_scanner/0.3",
   "date": "2026-08-22",
-  "prompt": "P-EW01_WITH_P-EW02_REAL_FIXTURE_CALIBRATION",
-  "status": "CLOSED_ENGINEERING_GATE_P_EW02_DONE_VERIFIED",
+  "prompt": "P-EW01_WITH_P-EW02_REAL_FIXTURE_CALIBRATION_AND_RULESET03_CORRECTION",
+  "status": "CLOSED_ENGINEERING_GATE_P_EW02_DONE_VERIFIED_RULESET03",
   "parent_candidate": "OW-01_AGENTIC_COMMERCE_MERCHANT_READINESS",
-  "ruleset_version": "2026-08-22.2",
+  "ruleset_version": "2026-08-22.3",
   "deliverables": {
     "spec": "00_SPEC.md",
     "runtime": "scanner.py",
     "tests": "tests/test_scanner.py",
     "workflow": ".github/workflows/general-business-agent-commerce-scanner-v0.yml",
-    "real_fixture_receipt": "../18_AGENT_COMMERCE_PEW02_BLIND10/02_BLIND10_RESULTS_AND_SCANNER_PATCH.md"
+    "blind_protocol": "../18_AGENT_COMMERCE_PEW02_BLIND10/00_BLIND_PROTOCOL.md",
+    "wedge_correction": "../23_OW01_AGENTIC_COMMERCE_WEDGE_CORRECTION.md"
   },
   "rule_families": {
     "openai_feed": ["OAI-FEED-00", "OAI-FEED-01", "OAI-FEED-02", "OAI-FEED-03", "OAI-FEED-04", "OAI-FEED-05", "OAI-FEED-06"],
-    "ucp": ["UCP-00", "UCP-01", "UCP-02", "UCP-03", "UCP-04", "UCP-05", "UCP-06", "UCP-07", "UCP-08", "UCP-09", "UCP-10", "UCP-11"]
+    "ucp": ["UCP-00", "UCP-01", "UCP-02", "UCP-03", "UCP-04", "UCP-05", "UCP-05P", "UCP-06", "UCP-07", "UCP-08", "UCP-09", "UCP-10", "UCP-11"]
   },
   "p_ew01": {
     "executed": true,
@@ -24,38 +25,56 @@
   },
   "p_ew02": {
     "executed": true,
-    "implementation_pr": 353,
-    "implementation_head": "14a950014cfd3a98b6ab340d9ea82e4ef8a9ca9e",
-    "merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db",
+    "initial_implementation_pr": 353,
+    "initial_merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db",
+    "corrective_ruleset_pr": 387,
+    "corrective_merge_sha": "75cc0f5b15b3a7199839626cea299a7f781c0d56",
     "blind_sample": 10,
-    "decision": "PASS_TEST",
+    "sample_replaced": false,
+    "decision": "PASS_TEST_AFTER_RULESET03_CORRECTION",
+    "http_responses": 10,
+    "network_errors": 0,
     "ucp_200_profiles": 4,
-    "scanner_false_negative_findings_corrected": 8,
-    "exact_head_ci_runs": [32558173769,32558173771,32558173780,32558173777,32558173755,32558173747,32558173754],
-    "ci_status": "SUCCESS_7_OF_7"
+    "ucp_404_or_410": 6,
+    "ucp_200_disposition": "HOLD_UNRESOLVED_EVIDENCE",
+    "generic_advice_outputs": 0,
+    "false_promotions": 0,
+    "ruleset03_canaries": "PASS_20_OF_20",
+    "exact_head_scanner_ci": 32568940358,
+    "exact_head_blind10_ci": 32568940347,
+    "postmerge_closure_ci": 32568940386
   },
   "real_fixture_learning": {
-    "supported_transports": ["rest","mcp","a2a","embedded"],
+    "supported_transports": ["rest", "mcp", "a2a", "embedded"],
+    "rest_endpoint_gate": "ONLY_WHEN_REST_BINDING_ADVERTISED",
+    "identity_linking_gate": "ONLY_WHEN_IDENTITY_LINKING_CAPABILITY_ADVERTISED",
     "unprobed_order_events_policy": "UNKNOWN_NOT_FAIL",
-    "order_capability_without_public_signing_keys": "UCP10_FAIL_UNDER_PINNED_SPEC",
+    "order_capability_without_proven_webhook_and_without_signing_keys": "UNKNOWN_NOT_FAIL",
+    "explicit_webhook_without_signing_keys": "FAIL",
+    "explicit_unsigned_webhook": "FAIL",
+    "payment_handlers": "SEPARATE_STRUCTURAL_EVIDENCE_RULE",
     "unknown_transport_policy": "UNKNOWN_NOT_FAIL"
   },
-  "drive": {
-    "p_ew01_document_id": "1jQWbGb57Fh9pRlbsQexlKzqJGsle7NMACWGN8HxOyso",
-    "p_ew02_document_id": "1DFWMaKoQVVceCv7rRViz_Or7sxAN_pG4azV9O0iLzJE",
-    "parent_folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
-    "p_ew02_readback_marker": "AGENT-COMMERCE-P-EW02-BLIND10-PASS-4UCP200-8FALSEFAILS-CORRECTED-NO-DEMAND-PROOF",
-    "semantic_readback": true
+  "business_mutation": {
+    "generic_shopify_ucp_enablement": "KILL_AS_PRIMARY_WEDGE",
+    "generic_bigcommerce_ucp_enablement": "KILL_AS_PRIMARY_WEDGE",
+    "generic_ai_ready_narrative_audit": "KILL",
+    "cross_protocol_conformance_drift_diagnostic": "KEEP_TESTABLE",
+    "custom_nonmanaged_stack_readiness": "KEEP_TESTABLE",
+    "woocommerce_transition_tooling": "WATCH_AND_RECHECK_BEFORE_OFFER",
+    "product_data_agent_discovery_quality": "KEEP_TESTABLE",
+    "developer_regression_tooling": "KEEP_TESTABLE"
   },
   "proof_boundary": {
     "public_evidence_ceiling": "E2_PLUS_ENGINEERING",
     "platform_approval": false,
     "buyer_demand": false,
     "wtp": "UNKNOWN",
+    "price": null,
     "transaction": "NONE",
     "profitability": "UNPROVEN",
-    "merchant_global_noncompliance_claimed": false
+    "market_winner": false
   },
   "external_action_authorized": false,
-  "next_gate": "P-EW03_ARTICLE50_TECHNICAL_TRANSPARENCY_SAMPLE_PACK_UNLESS_CURRENT_AUTHORITY_CHANGES"
+  "next_gate": "BUYER_EVIDENCE_ONLY_IF_EXPLICITLY_AUTHORIZED_ELSE_EARLY_WAVE_DRIFT_MONITORING"
 }
