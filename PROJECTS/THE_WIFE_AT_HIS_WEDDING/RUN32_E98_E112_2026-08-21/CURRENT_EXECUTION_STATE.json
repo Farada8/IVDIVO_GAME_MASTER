@@ -1,0 +1,98 @@
+{
+  "project": "THE WIFE AT HIS WEDDING",
+  "date": "2026-08-21",
+  "scope": "E91-E120_FINAL_ARC",
+  "status": "E91_E111_WORKING_COMPLETE_E112_STANDING_GRAPH_READY",
+  "founder_locked": false,
+  "controlling_working_branch": "wife/d01-wave3-run32-e98-e112-rebase-2026-08-21",
+  "working_pr": 107,
+  "freshness": {
+    "stale_pr": 106,
+    "stale_pr_status": "SUPERSEDED",
+    "main_has_advanced_after_pr107": true,
+    "newer_d01_prose_found": false,
+    "later_main_changes_classification": "PRIMARILY_AUDIO_SYSTEM_BODYGUARD_NON_D01",
+    "merge_rule": "FRESH_DELTA_REBASE_BEFORE_MERGE_NO_FORCE_OVERWRITE"
+  },
+  "run32": {
+    "source_prompt_range": "WAVE3_18_49",
+    "prompts_executed": 32,
+    "prompts_total": 32,
+    "episode_frontier": "E111",
+    "e112_standing_graph": "READY",
+    "red_team": {
+      "fatal": 0,
+      "major": 0,
+      "medium": [
+        "DOCUMENT_ARCHIVE_DENSITY",
+        "INSTITUTIONAL_RHETORICAL_CONVERGENCE",
+        "ACKNOWLEDGEMENT_CONCENTRATION",
+        "JURISDICTION_SPECIFIC_LEGAL_PROCEDURE",
+        "GITHUB_SPLIT_SOURCE_PRE_REPAIR_META_STRINGS"
+      ]
+    }
+  },
+  "drive": {
+    "run32_folder_id": "10S2nsam_wbWMRFRi5HzBs4ZDM_frNfm6",
+    "combined_e98_e111_master_id": "1mRlUzuMy2qDTWDtIHzLJIXgfzBSBUS6ZmRQJZf-kvj4",
+    "combined_e98_e111_master_title": "02_E98_E111_EN_VOICEOVER_SCRIPTS_v1.1_META_REPAIRED",
+    "e112_standing_graph_id": "16QDtSqOs38TK_n4AF3oSDIf7FamDJK0u5ogMSTyPV2g",
+    "run32_execution_report_id": "1LMYzAknv7MzVfJEfMVIWQiTBBBg9QR2NEtiAzm6prd0",
+    "analysis_path_id": "1iHMhWWseIDeK3YgZns-nv4drHu_wrzjn9FpvR59xaog",
+    "wave4_next64_id": "1IoUtt4hzJf0G8NFULMS3xlKyVG7VgqdlEzrc0ribTCM",
+    "drive_state_id": "1-MRyzmoZErsvE6F-4fZC_bBO-rHnqYJkDf3-sTOdzAQ",
+    "folder_readback": "PASS_7_NONEMPTY_DOCS"
+  },
+  "repairs": {
+    "diegetic_meta_leaks_found": 4,
+    "drive_master_repaired": true,
+    "github_split_v1_sources_repaired": false,
+    "controlling_overlay": "07_DIEGETIC_META_LEAK_REPAIR_OVERLAY_v1.0.md",
+    "new_gate": "NO_PRODUCTION_METADATA_INSIDE_DIEGETIC_SPEECH_UNLESS_EXPLICIT_IN_WORLD_CODE"
+  },
+  "story_state": {
+    "two_live_births_supported": true,
+    "current_mara_equals_historical_teen_mara_quinn": true,
+    "current_evelyn_equals_historical_teen_evelyn": true,
+    "current_evelyn_legal_bride_supported": true,
+    "current_evelyn_maternal_patient_supported": true,
+    "post_greenhouse_direct_private_mara_substitution_supported": false,
+    "post_marriage_sister_sexual_substitution_supported": false,
+    "evelyn_adrian_present_marriage_restoration": "BOTH_DECLINE",
+    "baby_b_to_current_mara_chain": "CUMULATIVE_WORKING_PROOF_READY_FOR_E112_CONTESTED_STANDING",
+    "main_conflict_status": "OPEN_FINAL_ACT"
+  },
+  "wave4": {
+    "next_prompts_created": 64,
+    "next_prompts_executed": 0,
+    "next_prompt_file": "06_WAVE4_64_NEXT_PROMPTS_v1.0.md",
+    "highest_unblocked_obligation": "WAVE4_PROMPT_01_FRESHNESS_THEN_E112_STANDING"
+  },
+  "reusable_learning_candidates": [
+    "CLAIM_CEILING_GATE",
+    "FACT_CAS_NO_SILENT_OVERRIDE",
+    "ORDER_NOT_EQUAL_COMPLIANCE",
+    "PARALLEL_CORROBORATION_NOT_PERMUTATION_SHORTCUT",
+    "PRIVACY_NOT_EQUAL_SECRECY",
+    "RELATIONSHIP_DECISION_OWNERSHIP",
+    "DIEGETIC_META_LEAK_GATE",
+    "ORDINARY_LIFE_DOSAGE"
+  ],
+  "external_gates_not_claimed": [
+    "HUMAN_SIGNAL",
+    "JURISDICTION_SPECIFIC_LEGAL_REVIEW",
+    "REAL_LISTENER_AUDIO_VALIDATION",
+    "MARKET_RESPONSE",
+    "FOUNDER_LOCK"
+  ],
+  "prohibited": [
+    "REOPEN_E61_E90_FIRE_ARC_WITHOUT_NEW_FATAL_MAJOR_EVIDENCE",
+    "USE_LILY_AS_EVIDENCE",
+    "USE_ADRIAN_MEMORY_AS_CIVIL_OR_BIRTH_IDENTITY_PROOF",
+    "USE_CURRENT_QUINN_CIVIL_SHELL_AS_BABY_B_ORIGIN_PROOF",
+    "USE_ONE_BIOMETRIC_CARD_AS_BIRTH_MARRIAGE_MATERNITY_OR_PROPERTY_PROOF",
+    "COLLAPSE_TWO_WOMEN_INTO_ONE_CERTIFICATE_REMEDY",
+    "GENERATE_E121_BEFORE_E120_RESOLUTION"
+  ],
+  "next_unblocked_obligation": "DRAFT_AND_GATE_E112_STANDING_AFTER_FRESHNESS_CHECK"
+}
