@@ -1,0 +1,110 @@
+{
+  "schema_version": "ivdivo.room917_ru_finalist_verification_bundle/1.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "model_id": "eleven_v3",
+  "language_code": "ru",
+  "status": "TEMPLATE_ONLY_REQUIRES_SEPARATE_FINALIST_SPEND_AUTHORIZATION",
+  "purpose": "Close evidence that S0 screening cannot prove: second-take identity consistency, second Elena-Julian status interaction, and Cate clean-vs-domestic identity range.",
+  "story_text_changed": false,
+  "source_policy": "Reuse locked/localized manuscript lines only; no new plot content.",
+  "blocks": [
+    {
+      "block_id": "RU_FV_ELENA_REPEAT",
+      "verification_function": "SECOND_TAKE_IDENTITY_ELENA",
+      "block_type": "ISOLATED_TTS",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "model_id": "eleven_v3",
+      "language_code": "ru",
+      "output_format": "mp3_44100_128",
+      "exact_text": "Привидений я не сертифицирую. Я подтверждаю, что система может делать, а чего не может. Если ответы кому-то не нравятся — пусть спорят с измерениями.",
+      "text_ref": "RU_E01_SCENE1_ELENA_PROFESSIONAL_BOUNDARY",
+      "voice_settings": {"stability": 0.38, "style": 0.0}
+    },
+    {
+      "block_id": "RU_FV_JULIAN_REPEAT",
+      "verification_function": "SECOND_TAKE_IDENTITY_JULIAN",
+      "block_type": "ISOLATED_TTS",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "model_id": "eleven_v3",
+      "language_code": "ru",
+      "output_format": "mp3_44100_128",
+      "exact_text": "Семьдесят два человека узнают, насколько надолго принципов хватает, чтобы в ноябре сохранить работу в приморском городке.",
+      "text_ref": "RU_E01_SCENE1_JULIAN_ECONOMIC_STAKES",
+      "voice_settings": {"stability": 0.46, "style": 0.0}
+    },
+    {
+      "block_id": "RU_FV_MINA_REPEAT",
+      "verification_function": "SECOND_TAKE_IDENTITY_MINA",
+      "block_type": "ISOLATED_TTS",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "model_id": "eleven_v3",
+      "language_code": "ru",
+      "output_format": "mp3_44100_128",
+      "exact_text": "Ну конечно. Мина Шах. Ночной менеджер, переговорщик по вопросам завтрака и сейчас единственный человек, который знает, какое ведро ставить под какую протечку. В Грейхейвене ведра выше по должности, чем большинство из нас.",
+      "text_ref": "RU_E01_SCENE1_MINA_ORDINARY_HUMOR",
+      "voice_settings": {"stability": 0.34, "style": 0.0}
+    },
+    {
+      "block_id": "RU_FV_CATE_REPEAT",
+      "verification_function": "SECOND_TAKE_IDENTITY_CATE",
+      "block_type": "ISOLATED_TTS",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "model_id": "eleven_v3",
+      "language_code": "ru",
+      "output_format": "mp3_44100_128",
+      "exact_text": "Лени-бёрд... Если это дойдёт—",
+      "text_ref": "RU_E01_SCENE3_CATE_CLEAN_HUMAN_SOURCE",
+      "voice_settings": {"stability": 0.32, "style": 0.0}
+    },
+    {
+      "block_id": "RU_FV_ELENA_JULIAN_STATUS",
+      "verification_function": "ELENA_JULIAN_2_STATUS_PAIR",
+      "block_type": "TTD_BLOCK",
+      "model_id": "eleven_v3",
+      "language_code": "ru",
+      "output_format": "mp3_44100_128",
+      "provider_character_ceiling": 900,
+      "turns": [
+        {"unit_id":"E01:JULIAN:S1","voice_id":"pNInz6obpgDQGcFmaJgB","exact_text":"Мисс Рид. Джулиан Эшкрофт. Вас ждали к четырём."},
+        {"unit_id":"E01:ELENA:S2","voice_id":"21m00Tcm4TlvDq8ikWAM","exact_text":"Сейчас четыре ноль три."},
+        {"unit_id":"E01:JULIAN:S3","voice_id":"pNInz6obpgDQGcFmaJgB","exact_text":"Строительная группа будет здесь завтра в семь утра. Три минуты — больше от отведённого вам времени, чем мне хотелось бы."},
+        {"unit_id":"E01:ELENA:S4","voice_id":"21m00Tcm4TlvDq8ikWAM","exact_text":"Не останавливайтесь из-за меня. Я документирую исторические звуковые системы. Стиль управления в контракт не входит."}
+      ]
+    },
+    {
+      "block_id": "RU_FV_CATE_DOMESTIC",
+      "verification_function": "CATE_IDENTITY_CLEAN_VS_CASSETTE_SOURCE_PERFORMANCE",
+      "block_type": "ISOLATED_TTS",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "model_id": "eleven_v3",
+      "language_code": "ru",
+      "output_format": "mp3_44100_128",
+      "exact_text": "Лени-бёрд, красный карандаш — внутри линий. Потому они и называются линиями.",
+      "text_ref": "RU_E02_SCENE2_CATE_DOMESTIC_CASSETTE_SOURCE",
+      "voice_settings": {"stability": 0.32, "style": 0.0},
+      "post_policy": "Evaluate clean performance identity first. Cassette degradation is a later sound-design transform and must not be acted as ghost/telephone color."
+    }
+  ],
+  "verification_requirements": {
+    "same_finalist_voice_ids_as_s0": true,
+    "same_meaningful_v3_settings_for_repeat_blocks": true,
+    "all_six_blocks_required_for_global_cast_lock": true,
+    "human_listen_required": true,
+    "blind_labels_preferred": true
+  },
+  "spend_boundary": {
+    "separate_from_s0_authorization": true,
+    "max_blocks": 6,
+    "automatic_execution": false,
+    "full_episode_render_forbidden": true
+  },
+  "hard_rules": [
+    "NO_USE_BEFORE_S0_SCREENING_PASS",
+    "NO_PROVIDER_CALL_WITHOUT_SEPARATE_FINALIST_SPEND_AUTHORIZATION",
+    "NO_CAST_LOCK_BEFORE_REAL_FINALIST_AUDIO_HASHES_AND_HUMAN_LISTEN",
+    "NO_STORY_EDIT",
+    "NO_FULL_E01_RENDER"
+  ]
+}
