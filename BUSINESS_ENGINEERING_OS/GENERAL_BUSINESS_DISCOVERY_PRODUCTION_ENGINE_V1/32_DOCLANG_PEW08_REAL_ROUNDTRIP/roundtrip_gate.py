@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 from docling.document_converter import DocumentConverter
+from docling_core.transforms.serializer.doclang import DocLangDocSerializer, DocLangParams
 
 
 def _norm(value: Any) -> str:
@@ -76,9 +77,23 @@ def diff_signatures(before: List[Dict[str, Any]], after: List[Dict[str, Any]]) -
     return mismatches
 
 
+def _validate_xsd(path: Path) -> Dict[str, Any]:
+    proc = subprocess.run(
+        ["doclang", "validate", str(path), "--xsd-only", "--quiet"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    return {
+        "returncode": proc.returncode,
+        "stdout": proc.stdout[-4000:],
+        "stderr": proc.stderr[-4000:],
+    }
+
+
 def base_result(source: Path) -> Dict[str, Any]:
     return {
-        "schema": "ivdivo.general_business.doclang_pew08_real_roundtrip/1.0",
+        "schema": "ivdivo.general_business.doclang_pew08_real_roundtrip/1.1",
         "source": source.name,
         "runtime": {
             "docling": importlib.metadata.version("docling"),
@@ -119,8 +134,17 @@ def run(source: Path, out_dir: Path) -> Dict[str, Any]:
             json.dumps(before, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8"
         )
 
-        doclang_path = out_dir / "generated_roundtrip.dclg.xml"
-        doclang_path.write_text(source_doc.export_to_doclang(), encoding="utf-8")
+        # Production/default convenience API path under test.
+        default_doclang_path = out_dir / "generated_default.dclg.xml"
+        default_doclang_path.write_text(source_doc.export_to_doclang(), encoding="utf-8")
+
+        # Same serializer/content with only the namespace switch changed.
+        namespace_doclang_path = out_dir / "generated_with_namespace.dclg.xml"
+        namespace_serializer = DocLangDocSerializer(
+            doc=source_doc,
+            params=DocLangParams(include_namespace=True),
+        )
+        namespace_doclang_path.write_text(namespace_serializer.serialize().text, encoding="utf-8")
     except Exception as exc:
         result.update({
             "technical_route": "HOLD_TEST_INFRASTRUCTURE_FAILURE",
@@ -131,27 +155,37 @@ def run(source: Path, out_dir: Path) -> Dict[str, Any]:
         })
         return write_result(out_dir, result)
 
-    xsd = subprocess.run(
-        ["doclang", "validate", str(doclang_path), "--xsd-only", "--quiet"],
-        capture_output=True,
-        text=True,
-        check=False,
-    )
+    default_xsd = _validate_xsd(default_doclang_path)
+    namespace_xsd = _validate_xsd(namespace_doclang_path)
     result["official_xsd"] = {
-        "returncode": xsd.returncode,
-        "stdout": xsd.stdout[-4000:],
-        "stderr": xsd.stderr[-4000:],
+        "default_export": default_xsd,
+        "explicit_namespace_control": namespace_xsd,
     }
-    if xsd.returncode != 0:
-        result.update({
-            "technical_route": "PASS_REAL_STRUCTURAL_COMPATIBILITY_GAP_TECHNICAL_ONLY",
-            "real_converter_generated_gap": True,
-            "gap_plane": "PRODUCER_OUTPUT_VS_OFFICIAL_XSD",
-        })
+    result["serializer_defaults"] = {
+        "export_to_doclang_uses_DocLangParams_defaults": True,
+        "DocLangParams.include_namespace_default": False,
+        "namespace_control_value": True,
+    }
+
+    if default_xsd["returncode"] != 0:
+        if namespace_xsd["returncode"] == 0:
+            result.update({
+                "technical_route": "PASS_REAL_DEFAULT_NAMESPACE_COMPATIBILITY_GAP_TECHNICAL_ONLY",
+                "real_converter_generated_gap": True,
+                "gap_plane": "DEFAULT_PRODUCER_NAMESPACE_VS_OFFICIAL_XSD",
+                "minimal_control_fix": "DocLangParams(include_namespace=True)",
+            })
+        else:
+            result.update({
+                "technical_route": "PASS_REAL_STRUCTURAL_COMPATIBILITY_GAP_TECHNICAL_ONLY",
+                "real_converter_generated_gap": True,
+                "gap_plane": "PRODUCER_OUTPUT_VS_OFFICIAL_XSD_BEYOND_NAMESPACE_CONTROL",
+            })
         return write_result(out_dir, result)
 
+    # If the default producer becomes XSD-valid, continue into the real round-trip.
     try:
-        reloaded_doc = DocumentConverter().convert(doclang_path).document
+        reloaded_doc = DocumentConverter().convert(default_doclang_path).document
         reloaded_doc.save_as_json(out_dir / "reloaded_docling.json")
         after = semantic_signature(reloaded_doc)
         (out_dir / "after_signature.json").write_text(
