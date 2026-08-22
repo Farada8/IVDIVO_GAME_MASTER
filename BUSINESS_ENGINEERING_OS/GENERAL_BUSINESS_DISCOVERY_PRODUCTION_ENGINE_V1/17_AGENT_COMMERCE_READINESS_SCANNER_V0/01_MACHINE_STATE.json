@@ -1,43 +1,53 @@
 {
-  "schema": "ivdivo.general_business.agent_commerce_scanner/0.1",
+  "schema": "ivdivo.general_business.agent_commerce_scanner/0.2",
   "date": "2026-08-22",
-  "prompt": "P-EW01",
-  "status": "CLOSED_ENGINEERING_GATE_P_EW02_NOT_EXECUTED",
+  "prompts": ["P-EW01", "P-EW02"],
+  "status": "P_EW01_P_EW02_EXECUTED_ENGINEERING_DISCRIMINATION_PASS",
   "parent_candidate": "OW-01_AGENTIC_COMMERCE_MERCHANT_READINESS",
-  "ruleset_version": "2026-08-22.1",
+  "ruleset_version": "2026-08-22.2",
   "deliverables": {
     "spec": "00_SPEC.md",
     "runtime": "scanner.py",
     "tests": "tests/test_scanner.py",
-    "workflow": ".github/workflows/general-business-agent-commerce-scanner-v0.yml"
+    "blind10_protocol": "../18_AGENT_COMMERCE_PEW02_BLIND10/00_BLIND_PROTOCOL.md",
+    "blind10_runner": "../18_AGENT_COMMERCE_PEW02_BLIND10/01_probe_and_scan.py"
   },
   "rule_families": {
     "openai_feed": ["OAI-FEED-00", "OAI-FEED-01", "OAI-FEED-02", "OAI-FEED-03", "OAI-FEED-04", "OAI-FEED-05", "OAI-FEED-06"],
     "ucp": ["UCP-00", "UCP-01", "UCP-02", "UCP-03", "UCP-04", "UCP-05", "UCP-06", "UCP-07", "UCP-08", "UCP-09", "UCP-10", "UCP-11"]
   },
-  "canary_count": 8,
-  "canary_result": "PASS_8_OF_8",
-  "exact_head_ci": {
-    "scanner_workflow_run": 32557818333,
-    "scanner_workflow_conclusion": "success",
-    "inherited_general_business_runs": [32557818320, 32557818307, 32557818255, 32557818300],
-    "inherited_general_business_conclusion": "success"
+  "canary_count": 14,
+  "canary_result": "PASS_14_OF_14",
+  "p_ew01": {
+    "executed": true,
+    "merge_pr": 348,
+    "merge_sha": "926964d791f41fbd133a5d7e2247c1226365e15b",
+    "final_ci_run": 32557875241
   },
-  "drive": {
-    "document_id": "1jQWbGb57Fh9pRlbsQexlKzqJGsle7NMACWGN8HxOyso",
-    "parent_folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
-    "semantic_readback": true,
-    "readback_marker": "AGENT-COMMERCE-SCANNER-V0-P-EW01-DRIVE-20260822"
+  "p_ew02": {
+    "executed": true,
+    "merge_pr": 353,
+    "merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db",
+    "final_head": "14a950014cfd3a98b6ab340d9ea82e4ef8a9ca9e",
+    "blind10_ci_run": 32558173769,
+    "evaluated": 10,
+    "merchant_specific_or_evidence_bound_results": 10,
+    "generic_advice_outputs": 0,
+    "false_promotions": 0,
+    "http_responses": 10,
+    "network_inaccessible": 0,
+    "decision": "PASS_TEST"
   },
-  "p_ew01_executed": true,
-  "p_ew02_executed": false,
-  "proof_boundary": {
-    "public_evidence_ceiling": "E2_PLUS",
-    "platform_approval": false,
-    "wtp": "UNKNOWN",
-    "transaction": "NONE",
-    "profitability": "UNPROVEN"
+  "engineering_proof": {
+    "scanner_discriminates_nontrivial_public_protocol_gaps": true,
+    "ten_fixture_test_is_market_validation": false,
+    "public_signal_is_merchant_internal_state": false,
+    "platform_approval_proven": false,
+    "buyer_demand_proven": false,
+    "wtp_proven": false,
+    "transaction_proven": false,
+    "profitability_proven": false
   },
   "external_action_authorized": false,
-  "next_gate": "P-EW02_TEN_REAL_PUBLIC_MERCHANT_BLIND_TEST"
+  "next_gate": "MONETIZATION_BRIDGE_FIXED_SCOPE_DIAGNOSTIC_SPEC_THEN_BUYER_WTP_TEST"
 }
