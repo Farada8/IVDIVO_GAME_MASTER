@@ -1,0 +1,85 @@
+# NEXT64 — P161–P224 — RECONCILED AFTER P129–P160
+
+**STATUS:** DESIGNED / NOT EXECUTED.  
+**COUNT:** exactly 64 prompts.  
+**PARALLEL SOURCE CANDIDATE:** Drive doc `13yskuADyGiF-ktHpn6iRLXo7rzHAwUpT_wmSw01QW_E`.  
+**AUTHORITY RULE:** this GitHub copy is reconciled against merged P97–P128 authority and the P129–P160 execution results. Dependencies override numbering.
+
+## Current pack authority — P161–P176
+P161. Acquire authenticated/exported complete eTenders pack `8872468`; if unavailable, record exact access blocker and stop inference.
+P162. Hash every acquired tender file and store file name, size, revision timestamp and source receipt.
+P163. Detect duplicate or superseded documents without deleting provenance.
+P164. Build authoritative addendum timeline and mark fields invalidated by later revisions.
+P165. Extract every selection criterion and evidence requirement with exact source pointer.
+P166. Extract every exclusion/declaration requirement and route ambiguous interpretation to procurement/legal human handoff.
+P167. Extract turnover/financial-capacity requirements; unknown remains null.
+P168. Extract insurance classes, limits and timing requirements; unknown remains null.
+P169. Extract bonds, guarantees, retention and payment timing; unknown remains null.
+P170. Extract programme, phasing, possession, occupation and site-access constraints.
+P171. Extract H&S/competence/PSCS/PSDP requirements without issuing legal clearance.
+P172. Extract required similar-project references and lookback periods.
+P173. Extract named personnel/key-role requirements and minimum experience.
+P174. Extract certifications/standards and expiry requirements.
+P175. Extract quality/MEAT criteria, weights and page/format constraints.
+P176. Build complete TenderRequirementRegistry with source hashes and revision identity.
+
+## Supplier evidence — P177–P192
+P177. Ingest the actual bidder company packet selected for this tender; no implicit use of founder/company facts without bidder designation.
+P178. Verify company identity and registration evidence for the bidder.
+P179. Verify tax-clearance evidence state and expiry date.
+P180. Verify insurance evidence state, insurer document, limits and expiry.
+P181. Verify turnover/financial statements evidence state for required periods.
+P182. Verify project-reference evidence and client/source provenance.
+P183. Verify staff/key-person evidence and availability state.
+P184. Verify H&S/competence/certification evidence and expiry.
+P185. Verify delivery capacity/geography/current workload evidence where relevant.
+P186. Build SupplierCapabilityProfile v2 with field-level provenance and expiry.
+P187. Join TenderRequirementRegistry to SupplierCapabilityProfile v2.
+P188. Classify every joined row `MET / UNKNOWN / CURABLE_BEFORE_DEADLINE / NONCURABLE / NOT_APPLICABLE`.
+P189. Build fatal-gap set using only requirements that are truly mandatory.
+P190. Build curable-gap action plan with owner, evidence needed and deadline.
+P191. Build unknown-resolution queue prioritized by deadline and decision impact.
+P192. Generate bounded BID/HOLD/NO-BID candidate only if all gating requirements are satisfied.
+
+## Independent validation + real decision use — P193–P208
+P193. Create blind PA4 packet with identical pack/profile hashes and hidden first decision.
+P194. Run independent reviewer on blind PA4 packet and capture reviewer class/identity plus divergence.
+P195. Compare first and blind decisions at requirement-row level, not just final label.
+P196. Measure false positives: requirements incorrectly marked met or fatal.
+P197. Measure false negatives: requirements or evidence gaps missed.
+P198. Revise schemas only from reproducible divergence; preserve prior versions.
+P199. Re-run PA4 after any material schema change; do not grandfather old PA4.
+P200. Build real-user test packet that excludes price/WTP questions until decision utility is demonstrated.
+P201. Define smallest actual bidder/bid-manager decision-use event that can prove PA5 without requiring a full bid submission.
+P202. Require explicit Founder authorization before any outreach/interview/send.
+P203. Capture raw target-user answer/decision delta without coaching or summary substitution.
+P204. Record before/after decision, confidence, action and timestamp for PA5 object.
+P205. Measure human review time using observed start/stop events.
+P206. Measure actual rework/missed-criterion delta across at least two uses before generalizing.
+P207. Keep monetary value null until an external cost basis or payment signal exists.
+P208. Design E3 behavioral-cost test after PA5 only if the artifact changes a real decision.
+
+## Commercial proof + durability — P209–P224
+P209. Design E4 transaction object requiring cash and binding transaction provenance.
+P210. Refresh substitute matrix after evidence join: eTenders native features, software, consultants and internal bid teams.
+P211. Test whether residual paid job is qualification/evidence readiness or merely repackaged bid consulting.
+P212. Test willingness to pay only on the residual job, not generic alerts.
+P213. Compare manual service, software-assisted service and SaaS only after observed delivery burden exists.
+P214. Build observed delivery-cost ledger; founder labor is not zero-cost merely because no cash leaves the account.
+P215. Build capacity limit from observed delivery times and review bottleneck.
+P216. Attach refresh triggers to deadline/status/addenda and supplier-document expiry.
+P217. Run stale-status and superseded-addendum adversarial tests.
+P218. Run proof-plane laundering adversarial tests for PA4/PA5/E3/E4.
+P219. Run polished-artifact false-confidence adversarial tests.
+P220. Run substitute-completeness kill test; zero residual job => HOLD/RESHAPE.
+P221. Run GitHub+Drive transaction/readback recovery test with simulated partial persistence failure.
+P222. Re-read current main, open PRs and Drive CURRENT pointers before any authority change.
+P223. Promote Self-Improvement candidate only if independently repeated and regression-safe.
+P224. Derive next frontier solely from remaining fatal uncertainty; if no new admissible evidence, `PROTECT_NO_CHANGE`.
+
+## Stop conditions
+- If P161 cannot expose the target pack, preserve HOLD and do not loop broad web search indefinitely.
+- If no real bidder packet is explicitly designated, P177–P186 remain evidence intake only; do not infer eligibility.
+- P193–P199 require a complete frozen target pack + supplier packet and a genuinely independent reviewer.
+- P200–P212 require real target-user behavior and explicit authorization before any external outreach.
+- No action authorizes tender submission, contract acceptance, payment, or legal determination.
