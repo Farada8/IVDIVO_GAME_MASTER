@@ -41,8 +41,8 @@ jobs:
           assert 'MUTATE_AND_TEST' in doc
           assert 'GENERAL-BUSINESS-OPP37-P25-P32-OFFER-ENGINEERING-32OF64-NO-MARKET-PROOF' in doc
           assert 'Existing General Business WIP is **not grandfathered**' in founder_authority
-          assert 'DISPOSITION=NORMAL_CASHFLOW_CANDIDATE' in rescreen
-          assert 'NOT EARLY_WAVE_PRIORITY' in rescreen
+          assert '## Disposition' in rescreen and 'NORMAL_CASHFLOW_CANDIDATE' in rescreen
+          assert 'Not:' in rescreen and '`EARLY_WAVE_PRIORITY`' in rescreen
           assert 'GENERAL-BUSINESS-OPP37-FOUNDER-RESCREEN-NORMAL-CASHFLOW-REMOTE0-PASS' in rescreen
           assert st['founder_profile_rescreen']['remote_first_pass'] is True
           assert st['founder_profile_rescreen']['founder_cash_at_risk_eur_current_phase'] == 0
