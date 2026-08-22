@@ -10,6 +10,8 @@ from engine.evidence_delta_guards import (
     bind_formation_evidence,
     resolve_versioned_formation_field,
     registry_presence_state,
+    resolve_conflicting_source_claims,
+    document_route_state,
     split_blocker_state,
     can_assert_bid_decision,
 )
@@ -48,6 +50,29 @@ class Cycle7EvidenceDeltaTests(unittest.TestCase):
             state["status"],
             "PUBLIC_REGISTRY_PRESENCE_ONLY_ACTIVE_STATUS_UNKNOWN",
         )
+
+    def test_official_current_source_beats_conflicting_aggregator(self):
+        state = resolve_conflicting_source_claims([
+            {"source_class": "OFFICIAL_FIRST_PARTY_CURRENT", "value": "NO"},
+            {"source_class": "THIRD_PARTY_AGGREGATOR", "value": "YES"},
+        ])
+        self.assertEqual(state["value"], "NO")
+        self.assertEqual(state["source_class"], "OFFICIAL_FIRST_PARTY_CURRENT")
+        self.assertEqual(state["status"], "AUTHORITATIVE_VALUE_WITH_LOWER_SOURCE_CONFLICT")
+
+    def test_equal_top_authority_conflict_fails_closed(self):
+        state = resolve_conflicting_source_claims([
+            {"source_class": "OFFICIAL_FIRST_PARTY_CURRENT", "value": "A"},
+            {"source_class": "OFFICIAL_FIRST_PARTY_CURRENT", "value": "B"},
+        ])
+        self.assertIsNone(state["value"])
+        self.assertEqual(state["status"], "CONFLICTING_TOP_AUTHORITY_CLAIMS_REVIEW_REQUIRED")
+
+    def test_documents_url_does_not_equal_attachment_inventory(self):
+        state = document_route_state(route_published=True, attachment_inventory_recovered=False)
+        self.assertTrue(state["route_known"])
+        self.assertFalse(state["authority_complete"])
+        self.assertEqual(state["status"], "DOCUMENT_ROUTE_NEQ_ATTACHMENT_INVENTORY")
 
     def test_partial_identity_does_not_unlock_join(self):
         s = split_blocker_state(

@@ -66,6 +66,66 @@ def registry_presence_state(*, listed: bool, active_status_proven: bool = False)
     }
 
 
+SOURCE_PRECEDENCE = {
+    "OFFICIAL_FIRST_PARTY_CURRENT": 100,
+    "OFFICIAL_FIRST_PARTY_HISTORICAL": 80,
+    "PRIVATE_PRIMARY": 70,
+    "PUBLIC_REGISTRY_INDEX": 60,
+    "THIRD_PARTY_AGGREGATOR": 30,
+    "UNVERIFIED_SECONDARY": 10,
+}
+
+
+def resolve_conflicting_source_claims(claims: Sequence[dict]) -> dict:
+    """Resolve conflicts by authority class without allowing lower-ranked sources to override."""
+    usable = [c for c in claims if c.get("value") is not None and c.get("source_class") in SOURCE_PRECEDENCE]
+    if not usable:
+        return {"value": None, "status": "UNKNOWN_NO_ADMISSIBLE_CLAIM"}
+    ranked = sorted(
+        usable,
+        key=lambda c: SOURCE_PRECEDENCE[c["source_class"]],
+        reverse=True,
+    )
+    top_rank = SOURCE_PRECEDENCE[ranked[0]["source_class"]]
+    top = [c for c in ranked if SOURCE_PRECEDENCE[c["source_class"]] == top_rank]
+    top_values = {c["value"] for c in top}
+    if len(top_values) > 1:
+        return {
+            "value": None,
+            "status": "CONFLICTING_TOP_AUTHORITY_CLAIMS_REVIEW_REQUIRED",
+            "source_class": top[0]["source_class"],
+        }
+    winning_value = top[0]["value"]
+    lower_conflicts = [
+        c for c in ranked
+        if SOURCE_PRECEDENCE[c["source_class"]] < top_rank and c["value"] != winning_value
+    ]
+    return {
+        "value": winning_value,
+        "status": (
+            "AUTHORITATIVE_VALUE_WITH_LOWER_SOURCE_CONFLICT"
+            if lower_conflicts
+            else "AUTHORITATIVE_VALUE"
+        ),
+        "source_class": top[0]["source_class"],
+        "lower_conflict_count": len(lower_conflicts),
+    }
+
+
+def document_route_state(*, route_published: bool, attachment_inventory_recovered: bool) -> dict:
+    """A published documents URL is not equivalent to the actual current attachment inventory."""
+    if attachment_inventory_recovered:
+        return {"route_known": True, "inventory": "RECOVERED", "authority_complete": True}
+    if route_published:
+        return {
+            "route_known": True,
+            "inventory": "NOT_RECOVERED",
+            "authority_complete": False,
+            "status": "DOCUMENT_ROUTE_NEQ_ATTACHMENT_INVENTORY",
+        }
+    return {"route_known": False, "inventory": "NOT_RECOVERED", "authority_complete": False}
+
+
 def split_blocker_state(
     *,
     current_pack_complete: bool,
