@@ -1,0 +1,39 @@
+name: Self-Improvement Registry Reservation
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_REGISTRY_RESERVATION_A01_A08/**'
+      - '.github/workflows/self-improvement-registry-reservation.yml'
+  push:
+    branches:
+      - self-improvement/registry-reservation-a01-a08-20260822
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_REGISTRY_RESERVATION_A01_A08/**'
+      - '.github/workflows/self-improvement-registry-reservation.yml'
+
+jobs:
+  reservation-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run registry reservation deterministic suite
+        working-directory: SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_REGISTRY_RESERVATION_A01_A08
+        run: python -m unittest tests.test_registry_reservation_scan -v
+      - name: Verify current snapshot is fail-closed
+        working-directory: SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_REGISTRY_RESERVATION_A01_A08
+        run: |
+          python - <<'PY'
+          import json, importlib.util
+          s=json.load(open('ACTIVE_REGISTRY_RESERVATION_SNAPSHOT_v1.json'))
+          spec=importlib.util.spec_from_file_location('rr','runtime/registry_reservation_scan.py')
+          m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+          r=m.validate_snapshot(s)
+          assert r['status']=='HOLD_PARTIAL_VISIBILITY', r
+          assert s['allocation_result']['allocation_authorized'] is False
+          assert s['allocation_result']['next_unreserved'] is None
+          print('PASS fail-closed reservation snapshot')
+          PY

@@ -1,0 +1,10 @@
+{
+  "schema":"IVDIVO_REGISTRY_RESERVATION_TEST_REPORT_v1",
+  "local_deterministic_tests":{"passed":16,"failed":0,"status":"PASS"},
+  "tested_behaviors":["partial visibility blocks allocation","SI-0016 open reservation blocks reuse","open-vs-open collision","committed-vs-reserved collision","stale-main snapshot","PR lifecycle release/revalidation","historical/no-allocation nonreservation","merge-time collision","renumber provenance preservation"],
+  "drive_package":{"file_id":"1ai2w18aUPPvvQURFbpNxuLSgmzy7tVgd","sha256":"e35f68c60d7d7f7e26347275610d6fe9d03149c41925bcadbc3aa0a045d3b1da","bytes":8754,"entries":8,"raw_readback":"PASS","zip_integrity":"PASS"},
+  "current_real_verdict":"HOLD_PARTIAL_VISIBILITY",
+  "allocation_authorized":false,
+  "new_si_id_allocated":false,
+  "evidence_boundary":"Engineering/persistence evidence only; no authority promotion."
+}
