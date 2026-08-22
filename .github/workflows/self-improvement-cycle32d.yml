@@ -1,0 +1,27 @@
+name: Self-Improvement Cycle32D
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/**'
+      - 'tools/ivdivo_resume_guard.py'
+      - 'tests/test_ivdivo_resume_guard_cycle32d.py'
+      - '.github/workflows/self-improvement-cycle32d.yml'
+  workflow_dispatch:
+
+jobs:
+  cycle32d-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test runner
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Run Cycle32D executable guards
+        run: >-
+          python -m pytest -q
+          SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/tests/test_cycle32d_stale_router_validator.py
+          SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/tests/test_cycle32d_resume_gate.py
+          SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/tests/test_cycle32d_decision_yield_utilities.py
+          tests/test_ivdivo_resume_guard_cycle32d.py
