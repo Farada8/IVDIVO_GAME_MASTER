@@ -1,7 +1,7 @@
 {
-  "schema": "BUSINESS_ENGINEERING_CYCLE9_P193_P224_v1",
+  "schema": "BUSINESS_ENGINEERING_CYCLE9_P193_P224_v1.1",
   "date": "2026-08-22",
-  "status": "RUN32_EXECUTED_CI_GREEN_DRIVE_READBACK_PASS",
+  "status": "CORE_MERGED_CI_GREEN_DRIVE_PASS_CURRENT_POINTER_CLOSURE_PENDING",
   "target": {
     "resource_id": "8872468",
     "official_workspace_reachable": true,
@@ -67,8 +67,10 @@
     ]
   },
   "persistence": {
-    "github_pr": 247,
-    "ci_run": 32550774027,
+    "core_pr": 247,
+    "core_merge_sha": "58f7b2476a8b416d79c0577206e5ce0a61e6da0e",
+    "final_reviewed_head": "41837b788f13703853aea39e3ca8be251a78ab04",
+    "exact_head_ci_run": 32550989109,
     "ci": "SUCCESS",
     "cycle8_regression": "SUCCESS",
     "cycle9_exact32": "SUCCESS",
@@ -81,8 +83,11 @@
       "next64": "1QncwOrBANab7fAor5yUzU32gu3u5KUF3jERsBkXyQ54",
       "machine_state": "1NYYT9jICFy9EtIu5gn8NzferVYJEuTCQ0iQDDjTfPBQ"
     },
-    "drive_readback": "PASS_5_OF_5_SEMANTIC_MARKERS"
+    "drive_readback": "PASS_5_OF_5_SEMANTIC_MARKERS",
+    "duplicate_replay_pr": 252,
+    "duplicate_replay_disposition": "CLOSED_UNMERGED_SUPERSEDED"
   },
   "current_gate": "ACQUIRE_TARGET_PACK_OR_EXPLICIT_BIDDER_PACKET",
-  "authority_mutation": false
+  "authority_pointer_candidate": "P225-P288",
+  "authority_mutation": "PENDING_CLOSURE_PR_MERGE"
 }
