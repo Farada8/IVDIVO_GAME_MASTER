@@ -1,21 +1,37 @@
 {
-  "schema_version": "room917.current_critical_sfx_canary_pointer/1.0",
+  "schema_version": "room917.current_critical_sfx_canary_pointer/1.1",
   "project": "ROOM917",
   "episode": "E01",
   "branch": "THE_INSURABLE_FIRE",
-  "status": "V2_1_24_CANDIDATES_BYTE_IDENTITIES_RECORDED__HOLD_HUMAN_AUDITION",
+  "status": "V2_1_24_CANDIDATES_IDENTITY_AUTHORITY__RUNTIME_RECEIPT_SEPARATED__HOLD_HUMAN_AUDITION",
   "authority": {
     "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py",
-    "generator_commit": "bcf057a2a43dec21e7f4ba9e8ea4762a96bcae79",
+    "generator_algorithm_lineage_commit": "bcf057a2a43dec21e7f4ba9e8ea4762a96bcae79",
+    "runtime_receipt_separation_commit": "9377835ab9199644e0f886d14abf0b95267b76e3",
     "receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json",
     "receipt_commit": "26544e956ca9d3d5b023325156fd0a34d201d633",
+    "reconciliation": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_AUTHORITY_RECONCILIATION_v1.json",
     "blind_builder": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py",
+    "critical_generation_workflow": ".github/workflows/room917-critical-sfx-synth-canaries.yml",
     "blind_workflow": ".github/workflows/room917-sound-asset-blind-audition-packages.yml",
     "blind_package_id": "ROOM917_E01_CRITICAL_SFX_BLIND_003"
+  },
+  "runtime_receipt": {
+    "schema": "room917.critical_sfx_runtime_generation_receipt/1.0",
+    "filename": "ROOM917_E01_CRITICAL_SFX_RUNTIME_GENERATION_RECEIPT_v1.json",
+    "identity_authority": false,
+    "workflow_law": "ALL_24_RUNTIME_SHA256_MUST_EXACTLY_MATCH_STATIC_V2_1_AUTHORITY_BEFORE_BLIND_PACKAGE"
   },
   "supersedes_for_current_use": [
     "ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json",
     "ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json"
+  ],
+  "stale_or_reference_only": [
+    {
+      "path": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_MACHINE_QC_SUMMARY_v2_2.json",
+      "classification": "REFERENCE_ONLY_STALE_LINEAGE",
+      "reason": "Produced against superseded v2 receipt; S14 hashes differ from current v2.1 authority."
+    }
   ],
   "assets": [
     "S07_TRANSFORMER_WAKE",
@@ -33,7 +49,7 @@
   "rng_policy": "PER_CANDIDATE_SHA256_DERIVED_SEED",
   "provider_calls": 0,
   "paid_synthesis_calls": 0,
-  "machine_fixes_verified_by_recorded_receipt": [
+  "machine_fixes_verified_by_current_v2_1_recorded_receipt": [
     "S13_EXACTLY_TWO_COUNTABLE_RING_PULSES_MACHINE_PRECHECK",
     "S19_TWO_PART_EVENTS_MACHINE_DISTINCT_HUMAN_CHECK_STILL_REQUIRED",
     "S11_S14_MATERIAL_SPECTRAL_SIMILARITY_PRESERVED",
@@ -51,8 +67,9 @@
   ],
   "local_reproduction_evidence_2026_08_22": {
     "all_24_wav_sha256_match_v2_1_recorded_identities": true,
+    "blind_listening_package_materialized_locally": true,
     "human_audition_performed": false,
     "production_binding_authorized": false
   },
-  "hard_law": "V2_1_IS_CURRENT_CANARY_IDENTITY_AUTHORITY_FOR_CRITICAL_SFX; SYNTHETIC CANARY AUDIO DOES NOT AUTHORIZE PATCHING, MIXING OR RELEASE."
+  "hard_law": "V2_1_IS_CURRENT_CANARY_IDENTITY_AUTHORITY. NEWER TIMESTAMP DOES NOT OVERRIDE SUPERSESSION. RUNTIME RECEIPT AND MACHINE QC CANNOT AUTHORIZE PATCHING, MIXING OR RELEASE."
 }
