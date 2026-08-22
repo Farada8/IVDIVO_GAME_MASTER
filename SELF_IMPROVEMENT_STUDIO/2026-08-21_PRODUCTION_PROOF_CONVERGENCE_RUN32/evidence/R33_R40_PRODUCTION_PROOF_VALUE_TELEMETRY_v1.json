@@ -1,0 +1,27 @@
+{
+  "candidate_id": "PRODUCTION_PROOF_STACK_v1",
+  "telemetry": {
+    "measurement_state": "PARTIAL",
+    "true_positive_findings": 2,
+    "false_positive_findings": 0,
+    "accepted_repairs": 1,
+    "avoided_rework_cycles": 0,
+    "measured_minutes_saved": null,
+    "measured_overhead_minutes": null,
+    "new_artifacts": null,
+    "new_prompts": 64,
+    "real_project_pilots": 6,
+    "independent_human_evidence_count": 0,
+    "regressions_introduced": 0,
+    "unsafe_or_unauthorized_actions_blocked": 0,
+    "measurement_notes": "Measured/adjudicated scope only: two distinct stale-routing findings (D01 aggregate and B02 routing) were confirmed against stronger terminal/project authority; one Drive Workstate repair was actually applied and read back. Six real project proof applications were executed (D01, D10, D09, D04, ROOM917, B02). No independent Human Signal exists for candidate-value promotion. Time saved, overhead minutes, artifact-overhead budget and false-negative rate are not measured and therefore remain null/unknown. Adversarial synthetic blocks are not counted as real unauthorized actions blocked. 64 future run cards were created and are counted as prompt overhead, not as evidence of value."
+  },
+  "evidence_boundaries": {
+    "precision_sample_size": 2,
+    "false_negative_rate": null,
+    "human_time_minutes": null,
+    "provider_spend": null,
+    "market_evidence": null,
+    "promotion_allowed": false
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IVDIVO Production Proof Chain Input v1",
+  "type": "object",
+  "required": ["authority_snapshot", "evidence", "claims", "gates"],
+  "properties": {
+    "authority_snapshot": {
+      "type": "object",
+      "required": ["project_id", "authority_id", "revision"],
+      "properties": {
+        "project_id": {"type": "string"},
+        "authority_id": {"type": "string"},
+        "revision": {"type": "string"}
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["artifact_id"],
+        "properties": {
+          "artifact_id": {"type": "string"},
+          "sha256": {"type": ["string", "null"]},
+          "readback_sha256": {"type": ["string", "null"]},
+          "source_revision": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "source_type", "status", "authority_weight"],
+        "properties": {
+          "evidence_id": {"type": "string"},
+          "source_type": {"type": "string"},
+          "status": {"enum": ["PASS", "FAIL", "WATCH", "HOLD", "DISCOVERY_ONLY", "REJECTED"]},
+          "authority_weight": {"type": "integer", "minimum": 0, "maximum": 100}
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim_id", "evidence_ids"],
+        "properties": {
+          "claim_id": {"type": "string"},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}},
+          "min_authority_weight": {"type": "integer", "minimum": 0, "maximum": 100},
+          "required_source_types": {"type": "array", "items": {"type": "string"}},
+          "requires_human_evidence": {"type": "boolean"},
+          "requires_live_external_evidence": {"type": "boolean"},
+          "required_artifact_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["gate_id", "required_claim_ids"],
+        "properties": {
+          "gate_id": {"type": "string"},
+          "required_claim_ids": {"type": "array", "items": {"type": "string"}},
+          "declared_verdict": {"enum": ["PASS", "FAIL", "HOLD"]},
+          "human_approval_required": {"type": "boolean"},
+          "human_approval_evidence_id": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

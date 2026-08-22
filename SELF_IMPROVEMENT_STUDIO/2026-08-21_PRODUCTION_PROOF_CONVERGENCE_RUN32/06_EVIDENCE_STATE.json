@@ -1,0 +1,91 @@
+{
+  "schema": "ivdivo.production_proof_run32_state/1.2",
+  "date": "2026-08-21",
+  "status": "NEXT64_R01_R48_EXECUTED_REAL_FOUNDER_GATE_REACHED",
+  "scope": "PRODUCTION_PROOF_MIRROR_ROUTING_EVIDENCE_VALUE_D01_PRELOCK_READINESS",
+  "drive_root_id": "13J_yDa4wULIM8VGkvs8W2eKhcIj5Banm",
+  "active_candidate_branch": "codex/production-proof-run32-v1-final2-2026-08-21",
+  "active_draft_pr": 119,
+  "routing_write_through_draft_pr": 131,
+  "run32": {
+    "executed": 32,
+    "fatal": 0,
+    "system_major_original": 1,
+    "system_major_original_detail": "D01 aggregate CURRENT_IVDIVO_SYSTEM_STATE still E96/E97 while project-specific current state is E01-E120 Final Story Gate PASS",
+    "routing_disposition": "QUARANTINED_BY_STRONGER_TERMINAL_ROUTING_OVERLAY_IN_PR131"
+  },
+  "next64": {
+    "designed": 64,
+    "executed_through": 48,
+    "r01_r08": "PASS_WITH_EXPECTED_EXTERNAL_AUTHORITY_HOLDS",
+    "r09_r16": "PASS_CONTROLLED_MIRROR_RECOVERY_WITH_R16_HOLD_FOR_MEASUREMENT",
+    "r17_r24": "PASS_ROUTING_WRITE_THROUGH_CANDIDATE_PR131",
+    "r25_r32": "PASS_EVIDENCE_APPROVAL_SEMANTICS",
+    "r33_r40": "PASS_ENGINEERING_HOLD_FOR_MEASUREMENT",
+    "r41_r48": "PASS_PRELOCK_READINESS_R48_HOLD_FOUNDER_LOCK_REQUIRED",
+    "r49_r56": "HOLD_NOT_EXECUTED_REQUIRES_D01_FOUNDER_LOCK",
+    "r57_r64": "NOT_EXECUTED_AFTER_REAL_AUTHORITY_STOP"
+  },
+  "candidate_modules": [
+    "tools/ivdivo_proof_chain.py",
+    "tools/ivdivo_mirror_integrity.py",
+    "tools/ivdivo_routing_consistency.py",
+    "tools/ivdivo_value_guard.py",
+    "tools/ivdivo_evidence_adapters.py"
+  ],
+  "candidate_schemas": [
+    "schemas/IVDIVO_PRODUCTION_PROOF_CHAIN_SCHEMA_v1.json",
+    "schemas/IVDIVO_MIRROR_INTEGRITY_MANIFEST_SCHEMA_v1.json",
+    "schemas/IVDIVO_ROUTING_CONSISTENCY_SCHEMA_v1.json",
+    "schemas/IVDIVO_CANDIDATE_VALUE_TELEMETRY_SCHEMA_v1.json"
+  ],
+  "merge_ref_regression": {
+    "passed": 58,
+    "failed": 0,
+    "status": "PASS",
+    "workflow_run_id": 32521787349,
+    "job_id": 96895326053,
+    "merge_ref_observed": "9aaecc92a7be9d0170df7bd16570288817187be3"
+  },
+  "real_data_pilots": {
+    "project_proof_applications": 6,
+    "projects": ["D01", "D10", "D09", "D04", "ROOM917", "B02"],
+    "D10_mirror": "PASS",
+    "D10_founder_lock_proof": "PASS",
+    "D01_proof": "HOLD_FOUNDER_APPROVAL_REQUIRED",
+    "D09_proof": "HOLD_FOUNDER_APPROVAL_REQUIRED",
+    "D04_provider": "HOLD_EXTERNAL_PROVIDER_REQUIRED",
+    "D04_human": "HOLD_HUMAN_SIGNAL_REQUIRED",
+    "ROOM917": "HOLD_EXACT_MASTER_OR_TRUSTED_TIMING_REQUIRED",
+    "B02": "EXTERNAL_FEEDBACK_READY",
+    "value_guard": "HOLD_FOR_MEASUREMENT"
+  },
+  "value_telemetry": {
+    "measurement_state": "PARTIAL",
+    "adjudicated_true_positive_findings": 2,
+    "adjudicated_false_positive_findings": 0,
+    "precision_sample_n": 2,
+    "false_negative_rate": null,
+    "measured_minutes_saved": null,
+    "measured_overhead_minutes": null,
+    "independent_human_evidence_count": 0,
+    "promotion_allowed": false
+  },
+  "authority_boundaries": {
+    "D10": "FOUNDER_LOCKED_E01_E24",
+    "D01": "E01_E120_FINAL_STORY_GATE_PASS_AWAITING_EXPLICIT_FOUNDER_LOCK",
+    "D09": "E01_E24_FINAL_STORY_GATE_PASS_AWAITING_FOUNDER_LOCK",
+    "B02": "FINAL_STORY_GATE_GREEN_EXTERNAL_FEEDBACK_READY_NOT_LOCKED",
+    "SMITH": "HARD_STOP_NOT_ACTIVE_UNTIL_D01_FOUNDER_LOCK"
+  },
+  "drive_evidence": {
+    "r01_r08": "1WQTEsBNZQuh_N06dxVVmQUbZ8LEX4bpBeOZBl9wxEws",
+    "r09_r16": "1WcVsSBfnFUn6N-n9bTB2YSnkhMs-k9wlKTRG0KoCb6Y",
+    "r17_r40_combined": "1ROFijY9xTJL200QMQaXELYpbBzmwgekDuDncuDn56nM",
+    "r41_r48_d01_prelock": "1Rqh829Tm0q-rXahNoukWKluhicQdizTEppXxzCFv4l4",
+    "current_workstate": "1ZEOWCsc9nlHR_x5jkbliWfG-HRHDiDVskjQeHb-pV7w"
+  },
+  "promotion": "NONE",
+  "next_gate": "FOUNDER_EXPLICIT_LOCK_DECISION_FOR_D01; DO_NOT_EXECUTE_R49_R56_SMITH_BEFORE_THIS",
+  "resume_after_gate": "IF_D01_LOCKED_THEN_PERSIST_LOCK_RECORDING_AUTHORITY_AND_EXECUTE_R49_R56_SMITH_AUTHORITY_CONTINUITY_STORY_CORE_ARCHITECTURE_GATE; OTHERWISE_PRESERVE_D01_AND_DO_NOT_EXTEND_STORY"
+}

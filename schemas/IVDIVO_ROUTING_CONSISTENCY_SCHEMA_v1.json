@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IVDIVO Routing Consistency Event v1",
+  "type": "object",
+  "required": ["event", "project_id", "event_artifact_id", "layers"],
+  "properties": {
+    "event": {"enum": ["FOUNDER_LOCK", "FINAL_STORY_GATE_PASS", "EXTERNAL_PROVIDER_REQUIRED", "HUMAN_EVIDENCE_REQUIRED"]},
+    "project_id": {"type": "string"},
+    "event_artifact_id": {"type": "string"},
+    "layers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "event_artifact_id"],
+        "properties": {
+          "role": {"enum": ["PROJECT_STATE", "PORTFOLIO_ROUTER", "WORKSTATE", "PROMPT_ROUTER", "SYSTEM_AGGREGATE"]},
+          "observed_status": {"type": "string"},
+          "event_artifact_id": {"type": "string"},
+          "next_action": {"type": ["string", "null"]},
+          "story_text_mutation_requested": {"type": "boolean"},
+          "track_event": {"type": "boolean"},
+          "normalized_event": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

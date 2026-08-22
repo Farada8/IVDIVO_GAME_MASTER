@@ -1,0 +1,39 @@
+name: Production Proof Candidate Tests
+
+# Re-run merge-ref CI after fresh-main concurrency movement.
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_proof_chain.py'
+      - 'tools/ivdivo_mirror_integrity.py'
+      - 'tools/ivdivo_routing_consistency.py'
+      - 'tools/ivdivo_value_guard.py'
+      - 'tools/ivdivo_evidence_adapters.py'
+      - 'tools/ivdivo_durable_write_reconciler.py'
+      - 'schemas/IVDIVO_PRODUCTION_PROOF_CHAIN_SCHEMA_v1.json'
+      - 'schemas/IVDIVO_MIRROR_INTEGRITY_MANIFEST_SCHEMA_v1.json'
+      - 'schemas/IVDIVO_ROUTING_CONSISTENCY_SCHEMA_v1.json'
+      - 'schemas/IVDIVO_CANDIDATE_VALUE_TELEMETRY_SCHEMA_v1.json'
+      - 'tests/test_proof_chain.py'
+      - 'tests/test_mirror_integrity.py'
+      - 'tests/test_routing_consistency.py'
+      - 'tests/test_value_guard.py'
+      - 'tests/test_production_proof_si0014_integration.py'
+      - 'tests/test_evidence_adapters_r25_r32.py'
+      - 'tests/test_value_guard_real_telemetry_r33_r40.py'
+      - 'tests/test_d01_downstream_readiness_r41_r48.py'
+      - 'PROJECTS/THE_WIFE_AT_HIS_WEDDING/DOWNSTREAM_READINESS_PRELOCK/D01_DOWNSTREAM_READINESS_PRELOCK_v1.json'
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-21_PRODUCTION_PROOF_CONVERGENCE_RUN32/evidence/R33_R40_PRODUCTION_PROOF_VALUE_TELEMETRY_v1.json'
+      - '.github/workflows/production-proof-tests.yml'
+  workflow_dispatch:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run production-proof candidate tests
+        run: PYTHONPATH=. python -m unittest tests.test_proof_chain tests.test_mirror_integrity tests.test_routing_consistency tests.test_value_guard tests.test_production_proof_si0014_integration tests.test_evidence_adapters_r25_r32 tests.test_value_guard_real_telemetry_r33_r40 tests.test_d01_downstream_readiness_r41_r48 -v
