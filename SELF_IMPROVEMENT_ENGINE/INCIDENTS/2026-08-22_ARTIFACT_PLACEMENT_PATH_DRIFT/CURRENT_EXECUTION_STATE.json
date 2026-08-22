@@ -1,11 +1,11 @@
 {
-  "schema": "artifact_placement_incident_state_v6",
+  "schema": "artifact_placement_incident_state_v7",
   "date": "2026-08-22",
   "issue": 356,
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "LIVE_INTERCEPTION_CAPTURE_ARMED_PRODUCTION_ADOPTED",
+  "candidate_status": "PROJECT_DONE_SCOPE_HARDENING_PENDING_CI",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "runtime": {
@@ -15,50 +15,35 @@
     "task_state_module": "personal-ai/projects/manager.py",
     "agent_executor_module": "personal-ai/agents/executor.py",
     "cli_module": "personal-ai/run.py",
-    "atomic_recovery_contract": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/ATOMIC_COMPLETION_RECOVERY_CONTRACT_v1.md",
-    "live_interception_contract": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/LIVE_INTERCEPTION_EVIDENCE_CONTRACT_v1.md",
-    "production_adoption_contract": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/PRODUCTION_ADOPTION_CONTRACT_v1.md",
+    "book_state_module": "personal-ai/books/core.py",
+    "production_completion_surface_audit": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/PRODUCTION_COMPLETION_SURFACE_AUDIT_v1.md",
     "ci_workflow": ".github/workflows/artifact-placement-runtime.yml",
-    "done_rule": "artifact-producing task with requires_artifact_placement_receipt=true may become DONE only through the placement gate with PLACEMENT_VERIFIED evidence"
+    "done_rule": "external artifact DONE requires a marked artifact task and PLACEMENT_VERIFIED receipt; internal project DONE must carry an explicit non-external completion scope"
   },
   "proof": {
     "runtime_merge_pr": 388,
-    "runtime_merge_commit": "b8265fe897a29147844591919fa4853aa3ba5a2c",
     "resource_type_guard_pr": 401,
-    "resource_type_guard_merge": "e277ecb7f91fd3b9ce55464758bc531e789e2be9",
     "atomic_completion_fix_pr": 409,
-    "atomic_completion_merge_commit": "654399a29324408cb0be75cae239587102090632",
     "live_interception_capture_pr": 411,
-    "live_interception_capture_merge_commit": "e9eb2614a1448d026762360165a815a29160be25",
-    "production_adoption_gap_found": true,
-    "guard_implemented_before_adoption_fix": true,
-    "guard_mandatory_on_canonical_agent_completion_before_adoption_fix": false,
     "production_adoption_pr": 417,
-    "production_adoption_reconciled_head": "5cd4c1493069b5da26e6df169e67a810a83f88cd",
     "production_adoption_merge_commit": "7f9f7c58d9febba0ac9585a81e318e9718d7454b",
-    "production_adoption_reconciliation_base_main": "cd1a085a7832ed3f74d443ef53f9ad38bd91041c",
-    "production_adoption_freshness_checked_main": "a0f2390b17b739abca679be2bb52aaf519c7f9cf",
-    "freshness_overlap_after_reconciliation": "NONE",
     "production_adoption_all_triggered_workflows": "14/14 PASS",
-    "artifact_placement_runtime_ci_run": 32571607772,
-    "artifact_placement_runtime_ci": "PASS",
-    "agent_executor_ci_run": 32571607837,
-    "agent_executor_ci": "PASS",
-    "source_evidence_ci": "PASS",
-    "file_ingestion_ci": "PASS",
-    "task_policy": "requires_artifact_placement_receipt",
-    "direct_complete_rejects_marked_artifact_task": true,
-    "compatibility_agent_gate_adoption": "VERIFIED_MERGED",
-    "strict_agent_gate_adoption": "VERIFIED_MERGED",
-    "cli_artifact_completion_route": "VERIFIED_MERGED",
-    "pl13_ingestion_cli_preserved_during_reconciliation": true,
-    "production_adoption_regression": "PASS",
+    "completion_surface_audit_base_main": "3fe685436dc6a230db9d70f7116dcd28f75fa7de",
+    "completion_surfaces_audited": 15,
+    "new_external_artifact_done_bypass_found_after_pr417": false,
+    "internal_project_done_ambiguity_found": true,
+    "internal_project_done_surface": "BookProductionCore FINAL -> parent ProjectState DONE",
+    "registered_pl08_done_route_preserved": true,
+    "candidate_completion_scope": "INTERNAL_BOOK_PRODUCTION",
+    "candidate_external_artifact_completion": "NOT_ASSERTED",
+    "candidate_scope_regression": "PENDING_EXACT_HEAD_CI",
     "live_interception_capture_armed": true,
     "live_interception_auto_promotion": false,
     "live_interception_provider_confirmation_required": true
   },
   "required_sequence": [
-    "DECLARE_ARTIFACT_TASK_POLICY",
+    "CLASSIFY_COMPLETION_SCOPE",
+    "DECLARE_ARTIFACT_TASK_POLICY_IF_EXTERNAL",
     "CREATE_OR_IMPORT",
     "PLACE_IN_CANONICAL_PROJECT_LOCATION",
     "READBACK_ACTUAL_PARENT_AND_RESOURCE_TYPE",
@@ -70,18 +55,17 @@
     "ROUTE_ARTIFACT_TASK_COMPLETION_THROUGH_GATE",
     "ATOMICALLY_PERSIST_STATUS_AND_RECEIPT",
     "IF_BLOCKED_WITH_RECEIPT_APPEND_INTERCEPTION_CANDIDATE_ATOMICALLY",
-    "ALLOW_DONE_ONLY_IF_PLACEMENT_VERIFIED_AND_OTHER_GATES_PASS"
+    "ALLOW_EXTERNAL_ARTIFACT_DONE_ONLY_IF_PLACEMENT_VERIFIED_AND_OTHER_GATES_PASS"
   ],
   "promotion_gate": {
-    "status": "HOLD_ARMED_FOR_LIVE_EVIDENCE",
+    "status": "HOLD_SCOPE_HARDENING_PENDING_CI",
     "completed_requirements": [
-      "provider adapters construct receipts from Google Drive and GitHub observations",
-      "atomic status+receipt persistence and restart/reopen regression merged through PR #409",
-      "append-only interception candidate capture merged through PR #411 without auto-promotion",
-      "mandatory placement-gate adoption across marked ProjectState tasks, compatibility Agent Executor, strict Agent Executor and CLI artifact completion routes reconciled against current ingestion/evidence CLI, exact-head tested 14/14 and merged through PR #417"
+      "provider adapters, atomic recovery, durable interception capture and production adoption are merged",
+      "current Personal AI completion surfaces were classified and no additional external-artifact DONE bypass was found after PR #417"
     ],
     "remaining_requirements": [
-      "observe future real traffic where the already-installed and production-adopted placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback; tests, replays and synthetic fixtures cannot satisfy this requirement"
+      "pass and merge the bounded internal project-DONE scope regression without changing the registered PL-08 FINAL route",
+      "observe future real traffic where the installed and production-adopted placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback"
     ]
   }
 }
