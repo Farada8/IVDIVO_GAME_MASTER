@@ -1,0 +1,83 @@
+{
+  "schema": "ivdivo.chat_closure/0.1",
+  "timestamp_local": "2026-08-22T14:52:00+01:00",
+  "timezone": "Europe/Dublin",
+  "scope": "structured substantive conversation recovery, not byte-for-byte raw transcript",
+  "closure_marker": "CHAT-CLOSURE-20260822-1452-DUBLIN-PERSONAL-AI-PL10-CURRENT",
+  "repository": "Farada8/IVDIVO_GAME_MASTER",
+  "main_observed_sha": "7f65ea79ed37a2ffaab0186e25b903666b086b42",
+  "production_launch": {
+    "authority_path": "SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_PRODUCTION_LAUNCH_STATE.json",
+    "self_improvement_authority": "V2_VERIFIED_CURRENT",
+    "authority_effect": "NONE",
+    "current_frontier": "PL-10",
+    "wave2_fully_done_verified": true,
+    "verified_cards_relevant_to_this_closure": [
+      "PL-00",
+      "PL-01",
+      "PL-02",
+      "PL-03",
+      "PL-04",
+      "PL-05",
+      "PL-06",
+      "PL-07",
+      "PL-08",
+      "PL-09",
+      "PL-11",
+      "PL-13",
+      "PL-14"
+    ]
+  },
+  "pl07": {
+    "status": "DONE_VERIFIED",
+    "implementation_pr": 432,
+    "merge_sha": "94af23c089d209677c7a3076be76b80eaab42050",
+    "verified_head": "fbaab4aca67c22d639862df99345333d69297f49",
+    "ci": "14/14 SUCCESS",
+    "drive_folder_id": "1tjh4nArbbsnY-kNKFtmYsze-Zkzimuzm",
+    "drive_document_id": "1r0xrEkztYPXkRxVcK-zgzyHVby55Zc422V0dcQRXPRY",
+    "drive_marker": "PL07-BUSINESS-RESEARCH-REDTEAM-HARDENED-EVIDENCE-CEILING-NO-LAUNDERING-20260822"
+  },
+  "pl14": {
+    "status": "DONE_VERIFIED",
+    "implementation_pr": 462,
+    "implementation_merge_sha": "74c4440c3d2fed9ea23369b3301a25b0fb2762fa",
+    "verified_head": "c51ced26517d16dbda79d16472059c6609454504",
+    "ci": "14/14 SUCCESS",
+    "closure_pr": 467,
+    "closure_merge_sha": "6c47f3fe758d0fc131fc4bde9634c01959d9ff88",
+    "drive_folder_id": "14T9TeOQ0BzoRm3N3eLz0YlL9rsz0xKma",
+    "drive_document_id": "19PVWtr35YRgKGwyO7alDNKymOC6Hy2ODYeMQ77XGxQI",
+    "drive_marker": "PERSONAL-AI-PL14-DONE-VERIFIED-PR462-CI14OF14-SOURCE-SEPARATED-NO-FABRICATION"
+  },
+  "pl10": {
+    "status": "WIP_NOT_DONE_VERIFIED",
+    "branch": "production-launch/pl10-multi-model-review-20260822",
+    "closure_time_compare_to_main": {
+      "ahead_by": 10,
+      "behind_by": 81
+    },
+    "existing_files": [
+      "personal-ai/review/README.md",
+      "personal-ai/review/__init__.py",
+      "personal-ai/review/public.py",
+      "personal-ai/review/service.py",
+      "personal-ai/review_cli.py",
+      "personal-ai/tests/test_multi_model_review.py",
+      "personal-ai/tests/test_multi_model_review_cli.py",
+      "personal-ai/tests/test_multi_model_review_integrity.py"
+    ],
+    "required_restart_action": "DO_NOT_MERGE_OLD_BRANCH_DIRECTLY; reconcile and fresh-main replay, add dedicated CI, run full Personal AI regression and Red Team, then merge and Drive-readback only if clean"
+  },
+  "engineering_laws": [
+    "show file, code, input, output and test",
+    "prompt/rules/files alone are not a finished engine",
+    "missing evidence remains UNKNOWN",
+    "retrieval does not upgrade evidence authority",
+    "multi-model agreement does not prove truth",
+    "historical closure workflows must not own the live frontier",
+    "exact-head CI must be followed by main-overlap/mergeability check in fast-moving repo",
+    "DONE_VERIFIED card does not promote global Self-Improvement authority"
+  ],
+  "restart_sentence": "Restore live CURRENT_PRODUCTION_LAUNCH_STATE.json first. If frontier is still PL-10, reconcile/fresh-replay the stale PL-10 WIP on current main; dedicated CI + full regression + Red Team -> merge -> Drive readback -> verification receipt -> advance only after evidence."
+}
