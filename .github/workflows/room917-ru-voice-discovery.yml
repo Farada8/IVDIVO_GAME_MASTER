@@ -1,5 +1,6 @@
 name: ROOM917 RU Voice Discovery
 
+# v1.0 trigger refresh 2026-08-22
 on:
   push:
     paths:
@@ -98,7 +99,6 @@ jobs:
               t=text(v)
               s=0
               gender=(v.get('labels') or {}).get('gender','').lower()
-              age=(v.get('labels') or {}).get('age','').lower()
               if role in ('ELENA','MINA','CATE') and 'female' in gender: s += 8
               if role=='JULIAN' and 'male' in gender: s += 8
               if role=='ELENA':
