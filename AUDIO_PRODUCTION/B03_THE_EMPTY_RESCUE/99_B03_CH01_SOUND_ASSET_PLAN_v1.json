@@ -1,0 +1,32 @@
+{
+  "artifact": "B03_CH01_SOUND_ASSET_PLAN_v1",
+  "date": "2026-08-22",
+  "status": "PASS_PLAN / NO_AUDIO_ASSET_LOCK_YET",
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "music_law": {
+    "default": "NO_MUSIC",
+    "no_music_windows": ["first impossible call clue pattern", "live drainage-flap repeat", "playback comparison", "protected silences", "post-incident coincidence/prediction/fraud reasoning"],
+    "allowed_future_scope": "only restrained transition/aftermath if human listen proves it adds orientation without ontology or clue masking"
+  },
+  "assets": [
+    {"asset_id":"B03_CH01_SFX001","type":"AMBIENCE","function":"wet-weather dispatch baseline","spec":"steady heavy exterior rain + low credible dispatch room bed","priority":"BACKGROUND","must_not_mask":"all speech","negative":"no ominous drone, thunder punctuation, alarm wash","status":"WORKING"},
+    {"asset_id":"B03_CH01_SFX002","type":"FOLEY","function":"ordinary-life grounding","spec":"small cup/tea handling","priority":"LOW","must_not_mask":"dialogue","negative":"no comic clink emphasis","status":"WORKING"},
+    {"asset_id":"B03_CH01_SFX003","type":"LINE_TEXTURE","function":"distinguish malformed unknown call from ordinary phone","spec":"sharper uneven static with clipped gaps while preserving intelligibility","priority":"SECONDARY","must_not_mask":"UNKNOWN_PRECURSOR_CALLER words","negative":"no ghost, glitch-monster, reversed speech, synth pulse","status":"WORKING"},
+    {"asset_id":"B03_CH01_SFX004","type":"CLUE_SFX","identity_ref":"ID_DRAINAGE_FLAP_FOUR_IMPACTS","function":"first evidentiary sound","spec":"hollow mechanical metal impacts; three uneven, longer pause, fourth","priority":"PROTECTED_CLUE","must_not_mask":"caller/narrator clue description","negative":"no musical tuning, supernatural ring, perfect metronome","status":"WORKING_IDENTITY_SOURCE_CANDIDATE"},
+    {"asset_id":"B03_CH01_SFX005","type":"LINE_EVENT","function":"call closure","spec":"realistic connection termination/dead line","priority":"LOW","negative":"no horror sting","status":"WORKING"},
+    {"asset_id":"B03_CH01_SFX006","type":"FIELD_RADIO_TEXTURE","function":"credible bounded verification","spec":"clean public-safety radio texture","priority":"SECONDARY","must_not_mask":"verification report","negative":"no military cliché, excessive squelch","status":"WORKING"},
+    {"asset_id":"B03_CH01_SFX007","type":"PHONE_SCENE_TEXTURE","function":"real collision witness channel","spec":"live mobile + believable gallery/rain stress without invented signature events","priority":"SECONDARY","must_not_mask":"casualty facts","status":"WORKING"},
+    {"asset_id":"B03_CH01_SFX008","type":"CLUE_SFX","identity_ref":"ID_DRAINAGE_FLAP_FOUR_IMPACTS","function":"live physical repeat of first clue family","spec":"same mechanism/rhythm family with natural live-field variation","priority":"PROTECTED_CLUE","must_not_mask":"rescue communication","negative":"not sample-identical/perfect copy","status":"WORKING"},
+    {"asset_id":"B03_CH01_SFX009","type":"PLAYBACK_TEXTURE","identity_ref":"ID_UNKNOWN_CALLER_SOURCE_VOICE","function":"prove same stored first-call source","spec":"reuse accepted first-caller source/take identity; apply only credible stored-playback filtering","priority":"PROTECTED_CONTINUITY","negative":"no independent regenerated performance","status":"BLOCKED_UNTIL_ACCEPTED_CALLER_TAKE"},
+    {"asset_id":"B03_CH01_SFX010","type":"PROTECTED_SILENCE","function":"let matched live/recorded evidence land","duration_ms":{"min":1800,"target":2800,"max":4500},"priority":"PROTECTED","negative":"no music swell, no filler Foley","status":"PLAN_LOCK"},
+    {"asset_id":"B03_CH01_SFX011","type":"AMBIENCE","function":"return to ordinary operational room after incident","spec":"low dispatch room bed","priority":"BACKGROUND","negative":"no ominous aftermath drone","status":"WORKING"},
+    {"asset_id":"B03_CH01_SFX012","type":"PROTECTED_SILENCE","function":"Nika non-answer as action","duration_ms":{"min":800,"target":1500,"max":2600},"priority":"PROTECTED","negative":"no score, no explanatory sound","status":"PLAN_LOCK"}
+  ],
+  "asset_acceptance_tests": [
+    "Dialogue intelligible at phone-speaker playback and low volume.",
+    "Blind A/B identifies first/live four-impact sounds as same family without requiring exact duplication.",
+    "Playback caller is recognizably same source identity as first call.",
+    "Mono fold preserves distinction among live phone, field radio and stored playback.",
+    "No asset suggests supernatural ontology or incompetence not present in text."
+  ]
+}
