@@ -1,0 +1,54 @@
+{
+  "schema_version": "room917.room_bed_factory_pointer/3.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "MACHINE_QC_PASS_HUMAN_ROLE_BLIND_GATE_PENDING",
+  "authority": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+  "source_receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_ROOM_BED_SYNTHETIC_CANARY_RECEIPT_v2.json",
+  "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py",
+  "generator_commit": "366b52b8a2a38227f6f094e05306d23bb17a8c2c",
+  "machine_qc_summary": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_ROOM_BED_MACHINE_QC_SUMMARY_v3.json",
+  "machine_qc_summary_commit": "d890dd6ee0a3438a80e2d8a0e6cadf3b65e10fb9",
+  "blind_lock_compiler": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/compile_room_bed_role_blind_lock.py",
+  "blind_lock_compiler_commit": "776f052ca9682be5a9670de0de9b12d9ed28bf67",
+  "assets": {
+    "A01_GREYHAVEN_LOBBY_30S_LOOP": {
+      "candidate_id": "A01_GREYHAVEN_LOBBY_30S_LOOP_CANDIDATE_SYNTH02",
+      "sha256": "9ca06999c727571f18ac8003a61f69a1d18bb46072713f45c7aab3deb86828b3",
+      "machine_qc": "PASS"
+    },
+    "A02_SWITCHBOARD_ALCOVE_30S_LOOP": {
+      "candidate_id": "A02_SWITCHBOARD_ALCOVE_30S_LOOP_CANDIDATE_SYNTH02",
+      "sha256": "f977e467ba9dd915a46956523045b87ffd0f40063a22630d9de84728b327edc0",
+      "machine_qc": "PASS"
+    }
+  },
+  "exact_reproduction": "2_OF_2_SHA256_MATCH",
+  "machine_gates": {
+    "loop_seam": "PASS",
+    "false_clue_proxy": "PASS",
+    "mono": "PASS",
+    "phone_proxy": "PASS"
+  },
+  "drive": {
+    "factory_folder_id": "1KNRfv-er5ceOVh9keYhm2ieiVleTPrzf",
+    "role_blind_package_id": "1U8zm4bpeFqkx_JM28wB3aiGFmc3C55h1",
+    "factory_admin_id": "1bKP_6DmxwyMJZSEcX9TyL_cC1sAIDlUm",
+    "role_blind_pipeline_id": "1vGbjHuZ0vkJl8DE32PMSvKQzQAszl36q"
+  },
+  "human_gate": {
+    "mode": "BLIND_ROLE_ASSIGNMENT_X_Y_PLUS_SEAM_FALSE_CLUE_MONO_PHONE",
+    "status": "PENDING",
+    "after_pass": "COMPILE_EXACT_SHA_LOCK_THEN_RUN_SOUND_ASSET_IDENTITY_GATE"
+  },
+  "d003_gate": {
+    "status": "BLOCKED_AFTER_ASSET_LOCK_UNTIL_EXACT_MASTER_OR_TRUSTED_EXACT_PRE_SCENE3_INTERVAL_TIMING_RECOVERED",
+    "expected_master_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "expected_master_size_bytes": 189558764,
+    "expected_master_duration_seconds": 658.190
+  },
+  "continuation_law": "DO_NOT_STOP_AT_HUMAN_ROLE_BLIND_GATE_WHILE_INDEPENDENT_MACHINE_BRANCHES_REMAIN_UNBLOCKED",
+  "hard_law": "MACHINE_QC_OR_HUMAN_ROLE_BLIND_PASS_ALONE_DOES_NOT_AUTHORIZE_D003_PATCH_OR_RELEASE"
+}
