@@ -1,0 +1,29 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE5_PUBLIC_ARTIFACT_STATE_v1",
+  "date": "2026-08-22",
+  "status": "CYCLE5_CANDIDATE_READY_FOR_REPOSITORY_READBACK_CI",
+  "base_main": "e41408aec56839585bfcff9a0fbfb0224cada25d",
+  "branch": "business-engineering/cycle5-public-artifacts-run32-2026-08-22",
+  "library": {
+    "raw_drive_folder": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "physical": 78,
+    "valid": 68,
+    "unique_valid_hashes": 58,
+    "raw_to_github": false
+  },
+  "drive": {"cycle5_folder": "1mZZVSiYPvON-F_yAYeyqfQ_3EEPQaSOI"},
+  "run32": {
+    "range": "P65-P96",
+    "executed": 32,
+    "fatal": 0,
+    "partial_holds": ["P73_NIS2_CURRENT_STATUS_REVALIDATION", "P83_HUMAN_DELIVERY_TIME_NOT_OBSERVED"],
+    "local_regression": "32/32 PASS"
+  },
+  "engineering": {"modules": "B113-B138", "contracts": "C153-C184", "protocols": "P-BIZ-17-P-BIZ-24"},
+  "active_wip": {"primary": "OP01", "pilots": ["OP03", "OP19_RESHAPED"], "limit": 3},
+  "proof": {"public_ceiling": "E2+", "E3": 0, "E4": 0, "willingness_to_pay": null, "price": null, "human_delivery_time": null},
+  "major_learning": {"OP19": "RESHAPE_GENERIC_AI_DIAGNOSTIC_TO_CONSTRUCTION_SPECIFIC_WORKFLOW_IMPLEMENTATION"},
+  "next64": {"range": "P97-P160", "designed": 64, "executed": 0},
+  "self_improvement": {"current": "v2", "v3": "candidate_scoped_only", "promotion_from_cycle5": false},
+  "next_gate": "GITHUB_DRIVE_WRITE_READBACK_CI_THEN_E3_AUTHORIZATION_OR_PUBLIC_DEFECT_REDUCTION"
+}
