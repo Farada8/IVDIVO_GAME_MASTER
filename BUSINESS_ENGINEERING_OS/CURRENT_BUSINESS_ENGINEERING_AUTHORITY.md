@@ -1,10 +1,10 @@
 # CURRENT — BUSINESS ENGINEERING OS AUTHORITY
 
 **DATE:** 2026-08-22  
-**STATUS:** CYCLE9 P193–P224 DECISION/PROOF RUN32 MERGED / FAIL-CLOSED / MARKET PROOF UNCHANGED
+**STATUS:** CYCLE9 P193–P224 MERGED + BIDDER PRIMARY EVIDENCE DELTA MERGED / NEXT P225–P288 / FAIL-CLOSED
 
-## Start rule
-This file is the canonical Business Engineering start pointer. Restore this file first, then the referenced cycle machine state and Drive readback. Do **not** repeat a completed Run32 because an older chat, handoff, branch or Drive document still describes it as future work.
+## Canonical start rule
+Read this file first. Completed Run32 blocks must not be repeated because an older chat, branch, handoff or Drive document still calls them future work.
 
 ## Current merge lineage
 - Cycle5 Public Artifact Validation: PR #185 -> `470a8aea93385ef8624b47688dbf4cf21090c058`.
@@ -14,158 +14,122 @@ This file is the canonical Business Engineering start pointer. Restore this file
 - Cycle7 P97–P128 Authority Recovery: PR #207 -> `f45f07cb6a78733fa1a123d5e11a35dfb43913c5`.
 - Cycle7 P129–P160 Commercial Reliability: PR #220 -> `bb5ec7f513cc6330066d2a29e163a22bf50e3d83`.
 - Cycle8 P161–P192 Evidence Acquisition: PR #232 -> `c219908781f3b0e160c3b020c6efbb5d53d9f4be`.
-- Authority/source precedence guards: PR #236 — merged additive fail-closed layer.
-- **Cycle9 P193–P224 Decision/Proof: PR #247 -> `58f7b2476a8b416d79c0577206e5ce0a61e6da0e`.**
-- Duplicate fresh-main replay PR #252: **CLOSED / SUPERSEDED / NOT COUNTED AGAIN**.
-
-Detailed historical execution remains in the individual cycle paths; this pointer intentionally keeps only the current causal state.
+- Authority/source precedence guards: PR #236 — merged.
+- Cycle9 P193–P224 Decision/Proof: PR #247 -> `58f7b2476a8b416d79c0577206e5ce0a61e6da0e`.
+- **Bidder Primary Evidence Delta: PR #253 -> `071d4b37e8d2cef395f9e12bcfb919eefb1158cc`.**
+- Duplicate replay PR #252: CLOSED / SUPERSEDED / not counted.
 
 ## Library authority
-Private RAW Drive: `1X6mo94Qo103HheyDry4P3dcQkv5qZg6N`.  
-Current library pointer: `BUSINESS_ENGINEERING_OS/LIBRARY/00_START_HERE_CURRENT_LIBRARY.md`.
+Private RAW Drive: `1X6mo94Qo103HheyDry4P3dcQkv5qZg6N`.
+Counts remain **78 physical / 68 valid / 58 unique valid byte hashes / 5 broken-quarantined / 8 exact duplicate groups**. Raw copyrighted/private source binaries stay Drive-only.
 
-Counts remain **78 physical / 68 valid / 58 unique valid byte hashes / 5 broken-quarantined / 8 exact duplicate groups**. Raw copyrighted binaries remain Drive-only; GitHub stores metadata, hashes, source passports, mechanisms, proofs, tests and provenance.
+## Completed Run32 frontier
+- P97–P128: 32/32 executed.
+- P129–P160: 32/32 executed.
+- P161–P192: 32/32 executed.
+- **P193–P224: 32/32 executed.**
 
-## Operating pipeline
-`OPPORTUNITY -> TARGET AUTHORITY -> EXPLICIT BIDDER DESIGNATION -> BIDDER PRIMARY EVIDENCE -> FROZEN TARGET+BIDDER MANIFESTS -> ATOMIC REQUIREMENT JOIN -> GAP ROUTING -> BOUNDED DECISION CANDIDATE -> BLIND SAME-PACKET PA4 -> REAL TARGET-USER DECISION USE -> PA5 -> E3 REAL BEHAVIOR -> E4 REAL TRANSACTION ONLY`.
+Cycle9 final reviewed head `41837b788f13703853aea39e3ca8be251a78ab04`; exact-head CI `32550989109` SUCCESS.
+Disposition: 13 PASS-class / 19 HOLD-BLOCKED; PA4 events 0; PA5 events 0; E3 0; E4 0; BID/NO-BID decisions 0; outreach/send/interview 0.
 
-Core separation laws:
-`TARGET_WORKSPACE != TARGET_FULL_PACK`  
-`DOCUMENT_URL != DOCUMENT_INVENTORY`  
-`ROUTE_KNOWN != PACK_ACQUIRED`  
-`SEARCH_INDEX_ABSENCE != DOCUMENT_NONEXISTENCE`  
-`BENCHMARK_PACK != TARGET_PACK`  
-`COMPANY_IDENTITY != BIDDER_DESIGNATION`  
-`BIDDER_DESIGNATION != CAPABILITY_PROOF`  
-`IDENTITY_EVIDENCE != CAPABILITY_EVIDENCE`  
-`PUBLIC_REGISTRY_PRESENCE != ACTIVE_STATUS`  
-`ENGINEERING_CONTINUE != OUTREACH_AUTHORIZATION`  
-`POLISH_OR_CI != PROOF_GRADE_UPGRADE`  
-`K != S != PA != E`.
+Cycle9 engineering: **16 modules / 24 contracts / 12 proof gates / 8 protocols / 32 deterministic canaries**.
+Drive folder `1s7R6TkVYl1k8zXcAPG3baSNyLlkUjunm`; semantic readback 5/5 PASS.
 
-## Completed Run32 layers
-- `P97–P128`: exactly 32/32 executed — authority recovery.
-- `P129–P160`: exactly 32/32 executed — commercial reliability.
-- `P161–P192`: exactly 32/32 executed — evidence acquisition.
-- **`P193–P224`: exactly 32/32 executed — decision/proof gating.**
+## Current Ballybunion target state
+Case `PROC-BALLYBUNION-8872468`.
 
-### Cycle9 P193–P224 — current completed Run32
-Path: `BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE9_P193_P224_DECISION_PROOF/`.  
-PR #247 / merge `58f7b2476a8b416d79c0577206e5ce0a61e6da0e`.  
-Final candidate head `41837b788f13703853aea39e3ca8be251a78ab04`.  
-Exact-head GitHub Actions run `32550989109`: **SUCCESS**.
-
-Disposition:
-- **32/32 executed**;
-- 13 PASS / PASS_SCHEMA / PASS_POLICY / PASS_ENGINEERING / PROTECT;
-- 19 HOLD / BLOCKED;
-- real PA4 events = 0;
-- real PA5 events = 0;
-- E3 events = 0;
-- E4 transactions = 0;
-- BID/NO-BID decisions = 0;
-- external outreach/send/interview events = 0.
-
-Cycle9 adds **16 modules / 24 contracts / 12 proof gates / 8 protocols / 32 deterministic canaries** around frozen packet manifests, blind reviewer identity, row-level divergence, PA5 evidence, observed burden, external value basis, proof-promotion firewall, residual-job routing, cross-store persistence and fatal-uncertainty routing.
-
-## Cycle9 Drive authority
-Folder: `1s7R6TkVYl1k8zXcAPG3baSNyLlkUjunm`.
-
-Five native Docs are physically parented inside the folder and semantically read back:
-- START HERE `17yKF-lJwPFUG1l7b4YUeghiZWUvLxrWGpDrMs6rIWl8` — `BUSINESS-C9-P193-P224-RUN32-NEXT64-P288`;
-- RUN32 `1TRxVo_vJPxHu3zVbgBjv9EpX1C_xdwnGjW1L-EQNUow` — `BUSINESS-C9-RUN32-32OF32-P224-PROTECT-NO-CHANGE`;
-- ENGINEERING `1_qs716b8JdCqV4KCIqKA0UZCAkNK1C8o5YKOJM81Zok` — `BUSINESS-C9-16M-24C-12P-8R`;
-- NEXT64 `1QncwOrBANab7fAor5yUzU32gu3u5KUF3jERsBkXyQ54` — `BUSINESS-C9-NEXT64-P225-P288-COUNT64`;
-- MACHINE `1NYYT9jICFy9EtIu5gn8NzferVYJEuTCQ0iQDDjTfPBQ` — `BUSINESS-C9-MACHINE-P193-P224-NEXT-P288`.
-
-## Current Ballybunion state
-Case: `PROC-BALLYBUNION-8872468`.
-
-Independent root blocker cut set remains:
+Root blockers remain independent:
 - `ROOT_A = TARGET_PACK_NOT_ACQUIRED`;
 - `ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_PACKET`.
 
-Known:
-- official/current eTenders workspace exists;
-- official document route is known;
-- public metadata confirms the opportunity identity and current high-level facts.
-
-Not acquired/proven:
-- complete current attachment/revision/addendum inventory/files;
-- authoritative TargetPackCompletenessCertificate;
-- explicit case-specific bidder designation;
-- frozen bidder evidence packet / SupplierCapabilityProfile v2;
-- target requirement-to-bidder evidence join.
+The official workspace and documents route are known, but the complete current attachment/revision/addendum inventory/files are not acquired. No merged evidence object explicitly designates a bidder for resource 8872468.
 
 Therefore:
-`TARGET_AUTHORITY = INCOMPLETE`  
-`BIDDER_DESIGNATION = MISSING`  
-`PA4 = FALSE`  
+`TARGET_AUTHORITY = INCOMPLETE`
+`BIDDER_DESIGNATION = MISSING`
+`VERIFIED_SUPPLIER_CAPABILITY_PACKET = FALSE`
+`ATOMIC_REQUIREMENT_JOIN = BLOCKED`
 `BID/HOLD/NO-BID = UNAUTHORIZED`.
 
-Historical resource `8176962` remains `BENCHMARK_FIXTURE_ONLY`; it cannot fill current target requirements.
+Historical resource `8176962` is `BENCHMARK_FIXTURE_ONLY`; no requirement carryover.
 
-## Current supplier-side evidence
-State remains **PARTIAL_IDENTITY_PLUS_PUBLIC_REGISTRY_PRESENCE**, not target-bound bidder capability.
+## Current supplier-side evidence — merged PR #253
+Current bounded supplier state:
+`PARTIAL_IDENTITY_PLUS_CORE_SCREEN_PLUS_TAX_ACCOUNT_EVIDENCE_PLUS_SELF_ISSUED_EWI_RECORDS`.
 
-Still null/unproven until authoritative evidence exists: current CRO status/company record where unresolved, final activity classification, tax clearance, insurance, turnover/working capital, H&S/PSCS competence, target-relevant roofing/insulation capability, named personnel/current capacity, similar-project references and procurement eligibility.
+Proven/observed only within source limits:
+- legal name/company type and registration number **796820** are visible in an official CORE-interface screenshot;
+- screen-displayed status `Normal` is observed, but screenshot capture timestamp is not independently proven, so present-time CRO status is not asserted;
+- Revenue/ROS evidence proves tax registration/account evidence and a historical account state at **2026-08-07 20:19 +01:00**;
+- three seller-issued EWI/external-insulation invoice families exist across May/June/July 2026, at least two counterparty groups and multiple sites, with concrete EWI/render scope;
+- one May invoice family contains conflicting period variants and counts once.
+
+Still NOT proven:
+- fresh/current certified CRO extract/status;
+- Tax Clearance Certificate/current tax-clearance state;
+- current balance after the timestamped ROS statement;
+- insurance certificate/policy;
+- independent customer completion/acceptance reference;
+- independent payment receipt / paid revenue;
+- turnover/profitability;
+- H&S/PSCS competence;
+- named personnel/current delivery capacity;
+- target-specific capability sufficiency;
+- procurement eligibility;
+- case-specific bidder designation.
+
+Backlog effects now authoritative:
+- `P235 = HOLD_NO_EXPLICIT_BIDDER_DESIGNATION`;
+- `P237 = PARTIAL_OFFICIAL_SCREEN_REG_NUMBER_CURRENT_CERTIFIED_EXTRACT_MISSING`;
+- `P243 = PARTIAL_TAX_REGISTRATION_AND_HISTORICAL_ACCOUNT_EVIDENCE_CLEARANCE_MISSING`;
+- `P244 = HOLD_NO_INSURANCE_CERTIFICATE`;
+- `P248 = PARTIAL_SELF_ISSUED_EWI_RECORDS_THIRD_PARTY_REFERENCE_UNPROVEN`;
+- `P250–P255 = BLOCKED_PRECONDITIONS`.
+
+Bidder-evidence Drive folder: `1x_Y-X-Bqd-tbAV1Lkbs2sksXcZAi5-WZ`.
+Dossier `1tzCl_iRPwtepuk_PaaYh4y2tCnxKifpluUwGjO_0Hmc`; machine/proofs `1AtcvNgOQF21z1e4w_0nLodfb2lMSYUh0qLcc6yeChCc`; semantic readback 2/2 PASS.
+PR #253 exact-head CI `32551065277` SUCCESS; unresolved review threads 0.
+
+## Evidence laws retained
+`TARGET_WORKSPACE != TARGET_FULL_PACK`
+`ROUTE_KNOWN != PACK_ACQUIRED`
+`BENCHMARK_PACK != TARGET_PACK`
+`COMPANY_IDENTITY != BIDDER_DESIGNATION`
+`BIDDER_DESIGNATION != CAPABILITY_PROOF`
+`OFFICIAL_SCREEN_REG_NUMBER_EVIDENCE != FRESH_CERTIFIED_CRO_EXTRACT`
+`UNDATED_SCREEN_STATUS != CURRENT_STATUS`
+`REVENUE_ACCOUNT_EVIDENCE != TAX_CLEARANCE`
+`HISTORICAL_TAX_BALANCE != CURRENT_TAX_BALANCE`
+`SELLER_ISSUED_INVOICE != PAYMENT_RECEIPT`
+`SELLER_ISSUED_INVOICE != CLIENT_COMPLETION_REFERENCE`
+`ENGINEERING_CONTINUE != OUTREACH_AUTHORIZATION`
+`POLISH_OR_CI != PROOF_GRADE_UPGRADE`
+`K != S != PA != E`.
 
 ## Proof frontier
-Public-only evidence ceiling = **E2+**.  
-Procurement artifact maturity = **PA3**.  
-PA4 = false.  
-PA5 = false.  
-E3 = false.  
-E4 = false.  
-WTP / price / profitability = null or unproven.  
-Procurement eligibility / legal clearance / finance approval = unproven.
-
-## Market-authority WIP
-PRIMARY: tender/procurement decision intelligence.  
-PILOT: retrofit route qualification — blocked on one real property packet.  
-PILOT: post-Digital-for-Business SME workflow implementation — blocked on one real workflow/report.  
-Maximum WIP = 3.
-
-## Self-Improvement
-Global Self-Improvement **v2 CURRENT**; v3 **CANDIDATE ONLY**.
-
-Cycle9 candidate-only observations:
-`AUTHORITY_CUT_SET_BEFORE_DOWNSTREAM_PROMPTS`  
-`EXTERNAL_ACTION_PERMISSION_IS_A_SEPARATE_CONTROL_PLANE`  
-`PROOF_LAUNDERING_REGRESSION_REQUIRED`  
-`NO_DIVERGENCE_NO_SCHEMA_CHURN`  
-`ROOT_BLOCKER_STABILITY_CAN_TRIGGER_PROTECT_NO_CHANGE`.
-
-No global SI promotion follows from Cycle9.
+Public/derived ceiling = **E2+**.
+Procurement artifact maturity = **PA3**.
+PA4=false; PA5=false; E3=false; E4=false.
+WTP/price/profitability/paid revenue/procurement eligibility/legal clearance/finance approval remain null or unproven.
 
 ## Exact next backlog
-**P225–P288 = exactly 64 prompts, DESIGNED / NOT EXECUTED. Dependency gates override numbering.**
+**P225–P288 = 64 prompts, DESIGNED / NOT EXECUTED; dependencies override numbering.**
 
-### P225–P256 — inherited evidence-acquisition chain
-1. acquire/authenticate current official target pack and bind acquisition receipt;
-2. hash/private-manifest files, prove completeness and reconcile revisions/addenda;
-3. build exact TenderRequirementRegistry;
-4. create explicit case-specific BidderDesignationObject;
-5. acquire/freeze authoritative bidder identity and target-required tax/insurance/finance/H&S/personnel/reference/capacity evidence;
-6. build SupplierCapabilityProfile v2 with UNKNOWN defaults;
-7. atomic row join and categorical `MET / UNKNOWN / CURABLE / NONCURABLE / N/A` routing;
-8. bounded BID/HOLD/NO-BID candidate only after all preconditions;
-9. otherwise `PROTECT_NO_CHANGE`.
-
-### P257–P288 — Cycle9-derived hardening
-Adds authenticated-pack ingestion without credential leakage, acquisition receipts, canonical manifest hashing, completeness-vs-observed-file separation, addendum supersession graph, authority-gap certificates, BidderDesignation v2, credential expiry, capability-claim provenance, target-specific negative controls, privacy-minimized bidder packet, atomic manifest freeze, requirement typing, no-similarity MET rule, critical path, null-safe finance, frozen blind PA4 packet, reproducible divergence, explicit external-action authorization, real PA5 instrumentation, observed human burden and E3/E4 gates.
-
-## Current decisive gate
-`ACQUIRE_COMPLETE_CURRENT_TARGET_PACK OR OBTAIN_EXPLICIT_CASE_SPECIFIC_BIDDER_DESIGNATION_AND_AUTHORITATIVE_PACKET`.
-
-The two roots are independent; progress on either is admissible, but downstream requirement join/decision needs both.
+Highest-value admissible frontier:
+1. P225 acquire authenticated current official target pack.
+2. P226–P234 receipt/manifest/completeness/revisions -> exact TenderRequirementRegistry.
+3. P235 obtain explicit case-specific BidderDesignationObject or keep bidder UNDESIGNATED.
+4. P237–P249 fill only still-required bidder evidence gaps; reuse merged #253 evidence instead of re-searching it.
+5. P250–P251 build/freeze SupplierCapabilityProfile v2 with UNKNOWN defaults.
+6. P252–P254 atomic requirement/evidence join + MET/UNKNOWN/CURABLE/NONCURABLE/N/A routing.
+7. P255 bounded BID/HOLD/NO-BID candidate only when preconditions are met.
+8. P257–P288 harden authenticated ingest, manifests, capability provenance, blind PA4 and real PA5/E3/E4 transitions.
 
 ## Stop rules
-- Do not repeat P193–P224; they are merged authority.
-- Do not infer bidder designation from company identity or user profile context.
+- Do not repeat P193–P224 or rediscover #253 evidence.
+- Do not infer bidder designation from company identity, invoices or project context.
 - Do not infer target requirements from historical/benchmark packs.
-- Do not turn continuation instructions into autonomous outreach.
-- Do not manufacture PA4/PA5/E3/E4, price, WTP, eligibility, transaction or legal evidence.
-- Do not raise proof grade because an artifact is polished or CI is green.
-- No autonomous tender submission, contract acceptance, payment or legal determination.
-- Without new admissible evidence, `PROTECT_NO_CHANGE` is preferable to another broad scan or generic meta-cycle.
+- Do not turn invoices into payment/revenue or self-issued records into independent references.
+- Do not turn Revenue account evidence into Tax Clearance.
+- No autonomous outreach, tender submission, contract acceptance, payment or legal determination.
+- Without new admissible evidence, `PROTECT_NO_CHANGE` is preferable to broad scanning or another generic meta-cycle.
