@@ -1,0 +1,34 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-08-22",
+  "project":"B03_SMITH_THE_EMPTY_RESCUE",
+  "range":"P41-P48",
+  "status":"EXECUTED_PASS_AFTER_MINIMAL_REPAIR",
+  "fatal":0,
+  "blocking_major":0,
+  "drive_gate_id":"1OAzxho9Uxe9iOeq2XKp9m3hqGsWfLbrdNjd47MRS9DE",
+  "checks":{
+    "P41_contrastive_syntax":"PASS_WITH_WATCH",
+    "P42_acknowledgment_function":"PASS_WITH_WATCH",
+    "P43_question_family_blind_test":"PASS_WITH_WATCH",
+    "P44_source_knowledge_provenance":"PASS",
+    "P45_epistemic_modality":"PASS",
+    "P46_emotional_latency_body_first":"PASS",
+    "P47_vocabulary_metaphor_provenance":"PASS_WITH_WATCH",
+    "P48_minimum_repair_regression":"PASS"
+  },
+  "repairs":[
+    {"chapter":"CH09","drive_id":"1Iz933l4pa4g1FFWWfdaby3pxkx6JYfCBjN-2VTm8tJM","change":"removed one duplicate sentence repeating the physical benefit of empty staging space","story_change":false},
+    {"chapter":"CH10","drive_id":"1NeV1N9kBnjCpjXLtk_izLg4a3jS6UFkL59zY2ZxpAGI","change":"repaired malformed reply: Because the time depends on what you are checking -> It depends on what you are checking","story_change":false}
+  ],
+  "forward_corpus_budget":[
+    "reduce command-room-only evidence scenes",
+    "do not repeat CH12 response-created-detail proof under a new impossible-detail wrapper",
+    "dummy metadata remains stronger midpoint discriminant",
+    "Taren contributes broader class/discriminant/topology risk only",
+    "avoid long bare binary Q/A pacing without status or pressure change",
+    "narrator should not restate conceptual meaning after action already proves it",
+    "preserve uncertainty vocabulary after every major proof"
+  ],
+  "next":"P49-P56_CH13_18_MIDPOINT_HISTORY_REBASE"
+}
