@@ -1,0 +1,62 @@
+{
+  "schema_version": "room917.e01_room_bed_canary_pointer/1.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "REAL_LISTENABLE_SESSION_CANARIES_EXIST__HOLD_NOT_PRODUCTION_BOUND",
+  "authority": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+  "generator": {
+    "path": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py",
+    "commit": "366b52b8a2a38227f6f094e05306d23bb17a8c2c",
+    "deterministic_seed": 91720260824,
+    "provider_calls": 0,
+    "paid_synthesis_calls": 0
+  },
+  "receipt": {
+    "path": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_ROOM_BED_SYNTHETIC_CANARY_RECEIPT_v2.json",
+    "commit": "26ac43940ef2043cbdff10d1a94969030f000731"
+  },
+  "artifact_workflow": {
+    "path": ".github/workflows/room917-room-bed-synth-canaries.yml",
+    "commit": "4f0836b3f6c038ad446f22035b1791319e9ad01a",
+    "artifact_name": "ROOM917_E01_A01_A02_SYNTH_CANARIES",
+    "production_binding": false
+  },
+  "drive_state": {
+    "raw_sfx_folder": "1Jnfri8BYco3x2-LD_g8WWJsfGNs-u6mF",
+    "raw_sfx_folder_scan": "EMPTY_2026_08_22",
+    "approved_reference_folder": "1TiC3vOTcbDN1fs0MiUuWNRgXlISCuDCc",
+    "approved_reference_folder_scan": "EMPTY_2026_08_22",
+    "sound_asset_recovery_doc": "1EFo5dftVQLqYGIxY0liMA3OgWWK0cxAIRlsFSwa5_RE",
+    "binary_canaries_uploaded_to_drive": false
+  },
+  "session_assets": {
+    "A01_GREYHAVEN_LOBBY_30S_LOOP": {
+      "candidate_id": "A01_GREYHAVEN_LOBBY_30S_LOOP_CANDIDATE_SYNTH02",
+      "wav_sha256": "9ca06999c727571f18ac8003a61f69a1d18bb46072713f45c7aab3deb86828b3",
+      "wav_size_bytes": 8640044,
+      "format": "48KHZ_24BIT_STEREO_30.000S",
+      "status": "HOLD_HUMAN_AUDITION_REQUIRED",
+      "production_binding": false
+    },
+    "A02_SWITCHBOARD_ALCOVE_30S_LOOP": {
+      "candidate_id": "A02_SWITCHBOARD_ALCOVE_30S_LOOP_CANDIDATE_SYNTH02",
+      "wav_sha256": "f977e467ba9dd915a46956523045b87ffd0f40063a22630d9de84728b327edc0",
+      "wav_size_bytes": 8640044,
+      "format": "48KHZ_24BIT_STEREO_30.000S",
+      "status": "HOLD_HUMAN_AUDITION_REQUIRED",
+      "production_binding": false
+    }
+  },
+  "human_canary_questions": [
+    "A01: does this sound like a large old coastal hotel lobby rather than generic noise?",
+    "A02: does this sound like a smaller drier carpeted switchboard alcove?",
+    "Does either bed reveal obvious synthesis or a repeating loop?",
+    "Does any small transient resemble a story clue such as a knock, relay, ring or lamp ping?",
+    "Would either ambience distract from dialogue?"
+  ],
+  "pass_effect": "AUDITION_EVIDENCE_ONLY__STILL_REQUIRES_IDENTITY_GATE_MONO_PHONE_FALSE_CLUE_AND_EXACT_D003_TIMING_BEFORE_PATCH",
+  "fail_effect": "REGENERATE_OR_REPLACE_ONLY_FAILED_BED",
+  "hard_law": "CANARY_EXISTENCE_DOES_NOT_AUTHORIZE_PATCHING_SCENE3_RELEASE_ORSEASON_SCALE"
+}
