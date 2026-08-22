@@ -3,11 +3,21 @@
   "date": "2026-08-22",
   "commissioner": "Clare County Council",
   "deadline_authority": "2026-09-17",
+  "deadline_exact_time": null,
+  "deadline_exact_time_status": "VERIFY_NOT_PUBLICLY_STATED",
+  "submission_platform": "CLARE_COCO_SUBMIT",
+  "proposal_upload_format": "ONE_PDF_VERIFIED",
   "budget_eur_all_in": 21500,
   "artist_fee_eur": 6000,
   "artist_fee_pct": 27.9,
   "primary_concept": "THE_LAKE_HOLDS_THE_LIGHT",
   "preferred_site": "SITE_2_CONDITIONAL",
+  "protected_structure": {
+    "rps_no": "464",
+    "status": "OLD_RECTORY_CURTILAGE",
+    "conservation_planning_gate": true
+  },
+  "site_visit_notes_status": "NOT_PUBLICLY_RECOVERED_ON_CURRENT_PAGE",
   "go_to_submit": false,
   "proposal_pdf": {
     "pages": 8,
@@ -33,15 +43,19 @@
     "status": "INDICATIVE_NOT_SURVEYED_SITE_PHOTO",
     "drive_file_id": "1FwjlCCBFedoE2cNZgE9y950wtd3FFN5f"
   },
+  "external_gate_delta": {
+    "drive_file_id": "1K_xXjhDVtHLjhoBw-8gl2JRbR-RFEMxn",
+    "case_state_v2_drive_file_id": "12OuiqQyuPrA43TmkY2c9u4MP88Srznqg"
+  },
+  "operational_submit_target": ">=24H_BEFORE_DATE_DEADLINE_SUBJECT_TO_LIVE_PORTAL",
   "remaining_gates": [
-    "CURRENT_SITE_SUPPORTING_INFO",
-    "SITE_BOUND_IN_SITU_VISUAL_IF_AVAILABLE",
-    "PORTAL_UPLOAD_AND_FILE_LIMITS",
-    "EXACT_DEADLINE_TIME_CONFIRMATION",
+    "SITE_SUPPORTING_INFO_OR_EXPLICIT_ABSENCE",
+    "PORTAL_PREFLIGHT",
     "FABRICATION_AND_INSTALL_QUOTE_SANITY",
     "FINAL_5X20_RED_TEAM",
+    "EARLY_SUBMISSION",
     "SUBMISSION_RECEIPT_READBACK"
   ],
   "cluain_parallel_state": "HOLD_0_OF_3_SUBMISSION_READY_PROJECT_RECORDS",
-  "proof_boundary": "NO_SELECTION_OR_AWARD_PROBABILITY_OR_ENGINEERING_APPROVAL_CLAIM"
+  "proof_boundary": "NO_SELECTION_OR_AWARD_PROBABILITY_OR_ENGINEERING_OR_CONSERVATION_APPROVAL_CLAIM"
 }
