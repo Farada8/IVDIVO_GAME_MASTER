@@ -1,0 +1,70 @@
+{
+  "$schema": "ivdivo.business.bidder_primary_evidence_delta/1.0",
+  "date": "2026-08-22",
+  "privacy": {
+    "raw_sources_public": false,
+    "client_names_public": false,
+    "site_addresses_public": false,
+    "bank_details_public": false,
+    "tax_identifiers_public": false,
+    "private_sources_remain": ["CHATGPT_FILE_LIBRARY", "PRIVATE_DRIVE_MIRROR"]
+  },
+  "company_registry": {
+    "legal_name": "SYNTHESIS-IVDIVO LIMITED",
+    "registration_number": "796820",
+    "registration_number_evidence": "OFFICIAL_CORE_SCREENSHOT",
+    "company_type": "PRIVATE_COMPANY_LIMITED_BY_SHARES",
+    "screen_status": "NORMAL",
+    "screen_capture_timestamp": null,
+    "embedded_event_lower_bound": "2026-05-22",
+    "current_status_claim_authorized": false,
+    "certified_current_cro_extract_present": false
+  },
+  "tax": {
+    "revenue_registration_evidence_present": true,
+    "ros_statement_timestamp": "2026-08-07T20:19:00+01:00",
+    "historical_balance_due_observed": true,
+    "historical_balance_amount_public": "REDACTED",
+    "tax_clearance_certificate_present": false,
+    "current_tax_clearance_status": "UNKNOWN",
+    "current_balance_after_statement_timestamp": "UNKNOWN"
+  },
+  "delivery_records": {
+    "invoice_families": 3,
+    "minimum_distinct_counterparty_groups": 2,
+    "multiple_sites_present": true,
+    "scope_tags": [
+      "EWI_INSTALLATION",
+      "INSULATION_BOARD_FIXING",
+      "BASE_COAT_AND_REINFORCEMENT_MESH",
+      "FINISHING_OR_ACRYLIC_RENDER",
+      "OPENING_AND_SERVICE_PENETRATION_DETAILING"
+    ],
+    "evidence_class": "SELF_ISSUED_DELIVERY_RECORD_PRESENT",
+    "third_party_completion_corroborated": false,
+    "payment_receipts_present": false,
+    "paid_revenue_claim_authorized": false,
+    "may_invoice_family_version_conflict": true
+  },
+  "bidder": {
+    "case": "PROC-BALLYBUNION-8872468",
+    "explicit_bidder_designation_present": false,
+    "company_context_may_auto_designate_bidder": false
+  },
+  "backlog_effect": {
+    "P235": "HOLD_NO_EXPLICIT_BIDDER_DESIGNATION",
+    "P237": "PARTIAL_OFFICIAL_SCREEN_REG_NUMBER_CURRENT_CERTIFIED_EXTRACT_MISSING",
+    "P243": "PARTIAL_TAX_REGISTRATION_AND_HISTORICAL_ACCOUNT_EVIDENCE_CLEARANCE_MISSING",
+    "P244": "HOLD_NO_INSURANCE_CERTIFICATE",
+    "P248": "PARTIAL_SELF_ISSUED_EWI_RECORDS_THIRD_PARTY_REFERENCE_UNPROVEN",
+    "P250_P255": "BLOCKED_PRECONDITIONS"
+  },
+  "proof": {
+    "public_ceiling": "E2_PLUS",
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "E4": false,
+    "target_bid_decision_authorized": false
+  }
+}
