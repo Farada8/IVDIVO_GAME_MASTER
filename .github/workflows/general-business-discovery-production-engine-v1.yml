@@ -31,6 +31,8 @@ jobs:
           src = (root/'08_P01_P08_SOURCE_LEDGER.md').read_text()
           p1724 = (root/'09_P17_P24_FATAL_ASSUMPTION_PORTFOLIO.md').read_text()
           fatal_state = json.loads((root/'10_P17_P24_MACHINE_STATE.json').read_text())
+          p0916 = (root/'11_P09_P16_BUYER_PROBLEM_EVIDENCE.md').read_text()
+          buyer_state = json.loads((root/'12_P09_P16_MACHINE_STATE.json').read_text())
           state = json.loads((root/'06_MACHINE_STATE.json').read_text())
           assert all(f'BDP{i:02d}' in spec for i in range(1,33))
           assert all(f'CDP{i:02d}' in spec for i in range(1,33))
@@ -38,7 +40,7 @@ jobs:
           assert '**MUTATE:** 11' in run
           assert all(f'P{i:02d}' in nxt for i in range(1,65))
           assert 'Prompt count never substitutes for evidence' in (root/'00_MASTER.md').read_text()
-          # Preserve the already verified P01-P08 discovery block.
+          # Preserve verified discovery and fatal-test blocks.
           assert state['discovery_refresh']['fresh_non_procurement_signals'] == 10
           assert state['discovery_refresh']['wip_count'] == 3
           assert state['discovery_refresh']['willingness_to_pay'] is None
@@ -47,16 +49,22 @@ jobs:
           assert 'WILLINGNESS_TO_PAY = UNKNOWN' in p0108
           assert 'OFFICIAL_SUPPORT_EXISTENCE != BUYER_WTP' in src
           assert all(f'SRC-GEN-{i:02d}' in src for i in range(1,12))
-          # New non-contiguous causal execution: P17-P24 follows fatal-first ordering.
-          assert state['next64']['executed'] == 16
-          assert state['next64']['executed_ranges'] == ['P01-P08', 'P17-P24']
-          assert state['next64']['remaining'] == 48
-          assert state['next64']['next_admissible_block'] == 'P09-P16_TARGETED_TO_CURRENT_3_WIP'
           assert fatal_state['next64']['executed_count'] == 16
           assert fatal_state['portfolio']['wip_count'] == 3
           assert fatal_state['external_action']['authorized'] is False
           assert all(f'OPP-{i}' in p1724 for i in (33,36,37))
-          assert 'INTERNAL_NEGATIVE_CONTROL_READY' in p1724
+          # New P09-P16 buyer/problem evidence block closes the contiguous P01-P24 engineering range.
+          assert buyer_state['next64']['executed_count'] == 24
+          assert buyer_state['next64']['unexecuted_count'] == 40
+          assert buyer_state['external_action']['authorized'] is False
+          assert buyer_state['evidence']['buyer_behavior_observed'] is False
+          assert 'PUBLIC_SCREENING_CANDIDATE != BUYER != BUDGET_OWNER != DEMAND' in p0916
+          assert state['next64']['executed'] == 24
+          assert state['next64']['executed_ranges'] == ['P01-P08', 'P09-P16', 'P17-P24']
+          assert state['next64']['remaining'] == 40
+          assert state['next64']['next_admissible_block'] == 'TEST_37_INTERNAL_NEGATIVE_CONTROL_THEN_P25_P32_IF_DIFFERENTIAL_PASSES'
+          assert state['buyer_problem_evidence']['screening_slots_per_lane'] == 10
+          assert state['buyer_problem_evidence']['buyer_behavior_observed'] is False
           assert state['external_action']['authorized'] is False
-          print('GENERAL_BUSINESS_ENGINE: PASS — 16/64 executed (P01-P08 + P17-P24), 48 remaining, WIP=3')
+          print('GENERAL_BUSINESS_ENGINE: PASS — P01-P24 engineering executed, 24/64, 40 remaining, WIP=3')
           PY
