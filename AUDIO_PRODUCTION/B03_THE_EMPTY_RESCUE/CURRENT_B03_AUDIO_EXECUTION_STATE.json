@@ -6,7 +6,7 @@
   "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
   "locked_book_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
   "ch01_source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
-  "last_completed_artifact": "107_B03_AUDIO_EXECUTION_STATE_PROVIDER_BRIDGE_READY_v1",
+  "last_completed_artifact": "108_B03_CH01_SPEAKER_PROVENANCE_RECONCILIATION_v1",
   "current_stage": "PROVIDER_BRIDGE_READY / LIVE EVIDENCE REQUIRED",
   "prelive_design": "COMPLETE",
   "provider": {
@@ -30,6 +30,16 @@
     "all_voice_ids_null": true,
     "all_requests_fail_closed": true
   },
+  "speaker_provenance_reconciliation": {
+    "status": "PASS_142_OF_142",
+    "private_ch01_map_drive_id": "1aw17696W4KOLVgCcnOkKxpaOJE15YRMg",
+    "reconciliation_json_drive_id": "10WMtxygCb24N2XnBZeL6z0-B0PJUZZFY",
+    "reconciliation_md_drive_id": "1ofWRzJoeWpidY0BkOGJsOqQKHMMnygLC",
+    "speaker_conflicts_found": 0,
+    "provider_bridge_preserved": true,
+    "whole_book_rejected_speaker_maps_must_not_seed_ch02_ch29": true,
+    "whole_book_current_rebased_state_path": "AUDIO_PRODUCTION/B03/CURRENT_SPEAKER_ATTRIBUTION_STATE.json"
+  },
   "prelive_artifacts_complete": [
     "voice/casting/pronunciation/S0 dry stack",
     "project overlay/listener contract",
@@ -38,7 +48,8 @@
     "12-cue sound asset plan",
     "sound-asset canary + acceptance ledger",
     "Hard Pilot assembly + QC contract",
-    "provider execution bridge"
+    "provider execution bridge",
+    "CH01 speaker provenance reconciliation"
   ],
   "critical_identity_locks": {
     "drainage_flap": "same four-impact physical/rhythmic family with natural variation; never musicalized or sample-perfect",
@@ -61,10 +72,13 @@
     "prelive_bundle_106_id": "164d9_qtXnkSr7fxMMJ6PHB21d3flbQ3Z",
     "provider_bridge_105_id": "1sIQNV0p12f1XRtwSRQCnps2kBMB6DTTl",
     "provider_ready_state_107_id": "10S56-gNk4Z2S9gZrTbJB4q2KGPQNs7vW",
+    "ch01_speaker_reconciliation_json_108_id": "10WMtxygCb24N2XnBZeL6z0-B0PJUZZFY",
+    "ch01_speaker_reconciliation_md_108_id": "1ofWRzJoeWpidY0BkOGJsOqQKHMMnygLC",
     "policy": "Full exact-text payload remains in Drive; public GitHub mirrors contracts/hashes/state only."
   },
   "next_exact_action": "Connect/authorize a real ElevenLabs execution context without storing secrets in project files. Enumerate actual workspace voices/models -> bind temporary S0 candidates -> immediate source/exact-text hash recheck -> execute only four S0 TTS jobs -> persist raw audio+alignment+provenance -> PASS/FAIL. In parallel execute only SFX canaries C0-C2 through /v1/sound-generation; C3 waits for the accepted first-caller take.",
-  "stop_rule": "Do not create more abstract audio-engine design until live S0/asset evidence exposes a concrete defect.",
+  "parallel_nonblocking_action": "Continue whole-book speaker attribution for CH02-29 only from the corrected rebased v2 map; do not use rejected Tier1/Tier2 cumulative maps.",
+  "stop_rule": "Do not create more abstract CH01 audio-engine design until live S0/asset evidence exposes a concrete defect.",
   "prohibited": [
     "story rewrite",
     "CH30",
@@ -72,6 +86,7 @@
     "Andrej diagnosis/prognosis invention",
     "bulk render before canary evidence",
     "fabricated provider/listen/alignment claims",
+    "rejected speaker-map reuse for CH02-29",
     "API keys or secrets in GitHub/Drive"
   ]
 }
