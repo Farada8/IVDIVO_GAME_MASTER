@@ -5,10 +5,12 @@
 
 ## Current production authority
 Use:
-- `ROOM917_SFX_ASSET_MANIFEST_v5.json` — active candidate registry;
+- `ROOM917_SFX_ASSET_MANIFEST_v5.json` — active candidate/hash registry;
 - `sfx_registry_gate_v2.py` — fail-closed manifest/human-lock gate;
-- `ROOM917_SFX_GATE_TEST_REPORT_v2.json` — regression evidence;
-- `ROOM917_SFX_ALL_COMBINATIONS_QC_v1.json` — 30/30 critical candidate combinations PASS.
+- `ROOM917_SFX_GATE_TEST_REPORT_v2.json` — registry regression evidence;
+- `ROOM917_SFX_ALL_COMBINATIONS_QC_v1.json` — 30/30 critical candidate combinations PASS;
+- `blind_result_compiler.py` + `BLIND_RESULTS_TEMPLATE_v6.csv` — human blind result -> exact candidate/hash lock compiler;
+- `BLIND_LOCK_COMPILER_TEST_REPORT_v1.json` — compiler regression PASS.
 
 Historical v2/v3/v4 manifests and blind packs are evidence only and must not be used for new lock decisions.
 
@@ -33,6 +35,9 @@ All 30 tested X/Y combinations PASS, including:
 ## Fail-closed human lock
 Before human blind selection the registry returns `HOLD`.
 A selected cue must reference an **active candidate and exact SHA-256**. Retired candidates fail. Hash drift/tampering fails.
+
+The blind-result compiler requires an explicit human X/Y/REJECT_BOTH choice plus `human_listen_confirmed=true` for every asset. `REJECT_BOTH` returns HOLD and writes no lock. Missing human attestation returns FAIL. Synthetic compiler test fixtures are never human evidence.
+
 No `AUDIO_CANON_MASTER` may be declared from machine metrics alone.
 
 ## Durable bytes
@@ -42,7 +47,8 @@ Current packs:
 - `ROOM917_SFX_ASSET_FACTORY_v5_ADMIN.zip` — SHA-256 `195e6f1c2ad278b47505e9efcb4d337e9d9d1d28dd90f5243019c10b23cf4258`;
 - `ROOM917_SFX_ENGINE_GATE_v2.zip` — SHA-256 `9ba06a847c6fe47ecc53a57535461f675366e2b8ba3744fbb856611fc2dffcce`;
 - **`ROOM917_SFX_FULL_BLIND_v6.zip`** — current listener pack, SHA-256 `79adb2e0c21a6d4cb76150600c2af49f0a4bd38bf6b4c83566f1ec86693e6cee`;
-- `ROOM917_SFX_FULL_ADMIN_v6.zip` — mapping + all-combination QC, SHA-256 `fda465ef77f80888aba3d9e60fb09129c1fd749a6d6c57e97bc625a698be5d3e`.
+- `ROOM917_SFX_FULL_ADMIN_v6.zip` — mapping + all-combination QC, SHA-256 `fda465ef77f80888aba3d9e60fb09129c1fd749a6d6c57e97bc625a698be5d3e`;
+- `ROOM917_SFX_BLIND_LOCK_COMPILER_v1.zip` — SHA-256 `b279526af3b356022fb412d0be85710bb7edf81c48a805f0aae6906f4e0780f0`.
 
 ## Current boundary
-Machine work for this requested factory scope is complete and green. The only non-simulatable gate is the human blind listen: X/Y/REJECT BOTH. After that result, run gate v2 and lock exact accepted bytes as `AUDIO_CANON_MASTER`.
+Machine work for this requested factory scope is complete and green. The only non-simulatable gate is the human blind listen: X/Y/REJECT BOTH. Once those actual choices exist, `blind_result_compiler.py` produces the exact lock JSON and `sfx_registry_gate_v2.py` verifies it before any cue can become `AUDIO_CANON_MASTER`.
