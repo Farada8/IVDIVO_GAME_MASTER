@@ -1,9 +1,9 @@
 {
-  "schema_version":"1.4",
+  "schema_version":"1.5",
   "updated":"2026-08-22",
   "project_id":"IVDIVO_BOOK_3_SMITH",
   "title":"SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
-  "status":"ACTIVE_MANUSCRIPT_PART_II_CH10_FRONTIER",
+  "status":"ACTIVE_MANUSCRIPT_PART_II_CH11_FRONTIER",
   "authority":{
     "founder_family_decision":"F1_CANONIZE_DAUGHTER_CORE_ONLY",
     "saga_bible_drive_id":"18boeup_cforR4zZ4Pc291WpG_T85OEklPH-t1YMlE6s",
@@ -14,12 +14,7 @@
     "cycle32b_drive_folder_id":"1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
     "cycle32b_github":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/00_INDEX_CURRENT_STATE.md"
   },
-  "smith_family":{
-    "status":"FOUNDER_CANON_F1",
-    "canon":["Smith has a teenage daughter in the current saga period"],
-    "working":["age 16-17 pending timeline normalization"],
-    "unknown_do_not_invent":["daughter name","mother name","exact marital history","custody or household structure","occupations","contact schedule"]
-  },
+  "smith_family":{"status":"FOUNDER_CANON_F1","canon":["Smith has a teenage daughter in the current saga period"],"working":["age 16-17 pending timeline normalization"],"unknown_do_not_invent":["daughter name","mother name","exact marital history","custody or household structure","occupations","contact schedule"]},
   "pre_prose_gate":{"fatal":0,"blocking_major":0,"prose_authorized":true},
   "manuscript":{
     "CH01":{"title":"WRONG ADDRESS","status":"PASS","drive_id":"197ikUS2gfyyXBykIMsgnPmCY8NphIVDLBLw0yZWx0PU"},
@@ -30,48 +25,21 @@
     "CH06":{"title":"FIRST PRECURSOR DOCTRINE","status":"PASS_FALSE_VICTORY","drive_id":"1P7dyxjnvcGzbpdltV2yoSa6JhZRJr8FbPiKuUKKDArE","block_gate_drive_id":"1BsEXW5XnFu469VqvgQnLjsrgVM-ZC6TaLGNBQQQEd90"},
     "CH07":{"title":"OUT OF THE SYSTEM","status":"PASS_AFTER_CORPUS_REPAIR","drive_id":"1JZrB0_kfltiw3PAyBVqn3q3nylBY-KSxhH-KmQJvu3o"},
     "CH08":{"title":"THE BLOCKED CALL","status":"PASS_AFTER_KNOWLEDGE_AND_CORPUS_REPAIR","drive_id":"1KcXRj0f1PNBpYDE8gftc44o5nnEW-Rs9K3o5__1035g"},
-    "CH09":{"title":"WHAT SILENCE COST","status":"PASS_AFTER_CAUSAL_AND_CORPUS_REPAIR","drive_id":"1Iz933l4pa4g1FFWWfdaby3pxkx6JYfCBjN-2VTm8tJM"}
+    "CH09":{"title":"WHAT SILENCE COST","status":"PASS_AFTER_CAUSAL_AND_CORPUS_REPAIR","drive_id":"1Iz933l4pa4g1FFWWfdaby3pxkx6JYfCBjN-2VTm8tJM"},
+    "CH10":{"title":"JANA'S LINE","status":"PASS_AFTER_TARGETED_HUMAN_SCENE_REPAIR","drive_id":"1NeV1N9kBnjCpjXLtk_izLg4a3jS6UFkL59zY2ZxpAGI","gate_drive_id":"1sE0Y0hKPe_3oG19THZXhJJfPUSY01fhS2U7-2HHhyWM"}
   },
-  "part_i_result":{
-    "fatal":0,"major":0,"false_victory":"EARNED",
-    "smith_initial_model":"external precursor / unverified; full predictive content is hazardous input that can alter deployment before ordinary evidence exists",
-    "doctrine":"quarantine full precursor content; preserve raw source; verify present hazard independently; deploy on present evidence rather than predicted scene",
-    "evidence_of_success":["false deployments stop","ordinary rescue remains functional","precursor recurrence decreases after information-path restriction; causation not established"],
-    "jurisdiction":"local rescue authority remains local"
+  "part_ii_ch07_09_gate":{"status":"PASS_AFTER_TARGETED_REPAIR","fatal":0,"blocking_major":0,"github":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/05_CH07_09_MINIBLOCK_GATE.json"},
+  "ch10_result":{
+    "fatal":0,"blocking_major":0,
+    "procedure":"TEMPORARY SPLIT-EVIDENCE PROCEDURE — LOCAL TRIAL",
+    "core_fields":["SOURCE_PRESERVED","CURRENT_BLIND_CHECK","FLAGGED_LOCAL_DECISION_AUTHORITY","RESPONSE_EVERY_CHANGE_CAUSED_BY_RECEIPT","NAMED_EXPOSURE_LOCAL_PROTECTIVE_HOLD","EXPLICIT_LOCAL_RELEASE_OR_ESCALATION","FULL_SCENE_TO_FIELD_ONLY_IF_IMMEDIATE_SAFETY","WITHHELD_BASIS_OPERATIONAL_CLAIM"],
+    "relationship_change":"cooperation increased; trust not restored; OES secrecy asymmetry reduced but historical access unresolved",
+    "ch11_function_protected":true
   },
-  "part_ii_ch07_09_gate":{
-    "status":"PASS_AFTER_TARGETED_REPAIR","fatal":0,"blocking_major":0,
-    "github":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/05_CH07_09_MINIBLOCK_GATE.json",
-    "repairs":["CH08 knowledge-boundary leak repaired","CH07-09 cross-speaker/narrator correction-reframe convergence repaired"],
-    "medium_watch":["CH08 procedural density","CH09 causal-audit language density","CH10 must convert conflict into live operational action"]
-  },
-  "cycle32b":{
-    "status":"EXECUTED_32_OF_32_ENGINEERING_PERSISTED",
-    "drive_folder_id":"1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
-    "github_root":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/",
-    "prompts_executed":32,"modules":32,"contracts":32,"proof_obligations":32,"protocols":32,
-    "next_prompts_designed":64,"next_prompts_executed":0,
-    "business_engine":"LOCAL_CANDIDATE_HOLD_FOR_REAL_LOCKED_PRODUCT_PILOT",
-    "new_si_id":null,
-    "parallel_branch_compare":{"ahead_by":28,"behind_by":338,"integration":"SEMANTIC_REBASE_ONLY_NO_BLIND_MERGE"}
-  },
-  "oes_confederation_reconciliation":{
-    "confederation_jurisdiction_on_earth":false,
-    "law":"knowledge != jurisdiction; forced cooperation without sovereignty transfer"
-  },
-  "civilian_continuity":{
-    "status":"ACTIVE_IN_MANUSCRIPT",
-    "selected_function":"Andrej Košir — hydro-service civilian worker and independent chronology/source; later permanent disabling lower-limb injury class remains WORKING"
-  },
-  "do_not":[
-    "DO_NOT_INVENT_SMITH_FAMILY_BEYOND_F1",
-    "DO_NOT_GIVE_CONFEDERATION_EARTH_COMMAND_JURISDICTION",
-    "DO_NOT_REVEAL_PRECURSOR_ONTOLOGY",
-    "DO_NOT_MAKE_ENIA_OR_TAREN_SOLVE_CASE",
-    "DO_NOT_REPEAT_PRE_PROSE_OR_CYCLE32",
-    "DO_NOT_RUN_BUSINESS_ENGINE_AS_IF_VERIFIED_CURRENT",
-    "DO_NOT_CLAIM_HUMAN_MARKET_PROVIDER_OR_LEGAL_EVIDENCE_NOT_RUN"
-  ],
-  "next_obligation":"CH10 JANA'S LINE: Smith wants to prevent response-feedback; Jana needs usable warnings; casualties support both sides. Under live storm pressure they negotiate a shared evidence protocol. Trust is not restored; cooperation is. Then CH11 -> CH12 -> block/corpus gate.",
-  "next_prompt_pointer":"P33_THEN_P34_THEN_P35"
+  "cycle32b":{"status":"32_PROMPTS_EXECUTED_ENGINEERING_PERSISTED_PLUS_P33_P36_EXECUTED","drive_folder_id":"1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv","github_root":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/","prompts_executed_initial":32,"modules":32,"contracts":32,"proof_obligations":32,"protocols":32,"next_prompts_designed":64,"next_prompts_executed":4,"business_engine":"LOCAL_CANDIDATE_HOLD_FOR_REAL_LOCKED_PRODUCT_PILOT","new_si_id":null,"parallel_branch_compare":{"ahead_by":28,"behind_by":338,"integration":"SEMANTIC_REBASE_ONLY_NO_BLIND_MERGE"}},
+  "oes_confederation_reconciliation":{"confederation_jurisdiction_on_earth":false,"law":"knowledge != jurisdiction; forced cooperation without sovereignty transfer"},
+  "civilian_continuity":{"status":"ACTIVE_IN_MANUSCRIPT","selected_function":"Andrej Košir — hydro-service civilian worker and independent chronology/source; later permanent disabling lower-limb injury class remains WORKING"},
+  "do_not":["DO_NOT_INVENT_SMITH_FAMILY_BEYOND_F1","DO_NOT_GIVE_CONFEDERATION_EARTH_COMMAND_JURISDICTION","DO_NOT_REVEAL_PRECURSOR_ONTOLOGY","DO_NOT_MAKE_ENIA_OR_TAREN_SOLVE_CASE","DO_NOT_REPEAT_PRE_PROSE_OR_CYCLE32","DO_NOT_RUN_BUSINESS_ENGINE_AS_IF_VERIFIED_CURRENT","DO_NOT_CLAIM_HUMAN_MARKET_PROVIDER_OR_LEGAL_EVIDENCE_NOT_RUN","DO_NOT_STEAL_CH12_RESPONSE_CREATED_DETAIL_IN_CH11"],
+  "next_obligation":"CH11 THE FORWARDED WARNING: continue from the CH10 flagged source. The authorized protective hold is reasonable but insufficient under time/field conditions. Nika must choose to pass suppressed warning information to a trusted field contact outside the local trial, accepting disciplinary exposure. Bounded action genuinely saves someone. Reserve the later precursor containing response-created detail for CH12.",
+  "next_prompt_pointer":"P37_THEN_P38"
 }
