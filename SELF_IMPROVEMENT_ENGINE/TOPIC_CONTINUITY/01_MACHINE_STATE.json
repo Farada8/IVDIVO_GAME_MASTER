@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.self_improvement.thread_topic_continuity_guard/0.1",
+  "schema": "ivdivo.self_improvement.thread_topic_continuity_guard/0.2",
   "date": "2026-08-22",
-  "status": "DEVELOPMENT_CONTRACT_READY_REAL_DEFECT_OBSERVED_NOT_PROMOTED",
+  "status": "MERGED_CANDIDATE_CI_GREEN_REAL_PILOT_PENDING_NOT_PROMOTED",
   "authority_effect": "NONE",
   "global_si_id": null,
   "parent_authority": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
@@ -38,6 +38,20 @@
   "tests": "tests/test_thread_topic_guard.py",
   "workflow": ".github/workflows/si-thread-topic-continuity-guard.yml",
   "pending_candidate": "31_IDEAS/PENDING/UNASSIGNED_THREAD_TOPIC_CONTINUITY_GUARD_2026-08-22.json",
+  "engineering_receipt": {
+    "pr": 448,
+    "tested_head_sha": "a30ab623e5a9e53475518fca673a467326357081",
+    "merge_sha": "6caea950b47e14943c4e16a1ef28d2ea427affc4",
+    "topic_guard_ci_run": 32572540988,
+    "topic_guard_ci": "SUCCESS",
+    "self_improvement_integrity_ci_run": 32572540986,
+    "self_improvement_integrity_ci": "SUCCESS",
+    "deterministic_canaries": 16,
+    "github_main_readback": true,
+    "drive_current_authority_readback": true,
+    "drive_current_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
+    "drive_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-MERGED-CANDIDATE-CI-GREEN-20260822"
+  },
   "canary_plan": {
     "deterministic_canaries_expected": 16,
     "real_continuation_events_required": 3,
@@ -48,11 +62,12 @@
   },
   "proof_boundary": {
     "real_defect_observed": true,
-    "engineering_tests_pending": true,
+    "engineering_tests_pending": false,
+    "engineering_ci_verified": true,
     "real_repaired_pilot": false,
     "verified_current": false,
     "v3_promoted": false
   },
-  "next_gate": "EXACT_HEAD_CI_THEN_NATURALLY_OCCURRING_REAL_TOPIC_ROUTING_PILOT",
-  "readback_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-REAL-DEFECT-20260822"
+  "next_gate": "NATURALLY_OCCURRING_REAL_TOPIC_ROUTING_PILOT_AND_HEALTHY_SWITCH_CONTROLS",
+  "readback_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-MERGED-CANDIDATE-CI-GREEN-20260822"
 }
