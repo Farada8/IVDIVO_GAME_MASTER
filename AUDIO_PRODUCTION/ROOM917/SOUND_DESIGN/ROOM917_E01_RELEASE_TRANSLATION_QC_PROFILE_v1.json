@@ -1,0 +1,93 @@
+{
+  "schema_version": "room917.e01_release_translation_qc/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "PROFILE_READY_REAL_MASTER_RECHECK_PENDING",
+  "inherits": {
+    "authority": "IVDIVO AUDIO PRODUCTION STUDIO COMPLETE CANON v3.3 AUDITED + MICROPHONE CHOREOGRAPHY",
+    "drive_id": "1ZG15kNcGjUKR_OKHQoXcqfrfVddlX6ma",
+    "law": "Release-target values are profile choices, not universal story canon."
+  },
+  "expected_master_identity": {
+    "filename": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "duration_seconds": 658.190,
+    "sample_rate_hz": 48000,
+    "bit_depth": 24,
+    "channels": 2
+  },
+  "technical_profile": {
+    "integrated_lufs_target": -16.0,
+    "integrated_lufs_tolerance_lu": 0.5,
+    "true_peak_ceiling_dbtp": -1.0,
+    "lra_ceiling_lu": 11.0,
+    "clipping": "NONE",
+    "format": "48K_24BIT_PCM_STEREO",
+    "notes": "Internal IVDIVO spoken/dramatized production profile. Final platform delivery may define a different derivative profile without rewriting the production master."
+  },
+  "known_current_baseline_from_prior_verified_qc": {
+    "integrated_lufs_approx": -16.04,
+    "sample_peak_left_dbfs": -2.15,
+    "sample_peak_right_dbfs": -2.25,
+    "approx_true_peak_left_dbtp": -2.14,
+    "approx_true_peak_right_dbtp": -2.25,
+    "clipping_detected": false,
+    "stereo_correlation_approx": 0.9956,
+    "side_relative_to_mid_db_approx": -25.38,
+    "interpretation": "Technically narrow/near-mono; not a defect by itself. Re-evaluate against declared stereo intent and translation after any patch."
+  },
+  "stereo_and_spatial_law": {
+    "hard_fail_on_high_correlation_alone": false,
+    "required_comparison": ["DECLARED_STEREO_INTENT", "SOURCE_ASSET_WIDTH", "STEM_WIDTH", "FINAL_MASTER_WIDTH", "MONO_SURVIVAL"],
+    "legal_intents": ["MONO_INTENTIONAL", "NARROW", "NATURAL_STEREO", "WIDE", "BINAURAL_OR_POSITIONAL", "SOURCE_DEPENDENT"],
+    "failure": "UNINTENDED_COLLAPSE_RELATIVE_TO_SOURCE_OR_INTENT",
+    "binaural_policy": "Optional positional enhancement only. No critical fact or clue may exist only as ear-specific placement.",
+    "distance_policy": "Distance is not pan alone; preserve direct/reverb ratio, spectrum, level, transient detail and occlusion logic."
+  },
+  "translation_matrix": [
+    {"target":"HEADPHONES","required":true,"purpose":"full spatial/body/clue audit"},
+    {"target":"EARBUDS","required":true,"purpose":"consumer intimate playback"},
+    {"target":"PHONE_SPEAKER","required":true,"purpose":"clue and dialogue survival under limited bandwidth"},
+    {"target":"MONO_FOLDDOWN","required":true,"purpose":"critical causality and dialogue survival"},
+    {"target":"LOW_VOLUME","required":true,"purpose":"hierarchy and clue audibility without over-loud SFX"},
+    {"target":"CASUAL_ATTENTION","required":true,"purpose":"one-listen comprehension"},
+    {"target":"PLAYBACK_1_25X","required":true,"purpose":"optional/applicable retention and clarity stress test; may be marked N/A only with explicit reason"}
+  ],
+  "room917_critical_translation_checks": [
+    "ELENA_DIALOGUE_REMAINS_REFERENCE_LAYER",
+    "NORMAL_916_SELECTOR_PLUS_LAMP_REMAINS_LEGIBLE",
+    "IMPOSSIBLE_DOUBLE_RING_PLUS_UNMARKED_LAMP_REMAINS_DISTINCT_FROM_NORMAL_916",
+    "CATE_REMAINS_ORDINARY_HUMAN_THROUGH_DAMAGED_ROUTE",
+    "LENI_BIRD_REMAINS_INTELLIGIBLE",
+    "IF_THIS_REACHES_REMAINS_INTELLIGIBLE",
+    "TWO_PART_LINE_CUT_REMAINS_TWO_PART",
+    "FOURTH_NOTE_RELATIONSHIP_REMAINS_PERCEPTIBLE",
+    "JULIAN_FINAL_REACTION_AND_ELENA_FINAL_QUESTION_REMAIN_FOREGROUND",
+    "ROOM_IDENTITY_DOES_NOT_DISAPPEAR_IN_SCENES1_2",
+    "PROTECTED_SILENCE_REMAINS_AUTHORED_NOT_FILLED"
+  ],
+  "post_patch_machine_checks": [
+    "MASTER_SHA_CHANGES_ONLY_BECAUSE_AUTHORIZED_PATCHES_EXIST",
+    "FORMAT_AND_DURATION_STABLE",
+    "NO_CLIPPING",
+    "LOUDNESS_WITHIN_PROFILE_OR_EXPLICITLY_HELD_FOR_MASTERING",
+    "TRUE_PEAK_WITHIN_PROFILE_OR_EXPLICITLY_HELD_FOR_MASTERING",
+    "SCENE3_PROTECTED_BYTES_UNCHANGED_FOR_D003_REPAIR",
+    "UNAUTHORIZED_RANGES_UNCHANGED",
+    "MONO_FOLDDOWN_CREATED",
+    "STEREO_INTEGRITY_REPORTED_NOT_GUESSED"
+  ],
+  "human_checks": [
+    "ACTOR_BELIEF",
+    "AI_AUDIBILITY",
+    "BODY_PRESENCE",
+    "ROOM_GEOGRAPHY",
+    "MYSTERY_COMPREHENSION",
+    "SFX_MASKING",
+    "MUSIC_DRAMATURGY",
+    "EMOTIONAL_PULL",
+    "WANT_NEXT_EPISODE"
+  ],
+  "release_law": "Machine technical PASS cannot substitute for P003B human listening. A human PASS cannot waive source identity, protected-range or technical failures. Both branches must converge before RELEASE_GO."
+}
