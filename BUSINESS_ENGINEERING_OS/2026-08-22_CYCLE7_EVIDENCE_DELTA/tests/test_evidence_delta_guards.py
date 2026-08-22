@@ -8,6 +8,8 @@ if str(DELTA_ROOT) not in sys.path:
 
 from engine.evidence_delta_guards import (
     bind_formation_evidence,
+    resolve_versioned_formation_field,
+    registry_presence_state,
     split_blocker_state,
     can_assert_bid_decision,
 )
@@ -22,6 +24,30 @@ class Cycle7EvidenceDeltaTests(unittest.TestCase):
         b = bind_formation_evidence("insurance", "present")
         self.assertFalse(b.verified or b.admissible)
         self.assertIsNone(b.value)
+
+    def test_conflicting_formation_versions_require_final_authority(self):
+        state = resolve_versioned_formation_field(["6399", "8559"])
+        self.assertIsNone(state["value"])
+        self.assertEqual(
+            state["status"],
+            "CONFLICTING_FORMATION_VERSIONS_FINAL_AUTHORITY_REQUIRED",
+        )
+
+    def test_single_formation_version_is_not_current_registry_proof(self):
+        state = resolve_versioned_formation_field(["8559"])
+        self.assertEqual(state["value"], "8559")
+        self.assertEqual(
+            state["status"],
+            "SINGLE_FORMATION_VERSION_NOT_CURRENT_REGISTRY_PROOF",
+        )
+
+    def test_registry_presence_does_not_imply_active_status(self):
+        state = registry_presence_state(listed=True, active_status_proven=False)
+        self.assertTrue(state["presence"])
+        self.assertEqual(
+            state["status"],
+            "PUBLIC_REGISTRY_PRESENCE_ONLY_ACTIVE_STATUS_UNKNOWN",
+        )
 
     def test_partial_identity_does_not_unlock_join(self):
         s = split_blocker_state(
