@@ -1,0 +1,78 @@
+{
+  "schema": "ivdivo.public_art.pac8_project_evidence/1.0",
+  "date": "2026-08-22",
+  "case": "CLUAIN_NA_COILLTE",
+  "status": "HOLD_CURABLE_PROJECT_LEVEL_PROVENANCE",
+  "go_to_submit": false,
+  "objects": [
+    {
+      "id": "PE-01",
+      "title": "Guelder Rose Paths (Kalynovi shliakhy)",
+      "class": "CLASS_B_DOCUMENTED_PROFESSIONAL_WORK",
+      "identity_confidence": "HIGH",
+      "context": "Fine Art Ukraine 2011, Mystetskyi Arsenal, Kyiv; catalogue p.140",
+      "timeframe": "2011",
+      "medium": "board, ivory ground, oil",
+      "dimensions": "49 x 91 cm",
+      "photo_refs": [
+        "495186926_2821173898270473_1658099110807270165_n.jpg",
+        "photo_2026-08-10_15-04-39.jpg"
+      ],
+      "overall_budget": null,
+      "client_or_commissioner": null,
+      "public_art_delivery_proven": false,
+      "submission_ready_project_record": false
+    },
+    {
+      "id": "PE-02",
+      "title": "Ukraine (diptych; working title)",
+      "class": "CLASS_B_SELECTED_PORTFOLIO_WORK",
+      "identity_confidence": "HIGH",
+      "context": "RHA selected-work pack",
+      "timeframe": null,
+      "medium": "oil on canvas, diptych",
+      "dimensions": null,
+      "photo_refs": [
+        "498514436_2834382206949642_773398228116738999_n.jpg",
+        "494666738_2821156808272182_1288430423051351283_n.jpg"
+      ],
+      "overall_budget": null,
+      "client_or_commissioner": null,
+      "public_art_delivery_proven": false,
+      "submission_ready_project_record": false
+    },
+    {
+      "id": "PE-03",
+      "title": "Untitled - historical composition",
+      "class": "CLASS_C_SELECTED_WORK_WITH_PARTIAL_METADATA",
+      "identity_confidence": "HIGH",
+      "context": "RHA selected-work pack",
+      "timeframe": null,
+      "medium": "prepared panel, oil, gilding / mixed media",
+      "dimensions": null,
+      "photo_refs": ["RHA_COMPLETE_APPLICATION_SELECTED_WORK_2"],
+      "overall_budget": null,
+      "client_or_commissioner": null,
+      "public_art_delivery_proven": false,
+      "submission_ready_project_record": false
+    }
+  ],
+  "submission_ready_count": 0,
+  "required_submission_ready_count": 3,
+  "professional_context": {
+    "steel_art_studio_period": "2003-2010",
+    "bureau_monumental_art_period": "2009-2017",
+    "private_kyiv_mural_commissions_stated": true,
+    "archive_loss_stated": true,
+    "project_level_named_records_recovered": 0
+  },
+  "invariants": [
+    "IMAGE_SIMILARITY_NEQ_PROJECT_IDENTITY_WITHOUT_DOCUMENT_BINDING",
+    "PORTFOLIO_WORK_NEQ_PUBLIC_ART_DELIVERY_CASE",
+    "EMPLOYMENT_HISTORY_NEQ_THREE_NAMED_PROJECTS",
+    "UNKNOWN_PROJECT_BUDGET_STAYS_UNKNOWN",
+    "WORKING_TITLE_MUST_REMAIN_LABELED_WORKING_TITLE",
+    "ARCHIVE_LOSS_EXPLAINS_GAP_BUT_DOES_NOT_PROVE_MISSING_FIELDS"
+  ],
+  "next_gate": "RECOVER_3_PROJECT_RECORDS_WITH_REQUIRED_FIELDS"
+}
