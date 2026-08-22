@@ -1,0 +1,38 @@
+{
+  "schema": "ivdivo.b03.conversation_closeout_cross_store_receipt/1.0",
+  "date": "2026-08-22",
+  "closeout_time_europe_dublin": "2026-08-22T14:40:00+01:00",
+  "project": "B03 — THE EMPTY RESCUE",
+  "status": "PERSISTED_GOOGLE_DRIVE_AND_GITHUB_MAIN",
+  "scope": "all authority-bearing project outcomes and engineering decisions available in the conversation context; not a verbatim ChatGPT UI transcript export",
+  "drive": {
+    "production_root_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+    "closeout_title": "153_B03_CONVERSATION_CLOSEOUT_HANDOFF_2026-08-22.md",
+    "closeout_drive_id": "19U5yxfPr8BOssOIxsn3Io2838Sm7Q6KB",
+    "closeout_sha256": "97fc90f8a7f77d7f7e0bed2cd7aa8845c861e1a8469c019d02b070c5c2b719fd",
+    "closeout_bytes": 10333
+  },
+  "github": {
+    "repository": "Farada8/IVDIVO_GAME_MASTER",
+    "path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CONVERSATION_CLOSEOUT/153_B03_CONVERSATION_CLOSEOUT_HANDOFF_2026-08-22.md",
+    "pull_request": 488,
+    "head_sha": "eec3c46a217a060ccdea8e8e0e6318b4ad862c8f",
+    "merge_sha": "8fe0ef71c68f9753be6cd778fae52c6876e7124e"
+  },
+  "continuity_marker": "B03-CONVERSATION-CLOSEOUT-20260822-AUTHORITY-PERSISTED-NO-VERBATIM-CHAT-EXPORT",
+  "resume_from": [
+    "153 conversation closeout handoff",
+    "152 final full-book scene-bed routing v1.2",
+    "151 casting/pronunciation/S0 cross-store receipt",
+    "fresh current GitHub main"
+  ],
+  "next_exact_action": "CH01_HARD_PILOT_REBIND_TO_FINAL_SCENE_BED_V1_2",
+  "hard_stops": {
+    "CH30": "PROHIBITED",
+    "bulk_render_allowed": false,
+    "provider_dispatch_claimed": false,
+    "human_voice_lock_claimed": false,
+    "slovenian_pronunciation_adjudication_claimed": false,
+    "story_text_mutation_bytes": 0
+  }
+}
