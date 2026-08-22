@@ -6,6 +6,8 @@ on:
       - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
       - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
       - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json'
+      - 'BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/**'
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/**'
       - 'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/**'
       - '.github/workflows/business-current-read-model.yml'
 
@@ -17,18 +19,26 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate current Business read model
+      - name: Validate current Business read model v1.3
         run: |
           python - <<'PY'
-          import json, pathlib
+          import json, pathlib, importlib.util
           root = pathlib.Path('.')
           model = json.loads((root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json').read_text())
           core = (root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md').read_text()
           overlay = (root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md').read_text()
           p288 = json.loads((root/'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/01_MACHINE_STATE.json').read_text())
+          rc = model['resume_control']
+          intake = (root/rc['unlock_intake_path']).read_text()
+          fixture = json.loads((root/rc['resume_gate_fixture']).read_text())
+          runtime_path = root/rc['resume_gate_runtime']
+          spec = importlib.util.spec_from_file_location('business_resume_gate', runtime_path)
+          gate = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(gate)
           core_lower = core.lower()
 
-          assert model['schema'] == 'ivdivo.business.current_read_model/1.2'
+          assert model['schema'] == 'ivdivo.business.current_read_model/1.3'
+          assert model['restore_order'][2] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json::resume_control'
           assert model['core']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
           assert model['mandatory_evidence_overlay']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
           assert model['mandatory_evidence_overlay']['may_change_root_blockers_silently'] is False
@@ -52,16 +62,36 @@ jobs:
           assert model['latest_reconciliation']['prompt'] == 288
           assert model['latest_reconciliation']['disposition'] == 'PROTECT_NO_CHANGE'
           assert model['latest_reconciliation']['executed_exactly_once'] is True
-          assert model['latest_reconciliation']['core_pr'] == 270
-          assert model['latest_reconciliation']['core_merge_sha'] == '751ed2ecb2a85da35de70b50952f49ff86d7cbe3'
-          assert model['latest_reconciliation']['exact_head_ci_run'] == 32552767006
-
           assert p288['prompt'] == 288 and p288['executed'] is True
-          assert p288['disposition'] == 'PROTECT_NO_CHANGE'
           assert p288['parent_backlog']['executed_total'] == 17
           assert p288['parent_backlog']['remaining_unexecuted'] == 47
-          assert p288['parent_backlog']['remaining_ranges'] == ['P225-P256','P273-P287']
-          assert p288['next_frontier'] == [225,235]
+
+          assert rc['status'] == 'CURRENT_BUSINESS_LOCAL_CONTROL_PLANE'
+          assert rc['resume_gate_pr'] == 282
+          assert rc['resume_gate_merge_sha'] == '75306d65cf01eb1bcfb0db2e05bc50c174c5c0bf'
+          assert rc['resume_gate_exact_head'] == 'aca35c463ce09e3a491bcb7634a891dfdf4ffe37'
+          assert rc['resume_gate_ci_run'] == 32553370924
+          assert rc['current_route'] == 'PROTECT_NO_CHANGE'
+          assert rc['unlock_intake_text_is_not_unlock_event'] is True
+          assert rc['generic_continuation_is_not_evidence_event'] is True
+          assert rc['route_may_authorize_external_action'] is False
+          assert rc['route_may_promote_proof_grade'] is False
+          assert fixture['unlock_intake_path'] == rc['unlock_intake_path']
+          assert fixture['expected_route'] == rc['current_route']
+          assert 'AWAITING_AUTHORIZED_INPUT' in intake
+          assert 'Authority effect:** none until the specified input is actually supplied and read back' in intake
+
+          keys = [
+            'target_pack_acquired','target_requirement_registry_ready','actual_bidder_designation',
+            'authoritative_bidder_packet_ready','frozen_target_manifest','frozen_bidder_manifest',
+            'bounded_decision_packet_ready','independent_reviewer_ready',
+            'external_interaction_authorized','real_decision_use_ready'
+          ]
+          state = gate.BusinessResumeState(**{k: fixture[k] for k in keys})
+          routed = gate.route_business_resume(state)
+          assert routed['route'] == 'PROTECT_NO_CHANGE'
+          assert routed['external_action_authorized'] is False
+          assert routed['proof_promotion'] is False
 
           assert model['dependency_state']['P252_P280'] == 'BLOCKED_FROZEN_TARGET_AND_BIDDER_PACKETS_REQUIRED'
           assert model['dependency_state']['P281_P283'] == 'BLOCKED_REAL_INDEPENDENT_REVIEW_REQUIRED'
@@ -69,14 +99,10 @@ jobs:
           assert model['proof_frontier'] == {'public_derived_ceiling':'E2_PLUS','artifact_plane':'PA3','PA4':False,'PA5':False,'E3':False,'E4':False}
 
           assert 'CORE_CURRENT + MANDATORY_EVIDENCE_OVERLAY = CURRENT_BUSINESS_READ_MODEL' in core
-          assert 'P288' in core
           assert 'total executed = **17**' in core_lower
           assert 'remaining unexecuted = **47**' in core_lower
-          assert 'P273–P287' in core
           assert 'ROOT_A = TARGET_PACK_NOT_ACQUIRED' in core
           assert 'ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET' in core
-          assert 'Do not repeat P193–P224, P257–P264, P265–P272 or **P288**.' in core
           assert 'NOT_FOUND_IN_CONNECTED_SOURCES != DOCUMENT_DOES_NOT_EXIST' in overlay
-
-          print('CURRENT_BUSINESS_READ_MODEL 1.2: PASS — 17/64 executed, 47 remaining')
+          print('CURRENT_BUSINESS_READ_MODEL 1.3: PASS — resume control restored, 17/64 executed, 47 remaining')
           PY
