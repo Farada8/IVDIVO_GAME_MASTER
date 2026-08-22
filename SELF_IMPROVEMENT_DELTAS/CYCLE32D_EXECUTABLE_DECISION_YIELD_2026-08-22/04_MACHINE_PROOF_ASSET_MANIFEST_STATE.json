@@ -1,0 +1,63 @@
+{
+  "schema": "ivdivo.self_improvement.cycle32d.combined_state/1.0",
+  "proof_bundle": {
+    "schema": "ivdivo.self_improvement.cycle32d.proof/1.0",
+    "cycle": "CYCLE32D",
+    "authority_effect": "NONE",
+    "new_si_ids": 0,
+    "deterministic_tests": {"passed": 32, "failed": 0},
+    "live_canaries": {
+      "main_drift": {
+        "sequence": ["2238eb296c09bc49523724fd5c15cf0e45a6fcc9","4d6dc7c5dc24ea77582327254d339e619173558f","ddf7864eadb4c3addba535690e936a77d76b0c1f","ee49be52766e2f70ae010281804ffdebd6538796","acb94116576cdc8409d8e48c83aa792810a5e098"],
+        "result": "OLDER_BASES_INVALIDATED"
+      },
+      "pr147": {"state":"OPEN_DRAFT_NOT_MERGED","concurrent_candidate":"SI-0016","result":"COLLISION_GUARD_REQUIRED"},
+      "cycle32c_drive": {"folder_id":"15ojNluyoYLFYgTrfbs3QjJ2Ceah9Qmtd","status":"EXECUTED_32_OF_32_LOCAL_PILOT"},
+      "cycle32c_github": {"branch":"studio/b03-smith-engineering-cycle32-2026-08-21","persistence":"PARTIAL_INDEX_ONLY_OBSERVED"}
+    },
+    "prospective_pilots": [
+      {"target":"conversation_upload_ingestion","decision_delta":"raw/canon copy -> hash/classify/pointer","evidence":"real current mounted assets"},
+      {"target":"cycle32c_persistence","decision_delta":"blind merge -> semantic salvage + clean fresh-main executable implementation","evidence":"real Drive/GitHub divergence"}
+    ],
+    "not_proven": ["universal cycle-time reduction","universal cost reduction","literary quality improvement","Human Signal","provider reliability","market behavior","v3 superiority"],
+    "promotion": "HOLD_LOCAL_PILOT",
+    "parallel_business_cycle7": {"commit":"ddf7864eadb4c3addba535690e936a77d76b0c1f","disposition":"REUSE_DOMAIN_READINESS; NO_DUPLICATE"},
+    "parallel_self_improvement_cycle9": {
+      "commit":"ee49be52766e2f70ae010281804ffdebd6538796",
+      "status":"MERGED_BOUNDED_CANDIDATE_NOT_GLOBAL_AUTHORITY",
+      "reuse":["fresh-main gate","semantic salvage","registry reservation law","evidence firewall","information gain","WIP governor","readback/closure"],
+      "cycle32d_unique_delta":["active-PR SI-ID collision utility","NO_ALLOCATION state","freshness vector","prompt fingerprint/dedupe","evidence-yield no-effect gate","input asset validator","selective rollback","next64 compiler"]
+    },
+    "latest_recovery_evidence": {"commit":"acb94116576cdc8409d8e48c83aa792810a5e098","disposition":"REAL_SI0014_EVIDENCE_REUSE","status":"1_OF_3_RECOVERIES_1_OF_2_PROJECTS_NO_PROMOTION"}
+  },
+  "machine_state": {
+    "schema":"ivdivo.self_improvement.cycle32d.state/1.0",
+    "cycle_id":"CYCLE32D_2026-08-22",
+    "status":"EXECUTABLE_LOCAL_PILOT_NO_GLOBAL_PROMOTION",
+    "controlling_authority":"CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md / v2 VERIFIED_CURRENT",
+    "base_main_observed":"acb94116576cdc8409d8e48c83aa792810a5e098",
+    "parallel_cycle32c_drive":"15ojNluyoYLFYgTrfbs3QjJ2Ceah9Qmtd",
+    "parallel_pr147":147,
+    "global_si_id_allocated":null,
+    "run32":{"total":32,"dispositioned":32},
+    "tests":{"passed":32,"failed":0},
+    "next64":{"first":"D33","last":"D96","count":64,"executed":0},
+    "promotion":"HOLD_LOCAL_PILOT",
+    "blocking_global_promotion":["prospective heterogeneous cross-project runtime comparison","transactional cross-branch SI-ID reservation implementation/readback"],
+    "parallel_cycle9_main":"SELF_IMPROVEMENT_ENGINE/CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22",
+    "cycle32d_scope_after_dedupe":"EXECUTABLE_UTILITY_CONFORMANCE_LAYER_UNDER_V2_AND_CYCLE9",
+    "latest_recovery_evidence_commit":"acb94116576cdc8409d8e48c83aa792810a5e098"
+  },
+  "input_asset_registry": {
+    "schema":"ivdivo.self_improvement.input_assets/1.0","cycle":"CYCLE32D","count":6,
+    "assets":[
+      {"filename":"01_EPISODES_01-05_EN_VOICEOVER_SCRIPTS.docx","size_bytes":73188,"sha256":"df93823aff722d708f84488a75bbaaabb56c8537968de1db52125f8807913d82","role":"OWNED_PRODUCT_ASSET","drive_pointer":"1HLRY6hnj-1UyONTaoD9NiURGw930l2Uc"},
+      {"filename":"07_OPPORTUNITY_OBJECTS_32_v1.json","size_bytes":134904,"sha256":"1c79c75aa3a8380c79e4b87b5382731ad2c4c629d4f5d2516248fe1b775c4e44","role":"PUBLIC_BUSINESS_STATE_ASSET","evidence_ceiling":"E2+"},
+      {"filename":"BODYGUARD_CURRENT_EXECUTION_STATE_v1.json","size_bytes":1218,"sha256":"3835e3683835dbb4c81e7603bec19cd93663871bfcbb8e5dc4f6e0b834f6306d","role":"PROJECT_EXECUTION_STATE_UPLOAD"},
+      {"filename":"BODYGUARD_E01_CANDIDATE_VOICE_BINDINGS_v1.json","size_bytes":3544,"sha256":"407aace8fbaf891d8427533463476baa90053f1143480cb144ffc825eccd20fa","role":"PROJECT_CANDIDATE_BINDING_UPLOAD"},
+      {"filename":"IVDIVO_ACTIVE10_LAUNCH_TEST_CONTROL_v1.xlsx","size_bytes":17871,"sha256":"a29b0a80308622074551b19171e77813d1de30e33c19db0179334d19366bb5d7","role":"PORTFOLIO_CONTROL_ASSET","drive_pointer":"1YO1_060a6KhdD4AjJDHnIYLc9LSe47GIiARtsU5UXws"},
+      {"filename":"active10_control_preview.png","size_bytes":236200,"sha256":"cfb12d54f3dbdf798eef50c13ea7bcc165d46256c9a894f5adfabdc326d1fc96","role":"DERIVED_PREVIEW"}
+    ]
+  },
+  "package_manifest_summary": {"run_cards_executed":32,"tests_passed":32,"tests_failed":0,"next_prompts_designed":64,"next_prompts_executed":0,"new_si_id_allocated":false,"promotion":"HOLD_LOCAL_PILOT"}
+}
