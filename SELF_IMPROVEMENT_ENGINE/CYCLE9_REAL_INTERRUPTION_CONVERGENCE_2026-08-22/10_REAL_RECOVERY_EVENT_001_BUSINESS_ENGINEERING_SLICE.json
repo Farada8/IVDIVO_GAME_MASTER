@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "event_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
+  "project_slice_id": "BUSINESS_ENGINEERING",
+  "counts_as_new_interruption_event": false,
+  "counts_as_distinct_project_recovery_evidence": true,
+  "recovery_decision": "RECOVER_PERSISTED_AUTHORITY_THEN_APPLY_SI0015_FRESHNESS",
+  "baseline_authority": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
+  "freshness_event": {
+    "new_main_merge_detected_during_recovery": "f45f07cb6a78733fa1a123d5e11a35dfb43913c5",
+    "merge_title": "Business Cycle7 P97-P128 authority recovery",
+    "pr": 207,
+    "action": "REBASE_FRONTIER_BEFORE_QUALIFICATION"
+  },
+  "newer_authority_overlay": "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P97_P128_AUTHORITY_RECOVERY/06_POST_MERGE_AUTHORITY_RECOVERY_CLOSURE.json",
+  "recovered_frontier": {
+    "p97_p128_executed": 32,
+    "current_target": "8872468",
+    "target_state": "HOLD_INSUFFICIENT_AUTHORITY",
+    "target_full_pack_verified": false,
+    "verified_supplier_packet": false,
+    "benchmark_8176962": "BENCHMARK_FIXTURE_ONLY",
+    "next64": "P129-P192",
+    "blind_auto_authorized": false,
+    "pa4": false,
+    "pa5": false,
+    "e3": false,
+    "e4": false
+  },
+  "false_resume_tests": [
+    {"case":"RERUN_OLD_CYCLE7_AS_INCOMPLETE","result":"REJECTED"},
+    {"case":"REVIVE_SUPERSEDED_PR_197","result":"REJECTED_SUPERSEDED"},
+    {"case":"USE_OLDER_C8_01_C8_64_POINTER_AFTER_P97_P128_MERGE","result":"REJECTED_STALE_POINTER"},
+    {"case":"BLIND_EXECUTE_P129_P192_WITHOUT_REQUIRED_REAL_INPUT","result":"REJECTED_PROTECT_NO_CHANGE"}
+  ],
+  "false_resume": false,
+  "github_evidence": {
+    "current_baseline_readback": "PASS",
+    "p97_p128_package_readback": "PASS",
+    "final_head_ci_run": 32548973081,
+    "final_head_ci_conclusion": "success",
+    "post_merge_closure": "06_POST_MERGE_AUTHORITY_RECOVERY_CLOSURE.json"
+  },
+  "drive_evidence": {
+    "business_p97_p128_control_doc": "154NhUZFLsXGVE6l6oEubeb6fyctK8i7arD8z8CDiIQY",
+    "business_control_revision_after_merge_closure": "AIroW35FAr8IM79p6oCmBqZpsJDbr7g2ZQE4nCUAFcfwhl_JQpTyruYHzAoziwG_8yNKfqLb3-HO-VxP7F4TlxeqFAqlfucv0AyCaWtMTaM",
+    "cycle9_recovery_slice_doc": "1nj2BTsfA16TDScCaUBGol5wbm7y6CUBrXV8US1tKW7k",
+    "cycle9_recovery_slice_revision": "AIroW34D18jGfjmbltIohNCwv0yjQ8icZJA6lXbgJA0Um5UMNnTXokJYIF8mc1nuNw4VoDXb_5N3u4zwTcjd4xHuOxAfsfV87eZ5bJOz3xM",
+    "readback": "PASS"
+  },
+  "source_adequacy": "SUFFICIENT_FOR_ENGINEERING_FRONTIER_NOT_FOR_MISSING_TENDER_OR_MARKET_FACTS",
+  "project_slice_readback_complete": true,
+  "si0014_effect": {
+    "genuine_interruption_events": 1,
+    "required_events": 3,
+    "distinct_projects_recovered": 2,
+    "required_distinct_projects": 2,
+    "zero_false_resume": true,
+    "promotion_authorized": false,
+    "status": "READY_FOR_PILOT"
+  },
+  "next_gate": "TWO_ADDITIONAL_GENUINE_INTERRUPTION_RECOVERY_EVENTS_WITH_ZERO_FALSE_RESUME"
+}
