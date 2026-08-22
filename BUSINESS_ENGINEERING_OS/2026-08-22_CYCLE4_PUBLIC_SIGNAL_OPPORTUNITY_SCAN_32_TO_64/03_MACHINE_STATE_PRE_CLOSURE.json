@@ -1,7 +1,7 @@
 {
-  "schema": "BUSINESS_ENGINEERING_OS_CYCLE4_STATE_v1",
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE4_PUBLIC_ADAPTER_STATE_v2",
   "date": "2026-08-22",
-  "status": "ENGINEERING_COMPLETE_CI_AND_DRIVE_CLOSURE_PENDING",
+  "status": "MERGED_TO_MAIN_THEN_CONVERGENCE_CORRECTION_PENDING",
   "constraints": {
     "no_outreach": true,
     "new_founder_cash_eur": 0,
@@ -13,25 +13,28 @@
   "library": {
     "raw_drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
     "previous_authority_files": 69,
-    "new_delta_files": 2,
-    "current_raw_files": 71,
-    "delta": [
-      {"title": "Business_Dynamics_John_Sterman.pdf", "drive_id": "1QFxl2X1u_lmh_PXf-ZedNdlSXvRhv8ta", "knowledge_grade": "K1_METADATA_ONLY"},
-      {"title": "How_to_Measure_Anything_Douglas_Hubbard.pdf", "drive_id": "1trJV8PiV5gBc2C03znMqc5IM7BCyg5ES", "knowledge_grade": "K1_METADATA_ONLY"}
-    ],
-    "canonical_unique_works": null
+    "new_delta_physical_files": 9,
+    "current_raw_files": 78,
+    "current_unique_valid_byte_hashes": 58,
+    "exact_duplicate_hash_groups": 8,
+    "broken_placeholders": 5,
+    "canonical_unique_works": null,
+    "current_pointer": "BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_LIBRARY_AUTHORITY_78_2026-08-22.md",
+    "superseded_pointer": "BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_LIBRARY_AUTHORITY_71_2026-08-22.md"
   },
   "engineering": {
-    "modules": "B81-B112",
+    "role": "PUBLIC_REGULATORY_SIGNAL_ADAPTER_NOT_TOP_LEVEL_CORE",
+    "canonical_modules": "BPUB01-BPUB32",
     "module_count": 32,
-    "contracts": "C97-C128",
+    "canonical_contracts": "CPUB01-CPUB32",
     "contract_count": 32,
-    "proof_obligations": "P97-P128",
+    "canonical_proof_obligations": "PUBP01-PUBP32",
     "proof_count": 32,
-    "protocols": "P-BIZ-09-P-BIZ-16",
+    "canonical_protocols": "P-PUB-01-P-PUB-08",
     "protocol_count": 8,
+    "pre_convergence_numeric_ids_revoked_as_global": true,
     "public_signal_prompts_executed": 32,
-    "next_prompts": "N129-N192",
+    "next_prompts_local_ids": "N129-N192",
     "next_prompts_designed": 64,
     "next_prompts_executed": 0
   },
@@ -46,30 +49,43 @@
   },
   "github": {
     "repository": "Farada8/IVDIVO_GAME_MASTER",
-    "base_main_sha": "be100f75ef5c7136513cfe5a1a931d3beeb49d75",
-    "branch": "business-engineering-os-cycle4-public-signals-20260822",
-    "pr": null,
-    "head_sha": null,
-    "cycle4_ci": "PENDING",
-    "cycle3_regression": "PENDING",
-    "self_improvement_integrity": "PENDING"
+    "public_scan_integrated_main_sha": "cfaf10d14c974a8221c17d799ad52632d7b05fda",
+    "convergence_branch": "business-engineering-os-cycle4-convergence-20260822",
+    "convergence_pr": null,
+    "convergence_ci": "PENDING",
+    "cycle3_regression": "PENDING_ON_CONVERGENCE",
+    "self_improvement_integrity": "PENDING_ON_CONVERGENCE"
   },
   "drive": {
     "business_root_id": "1yiKVWme2ZvAQMi0g1zIOzA4G5V4LMAgc",
-    "cycle4_folder_id": "1qdbdtBmvmVJQupHchxpV8xBJ3wlayUiW",
-    "documents": [],
-    "readback": "PENDING"
+    "cycle4_live32_folder_id": "1qdbdtBmvmVJQupHchxpV8xBJ3wlayUiW",
+    "live32_role": "CANDIDATE_EVIDENCE_AND_PORTFOLIO_PACK",
+    "readback_observed": true
   },
-  "parallel_dedupe": {
-    "empty_drive_cycle4_folder_id": "1j-BtQucOerKMRllfQ6eM4PLbUBhIDB7p",
-    "classification": "DISCOVERY_ONLY_AT_RESTORE",
-    "competing_authority": false
+  "parallel_convergence": {
+    "cycle3_core_preserved": true,
+    "design_pr_172": "CANDIDATE_ADAPTER_BDES_CDES",
+    "canonical_hardening_pr_173": "CANDIDATE_REQUIRES_BCAN_CCAN_NAMESPACE_AND_LIBRARY78_REBASE",
+    "live32_drive_pack": "CANDIDATE_DATASET_LOCAL_NUMERIC_ALIASES_NOT_GLOBAL",
+    "public_regulatory_adapter": "MERGED_ENGINEERING_RENAMESPACED_BPUB_CPUB",
+    "registry": "BUSINESS_ENGINEERING_OS/CYCLE4_CONVERGENCE_CURRENT_2026-08-22.md"
   },
-  "current_constraint": "32_PUBLIC_OPPORTUNITIES_TO_ROOT_WORKLOAD_DEDUPE_TO_FATAL_ASSUMPTION_KILL_TESTS_TO_MAX5_ZERO_CASH_NO_OUTREACH_ACTIVE_EXPERIMENTS",
-  "next_gate": "CYCLE5_TOP5_PUBLIC_DECISION_DELTA_EXPERIMENTS",
+  "current_constraint": "CONVERGE_PUBLIC_REGULATORY_32_PLUS_LIVE32_32_TO_ROOT_WORKLOADS_THEN_MAX3_CANDIDATE_PORTFOLIO_PUBLIC_ARTIFACT_TESTS",
+  "candidate_portfolio_from_parallel_live32": [
+    "OP01_TENDER_INTELLIGENCE_BID_NO_BID",
+    "OP03_RETROFIT_LEAD_GRANT_READINESS",
+    "OP19_AI_WORKFLOW_DIAGNOSTIC"
+  ],
+  "next_gate": "PUBLIC_ARTIFACT_TESTS_WITH_DECISION_DELTA_BEFORE_BUILD_OR_OUTREACH",
   "self_improvement": {
     "candidate_only": true,
     "auto_promotion": false,
+    "new_candidates": [
+      "NAMESPACE_COLLISION_GATE",
+      "CONCURRENT_AUTHORITY_RESTORE",
+      "LIBRARY_DELTA_AFTER_CYCLE_GATE",
+      "DATASET_NEQ_ENGINE"
+    ],
     "decision_delta_required": true,
     "readback_and_ci_required": true
   }
