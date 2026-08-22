@@ -1,0 +1,118 @@
+{
+  "schema": "ivdivo.article50.synthetic_fixture/0.1",
+  "date": "2026-08-22",
+  "authority_cut": "EU_AI_ACT_ART50_PLUS_COMMISSION_GUIDELINES_2026_07",
+  "legal_compliance_certified": false,
+  "market_proof_promoted": false,
+  "cases": [
+    {
+      "case_id": "CHATBOT_FIRST_INTERACTION",
+      "facts": {
+        "role": "provider",
+        "direct_human_interaction": true,
+        "interaction_disclosure_present": true,
+        "interaction_disclosure_first_interaction": true,
+        "disclosure_accessible": true,
+        "generates_synthetic_content": false
+      }
+    },
+    {
+      "case_id": "GEN_IMAGE_MARKED",
+      "facts": {
+        "role": "provider",
+        "generates_synthetic_content": true,
+        "content_type": "image",
+        "human_exposed": true,
+        "final_output": true,
+        "machine_readable_mark": true,
+        "placed_on_market_before_2026_08_02": false
+      }
+    },
+    {
+      "case_id": "DEEPFAKE_MACHINE_MARK_ONLY",
+      "facts": {
+        "role": "deployer",
+        "generates_synthetic_content": true,
+        "content_type": "video",
+        "human_exposed": true,
+        "final_output": true,
+        "deepfake": true,
+        "machine_readable_mark": true,
+        "visible_or_audible_label_first_exposure": false
+      }
+    },
+    {
+      "case_id": "PUBLIC_INTEREST_TEXT_EDITORIAL_EXCEPTION",
+      "facts": {
+        "role": "deployer",
+        "generates_synthetic_content": true,
+        "content_type": "text",
+        "human_exposed": true,
+        "final_output": true,
+        "published_to_inform_public": true,
+        "matter_of_public_interest": true,
+        "substantive_human_review": true,
+        "editorial_control": true,
+        "editorial_responsibility": true
+      }
+    },
+    {
+      "case_id": "PUBLIC_INTEREST_TEXT_NO_REVIEW_NO_LABEL",
+      "facts": {
+        "role": "deployer",
+        "generates_synthetic_content": true,
+        "content_type": "text",
+        "human_exposed": true,
+        "final_output": true,
+        "published_to_inform_public": true,
+        "matter_of_public_interest": true,
+        "substantive_human_review": false,
+        "editorial_control": false,
+        "editorial_responsibility": false,
+        "visible_label_first_exposure": false
+      }
+    },
+    {
+      "case_id": "EMOTION_RECOGNITION_NOTICE",
+      "facts": {
+        "role": "deployer",
+        "emotion_recognition_or_biometric_categorisation": true,
+        "exposure_notice_present": true
+      }
+    },
+    {
+      "case_id": "CLOSED_LOOP_NONFINAL",
+      "facts": {
+        "role": "provider",
+        "generates_synthetic_content": true,
+        "content_type": "image",
+        "human_exposed": false,
+        "final_output": false,
+        "machine_readable_mark": false
+      }
+    },
+    {
+      "case_id": "LEGACY_PROVIDER_MARKING_TRANSITION",
+      "facts": {
+        "role": "provider",
+        "generates_synthetic_content": true,
+        "content_type": "video",
+        "human_exposed": true,
+        "final_output": true,
+        "machine_readable_mark": false,
+        "placed_on_market_before_2026_08_02": true
+      }
+    },
+    {
+      "case_id": "UNKNOWN_ROLE_GENERATIVE_TEXT",
+      "facts": {
+        "role": "unknown",
+        "generates_synthetic_content": true,
+        "content_type": "text",
+        "human_exposed": true,
+        "final_output": true,
+        "machine_readable_mark": false
+      }
+    }
+  ]
+}
