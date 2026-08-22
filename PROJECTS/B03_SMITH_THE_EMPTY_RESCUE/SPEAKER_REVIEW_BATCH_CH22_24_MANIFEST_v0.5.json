@@ -19,13 +19,17 @@
     "packet_1": {"speaker_id": "PRECURSOR_SOURCE_CH24_PACKET_1", "segments": ["B03_CH24_S0152", "B03_CH24_S0154"]},
     "packet_2": {"speaker_id": "PRECURSOR_SOURCE_CH24_PACKET_2", "segments": ["B03_CH24_S0376", "B03_CH24_S0378", "B03_CH24_S0380"]},
     "identity_relation": "UNKNOWN",
-    "story_text_changes": 0
+    "story_text_changes": 0,
+    "voice_map_template_repair_required": true
   },
   "reconciled_cumulative_ch01_24": {"actual_speech": 2898, "assigned": 2898, "unknown": 0, "not_yet_context_reviewed": 816},
   "drive_artifacts": {
     "ch24_corrected_map": "1hzNIm7VyLiiuip2gDiZS4InvEPpzGKqx",
     "repair_gate": "1tl4xYMLOQmnJPT-PIAzDOMNFwrrzpu9L",
-    "manifest_v0_5": "1eGz0wHrkl7owFgXlSlmHec88-5_Fnsth"
+    "manifest_v0_5": "1eGz0wHrkl7owFgXlSlmHec88-5_Fnsth",
+    "voice_map_template_v0_9": "1SxlcrHojIuGmkSipqQlpcfTC9H7g1Nf7",
+    "voice_map_template_v0_9_sha256": "bf2c2501e340dc2c974f2d3000f9187a61e42966612829a413a9131d25a9e8b6",
+    "superseded_voice_map_template_v0_8": "1mUgsInTYtlqWRXyhp_Xhdmr8n6VIuU5x"
   },
   "next_exact_action": "CH25-27_CONTEXTUAL_SPEAKER_REVIEW",
   "full_speaker_gate": false,
