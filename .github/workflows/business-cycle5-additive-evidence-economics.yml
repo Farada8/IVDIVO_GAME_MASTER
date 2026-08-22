@@ -1,0 +1,17 @@
+name: Business Cycle5 Additive Evidence Economics
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_VALIDATION_32_TO_64/P65_P96_ADDITIVE_DELTA/**'
+      - '.github/workflows/business-cycle5-additive-evidence-economics.yml'
+  workflow_dispatch:
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run additive evidence/economics regressions
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_VALIDATION_32_TO_64/P65_P96_ADDITIVE_DELTA/tests/test_evidence_economics_guards.py
