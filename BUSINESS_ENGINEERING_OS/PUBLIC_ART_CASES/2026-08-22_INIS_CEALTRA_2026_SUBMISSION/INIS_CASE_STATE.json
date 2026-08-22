@@ -15,15 +15,27 @@
   "portfolio_strategy": "6_VERIFIED_PHYSICAL_WORKS",
   "artist_fee_eur": 6000,
   "artist_fee_pct": 27.9,
+  "deliverables": {
+    "artist_cv_pdf": "READY_PREFLIGHT_PASS_1_PAGE",
+    "previous_works_pdf": "READY_PREFLIGHT_PASS_6_IMAGES",
+    "hero_in_situ_visual": "HOLD_NOT_GENERATED",
+    "proposal_pdf": "HOLD_NOT_ASSEMBLED"
+  },
   "go_to_submit": false,
   "current_gate": [
+    "RECOVER_CURRENT_SITE_SUPPORTING_INFO_IF_AVAILABLE",
     "GENERATE_IN_SITU_HERO_VISUAL",
-    "FINALIZE_3_PAGE_CV",
-    "ASSEMBLE_6_IMAGE_PORTFOLIO_PDF",
     "ASSEMBLE_PROPOSAL_PDF",
     "QUOTE_SANITY_CHECK",
     "FINAL_READBACK"
   ],
+  "run32": {
+    "executed": 32,
+    "pass_or_pass_candidate": 22,
+    "partial": 2,
+    "hold_or_risk": 8
+  },
+  "next64": "DESIGNED",
   "cluain_parallel_state": "HOLD_0_OF_3_PROJECT_LEVEL_RECORDS",
   "proof_boundary": "NO_AWARD_PROBABILITY_OR_ELIGIBILITY_CLEARANCE_CLAIM"
 }
