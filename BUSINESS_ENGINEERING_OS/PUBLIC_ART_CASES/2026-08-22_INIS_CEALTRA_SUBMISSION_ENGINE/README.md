@@ -1,0 +1,74 @@
+# INIS CEALTRA 2026 — SUBMISSION PACK STATE
+
+**Case:** Clare County Council / Inis Cealtra Visitor Experience Artwork Commission  
+**Date:** 2026-08-22  
+**Commission ceiling:** EUR 21,500 all-in  
+**Deadline authority:** 17 September 2026  
+**Exact closing time:** not publicly stated in the visible current brief page; verify live portal / official clarification  
+**Submission platform:** Clare CoCo Submit  
+**Proposal upload format:** one PDF document  
+**Primary concept:** `THE_LAKE_HOLDS_THE_LIGHT`  
+**Preferred site:** Site 2, conditional on verified site data  
+**Protected-structure context:** Old Rectory curtilage, RPS No. 464  
+**GO_TO_SUBMIT:** false
+
+## Canonical prepared artifacts
+- **Proposal v2** — 8 pages; render/preflight PASS; explicit Protected Structure RPS 464 interface.
+- Artist CV — 1 page.
+- Previous works — 6 physical works; no AI mockups represented as prior commissions.
+- **Combined readback pack v2** — 15 pages; preflight PASS.
+- Clean concept hero PNG — indicative only.
+- **Master dashboard v3** — 1536×1024 visual project summary; not evidence authority.
+
+## Google Drive authority
+Folder `DELIVERABLES`: `1yZi4pIBJPW-SODGUmsamUDYxlr3jRTIj`
+
+Canonical current:
+- Proposal v2: `1dIgNe_ktIdXf2cbwpks2xfFwhPBNCbNJ`
+- Artist CV: `122DWkHFfS0rmELoVLwVZrvLjZAHXjuGU`
+- Previous works: `1aD1sGq17CE-lr_XyfZhz7W44g1UzCcP6`
+- Combined readback pack v2: `1QbqXrLyi-z4WV6KWyd5siGD9FPUOdg4n`
+- Concept hero PNG: `1FwjlCCBFedoE2cNZgE9y950wtd3FFN5f`
+- **Master dashboard v3:** `1aWkyN8DeVP4SGMFB2KAa7efa5lu4ar5v`
+- External gate delta: `1K_xXjhDVtHLjhoBw-8gl2JRbR-RFEMxn`
+- Updated case state v3: `17LO5m_gBdyJioLWz5iqsONW4EdpM7UBk`
+- 5x20 Red Team: `1fWMo67DcLkhM2r28naLh6mMUZ4REt0mK`
+- Persistence receipt: `1ADSxQcJHQq95Kg6m0TTuO9Ggol4xb_aV`
+
+Master dashboard integrity:
+- SHA-256: `6535d8c19f854c879fb2d2a7c98dbfa4372684aab365ecc32f94c72842898069`
+- Interpretation rule: dashboard is a visual summary only; official brief + current case state + verified artifacts override any dashboard text.
+
+Superseded for submission use:
+- Proposal v1: `1i8teEd1dEqYMCOvLn9pRJfBoOX3OM9iA`
+- Combined readback pack v1: `1j_jfXmhYQ6AxofnxcUY4rxXzZNWoIZ7A`
+
+## Current truth boundaries
+- The concept hero is an **indicative competition visual**, not a surveyed Site 2 photograph.
+- Exact location/orientation/foundation/engineering remain conditional on site verification and Council approval.
+- The Old Rectory protected-structure curtilage creates an explicit conservation/planning interface; no approval is inferred.
+- Current public page says site-visit notes would be added, but no substantive notes are visible in the recovered page content.
+- EUR 21,500 budget is structurally reconciled but supplier quote sanity is still pending.
+- Artist fee remains protected at EUR 6,000 (27.9%), above the 25% minimum.
+- No selection, award probability, eligibility certificate, engineering approval or supplier capacity is inferred.
+
+## Red Team disposition
+`KEEP / PREPARE` — no FATAL blocker identified in the assembled pack, but `GO_TO_SUBMIT=false` because MAJOR operational/technical gates remain.
+
+## Remaining submission gates
+1. Recover site supporting information or explicitly close it as unavailable.
+2. Founder authorization before supplier outreach.
+3. Obtain indicative sanity checks for architectural body + foundation/install.
+4. Preflight the live Clare CoCo Submit portal and any file-size/field constraints.
+5. Verify exact closing time; until then operational target is at least 24 hours before the date deadline.
+6. Final independent Red Team/readback after any quote/site changes.
+7. Early upload and receipt readback.
+
+## GitHub persistence
+- Repository: `Farada8/IVDIVO_GAME_MASTER`
+- Branch: `public-art/inis-cealtra-submission-pack-20260822`
+- Draft PR: `#274`
+- Persistence receipt: `15_MASTER_DASHBOARD_PERSISTENCE_2026-08-22.md`
+
+## Cluain parallel state
+Cluain remains in evidence-recovery mode: professional capability evidence is strong, but `0/3 submission-ready prior-project records` remains the safe count because project-level client/timeframe/budget/photo bindings are incomplete.

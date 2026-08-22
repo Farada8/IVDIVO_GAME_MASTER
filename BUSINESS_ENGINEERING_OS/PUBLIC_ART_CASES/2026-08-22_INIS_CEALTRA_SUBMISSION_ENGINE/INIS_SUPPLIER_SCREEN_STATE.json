@@ -1,0 +1,18 @@
+{
+  "schema": "ivdivo.public_art.inis_supplier_screen/1.0",
+  "status": "PREOUTREACH_DISCOVERY",
+  "outreach_performed": 0,
+  "quotes_received": 0,
+  "project_specific_public_prices": 0,
+  "generic_mosaic_public_price_signal_eur_per_m2": {
+    "low": 88,
+    "high": 250,
+    "status": "NONBINDING_RETAIL_EXAMPLES"
+  },
+  "body_quote_sanity": "HOLD_EXTERNAL_RESPONSE",
+  "foundation_quote_sanity": "HOLD_EXTERNAL_RESPONSE",
+  "lift_quote_sanity": "HOLD_EXTERNAL_RESPONSE",
+  "mosaic_material_sanity": "PARTIAL_PUBLIC_SIGNAL_ONLY",
+  "go_to_submit": false,
+  "drive_readback_file_id": "15149ts7pKrz4C5JQtB1eR5_9ug6mHdyo"
+}
