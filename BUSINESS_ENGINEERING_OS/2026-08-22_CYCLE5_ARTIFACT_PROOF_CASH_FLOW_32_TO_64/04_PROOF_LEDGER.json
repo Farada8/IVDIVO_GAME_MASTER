@@ -1,0 +1,10 @@
+{
+  "schema": "ivdivo.business_cycle5.proof_ledger/1.0",
+  "cycle": "CYCLE5_P65_P96",
+  "public_evidence_ceiling": "E2+",
+  "deterministic_engine_tests": {"passed": 21, "failed": 0},
+  "executed_prompts": "32/32 dispositioned",
+  "external_evidence": {"buyer_conversations_E3": 0, "payment_proofs_E4": 0, "validated_prices": 0, "repeat_paid_buyers": 0},
+  "truth_firewalls": ["PUBLIC_ARTIFACT_PASS != WILLINGNESS_TO_PAY", "PROGRAMME_BUDGET != BUYER_PROOF", "GRANT_REIMBURSEMENT != UPFRONT_CASH", "MACHINE_BUILD_TIME != HUMAN_DELIVERY_TIME", "OWNED_PRODUCT_ASSET != KNOWLEDGE_SOURCE"],
+  "story_or_product_mutations": 0
+}
