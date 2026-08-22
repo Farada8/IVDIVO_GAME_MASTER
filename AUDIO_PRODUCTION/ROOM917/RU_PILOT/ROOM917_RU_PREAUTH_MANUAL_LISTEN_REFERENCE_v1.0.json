@@ -1,0 +1,180 @@
+{
+  "schema_version": "ivdivo.room917_ru_preauth_manual_listen_reference/1.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "classification": "REFERENCE_ONLY",
+  "scope": "VOICE_TASTE_FORMATION_ONLY_NO_BINDINGS_NO_CAST_LOCK_NO_TTS_SPEND",
+  "status": "READY_FOR_MANUAL_PUBLIC_PREVIEW_LISTEN_WHILE_PROVIDER_AUTH_IS_HOLD",
+  "authority": {
+    "provider_snapshot": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json",
+    "provider_snapshot_status": "HOLD_PROVIDER_AUTH_REQUIRED",
+    "provider_snapshot_candidate_count": 0,
+    "production_binding_evidence_from_this_file": false
+  },
+  "official_public_sources": [
+    {
+      "source": "ElevenLabs Russian Text to Speech",
+      "url": "https://elevenlabs.io/text-to-speech/russian",
+      "checked": "2026-08-22",
+      "meaning": "PUBLIC_RUSSIAN_TTS_TASTE_REFERENCE_ONLY"
+    },
+    {
+      "source": "ElevenLabs Russian Accent Text to Speech",
+      "url": "https://elevenlabs.io/text-to-speech/russian-accent",
+      "checked": "2026-08-22",
+      "meaning": "ACCENT_AND_TIMBRE_REFERENCE_ONLY_NOT_NATIVE_RU_IDENTITY_PROOF"
+    },
+    {
+      "source": "ElevenLabs Voice Library docs",
+      "url": "https://elevenlabs.io/docs/eleven-creative/voices/voice-library",
+      "checked": "2026-08-22",
+      "meaning": "PRODUCTION_DISCOVERY_REQUIRES_PROVIDER_METADATA_AND_FILTERS"
+    },
+    {
+      "source": "ElevenLabs notice period docs",
+      "url": "https://elevenlabs.io/docs/help-center/product/voice-customization/voice-library/what-is-a-notice-period",
+      "checked": "2026-08-22",
+      "meaning": "DURABILITY_EVIDENCE_RULE"
+    }
+  ],
+  "public_russian_tts_references": [
+    {
+      "name": "Artem Lebedev",
+      "public_descriptor": "Captivating and Engaging",
+      "production_voice_id": null,
+      "native_ru_verified_for_room917": "UNKNOWN_UNTIL_AUTHENTICATED_SNAPSHOT",
+      "notice_period": "UNKNOWN",
+      "role_hypotheses": ["JULIAN_ALT"],
+      "listen_for": ["whether engagement becomes announcer cadence", "restraint under pressure", "natural conversational attack"],
+      "status": "REFERENCE_ONLY"
+    },
+    {
+      "name": "Denis",
+      "public_descriptor": "Pleasant, Engaging and Friendly",
+      "production_voice_id": null,
+      "native_ru_verified_for_room917": "UNKNOWN_UNTIL_AUTHENTICATED_SNAPSHOT",
+      "notice_period": "UNKNOWN",
+      "role_hypotheses": ["JULIAN_ALT"],
+      "listen_for": ["authority without friendliness flattening status conflict", "romantic charge without overt flirt", "precision on clue lines"],
+      "status": "REFERENCE_ONLY"
+    },
+    {
+      "name": "Stanislav",
+      "public_descriptor": "Deep, Empathetic and Warm",
+      "production_voice_id": null,
+      "native_ru_verified_for_room917": "UNKNOWN_UNTIL_AUTHENTICATED_SNAPSHOT",
+      "notice_period": "UNKNOWN",
+      "role_hypotheses": ["JULIAN_PRIMARY_TASTE_REFERENCE"],
+      "listen_for": ["depth without alpha growl", "empathy without softness collapse", "operational authority", "credible silence and low-volume tension"],
+      "status": "REFERENCE_ONLY"
+    },
+    {
+      "name": "Prince Nur",
+      "public_descriptor": "Smooth, Rich and Engaging",
+      "production_voice_id": null,
+      "native_ru_verified_for_room917": "UNKNOWN_UNTIL_AUTHENTICATED_SNAPSHOT",
+      "notice_period": "UNKNOWN",
+      "role_hypotheses": ["JULIAN_NEGATIVE_CONTROL_OR_ALT"],
+      "listen_for": ["whether smoothness sounds trailer-like", "whether richness becomes seduction-first delivery", "conversational credibility"],
+      "status": "REFERENCE_ONLY"
+    },
+    {
+      "name": "Marina",
+      "public_descriptor": "Soft, Clear and Warm",
+      "production_voice_id": null,
+      "native_ru_verified_for_room917": "UNKNOWN_UNTIL_AUTHENTICATED_SNAPSHOT",
+      "notice_period": "UNKNOWN",
+      "role_hypotheses": ["ELENA_PRIMARY_TASTE_REFERENCE", "MINA_ALT", "CATE_ALT"],
+      "listen_for": ["clarity without audiobook polish", "whether softness survives Elena professional control", "warmth range for Mina or Cate", "fear without melodrama"],
+      "status": "REFERENCE_ONLY"
+    }
+  ],
+  "public_russian_accent_references": [
+    {
+      "name": "Nadya",
+      "public_descriptor": "Energetic and Clear",
+      "role_hypotheses": ["MINA_TEMPO_REFERENCE"],
+      "warning": "RUSSIAN_ACCENT_PAGE_NOT_NATIVE_RUSSIAN_LANGUAGE_IDENTITY_PROOF",
+      "status": "REFERENCE_ONLY"
+    },
+    {
+      "name": "Pavel",
+      "public_descriptor": "Calm and Meditative",
+      "role_hypotheses": ["JULIAN_RESTRAINT_REFERENCE"],
+      "warning": "RUSSIAN_ACCENT_PAGE_NOT_NATIVE_RUSSIAN_LANGUAGE_IDENTITY_PROOF",
+      "status": "REFERENCE_ONLY"
+    },
+    {
+      "name": "Nik Ivanov",
+      "public_descriptor": "Enthusiastic and Rich",
+      "role_hypotheses": ["NEGATIVE_CONTROL_HIGH_ENERGY_MALE"],
+      "warning": "RUSSIAN_ACCENT_PAGE_NOT_NATIVE_RUSSIAN_LANGUAGE_IDENTITY_PROOF",
+      "status": "REFERENCE_ONLY"
+    },
+    {
+      "name": "Viktor",
+      "public_descriptor": "Bold, Slavic and Impatient",
+      "role_hypotheses": ["NEGATIVE_CONTROL_ALPHA_PRESSURE"],
+      "warning": "RUSSIAN_ACCENT_PAGE_NOT_NATIVE_RUSSIAN_LANGUAGE_IDENTITY_PROOF",
+      "status": "REFERENCE_ONLY"
+    },
+    {
+      "name": "Dasha",
+      "public_descriptor": "Warm, Serious, and Smooth",
+      "role_hypotheses": ["ELENA_SERIOUSNESS_REFERENCE", "CATE_WARMTH_REFERENCE"],
+      "warning": "RUSSIAN_ACCENT_PAGE_NOT_NATIVE_RUSSIAN_LANGUAGE_IDENTITY_PROOF",
+      "status": "REFERENCE_ONLY"
+    }
+  ],
+  "role_taste_matrix": {
+    "ELENA": {
+      "first_reference": "Marina",
+      "secondary_reference": "Dasha_ACCENT_REFERENCE_ONLY",
+      "target": "intelligent grounded professional precision; dry edge; fear inside control",
+      "reject_if": ["audiobook narrator", "advertising polish", "tearful default", "softness destroys competence", "foreign accent distracts"]
+    },
+    "JULIAN": {
+      "first_reference": "Stanislav",
+      "alternates": ["Denis", "Artem Lebedev", "Prince Nur_NEGATIVE_CONTROL", "Pavel_ACCENT_REFERENCE_ONLY"],
+      "target": "restrained operational authority; personal weight without alpha growl or seduction-first delivery",
+      "reject_if": ["alpha growl", "romance trailer", "villain threat", "overt flirt baseline", "announcer cadence"]
+    },
+    "MINA": {
+      "first_reference": "Marina_RANGE_TEST_ONLY",
+      "secondary_reference": "Nadya_TEMPO_REFERENCE_ONLY",
+      "target": "practical warm socially quick; ordinary humor; credible witness under pressure",
+      "reject_if": ["sitcom sidekick", "cartoon warmth", "hysteria", "witness precision lost"]
+    },
+    "CATE": {
+      "first_reference": "Marina_RANGE_TEST_ONLY",
+      "secondary_reference": "Dasha_WARMTH_REFERENCE_ONLY",
+      "target": "ordinary exhausted mother; intimate domestic warmth; same identity through clean source and cassette post",
+      "reject_if": ["ghost voice", "ethereal preset", "melodramatic pleading", "identity drift between media contexts"]
+    }
+  },
+  "existing_canary_units_to_reuse_after_auth": {
+    "ELENA": ["RU_E01_AUD_ELENA_01", "RU_E01_AUD_ELENA_03", "RU_E01_AUD_ELENA_05", "RU_E01_AUD_ELENA_06"],
+    "JULIAN": ["RU_E01_AUD_JULIAN_01", "RU_E01_AUD_JULIAN_02"],
+    "MINA": ["RU_E01_AUD_MINA_01", "RU_E01_AUD_MINA_02"],
+    "CATE": ["RU_E01_AUD_CATE_01", "RU_E01_AUD_CATE_02", "RU_E02_AUD_CATE_03"]
+  },
+  "manual_listen_questions": [
+    "DO_I_BELIEVE_THIS_IS_A_PERSON_NOT_A_TTS_PRESET",
+    "CAN_THIS_VOICE_SPEAK_QUIETLY_WITHOUT_BECOMING_AUDIOBOOK",
+    "DOES_PRESSURE_CHANGE_RHYTHM_WITHOUT_MELODRAMA",
+    "DOES_THE_VOICE_HAVE_ROOM_FOR_SUBTEXT_NOT_JUST_EMOTION",
+    "WOULD_I_LISTEN_TO_THIS_CHARACTER_FOR_TEN_MINUTES",
+    "DOES_THE_VOICE_STAY_CHARACTER_SPECIFIC_RATHER_THAN_GENERIC_PREMIUM"
+  ],
+  "hard_rules": [
+    "NO_VOICE_ID_INVENTION",
+    "NO_NOTICE_PERIOD_ASSUMPTION",
+    "NO_NATIVE_RU_VERIFICATION_FROM_PUBLIC_MARKETING_PAGE",
+    "NO_BINDINGS_FROM_THIS_REFERENCE",
+    "NO_PAID_CANARY_FROM_THIS_REFERENCE",
+    "NO_CAST_LOCK_FROM_THIS_REFERENCE",
+    "NO_STORY_OR_DIALOGUE_CHANGE"
+  ],
+  "next": "AFTER_AUTHENTICATED_PROVIDER_SNAPSHOT_MATCH_PUBLIC_TASTE_REFERENCES_TO_REAL_VOICE_IDS_OR_REPLACE_THEM_WITH_BETTER_NATIVE_RU_CANDIDATES"
+}
