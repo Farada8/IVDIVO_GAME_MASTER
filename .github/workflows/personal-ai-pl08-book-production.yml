@@ -1,0 +1,43 @@
+name: Personal AI PL-08 Book Production Core
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl08-book-production.yml'
+
+jobs:
+  pl08-book-production:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline PL-08 state-machine smoke
+        run: |
+          HOME_DIR="$(mktemp -d)"
+          MANUSCRIPT="$(mktemp)"
+          GATE="$(mktemp)"
+          printf 'Chapter one.\nChapter two.\n' > "$MANUSCRIPT"
+          cat > "$GATE" <<'JSON'
+          {"passed": true, "source": "synthetic CI continuity fixture", "findings": []}
+          JSON
+          python personal-ai/run.py --home "$HOME_DIR" project create ci-book
+          python personal-ai/run.py --home "$HOME_DIR" book create ci-book b01 'CI Book'
+          python personal-ai/run.py --home "$HOME_DIR" book manuscript ci-book b01 "$MANUSCRIPT"
+          python personal-ai/run.py --home "$HOME_DIR" book submit ci-book b01
+          python personal-ai/run.py --home "$HOME_DIR" book continuity ci-book b01 "$GATE"
+          python personal-ai/run.py --home "$HOME_DIR" book finalize ci-book b01 > /tmp/final.json
+          python - <<'PY'
+          import json
+          result = json.load(open('/tmp/final.json'))
+          assert result['state'] == 'FINAL'
+          assert result['continuity_gate']['status'] == 'PASS'
+          assert result['final']['sha256'] == result['manuscript']['sha256']
+          print('PL08_SMOKE: PASS')
+          PY
+      - name: Run PL-08 tests
+        run: python -m unittest personal-ai/tests/test_book_production.py -v
+      - name: Run full Personal AI regression suite
+        run: python -m unittest discover -s personal-ai/tests -v

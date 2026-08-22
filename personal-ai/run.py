@@ -7,6 +7,7 @@ from pathlib import Path
 
 from agents import AgentRunRequest, BoundedAgentExecutor
 from benchmarks import run_suite
+from books import BookProductionCore
 from business import BusinessQuoteService
 from core.bootstrap import bootstrap
 from memory.store import MemoryStore
@@ -25,20 +26,16 @@ def build_parser() -> argparse.ArgumentParser:
 
     project = sub.add_parser("project", help="Project state operations")
     project_sub = project.add_subparsers(dest="project_command", required=True)
-
     create = project_sub.add_parser("create", help="Create a persisted project")
     create.add_argument("project_id")
     create.add_argument("--name")
-
     status = project_sub.add_parser("status", help="Read project state")
     status.add_argument("project_id")
-
     next_task = project_sub.add_parser("next", help="Return the next actionable task")
     next_task.add_argument("project_id")
 
     memory = sub.add_parser("memory", help="Auditable local memory operations")
     memory_sub = memory.add_subparsers(dest="memory_command", required=True)
-
     put = memory_sub.add_parser("put", help="Persist a memory record")
     put.add_argument("content")
     put.add_argument("--kind", default="NOTE")
@@ -48,14 +45,12 @@ def build_parser() -> argparse.ArgumentParser:
     put.add_argument("--project-id")
     put.add_argument("--source-id")
     put.add_argument("--confidence", type=float)
-
     search = memory_sub.add_parser("search", help="Search local memory")
     search.add_argument("query")
     search.add_argument("--kind")
     search.add_argument("--project-id")
     search.add_argument("--include-invalid", action="store_true")
     search.add_argument("--limit", type=int, default=20)
-
     update = memory_sub.add_parser("update", help="Create a new memory version")
     update.add_argument("record_id")
     update.add_argument("content")
@@ -64,28 +59,20 @@ def build_parser() -> argparse.ArgumentParser:
     update.add_argument("--project-id")
     update.add_argument("--source-id")
     update.add_argument("--confidence", type=float)
-
     invalidate = memory_sub.add_parser("invalidate", help="Invalidate a memory record")
     invalidate.add_argument("record_id")
     invalidate.add_argument("--reason", required=True)
-
     trace = memory_sub.add_parser("trace", help="Show a memory record audit-event trail")
     trace.add_argument("record_id")
-
     versions = memory_sub.add_parser("versions", help="Show immutable memory versions")
     versions.add_argument("record_id")
-
-    source_trace = memory_sub.add_parser(
-        "source-trace", help="Trace a memory record through source_id provenance"
-    )
+    source_trace = memory_sub.add_parser("source-trace", help="Trace a memory record through source_id provenance")
     source_trace.add_argument("record_id")
     source_trace.add_argument("--max-depth", type=int, default=20)
 
     provider = sub.add_parser("provider", help="AI provider abstraction operations")
     provider_sub = provider.add_subparsers(dest="provider_command", required=True)
-
     provider_sub.add_parser("list", help="List provider configuration without exposing secrets")
-
     provider_run = provider_sub.add_parser("run", help="Run one provider request")
     provider_run.add_argument("provider_name")
     provider_run.add_argument("prompt")
@@ -93,11 +80,7 @@ def build_parser() -> argparse.ArgumentParser:
     provider_run.add_argument("--system")
     provider_run.add_argument("--max-output-tokens", type=int, default=512)
     provider_run.add_argument("--temperature", type=float)
-    provider_run.add_argument(
-        "--allow-network",
-        action="store_true",
-        help="Explicitly authorize a network/provider call for this invocation.",
-    )
+    provider_run.add_argument("--allow-network", action="store_true", help="Explicitly authorize a network/provider call for this invocation.")
 
     agent = sub.add_parser("agent", help="Bounded project-agent execution")
     agent_sub = agent.add_subparsers(dest="agent_command", required=True)
@@ -108,29 +91,43 @@ def build_parser() -> argparse.ArgumentParser:
     agent_run.add_argument("--model")
     agent_run.add_argument("--max-steps", type=int, default=3)
     agent_run.add_argument("--task-id")
-    agent_run.add_argument(
-        "--allow-network",
-        action="store_true",
-        help="Explicitly authorize network-backed provider use for this agent run.",
-    )
+    agent_run.add_argument("--allow-network", action="store_true", help="Explicitly authorize network-backed provider use for this agent run.")
 
     benchmark = sub.add_parser("benchmark", help="Baseline/candidate benchmark operations")
     benchmark_sub = benchmark.add_subparsers(dest="benchmark_command", required=True)
     benchmark_run = benchmark_sub.add_parser("run", help="Evaluate and persist one benchmark suite")
     benchmark_run.add_argument("suite", help="Path to benchmark suite JSON")
-    benchmark_run.add_argument(
-        "--enforce",
-        action="store_true",
-        help="Return non-zero exit status when the benchmark decision is FAIL.",
-    )
+    benchmark_run.add_argument("--enforce", action="store_true", help="Return non-zero exit status when the benchmark decision is FAIL.")
 
     business = sub.add_parser("business", help="Business operations")
     business_sub = business.add_subparsers(dest="business_command", required=True)
-    business_quote = business_sub.add_parser(
-        "quote", help="Create a persisted fail-closed quote from explicit JSON inputs"
-    )
+    business_quote = business_sub.add_parser("quote", help="Create a persisted fail-closed quote from explicit JSON inputs")
     business_quote.add_argument("project_id")
     business_quote.add_argument("request_json", help="Path to quote request JSON")
+
+    book = sub.add_parser("book", help="Book production state machine")
+    book_sub = book.add_subparsers(dest="book_command", required=True)
+    book_create = book_sub.add_parser("create", help="Create a persisted book state")
+    book_create.add_argument("project_id")
+    book_create.add_argument("book_id")
+    book_create.add_argument("title")
+    book_manuscript = book_sub.add_parser("manuscript", help="Replace manuscript and invalidate continuity gate")
+    book_manuscript.add_argument("project_id")
+    book_manuscript.add_argument("book_id")
+    book_manuscript.add_argument("manuscript_file")
+    book_submit = book_sub.add_parser("submit", help="Submit current manuscript for continuity review")
+    book_submit.add_argument("project_id")
+    book_submit.add_argument("book_id")
+    book_continuity = book_sub.add_parser("continuity", help="Record a sourced continuity PASS/FAIL result")
+    book_continuity.add_argument("project_id")
+    book_continuity.add_argument("book_id")
+    book_continuity.add_argument("result_json")
+    book_finalize = book_sub.add_parser("finalize", help="Finalize only after matching continuity PASS")
+    book_finalize.add_argument("project_id")
+    book_finalize.add_argument("book_id")
+    book_status = book_sub.add_parser("status", help="Read book state")
+    book_status.add_argument("project_id")
+    book_status.add_argument("book_id")
 
     return parser
 
@@ -169,43 +166,17 @@ def main() -> int:
             result = manager.load_project(args.project_id)
         elif args.project_command == "next":
             result = {"project_id": args.project_id, "next_task": manager.get_next_task(args.project_id)}
-        else:  # pragma: no cover - argparse enforces choices
+        else:
             raise RuntimeError("unsupported project command")
     elif args.command == "memory":
         store = MemoryStore(home / "runtime" / "state.db")
         if args.memory_command == "put":
-            result = store.store(
-                args.content,
-                kind=args.kind,
-                source=args.source,
-                metadata=_json_object(args.metadata),
-                record_id=args.record_id,
-                project_id=args.project_id,
-                source_id=args.source_id,
-                confidence=args.confidence,
-            )
+            result = store.store(args.content, kind=args.kind, source=args.source, metadata=_json_object(args.metadata), record_id=args.record_id, project_id=args.project_id, source_id=args.source_id, confidence=args.confidence)
         elif args.memory_command == "search":
-            result = {
-                "query": args.query,
-                "results": store.search(
-                    args.query,
-                    kind=args.kind,
-                    project_id=args.project_id,
-                    include_invalid=args.include_invalid,
-                    limit=args.limit,
-                ),
-            }
+            result = {"query": args.query, "results": store.search(args.query, kind=args.kind, project_id=args.project_id, include_invalid=args.include_invalid, limit=args.limit)}
         elif args.memory_command == "update":
             metadata = None if args.metadata is None else _json_object(args.metadata)
-            result = store.update(
-                args.record_id,
-                content=args.content,
-                source=args.source,
-                metadata=metadata,
-                project_id=args.project_id,
-                source_id=args.source_id,
-                confidence=args.confidence,
-            )
+            result = store.update(args.record_id, content=args.content, source=args.source, metadata=metadata, project_id=args.project_id, source_id=args.source_id, confidence=args.confidence)
         elif args.memory_command == "invalidate":
             result = store.invalidate(args.record_id, args.reason)
         elif args.memory_command == "trace":
@@ -214,7 +185,7 @@ def main() -> int:
             result = {"memory_id": args.record_id, "versions": store.versions(args.record_id)}
         elif args.memory_command == "source-trace":
             result = store.trace_source(args.record_id, max_depth=args.max_depth)
-        else:  # pragma: no cover - argparse enforces choices
+        else:
             raise RuntimeError("unsupported memory command")
     elif args.command == "provider":
         registry = default_registry()
@@ -224,52 +195,51 @@ def main() -> int:
             selected = registry.get(args.provider_name)
             descriptor = selected.describe()
             if descriptor.network_required and not args.allow_network:
-                raise ProviderUnavailableError(
-                    f"{descriptor.name} requires explicit --allow-network for this invocation"
-                )
-            response = selected.generate(
-                ProviderRequest(
-                    prompt=args.prompt,
-                    model=args.model,
-                    system=args.system,
-                    max_output_tokens=args.max_output_tokens,
-                    temperature=args.temperature,
-                )
-            )
-            result = response.to_dict()
-        else:  # pragma: no cover - argparse enforces choices
+                raise ProviderUnavailableError(f"{descriptor.name} requires explicit --allow-network for this invocation")
+            result = selected.generate(ProviderRequest(prompt=args.prompt, model=args.model, system=args.system, max_output_tokens=args.max_output_tokens, temperature=args.temperature)).to_dict()
+        else:
             raise RuntimeError("unsupported provider command")
     elif args.command == "agent":
         if args.agent_command == "run":
-            executor = BoundedAgentExecutor(home)
-            result = executor.run(
-                AgentRunRequest(
-                    project_id=args.project_id,
-                    prompt=args.prompt,
-                    provider=args.provider,
-                    model=args.model,
-                    max_steps=args.max_steps,
-                    allow_network=args.allow_network,
-                    task_id=args.task_id,
-                )
-            ).to_dict()
-        else:  # pragma: no cover - argparse enforces choices
+            result = BoundedAgentExecutor(home).run(AgentRunRequest(project_id=args.project_id, prompt=args.prompt, provider=args.provider, model=args.model, max_steps=args.max_steps, allow_network=args.allow_network, task_id=args.task_id)).to_dict()
+        else:
             raise RuntimeError("unsupported agent command")
     elif args.command == "benchmark":
         if args.benchmark_command == "run":
             result = run_suite(Path(args.suite), home)
             if args.enforce and result["status"] != "PASS":
                 exit_code = 2
-        else:  # pragma: no cover - argparse enforces choices
+        else:
             raise RuntimeError("unsupported benchmark command")
     elif args.command == "business":
         if args.business_command == "quote":
-            result = BusinessQuoteService(home).create_quote(
-                args.project_id, _json_file(args.request_json)
-            )
-        else:  # pragma: no cover - argparse enforces choices
+            result = BusinessQuoteService(home).create_quote(args.project_id, _json_file(args.request_json))
+        else:
             raise RuntimeError("unsupported business command")
-    else:  # pragma: no cover - argparse enforces choices
+    elif args.command == "book":
+        core = BookProductionCore(home)
+        if args.book_command == "create":
+            result = core.create_book(args.project_id, args.book_id, args.title)
+        elif args.book_command == "manuscript":
+            result = core.update_manuscript(args.project_id, args.book_id, Path(args.manuscript_file).read_text(encoding="utf-8"))
+        elif args.book_command == "submit":
+            result = core.submit_for_continuity(args.project_id, args.book_id)
+        elif args.book_command == "continuity":
+            gate = _json_file(args.result_json)
+            passed = gate.get("passed")
+            if not isinstance(passed, bool):
+                raise ValueError("continuity passed must be boolean")
+            findings = gate.get("findings", [])
+            if not isinstance(findings, list):
+                raise ValueError("continuity findings must be a list")
+            result = core.record_continuity_result(args.project_id, args.book_id, passed=passed, source=str(gate.get("source", "")), findings=findings)
+        elif args.book_command == "finalize":
+            result = core.finalize(args.project_id, args.book_id)
+        elif args.book_command == "status":
+            result = core.status(args.project_id, args.book_id)
+        else:
+            raise RuntimeError("unsupported book command")
+    else:
         raise RuntimeError("unsupported command")
 
     print(json.dumps(result, indent=2, sort_keys=True))
