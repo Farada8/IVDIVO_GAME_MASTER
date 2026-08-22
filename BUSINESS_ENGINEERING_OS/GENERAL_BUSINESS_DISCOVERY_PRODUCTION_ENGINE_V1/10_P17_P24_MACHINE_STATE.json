@@ -1,0 +1,82 @@
+{
+  "schema": "ivdivo.business.general_fatal_test_portfolio/1.0",
+  "date": "2026-08-22",
+  "status": "P17_P24_EXECUTED_INTERNAL_ONLY",
+  "authority_effect": "ENGINEERING_TEST_READINESS_ONLY",
+  "active_wip": [
+    {
+      "opportunity_id": "OPP-33",
+      "role": "PRIMARY",
+      "fatal_1": "BUYER_COORDINATION_GAP_EXISTS",
+      "test_id": "TEST-33",
+      "test_status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION",
+      "negative_control": "OFFICIAL_SEAI_SELF_NAVIGATION_PLUS_DIRECT_INSTALLER",
+      "pass_requires_behavior": true
+    },
+    {
+      "opportunity_id": "OPP-36",
+      "role": "PILOT",
+      "fatal_1": "IN_SCOPE_UNRESOLVED_OPERATIONAL_GAP_EXISTS",
+      "test_id": "TEST-36",
+      "test_status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION",
+      "negative_control": "COMMISSION_GUIDANCE_PLUS_VENDOR_DOCUMENTATION_ONLY",
+      "pass_requires_behavior": true
+    },
+    {
+      "opportunity_id": "OPP-37",
+      "role": "PILOT",
+      "fatal_1": "AI_SPECIFIC_INCREMENTAL_GAP_BEYOND_ORDINARY_SEO",
+      "test_id": "TEST-37",
+      "test_status": "INTERNAL_NEGATIVE_CONTROL_READY",
+      "negative_control": "ORDINARY_SEO_WEB_AUDIT_SAME_SITE_SAME_WINDOW",
+      "pass_requires_behavior_for_external_stage": true
+    }
+  ],
+  "next64": {
+    "total": 64,
+    "executed_count": 16,
+    "executed_ranges": ["P01-P08", "P17-P24"],
+    "unexecuted_count": 48,
+    "unexecuted_ranges": ["P09-P16", "P25-P64"],
+    "next_internal_block": "P09-P16_TARGETED_TO_OPP33_OPP36_OPP37"
+  },
+  "portfolio": {
+    "wip_count": 3,
+    "wip_max": 3,
+    "state": "S3_FATAL_TEST_READY",
+    "go_to_market": false,
+    "external_signal": false,
+    "transaction": false,
+    "repeatability": false
+  },
+  "evidence": {
+    "willingness_to_pay": null,
+    "unit_economics": null,
+    "buyer_behavior": null,
+    "transaction_evidence": null,
+    "proof_promotion": false
+  },
+  "external_action": {
+    "authorized": false,
+    "outreach": false,
+    "spend": false,
+    "contracting": false
+  },
+  "guards": [
+    "FATAL_ASSUMPTION_BEFORE_BUILD",
+    "CHEAPEST_DECISIVE_TEST_FIRST",
+    "THRESHOLD_BEFORE_TEST",
+    "NEGATIVE_CONTROL_REQUIRED",
+    "INTERVIEW_NEQ_BEHAVIOR",
+    "SIGNAL_NEQ_DEMAND",
+    "OFFICIAL_SUPPORT_EXISTENCE_NEQ_BUYER_WTP",
+    "WIP_MAX_3",
+    "NO_NEW_BEHAVIOR_EVIDENCE_NO_PROOF_PROMOTION",
+    "NO_EXTERNAL_ACTION_WITHOUT_EXPLICIT_AUTHORIZATION"
+  ],
+  "source_floor": {
+    "opp_33": "SEAI_BUSINESS_ENERGY_UPGRADE_SCHEME_CURRENT",
+    "opp_36": "EU_COMMISSION_ARTICLE_50_GUIDELINES_2026_07_20",
+    "opp_37": "FAILTE_IRELAND_CORPORATE_STRATEGY_2026_2029_CURRENT"
+  }
+}
