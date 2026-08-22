@@ -23,7 +23,7 @@
     "authority_doc_id": "1HHQ4Lcq0p3R5KFHbfzXemv5tMctOCNGt4CFYdXaV__Y",
     "source_manifest_doc_id": "1GvKeoaB8DdLEZEAJ6CJAKI2N1EvQlOkt3iq5BIhhgUk",
     "cycle1_and_adapter_doc_id": "1o7daILw9ebuj2RYtQY7b3eLF3667rYH1agXV5lX4xTM",
-    "readback_status": "AUTHORITY_DOC_READBACK_PASS; OTHER_DOCS_PENDING_FINAL_READBACK_AT_STATE_UPDATE"
+    "readback_status": "PASS_ALL_3_DOCS_AND_FOLDER_MEMBERSHIP"
   },
   "key_guards": [
     "NO_FALSE_FULL_READ",
@@ -43,6 +43,7 @@
     "runtime_source_inspection": "PASS",
     "narrative_router_integration": "PASS",
     "aggregate_system_state_integration": "PASS",
+    "drive_mirror_readback": "PASS",
     "real_project_validation": "NOT_YET_RUN"
   },
   "next_obligations": [
