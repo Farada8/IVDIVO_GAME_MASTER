@@ -1,0 +1,69 @@
+{
+  "artifact": "CURRENT_B03_SPEAKER_ATTRIBUTION_STATE",
+  "updated": "2026-08-22",
+  "project": "B03 — THE EMPTY RESCUE",
+  "story_authority": "FOUNDER_LOCKED_CH01-29",
+  "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
+  "source_segmentation_package_sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
+  "status": "CORRECTED_PARTIAL_MAP_FULL_GATE_OPEN",
+  "segmentation": {
+    "total_exact_text_segments": 7465,
+    "original_curly_quote_spans": 3718,
+    "narrator_inline_semantic_quote_exceptions": 3,
+    "actual_dialogue_spans": 3715,
+    "narration_segments": 3747,
+    "byte_exact_text_mutations": 0
+  },
+  "current_attribution": {
+    "tier1_strict_one_sided": 471,
+    "tier2_revalidated_pronoun_delta": 47,
+    "cumulative_assigned": 518,
+    "residual_unknown": 3197,
+    "coverage_percent": 13.94,
+    "full_speaker_gate": "OPEN"
+  },
+  "current_drive_authority": {
+    "tier2_rebased_map_id": "1px9HoDaBujFK1iJ0NiyQ1bRgvI5GHoS1",
+    "tier2_rebased_gate_id": "1W6TluQh58BDju0C5-IMSVJETiBJLvoJS",
+    "engine_repair_package_id": "19xGz0Orm86-MMfTlbzwIRX0RXp-vXydA",
+    "engine_repair_gate_id": "1Xv_Ys0a7AnHHJMNl0pgoA90t8iE5FVU_",
+    "tier1_reconciliation_json_id": "1QtSTOAOgeQ4zJU4dM8S7LuKDk1gJIPD8",
+    "tier1_reconciliation_md_id": "1PpM6Fo2sGGAO6YxDDrmIDMFHAiQJ22ye"
+  },
+  "rejected_provenance": {
+    "whole_book_autopass_v0_1": [
+      "1L2SMW9aUc_8dOgRiuHm2S-sRz-eza7d4",
+      "1bqNI7qFqCwcM9gGntHIhSmsYHg1eaJ0t",
+      "1LOvd1J5FAvdQ1Zsc8om4ywXBgpO4hDSk"
+    ],
+    "tier1_v1_map_id": "1jC_88TFKo6OvSWfF3Nayey4xRt48gkDZ",
+    "tier1_v1_reason": "70_DIRECT_SPEAKER_CONFLICTS_BIDIRECTIONAL_BOUNDARY_OWNERSHIP",
+    "tier2_v1_cumulative_map_id": "1D9ZVwn1VQxqv4zQ2ZjrMENhH4qy023ix",
+    "tier2_v1_disposition": "CUMULATIVE_REJECTED_47_DELTA_SALVAGED"
+  },
+  "ch01_separate_production_lane": {
+    "status": "PASS_142_OF_142_PROVIDER_BRIDGE_PRESERVED",
+    "private_segmentation_and_speaker_map_id": "1aw17696W4KOLVgCcnOkKxpaOJE15YRMg",
+    "reconciliation_json_id": "10WMtxygCb24N2XnBZeL6z0-B0PJUZZFY",
+    "reconciliation_md_id": "1ofWRzJoeWpidY0BkOGJsOqQKHMMnygLC",
+    "speaker_conflicts": 0,
+    "provider_bridge_quarantine_required": false
+  },
+  "next_stage": "CONTEXTUAL_TIER3_CH02_CH29_FROM_CORRECTED_V2_ONLY",
+  "allowed_evidence": [
+    "BOUNDED_SCENE_PARTICIPANTS",
+    "VOCATIVE",
+    "ACTION_BEAT_OWNERSHIP",
+    "CHANNEL_ROLE",
+    "DIRECT_ADDRESSEE",
+    "STABLE_CALL_CONTEXT",
+    "EXPLICIT_LOCAL_DIALOGUE_CHAIN_WITH_AUDIT_OBJECT"
+  ],
+  "forbidden": [
+    "NAIVE_ALTERNATING_TURN_AUTOFILL",
+    "SEMANTIC_VOICE_GUESSING",
+    "GENDER_ONLY_GUESSING",
+    "REUSE_REJECTED_V1_ASSIGNMENTS_AS_AUTHORITY",
+    "STORY_OR_PROSE_REWRITE"
+  ]
+}
