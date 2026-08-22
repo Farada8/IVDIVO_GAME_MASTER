@@ -2,9 +2,25 @@
   "project": "FULL TIER PROJECTION GENESIS",
   "cycle": "CYCLE2_SYMMETRY_TASK_SUFFICIENCY",
   "date": "2026-08-22",
+  "status": "CROSS_STORE_PERSISTED_DRAFT_PR_NO_MERGE",
   "github": {
     "base_main_sha": "74ae2afc2b897baa0a65bd0ea1fd0bc099922c5f",
-    "branch": "full-tier-projection-genesis-cycle2-20260822"
+    "branch": "full-tier-projection-genesis-cycle2-20260822",
+    "pr_number": 446,
+    "pr_url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/446",
+    "pr_draft": true,
+    "pr_mergeable_observed": false,
+    "merge": "NOT_REQUESTED"
+  },
+  "drive": {
+    "folder_id": "1LP9L-Th8AKBpFV5c6Ha2eJaOja4GCDBz",
+    "zip_id": "1tAlEs5-jnzDIUTtgwH5ZL-IUIyiMEtQJ",
+    "proof_id": "1U8wAHUsTkB1xSq7Z-vzr_PtfRPgxHcZV",
+    "synthesis_id": "1aLjhfQGupMOWmtYgeuqwFInfzhwqbBgL",
+    "results_id": "19ubJGtmWO3s82p3mqj3h4NwyW1mLhuev",
+    "state_id": "1HUeLtwBw1eqOtYDnbJtqVsrx_7r8bRQx",
+    "cold_id": "1uZdT9vLakp3UtPqTucDFfUjhAqt5q-Co",
+    "readback": "PASS_6_FILES"
   },
   "run8": ["TIER2-001","TIER2-002","TIER2-003","TIER2-004","TIER2-005","TIER2-006","TIER2-007","TIER2-008"],
   "tests": "9/9 PASS",
