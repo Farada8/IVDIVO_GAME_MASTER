@@ -1,5 +1,6 @@
 from providers.base import (
     AIProvider,
+    ProviderConfig,
     ProviderDescriptor,
     ProviderError,
     ProviderHTTPError,
@@ -8,10 +9,17 @@ from providers.base import (
     ProviderUnavailableError,
     ProviderUsage,
 )
-from providers.registry import ProviderRegistry, default_registry
+from providers.canonical import AnthropicProvider, OllamaProvider, OpenAIProvider
+from providers.mock import MockProvider
+from providers.registry import ProviderRegistry, default_registry, provider_from_config
 
 __all__ = [
     "AIProvider",
+    "OpenAIProvider",
+    "AnthropicProvider",
+    "OllamaProvider",
+    "MockProvider",
+    "ProviderConfig",
     "ProviderDescriptor",
     "ProviderError",
     "ProviderHTTPError",
@@ -21,4 +29,5 @@ __all__ = [
     "ProviderUsage",
     "ProviderRegistry",
     "default_registry",
+    "provider_from_config",
 ]
