@@ -1,0 +1,156 @@
+{
+  "schema_version": "room917.sound_post_render_execution/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "story_status": "LOCKED",
+  "production_phase": "POST_RENDER_EVALUATION_AND_SELECTIVE_REPAIR",
+  "sound_direction_authority": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_DIRECTION_SCORE_v1.md",
+  "universal_audio_authority": "IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md",
+  "master": {
+    "asset_id": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K",
+    "filename": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "expected_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "expected_size_bytes": 189558764,
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_seconds": 658.190,
+    "status": "IDENTITY_VERIFIED_RAW_BYTE_REACQUISITION_BLOCKED_HTTP403",
+    "rerender_forbidden": true
+  },
+  "preserve": {
+    "scene3_start_seconds": 444.980,
+    "scene3_status": "PRESERVE_ACCEPTED_V1_3E_TECHNICAL_LINEAGE_UNLESS_NEW_DIRECT_REGRESSION_EVIDENCE",
+    "protected_silence": true,
+    "locked_story": true,
+    "critical_clue_identity": true,
+    "no_blanket_silence_fill": true,
+    "no_music_as_room_bed_substitute": true
+  },
+  "current_evidence": {
+    "D003": {
+      "name": "PRE_SCENE3_ROOM_BED_CONTINUITY_UNDERCOVERAGE",
+      "severity": "MAJOR",
+      "status": "PROVEN_AT_SEGMENT_AGGREGATE_LEVEL_EXACT_INTERVALS_UNRESOLVED",
+      "patch_authorized": false,
+      "segment_start_seconds": 0.0,
+      "segment_end_seconds": 444.980,
+      "measured_below_minus45_dbfs_seconds": 109.8,
+      "measured_below_minus50_dbfs_seconds": 103.2,
+      "measured_below_minus85_dbfs_seconds": 36.1,
+      "formal_protected_silence_pre_scene3_seconds": 0.450,
+      "next_required_evidence": "EXACT_LOW_LEVEL_INTERVAL_LOCALIZATION_PLUS_ACCEPTED_OR_LIVE_CUE_TIMING"
+    },
+    "D004": {
+      "name": "PRE_SCENE3_CAUSAL_FOLEY_ACTION_UNDERDENSITY",
+      "severity": "MAJOR_CANDIDATE",
+      "status": "CANDIDATE_NOT_PROVEN",
+      "patch_authorized": false
+    },
+    "D005": {
+      "name": "PRE_SCENE3_MUSIC_UNDERUSE",
+      "severity": "WORKING_COMMERCIAL_HYPOTHESIS",
+      "status": "HOLD_FOR_HUMAN_LISTEN_AND_ABC",
+      "patch_authorized": false
+    }
+  },
+  "sound_repair_order": [
+    "ROOM_WEATHER_MATERIAL_BED_ONLY_WHERE_EXACT_EVIDENCE_AUTHORIZES",
+    "BODY_FOLEY_CAUSAL_ACTION_ONLY_AFTER_D004_PROOF",
+    "OPTIONAL_SELECTIVE_MUSIC_ONLY_AFTER_HUMAN_OR_COMMERCIAL_EVIDENCE"
+  ],
+  "music_exclusion_domains": [
+    "MISSING_FOURTH_NOTE",
+    "MALLET_COMPARISON",
+    "CONTACT_MIC_EVIDENCE",
+    "CRITICAL_TAPE_MEASUREMENT",
+    "TWO_TONE_BELL_IDENTIFICATION",
+    "STRUCTURAL_REPORT_CRITICAL_FACT",
+    "BLACKOUT_INITIAL_SYSTEM_FAILURE"
+  ],
+  "critical_mix_buses": [
+    "DIALOGUE",
+    "CLUE_SFX",
+    "SFX",
+    "FOLEY",
+    "AMBIENCE",
+    "MUSIC"
+  ],
+  "clue_safe_law": {
+    "clue_bus_never_ducked_by_music_or_ambience": true,
+    "mono_survival_required": true,
+    "mobile_survival_required": true,
+    "low_frequency_only_clue_forbidden": true,
+    "music_may_not_mask_evidence": true
+  },
+  "p003a2": {
+    "analyzer": "AUDIO_PRODUCTION/ROOM917/TOOLS/P003A2_MASTER_ESCROW_v1/p003a2_interval_analyzer.py",
+    "segment_start_seconds": 0.0,
+    "segment_end_seconds": 444.980,
+    "window_ms": 100,
+    "thresholds_dbfs": [-85, -50, -45],
+    "expected_master_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "classification_law": [
+      "PROTECTED_AUTHORED_PAUSE",
+      "VALID_LOW_DENSITY",
+      "MISSING_ROOM_OR_AMBIENCE_SUPPORT",
+      "MISSING_CAUSAL_OVERLAP_CANDIDATE",
+      "UNKNOWN_REQUIRES_LISTEN_OR_LIVE_TIMELINE"
+    ],
+    "level_only_never_authorizes_patch": true
+  },
+  "execution_router": [
+    {
+      "stage": "MASTER_BYTE_RECOVERY_OR_TRUSTED_TIMING_MAP",
+      "status": "BLOCKED_EXTERNAL_EVIDENCE",
+      "action": "RECOVER_IDENTICAL_MASTER_BYTES_OR_ACCEPTED_EXACT_INTERVAL_TIMING"
+    },
+    {
+      "stage": "P003A2_INTERVAL_LOCALIZATION",
+      "status": "READY_WHEN_MASTER_BYTE_GATE_OPENS"
+    },
+    {
+      "stage": "CUE_LINEAGE_TIMING_BIND",
+      "status": "READY_WHEN_ACCEPTED_OR_LIVE_TIMING_EXISTS"
+    },
+    {
+      "stage": "INTERVAL_CLASSIFICATION",
+      "status": "BLOCKED_UNTIL_SIGNAL_AND_TIMING_EVIDENCE"
+    },
+    {
+      "stage": "P004A_SELECTIVE_ROOM_BED_REPAIR",
+      "status": "BLOCKED_UNTIL_D003_EXACT_PATCH_INTERVALS_AUTHORIZED"
+    },
+    {
+      "stage": "P003B_HUMAN_LISTEN",
+      "status": "REQUIRED_NOT_SIMULATED"
+    },
+    {
+      "stage": "ABC_CANDIDATES",
+      "status": "BLOCKED_UNTIL_PROVEN_REPAIR_PLUS_HUMAN_GATE"
+    }
+  ],
+  "post_repair_candidates": {
+    "A_FORENSIC_CONTROL": "cleanest causal and intelligibility reference",
+    "B_COMMERCIAL": "stronger pacing and sound/music density without story cheating",
+    "C_PREMIUM": "best body presence, intimacy, spatial realism and restrained musical dramaturgy"
+  },
+  "release_gate": {
+    "no_open_fatal_or_major": true,
+    "one_listen_comprehension": true,
+    "mono_mobile_clue_qc": true,
+    "selective_regeneration_or_remix_proven": true,
+    "accepted_asset_locks_stable": true,
+    "commercial_quality_human_evidence_required": true,
+    "no_scale_e02_e24_before_e01_v2": true
+  },
+  "prohibited": [
+    "INVENT_PRODUCTION_TIMECODES",
+    "RERENDER_MASTER_TO_REPLACE_MISSING_IDENTICAL_BYTES",
+    "AUTO_FILL_LOW_LEVEL_WINDOWS",
+    "PATCH_D004_WITHOUT_PROOF",
+    "PATCH_D005_WITHOUT_HUMAN_OR_ABC_EVIDENCE",
+    "REAPPLY_OLD_SCENE3_SPATIAL_REPAIR",
+    "SIMULATE_HUMAN_LISTEN_PASS",
+    "SCALE_SEASON_BEFORE_E01_V2_QUALITY_GATE"
+  ]
+}
