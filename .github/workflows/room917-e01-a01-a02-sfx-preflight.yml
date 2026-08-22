@@ -9,6 +9,7 @@ on:
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/prepare_a01_a02_candidate_qc.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/compile_a01_a02_human_audition.py'
       - '.github/workflows/room917-e01-a01-a02-sfx-preflight.yml'
       - '.github/workflows/room917-e01-a01-a02-sfx-canary.yml'
   pull_request:
@@ -17,6 +18,7 @@ on:
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/prepare_a01_a02_candidate_qc.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/compile_a01_a02_human_audition.py'
       - '.github/workflows/room917-e01-a01-a02-sfx-preflight.yml'
       - '.github/workflows/room917-e01-a01-a02-sfx-canary.yml'
   workflow_dispatch:
@@ -43,7 +45,8 @@ jobs:
           set -euo pipefail
           python -m py_compile \
             AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py \
-            AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/prepare_a01_a02_candidate_qc.py
+            AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/prepare_a01_a02_candidate_qc.py \
+            AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/compile_a01_a02_human_audition.py
           ffmpeg -version >/dev/null
 
       - name: Validate queue-to-provider adapter
@@ -148,17 +151,20 @@ jobs:
         run: |
           set -euo pipefail
           python - <<'PY'
-          import json, wave
+          import json
           from pathlib import Path
           root=Path('_room917_sfx_preflight_fixture/qc')
           report=json.loads((root/'ROOM917_E01_A01_A02_MACHINE_QC.json').read_text(encoding='utf-8'))
           pending=json.loads((root/'ROOM917_E01_A01_A02_PENDING_HUMAN_CANDIDATES.json').read_text(encoding='utf-8'))
+          review=json.loads((root/'ROOM917_E01_A01_A02_HUMAN_AUDITION_REVIEW.json').read_text(encoding='utf-8'))
 
           assert report['status']=='PREPARED_FOR_HUMAN_AUDITION_NOT_BOUND'
           assert report['candidate_count']==2
           assert report['machine_may_award_artistic_pass'] is False
           assert report['production_binding_authorized'] is False
           assert pending['status']=='MULTIPLE_CANDIDATES_PENDING_HUMAN_SELECTION_NOT_BINDABLE'
+          assert review['human_review_attested'] is False
+          assert review['fixture_only'] is False
 
           required_human={
               'ROOM_IDENTITY','LOOP_SEAM','FALSE_CLUE_AUDIT',
@@ -176,7 +182,7 @@ jobs:
               for preview in row['previews'].values():
                   assert Path(preview['path']).is_file()
 
-          for candidates in pending['candidates_by_asset'].values():
+          for asset_id,candidates in pending['candidates_by_asset'].items():
               assert len(candidates)==1
               c=candidates[0]
               assert c['gain_db'] is None
@@ -186,7 +192,104 @@ jobs:
               assert c['loop_seam_status']=='HOLD'
               assert c['false_clue_audit_status']=='HOLD'
               assert c['binding_status']=='FORBIDDEN_PENDING_HUMAN_AND_CONTEXT_GATES'
+              form=review['assets'][asset_id]
+              assert form['decision']=='HOLD'
+              assert form['selected_candidate_id'] is None
+              assert form['selected_sha256'] is None
+              assert form['gain_db'] is None
+              assert set(form['gates'])==required_human
+              assert set(form['gates'].values())=={'HOLD'}
+              assert form['candidate_reference'][0]['candidate_id']==c['candidate_id']
+              assert form['candidate_reference'][0]['sha256']==c['sha256']
           print('SYNTHETIC_QC_PIPELINE_FAIL_CLOSED_PASS_NO_PROVIDER_CALLS')
+          PY
+
+      - name: Exercise explicit human-decision compiler on fixture only
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=_room917_sfx_preflight_fixture/qc
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('_room917_sfx_preflight_fixture/qc')
+          p=root/'ROOM917_E01_A01_A02_HUMAN_AUDITION_REVIEW.json'
+          review=json.loads(p.read_text(encoding='utf-8'))
+          review['fixture_only']=True
+          review['human_review_attested']=False
+          review['reviewer']='CI_SYNTHETIC_FIXTURE'
+          review['reviewed_at']='FIXTURE_ONLY'
+          for row in review['assets'].values():
+              c=row['candidate_reference'][0]
+              row['decision']='SELECT'
+              row['selected_candidate_id']=c['candidate_id']
+              row['selected_sha256']=c['sha256']
+              row['gain_db']=0.0
+              row['gates']={k:'PASS' for k in row['gates']}
+          p.write_text(json.dumps(review,indent=2)+'\n',encoding='utf-8')
+          PY
+
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/compile_a01_a02_human_audition.py \
+            --pending "$root/ROOM917_E01_A01_A02_PENDING_HUMAN_CANDIDATES.json" \
+            --review "$root/ROOM917_E01_A01_A02_HUMAN_AUDITION_REVIEW.json" \
+            --out-candidates "$root/FIXTURE_BINDING_GATE_INPUT.json" \
+            --report "$root/FIXTURE_HUMAN_COMPILE_REPORT.json"
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('_room917_sfx_preflight_fixture/qc')
+          out=json.loads((root/'FIXTURE_BINDING_GATE_INPUT.json').read_text(encoding='utf-8'))
+          report=json.loads((root/'FIXTURE_HUMAN_COMPILE_REPORT.json').read_text(encoding='utf-8'))
+          assert out['status']=='READY_FOR_EXISTING_SOUND_ASSET_BINDING_GATE'
+          assert out['fixture_only'] is True
+          assert out['production_binding_authorized'] is False
+          assert set(out['candidates'])=={
+              'A01_GREYHAVEN_LOBBY_30S_LOOP','A02_SWITCHBOARD_ALCOVE_30S_LOOP'
+          }
+          assert report['renderer_binding_emitted'] is False
+          assert report['provider_calls']==0
+          assert all(c['audition_status']=='PASS' for c in out['candidates'].values())
+          assert all(c['mono_status']=='PASS' for c in out['candidates'].values())
+          assert all(c['phone_proxy_status']=='PASS' for c in out['candidates'].values())
+          print('HUMAN_COMPILER_EXPLICIT_SELECTION_FIXTURE_PASS_NO_BINDING')
+          PY
+
+      - name: Prove one HOLD suppresses entire compiled candidate set
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=_room917_sfx_preflight_fixture/qc
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('_room917_sfx_preflight_fixture/qc')
+          p=root/'ROOM917_E01_A01_A02_HUMAN_AUDITION_REVIEW.json'
+          review=json.loads(p.read_text(encoding='utf-8'))
+          review['assets']['A02_SWITCHBOARD_ALCOVE_30S_LOOP']['gates']['FALSE_CLUE_AUDIT']='HOLD'
+          (root/'FIXTURE_REVIEW_ONE_HOLD.json').write_text(json.dumps(review,indent=2)+'\n',encoding='utf-8')
+          PY
+
+          set +e
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/compile_a01_a02_human_audition.py \
+            --pending "$root/ROOM917_E01_A01_A02_PENDING_HUMAN_CANDIDATES.json" \
+            --review "$root/FIXTURE_REVIEW_ONE_HOLD.json" \
+            --out-candidates "$root/FIXTURE_HOLD_BINDING_GATE_INPUT.json" \
+            --report "$root/FIXTURE_HOLD_COMPILE_REPORT.json"
+          rc=$?
+          set -e
+          if [ "$rc" -ne 4 ]; then
+            echo "::error::Expected fail-closed compiler exit 4, got $rc"
+            exit 41
+          fi
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('_room917_sfx_preflight_fixture/qc')
+          out=json.loads((root/'FIXTURE_HOLD_BINDING_GATE_INPUT.json').read_text(encoding='utf-8'))
+          assert out['status']=='HOLD_NOT_BINDABLE'
+          assert out['candidates']=={}
+          print('ONE_HOLD_SUPPRESSES_ALL_COMPILED_CANDIDATES_PASS')
           PY
 
       - name: Verify paid canary remains manual-only
@@ -215,10 +318,13 @@ jobs:
           - TTS/SFX credits: 0
           - queue -> provider prompt hashes: checked
           - provider prompt length: checked
-          - renderer + QC packer Python syntax: checked
+          - renderer + QC packer + human compiler Python syntax: checked
           - QC packer exercised on two synthetic MP3 fixtures
           - 48k/24-bit/stereo normalization: checked
           - seam/mono/phone preview generation: checked
+          - pre-populated human audition review form: checked, defaults HOLD
+          - explicit human-decision compiler: exercised on fixture only
+          - one HOLD suppresses the entire A01/A02 compiled candidate set: checked
           - artistic PASS and production binding remain human-gated: checked
           - paid workflow manual-only + confirm_spend guard: checked
           - production binding or D003 patch authorization: not granted
