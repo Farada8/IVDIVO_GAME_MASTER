@@ -1,6 +1,6 @@
 name: ROOM917 RU Voice Discovery
 
-# v1.4 public native/durable zero-spend discovery; concurrency-safe main publication
+# v1.5 zero-spend retrigger 2026-08-22; public native discovery; concurrency-safe main publication
 on:
   push:
     branches:
