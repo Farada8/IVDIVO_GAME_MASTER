@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.business.general_discovery_production_engine/1.4",
+  "schema": "ivdivo.business.general_discovery_production_engine/1.5",
   "date": "2026-08-22",
-  "status": "P01_P32_ENGINEERING_CURRENT_S5_OFFER_TESTABLE_INTERNAL_ONLY_PENDING_CI",
+  "status": "P01_P32_ENGINEERING_CURRENT_FOUNDER_RESREEN_PASS_S5_INTERNAL_PENDING_CI",
   "github": {
     "base_engine_pr": 303,
     "base_engine_merge_sha": "b579c7e0359b5c242b718866c2c2488a2dda1434",
@@ -14,7 +14,8 @@
     "test37_pr": 329,
     "test37_exact_head": "4d90880953b2303c05e83b433cfd121d760e45d4",
     "test37_merge_sha": "8a75f6abe2c4b82b0d673ad7a1a1280a99ecc02a",
-    "test37_final_ci": [32556941919, 32556941918, 32556941915, 32556941910]
+    "test37_final_ci": [32556941919, 32556941918, 32556941915, 32556941910],
+    "founder_profile_pr": 334
   },
   "namespace": {"modules": "BDP01-BDP32", "contracts": "CDP01-CDP32", "proof_gates": "PG01-PG12", "protocols": "P-BDP-01-P-BDP-12"},
   "run32": {"executed": 32, "keep_or_keep_with_ordering": 21, "mutate": 11, "kill": 0, "market_proof_created": false},
@@ -26,6 +27,22 @@
     "priority_rule": "DEPENDENCIES_AND_DECISION_VALUE_OVERRIDE_PROMPT_ORDER",
     "next_admissible_block": "P33-P40_OPP37_NULL_SAFE_ECONOMICS_AND_MANUAL_DELIVERY_TIMING"
   },
+  "founder_profile_rescreen": {
+    "authority": "PR334_MANDATORY_BEFORE_DEEP_DIVE",
+    "opportunity_id": "OPP-37",
+    "remote_first_pass": true,
+    "founder_cash_at_risk_eur_current_phase": 0,
+    "founder_physical_load": "NONE_LOW",
+    "test_before_build_spend": true,
+    "wave_stage": "EXPANDING",
+    "generic_ai_audit_competition": "HIGH",
+    "disposition": "NORMAL_CASHFLOW_CANDIDATE",
+    "early_wave_priority": false,
+    "optionality_next_primary": false,
+    "portfolio_primary": false,
+    "grandfathered": false,
+    "rescreen_completed": true
+  },
   "discovery_refresh": {
     "fresh_non_procurement_signals": 10,
     "dedupe_merges": 2,
@@ -33,6 +50,7 @@
     "candidate_pilot_1": "OPP-36_AI_TRANSPARENCY_IMPLEMENTATION_PACK",
     "candidate_pilot_2": "OPP-37_TOURISM_AI_DISCOVERABILITY_BOOKABILITY",
     "wip_count": 3,
+    "historical_wip_not_strategic_priority_without_profile_rescreen": true,
     "willingness_to_pay": null,
     "unit_economics": null,
     "transaction_evidence": false,
@@ -78,7 +96,7 @@
     "buyer_behavior_observed": false
   },
   "offer_engineering": {
-    "status": "P25_P32_INTERNAL_COMPLETE_PENDING_CI",
+    "status": "P25_P32_INTERNAL_COMPLETE_FOUNDER_RESREEN_PASS_PENDING_CI",
     "opportunity_id": "OPP-37",
     "working_offer": "FIRST_PARTY_FACT_CONSISTENCY_AND_ANSWERABILITY_DECISION_PACK",
     "generic_ai_seo_audit": "KILL_AS_DIFFERENTIATED_CORE",
@@ -98,26 +116,20 @@
   "state_machine": ["S0_RESTORE", "S1_DISCOVERED", "S2_QUALIFIED", "S3_FATAL_TEST_READY", "S4_VALUE_BOUNDED", "S5_OFFER_TESTABLE", "S6_ECONOMICS_BOUNDED", "S7_SALES_TEST_READY", "S8_EXTERNAL_SIGNAL", "S9_TRANSACTION", "S10_DELIVERY_PROVEN", "S11_REPEATABILITY", "S12_SCALE_READY"],
   "portfolio_policy": {"max_wip": 3, "primary": 1, "pilots_max": 2},
   "evidence_laws": [
-    "K_NEQ_S_NEQ_E_NEQ_CASH", "SIGNAL_NEQ_DEMAND", "PUBLIC_SCREENING_CANDIDATE_NEQ_BUYER", "USER_NEQ_BUYER_NEQ_BUDGET_OWNER", "INTERVIEW_NEQ_BEHAVIOR", "E1_VERBAL_ONLY_CANNOT_PASS_FATAL_TEST", "PAYMENT_NEQ_REPEATABILITY", "PRICE_HYPOTHESIS_NEQ_WTP", "COMPETITOR_PRICE_NEQ_OUR_WTP", "FREE_SCAN_SUBSTITUTES_GENERIC_AUDIT", "ORDINARY_SEO_DEFECT_NEQ_INCREMENTAL_AI_DEFECT", "BOUNDED_TECHNICAL_DIFFERENTIAL_NEQ_BUYER_DEMAND", "INTERNAL_DECISION_CHANGE_NEQ_BUYER_VALUE", "DELIVERY_COST_UNKNOWN_IMPLIES_PRICE_FLOOR_NULL", "GENERIC_AI_SEO_AUDIT_COMMODITY_PRESSURE", "NO_SOFTWARE_BUILD_BEFORE_REPEATED_MANUAL_NEED", "CONTRADICTION_NEVER_AVERAGES_AWAY", "MISSING_EVIDENCE_STAYS_NULL", "NO_NEW_BEHAVIOR_EVIDENCE_NO_PROOF_PROMOTION", "PROMPT_COUNT_NEQ_PROGRESS"
+    "FOUNDER_PROFILE_BEFORE_DEEP_DIVE", "EXISTING_WIP_NOT_GRANDFATHERED", "REMOTE_FIT_NEQ_DEMAND", "WAVE_STAGE_NEQ_WTP", "NORMAL_CASHFLOW_CANDIDATE_NEQ_PORTFOLIO_PRIMARY", "K_NEQ_S_NEQ_E_NEQ_CASH", "SIGNAL_NEQ_DEMAND", "PUBLIC_SCREENING_CANDIDATE_NEQ_BUYER", "USER_NEQ_BUYER_NEQ_BUDGET_OWNER", "INTERVIEW_NEQ_BEHAVIOR", "E1_VERBAL_ONLY_CANNOT_PASS_FATAL_TEST", "PAYMENT_NEQ_REPEATABILITY", "PRICE_HYPOTHESIS_NEQ_WTP", "COMPETITOR_PRICE_NEQ_OUR_WTP", "FREE_SCAN_SUBSTITUTES_GENERIC_AUDIT", "ORDINARY_SEO_DEFECT_NEQ_INCREMENTAL_AI_DEFECT", "BOUNDED_TECHNICAL_DIFFERENTIAL_NEQ_BUYER_DEMAND", "INTERNAL_DECISION_CHANGE_NEQ_BUYER_VALUE", "DELIVERY_COST_UNKNOWN_IMPLIES_PRICE_FLOOR_NULL", "GENERIC_AI_SEO_AUDIT_COMMODITY_PRESSURE", "NO_SOFTWARE_BUILD_BEFORE_REPEATED_MANUAL_NEED", "CONTRADICTION_NEVER_AVERAGES_AWAY", "MISSING_EVIDENCE_STAYS_NULL", "NO_NEW_BEHAVIOR_EVIDENCE_NO_PROOF_PROMOTION", "PROMPT_COUNT_NEQ_PROGRESS"
   ],
-  "evidence": {
-    "buyer_behavior": false,
-    "willingness_to_pay": null,
-    "transaction": null,
-    "unit_economics": null,
-    "profitability": null,
-    "repeatability": false,
-    "proof_promotion": false
-  },
+  "evidence": {"buyer_behavior": false, "willingness_to_pay": null, "transaction": null, "unit_economics": null, "profitability": null, "repeatability": false, "proof_promotion": false},
   "external_action": {"authorized": false, "autonomous_outreach": false, "autonomous_spend": false, "autonomous_contracting": false, "third_party_implementation": false},
   "parallel_overlays": {
-    "money_mechanisms_run32": {"state_path": "13_MONEY_MECHANISMS_MACHINE_STATE.json", "old_wip_invalidated": false, "mutated_by_opp37_offer_engineering": false}
+    "money_mechanisms_run32": {"state_path": "13_MONEY_MECHANISMS_MACHINE_STATE.json", "old_wip_invalidated": false, "mutated_by_opp37_offer_engineering": false},
+    "portfolio_router": {"current_read_model_integrated": true, "opp37_offer_engineering_overrides_portfolio_selection": false}
   },
   "drive": {
     "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
     "test37_document_id": "1vpPVwqT1R11Siviqjgd1UWOqwkIWfUomszW8CgYl0Ec",
     "p25_p32_document_id": "1R4R3gWsPwD7ipXdIgt1H-JTX58Rblp-nhuDt1lac71s",
     "p25_p32_readback_marker": "GENERAL-BUSINESS-OPP37-P25-P32-OFFER-ENGINEERING-32OF64-NO-MARKET-PROOF",
+    "founder_rescreen_readback_marker": "GENERAL-BUSINESS-OPP37-FOUNDER-RESCREEN-NORMAL-CASHFLOW-REMOTE0-PASS",
     "readback_status": "PASS"
   },
   "self_improvement": {"candidate": "EVIDENCE_GATED_BUSINESS_PRODUCTION_ROUTER", "scope": "BUSINESS_LOCAL", "global_promotion": false, "promotion_requires": "REAL_MULTI_LANE_CONTROL_COMPARISON"}
