@@ -1,0 +1,5 @@
+{
+  "SI-0014": {"status":"READY_FOR_PILOT","cycle9_disposition":"HOLD_PROMOTION","qualifying_events_added":0,"observed_real_interruptions_added":1,"reason":"real incident observed but does not meet qualification contract"},
+  "SI-0015": {"status":"READY_FOR_PILOT","cycle9_disposition":"KEEP_READY_FOR_PILOT","engineering_controls":"PASS","real_pilot_requirement":"STILL_OPEN"},
+  "V3_REFERENCE_INGEST": {"status":"CANDIDATE_HOLD","cycle9_disposition":"HOLD_TOP_LEVEL_PROMOTION","scoped_mechanisms":"CANDIDATE_FOR_REAL_PRODUCTION_PILOTS","reason":"references and synthetic gates cannot prove net production gain"}
+}
