@@ -1,0 +1,14 @@
+{
+  "schema":"CYCLE10_MODULE_CONTRACT_PROOF_REGISTRY_v1",
+  "authority_effect":"NONE_UNTIL_PROMOTED",
+  "modules":[
+    ["C10M01","DecisionChangeContract"],["C10M02","EvidenceGapVector"],["C10M03","ExistingMechanismSatisfactionGate"],["C10M04","CrossBranchFreshnessGuard"],
+    ["C10M05","SmallestDecisiveTestRouter"],["C10M06","ProductionReturnContract"],["C10M07","RegistryReservationView"],["C10M08","MergeTimeCandidateCollisionGate"],
+    ["C10M09","PromotionEvidenceFamilyCounter"],["C10M10","ReplicationDiversityCheck"],["C10M11","FalsePositiveControlGate"],["C10M12","CandidateUtilityPruner"],
+    ["C10M13","MetaOverheadTelemetry"],["C10M14","DecisionDeltaLedger"],["C10M15","RollbackWitness"],["C10M16","LibraryReferenceProvenanceGuard"]
+  ],
+  "contract_template":"C10Mxx must fail closed on missing provenance/state/evidence and may not auto-promote current authority.",
+  "proof_template":"Each module requires positive + negative fixture proving decision-changing behavior without evidence-class inflation.",
+  "contracts":"C10C01-C10C16",
+  "proof_obligations":"C10P01-C10P16"
+}
