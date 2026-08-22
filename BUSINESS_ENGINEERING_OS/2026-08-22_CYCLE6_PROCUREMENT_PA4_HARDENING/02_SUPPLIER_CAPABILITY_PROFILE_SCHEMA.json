@@ -1,0 +1,55 @@
+{
+  "$schema": "BUSINESS_ENGINEERING_OS_SupplierCapabilityProfile_v1",
+  "supplier_identity": {
+    "legal_name": null,
+    "company_number": null,
+    "tax_clearance_verified_at": null,
+    "geographies_served": null
+  },
+  "financial_capacity": {
+    "turnover_periods": null,
+    "turnover_evidence": null,
+    "working_capital_available_eur": null,
+    "credit_facilities": null,
+    "cash_timing_constraints": null
+  },
+  "insurance": {
+    "employers_liability": null,
+    "public_liability": null,
+    "professional_indemnity": null,
+    "other": null,
+    "verified_at": null
+  },
+  "delivery_capacity": {
+    "direct_personnel": null,
+    "subcontractors": null,
+    "current_committed_capacity": null,
+    "programme_constraints": null,
+    "school_live_site_experience": null
+  },
+  "references": {
+    "similar_projects": null,
+    "reference_contacts": null,
+    "completion_evidence": null
+  },
+  "safety_and_competence": {
+    "safety_statement": null,
+    "pscs_capability": null,
+    "psdp_dependency": null,
+    "competence_declarations": null,
+    "certifications": null
+  },
+  "specialist_scope": {
+    "roofing_system_capability": null,
+    "insulation_capability": null,
+    "rooflight_ceiling_capability": null,
+    "rainwater_goods_capability": null,
+    "protected_or_traditional_fabric_capability": null
+  },
+  "verification": {
+    "status": "UNVERIFIED",
+    "sources": [],
+    "verified_at": null
+  },
+  "rule": "UNKNOWN IS NOT FAIL AND NOT PASS; BID DECISION REQUIRES REQUIREMENT-BY-REQUIREMENT JOIN TO THE COMPLETE TENDER PACK"
+}
