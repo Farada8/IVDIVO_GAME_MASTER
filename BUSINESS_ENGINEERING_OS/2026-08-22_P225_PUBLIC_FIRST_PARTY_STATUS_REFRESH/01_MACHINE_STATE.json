@@ -1,0 +1,56 @@
+{
+  "schema": "ivdivo.business.p225_public_first_party_status_refresh/1.0",
+  "date": "2026-08-22",
+  "case_id": "PROC-BALLYBUNION-8872468",
+  "resource_id": "8872468",
+  "status": "CURRENT_FIRST_PARTY_STATUS_OBSERVED_TARGET_PACK_STILL_MISSING",
+  "authority_effect": "EVIDENCE_OVERLAY_ONLY",
+  "source": {
+    "host": "www.etenders.gov.ie",
+    "class": "CURRENT_PUBLIC_FIRST_PARTY_INDEX",
+    "observed_fields": {
+      "title": "Climate Summer Works: Roof replacements and energy efficiency upgrades at St. Joseph’s Secondary School and the adjacent former Convent Building in Ballybunion, Co. Kerry.",
+      "contracting_authority": "St Joseph's Secondary School (Ballybunion)",
+      "published": "2026-08-19T10:33:23+01:00",
+      "submission_deadline": "2026-09-02T17:00:00+01:00",
+      "procedure": "Open",
+      "workspace_status": "Tender Submission",
+      "estimated_value_eur": 1600000.0
+    },
+    "complete_attachment_inventory_observed": false,
+    "complete_tender_document_bytes_observed": false,
+    "revision_addendum_graph_observed": false
+  },
+  "p225_executed": false,
+  "target_pack_acquired": false,
+  "root_a": "TARGET_PACK_NOT_ACQUIRED",
+  "root_b": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET",
+  "parent_backlog": {
+    "range": "P225-P288",
+    "count": 64,
+    "executed": 17,
+    "remaining": 47
+  },
+  "proof_frontier": {
+    "public_derived_ceiling": "E2_PLUS",
+    "artifact_plane": "PA3",
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "E4": false
+  },
+  "laws": [
+    "CURRENT_FIRST_PARTY_STATUS_NEQ_TARGET_PACK_ACQUIRED",
+    "PUBLIC_INDEX_LISTING_NEQ_AUTHORITATIVE_COMPLETE_ATTACHMENT_INVENTORY",
+    "LIVE_TENDER_STATUS_NEQ_PROCUREMENT_ELIGIBILITY",
+    "ESTIMATED_VALUE_NEQ_AVAILABLE_CONTRACT_VALUE_TO_THIS_BIDDER",
+    "DEADLINE_OBSERVED_NEQ_SUBMISSION_AUTHORIZATION"
+  ],
+  "resume_route": "PROTECT_NO_CHANGE",
+  "next_admissible_p225_inputs": [
+    "AUTHENTICATED_ETENDERS_EXPORT_8872468",
+    "USER_PROVIDED_OFFICIAL_EXPORT_OR_ZIP",
+    "ALL_CURRENT_OFFICIAL_ATTACHMENTS_PLUS_AUTHORITATIVE_INVENTORY_REVISION_ADDENDUM_LIST",
+    "NEW_FIRST_PARTY_EXACT_DOCUMENT_OR_ATTACHMENT_COORDINATE"
+  ]
+}

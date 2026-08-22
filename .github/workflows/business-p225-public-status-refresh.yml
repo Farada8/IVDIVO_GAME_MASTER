@@ -1,0 +1,45 @@
+name: Business P225 Public First-Party Status Refresh
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_P225_PUBLIC_FIRST_PARTY_STATUS_REFRESH/**'
+      - '.github/workflows/business-p225-public-status-refresh.yml'
+
+jobs:
+  first-party-status-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate bounded first-party refresh
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('.')
+          state = json.loads((root/'BUSINESS_ENGINEERING_OS/2026-08-22_P225_PUBLIC_FIRST_PARTY_STATUS_REFRESH/01_MACHINE_STATE.json').read_text())
+          model = json.loads((root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json').read_text())
+          assert state['resource_id'] == '8872468'
+          assert state['source']['class'] == 'CURRENT_PUBLIC_FIRST_PARTY_INDEX'
+          assert state['source']['observed_fields']['submission_deadline'] == '2026-09-02T17:00:00+01:00'
+          assert state['source']['observed_fields']['estimated_value_eur'] == 1600000.0
+          assert state['source']['observed_fields']['procedure'] == 'Open'
+          assert state['source']['observed_fields']['workspace_status'] == 'Tender Submission'
+          assert state['source']['complete_attachment_inventory_observed'] is False
+          assert state['source']['complete_tender_document_bytes_observed'] is False
+          assert state['p225_executed'] is False
+          assert state['target_pack_acquired'] is False
+          assert state['root_a'] == 'TARGET_PACK_NOT_ACQUIRED'
+          assert state['root_b'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
+          assert state['parent_backlog'] == {'range':'P225-P288','count':64,'executed':17,'remaining':47}
+          assert state['resume_route'] == 'PROTECT_NO_CHANGE'
+          assert model['schema'] == 'ivdivo.business.current_read_model/1.3'
+          assert model['current_execution']['completed_total_cards_inside_parent_backlog'] == 17
+          assert model['current_execution']['remaining_unexecuted_count'] == 47
+          assert model['current_roots']['ROOT_A'] == 'TARGET_PACK_NOT_ACQUIRED'
+          assert model['current_roots']['ROOT_B'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
+          assert model['resume_control']['current_route'] == 'PROTECT_NO_CHANGE'
+          print('P225 PUBLIC FIRST-PARTY STATUS REFRESH: PASS — status observed, pack still not acquired, 17/64 unchanged')
+          PY
