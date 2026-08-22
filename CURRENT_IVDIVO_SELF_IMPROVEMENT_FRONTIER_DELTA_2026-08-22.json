@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-22",
+  "status": "CURRENT_SELF_IMPROVEMENT_FRONTIER_DELTA_NOT_ENGINE_AUTHORITY",
+  "purpose": "Fresh machine-readable overlay above CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json. It reconciles post-v2 Cycle10 convergence, library normalization and real-evidence gates without promoting v3, allocating a new SI ID, or replacing the governing v2 engine.",
+  "authority": {
+    "governing_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+    "engine_status": "V2_VERIFIED_CURRENT",
+    "v3_status": "CANDIDATE_HOLD",
+    "new_global_si_id": null,
+    "base_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+    "router": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md"
+  },
+  "cycle10_convergence": {
+    "status": "PERSISTENCE_CLOSURE_PASS",
+    "convergence_pr": 235,
+    "convergence_merge": "be23512b715f587d8d3511f9640722491e1b5214",
+    "closure_pr": 248,
+    "closure_merge": "18ee6482450bd3cd4b8617b9a36c85367023ec0d",
+    "cycle10_prompts_executed": 32,
+    "cycle10r_prompts_executed": 32,
+    "cycle10r_next_prompts_designed": 64,
+    "next64_policy": "DEPENDENCY_INDEXED_BACKLOG_NOT_AUTO_WIP",
+    "authority_promotion": false,
+    "evidence_ceiling": "PERSISTENCE_AND_DETERMINISTIC_ENGINEERING_ONLY_NOT_HUMAN_PROVIDER_LITERARY_LEGAL_MARKET_PROOF"
+  },
+  "library_normalization_n09_n16": {
+    "status": "N09_N16_CROSS_STORE_PASS",
+    "github_pr": 292,
+    "merge_commit": "8302d10c67b1f43f8f5f97c975d720e8fc352bda",
+    "source_registry_schema": "1.5",
+    "physical_entries_observed": 35,
+    "authenticated_raw_fetches": 35,
+    "sha256_coverage": "35_OF_35",
+    "valid_physical_entries": 26,
+    "broken_or_placeholder_entries": 9,
+    "canonical_works": 24,
+    "work_families": 23,
+    "exact_duplicate_detection": "PASS",
+    "quarantine": "PASS",
+    "source_passports": "PASS_DERIVED_REFERENCE_ONLY",
+    "authority_effect": "NONE_SELF_IMPROVEMENT_V2_REMAINS_VERIFIED_CURRENT"
+  },
+  "si0014_recovery_evidence": {
+    "status": "REAL_EVIDENCE_PARTIAL_HOLD",
+    "physical_interruption_incidents": 1,
+    "required_incidents": 3,
+    "distinct_project_recovery_slices": 2,
+    "required_distinct_projects": 2,
+    "false_resume_observed": 0,
+    "promotion_authorized": false,
+    "next_gate": "TWO_MORE_NATURALLY_OCCURRING_INTERRUPTION_RECOVERY_EVENTS_WITH_FALSE_RESUME_ACCOUNTING"
+  },
+  "si0015_routing_calibration": {
+    "status": "SOURCE_GROUNDED_ENGINEERING_PILOT_HOLD",
+    "real20_engineering_result": "20_OF_20_MATCHED_EXPECTED_LABELS_FP0_FN0",
+    "independent_human_expected_label_review": "NOT_PROVEN",
+    "live_operational_routing_telemetry": "NOT_PROVEN",
+    "promotion_authorized": false,
+    "next_gate": "INDEPENDENT_EXPECTED_LABEL_REVIEW_PLUS_REAL_ROUTING_TELEMETRY"
+  },
+  "book_intelligence": {
+    "status": "ACTIVE_GATEWAY_PILOT1_PASS",
+    "pilot1": "B03_SMITH_REAL_PROVENANCE_FRESHNESS_ROUTING_PASS",
+    "observed_gain": "PREVENTED_DUPLICATE_CH25_DRAFT_AND_RECOVERED_CURRENT_B03_FRONTIER",
+    "universal_promotion": false,
+    "next_gate": "SECOND_INDEPENDENT_PROJECT_OR_DOMAIN_PILOT"
+  },
+  "recent_self_improvement_learnings": [
+    "TEST_PASS_NEQ_ACCEPTABLE_PATCH",
+    "MERGED_NEQ_PERMANENTLY_CURRENT",
+    "FRESHNESS_CAN_SUPERSEDE_A_VALID_REPAIR_AFTER_MERGE",
+    "PROJECT_SPECIFIC_AUTHORITY_OUTRANKS_AGGREGATE_ROUTER",
+    "REPRESENTATION_QUALITY_IS_PART_OF_PRODUCTION_ACCEPTANCE",
+    "WRITE_CLAIM_NEQ_PERSISTED_ARTIFACT_UNTIL_READBACK"
+  ],
+  "current_meta_wip": {
+    "primary_meta_integration": "CURRENT_FRONTIER_RECONCILIATION_ONLY",
+    "bounded_pilot_1": "SI0014_NATURAL_RECOVERY_EVENT_ACCUMULATION",
+    "bounded_pilot_2": "SI0015_INDEPENDENT_ROUTING_CALIBRATION",
+    "book_intelligence_second_pilot": "QUEUED_NOT_PARALLEL_AUTO_WIP",
+    "wip_guard": "ONE_PRIMARY_META_INTEGRATION_PLUS_UP_TO_TWO_INDEPENDENT_BOUNDED_PILOTS"
+  },
+  "production_priority_guard": {
+    "current_portfolio_frontier": "B03_SMITH_FOUNDER_LOCKED_CH01_CH29_MANUSCRIPT_ASSEMBLY_COPY_FORMAT_EXPORT",
+    "story_development_reopen": false,
+    "meta_work_may_not_starve_primary_production": true
+  },
+  "next_actions": [
+    "KEEP_V2_AS_CURRENT_AND_DO_NOT_CREATE_V3_FOR_ACTIVITY",
+    "ACCUMULATE_TWO_MORE_NATURAL_SI0014_RECOVERY_EVENTS_WHEN_THEY_OCCUR",
+    "OBTAIN_INDEPENDENT_EXPECTED_LABEL_REVIEW_AND_REAL_ROUTING_TELEMETRY_FOR_SI0015",
+    "RUN_SECOND_INDEPENDENT_BOOK_INTELLIGENCE_PILOT_WHEN_A_REAL_REFERENCE_DECISION_REQUIRES_IT",
+    "RETURN_DEFAULT_EXECUTION_TO_HIGHEST_INFORMATION_PRIMARY_PRODUCTION_OBLIGATION"
+  ],
+  "forbidden": [
+    "AUTO_PROMOTE_V3",
+    "ALLOCATE_NEW_SI_ID_FROM_CYCLE_COUNT_OR_TEST_COUNT",
+    "COUNT_SOURCE_GROUNDED_MODEL_ADJUDICATION_AS_HUMAN_SIGNAL",
+    "COUNT_SYNTHETIC_INTERRUPTION_AS_NATURAL_RECOVERY_EVENT",
+    "COUNT_BOOK_SOURCE_AGREEMENT_AS_REAL_PROJECT_IMPROVEMENT",
+    "START_ANOTHER_32_TO_64_META_LOOP_WITHOUT_A_NEW_BOTTLENECK"
+  ]
+}
