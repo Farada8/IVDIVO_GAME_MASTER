@@ -1,0 +1,60 @@
+name: General Business P-EW10 SAFE Contract Maturity
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/34_SAFE_PEW10_CONTRACT_MATURITY/**'
+      - '.github/workflows/general-business-pew10-safe-contract-maturity.yml'
+
+jobs:
+  safe-contract-maturity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run live SAFE upstream maturity preflight
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/34_SAFE_PEW10_CONTRACT_MATURITY/live_preflight.py \
+            --out BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/34_SAFE_PEW10_CONTRACT_MATURITY/runtime/pew10_result.json
+
+      - name: Enforce proof and commercial boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/34_SAFE_PEW10_CONTRACT_MATURITY/runtime/pew10_result.json')
+          r = json.loads(p.read_text(encoding='utf-8'))
+          assert r['rfc_exists'] is True
+          assert r['has_machine_readable_requirement'] is True
+          assert r['technical_route'] in {
+              'PROOF_ELIGIBLE_M1_ONLY',
+              'WATCH_SCHEMA_NOT_STABLE_ENOUGH_FOR_CONFORMANCE_PROOF',
+          }
+          if r['contract_ready_for_independent_conformance_proof']:
+              assert r['technical_route'] == 'PROOF_ELIGIBLE_M1_ONLY'
+          else:
+              assert r['technical_route'] == 'WATCH_SCHEMA_NOT_STABLE_ENOUGH_FOR_CONFORMANCE_PROOF'
+          assert r['generic_agent_observability_wedge'] == 'KILL_SUBSTITUTED'
+          assert r['buyer_demand'] == 'UNPROVEN'
+          assert r['wtp'] == 'UNKNOWN'
+          assert r['price'] is None
+          assert r['transactions'] == 0
+          assert r['profitability'] == 'UNPROVEN'
+          assert r['wip_promotion'] is False
+          assert r['external_action_authorized'] is False
+          print('P-EW10 CLASSIFICATION:', r['technical_route'])
+          print('SCHEMA ARTIFACTS:', r['normative_looking_schema_artifacts'])
+          print('RFC EXPLICIT FORMAT TERMS:', r['explicit_format_terms_in_rfc'])
+          print('ISSUE #5:', r['issue_5'])
+          PY
+
+      - name: Upload P-EW10 evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: pew10-safe-contract-maturity-evidence
+          path: BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/34_SAFE_PEW10_CONTRACT_MATURITY/runtime/pew10_result.json

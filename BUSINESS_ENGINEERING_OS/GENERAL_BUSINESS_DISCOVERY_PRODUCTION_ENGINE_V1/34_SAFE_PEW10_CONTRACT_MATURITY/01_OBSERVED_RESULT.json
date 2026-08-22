@@ -1,0 +1,41 @@
+{
+  "schema": "ivdivo.general_business.safe_pew10_observed_result/1.0",
+  "observed_at": "2026-08-22T13:38:50Z",
+  "workflow_run_id": 32576356375,
+  "artifact_id": 9476643061,
+  "artifact_digest": "sha256:af845f384befc68a86da12cc7ad9720c8fdf2eb4eaca8a0f37468ec81280e5d2",
+  "upstream_repo": "OpenSecureAIAlliance/RFCs",
+  "upstream_head": "4ec7660569f41224c6bb8a1311c053e285a4d53d",
+  "upstream_blob_paths": [
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "rfc-safe-proposal.md"
+  ],
+  "machine_readable_mentions": 2,
+  "normative_looking_schema_artifacts": [],
+  "explicit_canonical_format_adopted": false,
+  "explicit_format_terms_in_rfc": {
+    "json_schema": false,
+    "ocsf": false,
+    "opentelemetry": false,
+    "protobuf": false,
+    "stix": false
+  },
+  "issue_5": {
+    "state": "open",
+    "says_requirements_name_no_format": true,
+    "title": "Specify a machine-readable baseline for the Evidence Preservation list: map it to OpenTelemetry GenAI semantic conventions"
+  },
+  "contract_ready_for_independent_conformance_proof": false,
+  "technical_route": "WATCH_SCHEMA_NOT_STABLE_ENOUGH_FOR_CONFORMANCE_PROOF",
+  "generic_agent_observability_wedge": "KILL_SUBSTITUTED",
+  "future_possible_wedge": "SAFE_SPECIFIC_EXCHANGE_COMPATIBILITY_COMPLETENESS_OR_REGRESSION_ONLY_IF_CANONICAL_CONTRACT_EMERGES",
+  "buyer_demand": "UNPROVEN",
+  "wtp": "UNKNOWN",
+  "price": null,
+  "transactions": 0,
+  "profitability": "UNPROVEN",
+  "wip_promotion": false,
+  "external_action_authorized": false
+}
