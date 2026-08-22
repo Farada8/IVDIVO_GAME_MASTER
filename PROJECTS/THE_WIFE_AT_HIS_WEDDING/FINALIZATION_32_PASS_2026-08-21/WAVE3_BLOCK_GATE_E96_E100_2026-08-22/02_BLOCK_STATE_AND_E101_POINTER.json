@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "project": "THE WIFE AT HIS WEDDING",
+  "project_id": "D01",
+  "date": "2026-08-22",
+  "status": "E96_E100_WORKING_COMPLETE_BLOCK_PASS_GO_TO_E101",
+  "founder_locked": false,
+  "runtime_spoken_words": {"E96":1138,"E97":1134,"E98":1156,"E99":1116,"E100":1214},
+  "runtime_total": 5758,
+  "block_red_team": {"fatal":0,"major":0,"medium":4},
+  "block_gate_github": "WAVE3_BLOCK_GATE_E96_E100_2026-08-22/01_E96_E100_BLOCK_REGRESSION_v1.0.md",
+  "block_gate_commit": "1c6ac03a2e70a8fe0595fedd6c597c7e51c0790c",
+  "drive_folder_id": "1JoX4WYNcq1X6C9mvfTaEBpDzpwD7wvDx",
+  "drive_gate_id": "1o-QiFDcyYTDo7cq6pipwyHi688ZF0gPcKdjxhX2MQjs",
+  "drive_gate_revision": "AIroW35QCCkCXu51vshE3HTZ4g_ZIHw95kAGusdY2jH_4-axTG72E3qysccsd0Ms6lTg518Jc71Z7imNdvXctRRSbjteYQBrZusU-IQttg4",
+  "identity_layer_chain": "TEEN_BODY_TO_GREENHOUSE_TO_COMPLIANCE_TO_BRIDE_TO_MATERNAL_PATIENT_TO_CIVIL_STATUS_PROBLEM",
+  "protected_boundaries": [
+    "BODY_NE_CIVIL_RECORD",
+    "BODY_NE_MARRIAGE",
+    "BODY_NE_MATERNITY",
+    "HISTORICAL_MARRIAGE_NE_PRESENT_ROMANTIC_RESTORATION",
+    "LILY_NE_EVIDENCE",
+    "MARA_NURSERY_CARE_NE_MATERNITY",
+    "ADRIAN_MEMORY_NE_IDENTITY_AUTHORITY"
+  ],
+  "medium_watches": [
+    "CUMULATIVE_EVIDENCE_PROCEDURE_DENSITY",
+    "MARA_FORENSIC_ACKNOWLEDGEMENT_CORRECTION_CADENCE",
+    "JURISDICTION_SPECIFIC_LEGAL_MEDICAL_PLAUSIBILITY_UNVERIFIED",
+    "PRESERVE_EVELYN_INDEPENDENT_AGENCY"
+  ],
+  "external_gates": {
+    "human_signal": "NOT_RUN",
+    "jurisdiction_specific_legal_review": "NOT_RUN",
+    "real_listener_audio_validation": "NOT_RUN",
+    "market_validation": "NOT_CLAIMED"
+  },
+  "highest_unblocked_obligation": "E101_CIVIL_STATUS_PROBLEM_CONTRACT_AND_DRAFT",
+  "next_episode_contract": {
+    "episode":"E101",
+    "title":"THE PERSON WITH NO ORIGINAL NUMBER",
+    "required_problem":"STRONG_HISTORICAL_BODY_CONTINUITY_BUT_DEFECTIVE_OR_MISSING_FOUNDATIONAL_CIVIL_RECORD",
+    "required_present_life_leverage":"PROFESSIONAL_LICENSING_CLIENT_AND_DOCUMENT_VALIDITY_CONSEQUENCES_PROPORTIONATE_NOT_TOTAL_COLLAPSE",
+    "required_rule":"DRAMATIZED_REMEDY_POSSIBILITIES_NE_JURISDICTION_SPECIFIC_LAW",
+    "institution_guard":"NO_FRAUD_LABEL_BY_NARRATIVE_CONVENIENCE",
+    "character_turn":"COMPLETE_HISTORICAL_RECONSTRUCTION_NO_LONGER_EQUALS_USABLE_PRESENT_IDENTITY",
+    "required_cliff":"E102_ORDINARY_LIFE_FRICTION_NOT_NEW_CONSPIRACY"
+  },
+  "next_action":"FRESHNESS_GATE_THEN_EXECUTE_E101"
+}
