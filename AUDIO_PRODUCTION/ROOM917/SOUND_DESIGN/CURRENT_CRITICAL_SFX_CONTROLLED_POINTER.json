@@ -1,0 +1,57 @@
+{
+  "schema_version": "room917.current_critical_sfx_controlled_pointer/1.0",
+  "updated": "2026-08-22T18:36:00+01:00",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "CONTROLLED_RECOVERY_BYTES_PRESENT_24_OF_24_HASH_MATCH_HUMAN_BINDING_OPEN",
+  "authority": {
+    "receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json",
+    "receipt_schema": "room917.critical_sfx_synthetic_canary_receipt/2.1",
+    "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py",
+    "seed": 91720260822,
+    "rng_policy": "PER_CANDIDATE_SHA256_DERIVED_SEED"
+  },
+  "recovery": {
+    "candidate_count": 24,
+    "authoritative_hash_matches": 24,
+    "hash_mismatches": 0,
+    "format": "48000_HZ_PCM24_STEREO",
+    "provider_calls": 0,
+    "paid_synthesis_calls": 0,
+    "production_binding": false
+  },
+  "controlled_drive": {
+    "folder_id": "1J1WuxvcP4gFl-uGeGYVohArBZHSAaEr8",
+    "folder_name": "ROOM917_CRITICAL_SFX_CANARIES_CONTROLLED_v2_1",
+    "bundle_file_id": "1OnAOxOEHt-CH-3Fikm3iSzrkk_okcAiC",
+    "bundle_filename": "ROOM917_E01_CRITICAL_SFX_CANARIES_CONTROLLED_RECOVERY_v1.zip",
+    "bundle_size_bytes": 6734063,
+    "bundle_sha256": "55c658feb61405ab23cbaa729e7a089d51c3ddc67e53a191a872a5e0f14e26a3",
+    "bundle_readback_sha256_verified": true,
+    "bundle_crc": "PASS",
+    "bundle_wav_count": 24,
+    "bundle_total_entries": 25,
+    "manifest_file_id": "1e5UQZx9zl1s7bm78pTaKaD5aSxKUkKXg",
+    "manifest_filename": "ROOM917_E01_CRITICAL_SFX_CONTROLLED_RECOVERY_MANIFEST_v1.json"
+  },
+  "existing_blind_subset": {
+    "drive_file_id": "1f_CyKbptuLinX35fln6sB8klZOEpO7Lc",
+    "filename": "ROOM917_SFX_S13_S14_S17_S19_BLIND_v2.zip",
+    "sha256": "8b66af4cf3a3fe728e476d83a9227be1d4bd1e3576f748212acaafefe80ebfdc",
+    "machine_preflight": "PASS_WITH_OBSERVATIONS_NO_HUMAN_SELECTION"
+  },
+  "required_before_binding": [
+    "BLIND_HUMAN_AUDITION",
+    "S11_S14_PAIRING_CHECK",
+    "S13_COUNTABILITY_HUMAN_CHECK",
+    "S17_VOICE_UNDERLAY_CHECK",
+    "S19_TWO_PART_HUMAN_CHECK",
+    "MONO_CHECK",
+    "PHONE_PROXY_CHECK",
+    "IDENTITY_GATE_PASS"
+  ],
+  "human_firewall": "BYTE_RECOVERY_AND_MACHINE_QC_DO_NOT_COUNT_AS_HUMAN_LISTEN_OR_AUDIO_CANON_APPROVAL",
+  "hard_law": "CONTROLLED_BYTES_EXISTENCE_DOES_NOT_AUTHORIZE_PATCHING_RELEASE_OR_SEASON_SCALE",
+  "next": "USE_CONTROLLED_BUNDLE_FOR_BLIND_AUDITION_AND_IDENTITY_GATE_WHEN_HUMAN_EVIDENCE_IS_AVAILABLE; CONTINUE_INDEPENDENT_READY_FRONTIERS meanwhile"
+}
