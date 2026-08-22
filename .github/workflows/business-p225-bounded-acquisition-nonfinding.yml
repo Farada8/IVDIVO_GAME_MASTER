@@ -1,0 +1,62 @@
+name: Business P225 Bounded Acquisition Nonfinding
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_P225_BOUNDED_ACQUISITION_NONFINDING/**'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json'
+      - '.github/workflows/business-p225-bounded-acquisition-nonfinding.yml'
+
+jobs:
+  bounded-acquisition-nonfinding-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate nonfinding does not become P225 execution
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('.')
+          base = root / 'BUSINESS_ENGINEERING_OS'
+          state = json.loads((base/'2026-08-22_P225_BOUNDED_ACQUISITION_NONFINDING/01_MACHINE_STATE.json').read_text())
+          cert = (base/'2026-08-22_P225_BOUNDED_ACQUISITION_NONFINDING/00_NO_LOOP_ACQUISITION_CERTIFICATE.md').read_text()
+          overlay = (base/'CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md').read_text()
+          read_model = json.loads((base/'CURRENT_BUSINESS_READ_MODEL.json').read_text())
+
+          assert state['schema'] == 'ivdivo.business.p225_bounded_acquisition_nonfinding/1.0'
+          assert state['status'] == 'BOUNDED_NONFINDING_PROTECT_NO_CHANGE'
+          assert state['authority_effect'] == 'NONE'
+          assert state['p225_executed'] is False
+          assert state['target_pack_acquired'] is False
+          assert state['root_a'] == 'TARGET_PACK_NOT_ACQUIRED'
+          assert state['root_b'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
+          assert state['p235_actual_designation_created'] is False
+          assert len(state['searched_surfaces']) == 3
+          assert len(state['no_loop_coordinates']) == 3
+          assert 'BOUNDED_NONFINDING_NEQ_P225_EXECUTION' in state['laws']
+
+          assert state['parent_backlog'] == {
+              'range':'P225-P288','count':64,'executed':17,'remaining':47
+          }
+          ex = read_model['current_execution']
+          assert ex['parent_backlog_count'] == 64
+          assert ex['completed_total_cards_inside_parent_backlog'] == 17
+          assert ex['remaining_unexecuted_count'] == 47
+          assert ex['remaining_ranges'] == ['P225-P256','P273-P287']
+          assert read_model['current_roots']['ROOT_A'] == 'TARGET_PACK_NOT_ACQUIRED'
+          assert read_model['current_roots']['ROOT_B'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
+
+          assert 'BUSINESS-P225-BOUNDED-NONFINDING-NOLOOP-8872468-V1' in cert
+          assert 'BOUNDED_NONFINDING != P225_EXECUTION' in cert
+          assert 'P225_EXECUTED = FALSE' in cert
+          assert 'BOUNDED_NONFINDING_NEQ_P225_EXECUTION' in overlay
+          assert 'Parent backlog accounting remains `P225–P288 = 17/64 EXECUTED; 47 REMAINING`.' in overlay
+          assert '`ROOT_A = TARGET_PACK_NOT_ACQUIRED`' in overlay
+          assert '`ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET`' in overlay
+
+          print('P225 bounded nonfinding: PASS — no authority promotion, no repeated-search license')
+          PY
