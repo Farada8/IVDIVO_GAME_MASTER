@@ -1,0 +1,81 @@
+name: General Business P-EW05 WIP3 Decision
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/03_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_DPP_REGISTRY_PREFLIGHT/03_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_MONETIZATION_LADDER_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/21_PEW05_WIP3_ENGINEERING_DECISION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/22_PEW05_WIP3_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md'
+      - '.github/workflows/general-business-pew05-wip3-decision.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run monetization ladder regression
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_monetization_ladder.py
+      - name: Validate P-EW05 evidence and anti-promotion gates
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          art=json.loads((root/'19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/03_MACHINE_STATE.json').read_text())
+          dpp=json.loads((root/'20_DPP_REGISTRY_PREFLIGHT/03_MACHINE_STATE.json').read_text())
+          money=json.loads((root/'20_MONETIZATION_LADDER_STATE.json').read_text())
+          p5=json.loads((root/'22_PEW05_WIP3_MACHINE_STATE.json').read_text())
+          doc=(root/'21_PEW05_WIP3_ENGINEERING_DECISION.md').read_text()
+          current=Path('BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md').read_text()
+
+          assert art['status']=='ENGINEERING_PASS_CI_SUCCESS_M1_ELIGIBLE_NOT_WTP_PROVEN'
+          assert art['engineering_proof']['dedicated_ci_run']==32561576738
+          assert art['engineering_proof']['dedicated_ci']=='SUCCESS'
+          assert art['proof_boundary']['wtp_proven'] is False
+          assert art['external_action_authorized'] is False
+
+          assert dpp['status']=='ENGINEERING_PASS_CI_SUCCESS_M1_ELIGIBLE_NOT_WTP_PROVEN'
+          assert dpp['engineering_proof']['controlling_pr']==375
+          assert dpp['engineering_proof']['dedicated_ci_run']==32562001036
+          assert dpp['engineering_proof']['dedicated_ci']=='SUCCESS'
+          assert dpp['proof_boundary']['wtp_proven'] is False
+          assert dpp['external_action_authorized'] is False
+
+          routes=money['current_routes']
+          assert set(routes)=={'OW-01','CF-01','CF-03'}
+          assert all(routes[k]['route'].startswith('M1_') for k in routes)
+          assert all(routes[k]['paid_diagnostic_transactions']==0 for k in routes)
+          assert all(routes[k]['wtp'] is None for k in routes)
+          assert money['p_ew05_decision']['all_three_m1'] is True
+          assert money['p_ew05_decision']['any_m2'] is False
+          assert money['p_ew05_decision']['market_winner_proven'] is False
+          assert money['p_ew05_decision']['sequence_is_market_ranking'] is False
+          assert money['p_ew05_decision']['next_bounded_wtp_test_candidate']=='OW-01'
+          assert money['external_action']['authorized'] is False
+          assert money['proof_boundary']['transactions']==0
+          assert money['proof_boundary']['wtp'] is None
+
+          assert p5['decision']['all_three_m1'] is True
+          assert p5['decision']['any_m2'] is False
+          assert p5['decision']['market_winner_proven'] is False
+          assert p5['decision']['next_sequence_is_market_ranking'] is False
+          assert p5['proof_boundary']['wtp'] is None
+          assert p5['proof_boundary']['transactions']==0
+          assert p5['proof_boundary']['external_action_authorized'] is False
+          assert p5['drive']['semantic_readback'] is True
+
+          assert 'ENGINEERING_PASS_ALL != MARKET_WINNER' in doc
+          assert 'M1 != M2' in doc
+          assert 'TEST_SEQUENCE != MARKET_WINNER' in current
+          assert 'EXTERNAL_ACTION_AUTHORIZED = FALSE' in current
+          assert 'P-EW05 = INTERNAL_DECISION_ALL_M1' in current
+          print('P-EW05_WIP3_DECISION: PASS')
+          PY
+      - name: Compile business runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime

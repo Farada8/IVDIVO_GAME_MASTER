@@ -18,7 +18,7 @@ jobs:
           python-version: '3.12'
       - name: Run calibrated scanner canaries
         run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/tests/test_scanner.py
-      - name: Validate P-EW02 durable closure and CURRENT frontier
+      - name: Validate P-EW02 durable closure under current frontier
         run: |
           python - <<'PY'
           import json
@@ -49,8 +49,11 @@ jobs:
           assert all(x['oai_feed_evidence'] == 'UNKNOWN' for x in obs['observations'])
           assert '8 false-negative findings' in result
           assert '2026-08-22.2' in spec
-          assert 'P-EW02 = EXECUTED / PASS_TEST' in current
-          assert 'P-EW03 = NEXT' in current
-          assert 'CURRENT-GENERAL-BUSINESS-PEW02-CLOSED-PEW03-NEXT-20260822' in current
-          print('P-EW02 CLOSURE: PASS — PR353/CI7, 4 UCP200, ruleset .2, Drive PASS, P-EW03 next')
+          assert 'P-EW02 = PASS_TEST' in current
+          assert 'P-EW03 = PASS_ENGINEERING' in current
+          assert 'P-EW04 = PASS_ENGINEERING' in current
+          assert 'P-EW05 = INTERNAL_DECISION_ALL_M1' in current
+          assert 'CURRENT-GENERAL-BUSINESS-PEW05-ALL-M1-OW01-NEXT-TEST-NO-MARKET-WINNER-20260822' in current
+          assert 'EXTERNAL_ACTION_AUTHORIZED = FALSE' in current
+          print('P-EW02 CLOSURE: PASS — durable PR353/CI7 evidence preserved under P-EW05 frontier')
           PY
