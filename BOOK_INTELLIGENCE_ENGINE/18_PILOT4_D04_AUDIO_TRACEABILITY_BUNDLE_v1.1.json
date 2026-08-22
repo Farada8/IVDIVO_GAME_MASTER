@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.1",
+  "pilot_id": "BOOK_INTELLIGENCE_PILOT4_D04_AUDIO",
+  "mode": "PROSPECTIVE_REAL_PROJECT_PROCESS_VALIDATION",
+  "project_id": "D04_SEVEN_NIGHTS_BEFORE_CODE_BLUE",
+  "nodes": [
+    {"id":"SRC_ITU_BS1116","type":"SOURCE","ref":"OPEN-ITU-BS1116-3"},
+    {"id":"SEC_EXPERIMENTAL_DESIGN","type":"SECTION","ref":"Annex 1 sections 2, 3.3, 4, 8.4, 10.4-11"},
+    {"id":"CLAIM_BIAS_CONTROL","type":"CLAIM","statement":"Order, listener-panel size, blinded/random assignment, listening level and statistical/reporting scope affect subjective-audio evidence quality."},
+    {"id":"MECH_LISTENER_SCREEN_CONTROL","type":"MECHANISM","mechanisms":["ORDER_COUNTERBALANCE","REPLICATE_BEFORE_RELIABLE","FIX_LEVEL_WITHIN_SESSION","EVIDENCE_SCOPE_LABEL"]},
+    {"id":"ADAPTER_AUDIO","type":"ADAPTER","domain":"AUDIO"},
+    {"id":"APP_D04_G4","type":"PROJECT_APPLICATION","target":"D04 G4 NORMAL vs SECOND TRANSFER human screen"},
+    {"id":"TEST_V2_DESIGN","type":"TEST","ref":"AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_PROTOCOL_v2.json"},
+    {"id":"RESULT_PROCESS_GAIN","type":"RESULT","result":"PASS_REAL_PROJECT_PROCESS_GAIN_HUMAN_AUDIO_RESULT_PENDING"},
+    {"id":"LEARNING_NO_SINGLE_LISTENER_RELIABILITY","type":"LEARNING","statement":"A single fixed-order forced-choice listener session cannot close a reusable reliable-perception gate."},
+    {"id":"RULE_SCOPE_PERCEPTUAL_EVIDENCE","type":"ENGINE_RULE","statement":"Human perceptual gates require evidence collection designed to match the strength of the claim; method quality is audited before result promotion."}
+  ],
+  "edges": [
+    {"from":"SRC_ITU_BS1116","to":"SEC_EXPERIMENTAL_DESIGN","relation":"CONTAINS"},
+    {"from":"SEC_EXPERIMENTAL_DESIGN","to":"CLAIM_BIAS_CONTROL","relation":"SUPPORTS"},
+    {"from":"CLAIM_BIAS_CONTROL","to":"MECH_LISTENER_SCREEN_CONTROL","relation":"ABSTRACTS_TO"},
+    {"from":"MECH_LISTENER_SCREEN_CONTROL","to":"ADAPTER_AUDIO","relation":"ROUTED_THROUGH"},
+    {"from":"ADAPTER_AUDIO","to":"APP_D04_G4","relation":"APPLIED_TO"},
+    {"from":"APP_D04_G4","to":"TEST_V2_DESIGN","relation":"CHANGED_TEST_DESIGN"},
+    {"from":"TEST_V2_DESIGN","to":"RESULT_PROCESS_GAIN","relation":"PRODUCED"},
+    {"from":"RESULT_PROCESS_GAIN","to":"LEARNING_NO_SINGLE_LISTENER_RELIABILITY","relation":"SUPPORTS_LEARNING"},
+    {"from":"LEARNING_NO_SINGLE_LISTENER_RELIABILITY","to":"RULE_SCOPE_PERCEPTUAL_EVIDENCE","relation":"CANDIDATE_RULE"}
+  ],
+  "audit": {
+    "node_count": 10,
+    "edge_count": 9,
+    "orphan_edges": 0,
+    "traceable_source_to_result": true,
+    "prospective": true,
+    "human_audio_result": "PENDING_EXTERNAL",
+    "story_changed": false,
+    "provider_calls": 0
+  },
+  "boundary": "This bundle validates the process repair and Book Intelligence routing, not the perceptual success of the D04 cue and not ITU compliance."
+}
