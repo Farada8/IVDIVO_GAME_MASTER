@@ -1,8 +1,9 @@
 {
-  "schema_version": "ivdivo.business.cycle5_public_artifact/1.0",
+  "schema_version": "ivdivo.business.cycle5_public_artifact/1.1",
   "date": "2026-08-22",
-  "status": "RUN32_EXECUTED_PERSISTENCE_AND_CI_PENDING",
+  "status": "RUN32_EXECUTED_DRIVE_READBACK_PASS_PARALLEL_MAIN_CYCLE5_SUPERSEDED_DIRECT_INTEGRATION_REPLICATION_PROVENANCE",
   "base_main": "e41408aec56839585bfcff9a0fbfb0224cada25d",
+  "parallel_main_after_run": "470a8aea93385ef8624b47688dbf4cf21090c058",
   "branch": "business-engineering-os-cycle5-public-artifact-run32-20260822",
   "raw_library_drive": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
   "library": {"physical":78,"valid":68,"unique_valid_hashes":58,"duplicate_groups":8,"broken_placeholders":5,"canonical_unique_works":null},
@@ -18,5 +19,7 @@
   "new_si_id": false,
   "external_proof": {"human_signal":false,"buyer_wtp":false,"payment":false,"profitability":false,"contract":false},
   "drive_folder": "1BcgDRVluKjpU86EUZICZkj8VamWlcIo5",
-  "next_gate": "GITHUB_DRIVE_READBACK_CI_FRESH_MAIN_THEN_PREPARE_HUMAN_VALIDATION_PACKETS_NO_SEND"
+  "drive_readback": {"folder_six_docs":true,"run32_marker":true,"local_24_of_24_marker":true,"next64_not_executed_marker":true,"no_outreach_marker":true},
+  "parallel_disposition": "DO_NOT_FORCE_MERGE_FULL_PACKAGE; SALVAGE_ONLY_UNIQUE_REPLICATION_AND_ADVERSARIAL_DELTA_ON_FRESH_MAIN",
+  "next_gate": "FRESH_MAIN_REPLICATION_SALVAGE_THEN_CURRENT_PA3_TO_PA4_PROCUREMENT_HARDENING"
 }
