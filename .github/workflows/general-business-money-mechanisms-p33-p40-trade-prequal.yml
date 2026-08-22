@@ -1,0 +1,48 @@
+name: General Business Money Mechanisms P33-P40 Trade Prequal
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_AI_WORKFLOW_P33_P40_EXECUTION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/32_AI_WORKFLOW_P33_P40_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/33_AI_WORKFLOW_P33_P40_SOURCE_LEDGER.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime/trade_inquiry_prequal.py'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_trade_inquiry_prequal.py'
+      - '.github/workflows/general-business-money-mechanisms-p33-p40-trade-prequal.yml'
+  workflow_dispatch:
+
+jobs:
+  p33-p40-trade-prequal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependency
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Run trade prequalification canaries
+        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_trade_inquiry_prequal.py
+      - name: Verify evidence ceiling and R&D status
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/32_AI_WORKFLOW_P33_P40_STATE.json')
+          s=json.loads(p.read_text())
+          assert s['status']=='R_AND_D_CANDIDATE_NOT_ACTIVE_WIP'
+          assert s['run']['executed']==8
+          assert s['run']['pass_engineering']==8
+          assert s['run']['market_proof_created'] is False
+          assert s['synthetic_benchmark']['observed'] is False
+          assert s['synthetic_benchmark']['real_time_saving_proven'] is False
+          assert s['product_spec']['price'] is None
+          assert s['product_spec']['wtp'] is None
+          assert s['product_spec']['recurring_revenue_proven'] is False
+          assert s['product_spec']['software_candidate'] is False
+          assert s['evidence']['real_inquiries_tested']==0
+          assert s['evidence']['transactions']==0
+          assert s['evidence']['external_action_authorized'] is False
+          assert s['alternatives']['generic_crm_positioning']=='REJECTED'
+          print('P33-P40 evidence ceiling: PASS')
+          PY

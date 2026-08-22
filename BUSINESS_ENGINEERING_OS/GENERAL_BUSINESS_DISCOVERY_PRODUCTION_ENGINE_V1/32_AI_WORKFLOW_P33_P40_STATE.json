@@ -1,0 +1,14 @@
+{
+  "schema":"ivdivo.business.money_mechanisms_ai_workflow_p33_p40/1.0",
+  "date":"2026-08-22",
+  "status":"R_AND_D_CANDIDATE_NOT_ACTIVE_WIP",
+  "workflow":"TRADE_INQUIRY_TO_SCOPE_PREQUALIFICATION_TO_QUOTE_PREP",
+  "run":{"prompts":["P33","P34","P35","P36","P37","P38","P39","P40"],"executed":8,"pass_engineering":8,"market_proof_created":false},
+  "prototype":{"type":"DETERMINISTIC_RULE_BASED_PREQUALIFICATION","production_connected":false,"binding_auto_quote":false,"routes":["NEED_MORE_INFO","SITE_SURVEY_REQUIRED","OUT_OF_SCOPE_SPECIALIST","HOLD_OUTSIDE_AREA","HOLD_CONSENT_OR_AUTHORITY","PREQUALIFIED_FOR_SURVEY_QUOTE_PREP"]},
+  "synthetic_benchmark":{"manual_base_minutes":12.0,"assisted_base_minutes":3.0,"observed":false,"real_time_saving_proven":false,"minimum_real_paired_sample_for_time_claim":20},
+  "regression":{"critical_route_cases":12,"additional_time_claim_guards":2,"critical_controls":["STRUCTURAL_SPECIALIST_NEVER_GETS_QUOTE_PREP","UNKNOWN_OR_DIFFICULT_ACCESS_FORCES_SURVEY","MISSING_REQUIRED_FIELDS_FORCE_MORE_INFO","NO_CONSENT_OR_AUTHORITY_HOLDS"]},
+  "product_spec":{"name":"Trade Inquiry Prequalification Pack","price":null,"wtp":null,"recurring_revenue_proven":false,"software_candidate":false},
+  "alternatives":{"diy":"GOOGLE_FORMS_PLUS_SHEETS","saas_native":"TRADIFY_ENQUIRIES_QUOTES_JOBS_INVOICES","public_support":"LEO_DIGITAL_FOR_BUSINESS","generic_crm_positioning":"REJECTED"},
+  "evidence":{"real_inquiries_tested":0,"observed_manual_minutes":null,"observed_assisted_minutes":null,"buyer_role_verified":false,"wtp":null,"price":null,"transactions":0,"repeatability":false,"profitability":false,"external_action_authorized":false},
+  "next_gate":"PRIVACY_SAFE_20_REAL_INQUIRY_PAIRED_BASELINE_PLUS_BUYER_ROLE_THEN_EXPLICITLY_AUTHORIZED_WTP_TEST"
+}
