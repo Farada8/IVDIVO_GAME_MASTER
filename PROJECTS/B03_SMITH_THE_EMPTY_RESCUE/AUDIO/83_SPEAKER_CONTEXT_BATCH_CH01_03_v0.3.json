@@ -1,0 +1,19 @@
+{
+  "project":"B03 — THE EMPTY RESCUE",
+  "status":"PASS_BATCH_ONLY_FULL_SPEAKER_GATE_OPEN",
+  "source_segmentation_package_drive_id":"1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
+  "engine_repair_gate_v0_2_drive_id":"1Xv_Ys0a7AnHHJMNl0pgoA90t8iE5FVU_",
+  "chapters_reviewed":[1,2,3],
+  "speech_turns_reviewed":376,
+  "assigned":373,
+  "unknown":3,
+  "coverage_percent":99.20,
+  "exact_text_changes":0,
+  "drive_package_id":"14Yqd0i3w0ufnukI5f117gPCLnHMYt-OX",
+  "drive_gate_id":"1us2ujwl-wNi5gDuAWqaRvYmLA1UHQMRA",
+  "drive_voice_map_template_id":"1vNK-RUH8mHwv3uU7oA9mMGv3e_6OnSCg",
+  "package_sha256":"309ab76c43b21e5d6c70c4f4e52328f6b1aa7cde9e112f21aafb93ecd975f6a4",
+  "unknown_quarantine":"Three late CH03 archive-checker questions remain UNKNOWN because both Nika and Jana are locally plausible and no explicit attribution resolves them.",
+  "voice_ids":"NULL_UNTIL_CASTING_PROVIDER_GATE",
+  "next":"CONTEXTUAL_REVIEW_CH04_CH06"
+}
