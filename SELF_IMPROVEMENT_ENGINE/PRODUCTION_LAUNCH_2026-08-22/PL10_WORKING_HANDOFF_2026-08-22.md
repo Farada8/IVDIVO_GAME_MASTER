@@ -14,6 +14,14 @@ Purpose: durable cross-chat continuation record; this file does not change `CURR
 - PL-14 cumulative exact-head CI: **14/14 SUCCESS**.
 - PL-14 Drive marker: `PERSONAL-AI-PL14-DONE-VERIFIED-PR462-CI14OF14-SOURCE-SEPARATED-NO-FABRICATION`.
 
+## Google Drive mirror
+
+- Production Launch parent: `1KYheQh4SqDffsgAFuN47s_mwMB5rgY5f`.
+- PL-10 folder: `1atG-ydfShjPrDa9cl6z5xf0s1Lkb8NaE`.
+- Working handoff document: `1f3xjgs2kPs-LK57r2tsuTbCaioV3JW4leQ01zju8jOI`.
+- Semantic readback marker: `PL10-WORKING-HANDOFF-CRITIC-ISOLATION-ACCEPTANCE-GATES-20260822`.
+- Drive readback: **PASS**.
+
 ## PL-10 implementation currently under audit
 
 Observed branch: `production-launch/pl10-multi-model-review-20260822`.
