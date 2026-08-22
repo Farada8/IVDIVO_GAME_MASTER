@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.general_business.pew05_wip3_decision/1.1",
+  "schema": "ivdivo.general_business.pew05_wip3_decision/1.2",
   "date": "2026-08-22",
-  "status": "INTERNAL_WIP3_ENGINEERING_COMPLETE_ALL_M1_NO_MARKET_PROOF",
+  "status": "INTERNAL_WIP3_ENGINEERING_COMPLETE_ALL_M1_NO_MARKET_PROOF_PENDING_CONVERGENCE_CI",
   "gates": {
     "P-EW01": {"status": "PASS_ENGINEERING", "pr": 348, "merge_sha": "926964d791f41fbd133a5d7e2247c1226365e15b"},
     "P-EW02": {"status": "PASS_TEST_ENGINEERING", "pr": 353, "merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db", "evaluated": 10, "generic_advice_outputs": 0, "false_promotions": 0},
@@ -45,6 +45,11 @@
     "profitability": "UNPROVEN",
     "early_wave_winner": "UNPROVEN",
     "external_action_authorized": false
+  },
+  "closure": {
+    "convergence_pr": 390,
+    "status": "PENDING_EXACT_HEAD_CI_AND_MERGE",
+    "supersedes_if_merged": [382, 384]
   },
   "next_gate": "WRITE_PREDECLARED_BUYER_WTP_TEST_CONTRACT_ONLY_IF_EXTERNAL_TESTING_IS_EXPLICITLY_AUTHORIZED"
 }
