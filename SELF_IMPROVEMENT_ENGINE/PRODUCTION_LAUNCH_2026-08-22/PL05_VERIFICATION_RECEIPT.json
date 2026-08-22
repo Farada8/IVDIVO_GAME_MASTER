@@ -1,0 +1,39 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.2",
+  "card": "PL-05",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 336,
+    "merge_sha": "876d0e4ca7f581be40f88b9be86f4a4da1894928",
+    "verified_head": "d20b104e93e61cc87e1e180d4ea879a5e23f75c5"
+  },
+  "exact_head_ci": [
+    {"workflow":"Personal AI PL-00 Bootstrap","run_id":32557296842,"conclusion":"success"},
+    {"workflow":"Personal AI PL-01 Project State","run_id":32557296835,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Local Memory","run_id":32557296948,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Memory Contract Hardening","run_id":32557296930,"conclusion":"success"},
+    {"workflow":"Personal AI PL-04 Provider Abstraction","run_id":32557296830,"conclusion":"success"},
+    {"workflow":"Personal AI PL-05 Agent Executor","run_id":32557296781,"conclusion":"success"}
+  ],
+  "acceptance": {
+    "bounded_steps_1_to_20": true,
+    "task_state_persistence": true,
+    "output_memory_persistence": true,
+    "jsonl_run_log": true,
+    "continue_protocol_bounded": true,
+    "max_step_fail_closed": true,
+    "provider_failure_persisted": true,
+    "network_authorization_before_task": true,
+    "offline_mock_integration": true,
+    "full_personal_ai_regression": true,
+    "drive_readback": true
+  },
+  "drive": {
+    "folder_id": "1hhgo94czLN6Qz4p9qNdMjxcZvf0ih0G3",
+    "document_id": "1Y0Zww7H003dYjlF-CsCV9vINt76mYZPkTLizcjF7764",
+    "verified_marker": "PERSONAL-AI-PL05-DONE-VERIFIED-PR336-CI6OF6"
+  },
+  "new_ready_cards": ["PL-10","PL-17"],
+  "current_frontier_after_closure": "PL-11",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION"
+}
