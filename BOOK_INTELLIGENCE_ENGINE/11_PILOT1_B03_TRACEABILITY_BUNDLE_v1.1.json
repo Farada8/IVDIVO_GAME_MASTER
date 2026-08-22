@@ -1,0 +1,35 @@
+{
+  "bundle_id": "BI-V11-PILOT1-B03-EVIDENCE-TRACE",
+  "requires_end_to_end": true,
+  "purpose": "RETROSPECTIVE_EVIDENCE_AUDIT_NOT_CLAIM_THAT_NASA_V1_1_CAUSED_PILOT1",
+  "nodes": [
+    {"id":"SRC-B03-GH-STALE","type":"SOURCE","label":"GitHub B03 prior state CH24 pass / CH25 authorized"},
+    {"id":"SEC-B03-GH-FRONTIER","type":"SECTION","label":"manuscript_frontier/next_obligation"},
+    {"id":"CLAIM-B03-STALE","type":"CLAIM","label":"GitHub frontier is older than fresher Drive manuscript/gates"},
+    {"id":"MECH-FRESH-LINEAGE","type":"MECHANISM","label":"fresh authority + provenance lineage before continuation"},
+    {"id":"ADAPTER-STORY","type":"ADAPTER","label":"Book Intelligence Story Adapter"},
+    {"id":"APP-B03-RECOVERY","type":"PROJECT_APPLICATION","label":"Recover B03 actual current frontier"},
+    {"id":"TEST-B03-CROSSSTORE","type":"TEST","label":"Compare GitHub state against Drive CH25-29/corpus/P72 v0.2"},
+    {"id":"RESULT-B03-P72","type":"RESULT","label":"CH01-29 development-complete factual+line lock pending; duplicate CH25 avoided"},
+    {"id":"LEARN-B03-STALE","type":"LEARNING","label":"cross-store stale state must not drive duplicate production"},
+    {"id":"RULE-FRESH-AUTHORITY","type":"ENGINE_RULE","label":"freshness/provenance readback before write"}
+  ],
+  "edges": [
+    {"from_id":"SRC-B03-GH-STALE","to_id":"SEC-B03-GH-FRONTIER","relation":"SOURCE_HAS_SECTION","locator":"PROJECT_STATES current_state manuscript_frontier"},
+    {"from_id":"SEC-B03-GH-FRONTIER","to_id":"CLAIM-B03-STALE","relation":"SECTION_SUPPORTS_CLAIM","locator":"GitHub old frontier vs Drive 58/67/68 artifacts"},
+    {"from_id":"CLAIM-B03-STALE","to_id":"MECH-FRESH-LINEAGE","relation":"CLAIM_ABSTRACTS_TO_MECHANISM","locator":"Pilot1 report"},
+    {"from_id":"MECH-FRESH-LINEAGE","to_id":"ADAPTER-STORY","relation":"MECHANISM_PACKED_FOR_DOMAIN","locator":"Book Intelligence Story Adapter"},
+    {"from_id":"ADAPTER-STORY","to_id":"APP-B03-RECOVERY","relation":"ADAPTER_APPLIED_TO_PROJECT","locator":"IVDIVO_BOOK_3_SMITH"},
+    {"from_id":"APP-B03-RECOVERY","to_id":"TEST-B03-CROSSSTORE","relation":"PROJECT_APPLICATION_TESTED_BY","locator":"Drive vs GitHub lineage reconciliation"},
+    {"from_id":"TEST-B03-CROSSSTORE","to_id":"RESULT-B03-P72","relation":"TEST_PRODUCED_RESULT","locator":"P72 v0.2 + synchronized project state"},
+    {"from_id":"RESULT-B03-P72","to_id":"LEARN-B03-STALE","relation":"RESULT_PROMOTED_TO_LEARNING","locator":"Pilot1 report"},
+    {"from_id":"LEARN-B03-STALE","to_id":"RULE-FRESH-AUTHORITY","relation":"LEARNING_CHANGED_ENGINE_RULE","locator":"CURRENT Book Intelligence/state routing"}
+  ],
+  "audit": {"engine":"v1.1 prototype","status":"PASS","node_count":10,"edge_count":9,"errors":[]},
+  "change_impact_fixture": {
+    "changed_ids":["CLAIM-B03-STALE"],
+    "expected_downstream":["ADAPTER-STORY","APP-B03-RECOVERY","LEARN-B03-STALE","MECH-FRESH-LINEAGE","RESULT-B03-P72","RULE-FRESH-AUTHORITY","TEST-B03-CROSSSTORE"]
+  },
+  "evidence_class": "REAL_PROJECT_VALIDATION_OF_V1_0_FRESHNESS_ROUTING",
+  "v1_1_use": "RETROSPECTIVE_TRACE_AUDIT"
+}
