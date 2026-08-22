@@ -13,22 +13,36 @@ from core.artifact_placement_adapters import PlacementIntent, receipt_from_drive
 
 
 class ArtifactPlacementAdapterTest(unittest.TestCase):
-    def test_drive_provider_observation_passes(self):
+    def test_drive_provider_observation_passes_with_raw_ids(self):
         intent = PlacementIntent("drive:ROOT", "drive:PARENT", "drive:START")
         receipt = receipt_from_drive_observation(
             intent=intent,
-            artifact_metadata={"id": "FILE", "parent_ids": ["drive:PARENT"]},
+            artifact_metadata={"id": "FILE", "parent_ids": ["PARENT"]},
             start_here_readback_ok=True,
             start_here_mentions_artifact=True,
         )
         self.assertEqual(receipt.status, PLACEMENT_VERIFIED)
+        self.assertEqual(receipt.artifact_id, "drive:FILE")
+        self.assertEqual(receipt.actual_parent, "drive:PARENT")
         self.assertEqual(receipt.provider, "GOOGLE_DRIVE")
+
+    def test_drive_prefixed_ids_do_not_double_prefix(self):
+        intent = PlacementIntent("drive:ROOT", "drive:PARENT", "drive:START")
+        receipt = receipt_from_drive_observation(
+            intent=intent,
+            artifact_metadata={"id": "drive:FILE", "parent_ids": ["drive:PARENT"]},
+            start_here_readback_ok=True,
+            start_here_mentions_artifact=True,
+        )
+        self.assertEqual(receipt.artifact_id, "drive:FILE")
+        self.assertEqual(receipt.actual_parent, "drive:PARENT")
+        self.assertEqual(receipt.status, PLACEMENT_VERIFIED)
 
     def test_drive_wrong_parent_fails_closed(self):
         intent = PlacementIntent("drive:ROOT", "drive:PARENT", "drive:START")
         receipt = receipt_from_drive_observation(
             intent=intent,
-            artifact_metadata={"id": "FILE", "parent_ids": ["drive:WRONG"]},
+            artifact_metadata={"id": "FILE", "parent_ids": ["WRONG"]},
             start_here_readback_ok=True,
             start_here_mentions_artifact=True,
         )
@@ -39,7 +53,7 @@ class ArtifactPlacementAdapterTest(unittest.TestCase):
         intent = PlacementIntent("drive:ROOT", "drive:PARENT", "drive:START")
         receipt = receipt_from_drive_observation(
             intent=intent,
-            artifact_metadata={"id": "FILE", "parent_ids": ["drive:PARENT", "drive:OTHER"]},
+            artifact_metadata={"id": "FILE", "parent_ids": ["PARENT", "OTHER"]},
             start_here_readback_ok=True,
             start_here_mentions_artifact=True,
         )
