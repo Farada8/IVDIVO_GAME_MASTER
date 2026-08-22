@@ -2,29 +2,46 @@
 
 This layer is a bounded execution runtime, not an autonomous self-modifying agent system.
 
-## Contract
+## Registered strict contract
 
-Input: `AgentRunRequest(project_id, prompt, provider, model, max_steps, allow_network, task_id)`.
+The canonical PL-05 acceptance path is `BoundedAgentExecutor.execute()` with an `AgentDefinition` containing exactly:
 
-Execution:
-1. project must already exist;
-2. selected provider must exist;
-3. network-backed providers require explicit `allow_network=True` / CLI `--allow-network`;
-4. executor creates a READY task and moves it to RUNNING;
-5. each provider response is logged as one step;
-6. only a response beginning with `CONTINUE:` requests another bounded step;
-7. any other response is final;
-8. final text is persisted as PL-02 `OUTPUT` memory, then the task becomes DONE;
-9. provider/runtime failures or exhausted `max_steps` mark the task FAILED;
-10. every run has a project-local JSONL audit log.
+- `ROLE`
+- `GOAL`
+- `INPUT`
+- `TOOLS`
+- `MEMORY`
+- `MAX_STEPS`
+- `OUTPUT_SCHEMA`
 
-`max_steps` is constrained to 1..20. There is no unbounded loop, hidden recursion, tool execution, background work or automatic network permission.
+Strict execution is iterative and finite:
 
-## Offline acceptance path
+`LOAD TASK -> LOAD CONTEXT -> PROPOSE ACTION -> CALL TOOL -> OBSERVE -> UPDATE STATE -> STOP`.
+
+Controls:
+- hard `MAX_STEPS` bound (1..20);
+- monotonic timeout;
+- explicit named tool registry plus per-agent allowlist;
+- unknown/non-allowlisted tools fail closed before execution;
+- tool results must be JSON-serializable observations;
+- output schema validation before OUTPUT persistence;
+- project/task state updates and project-local JSONL action log;
+- failure state and EVENT memory are persisted;
+- network-backed providers still require explicit authorization.
+
+The core allowlisted tool registry contains only bounded local helpers (`memory_search`, `echo`). It does not expose shell/code execution, recursive agent creation or destructive filesystem operations.
+
+## Compatibility mode
+
+`BoundedAgentExecutor.run(AgentRunRequest(...))` is retained for the baseline CLI and provider-only workflows. It uses the bounded `CONTINUE:` protocol, now also with a timeout guard. It is **not** the complete tool/observation contract used to prove strict PL-05 acceptance.
+
+CLI compatibility path:
 
 ```bash
 python personal-ai/run.py --home /tmp/pai project create demo
 python personal-ai/run.py --home /tmp/pai agent run demo "hello" --provider mock --max-steps 2
 ```
 
-Acceptance requires persisted project task state, persisted OUTPUT memory, a JSONL run log and deterministic mock execution. Live provider calls are not required for PL-05 acceptance and are not performed by CI.
+## Evidence boundary
+
+Acceptance requires deterministic offline tests proving bounded completion, state persistence after reopen, memory persistence, action logs, tool allowlisting, tool observation, output schema validation, timeout and max-step stop behavior. Live provider calls are not required for PL-05 acceptance and are not performed by CI.
