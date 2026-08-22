@@ -1,11 +1,16 @@
 {
-  "schema": "ivdivo.general_business.doclang_pew08_expected/1.0",
+  "schema": "ivdivo.general_business.doclang_pew08_expected/1.1",
   "runtime_pins": {
     "docling": "2.121.0",
     "doclang": "0.7.3"
   },
   "result_is_data_dependent": true,
+  "namespace_control": {
+    "question": "IF_DEFAULT_EXPORT_FAILS_XSD_DOES_SAME_SERIALIZER_WITH_INCLUDE_NAMESPACE_TRUE_PASS",
+    "purpose": "SEPARATE_DEFAULT_NAMESPACE_CONTRACT_GAP_FROM_CONTENT_OR_BROADER_SCHEMA_GAP"
+  },
   "allowed_routes": [
+    "PASS_REAL_DEFAULT_NAMESPACE_COMPATIBILITY_GAP_TECHNICAL_ONLY",
     "PASS_REAL_STRUCTURAL_COMPATIBILITY_GAP_TECHNICAL_ONLY",
     "PASS_REAL_FIDELITY_GAP_TECHNICAL_ONLY",
     "HOLD_NO_REAL_GAP_IN_BOUNDED_FIXTURES",
