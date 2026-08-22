@@ -1,0 +1,102 @@
+{
+  "schema_version": "ivdivo.room917_postrender_32x64_studio/1.0",
+  "updated": "2026-08-21T16:19:00+01:00",
+  "project_id": "ROOM917",
+  "active_branch": "THE_INSURABLE_FIRE",
+  "story_status": "LOCKED",
+  "production_phase": "POST_RENDER_EVALUATION_AND_SELECTIVE_REPAIR",
+  "source_execution_state": {
+    "path": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
+    "schema_version": "ivdivo.room917_execution_state/3.3"
+  },
+  "study": {
+    "requested_prompt_count": 32,
+    "executed_prompt_count": 32,
+    "execution_mode": "SEQUENTIAL_ARTIFACT_AND_EVIDENCE_ANALYSIS",
+    "human_listen_simulated": false,
+    "story_rewrite_authorized": false,
+    "derived_next_prompt_count": 64
+  },
+  "real_master": {
+    "filename": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "file_library_id": "file_000000002c8081f58d0e656cdc0e7267",
+    "sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "size_bytes": 189558764,
+    "duration_seconds": 658.190,
+    "sample_rate_hz": 48000,
+    "bit_depth": 24,
+    "channels": 2,
+    "controlled_drive_duplicate_verified": false,
+    "current_session_bytes_materialized": false
+  },
+  "p003a": {
+    "status": "COMPLETE",
+    "segment_end_seconds": 444.980,
+    "d003": "MAJOR_PROVEN_AT_SEGMENT_AGGREGATE_LEVEL",
+    "d004": "MAJOR_CANDIDATE_NOT_PROVEN",
+    "d005": "WORKING_COMMERCIAL_HYPOTHESIS",
+    "exact_patch_intervals_resolved": false
+  },
+  "scene3": {
+    "start_seconds": 444.980,
+    "end_seconds": 658.190,
+    "technical_lineage": "V1_3E_PROTECTED_UNLESS_NEW_DIRECT_REGRESSION_EVIDENCE"
+  },
+  "current_go_no_go": {
+    "engine_core": "GO",
+    "e01_current_evaluation_master_as_release_master": "NO_GO",
+    "global_spatial_repair": "NO_GO_UNTIL_PROVEN",
+    "global_silence_repair": "NO_GO_UNTIL_PROVEN",
+    "blanket_music_addition": "NO_GO",
+    "blanket_sfx_density_addition": "NO_GO",
+    "selective_evidence_preparation": "GO",
+    "abc_after_proven_repairs": "GO",
+    "e02_e24_batch_scale": "NO_GO",
+    "universal_engine_production_ready": "NO_GO"
+  },
+  "current_blockers": [
+    "P003A2_REQUIRES_IMMUTABLE_MASTER_BYTES_OR_PERSISTED_EXACT_INTERVAL_MAP",
+    "P003B_REQUIRES_REAL_HUMAN_PERCEPTUAL_LISTEN",
+    "LIVE_FULL_E01_TIMING_LINEAGE_INCOMPLETE",
+    "FOURTH_NOTE_PITCH_RELATIONSHIP_VERIFICATION",
+    "MINA_CATE_CAST_AUTHORITY_IF_STILL_OPEN"
+  ],
+  "next_action": {
+    "stage": "P003A2_PRE_SCENE3_EXACT_INTERVAL_LOCALIZATION",
+    "tool_executable_in_current_session": false,
+    "reason": "Exact immutable master bytes or a persisted exact interval map are not materialized in the current tool surface."
+  },
+  "next_prompt_program": {
+    "file": "03_64_NEXT_PROMPTS_v1.0.md",
+    "count": 64,
+    "phases": [
+      "A_RECOVER_AND_FREEZE_REAL_EVIDENCE",
+      "B_REAL_PERCEPTUAL_P003",
+      "C_P003A2_D001_D002_FORENSICS",
+      "D_MUSIC_SOUND_WORLD_FOLEY_PREMIUM_SPACE",
+      "E_PERFORMANCE_VOICE_REPAIR",
+      "F_BUILD_AND_TEST_ABC_V2",
+      "G_ECONOMICS_AUTOMATION_CONTROLLED_SCALE",
+      "H_SECOND_PROJECT_UNIVERSAL_RELEASE"
+    ]
+  },
+  "drive_folder_id": "1l4ELVn17bzvXOqQEiWZNxSsu1HiBNSW2",
+  "evidence_policy": [
+    "TECHNICAL_MEASURED",
+    "ARTIFACT_INTENT",
+    "HUMAN_LISTEN",
+    "FOUNDER_PRODUCT_SIGNAL",
+    "INFERENCE"
+  ],
+  "prohibited": [
+    "RESTART_S0_S1",
+    "RERENDER_MASTER_BECAUSE_ACCESS_IS_INCONVENIENT",
+    "PROMOTE_SYNTHETIC_TIMING_TO_LIVE_MASTER",
+    "BLANKET_FILL_SILENCE_OR_AMBIENCE",
+    "USE_MUSIC_AS_ROOM_BED_REPAIR",
+    "REAPPLY_OBSOLETE_SCENE3_REPAIR",
+    "REWRITE_LOCKED_STORY_FROM_AUDIO_PREFERENCE",
+    "SCALE_E02_E24_BEFORE_E01_V2_PROOF",
+    "CLAIM_HUMAN_OR_COMMERCIAL_PASS_WITHOUT_REAL_EVIDENCE"
+  ]
+}
