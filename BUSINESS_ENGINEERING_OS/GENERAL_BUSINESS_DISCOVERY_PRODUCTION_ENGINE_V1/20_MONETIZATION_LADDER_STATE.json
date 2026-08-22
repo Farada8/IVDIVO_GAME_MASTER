@@ -1,12 +1,14 @@
 {
-  "schema": "ivdivo.business.early_wave_monetization_bridge/1.1",
+  "schema": "ivdivo.business.early_wave_monetization_bridge/1.2",
   "date": "2026-08-22",
-  "status": "INTERNAL_MONETIZATION_ROUTING_COMPLETE_NO_MARKET_PROOF",
+  "status": "P-EW05_WIP3_ALL_M1_ENGINEERING_NO_MARKET_PROOF",
   "inputs": {
     "strategic_wip": ["OW-01", "CF-01", "CF-03"],
     "money_mechanisms_state": "13_MONEY_MECHANISMS_MACHINE_STATE.json",
     "agent_commerce_scanner_state": "17_AGENT_COMMERCE_READINESS_SCANNER_V0/01_MACHINE_STATE.json",
-    "agent_commerce_p_ew02_merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db"
+    "article50_state": "19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/03_MACHINE_STATE.json",
+    "dpp_state": "20_DPP_REGISTRY_PREFLIGHT/03_MACHINE_STATE.json",
+    "p_ew05_state": "22_PEW05_WIP3_MACHINE_STATE.json"
   },
   "ladder": [
     "M0_INTERNAL_PROOF_ARTIFACT",
@@ -40,41 +42,48 @@
       "paid_diagnostic_transactions": 0,
       "route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN",
       "offer_spec": "AGENT_COMMERCE_READINESS_DIAGNOSTIC",
+      "engineering_evidence": "P-EW01_P-EW02_REAL_PUBLIC_FIXTURE_DISCRIMINATION",
+      "next_test_sequence": "A",
       "price": null,
       "wtp": null
     },
     "CF-01": {
       "opportunity": "AI Act Article 50 Technical Transparency Pack",
-      "technical_artifact": false,
-      "nontrivial_delta": false,
+      "technical_artifact": true,
+      "nontrivial_delta": true,
       "buyer_role_plausible": true,
-      "route": "M0_INTERNAL_PROOF_ARTIFACT_REQUIRED",
-      "next_gate": "P-EW03",
+      "paid_diagnostic_transactions": 0,
+      "route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN",
+      "offer_spec": "AI_TRANSPARENCY_TECHNICAL_INVENTORY_AND_GAP_PACK",
+      "engineering_evidence": "P-EW03_6_SYNTHETIC_CASES_14_CANARIES_CI_SUCCESS",
+      "scope_guard": "NO_LEGAL_APPLICABILITY_OPINION_OR_CERTIFICATION",
+      "next_test_sequence": "B",
       "price": null,
       "wtp": null
     },
     "CF-03": {
       "opportunity": "DPP Supplier-Data / Registry Readiness",
-      "technical_artifact": false,
-      "nontrivial_delta": false,
+      "technical_artifact": true,
+      "nontrivial_delta": true,
       "buyer_role_plausible": true,
-      "route": "M0_INTERNAL_PROOF_ARTIFACT_REQUIRED",
-      "next_gate": "P-EW04",
+      "paid_diagnostic_transactions": 0,
+      "route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN",
+      "offer_spec": "DPP_SUPPLIER_DATA_READINESS_DIAGNOSTIC",
+      "engineering_evidence": "P-EW04_6_SYNTHETIC_CASES_CORRECTION_LOOP_16_CANARIES_CI_SUCCESS",
+      "scope_guard": "PRODUCT_SPECIFIC_APPLICABILITY_AND_REQUIRED_FIELDS_REQUIRE_AUTHORITY",
+      "next_test_sequence": "C",
       "price": null,
       "wtp": null
     }
   },
-  "agent_commerce_blind10": {
-    "p_ew01_executed": true,
-    "p_ew02_executed": true,
-    "ruleset_version": "2026-08-22.2",
-    "evaluated": 10,
-    "merchant_specific_or_evidence_bound_results": 10,
-    "generic_advice_outputs": 0,
-    "false_promotions": 0,
-    "buyer_demand_proven": false,
-    "wtp_proven": false,
-    "transaction_proven": false
+  "p_ew05_decision": {
+    "all_three_m1": true,
+    "any_m2": false,
+    "market_winner_proven": false,
+    "next_real_world_test_sequence": ["OW-01", "CF-01", "CF-03"],
+    "sequence_is_market_ranking": false,
+    "next_bounded_wtp_test_candidate": "OW-01",
+    "external_test_authorized": false
   },
   "software_promotion_gate": {
     "min_independent_customer_contexts_same_workflow": 3,
@@ -90,18 +99,22 @@
     "contracting": false
   },
   "drive": {
-    "document_id": "1leMlNJPcaMCUtCes-9wftPpp4LnCFh_9V79YhBkuTi8",
+    "monetization_bridge_document_id": "1leMlNJPcaMCUtCes-9wftPpp4LnCFh_9V79YhBkuTi8",
+    "p_ew05_document_id": "1BkxxRD8slnZtakhzYFuz8pQ8zTdXDoXm_PEU5MOaVr0",
     "parent_folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
     "semantic_readback": true,
-    "readback_marker": "EARLY-WAVE-MONETIZATION-BRIDGE-M0-M6-OW01-M1-CF01-M0-CF03-M0-20260822"
+    "p_ew05_readback_marker": "P-EW05-WIP3-ALL-M1-NO-MARKET-WINNER-OW01-NEXT-WTP-SEQUENCE-20260822"
   },
-  "next_internal_sequence": ["P-EW03", "P-EW04", "RUN_MONETIZATION_ROUTER_ON_WIP3", "P-EW05"],
+  "next_internal_sequence": ["NO_MORE_FEATURE_BUILD_FOR_WIP3_WITHOUT_NEW_EVIDENCE", "WRITE_WTP_TEST_CONTRACT_IF_EXTERNAL_TEST_AUTHORIZED", "ELSE_RETURN_TO_EARLY_WAVE_RADAR_AND_DRIFT_MONITORING"],
   "proof_boundary": {
     "buyer_demand": "UNPROVEN",
     "wtp": null,
     "price": null,
-    "transactions_from_bridge": 0,
+    "transactions": 0,
+    "cac": null,
+    "conversion": null,
     "recurring_revenue": "UNPROVEN",
-    "saas_demand": "UNPROVEN"
+    "saas_demand": "UNPROVEN",
+    "profitability": "UNPROVEN"
   }
 }
