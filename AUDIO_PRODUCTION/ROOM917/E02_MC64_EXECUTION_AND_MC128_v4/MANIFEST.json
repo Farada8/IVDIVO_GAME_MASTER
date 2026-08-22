@@ -1,0 +1,45 @@
+{
+  "schema_version": "ivdivo.room917.e02_mc64_to_mc128_package/4.0",
+  "status": "COMPLETE_RESEARCH_PACKAGE_NOT_LIVE_RENDER_AUTHORITY",
+  "project": "ROOM 917 CALLS AT MIDNIGHT",
+  "episode": "E02 — LENI-BIRD",
+  "source": {
+    "spoken_words": 1409,
+    "scenes": 3,
+    "story_authority": "ROOM 917 — PHASE D — Episodes 01–03 — v1.0",
+    "current_frontier": "E01_POST_RENDER_EVALUATION_AND_SELECTIVE_REPAIR",
+    "scale_gate": "NO_SCALE_UNTIL_E01_V2_PROVEN"
+  },
+  "executed_stack": {
+    "name": "MC64 v3 Scene Embodiment",
+    "range": "MC-00..MC-63",
+    "count": 64,
+    "sequential_complete": true,
+    "planning_or_policy_resolved": 50,
+    "gated_real_live_human_or_frontier": 14,
+    "live_provider_calls": 0
+  },
+  "derived_stack": {
+    "name": "IVDIVO Scene Embodiment + Post-Render Forensics v4",
+    "range": "MC-000..MC-127",
+    "count": 128,
+    "families": 16,
+    "status": "WORKING_CANDIDATE_NOT_UNIVERSAL_AUTHORITY"
+  },
+  "key_new_v4_mechanisms": [
+    "lifecycle routing instead of mechanically running every control",
+    "claim/evidence/knowledge graphs with proves-does-not-prove and negative-inference firewall",
+    "typed body/object state and access matrices",
+    "asset byte materialization and cross-dialog escrow",
+    "room-bed continuity separated from action-density and music",
+    "post-render low-level interval detection/classification",
+    "canonical source fingerprint/reuse",
+    "A forensic / B commercial / C premium controlled comparison",
+    "cheapest decisive evidence for every blocker",
+    "prompt redundancy/dedupe before promotion"
+  ],
+  "current_execution_state_modified": false,
+  "story_text_modified": false,
+  "next_production_action": "E01 P003A2 interval localization when exact master bytes or persisted interval map become accessible",
+  "next_research_action": "Persist package; validate v4 lifecycle routing/dedupe and post-render families on real immutable evidence"
+}
