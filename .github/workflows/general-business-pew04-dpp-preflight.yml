@@ -1,0 +1,50 @@
+name: General Business P-EW04 DPP Supplier Data Preflight
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/21_DPP_SUPPLIER_DATA_PREFLIGHT_V0/**'
+      - '.github/workflows/general-business-pew04-dpp-preflight.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run DPP regression tests
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/21_DPP_SUPPLIER_DATA_PREFLIGHT_V0/tests/test_validator.py
+      - name: Run synthetic correction loop
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/21_DPP_SUPPLIER_DATA_PREFLIGHT_V0/validator.py \
+            BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/21_DPP_SUPPLIER_DATA_PREFLIGHT_V0/02_SYNTHETIC_FIXTURE_AND_CORRECTION.json \
+            > /tmp/dpp_result.json
+          cat /tmp/dpp_result.json
+      - name: Validate proof boundary and delta
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          result = json.loads(Path('/tmp/dpp_result.json').read_text())
+          state = json.loads(Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/21_DPP_SUPPLIER_DATA_PREFLIGHT_V0/03_MACHINE_STATE.json').read_text())
+          spec = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/21_DPP_SUPPLIER_DATA_PREFLIGHT_V0/00_SPEC.md').read_text()
+
+          assert result['engineering_pass'] is True
+          assert result['closed_count'] == 3
+          assert set(result['closed_missing_data_gaps']) == {'compliance_document_refs','dimensions_mm','material_composition'}
+          assert result['corrected']['legal_applicability'] == 'UNKNOWN'
+          assert result['corrected']['disposition'] == 'TECHNICAL_PREFLIGHT_COMPLETE_LEGAL_SCOPE_UNKNOWN'
+          assert result['corrected']['counts']['ERROR'] == 0
+          assert result['corrected']['proof_boundary']['legal_dpp_applicability_proven'] is False
+          assert result['corrected']['proof_boundary']['registry_production_submission_proven'] is False
+          assert result['corrected']['proof_boundary']['buyer_demand_proven'] is False
+          assert result['corrected']['proof_boundary']['wtp_proven'] is False
+          assert state['external_action_authorized'] is False
+          assert 'DPP_DATA_READINESS != LEGAL_DPP_APPLICABILITY' in spec
+          assert 'REGISTRY_METADATA != FULL_DPP_DATASET' in spec
+          print('P-EW04_DPP_PREFLIGHT: PASS')
+          PY
+      - name: Compile validator
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/21_DPP_SUPPLIER_DATA_PREFLIGHT_V0
