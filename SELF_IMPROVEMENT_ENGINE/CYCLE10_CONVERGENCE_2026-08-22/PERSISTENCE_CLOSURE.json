@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "date": "2026-08-22",
-  "status": "PERSISTENCE_CLOSURE_PASS_PENDING_THIS_CLOSURE_PR_MERGE_READBACK",
+  "status": "PERSISTENCE_CLOSURE_PASS",
   "authority": {
     "self_improvement": "V2_VERIFIED_CURRENT",
     "v3": "CANDIDATE_HOLD",
@@ -19,9 +19,13 @@
     "cycle10r_manifest_finalize_commit": "59001bb865fe385cac2331d7821146c41497d64d",
     "cycle10_current_library_refresh_commit": "c8765b6a8f33b44d734bdd85d59d73174081eb28",
     "cycle10_pointer_repair_commit": "7ace10ec03a120f3fdbb9b8ee29801eab18d0813",
-    "fresh_main_at_closure_rebase": "a0c609ccf2cebe1bbad89eb6c2089cbf6314b19b",
+    "closure_pr": 248,
+    "closure_pr_head": "51a8c02525670c1e097f38184e2d4cd507b86d24",
+    "closure_merge_commit": "18ee6482450bd3cd4b8617b9a36c85367023ec0d",
+    "closure_pr_post_merge_readback": "PASS",
     "convergence_ci_run": 32550415859,
-    "convergence_ci_result": "SUCCESS",
+    "closure_ci_run": 32550808688,
+    "closure_ci_result": "SUCCESS",
     "expected_head_no_force_merge_used": true
   },
   "drive": {
@@ -39,7 +43,7 @@
     "cycle10r_machine_state": "SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/05_MACHINE_STATE.json",
     "cycle10r_next64": "SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/06_NEXT64_CYCLE11.md",
     "cycle10r_cross_store_manifest": "SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/07_CROSS_STORE_MANIFEST.json",
-    "cycle10r_cross_store_manifest_blob_sha": "ed3626724d6aad2dac68de2a979b10275c08aeb1"
+    "persistence_closure": "SELF_IMPROVEMENT_ENGINE/CYCLE10_CONVERGENCE_2026-08-22/PERSISTENCE_CLOSURE.json"
   },
   "counts": {
     "cycle10_prompts_executed": 32,
@@ -63,5 +67,5 @@
   },
   "evidence_ceiling": "PERSISTENCE_AND_DETERMINISTIC_ENGINEERING_ONLY_NOT_HUMAN_PROVIDER_LITERARY_LEGAL_MARKET_PROOF",
   "next64_policy": "DEPENDENCY_INDEXED_BACKLOG_NOT_AUTO_WIP",
-  "next_action_after_closure": "SELECT_HIGHEST_INFORMATION_REAL_LIBRARY_NORMALIZATION_OR_PRODUCTION_CANARY_AND_RETURN_FROM_META_RECURSION"
+  "next_action_after_closure": "EXECUTE_LIBRARY_NORMALIZATION_N09_N16_THEN_RETURN_TO_HIGHEST_INFORMATION_PRODUCTION_OR_REAL_PILOT"
 }
