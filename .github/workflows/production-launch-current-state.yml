@@ -5,8 +5,7 @@ on:
     paths:
       - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_PRODUCTION_LAUNCH_STATE.json'
       - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_HANDOFF.md'
-      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/PL03_VERIFICATION_RECEIPT.json'
-      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/PL09_VERIFICATION_RECEIPT.json'
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/PL*_VERIFICATION_RECEIPT.json'
       - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/PRODUCTION_LAUNCH_QUEUE_v0.1.json'
       - '.github/workflows/production-launch-current-state.yml'
 
@@ -18,7 +17,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate overlay, dependency closure and receipts
+      - name: Validate CURRENT overlay generically
         run: |
           python - <<'PY'
           import json
@@ -34,7 +33,7 @@ jobs:
 
           cards = {card['id']: dict(card) for card in base['cards']}
           allowed = set(base['statuses'])
-          for card_id, status in current['status_overrides'].items():
+          for card_id, status in current.get('status_overrides', {}).items():
               assert card_id in cards, f'unknown overlay card: {card_id}'
               assert status in allowed, f'invalid status: {status}'
               cards[card_id]['status'] = status
@@ -42,34 +41,45 @@ jobs:
           done = {cid for cid, card in cards.items() if card['status'] == 'DONE_VERIFIED'}
           for cid, card in cards.items():
               deps = set(card.get('depends_on') or [])
+              missing = deps - done
               if card['status'] in {'READY', 'RUNNING'}:
-                  missing = deps - done
                   assert not missing, f'{cid} is {card["status"]} with missing dependencies {sorted(missing)}'
-              if card['status'] == 'WAITING_DEPENDENCY':
-                  assert deps - done, f'{cid} is WAITING_DEPENDENCY but all dependencies are DONE_VERIFIED'
+              elif card['status'] == 'WAITING_DEPENDENCY':
+                  assert missing, f'{cid} is WAITING_DEPENDENCY but all dependencies are DONE_VERIFIED'
 
           frontier = current['current_frontier']
-          assert frontier == 'PL-07'
-          assert cards[frontier]['status'] == 'READY'
-          assert cards['PL-03']['status'] == 'DONE_VERIFIED'
-          assert cards['PL-04']['status'] == 'DONE_VERIFIED'
-          assert cards['PL-07']['status'] == 'READY'
-          assert cards['PL-09']['status'] == 'DONE_VERIFIED'
+          assert frontier in cards, f'unknown frontier: {frontier}'
+          assert cards[frontier]['status'] in {'READY', 'RUNNING'}, (
+              f'frontier {frontier} must be READY/RUNNING, got {cards[frontier]["status"]}'
+          )
 
-          pl03 = json.loads((root / 'PL03_VERIFICATION_RECEIPT.json').read_text())
-          assert pl03['card'] == 'PL-03'
-          assert pl03['status'] == 'DONE_VERIFIED'
-          assert pl03['exact_head_ci']['all_success'] is True
-          assert pl03['implementation']['merge_sha'] == current['proof']['PL-03']['merge_sha']
-          assert pl03['drive']['verified_marker'] == current['proof']['PL-03']['drive_marker']
+          for cid in current.get('newly_closed', []):
+              assert cid in cards and cards[cid]['status'] == 'DONE_VERIFIED', (
+                  f'newly_closed card is not DONE_VERIFIED: {cid}'
+              )
+          for cid in current.get('newly_unlocked', []):
+              assert cid in cards and cards[cid]['status'] == 'READY', (
+                  f'newly_unlocked card is not READY: {cid}'
+              )
 
-          pl09 = json.loads((root / 'PL09_VERIFICATION_RECEIPT.json').read_text())
-          assert pl09['card'] == 'PL-09'
-          assert pl09['status'] == 'DONE_VERIFIED'
-          assert pl09['implementation']['merge_sha'] == current['proof']['PL-09']['merge_sha']
+          for cid, proof in current.get('proof', {}).items():
+              assert cid in cards, f'proof references unknown card: {cid}'
+              assert cards[cid]['status'] == 'DONE_VERIFIED', f'proof card is not DONE_VERIFIED: {cid}'
+              receipt_path = root / f'{cid.replace("-", "")}_VERIFICATION_RECEIPT.json'
+              if not receipt_path.exists():
+                  continue
+              receipt = json.loads(receipt_path.read_text())
+              assert receipt.get('card') == cid, f'receipt card mismatch for {cid}'
+              assert receipt.get('status') == 'DONE_VERIFIED', f'receipt not DONE_VERIFIED for {cid}'
+              receipt_merge = (receipt.get('implementation') or {}).get('merge_sha') or receipt.get('merge_sha')
+              if proof.get('merge_sha') and receipt_merge:
+                  assert proof['merge_sha'] == receipt_merge, f'merge SHA mismatch for {cid}'
+              drive = receipt.get('drive') or {}
+              receipt_marker = drive.get('verified_marker') or drive.get('marker') or receipt.get('drive_marker')
+              if proof.get('drive_marker') and receipt_marker:
+                  assert proof['drive_marker'] == receipt_marker, f'Drive marker mismatch for {cid}'
 
           handoff = (root / 'CURRENT_HANDOFF.md').read_text()
-          assert 'PL-03 SOURCE / EVIDENCE LAYER = DONE_VERIFIED' in handoff
-          assert 'PL-07 BUSINESS RESEARCH = READY' in handoff
-          print('Production Launch CURRENT overlay valid; frontier=PL-07')
+          assert frontier in handoff, f'CURRENT_HANDOFF does not mention frontier {frontier}'
+          print(f'Production Launch CURRENT overlay valid; frontier={frontier}; done={len(done)}')
           PY

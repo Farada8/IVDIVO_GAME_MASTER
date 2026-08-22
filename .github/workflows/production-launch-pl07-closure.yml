@@ -1,0 +1,47 @@
+name: Production Launch PL-07 Closure
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_PRODUCTION_LAUNCH_STATE.json'
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_HANDOFF.md'
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/PL07_VERIFICATION_RECEIPT.json'
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/PL07_CLOSURE_READBACK.md'
+      - '.github/workflows/production-launch-pl07-closure.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pl07-closure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate PL-07 CURRENT closure overlay
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22')
+          state = json.loads((root/'CURRENT_PRODUCTION_LAUNCH_STATE.json').read_text())
+          receipt = json.loads((root/'PL07_VERIFICATION_RECEIPT.json').read_text())
+          queue = json.loads((root/'PRODUCTION_LAUNCH_QUEUE_v0.1.json').read_text())
+          assert state['status_overrides']['PL-07'] == 'DONE_VERIFIED'
+          assert state['current_frontier'] == 'PL-14'
+          assert receipt['status'] == 'DONE_VERIFIED'
+          assert receipt['implementation']['pr'] == 432
+          assert receipt['implementation']['merge_sha'] == '94af23c089d209677c7a3076be76b80eaab42050'
+          assert receipt['exact_head_ci']['count'] == 14 and receipt['exact_head_ci']['all_success'] is True
+          assert receipt['drive']['verified_marker'] == 'PL07-BUSINESS-RESEARCH-REDTEAM-HARDENED-EVIDENCE-CEILING-NO-LAUNDERING-20260822'
+          cards = {c['id']: c for c in queue['cards']}
+          for dep in cards['PL-14']['depends_on']:
+              effective = state['status_overrides'].get(dep, cards[dep]['status'])
+              assert effective == 'DONE_VERIFIED', (dep, effective)
+          assert state['authority_effect'] == 'NONE'
+          assert receipt['authority_effect'] == 'NO_GLOBAL_SI_PROMOTION'
+          print('PL07_CLOSURE_PASS')
+          PY

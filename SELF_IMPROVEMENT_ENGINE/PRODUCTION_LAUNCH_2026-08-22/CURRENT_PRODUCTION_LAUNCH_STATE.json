@@ -7,14 +7,14 @@
   "overlay_law": "CURRENT status_overrides and current_frontier supersede status/frontier fields in the base queue; dependency edges and acceptance text remain owned by the base queue",
   "status_overrides": {
     "PL-03": "DONE_VERIFIED",
-    "PL-07": "READY",
+    "PL-07": "DONE_VERIFIED",
     "PL-13": "DONE_VERIFIED",
     "PL-14": "READY"
   },
-  "current_frontier": "PL-07",
-  "newly_closed": ["PL-03","PL-13"],
-  "newly_unlocked": ["PL-07","PL-14"],
-  "inherited_verified": ["PL-00","PL-01","PL-02","PL-04","PL-05","PL-06","PL-08","PL-09","PL-11"],
+  "current_frontier": "PL-14",
+  "newly_closed": ["PL-07"],
+  "newly_unlocked": [],
+  "inherited_verified": ["PL-00","PL-01","PL-02","PL-03","PL-04","PL-05","PL-06","PL-07","PL-08","PL-09","PL-11","PL-13"],
   "proof": {
     "PL-03": {
       "implementation_pr": 416,
@@ -24,6 +24,15 @@
       "drive_folder_id": "1zHpSwi5seVuAMIHs4CxyGonGkKLC_prK",
       "drive_document_id": "1fUypA9XcvAgzEQME73IiAKaMBqhRHJIyD7aD5yA93Cg",
       "drive_marker": "PERSONAL-AI-PL03-DONE-VERIFIED-PR416-CI11OF11-EXPLICIT-VERIFICATION-EVENT"
+    },
+    "PL-07": {
+      "implementation_pr": 432,
+      "merge_sha": "94af23c089d209677c7a3076be76b80eaab42050",
+      "verified_head": "fbaab4aca67c22d639862df99345333d69297f49",
+      "cumulative_ci": "14/14 SUCCESS",
+      "drive_folder_id": "1tjh4nArbbsnY-kNKFtmYsze-Zkzimuzm",
+      "drive_document_id": "1r0xrEkztYPXkRxVcK-zgzyHVby55Zc422V0dcQRXPRY",
+      "drive_marker": "PL07-BUSINESS-RESEARCH-REDTEAM-HARDENED-EVIDENCE-CEILING-NO-LAUNDERING-20260822"
     },
     "PL-09": {
       "source": "base queue + PL09_VERIFICATION_RECEIPT.json on main",
@@ -42,6 +51,7 @@
   },
   "evidence_boundaries": [
     "PL-03 source presence is not proof of source correctness; confidence is not verification; explicit verification must still be evidence-backed.",
+    "PL-07 organizes supplied evidence and bounded calculations but does not perform independent source verification, web acquisition, market truth discovery, willingness-to-pay measurement or emit VERIFIED_FACT.",
     "PL-09 zero detected issues is not automatic continuity PASS; manual/independent review remains required.",
     "PL-13 ingestion proves identity/persistence/provenance for supported files, not truth, completeness, OCR, embeddings or semantic understanding/search.",
     "No card in this overlay promotes global Self-Improvement version authority."

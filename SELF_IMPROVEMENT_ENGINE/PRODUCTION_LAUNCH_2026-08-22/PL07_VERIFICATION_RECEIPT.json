@@ -1,0 +1,62 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.1",
+  "card": "PL-07",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 432,
+    "merge_sha": "94af23c089d209677c7a3076be76b80eaab42050",
+    "verified_head": "fbaab4aca67c22d639862df99345333d69297f49"
+  },
+  "exact_head_ci": {
+    "count": 14,
+    "all_success": true,
+    "runs": [
+      32572063713,
+      32572063733,
+      32572063740,
+      32572063712,
+      32572063722,
+      32572063734,
+      32572063717,
+      32572063737,
+      32572063739,
+      32572063718,
+      32572063741,
+      32572063751,
+      32572063752,
+      32572063759
+    ]
+  },
+  "acceptance": {
+    "question_geography_industry_as_of_persisted": true,
+    "sources_json": true,
+    "claims_json": true,
+    "comparison_csv": true,
+    "conclusions_md": true,
+    "open_questions_md": true,
+    "manifest_json": true,
+    "statuses_exact_observed_calculated_inferred_unknown": true,
+    "pl03_source_document_claim_provenance_reused": true,
+    "observed_does_not_become_verified_fact": true,
+    "inferred_remains_ai_inference": true,
+    "bounded_decimal_calculations_only": true,
+    "missing_operand_remains_unknown_null": true,
+    "division_by_zero_fails_closed": true,
+    "comparison_null_never_zero_false": true,
+    "future_source_cannot_support_claim_or_calculation": true,
+    "conclusion_evidence_ceiling_enforced": true,
+    "unknown_cannot_be_laundered_upward": true,
+    "deterministic_request_idempotence": true,
+    "cli_roundtrip": true,
+    "independent_red_team_major_found_and_repaired": true
+  },
+  "drive": {
+    "folder_id": "1tjh4nArbbsnY-kNKFtmYsze-Zkzimuzm",
+    "document_id": "1r0xrEkztYPXkRxVcK-zgzyHVby55Zc422V0dcQRXPRY",
+    "verified_marker": "PL07-BUSINESS-RESEARCH-REDTEAM-HARDENED-EVIDENCE-CEILING-NO-LAUNDERING-20260822"
+  },
+  "new_ready_cards": [],
+  "current_frontier_after_closure": "PL-14",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION",
+  "evidence_boundary": "PL-07 proves deterministic provenance-first organization of supplied evidence and bounded calculations with explicit freshness and epistemic ceilings. It does not perform independent source verification, web acquisition, market truth discovery, paid-provider research, willingness-to-pay measurement, or promotion to VERIFIED_FACT."
+}
