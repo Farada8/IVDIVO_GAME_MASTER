@@ -45,6 +45,15 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Toolchain gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile \
+            AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py \
+            AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/prepare_a01_a02_candidate_qc.py
+          ffmpeg -version >/dev/null
+
       - name: Provider secret gate
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -104,7 +113,7 @@ jobs:
             --confirm-spend "${{ inputs.confirm_spend }}" \
             --output-format mp3_44100_128
 
-      - name: Verify evidence is not a production binding
+      - name: Verify provider evidence is not a production binding
         shell: bash
         run: |
           set -euo pipefail
@@ -118,10 +127,38 @@ jobs:
           assert r['requested_count'] in (2,4)
           assert all(c['production_binding_authorized'] is False for c in r['candidates'])
           assert all(c['audition_status']=='HOLD_PENDING_LISTEN' for c in r['candidates'])
-          print('EVIDENCE_FAIL_CLOSED_PASS')
+          print('PROVIDER_EVIDENCE_FAIL_CLOSED_PASS')
           PY
 
-      - name: Upload canary evidence and source candidates
+      - name: Normalize candidates and build listening QC pack
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _room917_a01_a02_sfx_canary/qc
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/prepare_a01_a02_candidate_qc.py \
+            --evidence _room917_a01_a02_sfx_canary/ROOM917_E01_A01_A02_SFX_CANARY_EVIDENCE.json \
+            --outdir _room917_a01_a02_sfx_canary/qc
+
+      - name: Verify machine QC remains human-gated
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          q=Path('_room917_a01_a02_sfx_canary/qc/ROOM917_E01_A01_A02_MACHINE_QC.json')
+          r=json.loads(q.read_text(encoding='utf-8'))
+          assert r['status']=='PREPARED_FOR_HUMAN_AUDITION_NOT_BOUND'
+          assert r['machine_may_award_artistic_pass'] is False
+          assert r['production_binding_authorized'] is False
+          assert r['candidate_count'] in (2,4)
+          assert all(row['production_binding_authorized'] is False for row in r['rows'])
+          pending=json.loads(Path('_room917_a01_a02_sfx_canary/qc/ROOM917_E01_A01_A02_PENDING_HUMAN_CANDIDATES.json').read_text(encoding='utf-8'))
+          assert pending['status']=='MULTIPLE_CANDIDATES_PENDING_HUMAN_SELECTION_NOT_BINDABLE'
+          print('QC_HUMAN_GATE_PASS')
+          PY
+
+      - name: Upload canary evidence, normalized WAVs and QC previews
         uses: actions/upload-artifact@v4
         with:
           name: ROOM917_E01_A01_A02_SFX_CANARY_${{ github.run_id }}
@@ -140,8 +177,9 @@ jobs:
           - requested candidate count is bounded to 2 or 4
           - provider model: `eleven_text_to_sound_v2`
           - each candidate: 30-second loop request
-          - output is audition source evidence only
-          - production binding: FORBIDDEN until normalization + loop/false-clue/mono/phone + human audition + existing identity binding gate
-          - D003 patch authority: NOT granted by candidate generation
+          - candidates are normalized to 48k/24-bit/stereo and get seam/mono/phone listening previews
+          - machine QC cannot award artistic PASS
+          - production binding: FORBIDDEN until human audition + dialogue underlay + explicit gain + existing identity binding gate
+          - D003 patch authority: NOT granted by candidate generation or audition alone
           - full E01 render: NOT part of this workflow
           EOF
