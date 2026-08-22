@@ -6,6 +6,8 @@ SR=48000
 OUT=Path('ROOM917_CRITICAL_SFX_CANARIES'); OUT.mkdir(exist_ok=True)
 SEED=91720260822
 rng=np.random.default_rng(SEED)
+AUTHORITATIVE_RECEIPT='AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json'
+RUNTIME_RECEIPT_NAME='ROOM917_E01_CRITICAL_SFX_RUNTIME_GENERATION_RECEIPT_v1.json'
 
 def candidate_seed(asset_id,v):
     token=f'{SEED}|{asset_id}|{v}'.encode()
@@ -95,9 +97,11 @@ makers={
  'S17_COPPER_HISS':copper_hiss,
  'S19_TWO_PART_LINE_CUT':line_cut,
 }
-receipt={'schema_version':'room917.critical_sfx_synthetic_canary_receipt/2.1','date':'2026-08-22','seed':SEED,'rng_policy':'PER_CANDIDATE_SHA256_DERIVED_SEED','status':'CANDIDATE_HOLD_NOT_PRODUCTION_BOUND','assets':[],'machine_design_fixes':['S13_EXACTLY_TWO_COUNTABLE_RING_PULSES','S19_TARGET_EVENTS_ABOVE_LINE_BED_WITH_MECHANICALLY_DISTINCT_FINAL_DISCONNECT','S14_NO_HAAS_DELAY_MONO_SAFE_POSITIONAL_PAN_ONLY'],'laws':['NO_STORY_CHANGE','NO_PROVIDER_SPEND','HUMAN_AUDITION_REQUIRED','IDENTITY_GATE_REQUIRED_BEFORE_BINDING']}
+
+script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+receipt={'schema_version':'room917.critical_sfx_runtime_generation_receipt/1.0','date':'2026-08-22','seed':SEED,'rng_policy':'PER_CANDIDATE_SHA256_DERIVED_SEED','generator_script_sha256':script_sha256,'authoritative_identity_receipt':AUTHORITATIVE_RECEIPT,'status':'RUNTIME_BYTES_GENERATED_HOLD_UNTIL_AUTHORITY_COMPARISON_AND_HUMAN_AUDITION','assets':[],'machine_design_fixes':['S13_EXACTLY_TWO_COUNTABLE_RING_PULSES','S19_TARGET_EVENTS_ABOVE_LINE_BED_WITH_MECHANICALLY_DISTINCT_FINAL_DISCONNECT','S14_NO_HAAS_DELAY_MONO_SAFE_POSITIONAL_PAN_ONLY'],'laws':['RUNTIME_RECEIPT_IS_NOT_IDENTITY_AUTHORITY','NOT_PRODUCTION_BINDING','NO_STORY_CHANGE','NO_PROVIDER_SPEND','HUMAN_AUDITION_REQUIRED','IDENTITY_GATE_REQUIRED_BEFORE_BINDING']}
 for aid,maker in makers.items():
     for v in range(3):
         rng=np.random.default_rng(candidate_seed(aid,v)); y=maker(v); name=f'{aid}_CANDIDATE_SYNTH0{v+1}'; p=OUT/f'{name}.wav'; sf.write(p,y,SR,subtype='PCM_24'); data=p.read_bytes(); receipt['assets'].append({'contract_asset_id':aid,'candidate_id':name,'filename':p.name,'sha256':hashlib.sha256(data).hexdigest(),'size_bytes':len(data),'duration_seconds':len(y)/SR,'sample_rate_hz':SR,'bit_depth':24,'channels':2,'origin':'PROCEDURAL_SYNTHETIC_REFERENCE_ONLY','audition_status':'HOLD','production_binding':False})
-(OUT/'ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json').write_text(json.dumps(receipt,indent=2)+'\n')
+(OUT/RUNTIME_RECEIPT_NAME).write_text(json.dumps(receipt,indent=2)+'\n')
 print(json.dumps(receipt,indent=2))
