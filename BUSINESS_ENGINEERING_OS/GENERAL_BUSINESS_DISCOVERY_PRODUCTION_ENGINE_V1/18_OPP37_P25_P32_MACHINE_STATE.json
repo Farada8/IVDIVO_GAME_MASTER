@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.business.opp37_offer_engineering/1.2",
+  "schema": "ivdivo.business.opp37_offer_engineering/1.3",
   "date": "2026-08-22",
-  "status": "P25_P32_INTERNAL_ENGINEERING_COMPLETE_FOUNDER_RESREEN_PASS_PENDING_CI",
+  "status": "P25_P32_INTERNAL_ENGINEERING_COMPLETE_FOUNDER_RESCREEN_CI5OF5_PREMERGE",
   "opportunity_id": "OPP-37",
   "dependency": {
     "test37": "MERGED_PASS_2_OF_3",
@@ -76,5 +76,13 @@
     "founder_rescreen_readback_marker": "GENERAL-BUSINESS-OPP37-FOUNDER-RESCREEN-NORMAL-CASHFLOW-REMOTE0-PASS",
     "readback_status": "PASS"
   },
-  "github": {"pr": null, "exact_head": null, "ci_runs": [], "merge_sha": null}
+  "github": {
+    "pr": 339,
+    "verified_preclosure_head": "801f86f2e24daffa59e9e28c0040aa1537642050",
+    "verified_preclosure_ci_runs": [32557639736, 32557639702, 32557639733, 32557639721, 32557639730],
+    "verified_preclosure_ci_status": "SUCCESS_5_OF_5",
+    "final_exact_head": null,
+    "final_exact_head_ci_runs": [],
+    "merge_sha": null
+  }
 }
