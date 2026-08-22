@@ -35,9 +35,8 @@ Different bytes do not prove different intellectual works. Exact duplicate bytes
 Books can support mechanisms. They cannot prove current demand, willingness-to-pay, payment, repeatability, unit economics, procurement eligibility or legal clearance.
 
 ## Current Business OS
-Load `../CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md` first. Current Cycle4 gate is `PUBLIC_ARTIFACT_TESTS_FOR_TOP_ZERO_CASH_ARCHETYPES`.
+Load `../CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md` first.
 
-Cycle5 candidate workspace:
-`../2026-08-22_CYCLE5_PUBLIC_ARTIFACT_VALIDATION_32_TO_64/`
+This library pointer defines source-library accounting only. It does **not** define the current operational Business Engineering gate. Business Engineering has advanced beyond the old Cycle4/Cycle5 wording through Cycle6 procurement/cross-lane work and Cycle7 readiness engineering. The operational authority and exact current gate live only in `../CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md` after the corresponding cycle is merged and closed.
 
-The Cycle5 library task is normalization/discoverability and evidence routing, not acquisition of more generic business books.
+The library task remains normalization, discoverability, provenance and evidence routing — not acquisition of more generic business books while real decision-changing evidence is missing.
