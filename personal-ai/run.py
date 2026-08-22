@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 
 from agents import AgentRunRequest, BoundedAgentExecutor
+from benchmarks import run_suite
 from core.bootstrap import bootstrap
 from memory.store import MemoryStore
 from projects.manager import ProjectStateManager
@@ -112,6 +113,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="Explicitly authorize network-backed provider use for this agent run.",
     )
 
+    benchmark = sub.add_parser("benchmark", help="Baseline/candidate benchmark operations")
+    benchmark_sub = benchmark.add_subparsers(dest="benchmark_command", required=True)
+    benchmark_run = benchmark_sub.add_parser("run", help="Evaluate and persist one benchmark suite")
+    benchmark_run.add_argument("suite", help="Path to benchmark suite JSON")
+    benchmark_run.add_argument(
+        "--enforce",
+        action="store_true",
+        help="Return non-zero exit status when the benchmark decision is FAIL.",
+    )
+
     return parser
 
 
@@ -130,6 +141,7 @@ def _json_object(raw: str) -> dict:
 def main() -> int:
     args = build_parser().parse_args()
     home = _resolve_home(args.home)
+    exit_code = 0
 
     if args.command is None:
         result = bootstrap(home)
@@ -227,11 +239,18 @@ def main() -> int:
             ).to_dict()
         else:  # pragma: no cover - argparse enforces choices
             raise RuntimeError("unsupported agent command")
+    elif args.command == "benchmark":
+        if args.benchmark_command == "run":
+            result = run_suite(Path(args.suite), home)
+            if args.enforce and result["status"] != "PASS":
+                exit_code = 2
+        else:  # pragma: no cover - argparse enforces choices
+            raise RuntimeError("unsupported benchmark command")
     else:  # pragma: no cover - argparse enforces choices
         raise RuntimeError("unsupported command")
 
     print(json.dumps(result, indent=2, sort_keys=True))
-    return 0
+    return exit_code
 
 
 if __name__ == "__main__":
