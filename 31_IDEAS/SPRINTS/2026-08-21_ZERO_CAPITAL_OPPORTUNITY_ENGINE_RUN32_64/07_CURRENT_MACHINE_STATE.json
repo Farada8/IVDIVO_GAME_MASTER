@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-21",
+  "status": "RUN32_COMPLETE_MARKET_PROOF_PENDING",
+  "authority_order": ["FOUNDER_NEWEST_DIRECT_INSTRUCTION","EXTERNAL_VERIFIED_EVIDENCE","CURRENT_SELF_IMPROVEMENT_AUTHORITY","THIS_SPRINT_STATE","HEURISTIC_SCORE"],
+  "strict_zero_cash": {"founder_cash_pre_E4_eur":0,"reimbursable_grant_without_bridge_is_zero_cash":false,"loan_approval_assumed":false,"buyer_payment_assumed":false},
+  "primary": {"name":"Tender / Opportunity Intelligence + Bid/No-Bid for construction/retrofit/MMC SMEs","evidence_grade":"E1_AUTHORITATIVE_SIGNAL","next_gate":"E3_BUYER_INTEREST_THEN_E4_PAID_PILOT","market_proven":false},
+  "pilots": [
+    {"name":"AI estimator / quote + job-document automation","evidence_grade":"E1_AUTHORITATIVE_SIGNAL","next_gate":"E3/E4","market_proven":false},
+    {"name":"Retrofit lead qualification / coordination","evidence_grade":"E1_AUTHORITATIVE_SIGNAL","next_gate":"E3/E4","market_proven":false}
+  ],
+  "runtime_tests": {"status":"PASS","passed":4,"failed":0},
+  "run32": {"created":32,"executed":32},
+  "next_prompt_bank": {"count":64,"streams":8},
+  "next_external_experiment": {"cash_eur":0,"target":"20 Irish construction/retrofit/MMC SMEs","artifact":"3 public-opportunity sample briefs","ask":"paid 2-week pilot","success_evidence":["commercial reply","proposal request","booked sales call","paid pilot/deposit/PO"],"not_yet_executed":true},
+  "self_improvement_patches": ["macro signal cannot promote market proof","reimbursable grant without bridge fails strict zero-cash","heuristic score cannot override evidence grade"],
+  "rollback": "If first 20-target test yields no credible E3 signal, revise buyer/offer before any spend; do not solve absence of demand with paid tooling."
+}
