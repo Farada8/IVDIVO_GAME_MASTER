@@ -1,0 +1,23 @@
+{
+  "schema": "ivdivo.general_business.osera_pew09_frozen_sample/1.0",
+  "frozen_on": "2026-08-22",
+  "selection_rule": "FIRST_TEN_PUBLIC_FINOS_OSERA_BACKPATCH_REPOSITORIES_RETURNED_BEFORE_RESULT_INTERPRETATION",
+  "source_inventory_observed_date": "2026-07-10",
+  "repositories": [
+    {"repo":"backpatch-gson","baseline_tag":"v2.8.8+backpatch.baseline","release_tags":["v2.8.8+backpatch.001"]},
+    {"repo":"backpatch-jetty","baseline_tag":"v9.4.58.v20250814+backpatch.baseline","release_tags":["v9.4.58.v20250814+backpatch.001"]},
+    {"repo":"backpatch-camel","baseline_tag":"v2.25.4+backpatch.baseline","release_tags":["v2.25.4+backpatch.001","v2.25.4+backpatch.002","v2.25.4+backpatch.003","v2.25.4+backpatch.004"]},
+    {"repo":"backpatch-commons-lang","baseline_tag":"v2.6+backpatch.baseline","release_tags":["v2.6+backpatch.001"]},
+    {"repo":"backpatch-bouncycastle","baseline_tag":"v1.47+backpatch.baseline","release_tags":["v1.47+backpatch.001"]},
+    {"repo":"backpatch-activemq","baseline_tag":"v5.14.5+backpatch.baseline","release_tags":["v5.14.5+backpatch.001"]},
+    {"repo":"backpatch-okhttp","baseline_tag":"v3.14.9+backpatch.baseline","release_tags":["v3.14.9+backpatch.001"]},
+    {"repo":"backpatch-tapestry","baseline_tag":"v4.1.6+backpatch.baseline","release_tags":["v4.1.6+backpatch.001","v4.1.6+backpatch.002"]},
+    {"repo":"backpatch-cxf","baseline_tag":"v3.5.11+backpatch.baseline","release_tags":["v3.5.11+backpatch.001"]},
+    {"repo":"backpatch-graphql-java","baseline_tag":"v18.7+backpatch.baseline","release_tags":["v18.7+backpatch.001"]}
+  ],
+  "public_evidence_boundary": {
+    "rel_001_public_ci_absence_is_failure": false,
+    "rel_002_unimplemented_acceptance_check_counts_as_release_defect": false,
+    "evd_001_pre_draft_counts_as_hard_failure": false
+  }
+}
