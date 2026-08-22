@@ -1,0 +1,21 @@
+{
+  "schema_version": "room917.sfx_asset_factory/5.0",
+  "status": "MACHINE_QC_PASS_HUMAN_BLIND_GATE_PENDING",
+  "active_records": [
+    {"asset_id":"S13_INTERNAL_DOUBLE_RING_OLD","candidate":1,"sha256":"4d09c08641653a2b51fa7dcb58ac0886982cf3d7646b3f17e261ef1211f90ec3","machine_qc":"PASS","provenance":"BYTE_IDENTICAL_CARRY_FORWARD"},
+    {"asset_id":"S13_INTERNAL_DOUBLE_RING_OLD","candidate":2,"sha256":"c0a49109874361cfe92731815d9bf4b44416bf2b9085b41181d25384d2791c35","machine_qc":"PASS","provenance":"BYTE_IDENTICAL_CARRY_FORWARD"},
+    {"asset_id":"S14_UNMARKED_GLASS_LAMP_PING","candidate":1,"sha256":"f2ab1c2a7d0310786317fdce646900a7a8506f3c03b46b9c693fdac2d8f998d9","machine_qc":"PASS","provenance":"BYTE_IDENTICAL_CARRY_FORWARD"},
+    {"asset_id":"S14_UNMARKED_GLASS_LAMP_PING","candidate":2,"sha256":"4df58f742340c5e9a16108f6bd82ca10e1125cb92c7cf803385e5fb4b890527b","machine_qc":"PASS","provenance":"BYTE_IDENTICAL_CARRY_FORWARD"},
+    {"asset_id":"S17_COPPER_HISS","candidate":1,"sha256":"87786a1e4e7cba5702798434c5da1d731b58c61f7a8cc060f1c1f5fd44b33e56","machine_qc":"PASS","provenance":"BYTE_IDENTICAL_CARRY_FORWARD"},
+    {"asset_id":"S17_COPPER_HISS","candidate":2,"sha256":"7b152b60e88dcd1025d28a16aea132f64dd98d0272ad4a1d670e995fa31cd176","machine_qc":"PASS","provenance":"BYTE_IDENTICAL_CARRY_FORWARD"},
+    {"asset_id":"S19_TWO_PART_LINE_CUT","candidate":6,"sha256":"d32daede91e905b77fc1a4b73ff3b27c55a978c7e2535d9a80c916cd22eaf417","machine_qc":"PASS","provenance":"CROSS_CUE_VALIDATED_v5","duration_delta_s":0.55,"rolloff_delta_hz":8185.8,"flatness_ratio_s19_over_ring":99.85,"centroid_delta_hz":6177.8,"phone_retention_db":-3.7,"post_cut_peak":0.0},
+    {"asset_id":"S19_TWO_PART_LINE_CUT","candidate":7,"sha256":"5a7f3556322aff1a1590f55aa31317f1f66f08c8332dc3207116906d13da65bc","machine_qc":"PASS","provenance":"CROSS_CUE_VALIDATED_v5","duration_delta_s":0.55,"rolloff_delta_hz":8209.1,"flatness_ratio_s19_over_ring":138.51,"centroid_delta_hz":6456.9,"phone_retention_db":-4.05,"post_cut_peak":0.0}
+  ],
+  "retired_S19_candidates": {"1-2":"ring collision review","3-4":"stronger gate failure","5":"stronger gate failure"},
+  "active_S19_candidates":[6,7],
+  "cross_cue_validation":[
+    {"S19_candidate":6,"duration_delta_s":0.55,"rolloff_delta_hz":8185.8,"flatness_ratio_s19_over_ring":99.85,"centroid_delta_hz":6177.8,"phone_retention_db":-3.7,"post_cut_peak":0.0,"ring_vs_cut_distinctness_qc":"PASS"},
+    {"S19_candidate":7,"duration_delta_s":0.55,"rolloff_delta_hz":8209.1,"flatness_ratio_s19_over_ring":138.51,"centroid_delta_hz":6456.9,"phone_retention_db":-4.05,"post_cut_peak":0.0,"ring_vs_cut_distinctness_qc":"PASS"}
+  ],
+  "human_acceptance":"PENDING"
+}
