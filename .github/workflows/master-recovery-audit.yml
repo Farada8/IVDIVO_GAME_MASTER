@@ -34,6 +34,8 @@ jobs:
           math_note = (root / 'MATH_CURRENT_RESEARCH_NOTE_20260822.md').read_text(encoding='utf-8')
           binary = (root / 'BINARY_ASSET_RECOVERY_MANIFEST_20260822.md').read_text(encoding='utf-8')
           delta = (root / 'RECOVERY_AUDIT_DELTA_20260822_1332.md').read_text(encoding='utf-8')
+          visual = (root / 'VISUAL_SELECTION_RECOVERY_MANIFEST_20260822.md').read_text(encoding='utf-8')
+          painters = (root / 'PAINTERS_DUBLIN_RECOVERY_HANDOFF_20260822.md').read_text(encoding='utf-8')
 
           assert state['schema'] == 'ivdivo.master_recovery_state/1.1'
           assert state['state_is_recovery_pointer_not_frozen_project_frontier'] is True
@@ -99,12 +101,17 @@ jobs:
           assert 'RECOVERED_CONTEXT != CANON' in ledger
           assert 'NUMBER != NUMERAL_REPRESENTATION' in ledger
           assert 'Do not delete all conversations yet' in master
-          assert 'Three remaining global blocker classes' in delta
+          assert 'RECOVERY-DELTA-20260822-1332-PLACEVERBS-MATH-CLOSED-AUDIO-REFINED-VISUAL-PARTIAL-3-BLOCKERS-REMAIN' in delta
+          assert 'VISUAL-RECOVERY-20260822-SHILLELAGH-CLASSIFIED-PRELIMINARY-DUBLIN-PORTALS-FINALITY-ROUTING-OPEN' in visual
+          assert 'PAINTERS-DUBLIN-RECOVERY-20260822-NONSECRET-HANDOFF-PERSISTED-EXACT-EXPORT-NOT-FOUND' in painters
 
           # Evidence-ceiling checks.
           assert 'NO novelty claim' in math_note or 'no novelty claim' in math_note
           assert 'NO_LIVE_BINARY_CREATED != MISSING_BINARY' in binary
           assert 'CONTROLLED_DRIVE_DUPLICATE_NOT_VERIFIED' in binary
+          assert 'PRIOR_REACQUISITION_HTTP403_CONFIRMED' in binary
+          assert 'PRELIMINARY_APPLICATION_STUDY' in visual
+          assert 'PAINTERS_DUBLIN_CURRENT_EXPORT_HANDOFF_VERIFIED = FALSE' in painters
 
           for p in projects:
               if p.get('known_chat_only_material_gap') is True:
