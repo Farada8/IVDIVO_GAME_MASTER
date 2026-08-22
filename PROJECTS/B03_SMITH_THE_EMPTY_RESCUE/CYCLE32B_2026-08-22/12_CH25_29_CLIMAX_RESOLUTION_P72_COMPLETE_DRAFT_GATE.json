@@ -1,0 +1,40 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-08-22",
+  "project":"B03_SMITH_THE_EMPTY_RESCUE",
+  "status":"COMPLETE_DEVELOPMENT_DRAFT_P72_PASS_NOT_LOCKED",
+  "fatal":0,
+  "blocking_major":0,
+  "manuscript_lock":false,
+  "chapters":{
+    "CH25":{"title":"CASCADE","drive_id":"19uzwlXgRXZ8l8p-BuD1KpcXyK3SUF_WoCSt7uySKRUI","gate_drive_id":"1clmqs2Km6IoHyLQwM0aOpE042hG10f41YtuKbiqVghk","status":"PASS"},
+    "CH26":{"title":"THE RELAY","drive_id":"12jAjb8vrdPSQg-B46PScSGe-t_i1XGoqKbfggCv_EBE","gate_drive_id":"1XezS51FsLf80z3Pkc8R9iad41COWWOdFXn-OhiwK_qI","status":"PASS"},
+    "CH27":{"title":"THE BEST WARNING YET","drive_id":"109_Cg8iUR6rya0bA02D5Cn-KJvWEGm7H2sjrHh7Dlfk","gate_drive_id":"1H80cJqqAfrtKblSQNR28ZxNvzYOTSgHLsYoEjn_zjuE","status":"PASS_CLIMAX_CHOICE"},
+    "CH28":{"title":"THE THIRD ROUTE","drive_id":"1bBkk_RLqcvxiCuYG0On2mkaInI1pTZ3U0CO5CL8Hk3w","gate_drive_id":"1KlGgyVdhr7x_HLo4DKszyZHHu2JA7f7iD-MdHck4Iqc","status":"PASS_PHYSICAL_CLIMAX"},
+    "CH29":{"title":"WHAT WE DID WITH THE WARNING","drive_id":"1_hQ0A1Mw9Q3UiESavCk1FOVsjeeGBcYVekwqaB8aGgk","gate_drive_id":"1-pPURo6l3A6IwX6OUfRtHzO_q5-23P3X89X1WHVh1x8","status":"PASS_RESOLUTION"}
+  },
+  "p72":{"status":"EXECUTED_PASS","drive_id":"1T8ib8QympAjVPC58EufvjfnmRFXSDthNUgghBq6hqwk","fatal":0,"blocking_major":0,"medium_obligations":5},
+  "climax":{
+    "relay_segmentation":"EXECUTED_BY_LUKA_UNDER_EVA_SCOPE_LOCAL_TRANSPORT_PRESERVED",
+    "smith_choice":"REFUSED_SYNC_B_RESTORE_FOR_PRECURSOR_CENTRAL_COMMAND_SCRIPT",
+    "local_rescue":"WEST_HATCH_PLUS_FIELD_BUILT_WALL_SIDE_TRANSFER",
+    "andrej":"ALIVE_LONG_TERM_LASTING_LOWER_LIMB_FUNCTION_LOSS_EXPECTED_EXACT_DIAGNOSIS_UNKNOWN"
+  },
+  "resolution":{
+    "field_response":"CONTAINED",
+    "precursor_mechanism":"UNKNOWN",
+    "local_authority":"RESTORED",
+    "nika":"FORMAL_VIOLATION_RETAINED_ORDINARY_WORK_CONTINUES_SPECIALIST_REINSTATEMENT_LOCAL_REVIEW",
+    "morgen_pass":"DOCTRINE_ORIGIN_REVIEW_OPEN_DERIVATIVE_SUMMARY_HOLD",
+    "taren_contact":"ADVISORY_CHANNEL_CLOSED_NO_EARTH_AUTHORITY_TRANSFER",
+    "oes":"INTERIM_OBSERVATION_RESPONSE_COUPLING_PROCEDURE_ISSUED"
+  },
+  "development_obligations":[
+    "FULL_CH01_29_CORPUS_HUMAN_SCENE_REGRESSION",
+    "CONTINUITY_TIMELINE_KNOWLEDGE_PROVENANCE_REGRESSION",
+    "MEDICAL_FACTUAL_PLAUSIBILITY_PASS",
+    "RELAY_RESCUE_ENGINEERING_PLAUSIBILITY_PASS",
+    "COMPILED_PACING_AND_CH29_RESOLUTION_DENSITY_PASS"
+  ],
+  "next":"ASSEMBLE_AUTHORITATIVE_CH01_29_MASTER_MANUSCRIPT_THEN_RUN_DEVELOPMENT_PASSES"
+}
