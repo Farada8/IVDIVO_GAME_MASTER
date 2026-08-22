@@ -1,0 +1,37 @@
+{
+  "schema_version": "ivdivo.room917_ru_finalist_verification_authorization_contract/1.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "status": "MANUAL_AUTHORIZATION_REQUIRED",
+  "scope": "ROOM917_RU_FINALIST_VERIFICATION_ONLY",
+  "provider": "ElevenLabs",
+  "allowed_exact_block_counts": [6, 7, 8],
+  "automatic_execution": false,
+  "provider_call_made_by_authorization_compiler": false,
+  "provider_spend_made_by_authorization_compiler": false,
+  "cast_lock_granted_by_authorization": false,
+  "full_episode_render_allowed": false,
+  "requirements_before_authorization": [
+    "REAL_S0_CANARY_RECEIPT_EXISTS",
+    "S0_HUMAN_SCREENING_PASS_TO_FINALIST_VERIFICATION",
+    "COVERAGE_MINIMAL_FINALIST_PLAN_READY_FOR_FINALIST_SPEND_AUTHORIZATION",
+    "PLAN_CONTAINS_ONLY_MISSING_CAST_EVIDENCE",
+    "PLAN_BLOCK_COUNT_IS_6_OR_7_OR_8"
+  ],
+  "explicit_authorization_inputs": {
+    "confirm_spend": "YES",
+    "scope_phrase": "ROOM917_RU_FINALIST_VERIFICATION_ONLY",
+    "max_blocks": "EXACTLY_PLAN_REQUIRED_BLOCK_COUNT",
+    "authorization_note": "NON_EMPTY"
+  },
+  "resulting_artifact_status": "PAID_FINALIST_VERIFICATION_AUTHORIZED",
+  "next_after_authorization": "MANUAL_GITHUB_ACTIONS_DISPATCH_OF_ROOM917_RU_FINALIST_VERIFICATION",
+  "hard_rules": [
+    "NO_AUTHORIZATION_FROM_SILENCE_OR_IMPLICATION",
+    "NO_AUTHORIZATION_ABOVE_MINIMAL_PLAN_BLOCK_COUNT",
+    "NO_AUTO_DISPATCH",
+    "NO_CAST_LOCK_FROM_AUTHORIZATION",
+    "NO_FULL_E01_RENDER"
+  ]
+}
