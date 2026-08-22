@@ -1,0 +1,20 @@
+name: SI-0015 SMITH Real Routing Telemetry
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_ROUTING_TELEMETRY_2026-08-22/**'
+      - 'CURRENT_IVDIVO_SYSTEM_STATE.json'
+      - 'PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json'
+      - 'tools/ivdivo_preexecution_resume_guard.py'
+      - '.github/workflows/si0015-smith-real-routing-telemetry.yml'
+  workflow_dispatch:
+jobs:
+  telemetry:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run real SMITH routing guard telemetry
+        run: python SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_ROUTING_TELEMETRY_2026-08-22/test_real_routing_guard.py -v
