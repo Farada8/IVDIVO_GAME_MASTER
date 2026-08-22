@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_automix_postproduction_execution/1.0",
+  "schema_version": "ivdivo.room917_automix_postproduction_execution/1.1",
   "project": "ROOM917",
   "episode": "E01",
   "active_branch": "THE_INSURABLE_FIRE",
@@ -43,16 +43,26 @@
     "whole_episode_voice_regeneration_default": "FORBIDDEN"
   },
   "sound_asset_gate": {
+    "binding_report_schema_required": "room917.sound_asset_binding_gate/1.1",
     "binding_report_status_required": "PASS",
     "every_requested_binding_status_required": "PASS",
+    "renderer_bindings_atomic_required": true,
+    "renderer_bindings_complete_for_requested_set_required": true,
+    "required_asset_ids_for_current_patch": [
+      "A01_GREYHAVEN_LOBBY_30S_LOOP",
+      "A02_SWITCHBOARD_ALCOVE_30S_LOOP"
+    ],
     "hold_or_candidate_asset_may_enter_renderer": false,
     "identity_gate": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/sound_asset_binding_gate.py"
   },
   "timing_gate": {
+    "semantic_timing_schema_required": "room917.e01_sound_asset_resolved_timing/1.1",
+    "production_timing_ready_required": true,
     "allowed_grades": ["ACCEPTED_ALIGNMENT", "LIVE_TIMELINE"],
     "fixture_only_must_be": false,
     "production_timestamps_must_be": true,
-    "synthetic_alignment_is_production_authority": false
+    "synthetic_alignment_is_production_authority": false,
+    "partial_diagnostic_resolution_is_production_authority": false
   },
   "buses": {
     "required_exact_set": ["DIALOGUE", "CLUE_SFX", "SFX", "FOLEY", "AMBIENCE", "MUSIC"],
@@ -105,6 +115,8 @@
   },
   "prohibited": [
     "PROMOTE_SYNTHETIC_TIMING_TO_LIVE",
+    "PROMOTE_PARTIAL_SEMANTIC_TIMING_TO_PRODUCTION",
+    "PROMOTE_PARTIAL_SOUND_BINDING_SET_TO_AUTOMIX",
     "MIX_HOLD_OR_UNAUDITIONED_SFX",
     "MIX_UNLOCKED_OR_UNAPPROVED_VOICE_SOURCE",
     "APPLY_CATE_TELEPHONE_CHAIN_TO_NON_CATE",
