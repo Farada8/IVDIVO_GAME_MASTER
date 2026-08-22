@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "library": "IVDIVO_SELF_IMPROVEMENT_ENGINEERING_LIBRARY",
+  "current_authority": {
+    "github_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+    "github_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+    "drive_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0"
+  },
+  "private_uploaded_source_pointers": [
+    {
+      "title": "systems analysis books",
+      "drive_folder_id": "1F_21NJ9YXB63ctOS5KPrkeDlcYKkUTVv",
+      "handling": "PRIVATE_RAW_REFERENCE"
+    },
+    {
+      "title": "business books",
+      "drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+      "handling": "PRIVATE_RAW_REFERENCE"
+    },
+    {
+      "title": "Self-Improvement Reference Ingest Wave2",
+      "drive_folder_id": "1RdYaeSJtim_Bvu6U57QpMjJzIvkuOQ0-",
+      "handling": "DERIVED_REFERENCE_INGEST"
+    }
+  ],
+  "evidence_cycles": [
+    {
+      "cycle": "Cycle7 Durable Convergence",
+      "drive_id": "1tjsajMhfa_-GjuuiUnysbTBMrhk944Dq",
+      "authority_effect": "NONE"
+    },
+    {
+      "cycle": "Cycle8 Story Adapter Real Pilot",
+      "drive_id": "1UpkOWRDj1XOYEHS9toyBMJwm5Aq6lLqL",
+      "authority_effect": "NONE"
+    },
+    {
+      "cycle": "Cycle9 Real Interruption + Convergence",
+      "drive_id": "1HExzpVUcs2z7ObkVPYiLRQIZ3N8le4eV",
+      "authority_effect": "NONE_PENDING_CLOSURE"
+    }
+  ],
+  "copyright_boundary": "Do not copy raw copyrighted book binaries into public GitHub; store metadata/pointers/derived mechanisms only."
+}
