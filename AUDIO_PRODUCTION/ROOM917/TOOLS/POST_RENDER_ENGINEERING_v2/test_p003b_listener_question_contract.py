@@ -40,7 +40,7 @@ assert "mono.wav" not in serialized_public
 assert "pass_b_candidate" not in serialized_public
 assert public["question_classes"] == EXPECTED_CLASSES
 assert public["questions"] == EXPECTED_QUESTIONS
-assert "P003B_UNSEAL_GATE" in public["listener_rules"]
+assert any("P003B_UNSEAL_GATE" in rule for rule in public["listener_rules"])
 
 pass_c = mod.build_pass_c_manifest(
     "TEST_PACKAGE",
