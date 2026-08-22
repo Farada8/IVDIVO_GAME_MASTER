@@ -1,0 +1,16 @@
+{
+  "schema":"BUSINESS_ENGINEERING_OS_CYCLE6_CROSS_LANE_STATE_v1",
+  "authority_base":"7f57a3233a263a9c77cfa0e9a3c160f8a64049ef",
+  "procurement_parallel_pr":{"number":191,"head":"2a30482e0830d225fe51372192039fc918bbb60c","runs":"P33-P48","ci":"SUCCESS","state":"OPEN_DRAFT"},
+  "cross_lane_branch":"business-engineering/cycle6-cross-lane-p81-p96-2026-08-22",
+  "cross_lane_runs":{"range":"P81-P96","executed":16,"local_tests":"16/16_PASS"},
+  "combined_unique_run32":{"ranges":["P33-P48","P81-P96"],"executed":32},
+  "proof_frontier":{"procurement":"PA3_HOLD_FULL_PACK_AND_SUPPLIER_PROFILE","retrofit":"PA3_HOLD_REAL_PROPERTY_PACKET","sme_ai":"PA3_HOLD_REAL_POST_DFB_WORKFLOW","pa4":0,"pa5":0,"e3":0,"e4":0},
+  "public_evidence_ceiling":"E2+",
+  "wip":{"primary":"PROCUREMENT","pilots":["RETROFIT","SME_AI"],"limit":3},
+  "real_holds":["COMPLETE_OFFICIAL_TENDER_PACK","VERIFIED_SUPPLIER_PROFILE","INDEPENDENT_BLIND_PA4_REVIEW","REAL_PROPERTY_PACKET","REAL_POST_DFB_WORKFLOW","REAL_TARGET_USER_INTERACTION"],
+  "next64":{"range":"P97-P160","designed":64,"executed":0},
+  "self_improvement":{"current":"v2","candidate_rules":["MISSING_AUTHORITY_IS_A_FIRST_CLASS_RESULT","POLISH_CANNOT_UPGRADE_PROOF","PA4_MUST_BE_INDEPENDENT"],"global_promotion":false},
+  "authority_promotion":false,
+  "next_gate":"PR191_PLUS_CROSS_LANE_CI_AND_READBACK_THEN_FULL_PACK_OR_PROTECT_NO_CHANGE"
+}
