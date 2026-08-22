@@ -4,8 +4,9 @@
   "commissioner": "Clare County Council",
   "deadline_authority": "2026-09-17",
   "deadline_exact_time": null,
-  "deadline_exact_time_status": "VERIFY_NOT_PUBLICLY_STATED",
+  "deadline_exact_time_status": "EXPLICIT_UNAVAILABLE_IN_CURRENT_TOOL_PATH",
   "submission_platform": "CLARE_COCO_SUBMIT",
+  "portal_preflight_status": "EXPLICIT_UNAVAILABLE_IN_CURRENT_TOOL_PATH",
   "proposal_upload_format": "ONE_PDF_VERIFIED",
   "budget_eur_all_in": 21500,
   "artist_fee_eur": 6000,
@@ -17,12 +18,19 @@
     "status": "OLD_RECTORY_CURTILAGE",
     "conservation_planning_gate": true
   },
-  "site_visit_notes_status": "NOT_PUBLICLY_RECOVERED_ON_CURRENT_PAGE",
+  "site_supporting_info": {
+    "official_link_exists": true,
+    "landscape_master_plan_content_read": false,
+    "status": "EXPLICIT_UNAVAILABLE_IN_CURRENT_TOOL_PATH",
+    "site_visit_notes_status": "NOT_PUBLICLY_RECOVERED_ON_CURRENT_PAGE",
+    "operating_rule": "DO_NOT_ASSERT_SERVICES_ROOT_ZONES_SURVEYED_SIGHTLINES_FINAL_FOUNDATION_OR_APERTURE_ORIENTATION"
+  },
   "go_to_submit": false,
   "proposal_pdf": {
     "version": "v2",
     "pages": 8,
     "preflight": "PASS",
+    "render_qa": "PASS",
     "protected_structure_callout": true,
     "drive_file_id": "1dIgNe_ktIdXf2cbwpks2xfFwhPBNCbNJ",
     "supersedes_drive_file_id": "1i8teEd1dEqYMCOvLn9pRJfBoOX3OM9iA"
@@ -48,25 +56,46 @@
     "status": "INDICATIVE_NOT_SURVEYED_SITE_PHOTO",
     "drive_file_id": "1FwjlCCBFedoE2cNZgE9y950wtd3FFN5f"
   },
-  "external_gate_delta": {
-    "drive_file_id": "1K_xXjhDVtHLjhoBw-8gl2JRbR-RFEMxn",
-    "case_state_v2_drive_file_id": "12OuiqQyuPrA43TmkY2c9u4MP88Srznqg"
-  },
   "red_team": {
     "disposition": "KEEP_PREPARE",
     "fatal_blockers": 0,
+    "major_open": 2,
+    "major_items": [
+      "LANDSCAPE_MASTER_PLAN_CONTENT_NOT_READ",
+      "FABRICATION_FOUNDATION_INSTALL_QUOTE_SANITY"
+    ],
+    "medium_items": [
+      "PORTAL_EXACT_TIME_FILE_FIELD_PREFLIGHT"
+    ],
     "go_to_submit": false,
-    "drive_file_id": "1fWMo67DcLkhM2r28naLh6mMUZ4REt0mK"
+    "drive_file_id": "1fWMo67DcLkhM2r28naLh6mMUZ4REt0mK",
+    "extended_drive_readback_file_id": "1ikZUnPMI03euF4fkKmeGN46Mo_GU2rAN"
   },
+  "supplier_screen": {
+    "status": "PREOUTREACH_DISCOVERY",
+    "plausible_supplier_shortlist": true,
+    "outreach_performed": 0,
+    "quotes_received": 0,
+    "body_quote_sanity": "HOLD_EXTERNAL_RESPONSE",
+    "foundation_quote_sanity": "HOLD_EXTERNAL_RESPONSE",
+    "lift_quote_sanity": "HOLD_EXTERNAL_RESPONSE",
+    "mosaic_material_sanity": "PARTIAL_PUBLIC_SIGNAL_ONLY",
+    "rfq_protocol_drive_file_id": "184EjNo4ftPhAj_-IYP3vDzaS5nRGz5oP",
+    "shortlist_drive_file_id": "16IRd4R4SEyPWe3WGeaCiajpuJKEzz5aH",
+    "screen_state_drive_file_id": "15149ts7pKrz4C5JQtB1eR5_9ug6mHdyo",
+    "rfq_drafts_drive_file_id": "1tEWUwXDMHVjaViHtKgC48swJRwiJ0xeM"
+  },
+  "external_gate_retry_closure_drive_file_id": "1DPPSwpNE1NE5JWNqyadHecH4sDgK2Ccl",
   "operational_submit_target": ">=24H_BEFORE_DATE_DEADLINE_SUBJECT_TO_LIVE_PORTAL",
   "remaining_gates": [
-    "SITE_SUPPORTING_INFO_OR_EXPLICIT_ABSENCE",
+    "LANDSCAPE_MASTERPLAN_RECOVERY_OR_EXPLICIT_UNAVAILABLE_ACCEPTANCE",
+    "FOUNDER_AUTHORIZATION_FOR_SUPPLIER_OUTREACH",
+    "FABRICATION_FOUNDATION_INSTALL_QUOTE_SANITY",
     "PORTAL_PREFLIGHT",
-    "FABRICATION_AND_INSTALL_QUOTE_SANITY",
     "FINAL_READBACK_AFTER_EXTERNAL_CHANGES",
     "EARLY_SUBMISSION",
     "SUBMISSION_RECEIPT_READBACK"
   ],
   "cluain_parallel_state": "HOLD_0_OF_3_SUBMISSION_READY_PROJECT_RECORDS",
-  "proof_boundary": "NO_SELECTION_OR_AWARD_PROBABILITY_OR_ENGINEERING_OR_CONSERVATION_APPROVAL_CLAIM"
+  "proof_boundary": "NO_SELECTION_OR_AWARD_PROBABILITY_OR_ENGINEERING_OR_CONSERVATION_APPROVAL_OR_SUPPLIER_QUOTE_VALIDATION_CLAIM"
 }
