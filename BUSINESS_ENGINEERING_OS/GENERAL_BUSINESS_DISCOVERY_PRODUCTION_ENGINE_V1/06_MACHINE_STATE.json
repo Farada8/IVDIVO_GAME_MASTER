@@ -1,7 +1,7 @@
 {
   "schema": "ivdivo.business.general_discovery_production_engine/1.3",
   "date": "2026-08-22",
-  "status": "P01_P24_ENGINEERING_CURRENT_TEST37_INTERNAL_PASS_PENDING_CI",
+  "status": "P01_P24_ENGINEERING_CURRENT_TEST37_INTERNAL_PASS_CI_VALIDATED_PREMERGE",
   "github": {
     "base_engine_pr": 303,
     "base_engine_merge_sha": "b579c7e0359b5c242b718866c2c2488a2dda1434",
@@ -15,14 +15,12 @@
     "fatal_test_exact_head": "f66a8deddc067e9f15e3e5ad105e4d0cab90aaa4",
     "fatal_test_ci_run": 32555453377,
     "buyer_problem_pr": 322,
-    "buyer_problem_merge_sha": "110e37869b1a733be653d5e504f14a25209ba916"
+    "buyer_problem_merge_sha": "110e37869b1a733be653d5e504f14a25209ba916",
+    "test37_pr": 329,
+    "test37_preclosure_verified_head": "824e61d2de6ab6d9e0fe8581f94da8709ed76930",
+    "test37_preclosure_ci_status": "SUCCESS_4_OF_4"
   },
-  "namespace": {
-    "modules": "BDP01-BDP32",
-    "contracts": "CDP01-CDP32",
-    "proof_gates": "PG01-PG12",
-    "protocols": "P-BDP-01-P-BDP-12"
-  },
+  "namespace": {"modules": "BDP01-BDP32", "contracts": "CDP01-CDP32", "proof_gates": "PG01-PG12", "protocols": "P-BDP-01-P-BDP-12"},
   "run32": {"executed": 32, "keep_or_keep_with_ordering": 21, "mutate": 11, "kill": 0, "market_proof_created": false},
   "next64": {
     "created": 64,
@@ -61,7 +59,7 @@
     "proof_promotion": false
   },
   "test37_internal": {
-    "status": "PASS_2_OF_3_PENDING_CI",
+    "status": "PASS_2_OF_3_CI_VALIDATED_PREMERGE",
     "sample": 3,
     "count": 2,
     "counted_sites": ["PALLAS", "CLISSMANN"],
@@ -96,11 +94,7 @@
   ],
   "external_action": {"authorized": false, "autonomous_outreach": false, "autonomous_spend": false, "autonomous_contracting": false},
   "parallel_overlays": {
-    "money_mechanisms_run32": {
-      "state_path": "13_MONEY_MECHANISMS_MACHINE_STATE.json",
-      "old_wip_invalidated": false,
-      "mutated_by_test37": false
-    }
+    "money_mechanisms_run32": {"state_path": "13_MONEY_MECHANISMS_MACHINE_STATE.json", "old_wip_invalidated": false, "mutated_by_test37": false}
   },
   "drive": {
     "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
