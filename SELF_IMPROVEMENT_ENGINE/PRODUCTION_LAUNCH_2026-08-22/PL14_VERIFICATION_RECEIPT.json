@@ -1,0 +1,41 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.1",
+  "card": "PL-14",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 462,
+    "merge_sha": "74c4440c3d2fed9ea23369b3301a25b0fb2762fa",
+    "verified_head": "c51ced26517d16dbda79d16472059c6609454504"
+  },
+  "exact_head_ci": {
+    "count": 14,
+    "all_success": true,
+    "runs": [32573857070,32573857041,32573857042,32573857069,32573857083,32573857103,32573857032,32573857093,32573857065,32573857043,32573857058,32573857094,32573857028,32573857079]
+  },
+  "acceptance": {
+    "ask_command_executable": true,
+    "project_state_retrieval": true,
+    "project_task_retrieval": true,
+    "documents_source_group": true,
+    "decisions_source_group": true,
+    "generic_memory_source_group": true,
+    "project_isolation": true,
+    "invalidated_memory_excluded": true,
+    "no_hit_remains_unknown": true,
+    "literal_search_mode_explicit": true,
+    "semantic_search_not_claimed": true,
+    "embeddings_not_used": true,
+    "persisted_report_readback": true,
+    "cli_roundtrip": true,
+    "full_personal_ai_regression": true
+  },
+  "drive": {
+    "folder_id": "14T9TeOQ0BzoRm3N3eLz0YlL9rsz0xKma",
+    "document_id": "19PVWtr35YRgKGwyO7alDNKymOC6Hy2ODYeMQ77XGxQI",
+    "verified_marker": "PERSONAL-AI-PL14-DONE-VERIFIED-PR462-CI14OF14-SOURCE-SEPARATED-NO-FABRICATION"
+  },
+  "current_frontier_after_closure": "PL-10",
+  "wave_2_real_production_complete": true,
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION",
+  "evidence_boundary": "PL-14 proves bounded project-local literal retrieval with source separation and audit persistence. It does not prove retrieved-source truth, semantic similarity, embeddings, arbitrary document understanding, web search, model-generated synthesis or cross-project/global knowledge search."
+}
