@@ -6,6 +6,7 @@ on:
       - 'BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md'
       - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/**'
       - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_AGENT_COMMERCE_PEW02_BLIND10/**'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/23_OW01_AGENTIC_COMMERCE_WEDGE_CORRECTION.md'
       - '.github/workflows/general-business-pew02-postmerge-closure.yml'
 
 jobs:
@@ -23,37 +24,83 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
+
           root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
           scanner = json.loads((root/'17_AGENT_COMMERCE_READINESS_SCANNER_V0/01_MACHINE_STATE.json').read_text())
-          result = (root/'18_AGENT_COMMERCE_PEW02_BLIND10/02_BLIND10_RESULTS_AND_SCANNER_PATCH.md').read_text()
-          st = json.loads((root/'18_AGENT_COMMERCE_PEW02_BLIND10/03_MACHINE_STATE.json').read_text())
-          obs = json.loads((root/'18_AGENT_COMMERCE_PEW02_BLIND10/04_OBSERVATIONS_COMPACT.json').read_text())
+          legacy_st = json.loads((root/'18_AGENT_COMMERCE_PEW02_BLIND10/03_MACHINE_STATE.json').read_text())
+          legacy_obs = json.loads((root/'18_AGENT_COMMERCE_PEW02_BLIND10/04_OBSERVATIONS_COMPACT.json').read_text())
           current = Path('BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md').read_text()
-          spec = (root/'17_AGENT_COMMERCE_READINESS_SCANNER_V0/00_SPEC.md').read_text()
-          assert scanner['ruleset_version'] == '2026-08-22.2'
-          assert scanner['p_ew02']['executed'] is True
-          assert scanner['p_ew02']['decision'] == 'PASS_TEST'
-          assert scanner['p_ew02']['scanner_false_negative_findings_corrected'] == 8
-          assert st['authority']['implementation_pr'] == 353
-          assert st['authority']['implementation_merge_sha'] == '0f83a4b223b8355b7163616d2a2cec527ec228db'
-          assert st['authority']['ci_status'] == 'SUCCESS_7_OF_7'
-          assert st['blind_test']['sample_size'] == 10
-          assert st['blind_test']['http_200_ucp_profiles'] == 4
-          assert st['blind_test']['sample_substitution'] is False
-          assert st['proof_boundary']['buyer_demand'] is False
-          assert st['proof_boundary']['willingness_to_pay'] is None
-          assert st['proof_boundary']['proof_promotion'] is False
-          assert st['drive']['readback_status'] == 'PASS'
-          assert len(obs['observations']) == 10
-          assert sum(x['http_status'] == 200 for x in obs['observations']) == 4
-          assert all(x['oai_feed_evidence'] == 'UNKNOWN' for x in obs['observations'])
-          assert '8 false-negative findings' in result
-          assert '2026-08-22.2' in spec
-          assert 'P-EW02 = PASS_TEST' in current
+          wedge = (root/'23_OW01_AGENTIC_COMMERCE_WEDGE_CORRECTION.md').read_text()
+
+          # Controlling ruleset-0.3 closure. Do not silently regress to the initial
+          # ruleset-0.2 classification semantics.
+          assert scanner['schema'] == 'ivdivo.general_business.agent_commerce_scanner/0.3'
+          assert scanner['ruleset_version'] == '2026-08-22.3'
+          p2 = scanner['p_ew02']
+          assert p2['executed'] is True
+          assert p2['initial_implementation_pr'] == 353
+          assert p2['initial_merge_sha'] == '0f83a4b223b8355b7163616d2a2cec527ec228db'
+          assert p2['corrective_ruleset_pr'] == 387
+          assert p2['corrective_merge_sha'] == '75cc0f5b15b3a7199839626cea299a7f781c0d56'
+          assert p2['blind_sample'] == 10
+          assert p2['sample_replaced'] is False
+          assert p2['decision'] == 'PASS_TEST_AFTER_RULESET03_CORRECTION'
+          assert p2['http_responses'] == 10
+          assert p2['network_errors'] == 0
+          assert p2['ucp_200_profiles'] == 4
+          assert p2['ucp_404_or_410'] == 6
+          assert p2['ucp_200_disposition'] == 'HOLD_UNRESOLVED_EVIDENCE'
+          assert p2['generic_advice_outputs'] == 0
+          assert p2['false_promotions'] == 0
+          assert p2['ruleset03_canaries'] == 'PASS_20_OF_20'
+          assert p2['exact_head_scanner_ci'] == 32568940358
+          assert p2['exact_head_blind10_ci'] == 32568940347
+          assert p2['postmerge_closure_ci'] == 32568940386
+
+          learning = scanner['real_fixture_learning']
+          assert learning['rest_endpoint_gate'] == 'ONLY_WHEN_REST_BINDING_ADVERTISED'
+          assert learning['identity_linking_gate'] == 'ONLY_WHEN_IDENTITY_LINKING_CAPABILITY_ADVERTISED'
+          assert learning['unprobed_order_events_policy'] == 'UNKNOWN_NOT_FAIL'
+          assert learning['order_capability_without_proven_webhook_and_without_signing_keys'] == 'UNKNOWN_NOT_FAIL'
+          assert learning['explicit_webhook_without_signing_keys'] == 'FAIL'
+          assert learning['explicit_unsigned_webhook'] == 'FAIL'
+
+          # Cross-store evidence/readback remains mandatory.
+          drive = scanner['drive']
+          assert drive['semantic_readback'] is True
+          assert drive['wedge_correction_document_id'] == '1GWGxroh4L8MQQOTf3xyX_M_pDHz3brTfmabURJHCd2w'
+          assert drive['readback_marker'] == 'OW01-WEDGE-CORRECTION-RULESET03-KILL-GENERIC-UCP-SETUP-KEEP-CROSS-PROTOCOL-20260822'
+
+          # Historical P-EW02 state remains provenance, not controlling ruleset.
+          assert legacy_st['authority']['implementation_pr'] == 353
+          assert legacy_st['authority']['implementation_merge_sha'] == '0f83a4b223b8355b7163616d2a2cec527ec228db'
+          assert legacy_st['blind_test']['sample_size'] == 10
+          assert legacy_st['blind_test']['http_200_ucp_profiles'] == 4
+          assert legacy_st['blind_test']['sample_substitution'] is False
+          assert legacy_st['proof_boundary']['buyer_demand'] is False
+          assert legacy_st['proof_boundary']['willingness_to_pay'] is None
+          assert legacy_st['proof_boundary']['proof_promotion'] is False
+          assert len(legacy_obs['observations']) == 10
+          assert sum(x['http_status'] == 200 for x in legacy_obs['observations']) == 4
+          assert all(x['oai_feed_evidence'] == 'UNKNOWN' for x in legacy_obs['observations'])
+
+          # Current strategy must carry the corrected semantics and kill/mutation,
+          # while preserving commercial proof boundaries.
+          assert 'P-EW02 = PASS_TEST_RULESET03_CORRECTED' in current
           assert 'P-EW03 = PASS_ENGINEERING' in current
           assert 'P-EW04 = PASS_ENGINEERING' in current
           assert 'P-EW05 = INTERNAL_DECISION_ALL_M1' in current
-          assert 'CURRENT-GENERAL-BUSINESS-PEW05-ALL-M1-OW01-NEXT-TEST-NO-MARKET-WINNER-20260822' in current
+          assert 'OW01_GENERIC_PLATFORM_UCP_SETUP = KILL_AS_PRIMARY_WEDGE' in current
+          assert 'CURRENT-GENERAL-BUSINESS-OW01-WEDGE-CORRECTED-RULESET03-NO-WTP-20260822' in current
+          assert 'WILLINGNESS_TO_PAY = UNKNOWN' in current
+          assert 'PRICE = NULL' in current
+          assert 'TRANSACTION = NONE' in current
+          assert 'PROFITABILITY = UNPROVEN' in current
           assert 'EXTERNAL_ACTION_AUTHORIZED = FALSE' in current
-          print('P-EW02 CLOSURE: PASS — durable PR353/CI7 evidence preserved under P-EW05 frontier')
+
+          assert 'GENERIC UCP INSTALLATION FOR LARGE MANAGED COMMERCE PLATFORMS = KILL' in wedge
+          assert 'DO_NOT_SELL_WHAT_THE_PLATFORM_ALREADY_AUTOMATES' in wedge
+          assert 'WTP = UNKNOWN' in wedge
+
+          print('P-EW02 CLOSURE: PASS — ruleset03 correction, frozen-10 provenance, Drive readback and no-proof-overreach preserved')
           PY
