@@ -1,9 +1,13 @@
 {
-  "schema_version": "room917.authority_hygiene_rules/1.0",
+  "schema_version": "room917.authority_hygiene_rules/1.1",
   "scope": "ROOM917_E01_CUE_LINEAGE_SOURCE",
   "active_engine": "THE INSURABLE FIRE",
-  "allowed_drive_ids": [
-    "1Rz_Tv83fNhQIuPnMA4jRkESmgiu8xA-GZnctbQYDP_I"
+  "allowed_authorities": [
+    {
+      "drive_id": "1Rz_Tv83fNhQIuPnMA4jRkESmgiu8xA-GZnctbQYDP_I",
+      "revision_id": "AIroW35akh5K-jiaYRt8MsVE766IodPxPzb_8ueRhxFW36LZv5aJP_vTzTR7KZhJULqdCk5aTTiDvO4ncVEn0z521VzUp_jLDbvK_V7Fa50",
+      "title": "ROOM 917 — E01 ELEVENLABS ACTOR + SOUND DIRECTOR MASTER v1.0"
+    }
   ],
   "required_current_markers": [
     "ACTIVE ENGINE: THE INSURABLE FIRE",
@@ -17,5 +21,6 @@
   ],
   "unknown_source_policy": "HOLD_UNVERIFIED_AUTHORITY",
   "legacy_conflict_policy": "QUARANTINE_LEGACY_CONFLICT",
-  "law": "Drive/File search discovery is not authority. Exact approved source identity plus current markers are required for PASS; legacy-conflict signatures quarantine; all other sources HOLD."
+  "revision_change_policy": "HOLD_UNTIL_EXPLICIT_REVALIDATION",
+  "law": "Drive/File search discovery is not authority. Production preflight requires the exact approved Drive ID + revision ID + title. Content-bearing discovery candidates must also carry current markers. Legacy-conflict signatures quarantine; unknown or changed authorities HOLD."
 }
