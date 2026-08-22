@@ -1,0 +1,6 @@
+{
+  "OBSERVATIONAL_ONLY": {"distinguished_roles": [], "group_size": 24, "relation_types": 4},
+  "ONE_ADDRESSABLE_ROLE": {"distinguished_roles": [0], "group_size": 6, "relation_types": 7},
+  "TWO_ADDRESSABLE_ROLES": {"distinguished_roles": [0,1], "group_size": 2, "relation_types": 11},
+  "ALL_ROLES_ADDRESSABLE": {"distinguished_roles": [0,1,2,3], "group_size": 1, "relation_types": 15}
+}
