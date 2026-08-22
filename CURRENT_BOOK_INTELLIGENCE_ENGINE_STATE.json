@@ -1,30 +1,25 @@
 {
-  "schema_version": "1.7",
+  "schema_version": "1.8",
   "updated": "2026-08-22",
-  "status": "V1_1_ENGINEERING_VERIFIED_CURRENT_CROSS_DOMAIN_PROSPECTIVE_VALIDATED",
+  "status": "V1_1_ENGINEERING_VERIFIED_CURRENT_CROSS_DOMAIN_PROSPECTIVE_VALIDATED_DRIVE_SYNC_PASS",
   "authority": "BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.1.md",
   "runtime": "tools/ivdivo_book_intelligence.py",
   "runtime_version": "1.1",
   "source_manifest": "BOOK_INTELLIGENCE_ENGINE/01_SOURCE_LIBRARY_MANIFEST_v1.2.json",
   "schemas": "BOOK_INTELLIGENCE_ENGINE/02_BOOK_INTELLIGENCE_SCHEMAS_v1.1.json",
-  "prompt_stack": "BOOK_INTELLIGENCE_ENGINE/03_BOOK_INTELLIGENCE_PROMPT_STACK_32_v1.0.md",
-  "cycle1_report": "BOOK_INTELLIGENCE_ENGINE/04_CYCLE1_32_PROMPTS_EXECUTION_REPORT_v1.0.md",
   "integration_contract": "BOOK_INTELLIGENCE_ENGINE/05_ALL_ENGINE_ADAPTER_AND_INTEGRATION_CONTRACT_v1.1.md",
   "engine_role": "UNIVERSAL_GATEWAY_FOR_MATERIAL_BOOK_REFERENCE_USE",
-  "raw_book_binary_policy": "KEEP_IN_DRIVE_OR_LEGAL_EXTERNAL_SOURCE; NO_RAW_COPYRIGHTED_BINARIES_IN_GITHUB",
   "effective_source_register_count": 14,
   "full_read_claims_added_by_v1_2": 0,
   "source_model": {
     "dimensions": ["integrity_status","read_coverage","extraction_stage"],
-    "law": "EXTRACTION_STAGE_DOES_NOT_IMPLY_FULL_READ",
-    "legacy_lifecycle_stage": "COMPATIBILITY_ONLY"
+    "law": "EXTRACTION_STAGE_DOES_NOT_IMPLY_FULL_READ"
   },
   "evidence_model": {
     "engineering_verification_counts_as_real_validation": false,
-    "legacy_unclassified_counts_as_real_validation": false,
-    "real_validation_classes": ["REAL_PROJECT_VALIDATION","HUMAN_VALIDATION","PROVIDER_VALIDATION","MARKET_VALIDATION","FACTUAL_SPECIALIST_VALIDATION"],
     "promotion_requires_bidirectional_traceability": true,
-    "method_quality_must_match_claim_strength": true
+    "method_quality_must_match_claim_strength": true,
+    "human_provider_market_evidence": "NEVER_SYNTHESIZED_FROM_BOOKS"
   },
   "engineering_verification": {
     "v1_0_local_contract_tests": "13/13 PASS",
@@ -80,28 +75,26 @@
     "v1_1_architecture_promotion": "VERIFIED_CURRENT_CROSS_DOMAIN",
     "promotion_basis": "EXACT_REPO_ENGINEERING_PASS_PLUS_TWO_INDEPENDENT_PROSPECTIVE_PROJECTS_WITH_OBSERVABLE_GAIN_FATAL_0_MAJOR_0",
     "individual_book_derived_mechanisms": "REMAIN_ON_SEPARATE_LIFECYCLES_NOT_AUTO_PROMOTED",
-    "human_provider_market_evidence": "NEVER_SYNTHESIZED_FROM_BOOKS",
-    "do_not_claim": [
-      "FULL_NASA_READ",
-      "FULL_GOOGLE_SRE_READ",
-      "FULL_ITU_READ",
-      "NASA_PDF_DOWNLOADED_TO_DRIVE",
-      "D04_ITU_COMPLIANT",
-      "D04_G4_HUMAN_PASS",
-      "LIVE_PROVIDER_RENDER",
-      "UNIVERSAL_TRUTH_OF_ANY_SINGLE_BOOK_MECHANISM"
-    ]
+    "do_not_claim": ["FULL_NASA_READ","FULL_GOOGLE_SRE_READ","FULL_ITU_READ","NASA_PDF_DOWNLOADED_TO_DRIVE","D04_ITU_COMPLIANT","D04_G4_HUMAN_PASS","LIVE_PROVIDER_RENDER","UNIVERSAL_TRUTH_OF_ANY_SINGLE_BOOK_MECHANISM"]
   },
   "drive_mirror": {
     "folder_id": "1YaCto6NxrRRsbgUI1PoySLNBdna9xq6r",
     "authority_doc_id": "1HHQ4Lcq0p3R5KFHbfzXemv5tMctOCNGt4CFYdXaV__Y",
     "source_manifest_doc_id": "1GvKeoaB8DdLEZEAJ6CJAKI2N1EvQlOkt3iq5BIhhgUk",
     "v1_1_nasa_traceability_doc_id": "1-_50VgvTD3Qh86bhiXW7FNTzFFlaPEm61_xODLDZRl4",
-    "cross_domain_promotion_doc_id": "PENDING_CREATE_READBACK"
+    "cross_domain_promotion_doc_id": "1JKO9IwRHWYRtKduMQLuDRodevheuDOad4M0tFqKCjQI",
+    "cross_domain_promotion_readback": "PASS",
+    "source_manifest_v1_2_delta_readback": "PASS"
+  },
+  "d04_human_gate": {
+    "status": "PENDING_EXTERNAL_HUMAN_SIGNAL",
+    "drive_parent_folder_id": "11DuG5frwv9jFyT0boD0bVOuQgIdkF65C",
+    "protocol": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_PROTOCOL_v2.json",
+    "internal_key": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_KEY_INTERNAL_v2.json",
+    "listener_count_required": 3,
+    "result_claimed": false
   },
   "next_obligations": [
-    "WRITE_PILOT3_PILOT4_CROSS_DOMAIN_PROMOTION_TO_DRIVE_AND_READBACK",
-    "APPEND_SOURCE_MANIFEST_V1_2_DELTA_TO_DRIVE_SOURCE_MANIFEST",
     "RUN_D04_LISTENER_01_02_03_AS_REAL_HUMAN_SESSIONS_WITHOUT_KEY_EXPOSURE",
     "SCORE_D04_ONCE_AFTER_ALL_THREE_RESPONSES",
     "CONTINUE_PROBLEM_TARGETED_BOOK_SOURCE_EXTRACTION_ONLY_WHEN_DECISION_RELEVANT",
