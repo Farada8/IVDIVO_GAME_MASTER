@@ -1,0 +1,58 @@
+{
+  "schema": "ivdivo.general_business.ow01_wedge_correction/1.0",
+  "date": "2026-08-22",
+  "status": "STRATEGIC_MUTATION_RECORDED_NO_MARKET_PROOF",
+  "parent_candidate": "OW-01_AGENTIC_COMMERCE_MERCHANT_READINESS",
+  "dependency": {
+    "current_scanner_ruleset": "2026-08-22.3",
+    "corrective_pr": 387,
+    "corrective_merge_sha": "75cc0f5b15b3a7199839626cea299a7f781c0d56",
+    "p_ew02_frozen_sample_preserved": true
+  },
+  "kill": [
+    "GENERIC_SHOPIFY_UCP_ENABLEMENT_AS_PRIMARY_WEDGE",
+    "GENERIC_BIGCOMMERCE_BASIC_UCP_ENABLEMENT_AS_PRIMARY_WEDGE",
+    "GENERIC_AI_READY_NARRATIVE_AUDIT",
+    "MANUAL_WORK_THAT_ONLY_REPRODUCES_PLATFORM_DEFAULTS"
+  ],
+  "keep_testable": [
+    "CROSS_PROTOCOL_CONFORMANCE_AND_DRIFT_DIAGNOSTIC",
+    "CUSTOM_NON_MANAGED_STACK_READINESS",
+    "WOOCOMMERCE_TRANSITION_TOOLING_RECHECK_BEFORE_OFFER",
+    "PRODUCT_DATA_AND_AGENT_DISCOVERY_QUALITY_DIAGNOSTIC",
+    "DEVELOPER_REGRESSION_AND_PROTOCOL_MIGRATION_TOOLING"
+  ],
+  "founder_fit": {
+    "remote_first": true,
+    "physical_load": "NONE_TO_LOW",
+    "cash_at_risk_eur": "LOW_INTERNAL_PROOF_COMPATIBLE_WITH_0_TO_3000_PROFILE",
+    "inventory_required": false,
+    "warehouse_required": false,
+    "compounding_asset_possible": true
+  },
+  "monetization": {
+    "stage": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN",
+    "wtp": "UNKNOWN",
+    "price": null,
+    "paid_transactions": 0,
+    "cac": "UNKNOWN",
+    "profitability": "UNPROVEN"
+  },
+  "drive": {
+    "document_id": "1GWGxroh4L8MQQOTf3xyX_M_pDHz3brTfmabURJHCd2w",
+    "parent_folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
+    "semantic_readback": true,
+    "marker": "OW01-WEDGE-CORRECTION-RULESET03-KILL-GENERIC-UCP-SETUP-KEEP-CROSS-PROTOCOL-20260822"
+  },
+  "external_action_authorized": false,
+  "next_internal_route_if_no_external_authorization": "EARLY_WAVE_RADAR",
+  "next_external_test_if_explicitly_authorized": "PREDECLARED_WTP_TEST_FOR_CROSS_PROTOCOL_OR_CUSTOM_STACK_DIAGNOSTIC",
+  "laws": [
+    "EARLY_WAVE_REAL != FIRST_SERVICE_IDEA_GOOD",
+    "PLATFORM_DEFAULTS_CAN_ERASE_SERVICE_WEDGE",
+    "REAL_PROTOCOL_ADOPTION != MERCHANT_WTP_FOR_SETUP",
+    "SCANNER_FALSE_POSITIVE != MERCHANT_DEFECT",
+    "CORRECTED_ENGINEERING_EVIDENCE_CAN_MUTATE_THE_BUSINESS_MODEL",
+    "DO_NOT_SELL_WHAT_THE_PLATFORM_ALREADY_AUTOMATES"
+  ]
+}
