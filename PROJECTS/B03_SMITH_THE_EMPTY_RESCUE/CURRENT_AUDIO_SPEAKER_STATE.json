@@ -1,33 +1,48 @@
 {
-  "schema": "ivdivo.b03.audio_speaker_current_state/1.0",
+  "schema": "ivdivo.b03.audio_speaker_current_state/1.1",
   "updated": "2026-08-22",
   "project": "B03 — THE EMPTY RESCUE",
   "story_authority": "FOUNDER_LOCKED_CH01_29",
   "story_text_mutation": false,
   "ch30_authorized": false,
-  "status": "SPEAKER_CONTEXT_REVIEW_CH01_21_PARTIAL_FULL_GATE_OPEN",
+  "status": "SPEAKER_CONTEXT_REVIEW_CH01_24_PARTIAL_FULL_GATE_OPEN",
   "actual_speech_denominator": 3714,
-  "reviewed_scope": "CH01-21",
-  "reviewed_actual_speech": 2390,
-  "assigned": 2387,
-  "unknown": 3,
-  "coverage_reviewed_scope_pct": 99.87,
-  "remaining_unknown": ["B03_CH03_S0240", "B03_CH03_S0244", "B03_CH03_S0248"],
-  "not_yet_context_reviewed_after_ch21": 1324,
+  "reviewed_scope": "CH01-24",
+  "reviewed_actual_speech": 2898,
+  "assigned": 2898,
+  "unknown": 0,
+  "coverage_reviewed_scope_pct": 100.0,
+  "remaining_unknown": [],
+  "not_yet_context_reviewed_after_ch24": 816,
+  "reconciliation": {
+    "ch01_03_authority": "B03_SPEAKER_AUTHORITY_RECONCILIATION_CH01_03_v4",
+    "stale_ch03_unknown_closed": ["B03_CH03_S0240", "B03_CH03_S0244", "B03_CH03_S0248"],
+    "text_mutation_bytes": 0
+  },
   "latest_batch": {
-    "scope": "CH19-21",
-    "actual_speech": 355,
-    "assigned": 355,
+    "scope": "CH22-24",
+    "actual_speech": 508,
+    "assigned": 508,
     "unknown": 0,
+    "strong_baseline_overlaps": 145,
+    "substantive_conflicts": 0,
     "drive": {
-      "ch19": "1v_I69qXLMeNZHctnDsJRulEFNbFtKnNf",
-      "ch20": "1KR-i62LbUGcGOS-TKlXoLhyzSEeMn2bQ",
-      "ch21": "1CNM-1kQEZvM_mArkzGixGu0WqAUMVW9s",
-      "gate": "1VMSzd1eou29mQ56W7lZGcI2X6KQ4--5G",
-      "manifest": "1uwy_KvAprLJxOhp817_6V7HnoyV-spQ7",
-      "voice_map_template": "1g4lESWRrDNmfeUa4Ph4KbzlrU81DVj0o",
-      "zip": "1BNdcmf0CLxaSY0Psmb520cCoMiVvB28r"
+      "ch22": "1kZJy91dPNU7dakbXEoYyVLo6mHCnvgex",
+      "ch23": "1P-UZtTun34pGfK1hpkI0edf-mySB7x4j",
+      "ch24": "10sXNFUDoGjCQhT12uIp0SnmmhKqSl4eP",
+      "gate": "1E8vd8aZRfjKoBhjr2MBW4ihDu7TTkLua",
+      "manifest": "1y6B7lEr9zWFuyxjta8s3G5TFR666m-ZX",
+      "voice_map_template": "1mUgsInTYtlqWRXyhp_Xhdmr8n6VIuU5x",
+      "zip": "1ey9xi1JJFz7mr6HIE2gVjQ3vb025k_70"
     }
+  },
+  "remaining_scope": {
+    "CH25": 120,
+    "CH26": 169,
+    "CH27": 153,
+    "CH28": 166,
+    "CH29": 208,
+    "total": 816
   },
   "source_segmentation": {
     "drive_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
@@ -38,11 +53,12 @@
   "full_speaker_gate": false,
   "provider_evidence": false,
   "human_signal": false,
-  "next_exact_action": "CH22–24 contextual speaker review",
+  "next_exact_action": "CH25–27 contextual speaker review",
   "do_not": [
     "DO_NOT_MUTATE_LOCKED_PROSE",
     "DO_NOT_WRITE_CH30",
     "DO_NOT_INVENT_SPEAKER_IDENTITY",
-    "DO_NOT_ASSIGN_VOICE_IDS_BEFORE_FULL_SPEAKER_GATE_AND_CASTING"
+    "DO_NOT_ASSIGN_VOICE_IDS_BEFORE_FULL_SPEAKER_GATE_AND_CASTING",
+    "DO_NOT_CLAIM_FULL_SPEAKER_GATE_BEFORE_CH25_29_REVIEW"
   ]
 }
