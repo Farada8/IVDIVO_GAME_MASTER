@@ -1,8 +1,9 @@
 {
-  "schema": "ivdivo.self_improvement.cycle9/1.0",
+  "schema": "ivdivo.self_improvement.cycle9/1.1",
   "date": "2026-08-22",
-  "status": "RUN32_COMPLETE_CANDIDATE_PACKAGE_CI_DRIVE_CLOSURE_PENDING",
+  "status": "RUN32_COMPLETE_DRIVE_READBACK_PASS_FIRST_HEAD_CI_PASS_FRESH_MAIN_REVIEW_REQUIRED",
   "base_main_sha": "4d6dc7c5dc24ea77582327254d339e619173558f",
+  "fresh_main_observed_after_build": "f45f07cb6a78733fa1a123d5e11a35dfb43913c5",
   "governing_authority": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
   "governing_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
   "global_promotion": false,
@@ -15,27 +16,13 @@
     "mutate": [29],
     "rejected_duplicate_runtime": [10]
   },
-  "bounded_modules": [
-    "AuthoritySurfaceSnapshot",
-    "SourceSurfaceIndex",
-    "CandidateSemanticDedupe",
-    "PromotionEligibilityGate",
-    "EvidenceClassFirewall",
-    "EvidenceFamilyNormalizer",
-    "NegativeEvidenceRetentionGate",
-    "MissingAuthorityRouter",
-    "ImprovementEventCompiler",
-    "DefectRepairLifecycle",
-    "CanaryEvidenceCompiler",
-    "ReplicationMatrix",
-    "EngineWorthinessGate",
-    "MetaWorkBudgetGovernor",
-    "CompactionPlanner",
-    "SupersessionPlanner",
-    "PromptIRSemanticParityGate",
-    "SelfReferencePromotionGuard",
-    "PromotionPacketCompiler"
-  ],
+  "engineering": {
+    "modules": 20,
+    "contracts": 20,
+    "proof_obligations": 16,
+    "protocols": 12,
+    "deterministic_canaries": 17
+  },
   "reused_owners": {
     "durable_transactions": "SI-0014 / Cycle7 durable convergence",
     "project_slice_freshness": "SI-0015 / Cycle8 integrated canaries",
@@ -49,10 +36,24 @@
     "test_pass_is_promotion": false,
     "multiple_model_summaries_are_independent_if_same_root": false
   },
+  "drive_mirror": {
+    "folder_id": "1MbZ4-kRIl4dSEEhCMmf6jx72XV5pkhA5",
+    "master_doc_id": "1alHTEJrz__-zVArYJFGy9yVdBpxoIhzqQfP9xuKXMJw",
+    "library_doc_id": "1SomPGPwXbbebjKvRvtTptDTz46_swdobXn-gTCLIVzw",
+    "run32_doc_id": "1K1fUQDk0dHXvoofGyjmzGFbhcrGhIMzWFj1sIAMQi_Q",
+    "engineering_doc_id": "1pb8g3LoiWzaSKGxSXi3MGA4Qq2PAs9d61dQO7B858vg",
+    "next64_doc_id": "1sCO36bJPvBwQD4TpM3WZ5-q8GgWwataiJiMarGdvmDA",
+    "content_readback": "PASS"
+  },
+  "github": {
+    "pr": 211,
+    "first_ci_run_id": 32549067515,
+    "first_ci_job_id": 96972683436,
+    "first_ci_conclusion": "SUCCESS",
+    "first_ci_head_sha": "14f852b9ae99a886c49b857d60a636bc8f34e68c"
+  },
   "next64_count": 64,
-  "next_gate": "EXACT_HEAD_REGRESSION_PLUS_DRIVE_READBACK_PLUS_FRESH_MAIN_COMPARE",
-  "drive_mirror": null,
-  "ci": "PENDING",
+  "next_gate": "FINAL_HEAD_CI_PLUS_FRESH_MAIN_SEMANTIC_COMPARE_THEN_BOUNDED_CANDIDATE_CLOSURE",
   "forbidden": [
     "AUTO_PROMOTE_CYCLE9",
     "ALLOCATE_NEW_SI_ID_FOR_ALIAS",
