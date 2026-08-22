@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.0",
+  "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.1",
   "project": "ROOM917",
   "episode": "E01",
   "authority": "THE_INSURABLE_FIRE",
@@ -32,11 +32,24 @@
   },
   "blind_listen": {
     "pass_a_story_free": "NOT_RUN",
+    "pass_a_notes_frozen": false,
     "pass_b_targeted_verification": "NOT_RUN",
+    "pass_b_queue_may_open_only_after_pass_a_notes_frozen": true,
     "pass_c_translation_playback": {
       "stereo_headphones": "NOT_RUN",
       "ordinary_speakers_or_mono": "NOT_RUN",
       "mobile_proxy": "NOT_RUN"
+    }
+  },
+  "pass_b_verification_queue": {
+    "scene3": {
+      "artifact": "ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json",
+      "status": "SEALED_UNTIL_PASS_A_FREEZE",
+      "candidate_count": 10,
+      "source": "ROOM917_E01_SCENE3_v1_4A_NATURALNESS_AUDIT.md",
+      "source_kind": "HISTORICAL_REAL_AUDIO_MEASUREMENT_PLUS_PRODUCTION_INFERENCE",
+      "current_master_version_identity": "UNPROVEN",
+      "rule": "Candidates have no current release effect until identified current audio is directly verified."
     }
   },
   "question_classes": [
@@ -88,6 +101,7 @@
     "rules": [
       "NO_PATCH_FROM_TASTE_ALONE",
       "NO_PATCH_FROM_LOW_RMS_ALONE",
+      "NO_PATCH_FROM_PASS_B_CANDIDATE_UNTIL_CURRENT_AUDIO_VERIFIED",
       "NO_WHOLE_SCENE_RERENDER_WHEN_LOCAL_REPAIR_EXISTS",
       "DIALOGUE_RERENDER_ONLY_FOR_PROVEN_PERFORMANCE_OR_PRONUNCIATION_FAILURE",
       "MIX_REPAIR_FIRST_FOR_SPACING_MASKING_ROOM_CONTINUITY_OR_PLACEMENT",
