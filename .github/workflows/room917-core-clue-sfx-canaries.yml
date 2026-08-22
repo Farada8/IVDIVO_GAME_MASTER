@@ -1,0 +1,99 @@
+name: ROOM917 Core Clue SFX Canaries
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/room917-core-clue-sfx-canaries.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_core_clue_sfx_canaries.py'
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deterministic audio dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python -m pip install --disable-pip-version-check numpy scipy soundfile
+
+      - name: Generate bounded SFX canaries
+        run: |
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_core_clue_sfx_canaries.py > generation_receipt_stdout.json
+
+      - name: Machine preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import numpy as np
+          import soundfile as sf
+          root=Path('ROOM917_E01_CORE_CLUE_SFX_CANARIES_v1')
+          receipt=json.loads((root/'ROOM917_E01_CORE_CLUE_SFX_CANARY_RECEIPT_v1.json').read_text(encoding='utf-8'))
+          assets=receipt.get('assets') or []
+          if len(assets) != 12:
+              raise SystemExit(f'Expected 12 candidate assets, got {len(assets)}')
+          by={}
+          for row in assets: by.setdefault(row['asset_id'],[]).append(row)
+          expected={'M01_917_DOUBLE_INTERNAL_RING','M02_GLASS_LAMP_PING','M03_COPPER_HISS_BED','M05_TWO_PART_ANALOGUE_CUT'}
+          if set(by) != expected or any(len(v)!=3 for v in by.values()):
+              raise SystemExit('A/B/C category matrix incomplete')
+          for row in assets:
+              p=Path(row['wav_path'])
+              y,sr=sf.read(p,always_2d=True)
+              if sr != 48000 or y.shape[1] != 2:
+                  raise SystemExit(f'Format fail: {p}')
+              if np.max(np.abs(y)) >= .999:
+                  raise SystemExit(f'Clipping fail: {p}')
+              if not row.get('duration_spec_pass'):
+                  raise SystemExit(f'Duration spec fail: {p}')
+          if (root/'M04_CATE_FOUR_NOTE_LULLABY').exists():
+              raise SystemExit('M04 must not be generated before pitch/Cate identity lock')
+          print('PASS: 12 bounded clue SFX canaries; M04 intentionally absent.')
+          PY
+
+      - name: Package artifact
+        run: |
+          zip -qr ROOM917_E01_CORE_CLUE_SFX_CANARIES_v1.zip ROOM917_E01_CORE_CLUE_SFX_CANARIES_v1
+
+      - name: Upload listening artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_E01_CORE_CLUE_SFX_CANARIES_v1
+          path: |
+            ROOM917_E01_CORE_CLUE_SFX_CANARIES_v1/
+            ROOM917_E01_CORE_CLUE_SFX_CANARIES_v1.zip
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Summary
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## ROOM917 E01 core clue SFX canaries
+          - M01 double internal ring: 3 variants
+          - M02 glass lamp ping: 3 variants
+          - M03 copper hiss bed: 3 variants
+          - M05 two-part analogue cut: 3 variants
+          - M04 lullaby: intentionally not generated
+          - 48 kHz / 24-bit / stereo
+          - provider calls: 0
+          - paid synthesis: 0
+          - status: CANDIDATE / HOLD
+          - next: human blind category test + mono/phone/false-clue gates
+          EOF
