@@ -1,68 +1,98 @@
 {
-  "schema_version": "3.7-feature-audio-reconciled",
+  "schema_version": "3.8-feature-audio-final-scene-bed",
   "updated": "2026-08-22",
   "project_id": "IVDIVO_BOOK_3_SMITH",
   "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
-  "status": "FOUNDER_LOCKED_RELEASE_READY_AUDIO_ACOUSTIC_BRANCH_RECONCILIATION_OPEN",
-  "authority_policy": "MAIN_FOR_STORY_LOCK_DRIVE_140_FOR_CURRENT_AUDIO_ACOUSTIC_STATE_FEATURE_FOR_NEW_AUDIO_METADATA",
+  "status": "FOUNDER_LOCKED_RELEASE_READY_FINAL_SCENE_BED_PASS_CH01_HARD_PILOT_REBIND_FRONTIER",
+  "authority_policy": "MAIN_FOR_STORY_LOCK_DRIVE_152_FOR_FINAL_PHYSICAL_SCENE_BED_FEATURE_FOR_NEW_AUDIO_METADATA",
   "founder_lock": true,
   "story_lock": true,
   "locked_scope": "CH01_CH29",
   "ch30_authorized": false,
   "exact_text_mutation_bytes": 0,
-  "drive_current_authority": {
-    "production_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
-    "cross_store_receipt_151_id": "1XYrjVenrooqmejsFXBB4t91oM9qmKVgtniNWlX6cHwQ",
-    "current_audio_acoustic_state_md_id": "1dWCDDkwFRmbP5uTBUQmzw2FSbS_EEWKH",
-    "current_audio_acoustic_state_json_id": "1d5PzbnVnlFJzWUQbE8Oy5ibJ3QGcL-Te",
-    "working_scene_bed_v1_1_json_id": "1LvDp0jq2cdmRBgu0AczGRtlF1ohW6cLq",
-    "working_scene_bed_v1_1_gate_id": "1OMQJQeGsegmf_gF-uUwIyA0ncWveJtTQ",
-    "predecessor_full_book_scene_bed_v1_0_json_id": "1moQeFzhH5u7XfeMMduJWeg8axJHbSNIY",
-    "predecessor_full_book_scene_bed_v1_0_gate_id": "1EJm6hG81a3a4MXebpDtro-8o0-II2hEc",
-    "ch25_29_count_reconciled_json_id": "1_kuToOxY9Hq9m64IC8J9MZIeum4nxMTN",
-    "ch25_29_count_reconciliation_gate_id": "1KcGwcJNGpsyLDjEy0QIxHrEVae2KlZk9"
+  "full_conversation_handoff": {
+    "drive_doc_id": "19yCaEzPYMe-4AlyqH5W-LgtKGPnGZ4utLYSeYOkc07w",
+    "drive_title": "153_B03 — FULL CONVERSATION HANDOFF + CURRENT AUTHORITY RECEIPT — 2026-08-22",
+    "github_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/SESSION_HANDOFFS/153_FULL_CONVERSATION_HANDOFF_2026-08-22.md",
+    "status": "PERSISTED_BOTH_STORES"
   },
-  "github_main_mirror": {
-    "path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/AUDIO_ACOUSTIC_DRIVE_MIRROR_POINTERS_2026-08-22.json",
-    "commit_recorded_by_drive_receipt": "76aec545eae22988c9b076a495b36f2415a31fc7",
-    "authority_status": "WORKING_BRANCH_RECONCILIATION_OPEN"
+  "story_authority": {
+    "locked_master_76_drive_id": "141BOyku8VX8WXehH05rZnQGZirMOP-3iCs-5_yMJbGU",
+    "locked_master_73_drive_id": "1gs64S1WxaSPUiN-BXusmceM2E-EoquDntCasFaf8zas",
+    "local_development_v05_drive_id": "1UHGfjuZ_6aJF5Fkh1pHGwjgU219cPBmDD5owIVyIlXs",
+    "local_development_v05_status": "SUPPORTING_POST_LOCK_DUPLICATE_NON_CURRENT"
   },
   "audio": {
-    "speaker_ownership": "PASS_3714_OF_3714_UNKNOWN_0",
-    "textual_source_speaker_ids": 121,
-    "cast_slots_max": 28,
-    "provider_voice_ids_assigned": 0,
-    "audition_requests_dry_run": 111,
-    "live_s0_synthesis": "NOT_RUN",
-    "wav_evidence": "NONE",
-    "human_cast_lock": "NOT_RUN",
-    "slovenian_pronunciation_lock": "NOT_RUN",
-    "bulk_render_allowed": false,
-    "acoustic_routing": {
-      "status": "WORKING_NOT_FINAL",
-      "segments_structurally_covered": "7465/7465",
-      "current_candidate_blocks_after_ch01_repair": 95,
+    "segmentation": {
+      "status": "PASS",
+      "drive_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
+      "sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
+      "chapters": 29,
+      "segments": 7465
+    },
+    "speaker_ownership": {
+      "status": "PASS_3714_OF_3714_UNKNOWN_0",
+      "current_drive_id": "1lFmVbEZJSMnCZMn65nAEV5U-rESC-qFX"
+    },
+    "voice_roster": {
+      "textual_source_speaker_ids": 121,
+      "cast_slots_max": 28,
+      "provider_voice_ids_assigned": 0,
+      "human_cast_lock": "NOT_RUN",
+      "slovenian_pronunciation_lock": "NOT_RUN"
+    },
+    "final_scene_bed_routing": {
+      "status": "PASS_FINAL_PROVIDER_INDEPENDENT_PHYSICAL_SCENE_BED_AUTHORITY",
+      "gate_drive_id": "1P_bjUK8Tsxe8FtSZ3OiAmorKofrbIIGP",
+      "machine_file": "152_B03_FINAL_FULL_BOOK_SCENE_BED_ROUTING_v1.2.json",
+      "machine_sha256": "3fc0e12a142c3dcbda2d2fa5b2010db62ba4c7e6ce74f61493165a6709bb1c66",
+      "segments_covered": "7465/7465",
+      "chapters_covered": "29/29",
+      "scene_bed_blocks": 101,
       "validator_errors": 0,
-      "ch01_false_field_bed_repaired": true,
-      "ch19_29_parallel_exact_anchor_conflict": true
+      "exact_text_mutation_bytes": 0,
+      "supersedes_for_physical_routing": [
+        "137_B03_FULL_BOOK_SCENE_BED_ROUTING_v1.0",
+        "139_B03_FULL_BOOK_SCENE_BED_ROUTING_v1.1_CH01_CHANNEL_RECONCILED_WORKING"
+      ]
+    },
+    "provider_execution": {
+      "preferred_candidate": "ElevenLabs_NOT_LOCKED",
+      "provider_access_verified": false,
+      "live_s0_synthesis": "NOT_RUN",
+      "wav_evidence": "NONE",
+      "alignment": "NOT_RUN",
+      "mix_master_qc": "NOT_RUN",
+      "human_signal": "NOT_RUN",
+      "bulk_render_allowed": false
     }
   },
   "engineering_law": [
     "CHANNEL_PROCESSING != PHYSICAL_SCENE_BED",
     "RADIO_FIELD_CHANNEL != FIELD_SCENE_BED",
     "SOURCE_AUTHOR != ACOUSTIC_SPEAKER",
-    "SAME_PACKET_CLASS != SAME_SOURCE_IDENTITY"
+    "SAME_PACKET_CLASS != SAME_SOURCE_IDENTITY",
+    "RECORDED_PLAYBACK != HISTORICAL_LOCATION_BED",
+    "CAST_REUSE != CHARACTER_OR_SOURCE_IDENTITY"
   ],
-  "local_133_disposition": "SUPPORTING_SUPERSEDED_ONLY_DO_NOT_PROMOTE_OVER_DRIVE_139_140",
+  "cross_store": {
+    "drive_receipt_151_id": "1XYrjVenrooqmejsFXBB4t91oM9qmKVgtniNWlX6cHwQ",
+    "github_main_mirror_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/AUDIO_ACOUSTIC_DRIVE_MIRROR_POINTERS_2026-08-22.json",
+    "github_main_mirror_commit_recorded": "76aec545eae22988c9b076a495b36f2415a31fc7",
+    "feature_receipt_151_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/AUDIO_PRODUCTION/151_CROSS_STORE_RECONCILIATION_RECEIPT_2026-08-22.md"
+  },
   "story_change_control": "NO_STORY_REWRITE_WITHOUT_FOUNDER_UNLOCK_OR_CHANGE_ORDER",
   "do_not": [
     "DO_NOT_CHANGE_EXACT_TEXT",
     "DO_NOT_REOPEN_STORY",
     "DO_NOT_DRAFT_CH30",
-    "DO_NOT_PROMOTE_133_AS_CURRENT",
-    "DO_NOT_DECLARE_ACOUSTIC_ROUTING_FINAL_BEFORE_CH19_29_EXACT_ANCHOR_RECONCILIATION",
+    "DO_NOT_RESTORE_137_OR_139_AS_FINAL_PHYSICAL_ROUTING",
+    "DO_NOT_PROMOTE_133_OVER_FINAL_152",
+    "DO_NOT_INVENT_ACCENTS_OR_SLOVENIAN_PRONUNCIATION",
+    "DO_NOT_INVENT_PROVIDER_VOICE_IDS",
     "DO_NOT_BULK_RENDER_BEFORE_PROVIDER_CAST_PRONUNCIATION_EVIDENCE"
   ],
-  "next_obligation": "Reconcile CH19-29 exact-anchor routing branch against current 139 working map, emit final scene-bed authority, then rebind CH01 Hard Pilot.",
-  "next_prompt_pointer": "EXACT_ANCHOR_BRANCH_RECONCILIATION_CH19_29"
+  "next_obligation": "Rebind the existing CH01 Hard Pilot acoustic passports/cue plan to FINAL scene-bed authority v1.2, preserving exact text and provider-independent metadata.",
+  "existing_ch01_hard_pilot_manifest_drive_id": "1TGWOWe3ol5Do6tK5ZMeRVMzkhHb_cmVR",
+  "next_prompt_pointer": "CH01_HARD_PILOT_REBIND_TO_FINAL_SCENE_BED_V1_2"
 }
