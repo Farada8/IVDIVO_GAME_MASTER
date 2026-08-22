@@ -13,8 +13,11 @@ Cycle32B folder: `1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv`.
 - CH23 manuscript `13khiS1NdVndiGNDqQiHY_TRlhsiLme2HRY-2C3-7Zr0` -> exact authority title `FAILOVER`.
 - CH23 gate `1QMOlSxa57TzCFZvsnmZsn1Hj0jlGFpUFoEKsVIOsJnY` -> PASS / FATAL 0 / BLOCKING MAJOR 0.
 - CH24 manuscript `1h77I_epSM9m7UqWNiu0a_gjDQs4PaeFg28IuOkmcVkA` -> `GO TO THE RELAY`.
-- CH24 gate `1aUjy18rE5GfHDwExA5mf7rgmrsYD7mCXjHyHPtPAaig` -> PASS / FATAL 0 / BLOCKING MAJOR 0.
+- CH24 gate `1aUjy18rE5GfHDwExA5mf7rgmrsYD7mCXjHyHPtPAaig` -> **PASS AFTER TARGETED DIALOGUE-ACTION + LINE-LEVEL REPAIR / FATAL 0 / BLOCKING MAJOR 0**.
+- CH24 gate readback marker: `B03-CH24-GATE-PASS-F0-M0-DIALOGUE-REPAIR-NEXTBLOCK-REBASE`.
 - Fresh CH25–29 P65–P72 rebase `1YamdStR6xEifvZFb1KFRPUrUWoSzlb4CMs5uTNg_Cfk` -> PRE-PROSE PASS / FATAL 0 / BLOCKING MAJOR 0 / CH25 AUTHORIZED.
+
+Founder F1 continuity remains bound to `PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_F1_CANON_LOCK_AND_PREPROSE_GATE_v1.0.md`, Drive `1EkmIwNmE9kkZ6RBfeMZzQ6L-AbLKaPIcT5r8mU_PsU0`; this transaction does not reopen or expand unknown family details.
 
 ## Authority correction
 
@@ -37,6 +40,18 @@ Normal storm-driven failover re-concentrates traffic through shared fallback inf
 A local network technician identifies the established relay/control point because the remote management path itself rides the degraded/shared backbone. Physical maintenance mode can be locally verified; technician owns switching. Smith accompanies only as OES evidence-boundary owner and cannot touch the relay.
 
 Hydro independently authorizes one bounded manual-backup attempt after current access inspection and actuator degradation. Andrej chooses the handle role from actual mechanical knowledge; Tina remains mobile. Precursor access sequence stays sealed. Smith does not order the attempt.
+
+### CH24 dialogue-action repair provenance
+
+The initial CH24 draft was causally sound but several exchanges collapsed into generated-text policy/checklist form. The Drive manuscript was minimally repaired without changing plot, thresholds, jurisdiction, evidence state or decisions:
+- aphoristic doctrine exchange became incident-scoped threshold ownership;
+- `whole picture` abstraction became concrete fallback-graph behavior;
+- Socratic `Tempting?/Why?/why dangerous?` ladder became Jana catching Smith lingering on Taren's message and stopping a live-network experiment;
+- repeated reassurance joke became Maja asking what she still owns;
+- three `Not X / No` objective checks became one demand to state the relay job without packet/Taren/Morgen Pass;
+- final abstract refusal became Smith's personal uncertainty about contaminating ownership of his choice by hearing the packet.
+
+The CH24 gate was then re-read and passed at **FATAL 0 / BLOCKING MAJOR 0**.
 
 ## P65–P67 proof
 
@@ -63,7 +78,7 @@ Not magic good. Preserves accountable local judgment and limits route-script fee
 
 `CH01–CH24 = substantive Drive evidence`
 
-`CH24_GO_TO_THE_RELAY = PASS`
+`CH24_GO_TO_THE_RELAY = PASS_AFTER_TARGETED_DIALOGUE_ACTION_AND_LINE_LEVEL_REPAIR`
 
 `CH25_CASCADE = AUTHORIZED`
 
