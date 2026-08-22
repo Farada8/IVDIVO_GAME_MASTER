@@ -5,7 +5,7 @@
   "story_authority": "FOUNDER_LOCKED_CH01-29",
   "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
   "source_segmentation_package_sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
-  "status": "RECONCILED_PARTIAL_MAP_599_EXACT_REPO_CI_VERIFIED",
+  "status": "RECONCILED_PARTIAL_MAP_599_VERIFIED_CURRENT",
   "segmentation": {
     "total_exact_text_segments": 7465,
     "original_curly_quote_spans": 3718,
@@ -26,13 +26,15 @@
   },
   "verification": {
     "github_pr": 436,
-    "tested_pr_head": "016d24c655ba0c710ff01a3dab83aa7acc0a37d9",
-    "tested_merge_ref": "bea3fdb86f793988f47d5868ab2bcf396b092a8b",
-    "workflow_run_id": 32571914177,
-    "workflow_job_id": 97028433852,
-    "pytest": "22_PASSED",
+    "tested_pr_head": "28645a167332cb978c6ce0dedffdbac78680cea0",
+    "tested_merge_ref": "d64d16579c653a131ee2decb105ac28ab6b82143",
+    "workflow_run_id": 32572056461,
+    "workflow_job_id": 97028799073,
+    "pytest": "22_PASSED_IN_0.05S",
     "py_compile": "PASS",
-    "main_readback_required_after_merge": true
+    "main_merge_commit": "c53e9c0923041183bc642363ad5d572c1bb2cf77",
+    "main_readback": "PASS",
+    "main_readback_required_after_merge": false
   },
   "current_drive_authority": {
     "tier2_rebased_map_id": "1px9HoDaBujFK1iJ0NiyQ1bRgvI5GHoS1",
@@ -53,7 +55,7 @@
     "tier1_v1_reason": "70_DIRECT_SPEAKER_CONFLICTS_BIDIRECTIONAL_BOUNDARY_OWNERSHIP",
     "tier2_v1_cumulative_map_id": "1D9ZVwn1VQxqv4zQ2ZjrMENhH4qy023ix",
     "tier2_v1_disposition": "CUMULATIVE_REJECTED_47_DELTA_SALVAGED",
-    "corrected_v2_518": "BASE_PROVENANCE_SUPERSEDED_BY_RECONCILED_599_AFTER_MERGE_READBACK",
+    "corrected_v2_518": "BASE_PROVENANCE_SUPERSEDED_BY_RECONCILED_599",
     "working_661": "SUPERSEDED_NONCANONICAL_WORKING_CANDIDATE"
   },
   "ch01_separate_production_lane": {
