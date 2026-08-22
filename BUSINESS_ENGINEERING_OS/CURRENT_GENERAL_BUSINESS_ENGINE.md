@@ -72,6 +72,12 @@ Engineering artifact exists. No live Registry action, legal applicability determ
 - `P-EW06 = PASS_TECHNICAL_GAP_ONLY / COMMERCIAL HOLD / NO WIP PROMOTION`
 - `P-EW07 = PASS_MECHANISM_ORTHOGONAL_TO_SCHEMA / NO WIP PROMOTION`
 
+Backward-compatible machine markers retained for existing regression contracts:
+`P-EW02 = PASS_TEST`  
+`P-EW03 = PASS_ENGINEERING`  
+`P-EW04 = PASS_ENGINEERING`  
+`P-EW05 = INTERNAL_DECISION_ALL_M1`
+
 All three WIP opportunities remain:
 `M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN`
 
