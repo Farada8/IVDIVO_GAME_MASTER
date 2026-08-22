@@ -1,12 +1,12 @@
 {
-  "schema": "artifact_placement_incident_state_v9",
+  "schema": "artifact_placement_incident_state_v10",
   "date": "2026-08-22",
   "issue": 356,
   "deployment_boundary_issue": 444,
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "CHAT_CONNECTOR_DEPLOYMENT_HARDENING_PENDING_CI",
+  "candidate_status": "CHAT_CONNECTOR_READBACK_GATE_VERIFIED_MERGED",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "execution_surfaces": {
@@ -16,7 +16,7 @@
       "scope": "personal-ai task/agent/CLI runtime"
     },
     "CHAT_CONNECTOR_ENFORCEMENT": {
-      "status": "OPERATIONAL_PROTOCOL_CANDIDATE",
+      "status": "VERIFIED_OPERATIONAL_PROTOCOL",
       "middleware": false,
       "scope": "ChatGPT Google Drive/GitHub connector actions outside local Python runtime",
       "mode": "SYNCHRONOUS_OPERATIONAL_READBACK_GATE"
@@ -39,6 +39,14 @@
     "live_interception_capture_pr": 411,
     "production_adoption_pr": 417,
     "completion_scope_hardening_pr": 441,
+    "connector_deployment_boundary_pr": 449,
+    "connector_deployment_boundary_head": "389dbe18fb96affcb4e664a6dd9dea3cc55ef28e",
+    "connector_deployment_boundary_merge_commit": "c64790fdd892fd352b8a4e8ce44a3ba39e236683",
+    "connector_deployment_all_triggered_workflows": "15/15 PASS",
+    "connector_deployment_artifact_placement_ci_run": 32572552768,
+    "connector_deployment_pl11_ci_run": 32572552775,
+    "connector_deployment_freshness_checked_main": "9223c05a24d644d98b1ade3f5ab5662090527619",
+    "connector_deployment_freshness_overlap": "NONE",
     "local_runtime_production_adoption": "VERIFIED_MERGED",
     "local_runtime_scope_hardening": "VERIFIED_MERGED",
     "chat_connector_is_local_runtime_middleware": false,
@@ -46,7 +54,7 @@
     "chat_connector_live_ledger_real_event_count": 0,
     "chat_connector_classifier_auto_promotion": false,
     "chat_connector_independent_review_required": true,
-    "chat_connector_regression": "PENDING_EXACT_HEAD_CI",
+    "chat_connector_regression": "PASS_MERGED",
     "deployment_boundary_issue": 444
   },
   "required_sequence": [
@@ -61,13 +69,13 @@
     "NEVER_AUTO_PROMOTE_CAPTURE"
   ],
   "promotion_gate": {
-    "status": "HOLD_DEPLOYMENT_BOUNDARY_PENDING_CI",
+    "status": "HOLD_ARMED_FOR_LIVE_EVIDENCE",
     "completed_requirements": [
       "local Personal AI placement runtime is provider-normalized, atomic, production-adopted and completion-scope hardened",
-      "deployment audit identified that ChatGPT connector calls are outside local runtime middleware and opened issue #444"
+      "deployment audit identified that ChatGPT connector calls are outside local runtime middleware and opened issue #444",
+      "dual-surface deployment contract/classifier/ledger passed exact-head 15/15 workflows and merged through PR #449 without claiming ChatGPT platform middleware"
     ],
     "remaining_requirements": [
-      "pass and merge the bounded dual-surface Chat Connector deployment contract/classifier/ledger without claiming platform middleware",
       "observe a future real CHAT_CONNECTOR provider-backed placement/resource-type failure detected by synchronous provider/index readback before any false completion claim, persist it in the live ledger, then independently confirm provider origin/readback; tests, replays and synthetic fixtures cannot satisfy this requirement"
     ]
   }
