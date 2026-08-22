@@ -1,0 +1,79 @@
+{
+  "schema": "ivdivo.business.cycle4_convergence_run32/1.0",
+  "date": "2026-08-22",
+  "status": "CX01_CX32_EXECUTED_CI_AND_DRIVE_CLOSURE_PENDING",
+  "authority": {
+    "core": "CYCLE3",
+    "working_pr": 180,
+    "raw_library_drive_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "library_physical_files": 78,
+    "unique_valid_byte_hashes": 58,
+    "exact_duplicate_groups": 8,
+    "broken_placeholders": 5,
+    "canonical_unique_works": null
+  },
+  "run32": {
+    "total": 32,
+    "executed_or_dispositioned": 32,
+    "pending": 0,
+    "reference_or_noncore_holds": [7, 8],
+    "superseded_path_salvaged": [14],
+    "generic_service_mutate_or_kill": [30]
+  },
+  "opportunity_convergence": {
+    "input_public_regulatory_rows": 32,
+    "input_procurement_capital_rows": 32,
+    "root_workloads": 16,
+    "active_wip": ["R01", "R02", "R05"],
+    "first_reserve": "R04",
+    "max_wip": 3
+  },
+  "new_engineering": {
+    "new_top_level_engine": false,
+    "modules": [
+      "NamespaceCollisionGate",
+      "ConcurrentAuthorityRestore",
+      "LibraryDeltaAfterCycleGate",
+      "DatasetNeqEngine"
+    ],
+    "specification_modules": ["OpportunityRootDedupe", "GenericConsultingKillGate"],
+    "deterministic_tests_expected": 10,
+    "ci": "PENDING"
+  },
+  "self_improvement": {
+    "new_current_si_id": null,
+    "candidates": [
+      "NAMESPACE_COLLISION_GATE",
+      "CONCURRENT_AUTHORITY_RESTORE",
+      "LIBRARY_DELTA_AFTER_CYCLE_GATE",
+      "DATASET_NEQ_ENGINE",
+      "SOURCE_WEIGHT_NORMALIZATION",
+      "ROOT_WORKLOAD_DEDUPLICATION"
+    ],
+    "promotion": false
+  },
+  "evidence_ceiling": {
+    "library_mechanism_evidence": "K4_WITH_K5_CANDIDATES",
+    "public_signal_ceiling": "S4_OR_E2_LIKE_PUBLIC_ONLY",
+    "buyer_wtp_evidence": 0,
+    "payment_evidence": 0,
+    "conversion": null,
+    "profitability": null,
+    "legal_clearance": null,
+    "founder_new_cash_eur": 0,
+    "outreach_actions": 0
+  },
+  "next64_count": 64,
+  "next_gate": "PUBLIC_ARTIFACT_CANARIES_R01_R02_R05",
+  "drive_closure": "PENDING",
+  "forbidden": [
+    "SECOND_TOP_LEVEL_BUSINESS_ENGINE",
+    "RAW_COPYRIGHTED_BOOKS_IN_PUBLIC_GITHUB",
+    "DUPLICATE_SOURCE_DOUBLE_WEIGHT",
+    "PUBLIC_EVIDENCE_AS_WTP_OR_PAYMENT",
+    "GENERIC_CONSULTING_AS_UNDEFINED_ROOT",
+    "WIP_GREATER_THAN_3_WITHOUT_AUTHORITY",
+    "AUTO_SELF_IMPROVEMENT_PROMOTION",
+    "UNKNOWN_ECONOMICS_AS_ZERO_OR_ESTIMATE"
+  ]
+}
