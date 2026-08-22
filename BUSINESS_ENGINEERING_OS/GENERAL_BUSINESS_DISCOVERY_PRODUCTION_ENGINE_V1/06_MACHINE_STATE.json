@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.business.general_discovery_production_engine/1.5",
+  "schema": "ivdivo.business.general_discovery_production_engine/1.6",
   "date": "2026-08-22",
-  "status": "P01_P32_ENGINEERING_CURRENT_FOUNDER_RESREEN_PASS_S5_INTERNAL_PENDING_CI",
+  "status": "P01_P32_ENGINEERING_CURRENT_FOUNDER_RESCREEN_PASS_S5_INTERNAL_CI5OF5_PREMERGE",
   "github": {
     "base_engine_pr": 303,
     "base_engine_merge_sha": "b579c7e0359b5c242b718866c2c2488a2dda1434",
@@ -15,7 +15,11 @@
     "test37_exact_head": "4d90880953b2303c05e83b433cfd121d760e45d4",
     "test37_merge_sha": "8a75f6abe2c4b82b0d673ad7a1a1280a99ecc02a",
     "test37_final_ci": [32556941919, 32556941918, 32556941915, 32556941910],
-    "founder_profile_pr": 334
+    "founder_profile_pr": 334,
+    "p25_p32_pr": 339,
+    "p25_p32_verified_preclosure_head": "801f86f2e24daffa59e9e28c0040aa1537642050",
+    "p25_p32_verified_preclosure_ci": [32557639736, 32557639702, 32557639733, 32557639721, 32557639730],
+    "p25_p32_verified_preclosure_ci_status": "SUCCESS_5_OF_5"
   },
   "namespace": {"modules": "BDP01-BDP32", "contracts": "CDP01-CDP32", "proof_gates": "PG01-PG12", "protocols": "P-BDP-01-P-BDP-12"},
   "run32": {"executed": 32, "keep_or_keep_with_ordering": 21, "mutate": 11, "kill": 0, "market_proof_created": false},
@@ -96,7 +100,7 @@
     "buyer_behavior_observed": false
   },
   "offer_engineering": {
-    "status": "P25_P32_INTERNAL_COMPLETE_FOUNDER_RESREEN_PASS_PENDING_CI",
+    "status": "P25_P32_INTERNAL_COMPLETE_FOUNDER_RESCREEN_PASS_CI5OF5_PREMERGE",
     "opportunity_id": "OPP-37",
     "working_offer": "FIRST_PARTY_FACT_CONSISTENCY_AND_ANSWERABILITY_DECISION_PACK",
     "generic_ai_seo_audit": "KILL_AS_DIFFERENTIATED_CORE",
@@ -111,7 +115,7 @@
     "minimum_viable_price": null,
     "internal_decision_test": "PASS_2_OF_3_PLUS_1_NEGATIVE_CONTROL",
     "buyer_value_proven": false,
-    "state": "S5_OFFER_TESTABLE_INTERNAL_ONLY_PENDING_CI"
+    "state": "S5_OFFER_TESTABLE_INTERNAL_ONLY"
   },
   "state_machine": ["S0_RESTORE", "S1_DISCOVERED", "S2_QUALIFIED", "S3_FATAL_TEST_READY", "S4_VALUE_BOUNDED", "S5_OFFER_TESTABLE", "S6_ECONOMICS_BOUNDED", "S7_SALES_TEST_READY", "S8_EXTERNAL_SIGNAL", "S9_TRANSACTION", "S10_DELIVERY_PROVEN", "S11_REPEATABILITY", "S12_SCALE_READY"],
   "portfolio_policy": {"max_wip": 3, "primary": 1, "pilots_max": 2},
