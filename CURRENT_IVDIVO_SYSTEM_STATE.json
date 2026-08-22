@@ -14,7 +14,10 @@
     "WORKING_CANDIDATES",
     "REFERENCE_ONLY"
   ],
-  "repository": {"full_name": "Farada8/IVDIVO_GAME_MASTER", "branch": "main"},
+  "repository": {
+    "full_name": "Farada8/IVDIVO_GAME_MASTER",
+    "branch": "main"
+  },
   "current_routers": {
     "writing": "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
     "autopilot": "IVDIVO_NARRATIVE_OS/13_CROSS_CONVERSATION_STATE_AND_AUTOPILOT.md",
@@ -50,7 +53,14 @@
   ],
   "cross_dialog_policy": {
     "repeated_short_command_required": false,
-    "short_commands_are_resume_shorthand": ["и", "дальше", "продолжай", "делай", "работай", "действуй"],
+    "short_commands_are_resume_shorthand": [
+      "и",
+      "дальше",
+      "продолжай",
+      "делай",
+      "работай",
+      "действуй"
+    ],
     "neighbor_chat_claim_without_persisted_artifact": "DISCOVERY_ONLY",
     "chat_only_default_authority": "NONE_UNTIL_PERSISTED_AND_VERIFIED",
     "chat_only_retrieval_rule": "IF_SOURCE_CONVERSATION_IS_ACCESSIBLE_RETRIEVE_ACTUAL_RESULT_BEFORE_ASKING_FOUNDER_TO_REPEAT",
@@ -132,18 +142,20 @@
       "downstream_live_human_provider_evidence_not_implied": true
     },
     "active_project": {
-      "project_id": "IVDIVO_BOOK_3_SMITH_FULL_NOVEL",
+      "project_id": "IVDIVO_BOOK_3_SMITH",
       "title": "SMITH",
-      "mode": "FRESH_AUTHORITY_AND_CONTINUITY_RECONCILIATION_BEFORE_PROSE",
-      "project_state_path": null,
+      "mode": "ACTIVE_WORKING_PROSE_CH24_PASS_CH25_AUTHORIZED",
+      "project_state_path": "PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json",
       "source_transition_from": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/CURRENT_STATE.md",
-      "next_unblocked_obligation": "FRESH_AUTHORITY_RECONCILIATION_THEN_PREVIOUS_BOOK_CONSEQUENCE_CONTINUITY_CHECK_THEN_STORY_CORE_THEN_HUMAN_SCENE_DIALOGUE_CALIBRATION_THEN_CAUSAL_ARCHITECTURE_THEN_PRE_PROSE_STORY_GATE",
-      "authority_boundary": "NO_SMITH_PROSE_UNTIL_FRESH_AUTHORITY_AND_PRE_PROSE_STORY_GATE",
+      "next_unblocked_obligation": "DRAFT_CH25_CASCADE_FROM_ACTUAL_CH24_PASS_AND_FRESH_P65_P72_REBASE",
+      "authority_boundary": "PROJECT_SPECIFIC_SMITH_STATE_CONTROLS; DO_NOT_DRAFT_CH26_BEFORE_CH25_LOCAL_GATE",
       "do_not_repeat": [
-        "D01_E91_E120_DRAFTING",
-        "D01_FINAL_REGRESSION",
-        "D01_FOUNDER_LOCK",
-        "D01_E121_GENERATION"
+        "DO_NOT_REVERT_TO_CH21_OR_CH22_FRONTIER",
+        "DO_NOT_USE_THE_CONVERGENCE_AS_CH23_TITLE",
+        "DO_NOT_INVENT_EXACT_ANDREJ_DIAGNOSIS",
+        "DO_NOT_USE_PRECURSOR_ACCESS_SEQUENCE_TO_CAUSE_CH25_FIELD_CHOICE",
+        "DO_NOT_SHRINK_MULTI_SITE_EMERGENCY_TO_ANDREJ_ONLY",
+        "DO_NOT_DRAFT_CH26_BEFORE_CH25_LOCAL_GATE"
       ]
     },
     "pending_founder_decision_gates": [
@@ -216,11 +228,12 @@
     "FULL_CHAT_TRANSCRIPT_RECOVERY_CURRENT_FIRST_PASS",
     "SELF_IMPROVEMENT_META_ENGINE_v2_VERIFIED_CURRENT",
     "IVDIVO_ENGINE_v11_2_MACHINE_EXECUTION_VERIFIED",
-    "RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.3"
+    "RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.3",
+    "SMITH_CH24_PASS_CH25_AUTHORIZED_CURRENT_STATE_ROUTED"
   ],
   "pending_system_upgrade": {
     "name": "RECONCILED_RECOVERY_STATE_v2",
     "status": "WORKING_CANDIDATE_AWAITING_REAL_LARGE_TRANSCRIPT_PILOT_AND_INTEGRATION_REGRESSION"
   },
-  "state_status": "D10_FOUNDER_LOCKED; D01_FOUNDER_LOCKED_E01_E120; SMITH_NEXT_FRESH_AUTHORITY_RECONCILIATION_BEFORE_PROSE; D09_PENDING_FOUNDER_LOCK; NO_D10_E25; ENGINE_V11_2_MACHINE_EXECUTION_ROUTED_VERIFIED"
+  "state_status": "D10_FOUNDER_LOCKED; D01_FOUNDER_LOCKED_E01_E120; SMITH_CH24_PASS_CH25_AUTHORIZED_NEXT_DRAFT_CH25_CASCADE; D09_PENDING_FOUNDER_LOCK; NO_D10_E25; ENGINE_V11_2_MACHINE_EXECUTION_ROUTED_VERIFIED"
 }
