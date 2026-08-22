@@ -1,9 +1,17 @@
 {
-  "schema": "ivdivo.general_business.pew03_article50_pack/1.0",
+  "schema": "ivdivo.general_business.pew03_article50_pack/1.1",
   "date": "2026-08-22",
   "gate": "P-EW03",
   "lane": "CF-01",
-  "status": "SAMPLE_PACK_BUILT_CI_PENDING",
+  "status": "BASE_PASS_ENGINEERING_CONTROL_VERIFICATION_HARDENING_CI_PENDING",
+  "authority": {
+    "controlling_pr": 367,
+    "merge_sha": "3f65b522c59a7cdc988cbae893c1d54651eab6e6",
+    "verified_base_head": "5a2db19731aeb23eac7c15c2da374cdaea3023a5",
+    "verified_base_ci_run": 32561576738,
+    "verified_base_ci_status": "SUCCESS",
+    "duplicate_pr_370": "SUPERSEDED_PROVENANCE_NO_SECOND_EXECUTION"
+  },
   "source_baseline": {
     "article50_applicable_from": "2026-08-02",
     "commission_guidelines_published": "2026-07-20",
@@ -11,7 +19,8 @@
     "commission_ai_board_code_adequacy_confirmed": true,
     "code_adherence_voluntary": true,
     "code_is_conclusive_compliance_evidence": false,
-    "eu_icons_optional": true
+    "eu_icons_optional": true,
+    "legacy_transition_claim_status": "AI_OMNIBUS_PROPOSAL_IF_ADOPTED_LEGISLATIVE_REVIEW_REQUIRED"
   },
   "coverage": [
     "A50_1_PROVIDER_DIRECT_INTERACTION",
@@ -21,25 +30,44 @@
     "A50_4_DEPLOYER_PUBLIC_INTEREST_TEXT",
     "A50_5_PRESENTATION_ACCESSIBILITY"
   ],
-  "synthetic_cases": 6,
+  "base_synthetic_cases": 6,
+  "control_verification_cases": 8,
   "real_customer_cases": 0,
+  "hardening": {
+    "post_router_control_verifier": true,
+    "machine_mark_never_substitutes_for_human_deepfake_disclosure": true,
+    "closed_loop_scope_claim_fails_closed_to_review": true,
+    "legacy_transition_claim_fails_closed_to_legislative_review": true,
+    "hardening_ci_status": "PENDING"
+  },
+  "drive": {
+    "folder_id": "15N2xm8iEYe5MBg7Jp3W1qazgLAdkD9Qp",
+    "document_id": "1zG-MB0LZ64hOkh4NXOQgP6phWo0p-uFcZ6pJjaXqo60",
+    "readback_marker": "P-EW03-PR367-BASE-PR370-SUPERSEDED-UNIQUE-CONTROL-VERIFICATION-SALVAGE-NO-PROOF-PROMOTION",
+    "readback_status": "PASS"
+  },
   "core_guards": [
     "PROVIDER_OBLIGATION_NEQ_DEPLOYER_OBLIGATION",
     "MACHINE_MARKING_NEQ_HUMAN_DISCLOSURE",
+    "ROUTER_APPLIES_NEQ_CONTROL_PRESENT",
+    "CONTROL_PRESENT_NEQ_LEGAL_COMPLIANCE",
     "CREATIVE_CONTEXT_NEQ_NO_DISCLOSURE",
     "HUMAN_REVIEW_NEQ_EDITORIAL_RESPONSIBILITY",
     "CODE_SIGNATORY_NEQ_AUTOMATIC_COMPLIANCE",
     "NOT_CODE_SIGNATORY_NEQ_NON_COMPLIANCE",
     "UNKNOWN_EXCEPTION_FAILS_CLOSED",
+    "PROPOSED_TRANSITION_NEQ_OPERATIVE_EXCEPTION",
     "ARTICLE50_EVIDENCE_NEQ_GDPR_COMPLIANCE"
   ],
   "proof_boundary": {
+    "public_evidence_ceiling": "E2_PLUS_ENGINEERING",
     "legal_compliance_proven": false,
+    "independent_control_verification_proven": false,
     "customer_demand_proven": false,
     "wtp_proven": false,
     "transaction_proven": false,
     "profitability_proven": false
   },
   "external_action_authorized": false,
-  "next_if_ci_passes": "P-EW03_PASS_ENGINEERING_THEN_RUN_P-EW04_AND_COMPARE_IMPLEMENTATION_DELTA"
+  "next_if_hardening_ci_passes": "P-EW05_WIP3_COMPARISON_THEN_P-EW06_FIXED_SCOPE_DIAGNOSTIC_SPECS"
 }
