@@ -1,0 +1,54 @@
+{
+  "schema": "ivdivo.general_business.pew07_doclang_fidelity_proof/1.0",
+  "date": "2026-08-22",
+  "gate": "P-EW07",
+  "candidate": "DOCLANG_FIDELITY_REGRESSION_QA",
+  "status": "BUILT_DRIVE_VERIFIED_CI_PENDING",
+  "fresh_replay": {
+    "stale_branch": "business-engineering/pew07-doclang-fidelity-proof-20260822",
+    "stale_branch_disposition": "PROVENANCE_ONLY_NO_DUPLICATE_EXECUTION",
+    "fresh_branch": "business-engineering/pew07-doclang-fidelity-proof-r2-20260822"
+  },
+  "official_validator": {
+    "package": "doclang",
+    "version": "0.7.3",
+    "mode": "XSD_ONLY",
+    "expected_good_fixture": "PASS",
+    "expected_semantic_drift_fixture": "PASS"
+  },
+  "fidelity_checker": {
+    "expected_good_fixture": "PASS_FIDELITY",
+    "expected_semantic_drift_fixture": "FAIL_FIDELITY",
+    "missing_source_truth": "HOLD_INPUT_UNRESOLVED",
+    "structural_validation_proven_by_checker": false
+  },
+  "predeclared_decision": {
+    "if_official_validator_accepts_both_and_checker_separates": "PASS_MECHANISM_ORTHOGONAL_TO_SCHEMA",
+    "if_drift_fixture_structurally_invalid": "HOLD_PROOF_NOT_ORTHOGONAL",
+    "if_checker_cannot_separate": "KILL_AS_DUPLICATE_OR_NONFUNCTIONAL",
+    "commercial_route_if_pass": "M1_ONLY_NO_WIP_PROMOTION"
+  },
+  "public_basis": {
+    "docling_issue_3864": "DISCLOSED_FAILURE_CLASS_ONLY_CLOSED",
+    "docling_issue_3780": "DISCLOSED_FAILURE_CLASS_ONLY_OPEN_WHEN_INSPECTED",
+    "prevalence_proven": false
+  },
+  "drive": {
+    "folder_id": "1FyYsogdwV8mAnEwQMyHHgBdXqgu71hMD",
+    "document_id": "1hVCyR1rnyjgYwvGXK5nQu_t4G09xdJr9CcjmMHMvFAk",
+    "revision_id": "AIroW358-ZJjDkRVNfYS2InlahNDKJP8kWyPfGQnpbr-PWOxPmSTlTYy34kJl1lC61Fg609PwavdlW6VU59fbaX7aZhWcsBSVviCTWjjy2Q",
+    "readback_marker": "P-EW07-DOCLANG-SCHEMA-VALID-SEMANTIC-DRIFT-ORTHOGONALITY-CI-PENDING-NO-WIP-NO-MARKET-PROOF",
+    "readback_status": "PASS"
+  },
+  "proof_boundary": {
+    "buyer_demand_proven": false,
+    "wtp": null,
+    "price": null,
+    "transactions": 0,
+    "profitability_proven": false,
+    "market_winner": false,
+    "wip_promotion": false,
+    "external_action_authorized": false
+  },
+  "ci_status": "PENDING"
+}

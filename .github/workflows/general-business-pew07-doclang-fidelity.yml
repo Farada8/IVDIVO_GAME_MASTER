@@ -1,0 +1,45 @@
+name: General Business P-EW07 DocLang Fidelity Proof
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/**'
+      - '.github/workflows/general-business-pew07-doclang-fidelity.yml'
+
+jobs:
+  doclang-fidelity-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned official DocLang toolkit and pytest
+        run: python -m pip install --disable-pip-version-check 'doclang==0.7.3' pytest
+      - name: Official DocLang XSD accepts both structural fixtures
+        run: |
+          ROOT=BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF
+          doclang validate "$ROOT/fixtures/good.dclg.xml" --xsd-only --quiet
+          doclang validate "$ROOT/fixtures/semantic_drift.dclg.xml" --xsd-only --quiet
+      - name: Run deterministic fidelity regressions
+        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/tests/test_fidelity_checker.py
+      - name: Prove schema-valid drift is separated by source-truth invariant
+        run: |
+          python - <<'PY'
+          import sys
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF')
+          sys.path.insert(0, str(root))
+          import fidelity_checker as fc
+          truth = root / '01_SOURCE_TRUTH.json'
+          good = fc.check(truth, root / 'fixtures/good.dclg.xml')
+          drift = fc.check(truth, root / 'fixtures/semantic_drift.dclg.xml')
+          assert good['status'] == 'PASS_FIDELITY'
+          assert drift['status'] == 'FAIL_FIDELITY'
+          assert drift['mismatches'][0]['expected'] == 'Peter Thomas & Christian Johnston'
+          assert drift['mismatches'][0]['observed'] == 'Peter Thomas and Christian Johnston'
+          assert good['official_structural_validation_proven_by_this_checker'] is False
+          assert drift['buyer_demand_proven'] is False
+          assert drift['wtp_proven'] is False
+          print('P-EW07 orthogonality gate: PASS')
+          PY

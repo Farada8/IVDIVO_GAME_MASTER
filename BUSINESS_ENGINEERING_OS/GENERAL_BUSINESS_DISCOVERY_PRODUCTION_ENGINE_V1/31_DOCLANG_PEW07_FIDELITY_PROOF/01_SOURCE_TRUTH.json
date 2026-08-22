@@ -1,0 +1,9 @@
+{
+  "schema": "ivdivo.general_business.doclang_source_truth/1.0",
+  "fixture_origin": "MINIMAL_DERIVATION_FROM_PUBLIC_FAILURE_CLASS",
+  "claim_limit": "NOT_THE_ORIGINAL_PUBLIC_BUG_ATTACHMENT",
+  "expected_text_blocks": [
+    "Peter Thomas & Christian Johnston",
+    "B"
+  ]
+}
