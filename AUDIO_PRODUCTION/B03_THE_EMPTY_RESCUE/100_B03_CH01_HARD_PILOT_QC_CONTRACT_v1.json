@@ -1,0 +1,62 @@
+{
+  "artifact": "B03_CH01_HARD_PILOT_QC_CONTRACT_v1",
+  "date": "2026-08-22",
+  "status": "READY_AFTER_S0_CAST_AND_ASSET_CANARY / NOT_RENDERED",
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "purpose": "Prove the core audio promise of B03: operational competence + impossible evidence conflict, without horror coding or ontology invention.",
+  "pilot_slices": [
+    {"slice_id":"HP_A_FIRST_CALL","unit_range":"B03_CH01_U0040..B03_CH01_U0106","tests":["Nika procedural baseline","unknown caller human stress","first injury/location details","four-impact clue identity","bounded verification credibility","raw-record preservation"]},
+    {"slice_id":"HP_B_REAL_COLLISION","unit_range":"B03_CH01_U0134..B03_CH01_U0225","tests":["real emergency stays primary","matching injury details audible","live four-impact repeat","field-radio intelligibility","same first-caller playback identity","protected silence"]},
+    {"slice_id":"HP_C_EVIDENCE_REVIEW","unit_range":"B03_CH01_U0229..B03_CH01_U0264","tests":["timeline facts understandable","alternative explanations remain genuinely open","prediction/fraud labels not imposed","evidence-protection decision lands without music explanation"]}
+  ],
+  "preconditions": [
+    "LIVE_S0_PASS",
+    "required pilot voices at least PROVISIONAL_PILOT_LOCK",
+    "pronunciation checks passed for names in pilot",
+    "accepted first-caller source take exists",
+    "drainage-flap identity asset pair accepted at canary level",
+    "provider output provenance recorded"
+  ],
+  "machine_qc": {
+    "exact_text_hash": "PASS required for every rendered spoken unit",
+    "coverage": "each pilot spoken unit exactly once; replay units linked to accepted source identity",
+    "alignment": "provider raw alignment normalized before timeline",
+    "peak_loudness": "use current universal mastering target; do not invent project-specific numeric target here",
+    "protected_silence": "duration windows respected and no dialogue/music overlap",
+    "stereo_integrity": "per-stem/source intent checked",
+    "mono": "all critical speech/clues intelligible and source identities still distinguishable",
+    "phone": "speech/clue relation survives small mono speaker",
+    "low_volume": "casualty facts and clue pattern remain understandable",
+    "speed_1_25x": "dialogue remains intelligible; clue rhythm must not be judged solely at speed-up"
+  },
+  "human_listen_questions": [
+    "Before the anomaly, does this sound like a competent real dispatch system?",
+    "Does the first call feel frightening because of evidence, not because sound design tells you it is supernatural?",
+    "Is the empty verification credible rather than perfunctory?",
+    "During the real collision, is rescue work still the primary task?",
+    "Can you notice the repeated injury and four-impact sound without narration/mix over-highlighting them?",
+    "Does the stored playback unmistakably preserve the same caller/source identity?",
+    "Does the protected silence create cognitive impact without melodrama?",
+    "Does Jana’s review keep fraud/coincidence/prediction genuinely unresolved?",
+    "After the pilot, what do you believe happened? Any answer more specific than the manuscript supports is a warning sign."
+  ],
+  "fatal_failures": [
+    "story text altered",
+    "critical clue count/rhythm contradicted",
+    "playback uses a different caller identity without canon authority",
+    "audio implies known precursor ontology",
+    "local rescue competence is undermined by invented staging",
+    "Andrej medical condition made more specific than source",
+    "critical clue unintelligible in mono"
+  ],
+  "major_failures": [
+    "horror/ghost coding",
+    "music tells listener how to interpret anomaly",
+    "real collision becomes secondary to mystery performance",
+    "source switching confusing in mono",
+    "over-processed radio/phone masks casualty facts",
+    "drainage-flap repeat sounds like exact pasted sample rather than same physical family",
+    "protected silence filled without causal need"
+  ],
+  "promotion_rule": "HARD_PILOT_PASS requires machine gates PASS + human listen PASS + FATAL 0 + MAJOR 0. Only then may scaled CH01 production begin."
+}
