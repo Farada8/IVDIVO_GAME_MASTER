@@ -1,0 +1,99 @@
+{
+  "schema": "ivdivo.business.money_mechanisms_p41_p48_route_prep/1.0",
+  "status": "PASS_ENGINEERING_PREP_ONLY_NO_EXTERNAL_ACTION",
+  "run": {
+    "prompts": "P41-P48",
+    "executed": 8,
+    "pass_engineering": 8,
+    "market_proof_created": false
+  },
+  "authority": {
+    "next64_source": "05_NEXT64.md",
+    "current_general_business_pointer": "BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md",
+    "current_strategic_wip_count": 3,
+    "money_mechanisms_comparison_wip_does_not_override_current_wip": true
+  },
+  "lanes": {
+    "OW-01": {
+      "offer_boundary": "CROSS_PROTOCOL_OR_CUSTOM_STACK_AGENT_COMMERCE_DIAGNOSTIC_NOT_GENERIC_UCP_SETUP",
+      "channel_hypothesis": "DIRECT_TECHNICAL_BUYER",
+      "first_route_status": "PREPARED_NOT_EXECUTED"
+    },
+    "CF-01": {
+      "offer_boundary": "ARTICLE50_TECHNICAL_EVIDENCE_DIAGNOSTIC_NON_LEGAL_NON_CERTIFYING",
+      "channel_hypothesis": "PARTNER_REFERRAL_GOVERNANCE_OR_LEGAL_TECH_COMPLEMENT",
+      "first_route_status": "PREPARED_NOT_EXECUTED"
+    },
+    "CF-03": {
+      "offer_boundary": "DPP_SUPPLIER_DATA_AND_REGISTRY_READINESS_DIAGNOSTIC_NON_CERTIFYING_NO_LIVE_REGISTRY_ACTION",
+      "channel_hypothesis": "PARTNER_REFERRAL_DPP_ERP_PIM_TRACEABILITY",
+      "first_route_status": "PREPARED_NOT_EXECUTED"
+    }
+  },
+  "target_spec": {
+    "named_contact_list_created": false,
+    "max_qualified_targets_per_lane_if_authorized": 12,
+    "stages": [4, 4, 4],
+    "target_spec_is_buyer_access": false
+  },
+  "messages": {
+    "variants_prepared": 3,
+    "sent": 0,
+    "price_in_message": null,
+    "unsupported_compliance_or_market_winner_claims_allowed": false
+  },
+  "authorization_gate": {
+    "founder_explicit_authorization_required": true,
+    "external_action_authorized": false,
+    "default_experiment_spend_eur": 0,
+    "outreach_authorized": false,
+    "ads_authorized": false,
+    "listing_authorized": false,
+    "tender_submission_authorized": false,
+    "quote_authorized": false,
+    "registry_action_authorized": false
+  },
+  "evidence_ladder": [
+    "E0_TARGET_SPEC_ONLY",
+    "E1_VALID_TARGET_IDENTIFIED",
+    "E2_MESSAGE_DELIVERED",
+    "E3_QUALIFIED_REPLY",
+    "E4_MEETING_OR_SCOPE_CONVERSATION",
+    "E5_REAL_PROBLEM_CONFIRMED_WITH_CURRENT_WORKAROUND",
+    "E6_ARTIFACT_REVIEWED_AND_DECISION_VALUE_CONFIRMED",
+    "E7_QUOTE_OR_PRICE_REQUESTED",
+    "E8_COMMERCIAL_TERMS_ACCEPTED_SUBJECT_TO_PAYMENT",
+    "E9_DEPOSIT_OR_PAYMENT_RECEIVED",
+    "E10_REPEAT_OR_REFERRAL_TRANSACTION"
+  ],
+  "experiment": {
+    "sequence": ["OW-01", "CF-01", "CF-03"],
+    "low_signal_hold_after_valid_deliveries": 8,
+    "max_valid_deliveries_per_lane": 12,
+    "zero_qualified_replies_at_low_signal_gate_means_no_market": false,
+    "only_e9_is_transaction_evidence": true,
+    "e10_required_for_repeatability_claim": true
+  },
+  "observed": {
+    "targets_contacted": 0,
+    "messages_sent": 0,
+    "qualified_replies": 0,
+    "meetings": 0,
+    "quotes": 0,
+    "deposits": 0,
+    "transactions": 0,
+    "wtp": null,
+    "cac": null,
+    "conversion": null,
+    "repeatability": false
+  },
+  "proof_boundary": {
+    "channel_hypothesis_proven": false,
+    "buyer_access_proven": false,
+    "buyer_demand_proven": false,
+    "wtp_proven": false,
+    "profitability_proven": false,
+    "external_action_authorized": false
+  },
+  "next_dependency": "P49_P50_INTERNAL_DELIVERY_SOP_AND_QA_MAY_BE_DESIGNED_P51_P56_REQUIRE_REAL_DELIVERY_OR_RETENTION_EVIDENCE"
+}

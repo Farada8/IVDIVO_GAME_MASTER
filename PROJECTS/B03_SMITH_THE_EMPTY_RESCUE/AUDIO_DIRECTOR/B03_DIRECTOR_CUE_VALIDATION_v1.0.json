@@ -1,0 +1,41 @@
+{
+  "schema": "ivdivo.b03.director_cue_validation/1.0",
+  "generated": "2026-08-22",
+  "project": "B03 — THE EMPTY RESCUE",
+  "status": "PASS",
+  "checks": {
+    "render_block_count_108": true,
+    "unique_block_ids_108": true,
+    "protected_clue_blocks_8": true,
+    "cue_manifest_coverage_362_once": true,
+    "segment_coverage_7465_once": true,
+    "segment_order_exact": true,
+    "voice_ids_non_null_zero": true,
+    "provider_dispatch_false_all": true,
+    "ch24_packet_1_block_bound": true,
+    "ch24_packet_2_block_bound": true,
+    "ch27_read_aloud_smith_override": true,
+    "ch29_s0358_smith_override": true,
+    "exact_text_char_counts_match_render_plan": true,
+    "story_text_mutation_zero": true
+  },
+  "protected_clue_blocks": [
+    "B03_RB_002",
+    "B03_RB_005",
+    "B03_RB_007",
+    "B03_RB_009",
+    "B03_RB_021",
+    "B03_RB_023",
+    "B03_RB_043",
+    "B03_RB_068"
+  ],
+  "holds": {
+    "provider_access": "NOT_VERIFIED",
+    "voice_lock": false,
+    "pronunciation": "OPEN",
+    "asset_generation": "NOT_RUN",
+    "human_listening": "NOT_RUN",
+    "mix_master_qc": "NOT_RUN",
+    "bulk_render_allowed": false
+  }
+}

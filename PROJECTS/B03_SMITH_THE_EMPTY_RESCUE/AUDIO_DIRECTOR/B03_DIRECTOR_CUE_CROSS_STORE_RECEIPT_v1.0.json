@@ -1,0 +1,64 @@
+{
+  "schema": "ivdivo.b03.director_cue_cross_store_receipt/1.0",
+  "generated": "2026-08-22",
+  "project": "B03 — THE EMPTY RESCUE",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "status": "CROSS_STORE_PERSISTED",
+  "drive_parent_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+  "github": {
+    "repository": "Farada8/IVDIVO_GAME_MASTER",
+    "pull_request": 459,
+    "merge_commit": "becb0a259c56f8f2a4ac31becb79eb2c5cfc8f79"
+  },
+  "artifacts": {
+    "full_packet": {
+      "file_name": "B03_DIRECTOR_CUE_PACKET_v1.0.json",
+      "drive_id": "1_HBOhGh6a3lKOOQnXZCrssu4rWD_4D4U",
+      "sha256": "8fedb6cdd4a29ea2ee23b688e38c10b1bc795cb66d259cdd339c374384949e2c",
+      "bytes": 197481,
+      "github_lossless_mirror": {
+        "encoding": "gzip_then_base64_split",
+        "parts": 4,
+        "part_lengths": [5000, 5000, 5000, 4960],
+        "concatenated_base64_length": 19960,
+        "gzip_bytes": 14970,
+        "gzip_sha256": "7eb16a1775829a0142476540235ce69691aaf5b76b2f5e2bbfe9199a2d3beb83",
+        "reconstruction": "concatenate part01..part04 with no separators; base64-decode; gunzip; verify raw sha256"
+      }
+    },
+    "validation": {
+      "file_name": "B03_DIRECTOR_CUE_VALIDATION_v1.0.json",
+      "drive_id": "1hS01Bn8d0k7EzMmh_IUxC4gxRznRIkjz",
+      "sha256": "36ca84fd2941dfe49c118f894c6bb58d0e3b575e9ef342dd1918a563ee7ac04a",
+      "bytes": 1142,
+      "github_plaintext": true
+    },
+    "ch01_hard_pilot": {
+      "file_name": "B03_CH01_HARD_PILOT_DIRECTOR_CUES_v1.0.json",
+      "drive_id": "1hel-3WSI_04E9DAjxlFeIKs92StlfcxR",
+      "sha256": "5ff8e21f4216021f7205d6abcb038102b3dae7478fdd0b5d338c8dbb1057fcbb",
+      "bytes": 41476,
+      "github_storage": "pointer_and_hash_in_receipt"
+    },
+    "gate": {
+      "file_name": "B03_DIRECTOR_CUE_PACKET_GATE_v1.0.md",
+      "drive_id": "1gVZJJFIl26b5ErcpYm1wM2yT3V49R0ZU",
+      "sha256": "8e89aaf2da41c6f11de45d9bb5f89a64648ac722bd53542607799ed8101222d8",
+      "bytes": 3120,
+      "github_plaintext": true
+    }
+  },
+  "claims": {
+    "render_blocks": 108,
+    "segments": 7465,
+    "sound_cues": 362,
+    "protected_clue_blocks": 8,
+    "ch01_hard_pilot_blocks": 10,
+    "ch01_protected_clue_blocks": 4,
+    "story_text_mutation_bytes": 0,
+    "provider_voice_ids_non_null": 0,
+    "provider_dispatch": false,
+    "bulk_render_allowed": false
+  },
+  "next_exact_action": "S0_EXECUTION_PACKET_PLUS_PRONUNCIATION_EVIDENCE_LEDGER"
+}
