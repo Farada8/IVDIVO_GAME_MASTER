@@ -1,0 +1,187 @@
+{
+  "schema_version": "ivdivo.room917_en_ru_parallel_production/1.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "active_branch": "THE_INSURABLE_FIRE",
+  "story_status": "LOCKED",
+  "delivery_mode": "FULL_AUDIO_DRAMA",
+  "purpose": "Keep English post-render repair and Russian localization/render production synchronized as one physical Greyhaven with locale-specific acting, while preventing story-sound drift.",
+  "authority": {
+    "english_sound_execution": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_POST_RENDER_SOUND_EXECUTION_CONTRACT_v1.json",
+    "russian_assembly": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json",
+    "russian_recording_script": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md",
+    "russian_pointer": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/CURRENT_RU_PILOT_POINTER.json",
+    "english_pointer": "AUDIO_PRODUCTION/ROOM917/CURRENT_SOUND_DESIGN_POINTER.json"
+  },
+  "locale_frontiers": {
+    "en": {
+      "status": "POST_RENDER_EVALUATION_AND_SELECTIVE_REPAIR",
+      "existing_master": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+      "rerender_whole_episode": false,
+      "current_proven_failure": "D003_PRE_SCENE3_ROOM_BED_CONTINUITY_UNDERCOVERAGE_AGGREGATE_ONLY",
+      "current_blocker": "EXACT_MASTER_BYTES_OR_TRUSTED_EXACT_PRE_SCENE3_INTERVAL_TIMING_REQUIRED",
+      "next_allowed_actions": [
+        "RECOVER_IDENTICAL_MASTER_BYTES_OR_ACCEPTED_EXACT_INTERVAL_TIMING",
+        "P003A2_INTERVAL_LOCALIZATION",
+        "BIND_ACCEPTED_CUE_TIMING",
+        "CLASSIFY_ONLY_EVIDENCE_SUPPORTED_INTERVALS",
+        "SELECTIVE_ROOM_BED_REPAIR_IF_AUTHORIZED",
+        "P003B_HUMAN_LISTEN",
+        "A_B_C_MASTER_CANDIDATES"
+      ]
+    },
+    "ru": {
+      "status": "RU_NATIVE_DISCOVERY_ZERO_SPEND_THEN_BOUNDED_CANARY",
+      "whole_episode_paid_render_before_cast_gate": false,
+      "current_cast": "NOT_LOCKED",
+      "current_blocker": "RU_NATIVE_VOICE_DISCOVERY_SNAPSHOT_AND_EVIDENCE_BASED_BINDINGS_REQUIRED",
+      "next_allowed_actions": [
+        "ZERO_SPEND_NATIVE_RU_PROVIDER_DISCOVERY",
+        "PREVIEW_AND_SHORTLIST_UP_TO_3_PER_ROLE",
+        "CREATE_NATIVE_S0_BINDINGS_ONLY_FROM_FRESH_PROVIDER_EVIDENCE",
+        "BOUNDED_4_OR_6_BLOCK_PAID_CANARY_AFTER_EXPLICIT_SPEND_GATE",
+        "HUMAN_CREDIBILITY_LISTEN",
+        "SELECTIVE_RECAST_OR_PERFORMANCE_REPAIR",
+        "CAST_LOCK",
+        "CONTROLLED_30_TO_80_SECOND_DIALOGUE_BLOCK_RENDER",
+        "DIALOGUE_EDIT_AND_ALIGNMENT",
+        "FULL_SOUND_ASSEMBLY"
+      ]
+    }
+  },
+  "shared_world_invariants": {
+    "same_physical_greyhaven": true,
+    "same_clue_causality": true,
+    "same_room_identity": true,
+    "same_mechanical_identity": true,
+    "same_music_identity_when_accepted": true,
+    "locale_specific_dialogue_timing_allowed": true,
+    "locale_specific_voice_cast_required": true,
+    "story_sound_may_not_drift_to_fit_translation": true
+  },
+  "shared_language_neutral_story_sounds": [
+    "NORMAL_916_SELECTOR_CLACK",
+    "NORMAL_916_GLASS_PING",
+    "TRANSFORMER_50HZ_IDENTITY",
+    "IMPOSSIBLE_INTERNAL_DOUBLE_RING",
+    "UNMARKED_LAMP_PING_BEYOND_916",
+    "COPPER_HISS",
+    "TWO_PART_LINE_CUT",
+    "FOUR_NOTE_LULLABY_IDENTITY"
+  ],
+  "shared_sound_policy": {
+    "reuse_accepted_english_identity_first": true,
+    "timing_may_be_recut_for_locale_dialogue": true,
+    "pitch_or_signature_drift_for_locale": false,
+    "replacement_requires_missing_or_failed_asset_evidence": true,
+    "new_candidate_requires_blind_selection_and_lock": true,
+    "decorative_story_like_sounds_forbidden": true
+  },
+  "shared_scene_rules": {
+    "scene_1": {
+      "music": "NONE",
+      "room_function": "STONE_LOBBY_TO_SWITCHBOARD_ALCOVE",
+      "required_body_events": [
+        "ELENA_ARRIVAL_CAUSAL_FOOTWEAR_AND_WET_FABRIC_WHERE_AUDIBLE",
+        "JULIAN_APPROACH_BEFORE_FIRST_LINE",
+        "KEYS_PLACED_NOT_THROWN",
+        "ELENA_EQUIPMENT_CASE_HANDLING",
+        "STONE_TO_CARPET_ACOUSTIC_TRANSITION"
+      ]
+    },
+    "scene_2": {
+      "music": "NONE",
+      "required_sound_order": [
+        "SINGLE_SWITCH",
+        "TRANSFORMER_50HZ_IDENTITY",
+        "RECOGNITION_GAP",
+        "OLD_RELAY_WAVE",
+        "WEST_CABLE_OR_WEATHER_RUSTLE"
+      ],
+      "normal_916_reference_before_scene_3": true
+    },
+    "scene_3": {
+      "music": "NONE_UNTIL_AUTHORIZED_FINAL_BUTTON",
+      "required_evidence_order": [
+        "IMPOSSIBLE_INTERNAL_DOUBLE_RING",
+        "ACTORS_ORIENT_TO_PANEL",
+        "FIELD_RECORDER_START",
+        "TIME_01_17_12",
+        "EXTERNAL_TRUNK_PHYSICALLY_OPEN",
+        "UNMARKED_LAMP_ACTIVE_BEYOND_916",
+        "MINA_INDEPENDENT_CONFIRMATION",
+        "COPPER_LINE_MEDIUM",
+        "CATE_CLEAN_HUMAN_SOURCE_THROUGH_TRANSMISSION_POST",
+        "LENI_BIRD_EXACT",
+        "FOUR_NOTE_LULLABY_DAMAGED_AFTER_NOTE_3",
+        "TWO_PART_LINE_CUT",
+        "JULIAN_LAST_NOTE_KNOWLEDGE",
+        "ELENA_FINAL_QUESTION"
+      ]
+    }
+  },
+  "performance_separation": {
+    "english": "Preserve accepted cast/takes except evidence-supported selective repair.",
+    "russian": "Native-RU role-aware cast must pass canary and pair tests before lock.",
+    "cate_both_locales": "Generate or preserve a clean ordinary human source first; transmission damage is post, never ghost performance.",
+    "julian_both_locales": "No alpha/billionaire/villain cadence and no premature guilt performance.",
+    "elena_both_locales": "Professional precision before mystery affect; fear narrows control rather than becoming trailer horror.",
+    "mina_both_locales": "Ordinary social speed and practical humor; never comic-sidekick exposition delivery."
+  },
+  "mix_and_master_parity": {
+    "buses": ["DIALOGUE", "CLUE_SFX", "SFX", "FOLEY", "AMBIENCE", "MUSIC"],
+    "dialogue_priority": true,
+    "clue_bus_never_ducked_by_music_or_ambience": true,
+    "mono_survival_required": true,
+    "phone_mobile_survival_required": true,
+    "protected_silence_preserved": true,
+    "no_music_as_room_bed_substitute": true,
+    "target_sample_rate_hz": 48000,
+    "target_master_bit_depth": 24,
+    "pilot_target_integrated_lufs": -16.0,
+    "pilot_loudness_tolerance_lu": 0.5,
+    "max_true_peak_dbtp": -1.0
+  },
+  "language_specific_elements": {
+    "en": ["DIALOGUE_TAKES", "ENGLISH_PRONUNCIATION", "ENGLISH_REPLY_TIMING"],
+    "ru": ["RUSSIAN_LOCALIZED_DIALOGUE_TAKES", "RUSSIAN_PRONUNCIATION", "RUSSIAN_REPLY_TIMING"],
+    "ru_protected_pronunciation": [
+      "Грейхейвен",
+      "Эшкрофт",
+      "Лени-бёрд",
+      "девятьсот шестнадцать",
+      "девятьсот семнадцать",
+      "один семнадцать",
+      "пятьдесят герц"
+    ]
+  },
+  "listener_qc_same_questions_both_locales": [
+    "DO_I_BELIEVE_THE_ACTOR",
+    "WHERE_DO_I_HEAR_AI",
+    "WHERE_DOES_THE_SCENE_DIE",
+    "IS_SPATIAL_GEOGRAPHY_CLEAR",
+    "DOES_THE_MYSTERY_WORK_ON_ONE_LISTEN",
+    "DO_SFX_OR_MUSIC_MASK_WORDS_OR_CLUES",
+    "DO_I_WANT_THE_NEXT_EPISODE"
+  ],
+  "repair_law": {
+    "smallest_failed_layer_only": true,
+    "whole_episode_rerender_default": false,
+    "translation_rewrite_to_hide_mix_failure": false,
+    "sound_redesign_to_hide_acting_failure": false,
+    "evidence_first": true
+  },
+  "release_gate": {
+    "en": "E01_V2_NO_OPEN_FATAL_OR_MAJOR_PLUS_FOUNDER_LISTEN_PLUS_ONE_LISTEN_COMPREHENSION",
+    "ru": "RU_E01_CAST_CREDIBILITY_PLUS_BODY_ROOM_COHERENCE_PLUS_CLUE_CAUSALITY_PLUS_NO_AI_TELL",
+    "season_scale": "BLOCKED_UNTIL_EN_E01_V2_AND_RU_E01_CREDIBILITY_PROOF_ARE_ACCEPTED_FOR_THEIR_RESPECTIVE_BRANCHES"
+  },
+  "current_execution": {
+    "ru_zero_spend_discovery_retrigger_commit": "3d969b2e012c5dd9702b1b653d33a17f41e2b5ff",
+    "en_master_drive_duplicate_found": false,
+    "en_master_rerender_forbidden": true,
+    "paid_ru_s0_not_authorized_by_this_control_file": true,
+    "human_listen_not_simulated": true
+  }
+}
