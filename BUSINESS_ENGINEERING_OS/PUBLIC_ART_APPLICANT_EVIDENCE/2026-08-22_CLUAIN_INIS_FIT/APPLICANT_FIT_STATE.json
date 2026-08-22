@@ -1,0 +1,22 @@
+{
+  "schema": "ivdivo.public_art.applicant_fit/1.0",
+  "date": "2026-08-22",
+  "status": "EVIDENCE_ROUTING_NOT_MARKET_PROOF",
+  "cluain": {
+    "applicant_evidence": "STRONG_ARTISTIC_PROFESSIONAL",
+    "submission_ready_prior_project_records": 0,
+    "required_prior_project_records": 3,
+    "status": "HOLD_THREE_PROJECT_RECORDS",
+    "go_to_submit": false
+  },
+  "inis": {
+    "applicant_evidence": "USABLE_FOR_TRACK_RECORD_OR_POTENTIAL",
+    "historical_project_budget_required_for_previous_images": false,
+    "status": "HOLD_APPLICATION_PACKAGE",
+    "go_to_submit": false
+  },
+  "routing": "INIS_EVIDENCE_BURDEN_LOWER",
+  "award_probability": null,
+  "market_proof_promotion": false,
+  "next_gate": "ADVANCE_INIS_CONCEPT_SITE_TECHNICAL_BUDGET_WHILE_CLUAIN_PROJECT_RECORD_RECOVERY_CONTINUES"
+}
