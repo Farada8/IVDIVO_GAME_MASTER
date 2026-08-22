@@ -1,6 +1,6 @@
 name: ROOM917 RU Native Discovery PR Probe
 
-# synchronize refresh 2026-08-22
+# observable run trigger 2026-08-22
 on:
   pull_request:
     paths:
