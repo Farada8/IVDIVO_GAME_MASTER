@@ -1,0 +1,22 @@
+name: Personal AI PL-14 Personal Knowledge Search
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl14-personal-knowledge-search.yml'
+
+jobs:
+  pl14-personal-knowledge-search:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run PL-14 knowledge search tests
+        run: |
+          python -m unittest personal-ai/tests/test_personal_knowledge_search.py -v
+          python -m unittest personal-ai/tests/test_personal_knowledge_search_cli.py -v
+      - name: Run full Personal AI regression suite
+        run: python -m unittest discover -s personal-ai/tests -v
