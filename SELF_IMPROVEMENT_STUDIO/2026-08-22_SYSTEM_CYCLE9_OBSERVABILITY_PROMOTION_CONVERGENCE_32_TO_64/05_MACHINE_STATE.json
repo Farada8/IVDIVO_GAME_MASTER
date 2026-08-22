@@ -1,0 +1,85 @@
+{
+  "schema": "ivdivo.self_improvement.cycle9/1.3",
+  "date": "2026-08-22",
+  "status": "FRESH_MAIN_REPLAY_PR227_OPEN_DRIVE_READBACK_PASS_EXACT_HEAD_CI_PENDING",
+  "fresh_replay_base_main_sha": "7718de5b1b02a408414e0a566565d5e5b34b8f86",
+  "pr_creation_base_sha": "4c656c447f825cad6f8e14f8dfa7797568c633cb",
+  "governing_authority": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+  "governing_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+  "global_promotion": false,
+  "new_si_id": null,
+  "new_top_level_engine": false,
+  "run32": {
+    "total": 32,
+    "executed_or_dispositioned": 32,
+    "pass_like_reuse_accept": 30,
+    "mutate": [29],
+    "rejected_duplicate_runtime": [10],
+    "pending": 0
+  },
+  "engineering": {
+    "modules": 20,
+    "contracts": 20,
+    "proof_obligations": 16,
+    "protocols": 12,
+    "deterministic_canaries": 17
+  },
+  "reused_owners": {
+    "durable_transactions_and_recovery": "SI-0014 / Cycle7 durable convergence",
+    "project_slice_freshness": "SI-0015 existing current implementation",
+    "registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+    "learning_ledger": "CURRENT_IVDIVO_LEARNING_LEDGER.json"
+  },
+  "current_parallel_evidence": {
+    "si_0014_genuine_recovery_events": 1,
+    "si_0014_target_genuine_events": 3,
+    "projects_observed": 2,
+    "false_resume_count": 0,
+    "promotion_effect": "NONE"
+  },
+  "evidence_boundaries": {
+    "machine_is_human": false,
+    "source_is_provider": false,
+    "public_is_buyer": false,
+    "buyer_interest_is_payment": false,
+    "test_pass_is_promotion": false,
+    "multiple_model_summaries_are_independent_if_same_root": false
+  },
+  "drive": {
+    "canonical_mirror": {
+      "folder_id": "1MbZ4-kRIl4dSEEhCMmf6jx72XV5pkhA5",
+      "master_doc_id": "1alHTEJrz__-zVArYJFGy9yVdBpxoIhzqQfP9xuKXMJw",
+      "library_doc_id": "1SomPGPwXbbebjKvRvtTptDTz46_swdobXn-gTCLIVzw",
+      "run32_doc_id": "1K1fUQDk0dHXvoofGyjmzGFbhcrGhIMzWFj1sIAMQi_Q",
+      "engineering_doc_id": "1pb8g3LoiWzaSKGxSXi3MGA4Qq2PAs9d61dQO7B858vg",
+      "next64_doc_id": "1sCO36bJPvBwQD4TpM3WZ5-q8GgWwataiJiMarGdvmDA",
+      "content_readback": "PASS"
+    },
+    "supporting_duplicate_persistence_only": {
+      "folder_id": "1IWrQhyJUdcfWaSVKIt-N6bxOIT-PyJNf",
+      "content_markers_read_back": true,
+      "authority": false
+    }
+  },
+  "github": {
+    "superseded_provenance_pr": 211,
+    "superseded_pr_first_ci": "SUCCESS",
+    "fresh_branch": "self-improvement/cycle9-observability-promotion-convergence-fresh-20260822",
+    "fresh_pr": 227,
+    "fresh_pr_initial_head_sha": "68542ca111e93e671b77436bf7d304992e089a6a",
+    "fresh_ci": "PENDING_EXACT_UPDATED_HEAD"
+  },
+  "next64_count": 64,
+  "next_gate": "EXACT_HEAD_CI_PLUS_FRESH_MAIN_SEMANTIC_COMPARE_THEN_BOUNDED_CANDIDATE_CLOSURE",
+  "after_engineering_gate": "MEASURE_REAL_FAILURE_PREVENTION_OVERHEAD_AND_REQUIRED_HUMAN_PROVIDER_EVIDENCE_BEFORE_PROMOTION_REVIEW",
+  "forbidden": [
+    "AUTO_PROMOTE_CYCLE9",
+    "ALLOCATE_NEW_SI_ID_FOR_ALIAS",
+    "DUPLICATE_DURABLE_TRANSACTION_RUNTIME",
+    "DUPLICATE_REGISTRY_ALLOCATOR",
+    "DELETE_UNSUPERSEDED_NEGATIVE_EVIDENCE",
+    "COUNT_PROMPTS_TESTS_DOCS_AS_PRODUCT_PROGRESS",
+    "FABRICATE_HUMAN_PROVIDER_MARKET_EVIDENCE",
+    "META_WORK_STARVES_HIGHER_PRIORITY_PRODUCT"
+  ]
+}
