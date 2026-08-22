@@ -1,0 +1,27 @@
+name: Personal AI PL-08 Book Production Core
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl08-book-core.yml'
+
+jobs:
+  pl08-book-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline PL-08 book state smoke
+        run: |
+          HOME_DIR="$(mktemp -d)"
+          python personal-ai/run.py --home "$HOME_DIR" project create ci-book
+          python personal-ai/run.py --home "$HOME_DIR" book init ci-book --title "CI Book"
+          python personal-ai/run.py --home "$HOME_DIR" book advance ci-book --to CANON
+          python personal-ai/run.py --home "$HOME_DIR" book status ci-book
+      - name: Run PL-08 tests
+        run: python -m unittest personal-ai/tests/test_book_core.py -v
+      - name: Run full Personal AI regression suite
+        run: python -m unittest discover -s personal-ai/tests -v
