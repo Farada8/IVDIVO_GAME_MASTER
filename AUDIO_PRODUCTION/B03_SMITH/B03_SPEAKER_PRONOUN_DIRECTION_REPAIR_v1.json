@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-22",
+  "project": "B03_THE_EMPTY_RESCUE",
+  "story_authority": "FOUNDER_LOCKED_CH01_CH29",
+  "text_mutation": 0,
+  "source_baseline": {
+    "artifact": "89_B03_SPEAKER_ATTRIBUTION_CURRENT_BASELINE_v1_3.json",
+    "drive_id": "1zAoXqX_mMsQNpMf4K2GeOEmwU_gzv1A2",
+    "spoken_candidates": 3715,
+    "assigned": 517,
+    "unknown": 3198,
+    "coverage_pct": 13.92
+  },
+  "guard": "PRONOUN_ANTECEDENT_MUST_PRECEDE_PRONOUN",
+  "repairs": [
+    {
+      "segment_id": "B03_CH01_S0108",
+      "method_before": "POST_PRONOUN_RESOLVED",
+      "speaker_before": "NIKA",
+      "speaker_after": "JANA",
+      "pre_context": "Jana stood behind Nika now, arms folded.",
+      "post_tag": "she said.",
+      "invalid_forward_token": "Nika passed it on.",
+      "proof": "independent CH01 142/142 production speaker map plus exact local narration"
+    },
+    {
+      "segment_id": "B03_CH03_S0252",
+      "method_before": "POST_PRONOUN_RESOLVED",
+      "speaker_before": "NIKA",
+      "speaker_after": "JANA",
+      "pre_context": "Jana came to Nika’s desk.",
+      "post_tag": "she asked.",
+      "invalid_forward_token": "Nika looked at the three recordings on her screen.",
+      "proof": "exact local narration"
+    }
+  ],
+  "regression_controls": [
+    {
+      "segment_id": "B03_CH01_S0076",
+      "expected_speaker": "NIKA",
+      "expected_disposition": "KEEP",
+      "reason": "named antecedent Nika occurs in preceding narration before she asked"
+    },
+    {
+      "segment_id": "B03_CH03_S0154",
+      "expected_speaker": "JANA",
+      "expected_disposition": "KEEP",
+      "reason": "preceding narration explicitly ends with Jana before she asked"
+    }
+  ],
+  "effective_state": {
+    "assigned": 517,
+    "unknown": 3198,
+    "coverage_pct": 13.92,
+    "label_repairs": 2,
+    "assignment_count_change": 0,
+    "voice_map_authorized": false
+  },
+  "forbidden_side_effects": [
+    "NO_STORY_TEXT_CHANGE",
+    "NO_EXACT_TEXT_BYTE_CHANGE",
+    "NO_CONTEXTUAL_HEURISTIC_PROMOTION",
+    "NO_VOICE_LOCK_FROM_THIS_REPAIR"
+  ]
+}
