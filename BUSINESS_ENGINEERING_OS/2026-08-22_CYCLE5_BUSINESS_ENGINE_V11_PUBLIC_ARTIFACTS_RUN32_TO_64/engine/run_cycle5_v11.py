@@ -58,6 +58,7 @@ def main():
     result={"cycle":"BUSINESS_ENGINE_V1.1_CYCLE5_PUBLIC_ARTIFACTS","executed":len(cards),"status_counts":{},"portfolio":portfolio,"lineage":asdict(lineage),"cards":cards}
     for c in cards: result["status_counts"][c["status"]]=result["status_counts"].get(c["status"],0)+1
     out=ROOT/"reports"/"RUN32_CYCLE5_V11_LEDGER.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result,indent=2,ensure_ascii=False))
     print(json.dumps({"executed":len(cards),"status_counts":result["status_counts"],"output":str(out)},indent=2))
 
