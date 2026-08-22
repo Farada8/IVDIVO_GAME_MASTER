@@ -1,7 +1,7 @@
 # DR FINAL — URSULA K. LE GUIN — *STEERING THE CRAFT* — STRICT LIFECYCLE v1.0
 
 **Date:** 2026-08-22  
-**Pass:** 167  
+**Pass:** 168  
 **Class:** WIDER  
 **Final status:** `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`
 
@@ -262,3 +262,6 @@ Therefore:
 `TELLING ≠ FAILURE`  
 `CONFLICT ≠ THE ONLY FORM OF MOVEMENT`  
 `POV INTERPRETATION ≠ WORLD FACT`.
+
+## Concurrency normalization
+A parallel research run occupied Pass 167 while this source was being processed. Le Guin was normalized to Pass 168 / Batch 203. The transient misnumbered Batch 202 files were deleted to preserve one authoritative sequence.
