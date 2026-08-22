@@ -14,6 +14,14 @@ This directory is an index and metadata library, not a replacement authority.
 - Cycle8 writing-production convergence and story-adapter real pilot.
 - Reference Ingest Wave2 / v3 candidate — candidate only.
 - Cycle9 real interruption + convergence — bounded real-incident observation and engineering evidence.
+- `INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/` — bounded persistence/routing pilot from a real cross-dialog Drive discoverability failure. Adds `PERSISTED_BUT_MISPLACED`, placement receipt requirements and an executable guard. Authority effect: NONE.
+
+## Persistence/discoverability law
+A substantial result is not considered correctly persisted merely because a provider returned a successful file ID. The bounded incident pilot tests the stricter chain:
+
+`CREATE/IMPORT -> CANONICAL PLACEMENT -> PARENT READBACK -> START_HERE/CURRENT UPDATE -> INDEX READBACK -> DUPLICATE/LEGACY SCAN -> CROSS-STORE POINTER (when required) -> PLACEMENT_VERIFIED`.
+
+Until this chain passes, use `PERSISTED_BUT_MISPLACED` rather than `DONE_VERIFIED`.
 
 ## Library boundary
 Raw copyrighted books and uploaded binaries remain in private Google Drive/File Library. Public GitHub stores:
