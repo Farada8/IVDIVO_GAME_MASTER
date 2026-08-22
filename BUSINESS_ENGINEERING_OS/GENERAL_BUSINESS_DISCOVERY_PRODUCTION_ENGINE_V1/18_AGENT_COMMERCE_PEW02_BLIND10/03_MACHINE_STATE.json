@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.agent_commerce.pew02_blind10/0.4",
+  "schema": "ivdivo.agent_commerce.pew02_blind10/0.5",
   "date": "2026-08-22",
-  "status": "P_EW02_DONE_VERIFIED_POSTMERGE_CLOSURE_CANDIDATE",
+  "status": "P_EW02_DONE_VERIFIED_POSTMERGE_CLOSURE_PENDING_EXACT_HEAD_CI",
   "parent": "OW-01_AGENTIC_COMMERCE_MERCHANT_READINESS",
   "authority": {
     "implementation_pr": 353,
@@ -55,5 +55,5 @@
     "readback_status": "PASS"
   },
   "next_gate": "P-EW03_ARTICLE50_TECHNICAL_TRANSPARENCY_SAMPLE_PACK_UNLESS_CURRENT_AUTHORITY_CHANGES",
-  "closure": {"pr":null,"exact_head":null,"ci_runs":[],"merge_sha":null}
+  "closure": {"pr":363,"exact_head":null,"ci_runs":[],"merge_sha":null}
 }
