@@ -101,3 +101,42 @@ def test_ch01_real_collision_caller_regression_fails_closed():
 def test_subject_tracker_possessive_name_not_grammatical_subject():
     aps=sa.compile_aliases({'NIKA':['Nika']})
     assert sa._alias_subject_at_sentence_start('Nika’s line went dead.', aps) is None
+
+# LESSON ZERO CH01 cross-project semantic fixtures.
+# These preserve three independently speaker-labelled examples but do NOT change
+# the min_n=30 universal promotion law.
+def test_lesson_zero_q001_pronoun_tracker_ethan():
+    aliases={'ETHAN':['Ethan'],'MAYA':['Maya']}; genders={'ETHAN':'M','MAYA':'F'}
+    xs=[
+        seg('lz_n0','NARRATION','Ethan checked the time. He looked toward Maya. '),
+        seg('LZ_CH01_Q001','DIALOGUE','Two minutes,'),
+        seg('lz_n1','NARRATION',' he said.\n\nMaya did not turn around.')
+    ]
+    r=sa.classify_and_attribute(xs,aliases,genders,project_pronoun_subject_tracker_promoted=True)
+    assert [(x.segment_id,x.speaker,x.method) for x in r]==[('LZ_CH01_Q001','ETHAN','AUTO_PRONOUN_GRAMMATICAL_SUBJECT_TRACKER')]
+
+def test_lesson_zero_q012_same_paragraph_boy2():
+    aliases={'BOY_2':['the boy']}; genders={'BOY_2':'M'}
+    xs=[
+        seg('LZ_CH01_Q011','DIALOGUE','Hey, Rahman. You see these patterns, right?'),
+        seg('lz_n11','NARRATION',' the boy called. '),
+        seg('LZ_CH01_Q012','DIALOGUE','Tell us which one’s fake.'),
+        seg('lz_n12','NARRATION','\n\nSamir gave the smallest possible shrug.')
+    ]
+    seed=sa.classify_and_attribute(xs,aliases,genders)
+    propagated=sa.propagate_same_paragraph(xs,seed)
+    assert any(x.segment_id=='LZ_CH01_Q011' and x.speaker=='BOY_2' for x in seed)
+    assert [(x.segment_id,x.speaker,x.method) for x in propagated]==[('LZ_CH01_Q012','BOY_2','AUTO_SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION')]
+
+def test_lesson_zero_q076_same_paragraph_ethan():
+    aliases={'ETHAN':['Ethan']}; genders={'ETHAN':'M'}
+    xs=[
+        seg('LZ_CH01_Q075','DIALOGUE','Okay,'),
+        seg('lz_n75','NARRATION',' Ethan said. '),
+        seg('LZ_CH01_Q076','DIALOGUE','It is slightly about being first.'),
+        seg('lz_n76','NARRATION','\n\n')
+    ]
+    seed=sa.classify_and_attribute(xs,aliases,genders)
+    propagated=sa.propagate_same_paragraph(xs,seed)
+    assert any(x.segment_id=='LZ_CH01_Q075' and x.speaker=='ETHAN' for x in seed)
+    assert [(x.segment_id,x.speaker,x.method) for x in propagated]==[('LZ_CH01_Q076','ETHAN','AUTO_SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION')]
