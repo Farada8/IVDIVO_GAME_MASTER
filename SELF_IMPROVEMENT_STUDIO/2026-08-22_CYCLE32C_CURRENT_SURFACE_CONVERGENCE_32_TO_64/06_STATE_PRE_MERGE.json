@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1",
+  "cycle_id": "CYCLE32C_CURRENT_SURFACE_CONVERGENCE_2026-08-22",
+  "status": "PRE_MERGE_ENGINEERING_PACKAGE",
+  "authority": "SELF_IMPROVEMENT_V2_VERIFIED_CURRENT",
+  "v3": "CANDIDATE_NOT_PROMOTED",
+  "new_si_id_allocated": false,
+  "prompts_executed": 32,
+  "modules": 32,
+  "contracts": 32,
+  "proof_obligations": 32,
+  "protocols": 32,
+  "next_prompts_designed": 64,
+  "real_observed_defects": [
+    "CYCLE8_EMBEDDED_D01_GATE_STALE",
+    "DRIVE_CYCLE32C_FOLDER_EXISTED_EMPTY"
+  ],
+  "external_evidence": {
+    "human": false,
+    "provider": false,
+    "market": false
+  },
+  "holds": [
+    "HUMAN_DECISION_LATENCY_NOT_MEASURED",
+    "HUMAN_OPERATOR_BURDEN_NOT_MEASURED",
+    "V3_PROMOTION_NOT_JUSTIFIED"
+  ],
+  "drive_folder_id": "15ojNluyoYLFYgTrfbs3QjJ2Ceah9Qmtd",
+  "github_branch": "self-improvement/cycle32c-current-surface-convergence-2026-08-22",
+  "evidence_ceiling": "ENGINEERING_SOURCE_READBACK_ONLY",
+  "current_authority_mutation": "NONE_PRE_MERGE"
+}
