@@ -1,0 +1,74 @@
+{
+  "schema": "ivdivo.b03.full_book_speaker_authority/1.1",
+  "project": "B03 — THE EMPTY RESCUE",
+  "artifact": "139_B03_FULL_BOOK_SPEAKER_AUTHORITY_MANIFEST_v1.1_RECONCILED",
+  "date": "2026-08-22",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "full_speaker_gate": "PASS_RECONCILED_V1_1",
+  "actual_speech_denominator": 3714,
+  "assigned": 3714,
+  "unknown": 0,
+  "coverage_pct": 100.0,
+  "source_segmentation": {
+    "drive_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
+    "sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac"
+  },
+  "semantic_exception_patch": {
+    "drive_id": "1DYkgkq9aNL7Zw0qSG4ma9rQzzVhUz-sG",
+    "exceptions": 4,
+    "actual_speech_denominator": 3714
+  },
+  "authority_gates": {
+    "CH01_03": "1tpa7nlvYqghTBFubPaWtHRIfku3oYmQZ",
+    "CH04_06": "1vZIHiZDcYlKfhRPddJ9Jy73vCykpA_Ej",
+    "CH07_09": "1ewx28qPK7Bd2BpeHZSxed1PsbKKj-Iip",
+    "CH10_12": "1Q1U6S3yiPEXDKOnbaoDksfqOQ2Es_cAL",
+    "CH13_15": "1krIKwrK5fiF2Q5JJnpt5VPZNkNCW7hEH",
+    "CH16_18": "12s4jFCoLN18af33MwO_96JQis5T1X8YX",
+    "CH19_21": "1VMSzd1eou29mQ56W7lZGcI2X6KQ4--5G",
+    "CH22_24_REPAIRED_MANIFEST": "1eGz0wHrkl7owFgXlSlmHec88-5_Fnsth",
+    "CH22_24_ORIGINAL_V0_4_GATE_PROVENANCE_ONLY": "1E8vd8aZRfjKoBhjr2MBW4ihDu7TTkLua",
+    "CH24_CORRECTED_MAP": "1hzNIm7VyLiiuip2gDiZS4InvEPpzGKqx",
+    "CH24_SOURCE_QUARANTINE_GATE": "1tl4xYMLOQmnJPT-PIAzDOMNFwrrzpu9L",
+    "CH25_27": "1NpofxohfThXFLq5lIJMDOMgu5_jWSvuk",
+    "CH28_29": "1UmjhMWQapFnyM3ixYWVKGjCSRQdemV3W"
+  },
+  "ch24_source_identity": {
+    "packet_1": "PRECURSOR_SOURCE_CH24_PACKET_1",
+    "packet_2": "PRECURSOR_SOURCE_CH24_PACKET_2",
+    "identity_relation": "UNKNOWN",
+    "rule": "SAME_TOPIC_OR_PACKET_CLASS_NEQ_SAME_SPEAKER_IDENTITY"
+  },
+  "final_batch": {
+    "ch28": "1mv0Z8BKu2hhi6eNY-r-7xVRbGWbs978K",
+    "ch29": "1Q4Hcj0C4DAijSoj82scrXxC2nyLgDnXM",
+    "manifest": "14M9PZ1caI1NCQlv2cwtk_SQLJMJCbbW-",
+    "voice_map_template": "1MM9EKHaNzdOz6ECw0mZltURCZL6dikrF",
+    "gate": "1UmjhMWQapFnyM3ixYWVKGjCSRQdemV3W",
+    "zip": "1Z9ri7roltiBeitGlOdYUsEo1zNHgVb6D"
+  },
+  "full_book_gate": {
+    "version": "1.1_RECONCILED",
+    "drive_md": "1p6awYqAXxT_EKyuxDqYlyCsMANwkBnmc",
+    "drive_json": "1dnmmN3kzpahYnAC91qvzI0FFXAfmTb1y",
+    "superseded_v1_0_drive": "1j8jQXTiYLTGzqUrval6APudHIA2JoQNR"
+  },
+  "regression_fixtures": [
+    {"segment": "B03_CH06_S0038", "class": "ACTION_ATTENTION_BOUNDARY"},
+    {"segment": "B03_CH22_S0216", "class": "STRONG_EVIDENCE_OVERRIDES_INITIAL_CONTEXT_READ"},
+    {"segments": ["B03_CH24_S0152", "B03_CH24_S0154", "B03_CH24_S0376", "B03_CH24_S0378", "B03_CH24_S0380"], "class": "UNKNOWN_SOURCE_IDENTITY_MERGE"},
+    {"segment": "B03_CH26_S0024", "class": "PRONOUN_RESOLVER_WRONG_MALE_ANTECEDENT"},
+    {"segment": "B03_CH27_S0136", "class": "SOURCE_AUTHOR_NEQ_ACOUSTIC_SPEAKER"},
+    {"segment": "B03_CH29_S0312", "class": "PRONOUN_RESOLVER_WRONG_MALE_ANTECEDENT"}
+  ],
+  "story_text_mutation": false,
+  "voice_ids_assigned": 0,
+  "voice_lock": false,
+  "provider_access_verified": false,
+  "provider_evidence": false,
+  "human_cast_approval": false,
+  "pronunciation_gate": "OPEN",
+  "bulk_render_allowed": false,
+  "supersedes_for_downstream_provenance": "FULL_BOOK_SPEAKER_AUTHORITY_MANIFEST_v1.json",
+  "next_exact_action": "OBTAIN_LIVE_PROVIDER_CONTEXT_THEN_RUN_BOUNDED_S0_CASTING_AND_PRONUNCIATION_EVIDENCE"
+}
