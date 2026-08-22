@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-22
 **Parent authority:** `BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md`
-**Scope:** additive supplier legal-identity/status + bidder primary-evidence + authority-source-precedence + bounded target-acquisition nonfinding evidence; not a second Business Engineering authority.
+**Scope:** additive supplier legal-identity/status + bidder primary-evidence + authority-source-precedence + bounded target-acquisition/access-surface evidence; not a second Business Engineering authority.
 
 ## Current lineage
 - Cycle7 supplier/source-precedence evidence remains historical base.
@@ -10,12 +10,18 @@
 - Bidder primary-evidence delta: PR #253 -> merge `071d4b37e8d2cef395f9e12bcfb919eefb1158cc`.
 - Cycle9 authority closure: PR #254 -> merge `0b35a3ed8de491743bc8f4f8f475acfb3fd2fd08`.
 - P225/P235 unlock intake: PR #280 -> merge `86c6fe28d2aac24e880adcef5cd4b512839f73e1`; authority effect remains NONE until authorized input is actually supplied/read back.
+- P225 exact document-coordinate discovery is current additive evidence; pack remains not acquired.
+- P225 public-access-surface delta is current additive evidence; it does not change P225/P235 roots or proof grade.
+- Business local control-plane calibration now records two real negative controls and zero real positive root events; this is reliability evidence only, not market/procurement proof promotion.
 
 Google Drive evidence surfaces:
 - Cycle7 evidence delta document: `1yjs4NorTtyK0KqgT5DBujEw8jlswNoQb9tlAAh7TJmQ`.
 - Bidder primary-evidence dossier: `1tzCl_iRPwtepuk_PaaYh4y2tCnxKifpluUwGjO_0Hmc`.
 - Bidder primary-evidence machine/proofs: `1AtcvNgOQF21z1e4w_0nLodfb2lMSYUh0qLcc6yeChCc`.
 - P225/P235 unlock intake: `1hV7HGOEdm-OBP2CraIZKttWSc7I9YDJvtkAz-E_Yr38`.
+- P225 exact document-coordinate/readback: `18qL7O5QFUxlYwhFag7XQIXhXzZ4s-1tLZh_--yzIFvo`.
+- P225 public-access-surface folder: `1Gli4pUf_2XLgQ0zXSm_GpS6yk7_Vf7SJ`.
+- P225 public-access-surface document: `1q2jijpkwsslQ-js6R2k0GWPBnMOhhceVQuQtA_e8ueY`.
 
 ## Current supplier evidence
 Verified/proven at the stated evidence class:
@@ -84,6 +90,40 @@ No-loop law:
 
 Do not repeat the same exact Gmail/Drive/File-Library coordinates unless a new file/upload, exact filename, authenticated export, new account/folder/source coordinate, user-provided official ZIP/files/inventory, or new first-party exact coordinate appears.
 
+### P225 exact document-coordinate + public access-surface refresh — 2026-08-22
+A materially new first-party coordinate was subsequently recovered for the same resource:
+
+`https://www.etenders.gov.ie/epps/cft/listContractDocuments.do?resourceId=8872468`
+
+Current durable GitHub evidence:
+- coordinate discovery: `BUSINESS_ENGINEERING_OS/2026-08-22_P225_DOCUMENT_COORDINATE_DISCOVERY/00_DOCUMENT_COORDINATE_DISCOVERY.md`;
+- coordinate machine state: `BUSINESS_ENGINEERING_OS/2026-08-22_P225_DOCUMENT_COORDINATE_DISCOVERY/01_MACHINE_STATE.json`;
+- current public-access observation: `BUSINESS_ENGINEERING_OS/2026-08-22_P225_PUBLIC_ACCESS_SURFACE_DELTA/00_EVIDENCE_DELTA.md`;
+- local control-plane calibration: `BUSINESS_ENGINEERING_OS/2026-08-22_P225_DOCUMENT_COORDINATE_DISCOVERY/02_REAL_NEGATIVE_CONTROL_CALIBRATION.md`.
+
+Observed:
+- the exact official eTenders document route is proven;
+- the live current eTenders workspace remains observable;
+- an independent lower-authority procurement index uses descriptor `LOT-0001 NON-RESTRICTED-DOCUMENT`;
+- the accessible indexed/current tool surfaces still did **not** return an authoritative complete attachment inventory, current tender file bytes, revision/addendum graph, or authenticated export/ZIP.
+
+Interpretation boundary:
+`DOCUMENT_COORDINATE_DISCOVERED != TARGET_PACK_ACQUIRED`
+`DOCUMENT_ROUTE_KNOWN != ATTACHMENT_INVENTORY_RECOVERED`
+`PUBLIC_WORKSPACE_AVAILABLE != FILE_BYTES_ACQUIRED`
+`THIRD_PARTY_NON_RESTRICTED_DESCRIPTOR != COMPLETE_OFFICIAL_PACK_ACQUIRED`
+`NEW_ACCESS_EVIDENCE != P225_EXECUTION`.
+
+The third-party `NON-RESTRICTED-DOCUMENT` descriptor only narrows the access hypothesis; it cannot override or promote official eTenders authority. The unresolved blockage may be session/rendering/index access, but that remains a bounded hypothesis until actual official bytes/inventory are acquired.
+
+Control-plane calibration result:
+- `REAL_NEGATIVE_CONTROL_001 = PASS` for bounded connected-source nonfinding;
+- `REAL_NEGATIVE_CONTROL_002 = PASS` for exact coordinate/public-access hint without pack bytes;
+- real positive root events = `0`;
+- current route = `PROTECT_NO_CHANGE`.
+
+This calibration is Business-local reliability evidence only. It does not promote Self-Improvement globally and does not upgrade procurement proof.
+
 ## Formation metadata version conflict
 Recovered A1 submission `SR5869785` records NACE 6399.
 Recovered later A1 submission `SR6505561` records NACE 8559.
@@ -97,15 +137,16 @@ The latest recovered A1 form is not a final/current registry classification.
 ## Current tender authority state
 Case: `PROC-BALLYBUNION-8872468`.
 
-The official eTenders workspace/document route is known, but the complete current attachment/revision/addendum inventory and document bytes remain unrecovered through the accessible indexed surface.
+The official eTenders workspace and exact document route are now known. The complete current attachment/revision/addendum inventory and document bytes remain unrecovered through the accessible surfaces.
 
 Therefore:
 `DOCUMENT_ROUTE_KNOWN != CURRENT_ATTACHMENT_INVENTORY_RECOVERED`.
+`DOCUMENT_COORDINATE_DISCOVERED != TARGET_PACK_ACQUIRED`.
 
-Current first-party official authority outranks conflicting lower-ranked aggregator fields. Lower-ranked conflicts are retained as provenance but cannot override/promote current authority. Equal-ranked top-authority conflicts fail closed pending reconciliation.
+Current first-party official authority outranks conflicting/lower-ranked aggregator fields. Lower-ranked observations are retained as provenance but cannot override/promote current authority. Equal-ranked top-authority conflicts fail closed pending reconciliation.
 
 ## Backlog effects
-- `P225 = HOLD_TARGET_PACK_NOT_ACQUIRED`; bounded nonfinding does not count as execution.
+- `P225 = HOLD_TARGET_PACK_NOT_ACQUIRED`; neither bounded nonfinding nor coordinate/access-surface discovery counts as execution.
 - `P235 = HOLD_NO_EXPLICIT_BIDDER_DESIGNATION`.
 - `P237 = PARTIAL_OFFICIAL_SCREEN_REG_NUMBER_CURRENT_CERTIFIED_EXTRACT_MISSING`.
 - `P243 = PARTIAL_TAX_REGISTRATION_AND_HISTORICAL_ACCOUNT_EVIDENCE_CLEARANCE_MISSING`.
@@ -156,6 +197,12 @@ This is still **not** a verified `SupplierCapabilityProfile v2` and is not targe
 
 `DOCUMENT_ROUTE_NEQ_ATTACHMENT_INVENTORY`
 
+`DOCUMENT_COORDINATE_DISCOVERED_NEQ_TARGET_PACK_ACQUIRED`
+
+`PUBLIC_ACCESS_HINT_NEQ_FILE_BYTES_ACQUIRED`
+
+`THIRD_PARTY_NON_RESTRICTED_DESCRIPTOR_NEQ_COMPLETE_OFFICIAL_PACK_ACQUIRED`
+
 `NOT_FOUND_IN_CONNECTED_SOURCES_NEQ_DOCUMENT_DOES_NOT_EXIST`
 
 `COMPANY_CONTEXT_NEQ_EXPLICIT_BIDDER_DESIGNATION`
@@ -166,11 +213,11 @@ This is still **not** a verified `SupplierCapabilityProfile v2` and is not targe
 
 ## Next evidence action
 Highest-information admissible next moves remain:
-1. acquire the complete current official eTenders pack through authenticated export or user-provided official export;
+1. acquire the complete current official eTenders pack through authenticated export or user-provided official export from the now-known exact documents route;
 2. obtain an explicit case-specific bidder designation if the Founder actually intends this company to be evaluated internally for `8872468`;
 3. acquire a current certified CRO/company record only if required by the target pack;
 4. acquire current Tax Clearance and insurance evidence only if required by the target pack;
 5. acquire target-relevant third-party reference/completion evidence and current-capacity/H&S evidence only after exact requirements are known;
 6. then freeze target + bidder manifests and perform the atomic requirement/supplier join.
 
-Do not infer construction capability from formation/company evidence, do not convert invoices into paid revenue, do not convert a generic continuation request into bidder intent, and do not repeat the same connected-source non-finding loop without new evidence coordinates.
+Do not infer construction capability from formation/company evidence, do not convert invoices into paid revenue, do not convert a generic continuation request into bidder intent, and do not repeat the same connected/public document-route discovery loop without a materially new evidence coordinate or actual file bytes.
