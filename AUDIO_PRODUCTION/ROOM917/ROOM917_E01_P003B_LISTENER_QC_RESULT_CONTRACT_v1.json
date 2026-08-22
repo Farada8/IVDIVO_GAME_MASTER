@@ -1,10 +1,10 @@
 {
-  "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.2",
+  "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.3",
   "project": "ROOM917",
   "episode": "E01",
   "authority": "THE_INSURABLE_FIRE",
   "status": "WAITING_FOR_AUDIO",
-  "purpose": "Record only audible Listener-QC failures from an identifiable source master or provenance-verified derived candidate and compile them into smallest-scope selective repairs.",
+  "purpose": "Record only directly audible Listener-QC findings from an identity-verified source, provenance-verified derived candidate, or AutoMix-v1 eligibility-verified full mix; compile smallest-scope repairs without simulating human listening or authorizing story rewrite.",
   "source_identity": {
     "required": true,
     "immutable_source_file_name": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
@@ -14,14 +14,19 @@
     "expected_bit_depth": 24,
     "expected_channels": 2,
     "target_identity_mode": null,
-    "allowed_target_identity_mode": ["IMMUTABLE_SOURCE_MASTER", "PROVENANCE_VERIFIED_DERIVED_CANDIDATE"],
+    "allowed_target_identity_mode": [
+      "IMMUTABLE_SOURCE_MASTER",
+      "PROVENANCE_VERIFIED_DERIVED_CANDIDATE",
+      "AUTOMIX_V1_ELIGIBILITY_VERIFIED_FULL_MIX"
+    ],
     "observed_file_name": null,
     "observed_sha256": null,
     "parent_source_sha256": null,
     "derived_provenance_ref": null,
+    "automix_eligibility_ref": null,
     "machine_qc_ref": null,
     "identity_status": "UNVERIFIED",
-    "identity_law": "Source target must hash exactly to immutable source SHA. Derived target must have its own observed SHA plus evidence-backed provenance/1.1 to immutable source and a machine-QC report for that exact candidate."
+    "identity_law": "Source target must hash exactly to immutable source SHA. Derived target must have its own observed SHA plus evidence-backed provenance/1.1 to immutable source and machine QC for that exact candidate. AutoMix-v1 target must present PASS_P003B_AUTOMIX_ELIGIBILITY binding actual listener-audio SHA to the passed render manifest, machine-QC receipt and P003B handoff."
   },
   "protected_authority": {
     "scene3_v1_3e_window": {
@@ -40,8 +45,10 @@
   "blind_listen": {
     "pass_a_story_free": "NOT_RUN",
     "pass_a_notes_frozen": false,
+    "pass_a_freeze_receipt_ref": null,
     "pass_b_targeted_verification": "NOT_RUN",
-    "pass_b_queue_may_open_only_after_pass_a_notes_frozen": true,
+    "pass_b_queue_may_open_only_after_valid_pass_a_freeze_receipt": true,
+    "pass_c_unseal_receipt_ref": null,
     "pass_c_translation_playback": {
       "stereo_headphones": "NOT_RUN",
       "ordinary_speakers_or_mono": "NOT_RUN",
@@ -59,13 +66,35 @@
       "rule": "Candidates have no current release effect until identified current audio is directly verified."
     }
   },
-  "question_classes": ["ACTOR_BELIEF","AI_AUDIBLE","DEAD_SCENE","GEOGRAPHY","MYSTERY","SFX_MASKING"],
-  "failure_layers": ["PERFORMANCE","EDIT","MIX","SOUND_ASSET","UNKNOWN"],
-  "severity": ["FATAL","MAJOR","MEDIUM","POLISH"],
+  "question_classes": [
+    "ACTOR_BELIEF",
+    "AI_AUDIBLE",
+    "DEAD_SCENE",
+    "GEOGRAPHY",
+    "MYSTERY",
+    "SFX_MASKING"
+  ],
+  "failure_layers": ["PERFORMANCE", "EDIT", "MIX", "SOUND_ASSET", "UNKNOWN"],
+  "severity": ["FATAL", "MAJOR", "MEDIUM", "POLISH"],
   "defects": [],
   "defect_record_contract": {
-    "required_fields": ["defect_id","start_seconds","end_seconds","question_class","severity","confidence","heard","scene_failure","failure_layer","smallest_repair_scope","minimal_fix","do_not_touch","regression_tests","status"],
-    "allowed_status": ["KEEP","REPAIR","HOLD"]
+    "required_fields": [
+      "defect_id",
+      "start_seconds",
+      "end_seconds",
+      "question_class",
+      "severity",
+      "confidence",
+      "heard",
+      "scene_failure",
+      "failure_layer",
+      "smallest_repair_scope",
+      "minimal_fix",
+      "do_not_touch",
+      "regression_tests",
+      "status"
+    ],
+    "allowed_status": ["KEEP", "REPAIR", "HOLD"]
   },
   "repair_compiler": {
     "rules": [
@@ -88,8 +117,9 @@
   },
   "final_verdict": {
     "believability": null,
+    "allowed_believability": ["BELIEVE", "BORDERLINE", "DONT_BELIEVE"],
     "release_status": "HOLD",
-    "allowed_release_status": ["GO","NO_GO","REPAIR","HOLD"],
+    "allowed_release_status": ["GO", "NO_GO", "REPAIR", "HOLD"],
     "reason": "No current target audio has been identity-verified and listened in this result artifact."
   }
 }
