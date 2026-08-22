@@ -1,0 +1,44 @@
+{
+  "schema": "ivdivo.artifact_placement.prospective_canaries/1.0",
+  "date": "2026-08-22",
+  "authority_effect": "NONE",
+  "source_boundary": "Real Google Drive metadata/index readbacks; placement mechanics only, not content or market proof.",
+  "canaries": [
+    {
+      "id": "D09_CURRENT_MASTER_AFTER_REPAIR",
+      "expected_status": "PLACEMENT_VERIFIED",
+      "receipt": {
+        "artifact_id": "drive:1vt4RguE9P77eX2TK9PRUSGD_qXHs6IIpLlIe37Im21Y",
+        "provider": "GOOGLE_DRIVE",
+        "project_root": "drive:1jgc7bYPLUhCOFLIAF_K_ELduNAe4CGwp",
+        "expected_parent": "drive:1jousKwv6PxJFsh-9AAXiPHOvDJIHFwjh",
+        "actual_parent": "drive:1jousKwv6PxJFsh-9AAXiPHOvDJIHFwjh",
+        "artifact_exists": true,
+        "start_here_ref": "drive:1Nw3GCLqAq9AT8VcpYij2BXn-VJK1SQPljwRoenALeKc",
+        "start_here_readback_ok": true,
+        "start_here_mentions_artifact": true,
+        "legacy_conflicts": [],
+        "cross_store_required": false,
+        "cross_store_pointer_present": false
+      }
+    },
+    {
+      "id": "WOMENS_AUDIO_BUSINESS_ACTIVE10_DASHBOARD",
+      "expected_status": "PLACEMENT_VERIFIED",
+      "receipt": {
+        "artifact_id": "drive:1YO1_060a6KhdD4AjJDHnIYLc9LSe47GIiARtsU5UXws",
+        "provider": "GOOGLE_DRIVE",
+        "project_root": "drive:13Wu8VFrj-50XC_8usBEGOm5YHEfkV0O0",
+        "expected_parent": "drive:1x7Bjfaq_7Ywcvg0eDBMxilWNgz08Rmcm",
+        "actual_parent": "drive:1x7Bjfaq_7Ywcvg0eDBMxilWNgz08Rmcm",
+        "artifact_exists": true,
+        "start_here_ref": "drive:1Ol9583Kakm-e4iOcb4XzEdqdlsd03oj4eGWrro1lvZ0",
+        "start_here_readback_ok": true,
+        "start_here_mentions_artifact": true,
+        "legacy_conflicts": [],
+        "cross_store_required": false,
+        "cross_store_pointer_present": false
+      }
+    }
+  ]
+}
