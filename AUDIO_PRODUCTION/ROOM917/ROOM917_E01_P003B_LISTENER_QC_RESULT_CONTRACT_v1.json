@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.3",
+  "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.4",
   "project": "ROOM917",
   "episode": "E01",
   "authority": "THE_INSURABLE_FIRE",
@@ -46,6 +46,7 @@
     "pass_a_story_free": "NOT_RUN",
     "pass_a_notes_frozen": false,
     "pass_a_freeze_receipt_ref": null,
+    "pass_b_open_receipt_ref": null,
     "pass_b_targeted_verification": "NOT_RUN",
     "pass_b_queue_may_open_only_after_valid_pass_a_freeze_receipt": true,
     "pass_c_unseal_receipt_ref": null,
@@ -101,6 +102,7 @@
       "NO_PATCH_FROM_TASTE_ALONE",
       "NO_PATCH_FROM_LOW_RMS_ALONE",
       "NO_PATCH_FROM_PASS_B_CANDIDATE_UNTIL_CURRENT_AUDIO_VERIFIED",
+      "NO_REPAIR_COMPILATION_WITHOUT_PASS_B_OPEN_RECEIPT",
       "NO_WHOLE_SCENE_RERENDER_WHEN_LOCAL_REPAIR_EXISTS",
       "DIALOGUE_RERENDER_ONLY_FOR_PROVEN_PERFORMANCE_OR_PRONUNCIATION_FAILURE",
       "MIX_REPAIR_FIRST_FOR_SPACING_MASKING_ROOM_CONTINUITY_OR_PLACEMENT",
