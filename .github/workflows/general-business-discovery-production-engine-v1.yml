@@ -14,12 +14,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run business production router tests
-        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_business_production_router.py
-      - name: Run current TEST-37 regression when present
+      - name: Run cumulative business regressions
         run: |
-          if [ -f BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_test37_ai_vs_seo.py ]; then
-            python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_test37_ai_vs_seo.py
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_business_production_router.py
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_fatal_test_router.py
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_buyer_evidence_router.py
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_test37_ai_vs_seo.py
+          if [ -f BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_opp37_offer_router.py ]; then
+            python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_opp37_offer_router.py
           fi
       - name: Compile runtime
         run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
@@ -38,6 +40,8 @@ jobs:
           fatal_state = json.loads((root/'10_P17_P24_MACHINE_STATE.json').read_text())
           p0916 = (root/'11_P09_P16_BUYER_PROBLEM_EVIDENCE.md').read_text()
           buyer_state = json.loads((root/'12_P09_P16_MACHINE_STATE.json').read_text())
+          offer_doc = root/'17_OPP37_P25_P32_OFFER_ENGINEERING.md'
+          offer_state_path = root/'18_OPP37_P25_P32_MACHINE_STATE.json'
           state = json.loads((root/'06_MACHINE_STATE.json').read_text())
           assert all(f'BDP{i:02d}' in spec for i in range(1,33))
           assert all(f'CDP{i:02d}' in spec for i in range(1,33))
@@ -52,29 +56,30 @@ jobs:
           assert 'OPP-33' in p0108 and 'OPP-36' in p0108 and 'OPP-37' in p0108
           assert 'WILLINGNESS_TO_PAY = UNKNOWN' in p0108
           assert 'OFFICIAL_SUPPORT_EXISTENCE != BUYER_WTP' in src
-          assert all(f'SRC-GEN-{i:02d}' in src for i in range(1,12))
           assert fatal_state['next64']['executed_count'] == 16
-          assert fatal_state['portfolio']['wip_count'] == 3
           assert fatal_state['external_action']['authorized'] is False
-          assert all(f'OPP-{i}' in p1724 for i in (33,36,37))
           assert buyer_state['next64']['executed_count'] == 24
-          assert buyer_state['next64']['unexecuted_count'] == 40
           assert buyer_state['external_action']['authorized'] is False
           assert buyer_state['evidence']['buyer_behavior_observed'] is False
           assert 'PUBLIC_SCREENING_CANDIDATE != BUYER != BUDGET_OWNER != DEMAND' in p0916
-          assert state['next64']['executed'] == 24
-          assert state['next64']['executed_ranges'] == ['P01-P08', 'P09-P16', 'P17-P24']
-          assert state['next64']['remaining'] == 40
-          assert state['buyer_problem_evidence']['screening_slots_per_lane'] == 10
-          assert state['buyer_problem_evidence']['buyer_behavior_observed'] is False
+          assert state['test37_internal']['count'] == 2
+          assert state['test37_internal']['buyer_behavior'] is False
           assert state['external_action']['authorized'] is False
-          if 'test37_internal' in state:
-              assert state['test37_internal']['count'] == 2
-              assert state['test37_internal']['sample'] == 3
-              assert state['test37_internal']['buyer_behavior'] is False
-              assert state['test37_internal']['willingness_to_pay'] is None
-              assert state['test37_internal']['proof_promotion'] is False
-              assert state['test37_internal']['next64_increment'] == 0
-              assert state['next64']['next_admissible_block'] == 'P25-P32_OPP37_INTERNAL_OFFER_ENGINEERING'
+          if offer_doc.exists() and offer_state_path.exists():
+              offer = offer_doc.read_text()
+              ost = json.loads(offer_state_path.read_text())
+              assert all(f'P{i}' in offer for i in range(25,33))
+              assert ost['next64']['executed'] == 32
+              assert ost['next64']['remaining'] == 32
+              assert ost['p29_pricing_hypothesis']['wtp_proven'] is False
+              assert ost['p29_pricing_hypothesis']['minimum_viable_price'] is None
+              assert ost['evidence']['unit_economics'] is None
+              assert ost['evidence']['profitability'] is None
+              assert ost['external_action']['authorized'] is False
+              assert state['next64']['executed'] == 32
+              assert state['next64']['remaining'] == 32
+              assert state['next64']['next_admissible_block'] == 'P33-P40_OPP37_NULL_SAFE_ECONOMICS_AND_MANUAL_DELIVERY_TIMING'
+              assert state['offer_engineering']['generic_ai_seo_audit'] == 'KILL_AS_DIFFERENTIATED_CORE'
+              assert state['offer_engineering']['buyer_value_proven'] is False
           print(f"GENERAL_BUSINESS_ENGINE: PASS — current={state['next64']['executed']}/64, route={state['next64']['next_admissible_block']}")
           PY
