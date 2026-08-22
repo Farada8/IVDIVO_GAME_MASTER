@@ -1,0 +1,17 @@
+{
+  "schema":"ivdivo.business.pod_cost_preflight/1.0",
+  "date":"2026-08-22",
+  "status":"INTERNAL_COST_AND_ASSET_READINESS_NO_MARKET_PROOF",
+  "assets":[
+    {"id":"house_many_windows_board","drive_id":"1ZoTIVFu0kzl8nmloskoLsYRiB_wsDOd-","pixels":[1536,1024],"ratio":"3:2","dpi_4x6":256.0,"dpi_5x7_crop_min":204.8,"dpi_8x12":128.0,"content_state":"CONCEPT_BOARD_NOT_RETAIL_MASTER","print_master_ready":false},
+    {"id":"women_carry_memory_board","drive_id":"1NBATcf8uItQn8BsNGR34hUCwfcoWH7D_","pixels":[1536,1024],"ratio":"3:2","dpi_4x6":256.0,"dpi_5x7_crop_min":204.8,"dpi_8x12":128.0,"content_state":"CONCEPT_BOARD_NOT_RETAIL_MASTER","print_master_ready":false},
+    {"id":"giulio_hyperreal_railway","drive_id":"16gQTzydwX8sICiKqBSjUdx8ASmDAn4HO","pixels":[1024,1536],"ratio":"2:3","dpi_4x6":256.0,"dpi_5x7_crop_min":204.8,"dpi_8x12":128.0,"content_state":"ARTWORK_CANDIDATE_SMALL_FORMAT_ONLY_WITH_CURRENT_FILE","print_master_ready":false}
+  ],
+  "print_rules":{"printful_general_min_dpi":150,"paper_preferred_dpi":300,"small_4x6_resolution_gate":true,"five_by_seven_resolution_gate":true,"eight_by_twelve_resolution_gate":false},
+  "cost_inputs":{"poster_product_eur":6.54,"poster_shipping_europe_usd":5.79,"framed_product_eur":20.17,"framed_shipping_europe_usd":7.49,"postcard_product_eur":1.57,"postcard_shipping_europe_usd":4.09,"postcard_additional_shipping_usd":0.10,"usd_to_eur":0.854922,"etsy_transaction_percent":6.5,"etsy_processing_ireland_percent":4.0,"etsy_processing_flat_eur":0.30,"etsy_listing_usd":0.20},
+  "derived":{"poster_shipping_eur_approx":4.95,"framed_shipping_eur_approx":6.40,"postcard_shipping_eur_approx":3.50,"three_postcards_shipping_eur_approx":3.67,"listing_fee_eur_approx":0.17},
+  "routes":{"card_set_4x6":"ENGINEERING_ELIGIBLE_AFTER_PROVENANCE_AND_MASTER_QA","poster_5x7":"ENGINEERING_ELIGIBLE_AFTER_CLEAN_MASTER_AND_CROP_QA","wall_art_8x12_plus":"HOLD_RESOLUTION","framed":"HOLD_PRINT_MASTER"},
+  "freshness":{"printful_price_change_effective":"2026-08-27","must_refresh_before_external_test_after_date":true},
+  "evidence":{"listings_published":0,"paid_orders":0,"wtp":null,"cac":null,"conversion":null,"profitable_skus_proven":0,"external_action_authorized":false},
+  "next_dependency":"CREATE_3_CLEAN_PRINT_MASTERS_PLUS_PROVENANCE_RECORD_PLUS_REFRESH_COSTS_AFTER_2026_08_27"
+}
