@@ -33,6 +33,12 @@
     "pilots": ["CF-01","CF-03"]
   },
   "next_internal_gates": ["P-EW01","P-EW02","P-EW03","P-EW04","P-EW05"],
+  "drive": {
+    "document_id": "18KzOQZHiS4U_vRu5Zk3_vJMf_YSdvjNRVZFsMo1gLRM",
+    "parent_folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
+    "semantic_readback": true,
+    "readback_marker": "GENERAL-BUSINESS-EARLY-WAVE-RADAR-20260822-OW01-CF01-CF03-WIP3"
+  },
   "proof_boundary": {
     "public_evidence_ceiling": "E2_PLUS",
     "wtp": "UNKNOWN",
