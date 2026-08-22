@@ -1,20 +1,27 @@
 {
-  "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.1",
+  "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.2",
   "project": "ROOM917",
   "episode": "E01",
   "authority": "THE_INSURABLE_FIRE",
   "status": "WAITING_FOR_AUDIO",
-  "purpose": "Record only audible Listener-QC failures from an identifiable assembled master and compile them into smallest-scope selective repairs.",
+  "purpose": "Record only audible Listener-QC failures from an identifiable source master or provenance-verified derived candidate and compile them into smallest-scope selective repairs.",
   "source_identity": {
     "required": true,
-    "file_name": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "immutable_source_file_name": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "immutable_source_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
     "expected_duration_seconds": 658.190,
     "expected_sample_rate_hz": 48000,
     "expected_bit_depth": 24,
     "expected_channels": 2,
-    "expected_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "target_identity_mode": null,
+    "allowed_target_identity_mode": ["IMMUTABLE_SOURCE_MASTER", "PROVENANCE_VERIFIED_DERIVED_CANDIDATE"],
+    "observed_file_name": null,
     "observed_sha256": null,
-    "identity_status": "UNVERIFIED"
+    "parent_source_sha256": null,
+    "derived_provenance_ref": null,
+    "machine_qc_ref": null,
+    "identity_status": "UNVERIFIED",
+    "identity_law": "Source target must hash exactly to immutable source SHA. Derived target must have its own observed SHA plus evidence-backed provenance/1.1 to immutable source and a machine-QC report for that exact candidate."
   },
   "protected_authority": {
     "scene3_v1_3e_window": {
@@ -52,50 +59,13 @@
       "rule": "Candidates have no current release effect until identified current audio is directly verified."
     }
   },
-  "question_classes": [
-    "ACTOR_BELIEF",
-    "AI_AUDIBLE",
-    "DEAD_SCENE",
-    "GEOGRAPHY",
-    "MYSTERY",
-    "SFX_MASKING"
-  ],
-  "failure_layers": [
-    "PERFORMANCE",
-    "EDIT",
-    "MIX",
-    "SOUND_ASSET",
-    "UNKNOWN"
-  ],
-  "severity": [
-    "FATAL",
-    "MAJOR",
-    "MEDIUM",
-    "POLISH"
-  ],
+  "question_classes": ["ACTOR_BELIEF","AI_AUDIBLE","DEAD_SCENE","GEOGRAPHY","MYSTERY","SFX_MASKING"],
+  "failure_layers": ["PERFORMANCE","EDIT","MIX","SOUND_ASSET","UNKNOWN"],
+  "severity": ["FATAL","MAJOR","MEDIUM","POLISH"],
   "defects": [],
   "defect_record_contract": {
-    "required_fields": [
-      "defect_id",
-      "start_seconds",
-      "end_seconds",
-      "question_class",
-      "severity",
-      "confidence",
-      "heard",
-      "scene_failure",
-      "failure_layer",
-      "smallest_repair_scope",
-      "minimal_fix",
-      "do_not_touch",
-      "regression_tests",
-      "status"
-    ],
-    "allowed_status": [
-      "KEEP",
-      "REPAIR",
-      "HOLD"
-    ]
+    "required_fields": ["defect_id","start_seconds","end_seconds","question_class","severity","confidence","heard","scene_failure","failure_layer","smallest_repair_scope","minimal_fix","do_not_touch","regression_tests","status"],
+    "allowed_status": ["KEEP","REPAIR","HOLD"]
   },
   "repair_compiler": {
     "rules": [
@@ -119,12 +89,7 @@
   "final_verdict": {
     "believability": null,
     "release_status": "HOLD",
-    "allowed_release_status": [
-      "GO",
-      "NO_GO",
-      "REPAIR",
-      "HOLD"
-    ],
-    "reason": "Audio bytes not yet verified/listened in this result artifact."
+    "allowed_release_status": ["GO","NO_GO","REPAIR","HOLD"],
+    "reason": "No current target audio has been identity-verified and listened in this result artifact."
   }
 }
