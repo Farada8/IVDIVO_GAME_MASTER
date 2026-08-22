@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.sound_design_pointer/1.0",
+  "schema_version": "room917.sound_design_pointer/1.1",
   "project": "ROOM917",
   "episode": "E01",
   "status": "ACTIVE_POST_RENDER_SOUND_EXECUTION",
@@ -10,6 +10,24 @@
   "current_blocker": "EXACT_MASTER_BYTES_OR_TRUSTED_EXACT_PRE_SCENE3_INTERVAL_TIMING_REQUIRED",
   "scene3_policy": "PRESERVE_V1_3E_TECHNICAL_LINEAGE_UNLESS_NEW_DIRECT_REGRESSION_EVIDENCE",
   "next_machine_stage": "P003A2_PRE_SCENE3_INTERVAL_LOCALIZATION",
-  "human_gate": "P003B_REQUIRED_NOT_SIMULATED",
+  "human_gate": {
+    "stage": "P003B_LISTENER_QC_RED_TEAM",
+    "drive_id": "1DE-eRwLtu7H6aZ_XiQ9OnrkwUIDLmBByVAbUzpIgBgU",
+    "status": "READY_BUT_NOT_EXECUTED",
+    "law": "NO_HUMAN_LISTEN_CLAIM_WITHOUT_ACCESSIBLE_IDENTIFIABLE_AUDIO"
+  },
+  "quarantined_legacy_authority": [
+    {
+      "drive_id": "16fdc16IHn6YXtJCcmfd5Ft4r4Mt0Jyep",
+      "title": "ROOM_917_E01_STUDIO_SFX_CUE_SHEET",
+      "reason": "MARA_BRANCH_AND_50HZ_POLICY_CONFLICT_WITH_CURRENT_THE_INSURABLE_FIRE_AUTHORITY",
+      "quarantine_record": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/QUARANTINE/ROOM917_LEGACY_MARA_SFX_CUE_SHEET_QUARANTINE_v1.md"
+    }
+  ],
+  "recovered_timing_search": {
+    "room917_e01_timeline_json": "NOT_FOUND",
+    "room917_e01_cue_sheet_csv": "NOT_FOUND",
+    "legacy_studio_sfx_cue_sheet": "FOUND_BUT_QUARANTINED_NOT_TIMING_AUTHORITY"
+  },
   "season_scale": "BLOCKED_UNTIL_E01_V2_QUALITY_GATE"
 }
