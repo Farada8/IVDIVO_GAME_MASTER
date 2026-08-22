@@ -1,19 +1,14 @@
 {
-  "schema": "ivdivo.business.opp37_test37_ai_vs_seo/1.0",
+  "schema": "ivdivo.business.opp37_test37_ai_vs_seo/1.1",
   "date": "2026-08-22",
-  "status": "TEST37_INTERNAL_PASS_CANDIDATE_PENDING_CI",
+  "status": "TEST37_INTERNAL_PASS_CI_VALIDATED_PREMERGE",
   "opportunity_id": "OPP-37",
   "test_id": "TEST-37",
   "test_type": "INTERNAL_PUBLIC_WEB_NEGATIVE_CONTROL",
   "predeclared_threshold": {
     "sample": 3,
     "minimum_count": 2,
-    "requirements_per_counted_site": [
-      "ORDINARY_CONTROL_USABLE",
-      "MATERIAL_INCREMENTAL_AI_DEFECT",
-      "REPRODUCED",
-      "ACTIONABLE"
-    ]
+    "requirements_per_counted_site": ["ORDINARY_CONTROL_USABLE", "MATERIAL_INCREMENTAL_AI_DEFECT", "REPRODUCED", "ACTIONABLE"]
   },
   "observations": [
     {"site_id": "PALLAS", "ordinary_control_usable": true, "material_incremental_ai_defect": true, "reproduced": true, "actionable": true, "counts": true},
@@ -32,22 +27,9 @@
     "proof_promotion": false,
     "next64_increment": 0
   },
-  "next64": {
-    "executed": 24,
-    "remaining": 40,
-    "next_internal_block": "P25-P32_OPP37_INTERNAL_OFFER_ENGINEERING"
-  },
-  "external_action": {
-    "authorized": false,
-    "outreach_performed": false,
-    "spend": false,
-    "contracting": false
-  },
-  "coexistence": {
-    "money_mechanisms_run32_overlay_present": true,
-    "old_wip_invalidated": false,
-    "money_mechanisms_accounting_mutated_by_test37": false
-  },
+  "next64": {"executed": 24, "remaining": 40, "next_internal_block": "P25-P32_OPP37_INTERNAL_OFFER_ENGINEERING"},
+  "external_action": {"authorized": false, "outreach_performed": false, "spend": false, "contracting": false},
+  "coexistence": {"money_mechanisms_run32_overlay_present": true, "old_wip_invalidated": false, "money_mechanisms_accounting_mutated_by_test37": false},
   "drive": {
     "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
     "document_id": "1vpPVwqT1R11Siviqjgd1UWOqwkIWfUomszW8CgYl0Ec",
@@ -55,9 +37,18 @@
     "readback_status": "PASS"
   },
   "github": {
-    "pr": null,
-    "exact_head": null,
-    "ci_runs": [],
-    "merge_sha": null
+    "pr": 329,
+    "preclosure_verified_head": "824e61d2de6ab6d9e0fe8581f94da8709ed76930",
+    "preclosure_ci_runs": {
+      "test37": 32556868699,
+      "general_business": 32556868776,
+      "p17_p24": 32556868742,
+      "p09_p16": 32556868686
+    },
+    "preclosure_ci_status": "SUCCESS_4_OF_4",
+    "final_exact_head": null,
+    "final_ci_runs": [],
+    "merge_sha": null,
+    "closure_required_after_merge": true
   }
 }
