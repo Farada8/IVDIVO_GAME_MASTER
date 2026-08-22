@@ -1,0 +1,23 @@
+name: Self-Improvement Current Frontier Delta
+
+on:
+  pull_request:
+    paths:
+      - 'CURRENT_IVDIVO_SELF_IMPROVEMENT_FRONTIER_DELTA_2026-08-22.json'
+      - 'SELF_IMPROVEMENT_ENGINE/validate_current_frontier_delta.py'
+      - '.github/workflows/self-improvement-current-frontier-delta.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-frontier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate current frontier delta
+        run: python SELF_IMPROVEMENT_ENGINE/validate_current_frontier_delta.py
