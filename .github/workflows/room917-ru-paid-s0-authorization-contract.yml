@@ -1,0 +1,58 @@
+name: ROOM917 RU Paid S0 Authorization Contract
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/room917-ru-paid-s0-authorization-contract.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PAID_S0_AUTHORIZATION_CONTRACT_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/authorize_ru_paid_s0.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_authorize_ru_paid_s0.py'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/room917-ru-paid-s0-authorization-contract.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PAID_S0_AUTHORIZATION_CONTRACT_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/authorize_ru_paid_s0.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_authorize_ru_paid_s0.py'
+
+permissions:
+  contents: read
+
+jobs:
+  test-auth-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run authorization compiler tests
+        run: |
+          set -euo pipefail
+          python -m unittest AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_authorize_ru_paid_s0.py -v
+
+      - name: Assert checked-in contract cannot spend
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PAID_S0_AUTHORIZATION_CONTRACT_v1.0.json')
+          row=json.loads(p.read_text(encoding='utf-8'))
+          if row.get('status') != 'MANUAL_AUTHORIZATION_REQUIRED':
+              raise SystemExit('contract status drifted')
+          if row.get('automatic_execution') is not False:
+              raise SystemExit('automatic execution must remain false')
+          if row.get('full_episode_render_allowed') is not False:
+              raise SystemExit('full episode must remain forbidden')
+          if row.get('cast_lock_granted_by_authorization') is not False:
+              raise SystemExit('authorization must not grant cast lock')
+          if row.get('provider_call_made_by_authorization_compiler') is not False:
+              raise SystemExit('authorization compiler must not call provider')
+          if row.get('provider_spend_made_by_authorization_compiler') is not False:
+              raise SystemExit('authorization compiler must not spend')
+          print('PASS_MANUAL_ONLY_AUTHORIZATION_CONTRACT')
+          PY
