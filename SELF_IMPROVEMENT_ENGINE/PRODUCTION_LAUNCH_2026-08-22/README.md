@@ -1,12 +1,12 @@
 # IVDIVO Self-Improvement — Production Launch Pack
 
-Status: `PRODUCTION_BACKLOG_READY`
+Status: `REAL_PRODUCTION_ACTIVE`
 Date: 2026-08-22
 Authority effect: **NONE on Self-Improvement version authority**. Self-Improvement v2 remains `VERIFIED_CURRENT`.
 
 ## Purpose
 
-Convert the laptop-first Personal AI / Business / Books / Projects concept into an executable engineering backlog. This pack is intentionally anti-theatrical: every run card must produce files/code/state/tests or an explicit `DESIGN_ONLY` / `BLOCKED` result.
+Convert the laptop-first Personal AI / Business / Books / Projects concept into executable engineering. Every run card must produce concrete files/code/state/tests or an explicit `DESIGN_ONLY` / `BLOCKED` result.
 
 ## Controlling law
 
@@ -14,12 +14,18 @@ Convert the laptop-first Personal AI / Business / Books / Projects concept into 
 
 A prompt becomes engineering only when its required artifact, test, state transition and readback exist.
 
-## Files
+## Restore authority
 
-- `PRODUCTION_LAUNCH_PROMPTS_v0.1.md` — 25 production run cards, PL-00..PL-24.
-- `PRODUCTION_LAUNCH_QUEUE_v0.1.json` — machine-readable ordered queue and dependencies.
-- `ENGINEERING_INTEGRATION_CONTRACT_v0.1.md` — execution, acceptance, regression and authority contract.
-- `HANDOFF.md` — exact restart/continuation instructions.
+Read these in this order:
+
+1. `CURRENT_PRODUCTION_LAUNCH_STATE.json` — **authoritative current status/frontier overlay**.
+2. `PRODUCTION_LAUNCH_QUEUE_v0.1.json` — immutable base dependencies and acceptance criteria.
+3. `CURRENT_HANDOFF.md` — current restart instructions and proof boundaries.
+4. The relevant `PLxx_VERIFICATION_RECEIPT.json` for any DONE_VERIFIED card changed by the overlay.
+5. `PRODUCTION_LAUNCH_PROMPTS_v0.1.md` — original 25 production run cards.
+6. `ENGINEERING_INTEGRATION_CONTRACT_v0.1.md` — execution, acceptance, regression and authority contract.
+
+The CURRENT overlay supersedes only status/frontier fields. The base queue remains authority for dependency edges and acceptance text.
 
 ## Wave order
 
@@ -31,9 +37,11 @@ A prompt becomes engineering only when its required artifact, test, state transi
 
 ## Current executable frontier
 
-`PL-00 MASTER PRODUCTION BOOTSTRAP`
+`PL-07 BUSINESS RESEARCH`
 
-Do not jump to later cards unless dependencies are already proven by persisted/read-back artifacts.
+PL-03 Source Evidence Layer and PL-09 Continuity Checker are now DONE_VERIFIED with GitHub CI + Drive readback. PL-03 completion satisfies the remaining PL-07 dependency because PL-04 was already DONE_VERIFIED.
+
+Do not jump to later cards unless dependencies are proven by persisted/read-back artifacts or `CURRENT_PRODUCTION_LAUNCH_STATE.json` explicitly selects another admissible READY card.
 
 ## Completion semantics
 
