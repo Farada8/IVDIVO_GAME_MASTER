@@ -1,0 +1,175 @@
+{
+  "schema": "ivdivo.master_recovery_state/1.0",
+  "audit_date": "2026-08-22",
+  "audit_time_local": "2026-08-22T12:48:00+01:00",
+  "repository": "Farada8/IVDIVO_GAME_MASTER",
+  "branch_cut_main_sha": "a13b835aea9779840ad40c8266df9cf5ba1e9763",
+  "global_state": {
+    "browser_tabs_may_be_closed": true,
+    "delete_all_chats_authorized": false,
+    "delete_all_chats_gate": "BLOCKED_KNOWN_CHAT_ONLY_AND_BINARY_ARCHIVE_GAPS",
+    "authority_rule": "DURABLE_CURRENT_POINTER_AND_SOURCE_OVER_CHAT_RECOLLECTION",
+    "recovered_context_auto_canon": false
+  },
+  "projects": [
+    {
+      "id": "BUS-01",
+      "name": "General Business Engineering OS",
+      "status": "DURABLE_VERIFIED",
+      "github": ["BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md"],
+      "drive": ["16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X", "1JtUjyAEoVRGiBtkkmgeYd75C7lImjpVieBTS52MqLJM"],
+      "deletion_safety": "SAFE_FOR_WORK_AUTHORITY",
+      "known_chat_only_material_gap": false
+    },
+    {
+      "id": "BUS-02",
+      "name": "eTenders 8872468",
+      "status": "DURABLE_VERIFIED_WITH_EXTERNAL_BLOCKER",
+      "github": ["BUSINESS_ENGINEERING_OS"],
+      "deletion_safety": "SAFE_FOR_WORK_AUTHORITY",
+      "known_chat_only_material_gap": false,
+      "external_missing_evidence": ["authoritative current target attachment inventory", "attachment bytes", "explicit bidder designation"]
+    },
+    {
+      "id": "BOOK-B03",
+      "name": "SMITH / THE EMPTY RESCUE",
+      "status": "DURABLE_VERIFIED",
+      "github": ["PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json"],
+      "drive": ["141BOyku8VX8WXehH05rZnQGZirMOP-3iCs-5_yMJbGU", "1gs64S1WxaSPUiN-BXusmceM2E-EoquDntCasFaf8zas"],
+      "deletion_safety": "SAFE_FOR_WORK_AUTHORITY",
+      "known_chat_only_material_gap": false,
+      "binary_archive_check": "AUDIO_MEDIA_SEPARATE"
+    },
+    {
+      "id": "DORAMA-BB",
+      "name": "BLOODBOUND",
+      "status": "DURABLE_VERIFIED_DRIVE",
+      "drive": ["17dt299YyIeflzUkbfaDn3FbI9qUAoMEiHi3Otb4KSV8", "1Fp0vPbvt8JaGxGIvfxwyN4LuA4BXo8Ia1Rcp2Qk8hDA", "1zaaP_q1WGJGoPJRZhsZ7nwqO3R-Q83Vqjw6uFacIr7s", "1zb0aMErYQcEPhcPC3xMit2vpQwWOmVP9qyERB92W9BI"],
+      "github_project_pointer_verified": false,
+      "deletion_safety": "SAFE_FOR_WORK_AUTHORITY",
+      "known_chat_only_material_gap": false
+    },
+    {
+      "id": "DORAMA-WIFE",
+      "name": "THE WIFE AT HIS WEDDING",
+      "status": "DURABLE_VERIFIED_DRIVE",
+      "drive": ["1FjjH_8AAw6ZAHZR-8wuAfc4NEIJTdxMg", "1eueZnnYaUGktaSXCcMIiOAUUcINmCTV6xATBdZ9B9UA", "1-kXiIx3utxWTmIlPUuudiWVsXLfCHbBTOAADrrLrGF8", "1C-VzyTORtauuDFZToJ4bx5Nic9dOwsrPfRudL3dAOcM"],
+      "github_project_pointer_verified": false,
+      "deletion_safety": "SAFE_FOR_WORK_AUTHORITY",
+      "known_chat_only_material_gap": false
+    },
+    {
+      "id": "AUDIO-R917",
+      "name": "ROOM 917",
+      "status": "DURABLE_VERIFIED_DRIVE",
+      "drive": ["1vK_dPQQSa_F-J-dPpZKDSLSzdysKTJQUQle8tRSNSDg", "1P2mavegKiziTOcdNoRQvHvgEHzySY3OA", "1P4Q4xHZfb5NSJgmnNx3NQZPv6c34FbRJHua2-N9ngxg"],
+      "deletion_safety": "ARCHIVE_CHECK_REQUIRED",
+      "known_chat_only_material_gap": false,
+      "binary_archive_check": "REQUIRED"
+    },
+    {
+      "id": "AUDIO-D01",
+      "name": "D01 audio cast/readiness",
+      "status": "DURABLE_VERIFIED_GITHUB",
+      "deletion_safety": "SAFE_AFTER_RECOVERY",
+      "binary_archive_check": "REQUIRED_FOR_MEDIA"
+    },
+    {
+      "id": "SI-01",
+      "name": "IVDIVO Self-Improvement Engine",
+      "status": "DURABLE_VERIFIED",
+      "github": ["SELF_IMPROVEMENT_ENGINE"],
+      "drive": ["1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0", "1-2Qpt0TFq2dQiH7LzXJHD89SdCsVVbz3z9HbhwAWH_M", "1KYheQh4SqDffsgAFuN47s_mwMB5rgY5f"],
+      "deletion_safety": "SAFE_FOR_WORK_AUTHORITY",
+      "known_chat_only_material_gap": false
+    },
+    {
+      "id": "PAI-01",
+      "name": "Personal AI / Production Launch",
+      "status": "DURABLE_VERIFIED",
+      "github": ["SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_PRODUCTION_LAUNCH_STATE.json", "SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_HANDOFF.md"],
+      "drive": ["1WsinAXMIo9uGLLGSg8NnKRlEDnYLd1MPk6D-46QyXuA"],
+      "deletion_safety": "SAFE_FOR_WORK_AUTHORITY",
+      "known_chat_only_material_gap": false
+    },
+    {
+      "id": "GAME-PORTALS",
+      "name": "Portals: Ireland",
+      "status": "DURABLE_PARTIAL_RECOVERY_REQUIRED",
+      "library": ["PORTALS_IRELAND_IDEA_REGISTER_v0_1.csv"],
+      "github_project_pointer_verified": false,
+      "drive_current_authority_verified": false,
+      "deletion_safety": "NOT_SAFE_TO_DELETE_SOURCE_CHAT",
+      "known_chat_only_material_gap": true,
+      "recovery_ids": ["PORT-R01", "PORT-R02", "PORT-R03", "PORT-R04", "PORT-R05", "PORT-R06", "PORT-R07", "PORT-R08"]
+    },
+    {
+      "id": "ART-IRELAND",
+      "name": "Ireland vintage cards and murals",
+      "status": "LIBRARY_DURABLE_PARTIAL",
+      "library": ["Винтажные туристические постеры Дублина.png", "Концепты фресок Шиллега и Уиклоу.png"],
+      "deletion_safety": "ARCHIVE_CHECK_REQUIRED",
+      "known_chat_only_material_gap": "UNKNOWN_COMPLETE_BINARY_INVENTORY"
+    },
+    {
+      "id": "BUILD-FARADA",
+      "name": "FARADA modular buildings / windows-doors",
+      "status": "LIBRARY_DURABLE",
+      "library": ["FARADA_G30_L45_Fabrication_RFQ_Package_v1.xlsx", "FARADA_G30_L45_Preliminary_Engineering_BOM.xlsx"],
+      "deletion_safety": "SAFE_AFTER_RECOVERY",
+      "current_pointer_needed": true
+    },
+    {
+      "id": "WEB-PAINTERS",
+      "name": "painters-dublin.ie",
+      "status": "RECOVERY_REQUIRED",
+      "deletion_safety": "NOT_SAFE_TO_DELETE_SOURCE_CHAT",
+      "current_export_verified": false,
+      "credentials_must_not_be_persisted": true
+    },
+    {
+      "id": "MATH-ORDERS",
+      "name": "Numerical orders / bases / synthesis growth research",
+      "status": "LIBRARY_DURABLE_RECOVERY_REQUIRED",
+      "library": ["Механика_тонких_тел_и_64_видов_материи_IVDIVO_v0_1.docx", "Парадигма — рабочий свод для книги.docx", "Serdyuk_V._Paradigma_Tom_3_Paradigma.txt"],
+      "deletion_safety": "NOT_SAFE_TO_DELETE_SOURCE_CHAT",
+      "research_constraints": ["NUMBER_NEQ_NUMERAL_REPRESENTATION", "16_SYSTEM_SCHEME_IS_HYPOTHESIS_NOT_ESTABLISHED", "SYNTHESIS_REENTRY_IS_HYPOTHESIS", "TIER_ITERATION_REQUIRES_FORMALIZATION"]
+    },
+    {
+      "id": "RESEARCH-IVDIVO",
+      "name": "IVDIVO thin-body / matter / synthetic-life research",
+      "status": "LIBRARY_DURABLE",
+      "drive": ["1jYDgXJ4U_UP8Ei49ksZCSyTqstL6fNvG66PLBEUoS0I"],
+      "deletion_safety": "SAFE_AFTER_RECOVERY",
+      "evidence_classes_must_remain_separate": ["SOURCE_DOCTRINE", "USER_HYPOTHESIS", "ENGINEERING_POSSIBILITY", "FICTION_WORLDBUILDING"]
+    },
+    {
+      "id": "WRITE-ENGINE",
+      "name": "Book Intelligence / Writers Room / Dorama engines",
+      "status": "DURABLE_VERIFIED",
+      "github": ["SELF_IMPROVEMENT_ENGINE", "personal-ai"],
+      "deletion_safety": "SAFE_FOR_WORK_AUTHORITY",
+      "raw_copyrighted_library_policy": "PRIVATE_ONLY_NO_PUBLIC_GITHUB_MIRROR"
+    }
+  ],
+  "known_global_blockers": [
+    "PORTALS_CHAT_ONLY_AND_NOT_RECORDED_ITEMS",
+    "PORTALS_PLACE_VERBS_RAW_DICTIONARY_MISSING",
+    "VISUAL_FINAL_BINARY_INVENTORY_NOT_PROVEN",
+    "AUDIO_FINAL_BINARY_INVENTORY_NOT_PROVEN_FOR_ALL_PROJECTS",
+    "NUMERICAL_ORDER_LATEST_RESEARCH_NOTE_NOT_YET_SINGLE_CURRENT_AUTHORITY",
+    "PAINTERS_DUBLIN_CURRENT_EXPORT_HANDOFF_NOT_VERIFIED"
+  ],
+  "required_before_global_delete": [
+    "resolve_or_abandon_all_known chat-only recovery items",
+    "build visual binary manifest",
+    "build audio binary manifest",
+    "create current numerical-order research note with evidence ceiling",
+    "create painters-dublin current export/handoff if project remains active",
+    "rerun recovery audit and change delete gate only from evidence"
+  ],
+  "readback_markers": {
+    "master": "IVDIVO-MASTER-RECOVERY-20260822-V1-GLOBAL-DELETE-BLOCKED-KNOWN-GAPS-RECORDED",
+    "chat_only": "IVDIVO-CHAT-ONLY-RECOVERY-20260822-V1-NO-AUTO-CANON"
+  }
+}
