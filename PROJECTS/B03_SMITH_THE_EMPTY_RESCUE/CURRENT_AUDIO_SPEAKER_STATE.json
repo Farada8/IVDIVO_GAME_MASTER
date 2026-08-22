@@ -1,11 +1,11 @@
 {
-  "schema": "ivdivo.b03.audio_speaker_current_state/2.1",
+  "schema": "ivdivo.b03.audio_speaker_current_state/2.2",
   "updated": "2026-08-22",
   "project": "B03 — THE EMPTY RESCUE",
   "story_authority": "FOUNDER_LOCKED_CH01_29",
   "story_text_mutation": false,
   "ch30_authorized": false,
-  "status": "FULL_BOOK_SPEAKER_ATTRIBUTION_PASS_SOURCE_QUARANTINE_RECONCILED_WAITING_CASTING_PRONUNCIATION_LIVE_S0",
+  "status": "FULL_BOOK_SPEAKER_ATTRIBUTION_PASS_SOURCE_AND_CH29_RECONCILED_WAITING_VOICE_ROSTER_CASTING_PRONUNCIATION_LIVE_S0",
   "actual_speech_denominator": 3714,
   "reviewed_scope": "CH01-29",
   "reviewed_actual_speech": 3714,
@@ -13,10 +13,12 @@
   "unknown_speaker_ownership": 0,
   "coverage_pct": 100.0,
   "full_speaker_gate": true,
-  "full_speaker_gate_version": "v1.1_SOURCE_QUARANTINE_RECONCILED",
-  "full_speaker_gate_drive_id": "1adRFcqDWEpOjklzs8eklpIV_t3R_mUz6",
-  "authority_router_drive_id": "1Gi0Lznh7Rk812yTaZQyZNKPT9El5aQ12",
-  "current_state_receipt_drive_id": "1OJkbDo98b0b2Djkn1USXWF1FpT6M8vSy",
+  "full_speaker_gate_version": "v1.2_SOURCE_AND_CH29_RECONCILED",
+  "full_speaker_gate_drive_id": "1lFmVbEZJSMnCZMn65nAEV5U-rESC-qFX",
+  "full_speaker_gate_json_drive_id": "1NtrTdRlAEBr67ZwoqWVfAvdVpBHFAPn8",
+  "authority_router_drive_id": "1SF30eK_uoJDFgeR6GyODfGUrIaig-ZWa",
+  "current_state_receipt_drive_id": "1JQViwpa83Mt8lSMcBbvjProiLPxR4_xZ",
+  "full_authority_package_drive_id": "1qA2DzFdlg-N6v_Wc104PIYDNfQJ5bS00",
   "cross_batch_repairs": [
     {
       "scope": "CH24",
@@ -31,6 +33,18 @@
       "drive_corrected_map": "1hzNIm7VyLiiuip2gDiZS4InvEPpzGKqx",
       "drive_gate": "1tl4xYMLOQmnJPT-PIAzDOMNFwrrzpu9L",
       "drive_manifest": "1eGz0wHrkl7owFgXlSlmHec88-5_Fnsth"
+    },
+    {
+      "scope": "CH29",
+      "class": "PARAGRAPH_BREAK_LISTENER_REACTION_SPEAKER_TRANSFER_ERROR",
+      "status": "PASS_AFTER_LOCAL_CONTEXT_RECONCILIATION",
+      "segment_id": "B03_CH29_S0358",
+      "superseded_speaker": "TAREN_SOR",
+      "current_speaker": "SMITH",
+      "story_text_mutation_bytes": 0,
+      "drive_corrected_map": "1AAUv6Pp85WxycZUlVXBHhhTBUTN5Dagy",
+      "drive_reconciliation_gate": "1GSQyc44UOA44xnTdyevNVs3Ilmf1L_9G",
+      "regression_law": "PARAGRAPH_BREAK_ALONE_DOES_NOT_TRANSFER_SPEAKER; NAMED_PAUSE_CAN_MARK_LISTENER_REACTION_BEFORE_NEXT_RESPONSE"
     }
   ],
   "final_batch": {
@@ -38,14 +52,12 @@
     "actual_speech": 374,
     "assigned": 374,
     "unknown": 0,
-    "red_team_corrections": ["B03_CH29_S0312"],
+    "red_team_corrections": ["B03_CH29_S0312", "B03_CH29_S0358"],
     "drive": {
       "ch28": "1mv0Z8BKu2hhi6eNY-r-7xVRbGWbs978K",
-      "ch29": "1Q4Hcj0C4DAijSoj82scrXxC2nyLgDnXM",
-      "manifest": "14M9PZ1caI1NCQlv2cwtk_SQLJMJCbbW-",
-      "voice_map_template": "1MM9EKHaNzdOz6ECw0mZltURCZL6dikrF",
-      "gate": "1UmjhMWQapFnyM3ixYWVKGjCSRQdemV3W",
-      "zip": "1Z9ri7roltiBeitGlOdYUsEo1zNHgVb6D"
+      "ch29": "1AAUv6Pp85WxycZUlVXBHhhTBUTN5Dagy",
+      "reconciliation_manifest": "1lDCAfLqoXQxvqqruph4mJt63aJAwSt_r",
+      "reconciliation_gate": "1GSQyc44UOA44xnTdyevNVs3Ilmf1L_9G"
     }
   },
   "source_segmentation": {
@@ -60,7 +72,7 @@
   "human_signal": false,
   "pronunciation_gate": "OPEN",
   "bulk_render_allowed": false,
-  "next_exact_action": "Obtain live provider execution context; enumerate actual workspace voices/models; bind temporary S0 candidates; recheck source/exact-text hashes; execute only bounded S0 audition jobs; collect provenance/alignment; human cast and Slovenian pronunciation adjudication; then return to the existing CH01 canary/Hard Pilot path.",
+  "next_exact_action": "Normalize the full voice roster without inventing cross-chapter identities; create casting slots with voice_id=null; then obtain live provider context and run bounded S0 auditions with Slovenian pronunciation adjudication; return to existing CH01 canary/Hard Pilot path only after accepted evidence.",
   "do_not": [
     "DO_NOT_MUTATE_LOCKED_PROSE",
     "DO_NOT_WRITE_CH30",
