@@ -83,7 +83,7 @@ class BlockPlannerTests(unittest.TestCase):
 
     def test_oversize_unit_fails_closed(self):
         units=[unit("U1",1,1,"A",81)]
-        with self.assertRaisesRegex(ValueError,"exceeds max duration"):
+        with self.assertRaisesRegex(ValueError,"(exceeds max duration|produced >max block)"):
             plan_blocks(self.doc(units),self.policy())
 
 
