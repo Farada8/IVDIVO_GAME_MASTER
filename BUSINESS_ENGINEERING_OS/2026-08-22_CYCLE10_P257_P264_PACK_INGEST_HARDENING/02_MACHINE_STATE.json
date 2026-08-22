@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.business.cycle10.pack_ingest_hardening/1.1",
+  "schema": "ivdivo.business.cycle10.pack_ingest_hardening/1.2",
   "date": "2026-08-22",
-  "status": "CORE_MERGED_CI_GREEN_DRIVE_READBACK_PASS_CURRENT_POINTER_CLOSURE_PENDING",
+  "status": "AUTHORITY_CLOSED",
   "executed": {
     "range": "P257-P264",
     "count": 8,
@@ -51,11 +51,15 @@
     "ci": "SUCCESS",
     "review_threads": 0,
     "fresh_main_reconciliation": "PASS_TEST_FIXTURE_DOES_NOT_SATISFY_P235",
+    "closure_pr": 265,
+    "closure_merge_sha": "90053f57e88dfd1280593498a0b5b87aff1af22b",
+    "closure_ci_run": 32551801861,
+    "closure_ci": "SUCCESS",
     "drive_folder": "1R4VVl1oFNmILpb-mZYL6EpMuaYweW13e",
     "drive_run8_engineering": "1lKYrj_QwvkGlEhFQN72rBjKfnnFyKaBf8LM_bbwQWXo",
     "drive_machine": "1d6rLTZdIR_17wh5KjeULhwci_WbVgwy0Y1ED5k9AwPs",
     "drive_readback": "PASS_2_OF_2",
-    "current_authority_mutation": "PENDING_CLOSURE_PR"
+    "current_authority_mutation": true
   },
   "stop_rule": "NO_NEW_ADMISSIBLE_EXTERNAL_EVIDENCE_THEN_ENGINEERING_ONLY_OR_PROTECT_NO_CHANGE"
 }
