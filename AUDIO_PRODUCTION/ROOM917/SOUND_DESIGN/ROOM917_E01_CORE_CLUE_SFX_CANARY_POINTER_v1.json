@@ -1,0 +1,35 @@
+{
+  "schema_version": "room917.e01_core_clue_sfx_canary_pointer/1.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "TWELVE_REAL_LISTENABLE_CANARIES_EXIST__HOLD_NOT_PRODUCTION_BOUND",
+  "current_contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+  "shared_en_ru_identity_map": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_EN_RU_SHARED_SOUND_IDENTITY_MAP_v1.json",
+  "generator": {"path":"AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_core_clue_sfx_canaries.py","commit":"08c6ceac949b6c1d29fa1c71c8c662cf49ddcd76","provider_calls":0,"paid_synthesis_calls":0},
+  "receipt": {"path":"AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CORE_CLUE_SFX_CANARY_RECEIPT_v1.json","commit":"7479cd05f1c46a2483de50f40e790f55dfbe54bc"},
+  "workflow": {"path":".github/workflows/room917-core-clue-sfx-canaries.yml","commit":"05c521cd8f07767ca3f1a446384d5cd7de9253d9","artifact":"ROOM917_E01_CORE_CLUE_SFX_CANARIES_v1"},
+  "session_zip_sha256": "a721a4a0ffa46b867906147b10038aa7562ffa2a5b501f6675ae56f7eb785d77",
+  "categories": {
+    "M01_917_DOUBLE_INTERNAL_RING": {"variants":3,"current_mapping":"S13_INTERNAL_DOUBLE_RING_OLD","status":"BLIND_LISTEN_REQUIRED"},
+    "M02_GLASS_LAMP_PING": {"variants":3,"current_mapping":"S14_UNMARKED_GLASS_LAMP_PING","status":"BLIND_LISTEN_REQUIRED","note":"If chosen for impossible lamp, normal 916 S11 must later be derived/selected from same material family but audibly normal and spatially distinct."},
+    "M03_COPPER_HISS_BED": {"variants":3,"current_mapping":"S17_COPPER_HISS","status":"BLIND_LISTEN_PLUS_LOOP_MONO_PHONE_REQUIRED"},
+    "M05_TWO_PART_ANALOGUE_CUT": {"variants":3,"current_mapping":"S19_TWO_PART_LINE_CUT","status":"BLIND_LISTEN_REQUIRED"},
+    "M04_CATE_FOUR_NOTE_LULLABY": {"variants":0,"status":"INTENTIONALLY_NOT_GENERATED","blocker":"PITCH_LOCK_AND_CATE_PERFORMANCE_IDENTITY"}
+  },
+  "human_decision_format": "M01=A/B/C/NONE; M02=A/B/C/NONE; M03=A/B/C/NONE; M05=A/B/C/NONE",
+  "selection_questions": {
+    "M01": "Does it read as an ordinary old internal switchboard/telephone bell, not a modern ringtone, doorbell or horror cue?",
+    "M02": "Does it read as tiny physical glass/brass indicator hardware, not magic, UI notification or music?",
+    "M03": "Does it read as a neutral old copper line/electrical path without voices, whispers, drone or digital glitch?",
+    "M05": "Can you clearly hear two physical disconnect stages without reading them as a door lock, digital glitch or tape stop?"
+  },
+  "hard_law": [
+    "HUMAN_AUDITION_DOES_NOT_EQUAL_PRODUCTION_BINDING",
+    "PRODUCTION_BINDING_REQUIRES_ACCEPTED_SHA256_MONO_PHONE_AND_IDENTITY_GATE",
+    "NO_SCENE3_PATCH_FROM_CANARY_EXISTENCE",
+    "M04_REMAINS_OPEN",
+    "NO_STORY_CHANGE"
+  ]
+}
