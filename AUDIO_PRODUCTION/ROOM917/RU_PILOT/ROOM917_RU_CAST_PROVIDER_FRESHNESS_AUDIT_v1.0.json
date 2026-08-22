@@ -1,0 +1,52 @@
+{
+  "schema_version": "ivdivo.room917_ru_cast_provider_freshness_audit/1.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "scope": "VOICE_PROVIDER_AND_CAST_ONLY_NO_STORY_CHANGE",
+  "status": "MAJOR_PROVIDER_CAST_RISK_FOUND_AND_CONTAINED",
+  "evidence_basis": [
+    {"source": "ElevenLabs official docs — What are Legacy voices?", "url": "https://elevenlabs.io/docs/help-center/product/voices/my-voices/what-are-legacy-voices", "checked": "2026-08-22"},
+    {"source": "ElevenLabs official docs — What are Default voices?", "url": "https://elevenlabs.io/docs/help-center/product/voices/my-voices/what-are-default-voices", "checked": "2026-08-22"},
+    {"source": "ElevenLabs official docs — native-language Voice Library guidance", "url": "https://elevenlabs.io/docs/help-center/product/core-capabilities/text-to-speech/which-voices-in-the-voice-library-are-native-to-a-specific-language", "checked": "2026-08-22"},
+    {"source": "ElevenLabs official docs — Voice Library", "url": "https://elevenlabs.io/docs/eleven-creative/voices/voice-library", "checked": "2026-08-22"},
+    {"source": "ElevenLabs official docs — Eleven v3 TTS guide", "url": "https://elevenlabs.io/docs/eleven-creative/playground/text-to-speech", "checked": "2026-08-22"},
+    {"source": "ElevenLabs official docs — List shared voices API", "url": "https://elevenlabs.io/docs/api-reference/voices/voice-library/get-shared", "checked": "2026-08-22"}
+  ],
+  "audited_public_canary_cast": {
+    "ELENA": {"configured_name": "Rachel", "configured_voice_id": "21m00Tcm4TlvDq8ikWAM", "finding": "LEGACY_ID_AUTO_ROUTES_TO_REPLACEMENT", "documented_resolution": "Janet", "production_lock": "FORBIDDEN_UNTIL_CANONICAL_CURRENT_IDENTITY_IS_SNAPSHOTTED", "canary_use": "DIAGNOSTIC_ONLY"},
+    "JULIAN": {"configured_name": "Adam", "configured_voice_id": "pNInz6obpgDQGcFmaJgB", "finding": "CURRENT_PREMADE_EXAMPLE_AND_LEGACY_REPLACEMENT; PERMANENCE_MUST_BE_SNAPSHOTTED", "production_lock": "HOLD_PROVIDER_SNAPSHOT_AND_RU_LISTENING", "canary_use": "DIAGNOSTIC_ONLY"},
+    "MINA": {"configured_name": "Matilda", "configured_voice_id": "XrExE9yKIg1WjnnlVkGX", "finding": "DEFAULT_VOICE_IN_DOCUMENTED_REPLACEMENT_PROGRAM", "documented_expiry": "2026-12-31", "documented_suggested_replacement": "Maisie - Friendly Casual Neighbor", "production_lock": "FORBIDDEN", "canary_use": "DIAGNOSTIC_ONLY"},
+    "CATE": {"configured_name": "Sarah", "configured_voice_id": "EXAVITQu4vr4xnSDxMaL", "finding": "DEFAULT_VOICE_IN_DOCUMENTED_REPLACEMENT_PROGRAM", "documented_expiry": "2026-12-31", "documented_suggested_replacement": "Talia - Warm Soft Guide", "production_lock": "FORBIDDEN", "canary_use": "DIAGNOSTIC_ONLY"}
+  },
+  "native_language_finding": {
+    "severity": "MAJOR",
+    "fact": "ElevenLabs documents that premade and generated voices are English and may carry incorrect accent/pronunciation in other languages; professional Voice Library voices with the target-language tag are preferred for native performance.",
+    "room917_rule": "RU_PRODUCTION_CAST_MUST_BE_NATIVE_RU_VERIFIED_OR_FOUNDER_EXPLICITLY_ACCEPTS_ACCENT_AFTER_LISTENING"
+  },
+  "eleven_v3_settings_finding": {
+    "severity": "MAJOR",
+    "fact": "Current Eleven v3 product guidance states Similarity and Speaker Boost are not available for v3; style exaggeration should normally remain 0.",
+    "affected_artifact": "ROOM917_RU_S0_CANARY_BLOCK_BUNDLE_v1.0.json",
+    "affected_fields": ["voice_settings.similarity_boost", "voice_settings.use_speaker_boost"],
+    "rule": "DO_NOT_TREAT_UNSUPPORTED_OR_IGNORED_FIELDS_AS_CAST_IDENTITY_OR_PERFORMANCE_EVIDENCE"
+  },
+  "production_voice_requirements": {
+    "language": "ru",
+    "category_preference": "professional",
+    "verified_language_required": true,
+    "minimum_notice_period_days_for_shared_voice": 365,
+    "live_moderation": "EXCLUDE_FOR_AUTOMATED_PRODUCTION_UNLESS_REVIEWED",
+    "custom_rate": "EXCLUDE_AT_DISCOVERY_STAGE_UNLESS_FOUNDER_APPROVES",
+    "provider_identity_snapshot_required": true,
+    "disable_at_unix_must_be_null_or_beyond_delivery_horizon": true,
+    "full_episode_before_cast_lock": false
+  },
+  "next_gate": {
+    "stage": "RU_NATIVE_VOICE_DISCOVERY",
+    "method": "GET /v1/shared-voices filtered language=ru category=professional min_notice_period_days>=365 then role-specific audition",
+    "spend": "NO_TTS_SPEND_REQUIRED_FOR_DISCOVERY_AND_LIBRARY_PREVIEW",
+    "after_discovery": ["INDIVIDUAL_CANARY", "ELENA_MINA_PAIR", "ELENA_JULIAN_PAIR", "CATE_FRAGMENT_VS_CASSETTE_IDENTITY", "FOUNDER_LISTEN", "CAST_LOCK", "CONTROLLED_E01_RENDER"]
+  },
+  "story_text_changed": false
+}

@@ -1,10 +1,11 @@
 name: ROOM917 RU Voice Discovery
 
-# v1.1 no-spend refresh trigger 2026-08-22
+# v1.2 native/durable zero-spend refresh 2026-08-22
 on:
   push:
     paths:
       - '.github/workflows/room917-ru-voice-discovery.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/discover_ru_voice_candidates.py'
   workflow_dispatch:
 
 permissions:
@@ -35,7 +36,7 @@ jobs:
             exit 2
           fi
 
-      - name: Acquire secret-free voice and model inventory
+      - name: Acquire secret-free account voice and model inventory
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         shell: bash
@@ -141,13 +142,27 @@ jobs:
           print(f"voices={len(voices)} models={len(model_rows)}")
           PY
 
+      - name: Discover durable native-Russian professional shared voices
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/discover_ru_voice_candidates.py \
+            --out AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json \
+            --min-notice-days 365 \
+            --page-size 100 \
+            --max-pages 3
+
       - name: Commit provider inventory if changed
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_VOICE_DISCOVERY.json
+          git add \
+            AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_VOICE_DISCOVERY.json \
+            AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json
           if git diff --cached --quiet; then
             echo 'No inventory change.'
             exit 0
@@ -161,13 +176,16 @@ jobs:
           python - <<'PY'
           import json, os
           from pathlib import Path
-          p=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_VOICE_DISCOVERY.json')
-          row=json.loads(p.read_text(encoding='utf-8'))
+          account=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_VOICE_DISCOVERY.json')
+          native=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json')
+          a=json.loads(account.read_text(encoding='utf-8'))
+          n=json.loads(native.read_text(encoding='utf-8'))
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
               f.write('## ROOM917 RU voice discovery\n')
-              f.write(f"- voices available: {row['voice_count']}\n")
-              f.write(f"- models returned: {len(row['models'])}\n")
+              f.write(f"- account voices available: {a['voice_count']}\n")
+              f.write(f"- native RU professional voices (>=365-day notice): {n['candidate_count']}\n")
+              f.write(f"- models returned: {len(a['models'])}\n")
               f.write('- paid synthesis calls: 0\n')
               f.write('- provider key persisted: false\n')
-              f.write('- next: audition top candidates in Russian\n')
+              f.write('- next: preview native candidates, shortlist 3 per role, then bounded Russian canary + pair tests\n')
           PY

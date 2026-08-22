@@ -1,0 +1,63 @@
+{
+  "schema_version": "ivdivo.room917_ru_cast_audition_gate/1.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "scope": "CAST_PRONUNCIATION_PERFORMANCE_ONLY_NO_STORY_EDIT",
+  "status": "READY_FOR_NATIVE_RU_CANDIDATE_DISCOVERY",
+  "roles": {
+    "ELENA": {"character_age": 32, "target": "adult female; intelligent grounded documentary precision; dry edge; fear remains inside professional control", "hard_reject": ["foreign-accent Russian that distracts", "trailer cadence", "generic horror fear", "tearful audiobook default", "critical-number or name pronunciation drift"]},
+    "JULIAN": {"character_age": 36, "target": "adult male; restrained operational authority; personal weight without alpha growl or seduction-first delivery", "hard_reject": ["alpha/growl cadence", "overt flirt baseline", "villain threat color", "foreign-accent Russian that distracts", "melodramatic stress"]},
+    "MINA": {"target": "adult female; practical warm socially quick; ordinary humor without comedian rhythm; credible witness under pressure", "hard_reject": ["sitcom cadence", "hysteria", "cartoon warmth", "foreign-accent Russian that distracts", "loss of literal witness precision"]},
+    "CATE": {"target": "adult female/mother; ordinary exhausted human; intimate domestic warmth; same identity must survive clean fragment and cassette context", "hard_reject": ["ghost voice", "theatrical pleading", "ethereal preset", "child-like voice", "identity changes between fragment and cassette"]}
+  },
+  "provider_hard_gate": {
+    "verified_language": "ru",
+    "category_preference": "professional",
+    "minimum_notice_period_days": 365,
+    "legacy_id": "REJECT",
+    "default_voice_with_known_expiry": "REJECT_FOR_PRODUCTION_LOCK",
+    "provider_snapshot": "REQUIRED_BEFORE_PAID_CANARY",
+    "disable_at_unix": "MUST_BE_NULL_OR_OUTSIDE_PRODUCTION_HORIZON",
+    "voice_id_resolves_to_itself": "REQUIRED_FOR_CAST_LOCK"
+  },
+  "individual_canary_score": {
+    "scale_per_dimension": "0-5",
+    "dimensions": ["native_ru_pronunciation", "age_and_character_fit", "naturalism_no_tts_performance", "microemotion_and_subtext", "precision_under_pressure", "repeat_take_identity_consistency"],
+    "maximum": 30,
+    "lock_threshold": 24,
+    "hard_reject_overrides_score": true
+  },
+  "canary_units": {
+    "ELENA": ["RU_E01_AUD_ELENA_01", "RU_E01_AUD_ELENA_03", "RU_E01_AUD_ELENA_05", "RU_E01_AUD_ELENA_06"],
+    "JULIAN": ["RU_E01_AUD_JULIAN_01", "RU_E01_AUD_JULIAN_02"],
+    "MINA": ["RU_E01_AUD_MINA_01", "RU_E01_AUD_MINA_02"],
+    "CATE": ["RU_E01_AUD_CATE_01", "RU_E01_AUD_CATE_02", "RU_E02_AUD_CATE_03"]
+  },
+  "take_plan": {"candidate_count_target_per_role": 3, "initial_takes_per_canary": 2, "finalist_extra_take": 1, "rerender": "FAILED_UNIT_ONLY", "full_episode_rerender_for_cast_testing": false, "seed_policy": "record seed when used; do not mistake best-effort seed for deterministic identity"},
+  "pair_tests": {
+    "RU_PAIR_01_ELENA_MINA_LOBBY": {"pass": "dry immediate compatibility; neither actor sounds like exposition delivery; no instant-best-friend rhythm"},
+    "RU_PAIR_02_ELENA_JULIAN_DOORS": {"pass": "competence friction; both remain intelligent; no overt flirt and no alpha dynamic"},
+    "RU_PAIR_03_ELENA_JULIAN_STATUS": {"pass": "status conflict remains credible on both sides; pressure changes rhythm without caricature"},
+    "RU_PAIR_04_CATE_LINE_VS_CASSETTE": {"pass": "same woman across clean line fragment and cassette source; medium degradation belongs to post, not acting"}
+  },
+  "pronunciation_gate": {
+    "critical_tokens": {"Greyhaven": "Грейхейвен", "Ashcroft": "Эшкрофт", "Leni-bird": "Лени-бёрд", "916": "девятьсот шестнадцать", "917": "девятьсот семнадцать", "1:17": "один семнадцать", "50 Hz": "пятьдесят герц", "38 ms": "тридцать восемь миллисекунд"},
+    "v3_dictionary": "USE_IF_ACCOUNT_DICTIONARY_LOCATOR_EXISTS; OTHERWISE USE_LOCKED_RUSSIAN_SPELLING_AND_ISOLATED_CANARY",
+    "fail_policy": "SELECTIVE_RERENDER_OR_DICTIONARY_FIX; NEVER_REWRITE_STORY_FOR_TTS"
+  },
+  "performance_tag_gate": {
+    "model": "eleven_v3",
+    "baseline_first": true,
+    "tags_allowed_after_baseline": ["[whispers]", "[sighs]", "[exhales]", "[curious]", "[worried]"],
+    "rule": "TAG_MUST_DESCRIBE_AUDIBLE_PERFORMANCE_AND_MUST_NOT_ADD_STORY_INFORMATION",
+    "forbidden": ["decorative horror tags", "environmental SFX in character TTS", "tags that create unwritten emotion", "tag stacking to rescue wrong casting"],
+    "comparison": "A=clean text; B=minimal tag; retain B only if listening evidence is better"
+  },
+  "cast_lock_contract": {
+    "required": ["provider_identity_pass", "individual_score_pass", "all_required_pair_tests_pass", "pronunciation_pass", "founder_credibility_listen"],
+    "result": "VOICE_ID_PLUS_PROVIDER_METADATA_PLUS_MODEL_PLUS_ACCEPTED_CANARY_HASHES",
+    "status_before_all_required": "UNLOCKED",
+    "story_change": false
+  }
+}
