@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 
+from agents import AgentRunRequest, BoundedAgentExecutor
 from core.bootstrap import bootstrap
 from memory.store import MemoryStore
 from projects.manager import ProjectStateManager
@@ -94,6 +95,21 @@ def build_parser() -> argparse.ArgumentParser:
         "--allow-network",
         action="store_true",
         help="Explicitly authorize a network/provider call for this invocation.",
+    )
+
+    agent = sub.add_parser("agent", help="Bounded project-agent execution")
+    agent_sub = agent.add_subparsers(dest="agent_command", required=True)
+    agent_run = agent_sub.add_parser("run", help="Run one bounded agent task")
+    agent_run.add_argument("project_id")
+    agent_run.add_argument("prompt")
+    agent_run.add_argument("--provider", default="mock")
+    agent_run.add_argument("--model")
+    agent_run.add_argument("--max-steps", type=int, default=3)
+    agent_run.add_argument("--task-id")
+    agent_run.add_argument(
+        "--allow-network",
+        action="store_true",
+        help="Explicitly authorize network-backed provider use for this agent run.",
     )
 
     return parser
@@ -195,6 +211,22 @@ def main() -> int:
             result = response.to_dict()
         else:  # pragma: no cover - argparse enforces choices
             raise RuntimeError("unsupported provider command")
+    elif args.command == "agent":
+        if args.agent_command == "run":
+            executor = BoundedAgentExecutor(home)
+            result = executor.run(
+                AgentRunRequest(
+                    project_id=args.project_id,
+                    prompt=args.prompt,
+                    provider=args.provider,
+                    model=args.model,
+                    max_steps=args.max_steps,
+                    allow_network=args.allow_network,
+                    task_id=args.task_id,
+                )
+            ).to_dict()
+        else:  # pragma: no cover - argparse enforces choices
+            raise RuntimeError("unsupported agent command")
     else:  # pragma: no cover - argparse enforces choices
         raise RuntimeError("unsupported command")
 

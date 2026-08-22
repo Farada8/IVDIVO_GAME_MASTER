@@ -1,0 +1,26 @@
+name: Personal AI PL-05 Agent Executor
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl05-agent-executor.yml'
+
+jobs:
+  pl05-agent-executor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline bounded agent smoke
+        run: |
+          unset OPENAI_API_KEY ANTHROPIC_API_KEY OPENAI_MODEL ANTHROPIC_MODEL OLLAMA_MODEL
+          HOME_DIR="$(mktemp -d)"
+          python personal-ai/run.py --home "$HOME_DIR" project create ci-agent
+          python personal-ai/run.py --home "$HOME_DIR" agent run ci-agent 'CI bounded agent' --provider mock --max-steps 2
+      - name: Run PL-05 integration tests
+        run: python -m unittest personal-ai/tests/test_agent_executor.py -v
+      - name: Run full Personal AI regression suite
+        run: python -m unittest discover -s personal-ai/tests -v
