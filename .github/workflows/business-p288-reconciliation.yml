@@ -1,0 +1,45 @@
+name: Business P288 Fresh-Read Reconciliation
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/**'
+      - '.github/workflows/business-p288-reconciliation.yml'
+  push:
+    branches:
+      - 'business-engineering/p288-fresh-read-reconciliation-r2-20260822'
+
+permissions:
+  contents: read
+
+jobs:
+  p288-reconciliation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate P288 machine state
+        run: |
+          python - <<'PY'
+          import json
+          p='BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/01_MACHINE_STATE.json'
+          with open(p, encoding='utf-8') as f: s=json.load(f)
+          assert s['prompt'] == 288 and s['executed'] is True
+          assert s['disposition'] == 'PROTECT_NO_CHANGE'
+          assert s['roots']['ROOT_A'] == 'TARGET_PACK_NOT_ACQUIRED'
+          assert s['roots']['ROOT_B'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
+          assert s['parent_backlog']['count'] == 64
+          assert s['parent_backlog']['previous_executed'] == 16
+          assert s['parent_backlog']['executed_total'] == 17
+          assert s['parent_backlog']['remaining_unexecuted'] == 47
+          assert s['parent_backlog']['remaining_ranges'] == ['P225-P256','P273-P287']
+          assert s['proof'] == {
+              'public_derived_ceiling':'E2_PLUS','artifact_plane':'PA3',
+              'PA4':False,'PA5':False,'E3':False,'E4':False,'market_proof_delta':False}
+          assert s['next_frontier'] == [225,235]
+          print('P288 reconciliation invariants PASS')
+          PY
