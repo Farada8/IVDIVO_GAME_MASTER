@@ -1,13 +1,9 @@
 {
-  "schema": "ivdivo.business.opp37_offer_engineering/1.0",
+  "schema": "ivdivo.business.opp37_offer_engineering/1.1",
   "date": "2026-08-22",
   "status": "P25_P32_INTERNAL_ENGINEERING_COMPLETE_PENDING_CI",
   "opportunity_id": "OPP-37",
-  "dependency": {
-    "test37": "MERGED_PASS_2_OF_3",
-    "test37_pr": 329,
-    "test37_merge_sha": "8a75f6abe2c4b82b0d673ad7a1a1280a99ecc02a"
-  },
+  "dependency": {"test37": "MERGED_PASS_2_OF_3", "test37_pr": 329, "test37_merge_sha": "8a75f6abe2c4b82b0d673ad7a1a1280a99ecc02a"},
   "offer": {
     "generic_ai_seo_audit": "KILL_AS_DIFFERENTIATED_CORE",
     "working_name": "FIRST_PARTY_FACT_CONSISTENCY_AND_ANSWERABILITY_DECISION_PACK",
@@ -19,35 +15,11 @@
   "p25_value_hypothesis": {
     "type": "DECISION_CLARITY_AND_REWORK_REDUCTION",
     "revenue_uplift_claimed": false,
-    "measurable_internal_fields": [
-      "contradictions_found",
-      "ambiguous_canonical_facts",
-      "affected_first_party_surfaces",
-      "facts_resolved_to_one_canonical_rule",
-      "specific_decisions_created",
-      "generic_recommendations_rejected",
-      "pre_vs_post_answer_consistency_test_cases"
-    ]
+    "measurable_internal_fields": ["contradictions_found", "ambiguous_canonical_facts", "affected_first_party_surfaces", "facts_resolved_to_one_canonical_rule", "specific_decisions_created", "generic_recommendations_rejected", "pre_vs_post_answer_consistency_test_cases"]
   },
-  "p26_artifact": {
-    "components": 7,
-    "score_only_output_rejected": true,
-    "negative_findings_allowed": true,
-    "source_provenance_required": true
-  },
-  "p27_scope": {
-    "public_first_party_default": true,
-    "private_analytics_default": false,
-    "ranking_guarantee": false,
-    "ai_citation_guarantee": false,
-    "revenue_forecast": false,
-    "external_implementation_default": false
-  },
-  "p28_architectures": [
-    "PRODUCTIZED_ONE_SITE_DECISION_PACK",
-    "IMPLEMENTATION_COORDINATOR_CONDITIONAL",
-    "SAAS_TOOL_HOLD"
-  ],
+  "p26_artifact": {"components": 7, "score_only_output_rejected": true, "negative_findings_allowed": true, "source_provenance_required": true},
+  "p27_scope": {"public_first_party_default": true, "private_analytics_default": false, "ranking_guarantee": false, "ai_citation_guarantee": false, "revenue_forecast": false, "external_implementation_default": false},
+  "p28_architectures": ["PRODUCTIZED_ONE_SITE_DECISION_PACK", "IMPLEMENTATION_COORDINATOR_CONDITIONAL", "SAAS_TOOL_HOLD"],
   "p29_pricing_hypothesis": {
     "currency": "EUR",
     "vat_basis": "EX_VAT_HYPOTHESIS",
@@ -73,45 +45,15 @@
     "narrow_offer_disposition": "MUTATE_AND_TEST",
     "software_build_authorized": false
   },
-  "next64": {
-    "total": 64,
-    "executed": 32,
-    "remaining": 32,
-    "executed_ranges": ["P01-P08", "P09-P16", "P17-P24", "P25-P32"],
-    "next_internal_block": "P33-P40_OPP37_NULL_SAFE_ECONOMICS_AND_MANUAL_DELIVERY_TIMING"
-  },
-  "evidence": {
-    "buyer_behavior": false,
-    "willingness_to_pay": null,
-    "transaction": null,
-    "unit_economics": null,
-    "profitability": null,
-    "repeatability": false,
-    "proof_promotion": false
-  },
-  "external_action": {
-    "authorized": false,
-    "outreach_performed": false,
-    "spend": false,
-    "contracting": false,
-    "third_party_implementation": false
-  },
-  "market_controls": {
-    "free_audits_exist": true,
-    "low_paid_anchor_eur": 149,
-    "irish_ai_visibility_anchor_from_eur": 299,
-    "competitor_prices_are_wtp_proof": false
-  },
+  "next64": {"total": 64, "executed": 32, "remaining": 32, "executed_ranges": ["P01-P08", "P09-P16", "P17-P24", "P25-P32"], "next_internal_block": "P33-P40_OPP37_NULL_SAFE_ECONOMICS_AND_MANUAL_DELIVERY_TIMING"},
+  "evidence": {"buyer_behavior": false, "willingness_to_pay": null, "transaction": null, "unit_economics": null, "profitability": null, "repeatability": false, "proof_promotion": false},
+  "external_action": {"authorized": false, "outreach_performed": false, "spend": false, "contracting": false, "third_party_implementation": false},
+  "market_controls": {"free_audits_exist": true, "low_paid_anchor_eur": 149, "irish_ai_visibility_anchor_from_eur": 299, "competitor_prices_are_wtp_proof": false},
   "drive": {
     "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
-    "document_id": null,
-    "readback_marker": null,
-    "readback_status": "PENDING"
+    "document_id": "1R4R3gWsPwD7ipXdIgt1H-JTX58Rblp-nhuDt1lac71s",
+    "readback_marker": "GENERAL-BUSINESS-OPP37-P25-P32-OFFER-ENGINEERING-32OF64-NO-MARKET-PROOF",
+    "readback_status": "PASS"
   },
-  "github": {
-    "pr": null,
-    "exact_head": null,
-    "ci_runs": [],
-    "merge_sha": null
-  }
+  "github": {"pr": null, "exact_head": null, "ci_runs": [], "merge_sha": null}
 }
