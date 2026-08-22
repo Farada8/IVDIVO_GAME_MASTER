@@ -1,75 +1,64 @@
 # CURRENT — BUSINESS ENGINEERING OS AUTHORITY
 
-**DATE:** 2026-08-22
-**STATUS:** CYCLE5 PUBLIC ARTIFACT VALIDATION EXECUTED ON FEATURE BRANCH / PUBLIC EVIDENCE ONLY / NOT MARKET-PROOF PROMOTED
+**DATE:** 2026-08-22  
+**STATUS:** CYCLE5 MERGED / CYCLE6 PROCUREMENT PA4 HARDENING ACTIVE / PUBLIC EVIDENCE ONLY
 
-## Library
-Private RAW Drive: `1X6mo94Qo103HheyDry4P3dcQkv5qZg6N`
-Current pointer: `BUSINESS_ENGINEERING_OS/LIBRARY/00_START_HERE_CURRENT_LIBRARY.md`
-Physical authority: `BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_LIBRARY_AUTHORITY_78_2026-08-22.md`
-Counts: 78 physical / 68 valid / 58 unique valid byte hashes.
-Raw copyrighted binaries remain Drive-only.
+## Library authority
+Private RAW Drive: `1X6mo94Qo103HheyDry4P3dcQkv5qZg6N`  
+Current pointer: `BUSINESS_ENGINEERING_OS/LIBRARY/00_START_HERE_CURRENT_LIBRARY.md`  
+Physical authority: `BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_LIBRARY_AUTHORITY_78_2026-08-22.md`  
+Counts: **78 physical / 68 valid / 58 unique valid byte hashes**. Raw copyrighted binaries remain Drive-only.
 
-## Integrated Cycle4 foundation retained
-1. `2026-08-22_CYCLE4_LIBRARY78_LIVE_SIGNAL_32_TO_64` — Library78 + B81-B112/C97-C128.
-2. `2026-08-22_CYCLE4_PUBLIC_SIGNAL_OPPORTUNITY_SCAN_32_TO_64` — official/public opportunity corpus.
-3. `2026-08-22_CYCLE4_PROCUREMENT_CAPITAL_LIVE32` — C129-C152, funding/procurement evidence lane.
+## Integrated foundation
+Cycle4 remains the live-signal/opportunity foundation. Cycle5 Public Artifact Validation is now merged to `main` at `470a8aea93385ef8624b47688dbf4cf21090c058`.
 
-## Cycle5 working candidate
-Path: `BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_VALIDATION_32_TO_64/`
-Branch: `studio/business-engineering-cycle5-artifact-validation-2026-08-22`
-Drive folder: `1WQBjFu6wIYcrxs3QnPOeUHtZnMVkNwDf`
+Cycle5 completed the founder-requested production loop:
+- **32/32 sequential runs**;
+- `C5M01–C5M32` modules;
+- `C5C01–C5C24` contracts;
+- `C5P01–C5P12` proof gates;
+- `C5R01–C5R10` protocols;
+- baseline 14/14 and extended 32/32 regression suites PASS (overlapping evidence, not additive proof counts);
+- PA0–PA5 public-artifact proof plane;
+- PA3 samples `PA-PROC-001`, `PA-RETRO-001`, `PA-AI-001`;
+- disposition `30 KEEP / 2 MUTATE / 0 KILL`;
+- evidence-derived `P33–P96` Next64.
 
-Cycle5 completed:
-- 32/32 sequential runs;
-- C5M01–C5M32 modules;
-- C5C01–C5C24 contracts;
-- C5P01–C5P12 proof gates;
-- C5R01–C5R10 protocols;
-- baseline executable artifact engine + 14/14 baseline unit tests PASS;
-- extended PA0–PA5 artifact proof plane;
-- three source-populated samples: `PA-PROC-001`, `PA-RETRO-001`, `PA-AI-001`;
-- extended executable validator + 32/32 regression fixtures PASS;
-- extended Run32 disposition: 30 KEEP / 2 MUTATE / 0 KILL;
-- baseline + extended synthesis and Self-Improvement evidence bridges;
-- two compatible Next64 formulations, with extended evidence-gap sequence P33–P96;
-- Google Drive mirror/readback in the Cycle5 folder.
-
-## Test accounting
-Baseline 14/14 and extended 32/32 suites overlap in purpose. They are not 46 independent proofs. Both independently/convergently pass the critical public-evidence, null-safety, WIP and substitution invariants.
-
-## Public Artifact proof plane
-PA0 idea -> PA1 contracted -> PA2 source-populated -> PA3 regression-pass -> PA4 independent validation -> PA5 real target-user decision use.
-
+## Proof planes
 `PA != K != S != E`.
-Cycle5 extended samples reached **PA3**. PA4, PA5 and E3 are not proven.
 
-## Proof boundary
-Knowledge K, public-signal S, public-artifact PA and market E proof are non-substitutable.
-Public-only research ceiling = E2+.
-No buyer willingness-to-pay, payment, repeatability, unit economics, finance approval, procurement eligibility or legal clearance is claimed.
+Current public-only ceiling remains **E2+**. PA3 is proven for the three Cycle5 sample artifacts. PA4, PA5, E3, WTP, payment, repeatability, profitability, finance approval, procurement eligibility and legal clearance are not proven.
 
-## Active market WIP
-PRIMARY: tender/procurement decision intelligence — PA3 / PASS_WITH_HOLD.
-PILOT: retrofit qualification / route triage — PA3 / NARROWED_PASS_WITH_HOLD.
-PILOT: post-Digital-for-Business SME workflow implementation readiness — PA3 / NARROWED_PASS_WITH_HOLD.
-Maximum active WIP = 3.
+## Market WIP
+- **PRIMARY:** tender/procurement decision intelligence — PA3 / HOLD pending authoritative pack + supplier facts.
+- **PILOT:** retrofit route qualification/exceptions/document readiness — PA3 bounded; requires a real property packet before P49–P64.
+- **PILOT:** post-Digital-for-Business SME workflow implementation — PA3 bounded; requires a real workflow/report before P65–P80.
+- Maximum active WIP = 3.
 
-## Key Cycle5 corrections
-1. A business artifact must test the residual unsolved buyer job after native/free/subsidised substitutes are accounted for.
-2. Scalar scores over missing evidence are rejected; unknowns become explicit outputs and next-test inputs.
-3. Generic retrofit orchestration is not the differentiator because registered One Stop Shops already manage the full journey.
-4. Generic digital/AI diagnosis is not the differentiator because Digital for Business already supplies diagnosis/integration guidance.
-5. Concurrent persistence requires fresh read + semantic reconciliation before write; blind overwrite is forbidden.
+## Cycle6 active candidate
+Path: `BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE6_PROCUREMENT_PA4_HARDENING/`  
+Branch: `studio/business-engineering-cycle6-procurement-pa4-2026-08-22`
 
-Current path:
-`JOB -> NATIVE/FREE/SUBSIDISED SUBSTITUTE -> RESIDUAL UNSOLVED JOB -> SOURCE-POPULATED ARTIFACT -> DECISION DELTA -> PA4 -> REAL USER TEST -> PA5/E3 ONLY ON REAL INTERACTION`.
+Cycle6 executed the dependency-correct procurement block `P33–P48` against eTenders resource `8872468`.
 
-## Current gate
-`PA3 SAMPLE ARTIFACTS -> PA4 INDEPENDENT/ALTERNATE VALIDATION -> SMALLEST REAL TARGET-USER DECISION-USE TEST -> PA5/E3 ONLY IF REAL INTERACTION EXISTS`.
+Publicly accessible official data verify title/authority, `26-002`, MEAT, publication timestamp, submission deadline, EUR 1.6m estimated value and high-level scope. The complete official attachment inventory was not available through the accessible public indexed surface.
 
-Next useful work is extended P33–P48 procurement hardening first: full tender pack -> qualification object -> verified supplier profile -> fatal gaps -> independent PA4 review. Do not restart broad market scanning or generic book ingestion without a specific unresolved mechanism gap.
+Therefore:
+- `P33 = BLOCKED_INCOMPLETE_OFFICIAL_PACK`;
+- P34–P36 schemas/contracts compiled;
+- P37–P46 preserve unknown tender-specific requirements as null/HOLD;
+- `P47 = HOLD_INSUFFICIENT_EVIDENCE`;
+- `P48 = BLOCKED` until the same complete pack + verified supplier profile can be independently reviewed.
 
-Retrofit P49–P64 waits for a real property packet. SME-AI P65–P80 waits for a real post-Digital-for-Business workflow/report. Cross-lane P81–P96 remain safeguards.
+## Current engineering law
+`NO_FULL_OFFICIAL_PACK -> NO_TENDER_SPECIFIC_QUALIFICATION_ASSERTION -> NO_BID_NO_BID_DECISION`.
 
-Self-Improvement v2 remains CURRENT; Cycle5 findings are candidate evidence only. v3/global promotion remains forbidden without independent proof/regression.
+Cycle6 adds `C6M01–C6M10`, `C6C01–C6C16`, `C6P01–C6P08`, `C6R01–C6R08` plus an executable fail-closed procurement runtime and regression suite.
+
+## Current causal gate
+`COMPLETE_OFFICIAL_PACK + VERIFIED_SUPPLIER_PROFILE -> REQUIREMENT-BY-REQUIREMENT JOIN -> FATAL/CURABLE GAP ROUTING -> BID/HOLD/NO-BID -> BLIND PA4 REVIEW -> SMALLEST REAL DECISION-USE TEST -> PA5/E3 ONLY ON REAL INTERACTION`.
+
+Do not restart broad market scanning or generic book ingestion while this decisive evidence dependency is unresolved.
+
+## Self-Improvement
+v2 remains CURRENT. v3 remains CANDIDATE ONLY. Cycle6 introduces a scoped candidate rule: `MISSING_AUTHORITY_IS_A_FIRST_CLASS_RESULT`. It is not globally promoted from one public run.
