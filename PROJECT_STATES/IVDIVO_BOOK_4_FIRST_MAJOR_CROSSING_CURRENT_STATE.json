@@ -1,0 +1,103 @@
+{
+  "schema_version": "0.5",
+  "updated": "2026-08-22",
+  "project_id": "IVDIVO_BOOK_4_FIRST_MAJOR_CROSSING",
+  "title": "B04 — FIRST MAJOR CROSSING",
+  "status": "WORKING_CHAPTER_MAP_COMPLETE_FATAL0_MAJOR0_STORY_GATE_PENDING_PROSE_NO_GO",
+  "canon_status": "WORKING_NOT_CANON",
+  "prose_authorized": false,
+  "story_engine_locked": false,
+  "working_branch": "studio/b04-first-major-crossing-discovery-2026-08-22",
+  "authority_boundary": {
+    "b01": "DEVELOPMENT_LOCKED_NO_REWRITE",
+    "b02": "CH01_CH36_ACCEPTED_DEVELOPMENT_DRAFTS_STORY_COMPLETE_NO_AUTO_EPILOGUE",
+    "b03": "FOUNDER_LOCKED_CH01_CH29_RELEASE_READY_NO_CH30",
+    "b08_first_crossing_package": "FUTURE_WORKING_CONTINUITY_HOLD_NOT_BACKPORTED"
+  },
+  "preferred_engine": {
+    "id": "A_TWO_CASES_ONE_CODE",
+    "youth_lead_candidate": "MAYA_PREFERRED_WORKING_NOT_LOCKED",
+    "adult_colead": "SMITH",
+    "maya_new_arc": "TRUTHFUL_AUTONOMY_TO_RESPONSIBILITY_FOR_EXTERNALITIES",
+    "working_time_gap": "APPROX_10_14_WEEKS_AFTER_B02_FINAL_DINNER_AND_AFTER_B03",
+    "maya_work_role": "PAID_SUPERVISED_ROUTE_VALIDATION_ASSISTANT",
+    "maya_primary_price": "CURRENT_ROUTE_ENDORSEMENT_CYCLE_EXPIRES_AND_MUST_BE_REAPPLIED_NEXT_CYCLE",
+    "smith_role": "CO_LEAD_HISTORICAL_EVIDENCE_AND_INSTITUTIONAL_LIABILITY_NOT_ORBITAL_COMMAND",
+    "smith_price": "RELEASE_DAMAGING_OES_CLASSIFICATION_OUTCOME_LEDGER_AND_ACCEPT_INDEPENDENT_REVIEW",
+    "phenomenon_pair": {
+      "id": "P1_FALSE_OCCUPANCY_TWO_KINDS_OF_PRESENCE",
+      "incident_A": "LAWFUL_LIVING_SUPPORT_ECOLOGY_MISCLASSIFIED_AS_EQUIPMENT_OR_OCCUPANCY",
+      "incident_B": "MATERIAL_BOUND_UNATTRIBUTED_ACTUATION_FOLLOWS_ONE_REMOVABLE_COMPONENT_ONTOLOGY_UNKNOWN",
+      "shared_surface": "SPACE_BEHAVES_AS_OCCUPIED_OR_LOCALLY_ACTIVE_WITHOUT_REGISTERED_PERSON",
+      "confederation_limit": "STRONG_ON_A_CLASSIFICATION_NOT_B_ONTOLOGY_AND_NO_LOCAL_COMMAND",
+      "oes_limit": "USEFUL_B_HISTORICAL_OUTCOMES_BUT_UMBRELLA_CATEGORY_CONTAMINATED_ITS_OWN_STATISTICS"
+    },
+    "jurisdiction": {
+      "maya": "BOUNDED_ASSIGNED_ROUTE_SERVICE_ACTIONS_ONLY",
+      "orbital_incident_commander": "HABITAT_WIDE_EMERGENCY_COMMAND",
+      "civic_housing_service": "ALLOCATION_COMPENSATION_SERVICE_CONTINUITY_NOT_ANOMALY_COMMAND",
+      "smith_oes": "LEGACY_EVIDENCE_AND_OES_PROVENANCE_NOT_ORBITAL_COMMAND",
+      "planetary_contact": "COORDINATION_REQUEST_CHANNEL",
+      "confederation_advisory": "ANALYSIS_ADVICE_ONLY"
+    }
+  },
+  "gates": {
+    "continuity_normalization_v0_3": {
+      "status": "PASS",
+      "fatal": 0,
+      "blocking_major": 0
+    },
+    "engine_story_gate_v0_3": {
+      "status": "PASS_GO_TO_CAUSAL_ACT_ARCHITECTURE",
+      "fatal": 0,
+      "blocking_major": 0
+    },
+    "act_architecture_v0_4": {
+      "status": "COMPLETE",
+      "fatal": 0,
+      "majors_to_verify_in_chapter_map": 8
+    },
+    "chapter_function_map_v0_5": {
+      "status": "COMPLETE_CH01_CH32",
+      "maya_pov_chapters": 25,
+      "smith_pov_chapters": 7,
+      "architecture_checks_passed": "8_8",
+      "fatal": 0,
+      "blocking_major": 0,
+      "next_gate": "CHAPTER_MAP_STORY_CHARACTER_RELATIONSHIP_READER_CONTINUITY_RED_TEAM"
+    }
+  },
+  "drive": {
+    "folder_id": "1yudTGqdzsd4eyWPseeT8Qdm3TsBGjvYj",
+    "story_discovery_v0_1": "1OU2G7gwvCxcDfmoF07N8yyC5tbuwGTBDnY1CTCxMYJM",
+    "character_phenomenon_jurisdiction_v0_2": "1h5JwagU34bDC7qRZlrEYsT9uCSo4ddVg-4tULm0xVT4",
+    "continuity_final_engine_gate_v0_3": "1u2YyuPr33pREENYDgA-4TfBY9-a7ZAgF5rXi_g-SNzw",
+    "causal_act_architecture_v0_4": "1t96dumXDq0CaRIq6-ntRrtsUYLidHtcbhucfjVYTE0s",
+    "causal_chapter_function_map_v0_5": "1VivdPyUTTRsHpiKzJVleBtwVHCu5oMqLhQxk50DZ_9Q",
+    "current_state_sync_v0_5": "1lGz1ja2bdMtvxUOFpRWmyqIvur35U4UotXzA5tZ9X9E"
+  },
+  "artifacts_on_working_branch": [
+    "PROJECTS/B04_FIRST_MAJOR_CROSSING/00_B04_STORY_DISCOVERY_CONSEQUENCE_LEDGER_AND_ENGINE_COMPETITION_v0.1.md",
+    "PROJECTS/B04_FIRST_MAJOR_CROSSING/01_B04_CHARACTER_PHENOMENON_JURISDICTION_GATE_v0.2.md",
+    "PROJECTS/B04_FIRST_MAJOR_CROSSING/02_B04_B02_B03_CONTINUITY_NORMALIZATION_AND_FINAL_ENGINE_GATE_v0.3.md",
+    "PROJECTS/B04_FIRST_MAJOR_CROSSING/03_B04_CAUSAL_ACT_ARCHITECTURE_v0.4.md",
+    "PROJECTS/B04_FIRST_MAJOR_CROSSING/04_B04_CAUSAL_CHAPTER_FUNCTION_MAP_v0.5.md"
+  ],
+  "next_obligations": [
+    "RUN_CHAPTER_MAP_STORY_CHARACTER_RELATIONSHIP_READER_CONTINUITY_RED_TEAM",
+    "CREATE_CH01_HUMAN_SCENE_DIALOGUE_CALIBRATION",
+    "AUTHORIZE_CH01_PROSE_CANARY_ONLY_IF_GATE_FATAL0_MAJOR0"
+  ],
+  "next_obligation": "RUN_CHAPTER_MAP_STORY_CHARACTER_RELATIONSHIP_READER_CONTINUITY_RED_TEAM",
+  "do_not": [
+    "DO_NOT_WRITE_B04_PROSE_YET",
+    "DO_NOT_CANONIZE_MAYA_AS_LEAD_YET",
+    "DO_NOT_INVENT_EXACT_MAYA_AGE_BIRTHDAY_SALARY_HOUSING_ENTITLEMENT",
+    "DO_NOT_AUTO_PROMOTE_NIKO_ROMANCE",
+    "DO_NOT_INVENT_SMITH_DAUGHTER_NAME_MOTHER_CUSTODY_OR_REACTION",
+    "DO_NOT_REUSE_B08_MOVING_CORRIDOR_SEALED_TRANSFER_SPINE_BOUNDARY_ORDER_DIVERGENCE",
+    "DO_NOT_CREATE_PERMANENT_CROSSOVER_AGENCY",
+    "DO_NOT_ALLOW_SMITH_OR_CONFEDERATION_TO_TAKE_LOCAL_ORBITAL_COMMAND",
+    "DO_NOT_SOLVE_ROOT_MATRIX_B03_PRECURSOR_OR_UNIVERSAL_ONTOLOGY"
+  ]
+}
