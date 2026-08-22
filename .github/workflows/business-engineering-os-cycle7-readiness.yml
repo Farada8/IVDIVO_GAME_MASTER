@@ -1,0 +1,18 @@
+name: Business Engineering OS Cycle7 Cross-Lane Readiness
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_CROSS_LANE_READINESS_32_TO_64/**'
+      - 'BUSINESS_ENGINEERING_OS/LIBRARY/00_START_HERE_CURRENT_LIBRARY.md'
+      - '.github/workflows/business-engineering-os-cycle7-readiness.yml'
+jobs:
+  cycle7-readiness-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Cycle7 readiness compiler tests
+        working-directory: BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_CROSS_LANE_READINESS_32_TO_64
+        run: python -m unittest -v tests/test_opportunity_readiness_compiler.py
