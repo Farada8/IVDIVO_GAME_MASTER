@@ -61,13 +61,17 @@ Supporting GitHub files:
 - `RECOVERY/VISUAL_SELECTION_RECOVERY_MANIFEST_20260822.md`
 - `RECOVERY/PAINTERS_DUBLIN_RECOVERY_HANDOFF_20260822.md`
 - `RECOVERY/CHAT_ONLY_RECOVERY_LEDGER.md`
+- `RECOVERY/RECOVERY_V2_CLOSURE_20260822_1427.md`
+- `RECOVERY/FULL_CHAT_CLOSURE_HANDOFF_20260822_1501.md`
 
 Recovery Drive folder: `1JpT5EQbMlLMRGMiOqfwJBHciQGpbSe1u`.
 
-New V2 evidence docs:
+New V2 evidence / closure docs:
 - `05A ROOM917 BINARY PROVENANCE ADDENDUM` — `1bhvEEuOQoqMy1w-7XTyUvQdJIPDty9MRhuWM9OENC3Q`
 - `06 VISUAL SELECTION RECOVERY MANIFEST` — `1vkwwnISf95_NQJue4Bohem-MchY2Tvwf2qvq81w3zYc`
 - `07 painters-dublin.ie RECOVERY HANDOFF` — `1mr3b0r-5BvRziiYJwnr_-kr7cyPj2BY_lNP07cD7FFI`
+- `08 RECOVERY V2 CLOSURE` — `1i7MTmG-sbqfnI7FRFk2CTwiyT9RaLONgW5khsd8qvEo`
+- `09 FULL CHAT CLOSURE HANDOFF` — `1qLrziPbrcKJk5LczvEp2bpT-ly2hh2i9w3vBVbzmUi8`
 
 ## 4. Three remaining global blocker classes
 
@@ -106,13 +110,14 @@ The project is no longer conceptually chat-only because a durable non-secret rec
 ## 6. Restart protocol
 
 1. Read `RECOVERY/MASTER_RECOVERY_STATE.json`.
-2. Read `RECOVERY/RECOVERY_AUDIT_DELTA_20260822_1332.md`.
-3. Read the target project’s fresh current state/authority.
-4. For audio, read `RECOVERY/BINARY_ASSET_RECOVERY_MANIFEST_20260822.md`.
-5. For visuals, read `RECOVERY/VISUAL_SELECTION_RECOVERY_MANIFEST_20260822.md`.
-6. For `painters-dublin.ie`, read `RECOVERY/PAINTERS_DUBLIN_RECOVERY_HANDOFF_20260822.md`.
-7. For Portals or recovered old ideas, read `RECOVERY/CHAT_ONLY_RECOVERY_LEDGER.md`; never re-promote superseded chat context automatically.
-8. For numerical-order research, use `RECOVERY/MATH_CURRENT_RESEARCH_NOTE_20260822.md` + its Drive source.
+2. Read `RECOVERY/FULL_CHAT_CLOSURE_HANDOFF_20260822_1501.md` for the complete pre-close recovery handoff from this conversation.
+3. Read `RECOVERY/RECOVERY_AUDIT_DELTA_20260822_1332.md`.
+4. Read the target project’s fresh current state/authority.
+5. For audio, read `RECOVERY/BINARY_ASSET_RECOVERY_MANIFEST_20260822.md`.
+6. For visuals, read `RECOVERY/VISUAL_SELECTION_RECOVERY_MANIFEST_20260822.md`.
+7. For `painters-dublin.ie`, read `RECOVERY/PAINTERS_DUBLIN_RECOVERY_HANDOFF_20260822.md`.
+8. For Portals or recovered old ideas, read `RECOVERY/CHAT_ONLY_RECOVERY_LEDGER.md`; never re-promote superseded chat context automatically.
+9. For numerical-order research, use `RECOVERY/MATH_CURRENT_RESEARCH_NOTE_20260822.md` + its Drive source.
 
 ## 7. Current global decision
 
@@ -120,5 +125,7 @@ The project is no longer conceptually chat-only because a durable non-secret rec
 **Do not delete all conversations yet.**
 
 The recovery audit remains at **three evidence-backed blocker classes**, but those classes are now much narrower and have durable handoffs/manifests.
+
+`FULL_CHAT_HANDOFF_POINTER: RECOVERY/FULL_CHAT_CLOSURE_HANDOFF_20260822_1501.md | DRIVE 1qLrziPbrcKJk5LczvEp2bpT-ly2hh2i9w3vBVbzmUi8`
 
 `MASTER_RECOVERY_MARKER: IVDIVO-MASTER-RECOVERY-20260822-V2-GLOBAL-DELETE-BLOCKED-3-RESIDUAL-CLASSES`
