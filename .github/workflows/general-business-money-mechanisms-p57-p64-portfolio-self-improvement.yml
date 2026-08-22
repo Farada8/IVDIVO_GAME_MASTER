@@ -1,0 +1,83 @@
+name: General Business Money Mechanisms P57-P64 Portfolio Self Improvement
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/13_MONEY_MECHANISMS_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/39_PORTFOLIO_SELF_IMPROVEMENT_P57_P64_EXECUTION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/40_PORTFOLIO_SELF_IMPROVEMENT_P57_P64_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/41_P57_P64_TRANSFER_BOUNDARY_CANARIES.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime/portfolio_transfer_guard.py'
+      - '.github/workflows/general-business-money-mechanisms-p57-p64-portfolio-self-improvement.yml'
+  workflow_dispatch:
+
+jobs:
+  validate-portfolio-self-improvement:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run transfer and progress negative-control canaries
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime/portfolio_transfer_guard.py
+      - name: Validate P57-P64 portfolio and evidence ceiling
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          s=json.loads((root/'40_PORTFOLIO_SELF_IMPROVEMENT_P57_P64_STATE.json').read_text())
+          mm=json.loads((root/'13_MONEY_MECHANISMS_MACHINE_STATE.json').read_text())
+          c=json.loads((root/'41_P57_P64_TRANSFER_BOUNDARY_CANARIES.json').read_text())
+          d=json.loads((root/'38_DELIVERY_SOP_P49_P50_STATE.json').read_text())
+          assert s['status']=='PASS_ENGINEERING_58_OF_64_P51_P56_EVIDENCE_BLOCKED'
+          assert s['run']['executed']==8 and s['run']['pass_engineering']==8
+          assert s['run']['market_proof_created'] is False
+          assert s['run']['real_delivery_evidence_created'] is False
+          assert s['portfolio']['OW-01']=='KEEP_PRIMARY_M1_ONLY_NO_M2'
+          assert s['portfolio']['CF-01']=='KEEP_PILOT_M1_ONLY_NO_M2'
+          assert s['portfolio']['CF-03']=='KEEP_PILOT_M1_ONLY_NO_M2'
+          assert s['portfolio']['active_wip_killed']==0
+          assert s['portfolio']['active_wip_promoted_to_m2']==0
+          assert s['portfolio']['fourth_wip_added'] is False
+          assert len(c['cases'])==10
+          assert len(c['progress_guard_canaries'])==2
+          assert s['boundary_test']['transfer_canaries']==10
+          assert s['boundary_test']['progress_guard_canaries']==2
+          assert s['self_improvement']['promoted_local']=='MONOTONIC_MILESTONE_CI_GUARD'
+          assert s['self_improvement']['observed_control_failures']==2
+          assert s['self_improvement']['global_promotion'] is False
+          assert s['next64']['executed_total']==58
+          assert s['next64']['remaining_total']==6
+          assert s['next64']['blocked_ranges']==['P51-P56']
+          assert s['next64']['non_contiguous_execution_is_intentional'] is True
+          assert s['next_frontier']['general_business_internal']=='EARLY_WAVE_RADAR_DELTA03'
+          assert s['next_frontier']['external_action_authorized'] is False
+          assert s['observed']['businesses_proven']==0
+          assert s['observed']['wtp'] is None
+          assert s['observed']['paid_diagnostic_transactions']==0
+          assert s['observed']['real_deliveries']==0
+          assert all(v is False for v in s['proof_boundary'].values())
+          assert mm['next64']['executed']==58
+          assert mm['next64']['remaining']==6
+          assert mm['next64']['unexecuted_ranges']==['P51-P56']
+          assert mm['next64']['blocked_ranges']==['P51-P56']
+          assert mm['next64']['non_contiguous_execution_is_intentional'] is True
+          assert mm['portfolio_self_improvement']['promoted_local']=='MONOTONIC_MILESTONE_CI_GUARD'
+          assert mm['portfolio_self_improvement']['observed_control_failures']==2
+          assert mm['portfolio_self_improvement']['external_action_authorized'] is False
+          assert mm['evidence_boundary']['businesses_proven']==0
+          assert mm['evidence_boundary']['external_action_authorized'] is False
+          assert d['observed']['real_deliveries']==0
+          assert d['observed']['actual_delivery_hours'] is None
+          assert d['observed']['actual_delivery_cost'] is None
+          assert set(d['blocked_prompts'])=={'P51','P52','P53','P54','P55','P56'}
+          print('P57-P64 PORTFOLIO SELF-IMPROVEMENT: PASS / 58OF64 / P51-P56 EVIDENCE-BLOCKED / NO MARKET PROMOTION')
+          PY
+      - name: Compile contracts
+        run: |
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/13_MONEY_MECHANISMS_MACHINE_STATE.json >/dev/null
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/40_PORTFOLIO_SELF_IMPROVEMENT_P57_P64_STATE.json >/dev/null
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/41_P57_P64_TRANSFER_BOUNDARY_CANARIES.json >/dev/null
+          python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
