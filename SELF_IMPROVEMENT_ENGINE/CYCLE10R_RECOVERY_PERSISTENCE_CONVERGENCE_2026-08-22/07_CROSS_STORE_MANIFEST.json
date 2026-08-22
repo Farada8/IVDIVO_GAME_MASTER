@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "cycle": "CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22",
+  "authority_effect": "NONE_SELF_IMPROVEMENT_V2_REMAINS_VERIFIED_CURRENT",
+  "github": {
+    "repository": "Farada8/IVDIVO_GAME_MASTER",
+    "pull_request": 221,
+    "branch": "self-improvement/cycle10-recovery-persistence-promotion-32x64-20260822",
+    "branch_head_before_manifest": "0bf5f3ec7a703b3bc06bb0e412b8cf3d91f5f6d1",
+    "branch_cut_merge_base": "d919a680dea76ce74c6fa99113a1fe36d85f1e81",
+    "fresh_main_before_manifest": "45e90e4e11758ee6c95522c00967addc4b52d56b",
+    "fresh_compare": {
+      "status": "diverged",
+      "ahead_by": 12,
+      "behind_by": 61,
+      "cycle10r_files": 10,
+      "cycle10r_file_relation": "ALL_ADDITIVE_NEW_PATHS_NO_OVERLAP_IN_COMPARE"
+    },
+    "ci_prior_to_manifest": {
+      "workflow": "Self-Improvement Cycle10R Recovery Persistence",
+      "run_id": 32550074859,
+      "run_number": 9,
+      "job_id": 96975259292,
+      "merge_ref": "6f3d8125e9113f8608ee811e736b01cae9cc92da",
+      "base_parent_observed_in_log": "4c656c447f825cad6f8e14f8dfa7797568c633cb",
+      "head_parent": "0bf5f3ec7a703b3bc06bb0e412b8cf3d91f5f6d1",
+      "cycle10r_canaries": "32/32_PASS",
+      "compile": "PASS",
+      "inherited_run33": "27/27_PASS",
+      "conclusion": "SUCCESS",
+      "final_exact_head_current_main_ci": "RETRIGGERED_BY_THIS_MANIFEST_COMMIT_PENDING_READBACK"
+    }
+  },
+  "drive": {
+    "root": {
+      "id": "19BbmeqbZpQWfhvMgymblOb1GEGzCOho-",
+      "title": "CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_32_TO_64_2026-08-22"
+    },
+    "folders": [
+      {"role": "LIBRARY_AND_AUTHORITY", "id": "1N30sW3RM6lmSisqFtb8Z4RoHmDaTmIoq"},
+      {"role": "ENGINEERING_CONTRACTS_PROTOCOLS", "id": "1jenqVFAANOuG7nxcrgdcpxKMM5r_imsI"},
+      {"role": "RUN32_EXECUTION", "id": "1ldUHCYHDHUUUtZN-DDERRl78IPzD66k7"},
+      {"role": "NEXT64_AND_SYNTHESIS", "id": "1cgj8EJSRxdWH9YI0zfot1BAgg_UaYJfo"},
+      {"role": "PROOFS_CI_READBACK", "id": "1ANsYqZ6EP-pbTBDVVDxAfVpTXkPXujPM"}
+    ],
+    "documents": [
+      {
+        "role": "MASTER_LIBRARY_AUTHORITY",
+        "id": "1WxwjeGVN7ySvGV1ry4XQLCiyc6hpOgt80Ppe4ysq3s0",
+        "write_revision": "AIroW37Lp62PXfo5C3IX2CLR43AgNfOaz1d_SsdPeWkhHjD0iELng5uiGPWUGxdI0D-3ix5Co8GlAM098Fg0td_7JfCSDKsEOopFoErxyS4",
+        "marker": "CYCLE10R-MASTER-LIBRARY-AUTHORITY-35RAW-78BUSINESS-SI0014-1OF3-2OF2",
+        "content_readback": "PASS"
+      },
+      {
+        "role": "ENGINEERING_MODULES_CONTRACTS_PROOFS_PROTOCOLS",
+        "id": "1wMLHbNydObDDhpBlPGAcHtDycfAnVMZvIs1c3ZMLpdU",
+        "write_revision": "AIroW35bKTp1RH_AVO-Bu5P8xPSAPQmQgsGqe5u8MWYSx95479oPbsrXCZBGcSNdDJHb1PNVx2JZxGjfATNotdT632wKdbYWCQYC2Amt_hM",
+        "marker": "CYCLE10R-ENGINEERING-16M-24C-12P-8R",
+        "content_readback": "PASS"
+      },
+      {
+        "role": "RUN32_EXECUTION",
+        "id": "1zQ5ZKC21-Q_zGpElD5kDVTGQDR3aWn6FRyohLwaQbeA",
+        "write_revision": "AIroW34y_AX0fCvP7ar9QsWTHaMpOCF6z8cKBeqk8WrBtKAurB-xmsQXjk0QrJ0-FkOGFrU-Ko0BNrTQlqvxKh-XuLHpcMF3M5kE7kHCj60",
+        "marker": "CYCLE10R-RUN32-32OF32-ZERO-FABRICATED-EVENTS",
+        "content_readback": "PASS"
+      },
+      {
+        "role": "SYNTHESIS_MACHINE_STATE",
+        "id": "1yFfnVEh_5oBmDab60wO8hHwllPPK_3TfNyHpWxc9-nI",
+        "write_revision": "AIroW34ZbItFMJmiqhJtERJIKircEpKgCZPLJZCI1rScg4fJJNprLjAp7pp1LYrqXKF73qiB9ndIWLTDjXki-v4VpD1nC_fU16tvuEkp4wc",
+        "marker": "CYCLE10R-STATE-V2CURRENT-SI0014-1OF3-2OF2-ZERO_FALSE_RESUME",
+        "content_readback": "PASS"
+      },
+      {
+        "role": "NEXT64",
+        "id": "1OFw3Kjq2zn32MbxcIh9oX4ysf8w0FqSm8TAT0lv3yaQ",
+        "write_revision": "AIroW35fbcqO0EO3mudr_objkaxcli6UqxV8On_KKljEfdZToc0ucjMK4r335K3RkQms6xe_aIoKFDDxURdGyd0jBTMlVr-bjo8gLA5DL6U",
+        "marker": "CYCLE10R-NEXT64-EXACT64-NOT-AUTO-AUTHORIZED",
+        "content_readback": "PASS"
+      },
+      {
+        "role": "CI_CROSS_STORE_CLOSURE",
+        "id": "1AtUY1e1TdYB7HW-5gsr9R5VBt-Qk2ZT5OQP_TQq4Lx4",
+        "write_revision": "AIroW34owvvruhtserI5TqoWKVu-mm3NXxrWhrW0jvzt-_cE8viv4lSaR7RRRxLrVKFUJR358OoEFjtEDAMgmDf3inrLIENoi-_IzU3IaGs",
+        "marker": "CYCLE10R-CROSS-STORE-CLOSURE-PR221-CI-READBACK",
+        "content_readback": "PASS"
+      }
+    ],
+    "content_readback_status": "PASS_6_OF_6",
+    "byte_exact_mirror_claimed": false
+  },
+  "self_improvement": {
+    "si0014": {
+      "status": "READY_FOR_PILOT",
+      "genuine_events": 1,
+      "required_events": 3,
+      "distinct_projects": 2,
+      "required_projects": 2,
+      "false_resume": 0,
+      "promotion_authorized": false
+    },
+    "si0015": "READY_FOR_PILOT_REAL_BUSINESS_FRESHNESS_SIGNAL_ADDITIONAL_CONTROLS_REQUIRED",
+    "v3": "CANDIDATE_HOLD_MECHANISM_BY_MECHANISM_ONLY"
+  },
+  "closure_state": "DRIVE_READBACK_PASS_FINAL_FRESH_MAIN_CI_AND_POST_MERGE_READBACK_PENDING"
+}
