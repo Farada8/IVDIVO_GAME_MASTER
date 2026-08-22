@@ -1,0 +1,72 @@
+name: ROOM917 EN-RU Audio Parity
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_POST_RENDER_SOUND_EXECUTION_CONTRACT_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/EN_RU_PARITY_v1/validate_en_ru_parity.py'
+      - '.github/workflows/room917-en-ru-parity.yml'
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_POST_RENDER_SOUND_EXECUTION_CONTRACT_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/EN_RU_PARITY_v1/validate_en_ru_parity.py'
+      - '.github/workflows/room917-en-ru-parity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate E01 bilingual sound parity
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _room917_en_ru_parity
+          python AUDIO_PRODUCTION/ROOM917/TOOLS/EN_RU_PARITY_v1/validate_en_ru_parity.py \
+            --control AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json \
+            --en-contract AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_POST_RENDER_SOUND_EXECUTION_CONTRACT_v1.json \
+            --ru-contract AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json \
+            --out _room917_en_ru_parity/ROOM917_E01_EN_RU_PARITY_REPORT.json
+
+      - name: Upload parity report
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_E01_EN_RU_PARITY_REPORT
+          path: _room917_en_ru_parity/ROOM917_E01_EN_RU_PARITY_REPORT.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Summary
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p=Path('_room917_en_ru_parity/ROOM917_E01_EN_RU_PARITY_REPORT.json')
+          r=json.loads(p.read_text(encoding='utf-8'))
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
+              f.write('## ROOM917 E01 EN/RU Audio Parity\n')
+              f.write(f"- status: {r['status']}\n")
+              f.write(f"- passed checks: {len(r.get('checks') or [])}\n")
+              f.write(f"- failures: {len(r.get('failures') or [])}\n")
+              f.write('- paid synthesis calls: 0\n')
+              f.write('- purpose: prevent clue/sound-world drift between English and Russian while allowing locale-specific acting and dialogue timing\n')
+          PY
