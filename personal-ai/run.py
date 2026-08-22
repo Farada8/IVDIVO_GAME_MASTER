@@ -11,6 +11,7 @@ from books import BOOK_STAGES, BookProductionCore, ContinuityChecker
 from business import BusinessQuoteService
 from core.bootstrap import bootstrap
 from memory.store import MemoryStore
+from projects.artifact_completion import complete_task_with_artifact_gate
 from projects.manager import ProjectStateManager
 from providers import ProviderRequest, ProviderUnavailableError, default_registry
 
@@ -36,6 +37,14 @@ def build_parser() -> argparse.ArgumentParser:
 
     next_task = project_sub.add_parser("next", help="Return the next actionable task")
     next_task.add_argument("project_id")
+
+    complete_artifact = project_sub.add_parser(
+        "complete-artifact",
+        help="Complete an artifact-producing task using a provider-backed placement receipt JSON",
+    )
+    complete_artifact.add_argument("project_id")
+    complete_artifact.add_argument("task_id")
+    complete_artifact.add_argument("receipt_json", help="Path to ArtifactPlacementReceipt JSON")
 
     memory = sub.add_parser("memory", help="Auditable local memory operations")
     memory_sub = memory.add_subparsers(dest="memory_command", required=True)
@@ -114,6 +123,15 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Explicitly authorize network-backed provider use for this agent run.",
     )
+    agent_run.add_argument(
+        "--require-artifact-placement-receipt",
+        action="store_true",
+        help="Mark this task as artifact-producing; FINISH cannot become DONE without a verified placement receipt.",
+    )
+    agent_run.add_argument(
+        "--artifact-placement-receipt",
+        help="Optional path to provider-backed ArtifactPlacementReceipt JSON available at run completion.",
+    )
 
     benchmark = sub.add_parser("benchmark", help="Baseline/candidate benchmark operations")
     benchmark_sub = benchmark.add_subparsers(dest="benchmark_command", required=True)
@@ -190,6 +208,17 @@ def _json_file(path: str) -> dict:
     return value
 
 
+def _require_artifact_task(manager: ProjectStateManager, project_id: str, task_id: str) -> dict:
+    for task in manager.load_project(project_id)["tasks"]:
+        if task.get("id") == task_id:
+            if not bool(task.get("requires_artifact_placement_receipt", False)):
+                raise RuntimeError(
+                    "complete-artifact requires a task declared with requires_artifact_placement_receipt=true"
+                )
+            return task
+    raise KeyError(f"task not found: {task_id}")
+
+
 def main() -> int:
     args = build_parser().parse_args()
     home = _resolve_home(args.home)
@@ -205,6 +234,16 @@ def main() -> int:
             result = manager.load_project(args.project_id)
         elif args.project_command == "next":
             result = {"project_id": args.project_id, "next_task": manager.get_next_task(args.project_id)}
+        elif args.project_command == "complete-artifact":
+            _require_artifact_task(manager, args.project_id, args.task_id)
+            result = complete_task_with_artifact_gate(
+                manager,
+                args.project_id,
+                args.task_id,
+                _json_file(args.receipt_json),
+            )
+            if result["status"] != "DONE":
+                exit_code = 2
         else:  # pragma: no cover - argparse enforces choices
             raise RuntimeError("unsupported project command")
     elif args.command == "memory":
@@ -277,6 +316,11 @@ def main() -> int:
             raise RuntimeError("unsupported provider command")
     elif args.command == "agent":
         if args.agent_command == "run":
+            receipt = (
+                _json_file(args.artifact_placement_receipt)
+                if args.artifact_placement_receipt is not None
+                else None
+            )
             executor = BoundedAgentExecutor(home)
             result = executor.run(
                 AgentRunRequest(
@@ -287,8 +331,12 @@ def main() -> int:
                     max_steps=args.max_steps,
                     allow_network=args.allow_network,
                     task_id=args.task_id,
+                    requires_artifact_placement_receipt=args.require_artifact_placement_receipt,
+                    artifact_placement_receipt=receipt,
                 )
             ).to_dict()
+            if result["status"] == "BLOCKED":
+                exit_code = 2
         else:  # pragma: no cover - argparse enforces choices
             raise RuntimeError("unsupported agent command")
     elif args.command == "benchmark":
