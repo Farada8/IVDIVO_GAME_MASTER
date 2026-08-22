@@ -2,8 +2,8 @@
 """Fail-closed production preflight for ROOM917 E01 AutoMix/postproduction.
 
 This gate does not render, approve assets, invent timing, or grant release authority.
-It only verifies that already-approved production evidence is safe to hand to the
-existing post-render/AutoMix execution layer.
+It verifies that already-approved production evidence is structurally compatible
+with the actual upstream ROOM917 gates before handoff to selective post-render work.
 """
 from __future__ import annotations
 
@@ -16,6 +16,8 @@ from typing import Any, Dict, List
 PASS = "PASS_AUTOMIX_EXECUTION_READY"
 HOLD = "HOLD_AUTOMIX_EXECUTION"
 SHA256_RE = re.compile(r"^[0-9a-fA-F]{64}$")
+BINDING_REPORT_SCHEMA = "room917.sound_asset_binding_gate/1.1"
+SEMANTIC_TIMING_SCHEMA = "room917.e01_sound_asset_resolved_timing/1.1"
 
 
 def _gate(name: str, ok: bool, reasons: List[str]) -> Dict[str, Any]:
@@ -33,7 +35,6 @@ def _exact_set(value: Any, expected: List[str]) -> bool:
 def evaluate(contract: Dict[str, Any], candidate: Dict[str, Any]) -> Dict[str, Any]:
     gates: List[Dict[str, Any]] = []
 
-    # Locale / production authority gate.
     locale = candidate.get("locale")
     locale_policy = contract.get("locale_policy", {}).get(locale, {}) if locale else {}
     locale_reasons: List[str] = []
@@ -43,13 +44,11 @@ def evaluate(contract: Dict[str, Any], candidate: Dict[str, Any]) -> Dict[str, A
         locale_reasons.append(f"locale_{locale}_automix_not_authorized_by_current_policy")
     gates.append(_gate("LOCALE_AUTHORITY", not locale_reasons, locale_reasons))
 
-    # Only the current post-render patch path is production-authorized here.
     mode_reasons: List[str] = []
     if candidate.get("mode") != "POST_RENDER_PATCH":
         mode_reasons.append("unsupported_or_missing_mode__expected_POST_RENDER_PATCH")
     gates.append(_gate("MODE", not mode_reasons, mode_reasons))
 
-    # Voice provenance gate.
     voice = candidate.get("voice_manifest") if isinstance(candidate.get("voice_manifest"), dict) else {}
     voice_contract = contract.get("voice_gate", {})
     voice_reasons: List[str] = []
@@ -74,35 +73,76 @@ def evaluate(contract: Dict[str, Any], candidate: Dict[str, Any]) -> Dict[str, A
             voice_reasons.append(f"voice_source_{index}_sha256_missing_or_invalid")
     gates.append(_gate("VOICE_PROVENANCE", not voice_reasons, voice_reasons))
 
-    # Sound identity/binding gate: the upstream atomic binder must have passed.
+    # Require the real upstream binder report shape, not a manually summarized list.
     sound = candidate.get("sound_binding_report") if isinstance(candidate.get("sound_binding_report"), dict) else {}
     sound_contract = contract.get("sound_asset_gate", {})
     sound_reasons: List[str] = []
-    required_report_status = sound_contract.get("binding_report_status_required", "PASS")
-    required_binding_status = sound_contract.get("every_requested_binding_status_required", "PASS")
-    if sound.get("status") != required_report_status:
+    if sound.get("schema_version") != BINDING_REPORT_SCHEMA:
+        sound_reasons.append("sound_binding_report_schema_not_current_binder")
+    if sound.get("status") != sound_contract.get("binding_report_status_required", "PASS"):
         sound_reasons.append("sound_binding_report_not_PASS")
-    bindings = _as_list(sound.get("bindings"))
-    if not bindings:
-        sound_reasons.append("sound_bindings_missing")
-    for index, binding in enumerate(bindings):
-        if not isinstance(binding, dict) or binding.get("status") != required_binding_status:
-            sound_reasons.append(f"sound_binding_{index}_not_PASS")
+    if sound.get("renderer_bindings_atomic") is not True:
+        sound_reasons.append("sound_binding_report_not_atomic")
+    if sound.get("renderer_bindings_complete_for_requested_set") is not True:
+        sound_reasons.append("sound_binding_requested_set_not_complete")
+    if sound.get("renderer_bindings_suppressed_on_hold") is not False:
+        sound_reasons.append("sound_binding_report_indicates_hold_or_suppression")
+    if sound.get("request_set_errors") not in ([], None):
+        sound_reasons.append("sound_binding_request_set_errors_present")
+
+    requested = _as_list(sound.get("requested_asset_ids"))
+    emitted = _as_list(sound.get("renderer_bindings_emitted"))
+    if not requested or len(requested) != len(set(requested)):
+        sound_reasons.append("sound_requested_asset_ids_missing_or_duplicated")
+    if not _exact_set(emitted, requested):
+        sound_reasons.append("sound_renderer_emitted_set_not_exact_requested_set")
+    required_current = set(_as_list(sound_contract.get("required_asset_ids_for_current_patch")))
+    if required_current and not required_current.issubset(set(requested)):
+        sound_reasons.append("sound_current_patch_required_assets_missing")
+
+    rows = _as_list(sound.get("rows"))
+    row_ids = []
+    if not rows:
+        sound_reasons.append("sound_binding_rows_missing")
+    for index, row in enumerate(rows):
+        if not isinstance(row, dict):
+            sound_reasons.append(f"sound_binding_row_{index}_invalid")
+            continue
+        row_ids.append(row.get("asset_id"))
+        if row.get("status") != sound_contract.get("every_requested_binding_status_required", "PASS"):
+            sound_reasons.append(f"sound_binding_row_{index}_not_PASS")
+    if rows and not _exact_set(row_ids, requested):
+        sound_reasons.append("sound_binding_rows_do_not_exactly_cover_requested_set")
     gates.append(_gate("SOUND_ASSET_BINDING", not sound_reasons, sound_reasons))
 
-    # Timing must be real accepted/live production timing, never a fixture.
+    # Production timing must come from the atomic semantic resolver output.
     timing = candidate.get("timing") if isinstance(candidate.get("timing"), dict) else {}
     timing_contract = contract.get("timing_gate", {})
     timing_reasons: List[str] = []
-    if timing.get("grade") not in set(_as_list(timing_contract.get("allowed_grades"))):
-        timing_reasons.append("timing_grade_not_ACCEPTED_ALIGNMENT_or_LIVE_TIMELINE")
-    if timing.get("fixture_only") is not False:
-        timing_reasons.append("timing_is_fixture_or_unproven")
-    if timing.get("production_timestamps") is not True:
-        timing_reasons.append("production_timestamps_not_verified")
+    if timing.get("schema_version") != SEMANTIC_TIMING_SCHEMA:
+        timing_reasons.append("timing_schema_not_current_semantic_resolver")
+    if timing.get("status") != "PASS" or timing.get("production_timing_ready") is not True:
+        timing_reasons.append("semantic_timing_not_complete_PASS")
+    if timing.get("holds") not in ([], None):
+        timing_reasons.append("semantic_timing_holds_present")
+    if timing.get("errors") not in ([], None):
+        timing_reasons.append("semantic_timing_errors_present")
+    timing_requested = _as_list(timing.get("requested_asset_ids"))
+    production_resolved = timing.get("production_resolved") if isinstance(timing.get("production_resolved"), dict) else {}
+    if not timing_requested or len(timing_requested) != len(set(timing_requested)):
+        timing_reasons.append("semantic_timing_requested_set_missing_or_duplicated")
+    if set(production_resolved) != set(timing_requested):
+        timing_reasons.append("semantic_timing_production_set_not_complete")
+    allowed_timing_sources = set(_as_list(timing_contract.get("allowed_grades")))
+    for aid, row in production_resolved.items():
+        events = _as_list(row.get("events")) if isinstance(row, dict) else []
+        if not events:
+            timing_reasons.append(f"semantic_timing_{aid}_events_missing")
+        for event in events:
+            if not isinstance(event, dict) or event.get("source_status") not in allowed_timing_sources:
+                timing_reasons.append(f"semantic_timing_{aid}_source_not_allowed")
     gates.append(_gate("LIVE_TIMING", not timing_reasons, timing_reasons))
 
-    # Protected silence must be derived from the same live timing and protected after FX.
     silence = candidate.get("protected_silence") if isinstance(candidate.get("protected_silence"), dict) else {}
     silence_reasons: List[str] = []
     if silence.get("resolved_from_same_live_timing") is not True:
@@ -115,7 +155,6 @@ def evaluate(contract: Dict[str, Any], candidate: Dict[str, Any]) -> Dict[str, A
         silence_reasons.append("reverb_tail_invasion_enabled_or_unknown")
     gates.append(_gate("PROTECTED_SILENCE", not silence_reasons, silence_reasons))
 
-    # Bus topology must match current bilingual production contract exactly.
     bus_contract = contract.get("buses", {})
     expected_buses = _as_list(bus_contract.get("required_exact_set"))
     bus_reasons: List[str] = []
@@ -123,7 +162,6 @@ def evaluate(contract: Dict[str, Any], candidate: Dict[str, Any]) -> Dict[str, A
         bus_reasons.append("bus_set_does_not_match_required_exact_set")
     gates.append(_gate("BUS_TOPOLOGY", not bus_reasons, bus_reasons))
 
-    # Duck only ambience/music; dialogue and clue bus are immune.
     duck = candidate.get("ducking") if isinstance(candidate.get("ducking"), dict) else {}
     duck_contract = contract.get("ducking", {})
     duck_reasons: List[str] = []
@@ -135,7 +173,6 @@ def evaluate(contract: Dict[str, Any], candidate: Dict[str, Any]) -> Dict[str, A
         duck_reasons.append("ducking_not_event_aware")
     gates.append(_gate("DUCKING", not duck_reasons, duck_reasons))
 
-    # Cate telephone identity chain: clean human performance first, transmission only in post.
     tel_contract = contract.get("cate_telephone_chain", {})
     telephone_events = _as_list(candidate.get("telephone_events"))
     tel_reasons: List[str] = []
@@ -161,7 +198,6 @@ def evaluate(contract: Dict[str, Any], candidate: Dict[str, Any]) -> Dict[str, A
                 tel_reasons.append(f"telephone_event_{index}_{key}_mismatch")
     gates.append(_gate("CATE_TELEPHONE_CHAIN", not tel_reasons, tel_reasons))
 
-    # Exact source master identity is mandatory for post-render selective patching.
     master_contract = contract.get("post_render_patch_mode", {})
     master = candidate.get("master") if isinstance(candidate.get("master"), dict) else {}
     master_reasons: List[str] = []
@@ -176,7 +212,7 @@ def evaluate(contract: Dict[str, Any], candidate: Dict[str, Any]) -> Dict[str, A
 
     failures = [g for g in gates if g["status"] != "PASS"]
     return {
-        "schema_version": "ivdivo.room917_automix_preflight_result/1.0",
+        "schema_version": "ivdivo.room917_automix_preflight_result/1.1",
         "project": contract.get("project", "ROOM917"),
         "episode": contract.get("episode", "E01"),
         "status": PASS if not failures else HOLD,
