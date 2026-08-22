@@ -1,16 +1,60 @@
 {
-  "schema_version": "room917.current_post_render_engineering_pointer/2.0",
-  "updated": "2026-08-21T18:37:00+01:00",
+  "schema_version": "room917.current_post_render_engineering_pointer/2.1",
+  "updated": "2026-08-22T17:19:00+01:00",
   "project": "ROOM917",
   "episode": "E01",
-  "status": "PROJECT_ENGINEERING_PILOT_PASS_PRODUCTION_DATA_GATE_OPEN",
+  "status": "PROJECT_ENGINEERING_PILOT_PASS_P003B_READY_WAITING_FOR_AUDIO",
   "toolkit_path": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/",
   "signal_analyzer_dependency": "AUDIO_PRODUCTION/ROOM917/TOOLS/P003A2_MASTER_ESCROW_v1/p003a2_interval_analyzer.py",
   "semantic_lineage": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/examples/ROOM917_E01_S01_S02_SEMANTIC_CUE_LINEAGE_v1.json",
-  "engine_pipeline": ["MASTER_BYTES","SEMANTIC_CUE_LINEAGE","ACCEPTED_OR_LIVE_TIMING","P003A2_SIGNAL_INTERVALS","EVIDENCE_CLASSIFICATION","P004A_REPAIR_PLAN","PATCH_RENDER","BYTE_REGRESSION","HUMAN_P003B","COMMERCIAL_ABC"],
-  "validation": {"unit_tests": "5_PASS", "synthetic_authorized_patch_chain": "PASS", "unauthorized_change_negative_test": "FAIL_AS_REQUIRED", "production_semantic_blocks": 13},
-  "real_gate": "EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP",
+  "engine_pipeline": [
+    "MASTER_BYTES",
+    "SEMANTIC_CUE_LINEAGE",
+    "ACCEPTED_OR_LIVE_TIMING",
+    "P003A2_SIGNAL_INTERVALS",
+    "EVIDENCE_CLASSIFICATION",
+    "P004A_REPAIR_PLAN",
+    "PATCH_RENDER",
+    "BYTE_REGRESSION",
+    "HUMAN_P003B",
+    "COMMERCIAL_ABC"
+  ],
+  "validation": {
+    "unit_tests": "5_PASS",
+    "synthetic_authorized_patch_chain": "PASS",
+    "unauthorized_change_negative_test": "FAIL_AS_REQUIRED",
+    "production_semantic_blocks": 13
+  },
+  "listener_qc": {
+    "status": "READY_NOT_EXECUTED_WAITING_FOR_IDENTIFIED_AUDIO",
+    "protocol": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RED_TEAM_PROTOCOL_v1.0.md",
+    "result_contract": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json",
+    "scene3_pass_b_queue": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json",
+    "drive_protocol_id": "1DE-eRwLtu7H6aZ_XiQ9OnrkwUIDLmBByVAbUzpIgBgU",
+    "drive_result_id": "1DJdYhC9PRRe5iICFmC0UgOeCG4nCSmKSkIQa5rm-gw4",
+    "drive_scene3_pass_b_queue_id": "1HXg6KmpXGo7yJrDwDo3eLuptROi3h5ZexyRIMI23tlk",
+    "blind_firewall": "PASS_A_FIRST_FREEZE_NOTES_THEN_OPEN_PASS_B_QUEUE",
+    "scene3_v1_4a_evidence_role": "HISTORICAL_REAL_AUDIO_MEASURED_CANDIDATES_NOT_CURRENT_HUMAN_PASS",
+    "scene3_candidate_count": 10,
+    "allowed_questions": [
+      "ACTOR_BELIEF",
+      "AI_AUDIBLE",
+      "DEAD_SCENE",
+      "GEOGRAPHY",
+      "MYSTERY",
+      "SFX_MASKING"
+    ],
+    "repair_rule": "VERIFIED_DEFECT_ONLY_SMALLEST_SCOPE"
+  },
+  "real_gate": "EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP_FOR_P003A2; IDENTIFIED_ACCESSIBLE_AUDIO_FOR_P003B",
   "self_improvement_candidate": "SI-0008",
   "promotion_status": "PROJECT_PILOT_PASS_DOMAIN_PROMOTION_HOLD_FOR_SECOND_PROJECT_REPLICATION",
-  "protected": ["LOCKED_STORY","SCENE3_V1_3E_LINEAGE","NO_FAKE_HUMAN_PASS","NO_BLANKET_FILL","NO_SCALE_UNTIL_E01_V2_PROVEN"]
+  "protected": [
+    "LOCKED_STORY",
+    "SCENE3_V1_3E_LINEAGE",
+    "NO_FAKE_HUMAN_PASS",
+    "BLIND_PASS_A_NOT_CONTAMINATED_BY_PASS_B_CANDIDATES",
+    "NO_BLANKET_FILL",
+    "NO_SCALE_UNTIL_E01_V2_PROVEN"
+  ]
 }
