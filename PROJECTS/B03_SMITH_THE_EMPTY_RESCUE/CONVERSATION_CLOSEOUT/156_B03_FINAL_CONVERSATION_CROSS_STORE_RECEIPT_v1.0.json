@@ -20,6 +20,7 @@
     "addendum_155_merge_sha": "2f783285d311da982f447cb06044786c2cbd7f68",
     "addendum_155_blob_sha": "c922958dc354d0990ae80b886d713b6b08c906c3",
     "post_merge_main_observed": "d4d525e718c3e3b9adc12e05ea0bde9ea6deba6a",
+    "receipt_initial_commit": "29dde9b67cc30d15c0267b4fb40974fef862c8c8",
     "addendum_readback": "PASS"
   },
   "explicit_final_addendum_coverage": [
@@ -34,7 +35,7 @@
   ],
   "hard_stops": {
     "CH30": "PROHIBITED",
-    "locked_story_mutation_without_founder_unlock": false,
+    "locked_story_mutation_without_founder_unlock": "PROHIBITED",
     "provider_voice_ids_claimed": false,
     "provider_dispatch_claimed": false,
     "human_cast_lock_claimed": false,
