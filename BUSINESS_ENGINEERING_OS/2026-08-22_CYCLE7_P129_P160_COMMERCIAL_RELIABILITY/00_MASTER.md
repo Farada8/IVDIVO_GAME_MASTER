@@ -1,39 +1,36 @@
 # BUSINESS ENGINEERING OS — CYCLE7 P129–P160 COMMERCIAL RELIABILITY
 
 **DATE:** 2026-08-22  
-**STATUS:** 32-PROMPT EXECUTION / ENGINEERING + COMMERCIAL-PROOF HARDENING / FAIL-CLOSED  
-**FRESH MAIN BASE:** `c51f3364383f80b1d244ed2bc7721a40f41a06ef`  
-**INHERITS:** Cycle7 P97–P128 authority recovery merged through PR #207.
+**STATUS:** 32/32 EXECUTED / FRESH-MAIN SEMANTIC REPLAY / ENGINEERING + COMMERCIAL-PROOF HARDENING / FAIL-CLOSED  
+**ORIGINAL EXECUTION BASE:** `c51f3364383f80b1d244ed2bc7721a40f41a06ef`  
+**FRESH REPLAY BASE:** `0da038c3460c58ad4d712f907e3ce65b207018f6`  
+**INHERITS:** Cycle7 Cross-Lane Readiness, merged P97–P128 Authority Recovery PR #207, and merged Supplier Identity Evidence Delta PR #216.
 
-## Why this cycle exists
-P97–P128 narrowed the procurement blocker from generic missing information to two explicit missing authorities:
-1. complete current eTenders target attachment/revision/addendum inventory for `8872468`;
-2. verified real SupplierCapabilityPacket.
+## Fresh-main replay
+The original P129–P160 branch diverged after execution and became 32 commits behind current main. Its eight changed files were all additive. They were semantically replayed onto fresh main using the original Git blob identities, rather than force-merging stale history.
 
-This cycle executes the next exact 32 prompts `P129–P160` without pretending either blocker has cleared. The goal is to harden commercial reliability, supplier-evidence intake, privacy, economic null-safety, provenance, two-surface persistence and authority-promotion rules so the engine is useful before market proof arrives and safe when it does.
+Supplier identity is no longer merely a parallel discovery: PR #216 is merged authority. It verifies only `SYNTHESIS-IVDIVO LIMITED` legal name/legal form from private-primary formation evidence and keeps supplier state at `PARTIAL_IDENTITY_ONLY`. Formation NACE 6399 remains formation metadata only.
 
-## Fresh parallel evidence reconciled
-A private Drive evidence delta created after the parent cycle records:
-- legal name `SYNTHESIS-IVDIVO LIMITED` and private-company-limited-by-shares form supported by private formation documents;
-- formation activity classification NACE `6399` recorded in the formation declaration;
-- supplier state therefore improves only to `PARTIAL_IDENTITY_ONLY`;
-- tax clearance, turnover, working capital, insurance, construction/H&S competence, staff, roofing/insulation capability, project references, capacity and procurement eligibility remain unproven.
+Still unverified/null: current company number/CRO status, tax clearance, turnover, working capital, insurance, H&S/PSCS/competence, personnel, roofing/insulation capability, similar-project references, current delivery capacity and procurement eligibility.
 
-Governing laws retained:
+Governing laws:
 `PRIVATE_PRIMARY_IDENTITY_EVIDENCE != CAPABILITY_EVIDENCE`  
 `FORMATION_ACTIVITY_CODE != CURRENT_DELIVERY_CAPABILITY`  
 `HISTORICAL_ANALOG_MAY_GUIDE_RETRIEVAL_NOT_ASSERT_CURRENT_REQUIREMENT`.
 
-## P129–P160 execution summary
-Exactly 32 prompts are executed in `01_P129_P160_EXECUTION_LEDGER.md`.
+## Why this cycle exists
+P97–P128 narrowed the procurement blocker to two explicit evidence owners:
+1. complete current eTenders target attachment/revision/addendum inventory for `8872468`;
+2. verified real SupplierCapabilityPacket.
 
-Result classes:
-- engineering/schema/policy passes are allowed where the task is implementable without external evidence;
-- real-user, full-pack, award/outcome, delivery-time and price-dependent tasks remain explicit HOLD/EXTERNAL_REQUIRED;
-- no HOLD is converted into PASS by prompt-count pressure.
+P129–P160 executes commercial-reliability engineering around those blockers without pretending either has cleared.
+
+## P129–P160 execution
+Exactly 32 prompts were executed in `01_P129_P160_EXECUTION_LEDGER.md`.
+
+Engineering/schema/policy work may PASS where no external evidence is required. Real-user, full-pack, award/outcome, observed-delivery-time and external-price tasks remain explicit HOLD/EXTERNAL_REQUIRED. Prompt-count pressure never converts a HOLD into PASS.
 
 ## New engineering layer
-This cycle adds:
 - residual-paid-job / substitute router;
 - decision-utility instrumentation with real-user requirement;
 - external-price and contribution-margin null-safety;
@@ -54,10 +51,14 @@ This cycle adds:
 `PARTIAL_IDENTITY_ONLY != VERIFIED_SUPPLIER_PACKET`  
 `PA != K != S != E`.
 
-Public-only market ceiling remains `E2+`. PA4/PA5/E3/E4 remain false unless their explicit evidence gates are met. Price, WTP, contribution margin, profitability, procurement eligibility, legal clearance and award probability remain null/unproven.
+Public-only market ceiling remains `E2+`. PA4/PA5/E3/E4 remain false unless explicit evidence gates are met. Price, WTP, contribution margin, profitability, procurement eligibility, legal clearance and award probability remain null/unproven.
 
-## Next64 reconciliation
-A parallel Drive candidate already contains an exact 64-card `P161–P224` backlog. This cycle reuses it only after semantic reconciliation with merged P97–P128 authority and the P129–P160 outcomes. It remains DESIGNED / NOT EXECUTED.
+## Next64
+The reconciled next backlog is exactly `P161–P224`, DESIGNED / NOT EXECUTED. It concentrates on target-pack authority, supplier-capability primary evidence, atomic requirement joins, blind PA4, real decision use and transaction-only E4.
 
 ## Current causal gate
 `CURRENT TARGET PACK + VERIFIED SUPPLIER PACKET -> ATOMIC REQUIREMENT JOIN -> GAP ROUTING -> BOUNDED BID/HOLD/NO-BID CANDIDATE -> BLIND SAME-PACKET PA4 -> REAL TARGET-USER DECISION USE -> PA5 -> E3 ONLY ON REAL BEHAVIOR -> E4 ONLY ON TRANSACTION EVIDENCE`.
+
+## Persistence
+Google Drive Cycle folder: `1XZfTCPvGDWtnR6VITmd4dK6BeqzHzmmT`.
+Raw copyrighted library remains Drive-only. This cycle adds engineering artifacts, not raw-source duplication.
