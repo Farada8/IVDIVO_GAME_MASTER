@@ -1,5 +1,5 @@
 {
-  "schema": "ivdivo.general_business.pew03_article50_pack/1.2",
+  "schema": "ivdivo.general_business.pew03_article50_pack/1.3",
   "date": "2026-08-22",
   "gate": "P-EW03",
   "lane": "CF-01",
@@ -51,7 +51,23 @@
     "m1_route_changed": false,
     "market_rank_changed": false,
     "external_action_authorized": false,
-    "verification": "PENDING_CURRENT_PATCH_PR_CI"
+    "verification": "MERGED_IMPLEMENTATION_VERIFIED",
+    "implementation_pr": 412,
+    "implementation_head": "0fc63534eceba746d0ef43cc93552905d2c6b38e",
+    "implementation_merge_sha": "e340213a88b9a59513209819ba966aa3cb7faad6",
+    "exact_head_ci": {
+      "all_success": true,
+      "count": 7,
+      "runs": {
+        "article50_pack": 32570316435,
+        "p_ew05_compatibility": 32570316420,
+        "discovery_engine": 32570316412,
+        "buyer_evidence": 32570316384,
+        "fatal_tests": 32570316398,
+        "offer_engineering": 32570316408,
+        "opp37_ai_vs_seo": 32570316421
+      }
+    }
   },
   "core_guards": [
     "PROVIDER_OBLIGATION_NEQ_DEPLOYER_OBLIGATION",
@@ -76,5 +92,5 @@
   },
   "external_action_authorized": false,
   "current_general_business_authority": "P_EW05_ALL_WIP3_M1_NO_WTP",
-  "next_gate": "VERIFY_REGULATORY_DRIFT_PATCH_CI_THEN_RETURN_TO_INTERNAL_DRIFT_MONITOR_UNLESS_EXTERNAL_TESTING_IS_EXPLICITLY_AUTHORIZED"
+  "next_gate": "INTERNAL_REGULATORY_PROTOCOL_DRIFT_MONITOR_UNLESS_EXTERNAL_TESTING_IS_EXPLICITLY_AUTHORIZED"
 }
