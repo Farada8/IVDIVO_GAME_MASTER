@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.4",
-  "updated": "2026-08-21",
+  "schema_version": "1.5",
+  "updated": "2026-08-22",
   "status": "CURRENT_PROJECT_DOWNSTREAM_STATE_NOT_STORY_CANON",
   "project_id": "D04",
   "title": "SEVEN NIGHTS BEFORE CODE BLUE",
@@ -46,7 +46,7 @@
     "typography_rule": "Provider requests must use exact Recording Master text; audition-side curly apostrophes do not override master straight-apostrophe text."
   },
   "g4_transfer_prototype": {
-    "status": "MACHINE_PASS_HUMAN_LISTENER_PACKET_READY",
+    "status": "MACHINE_PASS_HUMAN_LISTENER_V2_READY",
     "format": "24BIT_48KHZ_24_SECONDS",
     "live_provider_calls": 0,
     "moss_radio_line_rendered": false,
@@ -54,8 +54,8 @@
     "machine_phone_midband_delta_db_600_1800": 7.28,
     "github_report": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_PROTOTYPE_REPORT_v1.md",
     "github_qc": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_PROTOTYPE_MACHINE_QC_v1.json",
-    "github_blind_packet": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_PACKET_v1.json",
-    "github_internal_scoring_key": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_KEY_INTERNAL_v1.json",
+    "github_blind_packet_v1": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_PACKET_v1.json",
+    "github_internal_scoring_key_v1": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_KEY_INTERNAL_v1.json",
     "drive_assets": {
       "stereo_wav": "1HKcTVYJLWMJSXQIfFpXDc8XylrMbSZTk",
       "mono_wav": "1JiDJI9cLGxsBayVGO1YkBqxbXKwpQteg",
@@ -67,10 +67,34 @@
       "blind_mono_B": "1OUJuaXOd2IoqkejojfZST2s6VHtDUgIj",
       "blind_phone_A": "1uViPn4frg3lthuOyelU3sDGolMuY3rCG",
       "blind_phone_B": "1MD21wCxCCrgee6GuP9golnX8j1935nz-",
-      "blind_listener_packet": "1Nb8YZ0PJrc__aVDZzxC-47Un79cLPcyn",
-      "blind_internal_key": "176yExP9bdUuFpF5vbB7eH8wImX-W2EcR"
+      "blind_listener_packet_v1": "1Nb8YZ0PJrc__aVDZzxC-47Un79cLPcyn",
+      "blind_internal_key_v1": "176yExP9bdUuFpF5vbB7eH8wImX-W2EcR"
     },
-    "human_gate": "READY_REQUIRES_REAL_BLIND_RESPONSE"
+    "v1_human_method_disposition": "PRELIMINARY_SINGLE_LISTENER_METHOD_SUPERSEDED_FOR_HUMAN_PASS_CLAIM",
+    "human_gate": "READY_REQUIRES_3_REAL_INDEPENDENT_V2_LISTENER_RESPONSES"
+  },
+  "g4_human_screen_v2": {
+    "status": "READY_FOR_3_INDEPENDENT_LISTENERS",
+    "human_result": "PENDING",
+    "test_scope": "INTERNAL_REPLICATED_PRODUCTION_SCREEN_NOT_ITU_COMPLIANCE",
+    "method_source_pass": "BOOK_INTELLIGENCE_ENGINE/16_ITU_BS1116_AUDIO_SUBJECTIVE_TEST_SOURCE_PASS_v1.0.md",
+    "github_protocol": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_PROTOCOL_v2.json",
+    "github_internal_key": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_KEY_INTERNAL_v2.json",
+    "drive_parent_folder_id": "11DuG5frwv9jFyT0boD0bVOuQgIdkF65C",
+    "listeners": {
+      "LISTENER_01": {"folder_id":"1jKvaK2xWq4D5c7FGzLJn3fmpuLnVjSX2","instruction_doc_id":"19Sk8wMF1EMgi2pkJnNV6G1m9gdY_-Qieq2vSCaefhts","result":"PENDING"},
+      "LISTENER_02": {"folder_id":"17dmI6pUznDgVDRGF_vgE0EiZcsvPY5Xn","instruction_doc_id":"1qIcUPWA4bpRjYQnbF99nK-Ziwbv_Yprj7w3FGHPMVzU","result":"PENDING"},
+      "LISTENER_03": {"folder_id":"1lahjeVPpjDJM9UcnxZlhvrWDLjnZgbyq","instruction_doc_id":"1_gJewEK-mliPJpKEX2rHW4DzDpoondUbxT3g-FIf068","result":"PENDING"}
+    },
+    "counterbalanced_modality_order": true,
+    "visible_ab_assignment_varied": true,
+    "cant_tell_allowed": true,
+    "fixed_volume_within_session": true,
+    "feedback_between_trials": false,
+    "provider_calls": 0,
+    "audio_assets_changed": false,
+    "story_changes": 0,
+    "pass_scope": "PASS_REPLICATED_INTERNAL_SCREEN_ONLY_NOT_FORMAL_STATISTICAL_VALIDATION"
   },
   "protected_audio_facts": [
     "NORMAL_TRANSFER_MUST_DIFFER_FROM_SECOND_TRANSFER_IN_MONO_AND_PHONE_PLAYBACK",
@@ -79,8 +103,8 @@
     "ROWAN_MUST_NOT_CARRY_ERASED_AFFECTION_INTO_NEW_CYCLE",
     "FINAL_NON_RESET_IS_PROVED_BY_ORDINARY_CONTINUITY_BEFORE_MUSIC"
   ],
-  "next_action": "REAL_HUMAN_BLIND_TRANSFER_LISTEN_RESPONSE_THEN_SCORE_AGAINST_INTERNAL_KEY; IF PASS, G4 MAY ADVANCE SUBJECT TO REAL_MOSS_RADIO_INTEGRATION; IF FAIL, SELECTIVE_SOUND_REPAIR_ONLY",
-  "current_blocker": "HUMAN_SIGNAL_REQUIRED_FOR_G4_PERCEPTUAL_PASS",
+  "next_action": "RUN_REAL_HUMAN_LISTENER_01_02_03_V2_INDEPENDENTLY_AND_SCORE_ONCE_AGAINST_INTERNAL_KEY; IF PASS, G4 MAY ADVANCE SUBJECT_TO_REAL_MOSS_RADIO_INTEGRATION; IF FAIL_OR_BORDERLINE, SELECTIVE_SOUND_REPAIR_ONLY",
+  "current_blocker": "REAL_HUMAN_SIGNAL_REQUIRED_FOR_G4_PERCEPTUAL_RESULT",
   "highest_blocked_live_obligation": "AUTHENTICATED_READ_ONLY_PROVIDER_MODEL_AND_VOICE_INVENTORY_THEN_BIND_EXACTLY_SIX_CANDIDATE_A_VOICE_IDS_AND_RUN_EXACTLY_SIX_S0_TECHNICAL_CANARIES",
   "parallel_safe_branches": [
     "VISUAL_CHARACTER_IDENTITY_LOCK_AND_KEY_ART_AB_VARIANTS",
@@ -92,6 +116,8 @@
     "DO_NOT_REOPEN_STORY_TEXT_FOR_DOWNSTREAM_PROVIDER_CONVENIENCE",
     "DO_NOT_SCALE_VIDEO_ASSETS_BEFORE_CHARACTER_VISUAL_CONTINUITY_IS_LOCKED",
     "DO_NOT_MARK_TRANSFER_PROTOTYPE_HUMAN_PASS_FROM_MACHINE_METRICS_ONLY",
+    "DO_NOT_MARK_G4_HUMAN_PASS_FROM_ONE_V1_LISTENER_RESPONSE",
+    "DO_NOT_CLAIM_BS1116_COMPLIANCE_FROM_INTERNAL_V2_SCREEN",
     "DO_NOT_RENDER_SYNTHETIC_MOSS_SPEECH_AS_CAST_EVIDENCE",
     "HUMAN_SIGNAL_REMAINS_EXTERNAL_EVIDENCE"
   ],
