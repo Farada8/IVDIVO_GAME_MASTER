@@ -1,0 +1,61 @@
+name: General Business Delta03 Radar Decision
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/32_EARLY_WAVE_RADAR_DELTA03_2026-08-22.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/33_EARLY_WAVE_RADAR_DELTA03_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md'
+      - '.github/workflows/general-business-delta03-radar.yml'
+
+jobs:
+  delta03-decision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Delta03 machine decision
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          state = json.loads((root / '33_EARLY_WAVE_RADAR_DELTA03_STATE.json').read_text(encoding='utf-8'))
+          assert state['decision']['disposition'] == 'PROTECT_NO_CHANGE'
+          assert state['decision']['advance_to_smallest_proof'] is None
+          assert state['decision']['new_wip'] is False
+          assert state['wip']['count'] == 3
+          assert state['wip']['delta03_promotion'] is False
+          assert len(state['candidates']) == 8
+          assert all(c['advance_to_smallest_proof'] is False for c in state['candidates'])
+          assert state['proof_boundary']['wtp'] is None
+          assert state['proof_boundary']['price'] is None
+          assert state['proof_boundary']['transactions'] == 0
+          assert state['proof_boundary']['wip_promotion'] is False
+          assert state['proof_boundary']['external_action_authorized'] is False
+          assert state['drive']['semantic_readback'] == 'PASS'
+          assert state['readback_marker'] == 'EARLY-WAVE-RADAR-DELTA03-PROTECT-NO-CHANGE-CRA-CBAM-PPWR-MACHINERY-SUBSTITUTION-NO-WIP-20260822'
+          print('Delta03 machine state: PASS')
+          PY
+      - name: Validate no accidental winner or proof promotion in narrative
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/32_EARLY_WAVE_RADAR_DELTA03_2026-08-22.md')
+          text = p.read_text(encoding='utf-8')
+          required = [
+              'DELTA03_ADVANCE_TO_SMALLEST_PROOF = NONE',
+              'DELTA03_DISPOSITION = PROTECT_NO_CHANGE',
+              'WIP_PROMOTION_FROM_DELTA03 = FALSE',
+              'WTP = UNKNOWN',
+              'PRICE = NULL',
+              'TRANSACTIONS = 0',
+              'EXTERNAL_ACTION_AUTHORIZED = FALSE',
+          ]
+          for marker in required:
+              assert marker in text, marker
+          assert 'MARKET_WINNER = NONE' in text
+          print('Delta03 no-promotion narrative gate: PASS')
+          PY
