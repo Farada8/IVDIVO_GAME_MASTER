@@ -1,0 +1,59 @@
+# proof-source-sync: 03cde25e4b990eab8fc2fac83a0d6da0895b794e
+name: Absolute Mathematics Run5 Lean
+
+on:
+  push:
+    branches:
+      - "absolute-math-run5-amsi225-256-2026-08-21"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  lean-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bootstrap pinned Lean and generate Lake manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.elan/bin:$PATH"
+          cd ABSOLUTE_MATHEMATICS/RUN5_AMSI225_256_2026-08-21/formal/lean
+          lean --version
+          lake --version
+          lake update
+          test -s lake-manifest.json
+
+      - name: Lean build + bundled independent leanchecker
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: ABSOLUTE_MATHEMATICS/RUN5_AMSI225_256_2026-08-21/formal/lean
+          auto-config: false
+          build: true
+          test: false
+          lint: false
+          use-mathlib-cache: false
+          use-github-cache: false
+          leanchecker: true
+          nanoda: false
+
+      - name: Finite property cross-checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 ABSOLUTE_MATHEMATICS/RUN5_AMSI225_256_2026-08-21/formal/lean/property_crosscheck.py
+
+      - name: Source escape audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILE=ABSOLUTE_MATHEMATICS/RUN5_AMSI225_256_2026-08-21/formal/lean/AbsoluteMathRun5.lean
+          if grep -En '(^|[^[:alnum:]_])(sorry|admit|axiom)([^[:alnum:]_]|$)' "$FILE"; then
+            echo "forbidden proof escape detected"
+            exit 1
+          fi
