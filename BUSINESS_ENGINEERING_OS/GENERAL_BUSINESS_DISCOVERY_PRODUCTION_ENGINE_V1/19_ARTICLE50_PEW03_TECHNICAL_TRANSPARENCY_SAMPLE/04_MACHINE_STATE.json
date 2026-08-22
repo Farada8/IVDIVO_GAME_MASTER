@@ -1,7 +1,7 @@
 {
   "schema": "ivdivo.general_business.article50_pew03/0.1",
   "date": "2026-08-22",
-  "status": "P_EW03_ENGINEERING_CANDIDATE_CI_PENDING",
+  "status": "P_EW03_ENGINEERING_CANDIDATE_CI_PENDING_DRIVE_VERIFIED",
   "parent_candidate": "CF-01_AI_ACT_ARTICLE50_TECHNICAL_TRANSPARENCY",
   "authority_cut": {
     "regulation": "EU_2024_1689_ARTICLE_50",
@@ -28,8 +28,9 @@
   "drive": {
     "folder_id": "15N2xm8iEYe5MBg7Jp3W1qazgLAdkD9Qp",
     "document_id": "1zG-MB0LZ64hOkh4NXOQgP6phWo0p-uFcZ6pJjaXqo60",
+    "readback_revision_id": "AIroW37ofP7o8TQ3CM2jo6mc154uj-YdYPNbD7MOPn9Ji_AQ1CmNTd0WbHh4Kiyn_7bfVgGXnzNR7xTVa9kGG9l5jk6O7rKLTqCLA5ajkro",
     "expected_readback_marker": "ARTICLE50-P-EW03-TECHNICAL-PREFLIGHT-NONLEGAL-NO-COMPLIANCE-CERT-NO-MARKET-PROOF",
-    "readback_status": "PENDING"
+    "readback_status": "PASS"
   },
   "proof_boundary": {
     "public_evidence_ceiling": "E2_PLUS_ENGINEERING",
