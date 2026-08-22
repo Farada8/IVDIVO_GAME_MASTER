@@ -1,0 +1,66 @@
+{
+  "schema": "ivdivo.business.general_buyer_problem_evidence/1.0",
+  "date": "2026-08-22",
+  "status": "P09_P16_EXECUTED_INTERNAL_ONLY",
+  "dependency": "P17_P24_FATAL_TESTS_MERGED",
+  "authority_effect": "BUYER_PROBLEM_AND_EVIDENCE_SCHEMA_ONLY",
+  "opportunities": ["OPP-33", "OPP-36", "OPP-37"],
+  "buyer_role_model": {
+    "user_ne_buyer_ne_budget_owner": true,
+    "role_verification_required": true,
+    "public_candidate_is_buyer": false
+  },
+  "screening_queues": {
+    "OPP-33": {"slots": 10, "status": "PUBLIC_SCREENING_ONLY", "demand_proof": false},
+    "OPP-36": {"slots": 10, "status": "ARCHETYPE_SCREENING_ONLY_REQUIRES_ACTUAL_AI_USE_VERIFICATION", "demand_proof": false},
+    "OPP-37": {"slots": 10, "status": "PUBLIC_TOURISM_SCREENING_ONLY_DIRECT_BOOKING_VERIFY_BEFORE_TEST", "demand_proof": false}
+  },
+  "evidence_ladder": ["E0_SCREENING", "E1_STATED_PROBLEM", "E2_ARTIFACT_OR_DATA_RELEASE", "E3_RESOURCE_COMMITMENT", "E4_COMMERCIAL_COMMITMENT", "E5_TRANSACTION", "E6_REPEAT"],
+  "fatal_behavior_floor": "E2_OR_HIGHER_REVIEW_REQUIRED",
+  "interview_protocol": "NON_LEADING_LAST_REAL_EVENT_ARTIFACT_FIRST",
+  "cost_of_delay": {
+    "OPP-33": "FORMULA_DEFINED_INPUTS_NULL",
+    "OPP-36": "FORMULA_DEFINED_INPUTS_NULL_NO_FINE_EXPECTATION",
+    "OPP-37": "FORMULA_DEFINED_INPUTS_NULL_NO_LOST_BOOKING_CLAIM"
+  },
+  "contradiction_policy": "CONTRADICTION_NEVER_AVERAGES_AWAY",
+  "next64": {
+    "total": 64,
+    "executed_count": 24,
+    "executed_ranges": ["P01-P08", "P09-P16", "P17-P24"],
+    "unexecuted_count": 40,
+    "unexecuted_range": "P25-P64"
+  },
+  "portfolio": {
+    "wip_count": 3,
+    "state": "S3_FATAL_TEST_READY",
+    "next_internal_action": "RUN_TEST_37_INTERNAL_NEGATIVE_CONTROL",
+    "external_tests_gated": ["TEST-33", "TEST-36"]
+  },
+  "evidence": {
+    "buyer_behavior_observed": false,
+    "willingness_to_pay": null,
+    "unit_economics": null,
+    "transaction_evidence": null,
+    "repeatability": false,
+    "proof_promotion": false
+  },
+  "external_action": {
+    "authorized": false,
+    "outreach_performed": false,
+    "spend": false,
+    "contracting": false
+  },
+  "guards": [
+    "PUBLIC_SCREENING_CANDIDATE_NEQ_BUYER",
+    "USER_NEQ_BUYER_NEQ_BUDGET_OWNER",
+    "INTERVIEW_NEQ_BEHAVIOR",
+    "E1_VERBAL_ONLY_CANNOT_PASS_FATAL_TEST",
+    "E5_TRANSACTION_NEQ_REPEATABILITY",
+    "CONTRADICTION_NEVER_AVERAGES_AWAY",
+    "MISSING_EVIDENCE_STAYS_NULL",
+    "VENDOR_MARKETING_NEQ_END_CUSTOMER_OUTCOME",
+    "NO_OUTREACH_WITHOUT_EXPLICIT_AUTHORIZATION",
+    "NO_PROOF_PROMOTION_FROM_SCHEMA_OR_SCREENING"
+  ]
+}
