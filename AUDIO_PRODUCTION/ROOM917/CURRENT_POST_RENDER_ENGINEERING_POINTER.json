@@ -1,6 +1,6 @@
 {
-  "schema_version": "room917.current_post_render_engineering_pointer/2.1",
-  "updated": "2026-08-22T17:19:00+01:00",
+  "schema_version": "room917.current_post_render_engineering_pointer/2.2",
+  "updated": "2026-08-22T18:25:48+01:00",
   "project": "ROOM917",
   "episode": "E01",
   "status": "PROJECT_ENGINEERING_PILOT_PASS_P003B_READY_WAITING_FOR_AUDIO",
@@ -8,6 +8,7 @@
   "signal_analyzer_dependency": "AUDIO_PRODUCTION/ROOM917/TOOLS/P003A2_MASTER_ESCROW_v1/p003a2_interval_analyzer.py",
   "semantic_lineage": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/examples/ROOM917_E01_S01_S02_SEMANTIC_CUE_LINEAGE_v1.json",
   "engine_pipeline": [
+    "RECOVERY_INTAKE_GATE",
     "MASTER_BYTES",
     "SEMANTIC_CUE_LINEAGE",
     "ACCEPTED_OR_LIVE_TIMING",
@@ -23,7 +24,28 @@
     "unit_tests": "5_PASS",
     "synthetic_authorized_patch_chain": "PASS",
     "unauthorized_change_negative_test": "FAIL_AS_REQUIRED",
-    "production_semantic_blocks": 13
+    "production_semantic_blocks": 13,
+    "recovery_intake_local_unit_tests": "5_PASS"
+  },
+  "recovery_intake": {
+    "gate": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/recovery_intake_gate.py",
+    "schema": "room917.recovery_intake_gate/1.0",
+    "master_identity": {
+      "sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+      "size_bytes": 189558764,
+      "duration_seconds": 658.190,
+      "sample_rate_hz": 48000,
+      "bit_depth": 24,
+      "channels": 2
+    },
+    "routes": {
+      "EXACT_MASTER_BYTES_PASS": "P003A2_SIGNAL_INTERVALS",
+      "ACCEPTED_OR_LIVE_TIMING_PASS": "LINEAGE_TIMING_RESOLUTION__P003A2_STILL_WAITS_FOR_MASTER_BYTES",
+      "TRUSTED_EXACT_P003A2_INTERVAL_OUTPUT_PASS": "EVIDENCE_CLASSIFICATION",
+      "NO_VALID_RECOVERY_INPUT": "HOLD_RECOVERY__CONTINUE_INDEPENDENT_SAFE_FRONTIER"
+    },
+    "never_authorizes_patch": true,
+    "never_infers_missing_evidence": true
   },
   "listener_qc": {
     "status": "READY_NOT_EXECUTED_WAITING_FOR_IDENTIFIED_AUDIO",
