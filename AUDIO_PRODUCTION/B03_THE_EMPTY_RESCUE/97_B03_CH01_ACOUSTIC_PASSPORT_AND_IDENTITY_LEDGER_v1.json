@@ -1,0 +1,95 @@
+{
+  "artifact": "B03_CH01_ACOUSTIC_PASSPORT_AND_IDENTITY_LEDGER_v1",
+  "date": "2026-08-22",
+  "status": "PASS_PLAN / LIVE_ASSETS_PENDING",
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "spaces": [
+    {
+      "space_id": "DISPATCH_CENTRE_WET_WEATHER",
+      "physical_scale": "working emergency dispatch room; exact architecture not invented",
+      "noise_floor": "low operational electronics/HVAC + distant human work, restrained",
+      "distinctive_background": "heavy exterior rain present but never masking speech",
+      "listener_poa": "near Nika workstation / operational listener perspective",
+      "stereo_intent": "subtle room width; speech remains center-intelligible",
+      "mono_fold_risk": "LOW",
+      "forbidden_false_clues": ["ominous drone", "supernatural hum", "unmotivated alarm bed"]
+    },
+    {
+      "space_id": "DISPATCH_CENTRE_HYDRO_PHONE",
+      "physical_scale": "same dispatch room + ordinary phone channel",
+      "noise_floor": "inherit dispatch bed",
+      "distinctive_background": "phone-mediated Andrej without comic telephone exaggeration",
+      "listener_poa": "Nika-side monitoring perspective",
+      "stereo_intent": "room center + narrow mediated caller image",
+      "mono_fold_risk": "LOW"
+    },
+    {
+      "space_id": "DISPATCH_CENTRE_REMOTE_GALLERY_CHECK",
+      "physical_scale": "dispatch room with remote call/radio evidence",
+      "noise_floor": "operational bed lowered around clue-bearing audio",
+      "distinctive_background": "unknown call texture distinct from ordinary weak-mobile hiss; field-radio check separately identifiable",
+      "listener_poa": "dispatch operator evidence perspective",
+      "stereo_intent": "mediated channels identifiable by texture, never by stereo-only clue",
+      "mono_fold_risk": "MEDIUM if channel identity depends on panning; therefore forbidden"
+    },
+    {
+      "space_id": "DISPATCH_CENTRE_LIVE_COLLISION_MULTICHANNEL",
+      "physical_scale": "dispatch room coordinating witness phone + rescue radio + stored playback",
+      "noise_floor": "controlled; operational activity increases but causal sounds stay readable",
+      "distinctive_background": "rain/live gallery context may be present without invented signature events",
+      "listener_poa": "Nika workstation with intelligible switching among live and recorded sources",
+      "stereo_intent": "source separation helpful but not required for comprehension",
+      "mono_fold_risk": "HIGH if simultaneous live/playback cues collapse; require mono test"
+    },
+    {
+      "space_id": "DISPATCH_CENTRE_EVIDENCE_REVIEW",
+      "physical_scale": "same dispatch room after acute incident load falls",
+      "noise_floor": "low operational bed",
+      "distinctive_background": "no ominous aftermath texture",
+      "listener_poa": "close procedural review perspective",
+      "stereo_intent": "stable, quiet, speech-led",
+      "mono_fold_risk": "LOW"
+    }
+  ],
+  "identity_ledger": [
+    {
+      "identity_id": "ID_DRAINAGE_FLAP_FOUR_IMPACTS",
+      "type": "rhythm+mechanism",
+      "source_asset": null,
+      "story_requirement": "first-call metal impacts and later live drainage-flap impacts must be recognizably the same event family",
+      "core_pattern": "three hollow impacts with uneven internal spacing, then a fourth after a longer pause",
+      "allowed_variation": ["small timing drift", "natural amplitude variation", "space/filter changes between remote call and live field", "wind-driven mechanical irregularity"],
+      "forbidden_variation": ["different impact count", "reordered pattern", "musicalized motif", "perfect sample-copy feel", "supernatural resonance", "stereo-only identity"],
+      "dependent_cues": ["B03_CH01_SFX004", "B03_CH01_SFX008", "B03_CH01_SFX010"],
+      "acceptance": "blind listener can notice family relationship after story setup without being told it is literally the same file",
+      "status": "WORKING_IDENTITY_LOCK"
+    },
+    {
+      "identity_id": "ID_UNKNOWN_CALLER_SOURCE_VOICE",
+      "type": "voice/source identity",
+      "source_asset": null,
+      "story_requirement": "later diegetic playback preserves the accepted first-caller source identity",
+      "allowed_variation": ["recording/playback filtering", "level matching", "bandwidth limitation consistent with storage/playback"],
+      "forbidden_variation": ["new independent acting take presented as same recording", "identity-changing pitch shift", "ghost effect", "synthetic glitch coding"],
+      "dependent_cues": ["UNKNOWN_PRECURSOR_CALLER live units", "B03_CH01_SFX009", "UNKNOWN_PRECURSOR_CALLER DIEGETIC_PLAYBACK_TRANSCRIPT units"],
+      "acceptance": "source-identity continuity is audible in A/B comparison",
+      "status": "WORKING_IDENTITY_LOCK"
+    },
+    {
+      "identity_id": "ID_MEDIATED_CHANNEL_GRAMMAR",
+      "type": "device/channel family",
+      "source_asset": null,
+      "story_requirement": "ordinary phone, malformed unknown call, field radio and stored playback remain distinguishable without exaggerated effects",
+      "allowed_variation": ["bandwidth", "noise texture", "compression", "distance"],
+      "forbidden_variation": ["effects that obscure words", "horror processing", "military-radio cliché", "source identity depending on hard pan"],
+      "dependent_cues": ["B03_CH01_SFX003", "B03_CH01_SFX006", "B03_CH01_SFX007", "B03_CH01_SFX009"],
+      "status": "WORKING"
+    }
+  ],
+  "global_fail_closed_rules": [
+    "No acoustic treatment may imply precursor ontology.",
+    "No critical clue may depend on stereo alone.",
+    "No rain/room bed may mask dispatch instructions or injury details.",
+    "Local responder competence must remain acoustically credible."
+  ]
+}
