@@ -1,0 +1,39 @@
+{
+  "schema": "ivdivo.business.unlock_input_validator/1.1",
+  "date": "2026-08-22",
+  "target_case": "PROC-BALLYBUNION-8872468",
+  "status": "ENGINEERING_HELPER_PENDING_CI",
+  "authority_effect": "NONE",
+  "parent_execution_count_before": 17,
+  "parent_execution_count_after": 17,
+  "roots": {
+    "ROOT_A": "TARGET_PACK_NOT_ACQUIRED",
+    "ROOT_B": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET"
+  },
+  "control_chain": [
+    "UNLOCK_INPUT",
+    "INPUT_VALIDATOR",
+    "PERSISTENCE_READBACK",
+    "CORE_RECONCILIATION",
+    "BUSINESS_RESUME_GATE_V1"
+  ],
+  "reuses": [
+    "P257-P264_AUTHENTICATED_PACK_INGEST",
+    "P265-P272_BIDDER_DESIGNATION_V2",
+    "BUSINESS_RESUME_GATE_V1"
+  ],
+  "deterministic_canaries": 14,
+  "real_positive_root_event_count": 0,
+  "current_resume_route": "PROTECT_NO_CHANGE",
+  "proof_frontier": {
+    "public_derived_ceiling": "E2_PLUS",
+    "artifact_plane": "PA3",
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "E4": false
+  },
+  "external_action_authorized": false,
+  "next_real_gates": [225, 235],
+  "law": "VALIDATED_INPUT_NEQ_AUTHORITY_UNTIL_PERSISTENCE_READBACK_AND_CORE_RECONCILIATION"
+}
