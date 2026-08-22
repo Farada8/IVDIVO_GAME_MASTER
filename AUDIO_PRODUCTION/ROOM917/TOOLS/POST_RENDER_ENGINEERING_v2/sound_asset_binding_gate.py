@@ -139,8 +139,6 @@ def compile_shared_bindings(shared_map: dict, atomic_bindings: dict) -> tuple[di
             }
             rows.append({"canonical_id": canonical_id, "status": "PASS", "en_asset_id": en_asset_id, "sha256": binding["sha256"]})
         elif identity_class == "PARAMETER_SHARED":
-            # Parameter-shared identities (notably the lullaby pitch family) are
-            # not byte-bindable here. They require their own parameter/pitch gate.
             rows.append({
                 "canonical_id": canonical_id,
                 "status": "HOLD_PARAMETER_GATE",
@@ -170,6 +168,15 @@ def main() -> int:
     if bool(args.shared_map) != bool(args.out_shared_bindings):
         raise SystemExit("--shared-map and --out-shared-bindings must be supplied together")
 
+    requested_asset_ids = sorted(candidates)
+    declared_requested = payload.get("requested_asset_ids") if isinstance(payload, dict) else None
+    request_set_errors = []
+    if declared_requested is not None:
+        if not isinstance(declared_requested, list) or len(declared_requested) != len(set(declared_requested)):
+            request_set_errors.append("DECLARED_REQUESTED_ASSET_IDS_INVALID_OR_DUPLICATED")
+        elif set(declared_requested) != set(requested_asset_ids):
+            request_set_errors.append("DECLARED_REQUESTED_ASSET_IDS_DO_NOT_MATCH_CANDIDATE_SET")
+
     specs = contract.get("assets", {})
     report_rows = []
     passed_library_candidates = {}
@@ -183,12 +190,13 @@ def main() -> int:
         if r["status"] == "PASS":
             passed_library_candidates[asset_id] = renderer_binding(asset_id, cand)
 
-    overall = "PASS" if report_rows and all(r["status"] == "PASS" for r in report_rows) else "HOLD"
-
-    # Critical fail-closed change: a renderer-facing binding set is atomic.
-    # Individual PASS candidates remain visible in the report, but if any member
-    # of the requested binding set is HOLD, the renderer output is deliberately empty.
+    overall = "PASS" if not request_set_errors and report_rows and all(r["status"] == "PASS" for r in report_rows) else "HOLD"
     atomic_bindings = passed_library_candidates if overall == "PASS" else {}
+    complete_for_requested_set = overall == "PASS" and set(atomic_bindings) == set(requested_asset_ids)
+    if not complete_for_requested_set:
+        atomic_bindings = {}
+        if overall == "PASS":
+            overall = "HOLD"
 
     args.out_bindings.parent.mkdir(parents=True, exist_ok=True)
     args.report.parent.mkdir(parents=True, exist_ok=True)
@@ -206,14 +214,18 @@ def main() -> int:
         "schema_version": "room917.sound_asset_binding_gate/1.1",
         "status": overall,
         "contract": str(args.contract),
+        "requested_asset_ids": requested_asset_ids,
+        "declared_requested_asset_ids": declared_requested,
+        "request_set_errors": request_set_errors,
         "rows": report_rows,
         "individually_passed_library_candidates": sorted(passed_library_candidates),
         "renderer_bindings_atomic": True,
+        "renderer_bindings_complete_for_requested_set": complete_for_requested_set,
         "renderer_bindings_emitted": sorted(atomic_bindings),
         "renderer_bindings_suppressed_on_hold": overall != "PASS",
         "shared_identity_rows": shared_rows,
         "shared_byte_bindings_emitted": sorted(shared_bindings),
-        "law": "A candidate may pass library QC individually, but renderer-facing binding output is atomic for the requested set. Shared BYTE_SHARED identities additionally resolve through the bilingual identity map. PARAMETER_SHARED identities require a separate pitch/parameter gate. No filename-only binding."
+        "law": "A candidate may pass library QC individually, but renderer-facing binding output is atomic for the complete requested set. If upstream declares requested_asset_ids, it must exactly equal the candidate set. Shared BYTE_SHARED identities additionally resolve through the bilingual identity map. PARAMETER_SHARED identities require a separate pitch/parameter gate. No filename-only binding."
     }
     args.report.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"{overall} individual_pass={len(passed_library_candidates)} renderer_bound={len(atomic_bindings)} total={len(report_rows)} shared_bound={len(shared_bindings)}")
