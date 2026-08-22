@@ -1,0 +1,13 @@
+{
+  "final_pre_pr_main": "b9a668f35940ca86dd3b256e82cc7deb41e628a6",
+  "supplier_identity_authority": "PR216_MERGED_PARTIAL_IDENTITY_ONLY",
+  "public_art_parallel": "PAC8_MERGED_PRESERVED_BOUNDED",
+  "run32": "P129-P160_32_32_EXECUTED",
+  "next64": "P161-P224_DESIGNED_NOT_EXECUTED",
+  "drive_folder": "1XZfTCPvGDWtnR6VITmd4dK6BeqzHzmmT",
+  "drive_folder_listing": "PASS",
+  "drive_master_semantic_readback": "PASS",
+  "drive_machine_state_semantic_readback": "PASS",
+  "market_proof": {"public_ceiling":"E2+","pa4":false,"pa5":false,"e3":false,"e4":false},
+  "core_pr_gate": "CI_GREEN + ZERO_UNRESOLVED_THREADS + FRESH_MAIN_COMPARE"
+}
