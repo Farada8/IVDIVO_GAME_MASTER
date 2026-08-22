@@ -1,0 +1,55 @@
+{
+  "schema": "ivdivo.artifact_placement.prospective_canaries/1.0",
+  "date": "2026-08-22",
+  "authority_effect": "NONE",
+  "source_boundary": "These fixtures encode real Google Drive metadata/index readbacks; they do not prove content quality or human acceptance.",
+  "canaries": [
+    {
+      "id": "D09_CURRENT_MASTER_AFTER_REPAIR",
+      "expected_status": "PLACEMENT_VERIFIED",
+      "receipt": {
+        "artifact_id": "drive:1vt4RguE9P77eX2TK9PRUSGD_qXHs6IIpLlIe37Im21Y",
+        "provider": "GOOGLE_DRIVE",
+        "project_root": "drive:1jgc7bYPLUhCOFLIAF_K_ELduNAe4CGwp",
+        "expected_parent": "drive:1jousKwv6PxJFsh-9AAXiPHOvDJIHFwjh",
+        "actual_parent": "drive:1jousKwv6PxJFsh-9AAXiPHOvDJIHFwjh",
+        "artifact_exists": true,
+        "start_here_ref": "drive:1Nw3GCLqAq9AT8VcpYij2BXn-VJK1SQPljwRoenALeKc",
+        "start_here_readback_ok": true,
+        "start_here_mentions_artifact": true,
+        "legacy_conflicts": [],
+        "cross_store_required": false,
+        "cross_store_pointer_present": false
+      },
+      "evidence": {
+        "artifact_metadata": "Drive readback: master parent_ids=[1jousKwv6PxJFsh-9AAXiPHOvDJIHFwjh]",
+        "parent_metadata": "02 — FULL v2 SCRIPT E01–E24 parent_ids=[1jgc7bYPLUhCOFLIAF_K_ELduNAe4CGwp]",
+        "index_readback": "D09 00_START_HERE names the exact current master, exact URL, intended folder, and records the placement repair",
+        "legacy_resolution": "Old misleading E01–E24 source was renamed LEGACY SOURCE — ACTUAL E01–E06 ONLY"
+      }
+    },
+    {
+      "id": "WOMENS_AUDIO_BUSINESS_ACTIVE10_DASHBOARD",
+      "expected_status": "PLACEMENT_VERIFIED",
+      "receipt": {
+        "artifact_id": "drive:1YO1_060a6KhdD4AjJDHnIYLc9LSe47GIiARtsU5UXws",
+        "provider": "GOOGLE_DRIVE",
+        "project_root": "drive:13Wu8VFrj-50XC_8usBEGOm5YHEfkV0O0",
+        "expected_parent": "drive:1x7Bjfaq_7Ywcvg0eDBMxilWNgz08Rmcm",
+        "actual_parent": "drive:1x7Bjfaq_7Ywcvg0eDBMxilWNgz08Rmcm",
+        "artifact_exists": true,
+        "start_here_ref": "drive:1Ol9583Kakm-e4iOcb4XzEdqdlsd03oj4eGWrro1lvZ0",
+        "start_here_readback_ok": true,
+        "start_here_mentions_artifact": true,
+        "legacy_conflicts": [],
+        "cross_store_required": false,
+        "cross_store_pointer_present": false
+      },
+      "evidence": {
+        "artifact_metadata": "Drive readback: dashboard parent_ids=[1x7Bjfaq_7Ywcvg0eDBMxilWNgz08Rmcm]",
+        "parent_metadata": "01_ANALYTICS_AND_DECISIONS parent_ids=[13Wu8VFrj-50XC_8usBEGOm5YHEfkV0O0]",
+        "index_readback": "Business MASTER CONTROL contains exact text IVDIVO_ACTIVE10_LAUNCH_TEST_CONTROL_v1"
+      }
+    }
+  ]
+}
