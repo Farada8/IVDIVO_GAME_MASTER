@@ -1,0 +1,47 @@
+name: General Business Money Mechanisms Dropship P09-P16
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/13_MONEY_MECHANISMS_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/23_EU_DROPSHIP_P09_P16_STOCK_TRANSITION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/24_EU_DROPSHIP_P09_P16_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime/ecommerce_stock_transition.py'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_ecommerce_stock_transition.py'
+      - '.github/workflows/general-business-money-mechanisms-dropship-p09-p16.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run stock transition canaries
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_ecommerce_stock_transition.py
+      - name: Validate state and proof boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          st=json.loads((root/'24_EU_DROPSHIP_P09_P16_MACHINE_STATE.json').read_text())
+          mm=json.loads((root/'13_MONEY_MECHANISMS_MACHINE_STATE.json').read_text())
+          c=json.loads((root/'15_EU_DROPSHIP_CANDIDATES.json').read_text())
+          assert st['status']=='P09_P16_EXECUTED_INTERNAL_ENGINEERING_NO_SKU_PROMOTION'
+          assert len(st['execution'])==8 and all(v.startswith('PASS_ENGINEERING') for v in st['execution'].values())
+          assert c['counts']['advance_price_ship_check']==11 == st['advance_price_ship_check_count']
+          assert st['current_observed_economics']['wholesale_cost'] is None
+          assert st['current_observed_economics']['ireland_shipping'] is None
+          assert st['current_observed_economics']['profitable_skus_proven']==0
+          assert st['proof_boundary']['inventory_purchase_authorized'] is False
+          assert st['proof_boundary']['supplier_signup_authorized'] is False
+          assert st['proof_boundary']['profitability_proven'] is False
+          assert mm['next64']['executed']==32 and mm['next64']['remaining']==32
+          assert mm['evidence_boundary']['businesses_proven']==0
+          assert mm['strategic_coexistence']['do_not_overwrite_current_early_wave_wip'] is True
+          print('DROPSHIP P09-P16: PASS / 32OF64 INTERNAL / NO MARKET PROOF')
+          PY
+      - name: Compile runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
