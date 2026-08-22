@@ -7,8 +7,9 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
-RULESET_VERSION = "2026-08-22.1"
+RULESET_VERSION = "2026-08-22.2"
 KNOWN_UCP_VERSIONS = {"2026-04-08", "2026-01-23"}
+KNOWN_UCP_TRANSPORTS = {"rest", "mcp", "a2a", "embedded"}
 EVIDENCE_STATES = {"OBSERVED_PUBLIC", "PROBED_PUBLIC", "MERCHANT_DECLARED", "UNKNOWN", "NOT_APPLICABLE"}
 OUTCOMES = {"PASS", "FAIL", "UNKNOWN", "NOT_APPLICABLE"}
 
@@ -105,13 +106,25 @@ def check_feed(snapshot: dict[str, Any]) -> list[Finding]:
     return out
 
 
-def _shopping_service(profile: dict[str, Any]) -> dict[str, Any] | None:
+def _shopping_services(profile: dict[str, Any]) -> list[dict[str, Any]]:
     services = ((profile.get("ucp") or {}).get("services") or {}).get("dev.ucp.shopping")
-    if isinstance(services, list) and services:
-        return services[0] if isinstance(services[0], dict) else None
     if isinstance(services, dict):
-        return services
-    return None
+        return [services]
+    if isinstance(services, list):
+        return [x for x in services if isinstance(x, dict)]
+    return []
+
+
+def _service_validation(service: dict[str, Any]) -> tuple[str, list[str]]:
+    transport = service.get("transport")
+    if transport not in KNOWN_UCP_TRANSPORTS:
+        return "UNKNOWN_TRANSPORT", []
+    required = ["version", "spec", "schema"]
+    # Embedded bindings can be profile-declared without a separate service endpoint.
+    if transport in {"rest", "mcp", "a2a"}:
+        required.append("endpoint")
+    missing = [key for key in required if not service.get(key)]
+    return "INVALID" if missing else "VALID", missing
 
 
 def check_ucp(snapshot: dict[str, Any]) -> list[Finding]:
@@ -147,15 +160,22 @@ def check_ucp(snapshot: dict[str, Any]) -> list[Finding]:
     else:
         out.append(finding("UCP-04", "UNKNOWN", "UCP", f"UCP version {version} not in ruleset allowlist; refresh spec before judging.", state))
 
-    service = _shopping_service(profile)
-    if not service:
+    services = _shopping_services(profile)
+    if not services:
         out.append(finding("UCP-05", "FAIL", "UCP", "No dev.ucp.shopping service declared.", state))
     else:
-        missing = [key for key in ("version", "spec", "schema", "endpoint") if not service.get(key)]
-        if service.get("transport") not in ("rest", None):
-            missing.append("supported_transport(rest)")
-        detail = "missing/invalid: " + ", ".join(missing) if missing else "declares version/spec/schema/endpoint."
-        out.append(finding("UCP-05", "FAIL" if missing else "PASS", "UCP", "Shopping service " + detail, state))
+        validations = [_service_validation(service) for service in services]
+        valid_transports = [service.get("transport") for service, (kind, _missing) in zip(services, validations) if kind == "VALID"]
+        if valid_transports:
+            out.append(finding("UCP-05", "PASS", "UCP", f"Shopping service has usable supported transport(s): {', '.join(str(x) for x in valid_transports)}.", state))
+        elif any(kind == "UNKNOWN_TRANSPORT" for kind, _missing in validations):
+            transports = [service.get("transport") for service in services]
+            out.append(finding("UCP-05", "UNKNOWN", "UCP", f"Shopping service uses transport(s) outside pinned ruleset: {transports!r}; refresh ruleset before judging.", state))
+        else:
+            missing_parts = []
+            for service, (_kind, missing) in zip(services, validations):
+                missing_parts.append(f"{service.get('transport')!r}:{','.join(missing)}")
+            out.append(finding("UCP-05", "FAIL", "UCP", "Shopping service known transport entries are incomplete: " + "; ".join(missing_parts) + ".", state))
 
     capabilities = (profile.get("ucp") or {}).get("capabilities") or {}
     checkout = "dev.ucp.shopping.checkout" in capabilities
@@ -190,14 +210,18 @@ def check_ucp(snapshot: dict[str, Any]) -> list[Finding]:
 
     order = "dev.ucp.shopping.order" in capabilities
     if order:
-        events = set(block.get("order_events") or [])
+        raw_events = block.get("order_events")
         required_events = {"created", "shipped", "delivered"}
-        missing_events = sorted(required_events - events)
-        detail = f"missing events: {', '.join(missing_events)}." if missing_events else "covers created/shipped/delivered."
-        out.append(finding("UCP-09", "FAIL" if missing_events else "PASS", "UCP", "Order lifecycle " + detail, state))
+        if raw_events is None:
+            out.append(finding("UCP-09", "UNKNOWN", "UCP", "Order lifecycle implementation was not probed; profile capability declaration alone cannot prove event coverage.", state))
+        else:
+            events = set(raw_events or [])
+            missing_events = sorted(required_events - events)
+            detail = f"missing events: {', '.join(missing_events)}." if missing_events else "covers created/shipped/delivered."
+            out.append(finding("UCP-09", "FAIL" if missing_events else "PASS", "UCP", "Order lifecycle " + detail, state))
 
         keys = profile.get("keys") or profile.get("signing_keys")
-        out.append(finding("UCP-10", "PASS" if keys else "FAIL", "UCP", "Signing key material " + ("declared." if keys else "missing from supplied profile."), state))
+        out.append(finding("UCP-10", "PASS" if keys else "FAIL", "UCP", "Signing key material " + ("declared." if keys else "missing from supplied profile while Order capability is declared."), state))
 
         signed = block.get("order_request_signing")
         outcome = "PASS" if signed is True else ("FAIL" if signed is False else "UNKNOWN")
@@ -227,7 +251,7 @@ def scan(snapshot: dict[str, Any]) -> dict[str, Any]:
     findings = check_feed(snapshot) + check_ucp(snapshot)
     counts = {key: sum(item.outcome == key for item in findings) for key in sorted(OUTCOMES)}
     return {
-        "schema": "ivdivo.agent_commerce.readiness_scan/0.1",
+        "schema": "ivdivo.agent_commerce.readiness_scan/0.2",
         "ruleset_version": RULESET_VERSION,
         "merchant_id": snapshot.get("merchant_id"),
         "disposition": classify(findings),
