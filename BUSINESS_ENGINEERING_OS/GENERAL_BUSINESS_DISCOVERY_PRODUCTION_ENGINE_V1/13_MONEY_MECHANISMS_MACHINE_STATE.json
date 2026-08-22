@@ -49,6 +49,16 @@
     "new_rule":"MONEY_MECHANISM_LAB_NEQ_CURRENT_STRATEGIC_WIP",
     "additional_law":"ACCOUNT_GATED_COST_NEQ_NEGATIVE_ECONOMICS_AND_NEQ_PERMISSION_TO_INVENT_MARGIN"
   },
-  "drive": {"folder_id":"1QM7DKxwmEGDHUkcIqkxgGfaZi1NqoATV","run32_document_id":"1ZBUqsaePrslxPLIsfMC1B6FFrz4Rk2d-r0zZyzZo2q8","next64_document_id":"12pbEAq4LcuYpV50oSu5gXU8RYS9LG0clvxf0gG1rpAE","dropship_document_id":"1ZH8903zhPatnb2tm8Mi00jrg8Xlchr3AUgM6fNwH2W4","digital_pod_document_id":"15CKV1C6wO1Kt27urZfyZWUltAh3yVug92iYjx9AtXq0","local_service_document_id":"1Keze5PThvwNVULEJYzPy9er1_K-HYJ4","closure_document_id":"15Uo28zfttHBMA6DuNj9Keo8SStlQ4AXrJ8_WDF0B688","dropship_p09_p16_document_id":null,"closure_readback_marker":"MONEY-MECHANISMS-CLOSURE-24OF64-COMPARISON-LAB-STRATEGIC-COEXISTENCE","readback_status":"PASS_6_OF_6_PLUS_P09_P16_PENDING"
+  "drive": {
+    "folder_id":"1QM7DKxwmEGDHUkcIqkxgGfaZi1NqoATV",
+    "run32_document_id":"1ZBUqsaePrslxPLIsfMC1B6FFrz4Rk2d-r0zZyzZo2q8",
+    "next64_document_id":"12pbEAq4LcuYpV50oSu5gXU8RYS9LG0clvxf0gG1rpAE",
+    "dropship_document_id":"1ZH8903zhPatnb2tm8Mi00jrg8Xlchr3AUgM6fNwH2W4",
+    "digital_pod_document_id":"15CKV1C6wO1Kt27urZfyZWUltAh3yVug92iYjx9AtXq0",
+    "local_service_document_id":"1Keze5PThvwNViwAj4rbPeqNVULEJYzPy9er1_K-HYJ4",
+    "closure_document_id":"15Uo28zfttHBMA6DuNj9Keo8SStlQ4AXrJ8_WDF0B688",
+    "dropship_p09_p16_document_id":"1rApEi78GqKC1hTSVywTCFYJXdWaOj7Ckt6EtjMz0FJY",
+    "dropship_p09_p16_readback_marker":"MONEY-MECHANISMS-DROPSHIP-P09-P16-STOCK-TRANSITION-NULLSAFE-NO-PROFIT-PROOF-20260822",
+    "readback_status":"PASS_7_OF_7"
   }
 }
