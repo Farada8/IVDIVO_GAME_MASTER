@@ -74,8 +74,30 @@ def _nonoverlapping_longest_matches(text: str, alias_patterns):
     return kept
 
 
+PREPOSITIONAL_MODIFIERS = (
+    "on|to|with|behind|beside|from|for|of|by|near|toward|towards|under|over|"
+    "inside|outside|at|in|into|onto|through|across|around|between|among|against|off"
+)
+
+
+def _alias_is_modifier(text: str, start: int, end: int) -> bool:
+    """Reject alias mentions embedded in modifiers rather than grammatical heads.
+
+    B03 CH01 counterexample: `The caller on Nika’s line said` contains the known
+    alias Nika, but Nika is neither the caller nor the reporting subject.
+    """
+    prefix=text[:start]
+    suffix=text[end:]
+    if re.search(r"\b(?:" + PREPOSITIONAL_MODIFIERS + r")\s+$", prefix, re.I):
+        return True
+    if re.match(r"[’']s\b", suffix, re.I):
+        return True
+    return False
+
+
 def resolve_explicit_subject(text: str, alias_patterns) -> Optional[Tuple[str,str]]:
-    found=_nonoverlapping_longest_matches(text, alias_patterns)
+    found=[x for x in _nonoverlapping_longest_matches(text, alias_patterns)
+           if not _alias_is_modifier(text, x[0], x[1])]
     speakers={s for _,_,s,_ in found}
     if len(speakers) != 1:
         return None
@@ -95,7 +117,6 @@ def direct_pre_tag(narration_before: str, alias_patterns) -> Optional[Tuple[str,
 
 
 def standalone_pre_tag(narration_before: str, alias_patterns) -> Optional[Tuple[str,str]]:
-    """Allow only an entire nearest paragraph that is itself an attribution sentence."""
     p = last_nonempty_paragraph(narration_before)
     if not p:
         return None
@@ -153,7 +174,7 @@ def _sentence_chunks(paragraph: str) -> List[str]:
 
 def _alias_subject_at_sentence_start(sentence: str, alias_patterns) -> Optional[Tuple[str,str]]:
     found=_nonoverlapping_longest_matches(sentence, alias_patterns)
-    edge=[x for x in found if x[0] <= 4]
+    edge=[x for x in found if x[0] <= 4 and not _alias_is_modifier(sentence, x[0], x[1])]
     speakers={x[2] for x in edge}
     if len(speakers) != 1:
         return None
@@ -164,11 +185,6 @@ def _alias_subject_at_sentence_start(sentence: str, alias_patterns) -> Optional[
 def pronoun_subject_tracker_antecedent(narration_before: str, alias_patterns,
                                        speaker_gender: Dict[str,str], pronoun: str,
                                        max_paragraphs: int = 5) -> Optional[Tuple[str,list]]:
-    """Track the most recent grammatical subject conservatively across a few local sentences.
-
-    This is stricter than nearest-name coreference: object mentions do not replace the subject.
-    Unknown role gender may be established by local he/she/his/her continuity.
-    """
     target={"he":"M","she":"F"}.get(pronoun.lower())
     if not target:
         return None
@@ -238,7 +254,6 @@ def classify_and_attribute(segments: List[dict], alias_map: Dict[str,List[str]],
             continue
         prev = segments[i-1].get("exact_text","") if i>0 and (segments[i-1].get("kind") == "NARRATION" or segments[i-1].get("type") == "NARRATION") else ""
         nxt = segments[i+1].get("exact_text","") if i+1<len(segments) and (segments[i+1].get("kind") == "NARRATION" or segments[i+1].get("type") == "NARRATION") else ""
-
         candidates=[]
         pre=direct_pre_tag(prev, alias_patterns)
         if pre: candidates.append((pre[0],"PRE_DIRECT_TAG",pre[1]))
@@ -250,7 +265,6 @@ def classify_and_attribute(segments: List[dict], alias_map: Dict[str,List[str]],
         else:
             pro=pronoun_post_tag(prev,nxt,alias_patterns,speaker_gender)
             if pro: candidates.append((pro[0],"POST_PRONOUN_RESOLVED_REVIEW_CANDIDATE",pro[1]))
-
         speakers={c[0] for c in candidates}
         if len(speakers)==1:
             candidates.sort(key=lambda c:{"PRE_DIRECT_TAG":0,"POST_DIRECT_TAG":1,"AUTO_PRONOUN_GRAMMATICAL_SUBJECT_TRACKER":2,"POST_PRONOUN_RESOLVED_REVIEW_CANDIDATE":3}.get(c[1],9))
@@ -324,7 +338,7 @@ def main():
     propagated=propagate_same_paragraph(segments,strong,overrides) if args.project_same_paragraph_promoted else []
     assignments=strong+propagated
     json.dump({
-        "schema_version":"1.1",
+        "schema_version":"1.2",
         "policy":"FAIL_CLOSED_STRONG_LOCAL_ONLY",
         "strong_count":len(strong),
         "same_paragraph_project_promoted":bool(args.project_same_paragraph_promoted),
