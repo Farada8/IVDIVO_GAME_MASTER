@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "tests_run": 20,
+  "passed": 20,
+  "note": "The host emitted an unrelated spreadsheet-runtime warmup warning during Python startup; the Absolute Math unittest suite itself completed OK. These are engineering regression tests, not proof of scientific novelty or real longitudinal self-improvement."
+}

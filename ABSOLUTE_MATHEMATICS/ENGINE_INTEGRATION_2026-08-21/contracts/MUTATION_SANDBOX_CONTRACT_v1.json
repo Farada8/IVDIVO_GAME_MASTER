@@ -1,0 +1,6 @@
+{
+  "title": "Self-Improvement Mutation Sandbox v1",
+  "required_gates": ["PARENT_REVISION_PINNED","MUTATION_SCOPE_BOUNDED","FORBIDDEN_PATHS_DECLARED","BENCHMARKS_PREREGISTERED","NO_CURRENT_AUTHORITY_WRITE","ROLLBACK_REF_PRESENT","REGRESSION_FLOOR_DECLARED","EVIDENCE_CLASS_DECLARED"],
+  "promotion": "candidate branch/artifact only; external review/promotion required",
+  "archive_policy": "retain failed/interesting stepping stones; do not only keep current best"
+}

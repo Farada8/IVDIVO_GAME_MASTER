@@ -1,0 +1,7 @@
+{
+  "title": "Genesis Process Contract v1",
+  "representation": "typed directed process graph",
+  "required": ["node_types", "operator_types", "edges", "feedback_policy", "normal_form_policy"],
+  "feedback_policy": "cycles are represented by SCC modules before condensation",
+  "normal_form_policy": "UNIQUE only with confluence evidence; otherwise retain equivalence class/set"
+}
