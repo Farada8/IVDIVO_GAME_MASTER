@@ -1,0 +1,60 @@
+{
+  "project": "BUSINESS ENGINEERING OS",
+  "cycle": "CYCLE4_LIVE_OPPORTUNITIES",
+  "status": "CLOSED_INTEGRATED_PUBLIC_EVIDENCE_ONLY",
+  "current_authority_main_sha": "e41408aec56839585bfcff9a0fbfb0224cada25d",
+  "current_authority_path": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
+  "library": {
+    "drive_folder": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "physical": 78,
+    "valid": 68,
+    "unique_valid_hashes": 58,
+    "broken_or_quarantined": 5,
+    "raw_binaries_on_github": false
+  },
+  "run32": {
+    "range": "C4-033..C4-064",
+    "count": 32,
+    "KEEP": 30,
+    "MUTATE": 1,
+    "MUTATE_CROSS_LANE": 1,
+    "pending": 0
+  },
+  "public_signals": 32,
+  "opportunity_objects": 32,
+  "lane_screen": {"PASS_TO_TEST": 23, "HOLD_SPECIALIST": 9},
+  "integrated_wip": {
+    "primary": "OPP-01 / tender-procurement decision intelligence",
+    "pilots": ["OPP-19 / retrofit qualification-orchestration", "OPP-29 / SME AI workflow diagnostic"],
+    "cap": 3
+  },
+  "self_improvement": {
+    "candidate": "EVIDENCE_FIRST_PORTFOLIO_GATE",
+    "internal_fixture_old_errors": 5,
+    "internal_fixture_new_errors": 0,
+    "status": "LOCAL_KEEP",
+    "global_promotion": false
+  },
+  "contract_namespace": {
+    "C97-C128": "canonical Library78 lane; local duplicate names provenance-only",
+    "C129-C152": "canonical procurement/capital lane",
+    "new_ids_allocated_by_closure": false
+  },
+  "drive_cycle4": {
+    "folder_id": "1DPwobnVm_CFSFHWyILd9kBwxPn3m-qPO",
+    "zip_id": "1nNyyFhQgU_gnarPIHOKetBylv-SHtvxS",
+    "zip_sha256": "12bb3d15832237bcf530bf14054bb3f3197b0a64d9f701f0f9484caeb8716b27",
+    "zip_bytes": 153855,
+    "readback": "PASS"
+  },
+  "tests": {"warm": "32/32 PASS", "cold": "32/32 PASS"},
+  "proof_ceiling": {
+    "market_proof": "NOT_PROVEN",
+    "payment_proof": "NOT_RUN",
+    "unit_economics": null,
+    "no_outreach": true,
+    "new_founder_cash_pre_E4_eur": 0
+  },
+  "next64": "C5-001..C5-064",
+  "next_constraint": "PUBLIC_ARTIFACT_TESTS_FOR_TOP_ZERO_CASH_ARCHETYPES"
+}
