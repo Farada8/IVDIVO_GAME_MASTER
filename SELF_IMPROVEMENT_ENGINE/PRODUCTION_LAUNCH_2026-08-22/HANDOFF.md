@@ -41,11 +41,17 @@ Date: 2026-08-22
 - Drive folder `1NB6hVQVjUlK6wiSMsyrRgk0pX6bFkjgy`, document `1m9vfHsbMgrC_7hvIL2t9A1RUvTE7OdhhMImIxkwqQww`, marker `PERSONAL-AI-PL04-DONE-VERIFIED-PR321-PR328-CI5OF5-CONTRACT4OPS`.
 
 `PL-05 AGENT EXECUTOR = DONE_VERIFIED`.
-- PR #336 merge `876d0e4ca7f581be40f88b9be86f4a4da1894928`; verified head `d20b104e93e61cc87e1e180d4ea879a5e23f75c5`.
-- bounded `max_steps` 1..20; only `CONTINUE:` requests another step; task lifecycle and OUTPUT memory persist; JSONL run audit persists.
-- exact-head/merge-ref PL-00/01/02/02-hardening/04/05 CI 6/6 SUCCESS.
-- Drive folder `1hhgo94czLN6Qz4p9qNdMjxcZvf0ih0G3`, document `1Y0Zww7H003dYjlF-CsCV9vINt76mYZPkTLizcjF7764`, marker `PERSONAL-AI-PL05-DONE-VERIFIED-PR336-CI6OF6`.
-- no autonomous tool use, background work or live-provider success is implied.
+- baseline PR #336 merge `876d0e4ca7f581be40f88b9be86f4a4da1894928`; mandatory strict-contract completion PR #366 merge `a3a199e94210a2ca36a69f5cdb69d1303a1bb769`, verified corrective head `604d98bbd029dbe82fa528c1b6607cecea671c3a`.
+- baseline compatibility `run()` / CLI remains bounded; canonical PL-05 acceptance path is strict `execute()`.
+- exact `AgentDefinition` contract: ROLE / GOAL / INPUT / TOOLS / MEMORY / MAX_STEPS / OUTPUT_SCHEMA.
+- execution loop persists LOAD_TASK -> LOAD_CONTEXT -> PROPOSE_ACTION -> CALL_TOOL -> OBSERVE -> UPDATE_STATE -> STOP events.
+- explicit `ToolRegistry` plus per-agent allowlist; current core tools are bounded local `memory_search` and `echo`, with no shell/arbitrary-code/destructive tool surface.
+- hard `max_steps` 1..20, monotonic timeout and OUTPUT_SCHEMA validation fail closed.
+- success persists project/task state + OUTPUT memory + JSONL action log; failure persists FAILED state + EVENT memory.
+- deterministic strict integration test executes allowlisted `memory_search`, observes, finishes, reopens project state + SQLite memory and verifies persisted output; negative tests cover forbidden tool, step exhaustion, timeout and schema mismatch.
+- corrective exact-head cumulative CI all SUCCESS: PL-00 `32561512421`, PL-01 `32561512402`, PL-02 `32561512414`, PL-02 hardening `32561512406`, PL-04 `32561512407`, PL-05 `32561512409`, PL-11 `32561512408`.
+- Drive folder `1hhgo94czLN6Qz4p9qNdMjxcZvf0ih0G3`, document `1Y0Zww7H003dYjlF-CsCV9vINt76mYZPkTLizcjF7764`, marker `PERSONAL-AI-PL05-DONE-VERIFIED-PR336-PR366-CI7OF7-STRICT-AGENT-CONTRACT`.
+- bounded explicitly allowlisted local tool execution is proven; unrestricted/autonomous tool use, background work, shell/code/destructive execution and live-provider success are not implied.
 
 `PL-11 TEST BENCHMARK RUNNER = DONE_VERIFIED`.
 - PR #345 merge `7480f261e26bd2be58c10f814aa1ea27056e8a69`; refreshed verified head `8d09d5d9171a21cff9e7b8958e6496d0796ba900`.
