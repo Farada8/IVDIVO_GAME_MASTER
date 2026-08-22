@@ -31,48 +31,53 @@ Date: 2026-08-22
 - contract-hardening PR #309 merge `d82020c7967c2c3dc1b22e4469974757d7aaf0bc` added named typed tables, SHA-256 content hashes, confidence/project/source fields, immutable versions, source-chain tracing and legacy migration.
 - verified hardening head `7e947cee84fefb5467aa154546f648077aec0bbe`.
 - exact-head workflows all SUCCESS: PL-00 `32555281797`, PL-01 `32555281872`, PL-02 baseline `32555281799`, PL-02 hardening `32555281777`.
-- CI exposed a real legacy-schema ordering defect before merge; the migration preflight was repaired and the second exact-head run passed 4/4 workflows.
 - hardening Drive folder `1MhVtyPF89UPpvLvPcBeQis4wdBXmeN6C`, document `1IYlQfZOt7yI4GaQVBjDuL36yuIjvIPe9GFEO8HsAt5w`, marker `PERSONAL-AI-PL02-DONE-VERIFIED-PR309-CI4OF4`.
 
 `PL-04 AI PROVIDER ABSTRACTION = DONE_VERIFIED`.
-- baseline provider implementation: PR #321 merge `d5e17a9ed75b724b4e6920e71bce4388ff804196`.
-- post-merge audit found a real original-contract gap: #321 exposed `generate()` but the registered PL-04 card requires `generate()`, `analyze()`, `classify()`, `extract()` and canonical provider class surfaces.
-- mandatory contract-completion delta: PR #328 merge `268a7d33c83d5551b9276b1a7a3551c76eb584fd`, corrective head `1a0de28f75585ee6693d68e7bbc436c2df0848df`.
-- PL-04 authority therefore means **#321 + #328 together**, not #321 alone.
-- four-operation `AIProvider` + `ProviderRegistry` dispatch; `ProviderConfig`; canonical `OpenAIProvider`, `AnthropicProvider`, `OllamaProvider`; deterministic offline MockProvider; existing stdlib OpenAI Responses / Anthropic Messages / Ollama Chat adapters retained.
-- corrective exact-head workflows all SUCCESS: PL-00 `32556833749`, PL-01 `32556833763`, PL-02 `32556833754`, PL-02 hardening `32556833779`, PL-04 `32556833757`.
-- configured credentials still do not authorize spending; existing explicit `--allow-network` gate remains in the CLI path.
-- no live OpenAI/Anthropic/Ollama request or API spend is claimed by PL-04 acceptance.
+- baseline PR #321 merge `d5e17a9ed75b724b4e6920e71bce4388ff804196`; mandatory four-operation contract completion PR #328 merge `268a7d33c83d5551b9276b1a7a3551c76eb584fd`.
+- canonical provider contract exposes generate/analyze/classify/extract plus ProviderConfig and OpenAIProvider/AnthropicProvider/OllamaProvider surfaces.
+- corrective exact-head PL-00/01/02/02-hardening/04 CI 5/5 SUCCESS.
+- configured credentials do not authorize spending; live provider success remains unverified and was not required.
 - Drive folder `1NB6hVQVjUlK6wiSMsyrRgk0pX6bFkjgy`, document `1m9vfHsbMgrC_7hvIL2t9A1RUvTE7OdhhMImIxkwqQww`, marker `PERSONAL-AI-PL04-DONE-VERIFIED-PR321-PR328-CI5OF5-CONTRACT4OPS`.
 
 `PL-05 AGENT EXECUTOR = DONE_VERIFIED`.
-- implementation PR #336 merge `876d0e4ca7f581be40f88b9be86f4a4da1894928`; verified head `d20b104e93e61cc87e1e180d4ea879a5e23f75c5`.
-- executor is explicitly bounded: `max_steps` 1..20; only `CONTINUE:` requests another step; no background/unbounded loop.
-- task lifecycle is persisted `READY -> RUNNING -> DONE/FAILED`; final text is persisted as PL-02 `OUTPUT`; every run writes project-local JSONL audit events.
-- network-backed providers require explicit authorization before task creation; offline mock is the acceptance path.
-- initial CI found a faulty new test that called `MemoryStore.search("")`; PL-02 correctly rejected the empty query. The test was repaired without weakening production code.
-- second exact-head/merge-ref workflows all SUCCESS: PL-00 `32557296842`, PL-01 `32557296835`, PL-02 `32557296948`, PL-02 hardening `32557296930`, PL-04 `32557296830`, PL-05 `32557296781`.
+- PR #336 merge `876d0e4ca7f581be40f88b9be86f4a4da1894928`; verified head `d20b104e93e61cc87e1e180d4ea879a5e23f75c5`.
+- bounded `max_steps` 1..20; only `CONTINUE:` requests another step; task lifecycle and OUTPUT memory persist; JSONL run audit persists.
+- exact-head/merge-ref PL-00/01/02/02-hardening/04/05 CI 6/6 SUCCESS.
 - Drive folder `1hhgo94czLN6Qz4p9qNdMjxcZvf0ih0G3`, document `1Y0Zww7H003dYjlF-CsCV9vINt76mYZPkTLizcjF7764`, marker `PERSONAL-AI-PL05-DONE-VERIFIED-PR336-CI6OF6`.
-- no autonomous tool use, live-provider success, background work, self-modifying code or model-weight training is implied.
+- no autonomous tool use, background work or live-provider success is implied.
+
+`PL-11 TEST BENCHMARK RUNNER = DONE_VERIFIED`.
+- PR #345 merge `7480f261e26bd2be58c10f814aa1ea27056e8a69`; refreshed verified head `8d09d5d9171a21cff9e7b8958e6496d0796ba900`.
+- executable JSON baseline/candidate runner supports higher/lower-is-better metrics, positive weights, per-case regression tolerance and suite aggregate threshold.
+- any critical regression forces `REJECT_CRITICAL_REGRESSION` even when aggregate gains are positive; `--enforce` returns non-zero on FAIL.
+- every run persists a JSON report under `runtime/benchmarks`; invalid/non-finite/duplicate cases fail closed.
+- refreshed exact-head workflows all SUCCESS: PL-00 `32557771235`, PL-01 `32557771273`, PL-02 `32557771252`, PL-02 hardening `32557771152`, PL-04 `32557771137`, PL-05 `32557771211`, PL-11 `32557771276`.
+- Drive folder `1XAsNDfR3VZtUCkQRpUT2vqV9k_-lwwbL`, document `1NhxssgezKnsKrcameuzM62q3Rde7nuazNBPNTmf_aqQ`, marker `PERSONAL-AI-PL11-DONE-VERIFIED-PR345-CI7OF7`.
+- PL-11 evaluates supplied measurements only; PL-12 will own patch/change promotion and rollback.
+
+## Wave-1 foundation state
+
+All Wave-1 cards are DONE_VERIFIED: `PL-00`, `PL-01`, `PL-02`, `PL-04`, `PL-05`, `PL-11`.
 
 ## Current READY graph
 
-Canonical next frontier: `PL-11 Test Benchmark Engine = READY`.
+Canonical next frontier: `PL-06 Business Core = READY` — first Wave-2 real-production card.
 
 Also READY:
 - `PL-03 Source Evidence Layer`;
-- `PL-06 Business Core`;
 - `PL-08 Book Production Core`;
 - `PL-10 Multi-Model Review`;
+- `PL-12 Change Control`;
 - `PL-13 File Ingestion`;
 - `PL-15 Daily Control Panel`;
 - `PL-16 Backup Recovery`;
 - `PL-17 Security`;
 - `PL-18 Cost Control`.
 
-Reason for PL-11 priority: it is the last unverified Wave-1 foundation card and supplies the baseline/candidate/delta regression decision needed by PL-12 Change Control and later production-readiness gates. A critical regression must be rejectable even when aggregate metrics look better.
+Reason for PL-06 priority: foundation execution, memory, providers, bounded agents and benchmark rejection are now verified. PL-06 is the first ready Wave-2 card and must prove a real business request can become a persisted estimate/quote without invented prices. PL-08 remains the parallel ready book-production path.
 
-Do not re-execute PL-00/01/02/04/05 unless a regression or explicit change-control event requires it. Reuse merged code and preserve cumulative regression coverage.
+Do not re-execute DONE_VERIFIED layers unless a regression or explicit PL-12-style change-control event requires it. Preserve cumulative regression coverage.
 
 ## Stop conditions
 
@@ -85,4 +90,4 @@ Stop and mark `BLOCKED` instead of inventing a pass when:
 
 ## Handoff sentence for a new session
 
-`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00, PL-01, hardened PL-02, corrected PL-04 (#321 + #328) and bounded PL-05 are DONE_VERIFIED. Continue from PL-11 Test Benchmark Engine; PL-03/06/08/10/13/15/16/17/18 are dependency-admissible READY alternatives. Persist code/state/tests/readback, reject critical regressions, and preserve v2 authority unless a separate promotion gate passes.`
+`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. Wave-1 foundation PL-00/01/02/04/05/11 is DONE_VERIFIED. Continue from PL-06 Business Core; PL-03/08/10/12/13/15/16/17/18 remain dependency-admissible READY alternatives. Persist code/state/tests/readback, never invent business prices or evidence, and preserve v2 authority unless a separate promotion gate passes.`

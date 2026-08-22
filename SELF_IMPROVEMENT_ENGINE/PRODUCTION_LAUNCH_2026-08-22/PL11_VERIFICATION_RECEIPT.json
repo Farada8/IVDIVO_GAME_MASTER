@@ -1,0 +1,42 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.2",
+  "card": "PL-11",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 345,
+    "merge_sha": "7480f261e26bd2be58c10f814aa1ea27056e8a69",
+    "verified_head": "8d09d5d9171a21cff9e7b8958e6496d0796ba900"
+  },
+  "exact_head_ci": [
+    {"workflow":"Personal AI PL-00 Bootstrap","run_id":32557771235,"conclusion":"success"},
+    {"workflow":"Personal AI PL-01 Project State","run_id":32557771273,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Local Memory","run_id":32557771252,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Memory Contract Hardening","run_id":32557771152,"conclusion":"success"},
+    {"workflow":"Personal AI PL-04 Provider Abstraction","run_id":32557771137,"conclusion":"success"},
+    {"workflow":"Personal AI PL-05 Agent Executor","run_id":32557771211,"conclusion":"success"},
+    {"workflow":"Personal AI PL-11 Test Benchmark Runner","run_id":32557771276,"conclusion":"success"}
+  ],
+  "acceptance": {
+    "baseline_candidate_delta": true,
+    "higher_is_better": true,
+    "lower_is_better": true,
+    "critical_regression_overrides_aggregate": true,
+    "aggregate_threshold_gate": true,
+    "noncritical_regression_visible": true,
+    "invalid_suite_fail_closed": true,
+    "floating_threshold_tolerance": true,
+    "persisted_json_report": true,
+    "enforced_nonzero_fail_exit": true,
+    "full_personal_ai_regression": true,
+    "drive_readback": true
+  },
+  "drive": {
+    "folder_id": "1XAsNDfR3VZtUCkQRpUT2vqV9k_-lwwbL",
+    "document_id": "1NhxssgezKnsKrcameuzM62q3Rde7nuazNBPNTmf_aqQ",
+    "verified_marker": "PERSONAL-AI-PL11-DONE-VERIFIED-PR345-CI7OF7"
+  },
+  "new_ready_cards": ["PL-12"],
+  "current_frontier_after_closure": "PL-06",
+  "wave_1_foundation_complete": true,
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION"
+}
