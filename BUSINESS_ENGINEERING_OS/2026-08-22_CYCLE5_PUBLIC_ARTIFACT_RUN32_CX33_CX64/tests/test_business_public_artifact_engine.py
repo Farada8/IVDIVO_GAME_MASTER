@@ -1,5 +1,26 @@
+import importlib.util
+import pathlib
 import unittest
-from BUSINESS_ENGINEERING_OS.2026-08-22_CYCLE5_PUBLIC_ARTIFACT_RUN32_CX33_CX64.engine.business_public_artifact_engine import *
+
+ENGINE = pathlib.Path(__file__).resolve().parents[1] / "engine" / "business_public_artifact_engine.py"
+spec = importlib.util.spec_from_file_location("business_public_artifact_engine", ENGINE)
+mod = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(mod)
+Evidence = mod.Evidence
+evidence_ceiling = mod.evidence_ceiling
+null_safe_number = mod.null_safe_number
+budget_proxy = mod.budget_proxy
+incumbent_bundling = mod.incumbent_bundling
+data_readiness = mod.data_readiness
+recurrence_gate = mod.recurrence_gate
+zero_cash_route = mod.zero_cash_route
+privacy_gate = mod.privacy_gate
+supersession_gate = mod.supersession_gate
+freshness_gate = mod.freshness_gate
+library_evidence_weight = mod.library_evidence_weight
+namespace_collision = mod.namespace_collision
+wip_gate = mod.wip_gate
+human_exit_gate = mod.human_exit_gate
 
 class PublicArtifactEngineTests(unittest.TestCase):
     def test_01_public_caps_e2(self): self.assertEqual(evidence_ceiling([Evidence("PUBLIC_SIGNAL","eTenders")]), "E2_PUBLIC_SIGNAL")
