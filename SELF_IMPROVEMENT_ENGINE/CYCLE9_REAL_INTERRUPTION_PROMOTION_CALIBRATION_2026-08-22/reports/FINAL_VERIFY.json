@@ -1,0 +1,25 @@
+{
+  "cycle": "Cycle9",
+  "run32": "31 PASS / 1 HOLD / 0 FAIL",
+  "ledger_sha256": "42904e011c8e1ab98c4254e58d7469b968e41c68411b2a7892fd835c4610b4ff",
+  "warm_tests": "33/33 PASS",
+  "cold_tests": "33/33 PASS",
+  "compileall": "PASS",
+  "evidence_boundaries": {
+    "human_signal": "NOT_CLAIMED",
+    "provider_live": "NOT_CLAIMED",
+    "market_effect": "NOT_CLAIMED",
+    "v3_current_promotion": "NOT_AUTHORIZED",
+    "si0014_promotion": "NOT_READY"
+  },
+  "generated_artifact_manifest": "library/GENERATED_ARTIFACT_MANIFEST.json",
+  "publication_freshness": "PASS_EVENT001_CONSUMED_POST_EVENT_DELTA_BUSINESS_ONLY",
+  "capture_main_sha": "4d6dc7c5dc24ea77582327254d339e619173558f",
+  "publication_main_sha": "7718de5b1b02a408414e0a566565d5e5b34b8f86",
+  "parallel_reconciliation": "MERGED_CYCLE9_EVENT001_CONSUMED",
+  "package": {
+    "name": "IVDIVO_SELF_IMPROVEMENT_CYCLE9_V121_FINAL.zip",
+    "size_bytes": 294335,
+    "sha256": "39d385ad634e554c22ed01f6e132b36a42510604568aeb956dafd783ba78b95c"
+  }
+}

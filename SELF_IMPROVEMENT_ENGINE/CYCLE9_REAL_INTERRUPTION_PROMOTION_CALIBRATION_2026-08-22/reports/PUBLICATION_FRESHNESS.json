@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.2",
+  "cycle": "CYCLE9_REAL_INTERRUPTION_PROMOTION_CALIBRATION",
+  "evidence_capture_main_sha": "4d6dc7c5dc24ea77582327254d339e619173558f",
+  "event001_consumed_main_sha": "ac28b1fca1b38d08cfebb73b83e5ebcabf572f04",
+  "publication_main_sha": "7718de5b1b02a408414e0a566565d5e5b34b8f86",
+  "post_event_main_delta_commits": 44,
+  "post_event_changed_surface_summary": [
+    "BUSINESS_ENGINEERING_OS/**",
+    ".github/workflows/business-engineering-*.yml",
+    ".github/workflows/public-art-*.yml"
+  ],
+  "self_improvement_overlap_after_event001": false,
+  "decision": "PUBLISH_ADDITIVE_PROMOTION_CALIBRATION_EXTENSION_ON_FRESH_MAIN",
+  "force_overwrite": false,
+  "current_si0014_evidence": {
+    "genuine_events": 1,
+    "required_events": 3,
+    "distinct_projects": 2,
+    "required_projects": 2,
+    "zero_false_resume": true,
+    "promotion_authorized": false
+  },
+  "new_authority_evidence": [
+    "SELF_IMPROVEMENT_ENGINE/CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22/09_REAL_RECOVERY_EVENT_001_SELF_IMPROVEMENT.json",
+    "SELF_IMPROVEMENT_ENGINE/CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22/10_REAL_RECOVERY_EVENT_001_BUSINESS_ENGINEERING_SLICE.json"
+  ],
+  "note": "The 44 commits after event-001 were Business Engineering/Public Art only. No Self-Improvement authority path changed, so Run32 is reinterpreted with event-001 consumed rather than rerun as ritual work."
+}

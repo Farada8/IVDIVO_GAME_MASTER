@@ -1,0 +1,11 @@
+{
+  "branch_base_sha": "7718de5b1b02a408414e0a566565d5e5b34b8f86",
+  "main_at_pre_pr_check": "4c656c447f825cad6f8e14f8dfa7797568c633cb",
+  "main_delta_commits": 3,
+  "changed_paths": [
+    "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P129_P160_COMMERCIAL_RELIABILITY/05_POST_MERGE_CLOSURE.md",
+    "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md"
+  ],
+  "self_improvement_overlap": false,
+  "decision": "OPEN_PR_WITH_NON_OVERLAP_RECORDED_NO_FORCE_REBASE"
+}
