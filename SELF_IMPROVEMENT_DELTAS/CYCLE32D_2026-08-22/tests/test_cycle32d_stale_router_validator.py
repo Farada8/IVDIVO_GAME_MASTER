@@ -1,4 +1,12 @@
-from SELF_IMPROVEMENT_DELTAS.CYCLE32D_2026_08_22.tools.cycle32d_stale_router_validator import validate_frontier
+import importlib.util
+from pathlib import Path
+
+MODULE_PATH = Path(__file__).resolve().parents[1] / "tools" / "cycle32d_stale_router_validator.py"
+spec = importlib.util.spec_from_file_location("cycle32d_stale_router_validator", MODULE_PATH)
+module = importlib.util.module_from_spec(spec)
+assert spec and spec.loader
+spec.loader.exec_module(module)
+validate_frontier = module.validate_frontier
 
 
 def test_d01_stale_router_is_quarantined():
