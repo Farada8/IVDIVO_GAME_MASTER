@@ -1,0 +1,14 @@
+{
+  "00_FULL_CONVERSATION_CLOSURE_HANDOFF_2026-08-22.md": {
+    "bytes": 18964,
+    "sha256": "8a73729464dd656afde486a570adde9998930bff6f30e08e5f658ea6502f6bf1"
+  },
+  "01_FULL_CONVERSATION_MACHINE_STATE_2026-08-22.json": {
+    "bytes": 2722,
+    "sha256": "50dcd11cd89fc1669455528bbf684f9102c35eab6d7807863ca5ad21776b35db"
+  },
+  "02_FULL_CONVERSATION_ARTIFACT_INDEX_2026-08-22.csv": {
+    "bytes": 1231,
+    "sha256": "40ac7ebcc9b14b24d54cc5bfa39874c983b528cda3325b3411c7eda21424a2ac"
+  }
+}
