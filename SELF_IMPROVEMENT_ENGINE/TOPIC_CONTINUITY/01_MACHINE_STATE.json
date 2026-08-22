@@ -1,14 +1,29 @@
 {
-  "schema": "ivdivo.self_improvement.thread_topic_continuity_guard/0.4",
+  "schema": "ivdivo.self_improvement.thread_topic_continuity_guard/0.5",
   "date": "2026-08-22",
-  "status": "MERGED_CANDIDATE_CI_GREEN_REAL_PILOT_2_OF_3_NOT_PROMOTED",
+  "status": "MERGED_TWO_LEVEL_ROUTING_REAL_PILOT_2_OF_3_NOT_PROMOTED",
   "authority_effect": "NONE",
   "global_si_id": null,
   "parent_authority": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
-  "related_candidate": {
+  "routing_stack": {
+    "execution_order": [
+      "THREAD_TOPIC_LOCK",
+      "PROJECT_FRONTIER_LOCK",
+      "EXECUTION"
+    ],
+    "thread_topic_runtime": "tools/ivdivo_thread_topic_guard.py",
+    "thread_topic_role": "SOLE_PROJECT_SWITCH_AUTHORITY",
+    "project_frontier_runtime": "tools/ivdivo_active_frontier_guard.py",
+    "project_frontier_role": "SUBORDINATE_ACTIVE_NEXT_GATE_CLASSIFIER",
+    "project_frontier_switch_authority": false,
+    "two_level_contract": "ENGINEERING_CONTRACTS/THREAD_FRONTIER_TWO_LEVEL_ROUTING_v0.1.md",
+    "two_level_state": "SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/03_TWO_LEVEL_ROUTING_STATE.json"
+  },
+  "superseded_candidate": {
     "name": "ACTIVE_FRONTIER_HIJACK_GUARD",
     "pr": 278,
-    "relationship": "THREAD_LEVEL_EXTENSION_AND_POTENTIAL_SUPERSET"
+    "state": "CLOSED_NOT_MERGED_SUPERSEDED_PROVENANCE_ONLY",
+    "relationship": "USEFUL_FRONTIER_SCOPE_PRESERVED_IN_PR464_WITH_DUPLICATE_SWITCH_AUTHORITY_REMOVED"
   },
   "observed_defect": {
     "evidence_class": "REAL_HUMAN_CORRECTION",
@@ -31,27 +46,39 @@
     "GLOBAL_CURRENT_NEQ_THREAD_CURRENT",
     "BOUND_CONFIRMATION_ONLY_FOR_EXACT_SWITCH_TARGET",
     "REQUIRED_CROSS_PROJECT_DEPENDENCY_REQUIRES_RETURN_TOKEN",
-    "THREAD_SWITCH_AUTHORITY_PRECEDES_FRONTIER_SWITCH_AUTHORITY"
+    "THREAD_TOPIC_LOCK_PRECEDES_PROJECT_FRONTIER_LOCK",
+    "THREAD_GUARD_IS_SOLE_PROJECT_SWITCH_AUTHORITY",
+    "FRONTIER_GUARD_HAS_NO_PROJECT_SWITCH_AUTHORITY",
+    "NEW_PROJECT_PLUS_OLD_PROJECT_GATE_IS_ROUTING_CORRUPTION",
+    "PROJECT_SWITCH_REQUIRES_TARGET_FRONTIER_RESTORE",
+    "DISCOVERED_RELEVANCE_NEQ_FRONTIER_SWITCH_AUTHORITY"
   ],
   "runtime": "tools/ivdivo_thread_topic_guard.py",
   "contract": "ENGINEERING_CONTRACTS/THREAD_TOPIC_CONTINUITY_GUARD_v0.1.md",
   "tests": "tests/test_thread_topic_guard.py",
   "workflow": ".github/workflows/si-thread-topic-continuity-guard.yml",
+  "two_level_workflow": ".github/workflows/si-thread-frontier-two-level.yml",
   "pending_candidate": "31_IDEAS/PENDING/UNASSIGNED_THREAD_TOPIC_CONTINUITY_GUARD_2026-08-22.json",
   "real_pilot_ledger": "SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/02_REAL_PILOT_LEDGER.json",
   "engineering_receipt": {
-    "pr": 448,
-    "tested_head_sha": "a30ab623e5a9e53475518fca673a467326357081",
-    "merge_sha": "6caea950b47e14943c4e16a1ef28d2ea427affc4",
-    "topic_guard_ci_run": 32572540988,
-    "topic_guard_ci": "SUCCESS",
-    "self_improvement_integrity_ci_run": 32572540986,
-    "self_improvement_integrity_ci": "SUCCESS",
-    "deterministic_canaries": 16,
-    "github_main_readback": true,
+    "thread_guard_pr": 448,
+    "thread_guard_tested_head_sha": "a30ab623e5a9e53475518fca673a467326357081",
+    "thread_guard_merge_sha": "6caea950b47e14943c4e16a1ef28d2ea427affc4",
+    "thread_guard_original_ci_run": 32572540988,
+    "deterministic_thread_canaries": 16,
+    "two_level_pr": 464,
+    "two_level_tested_head_sha": "29864e0084a349e8e681d5ca775bc9332ea55081",
+    "two_level_merge_sha": "4e21e26f2bcb2424a1582a306fccb839d6febe5c",
+    "two_level_thread_ci_run": 32573915416,
+    "two_level_thread_ci": "SUCCESS",
+    "two_level_ci_run": 32573915385,
+    "two_level_ci": "SUCCESS",
+    "deterministic_frontier_canaries": 12,
+    "deterministic_integration_canaries": 6,
+    "github_raw_mergeable_state": "clean",
     "drive_current_authority_readback": true,
     "drive_current_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
-    "drive_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-MERGED-CANDIDATE-CI-GREEN-20260822"
+    "drive_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-REAL-PILOT-2OF3-20260822"
   },
   "real_pilot_progress": {
     "real_continuation_events": 2,
@@ -85,13 +112,13 @@
   },
   "proof_boundary": {
     "real_defect_observed": true,
-    "engineering_tests_pending": false,
     "engineering_ci_verified": true,
+    "two_level_routing_verified": true,
     "real_repaired_pilot": true,
     "real_repaired_pilot_complete": false,
     "verified_current": false,
     "v3_promoted": false
   },
   "next_gate": "ONE_MORE_NATURALLY_OCCURRING_CONTINUATION_EVENT_FROM_AT_LEAST_ONE_OTHER_PROJECT_TYPE_PLUS_TWO_HEALTHY_EXPLICIT_SWITCH_CONTROLS_AND_ONE_SIDE_QUERY_RETURN_CONTROL",
-  "readback_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-REAL-PILOT-2OF3-20260822"
+  "readback_marker": "SI-THREAD-TOPIC-CONTINUITY-TWO-LEVEL-ROUTING-MERGED-REAL-PILOT-2OF3-20260822"
 }
