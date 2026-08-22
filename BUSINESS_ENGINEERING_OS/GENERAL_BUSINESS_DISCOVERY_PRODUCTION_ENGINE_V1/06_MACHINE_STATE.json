@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.business.general_discovery_production_engine/1.0",
+  "schema": "ivdivo.business.general_discovery_production_engine/1.1",
   "date": "2026-08-22",
-  "status": "P01_P08_DISCOVERY_REFRESH_MERGED_CURRENT",
+  "status": "P17_P24_FATAL_TEST_PORTFOLIO_COMPLETE_PENDING_CI",
   "github": {
     "base_engine_pr": 303,
     "base_engine_merge_sha": "b579c7e0359b5c242b718866c2c2488a2dda1434",
@@ -27,11 +27,11 @@
   },
   "next64": {
     "created": 64,
-    "executed": 8,
-    "executed_range": "P01-P08",
-    "remaining": 56,
+    "executed": 16,
+    "executed_ranges": ["P01-P08", "P17-P24"],
+    "remaining": 48,
     "priority_rule": "DEPENDENCIES_AND_DECISION_VALUE_OVERRIDE_PROMPT_ORDER",
-    "next_admissible_block": "P09-P24_FOR_CURRENT_3_WIP_ONLY"
+    "next_admissible_block": "P09-P16_TARGETED_TO_CURRENT_3_WIP"
   },
   "discovery_refresh": {
     "fresh_non_procurement_signals": 10,
@@ -44,6 +44,37 @@
     "unit_economics": null,
     "transaction_evidence": false,
     "repeatability": false
+  },
+  "fatal_tests": {
+    "status": "S3_FATAL_TEST_READY",
+    "active_lanes": ["OPP-33", "OPP-36", "OPP-37"],
+    "tests": {
+      "OPP-33": {
+        "fatal_1": "BUYER_COORDINATION_GAP_EXISTS",
+        "test": "TEST-33",
+        "status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION",
+        "negative_control": "OFFICIAL_SEAI_SELF_NAVIGATION_PLUS_DIRECT_INSTALLER"
+      },
+      "OPP-36": {
+        "fatal_1": "IN_SCOPE_UNRESOLVED_OPERATIONAL_GAP_EXISTS",
+        "test": "TEST-36",
+        "status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION",
+        "negative_control": "COMMISSION_GUIDANCE_PLUS_VENDOR_DOCUMENTATION_ONLY"
+      },
+      "OPP-37": {
+        "fatal_1": "AI_SPECIFIC_INCREMENTAL_GAP_BEYOND_ORDINARY_SEO",
+        "test": "TEST-37",
+        "status": "INTERNAL_NEGATIVE_CONTROL_READY",
+        "negative_control": "ORDINARY_SEO_WEB_AUDIT_SAME_SITE_SAME_WINDOW"
+      }
+    },
+    "thresholds_predeclared": true,
+    "negative_controls_required": true,
+    "internal_test_ready": ["TEST-37"],
+    "external_tests_gated": ["TEST-33", "TEST-36"],
+    "go_to_market": false,
+    "buyer_behavior_observed": false,
+    "proof_promotion": false
   },
   "state_machine": [
     "S0_RESTORE", "S1_DISCOVERED", "S2_QUALIFIED", "S3_FATAL_TEST_READY",
@@ -62,6 +93,11 @@
     "INTEREST_NEQ_TRANSACTION",
     "PAYMENT_NEQ_REPEATABILITY",
     "PRICE_HYPOTHESIS_NEQ_WTP",
+    "FATAL_ASSUMPTION_BEFORE_BUILD",
+    "CHEAPEST_DECISIVE_TEST_FIRST",
+    "THRESHOLD_BEFORE_TEST",
+    "NEGATIVE_CONTROL_REQUIRED",
+    "NO_NEW_BEHAVIOR_EVIDENCE_NO_PROOF_PROMOTION",
     "PROMPT_COUNT_NEQ_PROGRESS"
   ],
   "external_action": {
@@ -76,7 +112,9 @@
     "run32_next64_document_id": "1IHywe-oHrJwd_o_rhEeOi2ynAAnYDM_GgnX2hBtOgHk",
     "p01_p08_document_id": "10ned4n-eciCkyv1qa5VKT5UZPBm1cgauwxWGG34m-bU",
     "p01_p08_readback_marker": "GENERAL-BUSINESS-ENGINE-P01-P08-DISCOVERY-REFRESH-3WIP",
-    "readback_status": "PASS_3_OF_3"
+    "p17_p24_document_id": "1mm9gzE8koltTCA77LvA61rQ2Zhu8slNUkXqtZNDcvVU",
+    "p17_p24_readback_marker": "GENERAL-BUSINESS-P17-P24-FATAL-TESTS-16OF64-WIP3-NO-EXTERNAL",
+    "readback_status": "PASS_4_OF_4"
   },
   "self_improvement": {
     "candidate": "EVIDENCE_GATED_BUSINESS_PRODUCTION_ROUTER",
