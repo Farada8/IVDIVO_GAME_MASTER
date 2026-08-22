@@ -1,0 +1,31 @@
+name: Personal AI PL-01 Project State
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl01-project-state.yml'
+
+jobs:
+  pl01-project-state:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exercise project CLI persistence
+        run: |
+          export PERSONAL_AI_HOME="$RUNNER_TEMP/personal-ai-pl01"
+          python personal-ai/run.py project create ci-demo
+          python personal-ai/run.py project status ci-demo
+          python personal-ai/run.py project next ci-demo
+          test -f "$PERSONAL_AI_HOME/projects/ci-demo/project.yaml"
+          test -f "$PERSONAL_AI_HOME/projects/ci-demo/state.json"
+          test -f "$PERSONAL_AI_HOME/projects/ci-demo/tasks.json"
+          test -f "$PERSONAL_AI_HOME/projects/ci-demo/decisions.md"
+          test -d "$PERSONAL_AI_HOME/projects/ci-demo/artifacts"
+          test -d "$PERSONAL_AI_HOME/projects/ci-demo/references"
+          test -d "$PERSONAL_AI_HOME/projects/ci-demo/logs"
+      - name: Run full Personal AI tests
+        run: python -m unittest discover -s personal-ai/tests -v
