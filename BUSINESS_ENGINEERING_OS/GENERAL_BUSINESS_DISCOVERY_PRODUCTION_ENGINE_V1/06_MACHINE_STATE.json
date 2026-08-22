@@ -1,7 +1,7 @@
 {
   "schema": "ivdivo.business.general_discovery_production_engine/1.0",
   "date": "2026-08-22",
-  "status": "ENGINEERING_CANDIDATE_PENDING_CI",
+  "status": "ENGINEERING_CANDIDATE_DRIVE_READBACK_PASS_PENDING_CI",
   "namespace": {
     "modules": "BDP01-BDP32",
     "contracts": "CDP01-CDP32",
@@ -27,11 +27,7 @@
     "S7_SALES_TEST_READY", "S8_EXTERNAL_SIGNAL", "S9_TRANSACTION",
     "S10_DELIVERY_PROVEN", "S11_REPEATABILITY", "S12_SCALE_READY"
   ],
-  "portfolio_policy": {
-    "max_wip": 3,
-    "primary": 1,
-    "pilots_max": 2
-  },
+  "portfolio_policy": {"max_wip": 3, "primary": 1, "pilots_max": 2},
   "evidence_laws": [
     "K_NEQ_S_NEQ_E_NEQ_CASH",
     "SIGNAL_NEQ_DEMAND",
@@ -51,7 +47,10 @@
     "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
     "master_document_id": "1bR19b7uSN6dCP1msK9hAatILkFqJpXUcOyLImxaJx8s",
     "run32_next64_document_id": "1IHywe-oHrJwd_o_rhEeOi2ynAAnYDM_GgnX2hBtOgHk",
-    "readback_pending": true
+    "master_readback_marker": "GENERAL-BUSINESS-DISCOVERY-PRODUCTION-ENGINE-V1-MASTER",
+    "run32_next64_readback_marker": "GENERAL-BUSINESS-DISCOVERY-PRODUCTION-ENGINE-V1-RUN32-NEXT64",
+    "readback_pending": false,
+    "readback_status": "PASS_2_OF_2"
   },
   "self_improvement": {
     "candidate": "EVIDENCE_GATED_BUSINESS_PRODUCTION_ROUTER",
