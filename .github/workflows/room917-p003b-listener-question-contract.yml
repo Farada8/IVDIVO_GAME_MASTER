@@ -1,0 +1,29 @@
+name: ROOM917 P003B Six Question Contract
+
+on:
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_listener_package_builder.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_listener_question_contract.py'
+      - '.github/workflows/room917-p003b-listener-question-contract.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_listener_package_builder.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_listener_question_contract.py'
+      - '.github/workflows/room917-p003b-listener-question-contract.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify blind package asks exactly six Listener QC questions
+        run: python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_listener_question_contract.py
