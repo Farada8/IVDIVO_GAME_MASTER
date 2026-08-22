@@ -1,0 +1,63 @@
+name: General Business Money Mechanisms P49-P50 Delivery QA
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/13_MONEY_MECHANISMS_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/37_DELIVERY_SOP_P49_P50_EXECUTION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/38_DELIVERY_SOP_P49_P50_STATE.json'
+      - '.github/workflows/general-business-money-mechanisms-p49-p50-delivery-qa.yml'
+  workflow_dispatch:
+
+jobs:
+  validate-delivery-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate P49-P50 delivery evidence boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          s=json.loads((root/'38_DELIVERY_SOP_P49_P50_STATE.json').read_text())
+          mm=json.loads((root/'13_MONEY_MECHANISMS_MACHINE_STATE.json').read_text())
+          assert s['status']=='PASS_ENGINEERING_DELIVERY_SOP_QA_NO_REAL_DELIVERY'
+          assert s['run']['executed']==2 and s['run']['pass_engineering']==2
+          assert s['run']['real_delivery_evidence_created'] is False
+          assert s['run']['market_proof_created'] is False
+          assert s['authority']['current_strategic_wip_count']==3
+          assert s['authority']['external_action_authorized'] is False
+          assert len(s['delivery_state_machine'])==9
+          assert s['delivery_state_machine'][0]=='SCOPE_FREEZE'
+          assert s['delivery_state_machine'][-1]=='DELIVERY_READY'
+          assert len(s['qa_dimensions'])==7
+          assert 'QA_PASS_DELIVERY_READY' in s['qa_dispositions']
+          obs=s['observed']
+          assert obs['real_deliveries']==0
+          assert obs['actual_delivery_hours'] is None
+          assert obs['actual_delivery_cost'] is None
+          assert obs['customer_acceptance_events']==0
+          assert obs['payments']==0 and obs['repeat_deliveries']==0
+          assert s['guards']['delivery_sop_ready_is_delivery_occurred'] is False
+          assert s['guards']['qa_spec_ready_is_customer_acceptance'] is False
+          assert s['guards']['silence_is_acceptance'] is False
+          assert s['guards']['acceptance_is_payment'] is False
+          assert s['guards']['synthetic_runtime_is_actual_delivery_hours'] is False
+          assert set(s['blocked_prompts'])=={'P51','P52','P53','P54','P55','P56'}
+          assert all(v is False for v in s['proof_boundary'].values())
+          assert mm['next64']['executed']==50 and mm['next64']['remaining']==14
+          assert mm['next64']['unexecuted_ranges']==['P51-P64']
+          assert mm['delivery_qa_prep']['real_deliveries']==0
+          assert mm['delivery_qa_prep']['actual_delivery_hours'] is None
+          assert mm['delivery_qa_prep']['actual_delivery_cost'] is None
+          assert mm['delivery_qa_prep']['external_action_authorized'] is False
+          assert mm['evidence_boundary']['businesses_proven']==0
+          assert mm['evidence_boundary']['external_action_authorized'] is False
+          print('P49-P50 DELIVERY QA: PASS / 50OF64 INTERNAL / NO REAL DELIVERY / P51-P56 BLOCKED')
+          PY
+      - name: Compile JSON
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/13_MONEY_MECHANISMS_MACHINE_STATE.json >/dev/null && python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/38_DELIVERY_SOP_P49_P50_STATE.json >/dev/null
