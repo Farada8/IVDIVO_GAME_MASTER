@@ -1,0 +1,23 @@
+name: D01 Central Router Minimal Repair
+
+on:
+  pull_request:
+    paths:
+      - 'CURRENT_IVDIVO_SYSTEM_STATE.json'
+      - 'CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json'
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_D01_ROUTER_REPAIR_2026-08-22/**'
+      - '.github/workflows/d01-central-router-minimal-repair.yml'
+  workflow_dispatch:
+
+jobs:
+  repair-proof:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Parse current routing JSON
+        run: python -m json.tool CURRENT_IVDIVO_SYSTEM_STATE.json >/dev/null && python -m json.tool CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json >/dev/null
+      - name: Run minimal router regression
+        run: python SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_D01_ROUTER_REPAIR_2026-08-22/test_minimal_router_repair.py
