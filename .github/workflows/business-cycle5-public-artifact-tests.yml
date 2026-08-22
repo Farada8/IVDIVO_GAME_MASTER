@@ -1,0 +1,34 @@
+name: Business Cycle5 Public Artifact Tests
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_CANARIES_32_TO_64/**'
+      - '.github/workflows/business-cycle5-public-artifact-tests.yml'
+  push:
+    branches:
+      - 'business-engineering/cycle5-public-artifact-canaries-32x64-2026-08-22'
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_CANARIES_32_TO_64/**'
+      - '.github/workflows/business-cycle5-public-artifact-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  public-artifact-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Cycle5 public artifact engine tests
+        working-directory: BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_CANARIES_32_TO_64/engine
+        run: python -m unittest test_public_artifact_engine.py -v
