@@ -29,7 +29,7 @@ jobs:
           doc = (root/'11_P09_P16_BUYER_PROBLEM_EVIDENCE.md').read_text()
           st = json.loads((root/'12_P09_P16_MACHINE_STATE.json').read_text())
           current = json.loads((root/'06_MACHINE_STATE.json').read_text())
-          assert all(f'P{i}' in doc for i in range(9,17))
+          assert all(f'P{i:02d}' in doc for i in range(9,17))
           assert all(f'OPP-{i}' in doc for i in (33,36,37))
           assert 'PUBLIC_SCREENING_CANDIDATE != BUYER != BUDGET_OWNER != DEMAND' in doc
           assert 'E0_SCREENING -> E1_STATED_PROBLEM -> E2_ARTIFACT_OR_DATA_RELEASE' in doc
