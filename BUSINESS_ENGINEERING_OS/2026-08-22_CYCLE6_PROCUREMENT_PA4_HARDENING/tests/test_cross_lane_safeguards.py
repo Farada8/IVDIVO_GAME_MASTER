@@ -1,4 +1,11 @@
+import sys
 import unittest
+from pathlib import Path
+
+CYCLE_ROOT = Path(__file__).resolve().parents[1]
+if str(CYCLE_ROOT) not in sys.path:
+    sys.path.insert(0, str(CYCLE_ROOT))
+
 from engine.cross_lane_safeguards import *
 
 class CrossLaneCycle6Tests(unittest.TestCase):
