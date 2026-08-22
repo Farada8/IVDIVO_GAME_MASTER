@@ -10,6 +10,8 @@
     "d01_state": "FOUNDER_LOCKED_E01_E120_RECORDING_AUTHORITY_ISSUED"
   },
   "founder_f1": {
+    "authority_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_F1_CANON_LOCK_AND_PREPROSE_GATE_v1.0.md",
+    "drive_id": "1EkmIwNmE9kkZ6RBfeMZzQ6L-AbLKaPIcT5r8mU_PsU0",
     "canon": "SMITH_HAS_A_TEENAGE_DAUGHTER_IN_CURRENT_SAGA_PERIOD",
     "working_age": "16_17_PENDING_TIMELINE_NORMALIZATION",
     "unknown_do_not_invent": ["DAUGHTER_NAME","MOTHER_NAME","EXACT_MARITAL_HISTORY","CUSTODY_OR_HOUSEHOLD_STRUCTURE","OCCUPATIONS","CONTACT_SCHEDULE"]
@@ -17,18 +19,28 @@
   "drive": {
     "cycle32b_story_production_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
     "ch19_ch24_rebase_id": "1GsELpV6PqpKKKguLzOAzDCouOYxhOIWVsSdf9K9rk-4",
+    "ch19_manuscript_id": "1ngQwNpSTTawUxz7DkWMiYOdM4DBRL49QpCT_HqOMfXw",
+    "ch19_gate_id": "1XCid-Pzagb0oV9V0ljs4kVy9e3Vfph-pQlvGxFNzf50",
+    "ch20_manuscript_id": "1ri8PM0NfYEgveuN0LDlyK-gLWaUacTFQ2tjllZ3Y-Cc",
+    "ch20_gate_id": "1objKIzc2G2O34P40bnsypcv7VKn8C1BUHCOBXiFzNik",
+    "ch21_manuscript_id": "1ogpC4Aw9qwvUET8v7Zc3ns9STj7eEz7go9DZJ5v6Y60",
+    "ch21_gate_id": "1yTvQpIqg4cStGG8akXH_Wp84Rdxf_58b3THDWObYi8k",
     "ch22_manuscript_id": "1dkG9m9HBspfoEaEjIYqutWnJ91GfVneH0AJY1A-z1S4",
     "ch22_gate_id": "10pkAiSomDa_JZ5h6Yd8Wm_8lR71zRQHdaS7hOd661co",
     "ch23_manuscript_id": "13khiS1NdVndiGNDqQiHY_TRlhsiLme2HRY-2C3-7Zr0",
     "ch23_gate_id": "1QMOlSxa57TzCFZvsnmZsn1Hj0jlGFpUFoEKsVIOsJnY",
     "ch24_manuscript_id": "1h77I_epSM9m7UqWNiu0a_gjDQs4PaeFg28IuOkmcVkA",
     "ch24_gate_id": "1aUjy18rE5GfHDwExA5mf7rgmrsYD7mCXjHyHPtPAaig",
+    "ch24_gate_readback_marker": "B03-CH24-GATE-PASS-F0-M0-DIALOGUE-REPAIR-NEXTBLOCK-REBASE",
     "ch25_ch29_climax_rebase_id": "1YamdStR6xEifvZFb1KFRPUrUWoSzlb4CMs5uTNg_Cfk"
   },
   "verified_block_state": {
+    "ch19_gate": {"status":"PASS_AFTER_TARGETED_CAUSAL_FUNCTION_REPAIR","fatal":0,"blocking_major":0},
+    "ch20_gate": {"status":"PASS_AFTER_TARGETED_LINE_LEVEL_REPAIR","fatal":0,"blocking_major":0},
+    "ch21_gate": {"status":"PASS_AFTER_TARGETED_CAUSAL_FUNCTION_AND_LINE_LEVEL_REPAIR","fatal":0,"blocking_major":0,"repaired_major":"CH22_PAYOFF_SPENT_EARLY"},
     "ch22_gate": {"status":"PASS_AFTER_TARGETED_LINE_LEVEL_REPAIR","fatal":0,"blocking_major":0},
     "ch23_gate": {"status":"PASS_AFTER_TARGETED_LINE_LEVEL_REPAIR","fatal":0,"blocking_major":0,"authority_title":"FAILOVER"},
-    "ch24_gate": {"status":"PASS_AFTER_TARGETED_LINE_LEVEL_REPAIR","fatal":0,"blocking_major":0},
+    "ch24_gate": {"status":"PASS_AFTER_TARGETED_DIALOGUE_ACTION_AND_LINE_LEVEL_REPAIR","fatal":0,"blocking_major":0,"authority_title":"GO_TO_THE_RELAY"},
     "ch25_ch29_rebase": {"status":"PRE_PROSE_GATE_PASS","fatal":0,"blocking_major":0,"p65_p72_executed":true}
   },
   "manuscript_frontier": {
@@ -38,6 +50,16 @@
     "ch25_authorized": true,
     "ch25_title": "CASCADE",
     "entry_time_approx": "02:30_PLUS"
+  },
+  "ch24_exit_state": {
+    "relay_line": "SMITH_AND_LOCAL_NETWORK_TECHNICIAN_DEPART_FOR_ESTABLISHED_RELAY_CONTROL_POINT",
+    "relay_result": "UNRESOLVED",
+    "hydro_line": "ONE_BOUNDED_MANUAL_ISOLATION_ATTEMPT_BEGINS",
+    "hydro_result": "UNRESOLVED",
+    "precursor_route_content": "SEALED_FROM_OPERATIONS",
+    "maja_lower_cell": "ACTIVE_WITH_OWNED_OBJECTIVES_AND_LOCAL_ROUTE_AUTHORITY",
+    "upper_gorge_heavy_access": "CLOSED_UNAVAILABLE",
+    "ontology": "UNKNOWN"
   },
   "climax_consequence": {
     "andrej": "SURVIVES_WITH_PERMANENT_DISABLING_LOWER_LIMB_INJURY_CLASS",
@@ -62,7 +84,8 @@
     "ANDREJ_INJURY_IS_CONTINGENT_CAUSALLY_EARNED_NOT_PUNISHMENT",
     "TINA_REMAINS_MOBILE_COMPETENT_AGENT",
     "CENTRALIZED_OPTION_NOT_STRAW_MAN",
-    "DISTRIBUTED_OPTION_NOT_MAGIC_GOOD"
+    "DISTRIBUTED_OPTION_NOT_MAGIC_GOOD",
+    "SMITH_DAUGHTER_CONTINUITY_OBEYS_F1_LIMITS"
   ],
   "next_obligation": "DRAFT_CH25_CASCADE_FROM_ACTUAL_CH24_PASS_AND_FRESH_P65_P72_REBASE",
   "next_after_draft": "RUN_CH25_STORY_HUMAN_SCENE_CONTINUITY_INJURY_CAUSALITY_GATE",
@@ -73,5 +96,6 @@
     "DO_NOT_USE_PRECURSOR_ACCESS_SEQUENCE_TO_CAUSE_CH25_FIELD_CHOICE",
     "DO_NOT_SHRINK_MULTI_SITE_EMERGENCY_TO_ANDREJ_ONLY",
     "DO_NOT_DRAFT_CH26_BEFORE_CH25_LOCAL_GATE"
-  ]
+  ],
+  "evidence_ceiling": "WORKING_STORY_EDITORIAL_AUTHORITY_NOT_FINAL_STORY_LOCK"
 }
