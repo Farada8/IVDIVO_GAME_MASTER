@@ -1,0 +1,61 @@
+{
+  "schema": "BUSINESS_ENGINEERING_CYCLE10_P265_P272_v1",
+  "date": "2026-08-22",
+  "status": "RUN8_EXECUTED_DRIVE_READBACK_PASS_PENDING_GITHUB_CI",
+  "parent_backlog": "P225-P288",
+  "run": {
+    "range": "P265-P272",
+    "executed": 8,
+    "pass_engineering": 8,
+    "target_files_acquired": 0,
+    "real_bidder_designation_events": 0,
+    "requirement_join_events": 0,
+    "bid_hold_no_bid_events": 0,
+    "pa4": false,
+    "pa5": false,
+    "e3": false,
+    "e4": false
+  },
+  "engineering": {
+    "modules": 8,
+    "contracts": 16,
+    "proof_gates": 8,
+    "protocols": 6,
+    "deterministic_canaries": 16
+  },
+  "backlog_accounting": {
+    "p257_p264_executed": 8,
+    "p265_p272_executed": 8,
+    "hardening_cards_executed_p257_p288": 16,
+    "remaining_p225_p288": 48,
+    "remaining_ranges": ["P225-P256", "P273-P288"]
+  },
+  "root_state": {
+    "root_a": "TARGET_PACK_NOT_ACQUIRED",
+    "root_b": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET"
+  },
+  "proof_boundary": {
+    "tax_clearance_proven": false,
+    "insurance_proven": false,
+    "target_specific_capability_proven": false,
+    "independent_completion_reference_proven": false,
+    "current_workforce_capacity_proven": false,
+    "procurement_eligibility_proven": false,
+    "actual_bidder_intent_proven": false,
+    "proof_grade_promoted": false
+  },
+  "drive": {
+    "folder": "1j2T1jO0yZmYXkMW8-8f8AUpzzDJXhXx2",
+    "run8_engineering": "19ftjXkmMxAW-ASu5Nmie-Oukgpw4Z5ofYfqj179lyOg",
+    "machine_state": "1UBqvz-YmUc9d43W3o6nFSmCOdB66oh3z5F7S_xLfFIg",
+    "semantic_readback": "PASS_2_OF_2"
+  },
+  "github": {
+    "pr": null,
+    "head": null,
+    "ci_run": null,
+    "ci": "PENDING"
+  },
+  "current_gate": "ACQUIRE_AUTHENTIC_CURRENT_TARGET_PACK_OR_EXPLICIT_REAL_BIDDER_DESIGNATION_AND_EVIDENCE_PACKET",
+  "authority_mutation": false
+}
