@@ -1,0 +1,38 @@
+name: General Business T-ID01 Cross-Standard Interop
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/28_TID01_CROSS_STANDARD_IDENTITY_DISCOVERY/**'
+      - '.github/workflows/general-business-tid01-cross-standard-interop.yml'
+
+jobs:
+  tid01:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run T-ID01 deterministic canaries
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/28_TID01_CROSS_STANDARD_IDENTITY_DISCOVERY/tests/test_normalizer.py
+      - name: Verify result emits all predeclared semantic gaps without proof promotion
+        run: |
+          python - <<'PY'
+          import importlib.util, json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/28_TID01_CROSS_STANDARD_IDENTITY_DISCOVERY')
+          spec = importlib.util.spec_from_file_location('tid01', root/'normalizer.py')
+          mod = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(mod)
+          manifest = json.loads((root/'01_PUBLIC_FIXTURE_MANIFEST.json').read_text())
+          result = mod.run(manifest)
+          assert result['finding_count'] == 6
+          assert {x['id'] for x in result['findings']} == {'F001','F002','F003','F004','F005','F006'}
+          assert result['semantic_gap_found'] is True
+          assert result['proof_boundary']['buyer_demand'] == 'UNPROVEN'
+          assert result['proof_boundary']['wtp'] == 'UNKNOWN'
+          assert result['proof_boundary']['market_winner'] is None
+          assert result['proof_boundary']['external_action_authorized'] is False
+          print('T-ID01: PASS — 6 semantic incompatibility/drift classes detected; no market-proof promotion')
+          PY
