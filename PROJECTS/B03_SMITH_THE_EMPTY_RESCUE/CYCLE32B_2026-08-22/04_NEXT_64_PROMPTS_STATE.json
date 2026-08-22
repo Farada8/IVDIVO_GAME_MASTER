@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-08-22",
+  "status":"DESIGNED_64_NOT_EXECUTED",
+  "law":"Execute dependency-first; manuscript production outranks business/meta work; do not relabel designed prompts as executed.",
+  "drive_id":"1GhsuTk9vWtpngNr5Qcf0AiG168BH7LdSRh0v1CfnTDE",
+  "groups":[
+    {"id":"A","range":"P33-P40","name":"CH10-12 IMMEDIATE MANUSCRIPT","depends_on":"CYCLE32B_STORY_GATE_FATAL0_MAJOR0","prompts":["P33 CH10 live-objective plan","P34 CH10 tactic/subtext map","P35 Draft CH10 JANA'S LINE","P36 CH10 local Story/Human Scene gate","P37 Draft CH11 THE FORWARDED WARNING","P38 CH11 knowledge/jurisdiction/character gate","P39 Draft CH12 THE DETAIL THAT SHOULD NOT EXIST","P40 CH10-12 block/corpus gate"]},
+    {"id":"B","range":"P41-P48","name":"CH01-12 CORPUS REGRESSION","depends_on":"P40","prompts":["P41 contrastive syntax fingerprint","P42 acknowledgment function matrix","P43 question-family blind test","P44 source/knowledge provenance audit","P45 epistemic modality/distributed confidence","P46 emotional latency/body-first audit","P47 vocabulary/metaphor provenance","P48 minimum corpus repair + regression"]},
+    {"id":"C","range":"P49-P56","name":"CH13-18 MIDPOINT/HISTORY","depends_on":"P48","prompts":["P49 scene-card/prose rebase","P50 physical site/storm geography","P51 OES archive conflict","P52 Confederation contribution budget","P53 dummy-response test setup","P54 midpoint responder-metadata proof","P55 mystery fairness/ontology ceiling","P56 CH13-18 block gate"]},
+    {"id":"D","range":"P57-P64","name":"CH19-24 ESCALATION","depends_on":"P56","prompts":["P57 causal DAG","P58 distributed rescue test","P59 local authority integrity","P60 Confederation model overreach test","P61 Morgen Pass public/classified split","P62 Andrej continuity pre-climax","P63 reader waiting-state","P64 CH19-24 block gate"]},
+    {"id":"E","range":"P65-P72","name":"CH25-29 CLIMAX/RESOLUTION","depends_on":"P64","prompts":["P65 Andrej nonfatal permanent injury design","P66 centralized predictive control stress test","P67 distributed judgment stress test","P68 draft climax choice","P69 draft physical containment","P70 draft institutional resolution","P71 draft personal resolution","P72 full-novel Story Gate"]},
+    {"id":"F","range":"P73-P80","name":"BUSINESS ENGINE PILOT PREP","depends_on":"LOCKED_PRODUCT_AVAILABLE_AND_PRIMARY_BOOK_SAFE","prompts":["P73 select locked pilot","P74 rights/provenance manifest","P75 source-version/hash binder","P76 select bounded SKU pilot","P77 fresh provider/channel research","P78 real cost/capacity ledger","P79 Human/market experiment definition","P80 pilot GO/NO-GO"]},
+    {"id":"G","range":"P81-P88","name":"PERSISTENCE/BRANCH INTEGRATION","depends_on":"MATERIAL_STATE_CHANGE_OR_INTEGRATION_NEED","prompts":["P81 fresh main/B03 compare","P82 semantic merge inventory","P83 non-destructive PR strategy","P84 Drive backlink/index validation","P85 project-state coverage update","P86 safe Learning Ledger merge","P87 partial-write rollback contract","P88 cross-store readback closure"]},
+    {"id":"H","range":"P89-P96","name":"SELF-IMPROVEMENT/BUSINESS MATURATION","depends_on":"REAL_BUSINESS_PILOT_EVIDENCE","prompts":["P89 full registry-family dedupe","P90 formal Business Engine development contract","P91 bounded live pilot","P92 adversarial review","P93 evaluation matrix","P94 actual Human/market/provider evidence if authorized","P95 promote/narrow/merge/hold/reject/rollback","P96 prune queue + derive next evidence-driven work"]}
+  ],
+  "counts":{"designed":64,"executed":0},
+  "current_pointer":"P33_THEN_P34_THEN_P35_CH10"
+}
