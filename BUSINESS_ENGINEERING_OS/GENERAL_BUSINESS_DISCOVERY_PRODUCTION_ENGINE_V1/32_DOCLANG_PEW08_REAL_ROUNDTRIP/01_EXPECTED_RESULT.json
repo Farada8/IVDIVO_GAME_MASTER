@@ -1,0 +1,23 @@
+{
+  "schema": "ivdivo.general_business.doclang_pew08_expected/1.0",
+  "runtime_pins": {
+    "docling": "2.121.0",
+    "doclang": "0.7.3"
+  },
+  "result_is_data_dependent": true,
+  "allowed_routes": [
+    "PASS_REAL_STRUCTURAL_COMPATIBILITY_GAP_TECHNICAL_ONLY",
+    "PASS_REAL_FIDELITY_GAP_TECHNICAL_ONLY",
+    "HOLD_NO_REAL_GAP_IN_BOUNDED_FIXTURES",
+    "HOLD_TEST_INFRASTRUCTURE_FAILURE"
+  ],
+  "green_ci_means": "EXPERIMENT_EXECUTED_AND_CLASSIFIED_NOT_GAP_FOUND",
+  "commercial_result": "HOLD_COMMERCIAL_UNPROVEN",
+  "buyer_demand": "UNPROVEN",
+  "wtp": "UNKNOWN",
+  "price": null,
+  "transactions": 0,
+  "profitability": "UNPROVEN",
+  "wip_promotion": false,
+  "external_action_authorized": false
+}
