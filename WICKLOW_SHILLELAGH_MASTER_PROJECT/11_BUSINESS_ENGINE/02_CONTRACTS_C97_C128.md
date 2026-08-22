@@ -1,0 +1,34 @@
+# ENGINEERING CONTRACTS C97–C128
+
+- **C97 SOURCE_REQUIRED** — Every opportunity object must name at least one retrievable public source.
+- **C98 UNKNOWN_DEADLINE_STAYS_NULL** — Missing/ambiguous deadline time may not be guessed.
+- **C99 EXPIRED_NOT_ACTIVE** — Expired calls are case-study fixtures, never active pipeline.
+- **C100 ELIGIBILITY_FAIL_CLOSED** — Unverified eligibility blocks submission readiness.
+- **C101 BRIEF_BEFORE_CONCEPT_LOCK** — No site-specific concept lock before official brief compilation.
+- **C102 SITE_CLASS_BEFORE_ARTFORM** — Wall/garden/standalone/temporary site class precedes artform decision.
+- **C103 PORTFOLIO_EVIDENCE_NOT_ASSERTION** — Criterion fit must point to evidence or remain GAP.
+- **C104 REUSE_MECHANISM_NOT_COPY** — Reuse compositional mechanisms, not unchanged site-specific imagery.
+- **C105 HISTORY_CLAIM_PROVENANCE** — Every named historical assertion must have source/status.
+- **C106 ALLEGORY_LABELLED** — Invented symbolic figures/events cannot be presented as literal history.
+- **C107 VIEWPOINT_DEFINED** — Anamorphic/trompe-l’oeil work requires a declared primary viewpoint.
+- **C108 SURFACE_UNKNOWN_HOLD** — Unknown substrate/coating/moisture prevents final material lock.
+- **C109 ACCESS_COST_EXPLICIT** — Scaffold/MEWP/traffic management cannot hide inside generic production cost.
+- **C110 WEATHER_RISK_EXPLICIT** — Exterior schedule must include weather/cure risk.
+- **C111 MATERIAL_BY_SUBSTRATE** — Paint system follows substrate/environment, not image style.
+- **C112 MAINTENANCE_OWNER_NAMED** — Maintenance plan must name responsibility or remain unresolved.
+- **C113 H_S_BEFORE_INSTALL** — Installation cannot move to GO without H&S controls.
+- **C114 INSURANCE_BEFORE_CONTRACT** — Required insurance evidence is a contract gate, not assumed.
+- **C115 PERMISSION_NOT_INFERRED** — Owner/planning/licence approval cannot be inferred from an open call.
+- **C116 ASSET_HASH_REQUIRED** — Competition images receive stable hashes and provenance records.
+- **C117 BUDGET_TOTAL_RECONCILES** — All line items + VAT treatment must reconcile to brief ceiling.
+- **C118 ARTIST_FEE_VISIBLE** — Artist compensation is an explicit line item.
+- **C119 GUIDANCE_NOT_LAW** — 20–25% fee and 2–5% contingency are advisory planning references only unless brief/contract says otherwise.
+- **C120 CASH_TIMING_SEPARATE** — Cash exposure is tracked separately from nominal profit.
+- **C121 NO_UNKNOWN_ECONOMICS_FILL** — Unknown supplier quotes/margins remain null.
+- **C122 BID_EFFORT_BEFORE_POLISH** — Estimate application effort before high-cost visual refinement.
+- **C123 NO_MAGIC_BID_SCORE** — Decision uses explicit vector/gates, not opaque weighted total.
+- **C124 SUBMISSION_READBACK** — Final pack requires filename/page/checksum/readback verification.
+- **C125 PUBLIC_SIGNAL_NOT_WIN** — Published budget/call does not prove selection or buyer preference.
+- **C126 NO_E3_E4_WITHOUT_INTERACTION** — No willingness-to-pay/payment claim without real external event.
+- **C127 LEARNING_REQUIRES_OUTCOME** — Portfolio-learning promotions require real jury/client/result evidence.
+- **C128 SI_NO_AUTO_PROMOTION** — Mural SI findings remain DISCOVERY_ONLY until real pilot net-gain proof.

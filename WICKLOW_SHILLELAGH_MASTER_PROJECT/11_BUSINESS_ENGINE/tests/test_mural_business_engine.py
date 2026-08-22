@@ -1,0 +1,40 @@
+import unittest
+from mural_business_engine import *
+
+NOW="2026-08-22T00:45:00+01:00"
+
+class TestMuralBusinessEngine(unittest.TestCase):
+    def test01_expired(self): self.assertEqual(deadline_state(Opportunity("s","Shillelagh",15000,"2026-08-21T16:00:00+01:00","MURAL","src","x"),NOW),"EXPIRED")
+    def test02_open(self): self.assertEqual(deadline_state(Opportunity("r","Roscommon",112500,"2026-09-07T16:00:00+01:00","PUBLIC","src","x"),NOW),"OPEN")
+    def test03_missing_deadline(self): self.assertEqual(deadline_state(Opportunity("d","Donegal",55000,None,"PUBLIC","src","x"),NOW),"VERIFY_DEADLINE")
+    def test04_elig_hold(self): self.assertEqual(eligibility_gate(Opportunity("x","x",1,None,"x","src","x")),"HOLD")
+    def test05_elig_pass(self): self.assertEqual(eligibility_gate(Opportunity("x","x",1,None,"x","src","x",True)),"PASS")
+    def test06_elig_fail(self): self.assertEqual(eligibility_gate(Opportunity("x","x",1,None,"x","src","x",False)),"FAIL")
+    def test07_a0(self): self.assertEqual(application_readiness(Opportunity("x","x",1,None,"x","src","x"),False,False,False),"A0")
+    def test08_a1(self): self.assertEqual(application_readiness(Opportunity("x","x",1,None,"x","src","x",None,None,True),False,False,False),"A1")
+    def test09_a2(self): self.assertEqual(application_readiness(Opportunity("x","x",1,None,"x","src","x",True,None,True),False,False,False),"A2")
+    def test10_a3(self): self.assertEqual(application_readiness(Opportunity("x","x",1,None,"x","src","x",True,None,True),True,False,False),"A3")
+    def test11_a4(self): self.assertEqual(application_readiness(Opportunity("x","x",1,None,"x","src","x",True,None,True),True,True,False),"A4")
+    def test12_a5(self): self.assertEqual(application_readiness(Opportunity("x","x",1,None,"x","src","x",True,None,True),True,True,True),"A5")
+    def test13_a6(self): self.assertEqual(application_readiness(Opportunity("x","x",1,None,"x","src","x",True,None,True),True,True,True,True),"A6")
+    def test14_budget_none(self): self.assertIsNone(budget_advisory(None)["artist_fee_target"])
+    def test15_fee_math(self): self.assertEqual(budget_advisory(100000)["artist_fee_target"],22000)
+    def test16_cont_math(self): self.assertEqual(budget_advisory(100000)["contingency_target"],5000)
+    def test17_negative_ratio(self): self.assertRaises(ValueError,budget_advisory,100,-.1,.05)
+    def test18_kill_expired(self): self.assertEqual(bid_decision(Opportunity("s","s",1,"2026-08-21T16:00:00+01:00","x","src","x",True,None,True),NOW,True,True,True)["decision"],"KILL")
+    def test19_kill_ineligible(self): self.assertEqual(bid_decision(Opportunity("x","x",1,"2026-09-07T16:00:00+01:00","x","src","x",False,None,True),NOW,True,True,True)["decision"],"KILL")
+    def test20_hold_unknown_elig(self): self.assertEqual(bid_decision(Opportunity("x","x",1,"2026-09-07T16:00:00+01:00","x","src","x",None,None,True),NOW,True,True,True)["decision"],"HOLD")
+    def test21_hold_no_brief(self): self.assertIn("official_brief_missing",bid_decision(Opportunity("x","x",1,"2026-09-07T16:00:00+01:00","x","src","x",True,None,False),NOW,True,True,True)["reasons"])
+    def test22_hold_site(self): self.assertIn("site_unknown",bid_decision(Opportunity("x","x",1,"2026-09-07T16:00:00+01:00","x","src","x",True,None,True),NOW,False,True,True)["reasons"])
+    def test23_hold_portfolio(self): self.assertIn("portfolio_mapping_incomplete",bid_decision(Opportunity("x","x",1,"2026-09-07T16:00:00+01:00","x","src","x",True,None,True),NOW,True,False,True)["reasons"])
+    def test24_hold_cash(self): self.assertIn("cash_exposure_unknown",bid_decision(Opportunity("x","x",1,"2026-09-07T16:00:00+01:00","x","src","x",True,None,True),NOW,True,True,False)["reasons"])
+    def test25_keep_ready(self): self.assertEqual(bid_decision(Opportunity("x","x",1,"2026-09-07T16:00:00+01:00","x","src","x",True,None,True),NOW,True,True,True)["decision"],"KEEP")
+    def test26_history_hold(self): self.assertEqual(historical_claim_gate(0),"HOLD")
+    def test27_history_pass(self): self.assertEqual(historical_claim_gate(1),"PASS")
+    def test28_allegory(self): self.assertEqual(historical_claim_gate(0,True),"ALLEGORY_ALLOWED_LABEL_REQUIRED")
+    def test29_material_hold(self): self.assertEqual(material_lock(True,False),"HOLD")
+    def test30_material_pass(self): self.assertEqual(material_lock(True,True),"PASS")
+    def test31_trompe_hold(self): self.assertEqual(trompe_loeil_gate(True,False),"HOLD")
+    def test32_proof_ceiling(self): self.assertEqual((proof_ceiling(),proof_ceiling(True),proof_ceiling(False,True)),("E2+","E3","E4+"))
+
+if __name__ == "__main__": unittest.main()
