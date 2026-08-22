@@ -1,7 +1,7 @@
 # CURRENT — IVDIVO SELF-IMPROVEMENT AUTHORITY
 
-**Status:** CURRENT ROUTER — v2 VERIFIED_CURRENT  
-**Updated:** 2026-08-21  
+**Status:** CURRENT ROUTER — v2 VERIFIED_CURRENT / BOOK INTELLIGENCE GATE ACTIVE  
+**Updated:** 2026-08-22  
 **Scope:** whole-project improvement, with primary priority on BOOK PRODUCTION and LOCKED BOOK → AUDIO NOVEL PRODUCTION.
 
 ## CURRENT STACK
@@ -18,11 +18,14 @@
 10. `CURRENT_IVDIVO_LEARNING_LEDGER.json` — production observations, bounded experiments and reusable learnings.
 11. `LEARNING_LEDGER_SCHEMA_v1.json` — evidence-ledger schema.
 12. `IVDIVO_NARRATIVE_OS/14_CONTINUOUS_DELTA_AND_LEARNING_REGISTRY.md` — delta intake/dedupe/universalization firewall.
-13. `IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md` — reference/book learning route.
-14. `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md` — cross-conversation learning/continuation.
-15. `tools/ivdivo_self_improvement.py` — VERIFIED_CURRENT registry/audit/queue utility.
-16. `IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-21.md` — exact current runtime evidence.
-17. `CURRENT_IVDIVO_SYSTEM_STATE.json` — aggregate project pointer; rebase rather than overwrite when sibling dialogs advance it.
+13. `BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.0.md` — universal gateway for material book/manual/paper/script reference use.
+14. `CURRENT_BOOK_INTELLIGENCE_ENGINE_STATE.json` — Book Intelligence lifecycle, pilot and current validation state.
+15. `IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md` — Story-domain reference adapter behind Book Intelligence.
+16. `IVDIVO_NARRATIVE_OS/16_PROJECT_WIDE_CONTINUATION_LAW_v1.0.md` — cross-conversation learning/continuation.
+17. `tools/ivdivo_self_improvement.py` — VERIFIED_CURRENT registry/audit/queue utility.
+18. `tools/ivdivo_book_intelligence.py` — executable Book Intelligence contract/reference utility.
+19. `IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-21.md` — exact current Self-Improvement runtime evidence.
+20. `CURRENT_IVDIVO_SYSTEM_STATE.json` — aggregate project pointer; freshness-read/rebase rather than overwrite when sibling dialogs advance it.
 
 Historical/base: `IVDIVO_NARRATIVE_OS/17_SELF_IMPROVEMENT_ENGINE_v1.0.md`.
 
@@ -32,7 +35,9 @@ Drive mirrors:
 - Learning Ledger ID `1Qi-MhGcoup3o5YPy0vKutw7ZWZ0J3UKs2A7nInhaYXE`;
 - v1 base ID `1lbAaKASLAKFzCiGEF84Xrs-ziwQhCJASwLfDh3UGwSg`;
 - improvement registry mirror ID `1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs`;
-- portability inventory ID `1WofqSiO3fBD_VoIveOVDihBybwlpeDE051zVrf1ipVs`.
+- portability inventory ID `1WofqSiO3fBD_VoIveOVDihBybwlpeDE051zVrf1ipVs`;
+- Book Intelligence folder ID `1YaCto6NxrRRsbgUI1PoySLNBdna9xq6r`;
+- Book Intelligence current authority doc ID `1HHQ4Lcq0p3R5KFHbfzXemv5tMctOCNGt4CFYdXaV__Y`.
 
 ## PRIMARY OBJECTIVE ORDER
 
@@ -45,8 +50,12 @@ Self-improvement is not the product. Better completed books and better audio pro
 ### Writing
 Follow `CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md`, `CURRENT_IVDIVO_WRITING_STUDIO_AUTHORITY.md` and active project/book source-of-truth. Self-Improvement observes recurring defects/successes and promotes reusable mechanisms; it does not replace story production.
 
+When a book/manual/paper/script materially affects a writing decision, route the reference through Book Intelligence first, then through the Story Adapter. Do not jump `BOOK -> PROMPT/CANON`.
+
 ### Book → Audio
 Follow `CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md`, current audio overlay/source hash and manifests/gates. Audio may not silently reopen locked story. Repair the earliest proven failed layer. Hard Pilot, major repair, Release QC and Master Lock feed reusable evidence back to the Learning Ledger.
+
+Reference/book evidence may inform performance, acoustics, reliability and evaluation mechanisms but may not substitute for live provider, render, pronunciation or human-listener evidence.
 
 ### Abrupt-chat recovery / manual transcript transfer
 When the Founder copies a previous conversation into a new session (`Ctrl+A -> Ctrl+C -> paste`, export or generated big-paste attachment), run `18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md` before normal production continuation.
@@ -57,7 +66,7 @@ Do not require the Founder to manually label which parts matter. Do not trust �
 
 ## OPERATING LOOP
 
-`RESTORE CURRENT STATE -> IF PASTED PRIOR TRANSCRIPT THEN RECOVERY/INGESTION -> FRESHNESS/DELTA SWEEP -> IMPROVEMENT REGISTRY SWEEP -> LEARNING LEDGER SWEEP -> IDENTIFY CURRENT PRODUCTION BOTTLENECK -> SURFACE RELEVANT VERIFIED/CANDIDATE MECHANISMS -> EXECUTE PRIMARY PRODUCTION OBLIGATION -> RECORD NEW DEFECTS/SUCCESSES -> ADVANCE ONE PRIMARY IMPROVEMENT WHEN JUSTIFIED -> PILOT/RED TEAM -> EVALUATION MATRIX -> APPLY -> VERIFY -> PERSIST -> CONTINUE`.
+`RESTORE CURRENT STATE -> IF PASTED PRIOR TRANSCRIPT THEN RECOVERY/INGESTION -> FRESHNESS/DELTA SWEEP -> IF MATERIAL BOOK/REFERENCE USE THEN BOOK INTELLIGENCE GATE -> IMPROVEMENT REGISTRY SWEEP -> LEARNING LEDGER SWEEP -> IDENTIFY CURRENT PRODUCTION BOTTLENECK -> SURFACE RELEVANT VERIFIED/CANDIDATE MECHANISMS -> EXECUTE PRIMARY PRODUCTION OBLIGATION -> RECORD NEW DEFECTS/SUCCESSES -> ADVANCE ONE PRIMARY IMPROVEMENT WHEN JUSTIFIED -> PILOT/RED TEAM -> EVALUATION MATRIX -> APPLY -> VERIFY -> PERSIST -> CONTINUE`.
 
 ## GENERAL PROBLEM-SOLVING KERNEL
 
@@ -81,6 +90,29 @@ For current providers/APIs/laws/prices/model capabilities/platforms use fresh ve
 
 True checks while no active session exists require explicit scheduled automation; never claim invisible background research without it.
 
+## BOOK INTELLIGENCE INPUT TO SELF-IMPROVEMENT
+
+Books and long-form references may change Self-Improvement only through a typed, testable path:
+
+`SOURCE PASSPORT -> CLAIM + LOCATOR -> PROJECT-NEUTRAL MECHANISM -> FAILURE MODES -> DEDUPE/CONTRADICTION CHECK -> SELF_IMPROVEMENT ADAPTER -> ARCHITECTURE/PROCESS CANDIDATE -> BOUNDED REAL PROJECT PILOT -> SECOND INDEPENDENT PROJECT WHEN UNIVERSAL PROMOTION IS CLAIMED -> PROMOTION/HOLD/REJECT -> WRITE-THROUGH`.
+
+Rules:
+- prestige or quantity of books is not promotion evidence;
+- two books agreeing is not a production result;
+- duplicated editions/mirrors add zero independent evidence weight;
+- indexed/searched/TOC-mapped/partial-read/full-read/synthesized are separate lifecycle states;
+- a book-derived taxonomy is not sufficient reason to create a new engine;
+- reuse/extend existing modules unless an interface gap is demonstrated;
+- book evidence cannot substitute for human, provider, market, transaction or factual specialist evidence when those are the real gate.
+
+Current Book Intelligence validation state:
+- engineering contracts: 13/13 local tests PASS;
+- Cycle 1: 32/32 prompts executed, 26 PASS_ENGINEERING / 6 EVIDENCE_HOLD at cycle close;
+- Pilot 1 B03/SMITH: real provenance/freshness routing PASS — stale CH25 resume was prevented and current CH01–29 P72 development-complete frontier was recovered;
+- universal promotion: **not yet** — second independent domain/project pilot still required.
+
+Therefore Book Intelligence is an active input gateway to Self-Improvement, but its new cross-domain architecture mechanisms are not allowed to self-promote merely because the engine exists.
+
 ## TWO MEMORIES + ONE EVALUATION CONTRACT
 
 **Improvement Registry:** candidate ideas/mechanisms, lifecycle state, next action/gate.
@@ -92,6 +124,8 @@ True checks while no active session exists require explicit scheduled automation
 Evidence classes may not substitute for each other: automated tests ≠ literary quality; model review ≠ Human Signal; dry run ≠ live provider; source inspection ≠ runtime; predicted market score ≠ market behavior.
 
 A recovered transcript is an additional **discovery/evidence surface**, not a third authority memory. Its material contents must be reconciled into the two existing memories and controlling project artifacts instead of creating a parallel transcript canon.
+
+Book Intelligence is likewise not a third authority memory. It is a typed evidence/mechanism compiler feeding candidates and validated results into the existing Registry/Learning Ledger lifecycle.
 
 ## BEST-IDEA / ANTI-BEDLAM LAW
 
@@ -108,6 +142,8 @@ Default WIP: one primary meta-improvement integrating; up to two independent bou
 Newer is not automatically better. Model votes do not create authority. Higher test count does not prove literary quality. A file named FINAL is not a lock.
 
 Changes to this engine pass the same lifecycle. It may simplify itself and remove obsolete rules.
+
+For book-derived Self-Improvement changes, the Book Intelligence source/mechanism/provenance lifecycle happens **before** this promotion lifecycle; it never bypasses it.
 
 For self-improvement discoveries recovered from an old transcript, the transcript supplies provenance/discovery content but does not bypass lifecycle gates. Fully present material can be persisted as `CHAT_ONLY_CANDIDATE`; summaries/claims alone remain `DISCOVERY_ONLY`.
 
@@ -127,6 +163,6 @@ Evidence: `IVDIVO_NARRATIVE_OS/SELF_IMPROVEMENT_V2_RUNTIME_VERIFICATION_2026-08-
 
 The previous DNS/clone limitation remains an environment limitation only; it no longer blocks runtime verification because exact byte identity was proven through Git blob SHA before execution.
 
-Operational status: **the v2 architecture, registry lifecycle utility, learning ledger, kernels, evaluation contract and current router are VERIFIED_CURRENT.** The new transcript-recovery module is a Founder-directed operational extension and must itself be monitored through normal self-improvement evidence; real book/audio/Human/market evidence remains separate and must never be fabricated.
+Operational status: **the v2 architecture, registry lifecycle utility, learning ledger, kernels, evaluation contract and current router are VERIFIED_CURRENT. Book Intelligence is now the required reference/book gateway feeding Self-Improvement, with Pilot 1 PASS and second independent pilot still required for universal promotion of new cross-domain architecture mechanisms.** Real book/audio/Human/market evidence remains separate and must never be fabricated.
 
 **FIRST MAKE BETTER STORIES. THEN MAKE BETTER AUDIO FROM THOSE STORIES. THEN MAKE THE WHOLE FACTORY BETTER.**
