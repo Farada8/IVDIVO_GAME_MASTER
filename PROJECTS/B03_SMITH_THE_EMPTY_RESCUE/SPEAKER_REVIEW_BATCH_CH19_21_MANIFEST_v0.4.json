@@ -1,0 +1,38 @@
+{
+  "project": "B03 — THE EMPTY RESCUE",
+  "artifact": "125_B03_SPEAKER_REVIEW_BATCH_CH19_21_MANIFEST_v0.4",
+  "status": "PASS_BATCH_ONLY_FULL_SPEAKER_GATE_OPEN",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "source_segmentation_package_drive_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
+  "source_segmentation_package_sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
+  "actual_speech_denominator_full_book": 3714,
+  "chapters": {
+    "CH19": {"actual_speech": 113, "assigned": 113, "unknown": 0, "known_narrator_inline_exception": "B03_CH19_S0206"},
+    "CH20": {"actual_speech": 132, "assigned": 132, "unknown": 0},
+    "CH21": {"actual_speech": 110, "assigned": 110, "unknown": 0}
+  },
+  "batch": {"actual_speech": 355, "assigned": 355, "unknown": 0, "exact_text_changes": 0, "voice_ids_assigned": 0},
+  "cumulative_ch01_21": {
+    "reviewed_actual_speech": 2390,
+    "assigned": 2387,
+    "unknown": 3,
+    "coverage_pct": 99.8745,
+    "remaining_unknown": ["B03_CH03_S0240", "B03_CH03_S0244", "B03_CH03_S0248"],
+    "not_yet_context_reviewed_after_ch21": 1324
+  },
+  "drive_artifacts": {
+    "ch19": "1v_I69qXLMeNZHctnDsJRulEFNbFtKnNf",
+    "ch20": "1KR-i62LbUGcGOS-TKlXoLhyzSEeMn2bQ",
+    "ch21": "1CNM-1kQEZvM_mArkzGixGu0WqAUMVW9s",
+    "gate": "1VMSzd1eou29mQ56W7lZGcI2X6KQ4--5G",
+    "manifest": "1uwy_KvAprLJxOhp817_6V7HnoyV-spQ7",
+    "voice_map_template": "1g4lESWRrDNmfeUa4Ph4KbzlrU81DVj0o",
+    "zip": "1BNdcmf0CLxaSY0Psmb520cCoMiVvB28r"
+  },
+  "next_exact_action": "CH22–24 contextual speaker review",
+  "full_speaker_gate": false,
+  "voice_lock": false,
+  "provider_dispatch_allowed": false,
+  "human_evidence_claimed": false,
+  "story_text_mutation": false
+}
