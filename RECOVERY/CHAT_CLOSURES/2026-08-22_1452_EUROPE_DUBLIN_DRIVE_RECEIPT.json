@@ -1,0 +1,17 @@
+{
+  "schema": "ivdivo.chat_closure.drive_receipt/0.1",
+  "closure_marker": "CHAT-CLOSURE-20260822-1452-DUBLIN-PERSONAL-AI-PL10-CURRENT",
+  "github_archive_pr": 491,
+  "github_archive_merge_sha": "3e21c72f4c4ca9d32cff8b67322f5f42f96957ac",
+  "github_markdown_path": "RECOVERY/CHAT_CLOSURES/2026-08-22_1452_EUROPE_DUBLIN_PERSONAL_AI_FULL_CONVERSATION_CLOSURE.md",
+  "github_state_path": "RECOVERY/CHAT_CLOSURES/2026-08-22_1452_EUROPE_DUBLIN_PERSONAL_AI_FULL_CONVERSATION_STATE.json",
+  "google_drive": {
+    "folder_id": "1c557MdC_B3QI2hmRWgfMTQHp5ZjfHuuI",
+    "document_id": "1dnLEViu_sOI4KVJ9MiynBzZW7s70j2p63x4C9yQmZJQ",
+    "document_title": "FULL CONVERSATION CLOSURE — 2026-08-22 14:52 Dublin — Personal AI / Production Launch",
+    "document_revision_readback": "AIroW35N_NpAYDAvRe-n8SByAzmugBo2Gl80Kh5yONqUmH46rMsTVDhKVEfOzCQArtH6gqu_4HXRsEwAAVhsdp5JRW6DftbgAID7FiHLK_0",
+    "marker_readback": true,
+    "parent_readback": "1c557MdC_B3QI2hmRWgfMTQHp5ZjfHuuI"
+  },
+  "resume_rule": "Read live CURRENT_PRODUCTION_LAUNCH_STATE.json first; if frontier remains PL-10, do not merge the stale PL-10 branch directly — reconcile/fresh-replay on current main, CI + full regression + Red Team, then merge and Drive-readback only if clean."
+}
