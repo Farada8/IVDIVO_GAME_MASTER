@@ -1,0 +1,41 @@
+{
+  "schema_version": "room917.e01_sound_asset_candidates/1.0",
+  "status": "TEMPLATE_ONLY_NOT_PRODUCTION_BINDABLE",
+  "instructions": "Duplicate only the asset entries actually being auditioned. Replace every null/TODO. Do not mark PASS without real byte identity and listening/translation checks.",
+  "candidates": {
+    "A01_GREYHAVEN_LOBBY_30S_LOOP": {
+      "asset_id": "A01_GREYHAVEN_LOBBY_30S_LOOP",
+      "candidate_id": "TODO",
+      "path": "TODO",
+      "sha256": "TODO",
+      "size_bytes": null,
+      "sample_rate_hz": 48000,
+      "bit_depth": 24,
+      "channels": 2,
+      "gain_db": null,
+      "audition_status": "HOLD",
+      "mono_status": "HOLD",
+      "phone_proxy_status": "HOLD",
+      "loop_seam_status": "HOLD",
+      "false_clue_audit_status": "HOLD",
+      "notes": "Must read as Greyhaven lobby physical reality, not suspense cue."
+    },
+    "A02_SWITCHBOARD_ALCOVE_30S_LOOP": {
+      "asset_id": "A02_SWITCHBOARD_ALCOVE_30S_LOOP",
+      "candidate_id": "TODO",
+      "path": "TODO",
+      "sha256": "TODO",
+      "size_bytes": null,
+      "sample_rate_hz": 48000,
+      "bit_depth": 24,
+      "channels": 2,
+      "gain_db": null,
+      "audition_status": "HOLD",
+      "mono_status": "HOLD",
+      "phone_proxy_status": "HOLD",
+      "loop_seam_status": "HOLD",
+      "false_clue_audit_status": "HOLD",
+      "notes": "Must preserve smaller alcove identity without inventing relay/phone evidence."
+    }
+  }
+}
