@@ -134,7 +134,7 @@ class AgentExecutorTest(unittest.TestCase):
         self.assertEqual(task["status"], "FAILED")
         self.assertEqual(task["block_reason"], "max_steps_exceeded:2")
         memory = MemoryStore(self.home / "runtime" / "state.db")
-        self.assertEqual(memory.search("", kind="OUTPUT", project_id="demo"), [])
+        self.assertEqual(memory.search("agent-output-", kind="OUTPUT", project_id="demo"), [])
 
     def test_provider_failure_is_persisted_as_failed_task_and_log(self) -> None:
         provider = SequenceProvider(["unused"], fail_at=1)
