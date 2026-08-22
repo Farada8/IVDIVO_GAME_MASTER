@@ -1,0 +1,24 @@
+name: Self-Improvement Cycle10 Real Evidence
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_REAL_EVIDENCE_CALIBRATION/**'
+      - '.github/workflows/self-improvement-cycle10-real-evidence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  calibration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile calibration runtime
+        run: python -m compileall -q SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_REAL_EVIDENCE_CALIBRATION/runtime
+      - name: Run calibration canaries
+        run: python -m unittest discover -s SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_REAL_EVIDENCE_CALIBRATION/tests -p 'test_*.py' -v
