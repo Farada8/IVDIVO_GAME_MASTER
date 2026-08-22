@@ -1,0 +1,45 @@
+{
+  "schema": "ivdivo.general_business.tokenomics_pew06/1.0",
+  "date": "2026-08-22",
+  "status": "INTERNAL_PROOF_COMPLETE_CI_PENDING_AT_AUTHORING_TIME",
+  "route": "HOLD_NOT_PROMOTE_TECHNICAL_GAP_REAL_COMMERCIAL_DIFFERENTIATION_UNPROVEN",
+  "fixture": {
+    "synthetic": true,
+    "real_provider_prices_used": false,
+    "total_cost_eur": 100.0,
+    "work_unit_cost_coverage_pct": 95.0,
+    "outcome_cost_coverage_pct": 78.0,
+    "unattributed_outcome_cost_eur": 22.0,
+    "reported_margin_eur": 7.0,
+    "corrected_margin_eur": -15.0,
+    "decision_error_detected": true
+  },
+  "technical_result": "PASS_TECHNICAL_GAP_ONLY",
+  "focus_overlap": {
+    "current_ratified": "1.4",
+    "public_1_5_scope_reviewed": [
+      "AI_MODEL_IDENTITY",
+      "INPUT_OUTPUT_TOKEN_CONSUMPTION",
+      "PRICE_SHEET"
+    ],
+    "outcome_attribution_problem_killed_by_public_scope": false
+  },
+  "incumbent_overlap": {
+    "finout": "AI_COST_MONITORING_ALLOCATION_UNIT_ECONOMICS",
+    "cloudzero": "AI_OUTCOME_ATTRIBUTION_MULTI_DIMENSIONAL_UNIT_ECONOMICS",
+    "vantage": "LLM_TOKEN_ALLOCATION_TO_TEAM_USER_APPLICATION",
+    "generic_dashboard_killed": true,
+    "generic_outcome_attribution_product_killed": true
+  },
+  "surviving_hypothesis": "INDEPENDENT_EXPORTED_EVIDENCE_COMPLETENESS_QA_M1_ONLY",
+  "commercial_result": "HOLD_COMMERCIAL_DIFFERENTIATION_UNPROVEN",
+  "buyer_demand": "UNPROVEN",
+  "wtp": "UNKNOWN",
+  "price": null,
+  "transactions": 0,
+  "profitability": "UNPROVEN",
+  "wip_promotion": false,
+  "external_action_authorized": false,
+  "next_evidence_required": "REAL_BUYER_EVIDENCE_OF_INDEPENDENT_OUTCOME_ATTRIBUTION_OR_EVIDENCE_QUALITY_GAP",
+  "readback_marker": "PEW06-TOKENOMICS-TECHNICAL-GAP-PASS-COMMERCIAL-HOLD-NO-WIP-20260822"
+}
