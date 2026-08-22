@@ -6,6 +6,8 @@ on:
       - 'personal-ai/core/artifact_placement.py'
       - 'personal-ai/projects/artifact_completion.py'
       - 'personal-ai/tests/test_artifact_placement_runtime.py'
+      - 'personal-ai/tests/test_artifact_placement_prospective.py'
+      - 'SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/PROSPECTIVE_CANARIES_v1.json'
       - '.github/workflows/artifact-placement-runtime.yml'
   workflow_dispatch:
 
@@ -20,6 +22,9 @@ jobs:
       - name: Targeted artifact placement regression
         working-directory: personal-ai
         run: python -m unittest -v tests.test_artifact_placement_runtime
+      - name: Prospective cross-project placement canaries
+        working-directory: personal-ai
+        run: python -m unittest -v tests.test_artifact_placement_prospective
       - name: Existing project-state regression
         working-directory: personal-ai
         run: python -m unittest -v tests.test_project_state
