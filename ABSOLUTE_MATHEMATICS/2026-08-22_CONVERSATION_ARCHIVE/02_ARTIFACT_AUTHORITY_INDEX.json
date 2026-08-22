@@ -12,6 +12,12 @@
     {"stage":"Genesis Dynamics Cycle3 — High Priority","zip":"GENESIS_DYNAMICS_CYCLE3_HIGH_PRIORITY_2026-08-22.zip","sha256":"738da8931203c4717fdef945dd69e46000e5a8cc5c432dab7ba565909ecb9950","github_pr":369,"drive_folder_id":"1iYjDT_B20W9YKn73_N4NNskHTcNjlQCh","status":"ENGINEERING_SYNTHESIS / NOVELTY_UNVERIFIED"},
     {"stage":"Full Tier Projection Genesis Cycle1","zip":"FULL_TIER_PROJECTION_GENESIS_2026-08-22.zip","sha256":"03048ff6192c9c6a9a7eab8f45dfcc3d64fad0115d32fef171416c5f3648f2c0","github_pr":418,"drive_folder_id":"1Jdf1zeXkBKtTBe0bQT4CnYbJUn1phL7s","status":"DERIVED/KNOWN + NOVELTY_UNVERIFIED RESIDUE"},
     {"stage":"Full Tier Projection Genesis Cycle2","zip":"FULL_TIER_PROJECTION_GENESIS_CYCLE2_2026-08-22.zip","sha256":"0f3e7e5e657e0b392105afe6366bd461b4c153051feaff0a159bd8d94a8af694","github_pr":446,"drive_folder_id":"1LP9L-Th8AKBpFV5c6Ha2eJaOja4GCDBz","status":"ENGINEERING_SYNTHESIS / NOVELTY_UNVERIFIED"},
-    {"stage":"Symmetry Discovery → Absolute Elements","zip":"SYMMETRY_DISCOVERY_ABSOLUTE_ELEMENTS_2026-08-22.zip","sha256":"f59978b04825be6e7fcba0982f463918ac352e05b75f87e333d13c5c91cb5580","github_pr":null,"drive_file_id":"1vUIciTStMByGyQB4IgFvMdHuswYAwm5V","status":"ENGINEERING_SYNTHESIS / NOVELTY_UNVERIFIED"}
-  ]
+    {"stage":"Symmetry Discovery → Absolute Elements","zip":"SYMMETRY_DISCOVERY_ABSOLUTE_ELEMENTS_2026-08-22.zip","sha256":"575aba4876df744a12a9749f6959c790a0573f97cbdb981a4d9a52c33f3c8073","github_pr":478,"github_branch":"symmetry-discovery-absolute-elements-cycle3-20260822","github_head":"688760609c570254fdabab1c12b011ddc2611227","drive_folder_id":"1Hjc01p7Lq4cGWVWmtugHOTVWsXXXiu_h","drive_zip_id":"1oesizWR7ZzqSUQgAf9JmvtCVMdELkamd","status":"ENGINEERING_SYNTHESIS / NOVELTY_UNVERIFIED; 14/14 PASS"}
+  ],
+  "final_archive": {
+    "drive_folder_id":"1npI2LyLuQWGuwrbEREsmT9LKkkBwlWW2",
+    "drive_zip_id":"1gl9EH12uq0-GvGhbHHUBklPzov6gQt2Y",
+    "sha256":"5d57ec65baca9f25cd1c15480bded151689e53879cbe9007fae1422ac3d4fb05",
+    "bytes":486900
+  }
 }
