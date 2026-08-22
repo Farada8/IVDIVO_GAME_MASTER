@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.business.general_discovery_production_engine/1.1",
+  "schema": "ivdivo.business.general_discovery_production_engine/1.2",
   "date": "2026-08-22",
-  "status": "P17_P24_FATAL_TEST_PORTFOLIO_COMPLETE_PENDING_CI",
+  "status": "P09_P16_BUYER_PROBLEM_EVIDENCE_COMPLETE_PENDING_CI",
   "github": {
     "base_engine_pr": 303,
     "base_engine_merge_sha": "b579c7e0359b5c242b718866c2c2488a2dda1434",
@@ -10,7 +10,11 @@
     "discovery_refresh_merge_sha": "5551929cb5873dc6198247affe9b7e77738b5c41",
     "discovery_refresh_exact_head": "888bde71957a440e3532c01cac0e6f69d95f0bae",
     "discovery_refresh_ci_run": 32555010120,
-    "discovery_refresh_ci_status": "SUCCESS"
+    "fatal_test_pr": 315,
+    "fatal_test_merge_sha": "01c7e12bf8b24ab1469e6723aba375e06ccf30f3",
+    "fatal_test_exact_head": "f66a8deddc067e9f15e3e5ad105e4d0cab90aaa4",
+    "fatal_test_ci_run": 32555453377,
+    "fatal_test_parent_regression_ci_run": 32555453399
   },
   "namespace": {
     "modules": "BDP01-BDP32",
@@ -27,11 +31,11 @@
   },
   "next64": {
     "created": 64,
-    "executed": 16,
-    "executed_ranges": ["P01-P08", "P17-P24"],
-    "remaining": 48,
+    "executed": 24,
+    "executed_ranges": ["P01-P08", "P09-P16", "P17-P24"],
+    "remaining": 40,
     "priority_rule": "DEPENDENCIES_AND_DECISION_VALUE_OVERRIDE_PROMPT_ORDER",
-    "next_admissible_block": "P09-P16_TARGETED_TO_CURRENT_3_WIP"
+    "next_admissible_block": "TEST_37_INTERNAL_NEGATIVE_CONTROL_THEN_P25_P32_IF_DIFFERENTIAL_PASSES"
   },
   "discovery_refresh": {
     "fresh_non_procurement_signals": 10,
@@ -46,27 +50,12 @@
     "repeatability": false
   },
   "fatal_tests": {
-    "status": "S3_FATAL_TEST_READY",
+    "status": "MERGED_CURRENT_S3_FATAL_TEST_READY",
     "active_lanes": ["OPP-33", "OPP-36", "OPP-37"],
     "tests": {
-      "OPP-33": {
-        "fatal_1": "BUYER_COORDINATION_GAP_EXISTS",
-        "test": "TEST-33",
-        "status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION",
-        "negative_control": "OFFICIAL_SEAI_SELF_NAVIGATION_PLUS_DIRECT_INSTALLER"
-      },
-      "OPP-36": {
-        "fatal_1": "IN_SCOPE_UNRESOLVED_OPERATIONAL_GAP_EXISTS",
-        "test": "TEST-36",
-        "status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION",
-        "negative_control": "COMMISSION_GUIDANCE_PLUS_VENDOR_DOCUMENTATION_ONLY"
-      },
-      "OPP-37": {
-        "fatal_1": "AI_SPECIFIC_INCREMENTAL_GAP_BEYOND_ORDINARY_SEO",
-        "test": "TEST-37",
-        "status": "INTERNAL_NEGATIVE_CONTROL_READY",
-        "negative_control": "ORDINARY_SEO_WEB_AUDIT_SAME_SITE_SAME_WINDOW"
-      }
+      "OPP-33": {"fatal_1": "BUYER_COORDINATION_GAP_EXISTS", "test": "TEST-33", "status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION", "negative_control": "OFFICIAL_SEAI_SELF_NAVIGATION_PLUS_DIRECT_INSTALLER"},
+      "OPP-36": {"fatal_1": "IN_SCOPE_UNRESOLVED_OPERATIONAL_GAP_EXISTS", "test": "TEST-36", "status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION", "negative_control": "COMMISSION_GUIDANCE_PLUS_VENDOR_DOCUMENTATION_ONLY"},
+      "OPP-37": {"fatal_1": "AI_SPECIFIC_INCREMENTAL_GAP_BEYOND_ORDINARY_SEO", "test": "TEST-37", "status": "INTERNAL_NEGATIVE_CONTROL_READY", "negative_control": "ORDINARY_SEO_WEB_AUDIT_SAME_SITE_SAME_WINDOW"}
     },
     "thresholds_predeclared": true,
     "negative_controls_required": true,
@@ -75,6 +64,22 @@
     "go_to_market": false,
     "buyer_behavior_observed": false,
     "proof_promotion": false
+  },
+  "buyer_problem_evidence": {
+    "status": "P09_P16_INTERNAL_SCHEMA_AND_SCREENING_COMPLETE",
+    "active_lanes": ["OPP-33", "OPP-36", "OPP-37"],
+    "user_buyer_budget_owner_separated": true,
+    "jtbd_and_workarounds_mapped": true,
+    "cost_of_delay_formulas_defined_inputs_null": true,
+    "incumbent_and_substitutes_mapped": true,
+    "screening_slots_per_lane": 10,
+    "public_screening_candidate_is_buyer": false,
+    "non_leading_observation_protocol_defined": true,
+    "behavior_ladder": ["E0", "E1", "E2", "E3", "E4", "E5", "E6"],
+    "fatal_behavior_floor": "E2_OR_HIGHER_REVIEW_REQUIRED",
+    "ledger_schema_defined": true,
+    "contradiction_policy": "CONTRADICTION_NEVER_AVERAGES_AWAY",
+    "buyer_behavior_observed": false
   },
   "state_machine": [
     "S0_RESTORE", "S1_DISCOVERED", "S2_QUALIFIED", "S3_FATAL_TEST_READY",
@@ -86,17 +91,24 @@
   "evidence_laws": [
     "K_NEQ_S_NEQ_E_NEQ_CASH",
     "SIGNAL_NEQ_DEMAND",
+    "PUBLIC_SCREENING_CANDIDATE_NEQ_BUYER",
+    "USER_NEQ_BUYER_NEQ_BUDGET_OWNER",
     "OFFICIAL_SUPPORT_EXISTENCE_NEQ_BUYER_WTP",
     "PROGRAMME_STRATEGY_NEQ_PRIVATE_DEMAND_PROOF",
     "GRANT_AVAILABLE_NEQ_CLIENT_ELIGIBLE",
     "INTERVIEW_NEQ_BEHAVIOR",
+    "E1_VERBAL_ONLY_CANNOT_PASS_FATAL_TEST",
     "INTEREST_NEQ_TRANSACTION",
     "PAYMENT_NEQ_REPEATABILITY",
+    "E5_TRANSACTION_NEQ_REPEATABILITY",
     "PRICE_HYPOTHESIS_NEQ_WTP",
     "FATAL_ASSUMPTION_BEFORE_BUILD",
     "CHEAPEST_DECISIVE_TEST_FIRST",
     "THRESHOLD_BEFORE_TEST",
     "NEGATIVE_CONTROL_REQUIRED",
+    "CONTRADICTION_NEVER_AVERAGES_AWAY",
+    "MISSING_EVIDENCE_STAYS_NULL",
+    "VENDOR_MARKETING_NEQ_END_CUSTOMER_OUTCOME",
     "NO_NEW_BEHAVIOR_EVIDENCE_NO_PROOF_PROMOTION",
     "PROMPT_COUNT_NEQ_PROGRESS"
   ],
@@ -113,8 +125,10 @@
     "p01_p08_document_id": "10ned4n-eciCkyv1qa5VKT5UZPBm1cgauwxWGG34m-bU",
     "p01_p08_readback_marker": "GENERAL-BUSINESS-ENGINE-P01-P08-DISCOVERY-REFRESH-3WIP",
     "p17_p24_document_id": "1mm9gzE8koltTCA77LvA61rQ2Zhu8slNUkXqtZNDcvVU",
-    "p17_p24_readback_marker": "GENERAL-BUSINESS-P17-P24-FATAL-TESTS-16OF64-WIP3-NO-EXTERNAL",
-    "readback_status": "PASS_4_OF_4"
+    "p17_p24_readback_marker": "GENERAL-BUSINESS-P17-P24-CLOSED-PR315-01C7E12B-16OF64",
+    "p09_p16_document_id": null,
+    "p09_p16_readback_marker": null,
+    "readback_status": "PASS_4_OF_4_PLUS_P09_P16_PENDING"
   },
   "self_improvement": {
     "candidate": "EVIDENCE_GATED_BUSINESS_PRODUCTION_ROUTER",
