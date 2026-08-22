@@ -13,24 +13,11 @@
   ],
   "core": {
     "path": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
-    "owns": [
-      "CAUSAL_FRONTIER",
-      "COMPLETED_EXECUTION",
-      "PROOF_FRONTIER",
-      "WIP",
-      "DECISIVE_GATES",
-      "STOP_RULES",
-      "EXTERNAL_ACTION_AUTHORIZATION"
-    ]
+    "owns": ["CAUSAL_FRONTIER", "COMPLETED_EXECUTION", "PROOF_FRONTIER", "WIP", "DECISIVE_GATES", "STOP_RULES", "EXTERNAL_ACTION_AUTHORIZATION"]
   },
   "mandatory_evidence_overlay": {
     "path": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md",
-    "owns": [
-      "FRESH_BOUNDED_SUPPLIER_EVIDENCE",
-      "FRESH_SOURCE_EVIDENCE",
-      "CONNECTED_SOURCE_NONFINDINGS",
-      "EVIDENCE_FIELD_DISPOSITIONS_WITHIN_DECLARED_SCOPE"
-    ],
+    "owns": ["FRESH_BOUNDED_SUPPLIER_EVIDENCE", "FRESH_SOURCE_EVIDENCE", "CONNECTED_SOURCE_NONFINDINGS", "EVIDENCE_FIELD_DISPOSITIONS_WITHIN_DECLARED_SCOPE"],
     "may_supersede_stale_evidence_fields_within_scope": true,
     "may_change_completed_execution": false,
     "may_change_root_blockers_silently": false,
@@ -85,7 +72,16 @@
     "unlock_intake_text_is_not_unlock_event": true,
     "generic_continuation_is_not_evidence_event": true,
     "route_may_authorize_external_action": false,
-    "route_may_promote_proof_grade": false
+    "route_may_promote_proof_grade": false,
+    "calibration": {
+      "synthetic_deterministic_suite": "PASS_16_OF_16",
+      "real_negative_control_count": 1,
+      "real_positive_root_event_count": 0,
+      "latest_negative_control": "BUSINESS_ENGINEERING_OS/2026-08-22_P225_BOUNDED_ACQUISITION_NONFINDING/00_NO_LOOP_ACQUISITION_CERTIFICATE.md",
+      "latest_negative_control_result": "PASS_ROOT_UNCHANGED_ROUTE_PROTECT_NO_CHANGE",
+      "local_promotion_state": "NEGATIVE_CONTROL_PASS_POSITIVE_ROOT_EVENT_PENDING",
+      "broader_or_global_promotion": false
+    }
   },
   "dependency_state": {
     "P225_P234": "BLOCKED_AUTHENTIC_CURRENT_TARGET_PACK_REQUIRED",
@@ -114,7 +110,8 @@
     "DEPENDENCY_BLOCKED_PROMPTS_ARE_NOT_FAILED_OR_EXECUTED",
     "NO_NEW_ADMISSIBLE_EVIDENCE_THEN_PROTECT_NO_CHANGE",
     "UNLOCK_INTAKE_TEXT_DOES_NOT_EQUAL_UNLOCK_EVENT",
-    "CONTINUE_TEXT_DOES_NOT_EQUAL_NEW_EVIDENCE_EVENT"
+    "CONTINUE_TEXT_DOES_NOT_EQUAL_NEW_EVIDENCE_EVENT",
+    "BOUNDED_NONFINDING_DOES_NOT_EQUAL_ROOT_UNLOCK_EVENT"
   ],
   "self_improvement": {
     "scope": "BUSINESS_LOCAL_RELIABILITY_IMPROVEMENT",
