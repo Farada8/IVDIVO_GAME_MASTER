@@ -1,0 +1,29 @@
+{
+  "schema_version": "room917.release_translation_qc_validation/1.0",
+  "date": "2026-08-22",
+  "status": "BACKEND_PRIMITIVES_PASS_FULL_REAL_MASTER_RUN_BLOCKED_ON_MASTER_BYTES",
+  "environment": {
+    "ffmpeg_version_family": "7.1.5",
+    "numpy_available": true
+  },
+  "synthetic_fixture": {
+    "duration_seconds": 10.0,
+    "sample_rate_hz": 48000,
+    "bit_depth": 24,
+    "channels": 2,
+    "signal": "1 kHz stereo sine with 0.1 rad interchannel phase offset, -16 dBFS amplitude",
+    "production_evidence": false
+  },
+  "ffmpeg_loudnorm_observed": {
+    "input_i_lufs": -16.05,
+    "input_tp_dbtp": -16.00,
+    "input_lra_lu": 0.00,
+    "target_profile": {"integrated_lufs": -16.0, "true_peak_dbtp": -1.0, "lra_lu": 11.0}
+  },
+  "translation_proxy_observed": {
+    "mono_folddown": {"sample_rate_hz":48000,"bit_depth":24,"channels":1,"duration_seconds":10.0,"status":"CREATED"},
+    "phone_band_mono": {"sample_rate_hz":48000,"bit_depth":24,"channels":1,"duration_seconds":10.0,"status":"CREATED","filter":"highpass 250 Hz + lowpass 5000 Hz","warning":"stress proxy, not a physical-device loudspeaker model"}
+  },
+  "scope_limit": "This validates ffmpeg loudnorm/proxy primitives and chosen formats. It does not claim that the inaccessible ROOM917 real master has been re-run through release_translation_qc.py in this pass.",
+  "next_real_test": "Recover exact master SHA 231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8, then run release_translation_qc.py with ROOM917_E01_RELEASE_TRANSLATION_QC_PROFILE_v1.json and preserve generated report/proxies."
+}
