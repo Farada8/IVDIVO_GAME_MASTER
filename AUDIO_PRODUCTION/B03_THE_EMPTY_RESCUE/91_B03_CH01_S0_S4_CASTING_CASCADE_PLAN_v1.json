@@ -1,0 +1,46 @@
+{
+  "artifact": "B03_CH01_S0_S4_CASTING_CASCADE_PLAN_v1",
+  "date": "2026-08-22",
+  "status": "PLAN_READY / LIVE_EXECUTION_BLOCKED",
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "provider": "ElevenLabs",
+  "production_model_candidate": "eleven_v3",
+  "model_lock_status": "CANDIDATE_UNTIL_S0",
+  "S0_technical_canary": {
+    "purpose": "prove auth/model/output/alignment/unicode/provenance; cannot lock actors",
+    "planned_jobs": 4,
+    "exact_source_unit_ids": ["B03_CH01_U0001", "B03_CH01_U0015", "B03_CH01_U0030", "B03_CH01_U0051"],
+    "risks_covered": ["Koren Valley token", "Andrej Košir diacritic", "Jana Kovač diacritic", "apostrophe/punctuation", "narrator+character voice path", "character timing"],
+    "voice_ids": "TEMPORARY_REAL_IDS_REQUIRED_AT_EXECUTION",
+    "allowed_to_dispatch": false
+  },
+  "S1_fair_anchor_comparison": {
+    "rules": ["same exact locked anchor per role", "same model/settings", "dry/loudness-matched review", "no music/reverb", "candidate-specific rewrite forbidden"],
+    "wave_A_priority_roles": ["NARRATOR", "NIKA_ZUPAN", "UNKNOWN_PRECURSOR_CALLER"],
+    "wave_A_candidates_per_role": 3,
+    "wave_A_max_planned_renders": 9,
+    "wave_B_only_after_A_pass": ["JANA_KOVAC", "ANDREJ_KOSIR", "RESCUER_FIELD_RADIO"],
+    "wave_B_candidates_per_role": 3,
+    "wave_B_max_planned_renders": 9
+  },
+  "S2_secondary_discrimination": {
+    "policy": "survivors only; one additional exact-text discriminator per unresolved role"
+  },
+  "S3_forbidden_mode_stress": {
+    "priority": ["UNKNOWN_PRECURSOR_CALLER", "NIKA_ZUPAN", "JANA_KOVAC", "ANDREJ_KOSIR"],
+    "hard_fail_overrides_score": true
+  },
+  "S4_pair_ensemble": {
+    "first_pair": ["NIKA_ZUPAN", "UNKNOWN_PRECURSOR_CALLER"],
+    "second_pair": ["NIKA_ZUPAN", "ANDREJ_KOSIR"],
+    "supervisory_pair": ["NIKA_ZUPAN", "JANA_KOVAC"],
+    "reuse_accepted_single_role_takes_when_valid": true,
+    "generate_new_paid_material_only_if_existing_take_context_cannot_test_function": true
+  },
+  "provisional_voice_lock": "BLOCKED_UNTIL_S0_S4_EVIDENCE",
+  "hard_pilot": "BLOCKED",
+  "scaled_render": "BLOCKED",
+  "cost_control": "No stage spends on candidates eliminated by the previous stage.",
+  "voice_candidate_source": "Actual connected account/workspace list at execution time; do not hardcode retiring Default voices.",
+  "exact_text_publication_policy": "Exact audition text remains in private Drive artifact 86, not public GitHub."
+}
