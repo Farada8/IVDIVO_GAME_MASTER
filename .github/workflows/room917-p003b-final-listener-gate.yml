@@ -1,0 +1,39 @@
+name: ROOM917 P003B Final Listener Gate
+
+on:
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_final_listener_gate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_final_listener_gate.py'
+      - '.github/workflows/room917-p003b-final-listener-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run final Listener QC gate regressions
+        run: python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_final_listener_gate.py
+      - name: Validate synchronized result contract
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json')
+          row=json.loads(p.read_text(encoding='utf-8'))
+          assert row['schema_version']=='ivdivo.room917_p003b_listener_qc_result/1.3'
+          modes=set(row['source_identity']['allowed_target_identity_mode'])
+          assert 'AUTOMIX_V1_ELIGIBILITY_VERIFIED_FULL_MIX' in modes
+          assert row['blind_listen']['pass_b_queue_may_open_only_after_valid_pass_a_freeze_receipt'] is True
+          assert row['final_verdict']['allowed_believability']==['BELIEVE','BORDERLINE','DONT_BELIEVE']
+          assert row['question_classes']==['ACTOR_BELIEF','AI_AUDIBLE','DEAD_SCENE','GEOGRAPHY','MYSTERY','SFX_MASKING']
+          print('P003B result contract v1.3 synchronized: PASS')
+          PY
