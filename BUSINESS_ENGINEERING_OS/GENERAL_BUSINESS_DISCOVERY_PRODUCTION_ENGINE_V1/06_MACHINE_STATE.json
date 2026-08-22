@@ -1,7 +1,14 @@
 {
   "schema": "ivdivo.business.general_discovery_production_engine/1.0",
   "date": "2026-08-22",
-  "status": "ENGINEERING_CANDIDATE_DRIVE_READBACK_PASS_PENDING_CI",
+  "status": "MERGED_CURRENT_ENGINEERING_AUTHORITY",
+  "github": {
+    "pr": 303,
+    "merge_sha": "b579c7e0359b5c242b718866c2c2488a2dda1434",
+    "exact_head": "aafd79a653b2e3c2f8111e1ac7a7e35ddb706e40",
+    "ci_run": 32554671258,
+    "ci_status": "SUCCESS"
+  },
   "namespace": {
     "modules": "BDP01-BDP32",
     "contracts": "CDP01-CDP32",
@@ -47,9 +54,6 @@
     "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
     "master_document_id": "1bR19b7uSN6dCP1msK9hAatILkFqJpXUcOyLImxaJx8s",
     "run32_next64_document_id": "1IHywe-oHrJwd_o_rhEeOi2ynAAnYDM_GgnX2hBtOgHk",
-    "master_readback_marker": "GENERAL-BUSINESS-DISCOVERY-PRODUCTION-ENGINE-V1-MASTER",
-    "run32_next64_readback_marker": "GENERAL-BUSINESS-DISCOVERY-PRODUCTION-ENGINE-V1-RUN32-NEXT64",
-    "readback_pending": false,
     "readback_status": "PASS_2_OF_2"
   },
   "self_improvement": {
