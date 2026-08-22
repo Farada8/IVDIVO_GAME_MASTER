@@ -1,0 +1,41 @@
+{
+  "schema": "artifact_placement_incident_state_v1",
+  "date": "2026-08-22",
+  "issue": 356,
+  "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
+  "authority_effect": "NONE",
+  "self_improvement_current": "v2 VERIFIED_CURRENT",
+  "candidate_status": "BOUNDED_PILOT",
+  "trigger_project": "D09 THE MAN WHO CAME BACK",
+  "trigger_evidence": {
+    "misplaced_folders": ["I25/V25", "I26/V26"],
+    "legacy_title_mismatch": "old E01-E24 title / actual early source through E06"
+  },
+  "new_state": "PERSISTED_BUT_MISPLACED",
+  "required_guard": "artifact_placement_guard.py",
+  "required_sequence": [
+    "CREATE_OR_IMPORT",
+    "PLACE_IN_CANONICAL_PROJECT_LOCATION",
+    "READBACK_ACTUAL_PARENT",
+    "UPDATE_START_HERE_OR_CURRENT_INDEX",
+    "READBACK_INDEX",
+    "SCAN_DUPLICATE_OR_LEGACY_TITLE_CONFLICT",
+    "VERIFY_CROSS_STORE_POINTER_IF_REQUIRED",
+    "EMIT_PLACEMENT_RECEIPT",
+    "ALLOW_DONE_VERIFIED_ONLY_IF_ALL_PASS"
+  ],
+  "deterministic_local_proof": {
+    "tests_defined": 7,
+    "equivalent_local_smoke": "PASS",
+    "github_ci": "NOT_RUN"
+  },
+  "promotion_gate": {
+    "status": "HOLD",
+    "requirements": [
+      "cross-project prospective use",
+      "zero false DONE_VERIFIED on misplaced artifact fixture",
+      "Drive and GitHub adapter integration where applicable",
+      "regression against existing persistence/recovery contracts"
+    ]
+  }
+}
