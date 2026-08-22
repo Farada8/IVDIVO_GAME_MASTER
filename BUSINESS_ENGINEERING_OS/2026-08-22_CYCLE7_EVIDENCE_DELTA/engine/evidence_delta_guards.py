@@ -1,10 +1,5 @@
 from dataclasses import dataclass
-from enum import Enum
 from typing import Optional
-
-class HistoricalAnalogUse(str, Enum):
-    RETRIEVAL_HINT = "RETRIEVAL_HINT"
-    CURRENT_REQUIREMENT = "CURRENT_REQUIREMENT"
 
 IDENTITY_FIELDS = {"legal_name", "legal_form", "formation_activity_code"}
 
@@ -17,10 +12,8 @@ class EvidenceBinding:
     admissible: bool
     reason: str
 
-def historical_analog_admissible(use: HistoricalAnalogUse) -> bool:
-    return use == HistoricalAnalogUse.RETRIEVAL_HINT
-
 def bind_formation_evidence(field: str, value: Optional[str]) -> EvidenceBinding:
+    """Formation documents verify identity/formational facts, never delivery capability."""
     if field in IDENTITY_FIELDS and value is not None:
         return EvidenceBinding(field, value, "PRIVATE_PRIMARY_FORMATION_DOC", True, True, "IDENTITY_OR_FORMATION_ONLY")
     return EvidenceBinding(field, None, "PRIVATE_PRIMARY_FORMATION_DOC", False, False, "FORMATION_DOC_NOT_CAPABILITY_EVIDENCE")
