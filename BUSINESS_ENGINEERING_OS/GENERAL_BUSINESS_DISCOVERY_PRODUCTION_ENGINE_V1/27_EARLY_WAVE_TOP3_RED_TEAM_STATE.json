@@ -1,0 +1,75 @@
+{
+  "schema": "ivdivo.general_business.early_wave_top3_red_team/1.0",
+  "date": "2026-08-22",
+  "status": "INTERNAL_RED_TEAM_COMPLETE_NO_WIP_PROMOTION",
+  "parent_radar": "25_EARLY_WAVE_RADAR_DELTA02_2026-08-22.md",
+  "evidence_ceiling": "E2_PLUS_PUBLIC",
+  "external_action_authorized": false,
+  "market_winner": null,
+  "wtp": null,
+  "price": null,
+  "transactions": 0,
+  "profitability": "UNPROVEN",
+  "rank_after_red_team": [
+    {
+      "rank": 1,
+      "candidate": "EW-D02-02_AI_TOKENOMICS_COST_TO_VALUE",
+      "score": 80,
+      "route": "ADVANCE_TO_SMALLEST_INTERNAL_PROOF_ONLY",
+      "wip": "RADAR_ONLY",
+      "generic_wedges_killed": [
+        "GENERIC_AI_COST_DASHBOARD",
+        "GENERIC_TOKEN_SPEND_TRACKER",
+        "GENERIC_MULTI_PROVIDER_COST_AGGREGATOR",
+        "FOCUS_SCHEMA_VALIDATOR_AS_PRIMARY_WEDGE"
+      ],
+      "surviving_hypothesis": "AI_COST_TO_BUSINESS_OUTCOME_EVIDENCE_QUALITY",
+      "next_gate": "P-EW06_TOKENOMICS_OUTCOME_ATTRIBUTION_PROOF_CONTRACT"
+    },
+    {
+      "rank": 2,
+      "candidate": "EW-D02-01_AGENT_IDENTITY_DISCOVERY_TRUST",
+      "score": 74,
+      "route": "LONG_HORIZON_OPTIONALITY_HOLD",
+      "wip": "RADAR_ONLY",
+      "generic_wedges_killed": [
+        "GENERIC_AGENT_IDENTITY_PLATFORM",
+        "GENERIC_MCP_AUTH_SETUP",
+        "GENERIC_SHADOW_AGENT_DISCOVERY_AS_PRIMARY_WEDGE"
+      ],
+      "surviving_hypothesis": "OPEN_CROSS_STANDARD_CONFORMANCE_CORPUS"
+    },
+    {
+      "rank": 3,
+      "candidate": "EW-D02-03_APPIA_CONFORMITY_EVIDENCE",
+      "score": 66,
+      "route": "DEFER_BUILD_STANDARDS_WATCH",
+      "wip": "RADAR_ONLY",
+      "generic_wedges_killed": [
+        "GENERIC_AI_ACT_GAP_ANALYSIS",
+        "GENERIC_FRAMEWORK_CROSSWALK",
+        "GENERIC_COMPLIANCE_EVIDENCE_DASHBOARD"
+      ],
+      "surviving_hypothesis": "DEVELOPER_SIDE_MACHINE_CHECKABLE_APPIA_ARTIFACT_QA_WATCH_ONLY"
+    }
+  ],
+  "p_ew06_contract": {
+    "authorized_scope": "INTERNAL_PUBLIC_OR_SYNTHETIC_PROOF_ONLY",
+    "required": [
+      "ONE_NORMALIZED_LEDGER_SCHEMA",
+      "SMALL_MULTI_PROVIDER_FIXTURE_SET",
+      "OUTCOME_ATTRIBUTION_COMPLETENESS_METRIC",
+      "ONE_DECISION_ERROR_DEMONSTRATION",
+      "OVERLAP_TEST_VS_FOCUS15_FINOUT_CLOUDZERO_VANTAGE",
+      "KILL_IF_NO_NON_COMMODITY_GAP"
+    ],
+    "forbidden": [
+      "EXTERNAL_OUTREACH",
+      "SALES",
+      "PAID_TOOLING",
+      "PRODUCTION_INTEGRATION",
+      "WIP_PROMOTION"
+    ]
+  },
+  "readback_marker": "EARLY-WAVE-TOP3-REDTEAM-TOKENOMICS-INTERNAL-PROOF-IDENTITY-HOLD-APPIA-DEFER-20260822"
+}
