@@ -1,0 +1,8 @@
+{
+  "overall":"PASS",
+  "tests":{
+    "positive_test_only":{"exit_code":0,"output":{"status":"PASS","errors":[],"lock_written":true}},
+    "reject_both":{"exit_code":2,"output":{"status":"HOLD","errors":["REJECT_BOTH:S19_TWO_PART_CUT"],"lock_written":false}},
+    "no_attestation":{"exit_code":1,"output":{"status":"FAIL","errors":["HUMAN_ATTESTATION_MISSING:A01_STORM","HUMAN_ATTESTATION_MISSING:A01_CLOCK","HUMAN_ATTESTATION_MISSING:A01_TRANSFORMER_50HZ","HUMAN_ATTESTATION_MISSING:A02_RELAY_TREMBLE","HUMAN_ATTESTATION_MISSING:SELECTOR_916","HUMAN_ATTESTATION_MISSING:LAMP_916_MARKED","HUMAN_ATTESTATION_MISSING:S13_DOUBLE_RING","HUMAN_ATTESTATION_MISSING:S14_UNMARKED_LAMP","HUMAN_ATTESTATION_MISSING:S17_COPPER_HISS","HUMAN_ATTESTATION_MISSING:S19_TWO_PART_CUT"],"lock_written":false}}
+  }
+}
