@@ -1,0 +1,25 @@
+{
+  "project": "B03 — THE EMPTY RESCUE",
+  "artifact": "133_B03_SPEAKER_REVIEW_BATCH_CH25_27_MANIFEST_v0.4",
+  "status": "PASS_BATCH_ONLY_FULL_SPEAKER_GATE_OPEN",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "story_text_mutation": false,
+  "source_segmentation_package_drive_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
+  "source_segmentation_package_sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
+  "actual_speech_denominator_full_book": 3714,
+  "chapters": {
+    "CH25": {"actual_speech": 120, "assigned": 120, "unknown": 0, "drive_id": "1CIl_lXpd-GIMsNEeuxo1oPdJThHwun-2", "map_sha256": "d8e7390e8cbc160775285ea0026af0068b21fd8a6b54d599a910ec4b58b41c9f"},
+    "CH26": {"actual_speech": 169, "assigned": 169, "unknown": 0, "drive_id": "1QCc-GOuqGcA7kxrO67i2wQwa_VwQKAx3", "map_sha256": "da45a039e5fe262b0cf8b9dac407c2785f295cb6f410ab5a01a44f3a2b0382a3"},
+    "CH27": {"actual_speech": 153, "assigned": 153, "unknown": 0, "drive_id": "1PdzmD7tgPhBy8SR62jncNaUT0q0Op7d8", "map_sha256": "7a0e86ec45b5d2da03606f81bc09bf3fdfb002da68cbb9c4b800c5edbcace865"}
+  },
+  "batch": {"actual_speech": 442, "assigned": 442, "unknown": 0, "exact_text_changes": 0, "voice_ids_assigned": 0},
+  "red_team_corrections": [
+    {"segment_id": "B03_CH26_S0024", "corrected_acoustic_speaker": "NETWORK_TECHNICIAN_CH26", "defect": "PRONOUN_RESOLVER_WRONG_MALE_ANTECEDENT"},
+    {"segment_id": "B03_CH27_S0136", "corrected_acoustic_speaker": "SMITH", "source_author": "TAREN_SOR", "defect": "SOURCE_AUTHOR_NEQ_ACOUSTIC_SPEAKER"}
+  ],
+  "reconciled_cumulative_ch01_27": {"actual_speech": 3340, "assigned": 3340, "unknown": 0, "not_yet_context_reviewed": 374},
+  "drive_artifacts": {"manifest": "1dJBSnLhIqsg5V0MWS8lMEk0tpZF8SrsW", "voice_map_template": "1yvUlY7ZFSc8KjbHuE0VtgmWnvijLG7Kj", "gate": "1NpofxohfThXFLq5lIJMDOMgu5_jWSvuk", "zip": "1LKFhoFP8xQu6EuPnII7amqOYBF-wA_Fr"},
+  "next_exact_action": "CH28-29_CONTEXTUAL_SPEAKER_REVIEW",
+  "full_speaker_gate": false,
+  "provider_dispatch_allowed": false
+}
