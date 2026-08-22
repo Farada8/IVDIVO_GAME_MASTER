@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-22",
+  "book": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+  "master_drive_id": "1UHGfjuZ_6aJF5Fkh1pHGwjgU219cPBmDD5owIVyIlXs",
+  "master_version": "v0.3 — CONTINUITY PASS",
+  "drive_gate_id": "1UfQqgH8q4BK9LgOR_2zZcPZZvfujS06GvThOXuCLdvI",
+  "raw_snapshot_drive_id": "16WaOsjqm6usfmCr2xxG2lemx_SZ9ZSbx",
+  "result": {"fatal": 0, "major": 0, "status": "PASS_AFTER_REPAIRS"},
+  "major_defects_found_and_repaired": [
+    {
+      "id": "CTY-01-HOSPITAL-HANDOVER",
+      "before": "CH28 implied hospital handover/definitive assessment at 04:10 even though ambulance transfer had only just occurred; CH29 correctly placed hospital handover at 05:18.",
+      "repair": "CH28 now records transport/ambulance-care status only; 05:18 remains the sole hospital handover.",
+      "regression": "release -> trailhead -> ambulance transfer -> transport status -> 05:18 hospital handover"
+    },
+    {
+      "id": "KPV-02-BLUE-PAIR-LEAK",
+      "before": "CH24 specified source-blind relay work but CH26 exposed precursor phrase 'blue pair' to field engineer Luka Marin before segmentation.",
+      "repair": "Luka receives only approved change-sheet scope, printed service labels and local identifiers; precursor wording stays in evidence cell.",
+      "regression": "field relay engineering remains source-blind; precursor instruction cannot steer Luka's label matching"
+    }
+  ],
+  "minor_repairs": [
+    "04:07 packet wording normalized so CH28 damaged packet is not later called the last coherent packet",
+    "stray Markdown markers around Miha Zupancic removed from prose"
+  ],
+  "causal_regressions_passed": [
+    "Source B 19:55:04 precedes meter-case placement 19:55:39",
+    "22:15:07 source precedes MOSS selection 22:16:31 and field use 22:16:42; later MOSS source 23:53:18 follows both",
+    "Plan A -> A-specific source -> real slope closure -> Plan B -> B-specific source -> Maja local route -> later source",
+    "02:47:12 failover restoration precedes higher-detail precursor packets",
+    "hard withdrawal threshold precedes withdrawal order/acknowledgement and later bounded hydro hold",
+    "relay segmentation precedes post-segmentation source set",
+    "Andrej release precedes trailhead, ambulance transfer, transport status and 05:18 hospital handover"
+  ],
+  "next": "MEDICAL_FACTUAL_PLAUSIBILITY_PASS"
+}
