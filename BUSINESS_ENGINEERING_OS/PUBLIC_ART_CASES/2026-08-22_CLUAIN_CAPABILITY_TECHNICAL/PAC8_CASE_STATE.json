@@ -1,0 +1,38 @@
+{
+  "case_id": "PAC8_CLUAIN_CAPABILITY_TECHNICAL",
+  "date": "2026-08-22",
+  "fresh_base_main": "ee49be52766e2f70ae010281804ffdebd6538796",
+  "scope": "case_specific_public_art_evidence_and_production",
+  "global_module_ids_allocated": false,
+  "old_pr_178_authority": "PROVENANCE_ONLY_DO_NOT_MERGE",
+  "current_business_context": ["PR190", "PR201", "PR203"],
+  "opportunity": {
+    "name": "Cluain na Coillte Public Art Commission",
+    "commissioner": "Roscommon County Council",
+    "budget_eur_including_vat": 112500,
+    "deadline_local": "2026-09-07T16:00:00+01:00",
+    "development_homes": 51,
+    "final_site_known": false
+  },
+  "decision": "KEEP_PREPARE_CONDITIONAL_SUBMISSION_PACK",
+  "capability_state": "HOLD_CURABLE_THREE_PROJECT_EVIDENCE_PACK",
+  "design_maturity": "D2_CONCEPT_DIRECTION_READY",
+  "technical_maturity": "T1_PRELIMINARY_FEASIBILITY",
+  "budget_state": "READY_FOR_INDICATIVE_PROPOSAL",
+  "real_cost_confidence": "HOLD_QUOTES_AND_SITE",
+  "primary_concept": "THE_LIVING_THRESHOLD_THE_MEADOW_OPENS",
+  "fallback_concept": "ROOTS_ROUTES_HOME",
+  "shannon_valley": "HOLD_SECOND_PRIORITY_SOCIAL_ENGAGEMENT_EVIDENCE",
+  "go_to_submit": false,
+  "proof_ceiling": "E2_PLUS_PUBLIC_OFFICIAL_BRIEF",
+  "drive_folder_id": "1uA1uhnVtyrTvzZKwaOJGyS6h2DjIP6xM",
+  "next_gate": [
+    "RECOVER_3_PRIOR_PROJECT_EVIDENCE_OBJECTS",
+    "BUILD_2_PAGE_CV",
+    "PREPARE_3_CONCEPT_MECHANISMS",
+    "BUILD_JURY_VISUALS_WITH_SITE_SURVEY_CAVEAT",
+    "TECHNICAL_MAINTENANCE_ONE_PAGER",
+    "BOUND_QUOTES_AND_SITE_ASSUMPTIONS",
+    "RED_TEAM_FOUR_ASSESSMENT_HEADINGS"
+  ]
+}
