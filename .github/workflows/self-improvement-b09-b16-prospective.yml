@@ -1,0 +1,36 @@
+name: Self-Improvement B09-B16 Prospective Pilots
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_B09_B16_PROSPECTIVE_PILOTS/**'
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64/runtime/cycle10_governance.py'
+      - '.github/workflows/self-improvement-b09-b16-prospective.yml'
+
+jobs:
+  prospective-pilots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run B09-B16 deterministic harness
+        run: |
+          python -m unittest SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_B09_B16_PROSPECTIVE_PILOTS/tests/test_b09_b16.py -v
+          python SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_B09_B16_PROSPECTIVE_PILOTS/tools/run_b09_b16.py
+      - name: Validate JSON and evidence boundary
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_B09_B16_PROSPECTIVE_PILOTS/01_PROSPECTIVE_PILOTS.json')
+          d=json.loads(p.read_text())
+          assert d['captured_before_production_execution'] is True
+          assert d['authority_effect']=='NONE'
+          assert len(d['pilots'])==3
+          assert all(x['external_evidence_claimed'] is False for x in d['pilots'])
+          assert all(v is None for v in d['telemetry']['meta_minutes'].values())
+          assert all(v is None for v in d['telemetry']['avoided_rework_minutes'].values())
+          assert d['b16_disposition']['numbered_si_candidate']=='NO'
+          print('B09-B16 evidence boundary: PASS')
+          PY

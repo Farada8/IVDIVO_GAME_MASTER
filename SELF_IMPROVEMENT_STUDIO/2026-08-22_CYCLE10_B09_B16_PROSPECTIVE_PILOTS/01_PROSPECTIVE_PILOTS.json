@@ -1,0 +1,91 @@
+{
+  "schema": "IVDIVO_CYCLE10_B09_B16_PROSPECTIVE_PILOTS_v1",
+  "captured_before_production_execution": true,
+  "authority_effect": "NONE",
+  "pilots": [
+    {
+      "id": "B09_BOOK",
+      "domain": "BOOK",
+      "project": "B03_SMITH_THE_EMPTY_RESCUE",
+      "authority_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CURRENT_STATE.md",
+      "authority_blob_sha": "6f7162464396d73e6c1a7e879c0335a645a06f00",
+      "production_improvement": "Draft CH22 FIRST DISTRIBUTED RUN from actual CH21 PASS frontier",
+      "pre_meta_route": "DRAFT_CH22_FROM_CURRENT_AUTHORITY",
+      "uncertainty": "Prevent CH22 from spending CH23 failover/re-centralization payoff or violating the eight explicit CH22 hard conditions",
+      "smallest_decisive_test": "CH22_PRE_DRAFT_8_CONDITION_ACCEPTANCE_CARD",
+      "test_disposition": "ROUTE_TO_DRAFT_WITH_PREDECLARED_ACCEPTANCE",
+      "broad_alternative_not_executed": "Rerun full B03 story architecture or another broad 32-prompt analysis before CH22",
+      "delta": {"gate_changed": false, "selected_test_changed": true, "artifact_changed": true, "next_action_changed": false, "decision_changed": false, "meaningful_delta": true},
+      "artifact": "BOOK_CH22_PRE_DRAFT_ACCEPTANCE_CARD",
+      "production_return": "DRAFT_CH22_FIRST_DISTRIBUTED_RUN",
+      "external_evidence_claimed": false
+    },
+    {
+      "id": "B10_AUDIO",
+      "domain": "AUDIO",
+      "project": "NMM_E01",
+      "authority_sources": [
+        {"title": "04_NMM_E01_CAST_VOICE_BIBLE_AND_DIAGNOSTIC_TAKE_PLAN_v1.0", "drive_id": "1EbBkbZUbHvu2oqp37ieFVw6o3rZ3QnSaGy-7ssHVByY"},
+        {"title": "NMM — E01 PROVIDER-NEUTRAL RENDER BLOCK PLAN v1.0", "drive_id": "1vaJJnA1F76YQ6RWEZsLDw3I2aG_bGKNNghu6gMklIzI"}
+      ],
+      "production_improvement": "Advance locked E01 toward provider-ready production",
+      "pre_meta_route": "CONTINUE_E01_PREPRODUCTION",
+      "uncertainty": "Whether provider/full-render work is authorized before real voice identities and voice lock exist",
+      "smallest_decisive_test": "VOICE_ID_AND_VOICE_LOCK_PRESENCE_GATE",
+      "observed_source_state": ["PRE-VOICE-LOCK", "NO_PROVIDER_VOICE_IDS_SELECTED", "VOICE_IDS_PLACEHOLDER", "NO_AUDIO_RENDERED"],
+      "test_disposition": "HOLD_FULL_RENDER_VOICE_SELECTION_REQUIRED",
+      "broad_alternative_not_executed": "Compile or expand the full E01 provider-render pipeline before voice selection",
+      "delta": {"gate_changed": true, "selected_test_changed": true, "artifact_changed": true, "next_action_changed": true, "decision_changed": true, "meaningful_delta": true},
+      "artifact": "AUDIO_E01_VOICE_GATE_CARD",
+      "production_return": "REAL_VOICE_DIAGNOSTIC_SELECTION_THEN_VOICE_MAP_LOCK",
+      "external_evidence_claimed": false
+    },
+    {
+      "id": "B11_BUSINESS",
+      "domain": "BUSINESS",
+      "project": "PROC-BALLYBUNION-8872468",
+      "authority_path": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json",
+      "authority_schema": "ivdivo.business.current_read_model/1.2",
+      "production_improvement": "Continue remaining P273-P287 Business hardening after P225/P235 unlock-intake merge",
+      "pre_meta_route": "CONSIDER_INTERNAL_P273_P287_HARDENING",
+      "uncertainty": "Whether fresh admissible inputs now justify internal downstream execution",
+      "smallest_decisive_test": "CURRENT_ROOT_AND_DEPENDENCY_STATE_READ",
+      "observed_source_state": {
+        "ROOT_A": "TARGET_PACK_NOT_ACQUIRED",
+        "ROOT_B": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET",
+        "P252_P280": "BLOCKED_FROZEN_TARGET_AND_BIDDER_PACKETS_REQUIRED",
+        "P281_P283": "BLOCKED_REAL_INDEPENDENT_REVIEW_REQUIRED",
+        "P284_P287": "BLOCKED_EXPLICIT_EXTERNAL_AUTHORIZATION_AND_REAL_USE_REQUIRED"
+      },
+      "test_disposition": "STOP_INTERNAL_HARDENING_RETURN_TO_REAL_INPUT_GATES",
+      "broad_alternative_not_executed": "Execute P273-P287 or start another broad Business-engineering cycle without new admissible evidence",
+      "delta": {"gate_changed": false, "selected_test_changed": true, "artifact_changed": true, "next_action_changed": true, "decision_changed": true, "meaningful_delta": true},
+      "artifact": "BUSINESS_REAL_GATE_RETURN_CARD",
+      "production_return": "P225_TARGET_PACK_OR_P235_ACTUAL_BIDDER_DESIGNATION_INPUT",
+      "external_evidence_claimed": false
+    }
+  ],
+  "telemetry": {
+    "meta_minutes": {"BOOK": null, "AUDIO": null, "BUSINESS": null},
+    "avoided_rework_minutes": {"BOOK": null, "AUDIO": null, "BUSINESS": null},
+    "measurement_status": "NULL_UNINSTRUMENTED",
+    "counterfactual_minutes_not_inferred": true
+  },
+  "b15_stop_rule": {
+    "rule": "IF_TWO_CONSECUTIVE_META_STEPS_HAVE_NO_MEANINGFUL_DECISION_DELTA_THEN_RETURN_TO_PRODUCTION",
+    "meaningful_delta_fields": ["gate_changed", "selected_test_changed", "artifact_changed", "next_action_changed", "decision_changed"],
+    "documentation_only_does_not_reset_counter": true
+  },
+  "b16_disposition": {
+    "profile_status": "KEEP_LOCAL_BOUNDED_PROFILE",
+    "numbered_si_candidate": "NO",
+    "reasons": [
+      "Only three prospective domain pilots",
+      "Meta-time and avoided-rework minutes are unmeasured/null",
+      "Observed value is routing/guardrail value, not production-quality evidence",
+      "Global SI reservation view remains fail-closed/partial; no new ID allocation is authorized",
+      "Self-Improvement v2 remains VERIFIED_CURRENT and Cycle10 has no automatic authority effect"
+    ],
+    "next_evidence": "Repeat prospective use on additional real production decisions with instrumented overhead/rework telemetry and independent controls before any numbered-candidate tribunal"
+  }
+}
