@@ -1,0 +1,35 @@
+{
+  "schema": "BUSINESS_EVIDENCE_LEDGER_v1",
+  "required_fields": [
+    "evidence_id",
+    "claim",
+    "evidence_level",
+    "source_type",
+    "source_identity",
+    "observed_date",
+    "freshness_status",
+    "buyer_or_actor",
+    "what_it_proves",
+    "what_it_does_not_prove",
+    "project_scope",
+    "status",
+    "next_action",
+    "next_gate"
+  ],
+  "evidence_levels": {
+    "E0": "idea only",
+    "E1": "single sourced public signal or comparable project",
+    "E2": "multiple public signals or explicit procurement category",
+    "E3": "direct buyer/partner evidence, real supplier quote, or written request",
+    "E4": "paid pilot/contract plus delivery evidence",
+    "E5": "repeated paid delivery/retention/recurring procurement"
+  },
+  "statuses": ["CONFIRMED", "HYPOTHESIS", "TEST_REQUIRED", "REJECTED", "STALE"],
+  "rules": [
+    "Public research does not create E3+.",
+    "Funding eligibility does not equal buyer demand.",
+    "Competitor existence does not prove willingness to buy our product.",
+    "Every negative result is retained as evidence rather than deleted.",
+    "Stale evidence must be refreshed before decision use."
+  ]
+}
