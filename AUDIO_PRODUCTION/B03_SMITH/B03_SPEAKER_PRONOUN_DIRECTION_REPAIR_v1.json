@@ -1,16 +1,17 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "date": "2026-08-22",
   "project": "B03_THE_EMPTY_RESCUE",
   "story_authority": "FOUNDER_LOCKED_CH01_CH29",
   "text_mutation": 0,
   "source_baseline": {
-    "artifact": "89_B03_SPEAKER_ATTRIBUTION_CURRENT_BASELINE_v1_3.json",
-    "drive_id": "1zAoXqX_mMsQNpMf4K2GeOEmwU_gzv1A2",
+    "artifact": "92_B03_SPEAKER_ATTRIBUTION_CURRENT_BASELINE_v1_4.json",
+    "drive_id": "1YtLq1LWMqusgipHkwzbzD18XgslMk0O0",
     "spoken_candidates": 3715,
-    "assigned": 517,
-    "unknown": 3198,
-    "coverage_pct": 13.92
+    "assigned": 544,
+    "unknown": 3171,
+    "coverage_pct": 14.64,
+    "preserve_batch02_manual_adjudications": 27
   },
   "guard": "PRONOUN_ANTECEDENT_MUST_PRECEDE_PRONOUN",
   "repairs": [
@@ -50,9 +51,9 @@
     }
   ],
   "effective_state": {
-    "assigned": 517,
-    "unknown": 3198,
-    "coverage_pct": 13.92,
+    "assigned": 544,
+    "unknown": 3171,
+    "coverage_pct": 14.64,
     "label_repairs": 2,
     "assignment_count_change": 0,
     "voice_map_authorized": false
