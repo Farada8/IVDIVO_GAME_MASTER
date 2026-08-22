@@ -5,7 +5,13 @@
   "implementation": {
     "pr": 386,
     "merge_sha": "0fde6da5e5af5a388acb905b79b5b21263a15287",
-    "verified_head": "5c8e1da06374bf87f9e254898c064212ff415b3e"
+    "verified_head": "5c8e1da06374bf87f9e254898c064212ff415b3e",
+    "corrective_hardening": {
+      "pr": 393,
+      "merge_sha": "9ca32760f21f394d7ef10ca1fe9334b4c298a75c",
+      "verified_head": "ba856e93d18ca708b92bd1c43bd1c6b6b2d81883",
+      "reason": "bind continuity PASS to exact reviewed content digest so stale PASS cannot authorize changed book content"
+    }
   },
   "exact_head_ci": [
     {"workflow":"Personal AI PL-00 Bootstrap","run_id":32568862044,"conclusion":"success"},
@@ -17,6 +23,17 @@
     {"workflow":"Personal AI PL-06 Business Core","run_id":32568862018,"conclusion":"success"},
     {"workflow":"Personal AI PL-11 Test Benchmark Runner","run_id":32568862114,"conclusion":"success"},
     {"workflow":"Personal AI PL-08 Book Production Core","run_id":32568862080,"conclusion":"success"}
+  ],
+  "corrective_exact_head_ci": [
+    {"workflow":"Personal AI PL-00 Bootstrap","run_id":32569104979,"conclusion":"success"},
+    {"workflow":"Personal AI PL-01 Project State","run_id":32569105056,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Local Memory","run_id":32569104990,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Memory Contract Hardening","run_id":32569104989,"conclusion":"success"},
+    {"workflow":"Personal AI PL-04 Provider Abstraction","run_id":32569104967,"conclusion":"success"},
+    {"workflow":"Personal AI PL-05 Agent Executor","run_id":32569105030,"conclusion":"success"},
+    {"workflow":"Personal AI PL-06 Business Core","run_id":32569105020,"conclusion":"success"},
+    {"workflow":"Personal AI PL-11 Test Benchmark Runner","run_id":32569105112,"conclusion":"success"},
+    {"workflow":"Personal AI PL-08 Book Production Core","run_id":32569105007,"conclusion":"success"}
   ],
   "acceptance": {
     "registered_book_structure": true,
@@ -32,15 +49,20 @@
     "final_after_pass": true,
     "reopen_persistence": true,
     "cli_roundtrip": true,
+    "continuity_pass_bound_to_content_sha256": true,
+    "stale_pass_after_content_change_rejected": true,
+    "stale_pass_rejection_preserves_state": true,
+    "explicit_recheck_refreshes_digest": true,
+    "corrective_full_regression_9_of_9": true,
     "drive_readback": true
   },
   "drive": {
     "folder_id": "15CnYhNSU_zLymx52gUzFf-jeSvWWmdDy",
     "document_id": "1viqes9vbzS56PtZsGNfXSa-bjyrcZ7MfMu-o7dJjTOU",
-    "verified_marker": "PERSONAL-AI-PL08-DONE-VERIFIED-PR386-CI9OF9-FINAL-FAIL-CLOSED"
+    "verified_marker": "PERSONAL-AI-PL08-DONE-VERIFIED-PR386-PR393-CI9OF9-HASH-BOUND-CONTINUITY"
   },
   "new_ready_cards": ["PL-09"],
   "current_frontier_after_closure": "PL-09",
   "authority_effect": "NO_GLOBAL_SI_PROMOTION",
-  "evidence_boundary": "PL-08 proves structure/state enforcement only; automatic continuity analysis and manuscript quality remain unproven."
+  "evidence_boundary": "PL-08 proves structure/state enforcement and binds continuity authorization to the exact reviewed story/manuscript content digest. Automatic continuity analysis, manuscript quality and factual correctness remain unproven and belong to PL-09 or later gates."
 }
