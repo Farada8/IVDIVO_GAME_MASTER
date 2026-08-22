@@ -1,6 +1,6 @@
 name: ROOM917 RU Voice Discovery
 
-# v1.6 zero-spend retrigger 2026-08-22; public native discovery; concurrency-safe main publication
+# v1.7 zero-spend auth-aware discovery; concurrency-safe main publication
 on:
   push:
     branches:
@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Discover durable native-Russian professional shared voices
+      - name: Build native-Russian provider snapshot or HOLD receipt
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         shell: bash
@@ -69,6 +69,7 @@ jobs:
               raise SystemExit('native discovery artifact missing')
           if not account.exists():
               raise SystemExit('account inventory artifact missing')
+
           n=json.loads(native.read_text(encoding='utf-8'))
           a=json.loads(account.read_text(encoding='utf-8'))
           if n.get('paid_synthesis_calls') != 0:
@@ -77,10 +78,27 @@ jobs:
               raise SystemExit('account inventory unexpectedly reports paid synthesis')
           if n.get('selection_policy',{}).get('auto_cast') is not False:
               raise SystemExit('native discovery must not auto-cast')
+
           required={'ELENA','JULIAN','MINA','CATE'}
           if set((n.get('ranked_role_candidates') or {}).keys()) != required:
               raise SystemExit('native discovery role rankings incomplete')
-          print(f"native_status={n.get('status')} candidates={n.get('candidate_count')} account_status={a.get('status')}")
+
+          status=n.get('status')
+          allowed={
+              'PASS_CANDIDATES_FOUND',
+              'HOLD_NO_NATIVE_DURABLE_CANDIDATES',
+              'HOLD_PROVIDER_AUTH_REQUIRED',
+          }
+          if status not in allowed:
+              raise SystemExit(f'unexpected native discovery status: {status}')
+
+          if status == 'HOLD_PROVIDER_AUTH_REQUIRED':
+              if n.get('candidate_count') != 0 or n.get('candidates'):
+                  raise SystemExit('provider-auth HOLD must contain zero candidates')
+              if n.get('selection_policy',{}).get('full_e01_render_allowed') is not False:
+                  raise SystemExit('provider-auth HOLD must explicitly forbid full E01 render')
+
+          print(f"native_status={status} candidates={n.get('candidate_count')} account_status={a.get('status')}")
           PY
 
       - name: Commit and publish provider inventory safely
@@ -130,12 +148,13 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
               f.write('## ROOM917 RU voice discovery\n')
               f.write(f"- native discovery status: {n.get('status')}\n")
-              f.write(f"- native RU professional voices (>=365-day notice): {n.get('candidate_count')}\n")
+              f.write(f"- native RU professional candidates: {n.get('candidate_count')}\n")
               f.write(f"- account inventory status: {a.get('status')}\n")
               f.write(f"- account voices available: {a.get('voice_count')}\n")
               f.write(f"- models returned: {len(a.get('models') or [])}\n")
               f.write('- paid synthesis calls: 0\n')
               f.write('- provider key persisted: false\n')
+              f.write('- missing provider auth produces HOLD_PROVIDER_AUTH_REQUIRED, not a fake shortlist\n')
               f.write('- publication: concurrency-safe fetch/rebase/retry; never force-push\n')
-              f.write('- next: preview native role-ranked candidates, bind 3 per role, then bounded Russian canary + pair tests\n')
+              f.write('- paid S0 and full E01 stay blocked until authenticated snapshot + preview evidence + approved bindings\n')
           PY
