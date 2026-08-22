@@ -1,0 +1,21 @@
+name: Business Cycle5 Independent Replication Handoff
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_INDEPENDENT_REPLICATION_CX33_CX64/**'
+      - '.github/workflows/business-cycle5-independent-replication.yml'
+  workflow_dispatch:
+
+jobs:
+  handoff-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate replication handoff
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_INDEPENDENT_REPLICATION_CX33_CX64/tests/test_replication_handoff.py -v
+      - name: Validate evidence JSON
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_INDEPENDENT_REPLICATION_CX33_CX64/01_REPLICATION_EVIDENCE.json >/dev/null
