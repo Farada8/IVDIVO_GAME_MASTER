@@ -5,99 +5,77 @@
   "story_authority": "FOUNDER_LOCKED_CH01-29",
   "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
   "source_segmentation_package_sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
-  "status": "RECONCILED_PARTIAL_MAP_599_VERIFIED_CURRENT",
+  "status": "ENGINE_VERIFIED_SUBSET_599_PLUS_PRODUCTION_CHAPTER_LOCAL_FULL_3714_PASS",
   "segmentation": {
     "total_exact_text_segments": 7465,
     "original_curly_quote_spans": 3718,
-    "narrator_inline_semantic_quote_exceptions": 3,
-    "actual_dialogue_spans": 3715,
-    "narration_segments": 3747,
+    "production_semantic_quote_exceptions": 4,
+    "production_actual_cast_speech": 3714,
     "byte_exact_text_mutations": 0
   },
-  "current_attribution": {
+  "engine_verified_subset": {
+    "tested_candidate_fixture": 3715,
     "corrected_v2_base": 518,
     "verified_engine_delta": 81,
     "corrected_existing_assignments": 1,
     "cumulative_assigned": 599,
-    "residual_unknown": 3116,
+    "residual_unknown_in_tested_fixture": 3116,
     "coverage_percent": 16.12,
-    "full_speaker_gate": "OPEN",
-    "voice_map_authorized": false
+    "scaled_voice_map_authorized": false,
+    "note": "These are deterministic engine-verified assignments, not the denominator for the later chapter-local production gate. No unrun engine result is inferred."
   },
-  "verification": {
-    "github_pr": 436,
-    "tested_pr_head": "28645a167332cb978c6ce0dedffdbac78680cea0",
-    "tested_merge_ref": "d64d16579c653a131ee2decb105ac28ab6b82143",
-    "workflow_run_id": 32572056461,
-    "workflow_job_id": 97028799073,
-    "pytest": "22_PASSED_IN_0.05S",
-    "py_compile": "PASS",
-    "main_merge_commit": "c53e9c0923041183bc642363ad5d572c1bb2cf77",
-    "main_readback": "PASS",
-    "main_readback_required_after_merge": false
+  "production_chapter_local_authority": {
+    "status": "PASS",
+    "actual_cast_speech": 3714,
+    "assigned": 3714,
+    "unknown_speaker_ownership": 0,
+    "coverage_percent": 100.0,
+    "full_speaker_gate_version": "v1.2_SOURCE_AND_CH29_RECONCILED",
+    "full_gate_drive_id": "1lFmVbEZJSMnCZMn65nAEV5U-rESC-qFX",
+    "authority_router_drive_id": "1SF30eK_uoJDFgeR6GyODfGUrIaig-ZWa",
+    "current_state_drive_id": "1JQViwpa83Mt8lSMcBbvjProiLPxR4_xZ",
+    "authority_package_drive_id": "1qA2DzFdlg-N6v_Wc104PIYDNfQJ5bS00",
+    "voice_ids_assigned": 0,
+    "voice_roster_normalization_authorized": true,
+    "provider_dispatch_authorized": false
   },
-  "current_drive_authority": {
-    "tier2_rebased_map_id": "1px9HoDaBujFK1iJ0NiyQ1bRgvI5GHoS1",
-    "tier2_rebased_gate_id": "1W6TluQh58BDju0C5-IMSVJETiBJLvoJS",
-    "engine_repair_package_id": "19xGz0Orm86-MMfTlbzwIRX0RXp-vXydA",
-    "engine_repair_gate_id": "1Xv_Ys0a7AnHHJMNl0pgoA90t8iE5FVU_",
-    "tier1_reconciliation_json_id": "1QtSTOAOgeQ4zJU4dM8S7LuKDk1gJIPD8",
-    "tier1_reconciliation_md_id": "1PpM6Fo2sGGAO6YxDDrmIDMFHAiQJ22ye",
-    "note": "No Drive ID is claimed yet for the v3 599 reconciliation artifacts."
+  "source_identity_boundary": {
+    "ch24_packet_1": "PRECURSOR_SOURCE_CH24_PACKET_1",
+    "ch24_packet_2": "PRECURSOR_SOURCE_CH24_PACKET_2",
+    "inter_packet_identity": "UNKNOWN",
+    "law": "SAME_TOPIC_OR_PACKET_CLASS_NEQ_SAME_SPEAKER_IDENTITY"
   },
-  "rejected_or_superseded_provenance": {
-    "whole_book_autopass_v0_1": [
-      "1L2SMW9aUc_8dOgRiuHm2S-sRz-eza7d4",
-      "1bqNI7qFqCwcM9gGntHIhSmsYHg1eaJ0t",
-      "1LOvd1J5FAvdQ1Zsc8om4ywXBgpO4hDSk"
-    ],
-    "tier1_v1_map_id": "1jC_88TFKo6OvSWfF3Nayey4xRt48gkDZ",
-    "tier1_v1_reason": "70_DIRECT_SPEAKER_CONFLICTS_BIDIRECTIONAL_BOUNDARY_OWNERSHIP",
-    "tier2_v1_cumulative_map_id": "1D9ZVwn1VQxqv4zQ2ZjrMENhH4qy023ix",
-    "tier2_v1_disposition": "CUMULATIVE_REJECTED_47_DELTA_SALVAGED",
-    "corrected_v2_518": "BASE_PROVENANCE_SUPERSEDED_BY_RECONCILED_599",
-    "working_661": "SUPERSEDED_NONCANONICAL_WORKING_CANDIDATE"
-  },
+  "production_regressions": [
+    {
+      "segment_id": "B03_CH29_S0312",
+      "current_speaker": "OES_SUPERVISOR_CH29",
+      "law": "ACTIVE_LOCAL_SUBJECT_BEATS_EARLIER_NAMED_MALE"
+    },
+    {
+      "segment_id": "B03_CH29_S0358",
+      "current_speaker": "SMITH",
+      "superseded_speaker": "TAREN_SOR",
+      "law": "PARAGRAPH_BREAK_ALONE_DOES_NOT_TRANSFER_SPEAKER; NAMED_PAUSE_CAN_MARK_LISTENER_REACTION_BEFORE_NEXT_RESPONSE"
+    }
+  ],
   "ch01_separate_production_lane": {
     "status": "PASS_142_OF_142_PROVIDER_BRIDGE_PRESERVED",
     "private_segmentation_and_speaker_map_id": "1aw17696W4KOLVgCcnOkKxpaOJE15YRMg",
-    "reconciliation_json_id": "10WMtxygCb24N2XnBZeL6z0-B0PJUZZFY",
-    "reconciliation_md_id": "1ofWRzJoeWpidY0BkOGJsOqQKHMMnygLC",
-    "speaker_conflicts_after_runtime_fix": 0,
     "provider_bridge_quarantine_required": false
   },
-  "verified_correction": {
-    "segment_id": "B03_CH29_S0312",
-    "from": "SMITH",
-    "to": "SUPERVISOR",
-    "reason": "local grammatical/discourse subject before quote plus post-quote he said"
-  },
-  "project_promoted_rules": [
+  "project_promoted_engine_rules": [
     "SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION",
     "PRONOUN_GRAMMATICAL_SUBJECT_TRACKER"
   ],
   "universal_promotion": "HOLD_SECOND_BOOK_REPLICATION",
-  "next_stage": "SECOND_BOOK_REPLICATION_PLUS_HIGH_INFORMATION_UNKNOWN_REVIEW_FROM_599",
-  "allowed_evidence": [
-    "DIRECT_GRAMMATICAL_SPEECH_TAG",
-    "PROJECT_VALIDATED_SAME_PARAGRAPH_PROPAGATION",
-    "PROJECT_VALIDATED_GRAMMATICAL_SUBJECT_TRACKER",
-    "BOUNDED_SCENE_PARTICIPANTS",
-    "VOCATIVE",
-    "ACTION_BEAT_OWNERSHIP_REVIEW_ONLY_UNLESS_VALIDATED",
-    "CHANNEL_ROLE",
-    "DIRECT_ADDRESSEE",
-    "STABLE_CALL_CONTEXT",
-    "EXPLICIT_LOCAL_DIALOGUE_CHAIN_WITH_AUDIT_OBJECT"
-  ],
+  "next_stage": "PRODUCTION_FULL_VOICE_ROSTER_NORMALIZATION_AND_CASTING; ENGINE_SECOND_BOOK_REPLICATION_REMAINS_SEPARATE",
   "forbidden": [
     "NAIVE_ALTERNATING_TURN_AUTOFILL",
     "SEMANTIC_VOICE_GUESSING",
     "GENDER_ONLY_GUESSING",
-    "REPORTING_CLAUSE_MODIFIER_ALIAS_AS_SUBJECT",
     "REUSE_REJECTED_V1_ASSIGNMENTS_AS_AUTHORITY",
     "ROLE_GRANULARITY_COMPATIBILITY_AS_VOICE_IDENTITY_PROOF",
     "STORY_OR_PROSE_REWRITE",
-    "SCALED_VOICE_MAP_FROM_PARTIAL_ATTRIBUTION"
+    "CLAIMING_3714_AS_ENGINE_AUTO_VERIFIED"
   ]
 }
