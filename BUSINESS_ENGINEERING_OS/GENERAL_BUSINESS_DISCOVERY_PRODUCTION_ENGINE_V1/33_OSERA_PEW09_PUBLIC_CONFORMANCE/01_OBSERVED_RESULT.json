@@ -1,0 +1,46 @@
+{
+  "schema": "ivdivo.general_business.osera_pew09_observed_result/1.0",
+  "observed_at": "2026-08-22T13:32:27Z",
+  "workflow_run_id": 32576050831,
+  "artifact_id": 9476568430,
+  "artifact_digest": "sha256:ef2d07190df8718207f070c63dbb5261a93869051dbb9575cea7f0b2eebd22c4",
+  "sample_size": 10,
+  "controls_per_repo": 6,
+  "independent_frozen_public_gap_class_count": 1,
+  "gap_classes": {
+    "CURRENT_BACKPATCH_BRANCH_CONVENTION_GAP": [
+      "backpatch-activemq",
+      "backpatch-commons-lang",
+      "backpatch-cxf",
+      "backpatch-graphql-java",
+      "backpatch-gson",
+      "backpatch-jetty",
+      "backpatch-okhttp",
+      "backpatch-tapestry"
+    ]
+  },
+  "backpatch_branch_visible": [
+    "backpatch-camel",
+    "backpatch-bouncycastle"
+  ],
+  "all_10_passed": [
+    "FORK_001_repository_name",
+    "FORK_003_expected_baseline_tag_resolves",
+    "REL_003A_expected_release_tags_resolve",
+    "REL_003B_baseline_release_base_lineage",
+    "REL_003C_release_ordinal_metadata"
+  ],
+  "standards_level_observation_not_counted_as_release_defect": {
+    "REL_002_AUTOMATED_ACCEPTANCE_CHECK_NOT_YET_DEFINED": true,
+    "reason": "No published artifact bytecode mismatch was measured; the draft's missing automated acceptance check is not promoted into a release defect."
+  },
+  "technical_route": "KILL_AS_CURRENT_NEW_WIP_WATCH_STANDARD_EVOLUTION",
+  "business_interpretation": "OSERA remains an early infrastructure watch, but the bounded public proof did not meet the predeclared two-independent-gap threshold for promotion as a current independent conformance/completeness QA business wedge.",
+  "buyer_demand": "UNPROVEN",
+  "wtp": "UNKNOWN",
+  "price": null,
+  "transactions": 0,
+  "profitability": "UNPROVEN",
+  "wip_promotion": false,
+  "external_action_authorized": false
+}
