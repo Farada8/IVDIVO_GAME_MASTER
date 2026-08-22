@@ -1,0 +1,21 @@
+{
+  "artifact": "B03_CH01_CASTING_SCORECARD_TEMPLATE_v1",
+  "date": "2026-08-22",
+  "status": "TEMPLATE_READY / NO CANDIDATE SCORED",
+  "authority_standard": "IVDIVO_AUDIO_VOICE_AUDITION_BINDING_STANDARD_v1.0",
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "decision_states": ["REJECT", "HOLD", "CALLBACK", "PROVISIONAL_PILOT_LOCK", "SEASON_LOCK"],
+  "global_hard_fail_rule": "ANY_HARD_FAIL overrides numeric average",
+  "comparison_rules": ["same exact locked anchor", "same model/settings class", "music OFF", "reverb OFF", "heavy processing OFF", "loudness matched", "anonymous candidate labels where practical", "NATURAL_RESTRAINED then DIRECTED_CHANGE"],
+  "roles": {
+    "NARRATOR": {"weights": {"natural_spoken_language": 20, "procedural_clarity": 20, "long_form_listenability": 20, "tension_without_portent": 15, "direction_response": 15, "distinctiveness": 10}, "hard_fails": ["trailer voice", "supernatural portent", "emotion over-explanation"]},
+    "NIKA_ZUPAN": {"weights": {"professional_credibility": 25, "precision_under_pressure": 20, "natural_spoken_language": 15, "dry_humour": 10, "direction_response": 15, "long_form_listenability": 15}, "hard_fails": ["panic acting", "detective-genius smugness", "generic action-hero authority"]},
+    "JANA_KOVAC": {"weights": {"supervisory_authority": 25, "restraint": 20, "evidence_discipline": 20, "natural_spoken_language": 15, "direction_response": 10, "distinctiveness": 10}, "hard_fails": ["theatrical severity", "mystic certainty", "bureaucratic caricature"]},
+    "ANDREJ_KOSIR": {"weights": {"practical_credibility": 20, "deadpan_humour": 20, "systems_literacy": 15, "natural_spoken_language": 15, "direction_response": 15, "long_form_listenability": 15}, "hard_fails": ["broad comedy", "foreshadowing knowledge he does not have", "victim melodrama"]},
+    "UNKNOWN_PRECURSOR_CALLER": {"weights": {"credible_fear": 25, "ontological_neutrality": 25, "intelligibility": 15, "voice_identity_replay_stability": 20, "direction_response": 15}, "hard_fails": ["ghost coding", "oracle/prophecy coding", "villain coding", "synthetic glitch coding", "invented age certainty"]},
+    "RESCUER_FIELD_RADIO": {"weights": {"field_credibility": 30, "brevity": 20, "intelligibility": 20, "restraint": 15, "direction_response": 15}, "hard_fails": ["invented diagnosis", "military cliché", "unnecessary urgency"]}
+  },
+  "candidate_record_schema": {"role": null, "candidate_label": null, "provider_voice_id": null, "provider_model": null, "settings_hash": null, "anchor_unit_id": null, "natural_take_id": null, "directed_change_take_id": null, "scores": {}, "hard_fails": [], "pronunciation_findings": [], "known_weaknesses": [], "decision": "HOLD", "reviewer_notes": null},
+  "long_form_gate": "8–10 minute representative evidence required before SEASON_LOCK for lead/major recurring voices",
+  "no_voice_lock_without_real_audio": true
+}
