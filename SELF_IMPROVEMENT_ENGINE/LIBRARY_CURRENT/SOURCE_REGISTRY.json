@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated": "2026-08-22",
   "library": "IVDIVO_SELF_IMPROVEMENT_ENGINEERING_LIBRARY",
   "status": "CURRENT_INDEX_WITH_PRIVATE_RAW_POINTERS_AND_CANDIDATE_EVIDENCE",
@@ -63,10 +63,12 @@
       "drive_id": "1HExzpVUcs2z7ObkVPYiLRQIZ3N8le4eV",
       "status": "MERGED_EVIDENCE_LAYER_WITH_GENUINE_RECOVERY_EVENT_001",
       "merge_commit": "ee49be52766e2f70ae010281804ffdebd6538796",
-      "recovery_state_commit": "25980c93bbcd43ecea6bed80585e12050db88263",
-      "si_0014_genuine_events": "1_of_3",
-      "distinct_recovered_projects": "2_of_2",
+      "original_recovery_state_commit": "25980c93bbcd43ecea6bed80585e12050db88263",
+      "si_0014_ledger_v1_1_merge_commit": "1998ec605d72889d4d2fd11e270298833b846400",
+      "physical_interruption_incidents": "1_of_3",
+      "project_recovery_slices": "2_projects_satisfied",
       "false_resume_observed": 0,
+      "telemetry_unknowns_remain_null": true,
       "authority_effect": "NONE_V2_REMAINS_CURRENT"
     },
     {
