@@ -130,3 +130,36 @@ def next_frontier(target_pack_acquired: bool, bidder_packet_acquired: bool, pa4:
     if not pa5:
         return "RUN_SMALLEST_REAL_DECISION_USE_TEST"
     return "DERIVE_FROM_NEW_EVIDENCE"
+
+
+def planned_award_date_guard(
+    workspace_status: Optional[str],
+    contract_award_date: Optional[str],
+    award_notice_or_binding_award_proven: bool = False,
+) -> Dict[str, Any]:
+    """A future/admin award-date field is not evidence that an award has happened.
+
+    Current workspace metadata may expose a Contract Award Date while the CfT is still
+    in Tender Submission. Only a separate award notice or binding award provenance can
+    set awarded=True.
+    """
+    if award_notice_or_binding_award_proven:
+        return {
+            "awarded": True,
+            "status": "AWARD_PROVEN_BY_SEPARATE_AUTHORITY",
+            "workspace_status": workspace_status,
+            "contract_award_date": contract_award_date,
+        }
+    if contract_award_date:
+        return {
+            "awarded": False,
+            "status": "PLANNED_AWARD_DATE_NEQ_AWARDED_CONTRACT",
+            "workspace_status": workspace_status,
+            "contract_award_date": contract_award_date,
+        }
+    return {
+        "awarded": False,
+        "status": "NO_AWARD_EVIDENCE",
+        "workspace_status": workspace_status,
+        "contract_award_date": None,
+    }
