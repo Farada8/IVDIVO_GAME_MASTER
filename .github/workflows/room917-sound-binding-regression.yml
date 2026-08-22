@@ -1,0 +1,33 @@
+name: ROOM917 Sound Binding Regression
+
+on:
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/sound_asset_binding_gate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_sound_asset_binding_gate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_EN_RU_SHARED_SOUND_IDENTITY_MAP_v1.json'
+      - '.github/workflows/room917-sound-binding-regression.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/sound_asset_binding_gate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_sound_asset_binding_gate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_EN_RU_SHARED_SOUND_IDENTITY_MAP_v1.json'
+      - '.github/workflows/room917-sound-binding-regression.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run atomic bilingual sound-binding regressions
+        run: python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_sound_asset_binding_gate.py
