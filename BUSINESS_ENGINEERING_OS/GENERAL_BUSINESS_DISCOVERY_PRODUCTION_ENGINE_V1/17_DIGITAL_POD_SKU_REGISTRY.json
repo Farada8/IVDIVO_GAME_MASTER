@@ -1,0 +1,31 @@
+{
+  "schema": "ivdivo.business.digital_pod_skus/1.0",
+  "date": "2026-08-22",
+  "status": "INTERNAL_HYPOTHESES_ONLY",
+  "families": [
+    {"id": "FAM_A", "name": "IRELAND_REIMAGINED_LOCAL_MEMORY", "positioning": "place-specific original Irish narrative art"},
+    {"id": "FAM_B", "name": "METAPHYSICAL_RENAISSANCE_ARCHITECTURAL_IMAGINATION", "positioning": "original architectural/metaphysical collectible art"}
+  ],
+  "digital_skus": [
+    "Shillelagh House of Many Windows", "Shillelagh River of Time", "Shillelagh Great Irish Loggia", "Wicklow Land Memory Weather Triptych", "Ireland Reimagined 33 Gates Plate I", "Ireland Reimagined Emigrant Letter", "Old Railway Road Between Worlds", "Metaphysical Renaissance Irish Arcades", "Atlantic Cartouche", "IVDIVO Composition Study Pack"
+  ],
+  "pod_skus": [
+    "A3_A2_House_of_Many_Windows_Poster", "A3_A2_River_of_Time_Poster", "A3_A2_Great_Irish_Loggia_Poster", "Atlantic_Cartouche_Framed_Print", "Old_Railway_Framed_Print", "Wicklow_Triptych_Poster_Set", "Shillelagh_Art_Postcard_Set", "Ireland_Reimagined_Art_Card_Set", "Canvas_One_Proven_Composition_HOLD_COST_CHECK", "Tote_One_Graphic_Composition_HOLD_MARGIN_AND_FIT"
+  ],
+  "market_negative_control": {
+    "generic_vintage_ireland_poster": "MUTATE_REJECT_PRIMARY_POSITIONING",
+    "etsy_observed_result_ranges": {"ireland_vintage_travel_poster": "1000+ relevant results", "vintage_travel_poster_ireland": "3000+ items", "irish_travel_poster": "5000+ items", "dublin_ireland_vintage_poster": "645+ items"},
+    "observed_low_ticket_digital_examples": "roughly EUR3-6 / USD3-8 in sampled search results"
+  },
+  "platform_rules": {
+    "seller_original_digital_downloads_allowed": true,
+    "seller_original_design_with_disclosed_production_partner_allowed": true,
+    "seller_prompted_ai_requires_disclosure": true,
+    "ai_prompt_bundles_allowed": false,
+    "production_partner_disclosure_required": true
+  },
+  "etsy_fee_inputs": {"listing_fee_usd": 0.20, "transaction_fee_percent": 6.5, "ireland_payment_processing_percent": 4.0, "ireland_payment_processing_flat_eur": 0.30, "seller_fee_vat_possible": true, "offsite_ads_if_applicable": "12-15% under current Etsy rules"},
+  "printful": {"eu_facilities": ["Riga, Latvia", "Barcelona, Spain"], "exact_product_cost": null, "exact_shipping_to_ireland": null, "vat_treatment": "SKU/order/seller-registration dependent"},
+  "evidence": {"listings_published": 0, "orders": 0, "wtp": null, "conversion": null, "cac": null, "profitable_skus_proven": 0},
+  "next_gate": "SELECT_3_EXISTING_ORIGINAL_ASSETS_WITH_PROVENANCE_RESOLUTION_THEN_EXACT_COSTING"
+}
