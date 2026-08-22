@@ -1,0 +1,44 @@
+name: Business Agent Commerce Scanner P-EW01 P-EW02
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/P_EW01_EW02_AGENT_COMMERCE_SCANNER/**'
+      - '.github/workflows/business-agent-commerce-scanner.yml'
+  push:
+    branches:
+      - 'business-engineering/pew01-pew02-agent-commerce-scanner-20260822'
+
+jobs:
+  scanner-and-blind-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test runner
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Run P-EW01/P-EW02 regression suite
+        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/P_EW01_EW02_AGENT_COMMERCE_SCANNER/tests/test_agent_commerce_scanner.py
+      - name: Execute ten-fixture blind test
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/P_EW01_EW02_AGENT_COMMERCE_SCANNER/runtime/run_blind_test.py > /tmp/agent_commerce_blind_test.json
+          python -m json.tool /tmp/agent_commerce_blind_test.json >/dev/null
+          python - <<'PY'
+          import json
+          p='/tmp/agent_commerce_blind_test.json'
+          x=json.load(open(p))
+          assert x['fixture_count']==10
+          assert x['public_only_actionable_gap_count']==0
+          assert x['generic_seo_advice_emitted'] is False
+          assert x['proof_promotion'] is False
+          assert x['external_action_authorized'] is False
+          print('P-EW01/P-EW02 PASS:', x['issue_counts'], x['disposition_counts'])
+          PY
+      - name: Validate fixture JSON
+        run: |
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/P_EW01_EW02_AGENT_COMMERCE_SCANNER/02_FIXTURE_INPUTS.json >/dev/null
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/P_EW01_EW02_AGENT_COMMERCE_SCANNER/02A_FIXTURE_KEY.json >/dev/null
+      - name: Compile runtime
+        run: python -m compileall BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/P_EW01_EW02_AGENT_COMMERCE_SCANNER/runtime

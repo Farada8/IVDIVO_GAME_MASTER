@@ -1,0 +1,17 @@
+{
+  "schema": "ivdivo.agent_commerce.fixture_key/1.0",
+  "date": "2026-08-22",
+  "fixtures": {
+    "F01": {"merchant": "Lloyds Online Doctor Ireland", "domain": "lloydsonlinedoctor.ie", "source_ids": ["S15"]},
+    "F02": {"merchant": "Etsy", "domain": "etsy.com", "source_ids": ["S13", "S14", "S02"]},
+    "F03": {"merchant": "Target", "domain": "target.com", "source_ids": ["S01"]},
+    "F04": {"merchant": "Sephora", "domain": "sephora.com", "source_ids": ["S01"]},
+    "F05": {"merchant": "Nordstrom", "domain": "nordstrom.com", "source_ids": ["S01"]},
+    "F06": {"merchant": "Lowe's", "domain": "lowes.com", "source_ids": ["S01"]},
+    "F07": {"merchant": "Best Buy", "domain": "bestbuy.com", "source_ids": ["S01"]},
+    "F08": {"merchant": "The Home Depot", "domain": "homedepot.com", "source_ids": ["S01"]},
+    "F09": {"merchant": "Wayfair", "domain": "wayfair.com", "source_ids": ["S01"]},
+    "F10": {"merchant": "Glossier", "domain": "glossier.com", "source_ids": ["S01", "S02"]}
+  },
+  "blind_rule": "scanner runtime consumes 02_FIXTURE_INPUTS.json only; merchant names are joined after scan"
+}

@@ -1,0 +1,168 @@
+{
+  "schema": "ivdivo.agent_commerce.blind_fixture_inputs/1.0",
+  "date": "2026-08-22",
+  "allowed_observation_states": ["PRESENT", "ABSENT_VERIFIED", "NOT_OBSERVABLE_PUBLICLY", "VENDOR_SPECIFIC_UNKNOWN", "NOT_APPLICABLE"],
+  "fixtures": [
+    {
+      "fixture_id": "F01",
+      "observations": {
+        "official_agentic_discovery": "PRESENT",
+        "ucp_public_profile": "PRESENT",
+        "product_data_plane": "PRESENT",
+        "protocol_checkout_surface": "PRESENT",
+        "fulfillment_order_state": "PRESENT",
+        "authorization_trust_controls": "NOT_OBSERVABLE_PUBLICLY",
+        "payment_handler_boundary": "PRESENT",
+        "agent_discovery_interop": "PRESENT",
+        "evidence_freshness": "PRESENT"
+      },
+      "evidence_notes": {
+        "ucp_public_profile": "Direct public UCP profile observed; profile declares current protocol version, shopping service, catalog/cart/checkout/fulfillment/order capabilities and payment handlers.",
+        "authorization_trust_controls": "Do not infer runtime request-signature/idempotency conformance from a profile document alone."
+      },
+      "generic_seo_signal": true
+    },
+    {
+      "fixture_id": "F02",
+      "observations": {
+        "official_agentic_discovery": "PRESENT",
+        "ucp_public_profile": "NOT_OBSERVABLE_PUBLICLY",
+        "product_data_plane": "PRESENT",
+        "protocol_checkout_surface": "PRESENT",
+        "fulfillment_order_state": "NOT_OBSERVABLE_PUBLICLY",
+        "authorization_trust_controls": "NOT_OBSERVABLE_PUBLICLY",
+        "payment_handler_boundary": "VENDOR_SPECIFIC_UNKNOWN",
+        "agent_discovery_interop": "VENDOR_SPECIFIC_UNKNOWN",
+        "evidence_freshness": "PRESENT"
+      },
+      "evidence_notes": {
+        "official_agentic_discovery": "Current first-party evidence describes ongoing agentic commerce partnerships; 2026 first-party material also describes direct AI-powered purchase partnerships.",
+        "protocol_checkout_surface": "Channel-level purchase integration is documented; merchant-internal endpoint/security implementation remains non-public."
+      },
+      "generic_seo_signal": true
+    },
+    {
+      "fixture_id": "F03",
+      "observations": {
+        "official_agentic_discovery": "PRESENT",
+        "ucp_public_profile": "NOT_OBSERVABLE_PUBLICLY",
+        "product_data_plane": "PRESENT",
+        "protocol_checkout_surface": "VENDOR_SPECIFIC_UNKNOWN",
+        "fulfillment_order_state": "NOT_OBSERVABLE_PUBLICLY",
+        "authorization_trust_controls": "NOT_OBSERVABLE_PUBLICLY",
+        "payment_handler_boundary": "VENDOR_SPECIFIC_UNKNOWN",
+        "agent_discovery_interop": "VENDOR_SPECIFIC_UNKNOWN",
+        "evidence_freshness": "PRESENT"
+      },
+      "generic_seo_signal": true
+    },
+    {
+      "fixture_id": "F04",
+      "observations": {
+        "official_agentic_discovery": "PRESENT",
+        "ucp_public_profile": "NOT_OBSERVABLE_PUBLICLY",
+        "product_data_plane": "PRESENT",
+        "protocol_checkout_surface": "VENDOR_SPECIFIC_UNKNOWN",
+        "fulfillment_order_state": "NOT_OBSERVABLE_PUBLICLY",
+        "authorization_trust_controls": "NOT_OBSERVABLE_PUBLICLY",
+        "payment_handler_boundary": "VENDOR_SPECIFIC_UNKNOWN",
+        "agent_discovery_interop": "VENDOR_SPECIFIC_UNKNOWN",
+        "evidence_freshness": "PRESENT"
+      },
+      "generic_seo_signal": true
+    },
+    {
+      "fixture_id": "F05",
+      "observations": {
+        "official_agentic_discovery": "PRESENT",
+        "ucp_public_profile": "NOT_OBSERVABLE_PUBLICLY",
+        "product_data_plane": "PRESENT",
+        "protocol_checkout_surface": "VENDOR_SPECIFIC_UNKNOWN",
+        "fulfillment_order_state": "NOT_OBSERVABLE_PUBLICLY",
+        "authorization_trust_controls": "NOT_OBSERVABLE_PUBLICLY",
+        "payment_handler_boundary": "VENDOR_SPECIFIC_UNKNOWN",
+        "agent_discovery_interop": "VENDOR_SPECIFIC_UNKNOWN",
+        "evidence_freshness": "PRESENT"
+      },
+      "generic_seo_signal": true
+    },
+    {
+      "fixture_id": "F06",
+      "observations": {
+        "official_agentic_discovery": "PRESENT",
+        "ucp_public_profile": "NOT_OBSERVABLE_PUBLICLY",
+        "product_data_plane": "PRESENT",
+        "protocol_checkout_surface": "VENDOR_SPECIFIC_UNKNOWN",
+        "fulfillment_order_state": "NOT_OBSERVABLE_PUBLICLY",
+        "authorization_trust_controls": "NOT_OBSERVABLE_PUBLICLY",
+        "payment_handler_boundary": "VENDOR_SPECIFIC_UNKNOWN",
+        "agent_discovery_interop": "VENDOR_SPECIFIC_UNKNOWN",
+        "evidence_freshness": "PRESENT"
+      },
+      "generic_seo_signal": true
+    },
+    {
+      "fixture_id": "F07",
+      "observations": {
+        "official_agentic_discovery": "PRESENT",
+        "ucp_public_profile": "NOT_OBSERVABLE_PUBLICLY",
+        "product_data_plane": "PRESENT",
+        "protocol_checkout_surface": "VENDOR_SPECIFIC_UNKNOWN",
+        "fulfillment_order_state": "NOT_OBSERVABLE_PUBLICLY",
+        "authorization_trust_controls": "NOT_OBSERVABLE_PUBLICLY",
+        "payment_handler_boundary": "VENDOR_SPECIFIC_UNKNOWN",
+        "agent_discovery_interop": "VENDOR_SPECIFIC_UNKNOWN",
+        "evidence_freshness": "PRESENT"
+      },
+      "generic_seo_signal": true
+    },
+    {
+      "fixture_id": "F08",
+      "observations": {
+        "official_agentic_discovery": "PRESENT",
+        "ucp_public_profile": "NOT_OBSERVABLE_PUBLICLY",
+        "product_data_plane": "PRESENT",
+        "protocol_checkout_surface": "VENDOR_SPECIFIC_UNKNOWN",
+        "fulfillment_order_state": "NOT_OBSERVABLE_PUBLICLY",
+        "authorization_trust_controls": "NOT_OBSERVABLE_PUBLICLY",
+        "payment_handler_boundary": "VENDOR_SPECIFIC_UNKNOWN",
+        "agent_discovery_interop": "VENDOR_SPECIFIC_UNKNOWN",
+        "evidence_freshness": "PRESENT"
+      },
+      "generic_seo_signal": true
+    },
+    {
+      "fixture_id": "F09",
+      "observations": {
+        "official_agentic_discovery": "PRESENT",
+        "ucp_public_profile": "NOT_OBSERVABLE_PUBLICLY",
+        "product_data_plane": "PRESENT",
+        "protocol_checkout_surface": "VENDOR_SPECIFIC_UNKNOWN",
+        "fulfillment_order_state": "NOT_OBSERVABLE_PUBLICLY",
+        "authorization_trust_controls": "NOT_OBSERVABLE_PUBLICLY",
+        "payment_handler_boundary": "VENDOR_SPECIFIC_UNKNOWN",
+        "agent_discovery_interop": "VENDOR_SPECIFIC_UNKNOWN",
+        "evidence_freshness": "PRESENT"
+      },
+      "generic_seo_signal": true
+    },
+    {
+      "fixture_id": "F10",
+      "observations": {
+        "official_agentic_discovery": "PRESENT",
+        "ucp_public_profile": "NOT_OBSERVABLE_PUBLICLY",
+        "product_data_plane": "PRESENT",
+        "protocol_checkout_surface": "VENDOR_SPECIFIC_UNKNOWN",
+        "fulfillment_order_state": "NOT_OBSERVABLE_PUBLICLY",
+        "authorization_trust_controls": "NOT_OBSERVABLE_PUBLICLY",
+        "payment_handler_boundary": "VENDOR_SPECIFIC_UNKNOWN",
+        "agent_discovery_interop": "VENDOR_SPECIFIC_UNKNOWN",
+        "evidence_freshness": "PRESENT"
+      },
+      "evidence_notes": {
+        "product_data_plane": "Current OpenAI material says Shopify product data is integrated via Shopify Catalog; historical OpenAI material identifies this fixture as a Shopify merchant example. This supports discovery data-plane evidence only, not current native checkout readiness."
+      },
+      "generic_seo_signal": true
+    }
+  ]
+}
