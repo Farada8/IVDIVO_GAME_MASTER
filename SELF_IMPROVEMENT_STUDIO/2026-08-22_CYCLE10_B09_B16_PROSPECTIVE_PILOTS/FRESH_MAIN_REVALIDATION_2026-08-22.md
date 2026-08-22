@@ -1,14 +1,25 @@
-# Fresh-main revalidation — B09–B16
+# Fresh-main revalidation — B09–B16 v1.1
 
-Revalidation main: `8463e492b5c42f933127a6e009654b7575179889`.
+Revalidation main: `d2141966639d9a0082182a89ed3eea85b18f6bc3`.
 
-Parallel delta reviewed:
-- Business P225 bounded acquisition nonfinding merged after the pilot branch was cut.
-- Its merge message explicitly states P225 was not executed, 17/47 accounting did not change, neither root closed, and proof grade did not promote.
-- Current `BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json` remains schema 1.2 with ROOT_A `TARGET_PACK_NOT_ACQUIRED`, ROOT_B `NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET`, and downstream P273–P287 dependency blocks.
+## Material parallel delta
+Fresh compare from the prior base showed B03 changed materially:
+- CH22 `FIRST DISTRIBUTED RUN` PASS;
+- CH23 `FAILOVER` PASS;
+- CH24 `GO TO THE RELAY` PASS;
+- fresh P65–P72 climax/resolution rebase PASS;
+- CH25 `CASCADE` is now the exact authorized next obligation.
 
-Therefore B11 prospective disposition remains unchanged: `STOP_INTERNAL_HARDENING_RETURN_TO_REAL_INPUT_GATES`.
+Therefore the original CH22 prospective capture is retained as provenance but excluded from causal pilot evidence. B09 is reissued prospectively on CH25 before draft work.
 
-No parallel delta identified here changes B03 CH22 authorization or the cited NMM pre-voice-lock source state.
+## Audio
+No newer evidence in this reconciliation changes the cited NMM source state used by B10: pre-voice-lock, no selected provider voice IDs, voice IDs placeholder, no audio rendered.
 
-B09–B16 semantic decisions remain valid. No new SI ID; no authority promotion.
+## Business
+Fresh Business P225 bounded acquisition nonfinding and Resume Gate do not close ROOT_A/ROOT_B, do not execute P225, do not promote proof grade, and current read model remains schema 1.2 with downstream dependency blocks. B11 remains `STOP_INTERNAL_HARDENING_RETURN_TO_REAL_INPUT_GATES`.
+
+## Decision
+B09–B16 remains valid after replacing the stale Book pilot with fresh CH25.
+No new SI ID.
+No authority promotion.
+Production-return frontier after B16: B03 CH25 `CASCADE`, subject to fresh state read immediately before prose.

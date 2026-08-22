@@ -1,23 +1,29 @@
 {
-  "schema": "IVDIVO_CYCLE10_B09_B16_PROSPECTIVE_PILOTS_v1",
+  "schema": "IVDIVO_CYCLE10_B09_B16_PROSPECTIVE_PILOTS_v1.1",
   "captured_before_production_execution": true,
   "authority_effect": "NONE",
+  "superseded_capture": {
+    "pilot": "B09_BOOK_CH22",
+    "status": "SUPERSEDED_BY_PARALLEL_PRODUCTION_BEFORE_MERGE",
+    "count_as_causal_pilot_evidence": false,
+    "reason": "Parallel B03 production advanced CH22-CH24 to PASS before the meta package merged"
+  },
   "pilots": [
     {
       "id": "B09_BOOK",
       "domain": "BOOK",
       "project": "B03_SMITH_THE_EMPTY_RESCUE",
+      "fresh_main_at_prework": "d2141966639d9a0082182a89ed3eea85b18f6bc3",
       "authority_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CURRENT_STATE.md",
-      "authority_blob_sha": "6f7162464396d73e6c1a7e879c0335a645a06f00",
-      "production_improvement": "Draft CH22 FIRST DISTRIBUTED RUN from actual CH21 PASS frontier",
-      "pre_meta_route": "DRAFT_CH22_FROM_CURRENT_AUTHORITY",
-      "uncertainty": "Prevent CH22 from spending CH23 failover/re-centralization payoff or violating the eight explicit CH22 hard conditions",
-      "smallest_decisive_test": "CH22_PRE_DRAFT_8_CONDITION_ACCEPTANCE_CARD",
-      "test_disposition": "ROUTE_TO_DRAFT_WITH_PREDECLARED_ACCEPTANCE",
-      "broad_alternative_not_executed": "Rerun full B03 story architecture or another broad 32-prompt analysis before CH22",
+      "production_improvement": "Draft CH25 CASCADE from actual CH24 PASS frontier and fresh P65-P72 rebase",
+      "pre_meta_route": "DRAFT_CH25_FROM_CURRENT_AUTHORITY",
+      "uncertainty": "Keep the injury conventionally causal, authority-correct and multi-site without anomaly punishment or spending CH26-CH29 payoffs",
+      "smallest_decisive_test": "CH25_INJURY_CAUSALITY_AND_AUTHORITY_PREFLIGHT",
+      "test_disposition": "ROUTE_TO_DRAFT_CH25_WITH_PREDECLARED_ACCEPTANCE",
+      "broad_alternative_not_executed": "Rerun P65-P72 or full B03 climax architecture before CH25",
       "delta": {"gate_changed": false, "selected_test_changed": true, "artifact_changed": true, "next_action_changed": false, "decision_changed": false, "meaningful_delta": true},
-      "artifact": "BOOK_CH22_PRE_DRAFT_ACCEPTANCE_CARD",
-      "production_return": "DRAFT_CH22_FIRST_DISTRIBUTED_RUN",
+      "artifact": "BOOK_CH25_INJURY_CAUSALITY_AND_AUTHORITY_PREFLIGHT",
+      "production_return": "DRAFT_CH25_CASCADE",
       "external_evidence_claimed": false
     },
     {
@@ -80,7 +86,8 @@
     "profile_status": "KEEP_LOCAL_BOUNDED_PROFILE",
     "numbered_si_candidate": "NO",
     "reasons": [
-      "Only three prospective domain pilots",
+      "Only three current counted prospective domain pilots",
+      "Original CH22 book capture was explicitly rejected as causal evidence after parallel production overtook it",
       "Meta-time and avoided-rework minutes are unmeasured/null",
       "Observed value is routing/guardrail value, not production-quality evidence",
       "Global SI reservation view remains fail-closed/partial; no new ID allocation is authorized",
