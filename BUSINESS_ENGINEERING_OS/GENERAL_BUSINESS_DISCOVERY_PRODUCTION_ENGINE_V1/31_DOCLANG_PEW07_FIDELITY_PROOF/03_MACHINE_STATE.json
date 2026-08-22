@@ -1,32 +1,47 @@
 {
-  "schema": "ivdivo.general_business.pew07_doclang_fidelity_proof/1.0",
+  "schema": "ivdivo.general_business.pew07_doclang_fidelity_proof/1.1",
   "date": "2026-08-22",
   "gate": "P-EW07",
   "candidate": "DOCLANG_FIDELITY_REGRESSION_QA",
-  "status": "BUILT_DRIVE_VERIFIED_CI_PENDING",
-  "fresh_replay": {
+  "status": "PASS_MECHANISM_ORTHOGONAL_TO_SCHEMA_NO_WIP_PROMOTION",
+  "controlling_authority": {
+    "pr": 447,
+    "tested_head": "8163b83ea9e953ba38bf26ccec45a6cec7ba8e8a",
+    "merge_sha": "907bf7a6e0aed99e90c3dd6eb3d275c491f9ed6a",
+    "dedicated_ci_run": 32572489009,
+    "dedicated_ci_status": "SUCCESS",
+    "all_business_workflows_same_head": {
+      "general_business_discovery_engine": {"run": 32572489013, "status": "SUCCESS"},
+      "p09_p16_buyer_evidence": {"run": 32572489003, "status": "SUCCESS"},
+      "p17_p24_fatal_tests": {"run": 32572488988, "status": "SUCCESS"},
+      "opp37_p25_p32_offer_engineering": {"run": 32572489025, "status": "SUCCESS"},
+      "opp37_test37_ai_vs_seo": {"run": 32572489043, "status": "SUCCESS"}
+    }
+  },
+  "duplicate_reconciliation": {
     "stale_branch": "business-engineering/pew07-doclang-fidelity-proof-20260822",
-    "stale_branch_disposition": "PROVENANCE_ONLY_NO_DUPLICATE_EXECUTION",
-    "fresh_branch": "business-engineering/pew07-doclang-fidelity-proof-r2-20260822"
+    "stale_pr": 443,
+    "stale_pr_disposition": "SUPERSEDED_PROVENANCE_CLOSED_NO_DUPLICATE_EXECUTION"
   },
   "official_validator": {
     "package": "doclang",
     "version": "0.7.3",
     "mode": "XSD_ONLY",
-    "expected_good_fixture": "PASS",
-    "expected_semantic_drift_fixture": "PASS"
+    "good_fixture": "PASS",
+    "semantic_drift_fixture": "PASS"
   },
   "fidelity_checker": {
-    "expected_good_fixture": "PASS_FIDELITY",
-    "expected_semantic_drift_fixture": "FAIL_FIDELITY",
+    "good_fixture": "PASS_FIDELITY",
+    "semantic_drift_fixture": "FAIL_FIDELITY",
     "missing_source_truth": "HOLD_INPUT_UNRESOLVED",
     "structural_validation_proven_by_checker": false
   },
-  "predeclared_decision": {
-    "if_official_validator_accepts_both_and_checker_separates": "PASS_MECHANISM_ORTHOGONAL_TO_SCHEMA",
-    "if_drift_fixture_structurally_invalid": "HOLD_PROOF_NOT_ORTHOGONAL",
-    "if_checker_cannot_separate": "KILL_AS_DUPLICATE_OR_NONFUNCTIONAL",
-    "commercial_route_if_pass": "M1_ONLY_NO_WIP_PROMOTION"
+  "decision": {
+    "technical": "PASS_MECHANISM_ORTHOGONAL_TO_SCHEMA",
+    "interpretation": "STRUCTURAL_CONFORMANCE_AND_SOURCE_SEMANTIC_FIDELITY_ARE_DISTINCT_VERIFICATION_PLANES",
+    "commercial": "M1_ONLY_NO_WIP_PROMOTION",
+    "generic_converter_or_schema_validator_wedge": "KILLED_AS_PRIMARY_WEDGE",
+    "surviving_hypothesis": "INDEPENDENT_CONVERSION_FIDELITY_REGRESSION_QA_M1_ONLY"
   },
   "public_basis": {
     "docling_issue_3864": "DISCLOSED_FAILURE_CLASS_ONLY_CLOSED",
@@ -36,9 +51,9 @@
   "drive": {
     "folder_id": "1FyYsogdwV8mAnEwQMyHHgBdXqgu71hMD",
     "document_id": "1hVCyR1rnyjgYwvGXK5nQu_t4G09xdJr9CcjmMHMvFAk",
-    "revision_id": "AIroW358-ZJjDkRVNfYS2InlahNDKJP8kWyPfGQnpbr-PWOxPmSTlTYy34kJl1lC61Fg609PwavdlW6VU59fbaX7aZhWcsBSVviCTWjjy2Q",
-    "readback_marker": "P-EW07-DOCLANG-SCHEMA-VALID-SEMANTIC-DRIFT-ORTHOGONALITY-CI-PENDING-NO-WIP-NO-MARKET-PROOF",
-    "readback_status": "PASS"
+    "premerge_revision_id": "AIroW358-ZJjDkRVNfYS2InlahNDKJP8kWyPfGQnpbr-PWOxPmSTlTYy34kJl1lC61Fg609PwavdlW6VU59fbaX7aZhWcsBSVviCTWjjy2Q",
+    "premerge_readback_status": "PASS",
+    "closure_marker_expected": "P-EW07-PASS-ORTHOGONAL-PR447-CI32572489009-MERGE907BF7-NO-WIP-NO-MARKET-PROOF"
   },
   "proof_boundary": {
     "buyer_demand_proven": false,
@@ -50,5 +65,7 @@
     "wip_promotion": false,
     "external_action_authorized": false
   },
-  "ci_status": "PENDING"
+  "ci_status": "SUCCESS",
+  "next_internal_if_no_external_authorization": "EARLY_WAVE_RADAR_DELTA03",
+  "next_if_external_testing_explicitly_authorized": "PREDECLARE_BOUNDED_BUYER_WTP_TEST_STARTING_WITH_CORRECTED_OW01_WEDGE"
 }
