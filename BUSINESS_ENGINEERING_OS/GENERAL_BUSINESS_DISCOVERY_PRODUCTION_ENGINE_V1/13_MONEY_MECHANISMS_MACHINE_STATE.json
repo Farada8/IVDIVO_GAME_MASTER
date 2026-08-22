@@ -1,0 +1,60 @@
+{
+  "schema": "ivdivo.business.money_mechanisms_run32/1.0",
+  "date": "2026-08-22",
+  "status": "RUN32_COMPLETE_PENDING_CI_AND_DRIVE_READBACK",
+  "parent_engine": "GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1",
+  "purpose": "correct public-signal/procurement discovery bias and compare diverse money mechanisms",
+  "run32": {
+    "mechanisms": 32,
+    "test_now": 13,
+    "test_or_test_after": 10,
+    "mutate": 2,
+    "watch_or_hold": 6,
+    "keep_vertical": 1,
+    "kill": 0,
+    "market_proof_created": false
+  },
+  "next64": {
+    "created": 64,
+    "executed": 0,
+    "priority_internal_blocks": ["P01-P08", "P17-P24", "P25-P32"]
+  },
+  "top10": [
+    "LOCAL_SKILLED_PRODUCTIZED_SERVICE",
+    "SERVICE_ARBITRAGE_SUBCONTRACTING",
+    "LOCAL_LEAD_GENERATION",
+    "HIGH_TICKET_B2B_BROKERAGE",
+    "EU_SUPPLIER_DROPSHIPPING",
+    "PRINT_ON_DEMAND",
+    "ETSY_DIGITAL_TEMPLATES",
+    "AI_WORKFLOW_IMPLEMENTATION",
+    "PAID_INTELLIGENCE_PACK",
+    "USED_GOODS_EQUIPMENT_ARBITRAGE"
+  ],
+  "bounded_wip3": {
+    "primary_experiment": "EU_SUPPLIER_ECOMMERCE_DROPSHIPPING",
+    "pilot_1": "DIGITAL_AND_POD_ART_COMMERCE",
+    "pilot_2": "LOCAL_SERVICE_ARBITRAGE_AND_LEADGEN",
+    "businesses_proven": 0
+  },
+  "evidence_boundary": {
+    "wtp": null,
+    "cac": null,
+    "conversion": null,
+    "transactions_created_by_run": 0,
+    "repeatability": false,
+    "external_action_authorized": false
+  },
+  "self_improvement": {
+    "candidate": "DISCOVERY_SOURCE_BALANCE_GATE",
+    "status": "LOCAL_CANDIDATE_ONLY",
+    "global_promotion": false,
+    "failure_mode": "PUBLIC_SIGNAL_EVIDENCE_AVAILABILITY_BIAS"
+  },
+  "drive": {
+    "folder_id": null,
+    "run32_document_id": null,
+    "next64_document_id": null,
+    "readback_status": "PENDING"
+  }
+}
