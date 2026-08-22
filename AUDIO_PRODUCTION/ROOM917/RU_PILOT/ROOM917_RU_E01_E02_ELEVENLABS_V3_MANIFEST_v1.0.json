@@ -1,0 +1,242 @@
+{
+  "schema_version": "ivdivo.room917_ru_elevenlabs_manifest/1.0",
+  "created": "2026-08-22",
+  "project_id": "ROOM917",
+  "active_branch": "THE_INSURABLE_FIRE",
+  "locale": "ru-RU",
+  "delivery_mode": "FULL_AUDIO_DRAMA",
+  "status": "AUDITION_READY_VOICE_IDS_REQUIRED",
+  "authority": {
+    "ru_overlay": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PILOT_AUTHORITY_AND_EXECUTION_v1.0.md",
+    "ru_e01_script": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md",
+    "ru_e02_script": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E02_LENI_BIRD_RECORDING_SCRIPT_v1.0.md",
+    "english_current_state": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
+    "english_frontier_superseded": false
+  },
+  "provider": {
+    "name": "ElevenLabs",
+    "primary_dialogue_model": "eleven_v3",
+    "documented_fallback_model": "eleven_multilingual_v2",
+    "audition_output_format": "mp3_48000_192",
+    "production_source_preference": "pcm_48000",
+    "final_master": "DAW_POST_48K_24BIT_WAV",
+    "ssml_breaks_allowed_in_v3": false,
+    "api_key_policy": "ENV_ONLY_NEVER_PERSIST",
+    "text_to_dialogue_policy": "OPTIONAL_SAFE_RELATIONAL_BLOCKS_ONLY",
+    "critical_lines_single_speaker_replaceable": true
+  },
+  "voice_bindings": {
+    "ELENA": {"voice_id_env": "ROOM917_RU_VOICE_ELENA", "status": "CANDIDATE_REQUIRED"},
+    "JULIAN": {"voice_id_env": "ROOM917_RU_VOICE_JULIAN", "status": "CANDIDATE_REQUIRED"},
+    "MINA": {"voice_id_env": "ROOM917_RU_VOICE_MINA", "status": "CANDIDATE_REQUIRED"},
+    "CATE": {"voice_id_env": "ROOM917_RU_VOICE_CATE", "status": "CANDIDATE_REQUIRED"}
+  },
+  "pronunciation_lock": [
+    {"token": "Greyhaven", "spoken_ru": "Грейхейвен"},
+    {"token": "Ashcroft", "spoken_ru": "Эшкрофт"},
+    {"token": "Leni-bird", "spoken_ru": "Лени-бёрд", "semantic_translation_forbidden": true},
+    {"token": "916", "spoken_ru": "девятьсот шестнадцать"},
+    {"token": "917", "spoken_ru": "девятьсот семнадцать"},
+    {"token": "1:17", "spoken_ru": "один семнадцать"},
+    {"token": "50 Hz", "spoken_ru": "пятьдесят герц"},
+    {"token": "38 ms", "spoken_ru": "тридцать восемь миллисекунд"}
+  ],
+  "audition_units": [
+    {
+      "id": "RU_E01_AUD_ELENA_01",
+      "character": "ELENA",
+      "function": "worldview_professional_not_horror",
+      "text": "Старые здания плохо помнят. Труба подхватывает ритм шагов. Трос лифта уносит голос на три этажа. Люди называют это привидениями, потому что так приятнее, чем признать: они просто никогда как следует не слушали. Моя работа — слушать как следует.",
+      "direction": "grounded documentary precision; tiny dry edge; no foreshadowed fear",
+      "takes": 3
+    },
+    {
+      "id": "RU_E01_AUD_ELENA_02",
+      "character": "ELENA",
+      "function": "professional_boundary",
+      "text": "Привидений я не сертифицирую. Я подтверждаю, что система может делать, а чего не может. Если ответы кому-то не нравятся — пусть спорят с измерениями.",
+      "direction": "plain almost administrative; reject trailer swagger",
+      "takes": 3
+    },
+    {
+      "id": "RU_E01_AUD_ELENA_03",
+      "character": "ELENA",
+      "function": "fear_inside_precision",
+      "text": "Не трогайте. Время — один семнадцать и двенадцать секунд. Внешняя телефонная магистраль физически разомкнута. Неотмеченная лампа активна справа от девятьсот шестнадцатой. Мина, подтвердите.",
+      "direction": "slower than normal; command first; fear controlled through measurement; never panic",
+      "takes": 4
+    },
+    {
+      "id": "RU_E01_AUD_ELENA_04",
+      "character": "ELENA",
+      "function": "small_vulnerability",
+      "text": "Да. Пожалуйста, продолжайте помогать.",
+      "direction": "small factual vulnerability; optional audible breath before please; do not cry",
+      "takes": 4
+    },
+    {
+      "id": "RU_E01_AUD_ELENA_05",
+      "character": "ELENA",
+      "function": "mother_reveal",
+      "text": "Нет. Так меня называла мама.",
+      "direction": "fact lands harder than performance; short; no grief speech",
+      "takes": 5
+    },
+    {
+      "id": "RU_E01_AUD_ELENA_06",
+      "character": "ELENA",
+      "function": "final_cliff",
+      "text": "Где вы это слышали? Я её не пела. Женщина с девятьсот семнадцатого спела. Тогда откуда вы знаете последнюю ноту?",
+      "direction": "attention snaps to Julian; quieter not louder; final line precise human question",
+      "takes": 4
+    },
+    {
+      "id": "RU_E01_AUD_JULIAN_01",
+      "character": "JULIAN",
+      "function": "economic_stakes",
+      "text": "Семьдесят два человека узнают, насколько надолго принципов хватает, чтобы в ноябре сохранить работу в приморском городке.",
+      "direction": "restrained operational truth; personal weight without plea or manipulation",
+      "takes": 4
+    },
+    {
+      "id": "RU_E01_AUD_JULIAN_02",
+      "character": "JULIAN",
+      "function": "status_pressure",
+      "text": "Останавливаетесь. Сейчас, Элена.",
+      "direction": "manager under real stress; economy; reject threat, growl, alpha cadence",
+      "takes": 4
+    },
+    {
+      "id": "RU_E01_AUD_MINA_01",
+      "character": "MINA",
+      "function": "ordinary_humor_and_material_reality",
+      "text": "Ну конечно. Мина Шах. Ночной менеджер, переговорщик по вопросам завтрака и сейчас единственный человек, который знает, какое ведро ставить под какую протечку. В Грейхейвене ведра выше по должности, чем большинство из нас.",
+      "direction": "practical warm socially quick; no comedian cadence",
+      "takes": 3
+    },
+    {
+      "id": "RU_E01_AUD_MINA_02",
+      "character": "MINA",
+      "function": "witness_under_pressure",
+      "text": "Подтверждаю. Там, где была пыль, теперь горит лампа. Женщину. Она назвала вас «Лени-бёрд». Потом пропела три ноты. Может, четыре, но последняя сломалась.",
+      "direction": "literal careful witness; humor off; do not become hysterical",
+      "takes": 3
+    },
+    {
+      "id": "RU_E01_AUD_CATE_01",
+      "character": "CATE",
+      "function": "clean_human_fragment",
+      "text": "Лени-бёрд...",
+      "direction": "ordinary exhausted human; clean dry; not ghost; not theatrical pleading",
+      "takes": 6
+    },
+    {
+      "id": "RU_E01_AUD_CATE_02",
+      "character": "CATE",
+      "function": "clean_human_fragment_2",
+      "text": "Если это дойдёт—",
+      "direction": "same ordinary human identity; fixed spacing family; post will damage medium",
+      "takes": 6
+    },
+    {
+      "id": "RU_E02_AUD_CATE_03",
+      "character": "CATE",
+      "function": "cassette_identity_match",
+      "text": "Лени-бёрд, красный карандаш — внутри линий. Потому они и называются линиями. Хочешь песню про луну? Хорошо. Один раз — и спать.",
+      "direction": "domestic close-mic warmth; ordinary mother; must plausibly be same woman as line fragment",
+      "takes": 4
+    },
+    {
+      "id": "RU_E02_AUD_ELENA_07",
+      "character": "ELENA",
+      "function": "restrained_personal_history",
+      "text": "Потому что не слушать было обратимо. Услышать прощание — уже нет. В отчёте семилетней девочке предлагалось поверить, что её мать опустошила счёт, подожгла бальный зал и ушла в шторм без пальто. Я годами пыталась заставить эти поступки звучать как один человек. Не получилось.",
+      "direction": "thought long internalized; restrained; no tearful audiobook delivery",
+      "takes": 4
+    },
+    {
+      "id": "RU_E02_AUD_ELENA_08",
+      "character": "ELENA",
+      "function": "hard_38ms_fact_and_cliff",
+      "text": "Тридцать восемь миллисекунд. Слишком долго для этой ниши и слишком быстро для городской станции. Внешняя магистраль физически разомкнута. В этот отель никто не звонил снаружи. С другого конца этой медной пары. Откуда-то изнутри Грейхейвена.",
+      "direction": "technical comprehension first; final location conclusion concrete, not mystical",
+      "takes": 4
+    }
+  ],
+  "pair_tests": [
+    {
+      "id": "RU_PAIR_01_ELENA_MINA_LOBBY",
+      "characters": ["ELENA", "MINA"],
+      "goal": "dry immediate compatibility without instant-best-friend acting"
+    },
+    {
+      "id": "RU_PAIR_02_ELENA_JULIAN_DOORS",
+      "characters": ["ELENA", "JULIAN"],
+      "goal": "competence friction; no overt flirt; no alpha dynamic"
+    },
+    {
+      "id": "RU_PAIR_03_ELENA_JULIAN_STATUS",
+      "characters": ["ELENA", "JULIAN"],
+      "goal": "status conflict where both positions remain credible"
+    },
+    {
+      "id": "RU_PAIR_04_CATE_LINE_VS_CASSETTE",
+      "characters": ["CATE"],
+      "goal": "same human identity across two media; medium difference belongs to post"
+    }
+  ],
+  "critical_shared_sound_assets": [
+    "NORMAL_916_SELECTOR_CLACK",
+    "NORMAL_916_GLASS_PING",
+    "IMPOSSIBLE_INTERNAL_DOUBLE_RING",
+    "UNMARKED_LAMP_PING_BEYOND_916",
+    "COPPER_HISS",
+    "THREE_SHALLOW_HUMAN_BREATHS",
+    "TWO_PART_LINE_CUT",
+    "FOUR_NOTE_LULLABY_IDENTITY",
+    "TRANSFORMER_50HZ_IDENTITY"
+  ],
+  "sfx_generation_policy": {
+    "model_family": "ElevenLabs Sound Effects v2 candidate generation when needed",
+    "reuse_language_neutral_locked_assets_first": true,
+    "variants_for_new_critical_candidate": 3,
+    "blind_select": true,
+    "forbidden": [
+      "decorative_whispers",
+      "unwritten_knocks",
+      "unwritten_footsteps",
+      "horror_stingers",
+      "evidence_creating_atmosphere"
+    ]
+  },
+  "music_policy": {
+    "reuse_accepted_english_identity_first": true,
+    "model_family_if_missing": "ElevenLabs Music v2 candidate only under cue plan",
+    "E01": "NO_SCORE_UNTIL_FINAL_LINE_THEN_ONE_RESTRAINED_LOW_PIANO_CHORD",
+    "E02": "END_ONLY_MUTED_FOUR_NOTE_FIGURE_STOPS_BEFORE_FINAL_NOTE"
+  },
+  "render_policy": {
+    "block_duration_seconds_target": [30, 80],
+    "full_episode_single_pass_forbidden": true,
+    "clean_dialogue_first": true,
+    "selective_regeneration_only": true,
+    "post_layers": ["DIALOGUE", "FOLEY", "SFX", "CLUE_SFX", "AMBIENCE", "MUSIC"],
+    "cate_transmission_processing_in_post": true
+  },
+  "mix_qc": {
+    "target_integrated_lufs_approx": -16.0,
+    "final_sample_rate_hz": 48000,
+    "final_bit_depth": 24,
+    "mono_fold_down_required": true,
+    "phone_low_volume_test_required": true,
+    "clue_comprehension_over_spectacle": true
+  },
+  "gates": {
+    "AUDITION": "HOLD_UNTIL_CURRENT_RU_VOICE_IDS_SELECTED",
+    "PAIR_TEST": "HOLD_AFTER_AUDITION",
+    "RU_E01_FULL_RENDER": "HOLD_AFTER_VOICE_BINDING_LOCK",
+    "RU_E01_FOUNDER_CREDIBILITY": "REQUIRED",
+    "RU_E02_PAID_RENDER": "HOLD_UNTIL_RU_E01_CREDIBILITY_PASS_OR_FOUNDER_OVERRIDE"
+  },
+  "secrets": "NO_KEYS_OR_TOKENS_IN_REPOSITORY"
+}
