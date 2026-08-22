@@ -1,0 +1,16 @@
+{
+  "artifact": "BUSINESS_ENGINEERING_OS_CYCLE4_INTEGRATED_STATE_v2",
+  "date": "2026-08-22",
+  "library": {"raw_drive_folder_id":"1X6mo94Qo103HheyDry4P3dcQkv5qZg6N","physical_files":78,"valid_files":68,"unique_valid_byte_hashes":58},
+  "prompts": {"executed":"P33-P64","count":32,"next_designed":"P65-P128","next_count":64},
+  "opportunities": {"procurement_capital_count":32,"public_evidence_ceiling":"E2+","E3_count":0,"E4_count":0},
+  "portfolio": {"primary":"OP01","pilots":["OP03","OP19"],"wip":3},
+  "parallel_branches": {"library78_live_signal":{"pr":175,"merged":true},"public_regulatory_signals":{"pr":176,"merged":true},"procurement_capital_live32":{"branch":"business-engineering-os-cycle4-live-opportunities-20260822","merged":false}},
+  "contracts": {"sibling":"C97-C128","this_delta":"C129-C152"},
+  "engineering_tests": {"passed":18,"total":18},
+  "money": {"founder_cash_spent_eur":0,"paid_market_proof":false},
+  "self_improvement": {"v2_current":true,"v3_candidate_adapter_used":true,"v3_promoted":false},
+  "current_gate": "PUBLIC_ARTIFACT_TESTS_FOR_TOP_ZERO_CASH_ARCHETYPES",
+  "drive_cycle4_folder_id": "1qdbdtBmvmVJQupHchxpV8xBJ3wlayUiW",
+  "persistence": {"drive":"written_readback_pending","github_sibling_branches":"merged","github_integrated_delta":"staged","final_readback":"pending"}
+}
