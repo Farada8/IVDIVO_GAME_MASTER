@@ -56,6 +56,14 @@
     "status": "INDICATIVE_NOT_SURVEYED_SITE_PHOTO",
     "drive_file_id": "1FwjlCCBFedoE2cNZgE9y950wtd3FFN5f"
   },
+  "master_dashboard_v3": {
+    "file_name": "INIS_CEALTRA_2026_MASTER_DASHBOARD_v3.png",
+    "width_px": 1536,
+    "height_px": 1024,
+    "sha256": "6535d8c19f854c879fb2d2a7c98dbfa4372684aab365ecc32f94c72842898069",
+    "drive_file_id": "1aWkyN8DeVP4SGMFB2KAa7efa5lu4ar5v",
+    "status": "VISUAL_SUMMARY_ONLY_NOT_EVIDENCE_AUTHORITY"
+  },
   "red_team": {
     "disposition": "KEEP_PREPARE",
     "fatal_blockers": 0,
@@ -84,6 +92,11 @@
     "shortlist_drive_file_id": "16IRd4R4SEyPWe3WGeaCiajpuJKEzz5aH",
     "screen_state_drive_file_id": "15149ts7pKrz4C5JQtB1eR5_9ug6mHdyo",
     "rfq_drafts_drive_file_id": "1tEWUwXDMHVjaViHtKgC48swJRwiJ0xeM"
+  },
+  "persistence": {
+    "drive_state_v3_file_id": "17LO5m_gBdyJioLWz5iqsONW4EdpM7UBk",
+    "drive_persistence_receipt_file_id": "1ADSxQcJHQq95Kg6m0TTuO9Ggol4xb_aV",
+    "github_persistence_file": "15_MASTER_DASHBOARD_PERSISTENCE_2026-08-22.md"
   },
   "external_gate_retry_closure_drive_file_id": "1DPPSwpNE1NE5JWNqyadHecH4sDgK2Ccl",
   "operational_submit_target": ">=24H_BEFORE_DATE_DEADLINE_SUBJECT_TO_LIVE_PORTAL",
