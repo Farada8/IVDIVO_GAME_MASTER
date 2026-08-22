@@ -1,5 +1,6 @@
 from __future__ import annotations
 from typing import Iterable
+import hashlib
 
 VALID_STATES = {"KEEP","MERGE","HOLD","PRUNE","PROMOTION_REVIEW","READY_FOR_PILOT"}
 
@@ -71,3 +72,54 @@ def meta_overhead_ratio(meta_minutes, avoided_rework_minutes):
     if meta_minutes is None or avoided_rework_minutes is None: return None
     if avoided_rework_minutes==0: return float("inf") if meta_minutes>0 else 0.0
     return meta_minutes/avoided_rework_minutes
+
+# Unique mechanisms salvaged from Cycle32D executable candidate after semantic dedupe.
+# These extend Cycle10; they do not create another engine or authority layer.
+def prompt_functional_fingerprint(card):
+    fields=("consumer","evidence_class","gate","action_semantics","state_mutation")
+    normalized=[str(card.get(k,"")).strip().lower() for k in fields]
+    return hashlib.sha256("|".join(normalized).encode("utf-8")).hexdigest()[:20]
+
+def dedupe_prompt_bank(cards):
+    seen={}; duplicates=[]
+    for card in cards:
+        fp=prompt_functional_fingerprint(card)
+        if fp in seen:
+            duplicates.append((seen[fp],card.get("id")))
+        else:
+            seen[fp]=card.get("id")
+    return {"status":"PASS_UNIQUE" if not duplicates else "MERGE_FUNCTIONAL_DUPLICATES","unique":len(seen),"total":len(cards),"duplicates":duplicates}
+
+def ordinal_voi_route(tests):
+    eligible=[t for t in tests if t.get("decision_consumer")]
+    if not eligible:
+        return {"status":"HOLD_NO_DECISION_CONSUMER","selected":None}
+    def key(t):
+        return (int(t.get("decision_flip",0))+int(t.get("evidence_independence",0)), -int(t.get("burden",3)), -int(t.get("risk",3)))
+    selected=max(eligible,key=key)
+    return {"status":"SELECT_SMALLEST_HIGH_INFORMATION_TEST","selected":selected.get("id"),"basis":"ordinal decision-change/evidence-independence before burden/risk"}
+
+def cost_of_delay_band(consequence):
+    c=(consequence or "").lower()
+    if any(x in c for x in ("data loss","authority corruption","irreversible","payment replay","safety")):
+        return "HIGH"
+    if any(x in c for x in ("blocks production","deadline","stale merge","rework")):
+        return "MEDIUM"
+    return "LOW"
+
+def selective_rollback_plan(changed, dependency_graph, locked=None):
+    locked=set(locked or ()); affected=[]; stack=list(dependency_graph.get(changed,())); seen=set()
+    while stack:
+        node=stack.pop()
+        if node in seen or node in locked:
+            continue
+        seen.add(node); affected.append(node); stack.extend(dependency_graph.get(node,()))
+    return {"status":"PASS_SELECTIVE_REVALIDATION","changed":changed,"revalidate":affected,"locked_preserved":sorted(locked)}
+
+def validate_asset_registry(items):
+    bad=[]
+    for item in items:
+        sha=item.get("sha256","")
+        if not item.get("filename") or len(sha)!=64 or any(ch not in "0123456789abcdef" for ch in sha.lower()) or item.get("size_bytes",0)<0 or not item.get("role"):
+            bad.append(item.get("filename"))
+    return {"status":"PASS" if not bad else "FAIL_ASSET_REGISTRY","count":len(items),"bad":bad}

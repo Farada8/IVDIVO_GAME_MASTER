@@ -42,5 +42,34 @@ class T(unittest.TestCase):
     def test30_gap_vector(self): self.assertEqual(m.evidence_gap_vector(["a"],["b"],["h"])["unknown"],["b"])
     def test31_overhead_null(self): self.assertIsNone(m.meta_overhead_ratio(None,10))
     def test32_overhead_ratio(self): self.assertEqual(m.meta_overhead_ratio(5,10),0.5)
+    def test33_prompt_fingerprint_same_function(self):
+        a={"consumer":"book","evidence_class":"E2","gate":"G","action_semantics":"repair","state_mutation":"none"}
+        b={"consumer":" BOOK ","evidence_class":"e2","gate":"g","action_semantics":"REPAIR","state_mutation":"NONE"}
+        self.assertEqual(m.prompt_functional_fingerprint(a),m.prompt_functional_fingerprint(b))
+    def test34_prompt_dedupe_detects_functional_duplicate(self):
+        base={"consumer":"book","evidence_class":"E2","gate":"G","action_semantics":"repair","state_mutation":"none"}
+        cards=[dict(base,id="A"),dict(base,id="B")]
+        self.assertEqual(m.dedupe_prompt_bank(cards)["status"],"MERGE_FUNCTIONAL_DUPLICATES")
+    def test35_prompt_dedupe_unique(self):
+        a={"id":"A","consumer":"book","evidence_class":"E2","gate":"G1","action_semantics":"repair","state_mutation":"none"}
+        b={"id":"B","consumer":"book","evidence_class":"E2","gate":"G2","action_semantics":"repair","state_mutation":"none"}
+        self.assertEqual(m.dedupe_prompt_bank([a,b])["unique"],2)
+    def test36_voi_requires_decision_consumer(self):
+        self.assertEqual(m.ordinal_voi_route([{"id":"x"}])["status"],"HOLD_NO_DECISION_CONSUMER")
+    def test37_voi_prefers_information_then_burden(self):
+        tests=[{"id":"a","decision_consumer":"D","decision_flip":1,"evidence_independence":1,"burden":3,"risk":1},{"id":"b","decision_consumer":"D","decision_flip":1,"evidence_independence":1,"burden":1,"risk":1}]
+        self.assertEqual(m.ordinal_voi_route(tests)["selected"],"b")
+    def test38_cost_of_delay_high(self): self.assertEqual(m.cost_of_delay_band("authority corruption risk"),"HIGH")
+    def test39_cost_of_delay_medium(self): self.assertEqual(m.cost_of_delay_band("deadline causes rework"),"MEDIUM")
+    def test40_selective_rollback_preserves_locked(self):
+        graph={"A":["B","LOCK"],"B":["C"],"LOCK":["X"]}
+        out=m.selective_rollback_plan("A",graph,{"LOCK"})
+        self.assertEqual(set(out["revalidate"]),{"B","C"}); self.assertEqual(out["locked_preserved"],["LOCK"])
+    def test41_asset_registry_pass(self):
+        x={"filename":"a.bin","sha256":"a"*64,"size_bytes":1,"role":"fixture"}
+        self.assertEqual(m.validate_asset_registry([x])["status"],"PASS")
+    def test42_asset_registry_fail_hash(self):
+        x={"filename":"a.bin","sha256":"bad","size_bytes":1,"role":"fixture"}
+        self.assertEqual(m.validate_asset_registry([x])["status"],"FAIL_ASSET_REGISTRY")
 
 if __name__=="__main__": unittest.main(verbosity=2)
