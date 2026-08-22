@@ -1,0 +1,23 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-08-22",
+  "block":"CH07-CH09",
+  "status":"PASS_AFTER_TARGETED_REPAIR",
+  "fatal":0,
+  "blocking_major":0,
+  "medium_watch":["CH08_PROCEDURAL_DENSITY","CH09_CAUSAL_AUDIT_LANGUAGE_DENSITY","CH10_MUST_NOT_REPEAT_RETROSPECTIVE_AUDIT"],
+  "chapters":[
+    {"id":"CH07","title":"OUT OF THE SYSTEM","drive_id":"1JZrB0_kfltiw3PAyBVqn3q3nylBY-KSxhH-KmQJvu3o","result":"PASS_AFTER_CORPUS_REPAIR","function":"false-victory residue -> Enia relation pressure -> new quarantined source"},
+    {"id":"CH08","title":"THE BLOCKED CALL","drive_id":"1KcXRj0f1PNBpYDE8gftc44o5nnEW-Rs9K3o5__1035g","result":"PASS_AFTER_KNOWLEDGE_AND_CORPUS_REPAIR","function":"professional compliance with suppression under morally specific warning"},
+    {"id":"CH09","title":"WHAT SILENCE COST","drive_id":"1Iz933l4pa4g1FFWWfdaby3pxkx6JYfCBjN-2VTm8tJM","result":"PASS_AFTER_CAUSAL_AND_CORPUS_REPAIR","function":"blocked warning later matches real collapse/death; Smith audits own protocol as decision-chain evidence"}
+  ],
+  "repairs":[
+    {"type":"KNOWLEDGE_BOUNDARY","severity":"MAJOR","chapter":"CH08","result":"REPAIRED_DAVOR_NO_LONGER_KNOWS_MIHA_WAS_IN_QUARANTINED_CONTENT"},
+    {"type":"RHETORICAL_CONVERGENCE","severity":"MAJOR_CORPUS_RISK","chapters":["CH07","CH08","CH09"],"result":"TARGETED_CORRECTION_REFRAME_AND_NARRATOR_EXPLANATION_REPAIRS_APPLIED"}
+  ],
+  "causal_verdict":"Davor death is earned by physical road/runoff failure after reasonable independent checks and strengthened controls. Suppression influenced the decision path but is not asserted as physical cause. Counterfactual prevention remains unproved.",
+  "jurisdiction_verdict":"PASS_LOCAL_AUTHORITY_REMAINS_LOCAL",
+  "enia_verdict":"PASS_NO_CASE_SOLUTION",
+  "ontology_verdict":"PASS_NOT_REVEALED",
+  "next":"CH10_JANAS_LINE_SHARED_EVIDENCE_PROTOCOL_UNDER_STORM_PRESSURE"
+}
