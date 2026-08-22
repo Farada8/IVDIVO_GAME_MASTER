@@ -1,0 +1,69 @@
+name: ROOM917 RU Finalist Contract Tests
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/room917-ru-finalist-contract-tests.yml'
+      - '.github/workflows/room917-ru-finalist-verification.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_FINALIST_VERIFICATION_BUNDLE_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_FINALIST_VERIFICATION_AUTHORIZATION_CONTRACT_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_SCREENING_RECEIPT_TEMPLATE_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_finalist_verification_plan.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/authorize_ru_finalist_verification.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_prepare_ru_finalist_verification_plan.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_authorize_ru_finalist_verification.py'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/room917-ru-finalist-contract-tests.yml'
+      - '.github/workflows/room917-ru-finalist-verification.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_FINALIST_VERIFICATION_BUNDLE_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_FINALIST_VERIFICATION_AUTHORIZATION_CONTRACT_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_SCREENING_RECEIPT_TEMPLATE_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_finalist_verification_plan.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/authorize_ru_finalist_verification.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_prepare_ru_finalist_verification_plan.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_authorize_ru_finalist_verification.py'
+
+permissions:
+  contents: read
+
+jobs:
+  finalist-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Test coverage-minimal finalist planner
+        run: python -m unittest AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_prepare_ru_finalist_verification_plan.py -v
+
+      - name: Test exact finalist spend authorization
+        run: python -m unittest AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_authorize_ru_finalist_verification.py -v
+
+      - name: Assert checked-in authorization contract is inert
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_FINALIST_VERIFICATION_AUTHORIZATION_CONTRACT_v1.0.json')
+          row=json.loads(p.read_text(encoding='utf-8'))
+          if row.get('status') != 'MANUAL_AUTHORIZATION_REQUIRED':
+              raise SystemExit('finalist authorization contract status drifted')
+          if row.get('automatic_execution') is not False:
+              raise SystemExit('automatic execution must remain false')
+          if row.get('cast_lock_granted_by_authorization') is not False:
+              raise SystemExit('authorization cannot grant CAST LOCK')
+          if row.get('full_episode_render_allowed') is not False:
+              raise SystemExit('authorization cannot grant full E01')
+          if row.get('provider_call_made_by_authorization_compiler') is not False:
+              raise SystemExit('authorization compiler cannot call provider')
+          if row.get('provider_spend_made_by_authorization_compiler') is not False:
+              raise SystemExit('authorization compiler cannot spend')
+          print('PASS_FINALIST_AUTHORIZATION_CONTRACT_INERT')
+          PY
