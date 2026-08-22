@@ -1,0 +1,94 @@
+name: ROOM917 RU E01 Dialogue Units
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/room917-ru-e01-dialogue-units.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_e01_dialogue_units.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_compile_ru_e01_dialogue_units.py'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/room917-ru-e01-dialogue-units.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_e01_dialogue_units.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_compile_ru_e01_dialogue_units.py'
+
+permissions:
+  contents: read
+
+jobs:
+  compile-locked-dialogue-units:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_compile_ru_e01_dialogue_units.py -v
+
+      - name: Compile authoritative E01 script
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _room917_ru_e01_units
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_e01_dialogue_units.py \
+            --script AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md \
+            --out _room917_ru_e01_units/ROOM917_RU_E01_DIALOGUE_UNITS.json
+
+      - name: Validate live-script invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          row=json.loads(Path('_room917_ru_e01_units/ROOM917_RU_E01_DIALOGUE_UNITS.json').read_text(encoding='utf-8'))
+          if row.get('story_status') != 'LOCKED':
+              raise SystemExit('story lock lost')
+          if row.get('story_or_dialogue_changed') is not False:
+              raise SystemExit('compiler changed dialogue')
+          if row.get('provider_calls') != 0 or row.get('paid_synthesis_calls') != 0:
+              raise SystemExit('compiler must be zero-spend')
+          if row.get('unit_count',0) < 25:
+              raise SystemExit(f"unexpectedly low E01 dialogue count: {row.get('unit_count')}")
+          roles=row.get('role_counts') or {}
+          for role in ['ELENA','JULIAN','MINA','CATE']:
+              if int(roles.get(role,0)) < 1:
+                  raise SystemExit(f'missing dialogue role: {role}')
+          scenes=set((row.get('scene_counts') or {}).keys())
+          if not {'1','2','3'}.issubset(scenes):
+              raise SystemExit(f'expected scenes 1/2/3, got {sorted(scenes)}')
+          ids=[u['unit_id'] for u in row['units']]
+          if len(ids) != len(set(ids)):
+              raise SystemExit('dialogue unit ids not unique')
+          hashes=[u['text_sha256'] for u in row['units']]
+          if not all(len(h)==64 for h in hashes):
+              raise SystemExit('invalid unit hash')
+          texts=[u['text'] for u in row['units']]
+          required=[
+              'Лени-бёрд...',
+              'Если это дойдёт—',
+              'Тогда откуда вы знаете последнюю ноту?'
+          ]
+          for text in required:
+              if text not in texts:
+                  raise SystemExit(f'protected dialogue missing as exact unit: {text}')
+          print(f"ROOM917 RU E01 dialogue units PASS: {row['unit_count']} units roles={roles} scenes={row['scene_counts']}")
+          PY
+
+      - name: Upload generated dialogue-unit manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_RU_E01_DIALOGUE_UNITS
+          path: _room917_ru_e01_units/
+          if-no-files-found: error
+          retention-days: 14
