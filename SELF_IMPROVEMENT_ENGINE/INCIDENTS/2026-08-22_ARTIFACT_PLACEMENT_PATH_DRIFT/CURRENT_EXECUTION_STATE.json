@@ -5,7 +5,7 @@
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "LIVE_INTERCEPTION_CAPTURE_ARMED_PENDING_CI",
+  "candidate_status": "LIVE_INTERCEPTION_CAPTURE_ARMED",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "runtime": {
@@ -34,16 +34,19 @@
     "resource_type_negative_canary": "PASS",
     "atomic_completion_fix_pr": 409,
     "atomic_completion_merge_commit": "654399a29324408cb0be75cae239587102090632",
-    "artifact_placement_runtime_ci_run": 32569759436,
     "reopen_recovery_regression": "PASS",
     "atomic_recovery_all_related_workflows": "10/10 PASS",
-    "live_interception_capture_branch": "self-improvement/live-interception-evidence-20260822",
+    "live_interception_capture_pr": 411,
+    "live_interception_capture_validation_head": "073444b5d30d4f54faedd1bba189046c8feb62cf",
+    "live_interception_capture_merge_commit": "e9eb2614a1448d026762360165a815a29160be25",
+    "live_interception_runtime_ci_run": 32570077658,
+    "live_interception_regression": "PASS",
+    "live_interception_all_related_workflows": "10/10 PASS",
     "live_interception_capture_armed": true,
     "live_interception_history_mode": "APPEND_ONLY_PER_TASK",
     "live_interception_atomic_with_blocked_state": true,
     "live_interception_auto_promotion": false,
-    "live_interception_provider_confirmation_required": true,
-    "live_interception_regression": "PENDING_EXACT_HEAD_CI"
+    "live_interception_provider_confirmation_required": true
   },
   "required_sequence": [
     "CREATE_OR_IMPORT",
@@ -59,10 +62,11 @@
     "ALLOW_DONE_ONLY_IF_PLACEMENT_VERIFIED_AND_OTHER_GATES_PASS"
   ],
   "promotion_gate": {
-    "status": "HOLD",
+    "status": "HOLD_ARMED_FOR_LIVE_EVIDENCE",
     "completed_requirements": [
       "provider adapters construct receipts from Google Drive and GitHub provider observations with normalization and fail-closed regression coverage",
-      "atomic status+receipt persistence and restart/reopen regression passed against current ProjectState, Local Memory, Memory Contract Hardening and Provider Abstraction compatibility suites and merged through PR #409"
+      "atomic status+receipt persistence and restart/reopen regression passed and merged through PR #409",
+      "append-only interception candidate capture is installed, atomic, restart-safe, exact-head tested and merged through PR #411 without auto-promotion"
     ],
     "remaining_requirements": [
       "observe future real traffic where the installed placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback; runtime interception candidates never self-certify as promotion proof"
