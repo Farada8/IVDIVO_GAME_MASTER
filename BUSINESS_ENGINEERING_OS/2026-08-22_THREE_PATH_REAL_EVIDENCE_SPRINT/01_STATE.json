@@ -1,0 +1,73 @@
+{
+  "schema": "ivdivo.business.three_path_real_evidence/1.0",
+  "date": "2026-08-22",
+  "status": "CURRENT_SPRINT_CANDIDATE_NOT_PRIMARY_PROMOTION",
+  "parent": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json::portfolio_router",
+  "primary_promoted": false,
+  "paths": {
+    "OPR-05_DIRECT_SERVICE": {
+      "signal_class": "REAL_BUYER_SIDE_MARKETPLACE_SIGNAL",
+      "private_source": true,
+      "github_privacy_mode": "DERIVED_REDACTED_ONLY",
+      "observed_at": "2026-08-21",
+      "lead_digest_count_24h": 2,
+      "relevant_service_category": "HOME_INSULATION_INTERNAL_WALL_INSULATION",
+      "buyer_stage": "PLANNING_RESEARCHING",
+      "contact_cost_credits": 8,
+      "contact_authorized": false,
+      "wtp_proven": false,
+      "reply_observed": false,
+      "quote_request_observed": false,
+      "order_observed": false,
+      "margin_proven": false,
+      "disposition": "CONDITIONAL_FRONT_RUNNER_REAL_LEAD_SIGNAL",
+      "next_gate": "AUTHORIZED_BOUNDED_CONTACT_OR_OTHER_DIRECT_LEAD_WITH_REAL_REPLY_OR_QUOTE_REQUEST"
+    },
+    "OPR-01_SMALLER_PROCUREMENT": {
+      "signal_class": "CURRENT_PUBLIC_TENDER_SIGNAL",
+      "resource_id": "8857214",
+      "title": "Request for Tender for Roof Repairs at An Grianan Adult Education College, Termonfeckin, Co. Louth",
+      "estimated_value_eur": 200000,
+      "deadline_local": "2026-09-15T12:00:00+01:00",
+      "award_mechanism": "MEAT_70_PRICE_30_QUALITY",
+      "current_pack_acquired": false,
+      "historical_resource_id": "8183893",
+      "historical_pack_role": "BENCHMARK_ONLY_NO_REQUIREMENT_CARRYOVER",
+      "bid_no_bid_authorized": false,
+      "eligibility_proven": false,
+      "disposition": "EXPLORE_CURRENT_PACK_FIRST",
+      "next_gate": "ACQUIRE_CURRENT_OFFICIAL_ATTACHMENT_INVENTORY_AND_FILES"
+    },
+    "OPR-04_SME_IMPLEMENTATION": {
+      "signal_class": "PUBLIC_SUPPORT_PLUS_INTERNAL_ARTIFACT_ONLY",
+      "digital_for_business_free_diagnostic": true,
+      "grow_digital_max_grant_eur": 5000,
+      "grow_digital_funding_share": 0.5,
+      "generic_diagnostic_substitute_pressure": "HIGH",
+      "residual_hypothesis": "IMPLEMENTATION_CONFIGURATION_MIGRATION_TRAINING_CONTROLS_MEASUREMENT",
+      "existing_internal_artifact": "QUOTE_PLUS_JOB_PACK_ASSISTANT",
+      "real_external_workflow_packet_present": false,
+      "real_operator_pain_observed": false,
+      "pilot_request_observed": false,
+      "wtp_proven": false,
+      "disposition": "HOLD_REAL_WORKFLOW_PACKET_REQUIRED",
+      "next_gate": "ONE_REAL_SME_WORKFLOW_OR_REPORT_PLUS_EXPLICIT_OPERATOR_PAIN_OR_IMPLEMENTATION_NEED"
+    }
+  },
+  "evidence_order": [
+    "OPR-05_DIRECT_SERVICE",
+    "OPR-01_SMALLER_PROCUREMENT",
+    "OPR-04_SME_IMPLEMENTATION"
+  ],
+  "ordering_basis": "REAL_EVIDENCE_DEPTH_AND_NEXT_TEST_COST_NOT_MAGIC_SCORE",
+  "prohibited_inferences": [
+    "REAL_SIGNAL_EQUALS_WTP",
+    "LEAD_EQUALS_ORDER",
+    "ACTIVE_TENDER_EQUALS_ELIGIBLE_BID",
+    "HISTORICAL_PACK_EQUALS_CURRENT_AUTHORITY",
+    "FREE_SUPPORT_EQUALS_PAID_SERVICE_DEMAND",
+    "PUBLIC_SIGNAL_EQUALS_PROFITABILITY"
+  ],
+  "external_action_authorized": false,
+  "proof_promotion": false
+}
