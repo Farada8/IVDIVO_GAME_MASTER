@@ -1,0 +1,23 @@
+name: Business Cycle5 Public Artifact Tests
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_RUN32_CX33_CX64/**'
+      - '.github/workflows/business-cycle5-public-artifact-tests.yml'
+  workflow_dispatch:
+
+jobs:
+  public-artifact-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Cycle5 public artifact regression
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_RUN32_CX33_CX64/tests/test_business_public_artifact_engine.py -v
+      - name: Validate machine and evidence JSON
+        run: |
+          python -m json.tool BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_RUN32_CX33_CX64/04_PUBLIC_ARTIFACT_EVIDENCE_REGISTER.json >/dev/null
+          python -m json.tool BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_RUN32_CX33_CX64/07_MACHINE_STATE.json >/dev/null
