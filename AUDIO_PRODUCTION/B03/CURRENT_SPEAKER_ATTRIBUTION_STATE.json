@@ -5,7 +5,7 @@
   "story_authority": "FOUNDER_LOCKED_CH01-29",
   "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
   "source_segmentation_package_sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
-  "status": "ENGINE_VERIFIED_SUBSET_599_PLUS_PRODUCTION_CHAPTER_LOCAL_FULL_3714_PASS",
+  "status": "ENGINE_VERIFIED_SUBSET_599_PLUS_PRODUCTION_FULL_3714_PASS_ROSTER_NORMALIZED",
   "segmentation": {
     "total_exact_text_segments": 7465,
     "original_curly_quote_spans": 3718,
@@ -22,7 +22,7 @@
     "residual_unknown_in_tested_fixture": 3116,
     "coverage_percent": 16.12,
     "scaled_voice_map_authorized": false,
-    "note": "These are deterministic engine-verified assignments, not the denominator for the later chapter-local production gate. No unrun engine result is inferred."
+    "note": "Deterministic engine-verified subset only. It must never be reported as the production denominator."
   },
   "production_chapter_local_authority": {
     "status": "PASS",
@@ -35,8 +35,22 @@
     "authority_router_drive_id": "1SF30eK_uoJDFgeR6GyODfGUrIaig-ZWa",
     "current_state_drive_id": "1JQViwpa83Mt8lSMcBbvjProiLPxR4_xZ",
     "authority_package_drive_id": "1qA2DzFdlg-N6v_Wc104PIYDNfQJ5bS00",
-    "voice_ids_assigned": 0,
-    "voice_roster_normalization_authorized": true,
+    "rebuilt_full_manifest_v1_1_drive_id": "1qry9Pr2iW3qtlu19PAe-lm14tue4QC2T",
+    "stale_120_diff_v1_1_drive_id": "1FkYxNZW3rEHZwqWj84zVhyp5YDRtHMUR",
+    "stale_120_manifest_routing_status": "SUPERSEDED",
+    "voice_ids_assigned": 0
+  },
+  "voice_roster_normalization": {
+    "status": "PASS",
+    "acoustic_speaker_ids": 119,
+    "cast_slots": 28,
+    "ensemble_slot_collisions": 0,
+    "provider_voice_ids_assigned": 0,
+    "architecture_drive_id": "13Go1HxW86AmYf7dfptH8o1QzihCqexSL",
+    "gate_drive_id": "1p2A29eLYryoAKE3DAOjNMbYj8DVGxDs9",
+    "package_drive_id": "1L_EjMpS-RrjI9pKjrHZBF4RbcMwN1ztw",
+    "package_sha256": "376d75e7aa80fe0d54f75f03f28bf572c9f7da32bb2ba8b942c16a2ce463fe11",
+    "casting_manifest_complete": false,
     "provider_dispatch_authorized": false
   },
   "source_identity_boundary": {
@@ -45,17 +59,18 @@
     "inter_packet_identity": "UNKNOWN",
     "law": "SAME_TOPIC_OR_PACKET_CLASS_NEQ_SAME_SPEAKER_IDENTITY"
   },
-  "production_regressions": [
+  "acoustic_ownership_regressions": [
     {
-      "segment_id": "B03_CH29_S0312",
-      "current_speaker": "OES_SUPERVISOR_CH29",
-      "law": "ACTIVE_LOCAL_SUBJECT_BEATS_EARLIER_NAMED_MALE"
+      "segment_id": "B03_CH27_S0136",
+      "acoustic_speaker": "SMITH",
+      "source_author": "TAREN_SOR",
+      "law": "SOURCE_AUTHOR_AND_ACOUSTIC_SPEAKER_ARE_SEPARATE_FIELDS_WHEN_TEXT_IS_READ_ALOUD"
     },
     {
       "segment_id": "B03_CH29_S0358",
       "current_speaker": "SMITH",
       "superseded_speaker": "TAREN_SOR",
-      "law": "PARAGRAPH_BREAK_ALONE_DOES_NOT_TRANSFER_SPEAKER; NAMED_PAUSE_CAN_MARK_LISTENER_REACTION_BEFORE_NEXT_RESPONSE"
+      "law": "PARAGRAPH_BREAK_ALONE_DOES_NOT_TRANSFER_SPEAKER"
     }
   ],
   "ch01_separate_production_lane": {
@@ -68,7 +83,7 @@
     "PRONOUN_GRAMMATICAL_SUBJECT_TRACKER"
   ],
   "universal_promotion": "HOLD_SECOND_BOOK_REPLICATION",
-  "next_stage": "PRODUCTION_FULL_VOICE_ROSTER_NORMALIZATION_AND_CASTING; ENGINE_SECOND_BOOK_REPLICATION_REMAINS_SEPARATE",
+  "next_stage": "CASTING_MANIFEST_AND_PRONUNCIATION_ADJUDICATION_QUEUE; LIVE_PROVIDER_S0_ONLY_AFTER_CASTING_EVIDENCE",
   "forbidden": [
     "NAIVE_ALTERNATING_TURN_AUTOFILL",
     "SEMANTIC_VOICE_GUESSING",
@@ -76,6 +91,7 @@
     "REUSE_REJECTED_V1_ASSIGNMENTS_AS_AUTHORITY",
     "ROLE_GRANULARITY_COMPATIBILITY_AS_VOICE_IDENTITY_PROOF",
     "STORY_OR_PROSE_REWRITE",
-    "CLAIMING_3714_AS_ENGINE_AUTO_VERIFIED"
+    "CLAIMING_3714_AS_ENGINE_AUTO_VERIFIED",
+    "BULK_RENDER_BEFORE_CASTING_AND_S0_EVIDENCE"
   ]
 }
