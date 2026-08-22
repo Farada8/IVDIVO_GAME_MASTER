@@ -18,25 +18,30 @@ jobs:
           python-version: '3.12'
       - name: Run calibrated scanner canaries
         run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/tests/test_scanner.py
-      - name: Validate P-EW02 durable closure under current frontier
+      - name: Validate historical P-EW02 evidence and current ruleset authority
         run: |
           python - <<'PY'
-          import json
+          import json, re
           from pathlib import Path
           root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
           scanner = json.loads((root/'17_AGENT_COMMERCE_READINESS_SCANNER_V0/01_MACHINE_STATE.json').read_text())
-          result = (root/'18_AGENT_COMMERCE_PEW02_BLIND10/02_BLIND10_RESULTS_AND_SCANNER_PATCH.md').read_text()
+          runtime = (root/'17_AGENT_COMMERCE_READINESS_SCANNER_V0/scanner.py').read_text()
+          historical = (root/'18_AGENT_COMMERCE_PEW02_BLIND10/02_BLIND10_RESULTS_AND_SCANNER_PATCH.md').read_text()
+          correction = (root/'18_AGENT_COMMERCE_PEW02_BLIND10/05_RULESET_03_PUBLIC_EVIDENCE_CORRECTION.md').read_text()
           st = json.loads((root/'18_AGENT_COMMERCE_PEW02_BLIND10/03_MACHINE_STATE.json').read_text())
           obs = json.loads((root/'18_AGENT_COMMERCE_PEW02_BLIND10/04_OBSERVATIONS_COMPACT.json').read_text())
           current = Path('BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md').read_text()
           spec = (root/'17_AGENT_COMMERCE_READINESS_SCANNER_V0/00_SPEC.md').read_text()
-          assert scanner['ruleset_version'] == '2026-08-22.2'
+          m = re.search(r'RULESET_VERSION\s*=\s*"([^"]+)"', runtime)
+          assert m and m.group(1) == '2026-08-22.3'
+          assert scanner['ruleset_version'] == '2026-08-22.3'
           assert scanner['p_ew02']['executed'] is True
-          assert scanner['p_ew02']['decision'] == 'PASS_TEST'
-          assert scanner['p_ew02']['scanner_false_negative_findings_corrected'] == 8
+          assert scanner['p_ew02']['decision'] == 'PASS_TEST_ENGINEERING'
+          assert scanner['p_ew02']['initial_false_negative_findings_corrected_in_ruleset_02'] == 8
+          assert scanner['post_pew05_correction']['pr'] == 387
+          assert scanner['current_public_evidence_policy']['order_capability_without_proven_webhook_flow_and_missing_signing_keys'] == 'UNKNOWN_NOT_FAIL'
           assert st['authority']['implementation_pr'] == 353
           assert st['authority']['implementation_merge_sha'] == '0f83a4b223b8355b7163616d2a2cec527ec228db'
-          assert st['authority']['ci_status'] == 'SUCCESS_7_OF_7'
           assert st['blind_test']['sample_size'] == 10
           assert st['blind_test']['http_200_ucp_profiles'] == 4
           assert st['blind_test']['sample_substitution'] is False
@@ -47,13 +52,13 @@ jobs:
           assert len(obs['observations']) == 10
           assert sum(x['http_status'] == 200 for x in obs['observations']) == 4
           assert all(x['oai_feed_evidence'] == 'UNKNOWN' for x in obs['observations'])
-          assert '8 false-negative findings' in result
-          assert '2026-08-22.2' in spec
+          assert '8 false-negative findings' in historical
+          assert 'historical evidence, not current scanner authority' in spec
+          assert 'HISTORICAL_RECEIPT != CURRENT_RULESET_AUTHORITY' in correction
           assert 'P-EW02 = PASS_TEST' in current
           assert 'P-EW03 = PASS_ENGINEERING' in current
           assert 'P-EW04 = PASS_ENGINEERING' in current
           assert 'P-EW05 = INTERNAL_DECISION_ALL_M1' in current
-          assert 'CURRENT-GENERAL-BUSINESS-PEW05-ALL-M1-OW01-NEXT-TEST-NO-MARKET-WINNER-20260822' in current
           assert 'EXTERNAL_ACTION_AUTHORIZED = FALSE' in current
-          print('P-EW02 CLOSURE: PASS — durable PR353/CI7 evidence preserved under P-EW05 frontier')
+          print('P-EW02 CLOSURE: PASS — historical evidence preserved; current ruleset 0.3 authoritative')
           PY
