@@ -1,12 +1,14 @@
 {
-  "schema": "ivdivo.business.early_wave_monetization_bridge/1.1",
+  "schema": "ivdivo.business.early_wave_monetization_bridge/1.2",
   "date": "2026-08-22",
-  "status": "INTERNAL_MONETIZATION_ROUTING_COMPLETE_NO_MARKET_PROOF",
+  "status": "P_EW05_INTERNAL_DECISION_COMPLETE_ALL_WIP3_M1_NO_WTP",
   "inputs": {
     "strategic_wip": ["OW-01", "CF-01", "CF-03"],
     "money_mechanisms_state": "13_MONEY_MECHANISMS_MACHINE_STATE.json",
     "agent_commerce_scanner_state": "17_AGENT_COMMERCE_READINESS_SCANNER_V0/01_MACHINE_STATE.json",
-    "agent_commerce_p_ew02_merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db"
+    "agent_commerce_p_ew02_merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db",
+    "article50_p_ew03_merge_sha": "3f65b522c59a7cdc988cbae893c1d54651eab6e6",
+    "dpp_p_ew04_merge_sha": "8797476c45ac38bc9eb9bfbe8a3b1d9c27f1a7d7"
   },
   "ladder": [
     "M0_INTERNAL_PROOF_ARTIFACT",
@@ -40,29 +42,44 @@
       "paid_diagnostic_transactions": 0,
       "route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN",
       "offer_spec": "AGENT_COMMERCE_READINESS_DIAGNOSTIC",
+      "portfolio_disposition": "PRESERVE_STRATEGIC_PRIMARY_HOLD_AT_M1",
       "price": null,
       "wtp": null
     },
     "CF-01": {
       "opportunity": "AI Act Article 50 Technical Transparency Pack",
-      "technical_artifact": false,
-      "nontrivial_delta": false,
+      "technical_artifact": true,
+      "nontrivial_delta": true,
       "buyer_role_plausible": true,
-      "route": "M0_INTERNAL_PROOF_ARTIFACT_REQUIRED",
-      "next_gate": "P-EW03",
+      "paid_diagnostic_transactions": 0,
+      "route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN",
+      "offer_spec": "AI_ARTICLE50_TECHNICAL_TRANSPARENCY_DIAGNOSTIC",
+      "portfolio_disposition": "PROMOTE_M0_TO_M1_INTERNAL_ONLY",
       "price": null,
       "wtp": null
     },
     "CF-03": {
       "opportunity": "DPP Supplier-Data / Registry Readiness",
-      "technical_artifact": false,
-      "nontrivial_delta": false,
+      "technical_artifact": true,
+      "nontrivial_delta": true,
       "buyer_role_plausible": true,
-      "route": "M0_INTERNAL_PROOF_ARTIFACT_REQUIRED",
-      "next_gate": "P-EW04",
+      "paid_diagnostic_transactions": 0,
+      "route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN",
+      "offer_spec": "DPP_SUPPLIER_DATA_READINESS_DIAGNOSTIC",
+      "portfolio_disposition": "PROMOTE_M0_TO_M1_INTERNAL_ONLY",
       "price": null,
       "wtp": null
     }
+  },
+  "p_ew05": {
+    "decision": "NO_COMMERCIAL_WINNER_YET",
+    "m1_count": 3,
+    "m2_or_higher_count": 0,
+    "strategic_primary": "OW-01",
+    "strategic_primary_reason": "EARLY_WAVE_PORTFOLIO_LOGIC_NOT_MONETIZATION_PROOF",
+    "internal_promotions": ["CF-01:M0->M1", "CF-03:M0->M1"],
+    "kills": [],
+    "next_decisive_evidence": "EXPLICITLY_AUTHORIZED_BUYER_SIDE_OR_INDEPENDENT_IMPLEMENTATION_EVIDENCE"
   },
   "agent_commerce_blind10": {
     "p_ew01_executed": true,
@@ -89,13 +106,7 @@
     "spend": false,
     "contracting": false
   },
-  "drive": {
-    "document_id": "1leMlNJPcaMCUtCes-9wftPpp4LnCFh_9V79YhBkuTi8",
-    "parent_folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
-    "semantic_readback": true,
-    "readback_marker": "EARLY-WAVE-MONETIZATION-BRIDGE-M0-M6-OW01-M1-CF01-M0-CF03-M0-20260822"
-  },
-  "next_internal_sequence": ["P-EW03", "P-EW04", "RUN_MONETIZATION_ROUTER_ON_WIP3", "P-EW05"],
+  "next_internal_sequence": ["P-EW05_CLOSE_INTERNAL_CYCLE", "PREDECLARE_EXTERNAL_EVIDENCE_CONTRACT_BEFORE_ANY_M2_TEST"],
   "proof_boundary": {
     "buyer_demand": "UNPROVEN",
     "wtp": null,
