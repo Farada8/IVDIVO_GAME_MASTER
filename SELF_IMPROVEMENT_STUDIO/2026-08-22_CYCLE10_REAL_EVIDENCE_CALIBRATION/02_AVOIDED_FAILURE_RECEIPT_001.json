@@ -1,0 +1,58 @@
+{
+  "schema": "ivdivo.self_improvement.avoided_failure_receipt/1.0",
+  "receipt_id": "AFR-2026-08-22-001",
+  "event_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
+  "status": "OBSERVED_PARTIAL_NOT_ECONOMIC_VALUATION",
+  "raw_event_refs": [
+    "e0ddd5034a98bb409647536674e0aa517fb03ea0",
+    "5c96aae5bc65181947d26c0681f81b7e0ae52bbe"
+  ],
+  "observed_failures_prevented_or_contained": [
+    {
+      "failure_id": "AF-001-DUPLICATE_CYCLE8_RERUN",
+      "classification": "DUPLICATE_WORK_UNIT",
+      "observed": true,
+      "count": 1,
+      "evidence": "Self-Improvement raw recovery event explicitly records duplicate_work_units_avoided=1 and rejection of already executed/merged Cycle8 N01-N32."
+    },
+    {
+      "failure_id": "AF-002-STALE_BUSINESS_FRONTIER",
+      "classification": "STALE_AUTHORITY_ROUTE",
+      "observed": true,
+      "count": 1,
+      "evidence": "Business recovery slice detected newer merged P97-P128 authority and rebased frontier before qualification."
+    }
+  ],
+  "rejected_wrong_resume_paths": {
+    "count": 4,
+    "paths": [
+      "RERUN_OLD_CYCLE7_AS_INCOMPLETE",
+      "REVIVE_SUPERSEDED_PR_197",
+      "USE_OLDER_C8_01_C8_64_POINTER_AFTER_P97_P128_MERGE",
+      "BLIND_EXECUTE_P129_P192_WITHOUT_REQUIRED_REAL_INPUT"
+    ],
+    "interpretation": "Observed route rejections inside one recovery event; not four independent interruption events and not four monetized failures."
+  },
+  "recovery_quality": {
+    "genuine_event_count": 1,
+    "distinct_project_slices": 2,
+    "false_resume_count": 0,
+    "all_recorded_project_slice_readbacks_complete": true
+  },
+  "economic_metrics": {
+    "operator_minutes": null,
+    "time_saved_minutes": null,
+    "money_saved": null,
+    "cost_of_wrong_resume": null,
+    "roi": null
+  },
+  "forbidden_inferences": [
+    "DO_NOT_TREAT_REJECTED_PATH_COUNT_AS_INDEPENDENT_EVENT_COUNT",
+    "DO_NOT_INVENT_TIME_SAVED",
+    "DO_NOT_INVENT_MONEY_SAVED",
+    "DO_NOT_INFER_SI0014_PROMOTION",
+    "DO_NOT_INFER_HUMAN_PROVIDER_MARKET_EVIDENCE"
+  ],
+  "decision_value": "OBSERVED_WRONG_ROUTE_PREVENTION_WITH_UNMEASURED_TIME_AND_ECONOMICS",
+  "next_measurement": "ON_NEXT_GENUINE_RECOVERY_CAPTURE_OPERATOR_START_END_OR_ELAPSED_MINUTES_IF_OBSERVABLE_WITHOUT_CHANGING_RECOVERY_BEHAVIOR"
+}
