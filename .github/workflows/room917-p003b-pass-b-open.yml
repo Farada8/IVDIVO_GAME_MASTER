@@ -1,0 +1,46 @@
+name: ROOM917 P003B Pass B Open
+
+on:
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_pass_a_freeze.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_pass_b_open.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_pass_b_open.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_repair_compiler.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_repair_compiler.py'
+      - '.github/workflows/room917-p003b-pass-b-open.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify Pass B open tamper gates
+        run: python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_pass_b_open.py
+      - name: Verify selective repair compiler requires Pass B receipt
+        run: python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_repair_compiler.py
+      - name: Verify current Scene3 Pass B queue shape
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          q=json.loads(Path('AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json').read_text(encoding='utf-8'))
+          assert q['schema_version']=='ivdivo.room917_p003b_pass_b_verification_queue/1.0'
+          assert q['status']=='READY_AFTER_BLIND_PASS_A_ONLY'
+          assert q['blind_firewall']['pass_a_must_not_read_this_queue'] is True
+          assert q['blind_firewall']['open_queue_only_after_pass_a_notes_are_frozen'] is True
+          ids=[x['candidate_id'] for x in q['verification_candidates']]
+          assert len(ids)==len(set(ids)) and len(ids)==10
+          allowed={'ACTOR_BELIEF','AI_AUDIBLE','DEAD_SCENE','GEOGRAPHY','MYSTERY','SFX_MASKING'}
+          assert all(x['question_class'] in allowed for x in q['verification_candidates'])
+          print('Current Scene3 Pass B queue contract: PASS')
+          PY
