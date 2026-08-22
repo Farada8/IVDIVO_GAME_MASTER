@@ -18,46 +18,57 @@ Execution laws:
 `INTERCEPTION_CANDIDATE != REAL_PROVIDER_INTERCEPTION_PROOF`.
 `GUARD_IMPLEMENTED != GUARD_ADOPTED_BY_PRODUCTION_COMPLETION_PATHS`.
 `PROJECT_DONE != EXTERNAL_ARTIFACT_DONE`.
+`LOCAL_RUNTIME_GUARD != CHATGPT_PLATFORM_MIDDLEWARE`.
 
-## Current merged authority
+## Current merged local-runtime authority
 - PR #388 — base placement convergence;
 - PR #401 — resource-type/tool-route hardening;
 - PR #409 — atomic completion/restart recovery;
-- PR #411 — durable live-interception evidence capture;
-- PR #417 — mandatory production completion-path adoption, merge `7f9f7c58d9febba0ac9585a81e318e9718d7454b`;
-- PR #441 — internal project-DONE completion-scope hardening, merge `74ae2afc2b897baa0a65bd0ea1fd0bc099922c5f`.
+- PR #411 — durable local-runtime interception capture;
+- PR #417 — mandatory Personal AI production completion-path adoption;
+- PR #441 — internal project-DONE completion-scope hardening.
 
-## Production completion-surface audit — merged
-The current `personal-ai` completion/persistence surfaces were audited after PR #417. No additional external-artifact DONE bypass was found.
+The local Personal AI surface is enforced. Artifact-required tasks cannot reach DONE without placement evidence, and internal PL-08 project DONE is explicitly non-external.
 
-One semantic ambiguity was found in registered PL-08 behavior: `BookProductionCore FINAL` intentionally sets the parent project status to `DONE`. The registered route is preserved, but its meaning is now explicit and machine-readable:
-- `completion_scope = INTERNAL_BOOK_PRODUCTION`;
-- `external_artifact_completion = NOT_ASSERTED`.
+## Deployment-boundary candidate — Issue #444
+A new audit found that the laptop-first `personal-ai` runtime is not middleware for Google Drive/GitHub connector actions executed by ChatGPT/platform tooling in other dialogs. Therefore the prior system-wide wording `installed guard catches the next failure` is too broad when applied to CHAT_CONNECTOR writes.
 
-Therefore PL-08 `FINAL -> project DONE` means only that the internal book-production state machine completed after its continuity authorization. It does not mean that a manuscript/export/package was externally persisted, placement-verified, published or distributed. Reaching FINAL cannot complete or override a separate artifact-required task.
+The candidate splits enforcement into two surfaces:
 
-PR #441 validation head `b7be25a459ad2a48a8de32ea31714fb445211b15` passed 14/14 triggered workflows, including artifact-placement-runtime #37 and PL-08 Book Production Core #42. Freshness comparison through main `cca976093a4b6678cd33bf6406a1cc8b258aaaa5` found no overlap with the seven PR paths before merge.
+### LOCAL_RUNTIME_ENFORCEMENT
+Status: `MERGED_ENFORCED`.
+Mode: executable task/agent/CLI guard inside Personal AI.
 
-Audit artifact:
-`PRODUCTION_COMPLETION_SURFACE_AUDIT_v1.md`.
+### CHAT_CONNECTOR_ENFORCEMENT
+Status: `OPERATIONAL_PROTOCOL_CANDIDATE`.
+Platform middleware installed: `false`.
+Mode: `SYNCHRONOUS_OPERATIONAL_READBACK_GATE`.
 
-Regression:
-`personal-ai/tests/test_project_completion_scope.py`.
+Required Chat Connector sequence:
+`WRITE -> PROVIDER READBACK -> CANONICAL INDEX/CURRENT READBACK -> CONNECTOR PLACEMENT CAPTURE -> COMPLETION CLAIM`.
 
-## External artifact completion rule
-Artifact-producing tasks explicitly declare `requires_artifact_placement_receipt=true`. For marked tasks, direct completion is rejected and the placement gate controls DONE. Missing receipt => BLOCKED; non-verified receipt => BLOCKED + interception evidence; PLACEMENT_VERIFIED receipt => DONE subject to normal functional gates.
+New candidate components:
+- `personal-ai/core/connector_placement_capture.py`;
+- `personal-ai/tests/test_connector_placement_capture.py`;
+- `CHAT_CONNECTOR_DEPLOYMENT_BOUNDARY_v1.md`;
+- `CHAT_CONNECTOR_LIVE_INTERCEPTION_LEDGER_v1.json`.
 
-## Promotion boundary
-Self-Improvement v2 remains CURRENT. The bounded mechanism status is:
-`LIVE_INTERCEPTION_CAPTURE_ARMED_PRODUCTION_ADOPTED_SCOPE_HARDENED`.
+The classifier never calls provider APIs and never claims automatic interception. It classifies evidence already obtained by synchronous connector readback. Every capture has `promotion_proof=false` and requires independent review.
 
-Promotion remains:
-`HOLD_ARMED_FOR_LIVE_EVIDENCE`.
+A failing capture can become only `ELIGIBLE_FOR_INDEPENDENT_LIVE_REVIEW` when it has real provider-readback origin, a provider readback reference, was captured before any completion claim, and no false claim was emitted. TEST_FIXTURE, REPLAY, UNKNOWN-origin and post-claim incidents cannot qualify.
 
-Exactly one non-simulatable requirement remains:
-`Observe future real traffic where the installed and production-adopted placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback.`
+Current live ledger count: `0`.
 
-Tests, replays and synthetic fixtures cannot satisfy that final gate. Do not manufacture a failure.
+Current candidate status:
+`CHAT_CONNECTOR_DEPLOYMENT_HARDENING_PENDING_CI`.
 
-Drive mirror authority:
+Promotion status:
+`HOLD_DEPLOYMENT_BOUNDARY_PENDING_CI`.
+
+After this bounded layer passes exact-head CI and merges, the remaining real gate must be scoped specifically to the original cross-dialog surface:
+`Observe a future real CHAT_CONNECTOR provider-backed placement/resource-type failure; detect it by synchronous provider/index readback before any false completion claim; persist it in the live ledger; then independently confirm provider origin/readback.`
+
+Tests, replays and synthetic fixtures cannot satisfy that gate. Do not manufacture a failure.
+
+Drive mirror authority remains:
 `06_SELF_IMPROVEMENT / INCIDENT — ARTIFACT_PLACEMENT_PATH_DRIFT — 2026-08-22`.

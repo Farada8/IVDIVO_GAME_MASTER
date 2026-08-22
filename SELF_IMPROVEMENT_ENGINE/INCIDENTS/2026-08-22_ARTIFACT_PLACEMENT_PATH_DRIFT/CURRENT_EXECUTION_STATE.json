@@ -1,24 +1,36 @@
 {
-  "schema": "artifact_placement_incident_state_v8",
+  "schema": "artifact_placement_incident_state_v9",
   "date": "2026-08-22",
   "issue": 356,
+  "deployment_boundary_issue": 444,
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "LIVE_INTERCEPTION_CAPTURE_ARMED_PRODUCTION_ADOPTED_SCOPE_HARDENED",
+  "candidate_status": "CHAT_CONNECTOR_DEPLOYMENT_HARDENING_PENDING_CI",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
+  "execution_surfaces": {
+    "LOCAL_RUNTIME_ENFORCEMENT": {
+      "status": "MERGED_ENFORCED",
+      "middleware": true,
+      "scope": "personal-ai task/agent/CLI runtime"
+    },
+    "CHAT_CONNECTOR_ENFORCEMENT": {
+      "status": "OPERATIONAL_PROTOCOL_CANDIDATE",
+      "middleware": false,
+      "scope": "ChatGPT Google Drive/GitHub connector actions outside local Python runtime",
+      "mode": "SYNCHRONOUS_OPERATIONAL_READBACK_GATE"
+    }
+  },
   "runtime": {
     "receipt_module": "personal-ai/core/artifact_placement.py",
     "provider_adapter_module": "personal-ai/core/artifact_placement_adapters.py",
-    "completion_gate": "personal-ai/projects/artifact_completion.py",
-    "task_state_module": "personal-ai/projects/manager.py",
-    "agent_executor_module": "personal-ai/agents/executor.py",
-    "cli_module": "personal-ai/run.py",
-    "book_state_module": "personal-ai/books/core.py",
-    "production_completion_surface_audit": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/PRODUCTION_COMPLETION_SURFACE_AUDIT_v1.md",
+    "connector_capture_module": "personal-ai/core/connector_placement_capture.py",
+    "connector_capture_test": "personal-ai/tests/test_connector_placement_capture.py",
+    "connector_deployment_contract": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/CHAT_CONNECTOR_DEPLOYMENT_BOUNDARY_v1.md",
+    "connector_live_ledger": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/CHAT_CONNECTOR_LIVE_INTERCEPTION_LEDGER_v1.json",
     "ci_workflow": ".github/workflows/artifact-placement-runtime.yml",
-    "done_rule": "external artifact DONE requires a marked artifact task and PLACEMENT_VERIFIED receipt; internal project DONE must carry an explicit non-external completion scope"
+    "connector_rule": "WRITE -> PROVIDER_READBACK -> INDEX_OR_CURRENT_READBACK -> CONNECTOR_CAPTURE -> COMPLETION_CLAIM"
   },
   "proof": {
     "runtime_merge_pr": 388,
@@ -26,53 +38,37 @@
     "atomic_completion_fix_pr": 409,
     "live_interception_capture_pr": 411,
     "production_adoption_pr": 417,
-    "production_adoption_merge_commit": "7f9f7c58d9febba0ac9585a81e318e9718d7454b",
     "completion_scope_hardening_pr": 441,
-    "completion_scope_hardening_head": "b7be25a459ad2a48a8de32ea31714fb445211b15",
-    "completion_scope_hardening_merge_commit": "74ae2afc2b897baa0a65bd0ea1fd0bc099922c5f",
-    "completion_scope_hardening_all_triggered_workflows": "14/14 PASS",
-    "completion_scope_artifact_placement_ci_run": 32572140553,
-    "completion_scope_pl08_ci_run": 32572140520,
-    "completion_scope_freshness_checked_main": "cca976093a4b6678cd33bf6406a1cc8b258aaaa5",
-    "completion_scope_freshness_overlap": "NONE",
-    "completion_surfaces_audited": 15,
-    "new_external_artifact_done_bypass_found_after_pr417": false,
-    "internal_project_done_ambiguity_found": true,
-    "internal_project_done_surface": "BookProductionCore FINAL -> parent ProjectState DONE",
-    "registered_pl08_done_route_preserved": true,
-    "internal_project_completion_scope": "INTERNAL_BOOK_PRODUCTION",
-    "internal_project_external_artifact_completion": "NOT_ASSERTED",
-    "project_done_does_not_complete_separate_artifact_task_regression": "PASS",
-    "completion_scope_regression": "PASS_MERGED",
-    "live_interception_capture_armed": true,
-    "live_interception_auto_promotion": false,
-    "live_interception_provider_confirmation_required": true
+    "local_runtime_production_adoption": "VERIFIED_MERGED",
+    "local_runtime_scope_hardening": "VERIFIED_MERGED",
+    "chat_connector_is_local_runtime_middleware": false,
+    "chat_connector_platform_middleware_installed": false,
+    "chat_connector_live_ledger_real_event_count": 0,
+    "chat_connector_classifier_auto_promotion": false,
+    "chat_connector_independent_review_required": true,
+    "chat_connector_regression": "PENDING_EXACT_HEAD_CI",
+    "deployment_boundary_issue": 444
   },
   "required_sequence": [
-    "CLASSIFY_COMPLETION_SCOPE",
-    "DECLARE_ARTIFACT_TASK_POLICY_IF_EXTERNAL",
-    "CREATE_OR_IMPORT",
-    "PLACE_IN_CANONICAL_PROJECT_LOCATION",
-    "READBACK_ACTUAL_PARENT_AND_RESOURCE_TYPE",
-    "UPDATE_START_HERE_OR_CURRENT_INDEX",
-    "READBACK_INDEX",
-    "SCAN_DUPLICATE_OR_LEGACY_TITLE_CONFLICT",
-    "VERIFY_CROSS_STORE_POINTER_IF_REQUIRED",
-    "EMIT_PLACEMENT_RECEIPT",
-    "ROUTE_ARTIFACT_TASK_COMPLETION_THROUGH_GATE",
-    "ATOMICALLY_PERSIST_STATUS_AND_RECEIPT",
-    "IF_BLOCKED_WITH_RECEIPT_APPEND_INTERCEPTION_CANDIDATE_ATOMICALLY",
-    "ALLOW_EXTERNAL_ARTIFACT_DONE_ONLY_IF_PLACEMENT_VERIFIED_AND_OTHER_GATES_PASS"
+    "CLASSIFY_EXECUTION_SURFACE",
+    "IF_LOCAL_RUNTIME_APPLY_AUTOMATIC_TASK_GATE",
+    "IF_CHAT_CONNECTOR_WRITE_OR_UPDATE",
+    "READBACK_PROVIDER_METADATA_OR_CONTENT",
+    "READBACK_CANONICAL_INDEX_OR_CURRENT_POINTER",
+    "BUILD_CONNECTOR_PLACEMENT_CAPTURE",
+    "IF_FAILURE_BLOCK_COMPLETION_CLAIM_AND_PERSIST_LEDGER_EVENT",
+    "IF_VERIFIED_ONLY_THEN_ALLOW_COMPLETION_CLAIM",
+    "NEVER_AUTO_PROMOTE_CAPTURE"
   ],
   "promotion_gate": {
-    "status": "HOLD_ARMED_FOR_LIVE_EVIDENCE",
+    "status": "HOLD_DEPLOYMENT_BOUNDARY_PENDING_CI",
     "completed_requirements": [
-      "provider adapters, atomic recovery, durable interception capture and production adoption are merged",
-      "current Personal AI completion surfaces were classified and no additional external-artifact DONE bypass was found after PR #417",
-      "registered PL-08 FINAL -> project DONE route is explicitly scoped as INTERNAL_BOOK_PRODUCTION with external_artifact_completion=NOT_ASSERTED; exact-head 14/14 PASS and merged through PR #441"
+      "local Personal AI placement runtime is provider-normalized, atomic, production-adopted and completion-scope hardened",
+      "deployment audit identified that ChatGPT connector calls are outside local runtime middleware and opened issue #444"
     ],
     "remaining_requirements": [
-      "observe future real traffic where the installed and production-adopted placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback; tests, replays and synthetic fixtures cannot satisfy this requirement"
+      "pass and merge the bounded dual-surface Chat Connector deployment contract/classifier/ledger without claiming platform middleware",
+      "observe a future real CHAT_CONNECTOR provider-backed placement/resource-type failure detected by synchronous provider/index readback before any false completion claim, persist it in the live ledger, then independently confirm provider origin/readback; tests, replays and synthetic fixtures cannot satisfy this requirement"
     ]
   }
 }
