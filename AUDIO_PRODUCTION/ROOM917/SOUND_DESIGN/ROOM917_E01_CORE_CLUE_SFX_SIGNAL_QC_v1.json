@@ -1,0 +1,39 @@
+{
+  "schema_version": "room917.core_clue_sfx_signal_qc/1.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "status": "MACHINE_QC_PASS_STRUCTURAL_ONLY__NO_HUMAN_PASS",
+  "phone_proxy": {"mono": true, "band_hz": [280, 6500], "purpose": "translation audition only"},
+  "results": {
+    "M01_917_DOUBLE_INTERNAL_RING": {
+      "A": {"detected_group_times_s": [0.0643, 0.3500], "two_group_structure_pass": true},
+      "B": {"detected_group_times_s": [0.0654, 0.2165, 0.3965], "two_group_structure_pass": true, "note":"third detected local envelope maximum requires human interpretation; main two-ring grouping remains present"},
+      "C": {"detected_group_times_s": [0.0633, 0.4300], "two_group_structure_pass": true}
+    },
+    "M02_GLASS_LAMP_PING": {
+      "A": {"late_vs_early_rms_db": -23.83, "short_decay_pass": true},
+      "B": {"late_vs_early_rms_db": -26.84, "short_decay_pass": true},
+      "C": {"late_vs_early_rms_db": -43.59, "short_decay_pass": true}
+    },
+    "M03_COPPER_HISS_BED": {
+      "A": {"max_single_bin_fraction_250_4000": 0.000589, "no_dominant_tone_pass": true, "seam_vs_internal_diff_rms_db": -3.08, "hard_seam_pass": true},
+      "B": {"max_single_bin_fraction_250_4000": 0.001023, "no_dominant_tone_pass": true, "seam_vs_internal_diff_rms_db": -4.75, "hard_seam_pass": true},
+      "C": {"max_single_bin_fraction_250_4000": 0.004521, "no_dominant_tone_pass": true, "seam_vs_internal_diff_rms_db": -6.26, "hard_seam_pass": true}
+    },
+    "M05_TWO_PART_ANALOGUE_CUT": {
+      "A": {"detected_transient_times_s": [0.0598, 0.1925], "two_stage_structure_pass": true},
+      "B": {"detected_transient_times_s": [0.0625, 0.2375], "two_stage_structure_pass": true},
+      "C": {"detected_transient_times_s": [0.0698, 0.2875], "two_stage_structure_pass": true}
+    }
+  },
+  "phone_proxy_mp3_sha256": {
+    "M01": "6844ffb1db441da2686bb582ce5b6f5a637ff468ca42f5056c72a29bf7e9da05",
+    "M02": "51fe42fae0c302eba035159a0364b585dd700409eb46b2bb89bf3e0667865b90",
+    "M03": "b951b2f1fab571d465d5893da3a44a63bdf0acbbc6bb2de135aa2b03d8c4c5af",
+    "M05": "1d1f83a93774057926d4405f460c4b8d7a6ce0872f7dd5cfb0989ea38d4be54f"
+  },
+  "session_package_v1_1": {"filename":"ROOM917_E01_CORE_CLUE_SFX_CANARIES_v1_1.zip","sha256":"2276266b0c1dac460f2745f9d5032c9f229ee7c98064a44a09533811da5aa9fd","includes_phone_proxies":true,"includes_signal_qc":true},
+  "human_gates_still_open": ["CATEGORY_IDENTITY","FALSE_CLUE_AUDIT","BELIEVABILITY","NON_HORROR_READ","EARBUDS","PHONE_PROXY","FINAL_VARIANT_SELECTION"],
+  "hard_law": "MACHINE_STRUCTURE_PASS_DOES_NOT_LOCK_OR_BIND_AUDIO"
+}
