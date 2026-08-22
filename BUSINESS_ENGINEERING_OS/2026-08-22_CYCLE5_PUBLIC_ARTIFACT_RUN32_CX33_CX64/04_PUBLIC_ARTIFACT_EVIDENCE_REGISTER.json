@@ -1,0 +1,29 @@
+{
+  "schema_version": "ivdivo.business.public_artifact_evidence/1.0",
+  "date": "2026-08-22",
+  "evidence_ceiling": "E2_PUBLIC_PLUS_ENGINEERING_ONLY",
+  "no_outreach": true,
+  "sources": [
+    {"id":"PUB01","class":"OFFICIAL_PROCUREMENT","title":"WCC062026 Energy Efficiency Retrofit Housing Framework 2026-2029","url":"https://www.etenders.gov.ie/epps/cft/prepareViewCfTWS.do?resourceId=7362219","use":"tender field/document pattern"},
+    {"id":"PUB02","class":"OFFICIAL_PROCUREMENT","title":"SEN Extension St Catherine's NS","url":"https://www.etenders.gov.ie/epps/cft/prepareViewCfTWS.do?resourceId=8881998","use":"current works notice field coverage"},
+    {"id":"PUB03","class":"OFFICIAL_PROCUREMENT","title":"CAMHS St Fintan's refurbishment","url":"https://www.etenders.gov.ie/epps/cft/prepareViewCfTWS.do?resourceId=8840890","use":"current works notice field coverage"},
+    {"id":"PUB04","class":"OFFICIAL_PROCUREMENT","title":"Modular Buildings Casement Aerodrome","url":"https://www.etenders.gov.ie/epps/cft/listContractDocuments.do?resourceId=2999601","use":"MMC document pattern"},
+    {"id":"PUB05","class":"OFFICIAL_PROCUREMENT","title":"Modular accommodation Kilmallock design services","url":"https://www.etenders.gov.ie/epps/cft/listContractDocuments.do?resourceId=8618288","use":"MMC professional-services pattern"},
+    {"id":"PUB06","class":"OFFICIAL_SEAI","title":"Business energy upgrades","url":"https://www.seai.ie/grants/business-grants/rapid-approval","use":"retrofit workflow"},
+    {"id":"PUB07","class":"OFFICIAL_SEAI","title":"Technical Assistance Grant for Business","url":"https://www.seai.ie/grants/business-grants/rapid-approval/technical-assistance-grant","use":"accredited design boundary"},
+    {"id":"PUB08","class":"OFFICIAL_SEAI","title":"Register for Business Energy Upgrade Scheme","url":"https://www.seai.ie/contractors-and-suppliers/register-with-seai/business-energy-upgrade-scheme","use":"registered company/installer boundary"},
+    {"id":"PUB09","class":"OFFICIAL_LEO","title":"Digital for Business","url":"https://www.localenterprise.ie/portal/digital/the-digital-for-business-support.html","use":"free diagnostic bundling"},
+    {"id":"PUB10","class":"OFFICIAL_LEO","title":"Grow Digital Voucher","url":"https://www.localenterprise.ie/portal/growdigital/growdigital-voucher.html","use":"post-diagnostic implementation support"},
+    {"id":"PUB11","class":"OFFICIAL_DETE","title":"EU AI Act Ireland","url":"https://enterprise.gov.ie/en/what-we-do/innovation-research-development/artificial-intelligence/eu-ai-act/eu-ai-act.html","use":"AI literacy/regulatory trigger"},
+    {"id":"PUB12","class":"OFFICIAL_OGP","title":"eTenders supplier guidance and alerts","url":"https://www.gov.ie/en/office-of-government-procurement/publications/etenders-has-changed-updates-for-businesses/","use":"official discovery/alert incumbent"},
+    {"id":"VEN01","class":"VENDOR_CLAIM_REFERENCE_ONLY","title":"Tender Co-Pilot","url":"https://tendercopilot.io/features/tender-tracking","use":"bundling test only"},
+    {"id":"VEN02","class":"VENDOR_CLAIM_REFERENCE_ONLY","title":"TenderFlare","url":"https://tenderflare.com/","use":"bundling test only"},
+    {"id":"VEN03","class":"VENDOR_CLAIM_REFERENCE_ONLY","title":"BidMerit","url":"https://www.bidmerit.ie/","use":"bundling test only"},
+    {"id":"VEN04","class":"SECONDARY_AGGREGATOR_REFERENCE_ONLY","title":"TenderWatch","url":"https://tenderwatch.ie/","use":"secondary aggregate count and bundling; not root authority"}
+  ],
+  "sample_limit": {
+    "cx33_target": 100,
+    "status": "PARTIAL_NOT_100_CORPUS",
+    "note": "Multiple current/recent official notices were inspected plus a secondary aggregate count. Do not represent this cycle as a verified 100-row tender dataset."
+  }
+}
