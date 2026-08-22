@@ -32,8 +32,6 @@ jobs:
           current = Path('BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md').read_text()
           wedge = (root/'23_OW01_AGENTIC_COMMERCE_WEDGE_CORRECTION.md').read_text()
 
-          # Controlling ruleset-0.3 closure. Do not silently regress to the initial
-          # ruleset-0.2 classification semantics.
           assert scanner['schema'] == 'ivdivo.general_business.agent_commerce_scanner/0.3'
           assert scanner['ruleset_version'] == '2026-08-22.3'
           p2 = scanner['p_ew02']
@@ -65,13 +63,11 @@ jobs:
           assert learning['explicit_webhook_without_signing_keys'] == 'FAIL'
           assert learning['explicit_unsigned_webhook'] == 'FAIL'
 
-          # Cross-store evidence/readback remains mandatory.
           drive = scanner['drive']
           assert drive['semantic_readback'] is True
           assert drive['wedge_correction_document_id'] == '1GWGxroh4L8MQQOTf3xyX_M_pDHz3brTfmabURJHCd2w'
           assert drive['readback_marker'] == 'OW01-WEDGE-CORRECTION-RULESET03-KILL-GENERIC-UCP-SETUP-KEEP-CROSS-PROTOCOL-20260822'
 
-          # Historical P-EW02 state remains provenance, not controlling ruleset.
           assert legacy_st['authority']['implementation_pr'] == 353
           assert legacy_st['authority']['implementation_merge_sha'] == '0f83a4b223b8355b7163616d2a2cec527ec228db'
           assert legacy_st['blind_test']['sample_size'] == 10
@@ -84,8 +80,6 @@ jobs:
           assert sum(x['http_status'] == 200 for x in legacy_obs['observations']) == 4
           assert all(x['oai_feed_evidence'] == 'UNKNOWN' for x in legacy_obs['observations'])
 
-          # Current strategy must carry the corrected semantics and kill/mutation,
-          # while preserving commercial proof boundaries.
           assert 'P-EW02 = PASS_TEST_RULESET03_CORRECTED' in current
           assert 'P-EW03 = PASS_ENGINEERING' in current
           assert 'P-EW04 = PASS_ENGINEERING' in current
@@ -99,7 +93,7 @@ jobs:
           assert 'EXTERNAL_ACTION_AUTHORIZED = FALSE' in current
 
           assert 'GENERIC UCP INSTALLATION FOR LARGE MANAGED COMMERCE PLATFORMS = KILL' in wedge
-          assert 'DO_NOT_SELL_WHAT_THE_PLATFORM_ALREADY_AUTOMATES' in wedge
+          assert 'DO_NOT_SELL WHAT THE PLATFORM ALREADY AUTOMATES' in wedge
           assert 'WTP = UNKNOWN' in wedge
 
           print('P-EW02 CLOSURE: PASS — ruleset03 correction, frozen-10 provenance, Drive readback and no-proof-overreach preserved')
