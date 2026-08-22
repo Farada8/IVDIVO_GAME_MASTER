@@ -9,28 +9,49 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 COMPILER = HERE / "p003b_repair_compiler.py"
+SHA = "a" * 64
 
 
 def base_result() -> dict:
     return {
-        "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.2",
+        "schema_version": "ivdivo.room917_p003b_listener_qc_result/1.4",
         "project": "ROOM917",
         "episode": "E01",
         "authority": "THE_INSURABLE_FIRE",
         "source_identity": {
             "expected_duration_seconds": 658.190,
             "target_identity_mode": "IMMUTABLE_SOURCE_MASTER",
-            "allowed_target_identity_mode": ["IMMUTABLE_SOURCE_MASTER", "PROVENANCE_VERIFIED_DERIVED_CANDIDATE"],
-            "observed_sha256": "a" * 64,
+            "allowed_target_identity_mode": [
+                "IMMUTABLE_SOURCE_MASTER",
+                "PROVENANCE_VERIFIED_DERIVED_CANDIDATE",
+                "AUTOMIX_V1_ELIGIBILITY_VERIFIED_FULL_MIX",
+            ],
+            "observed_sha256": SHA,
             "identity_status": "VERIFIED",
         },
         "blind_listen": {
             "pass_a_story_free": "COMPLETE",
             "pass_a_notes_frozen": True,
+            "pass_a_freeze_receipt_ref": "PASS_A_FREEZE.json",
+            "pass_b_open_receipt_ref": "PASS_B_OPEN.json",
             "pass_b_targeted_verification": "COMPLETE",
         },
         "defects": [],
     }
+
+
+def pass_b_receipt(**overrides) -> dict:
+    row = {
+        "schema_version": "ivdivo.room917_p003b_pass_b_open_receipt/1.0",
+        "status": "PASS_B_AUTHORIZED",
+        "pass_b_authorized": True,
+        "pass_c_authorized": False,
+        "release_authority": False,
+        "target_sha256": SHA,
+        "queue_sha256": "b" * 64,
+    }
+    row.update(overrides)
+    return row
 
 
 def defect(**overrides) -> dict:
@@ -54,13 +75,20 @@ def defect(**overrides) -> dict:
     return d
 
 
-def run(payload: dict) -> tuple[subprocess.CompletedProcess[str], dict]:
+def run(payload: dict, receipt: dict | None = None) -> tuple[subprocess.CompletedProcess[str], dict]:
     with tempfile.TemporaryDirectory() as td:
         td = Path(td)
         src = td / "result.json"
+        br = td / "pass_b.json"
         out = td / "plan.json"
         src.write_text(json.dumps(payload), encoding="utf-8")
-        proc = subprocess.run([sys.executable, str(COMPILER), "--result", str(src), "--out", str(out)], text=True, capture_output=True)
+        br.write_text(json.dumps(receipt or pass_b_receipt()), encoding="utf-8")
+        proc = subprocess.run([
+            sys.executable, str(COMPILER),
+            "--result", str(src),
+            "--pass-b-open-receipt", str(br),
+            "--out", str(out),
+        ], text=True, capture_output=True)
         return proc, json.loads(out.read_text(encoding="utf-8"))
 
 
@@ -107,6 +135,22 @@ def test_pass_a_must_be_frozen() -> None:
     assert proc.returncode != 0
     assert out["repairs"] == []
     assert "PASS_A_NOTES_NOT_FROZEN" in out["gate_errors"]
+
+
+def test_pass_b_receipt_target_mismatch_blocks_all() -> None:
+    p = base_result(); p["defects"] = [defect()]
+    proc, out = run(p, pass_b_receipt(target_sha256="c" * 64))
+    assert proc.returncode != 0
+    assert out["repairs"] == []
+    assert "PASS_B_OPEN_RECEIPT_TARGET_SHA_MISMATCH" in out["gate_errors"]
+
+
+def test_pass_b_receipt_hold_blocks_all() -> None:
+    p = base_result(); p["defects"] = [defect()]
+    proc, out = run(p, pass_b_receipt(status="HOLD", pass_b_authorized=False))
+    assert proc.returncode != 0
+    assert out["repairs"] == []
+    assert "PASS_B_OPEN_RECEIPT_NOT_AUTHORIZED" in out["gate_errors"]
 
 
 def test_keep_is_ignored() -> None:
