@@ -1,0 +1,59 @@
+{
+  "status": "PILOT_EVIDENCE_ONLY_NOT_CURRENT_AUTHORITY",
+  "event_id": "BOOK_ENGINE_MILESTONE_G_SECOND_PROJECT_REPLICATION_2026-08-21",
+  "source_project": "Farada8/PORTALY_ZVEZD",
+  "source_branch": "ivdivo-book-engine-milestone-g-v6",
+  "source_pr": 7,
+  "source_milestone": "IVDIVO_BOOK_ENGINE_v0.6_MILESTONE_G",
+  "fresh_global_main_base_sha": "55c69de4f19aec1c2b408020c1447cbd38beef5b",
+  "global_self_improvement_authority": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+  "promotion_authorized": false,
+  "candidate_id_allocation_authorized": false,
+  "dedupe_required_before_registry_mutation": true,
+  "requested_disposition": ["MERGE_WITH_EXISTING", "ACCEPT_WITH_SCOPE", "HOLD_FOR_MORE_REPLICATION", "REJECT_WITH_REASON"],
+  "evidence": {
+    "book_engine_version": "0.6.0",
+    "run32_v4": {"pass": 31, "hold": 1, "fail": 0, "ledger_sha256": "a2e8dd34995008585e9bf80133bb4db38e307144af55e6e66cf67aa47a84511b"},
+    "warm_regression": {"passed": 175, "failed": 0},
+    "fresh_unzip_regression": {"passed": 175, "failed": 0},
+    "runtime_zip_sha256": "19e5543c74dab89f57af8c33e11b11fccc883b75da8c0c1b7c3595072c4535e2",
+    "drive_runtime_file_id": "1p8pGxfGjxVWczy2ColyFlpDwarcFNDzN",
+    "drive_raw_readback_identity": "MATCH",
+    "github_full_runtime_byte_identity": "HOLD",
+    "second_project": "D10_BLOODBOUND",
+    "positive_fixture": {
+      "title": "SUPERSEDED — BLOODBOUND — E06 NOT EXTINCT — SCRIPT v1.0 — HOUSE-STYLE PATCHED IN v1.1",
+      "drive_id": "1qM45adOw6qQY4-PmP0ci3MwF_A5hT8UE-Fy6zewH7F0",
+      "sha256": "ec4336fb57f42a2cfe70bb6a0bb625f588dd57e0183d6030a77b17df0bef60c4",
+      "expected_hits": 1,
+      "observed_hits": 1
+    },
+    "repaired_no_change_fixture": {
+      "title": "BLOODBOUND — E06 NOT EXTINCT — SCRIPT v1.1 — CLEAN CURRENT",
+      "drive_id": "1kRQb4f1tuRPm219FdvtjCXMNCjDyZjCO7QQw_2DcYqQ",
+      "sha256": "00fa1d6928d9ebcd04361f5b861ef9f3602258684dd30ad7a6c9766db6258180",
+      "expected_hits": 0,
+      "observed_hits": 0
+    },
+    "corpus_adjudication_drive_id": "1AHKdt-RKvXVTl16zjCjkcS_h49sTvV2wE_uPc2ISYUY",
+    "founder_story_lock_drive_id": "1Fp0vPbvt8JaGxGIvfxwyN4LuA4BXo8Ia1Rcp2Qk8hDA",
+    "false_positive_control": {"text_family": "legitimate forensic Not identity / Not inheritance path", "observed_hits": 0},
+    "locked_story_mutated": false
+  },
+  "mechanism_under_review": {
+    "local_id": "MF-C03-REAL-BOOK-SENSORS",
+    "scope_request": "BOOK_DOMAIN_REVIEW_ONLY",
+    "mechanism": "known adjudicated positive + repaired no-change + false-positive control + source hashes + lock protection",
+    "why_not_universal": "Only one second-project replication exists and no human/provider evidence is implicated or claimed.",
+    "dedupe_note": "Reconcile semantically against current replication/promotion/evidence mechanisms. Do not bind this handoff to SI-0009: fresh evidence shows SI-0009 is a transcript-recovery candidate, not a Book Engine replication law."
+  },
+  "protected_authorities": [
+    "FOUNDER_NEWEST_DIRECT_INSTRUCTION",
+    "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+    "CURRENT_IVDIVO_WRITING_PRODUCTION_AUTHORITY.md",
+    "D10_BLOODBOUND_FOUNDER_LOCK",
+    "HUMAN_SIGNAL",
+    "PROVIDER_EVIDENCE"
+  ],
+  "hard_boundary": "This handoff is replication evidence only. It does not allocate a registry ID, update CURRENT state, authorize universal promotion, reopen D10 story text, or convert automated evidence into human/provider evidence."
+}
