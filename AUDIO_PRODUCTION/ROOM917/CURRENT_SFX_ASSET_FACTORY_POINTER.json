@@ -1,0 +1,45 @@
+{
+  "schema_version": "room917.sfx_asset_factory_pointer/2.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "MACHINE_QC_PASS_HUMAN_BLIND_GATE_PENDING",
+  "authority": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+  "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py",
+  "generator_blob_sha": "b1dcf1a1dc196f5ceb3a66d10a7687d5d5bc869e",
+  "receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json",
+  "receipt_blob_sha": "db16a7072ed1fb3c9af8f04fc90f83c78a13d7c0",
+  "machine_qc_summary": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_MACHINE_QC_SUMMARY_v2_2.json",
+  "machine_qc": {"candidates":24,"checks":51,"failures":0,"status":"PASS"},
+  "assets": [
+    "S07_TRANSFORMER_WAKE",
+    "S08_RELAY_RIPPLE",
+    "S10_SELECTOR_916",
+    "S11_GLASS_LAMP_916_PING",
+    "S13_INTERNAL_DOUBLE_RING_OLD",
+    "S14_UNMARKED_GLASS_LAMP_PING",
+    "S17_COPPER_HISS",
+    "S19_TWO_PART_LINE_CUT"
+  ],
+  "variants_per_asset": 3,
+  "cross_cue_all_combinations_status": "PASS",
+  "tools": {
+    "machine_qc": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/critical_sfx_machine_qc_v2.py",
+    "blind_builder": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/build_critical_sfx_blind_package.py",
+    "blind_lock_compiler": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/compile_critical_sfx_blind_lock.py"
+  },
+  "drive": {
+    "factory_folder_id": "1KNRfv-er5ceOVh9keYhm2ieiVleTPrzf",
+    "blind_package_v2_id": "1lZ2UzgaipR2ki-eijHJq-K7BN_rTlL5J",
+    "factory_admin_v2_id": "1ot1CG9FzXQikLPyW4LN6e7rb1iCj35ZE",
+    "blind_pipeline_v2_id": "1GffHB3CJ6WQL_UFQPCANX538H_HfJ_LE"
+  },
+  "human_gate": {
+    "required": true,
+    "mode": "BLIND_A_B_C_OR_REJECT_ALL_PER_ASSET",
+    "after_pass": "COMPILE_EXACT_CANDIDATE_ID_PLUS_SHA256_LOCK_THEN_RUN_SOUND_ASSET_BINDING_GATE"
+  },
+  "continuation_law": "DO_NOT_STOP_AT_THIS HUMAN GATE IF ANY INDEPENDENT MACHINE BRANCH REMAINS UNBLOCKED; CONTINUE OTHER UNBLOCKED WORK AND RETURN TO THIS GATE WHEN HUMAN EVIDENCE EXISTS.",
+  "hard_law": "MACHINE_QC_PASS_DOES_NOT_AUTHORIZE_PRODUCTION_BINDING_PATCHING_OR_RELEASE"
+}
