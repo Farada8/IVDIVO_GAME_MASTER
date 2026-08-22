@@ -1,0 +1,36 @@
+name: General Business P-EW03 Article 50 Technical Preflight
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_ARTICLE50_PEW03_TECHNICAL_TRANSPARENCY_SAMPLE/**'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md'
+      - '.github/workflows/general-business-pew03-article50.yml'
+
+jobs:
+  article50-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run deterministic Article 50 technical preflight regression
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_ARTICLE50_PEW03_TECHNICAL_TRANSPARENCY_SAMPLE/tests/test_preflight.py
+      - name: Run fixture and verify non-promotion boundaries
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_ARTICLE50_PEW03_TECHNICAL_TRANSPARENCY_SAMPLE/03_preflight.py > /tmp/article50_results.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('/tmp/article50_results.json')
+          data = json.loads(p.read_text())
+          assert len(data['results']) == 9
+          assert data['legal_compliance_certified'] is False
+          assert data['market_proof_promoted'] is False
+          by_id = {x['case_id']: x for x in data['results']}
+          assert by_id['DEEPFAKE_MACHINE_MARK_ONLY']['overall'] == 'CONTROL_GAPS_FOUND'
+          assert by_id['LEGACY_PROVIDER_MARKING_TRANSITION']['overall'] == 'REVIEW_REQUIRED'
+          assert by_id['UNKNOWN_ROLE_GENERATIVE_TEXT']['overall'] == 'REVIEW_REQUIRED'
+          print('P-EW03 boundary check: PASS')
+          PY
