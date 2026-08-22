@@ -1,0 +1,78 @@
+{
+  "artifact": "B03_CH01_MICROPHONE_CHOREOGRAPHY_v1",
+  "date": "2026-08-22",
+  "status": "PASS_PLAN / LIVE_PERFORMANCE_PENDING",
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "global_law": "Performance distance and mediated-channel identity are acting/staging decisions first, gain decisions second.",
+  "scene_choreography": [
+    {
+      "scene_id": "B03_CH01_S01",
+      "listener_poa": "near Nika workstation",
+      "narrator": "close-neutral; no trailer projection",
+      "NIKA_ZUPAN": "conversational workstation distance; quick task transitions",
+      "WOMAN_CELLAR_CALLER": "through ordinary phone medium; mild stress only",
+      "movement_logic": "small workstation actions; no cinematic roaming",
+      "stereo_intent": "stable operational room width",
+      "mono_safe": true
+    },
+    {
+      "scene_id": "B03_CH01_S02",
+      "listener_poa": "Nika-side phone monitoring perspective",
+      "NIKA_ZUPAN": "close/conversational; dry humor thrown away",
+      "ANDREJ_KOSIR": "through phone medium; practical, no comic proximity tricks",
+      "movement_logic": "dialogue rhythm carries familiarity, not spatial gimmicks",
+      "stereo_intent": "caller narrow/mediated; Nika anchored in room",
+      "mono_safe": true
+    },
+    {
+      "scene_id": "B03_CH01_S03",
+      "listener_poa": "Nika operational evidence perspective",
+      "UNKNOWN_PRECURSOR_CALLER": "through malformed call channel; breath and clipped speech remain human and intelligible",
+      "NIKA_ZUPAN": "starts procedural, entries shorten as contradiction grows; volume does not rise for effect",
+      "JANA_KOVAC": "slightly off-axis/adjacent workstation authority; low projection",
+      "FIREFIGHTER_GALLERY_THREE": "clean field radio; task-focused",
+      "movement_logic": "attention shifts from phone to verification resources without creating detective-theatre staging",
+      "stereo_intent": "channel changes legible but clues remain mono-safe",
+      "mono_safe": true,
+      "protected_clue": "ID_DRAINAGE_FLAP_FOUR_IMPACTS"
+    },
+    {
+      "scene_id": "B03_CH01_S04",
+      "listener_poa": "same dispatch workstation continuity",
+      "NIKA_ZUPAN": "ordinary rhythm partially restored",
+      "ANDREJ_KOSIR": "same phone identity as first call; fourteen-minute friction audible but not underlined musically",
+      "movement_logic": "no anomaly framing",
+      "mono_safe": true
+    },
+    {
+      "scene_id": "B03_CH01_S05",
+      "listener_poa": "Nika workstation coordinating multiple live sources",
+      "NIKA_ZUPAN": "controlled urgency; detail-recognition tightens timing rather than adding drama",
+      "JANA_KOVAC": "nearby low-energy command; keeps live incident primary",
+      "REAL_COLLISION_CALLER": "live mobile under real stress; intelligible, not screaming by default",
+      "RESCUER_FIELD_RADIO": "through field radio; concise, weather/exertion subtle",
+      "UNKNOWN_PRECURSOR_CALLER_PLAYBACK": "same accepted source identity as first call; playback filter only",
+      "movement_logic": "source switching is explicit in channel texture; simultaneous live/playback moment must remain comprehensible",
+      "stereo_intent": "separate sources modestly; no critical recognition depends on pan",
+      "mono_safe": true,
+      "protected_silence": {"min_ms": 1800, "target_ms": 2800, "max_ms": 4500}
+    },
+    {
+      "scene_id": "B03_CH01_S06",
+      "listener_poa": "close evidence-review perspective",
+      "NIKA_ZUPAN": "measured, tired, intellectually active",
+      "JANA_KOVAC": "low-energy narrowing questions; no answer implied before evidence supports it",
+      "movement_logic": "minimal; screen/record review may anchor actions without sonic clutter",
+      "stereo_intent": "quiet stable room",
+      "mono_safe": true,
+      "protected_silence": {"min_ms": 800, "target_ms": 1500, "max_ms": 2600}
+    }
+  ],
+  "forbidden_microphone_behaviors": [
+    "whispering to manufacture mystery",
+    "extreme proximity for unknown caller",
+    "cinematic wide-pan dispatchers that damage mono comprehension",
+    "radio distortion that obscures casualty details",
+    "breathy romance/intimacy coding between operational colleagues"
+  ]
+}
