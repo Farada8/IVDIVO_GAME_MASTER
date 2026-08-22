@@ -1,0 +1,26 @@
+name: Business Cycle4 Convergence Run32 Tests
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_CONVERGENCE_RUN32_CX01_CX32/**'
+      - '.github/workflows/business-cycle4-convergence-run32-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  convergence-guards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run convergence guard tests
+        run: python -m unittest discover -s BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_CONVERGENCE_RUN32_CX01_CX32/tests -p 'test_*.py' -v
+      - name: Run integrated business opportunity regressions
+        run: |
+          python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_PROCUREMENT_CAPITAL_LIVE32/engine/test_cycle4_business_engine.py
+          python -m unittest discover -s BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_PUBLIC_SIGNAL_OPPORTUNITY_SCAN_32_TO_64/tests -p 'test_*.py' -v
