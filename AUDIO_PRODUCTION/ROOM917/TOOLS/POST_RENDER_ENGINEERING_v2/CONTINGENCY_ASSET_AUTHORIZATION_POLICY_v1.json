@@ -1,0 +1,72 @@
+{
+  "schema_version": "room917.contingency_asset_authorization_policy/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "ACTIVE_FAIL_CLOSED",
+  "authority_basis": {
+    "drive_id": "1wHtEx3Uf7606CcBjwAFUNmfNyCz26FoqSaMnd4E1gQE",
+    "title": "ROOM 917 — FIRST RENDER HANDOFF INDEX — v1.0",
+    "post_render_override": "CURRENT 2026-08-21",
+    "law": "Pre-render SFX/casting utilities are reference/contingency only while the real E01 post-render branch is active and may be used only if real E01 evidence proves a rebuild is required."
+  },
+  "origin_classes": {
+    "PROCEDURAL_SYNTHETIC_REFERENCE_ONLY": "CONTINGENCY_ONLY",
+    "EXTERNAL_PROVIDER_REFERENCE_ONLY": "CONTINGENCY_ONLY",
+    "FIELD_OR_PROVIDER_PRODUCTION_CANDIDATE": "REQUIRES_EXPLICIT_DEFECT_AUTHORIZATION",
+    "APPROVED_REFERENCE_MASTER": "REQUIRES_CURRENT_BRANCH_IDENTITY_AND_DEFECT_SCOPE"
+  },
+  "binding_law": "NO_CONTINGENCY_OR_NEWLY_ACQUIRED_ASSET_MAY BECOME PRODUCTION-BOUND IN THE ACTIVE POST-RENDER BRANCH WITHOUT AN EXPLICIT EVIDENCE-BACKED DEFECT AUTHORIZATION.",
+  "required_authorization_fields": [
+    "status",
+    "defect_id",
+    "defect_status",
+    "authorized_asset_ids",
+    "authorized_layer",
+    "authorized_scope",
+    "evidence_ref",
+    "authority_branch",
+    "expires_after_repair_stage"
+  ],
+  "allowed_authorization_status": ["PASS", "HOLD", "REJECT"],
+  "pass_requirements": [
+    "status == PASS",
+    "defect_status == PROVEN",
+    "authority_branch == THE_INSURABLE_FIRE",
+    "candidate asset_id appears in authorized_asset_ids",
+    "candidate origin is declared and matches the authorization scope",
+    "evidence_ref is non-empty",
+    "authorized_scope is smallest-scope and does not reopen Scene3 unless new direct regression evidence explicitly authorizes it",
+    "authorization has not expired at the current repair stage"
+  ],
+  "known_current_defect_scope": {
+    "D003_PRE_SCENE3_ROOM_BED_CONTINUITY_UNDERCOVERAGE": {
+      "defect_status": "PROVEN_AGGREGATE_ONLY_EXACT_INTERVALS_UNRESOLVED",
+      "production_authorization_status": "HOLD",
+      "reason": "Exact selective repair intervals are not yet resolved; aggregate undercoverage does not authorize blanket room-bed insertion.",
+      "potential_asset_ids_after_exact_interval_proof": ["A01_GREYHAVEN_LOBBY_30S_LOOP", "A02_SWITCHBOARD_ALCOVE_30S_LOOP"],
+      "scene3_authorization": "NONE"
+    }
+  },
+  "explicitly_forbidden": [
+    "HUMAN_LIKES_CANARY_THEREFORE_BIND",
+    "CANARY_SHA_EXISTS_THEREFORE_BIND",
+    "LOW_RMS_THEREFORE_BIND",
+    "PROMPT_MATCHES_CONTRACT_THEREFORE_BIND",
+    "CONTINGENCY_WORKFLOW_SUCCESS_THEREFORE_BIND",
+    "USE_A03_FOR_D003",
+    "REOPEN_SCENE3_WITHOUT_NEW_DIRECT_REGRESSION_EVIDENCE"
+  ],
+  "template_authorization": {
+    "schema_version": "room917.contingency_asset_authorization/1.0",
+    "status": "HOLD",
+    "defect_id": "TODO",
+    "defect_status": "TODO_PROVEN_OR_NOT",
+    "authorized_asset_ids": [],
+    "authorized_layer": "TODO",
+    "authorized_scope": "TODO_EXACT_INTERVAL_OR_CUE_SCOPE",
+    "evidence_ref": "TODO",
+    "authority_branch": "THE_INSURABLE_FIRE",
+    "expires_after_repair_stage": "P004A_SELECTIVE_REPAIR"
+  }
+}
