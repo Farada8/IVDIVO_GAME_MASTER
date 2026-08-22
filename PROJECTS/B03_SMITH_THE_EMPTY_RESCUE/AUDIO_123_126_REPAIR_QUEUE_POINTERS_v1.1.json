@@ -1,0 +1,25 @@
+{
+  "schema": "ivdivo.b03.audio_repair_queue_pointers/1.1",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "current_roster_drive_id": "13Go1HxW86AmYf7dfptH8o1QzihCqexSL",
+  "performance_123": {
+    "source": "123_B03_SEGMENT_LEVEL_PERFORMANCE_PACKAGE_v1.0",
+    "drive_queue_id": "1OQG5hxgBL1fozW1A253qDcifL9r75eDV",
+    "affected_rows": 291,
+    "mandatory_full_performance_recompute": 81,
+    "same_class_rebind_then_local_revalidation": 210,
+    "unaffected_speech_rows": 3423,
+    "status": "REPAIR_OPEN"
+  },
+  "dry_render_126": {
+    "source": "126_B03_DRY_RENDER_MANIFEST_v1.1",
+    "drive_queue_id": "1pvxTstBU2sfvIynr8zACs-dWYTGFhUC8",
+    "affected_speech_render_units": 291,
+    "voice_slot_changes": 287,
+    "mandatory_full_performance_recompute": 81,
+    "unaffected_render_units_structurally_salvageable": 7174,
+    "status": "REPAIR_OPEN"
+  },
+  "provider_voice_ids_assigned": 0,
+  "bulk_render_allowed": false
+}
