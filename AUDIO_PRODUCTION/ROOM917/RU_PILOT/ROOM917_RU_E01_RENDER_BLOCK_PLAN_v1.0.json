@@ -1,0 +1,265 @@
+{
+  "schema_version": "ivdivo.room917_ru_e01_render_block_plan/1.0",
+  "date": "2026-08-22",
+  "status": "READY_AFTER_RU_CAST_LOCK",
+  "story_status": "LOCKED",
+  "source_script": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md",
+  "provider": "ElevenLabs",
+  "primary_model": "eleven_v3",
+  "production_source_preference": "pcm_48000_WHERE_PROVIDER_ACCOUNT_SUPPORTS_IT_OTHERWISE_HIGHEST_VERIFIED_48K_SOURCE",
+  "full_episode_single_pass_forbidden": true,
+  "block_duration_target_seconds": [30, 80],
+  "cast_binding_gate": "ROOM917_RU_S0_HUMAN_LISTEN_PASS",
+  "architecture": "HYBRID_STAGE",
+  "rules": [
+    "EXACT_RU_RECORDING_SCRIPT_TEXT_ONLY",
+    "NO_STORY_REWRITE_DURING_PROVIDER_RENDER",
+    "CRITICAL_CLUE_LINES_REMAIN_INDEPENDENTLY_REPLACEABLE",
+    "EXACT_SPATIAL_GEOMETRY_IS_POST_NOT_TTS",
+    "CATE_CLEAN_HUMAN_FIRST_TRANSMISSION_DAMAGE_IN_POST",
+    "NO_SCORE_UNDER_INVESTIGATION",
+    "SELECTIVE_REGENERATION_ONLY",
+    "NO_CAST_LOCK_FROM_METADATA_OR_MACHINE_QC"
+  ],
+  "blocks": [
+    {
+      "block_id": "RU_E01_B00_OPENING_VO",
+      "scene": 1,
+      "provider_mode": "ISOLATED_TTS",
+      "characters": ["ELENA"],
+      "source_start_anchor": "Старые здания плохо помнят.",
+      "source_end_anchor": "Моя работа — слушать как следует.",
+      "function": "professional worldview before mystery",
+      "performance": "grounded observational precision; no horror narrator; no prophecy",
+      "mic_stage": "V.O. dry intimate but not whisper; centre; no fake near-ear ASMR",
+      "regeneration_unit": "WHOLE_BLOCK"
+    },
+    {
+      "block_id": "RU_E01_B01_ELENA_MINA_LOBBY",
+      "scene": 1,
+      "provider_mode": "TTD_BLOCK",
+      "characters": ["MINA", "ELENA"],
+      "source_start_anchor": "Элена Рид?",
+      "source_end_anchor": "В Грейхейвене ведра выше по должности, чем большинство из нас.",
+      "function": "ordinary social reality and immediate working chemistry",
+      "performance": "dry practical compatibility; Mina not comedy sidekick; Elena not aloof genius",
+      "mic_stage": "large stone lobby; reception asymmetry; exact distance imposed after alignment",
+      "regeneration_unit": "WHOLE_PAIR_BLOCK"
+    },
+    {
+      "block_id": "RU_E01_B02_JULIAN_ARRIVAL_STAKES",
+      "scene": 1,
+      "provider_mode": "TTD_BLOCK",
+      "characters": ["JULIAN", "ELENA", "MINA"],
+      "source_start_anchor": "Мисс Рид. Джулиан Эшкрофт. Вас ждали к четырём.",
+      "source_end_anchor": "В Грейхейвене это уже один и тот же вопрос.",
+      "function": "status collision plus economic stakes",
+      "performance": "Julian operational and burdened; no alpha cadence; Elena procedural; Mina knows both systems",
+      "mic_stage": "Julian footsteps precede voice; keys placed on desk; stable lobby triangle",
+      "regeneration_unit": "WHOLE_BLOCK_UNLESS_SINGLE_LINE_FAILS"
+    },
+    {
+      "block_id": "RU_E01_B03_ARCHIVE_AND_BOUNDARY",
+      "scene": 1,
+      "provider_mode": "TTD_BLOCK",
+      "characters": ["JULIAN", "ELENA", "MINA"],
+      "source_start_anchor": "Тогда вы знаете и то, что после завтрашней инспекции западное крыло могут освободить под снос.",
+      "source_end_anchor": "Гостей так мало. Беру что дают.",
+      "function": "professional boundary and non-romantic competence friction",
+      "performance": "no witty-showdown rhythm; let operational consequences lead",
+      "mic_stage": "case opens close to Elena; voices still in lobby; no cinematic push-in",
+      "regeneration_unit": "WHOLE_BLOCK"
+    },
+    {
+      "block_id": "RU_E01_B04_SWITCHBOARD_ORIENTATION",
+      "scene": 1,
+      "provider_mode": "TTD_BLOCK",
+      "characters": ["MINA", "ELENA", "JULIAN"],
+      "source_start_anchor": "Вот она. Родной коммутатор, тысяча девятьсот пятьдесят четвёртый.",
+      "source_end_anchor": "Я сказала, что вижу. «Быстро» люди обычно говорят перед тем, как заплатить мне дважды.",
+      "function": "teach physical system and establish absence of 917 before anomaly",
+      "performance": "technical material reality; Elena's admiration is professional not mystical",
+      "mic_stage": "stone-to-carpet transition already heard; switchboard alcove dry and close",
+      "regeneration_unit": "WHOLE_BLOCK",
+      "required_sound_assets": [
+        "CASE_LATCHES_CLOSE_MATERIAL",
+        "SWITCHBOARD_DRY_SELECTOR_CLICKS"
+      ]
+    },
+    {
+      "block_id": "RU_E01_B05_NORMAL_SYSTEM_BASELINE",
+      "scene": 2,
+      "provider_mode": "TTD_BLOCK",
+      "characters": ["ELENA", "MINA", "JULIAN"],
+      "source_start_anchor": "Мина, пожалуйста, сфотографируйте красный провод, мост и разомкнутые контакты внешней магистрали.",
+      "source_end_anchor": "Бухгалтеры, судя по моим счетам, тоже.",
+      "function": "establish normal system behavior before impossible event",
+      "performance": "procedural clarity with ordinary humor; no suspense acting",
+      "mic_stage": "tight alcove; equipment actions attached to Elena's body",
+      "regeneration_unit": "WHOLE_BLOCK",
+      "required_sound_assets": [
+        "TRANSFORMER_50HZ_IDENTITY",
+        "NORMAL_RELAY_WAVE",
+        "WEST_CABLE_WEATHER_RUSTLE"
+      ],
+      "music": "FORBIDDEN"
+    },
+    {
+      "block_id": "RU_E01_B06_916_AND_PROCEDURAL_FRICTION",
+      "scene": 2,
+      "provider_mode": "TTD_BLOCK",
+      "characters": ["ELENA", "MINA", "JULIAN"],
+      "source_start_anchor": "А девятьсот шестнадцать как...",
+      "source_end_anchor": "Примерно в двадцати пяти годах плохой документации.",
+      "function": "lock normal 916 reference then force Julian departure and Elena/Mina working pair",
+      "performance": "procedure conflict not flirtation; Julian stress visible but rational",
+      "mic_stage": "normal 916 sound must be spatially learnable; Julian exits audibly; room shrinks after door",
+      "regeneration_unit": "SPLIT_IF_JULIAN_DEPARTURE_TIMING_FAILS",
+      "required_sound_assets": [
+        "NORMAL_916_SELECTOR_CLACK",
+        "NORMAL_916_GLASS_PING",
+        "JULIAN_DEPARTURE_FOOTSTEPS_AND_DOOR"
+      ],
+      "music": "FORBIDDEN"
+    },
+    {
+      "block_id": "RU_E01_B07_0117_PRECALL",
+      "scene": 3,
+      "provider_mode": "TTD_BLOCK",
+      "characters": ["MINA", "ELENA"],
+      "source_start_anchor": "Один семнадцать. Ваши десять минут решили сделать карьеру.",
+      "source_end_anchor": "Я и не собиралась трогать невозможную лампочку.",
+      "function": "ordinary late-work rhythm ruptured by impossible but ordinary-sounding system event",
+      "performance": "Mina joke dies immediately after event; Elena fear narrows into procedure",
+      "mic_stage": "near-silent alcove; actors orient toward panel after ring, not before",
+      "regeneration_unit": "WHOLE_BLOCK",
+      "required_sound_assets": [
+        "IMPOSSIBLE_INTERNAL_DOUBLE_RING",
+        "UNMARKED_LAMP_PING_BEYOND_916"
+      ],
+      "music": "FORBIDDEN"
+    },
+    {
+      "block_id": "RU_E01_B08_ELENA_EVIDENCE_DECLARATION",
+      "scene": 3,
+      "provider_mode": "ISOLATED_TTS",
+      "characters": ["ELENA"],
+      "source_start_anchor": "Время — один семнадцать и двенадцать секунд.",
+      "source_end_anchor": "Мина, подтвердите.",
+      "function": "clue-critical evidentiary declaration",
+      "performance": "slower than Scene 2; command first; fear only inside measurement",
+      "mic_stage": "field recorder audibly active; exact voice geometry preserved in mono",
+      "regeneration_unit": "WHOLE_BLOCK",
+      "critical": true
+    },
+    {
+      "block_id": "RU_E01_B08B_MINA_CONFIRMATION",
+      "scene": 3,
+      "provider_mode": "ISOLATED_TTS",
+      "characters": ["MINA"],
+      "source_start_anchor": "Подтверждаю. Там, где была пыль, теперь горит лампа.",
+      "source_end_anchor": "Подтверждаю. Там, где была пыль, теперь горит лампа.",
+      "function": "independent witness confirmation",
+      "performance": "literal careful witness; all humor off",
+      "mic_stage": "same field-recorder evidence space as Elena declaration",
+      "regeneration_unit": "WHOLE_BLOCK",
+      "critical": true
+    },
+    {
+      "block_id": "RU_E01_B09_CATE_IMPOSSIBLE_CALL",
+      "scene": 3,
+      "provider_mode": "ISOLATED_TTS_PLUS_POST",
+      "characters": ["CATE"],
+      "source_units": [
+        "Лени-бёрд...",
+        "Если это дойдёт—"
+      ],
+      "function": "ordinary human mother identity carried through impossible route",
+      "performance": "clean ordinary exhausted human; no ghost; no pleading performance",
+      "mic_stage": "record clean/dry first; copper bandwidth, hiss and damage only in post",
+      "regeneration_unit": "EACH_LINE_INDEPENDENT",
+      "critical": true,
+      "required_sound_assets": [
+        "COPPER_HISS",
+        "THREE_SHALLOW_HUMAN_BREATHS",
+        "FOUR_NOTE_LULLABY_IDENTITY_DAMAGED_AFTER_NOTE_3",
+        "TWO_PART_LINE_CUT"
+      ]
+    },
+    {
+      "block_id": "RU_E01_B10_POSTCALL_ELENA_MINA",
+      "scene": 3,
+      "provider_mode": "TTD_BLOCK_WITH_CRITICAL_REPLACEABLE_LINES",
+      "characters": ["ELENA", "MINA"],
+      "source_start_anchor": "Мина, руки оставьте там, где они есть.",
+      "source_end_anchor": "Нет. Так меня называла мама.",
+      "function": "reconstruct evidence, ground Elena, reveal personal identity",
+      "performance": "both work through shock rather than perform shock",
+      "mic_stage": "hands remain at equipment; movement minimal; protected 0.6–1.0 s after mother line",
+      "regeneration_unit": "WHOLE_BLOCK_WITH_ELENA_MOTHER_LINE_INDEPENDENT",
+      "critical_lines": [
+        "Нет. Так меня называла мама."
+      ],
+      "music": "FORBIDDEN"
+    },
+    {
+      "block_id": "RU_E01_B11_JULIAN_RETURN_EXPLANATION_FIGHT",
+      "scene": 3,
+      "provider_mode": "TTD_BLOCK",
+      "characters": ["JULIAN", "MINA", "ELENA"],
+      "source_start_anchor": "Почему коммутатор включён?",
+      "source_end_anchor": "Сейчас, Элена.",
+      "function": "rational counter-explanations remain credible until Julian reveals impossible knowledge",
+      "performance": "Julian rational and stressed, not villainous or guilty; Elena concrete and evidentiary",
+      "mic_stage": "Julian approaches quickly before opening door; no romantic proximity",
+      "regeneration_unit": "WHOLE_BLOCK",
+      "music": "FORBIDDEN"
+    },
+    {
+      "block_id": "RU_E01_B12_LULLABY_TEST",
+      "scene": 3,
+      "provider_mode": "PITCH_VERIFIED_VOCALIZATION_NOT_BLIND_TTS",
+      "characters": ["ELENA", "JULIAN"],
+      "function": "Elena supplies exactly three notes; Julian involuntarily supplies the missing fourth",
+      "performance": "memory test, not singing performance; Julian fourth note reflexive, short and unpretty",
+      "mic_stage": "same room geometry; 0.5 s room tone before Elena notes; 0.4–0.8 s before Julian; 0.8–1.2 s protected silence after",
+      "regeneration_unit": "ELENA_THREE_NOTES_AND_JULIAN_FOURTH_SEPARATE",
+      "critical": true,
+      "pitch_rule": "MUST_MATCH_LOCKED_FOUR_NOTE_LULLABY_IDENTITY_EXACTLY; HUMAN_OR_PITCH_VERIFIED_TAKE_REQUIRED",
+      "automatic_tts_acceptance": false,
+      "music": "FORBIDDEN"
+    },
+    {
+      "block_id": "RU_E01_B13_FINAL_CLIFF",
+      "scene": 3,
+      "provider_mode": "TTD_BLOCK_WITH_FINAL_LINE_ISOLATED_REPLACEABLE",
+      "characters": ["ELENA", "JULIAN"],
+      "source_start_anchor": "Где вы это слышали?",
+      "source_end_anchor": "Тогда откуда вы знаете последнюю ноту?",
+      "function": "convert anomaly into personal contradiction and close episode conflict beat",
+      "performance": "Julian loses prepared language; Elena becomes quieter and more precise, never accusatory melodrama",
+      "mic_stage": "attention snaps to Julian; no spatial push-in required for meaning",
+      "regeneration_unit": "FINAL_LINE_INDEPENDENT",
+      "critical_lines": [
+        "Тогда откуда вы знаете последнюю ноту?"
+      ],
+      "music_after_block": "ONE_RESTRAINED_LOW_PIANO_CHORD_OVER_DEAD_LINE_HISS_THEN_HARD_CUT"
+    }
+  ],
+  "post_render_sequence": [
+    "DIALOGUE_EDIT",
+    "ALIGNMENT_NORMALIZATION",
+    "RESOLVE_EXACT_MICROPHONE_CHOREOGRAPHY_TIMING",
+    "REUSE_LOCKED_EN_RU_CLUE_SFX",
+    "ADD_CAUSAL_FOLEY",
+    "ADD_ROOM_AMBIENCE",
+    "PROCESS_CATE_TRANSMISSION",
+    "INSERT_PITCH_VERIFIED_LULLABY_VOCALIZATIONS",
+    "ADD_AUTHORIZED_END_MUSIC_ONLY",
+    "SPATIAL_AUTOMATION",
+    "MIX_MASTER_QC",
+    "FOUNDER_CREDIBILITY_LISTEN",
+    "SELECTIVE_REPAIR_ONLY"
+  ],
+  "promotion_rule": "PLAN_MAY_NOT_DISPATCH_FULL_E01_UNTIL_CURRENT_RU_CAST_BINDINGS_HAVE_HUMAN_PASS_EVIDENCE"
+}
