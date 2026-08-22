@@ -1,0 +1,70 @@
+{
+  "record_type": "UNASSIGNED_SELF_IMPROVEMENT_CANDIDATE",
+  "date": "2026-08-22",
+  "candidate_name": "THREAD_TOPIC_CONTINUITY_GUARD",
+  "global_si_id": null,
+  "status": "DEVELOPMENT_CONTRACT_READY_REAL_DEFECT_OBSERVED",
+  "promotion_authorized": false,
+  "authority_effect": "NONE",
+  "parent_current": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
+  "problem": "Generic continuation turns can be misrouted into a different project because assistant initiative, memory salience, retrieved sibling context, or fresher global project authority is mistaken for user switch intent.",
+  "real_defect_evidence": {
+    "class": "REAL_HUMAN_CORRECTION",
+    "event_date": "2026-08-22",
+    "active_project": "ORBITAL_YOUTH_BOOK",
+    "wrong_pivot": "SYNTHESIS_IVDIVO_BUSINESS",
+    "generic_continuation_present": true,
+    "explicit_user_switch_present": false,
+    "user_later_corrected_switch_assumption": true,
+    "counts_as_successful_pilot": false
+  },
+  "mechanism": {
+    "layer_1": "THREAD_TOPIC_LOCK",
+    "layer_2": "PROJECT_FRONTIER_LOCK",
+    "routing_order": [
+      "RESTORE_THREAD_TOPIC_LOCK",
+      "CLASSIFY_SWITCH_EVIDENCE",
+      "ROUTE_GENERIC_CONTINUATION_OR_SIDE_QUERY",
+      "RESTORE_PROJECT_FRONTIER",
+      "EXECUTE",
+      "RETURN_FROM_BOUNDED_DETOUR_IF_NEEDED"
+    ]
+  },
+  "laws": [
+    "SHORT_CONTINUATION_INHERITS_THREAD_TOPIC",
+    "GENERIC_CONTINUATION_NEQ_PROJECT_SWITCH",
+    "ASSISTANT_PIVOT_NEQ_USER_SWITCH",
+    "MENTION_NEQ_SWITCH",
+    "SIDE_QUERY_NEQ_THREAD_REBIND",
+    "DISCOVERED_CONTEXT_NEQ_THREAD_REBIND",
+    "FRESHER_SIBLING_AUTHORITY_NEQ_THREAD_SWITCH_AUTHORITY",
+    "SHORT_AFFIRMATIVE_REQUIRES_BOUND_PENDING_SWITCH_TARGET_TO_SWITCH",
+    "REQUIRED_DEPENDENCY_REQUIRES_RETURN_TOKEN",
+    "THREAD_SWITCH_AUTHORITY_PRECEDES_FRONTIER_SWITCH_AUTHORITY"
+  ],
+  "related_existing_candidate": {
+    "name": "ACTIVE_FRONTIER_HIJACK_GUARD",
+    "pr": 278,
+    "disposition": "EXTEND_AND_DEDUPE_AFTER_NEW_CANDIDATE_CI"
+  },
+  "artifacts": {
+    "spec": "SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/00_THREAD_TOPIC_CONTINUITY_GUARD.md",
+    "machine_state": "SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/01_MACHINE_STATE.json",
+    "contract": "ENGINEERING_CONTRACTS/THREAD_TOPIC_CONTINUITY_GUARD_v0.1.md",
+    "runtime": "tools/ivdivo_thread_topic_guard.py",
+    "tests": "tests/test_thread_topic_guard.py",
+    "workflow": ".github/workflows/si-thread-topic-continuity-guard.yml"
+  },
+  "promotion_gate": {
+    "exact_head_ci_success": true,
+    "real_continuation_events_min": 3,
+    "distinct_project_types_min": 2,
+    "healthy_explicit_switch_controls_min": 2,
+    "side_query_return_controls_min": 1,
+    "max_false_project_switches": 0,
+    "readback_required": true,
+    "global_promotion_now": false
+  },
+  "id_allocation_rule": "Do not allocate a global SI ID until full registry-family and open-PR reservation reconciliation proves a collision-free ID. PR #147 previously reserved SI-0016.",
+  "next_action": "Run exact-head CI; if green, mirror candidate/defect receipt to CURRENT Self-Improvement Drive authority and begin natural real-use pilot without manufacturing events."
+}

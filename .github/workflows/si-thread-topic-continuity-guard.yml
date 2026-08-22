@@ -1,0 +1,46 @@
+name: Self-Improvement Thread Topic Continuity Guard
+
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_thread_topic_guard.py'
+      - 'tests/test_thread_topic_guard.py'
+      - 'ENGINEERING_CONTRACTS/THREAD_TOPIC_CONTINUITY_GUARD_v0.1.md'
+      - 'SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/**'
+      - '31_IDEAS/PENDING/UNASSIGNED_THREAD_TOPIC_CONTINUITY_GUARD_2026-08-22.json'
+      - '.github/workflows/si-thread-topic-continuity-guard.yml'
+
+jobs:
+  topic-continuity-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run 16 topic continuity canaries
+        run: python tests/test_thread_topic_guard.py
+      - name: Validate candidate JSON
+        run: |
+          python -m json.tool SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/01_MACHINE_STATE.json >/dev/null
+          python -m json.tool 31_IDEAS/PENDING/UNASSIGNED_THREAD_TOPIC_CONTINUITY_GUARD_2026-08-22.json >/dev/null
+      - name: Compile runtime
+        run: python -m compileall -q tools/ivdivo_thread_topic_guard.py
+      - name: Assert real defect is blocked without false switch
+        run: |
+          python - <<'PY'
+          from tools.ivdivo_thread_topic_guard import route_turn
+          out = route_turn(
+              active_project='ORBITAL_YOUTH_BOOK',
+              active_topic='ORBITAL_YOUTH_CURRENT_BOOK_WORK',
+              active_next_gate='CONTINUE_FROM_LAST_CONFIRMED_BOOK_FRONTIER',
+              user_text='и',
+              proposed_project='SYNTHESIS_IVDIVO_BUSINESS',
+              proposed_topic='BUSINESS_ENGINEERING',
+              assistant_initiated_pivot=True,
+          )
+          assert out.status == 'CONTINUE_ACTIVE_TOPIC'
+          assert out.active_project == 'ORBITAL_YOUTH_BOOK'
+          assert out.drift_blocked is True
+          print('THREAD_TOPIC_REAL_DEFECT_FIXTURE: PASS')
+          PY
