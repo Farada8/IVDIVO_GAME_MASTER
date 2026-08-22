@@ -1,0 +1,19 @@
+name: Business Cycle5 Public Artifacts
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACTS_P65_P96_32_TO_64/**'
+      - '.github/workflows/business-cycle5-public-artifacts.yml'
+  workflow_dispatch:
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Cycle5 business-engine tests
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACTS_P65_P96_32_TO_64/tests/test_cycle5_business_engine.py
+      - name: Validate machine state
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACTS_P65_P96_32_TO_64/11_STATE_PRE_MERGE.json > /dev/null
