@@ -1,0 +1,50 @@
+{
+  "project": "B03_THE_EMPTY_RESCUE",
+  "date": "2026-08-22",
+  "drive_production_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+  "authority_status": "WORKING_BRANCH_RECONCILIATION_OPEN",
+  "artifacts": {
+    "full_book_scene_bed_working_manifest_v1_1": {
+      "drive_id": "1LvDp0jq2cdmRBgu0AczGRtlF1ohW6cLq",
+      "file": "139_B03_FULL_BOOK_SCENE_BED_ROUTING_v1.1_CH01_CHANNEL_RECONCILED_WORKING.json",
+      "sha256": "d834e1f03eeb521e884f73aea5e4eaf6aa34f2a2bce82f560aec1dcb016f92d8",
+      "coverage": "7465/7465",
+      "candidate_scene_bed_blocks": 95,
+      "final": false
+    },
+    "full_book_scene_bed_working_gate_v1_1": {
+      "drive_id": "1OMQJQeGsegmf_gF-uUwIyA0ncWveJtTQ",
+      "file": "139_B03_FULL_BOOK_SCENE_BED_ROUTING_GATE_v1.1_CH01_CHANNEL_RECONCILED_WORKING.md"
+    },
+    "current_state_json": {
+      "drive_id": "1d5PzbnVnlFJzWUQbE8Oy5ibJ3QGcL-Te",
+      "file": "140_B03_AUDIO_ACOUSTIC_CURRENT_STATE_2026-08-22.json"
+    },
+    "current_state_md": {
+      "drive_id": "1dWCDDkwFRmbP5uTBUQmzw2FSbS_EEWKH",
+      "file": "140_B03_AUDIO_ACOUSTIC_CURRENT_STATE_2026-08-22.md"
+    },
+    "ch01_09_reconciliation": {
+      "drive_gate_id": "1BWG0WrpxBqXm1-YndpquDttYY0TyTUO6",
+      "drive_json_id": "1SjxG2kYUD0xVHaHKeTWqRxdgS8GMx-qM"
+    },
+    "ch10_18_reconciliation": {
+      "drive_gate_id": "1LQwXFPg6s1Bg2E5xXK_N2zCUegnakXQd",
+      "drive_json_id": "1TPnJf9wx7C0q3bocaC2PHtg2E0xXtYpg"
+    },
+    "ch25_29_count_reconciliation": {
+      "drive_gate_id": "1KcGwcJNGpsyLDjEy0QIxHrEVae2KlZk9",
+      "drive_json_id": "1_kuToOxY9Hq9m64IC8J9MZIeum4nxMTN"
+    },
+    "parallel_ch19_29_branch": {
+      "drive_gate_id": "1-mwt8NfyFF51w1F81kMn-EI_4nNbidPgODtbFF3PhNc",
+      "drive_delta_id": "1nMMkxB4LTa3mRHvhuXBJQV7CpB34ebPQR895vcWJRUM",
+      "status": "MUST_RECONCILE_BEFORE_FINAL_PROMOTION"
+    },
+    "existing_ch01_hard_pilot_manifest": {
+      "drive_id": "1TGWOWe3ol5Do6tK5ZMeRVMzkhHb_cmVR",
+      "status": "PRESERVE_AND_REBIND_AFTER_FINAL_ROUTING"
+    }
+  },
+  "next": "EXACT_ANCHOR_BRANCH_RECONCILIATION_CH19_29_THEN_FINAL_SCENE_BED_AUTHORITY"
+}
