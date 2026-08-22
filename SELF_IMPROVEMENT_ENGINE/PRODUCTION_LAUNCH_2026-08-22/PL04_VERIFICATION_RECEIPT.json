@@ -1,0 +1,45 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.2",
+  "card": "PL-04",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 321,
+    "merge_sha": "d5e17a9ed75b724b4e6920e71bce4388ff804196",
+    "verified_head": "abf25bf1d259686208672925b05b3a4001e2433e"
+  },
+  "exact_head_ci": [
+    {"workflow":"Personal AI PL-00 Bootstrap","run_id":32555953501,"conclusion":"success"},
+    {"workflow":"Personal AI PL-01 Project State","run_id":32555953480,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Local Memory","run_id":32555953481,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Memory Contract Hardening","run_id":32555953486,"conclusion":"success"},
+    {"workflow":"Personal AI PL-04 Provider Abstraction","run_id":32555953494,"conclusion":"success"}
+  ],
+  "acceptance": {
+    "provider_request_response_contract": true,
+    "provider_registry": true,
+    "offline_mock": true,
+    "provider_list_no_network_probe": true,
+    "secret_not_exposed_in_descriptors": true,
+    "explicit_network_authorization_gate": true,
+    "openai_fake_transport_mapping": true,
+    "anthropic_fake_transport_mapping": true,
+    "ollama_fake_transport_mapping": true,
+    "unconfigured_paid_provider_fail_closed": true,
+    "full_personal_ai_regression": true,
+    "drive_readback": true
+  },
+  "live_provider_evidence": {
+    "openai": false,
+    "anthropic": false,
+    "ollama": false,
+    "required_for_pl04_acceptance": false
+  },
+  "drive": {
+    "folder_id": "1NB6hVQVjUlK6wiSMsyrRgk0pX6bFkjgy",
+    "document_id": "1m9vfHsbMgrC_7hvIL2t9A1RUvTE7OdhhMImIxkwqQww",
+    "verified_marker": "PERSONAL-AI-PL04-DONE-VERIFIED-PR321-CI5OF5"
+  },
+  "new_ready_cards": ["PL-05","PL-08","PL-18"],
+  "current_frontier_after_closure": "PL-05",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION"
+}

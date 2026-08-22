@@ -34,21 +34,31 @@ Date: 2026-08-22
 - CI exposed a real legacy-schema ordering defect before merge; the migration preflight was repaired and the second exact-head run passed 4/4 workflows.
 - hardening Drive folder `1MhVtyPF89UPpvLvPcBeQis4wdBXmeN6C`, document `1IYlQfZOt7yI4GaQVBjDuL36yuIjvIPe9GFEO8HsAt5w`, marker `PERSONAL-AI-PL02-DONE-VERIFIED-PR309-CI4OF4`.
 
+`PL-04 AI PROVIDER ABSTRACTION = DONE_VERIFIED`.
+- PR #321 merge `d5e17a9ed75b724b4e6920e71bce4388ff804196`.
+- verified head `abf25bf1d259686208672925b05b3a4001e2433e`.
+- exact-head workflows all SUCCESS: PL-00 `32555953501`, PL-01 `32555953480`, PL-02 `32555953481`, PL-02 hardening `32555953486`, PL-04 `32555953494`.
+- common ProviderRequest/ProviderResponse/ProviderRegistry contract, deterministic offline mock, stdlib adapters for OpenAI Responses / Anthropic Messages / Ollama Chat, explicit `--allow-network` gate and secret-leakage regressions.
+- no live provider request or API spend is claimed by PL-04 acceptance.
+- Drive folder `1NB6hVQVjUlK6wiSMsyrRgk0pX6bFkjgy`, document `1m9vfHsbMgrC_7hvIL2t9A1RUvTE7OdhhMImIxkwqQww`, marker `PERSONAL-AI-PL04-DONE-VERIFIED-PR321-CI5OF5`.
+
 ## Current READY graph
 
-Canonical next frontier: `PL-04 AI Provider Abstraction = READY`.
+Canonical next frontier: `PL-05 Agent Executor = READY`.
 
 Also READY:
 - `PL-03 Source Evidence Layer`;
 - `PL-06 Business Core`;
+- `PL-08 Book Production Core`;
 - `PL-11 Test Benchmark Engine`;
 - `PL-13 File Ingestion`;
 - `PL-15 Daily Control Panel`;
-- `PL-16 Backup Recovery`.
+- `PL-16 Backup Recovery`;
+- `PL-18 Cost Control`.
 
-Reason for PL-04 priority: it is the remaining Wave-1 provider dependency and directly unlocks PL-05 Agent Executor, PL-08 Book Production Core and PL-18 Cost Control; together with PL-03 it unlocks PL-07 Business Research.
+Reason for PL-05 priority: it is the remaining Wave-1 integration card that must bind project state + persistent memory + provider abstraction into one bounded executable task. PL-05 verification unlocks PL-10 Multi-Model Review and PL-17 Security and is required by the later Production Gate. PL-11 remains the other unverified Wave-1 foundation card.
 
-Do not re-execute PL-00/01/02 unless a regression or explicit change-control event requires it. Reuse merged code and preserve cumulative regression coverage.
+Do not re-execute PL-00/01/02/04 unless a regression or explicit change-control event requires it. Reuse merged code and preserve cumulative regression coverage.
 
 ## Stop conditions
 
@@ -61,4 +71,4 @@ Stop and mark `BLOCKED` instead of inventing a pass when:
 
 ## Handoff sentence for a new session
 
-`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00, PL-01 and hardened PL-02 are DONE_VERIFIED. Continue from PL-04, while PL-03/06/11/13/15/16 remain dependency-admissible READY alternatives. Persist code/state/tests/readback and preserve v2 authority unless a separate promotion gate passes.`
+`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00, PL-01, hardened PL-02 and PL-04 are DONE_VERIFIED. Continue from PL-05 Agent Executor; PL-03/06/08/11/13/15/16/18 are dependency-admissible READY alternatives. Persist code/state/tests/readback; do not treat configured provider credentials as live-provider evidence; preserve v2 authority unless a separate promotion gate passes.`
