@@ -1,0 +1,21 @@
+{
+  "schema_version": "room917.authority_hygiene_rules/1.0",
+  "scope": "ROOM917_E01_CUE_LINEAGE_SOURCE",
+  "active_engine": "THE INSURABLE FIRE",
+  "allowed_drive_ids": [
+    "1Rz_Tv83fNhQIuPnMA4jRkESmgiu8xA-GZnctbQYDP_I"
+  ],
+  "required_current_markers": [
+    "ACTIVE ENGINE: THE INSURABLE FIRE",
+    "CAST: ELENA REED / JULIAN ASHCROFT / MINA SHAH / CATE-ON-THE-LINE",
+    "DO NOT USE obsolete Gideon / Mara Quinn / Celia / Quiet Register production cues"
+  ],
+  "legacy_conflict_markers": [
+    "Mara remains a human voice",
+    "Tiny raw 'Nellie-bird' playback",
+    "Authentic 917 line has NO steady 50 Hz hum"
+  ],
+  "unknown_source_policy": "HOLD_UNVERIFIED_AUTHORITY",
+  "legacy_conflict_policy": "QUARANTINE_LEGACY_CONFLICT",
+  "law": "Drive/File search discovery is not authority. Exact approved source identity plus current markers are required for PASS; legacy-conflict signatures quarantine; all other sources HOLD."
+}
