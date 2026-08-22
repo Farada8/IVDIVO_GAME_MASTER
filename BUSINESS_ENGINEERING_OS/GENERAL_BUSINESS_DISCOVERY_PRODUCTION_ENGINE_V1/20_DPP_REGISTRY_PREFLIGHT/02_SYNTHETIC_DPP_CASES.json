@@ -1,0 +1,118 @@
+{
+  "schema": "ivdivo.dpp.synthetic_cases/0.1",
+  "status": "SYNTHETIC_DESIGN_ONLY_NOT_REGISTRY_SUBMISSION",
+  "cases": [
+    {
+      "case_id": "BATTERY_COMPLETE_SYNTHETIC",
+      "applicability_status": "KNOWN_IN_SCOPE",
+      "applicable_legal_basis": "EU Batteries Regulation fixture contract; mandatory date tracked separately",
+      "product_group": "industrial_battery",
+      "economic_operator_id": "EO-SYN-001",
+      "economic_operator_role": "manufacturer",
+      "product_identifier": "BAT-SYN-0001",
+      "imported_to_eu": false,
+      "commodity_code": null,
+      "data_carrier_type": "QR",
+      "decentralised_dpp_location": "https://example.invalid/dpp/BAT-SYN-0001",
+      "fixture_required_data_points": ["identity", "manufacturer", "performance", "repair_reuse_recycling"],
+      "mapped_data_points": ["identity", "manufacturer", "performance", "repair_reuse_recycling"],
+      "supplier_records": [
+        {"supplier_id": "SUP-A", "data_point": "cell_chemistry", "value": "SYNTHETIC-NMC", "source_evidence": "fixture://sup-a/cert-1", "freshness_date": "2026-08-01"},
+        {"supplier_id": "SUP-B", "data_point": "recycled_content", "value": "SYNTHETIC-12%", "source_evidence": "fixture://sup-b/decl-2", "freshness_date": "2026-08-02"}
+      ],
+      "registry_generated_uri_before_registration": false
+    },
+    {
+      "case_id": "IMPORTED_MISSING_COMMODITY",
+      "applicability_status": "KNOWN_IN_SCOPE",
+      "applicable_legal_basis": "synthetic in-scope fixture",
+      "product_group": "industrial_battery",
+      "economic_operator_id": "EO-SYN-002",
+      "economic_operator_role": "importer",
+      "product_identifier": "BAT-SYN-0002",
+      "imported_to_eu": true,
+      "commodity_code": null,
+      "data_carrier_type": "QR",
+      "decentralised_dpp_location": "https://example.invalid/dpp/BAT-SYN-0002",
+      "fixture_required_data_points": ["identity"],
+      "mapped_data_points": ["identity"],
+      "supplier_records": [{"supplier_id": "SUP-C", "data_point": "identity", "value": "ok", "source_evidence": "fixture://sup-c/id", "freshness_date": "2026-08-02"}],
+      "registry_generated_uri_before_registration": false
+    },
+    {
+      "case_id": "SUPPLIER_PROVENANCE_GAP",
+      "applicability_status": "KNOWN_IN_SCOPE",
+      "applicable_legal_basis": "synthetic in-scope fixture",
+      "product_group": "industrial_battery",
+      "economic_operator_id": "EO-SYN-003",
+      "economic_operator_role": "manufacturer",
+      "product_identifier": "BAT-SYN-0003",
+      "imported_to_eu": false,
+      "data_carrier_type": "QR",
+      "decentralised_dpp_location": "https://example.invalid/dpp/BAT-SYN-0003",
+      "fixture_required_data_points": ["identity", "materials"],
+      "mapped_data_points": ["identity", "materials"],
+      "supplier_records": [{"supplier_id": "SUP-D", "data_point": "materials", "value": "synthetic", "source_evidence": "", "freshness_date": "2026-08-03"}],
+      "registry_generated_uri_before_registration": false
+    },
+    {
+      "case_id": "APPLICABILITY_UNKNOWN",
+      "applicability_status": "UNKNOWN",
+      "applicable_legal_basis": null,
+      "product_group": "future_textile_fixture",
+      "economic_operator_id": "EO-SYN-004",
+      "economic_operator_role": "manufacturer",
+      "product_identifier": "TXT-SYN-0001",
+      "imported_to_eu": false,
+      "data_carrier_type": "QR",
+      "decentralised_dpp_location": "https://example.invalid/dpp/TXT-SYN-0001",
+      "fixture_required_data_points": null,
+      "mapped_data_points": null,
+      "supplier_records": null,
+      "registry_generated_uri_before_registration": false
+    },
+    {
+      "case_id": "DECENTRALISED_POINTER_GAP",
+      "applicability_status": "KNOWN_IN_SCOPE",
+      "applicable_legal_basis": "synthetic in-scope fixture",
+      "product_group": "industrial_battery",
+      "economic_operator_id": "EO-SYN-005",
+      "economic_operator_role": "manufacturer",
+      "product_identifier": "BAT-SYN-0005",
+      "imported_to_eu": false,
+      "data_carrier_type": "QR",
+      "decentralised_dpp_location": "",
+      "fixture_required_data_points": ["identity"],
+      "mapped_data_points": ["identity"],
+      "supplier_records": [{"supplier_id": "SUP-E", "data_point": "identity", "value": "ok", "source_evidence": "fixture://sup-e/id", "freshness_date": "2026-08-03"}],
+      "registry_generated_uri_before_registration": false
+    },
+    {
+      "case_id": "FUTURE_PRODUCT_PREP_ONLY",
+      "applicability_status": "KNOWN_NOT_YET_IN_SCOPE",
+      "applicable_legal_basis": "future product-specific DPP requirement not yet effective in this fixture",
+      "product_group": "textile_apparel_future",
+      "economic_operator_id": "EO-SYN-006",
+      "economic_operator_role": "manufacturer",
+      "product_identifier": "TXT-SYN-0002",
+      "imported_to_eu": false,
+      "data_carrier_type": "QR",
+      "decentralised_dpp_location": "https://example.invalid/dpp/TXT-SYN-0002",
+      "fixture_required_data_points": ["identity"],
+      "mapped_data_points": ["identity"],
+      "supplier_records": [{"supplier_id": "SUP-F", "data_point": "identity", "value": "ok", "source_evidence": "fixture://sup-f/id", "freshness_date": "2026-08-03"}],
+      "registry_generated_uri_before_registration": false
+    }
+  ],
+  "correction_demo": {
+    "before_case_id": "IMPORTED_MISSING_COMMODITY",
+    "correction": {"commodity_code": "8507-SYNTHETIC"},
+    "expected_after_disposition": "READY_FOR_TEST_ENVIRONMENT_PREFLIGHT"
+  },
+  "proof_boundary": {
+    "registry_submission_performed": false,
+    "legal_compliance_proven": false,
+    "wtp_proven": false,
+    "transaction_proven": false
+  }
+}

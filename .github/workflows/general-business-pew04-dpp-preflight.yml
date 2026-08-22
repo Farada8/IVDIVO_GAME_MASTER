@@ -1,0 +1,51 @@
+name: General Business P-EW04 DPP Registry Preflight
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_DPP_REGISTRY_PREFLIGHT/**'
+      - '.github/workflows/general-business-pew04-dpp-preflight.yml'
+  push:
+    branches:
+      - 'business-engineering/pew04-dpp-preflight-20260822'
+
+jobs:
+  dpp-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Run P-EW04 regression suite
+        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_DPP_REGISTRY_PREFLIGHT/tests/test_validator.py
+      - name: Validate P-EW04 JSON
+        run: |
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_DPP_REGISTRY_PREFLIGHT/02_SYNTHETIC_DPP_CASES.json >/dev/null
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_DPP_REGISTRY_PREFLIGHT/03_MACHINE_STATE.json >/dev/null
+      - name: Execute correction-loop acceptance gate
+        run: |
+          python - <<'PY'
+          import copy, json, sys
+          from pathlib import Path
+          root=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_DPP_REGISTRY_PREFLIGHT')
+          sys.path.insert(0,str(root))
+          import validator
+          packet=json.loads((root/'02_SYNTHETIC_DPP_CASES.json').read_text(encoding='utf-8'))
+          cases={x['case_id']:x for x in packet['cases']}
+          complete=validator.validate_case(cases['BATTERY_COMPLETE_SYNTHETIC'])
+          assert complete['disposition']=='READY_FOR_TEST_ENVIRONMENT_PREFLIGHT'
+          assert complete['registry_submission_performed'] is False
+          before=copy.deepcopy(cases['IMPORTED_MISSING_COMMODITY'])
+          after=copy.deepcopy(before); after['commodity_code']='8507-SYNTHETIC'
+          delta=validator.revalidate(before,after)
+          assert delta['gap_delta']==1
+          assert delta['after_gap_count']==0
+          assert delta['implementation_delta_observed'] is True
+          assert delta['market_proof_promotion'] is False
+          print('P-EW04 correction loop PASS',delta)
+          PY
+      - name: Compile P-EW04 runtime
+        run: python -m compileall BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_DPP_REGISTRY_PREFLIGHT
