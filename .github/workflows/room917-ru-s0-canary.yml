@@ -1,0 +1,157 @@
+name: ROOM917 RU S0 Canary
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_spend:
+        description: 'Type YES to authorize bounded ElevenLabs canary synthesis'
+        required: true
+        default: 'NO'
+        type: string
+      max_blocks:
+        description: 'Maximum canary blocks to render'
+        required: true
+        default: '6'
+        type: choice
+        options:
+          - '4'
+          - '6'
+
+permissions:
+  contents: read
+
+jobs:
+  canary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Guard bounded spend
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.confirm_spend }}" != "YES" ]; then
+            echo "::error::Paid canary blocked. Re-run with confirm_spend=YES."
+            exit 2
+          fi
+          case "${{ inputs.max_blocks }}" in
+            4|6) ;;
+            *) echo "::error::max_blocks must be 4 or 6"; exit 3 ;;
+          esac
+
+      - name: Fail closed if ElevenLabs secret missing
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${ELEVENLABS_API_KEY:-}" ]; then
+            echo "::error::Repository secret ELEVENLABS_API_KEY is not configured."
+            exit 4
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Render bounded S0 canary with timestamps
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          MAX_BLOCKS: ${{ inputs.max_blocks }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$GITHUB_WORKSPACE/_room917_ru_s0_canary"
+          TMP="$GITHUB_WORKSPACE/_room917_ru_s0_blocks"
+          mkdir -p "$OUT" "$TMP"
+
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          src=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_CANARY_BLOCK_BUNDLE_v1.0.json')
+          bundle=json.loads(src.read_text(encoding='utf-8'))
+          maximum=int(os.environ['MAX_BLOCKS'])
+          blocks=bundle['blocks'][:maximum]
+          tmp=Path('_room917_ru_s0_blocks')
+          for i,b in enumerate(blocks,1):
+              p=tmp/f'{i:02d}__{b["block_id"]}.json'
+              p.write_text(json.dumps(b,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          plan={
+              'schema_version':'ivdivo.room917_ru_s0_live_plan/1.0',
+              'bundle':str(src),
+              'model_id':bundle['model_id'],
+              'locale':bundle['locale'],
+              'max_blocks':maximum,
+              'selected_block_ids':[b['block_id'] for b in blocks],
+              'full_episode_render_forbidden':True,
+              'cast_lock':False,
+          }
+          Path('_room917_ru_s0_canary/LIVE_CANARY_PLAN.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+
+          while IFS= read -r block; do
+            base="$(basename "$block" .json)"
+            mkdir -p "$OUT/$base"
+            (
+              cd audio/studio
+              python elevenlabs_adapter.py "$GITHUB_WORKSPACE/$block" --out-dir "$OUT/$base"
+            )
+          done < <(find _room917_ru_s0_blocks -maxdepth 1 -type f -name '*.json' | sort)
+
+      - name: Build secret-free receipt and hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          root=Path('_room917_ru_s0_canary')
+          audio=[]
+          for p in sorted(root.rglob('*__audio.*')):
+              data=p.read_bytes()
+              audio.append({
+                  'path':str(p.relative_to(root)),
+                  'bytes':len(data),
+                  'sha256':hashlib.sha256(data).hexdigest(),
+              })
+          receipt={
+              'schema_version':'ivdivo.room917_ru_s0_canary_receipt/1.0',
+              'generated_at':datetime.now(timezone.utc).isoformat().replace('+00:00','Z'),
+              'provider':'ElevenLabs',
+              'secret_persisted':False,
+              'full_episode_rendered':False,
+              'cast_locked':False,
+              'audio_files':audio,
+              'human_listen_required':True,
+              'promotion_rule':'NO_CAST_LOCK_AND_NO_FULL_E01_UNTIL_S0_LISTEN_GATE_PASSES'
+          }
+          (root/'CANARY_RECEIPT.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          if not audio:
+              raise SystemExit('No audio files were produced')
+          print(f'audio_files={len(audio)}')
+          PY
+
+      - name: Upload S0 listening artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_RU_S0_CANARY
+          path: _room917_ru_s0_canary/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Summary
+        shell: bash
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## ROOM917 RU S0 Canary
+          - bounded canary only; no full episode
+          - voice IDs remain CANARY_ONLY, not cast lock
+          - generated audio includes provider timestamps/alignment evidence
+          - next gate: human credibility listen, then selective replacement or cast lock
+          EOF
