@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.sound_design_pointer/1.1",
+  "schema_version": "room917.sound_design_pointer/1.2",
   "project": "ROOM917",
   "episode": "E01",
   "status": "ACTIVE_POST_RENDER_SOUND_EXECUTION",
@@ -10,6 +10,16 @@
   "current_blocker": "EXACT_MASTER_BYTES_OR_TRUSTED_EXACT_PRE_SCENE3_INTERVAL_TIMING_REQUIRED",
   "scene3_policy": "PRESERVE_V1_3E_TECHNICAL_LINEAGE_UNLESS_NEW_DIRECT_REGRESSION_EVIDENCE",
   "next_machine_stage": "P003A2_PRE_SCENE3_INTERVAL_LOCALIZATION",
+  "authority_hygiene": {
+    "status": "INTEGRATED_FAIL_CLOSED",
+    "guard": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/authority_hygiene_guard.py",
+    "rules": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/AUTHORITY_HYGIENE_RULES_v1.json",
+    "contract": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/AUTHORITY_HYGIENE_CONTRACT_v1.json",
+    "current_source_drive_id": "1Rz_Tv83fNhQIuPnMA4jRkESmgiu8xA-GZnctbQYDP_I",
+    "current_source_revision_id": "AIroW35akh5K-jiaYRt8MsVE766IodPxPzb_8ueRhxFW36LZv5aJP_vTzTR7KZhJULqdCk5aTTiDvO4ncVEn0z521VzUp_jLDbvK_V7Fa50",
+    "targeted_regression_tests": "5_PASS",
+    "pipeline_preflight": "ENFORCED_BEFORE_TIMING_RESOLUTION_AND_REPAIR_PLANNING"
+  },
   "human_gate": {
     "stage": "P003B_LISTENER_QC_RED_TEAM",
     "drive_id": "1DE-eRwLtu7H6aZ_XiQ9OnrkwUIDLmBByVAbUzpIgBgU",
