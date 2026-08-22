@@ -1,20 +1,27 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "cycle": "CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22",
-  "status": "CYCLE9_CLOSED_WITH_GENUINE_RECOVERY_EVENT_1_OF_3_NOT_CURRENT_AUTHORITY",
+  "status": "CYCLE9_CLOSED_WITH_GENUINE_RECOVERY_EVENT_1_OF_3_TWO_PROJECT_SLICES_NOT_CURRENT_AUTHORITY",
   "authority_preserved": "SELF_IMPROVEMENT_V2_VERIFIED_CURRENT",
   "si0014": {
     "real_interruption_observed": true,
-    "project_slice_recovered": "IVDIVO_SELF_IMPROVEMENT",
-    "project_slice_readback_complete": true,
-    "zero_false_resume_for_this_recovery": true,
-    "qualifying_event_added": true,
     "genuine_recovery_count": 1,
     "required_recovery_count": 3,
-    "distinct_project_count": 1,
+    "recovered_project_slices": ["IVDIVO_SELF_IMPROVEMENT", "BUSINESS_ENGINEERING"],
+    "distinct_project_count": 2,
     "required_distinct_project_count": 2,
+    "project_diversity_gate_satisfied": true,
+    "zero_false_resume_so_far": true,
     "promotion_authorized": false,
     "status": "READY_FOR_PILOT"
+  },
+  "recovery_event_001": {
+    "event_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
+    "self_improvement_slice": "09_REAL_RECOVERY_EVENT_001_SELF_IMPROVEMENT.json",
+    "business_engineering_slice": "10_REAL_RECOVERY_EVENT_001_BUSINESS_ENGINEERING_SLICE.json",
+    "counts_as_events": 1,
+    "business_freshness_rebase_detected": true,
+    "business_new_main_merge": "f45f07cb6a78733fa1a123d5e11a35dfb43913c5"
   },
   "si0015_status": "READY_FOR_PILOT",
   "v3_status": "CANDIDATE_HOLD",
@@ -32,9 +39,10 @@
     "economics": null
   },
   "cycle9_merge_commit": "ee49be52766e2f70ae010281804ffdebd6538796",
+  "recovery_event_001_merge_commit": "acb94116576cdc8409d8e48c83aa792810a5e098",
   "drive_root": "1HExzpVUcs2z7ObkVPYiLRQIZ3N8le4eV",
-  "real_recovery_event": "09_REAL_RECOVERY_EVENT_001_SELF_IMPROVEMENT.json",
-  "drive_real_recovery_event_doc": "1HaEp8hyn-w_Ul5xdngKeh_TxIrg1CmAAd2QPO7dhS5o",
-  "next_gate": "TWO_MORE_GENUINE_RECOVERIES_TOTAL_MUST_SPAN_AT_LEAST_ONE_ADDITIONAL_PROJECT_WITH_ZERO_FALSE_RESUME",
+  "drive_self_improvement_event_doc": "1HaEp8hyn-w_Ul5xdngKeh_TxIrg1CmAAd2QPO7dhS5o",
+  "drive_business_slice_doc": "1nj2BTsfA16TDScCaUBGol5wbm7y6CUBrXV8US1tKW7k",
+  "next_gate": "TWO_ADDITIONAL_GENUINE_INTERRUPTION_RECOVERY_EVENTS_WITH_ZERO_FALSE_RESUME_PROJECT_DIVERSITY_ALREADY_SATISFIED",
   "next64_count": 64
 }
