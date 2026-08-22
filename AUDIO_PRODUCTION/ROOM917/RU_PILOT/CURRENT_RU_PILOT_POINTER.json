@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_ru_pilot_pointer/1.0",
+  "schema_version": "ivdivo.room917_ru_pilot_pointer/1.1",
   "updated": "2026-08-22",
   "project": "ROOM 917 CALLS AT MIDNIGHT",
   "project_id": "ROOM917",
@@ -8,7 +8,7 @@
   "story_status": "LOCKED",
   "scope": "PARALLEL_RUSSIAN_LOCALIZATION_AND_PERFORMANCE_CREDIBILITY_PILOT",
   "does_not_supersede": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
-  "status": "RU_E01_E02_RECORDING_SCRIPTS_AND_PROVIDER_AUDITION_TOOLCHAIN_READY",
+  "status": "RU_S0_CANARY_AND_E01_SOUND_ASSEMBLY_PREPARED_HUMAN_LISTEN_PENDING",
   "github": {
     "authority": {
       "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PILOT_AUTHORITY_AND_EXECUTION_v1.0.md",
@@ -29,6 +29,40 @@
     "audition_renderer": {
       "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/render_ru_pilot.py",
       "commit": "f077bbd993dc8a63a0a8f9a035cc0b88f4794219"
+    },
+    "public_canary_cast": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_PUBLIC_CANARY_CAST_v1.0.json",
+      "commit": "7eec83b3679c36963a3cde68f30872875d91516e",
+      "status": "CANARY_ONLY_NOT_CAST_LOCK"
+    },
+    "s0_canary_bundle": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_CANARY_BLOCK_BUNDLE_v1.0.json",
+      "commit": "681814aa10125c4d5e159fbe37b02c68b8789c96",
+      "blocks": 6
+    },
+    "e01_director_sound_map": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_DIRECTOR_SOUND_MAP_v1.0.md",
+      "commit": "113d5c52a27b6284c15da9da25e2173197c6814b"
+    },
+    "e01_assembly_contract": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json",
+      "commit": "7d0d35120842826520b20e8b40786b0819bbc3b9"
+    },
+    "s0_listen_gate": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_LISTEN_GATE_v1.0.json",
+      "commit": "ec064917ad57efcf7c4ab298186df6eb40b2968a"
+    },
+    "s0_canary_workflow": {
+      "path": ".github/workflows/room917-ru-s0-canary.yml",
+      "commit": "6f5798ee7886a5ce38cdaf523133bc9bd06b81c6",
+      "trigger": "workflow_dispatch",
+      "paid_guard": "confirm_spend=YES",
+      "max_blocks": [4, 6],
+      "full_episode_render_forbidden": true
+    },
+    "voice_discovery_workflow": {
+      "path": ".github/workflows/room917-ru-voice-discovery.yml",
+      "paid_synthesis_calls": 0
     }
   },
   "drive": {
@@ -47,23 +81,22 @@
     "e02_ru_script_doc": {
       "title": "ROOM917 RU E02 — ЛЕНИ-БЁРД — RECORDING SCRIPT v1.0",
       "id": "1LdwOJbPRHHWKVCoP3giK-WdwaiauEOIEPdNkXuGIlp4"
+    },
+    "production_update_doc": {
+      "status": "TO_BE_MIRRORED_THIS_PASS"
     }
   },
   "provider": {
     "name": "ElevenLabs",
     "primary_model": "eleven_v3",
     "current_ru_voice_bindings": "NOT_YET_LOCKED",
-    "required_env": [
-      "ELEVENLABS_API_KEY",
-      "ROOM917_RU_VOICE_ELENA",
-      "ROOM917_RU_VOICE_JULIAN",
-      "ROOM917_RU_VOICE_MINA",
-      "ROOM917_RU_VOICE_CATE"
-    ],
+    "public_canary_voice_ids": "BOUNDED_TEST_ONLY",
+    "required_secret": "ELEVENLABS_API_KEY",
     "current_session_direct_provider_connector": "UNAVAILABLE",
-    "executable_path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/render_ru_pilot.py",
     "dry_run_default": true,
-    "paid_full_episode_autorender": false
+    "paid_full_episode_autorender": false,
+    "s0_paid_dispatch": "GUARDED_MANUAL_WORKFLOW_READY",
+    "actual_audio_produced_this_pass": false
   },
   "protected_ru_facts": {
     "nickname": "Лени-бёрд",
@@ -78,23 +111,28 @@
     "ontology": "UNKNOWN_NOT_GHOST_PROOF"
   },
   "sound_strategy": {
+    "architecture": "AUDIO_STUDIO_V3_3_HYBRID_STAGE",
     "reuse_language_neutral_english_assets_first": true,
     "critical_story_sfx_must_not_drift_between_languages": true,
     "new_sfx_generation": "CANDIDATE_ONLY_BLIND_SELECT_AND_LOCK",
     "foley": "CAUSAL_BODY_OBJECT_ACTION_NOT_BLANKET_DENSITY",
+    "microphone_choreography": "PERFORMANCE_IN_TTS_EXACT_GEOMETRY_IN_POST",
     "cate": "CLEAN_HUMAN_PERFORMANCE_THEN_TRANSMISSION_POST",
     "music_e01": "NO_SCORE_UNTIL_FINAL_LOW_PIANO_BUTTON",
-    "music_e02": "END_MUTED_4_NOTE_FIGURE_STOPS_BEFORE_LAST_NOTE"
+    "music_e02": "END_MUTED_4_NOTE_FIGURE_STOPS_BEFORE_LAST_NOTE",
+    "mono_phone_survival": true
   },
   "next_action": {
-    "stage": "RU_CAST_AUDITION",
-    "action": "Select current Russian candidate voices for Elena, Julian, Mina and Cate; populate voice IDs; render the manifest canary auditions; evaluate individual and pair credibility before any full E01 paid render.",
-    "blocker": "CURRENT_RU_VOICE_IDS_NOT_SELECTED_AND_NO_DIRECT_ELEVENLABS_CONNECTOR_IN_THIS_SESSION",
-    "safe_without_provider_spend": true
+    "stage": "RU_S0_HUMAN_CANARY",
+    "action": "Run guarded ROOM917 RU S0 Canary workflow for 4 or 6 bounded blocks, download/listen to the artifact, score Elena/Julian/Mina/Cate and both pair tests, then recast or lock only what passes.",
+    "blocker": "NO_CONFIRMED_LIVE_S0_ARTIFACT_YET",
+    "full_e01_before_gate": "FORBIDDEN"
   },
-  "after_cast_lock": [
+  "after_s0_pass": [
+    "RU_CAST_LOCK_WITH_PROVIDER_IDENTITY_CONFIRMATION",
     "RU_E01_CONTROLLED_DIALOGUE_BLOCK_RENDER",
-    "DIALOGUE_EDIT_AND_LISTENING_TIMING",
+    "DIALOGUE_EDIT_AND_ALIGNMENT",
+    "RESOLVED_MICROPHONE_CHOREOGRAPHY_TIMING",
     "REUSE_OR_LOCK_CRITICAL_EN_RU_SFX",
     "CAUSAL_FOLEY_AND_ROOM_BED",
     "CATE_TRANSMISSION_POST",
