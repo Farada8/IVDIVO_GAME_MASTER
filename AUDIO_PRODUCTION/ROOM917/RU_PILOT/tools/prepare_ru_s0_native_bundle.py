@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Compile ROOM917 RU S0 runtime canary bundle from durable native-RU bindings.
+"""Compile ROOM917 RU S0 runtime canary bundle from authorized pre-canary bindings.
 
-The checked-in S0 text bundle is treated as TEXT/TEST GEOMETRY ONLY. Its historical
-public voice IDs are diagnostic and are never allowed to reach paid production through
-this compiler.
+The checked-in S0 text bundle is TEXT/TEST GEOMETRY ONLY. Historical public
+voice IDs are diagnostic and may never reach paid production. The bindings
+artifact is explicitly canary-only and must not claim acting evidence or CAST LOCK.
 """
 from __future__ import annotations
 
@@ -20,10 +20,7 @@ DIAGNOSTIC_IDS = {
     "XrExE9yKIg1WjnnlVkGX": "MINA",
     "EXAVITQu4vr4xnSDxMaL": "CATE",
 }
-S0_ALLOWED_OUTPUT_FORMATS = {
-    "mp3_44100_128",
-    "mp3_44100_192",
-}
+S0_ALLOWED_OUTPUT_FORMATS = {"mp3_44100_128", "mp3_44100_192"}
 S0_DEFAULT_OUTPUT_FORMAT = "mp3_44100_128"
 
 
@@ -58,6 +55,12 @@ def main() -> int:
     require(template.get("model_id") == "eleven_v3", "template model must be eleven_v3")
     require(bindings.get("status") == "PAID_S0_AUTHORIZED", "bindings status must be PAID_S0_AUTHORIZED")
     require(bindings.get("founder_paid_canary_authorized") is True, "founder_paid_canary_authorized must be true")
+    require(bindings.get("paid_s0_authorized") is True, "paid_s0_authorized must be true")
+    require(bindings.get("pre_canary_binding_gate") == "PASS", "pre_canary_binding_gate must PASS")
+    require(bindings.get("canary_binding_only") is True, "bindings must be canary_binding_only=true")
+    require(bindings.get("acting_evidence_complete") is False, "S0 bindings must not claim acting evidence complete")
+    require(bindings.get("cast_lock") is False, "S0 bindings must not claim CAST LOCK")
+    require(bindings.get("full_episode_render_allowed") is False, "S0 bindings must not allow full episode render")
     require(bindings.get("provider_snapshot_sha256") == digest(args.provider_snapshot), "binding snapshot hash mismatch")
 
     query = snapshot.get("query_policy") or {}
@@ -77,6 +80,9 @@ def main() -> int:
         require(voice_id not in DIAGNOSTIC_IDS, f"{role}: diagnostic legacy/default ID forbidden")
         require(row.get("preview_listen") == "PASS", f"{role}: preview_listen must be PASS")
         require(row.get("provider_identity_check") == "PASS", f"{role}: provider_identity_check must be PASS")
+        require(row.get("provider_durability_check") == "PASS", f"{role}: provider_durability_check must be PASS")
+        require(row.get("plausible_for_canary") == "PASS", f"{role}: plausible_for_canary must be PASS")
+        require(row.get("canary_binding_only") is True, f"{role}: role binding must be canary-only")
         cand = candidates.get(voice_id)
         require(cand is not None, f"{role}: voice_id absent from sealed native provider snapshot")
         require(cand.get("ru_verified") is True, f"{role}: provider candidate is not ru_verified")
@@ -85,9 +91,12 @@ def main() -> int:
         bound[role] = voice_id
 
     runtime = json.loads(json.dumps(template, ensure_ascii=False))
-    runtime["schema_version"] = "ivdivo.room917_ru_s0_native_runtime_bundle/1.2"
+    runtime["schema_version"] = "ivdivo.room917_ru_s0_native_runtime_bundle/2.0"
     runtime["status"] = "NATIVE_RU_BOUND_PAID_S0_RUNTIME"
     runtime["cast_source"] = str(args.bindings)
+    runtime["canary_binding_only"] = True
+    runtime["acting_evidence_complete"] = False
+    runtime["cast_lock"] = False
     runtime["provider_snapshot"] = {
         "path": str(args.provider_snapshot),
         "sha256": digest(args.provider_snapshot),
@@ -96,10 +105,7 @@ def main() -> int:
 
     for block in runtime.get("blocks") or []:
         fmt = str(block.get("output_format") or S0_DEFAULT_OUTPUT_FORMAT)
-        require(
-            fmt in S0_ALLOWED_OUTPUT_FORMATS,
-            f"{block.get('block_id')}: unsupported S0 audition output_format={fmt}; allowed={sorted(S0_ALLOWED_OUTPUT_FORMATS)}",
-        )
+        require(fmt in S0_ALLOWED_OUTPUT_FORMATS, f"{block.get('block_id')}: unsupported S0 audition output_format={fmt}")
         block["output_format"] = fmt
 
         if block.get("voice_id"):
@@ -113,8 +119,6 @@ def main() -> int:
             require(role is not None, f"{block.get('block_id')}: unknown turn template voice ID {old}")
             turn["voice_id"] = bound[role]
 
-        # Eleven v3 product guidance: Similarity, Speaker Boost, and Speed are not available.
-        # Keep only settings meaningful for v3 audition evidence; style remains fixed at 0.
         if isinstance(block.get("voice_settings"), dict):
             vs = block["voice_settings"]
             vs.pop("similarity_boost", None)
@@ -134,15 +138,16 @@ def main() -> int:
         "allowed_formats": sorted(S0_ALLOWED_OUTPUT_FORMATS),
         "default": S0_DEFAULT_OUTPUT_FORMAT,
         "final_master_format_is_separate": True,
-        "final_master_target": "48K_24BIT_WAV_AFTER_CAST_LOCK_AND_ASSEMBLY",
+        "final_master_target": "48K_24BIT_WAV_AFTER_CAST_LOCK_AND_ASSEMBLY"
     }
     runtime["hard_rules"] = list(runtime.get("hard_rules") or []) + [
         "NATIVE_RU_PROVIDER_SNAPSHOT_MATCH_REQUIRED",
         "DIAGNOSTIC_PUBLIC_IDS_FORBIDDEN",
         "S0_AUDITION_OUTPUT_FORMAT_ALLOWLIST_REQUIRED",
         "ELEVEN_V3_UNAVAILABLE_SETTINGS_STRIPPED",
-        "HUMAN_LISTEN_REQUIRED_BEFORE_CAST_LOCK",
-        "FULL_E01_RENDER_FORBIDDEN_AT_S0",
+        "PRE_CANARY_BINDING_IS_NOT_CAST_LOCK",
+        "HUMAN_LISTEN_REQUIRED_AFTER_AUDIO_EXISTS",
+        "FULL_E01_RENDER_FORBIDDEN_AT_S0"
     ]
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
@@ -152,8 +157,10 @@ def main() -> int:
         "out": str(args.out),
         "roles": bound,
         "provider_snapshot_sha256": runtime["provider_snapshot"]["sha256"],
+        "canary_binding_only": True,
+        "cast_lock": False,
         "audition_formats": sorted(S0_ALLOWED_OUTPUT_FORMATS),
-        "v3_removed_settings": runtime["eleven_v3_setting_policy"]["removed_as_unavailable_for_v3"],
+        "v3_removed_settings": runtime["eleven_v3_setting_policy"]["removed_as_unavailable_for_v3"]
     }, ensure_ascii=False))
     return 0
 
