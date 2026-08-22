@@ -64,10 +64,18 @@ def founder_profile_gate(*, remote_first: bool, founder_cash_at_risk_eur: float,
     }
 
 
+def _normalize_offer_name(name: str) -> str:
+    normalized = name.upper().replace("-", "_").replace("/", "_")
+    normalized = "_".join(normalized.split())
+    while "__" in normalized:
+        normalized = normalized.replace("__", "_")
+    return normalized
+
+
 def validate_offer(evidence: OfferEvidence, *, offer_name: str) -> Mapping[str, object]:
     if not evidence.test37_internal_pass:
         return {"status": "HOLD_TEST37_NOT_PASSED", "testable": False, "proof_promotion": False}
-    if "GENERIC_AI_SEO_AUDIT" in offer_name.upper():
+    if "GENERIC_AI_SEO_AUDIT" in _normalize_offer_name(offer_name):
         return {"status": "KILL_GENERIC_COMMODITY_CORE", "testable": False, "proof_promotion": False}
 
     missing = [x for x in REQUIRED_ARTIFACT_COMPONENTS if x not in set(evidence.artifact_components)]
