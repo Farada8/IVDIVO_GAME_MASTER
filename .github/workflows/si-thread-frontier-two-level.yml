@@ -1,0 +1,64 @@
+name: Self-Improvement Thread + Frontier Two-Level Routing
+
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_thread_topic_guard.py'
+      - 'tools/ivdivo_active_frontier_guard.py'
+      - 'tests/test_thread_topic_guard.py'
+      - 'tests/test_active_frontier_guard.py'
+      - 'tests/test_thread_frontier_two_level_routing.py'
+      - 'ENGINEERING_CONTRACTS/THREAD_TOPIC_CONTINUITY_GUARD_v0.1.md'
+      - 'ENGINEERING_CONTRACTS/THREAD_FRONTIER_TWO_LEVEL_ROUTING_v0.1.md'
+      - 'SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/**'
+      - '.github/workflows/si-thread-topic-continuity-guard.yml'
+      - '.github/workflows/si-thread-frontier-two-level.yml'
+
+jobs:
+  two-level-routing-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run thread-topic canaries
+        run: python tests/test_thread_topic_guard.py
+      - name: Run active-frontier canaries
+        run: python tests/test_active_frontier_guard.py
+      - name: Run two-level integration canaries
+        run: python tests/test_thread_frontier_two_level_routing.py
+      - name: Compile both routing runtimes
+        run: python -m compileall -q tools/ivdivo_thread_topic_guard.py tools/ivdivo_active_frontier_guard.py
+      - name: Validate machine state JSON
+        run: |
+          python -m json.tool SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/01_MACHINE_STATE.json >/dev/null
+          python -m json.tool SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/02_REAL_PILOT_LEDGER.json >/dev/null
+          python -m json.tool SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/03_TWO_LEVEL_ROUTING_STATE.json >/dev/null
+      - name: Assert switch cannot inherit old project frontier
+        run: |
+          python - <<'PY'
+          from tools.ivdivo_thread_topic_guard import route_turn
+          from tools.ivdivo_active_frontier_guard import decide_frontier_use, SAME_PROJECT_RELEVANT
+
+          topic = route_turn(
+              active_project='BUSINESS_ENGINEERING_OS',
+              active_topic='BUSINESS_CURRENT',
+              active_next_gate='P225_OLD_BUSINESS_GATE',
+              user_text='switch to public art',
+              proposed_project='PUBLIC_ART_CLUAIN',
+              proposed_topic='PUBLIC_ART_APPLICATION',
+              explicit_user_switch=True,
+          )
+          assert topic.status == 'SWITCH_AUTHORIZED'
+          assert topic.active_project == 'PUBLIC_ART_CLUAIN'
+
+          frontier = decide_frontier_use(
+              active_project=topic.active_project,
+              active_next_gate=None,
+              discovered_material_project=topic.active_project,
+              relation_to_current_gate=SAME_PROJECT_RELEVANT,
+          )
+          assert frontier.status == 'HOLD_NO_ACTIVE_FRONTIER'
+          print('NEW_PROJECT_OLD_GATE_LEAK: BLOCKED')
+          PY
