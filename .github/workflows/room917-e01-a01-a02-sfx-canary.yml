@@ -56,27 +56,38 @@ jobs:
             exit 22
           fi
 
-      - name: Validate bounded plan without spending
+      - name: Validate provider adapter against current generation queue without spending
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
-          import json
+          import hashlib, json
           from pathlib import Path
-          p=Path('AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json')
-          data=json.loads(p.read_text(encoding='utf-8'))
+
+          plan_path=Path('AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json')
+          queue_path=Path('AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json')
+          data=json.loads(plan_path.read_text(encoding='utf-8'))
+          queue=json.loads(queue_path.read_text(encoding='utf-8'))
+
           assert data['project']=='ROOM917' and data['episode']=='E01'
+          assert data['authority']['generation_queue'].endswith(queue_path.name)
+          assert data['adapter_law']['provider_neutral_queue_is_prompt_semantic_authority'] is True
           assert data['provider']['model_id']=='eleven_text_to_sound_v2'
           assert data['provider']['loop'] is True
           assert float(data['provider']['duration_seconds'])==30.0
           assert data['provider']['dispatch'] is False
           assert len(data['requests'])==4
           assert {r['asset_id'] for r in data['requests']}=={'A01_GREYHAVEN_LOBBY_30S_LOOP','A02_SWITCHBOARD_ALCOVE_30S_LOOP'}
+
+          qmap={row['asset_id']:{v['variant']:v['prompt'] for v in row['variants']} for row in queue['queue']}
           for r in data['requests']:
-              assert len(r['text']) <= 450
+              assert len(r['text']) <= int(data['adapter_law']['provider_prompt_character_limit'])
               assert r['loop'] is True
               assert float(r['duration_seconds'])==30.0
-          print('PLAN_VALIDATED_NO_SPEND')
+              source=qmap[r['asset_id']][r['source_variant']]
+              source_sha=hashlib.sha256(source.encode('utf-8')).hexdigest()
+              assert source_sha == r['source_prompt_sha256'], (r['request_id'], source_sha, r['source_prompt_sha256'])
+          print('PROVIDER_ADAPTER_AND_SOURCE_PROMPT_HASHES_VALIDATED_NO_SPEND')
           PY
 
       - name: Render only bounded canary candidates
@@ -123,6 +134,8 @@ jobs:
         run: |
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
           ## ROOM917 E01 A01/A02 Sound Effects Canary
+          - provider-neutral generation queue remains prompt semantic authority
+          - provider prompt adapter is hash-linked to source variants and limited to <=450 characters
           - paid execution occurred only after explicit `confirm_spend=YES`
           - requested candidate count is bounded to 2 or 4
           - provider model: `eleven_text_to_sound_v2`
