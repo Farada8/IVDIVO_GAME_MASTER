@@ -3,7 +3,7 @@
   "date": "2026-08-22",
   "gate": "P-EW03",
   "lane": "CF-01",
-  "status": "ENGINEERING_PASS_M1_ELIGIBLE_WITH_REGULATORY_DRIFT_PATCH_PENDING_PR_VERIFICATION",
+  "status": "ENGINEERING_PASS_CI_SUCCESS_M1_ELIGIBLE_NOT_WTP_PROVEN",
   "source_baseline": {
     "article50_general_application_from": "2026-08-02",
     "digital_omnibus_ai_regulation": "EU_2026_1744",
@@ -31,13 +31,13 @@
   "synthetic_cases": 6,
   "regulatory_drift_transition_canaries": 3,
   "real_customer_cases": 0,
-  "original_engineering_proof": {
+  "engineering_proof": {
     "pr": 367,
     "merge_sha": "3f65b522c59a7cdc988cbae893c1d54651eab6e6",
     "head_sha": "5a2db19731aeb23eac7c15c2da374cdaea3023a5",
     "dedicated_ci_run": 32561576738,
     "dedicated_ci": "SUCCESS",
-    "original_canaries": 14,
+    "canaries": 14,
     "m1_technical_diagnostic_spec_eligible": true
   },
   "regulatory_drift_patch": {
@@ -46,6 +46,7 @@
     "transition_is_exemption": false,
     "transition_is_general_article50_delay": false,
     "missing_transition_evidence_policy": "FAIL_CLOSED_UNKNOWN",
+    "derived_transition_canaries": 3,
     "p_ew05_route_changed": false,
     "m1_route_changed": false,
     "market_rank_changed": false,
