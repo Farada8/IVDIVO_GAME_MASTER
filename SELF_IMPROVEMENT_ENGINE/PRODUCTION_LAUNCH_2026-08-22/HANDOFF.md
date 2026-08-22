@@ -13,7 +13,7 @@ Date: 2026-08-22
 7. Read back persisted artifacts before changing card state.
 8. Update queue state only with evidence.
 
-## Verified production frontier
+## DONE_VERIFIED production layers
 
 `PL-00 MASTER PRODUCTION BOOTSTRAP = DONE_VERIFIED`.
 - PR #287 merge `2264d7b17ce08811f0037c1ce9fd0ca622442064`.
@@ -22,17 +22,33 @@ Date: 2026-08-22
 
 `PL-01 PROJECT STATE SYSTEM = DONE_VERIFIED`.
 - PR #294 merge `566fbc00dea63e89257fe6eb4abc26e130e0a663`.
-- PL-00 regression and PL-01 Project State exact-head workflows both SUCCESS.
+- PL-00 regression + PL-01 exact-head workflows SUCCESS.
 - persisted ProjectStateManager + CLI + lifecycle/CLI tests.
 - Drive folder `1kNuZY2ivHEkXHFn9D7HLujQxZf7EvGUO`, marker `PERSONAL-AI-PL01-DONE-VERIFIED-PR294`.
 
-## Current READY foundation cards
+`PL-02 LOCAL MEMORY = DONE_VERIFIED`.
+- baseline PR #299 merge `5a9337f2a416edbacdf4a85f02efdc1e27511bf9` established persistent store/search/update/invalidate/trace and audit events.
+- contract-hardening PR #309 merge `d82020c7967c2c3dc1b22e4469974757d7aaf0bc` added named typed tables, SHA-256 content hashes, confidence/project/source fields, immutable versions, source-chain tracing and legacy migration.
+- verified hardening head `7e947cee84fefb5467aa154546f648077aec0bbe`.
+- exact-head workflows all SUCCESS: PL-00 `32555281797`, PL-01 `32555281872`, PL-02 baseline `32555281799`, PL-02 hardening `32555281777`.
+- CI exposed a real legacy-schema ordering defect before merge; the migration preflight was repaired and the second exact-head run passed 4/4 workflows.
+- hardening Drive folder `1MhVtyPF89UPpvLvPcBeQis4wdBXmeN6C`, document `1IYlQfZOt7yI4GaQVBjDuL36yuIjvIPe9GFEO8HsAt5w`, marker `PERSONAL-AI-PL02-DONE-VERIFIED-PR309-CI4OF4`.
 
-- `PL-02 Local Memory = READY` — canonical next frontier because it unlocks evidence, business, ingestion, knowledge search, daily control and backup paths.
-- `PL-04 AI Provider Abstraction = READY`.
-- `PL-11 Test Benchmark Engine = READY`.
+## Current READY graph
 
-Do not re-execute PL-00 or PL-01 unless a regression or explicit change-control event requires it. Reuse their merged code as the base for subsequent cards.
+Canonical next frontier: `PL-04 AI Provider Abstraction = READY`.
+
+Also READY:
+- `PL-03 Source Evidence Layer`;
+- `PL-06 Business Core`;
+- `PL-11 Test Benchmark Engine`;
+- `PL-13 File Ingestion`;
+- `PL-15 Daily Control Panel`;
+- `PL-16 Backup Recovery`.
+
+Reason for PL-04 priority: it is the remaining Wave-1 provider dependency and directly unlocks PL-05 Agent Executor, PL-08 Book Production Core and PL-18 Cost Control; together with PL-03 it unlocks PL-07 Business Research.
+
+Do not re-execute PL-00/01/02 unless a regression or explicit change-control event requires it. Reuse merged code and preserve cumulative regression coverage.
 
 ## Stop conditions
 
@@ -45,4 +61,4 @@ Stop and mark `BLOCKED` instead of inventing a pass when:
 
 ## Handoff sentence for a new session
 
-`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00 and PL-01 are DONE_VERIFIED; continue from PL-02 unless fresh dependency evidence makes another READY foundation card higher-value. Persist code/state/tests/readback and preserve v2 authority unless a separate promotion gate passes.`
+`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00, PL-01 and hardened PL-02 are DONE_VERIFIED. Continue from PL-04, while PL-03/06/11/13/15/16 remain dependency-admissible READY alternatives. Persist code/state/tests/readback and preserve v2 authority unless a separate promotion gate passes.`
