@@ -1,6 +1,6 @@
 {
-  "schema_version": "ivdivo.room917_ru_account_voice_inventory/1.2",
-  "generated_at": "2026-08-22T16:37:56.862716Z",
+  "schema_version": "ivdivo.room917_ru_account_voice_inventory/1.3",
+  "generated_at": "2026-08-22T17:05:05.067961Z",
   "provider": "ElevenLabs",
   "status": "SKIPPED_NO_REPOSITORY_SECRET",
   "secret_persisted": false,
@@ -8,5 +8,5 @@
   "voice_count": null,
   "voices": [],
   "models": [],
-  "note": "Native /v1/shared-voices discovery is independent and remains authoritative for the RU casting frontier."
+  "note": "Account inventory skipped. Native RU production discovery is also fail-closed until authenticated provider access exists."
 }
