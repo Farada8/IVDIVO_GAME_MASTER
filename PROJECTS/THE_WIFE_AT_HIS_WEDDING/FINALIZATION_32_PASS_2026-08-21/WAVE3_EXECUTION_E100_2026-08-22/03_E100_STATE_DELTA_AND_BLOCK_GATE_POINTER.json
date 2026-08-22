@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "project": "THE WIFE AT HIS WEDDING",
+  "project_id": "D01",
+  "date": "2026-08-22",
+  "authority_effect": "WORKING_FRONTIER_ONLY_NOT_FOUNDER_LOCK",
+  "episode": {
+    "id": "E100",
+    "title": "THE MOTHER RECORD",
+    "status": "WORKING_COMPLETE",
+    "runtime_spoken_words": 1214,
+    "runtime_gate": "PASS_1100_1550",
+    "red_team": {"fatal": 0, "major": 0, "medium": 2},
+    "github_script": "WAVE3_EXECUTION_E100_2026-08-22/01_E100_THE_MOTHER_RECORD_v1.0.md",
+    "github_gate": "WAVE3_EXECUTION_E100_2026-08-22/02_E100_MATERNAL_PATIENT_CHILD_INTEGRITY_CIVIL_STATUS_GATE_v1.0.md",
+    "github_script_commit": "5216e0775c8b1f5b77827985c07ec40daba868c9",
+    "github_gate_commit": "eb69cd556ca0535328a8ea0a2089c16761e18d31",
+    "drive_folder_id": "1a80gWANTK8wOPah-WAiGsgNkmWZrfgyg",
+    "drive_script_id": "1Vktb3mfJhrR06VlyD-sDE64a1yVbgwD9agKffmKLhT0",
+    "drive_script_revision": "AIroW36Q6I3bQ5hkfrUa3QEzkFRRdWj4pPkPwBLErfk_VGNQcZ0ppBHbBoiFUK0cOrj8cJTYpF1WodQTs7L-poATWwYWMfm0Gm_odZQlgNI",
+    "drive_gate_id": "1wz438HJY614hWhojCfRTUvFtMos5DprU6bu-spG8fF8",
+    "drive_gate_revision": "AIroW37EqpDOwb9wppjNevnb95q5P4kXaNXGCJSYbuKkvJzyvnSP2ArCHLsedl_2FfRBuAGfReRjR2apNrx6A8-jKajOZvDyCMMVAFmT_cQ"
+  },
+  "story_answer": "CURRENT_EVELYN_MAPS_TO_THE_AUDITED_ADULT_MATERNAL_PATIENT_CHAIN_FROM_PRENATAL_REGISTRATION_THROUGH_DELIVERY_AND_DISCHARGE",
+  "child_integrity": "LILY_NOT_USED_AS_EVIDENCE",
+  "mara_nursery_boundary": "PROTECTIVE_CARE_NOT_MATERNITY_OR_LEGAL_PARENT_EVIDENCE",
+  "civil_status_turn": "HISTORICAL_OR_BIOLOGICAL_CONTINUITY_DOES_NOT_ITSELF_CREATE_MARA_CIVIL_BIRTH_RECORD",
+  "ordinary_life_price": "PROFESSIONAL_CREDENTIAL_CLARIFICATION_REQUEST_PLUS_CLIENT_INVOICE_MILESTONE",
+  "external_gates": {
+    "human_signal": "NOT_RUN",
+    "jurisdiction_specific_legal_review": "NOT_RUN",
+    "real_listener_audio_validation": "NOT_RUN",
+    "market_validation": "NOT_CLAIMED"
+  },
+  "episode_frontier": "E100",
+  "highest_unblocked_obligation": "RUN_E96_E100_BLOCK_REGRESSION_BEFORE_E101",
+  "block_gate_requirements": [
+    "RUNTIME_ALL_EPISODES",
+    "SOURCE_PROVENANCE_AND_ANTI_CIRCULARITY",
+    "MARRIAGE_AND_CONSENT_CONTINUITY",
+    "LILY_INTEGRITY",
+    "SISTER_AND_ROMANCE_BRAID",
+    "ORDINARY_LIFE_PRESENCE",
+    "AUDIO_WAITING_QUESTION_AND_SCENE_PROPULSION",
+    "C3M12_C3M13_CORPUS_RHETORIC_WATCH",
+    "RED_TEAM_FATAL_MAJOR_ZERO"
+  ],
+  "do_not_advance_to_e101_until_block_gate_passes": true,
+  "next_action": "EXECUTE_E96_E100_BLOCK_GATE"
+}
