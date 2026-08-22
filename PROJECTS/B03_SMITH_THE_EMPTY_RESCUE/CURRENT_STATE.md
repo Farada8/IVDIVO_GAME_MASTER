@@ -1,7 +1,7 @@
 # B03 — SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE
 
 **Updated:** 2026-08-22  
-**Status:** ACTIVE WORKING PROSE / F1 FOUNDER CANON RECOVERED / CH19 DRAFTED / LOCAL GATE PENDING  
+**Status:** ACTIVE WORKING PROSE / F1 FOUNDER CANON RECOVERED / CH19 PASS / CH20 AUTHORIZED  
 **Authority note:** WORKING manuscript state, not final story lock.
 
 ## Activation / stale-state correction
@@ -30,17 +30,16 @@ Cycle32B story-production folder: `1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv`.
 Key current evidence:
 - CH13–18 block gate: `15VHNFSF5lBDoNnyJIeI_S9TNAawKlwJ0w4AK_vlCmxA` -> **PASS AFTER TARGETED RHETORICAL REPAIR / FATAL 0 / BLOCKING MAJOR 0**.
 - CH19–24 escalation rebase: `1GsELpV6PqpKKKguLzOAzDCouOYxhOIWVsSdf9K9rk-4` -> **WORKING REBASE / PASS FOR PROSE / FATAL 0 / BLOCKING MAJOR 0**.
-- CH19 manuscript `THE REAL STORM`: `1ngQwNpSTTawUxz7DkWMiYOdM4DBRL49QpCT_HqOMfXw` -> substantive draft exists and has been read back.
+- CH19 manuscript `THE REAL STORM`: `1ngQwNpSTTawUxz7DkWMiYOdM4DBRL49QpCT_HqOMfXw` -> substantive draft, targeted causal-function repair applied and read back.
+- CH19 local Story/Human Scene/continuity gate: `1XCid-Pzagb0oV9V0ljs4kVy9e3Vfph-pQlvGxFNzf50` -> **PASS AFTER TARGETED CAUSAL-FUNCTION REPAIR / FATAL 0 / BLOCKING MAJOR 0**.
 
 ## Working manuscript frontier
 
 CH01–CH18 have substantive manuscript/gate evidence in Drive. CH13–18 are explicitly block-gated PASS.
 
-CH19 `THE REAL STORM` is drafted from the correct post-CH18 state. It establishes conventional storm pressure, hydro/service-gallery danger, resource scarcity, normal communications failover, and the precursor observation without allowing the precursor source to command current rescue action.
+CH19 `THE REAL STORM` is **PASS**. The initial local gate found one real blocking MAJOR: the first draft prematurely spent CH23's later failover/re-centralization payoff. Repair preserved normal redundancy as a CH19 seed but removed the explicit system-level conclusion and precursor causal wording. Re-read then returned FATAL 0 / BLOCKING MAJOR 0.
 
-**CH19 chapter-local Story / Human Scene / continuity gate has not yet been located as a separate durable artifact. Therefore CH19 is DRAFTED, not yet claimed PASS.**
-
-CH20 is not authorized merely by existence of the CH19 draft; run the CH19 local gate first.
+**CH20 `BLACKOUT` is AUTHORIZED from the current CH19–24 rebase.**
 
 ## Current causal/authority invariants
 
@@ -49,25 +48,31 @@ CH20 is not authorized merely by existence of the CH19 draft; run the CH19 local
 - Confederation knowledge does not confer Earth jurisdiction.
 - Observable phenomenon precedes ontology; origin/mechanism remain UNKNOWN.
 - Precursor content is an unverified observation lane, not an operational command lane.
-- Normal redundancy/failover may re-centralize communications; this is a system feature with story consequences, not proof of anomaly mechanism.
+- Normal redundancy/failover is seeded; do **not** spend the re-centralization/specificity payoff before CH23.
 - Distributed rescue must show benefit **and price**; decentralization is not magic good.
-- Andrej, Tina and Maja are now manuscript continuity and must not be reverted to placeholder/open civilian status.
+- Andrej, Tina and Maja are manuscript continuity and must not revert to placeholder/open civilian status.
 - Smith's daughter continuity must obey F1 limits.
 
-## Current medium watches
+## CH20 hard conditions
 
-1. CH19 has substantial procedural/operational density; local gate must test whether people/resource pressure carries the chapter rather than systems explanation.
-2. Taren/Confederation precision must not become an authorial oracle or local command authority.
-3. Failover/relay mechanics must remain plausible fictional emergency infrastructure, not falsely mapped onto real Slovenian systems.
-4. Maja/Tina/Andrej must remain people with ordinary competence, humor, cost and agency rather than distributed-system components.
-5. Precursor specificity must remain noisy/partial; no perfect meter or ontology shortcut.
-6. Preserve chapter-to-chapter dialogue/corpus separation; do not bulk-rewrite passed earlier chapters without new FATAL/MAJOR evidence.
+1. OES must have a genuinely defensible case for blackout based on current specificity and Morgen Pass history.
+2. Taren may identify a systems risk but may not issue an Earth operational plan, price casualties or take local command.
+3. Jana must convert disagreement into an operational acceptance criterion: rescue must still function if precursor packets stop, and must not collapse into obedience if they continue.
+4. No equal-airtime expert panel. Dialogue must alter operational choices under interruption.
+5. Keep hydro/resource pressure alive; do not let strategy debate replace the emergency.
+6. Do not spend CH23's normal-failover re-centralization payoff.
+
+## Medium watches
+
+- CH19 procedural/timestamp density is high; CH20 should move conflict through objectives, interruption and choices rather than another report-log sequence.
+- Corpus watch for repeated acknowledgements/corrections and polished systems formulations.
+- Taren precision must not become an authorial oracle.
+- Relay/hydro mechanics remain plausible fictional emergency infrastructure, not claims about actual Slovenian systems.
+- Maja/Tina/Andrej must remain people with ordinary competence, humor, cost and agency.
+- Precursor specificity stays noisy/partial; no perfect meter or ontology shortcut.
 
 ## Exact next obligation
 
-**RUN CH19 LOCAL STORY + HUMAN SCENE + CONTINUITY GATE AGAINST THE ACTUAL CH19 DRAFT.**
+**DRAFT CH20 — `BLACKOUT` FROM THE ACTUAL CH19 PASS FRONTIER AND CURRENT CH19–24 REBASE.**
 
-Required decision:
-- if FATAL 0 / BLOCKING MAJOR 0 -> persist the gate and authorize CH20 `BLACKOUT` from the existing CH19–24 rebase;
-- if a real FATAL/MAJOR appears -> repair only the earliest failed layer, re-read, rerun gate;
-- do not draft CH20 from stale GitHub cards or from chat memory alone.
+After drafting, run chapter-local Story + Human Scene + continuity gate. Repair only a real FATAL/BLOCKING MAJOR at the earliest failed layer; otherwise continue causally toward CH21 `OBJECTIVES, NOT SCRIPTS`.
