@@ -1,10 +1,10 @@
 {
-  "schema_version":"3.4-feature-reconcile",
+  "schema_version":"3.5-feature-audio",
   "updated":"2026-08-22",
   "project_id":"IVDIVO_BOOK_3_SMITH",
   "title":"SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
-  "status":"RECONCILED_TO_MAIN_FOUNDER_LOCKED_RELEASE_READY_SPEAKER_ATTRIBUTION_FRONTIER",
-  "authority_branch":"main",
+  "status":"FOUNDER_LOCKED_RELEASE_READY_FULL_SPEAKER_GATE_PASS_VOICE_MAP_FRONTIER",
+  "authority_branch":"main_for_story_lock_feature_for_new_audio_metadata",
   "main_state_sha_at_reconciliation":"e296cb0ab6529c9eb1b4272664e3b8493a85bbf3",
   "founder_lock":true,
   "story_lock":true,
@@ -18,20 +18,28 @@
     "locked_docx_id":"1doIynZBHGX5OSUXmjrFF3l6B3ZxXAMFg",
     "locked_pdf_id":"16VsrU2BFMHeM-0qwMH8RTWfMLmLG4kJ4",
     "locked_txt_id":"1Sjmz5Vb8azDwB6maAU4pRe2vUhL8NKKl",
-    "audio_adaptation_package_id":"1aYILch6u5HWLxxm5s2sMC7t3Bho5ph8_",
     "audio_exact_text_segmentation_package_id":"1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
     "audio_exact_text_segmentation_gate_id":"15LBarVV2mFt0SNgbii-ld827DgfNxc8P",
-    "speaker_engine_repair_gate_v0_2_id":"1Xv_Ys0a7AnHHJMNl0pgoA90t8iE5FVU_"
+    "speaker_engine_repair_gate_v0_2_id":"1Xv_Ys0a7AnHHJMNl0pgoA90t8iE5FVU_",
+    "semantic_exception_patch_id":"1mfPFIMYu33zbPLrQvfbWKCMcyRoEi_VT",
+    "full_speaker_gate_id":"1FFWJ2ru560zxfEtF-FT3cXqLiUfL203b",
+    "full_speaker_manifest_id":"1Z8ATM6OyDlABS7KuXdwe26fa6dc2Utiw",
+    "full_speaker_package_id":"1YQ7nPUcoxx2Kaj2QpAqHq4uYp0nkinmk"
   },
-  "speaker_attribution":{"exact_segments":7465,"speech_dialogue":3715,"confirmed_baseline":471,"unknown_baseline":3244,"engine_repair":"PASS","full_gate":"NOT_YET_PASSED","next":"CONTEXTUAL_REVIEW_QUEUE_THEN_VOICE_MAP"},
-  "non_current_post_lock_artifacts_from_this_feature_branch":[
-    "1UHGfjuZ_6aJF5Fkh1pHGwjgU219cPBmDD5owIVyIlXs",
-    "1VlXJxjimqe8C_sDrrjZhIPyTyh9gUpREDJHeIOFThaE",
-    "1UfQqgH8q4BK9LgOR_2zZcPZZvfujS06GvThOXuCLdvI",
-    "1BptpZZEKolgxnK7FTI9qtwSfiz5Syxs0aEA4ffhRuyQ",
-    "1a3KoDacqm2qrTGip4ZzbsD4Mim6o2KNJ68RFdTRhfrw"
-  ],
-  "non_current_disposition":"SUPPORTING_POST_LOCK_QA_PROVENANCE_ONLY_DO_NOT_EXPORT_DO_NOT_USE_AS_STORY_AUTHORITY",
-  "do_not":["DO_NOT_REOPEN_STORY_DEVELOPMENT","DO_NOT_DRAFT_CH30","DO_NOT_USE_POST_LOCK_DUPLICATE_MASTER_AS_EXPORT_AUTHORITY","DO_NOT_GUESS_AMBIGUOUS_SPEAKERS","DO_NOT_CHANGE_EXACT_TEXT"],
-  "next_obligation":"Continue from repaired speaker-attribution baseline v0.2; resolve contextual review queue with evidence, retain UNKNOWN where ambiguous, then freeze voice-map template with null voice IDs until casting/provider gate."
+  "speaker_attribution":{
+    "original_curly_quote_segments":3718,
+    "narrator_inline_quote_exceptions":4,
+    "actual_speech_turns":3714,
+    "assigned":3714,
+    "unknown":0,
+    "coverage":"100_PERCENT",
+    "exact_text_changes":0,
+    "exact_text_hash_mismatches":0,
+    "full_gate":"PASS",
+    "voice_ids_assigned":0
+  },
+  "story_change_control":"NO_STORY_REWRITE_WITHOUT_FOUNDER_UNLOCK_OR_CHANGE_ORDER",
+  "do_not":["DO_NOT_REOPEN_STORY_DEVELOPMENT","DO_NOT_DRAFT_CH30","DO_NOT_CHANGE_EXACT_TEXT","DO_NOT_MERGE_SPEAKER_IDENTITY_WITH_VOICE_CASTING","DO_NOT_INVENT_PROVIDER_VOICE_IDS"],
+  "next_obligation":"Build provider-agnostic voice map with stable dedicated-character slots and collision-safe ensemble reuse; provider voice IDs remain null until explicit casting/provider selection.",
+  "next_prompt_pointer":"VOICE_MAP_GATE"
 }
