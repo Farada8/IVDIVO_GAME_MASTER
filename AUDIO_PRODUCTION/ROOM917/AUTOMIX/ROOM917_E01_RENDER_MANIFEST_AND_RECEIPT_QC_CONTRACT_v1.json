@@ -1,0 +1,67 @@
+{
+  "schema_version": "ivdivo.room917_render_manifest_receipt_qc/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "active_branch": "THE_INSURABLE_FIRE",
+  "scope": "POST_AUTOMATION_PLAN_RENDER_HANDOFF_AND_MACHINE_QC",
+  "release_authority": false,
+  "source_master": {
+    "sha256_required": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "exact_bytes_verified_required": true
+  },
+  "compiled_plan": {
+    "status_required": "PASS_AUTOMATION_PLAN_COMPILED",
+    "render_authority_required": true,
+    "release_authority_required": false,
+    "sha256_required": true
+  },
+  "render_format": {
+    "sample_rate_hz": 48000,
+    "bit_depth": 24,
+    "full_mix_channels": 2,
+    "stem_channels": 2
+  },
+  "required_buses": ["DIALOGUE", "CLUE_SFX", "SFX", "FOLEY", "AMBIENCE", "MUSIC"],
+  "required_outputs": {
+    "full_mix": "ROOM917_E01_FULLMIX_48k24.wav",
+    "stems": {
+      "DIALOGUE": "ROOM917_E01_STEM_DIALOGUE_48k24.wav",
+      "CLUE_SFX": "ROOM917_E01_STEM_CLUE_SFX_48k24.wav",
+      "SFX": "ROOM917_E01_STEM_SFX_48k24.wav",
+      "FOLEY": "ROOM917_E01_STEM_FOLEY_48k24.wav",
+      "AMBIENCE": "ROOM917_E01_STEM_AMBIENCE_48k24.wav",
+      "MUSIC": "ROOM917_E01_STEM_MUSIC_48k24.wav"
+    }
+  },
+  "receipt_requirements": {
+    "all_output_files_exist": true,
+    "sha256_required_per_output": true,
+    "same_sample_count_full_mix_and_stems": true,
+    "zero_sample_offset_required": true,
+    "stem_sum_null_max_abs_lsb": 1,
+    "protected_silence_post_fx_sample_exact_pass": true,
+    "clue_sfx_survival_pass": true,
+    "scene3_lineage_preserved": true,
+    "mono_survival_pass": true,
+    "phone_proxy_survival_pass": true
+  },
+  "master_qc": {
+    "integrated_lufs_target": -16.0,
+    "integrated_lufs_tolerance_lu": 0.5,
+    "true_peak_max_dbtp": -1.0,
+    "lra_max_lu": 11.0
+  },
+  "prohibited": [
+    "MISSING_STEM",
+    "EXTRA_UNDECLARED_STEM",
+    "HASHLESS_OUTPUT",
+    "SAMPLE_OFFSET_BETWEEN_STEMS_AND_FULL_MIX",
+    "STEM_SUM_NON_NULL_ABOVE_ONE_LSB",
+    "PROTECTED_SILENCE_POST_FX_VIOLATION",
+    "CLUE_SFX_LOST_IN_TRANSLATION",
+    "SCENE3_LINEAGE_CHANGE_WITHOUT_DIRECT_REGRESSION_AUTHORITY",
+    "MASTER_QC_OUTSIDE_PROFILE",
+    "MACHINE_RELEASE_PASS"
+  ],
+  "human_gate_after_machine_pass": "P003B_LISTENER_QC_RED_TEAM"
+}
