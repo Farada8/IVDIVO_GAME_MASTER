@@ -1,0 +1,116 @@
+{
+  "schema_version": "ivdivo.room917_automix_postproduction_execution/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "active_branch": "THE_INSURABLE_FIRE",
+  "story_status": "LOCKED",
+  "scope": "AUTOMIX_POSTPRODUCTION_ONLY",
+  "law": "ONLY_APPROVED_VOICES_AND_PASS_BOUND_SOUND_ASSETS_MAY_ENTER_PRODUCTION_AUTOMIX",
+  "release_authority": false,
+  "current_frontier": {
+    "status": "CONTRACT_READY__PRODUCTION_EXECUTION_BLOCKED_ON_REAL_INPUT_EVIDENCE",
+    "mainline_blockers": [
+      "EXACT_MASTER_BYTES_OR_TRUSTED_EXACT_PRE_SCENE3_INTERVAL_TIMING_REQUIRED",
+      "PRODUCTION_ACCEPTED_A01_A02_ROOM_BED_BYTES_REQUIRED_FOR_D003_REPAIR"
+    ],
+    "independent_safe_work": "PREFLIGHT_AND_NEGATIVE_GATE_HARDENING"
+  },
+  "authority": {
+    "execution_state": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
+    "sound_pointer": "AUDIO_PRODUCTION/ROOM917/CURRENT_SOUND_DESIGN_POINTER.json",
+    "post_render_pointer": "AUDIO_PRODUCTION/ROOM917/CURRENT_POST_RENDER_ENGINEERING_POINTER.json",
+    "bilingual_control": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json",
+    "continuation_policy": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/CONTINUATION_POLICY_v1.json"
+  },
+  "locale_policy": {
+    "EN": {
+      "status": "POST_RENDER_SELECTIVE_REPAIR",
+      "voice_policy": "PRESERVE_ACCEPTED_EXISTING_CAST_TAKES_EXCEPT_EVIDENCE_SUPPORTED_SELECTIVE_REPAIR",
+      "automix_allowed_when_all_gates_pass": true
+    },
+    "RU": {
+      "status": "CAST_NOT_LOCKED",
+      "voice_policy": "NO_PRODUCTION_AUTOMIX_BEFORE_NATIVE_RU_CAST_LOCK",
+      "automix_allowed_when_all_gates_pass": false
+    }
+  },
+  "voice_gate": {
+    "manifest_status_allowed": ["PASS", "LOCKED"],
+    "source_status_allowed": ["PASS", "LOCKED"],
+    "fixture_only_must_be": false,
+    "production_sources_must_be": true,
+    "sha256_required_per_source": true,
+    "whole_episode_voice_regeneration_default": "FORBIDDEN"
+  },
+  "sound_asset_gate": {
+    "binding_report_status_required": "PASS",
+    "every_requested_binding_status_required": "PASS",
+    "hold_or_candidate_asset_may_enter_renderer": false,
+    "identity_gate": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/sound_asset_binding_gate.py"
+  },
+  "timing_gate": {
+    "allowed_grades": ["ACCEPTED_ALIGNMENT", "LIVE_TIMELINE"],
+    "fixture_only_must_be": false,
+    "production_timestamps_must_be": true,
+    "synthetic_alignment_is_production_authority": false
+  },
+  "buses": {
+    "required_exact_set": ["DIALOGUE", "CLUE_SFX", "SFX", "FOLEY", "AMBIENCE", "MUSIC"],
+    "dialogue_priority": true,
+    "clue_sfx_never_ducked": true,
+    "stem_sum_order": ["DIALOGUE", "CLUE_SFX", "SFX", "FOLEY", "AMBIENCE", "MUSIC"]
+  },
+  "ducking": {
+    "allowed_targets_exact": ["AMBIENCE", "MUSIC"],
+    "immune_required": ["DIALOGUE", "CLUE_SFX"],
+    "generic_ducking_of_sfx_or_foley": false,
+    "event_aware": true
+  },
+  "protected_silence": {
+    "resolved_from_same_live_timing_required": true,
+    "post_fx_sample_exact_mask_required": true,
+    "silence_removal_forbidden": true,
+    "reverb_tail_invasion_forbidden": true,
+    "auto_fill_unclassified_low_level_windows_forbidden": true
+  },
+  "cate_telephone_chain": {
+    "speaker_exact": "CATE",
+    "clean_human_source_required": true,
+    "hpf_hz": 300,
+    "lpf_hz": 3400,
+    "reverb": "NONE",
+    "mono_core": true,
+    "pitch_shift": false,
+    "stereo_widening": false,
+    "ghost_processing": false,
+    "forbidden_speakers": ["ELENA", "MINA", "JULIAN"]
+  },
+  "post_render_patch_mode": {
+    "exact_current_master_required": true,
+    "expected_master_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "verified_master_bytes_required": true,
+    "scene3_start_seconds": 444.980,
+    "scene3_policy": "PRESERVE_V1_3E_TECHNICAL_LINEAGE_UNLESS_NEW_DIRECT_REGRESSION_EVIDENCE"
+  },
+  "master_qc": {
+    "sample_rate_hz": 48000,
+    "bit_depth": 24,
+    "integrated_lufs_target": -16.0,
+    "integrated_lufs_tolerance_lu": 0.5,
+    "true_peak_max_dbtp": -1.0,
+    "lra_max_lu": 11.0,
+    "mono_survival_required": true,
+    "phone_proxy_survival_required": true,
+    "human_p003b_required_before_release": true
+  },
+  "prohibited": [
+    "PROMOTE_SYNTHETIC_TIMING_TO_LIVE",
+    "MIX_HOLD_OR_UNAUDITIONED_SFX",
+    "MIX_UNLOCKED_OR_UNAPPROVED_VOICE_SOURCE",
+    "APPLY_CATE_TELEPHONE_CHAIN_TO_NON_CATE",
+    "DUCK_DIALOGUE_OR_CLUE_SFX",
+    "TRIM_OR_FILL_PROTECTED_SILENCE",
+    "USE_MUSIC_AS_ROOM_BED_SUBSTITUTE",
+    "DECLARE_RELEASE_PASS_FROM_MACHINE_PREFLIGHT"
+  ]
+}
