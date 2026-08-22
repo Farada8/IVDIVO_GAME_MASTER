@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.3",
+  "updated": "2026-08-22",
+  "candidate_id": "BOOK-MECH-C01",
+  "status": "ENGINEERING_CANDIDATE_LOCAL_24_24_PASS_UPSTREAM_BI_V1_1_VERIFIED_CURRENT_CROSS_DOMAIN_OPEN_STORY_QUALITY_PILOT_HOLD",
+  "parent_authority": "BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.1.md",
+  "parent_engine_state_observed": "V1_1_ENGINEERING_VERIFIED_CURRENT_CROSS_DOMAIN_PROSPECTIVE_VALIDATED_DRIVE_SYNC_PASS",
+  "parent_engine_state_schema_observed": "1.8",
+  "parent_engine_relation": "REUSE_CURRENT_NO_DUPLICATE_TRACEABILITY_OR_EVIDENCE_ENGINE",
+  "runtime": "tools/ivdivo_story_mechanism_intelligence.py",
+  "tests": "tests/test_story_mechanism_intelligence.py",
+  "schemas": "BOOK_INTELLIGENCE_ENGINE/2026-08-22_CYCLE2_STORY_MECHANISM_INTELLIGENCE_32_TO_64/06_STORY_MECHANISM_SCHEMAS_v0.1.json",
+  "fresh_reconciliation": "BOOK_INTELLIGENCE_ENGINE/2026-08-22_CYCLE2_STORY_MECHANISM_INTELLIGENCE_32_TO_64/07_FRESH_UPSTREAM_AND_STORY_PILOT_RECONCILIATION_2026-08-22.md",
+  "local_tests": {
+    "passed": 24,
+    "failed": 0,
+    "status": "PASS_ENGINEERING"
+  },
+  "cycle2_prompts": {
+    "dispositioned": 32,
+    "fabricated_pass": 0,
+    "story_quality_evidence_hold": true,
+    "human_evidence_hold": true
+  },
+  "next_prompt_bank": {
+    "count": 64,
+    "execution_policy": "DEPENDENCY_AND_INFORMATION_VALUE_ORDERED_NOT_BLIND_QUEUE"
+  },
+  "upstream_business_pilot2": {
+    "status": "REUSED_FROM_CURRENT_MAIN",
+    "result": "PASS_CROSS_DOMAIN_SAFETY_REPLICATION_NO_INCREMENTAL_DECISION_GAIN",
+    "promotion": "HOLD_FOR_BUSINESS_SPECIFIC_INCREMENTAL_GAIN"
+  },
+  "upstream_book_intelligence_v1_1": {
+    "status": "VERIFIED_CURRENT_CROSS_DOMAIN",
+    "prospective_project_validation": "PASS_ACROSS_TWO_INDEPENDENT_PROJECT_APPLICATIONS",
+    "rule": "PARENT_ENGINE_PROMOTION_DOES_NOT_AUTO_PROMOTE_INDIVIDUAL_STORY_MECHANISMS"
+  },
+  "b03_control": {
+    "status": "FOUNDER_LOCKED_SHADOW_ONLY",
+    "text_mutation_authorized": false,
+    "founder_locked_chapters": "CH01-CH29",
+    "current_frontier": "AUDIO_ADAPTATION_NOT_STORY_REWRITE"
+  },
+  "fresh_story_pilot_eligibility": {
+    "result": "HOLD_NO_AUTHORIZED_CURRENT_STORY_DEFECT",
+    "checked_high_authority_projects": [
+      "B03_THE_EMPTY_RESCUE_FOUNDER_LOCKED",
+      "D10_BLOODBOUND_FOUNDER_LOCKED",
+      "D01_THE_WIFE_AT_HIS_WEDDING_FOUNDER_LOCKED",
+      "B02_ORBITAL_YOUTH_EXTERNAL_FEEDBACK_READY_NO_SPECULATIVE_REWRITE",
+      "D09_THE_MAN_WHO_CAME_BACK_COMPLETE_FOUNDER_LOCK_DECISION_GATE"
+    ],
+    "fabricate_pilot_to_validate_engine": false
+  },
+  "promotion_effect": "NONE",
+  "self_improvement_v2": "REMAINS_VERIFIED_CURRENT",
+  "self_improvement_v3": "NOT_PROMOTED",
+  "next_gate": "REAL_NON_LOCKED_STORY_DEFECT_WITH_AUTHORIZED_BASELINE_CANDIDATE_COMPARISON",
+  "next_route": "COMPLETE_CROSS_STORE_PERSISTENCE_THEN_RETURN_TO_PRODUCTION",
+  "marker": "BOOK-MECH-C01-FRESH-UPSTREAM-BI1.8-OPEN-STORY-PILOT-HOLD-RETURN-TO-PRODUCTION"
+}
