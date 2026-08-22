@@ -1,0 +1,21 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_UPLOADED_HANDOFF_PROVENANCE_v1",
+  "date": "2026-08-22",
+  "uploaded_name": "Вставленная ​​уценка(7).md",
+  "source_role": "conversation_handoff_supporting_context",
+  "utf8_characters": 19495,
+  "source_lines_python_splitlines": 705,
+  "sha256_utf8": "ad4a0b44b0c35dbed4697bc98b66e8e1ad03f7ebb8c3c774ca7e86fd393dc3f8",
+  "drive_native_copy": {
+    "document_id": "12mnDFWMFxfMsd5sioDDDtbwj-5LrgN32h1ChGSK87aI",
+    "cycle6_folder_id": "1PVtwKAzHTYVKF9rpdqMt7FkcYEG9CACU",
+    "title": "99 SOURCE HANDOFF — UPLOADED CURRENT CHAT — 2026-08-22"
+  },
+  "github_policy": "GitHub stores provenance/pointers and engineered state; the full uploaded handoff source is retained in Drive to avoid creating another competing raw authority.",
+  "authority_effect": "SUPPORTING_CONTEXT_ONLY",
+  "does_not_supersede": [
+    "CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
+    "Library78 physical authority",
+    "Cycle5 post-merge machine state"
+  ]
+}
