@@ -1,0 +1,22 @@
+name: Business Library Convergence Salvage R2 Tests
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_LIBRARY_MECHANISM_CONVERGENCE_SALVAGE/**'
+      - '.github/workflows/business-library-convergence-salvage-r2-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run 10 convergence guard canaries
+        run: python -m unittest discover -s BUSINESS_ENGINEERING_OS/2026-08-22_LIBRARY_MECHANISM_CONVERGENCE_SALVAGE/tests -p 'test_*.py' -v
