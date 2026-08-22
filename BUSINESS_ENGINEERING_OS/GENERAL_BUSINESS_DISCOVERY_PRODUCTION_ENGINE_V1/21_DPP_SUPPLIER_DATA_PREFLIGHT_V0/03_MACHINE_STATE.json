@@ -1,0 +1,48 @@
+{
+  "schema": "ivdivo.general_business.pew04_dpp_supplier_data_preflight/1.0",
+  "date": "2026-08-22",
+  "gate": "P-EW04",
+  "lane": "CF-03_OW-03",
+  "status": "SYNTHETIC_CORRECTION_LOOP_READY_CI_GATED",
+  "source_baseline": {
+    "dpp_registry_operational_from": "2026-07-20",
+    "testing_environment_available": true,
+    "registry_is_indexing_service": true,
+    "full_dpp_data_is_decentralised": true,
+    "generic_espr_annex_iii_is_universal_mandatory_field_list": false,
+    "synthetic_fixture_product_group": "furniture",
+    "synthetic_fixture_legal_applicability": "UNKNOWN",
+    "first_commission_referenced_implementation_deadline": "2027-02-18_CERTAIN_LARGE_BATTERIES"
+  },
+  "fixture": {
+    "id": "SYN-FURN-001",
+    "real_product": false,
+    "real_operator": false,
+    "initial_missing_data_count_expected": 8,
+    "corrected_missing_data_count_expected": 5,
+    "closed_gaps_expected": ["compliance_document_refs", "dimensions_mm", "material_composition"],
+    "closed_count_expected": 3
+  },
+  "core_guards": [
+    "DPP_DATA_READINESS_NEQ_LEGAL_DPP_APPLICABILITY",
+    "REGISTRY_METADATA_NEQ_FULL_DPP_DATASET",
+    "FIELD_PRESENT_WITHOUT_SOURCE_NEQ_VERIFIED_DATA",
+    "MISSING_SUPPLIER_DATA_NEQ_LEGAL_NONCOMPLIANCE",
+    "PRODUCT_GROUP_PRIORITY_NEQ_CURRENT_MANDATORY_DPP",
+    "TEST_ENVIRONMENT_ACCESS_NEQ_PRODUCTION_REGISTRATION_SUCCESS",
+    "SYNTHETIC_IDENTIFIER_NEQ_REAL_OPERATOR_IDENTIFIER",
+    "GENERIC_ESPR_FIELD_CATEGORY_NEQ_PRODUCT_SPECIFIC_REQUIRED_FIELD"
+  ],
+  "proof_boundary": {
+    "technical_data_delta_expected_on_synthetic_fixture": true,
+    "legal_applicability_proven": false,
+    "registry_acceptance_proven": false,
+    "conformity_proven": false,
+    "buyer_demand_proven": false,
+    "wtp_proven": false,
+    "transaction_proven": false,
+    "profitability_proven": false
+  },
+  "external_action_authorized": false,
+  "next_if_ci_passes": "CF-03_CAN_ROUTE_TO_M1_DIAGNOSTIC_SPEC_NOT_WTP_PROVEN_THEN_P-EW05_COMPARE_WIP3"
+}
