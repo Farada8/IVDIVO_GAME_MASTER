@@ -33,6 +33,12 @@
     "SYNTHETIC_IDENTIFIER_NEQ_REAL_OPERATOR_IDENTIFIER",
     "GENERIC_ESPR_FIELD_CATEGORY_NEQ_PRODUCT_SPECIFIC_REQUIRED_FIELD"
   ],
+  "drive": {
+    "document_id": "1vB2oIDSwI801sdDApIavpbVD2tqGtj7k_ZLfMsISUC8",
+    "parent_folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
+    "semantic_readback": true,
+    "readback_marker": "P-EW04-DPP-SUPPLIER-DATA-PREFLIGHT-V0-3GAPS-CLOSED-LEGAL-SCOPE-UNKNOWN-20260822"
+  },
   "proof_boundary": {
     "technical_data_delta_expected_on_synthetic_fixture": true,
     "legal_applicability_proven": false,
