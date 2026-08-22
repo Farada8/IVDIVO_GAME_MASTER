@@ -1,0 +1,63 @@
+{
+  "schema_version": "ivdivo.room917_sfx_blind_pack_machine_preflight/1.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "scope": "MACHINE_PREFLIGHT_ONLY_NOT_HUMAN_LISTENER_SELECTION",
+  "status": "PASS_WITH_OBSERVATIONS",
+  "source": {
+    "drive_file_id": "1f_CyKbptuLinX35fln6sB8klZOEpO7Lc",
+    "filename": "ROOM917_SFX_S13_S14_S17_S19_BLIND_v2.zip",
+    "size_bytes": 1889643,
+    "sha256": "8b66af4cf3a3fe728e476d83a9227be1d4bd1e3576f748212acaafefe80ebfdc",
+    "sha256_verified_after_materialization": true,
+    "contained_wav_count": 8,
+    "contained_scorecard": "BLIND_SCORECARD_S13_S14_S17_S19_v2.txt"
+  },
+  "blind_firewall": {
+    "x_y_mapping_opened": false,
+    "selection_made": false,
+    "human_believability_claimed": false,
+    "human_clue_legibility_claimed": false,
+    "rule": "Machine measurements may reject an impossible candidate but may not choose X/Y or create AUDIO_CANON_MASTER."
+  },
+  "format": {
+    "all_wavs_sample_rate_hz": 48000,
+    "all_wavs_bit_depth": 24,
+    "all_wavs_channels": 2,
+    "all_x_y_hashes_distinct": true
+  },
+  "measurements": {
+    "S13_INTERNAL_DOUBLE_RING_OLD": {
+      "X": {"duration_seconds": 1.75, "envelope_event_count": 2, "event_times_seconds": [0.172, 0.952], "stereo_correlation": 1.0, "tail_250ms_rms_dbfs": -240.0},
+      "Y": {"duration_seconds": 1.75, "envelope_event_count": 2, "event_times_seconds": [0.150, 0.890], "stereo_correlation": 1.0, "tail_250ms_rms_dbfs": -240.0},
+      "machine_finding": "BOTH_HAVE_TWO_DISTINCT_ENVELOPE_GROUPS_AND_CLEAN_TAIL",
+      "human_gate": "OPEN"
+    },
+    "S14_UNMARKED_GLASS_LAMP_PING": {
+      "X": {"duration_seconds": 0.72, "envelope_event_count": 1, "stereo_correlation": 1.0, "tail_250ms_rms_dbfs": -62.773},
+      "Y": {"duration_seconds": 0.72, "envelope_event_count": 1, "stereo_correlation": 1.0, "tail_250ms_rms_dbfs": -63.052},
+      "machine_finding": "BOTH_ARE_SINGLE_EVENT_DUAL_MONO_SOURCE_ASSETS; SOURCE_POSITION_MUST_NOT_BE_INFERRED_FROM_INTRINSIC_STEREO",
+      "human_gate": "OPEN"
+    },
+    "S17_COPPER_HISS": {
+      "X": {"duration_seconds": 2.4, "stereo_correlation": 0.747037, "steady_50hz_power_ratio_db_relative_20hz_20khz": -175.276},
+      "Y": {"duration_seconds": 2.4, "stereo_correlation": 0.930769, "steady_50hz_power_ratio_db_relative_20hz_20khz": -176.040},
+      "machine_finding": "NO_MEANINGFUL_STEADY_50HZ_COMPONENT_DETECTED_IN_EITHER_CANDIDATE",
+      "human_gate": "OPEN"
+    },
+    "S19_TWO_PART_LINE_CUT": {
+      "X": {"duration_seconds": 1.55, "envelope_event_count": 2, "event_times_seconds": [0.210, 0.540], "stereo_correlation": 0.905216, "tail_250ms_rms_dbfs": -240.0},
+      "Y": {"duration_seconds": 1.55, "envelope_event_count": 2, "event_times_seconds": [0.220, 0.575], "stereo_correlation": 0.909472, "tail_250ms_rms_dbfs": -240.0},
+      "machine_finding": "BOTH_HAVE_TWO_DISTINCT_EVENTS_AND_DIGITALLY_CLEAN_POST_CUT_TAIL",
+      "human_gate": "OPEN"
+    }
+  },
+  "listener_qc_implications": [
+    "NO_X_Y_WINNER_CAN_BE_DECLARED_FROM_THESE_MEASUREMENTS",
+    "S13_S14_DUAL_MONO_SOURCE_IS_NOT_BY_ITSELF_A_GEOGRAPHY_FAILURE; ASSEMBLED_MIX_PLACEMENT_REMAINS_THE_RELEVANT_LISTENER_TEST",
+    "S17_50HZ_REJECTION_DOES_NOT_PROVE_VOICE_NON_MASKING; THAT_REQUIRES_ASSEMBLED_DIALOGUE_CONTEXT",
+    "S19_TWO_EVENT_STRUCTURE_DOES_NOT_PROVE_LISTENER_CAN_COUNT_TWO_EVENTS; HUMAN_BLIND_LISTEN_REMAINS_REQUIRED"
+  ],
+  "next": "HUMAN_BLIND_X_Y_SELECTION_IN_SFX_FACTORY; P003B_ASSEMBLED_MASTER_LISTENER_QC_REMAINS_SEPARATE_AND_BLOCKED_ON_IDENTIFIED_MASTER_BYTES"
+}
