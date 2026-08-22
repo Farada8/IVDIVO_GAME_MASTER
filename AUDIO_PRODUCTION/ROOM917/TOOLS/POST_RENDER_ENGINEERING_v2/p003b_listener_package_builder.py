@@ -6,6 +6,15 @@ from pathlib import Path
 SOURCE_SHA="231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8"
 REQ_DIRECT={"FORMAT_DURATION_STABILITY","SCENE3_BYTES_UNCHANGED","UNAUTHORIZED_RANGES_UNCHANGED","AUTHORIZED_PATCH_RANGE_CHANGED"}
 IDENTITY_FAILURE_PREFIXES=("MASTER_SHA256_","MASTER_DURATION_","MASTER_SAMPLE_RATE_","MASTER_BIT_DEPTH_","MASTER_CHANNEL_COUNT_","DERIVED_","PATCH_","RENDER_","REGRESSION_")
+QUESTION_CLASSES=["ACTOR_BELIEF","AI_AUDIBLE","DEAD_SCENE","GEOGRAPHY","MYSTERY","SFX_MASKING"]
+QUESTIONS=[
+    "Верю ли я актёру?",
+    "Где слышно ИИ?",
+    "Где сцена мёртвая?",
+    "Понятна ли география?",
+    "Работает ли тайна?",
+    "Не мешают ли SFX словам?",
+]
 
 def load(p: Path): return json.loads(p.read_text(encoding="utf-8"))
 def sha256_file(p: Path,block_size:int=8*1024*1024)->str:
@@ -62,7 +71,23 @@ def main()->int:
         if src and Path(src).is_file():
             dst=a.outdir/outname; shutil.copy2(src,dst); files[key]={"file":dst.name,"sha256":sha256_file(dst),"playback":"PASS_C_ONLY_AFTER_PASS_A_NOTES_FROZEN"}
 
-    public_manifest={"schema_version":"room917.p003b_blind_listener_package/1.0","package_id":a.package_id,"status":"READY_FOR_PASS_A","listener_rules":["LISTEN_ONCE_WITHOUT_STORY_NOTES","DO_NOT_OPEN_INTERNAL_IDENTITY_KEY","FREEZE_PASS_A_NOTES_BEFORE_TARGETED_PASS_B","TRANSLATION_FILES_ARE_PASS_C_ONLY"],"files":files,"questions":["Does any acting sound synthetic or performed rather than lived?","Where does the scene feel dead or physically empty?","Can you always tell where people and important sounds are?","Which sound moments are unclear or mask speech?","Does the mystery read without explanation?","At what exact time do you want to stop listening, if anywhere?"],"machine_qc_status":qc.get("status"),"warning":"Machine QC status is not a human listening verdict."}
+    public_manifest={
+        "schema_version":"room917.p003b_blind_listener_package/1.1",
+        "package_id":a.package_id,
+        "status":"READY_FOR_PASS_A",
+        "listener_rules":[
+            "LISTEN_ONCE_WITHOUT_STORY_NOTES",
+            "DO_NOT_OPEN_INTERNAL_IDENTITY_KEY",
+            "FREEZE_PASS_A_NOTES_BEFORE_TARGETED_PASS_B",
+            "TRANSLATION_FILES_ARE_PASS_C_ONLY",
+            "ANSWER_ONLY_THE_SIX_LOCKED_LISTENER_QC_QUESTIONS"
+        ],
+        "files":files,
+        "question_classes":QUESTION_CLASSES,
+        "questions":QUESTIONS,
+        "machine_qc_status":qc.get("status"),
+        "warning":"Machine QC status is not a human listening verdict. Retention, market appeal and next-episode intent are outside P003B Listener QC."
+    }
     (a.outdir/"LISTENER_MANIFEST.json").write_text(json.dumps(public_manifest,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     internal={"schema_version":"room917.p003b_internal_identity_key/1.0","package_id":a.package_id,"identity_mode":mode,"target_original_path":str(a.audio.resolve()),"target_sha256":audio_sha,"target_wav_meta":meta,"machine_qc":{"path":str(a.machine_qc.resolve()),"sha256":sha256_file(a.machine_qc),"status":qc.get("status")},"derived_provenance":provenance_summary,"law":"Keep sealed from Pass A listener until notes are frozen."}
     (a.outdir/"INTERNAL_IDENTITY_KEY_SEALED.json").write_text(json.dumps(internal,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
