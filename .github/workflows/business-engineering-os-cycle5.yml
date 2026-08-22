@@ -1,0 +1,17 @@
+name: Business Engineering OS Cycle5
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACTS_P65_P96/**'
+      - '.github/workflows/business-engineering-os-cycle5.yml'
+jobs:
+  cycle5-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Cycle5 public artifact canaries
+        working-directory: BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACTS_P65_P96/engine
+        run: python -m unittest -v test_cycle5_public_artifact_engine.py
