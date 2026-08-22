@@ -1,7 +1,8 @@
 # CURRENT — BUSINESS ENGINEERING OS AUTHORITY
 
 **DATE:** 2026-08-22
-**STATUS:** CYCLE5 PUBLIC ARTIFACT VALIDATION EXECUTED ON FEATURE BRANCH / PUBLIC EVIDENCE ONLY / NOT MARKET-PROOF PROMOTED
+**STATUS:** CYCLE5 PUBLIC ARTIFACT VALIDATION MERGED TO MAIN / PUBLIC EVIDENCE ONLY / NOT MARKET-PROOF PROMOTED
+**MERGE:** PR #185 -> `470a8aea93385ef8624b47688dbf4cf21090c058`
 
 ## Library
 Private RAW Drive: `1X6mo94Qo103HheyDry4P3dcQkv5qZg6N`
@@ -15,10 +16,11 @@ Raw copyrighted binaries remain Drive-only.
 2. `2026-08-22_CYCLE4_PUBLIC_SIGNAL_OPPORTUNITY_SCAN_32_TO_64` — official/public opportunity corpus.
 3. `2026-08-22_CYCLE4_PROCUREMENT_CAPITAL_LIVE32` — C129-C152, funding/procurement evidence lane.
 
-## Cycle5 working candidate
+## Cycle5 current authority
 Path: `BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_PUBLIC_ARTIFACT_VALIDATION_32_TO_64/`
-Branch: `studio/business-engineering-cycle5-artifact-validation-2026-08-22`
+Merged PR: `#185`
 Drive folder: `1WQBjFu6wIYcrxs3QnPOeUHtZnMVkNwDf`
+Final Drive handoff: `1pqQnjeIZQYdSktb_b_q2gCY64X4cN4UraMcQLyE5kH0`
 
 Cycle5 completed:
 - 32/32 sequential runs;
@@ -32,17 +34,17 @@ Cycle5 completed:
 - extended executable validator + 32/32 regression fixtures PASS;
 - extended Run32 disposition: 30 KEEP / 2 MUTATE / 0 KILL;
 - baseline + extended synthesis and Self-Improvement evidence bridges;
-- two compatible Next64 formulations, with extended evidence-gap sequence P33–P96;
-- Google Drive mirror/readback in the Cycle5 folder.
+- Next64 evidence hardening, with extended sequence P33–P96;
+- Google Drive mirror/readback completed.
 
 ## Test accounting
-Baseline 14/14 and extended 32/32 suites overlap in purpose. They are not 46 independent proofs. Both independently/convergently pass the critical public-evidence, null-safety, WIP and substitution invariants.
+Baseline 14/14 and extended 32/32 suites overlap in purpose. They are not 46 independent proofs. Both converge on the critical public-evidence, null-safety, WIP and substitution invariants.
 
 ## Public Artifact proof plane
 PA0 idea -> PA1 contracted -> PA2 source-populated -> PA3 regression-pass -> PA4 independent validation -> PA5 real target-user decision use.
 
 `PA != K != S != E`.
-Cycle5 extended samples reached **PA3**. PA4, PA5 and E3 are not proven.
+Cycle5 samples reached **PA3**. PA4, PA5 and E3 are not proven.
 
 ## Proof boundary
 Knowledge K, public-signal S, public-artifact PA and market E proof are non-substitutable.
@@ -68,7 +70,7 @@ Current path:
 ## Current gate
 `PA3 SAMPLE ARTIFACTS -> PA4 INDEPENDENT/ALTERNATE VALIDATION -> SMALLEST REAL TARGET-USER DECISION-USE TEST -> PA5/E3 ONLY IF REAL INTERACTION EXISTS`.
 
-Next useful work is extended P33–P48 procurement hardening first: full tender pack -> qualification object -> verified supplier profile -> fatal gaps -> independent PA4 review. Do not restart broad market scanning or generic book ingestion without a specific unresolved mechanism gap.
+Next useful work: extended P33–P48 procurement hardening first: full tender pack -> qualification object -> verified supplier profile -> fatal gaps -> independent PA4 review. Do not restart broad market scanning or generic book ingestion without a specific unresolved mechanism gap.
 
 Retrofit P49–P64 waits for a real property packet. SME-AI P65–P80 waits for a real post-Digital-for-Business workflow/report. Cross-lane P81–P96 remain safeguards.
 
