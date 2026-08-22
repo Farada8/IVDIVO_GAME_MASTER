@@ -1,0 +1,38 @@
+{
+  "schema": "BIDDER_DESIGNATION_TEST_FIXTURE_v1",
+  "date": "2026-08-22",
+  "resource_id": "8872468",
+  "legal_entity_name": "SYNTHESIS-IVDIVO LIMITED",
+  "registration_number": "796820",
+  "entity_evidence_state": "PARTIAL_IDENTITY_PLUS_CORE_SCREEN_PLUS_TAX_ACCOUNT_EVIDENCE_PLUS_SELF_ISSUED_EWI_RECORDS",
+  "designation_mode": "TEST_FIXTURE_ONLY",
+  "authorized_designator": null,
+  "designated_at": null,
+  "designation_scope": "INTERNAL_ENGINE_TEST_ONLY",
+  "active": false,
+  "explicit_bidder_designation": false,
+  "internal_fixture_allowed": true,
+  "p235_state": "HOLD_NO_EXPLICIT_BIDDER_DESIGNATION",
+  "target_pack_complete": false,
+  "bidder_capability_packet_complete": false,
+  "requirement_join_authorized": false,
+  "bid_hold_no_bid_authorized": false,
+  "proof_boundary": {
+    "pa4": false,
+    "pa5": false,
+    "e3": false,
+    "e4": false
+  },
+  "contracts": [
+    "TEST_FIXTURE_ENTITY_NEQ_EXPLICIT_BIDDER_DESIGNATION",
+    "COMPANY_CONTEXT_NEQ_EXPLICIT_BIDDER_DESIGNATION",
+    "BIDDER_DESIGNATION_REQUIRES_AUTHORIZED_ACTOR_TIMESTAMP_SCOPE_AND_ACTIVE_STATE",
+    "EXPLICIT_DESIGNATION_ALONE_NEQ_REQUIREMENT_JOIN_AUTHORITY"
+  ],
+  "notes": [
+    "This object is safe for internal engine fixtures only.",
+    "It does not state that the Founder or company intends to bid for resource 8872468.",
+    "Registration number is evidence-bound identity metadata, not capability or procurement eligibility evidence.",
+    "A future ACTUAL_BIDDER designation must be an explicit case-specific authorized event."
+  ]
+}
