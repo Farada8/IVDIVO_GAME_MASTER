@@ -4,70 +4,58 @@ on:
   pull_request:
     paths:
       - '.github/workflows/room917-ru-native-discovery-pr-probe.yml'
-      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/discover_ru_voice_candidates.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/probe_public_shared_voices.py'
 
 permissions:
   contents: read
 
 jobs:
-  discover-native-ru:
+  public-shared-voice-probe:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Checkout PR head
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Discover durable native-Russian professional voices
-        env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      - name: Probe first 300 public Voice Library rows
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p _room917_ru_native_probe
-          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/discover_ru_voice_candidates.py \
-            --out _room917_ru_native_probe/RU_NATIVE_VOICE_DISCOVERY.json \
-            --min-notice-days 365 \
-            --page-size 100 \
-            --max-pages 3
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/probe_public_shared_voices.py \
+            --out _room917_ru_native_probe/PUBLIC_SHARED_VOICE_PROBE.json \
+            --pages 100 \
+            --min-notice-days 365
 
-      - name: Validate and add probe receipt
+      - name: Add receipt
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           import hashlib, json
           from pathlib import Path
-          p=Path('_room917_ru_native_probe/RU_NATIVE_VOICE_DISCOVERY.json')
-          if not p.exists():
-              raise SystemExit('RU_NATIVE_VOICE_DISCOVERY.json missing')
-          data=p.read_bytes()
-          row=json.loads(data.decode('utf-8'))
-          if row.get('paid_synthesis_calls') != 0:
-              raise SystemExit('unexpected paid synthesis')
-          if row.get('selection_policy',{}).get('auto_cast') is not False:
-              raise SystemExit('auto_cast must remain false')
+          p=Path('_room917_ru_native_probe/PUBLIC_SHARED_VOICE_PROBE.json')
+          data=p.read_bytes(); row=json.loads(data.decode('utf-8'))
           receipt={
-              'schema_version':'ivdivo.room917_ru_native_discovery_probe_receipt/1.1',
+              'schema_version':'ivdivo.room917_public_shared_voice_probe_receipt/1.0',
               'provider':'ElevenLabs',
               'tts_calls':0,
               'paid_synthesis_calls':0,
-              'secret_persisted':False,
-              'candidate_count':row.get('candidate_count'),
-              'snapshot_sha256':hashlib.sha256(data).hexdigest(),
-              'policy':row.get('query_policy'),
+              'authentication':'NONE',
+              'voice_rows_scanned':row.get('voice_rows_scanned'),
+              'ru_voice_count':row.get('ru_voice_count_in_probe'),
+              'production_candidate_count':row.get('production_candidate_count_in_probe'),
+              'provider_has_more_after_probe':row.get('provider_has_more_after_probe'),
+              'sha256':hashlib.sha256(data).hexdigest(),
           }
           Path('_room917_ru_native_probe/PROBE_RECEIPT.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           PY
 
-      - name: Upload sanitized native-RU discovery artifact
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: ROOM917_RU_NATIVE_DISCOVERY_PROBE
+          name: ROOM917_RU_PUBLIC_SHARED_VOICE_PROBE
           path: _room917_ru_native_probe/
           if-no-files-found: error
           retention-days: 7
@@ -78,13 +66,12 @@ jobs:
           python - <<'PY'
           import json, os
           from pathlib import Path
-          row=json.loads(Path('_room917_ru_native_probe/RU_NATIVE_VOICE_DISCOVERY.json').read_text(encoding='utf-8'))
+          row=json.loads(Path('_room917_ru_native_probe/PUBLIC_SHARED_VOICE_PROBE.json').read_text(encoding='utf-8'))
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
-              f.write('## ROOM917 RU native discovery probe\n')
-              f.write(f"- status: {row.get('status')}\n")
-              f.write(f"- native RU professional voices: {row.get('candidate_count')}\n")
-              f.write('- minimum notice period: 365 days\n')
+              f.write('## ROOM917 public Voice Library probe\n')
+              f.write(f"- rows scanned: {row.get('voice_rows_scanned')}\n")
+              f.write(f"- RU voices found: {row.get('ru_voice_count_in_probe')}\n")
+              f.write(f"- production candidates found: {row.get('production_candidate_count_in_probe')}\n")
+              f.write(f"- has more after probe: {row.get('provider_has_more_after_probe')}\n")
               f.write('- paid synthesis calls: 0\n')
-              f.write('- secret required for this endpoint: no\n')
-              f.write('- artifact: ROOM917_RU_NATIVE_DISCOVERY_PROBE\n')
           PY
