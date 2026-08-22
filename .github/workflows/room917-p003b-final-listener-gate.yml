@@ -6,6 +6,7 @@ on:
       - 'AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json'
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_final_listener_gate.py'
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_p003b_final_listener_gate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_pass_b_open.py'
       - '.github/workflows/room917-p003b-final-listener-gate.yml'
   workflow_dispatch:
 
@@ -29,11 +30,13 @@ jobs:
           from pathlib import Path
           p=Path('AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json')
           row=json.loads(p.read_text(encoding='utf-8'))
-          assert row['schema_version']=='ivdivo.room917_p003b_listener_qc_result/1.3'
+          assert row['schema_version']=='ivdivo.room917_p003b_listener_qc_result/1.4'
           modes=set(row['source_identity']['allowed_target_identity_mode'])
           assert 'AUTOMIX_V1_ELIGIBILITY_VERIFIED_FULL_MIX' in modes
           assert row['blind_listen']['pass_b_queue_may_open_only_after_valid_pass_a_freeze_receipt'] is True
+          assert 'pass_b_open_receipt_ref' in row['blind_listen']
+          assert 'NO_REPAIR_COMPILATION_WITHOUT_PASS_B_OPEN_RECEIPT' in row['repair_compiler']['rules']
           assert row['final_verdict']['allowed_believability']==['BELIEVE','BORDERLINE','DONT_BELIEVE']
           assert row['question_classes']==['ACTOR_BELIEF','AI_AUDIBLE','DEAD_SCENE','GEOGRAPHY','MYSTERY','SFX_MASKING']
-          print('P003B result contract v1.3 synchronized: PASS')
+          print('P003B result contract v1.4 synchronized: PASS')
           PY
