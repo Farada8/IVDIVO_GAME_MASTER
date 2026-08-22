@@ -1,0 +1,24 @@
+name: Personal AI PL-09 Continuity Checker
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl09-continuity-checker.yml'
+
+jobs:
+  pl09-continuity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run PL-09 deterministic continuity tests
+        run: |
+          python -m unittest \
+            personal-ai/tests/test_continuity_checker.py \
+            personal-ai/tests/test_pl09_acceptance_fixture.py \
+            -v
+      - name: Run full Personal AI regression suite
+        run: python -m unittest discover -s personal-ai/tests -v
