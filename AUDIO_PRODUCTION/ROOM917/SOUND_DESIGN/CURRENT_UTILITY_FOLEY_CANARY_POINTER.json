@@ -1,0 +1,79 @@
+{
+  "schema_version": "room917.current_utility_foley_canary_pointer/1.0",
+  "updated": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "36_CANDIDATES_MACHINE_QC_PASS__HOLD_HUMAN_AUDITION",
+  "autopilot_law": "LOCAL_GATE_NE_GLOBAL_STOP",
+  "scope": "UTILITY_FOLEY_AND_CAUSAL_SFX_NOT_CRITICAL_CLUE_CANARY_AUTHORITY",
+  "asset_ids": [
+    "S01_REVOLVING_DOOR_GROAN",
+    "S02_JULIAN_MEASURED_STEPS_STONE",
+    "S03_KEYRING_PLACED_ON_DESK",
+    "S04_FLIGHT_CASE_OPEN",
+    "S05_WOOD_SWITCHBOARD_CABINET_OPEN",
+    "S06_DRY_TOGGLE_CLICKS",
+    "S09_CONDUIT_WIND_SCRATCH",
+    "S12_PROBE_CONTACT_CLICKS",
+    "S15_FIELD_RECORDER_START",
+    "S16_HEADSET_PLUG_SEAT",
+    "S20_FAST_JULIAN_STEPS_AND_DOOR",
+    "S21_DEAD_LINE_HISS"
+  ],
+  "variants_per_asset": 3,
+  "candidate_count": 36,
+  "audio_format": {"sample_rate_hz": 48000, "bit_depth": 24, "channels": 2},
+  "provider_calls": 0,
+  "paid_synthesis_calls": 0,
+  "machine_qc": {
+    "status": "PASS",
+    "failures": 0,
+    "measurement": "LOG_ENVELOPE_POSITIVE_FLUX_CAUSAL_ONSET_DETECTOR",
+    "note": "Initial naive envelope detector over-counted resonant latch/step tails. Final v1.1 QC corrected measurement semantics rather than broadening acceptance thresholds."
+  },
+  "drive": {
+    "incoming_root": "1JXfbdauI-ouBRr_e8XLT99lD52TBZeTG",
+    "canary_folder": "1-MY7N1KrUlmGvCRGKDARh6sWVRCrjpud",
+    "audio_package_folder": "1g7Upb0GATXnODesdRgiLIri6iNVWbqPi",
+    "source_receipts_folder": "1lIxCbvSDeWwUJd2_5foOnfQW2GfTWaTi",
+    "zip_file_id": "1YNq1ZpyfYA_onCimNrBAyY8pnvY9SKsf",
+    "zip_sha256": "a4c2f87729c875c687b48c2823384adad559ed2184c7c71a074774c539df3b75",
+    "generator_file_id": "1jxM5SRv7zdSj2YO9zrFdcT2mMCiv7gdA",
+    "qc_script_file_id": "1vOEr6umj6lc-wQhVYLiGi8NA2SQ2BVOG",
+    "receipt_file_id": "1PyzR3IFgEh6ecaEKOo1pFiZmnLtHWdFl",
+    "final_qc_file_id": "1o0-Ia_wXSdyn_Sru7Ui46q-KX4L9DkWg"
+  },
+  "authority_relationship": {
+    "critical_clue_canaries": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/CURRENT_CRITICAL_SFX_CANARY_POINTER.json",
+    "room_bed_canaries": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/CURRENT_ROOM_BED_CANARY_POINTER.json",
+    "sound_asset_contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+    "does_not_supersede": ["CRITICAL_SFX_CANARY_AUTHORITY", "ROOM_BED_CANARY_AUTHORITY", "CURRENT_SOUND_DESIGN_POINTER"]
+  },
+  "human_gate": {
+    "required": true,
+    "decision_per_asset": "A_OR_B_OR_C_OR_NONE",
+    "phone_proxy_required_for_story_critical": [
+      "S06_DRY_TOGGLE_CLICKS",
+      "S09_CONDUIT_WIND_SCRATCH",
+      "S15_FIELD_RECORDER_START",
+      "S16_HEADSET_PLUG_SEAT",
+      "S21_DEAD_LINE_HISS"
+    ],
+    "production_binding_authorized": false
+  },
+  "hard_rules": [
+    "DO_NOT_REGENERATE_WITHOUT_NEW_DEFECT_EVIDENCE",
+    "DO_NOT_MOVE_TO_APPROVED_REFERENCE_MASTERS_BEFORE_HUMAN_GATE",
+    "MACHINE_QC_PASS_IS_NOT_HUMAN_AUDITION_PASS",
+    "NO_STORY_OR_DIALOGUE_CHANGE",
+    "NO_SCENE3_REOPEN_FROM_THIS_LAYER",
+    "CONTINUE_OTHER_READY_DAG_WORK_WHILE_HUMAN_GATE_IS_PENDING"
+  ],
+  "next_independent_work": [
+    "BUILD_FOLEY_MICROPHONE_CHOREOGRAPHY_BINDING_MAP",
+    "BUILD_EN_RU_BYTE_SHARED_ELIGIBILITY_FOR_NON_CHARACTER_FOLEY",
+    "PREPARE_E01_ASSEMBLY_SLOT_MAP_WITHOUT_TIMING_INVENTION",
+    "CONTINUE_RU_PROVIDER_AUTH_IN_PARALLEL_WHEN_EXTERNAL_AUTH_BECOMES_AVAILABLE"
+  ]
+}
