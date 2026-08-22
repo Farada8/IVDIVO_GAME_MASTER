@@ -1,0 +1,53 @@
+name: Business P225 Document Coordinate Discovery
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_P225_DOCUMENT_COORDINATE_DISCOVERY/**'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json'
+      - 'BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/engine/unlock_validator.py'
+      - '.github/workflows/business-p225-document-coordinate-discovery.yml'
+
+jobs:
+  document-coordinate-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate coordinate discovery without root promotion
+        run: |
+          python - <<'PY'
+          import importlib.util, json, pathlib, sys
+          root = pathlib.Path('.')
+          state = json.loads((root/'BUSINESS_ENGINEERING_OS/2026-08-22_P225_DOCUMENT_COORDINATE_DISCOVERY/01_MACHINE_STATE.json').read_text())
+          model = json.loads((root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json').read_text())
+          assert state['resource_id'] == '8872468'
+          assert state['documents_coordinate_discovered'] is True
+          assert state['official_documents_url'].endswith('listContractDocuments.do?resourceId=8872468')
+          assert state['attachment_inventory_read_back'] is False
+          assert state['document_bytes_acquired'] is False
+          assert state['p225_executed'] is False
+          assert state['target_pack_acquired'] is False
+          assert state['root_a'] == 'TARGET_PACK_NOT_ACQUIRED'
+          assert state['root_b'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
+          assert state['parent_backlog'] == {'range':'P225-P288','count':64,'executed':17,'remaining':47}
+          assert state['resume_route'] == 'PROTECT_NO_CHANGE'
+          assert model['schema'] == 'ivdivo.business.current_read_model/1.4'
+          assert model['current_roots']['ROOT_A'] == 'TARGET_PACK_NOT_ACQUIRED'
+          assert model['current_roots']['ROOT_B'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
+          assert model['current_execution']['completed_total_cards_inside_parent_backlog'] == 17
+          assert model['current_execution']['remaining_unexecuted_count'] == 47
+          assert model['resume_control']['current_route'] == 'PROTECT_NO_CHANGE'
+          validator_path = root/'BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/engine/unlock_validator.py'
+          spec = importlib.util.spec_from_file_location('unlock_validator_coordinate_guard', validator_path)
+          module = importlib.util.module_from_spec(spec)
+          sys.modules[spec.name] = module
+          spec.loader.exec_module(module)
+          result = module.validate_p225_input(receipt=None, files=[])
+          assert result['status'] == 'HOLD_P225_NO_FILES'
+          assert result['admissible_for_ingest'] is False
+          assert result['root_authority_mutated'] is False
+          print('P225 DOCUMENT COORDINATE: PASS — exact URL discovered, no files, ROOT_A unchanged, 17/64 unchanged')
+          PY
