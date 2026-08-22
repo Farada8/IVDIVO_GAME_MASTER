@@ -88,6 +88,10 @@ class RecoveryIntakeGateTests(unittest.TestCase):
         prov = self.write_json("prov.json", {"evidence_grade": "P003A2_ORIGINAL_OUTPUT", "source_master_sha256": g.EXPECTED_MASTER["sha256"], "source_ref": "durable-original-output-id", "immutable_source": True})
         self.assertEqual(g.validate_interval_map(self.interval_map(), prov)["status"], "PASS")
 
+    def test_interval_only_does_not_skip_timing(self):
+        self.assertEqual(g.decide_route(False, False, True), "INTERVAL_ANALYSIS_RECOVERED__ACCEPTED_LIVE_TIMING_REQUIRED")
+        self.assertEqual(g.decide_route(False, True, True), "EVIDENCE_CLASSIFICATION")
+
 
 if __name__ == "__main__":
     unittest.main()
