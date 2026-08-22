@@ -10,6 +10,16 @@ The Business CURRENT authority is now correct at 17/64 executed after P288, but 
 
 `BusinessResumeGate v1` makes the resume decision deterministic from authoritative state only.
 
+## Canonical unlock intake
+Current input contract:
+`BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/PROC_BALLYBUNION_8872468_P225_P235_UNLOCK.md`.
+
+The intake and Resume Gate are complementary, not competing:
+
+`UNLOCK_INTAKE -> ADMISSIBLE AUTHORITY EVENT -> BUSINESS RESUME GATE -> EXACT ALLOWED NEXT CHAIN`.
+
+The intake defines what can legitimately move P225 or P235. The gate decides what may run after that event. Intake text by itself has zero authority effect until the specified input/declaration is actually supplied and read back.
+
 ## Allowed routes
 - `PROTECT_NO_CHANGE` — neither independent root has a new admissible authority event.
 - `RESUME_P226_P234` — authentic target pack exists; process target authority.
@@ -26,6 +36,8 @@ The Business CURRENT authority is now correct at 17/64 executed after P288, but 
 
 ## Core contracts
 `CONTINUE_TEXT_NEQ_NEW_EVIDENCE_EVENT`
+
+`UNLOCK_INTAKE_TEXT_NEQ_UNLOCK_EVENT`
 
 `NO_NEW_ROOT_EVENT -> PROTECT_NO_CHANGE`
 
@@ -51,7 +63,8 @@ The Business CURRENT authority is now correct at 17/64 executed after P288, but 
 At the present canonical state:
 - target_pack_acquired = false;
 - actual_bidder_designation = false;
-- all downstream readiness flags = false.
+- all downstream readiness flags = false;
+- unlock intake status = `AWAITING_AUTHORIZED_INPUT`.
 
 Expected route:
 `PROTECT_NO_CHANGE`
