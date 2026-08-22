@@ -1,0 +1,68 @@
+{
+  "schema_version": "room917.critical_sfx_authority_reconciliation/1.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "RESOLVED__V2_1_IDENTITY_AUTHORITY__V2_2_QC_SUMMARY_STALE_LINEAGE",
+  "current_identity_authority": {
+    "path": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json",
+    "commit": "26544e956ca9d3d5b023325156fd0a34d201d633",
+    "schema": "room917.critical_sfx_synthetic_canary_receipt/2.1",
+    "candidate_count": 24,
+    "supersedes": [
+      "ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json",
+      "ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json"
+    ]
+  },
+  "runtime_generation": {
+    "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py",
+    "receipt_schema": "room917.critical_sfx_runtime_generation_receipt/1.0",
+    "receipt_filename": "ROOM917_E01_CRITICAL_SFX_RUNTIME_GENERATION_RECEIPT_v1.json",
+    "law": "Runtime generation receipt is byte evidence only and cannot replace the authoritative identity receipt."
+  },
+  "stale_younger_artifact": {
+    "path": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_MACHINE_QC_SUMMARY_v2_2.json",
+    "commit": "9647a2b65b730537c82981afe0872096b8731983",
+    "classification": "REFERENCE_ONLY_STALE_LINEAGE",
+    "reason": "It was produced against superseded ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json, not the current v2.1 identity authority.",
+    "cannot_authorize": [
+      "CURRENT_S14_MACHINE_PASS",
+      "CURRENT_CRITICAL_SFX_BINDING",
+      "CURRENT_BLIND_PACKAGE_IDENTITY",
+      "PRODUCTION_MIX",
+      "RELEASE"
+    ]
+  },
+  "observed_identity_divergence": {
+    "scope": "S14_UNMARKED_GLASS_LAMP_PING",
+    "current_v2_1_sha256": [
+      "0cdd77b5ee6228fb4b1d567d3af2a243fdfb8da4612fd6bbd988e0d32f0c1e16",
+      "83ed088159a6c7e8c21f7e92c3e16dd4aa6c3b32efb7a92ad3ae90be33634982",
+      "6f02ec50f0ca072d91fe39e7d6d6a040c40b350b8c8a1e549cce4ee9c68e8382"
+    ],
+    "stale_v2_2_summary_sha256": [
+      "5d3aa1e42ec4203ceab954edbaa336e5ca17f308b56e0b76dfaddbf2c733a3e3",
+      "25a60419494f64ad7ecd196e0bda7d6df47b53128d46a2c7fe70bf2633d70f99",
+      "232770a9c9fcaaec39e17658cb4c419b7f1f2d1fd14163a3495e9caedb02699b"
+    ],
+    "interpretation": "The later timestamp on the v2.2 QC summary does not make its S14 bytes authoritative. Authority follows the explicitly superseding v2.1 identity receipt and current blind workflow."
+  },
+  "current_execution_chain": [
+    "GENERATE_RUNTIME_BYTES",
+    "WRITE_DISTINCT_RUNTIME_RECEIPT",
+    "COMPARE_ALL_24_RUNTIME_SHA256_TO_AUTHORITATIVE_V2_1",
+    "FAIL_ON_ANY_IDENTITY_DRIFT",
+    "BUILD_BLIND_PACKAGE_FROM_AUTHORITATIVE_V2_1_RECEIPT",
+    "FREEZE_HUMAN_BLIND_NOTES",
+    "COMPILE_SELECTED_IDENTITY",
+    "CONTEXT_GAIN_LOCK",
+    "ATOMIC_SOUND_ASSET_BINDING_GATE"
+  ],
+  "human_firewall": {
+    "human_audition_performed": false,
+    "machine_qc_can_substitute_for_human": false,
+    "production_binding_authorized": false
+  },
+  "hard_law": "NEWER_FILE_DATE_NE_HIGHER_AUTHORITY. A QC summary tied to superseded bytes is REFERENCE ONLY until regenerated and cryptographically tied to the current identity receipt."
+}
