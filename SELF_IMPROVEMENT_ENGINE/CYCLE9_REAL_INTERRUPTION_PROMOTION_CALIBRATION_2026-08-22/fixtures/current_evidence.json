@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-08-22T04:08:00+01:00",
+  "github_main_sha": "4d6dc7c5dc24ea77582327254d339e619173558f",
+  "publication_main_sha": "5e406a18cee325e5077af87beb4c69aaac7a2837",
+  "self_improvement_authority": {"engine":"IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md","status":"VERIFIED_CURRENT","machine_state_schema":"2.7"},
+  "candidates": {
+    "SI-0014": {"status":"READY_FOR_PILOT","required_genuine_interruptions":3,"required_projects":2,"false_resume_budget":0},
+    "SI-0015": {"status":"READY_FOR_PILOT","required_real_project_pilot":true,"required_healthy_control":true,"required_false_positive_review":true},
+    "V3_REFERENCE_INGEST": {"status":"CANDIDATE_HOLD","authority_effect":"NONE","promotion_requires_real_production_net_gain":true}
+  },
+  "cycle9_real_incident": {"observed":true,"description":"Founder reported closing browser and losing many dialogs from view","real_interruption":true,"project_slice_readback_complete":false,"zero_false_resume_proven":false,"qualifying_si0014_event":false},
+  "parallel": {"cycle9_old_branch":{"status":"DIVERGED","ahead":3,"behind":1},"cycle8_n01_n32":{"status":"ALREADY_EXECUTED_MERGED"},"cycle7_durable_convergence":{"status":"INTEGRATED_CURRENT_SURFACE"}}
+}
