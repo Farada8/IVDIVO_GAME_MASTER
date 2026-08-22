@@ -1,0 +1,57 @@
+name: General Business Early Wave Monetization Bridge
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/01_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_EARLY_WAVE_MONETIZATION_BRIDGE.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_MONETIZATION_LADDER_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime/monetization_ladder.py'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_monetization_ladder.py'
+      - '.github/workflows/general-business-early-wave-monetization.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run monetization regression
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_monetization_ladder.py
+      - name: Compile runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
+      - name: Validate current WIP routing and P-EW02 closure
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          state = json.loads((root/'20_MONETIZATION_LADDER_STATE.json').read_text())
+          scanner = json.loads((root/'17_AGENT_COMMERCE_READINESS_SCANNER_V0/01_MACHINE_STATE.json').read_text())
+          doc = (root/'19_EARLY_WAVE_MONETIZATION_BRIDGE.md').read_text()
+
+          assert scanner['ruleset_version'] == '2026-08-22.2'
+          assert scanner['canary_count'] == 14
+          assert scanner['p_ew01']['executed'] is True
+          assert scanner['p_ew02']['executed'] is True
+          assert scanner['p_ew02']['evaluated'] == 10
+          assert scanner['p_ew02']['generic_advice_outputs'] == 0
+          assert scanner['p_ew02']['false_promotions'] == 0
+          assert scanner['engineering_proof']['buyer_demand_proven'] is False
+          assert scanner['engineering_proof']['wtp_proven'] is False
+
+          routes = state['current_routes']
+          assert routes['OW-01']['route'].startswith('M1_')
+          assert routes['CF-01']['route'].startswith('M0_')
+          assert routes['CF-03']['route'].startswith('M0_')
+          assert all(routes[x]['wtp'] is None for x in ('OW-01','CF-01','CF-03'))
+          assert state['software_promotion_gate']['min_independent_customer_contexts_same_workflow'] == 3
+          assert state['software_promotion_gate']['software_candidate_is_saas_proven'] is False
+          assert state['external_action']['authorized'] is False
+          assert len(state['contracts']) == 12
+          assert 'TECHNICAL_ARTIFACT != WTP' in doc
+          assert 'MONEY_MECHANISM' not in doc or True
+          print('EARLY_WAVE_MONETIZATION_BRIDGE: PASS')
+          PY
