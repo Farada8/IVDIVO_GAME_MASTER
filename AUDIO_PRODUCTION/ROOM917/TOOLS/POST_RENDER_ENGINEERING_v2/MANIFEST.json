@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.post_render_engineering_manifest/2.6",
+  "schema_version": "room917.post_render_engineering_manifest/2.7",
   "status": "PROJECT_PILOT_PASS_DOMAIN_PROMOTION_HOLD",
   "project": "ROOM917",
   "episode": "E01",
@@ -25,7 +25,7 @@
     "mode": "FAIL_CLOSED_NON_STOP",
     "law": "DO_NOT_STOP_AT_A_BLOCKED_GATE_IF_ANY_INDEPENDENT_SAFE_FRONTIER_REMAINS_EXECUTABLE",
     "router": "post_render_router.py",
-    "router_schema": "room917.post_render_router/1.2",
+    "router_schema": "room917.post_render_router/1.3",
     "self_improvement_adapter": "self_improvement_adapter.py",
     "blocked_is_not_stop": true,
     "hard_stop_only_when": [
@@ -51,7 +51,8 @@
     "exact_master_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
     "master_route": "P003A2_SIGNAL_INTERVALS",
     "accepted_live_timing_route": "LINEAGE_TIMING_RESOLUTION__P003A2_STILL_WAITS_FOR_MASTER_BYTES",
-    "trusted_exact_interval_route": "EVIDENCE_CLASSIFICATION",
+    "trusted_exact_interval_only_route": "INTERVAL_ANALYSIS_RECOVERED__ACCEPTED_LIVE_TIMING_REQUIRED",
+    "trusted_exact_interval_plus_timing_route": "EVIDENCE_CLASSIFICATION",
     "trusted_timing_grades": [
       "ACCEPTED_ALIGNMENT",
       "LIVE_TIMELINE"
@@ -60,7 +61,9 @@
       "P003A2_ORIGINAL_OUTPUT",
       "FOUNDER_LOCKED_EXACT_SIGNAL_ANALYSIS"
     ],
-    "local_unit_validation_2026_08_22": "5_PASS",
+    "local_unit_validation_2026_08_22": "6_PASS",
+    "router_regression_tests": "5_CASES_ADDED",
+    "router_hardening": "RAW_PATH_EXISTENCE_NO_LONGER_COUNTS_AS_MASTER_OR_TIMING_PASS; RECOVERY_INTAKE_RESULT_REQUIRED",
     "patch_authority": "NEVER_GRANTED_BY_INTAKE_GATE"
   },
   "sound_asset_identity": {
@@ -79,16 +82,16 @@
       "generator": "../../SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py",
       "workflow": "../../../../.github/workflows/room917-room-bed-synth-canaries.yml",
       "count": 2,
-      "status": "HOLD_HUMAN_AUDITION_REQUIRED"
+      "status": "CONTROLLED_BYTES_PRESENT_BLIND_PACKAGE_READY_HOLD_HUMAN_AUDITION"
     },
     "critical_sfx": {
-      "receipt": "../../SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json",
+      "receipt": "../../SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json",
       "generator": "../../SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py",
       "workflow": "../../../../.github/workflows/room917-critical-sfx-synth-canaries.yml",
       "functions": 8,
       "variants_per_function": 3,
       "count": 24,
-      "status": "HOLD_HUMAN_AUDITION_REQUIRED"
+      "status": "BLIND_PACKAGE_READY_HOLD_HUMAN_AUDITION"
     },
     "support_sfx_music": {
       "receipt": "../../SOUND_DESIGN/ROOM917_E01_SUPPORT_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json",
@@ -131,13 +134,15 @@
     "sealed_identity_key": true,
     "pass_a_firewall": "FREEZE_STORY_FREE_NOTES_BEFORE_PASS_B_OR_TRANSLATION_FILES"
   },
-  "real_production_frontier": "P003A2_BLOCKED_ON_EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP; D003_PATCH_REQUIRES_A01_A02_HUMAN_ACCEPTANCE_AND_IDENTITY_BINDING",
+  "real_production_frontier": "P003A2_BLOCKED_ON_EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP; CLASSIFICATION_REQUIRES_ACCEPTED_OR_LIVE_TIMING; D003_PATCH_REQUIRES_A01_A02_HUMAN_ACCEPTANCE_AND_IDENTITY_BINDING",
   "domain_promotion_gate": "SECOND_PROJECT_REPLICATION",
   "prohibited": [
     "INVENT_PRODUCTION_TIMECODES",
     "AUTO_FILL_LOW_LEVEL_WINDOWS",
     "SIMULATE_HUMAN_PASS",
     "INGEST_UNVERIFIED_SEARCH_RESULT_AS_AUTHORITY",
+    "TREAT_PATH_EXISTENCE_AS_RECOVERY_PASS",
+    "CLASSIFY_RECOVERED_SIGNAL_INTERVALS_WITHOUT_ACCEPTED_OR_LIVE_TIMING",
     "BIND_SOUND_ASSET_BY_FILENAME_ONLY",
     "RENDER_PATCH_FROM_UNVERIFIED_ASSET_BYTES",
     "ACCEPT_DERIVED_MASTER_WITHOUT_EXACT_PARENT_SOURCE_BYTES",
