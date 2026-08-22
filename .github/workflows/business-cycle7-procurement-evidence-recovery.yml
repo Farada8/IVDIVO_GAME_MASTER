@@ -1,0 +1,18 @@
+name: Business Cycle7 Procurement Evidence Recovery
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_PROCUREMENT_EVIDENCE_RECOVERY_P97_P128/**'
+      - '.github/workflows/business-cycle7-procurement-evidence-recovery.yml'
+jobs:
+  contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run fail-closed recovery tests
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_PROCUREMENT_EVIDENCE_RECOVERY_P97_P128/tests/test_procurement_evidence_recovery.py
+      - name: Validate machine state JSON
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_PROCUREMENT_EVIDENCE_RECOVERY_P97_P128/03_MACHINE_STATE.json >/dev/null
