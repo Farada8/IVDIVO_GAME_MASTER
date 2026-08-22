@@ -1,73 +1,100 @@
 # P-EW07 — DOCLANG FIDELITY REGRESSION PROOF CONTRACT
 
 **Date:** 2026-08-22  
-**Status:** INTERNAL PUBLIC/MINIMAL-FIXTURE PROOF / NO WIP PROMOTION / NO EXTERNAL ACTION
+**Status:** INTERNAL BOUNDED PROOF / NO WIP PROMOTION / NO EXTERNAL ACTION
 
 Parent decision:
 - `29_EARLY_WAVE_REMAINING5_RED_TEAM_2026-08-22.md`
 - `30_EARLY_WAVE_REMAINING5_RED_TEAM_STATE.json`
 
 ## Question
-Can a DocLang document remain structurally valid under the official reference validator while still containing a conversion-fidelity defect that changes source text?
+Does the current Docling -> DocLang -> Docling round-trip create measurable semantic/structural loss on a bounded stress fixture, independently of DocLang XSD validity?
 
-This deliberately separates two contracts:
-1. **DocLang structural conformance** — official DocLang XSD/reference toolkit;
-2. **source-to-output fidelity** — independent invariant comparing source truth to converted semantic text.
+Two separate proofs are required and must not be conflated:
+1. **Orthogonality control:** a manually drifted but schema-valid DocLang document proves only `SCHEMA_VALID != SOURCE_FAITHFUL`.
+2. **Real converter round-trip:** current pinned Docling generates DocLang from a source document, re-imports it, and compares bounded semantic/structural invariants against the pre-DocLang DoclingDocument baseline.
 
 `SCHEMA_VALID != SEMANTICALLY_FAITHFUL`
-`PUBLIC_BUG_CLASS != PREVALENCE`
-`FIDELITY_PROOF != BUYER_DEMAND`
+`MANUALLY_INJECTED_DRIFT != CONVERTER_GENERATED_LOSS`
+`PUBLIC_BUG_CLASS != CURRENT_REPRODUCTION`
+`TECHNICAL_GAP != BUYER_DEMAND`
 
 ## Public basis
-The DocLang project publishes the normative specification and reference toolkit including XSD/Schematron validation. Docling already supports DocLang as input/output.
+Current Docling documentation states:
+- Docling JSON is the lossless serialization of a DoclingDocument;
+- DocLang XML is a supported output serialization;
+- DocLang XML is also a supported input format;
+- DocLang preserves table spans using OTSL continuation tokens.
 
-Public July 2026 Docling issues report conversion defects including:
-- PDF->DocLang syntax trouble involving an ampersand in ordinary text;
-- a poetic text line misclassified as a formula, with downstream schema/chunking failure until required text is restored.
+Current pinned runtime for the real test: `docling==2.121.0` (released 2026-08-20).
+Official structural validator remains pinned at `doclang==0.7.0`.
+
+Public issue history establishes that DocLang/conversion fidelity defects are plausible, not that this fixture currently reproduces them:
+- issue #3864: PDF -> DocLang ampersand/syntax failure on Docling 2.87.1;
+- issue #3780: poetic line misclassified as formula with missing required text in exported structured data.
 
 Sources:
-- https://github.com/doclang-project/doclang
-- https://github.com/doclang-project/doclang/blob/main/doclang/README.md
 - https://docling-project.github.io/docling/usage/supported_formats/
+- https://docling-project.github.io/docling/concepts/serialization/
+- https://docling-project.github.io/docling/reference/docling_document/
 - https://github.com/docling-project/docling/issues/3864
 - https://github.com/docling-project/docling/issues/3780
+- https://pypi.org/project/docling/
 
-## Official structural fixture basis
-The XML shape is derived from the official DocLang `examples/archive-demo/document.xml` reference example.
+## A — orthogonality control
+The existing pair remains intentionally synthetic:
+- `good.dclg.xml` preserves logical source text `Peter Thomas & Christian Johnston`;
+- `semantic_drift.dclg.xml` manually changes it to `Peter Thomas and Christian Johnston` while remaining structurally valid.
 
-Two test documents use the same valid DocLang structure:
-- `good.dclg.xml` preserves logical source text `Peter Thomas & Christian Johnston` (encoded in XML as `&amp;`);
-- `semantic_drift.dclg.xml` changes the logical text to `Peter Thomas and Christian Johnston` while keeping the same DocLang structure.
+This may conclude at most:
+`PASS_ORTHOGONALITY_CONTROL`
 
-The expected source truth is stored separately in `01_SOURCE_TRUTH.json`.
+It is forbidden to relabel this pair as a real converter defect.
 
-## Predeclared proof
-The proof passes only if:
-1. the official pinned DocLang reference toolkit accepts **both** XML files under XSD validation;
-2. our independent fidelity checker passes `good.dclg.xml`;
-3. the same checker fails `semantic_drift.dclg.xml` for a content mismatch;
-4. the fidelity result does not depend on treating the drifted XML as structurally invalid.
+## B — real converter-generated round-trip
+Input:
+`fixtures/roundtrip_stress.html`
 
-If the official validator rejects the drift fixture, this exact test does not establish orthogonality and must be repaired or classified HOLD.
+Path:
+`HTML SOURCE -> DOCLING DOCUMENT -> LOSSLESS JSON BASELINE + DOCLANG XML -> DOCLANG RE-IMPORT -> DOCLING DOCUMENT`
 
-## What this can prove
-At most:
-`PASS_MECHANISM_ORTHOGONAL_TO_SCHEMA`
+The stress fixture includes:
+- XML-sensitive ampersands and angle-bracket text;
+- Unicode / punctuation / currency;
+- headings and ordered-list structure;
+- a table containing colspan and rowspan;
+- code-like text with `<`, `>`, `&&`, quotes and ampersands.
 
-It can show there exists a class of structurally valid semantic drift that a schema validator cannot detect because both strings are legal document content.
+The independent signature compares only bounded semantics that matter downstream:
+- reading-order item type;
+- item label;
+- hierarchy level;
+- logical text;
+- table dimensions;
+- table cell text and row/column span coordinates.
 
-It cannot prove:
-- prevalence in production DocLang pipelines;
-- buyer pain;
-- WTP;
-- superiority over existing document QA products;
-- that the public issue itself produces this exact fixture.
+Volatile source provenance/hashes and source-specific geometry are deliberately excluded.
+
+## Data-dependent result
+There is no predeclared requirement that the converter must fail.
+
+If generated DocLang passes official XSD and one or more bounded semantic/structural invariants change after re-import:
+`PASS_REAL_FIDELITY_GAP_TECHNICAL_ONLY`
+
+If generated DocLang passes official XSD and all bounded invariants survive:
+`HOLD_NO_REAL_GAP_IN_BOUNDED_FIXTURES`
+
+If conversion/re-import/XSD validation cannot complete deterministically:
+`HOLD_TEST_INFRASTRUCTURE_OR_COMPATIBILITY_FAILURE`
+
+A green CI run means the experiment executed under its declared boundary; it does **not** mean a market gap was found.
 
 ## Commercial overlap gate
-Even if the mechanism passes, generic DocLang conversion/validation remains killed. A future wedge survives only as:
-`INDEPENDENT_CONVERSION_FIDELITY_REGRESSION_QA_M1_ONLY`
-
-Before any promotion, evidence would still be needed that document-AI/RAG teams experience costly fidelity regressions not adequately caught by converter-native tests.
+Regardless of technical result:
+- generic DocLang conversion remains killed;
+- generic schema/XSD validation remains killed;
+- no DocLang product is promoted into WIP;
+- any surviving hypothesis is only `INDEPENDENT_CONVERSION_FIDELITY_REGRESSION_QA_M1_ONLY` and still requires real external evidence of costly regressions not already handled by converter-native tests.
 
 ## Proof boundary
 `BUYER_DEMAND = UNPROVEN`
