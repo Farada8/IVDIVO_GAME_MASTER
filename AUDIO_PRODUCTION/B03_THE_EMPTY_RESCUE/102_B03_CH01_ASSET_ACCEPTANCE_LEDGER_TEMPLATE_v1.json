@@ -1,0 +1,33 @@
+{
+  "artifact": "B03_CH01_ASSET_ACCEPTANCE_LEDGER_TEMPLATE_v1",
+  "date": "2026-08-22",
+  "status": "EMPTY_TEMPLATE / NO_ASSETS_ACCEPTED",
+  "entries": [
+    {
+      "asset_id": null,
+      "identity_ref": null,
+      "source_or_provider": null,
+      "provider_asset_id": null,
+      "local_filename": null,
+      "sha256": null,
+      "sample_rate_hz": null,
+      "channels": null,
+      "duration_ms": null,
+      "source_build_id": null,
+      "generation_or_recording_prompt_version": null,
+      "accepted_for": [],
+      "blind_test_result": null,
+      "mono_result": null,
+      "phone_result": null,
+      "story_false_implication_check": null,
+      "human_reviewer": null,
+      "status": "UNPOPULATED"
+    }
+  ],
+  "rules": [
+    "A filename alone is not asset provenance.",
+    "Accepted clue identity assets require hash + source/provenance + blind relation test.",
+    "SFX009 cannot exist as an independent generated voice asset; it derives from accepted first-caller take.",
+    "No WORKING asset may be promoted to AUDIO_CANON_ASSET before Hard Pilot evidence where it affects story inference."
+  ]
+}
