@@ -1,20 +1,24 @@
 {
-  "schema": "ivdivo.business.bidder_primary_evidence_machine_state/1.0",
+  "schema": "ivdivo.business.bidder_primary_evidence_machine_state/1.1",
   "date": "2026-08-22",
-  "parent_authority": "CYCLE8_P161_P192_EVIDENCE_ACQUISITION_MERGED",
-  "delta_state": "PARTIAL_PRIMARY_EVIDENCE_RECOVERED",
+  "parent_authority": "CYCLE9_P193_P224_MERGED_AUTHORITY",
+  "delta_state": "PARTIAL_PRIMARY_EVIDENCE_RECOVERED_CONNECTED_SOURCE_REFRESH_COMPLETE",
   "supplier_state": "PARTIAL_IDENTITY_PLUS_CORE_SCREEN_PLUS_TAX_ACCOUNT_EVIDENCE_PLUS_SELF_ISSUED_EWI_RECORDS",
   "company": {
-    "registration_number_evidence": "OFFICIAL_SCREEN_PRESENT",
+    "registration_number": "796820",
+    "registration_number_evidence": "OFFICIAL_CORE_SCREEN_PRESENT",
     "screen_status_value": "NORMAL",
     "screen_status_freshness": "UNVERIFIED_CAPTURE_TIMESTAMP",
-    "current_certified_cro_extract": false
+    "current_status_claim_authorized": false,
+    "current_certified_cro_extract": false,
+    "formation_attachment_checked": "A1_DECLARATION_CONSENT_PACKAGE_NOT_CERTIFICATE_OF_INCORPORATION"
   },
   "tax": {
     "registration_account_evidence": true,
     "historical_ros_statement_as_of": "2026-08-07T20:19:00+01:00",
     "tax_clearance_certificate": false,
-    "current_clearance": "UNKNOWN"
+    "current_clearance": "UNKNOWN",
+    "connected_source_refresh": "NO_TCC_ARTIFACT_FOUND"
   },
   "delivery": {
     "invoice_families": 3,
@@ -23,11 +27,21 @@
     "self_issued_records_present": true,
     "third_party_completion_evidence": false,
     "payment_evidence": false,
-    "may_invoice_version_conflict": true
+    "may_invoice_version_conflict": true,
+    "connected_source_refresh": "NO_NEW_INDEPENDENT_REFERENCE_OR_PAYMENT_ARTIFACT_FOUND"
   },
   "insurance": {
     "certificate_present": false,
-    "status": "UNKNOWN"
+    "status": "UNKNOWN",
+    "connected_source_refresh": "NO_INSURANCE_CERTIFICATE_FOUND"
+  },
+  "connected_source_refresh": {
+    "date": "2026-08-22",
+    "surfaces": ["GOOGLE_DRIVE", "GMAIL"],
+    "bounded": true,
+    "privacy_redacted": true,
+    "nonfinding_semantics": "NOT_FOUND_IN_CONNECTED_SOURCES_NEQ_DOCUMENT_DOES_NOT_EXIST",
+    "repeat_search_without_new_coordinate": false
   },
   "target_case": {
     "case_id": "PROC-BALLYBUNION-8872468",
@@ -35,7 +49,17 @@
     "explicit_bidder_designation": false,
     "supplier_capability_packet_complete": false,
     "atomic_join_unlocked": false,
-    "bid_decision_authorized": false
+    "bid_decision_authorized": false,
+    "root_a": "TARGET_PACK_NOT_ACQUIRED",
+    "root_b": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET"
+  },
+  "backlog_effect": {
+    "P235": "HOLD_NO_EXPLICIT_BIDDER_DESIGNATION",
+    "P237": "PARTIAL_OFFICIAL_SCREEN_REG_NUMBER_CURRENT_CERTIFIED_EXTRACT_MISSING",
+    "P243": "PARTIAL_TAX_REGISTRATION_AND_HISTORICAL_ACCOUNT_EVIDENCE_CLEARANCE_MISSING",
+    "P244": "HOLD_NO_INSURANCE_CERTIFICATE",
+    "P248": "PARTIAL_SELF_ISSUED_EWI_RECORDS_THIRD_PARTY_REFERENCE_UNPROVEN",
+    "P250_P255": "BLOCKED_PRECONDITIONS"
   },
   "proof": {
     "public_ceiling": "E2_PLUS",
@@ -46,13 +70,11 @@
     "paid_revenue_claim": false
   },
   "next": [
-    "ACQUIRE_AUTHENTICATED_CURRENT_TENDER_PACK",
-    "EXPLICITLY_DESIGNATE_BIDDER_OR_KEEP_UNDESIGNATED",
-    "ACQUIRE_CURRENT_CERTIFIED_CRO_RECORD_IF_REQUIRED",
-    "ACQUIRE_CURRENT_TAX_CLEARANCE_EVIDENCE_IF_REQUIRED",
-    "ACQUIRE_INSURANCE_HS_CAPACITY_EVIDENCE_IF_REQUIRED",
-    "ACQUIRE_THIRD_PARTY_REFERENCE_OR_COMPLETION_EVIDENCE",
-    "SEARCH_PAYMENT_EVIDENCE_ONLY_IF_NEEDED_FOR_COMMERCIAL_PROOF"
+    "ACQUIRE_AUTHENTICATED_OR_USER_PROVIDED_CURRENT_TENDER_PACK",
+    "EXPLICIT_CASE_SPECIFIC_BIDDER_DESIGNATION_OR_KEEP_UNDESIGNATED",
+    "ACQUIRE_ONLY_TARGET_REQUIRED_BIDDER_EVIDENCE_AFTER_REQUIREMENTS_KNOWN",
+    "FREEZE_TARGET_AND_BIDDER_MANIFESTS",
+    "ATOMIC_REQUIREMENT_SUPPLIER_JOIN"
   ],
   "stop_rule": "NO_NEW_ADMISSIBLE_EVIDENCE_THEN_PROTECT_NO_CHANGE"
 }
