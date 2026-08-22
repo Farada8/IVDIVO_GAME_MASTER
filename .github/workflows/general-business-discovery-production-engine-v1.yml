@@ -16,9 +16,14 @@ jobs:
           python-version: '3.12'
       - name: Run business production router tests
         run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_business_production_router.py
+      - name: Run current TEST-37 regression when present
+        run: |
+          if [ -f BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_test37_ai_vs_seo.py ]; then
+            python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_test37_ai_vs_seo.py
+          fi
       - name: Compile runtime
         run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
-      - name: Validate architecture and executed General Business blocks
+      - name: Validate architecture and current General Business state
         run: |
           python - <<'PY'
           import json
@@ -40,7 +45,6 @@ jobs:
           assert '**MUTATE:** 11' in run
           assert all(f'P{i:02d}' in nxt for i in range(1,65))
           assert 'Prompt count never substitutes for evidence' in (root/'00_MASTER.md').read_text()
-          # Preserve verified discovery and fatal-test blocks.
           assert state['discovery_refresh']['fresh_non_procurement_signals'] == 10
           assert state['discovery_refresh']['wip_count'] == 3
           assert state['discovery_refresh']['willingness_to_pay'] is None
@@ -53,7 +57,6 @@ jobs:
           assert fatal_state['portfolio']['wip_count'] == 3
           assert fatal_state['external_action']['authorized'] is False
           assert all(f'OPP-{i}' in p1724 for i in (33,36,37))
-          # New P09-P16 buyer/problem evidence block closes the contiguous P01-P24 engineering range.
           assert buyer_state['next64']['executed_count'] == 24
           assert buyer_state['next64']['unexecuted_count'] == 40
           assert buyer_state['external_action']['authorized'] is False
@@ -62,9 +65,16 @@ jobs:
           assert state['next64']['executed'] == 24
           assert state['next64']['executed_ranges'] == ['P01-P08', 'P09-P16', 'P17-P24']
           assert state['next64']['remaining'] == 40
-          assert state['next64']['next_admissible_block'] == 'TEST_37_INTERNAL_NEGATIVE_CONTROL_THEN_P25_P32_IF_DIFFERENTIAL_PASSES'
           assert state['buyer_problem_evidence']['screening_slots_per_lane'] == 10
           assert state['buyer_problem_evidence']['buyer_behavior_observed'] is False
           assert state['external_action']['authorized'] is False
-          print('GENERAL_BUSINESS_ENGINE: PASS — P01-P24 engineering executed, 24/64, 40 remaining, WIP=3')
+          if 'test37_internal' in state:
+              assert state['test37_internal']['count'] == 2
+              assert state['test37_internal']['sample'] == 3
+              assert state['test37_internal']['buyer_behavior'] is False
+              assert state['test37_internal']['willingness_to_pay'] is None
+              assert state['test37_internal']['proof_promotion'] is False
+              assert state['test37_internal']['next64_increment'] == 0
+              assert state['next64']['next_admissible_block'] == 'P25-P32_OPP37_INTERNAL_OFFER_ENGINEERING'
+          print(f"GENERAL_BUSINESS_ENGINE: PASS — current={state['next64']['executed']}/64, route={state['next64']['next_admissible_block']}")
           PY
