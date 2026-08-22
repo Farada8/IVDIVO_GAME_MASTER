@@ -1,0 +1,43 @@
+{
+  "schema": "ivdivo.b03.full_book_speaker_authority/1.1",
+  "project": "B03 — THE EMPTY RESCUE",
+  "status": "PASS_SOURCE_QUARANTINE_RECONCILED",
+  "actual_speech_denominator": 3714,
+  "assigned": 3714,
+  "unknown_speaker_ownership": 0,
+  "coverage_pct": 100.0,
+  "source_segmentation": {"drive_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB", "sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac"},
+  "semantic_exception_patch": "1DYkgkq9aNL7Zw0qSG4ma9rQzzVhUz-sG",
+  "authority_chain": {
+    "CH01_03": "1tpa7nlvYqghTBFubPaWtHRIfku3oYmQZ",
+    "CH04_06": "1vZIHiZDcYlKfhRPddJ9Jy73vCykpA_Ej",
+    "CH07_09": "1ewx28qPK7Bd2BpeHZSxed1PsbKKj-Iip",
+    "CH10_12": "1Q1U6S3yiPEXDKOnbaoDksfqOQ2Es_cAL",
+    "CH13_15": "1krIKwrK5fiF2Q5JJnpt5VPZNkNCW7hEH",
+    "CH16_18": "12s4jFCoLN18af33MwO_96JQis5T1X8YX",
+    "CH19_21": "1VMSzd1eou29mQ56W7lZGcI2X6KQ4--5G",
+    "CH22_24_base": "1E8vd8aZRfjKoBhjr2MBW4ihDu7TTkLua",
+    "CH24_source_quarantine": "1tl4xYMLOQmnJPT-PIAzDOMNFwrrzpu9L",
+    "CH25_27": "1NpofxohfThXFLq5lIJMDOMgu5_jWSvuk",
+    "CH28_29": "1UmjhMWQapFnyM3ixYWVKGjCSRQdemV3W"
+  },
+  "ch24_override": {
+    "corrected_map": "1hzNIm7VyLiiuip2gDiZS4InvEPpzGKqx",
+    "manifest": "1eGz0wHrkl7owFgXlSlmHec88-5_Fnsth",
+    "segments": ["B03_CH24_S0152", "B03_CH24_S0154", "B03_CH24_S0376", "B03_CH24_S0378", "B03_CH24_S0380"],
+    "packet_1_role": "PRECURSOR_SOURCE_CH24_PACKET_1",
+    "packet_2_role": "PRECURSOR_SOURCE_CH24_PACKET_2",
+    "inter_packet_identity": "UNKNOWN"
+  },
+  "current_full_gate_drive": "1adRFcqDWEpOjklzs8eklpIV_t3R_mUz6",
+  "current_router_drive": "1Gi0Lznh7Rk812yTaZQyZNKPT9El5aQ12",
+  "current_state_receipt_drive": "1OJkbDo98b0b2Djkn1USXWF1FpT6M8vSy",
+  "voice_ids_assigned": 0,
+  "voice_lock": false,
+  "provider_access_verified": false,
+  "provider_evidence": false,
+  "human_cast_approval": false,
+  "pronunciation_gate": "OPEN",
+  "bulk_render_allowed": false,
+  "next_exact_action": "OBTAIN_LIVE_PROVIDER_CONTEXT_THEN_RUN_BOUNDED_S0_CASTING_AND_PRONUNCIATION_EVIDENCE"
+}
