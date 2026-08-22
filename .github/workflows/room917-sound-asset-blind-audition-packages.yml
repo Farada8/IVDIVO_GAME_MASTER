@@ -1,0 +1,112 @@
+name: ROOM917 Sound Asset Blind Audition Packages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/room917-sound-asset-blind-audition-packages.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_support_sfx_synth_canaries.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deterministic audio dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy soundfile
+      - name: Generate all isolated canaries
+        run: |
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_support_sfx_synth_canaries.py
+      - name: Build room-bed X/Y blind package
+        run: |
+          python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py \
+            --receipt ROOM917_ROOM_BED_SYNTH_CANARIES/ROOM917_E01_ROOM_BED_SYNTHETIC_CANARY_RECEIPT_v2.json \
+            --canary-dir ROOM917_ROOM_BED_SYNTH_CANARIES \
+            --outdir ROOM917_BLIND_ROOM_BEDS \
+            --package-id ROOM917_E01_ROOM_BEDS_BLIND_001 \
+            --seed 91720260822 \
+            --room-bed-mode
+      - name: Build critical SFX A/B/C blind package
+        run: |
+          python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py \
+            --receipt ROOM917_CRITICAL_SFX_CANARIES/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json \
+            --canary-dir ROOM917_CRITICAL_SFX_CANARIES \
+            --outdir ROOM917_BLIND_CRITICAL_SFX \
+            --package-id ROOM917_E01_CRITICAL_SFX_BLIND_001 \
+            --seed 91720260822
+      - name: Build support SFX/music A/B/C blind package
+        run: |
+          python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py \
+            --receipt ROOM917_SUPPORT_SFX_CANARIES/ROOM917_E01_SUPPORT_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json \
+            --canary-dir ROOM917_SUPPORT_SFX_CANARIES \
+            --outdir ROOM917_BLIND_SUPPORT_SFX \
+            --package-id ROOM917_E01_SUPPORT_SFX_BLIND_001 \
+            --seed 91720260822
+      - name: Verify public/internal separation
+        shell: bash
+        run: |
+          set -euo pipefail
+          for d in ROOM917_BLIND_ROOM_BEDS ROOM917_BLIND_CRITICAL_SFX ROOM917_BLIND_SUPPORT_SFX; do
+            test -f "$d/PUBLIC_BLIND/LISTENER_MANIFEST.json"
+            test -f "$d/INTERNAL_IDENTITY_KEY_SEALED.json"
+            if find "$d/PUBLIC_BLIND" -type f -name '*IDENTITY*' | grep -q .; then
+              echo "Identity leak in public package: $d"; exit 1
+            fi
+          done
+          echo 'PASS: public blind packages contain no identity key file.'
+      - name: Upload public room-bed blind package
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_E01_PUBLIC_BLIND_ROOM_BEDS
+          path: ROOM917_BLIND_ROOM_BEDS/PUBLIC_BLIND/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Upload public critical-SFX blind package
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_E01_PUBLIC_BLIND_CRITICAL_SFX
+          path: ROOM917_BLIND_CRITICAL_SFX/PUBLIC_BLIND/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Upload public support-SFX blind package
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_E01_PUBLIC_BLIND_SUPPORT_SFX
+          path: ROOM917_BLIND_SUPPORT_SFX/PUBLIC_BLIND/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Upload sealed identity keys separately
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_E01_INTERNAL_SOUND_ASSET_IDENTITY_KEYS_SEALED
+          path: |
+            ROOM917_BLIND_ROOM_BEDS/INTERNAL_IDENTITY_KEY_SEALED.json
+            ROOM917_BLIND_CRITICAL_SFX/INTERNAL_IDENTITY_KEY_SEALED.json
+            ROOM917_BLIND_SUPPORT_SFX/INTERNAL_IDENTITY_KEY_SEALED.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Summary
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## ROOM917 E01 blind sound-asset audition
+          - room beds: blind X/Y package
+          - critical SFX: 8 functions x 3 blinded variants
+          - support SFX/music: 13 functions x 3 blinded variants
+          - public artifacts exclude identity key files
+          - identity keys uploaded as separate sealed artifact
+          - S18 breathing remains outside this workflow in the ElevenLabs/cast stream
+          - no candidate is production-bound by this workflow
+          EOF
