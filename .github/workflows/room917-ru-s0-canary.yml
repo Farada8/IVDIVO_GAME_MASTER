@@ -57,6 +57,29 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Compile native-RU bound S0 runtime bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          TEMPLATE="AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_CANARY_BLOCK_BUNDLE_v1.0.json"
+          BINDINGS="AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_NATIVE_BINDINGS.json"
+          SNAPSHOT="AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json"
+          RUNTIME="$GITHUB_WORKSPACE/_room917_ru_s0_runtime/RUNTIME_NATIVE_S0_BUNDLE.json"
+          if [ ! -f "$BINDINGS" ]; then
+            echo "::error::Paid S0 blocked: $BINDINGS does not exist. Native RU shortlist/binding gate has not been completed."
+            exit 5
+          fi
+          if [ ! -f "$SNAPSHOT" ]; then
+            echo "::error::Paid S0 blocked: $SNAPSHOT does not exist. Run ROOM917 RU Voice Discovery first."
+            exit 6
+          fi
+          mkdir -p "$(dirname "$RUNTIME")"
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_s0_native_bundle.py \
+            --template-bundle "$TEMPLATE" \
+            --bindings "$BINDINGS" \
+            --provider-snapshot "$SNAPSHOT" \
+            --out "$RUNTIME"
+
       - name: Render bounded S0 canary with timestamps
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -66,13 +89,14 @@ jobs:
           set -euo pipefail
           OUT="$GITHUB_WORKSPACE/_room917_ru_s0_canary"
           TMP="$GITHUB_WORKSPACE/_room917_ru_s0_blocks"
+          RUNTIME="$GITHUB_WORKSPACE/_room917_ru_s0_runtime/RUNTIME_NATIVE_S0_BUNDLE.json"
           mkdir -p "$OUT" "$TMP"
 
           python - <<'PY'
           import json, os
           from pathlib import Path
 
-          src=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_CANARY_BLOCK_BUNDLE_v1.0.json')
+          src=Path('_room917_ru_s0_runtime/RUNTIME_NATIVE_S0_BUNDLE.json')
           bundle=json.loads(src.read_text(encoding='utf-8'))
           maximum=int(os.environ['MAX_BLOCKS'])
           blocks=bundle['blocks'][:maximum]
@@ -81,10 +105,12 @@ jobs:
               p=tmp/f'{i:02d}__{b["block_id"]}.json'
               p.write_text(json.dumps(b,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           plan={
-              'schema_version':'ivdivo.room917_ru_s0_live_plan/1.0',
+              'schema_version':'ivdivo.room917_ru_s0_live_plan/1.1',
               'bundle':str(src),
               'model_id':bundle['model_id'],
               'locale':bundle['locale'],
+              'runtime_voice_bindings':bundle.get('runtime_voice_bindings'),
+              'provider_snapshot':bundle.get('provider_snapshot'),
               'max_blocks':maximum,
               'selected_block_ids':[b['block_id'] for b in blocks],
               'full_episode_render_forbidden':True,
@@ -121,10 +147,11 @@ jobs:
                   'sha256':hashlib.sha256(data).hexdigest(),
               })
           receipt={
-              'schema_version':'ivdivo.room917_ru_s0_canary_receipt/1.0',
+              'schema_version':'ivdivo.room917_ru_s0_canary_receipt/1.1',
               'generated_at':datetime.now(timezone.utc).isoformat().replace('+00:00','Z'),
               'provider':'ElevenLabs',
               'secret_persisted':False,
+              'native_ru_binding_gate_passed':True,
               'full_episode_rendered':False,
               'cast_locked':False,
               'audio_files':audio,
@@ -156,8 +183,11 @@ jobs:
         run: |
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
           ## ROOM917 RU S0 Canary
+          - paid dispatch requires explicit confirm_spend=YES
+          - paid dispatch additionally requires sealed native-Russian professional provider snapshot + approved native bindings
+          - historical public/legacy/default diagnostic IDs are rejected by the runtime compiler
           - bounded canary only; no full episode
-          - voice IDs remain CANARY_ONLY, not cast lock
+          - voice IDs remain audition bindings, not cast lock
           - generated audio includes provider timestamps/alignment evidence
           - machine QC must pass before artifact upload
           - artifact includes S0_QC_REPORT.json and S0_LISTENING_INDEX.json
