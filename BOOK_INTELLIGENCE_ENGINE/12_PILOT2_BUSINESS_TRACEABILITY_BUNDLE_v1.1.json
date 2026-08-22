@@ -1,0 +1,35 @@
+{
+  "bundle_id": "BI-V11-PILOT2-BUSINESS-EVIDENCE-TRACE",
+  "requires_end_to_end": true,
+  "purpose": "RETROSPECTIVE_EVIDENCE_AUDIT_OF_SAFE_CROSS_DOMAIN_ROUTING",
+  "nodes": [
+    {"id":"SRC-BIZ-PASSPORTS","type":"SOURCE","label":"Business source-passport engineering spec"},
+    {"id":"SEC-BIZ-MECH","type":"SECTION","label":"SP-02/SP-05/SP-11 + C69/C70/C72/C74/C83"},
+    {"id":"CLAIM-BIZ-BOUNDARY","type":"CLAIM","label":"constraint/VOI mechanisms can guide action but cannot create current tender evidence"},
+    {"id":"MECH-BIZ-PACKET","type":"MECHANISM","label":"constraint first + cheapest decisive test + knowledge/market firewall"},
+    {"id":"ADAPTER-BUSINESS","type":"ADAPTER","label":"Book Intelligence Business Adapter"},
+    {"id":"APP-BALLYBUNION","type":"PROJECT_APPLICATION","label":"PROC-BALLYBUNION-8872468"},
+    {"id":"TEST-BIZ-ROUTE","type":"TEST","label":"Apply max-3 mechanisms against fresh P288/ResumeGate state"},
+    {"id":"RESULT-BIZ-HOLD","type":"RESULT","label":"PROTECT_NO_CHANGE; no proof promotion; no external action; no incremental decision gain"},
+    {"id":"LEARN-BIZ-SAFE","type":"LEARNING","label":"safe cross-domain reuse is not enough for universal promotion without incremental gain"},
+    {"id":"RULE-NO-GAIN-NO-PROMOTE","type":"ENGINE_RULE","label":"NO_PROMOTION_WITHOUT_OBSERVABLE_INCREMENTAL_GAIN"}
+  ],
+  "edges": [
+    {"from_id":"SRC-BIZ-PASSPORTS","to_id":"SEC-BIZ-MECH","relation":"SOURCE_HAS_SECTION","locator":"Cycle3 priority source passports/contracts"},
+    {"from_id":"SEC-BIZ-MECH","to_id":"CLAIM-BIZ-BOUNDARY","relation":"SECTION_SUPPORTS_CLAIM","locator":"SP-02/SP-05/SP-11 and C69/C70/C72/C74/C83"},
+    {"from_id":"CLAIM-BIZ-BOUNDARY","to_id":"MECH-BIZ-PACKET","relation":"CLAIM_ABSTRACTS_TO_MECHANISM","locator":"Pilot2 adapter packet"},
+    {"from_id":"MECH-BIZ-PACKET","to_id":"ADAPTER-BUSINESS","relation":"MECHANISM_PACKED_FOR_DOMAIN","locator":"Pilot2 report"},
+    {"from_id":"ADAPTER-BUSINESS","to_id":"APP-BALLYBUNION","relation":"ADAPTER_APPLIED_TO_PROJECT","locator":"PROC-BALLYBUNION-8872468"},
+    {"from_id":"APP-BALLYBUNION","to_id":"TEST-BIZ-ROUTE","relation":"PROJECT_APPLICATION_TESTED_BY","locator":"fresh Business read model + ResumeGate"},
+    {"from_id":"TEST-BIZ-ROUTE","to_id":"RESULT-BIZ-HOLD","relation":"TEST_PRODUCED_RESULT","locator":"Pilot2 Drive/GitHub report"},
+    {"from_id":"RESULT-BIZ-HOLD","to_id":"LEARN-BIZ-SAFE","relation":"RESULT_PROMOTED_TO_LEARNING","locator":"NO_INCREMENTAL_DECISION_GAIN"},
+    {"from_id":"LEARN-BIZ-SAFE","to_id":"RULE-NO-GAIN-NO-PROMOTE","relation":"LEARNING_CHANGED_ENGINE_RULE","locator":"CURRENT Book Intelligence state v1.3+"}
+  ],
+  "audit": {"engine":"v1.1 prototype","status":"PASS","node_count":10,"edge_count":9,"errors":[]},
+  "change_impact_fixture": {
+    "changed_ids":["MECH-BIZ-PACKET"],
+    "expected_downstream":["ADAPTER-BUSINESS","APP-BALLYBUNION","LEARN-BIZ-SAFE","RESULT-BIZ-HOLD","RULE-NO-GAIN-NO-PROMOTE","TEST-BIZ-ROUTE"]
+  },
+  "evidence_class": "CROSS_DOMAIN_SAFETY_REPLICATION",
+  "v1_1_use": "RETROSPECTIVE_TRACE_AUDIT"
+}
