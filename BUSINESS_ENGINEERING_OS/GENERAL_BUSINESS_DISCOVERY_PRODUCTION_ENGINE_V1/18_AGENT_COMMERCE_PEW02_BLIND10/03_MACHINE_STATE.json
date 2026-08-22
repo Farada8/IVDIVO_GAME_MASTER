@@ -1,0 +1,59 @@
+{
+  "schema": "ivdivo.agent_commerce.pew02_blind10/0.4",
+  "date": "2026-08-22",
+  "status": "P_EW02_DONE_VERIFIED_POSTMERGE_CLOSURE_CANDIDATE",
+  "parent": "OW-01_AGENTIC_COMMERCE_MERCHANT_READINESS",
+  "authority": {
+    "implementation_pr": 353,
+    "implementation_head": "14a950014cfd3a98b6ab340d9ea82e4ef8a9ca9e",
+    "implementation_merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db",
+    "ci_runs": [32558173769,32558173771,32558173780,32558173777,32558173755,32558173747,32558173754],
+    "ci_status": "SUCCESS_7_OF_7",
+    "artifact_id": 9472016122,
+    "artifact_digest": "sha256:7a9a413460d1f2f154b10a15ce0746bd1d07f7df57975641288aa4e09349dcf9"
+  },
+  "scanner": {
+    "ruleset_before_real_fixture": "2026-08-22.1",
+    "ruleset_current": "2026-08-22.2",
+    "false_negative_rule_classes_found": 2,
+    "false_negative_findings_corrected": 8,
+    "corrections": ["UCP05_MCP_AND_EMBEDDED_SUPPORTED","UCP09_UNPROBED_ORDER_EVENTS_UNKNOWN_NOT_FAIL"],
+    "remaining_profile_gate": "UCP10_ORDER_CAPABILITY_WITHOUT_PUBLIC_SIGNING_KEYS_FAIL"
+  },
+  "blind_test": {
+    "sample_frozen_before_probe": true,
+    "sample_substitution": false,
+    "sample_size": 10,
+    "evaluated": 10,
+    "http_responses": 10,
+    "network_errors": 0,
+    "generic_advice_outputs": 0,
+    "false_promotions": 0,
+    "decision": "PASS_TEST",
+    "http_200_ucp_profiles": 4,
+    "http_non_200_discovery_failures": 6,
+    "profile_domains": ["elverys.ie","allbirds.com","glossier.com","gymshark.com"],
+    "observed_ucp_version": "2026-04-08",
+    "observed_transports": ["mcp","embedded"]
+  },
+  "proof_boundary": {
+    "public_evidence_ceiling": "E2_PLUS_ENGINEERING",
+    "platform_approval": false,
+    "buyer_demand": false,
+    "willingness_to_pay": null,
+    "transaction": null,
+    "profitability": null,
+    "private_openai_feed_inferred": false,
+    "merchant_global_noncompliance_claimed": false,
+    "proof_promotion": false
+  },
+  "external_action": {"outreach":false,"spend":false,"account_creation":false,"cart_or_order_creation":false,"contracting":false},
+  "drive": {
+    "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
+    "document_id": "1DFWMaKoQVVceCv7rRViz_Or7sxAN_pG4azV9O0iLzJE",
+    "readback_marker": "AGENT-COMMERCE-P-EW02-BLIND10-PASS-4UCP200-8FALSEFAILS-CORRECTED-NO-DEMAND-PROOF",
+    "readback_status": "PASS"
+  },
+  "next_gate": "P-EW03_ARTICLE50_TECHNICAL_TRANSPARENCY_SAMPLE_PACK_UNLESS_CURRENT_AUTHORITY_CHANGES",
+  "closure": {"pr":null,"exact_head":null,"ci_runs":[],"merge_sha":null}
+}
