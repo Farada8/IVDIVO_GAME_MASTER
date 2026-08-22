@@ -1,0 +1,64 @@
+{
+  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.0",
+  "updated": "2026-08-22T17:19:00+01:00",
+  "project": "ROOM917",
+  "episode": "E01",
+  "authority": "THE_INSURABLE_FIRE",
+  "status": "P003B_READY_WAITING_FOR_IDENTIFIED_AUDIO",
+  "purpose": "Single current pointer for ROOM917 Listener QC / Red Team. Do not restart old Scene3 diagnosis or simulate human listening.",
+  "github": {
+    "protocol": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RED_TEAM_PROTOCOL_v1.0.md",
+    "result_contract": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json",
+    "scene3_pass_b_queue": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json"
+  },
+  "drive": {
+    "folder_id": "1P2mavegKiziTOcdNoRQvHvgEHzySY3OA",
+    "protocol_id": "1DE-eRwLtu7H6aZ_XiQ9OnrkwUIDLmBByVAbUzpIgBgU",
+    "result_contract_id": "1DJdYhC9PRRe5iICFmC0UgOeCG4nCSmKSkIQa5rm-gw4",
+    "scene3_pass_b_queue_id": "1HXg6KmpXGo7yJrDwDo3eLuptROi3h5ZexyRIMI23tlk"
+  },
+  "audio_gate": {
+    "expected_full_master": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "expected_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "expected_duration_seconds": 658.190,
+    "current_byte_access": "UNVERIFIED_UNAVAILABLE_IN_CONTROLLED_DRIVE_FILE_LIBRARY_NAV_SEARCH",
+    "rule": "No P003B execution without identifiable accessible assembled audio or trustworthy derived audition audio."
+  },
+  "procedure": [
+    "VERIFY_AUDIO_IDENTITY",
+    "PASS_A_BLIND_STORY_FREE",
+    "FREEZE_PASS_A_NOTES",
+    "OPEN_PASS_B_VERIFICATION_QUEUE",
+    "CLASSIFY_FAILURE_LAYER",
+    "VERIFY_OR_REJECT_CANDIDATES",
+    "COMPILE_SMALLEST_SELECTIVE_REPAIRS",
+    "LOCAL_REGRESSION",
+    "PASS_C_STEREO_MONO_MOBILE",
+    "GO_NO_GO"
+  ],
+  "six_questions": [
+    "ACTOR_BELIEF",
+    "AI_AUDIBLE",
+    "DEAD_SCENE",
+    "GEOGRAPHY",
+    "MYSTERY",
+    "SFX_MASKING"
+  ],
+  "scene3": {
+    "technical_lineage": "v1.3E_OR_DESCENDANT_PROTECTED_PASS",
+    "old_v1_2_2_repair_campaign": "SUPERSEDED_DO_NOT_REAPPLY",
+    "v1_4a_naturalness_audit": "REAL_AUDIO_MEASURED_EVIDENCE_AND_PRODUCTION_INFERENCE_NOT_HUMAN_PANEL",
+    "pass_b_candidate_count": 10,
+    "open_release_gates": [
+      "FOURTH_NOTE_PERCEPTUAL_LOCK",
+      "MINA_HUMAN_CAST_APPROVAL",
+      "CATE_HUMAN_CAST_APPROVAL"
+    ]
+  },
+  "pre_scene3": {
+    "D003": "PROVEN_AGGREGATE_MAJOR_EXACT_INTERVALS_UNRESOLVED",
+    "blanket_fill": "FORBIDDEN"
+  },
+  "repair_law": "NO_PATCH_FROM_TASTE_OR_METRICS_ALONE; ONLY VERIFIED_AUDIBLE_DEFECT -> SMALLEST_REPAIR -> REGRESSION",
+  "story_rewrite": "FORBIDDEN_UNLESS_REAL_STORY_CONTINUITY_ERROR_AND_FOUNDER_REOPENS"
+}
