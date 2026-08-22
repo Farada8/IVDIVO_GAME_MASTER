@@ -1,0 +1,28 @@
+name: SI Active Frontier Guard
+
+on:
+  pull_request:
+    paths:
+      - '31_IDEAS/PENDING/UNASSIGNED_ACTIVE_FRONTIER_HIJACK_GUARD_2026-08-22.json'
+      - 'ENGINEERING_CONTRACTS/ACTIVE_FRONTIER_SCOPE_GUARD_v0.1.md'
+      - 'tools/ivdivo_active_frontier_guard.py'
+      - 'tests/test_active_frontier_guard.py'
+      - '.github/workflows/si-active-frontier-guard.yml'
+  push:
+    branches:
+      - 'self-improvement/active-frontier-hijack-guard-20260822'
+
+jobs:
+  active-frontier-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run active-frontier guard canaries
+        run: python tests/test_active_frontier_guard.py
+      - name: Compile runtime
+        run: python -m compileall tools/ivdivo_active_frontier_guard.py
+      - name: Parse candidate JSON
+        run: python -m json.tool 31_IDEAS/PENDING/UNASSIGNED_ACTIVE_FRONTIER_HIJACK_GUARD_2026-08-22.json >/dev/null
