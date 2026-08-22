@@ -1,0 +1,76 @@
+name: Master Recovery Audit Guard
+
+on:
+  pull_request:
+    paths:
+      - 'RECOVERY/**'
+      - '.github/workflows/master-recovery-audit.yml'
+  push:
+    branches:
+      - 'recovery/master-recovery-audit-20260822'
+
+jobs:
+  recovery-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate master recovery state
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('RECOVERY')
+          state = json.loads((root / 'MASTER_RECOVERY_STATE.json').read_text(encoding='utf-8'))
+          master = (root / 'MASTER_RECOVERY_INDEX.md').read_text(encoding='utf-8')
+          ledger = (root / 'CHAT_ONLY_RECOVERY_LEDGER.md').read_text(encoding='utf-8')
+
+          assert state['schema'] == 'ivdivo.master_recovery_state/1.0'
+          assert state['global_state']['browser_tabs_may_be_closed'] is True
+          assert state['global_state']['delete_all_chats_authorized'] is False
+          assert state['global_state']['delete_all_chats_gate'].startswith('BLOCKED_')
+          assert state['global_state']['recovered_context_auto_canon'] is False
+
+          projects = state['projects']
+          ids = [p['id'] for p in projects]
+          assert len(ids) == len(set(ids)), 'duplicate project id'
+          required = {
+              'BUS-01','BUS-02','BOOK-B03','DORAMA-BB','DORAMA-WIFE',
+              'AUDIO-R917','SI-01','PAI-01','GAME-PORTALS','ART-IRELAND',
+              'BUILD-FARADA','WEB-PAINTERS','MATH-ORDERS','RESEARCH-IVDIVO','WRITE-ENGINE'
+          }
+          assert required.issubset(set(ids))
+
+          by_id = {p['id']: p for p in projects}
+          assert by_id['GAME-PORTALS']['known_chat_only_material_gap'] is True
+          assert by_id['GAME-PORTALS']['deletion_safety'] == 'NOT_SAFE_TO_DELETE_SOURCE_CHAT'
+          assert by_id['MATH-ORDERS']['deletion_safety'] == 'NOT_SAFE_TO_DELETE_SOURCE_CHAT'
+          assert by_id['WEB-PAINTERS']['deletion_safety'] == 'NOT_SAFE_TO_DELETE_SOURCE_CHAT'
+          assert by_id['ART-IRELAND']['deletion_safety'] == 'ARCHIVE_CHECK_REQUIRED'
+          assert by_id['AUDIO-R917']['binary_archive_check'] == 'REQUIRED'
+
+          blockers = state['known_global_blockers']
+          assert len(blockers) >= 6
+          assert 'PORTALS_CHAT_ONLY_AND_NOT_RECORDED_ITEMS' in blockers
+          assert 'VISUAL_FINAL_BINARY_INVENTORY_NOT_PROVEN' in blockers
+          assert 'AUDIO_FINAL_BINARY_INVENTORY_NOT_PROVEN_FOR_ALL_PROJECTS' in blockers
+
+          assert state['readback_markers']['master'] in master
+          assert state['readback_markers']['chat_only'] in ledger
+          assert 'RECOVERED_CONTEXT != CANON' in ledger
+          assert 'NUMBER != NUMERAL_REPRESENTATION' in ledger
+          assert 'Do not yet delete all conversations' in master
+
+          # Fail closed: any project with an explicit true chat-only material gap
+          # may not be labelled SAFE_FOR_WORK_AUTHORITY.
+          for p in projects:
+              if p.get('known_chat_only_material_gap') is True:
+                  assert p.get('deletion_safety') != 'SAFE_FOR_WORK_AUTHORITY', p['id']
+
+          print(f"MASTER_RECOVERY_GUARD_PASS projects={len(projects)} blockers={len(blockers)}")
+          PY
+      - name: Validate JSON syntax
+        run: python -m json.tool RECOVERY/MASTER_RECOVERY_STATE.json >/dev/null
