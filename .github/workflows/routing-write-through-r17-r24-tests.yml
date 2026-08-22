@@ -1,0 +1,21 @@
+name: Routing Write-Through R17-R24 Tests
+
+on:
+  pull_request:
+    paths:
+      - 'PROJECT_STATES/CURRENT_TERMINAL_ROUTING_OVERLAY.json'
+      - 'PROJECT_STATES/00_PROJECT_STATE_COVERAGE_INDEX.json'
+      - 'tests/test_routing_write_through_r17_r24.py'
+      - '.github/workflows/routing-write-through-r17-r24-tests.yml'
+  workflow_dispatch:
+
+jobs:
+  routing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run routing write-through tests
+        run: PYTHONPATH=. python -m unittest tests.test_routing_write_through_r17_r24 -v
