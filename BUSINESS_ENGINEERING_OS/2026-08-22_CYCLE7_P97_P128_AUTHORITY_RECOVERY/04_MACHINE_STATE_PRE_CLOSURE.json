@@ -1,0 +1,89 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE7_AUTHORITY_RECOVERY_v1",
+  "date": "2026-08-22",
+  "status": "RUN32_COMPLETE_CI_DRIVE_CLOSURE_PENDING",
+  "base_main_sha": "4d6dc7c5dc24ea77582327254d339e619173558f",
+  "target": {
+    "resource_id": "8872468",
+    "authority": "St Joseph's Secondary School (Ballybunion)",
+    "ca_unique_id": "26-002",
+    "evaluation_mechanism": "MEAT",
+    "estimated_value_eur": 1600000,
+    "clarification_deadline": "2026-08-31T14:00:00+01:00",
+    "submission_deadline": "2026-09-02T17:00:00+01:00",
+    "opening_time": "2026-09-02T17:30:00+01:00",
+    "duration_months": 9,
+    "workspace_verified": true,
+    "attachment_inventory_verified": false,
+    "pack_complete": false
+  },
+  "benchmark": {
+    "resource_id": "8176962",
+    "indexed_attachment_count": 6,
+    "classification": "BENCHMARK_FIXTURE_ONLY",
+    "target_promotion_allowed": false
+  },
+  "lineage": {
+    "resources": ["7039079", "8176962", "8872468"],
+    "relation": "POSSIBLE_PROJECT_LINEAGE",
+    "requirements_carried_over": false
+  },
+  "supplier_packet": {
+    "verified": false,
+    "status": "HOLD_REAL_SUPPLIER_PACKET"
+  },
+  "run32": {
+    "range": "P97-P128",
+    "executed": 32,
+    "pass_or_schema_or_policy_or_protect": 14,
+    "hold_blocked_partial_external": 18,
+    "bid_no_bid_assertions": 0,
+    "pa4_promotions": 0,
+    "pa5_promotions": 0,
+    "e3_promotions": 0,
+    "e4_promotions": 0
+  },
+  "next64": {
+    "range": "P129-P192",
+    "designed": 64,
+    "executed": 0
+  },
+  "wip": {
+    "primary": "tender/procurement decision intelligence",
+    "pilots": [
+      "retrofit route qualification/exceptions/document readiness",
+      "post-Digital-for-Business SME workflow implementation"
+    ],
+    "max_active": 3
+  },
+  "proof": {
+    "public_evidence_ceiling": "E2_PLUS",
+    "pa4": false,
+    "pa5": false,
+    "e3": false,
+    "e4": false,
+    "unknown_economics": null
+  },
+  "constraints": {
+    "no_outreach": true,
+    "new_founder_cash_eur": 0,
+    "no_tender_submission": true,
+    "no_legal_determination": true,
+    "raw_books_drive_only": true
+  },
+  "authority_pointer": {
+    "human_readable_current_mentions_core_pr191": true,
+    "later_merged_cross_lane_pr202_present_on_main": true,
+    "status": "STOP_RECONCILE_BEFORE_PROMOTION"
+  },
+  "current_gate": "TARGET_PACK + VERIFIED_SUPPLIER_PACKET -> REQUIREMENT_JOIN -> GAP_ROUTING -> BLIND_PA4 -> REAL_DECISION_USE -> PA5/E3 -> TRANSACTION_ONLY_E4",
+  "self_improvement": {
+    "current_global": "v2",
+    "auto_promotion": false,
+    "candidates": [
+      "MISSING_AUTHORITY_IS_A_FIRST_CLASS_RESULT",
+      "BENCHMARK_MUST_NOT_FILL_TARGET_GAP",
+      "AUTHORITY_POINTER_LAG_GATE"
+    ]
+  }
+}
