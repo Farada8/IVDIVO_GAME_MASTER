@@ -1,18 +1,19 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "date": "2026-08-22",
   "parent_authority": "CYCLE7_CROSS_LANE_READINESS_PLUS_MERGED_P97_P128_AUTHORITY_RECOVERY",
   "delta": "CYCLE7_SUPPLIER_IDENTITY_EVIDENCE_DELTA",
-  "status": "DRIVE_PERSISTED_PENDING_PR216_MERGE_READBACK",
+  "status": "MERGED_AND_READBACK_CLOSED",
   "case": "PROC-BALLYBUNION-8872468",
   "authority_side": {"current_pack_complete": false, "benchmark_noncarryover_guard_reused": true, "historical_same_buyer_analog": "8176962", "historical_mechanism_owner": "MERGED_P97_P128_AUTHORITY"},
   "supplier_side": {"state": "PARTIAL_IDENTITY_ONLY", "legal_name_verified": true, "legal_form_verified": true, "formation_activity_code_recovered": true, "company_number_verified": false, "current_cro_status_verified": false, "tax_clearance_verified": false, "turnover_verified": false, "insurance_verified": false, "delivery_capacity_verified": false, "similar_references_verified": false, "safety_competence_verified": false, "roofing_insulation_capability_verified": false},
   "decision": {"typed_state": "HOLD_MISSING_AUTHORITY", "requirement_join_unlocked": false, "bid_hold_no_bid_authorized": false, "independent_pa4": false, "pa5": false, "e3": false, "e4": false},
   "unique_regression": {"delta_guards_pass": 5, "delta_guards_total": 5, "historical_noncarryover_not_recounted": true},
-  "drive": {"cycle7_authority_folder": "1J7NbU_m4Hz-Vz_5yH4a5ioZTTmN5nd2A", "evidence_delta_document": "1yjs4NorTtyK0KqgT5DBujEw8jlswNoQb9tlAAh7TJmQ"},
+  "github": {"pr": 216, "merge_sha": "41982f9938b46e4dcdc613a90169f1d1b614fe98", "final_reviewed_head": "7d237be6acc3bb40d273ceed0a3f0b4ecea62501", "exact_head_ci_run": 32549435936, "exact_head_ci": "SUCCESS", "current_pointer_commit": "ef1ebe034ada8c3f54ab02e7df1cc03ac141104d"},
+  "drive": {"cycle7_authority_folder": "1J7NbU_m4Hz-Vz_5yH4a5ioZTTmN5nd2A", "evidence_delta_document": "1yjs4NorTtyK0KqgT5DBujEw8jlswNoQb9tlAAh7TJmQ", "semantic_readback": "PASS"},
   "new_engineering_contracts": ["PRIVATE_PRIMARY_IDENTITY_EVIDENCE_NEQ_CAPABILITY_EVIDENCE", "FORMATION_ACTIVITY_CODE_NEQ_CURRENT_DELIVERY_CAPABILITY", "BLOCKER_DECOMPOSITION_SPLITS_AUTHORITY_SIDE_AND_SUPPLIER_SIDE", "NO_DOCUMENT_PROVENANCE_SUPPLIER_FIELD_STAYS_NULL", "PARTIAL_IDENTITY_ONLY_NEQ_VERIFIED_SUPPLIER_PACKET"],
   "next_evidence_actions": ["ACQUIRE_COMPLETE_CURRENT_OFFICIAL_PACK", "VERIFY_CURRENT_SUPPLIER_LEGAL_STATUS", "ACQUIRE_TENDER_REQUIRED_SUPPLIER_EVIDENCE_AFTER_CURRENT_REQUIREMENTS_ARE_EXTRACTED"],
   "market_proof_ceiling": "E2+",
   "self_improvement": {"global_v2": "CURRENT", "v3": "CANDIDATE_ONLY", "promotion_from_this_delta": false},
-  "persistence": {"github": "PR216_OPEN", "drive": "READBACK_VERIFIED", "readback": "PENDING_POST_MERGE_GITHUB"}
+  "persistence": {"github": "MERGED_READBACK_PASS", "drive": "READBACK_VERIFIED", "readback": "CLOSED"}
 }
