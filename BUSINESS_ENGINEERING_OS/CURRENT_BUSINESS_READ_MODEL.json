@@ -1,0 +1,76 @@
+{
+  "schema": "ivdivo.business.current_read_model/1.0",
+  "date": "2026-08-22",
+  "status": "CURRENT_LOCAL_RELIABILITY_CONTRACT",
+  "authority_effect": "NONE_BEYOND_EXPLICIT_RESTORE_AND_PRECEDENCE_RULES",
+  "restore_order": [
+    "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
+    "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md",
+    "RELEVANT_CURRENT_CYCLE_MACHINE_STATE",
+    "CURRENT_DRIVE_EVIDENCE_AND_READBACK",
+    "FRESH_GITHUB_MAIN_AND_OPEN_BUSINESS_PR_RECONCILIATION"
+  ],
+  "core": {
+    "path": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
+    "owns": [
+      "CAUSAL_FRONTIER",
+      "COMPLETED_EXECUTION",
+      "PROOF_FRONTIER",
+      "WIP",
+      "DECISIVE_GATES",
+      "STOP_RULES",
+      "EXTERNAL_ACTION_AUTHORIZATION"
+    ]
+  },
+  "mandatory_evidence_overlay": {
+    "path": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md",
+    "owns": [
+      "FRESH_BOUNDED_SUPPLIER_EVIDENCE",
+      "FRESH_SOURCE_EVIDENCE",
+      "CONNECTED_SOURCE_NONFINDINGS",
+      "EVIDENCE_FIELD_DISPOSITIONS_WITHIN_DECLARED_SCOPE"
+    ],
+    "may_supersede_stale_evidence_fields_within_scope": true,
+    "may_change_completed_execution": false,
+    "may_change_root_blockers_silently": false,
+    "may_promote_proof_grade": false,
+    "may_promote_market_authority": false,
+    "may_authorize_external_action": false
+  },
+  "root_blocker_change_rule": "ANY_EVIDENCE_DELTA_THAT_CLOSES_OR_CHANGES_A_ROOT_BLOCKER_REQUIRES_EXPLICIT_CORE_RECONCILIATION",
+  "current_roots": {
+    "ROOT_A": "TARGET_PACK_NOT_ACQUIRED",
+    "ROOT_B": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_PACKET"
+  },
+  "current_execution": {
+    "full_completed_run32_ranges": ["P97-P128", "P129-P160", "P161-P192", "P193-P224"],
+    "completed_engineering_subset": "P257-P264",
+    "completed_engineering_subset_count": 8,
+    "parent_backlog": "P225-P288",
+    "parent_backlog_count": 64,
+    "remaining_unexecuted_count": 56,
+    "highest_information_real_gates": [225, 235]
+  },
+  "proof_frontier": {
+    "public_derived_ceiling": "E2_PLUS",
+    "artifact_plane": "PA3",
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "E4": false
+  },
+  "guards": [
+    "CORE_CURRENT_PLUS_MANDATORY_EVIDENCE_OVERLAY_EQUALS_CURRENT_BUSINESS_READ_MODEL",
+    "OVERLAY_SCOPE_DOES_NOT_EQUAL_CAUSAL_AUTHORITY",
+    "EVIDENCE_REFRESH_DOES_NOT_EQUAL_PROOF_PROMOTION",
+    "ROOT_BLOCKER_CHANGE_REQUIRES_CORE_RECONCILIATION",
+    "TEST_FIXTURE_DOES_NOT_EQUAL_ACTUAL_BIDDER",
+    "NOT_FOUND_IN_CONNECTED_SOURCES_DOES_NOT_EQUAL_DOCUMENT_DOES_NOT_EXIST",
+    "ENGINEERING_READINESS_DOES_NOT_EQUAL_MARKET_PROOF"
+  ],
+  "self_improvement": {
+    "scope": "BUSINESS_LOCAL_RELIABILITY_IMPROVEMENT",
+    "new_global_si_id": null,
+    "v3_promotion": false
+  }
+}
