@@ -1,0 +1,26 @@
+name: Business Engineering OS Cycle7 Commercial Reliability
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P129_P160_COMMERCIAL_RELIABILITY/**'
+      - '.github/workflows/business-engineering-cycle7-commercial-reliability.yml'
+  push:
+    branches:
+      - 'business-engineering/cycle7-p129-p160-commercial-reliability-20260822'
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P129_P160_COMMERCIAL_RELIABILITY/**'
+      - '.github/workflows/business-engineering-cycle7-commercial-reliability.yml'
+
+jobs:
+  commercial-reliability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run commercial reliability canaries
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P129_P160_COMMERCIAL_RELIABILITY/tests/test_commercial_reliability.py
+      - name: Compile runtime
+        run: python -m compileall BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P129_P160_COMMERCIAL_RELIABILITY/engine

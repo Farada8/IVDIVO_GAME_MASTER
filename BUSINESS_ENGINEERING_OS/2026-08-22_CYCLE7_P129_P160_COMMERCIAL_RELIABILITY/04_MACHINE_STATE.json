@@ -1,0 +1,92 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE7_P129_P160_COMMERCIAL_RELIABILITY_v1_1",
+  "date": "2026-08-22",
+  "original_execution_base": "c51f3364383f80b1d244ed2bc7721a40f41a06ef",
+  "fresh_replay_base": "0da038c3460c58ad4d712f907e3ce65b207018f6",
+  "replay_mode": "SEMANTIC_REPLAY_ADDITIVE_BLOBS_NO_FORCE_MERGE",
+  "parent_authority": "CYCLE7_READINESS_PLUS_P97_P128_PLUS_SUPPLIER_IDENTITY_DELTA",
+  "supplier_delta_pr": 216,
+  "run32": {
+    "range": "P129-P160",
+    "executed": 32,
+    "fabricated_target_requirements": 0,
+    "fabricated_supplier_capability_claims": 0,
+    "outreach": 0,
+    "price_wtp_claims": 0,
+    "pa4_promotions": 0,
+    "pa5_promotions": 0,
+    "e3_promotions": 0,
+    "e4_promotions": 0,
+    "founder_cash_eur": 0
+  },
+  "supplier_state": {
+    "identity": "PARTIAL_IDENTITY_ONLY",
+    "formation_evidence": "PRIVATE_PRIMARY_SUPPORTS_LEGAL_NAME_FORM_AND_NACE_6399_ONLY",
+    "current_company_number_cro_status": "UNKNOWN",
+    "tax_clearance": "UNKNOWN",
+    "insurance": "UNKNOWN",
+    "turnover_financial_capacity": "UNKNOWN",
+    "construction_hs_competence": "UNKNOWN",
+    "relevant_references": "UNKNOWN",
+    "staff_capacity": "UNKNOWN",
+    "procurement_eligibility": "NOT_PROVEN"
+  },
+  "target_state": {
+    "resource_id": "8872468",
+    "status": "HOLD_MISSING_AUTHORITY",
+    "full_current_pack": false,
+    "verified_supplier_packet": false,
+    "atomic_requirement_join": false
+  },
+  "engineering": {
+    "modules": 20,
+    "contracts": 28,
+    "proof_gates": 14,
+    "protocols": 10,
+    "runtime": "engine/commercial_reliability.py",
+    "regression_tests": 28
+  },
+  "holds": {
+    "P130": "REAL_DECISION_DELTA_REQUIRED",
+    "P141": "TIMESTAMP_PRECISION_INSUFFICIENT",
+    "P143": "FUTURE_AWARD_OUTCOME_REQUIRED",
+    "P145": "REAL_PROPERTY_PACKET_REQUIRED",
+    "P146": "REAL_DFB_WORKFLOW_REQUIRED",
+    "P152": "OBSERVED_DELIVERY_TIMES_REQUIRED",
+    "P153": "FULL_TARGET_PACK_REQUIRED"
+  },
+  "next64": {
+    "range": "P161-P224",
+    "designed": 64,
+    "executed": 0,
+    "source_parallel_drive_candidate": "13yskuADyGiF-ktHpn6iRLXo7rzHAwUpT_wmSw01QW_E",
+    "reconciled_git_path": "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P129_P160_COMMERCIAL_RELIABILITY/03_NEXT64_P161_P224_RECONCILED.md"
+  },
+  "drive": {
+    "folder": "1XZfTCPvGDWtnR6VITmd4dK6BeqzHzmmT",
+    "master": "1Tq-CGbIlR3toznLqVd5R-EYbnpM9ihiwVXTZQHa1oRY",
+    "run32_engineering": "1-YssQwfnvPUuFzCerLVGgxigvSnKpzu9cLQ1lOHcU34",
+    "next64": "1RvYQLpooIg_-SSP8djiOtagsREPKhfprWL_gvx-NqIE",
+    "machine_state": "1xiSw2dkte4qZepfF6FQgT6MO0saKBhAAhLDX2y5Oyrk",
+    "source_supplier_evidence_delta": "1yjs4NorTtyK0KqgT5DBujEw8jlswNoQb9tlAAh7TJmQ"
+  },
+  "proof_frontier": {
+    "public_ceiling": "E2+",
+    "artifact_maturity": "PA3",
+    "independent_pa4": false,
+    "pa5": false,
+    "e3": false,
+    "e4": false,
+    "wtp": null,
+    "price": null,
+    "profitability": null
+  },
+  "scoped_si_candidates": [
+    "IDENTITY_EVIDENCE_MUST_NOT_LAUNDER_CAPABILITY",
+    "NEGATIVE_FILTERS_MAY_BE_CHEAP_POSITIVE_ELIGIBILITY_REQUIRES_AUTHORITY",
+    "CROSS_STORE_WRITE_NEQ_AUTHORITY_UNTIL_READBACK"
+  ],
+  "global_si_v2": "CURRENT",
+  "global_si_v3": "CANDIDATE_ONLY",
+  "current_gate": "CURRENT_TARGET_PACK + VERIFIED_SUPPLIER_PACKET -> ATOMIC_REQUIREMENT_JOIN -> GAP_ROUTING -> BOUNDED_DECISION -> BLIND_PA4 -> REAL_DECISION_USE -> PA5 -> E3_REAL_BEHAVIOR -> E4_TRANSACTION_ONLY"
+}
