@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_ru_e01_block_boundary_policy/1.0",
+  "schema_version": "ivdivo.room917_ru_e01_block_boundary_policy/1.1",
   "created": "2026-08-22",
   "project_id": "ROOM917",
   "episode": "E01",
@@ -23,12 +23,13 @@
   "protected_exact_text_units": [
     "Лени-бёрд...",
     "Если это дойдёт—",
-    "Не трогайте. Время — один семнадцать и двенадцать секунд. Внешняя телефонная магистраль физически разомкнута. Неотмеченная лампа активна справа от девятьсот шестнадцатой. Мина, подтвердите.",
+    "Не трогайте.",
+    "Время — один семнадцать и двенадцать секунд. Внешняя телефонная магистраль физически разомкнута. Неотмеченная лампа активна справа от девятьсот шестнадцатой. Мина, подтвердите.",
     "Тогда откуда вы знаете последнюю ноту?"
   ],
   "protected_functions": {
     "CATE_CLEAN_FRAGMENT": "ISOLATE_FOR_REPLACEABILITY_AND_POST_TRANSMISSION",
-    "EVENT_TIME_AND_OPEN_TRUNK": "KEEP_LOCALLY_REPLACEABLE",
+    "EVENT_TIME_AND_OPEN_TRUNK": "KEEP_BOTH_ACTUAL_ELENA_UNITS_LOCALLY_REPLACEABLE",
     "FINAL_QUESTION": "ISOLATE_OR_END_BLOCK_WITHOUT_FOLLOWING_DIALOGUE"
   },
   "block_render_mode_law": {
