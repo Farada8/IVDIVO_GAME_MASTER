@@ -1,10 +1,10 @@
 # B03 — SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE
 
 **Updated:** 2026-08-22  
-**Status:** ACTIVE WORKING PROSE / CH19–CH24 PASS / CH25 CASCADE AUTHORIZED  
-**Authority note:** WORKING manuscript state, not final story lock.
+**Status:** DEVELOPMENT-COMPLETE / CH01–29 STORY PASS / FACTUAL + LINE LOCK PENDING  
+**Authority note:** complete working story-development manuscript; **NOT Founder-locked**; do not draft CH30.
 
-## Activation / Founder continuity
+## Canon / Founder continuity
 
 D01 THE WIFE AT HIS WEDDING is **FOUNDER-LOCKED E01–E120 / Recording Authority issued**. `WAIT_FOR_D01_FOUNDER_LOCK` is CLOSED.
 
@@ -17,76 +17,26 @@ Founder F1 authority remains controlling for Smith family continuity:
 
 Cycle32B story-production folder: `1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv`.
 
-Current post-midpoint chain:
-- CH19–24 escalation rebase: `1GsELpV6PqpKKKguLzOAzDCouOYxhOIWVsSdf9K9rk-4`.
-- CH19 `THE REAL STORM`: manuscript `1ngQwNpSTTawUxz7DkWMiYOdM4DBRL49QpCT_HqOMfXw`; gate `1XCid-Pzagb0oV9V0ljs4kVy9e3Vfph-pQlvGxFNzf50` -> PASS.
-- CH20 `BLACKOUT`: manuscript `1ri8PM0NfYEgveuN0LDlyK-gLWaUacTFQ2tjllZ3Y-Cc`; gate `1objKIzc2G2O34P40bnsypcv7VKn8C1BUHCOBXiFzNik` -> PASS.
-- CH21 `OBJECTIVES, NOT SCRIPTS`: manuscript `1ogpC4Aw9qwvUET8v7Zc3ns9STj7eEz7go9DZJ5v6Y60`; gate `1yTvQpIqg4cStGG8akXH_Wp84Rdxf_58b3THDWObYi8k` -> PASS.
-- CH22 `FIRST DISTRIBUTED RUN`: manuscript `1dkG9m9HBspfoEaEjIYqutWnJ91GfVneH0AJY1A-z1S4`; gate `10pkAiSomDa_JZ5h6Yd8Wm_8lR71zRQHdaS7hOd661co` -> PASS.
-- CH23 **`FAILOVER`**: manuscript `13khiS1NdVndiGNDqQiHY_TRlhsiLme2HRY-2C3-7Zr0`; gate `1QMOlSxa57TzCFZvsnmZsn1Hj0jlGFpUFoEKsVIOsJnY` -> PASS. Earlier non-authority working label `THE CONVERGENCE` is corrected/rejected.
-- CH24 `GO TO THE RELAY`: manuscript `1h77I_epSM9m7UqWNiu0a_gjDQs4PaeFg28IuOkmcVkA`; gate `1aUjy18rE5GfHDwExA5mf7rgmrsYD7mCXjHyHPtPAaig` -> PASS.
-- Fresh post-CH24 climax/resolution rebase P65–P72: `1YamdStR6xEifvZFb1KFRPUrUWoSzlb4CMs5uTNg_Cfk` -> **FATAL 0 / BLOCKING MAJOR 0 / CH25 AUTHORIZED**.
+Key terminal artifacts:
+- CH19–24 escalation block gate: `1EZ0MaNRWiiXwcEznNV6fMoVkIfXPohkAOxxDSPbUQho` -> **PASS / FATAL 0 / BLOCKING MAJOR 0**.
+- CH25 gate: `1kI78IBxGNhGJbUmzHyDMOdTWCSWrVrCqiUuewFx2Mzg` -> PASS.
+- CH26 gate: `1JNE2tZaHZH1DJrCbQv2rRj32-doDIlQXG4KXZ91CXj4` -> PASS.
+- CH27 gate: `10CM0XzoVYqDZSo-knskDtsQtim155sXC40usq_FvbtQ` -> PASS.
+- CH28 gate: `1YN7qZtt5xMhxFDpTOyz2Bh8FnGqwNrOBOcTPvgdJLPs` -> PASS.
+- CH29 manuscript `WHAT WE DID WITH THE WARNING`: `1LZPRkR89wAkdcWJqUOv6dYdUUSimtDm3b1PpxEUydpM`.
+- CH29 local story + resolution gate: `1fkyOoczhhRKVI8u9WP5naAtcFINnEgfD6Tn5jTjtp0s` -> **PASS / FATAL 0 / BLOCKING MAJOR 0 / MAIN BOOK CONFLICT CLOSED IN PROSE**.
+- CH19–29 corpus + Human Scene regression: `191JzLnEKRhxh_j4Pga18H9PHXPyFzglXW41BKDD9WVM` -> **PASS / FATAL 0 / BLOCKING MAJOR 0**.
+- **P72 FULL-NOVEL STORY + HUMAN SCENE GATE:** `1V7sO8SW3I4_zQFrEHIHKifLZ7kc20rFNmKirjUVLjWU` -> **PASS / FATAL 0 / BLOCKING MAJOR 0 / BOOK STORY DEVELOPMENT COMPLETE**.
 
-## Actual frontier after CH24
+## P72 disposition
 
-### Network / relay
-Normal storm-driven failover has re-concentrated traffic through shared fallback infrastructure. This has genuine operational benefits (medical/road/hydro synchronization) and correlates with renewed precursor route completeness. Mechanism remains UNKNOWN.
+The CH01–29 manuscript closes the Book One governing problem without solving the precursor ontology by assertion. The causal spine remains cumulative from OES containment logic through response-created evidence, Morgen Pass history, storm/failover, distributed-response cost, Andrej's conventional injury, relay segmentation, the strongest unused warning, the independent third route, and CH29 decision accounting.
 
-The local network technician, not Smith, has identified the established mountain relay/control point on a separately checked service spur. Remote management rides the degraded/shared backbone and is less reliably verifiable. The technician owns relay engineering; Smith accompanies only as OES evidence-boundary owner and must not touch/command the relay.
+The ending closes the live Slovenian incident and ownership, Davor accounting, Andrej/Tina consequence, Nika review/reinstatement path, OES interim doctrine correction, Morgen Pass training-context correction, Taren emergency advisory authorization and local operational handoff **before** the ordinary Dublin/daughter beat.
 
-### Hydro
-Remote actuator response has degraded below minimum. Tina has rechecked access and found it still inside hard withdrawal thresholds. Andrej chooses one bounded manual-isolation attempt because he knows the incomplete travel; Tina stays mobile on the exit side watching water/return path. Hydro authority owns the equipment decision and thresholds. No tool recovery. Any hard withdrawal threshold ends the attempt immediately.
+Origin/mechanism of the precursor recordings remains **UNKNOWN**. This is a legitimate series-level residue, not an unclosed Book One plot obligation.
 
-Andrej/Tina are already wet/cold from CH22; abandoned tools remain below. The precursor lower-service access sequence remains sealed and is not a route command.
-
-### Lower valley
-Maja retains tactical ownership of the depot emergency corridor, bridge staffing, medical return and reduced underpass operation. Upper Gorge remains closed; north heavy/mobile resources remain inaccessible.
-
-## CH25–29 climax/resolution authority
-
-Fresh post-CH24 rebase supersedes stale Part V cards where they conflict with actually written CH19–24 consequences.
-
-### CH25 — CASCADE
-- bounded manual isolation must perform a real conventional protective function;
-- during threshold-driven withdrawal, ordinary storm/debris/access damage causes a severe lower-limb trapping/crush injury to Andrej;
-- exact diagnosis/amputation status remains UNKNOWN pending factual/medical pass;
-- Tina remains mobile;
-- Maja/medical/bridge/underpass obligations continue so the book does not collapse into a single-victim tunnel.
-
-### CH26 — THE RELAY
-- local network technician owns physical relay segmentation;
-- Smith owns OES information-lane boundary only;
-- selected cross-links are bounded while essential medical/road continuity is preserved;
-- central visibility worsens as precursor coherence becomes less route-complete/noisy.
-
-### CH27 — THE BEST WARNING YET
-- the clearest warning yet offers a genuinely tempting fast route to injured Andrej;
-- Taren may assess coherence/predictive value with uncertainty but cannot issue an order;
-- centralized predictive control could genuinely save time but requires rebuilding/using the same high-resolution response architecture implicated in the recursive hazard;
-- Smith's climax choice is to refuse making the warning the route authority and accept bounded distributed judgment with incomplete information.
-
-### CH28 — THE THIRD ROUTE
-- Tina/local service/rescue knowledge identifies a physically plausible old inspection/service approach absent from the warning set; no unseeded secret tunnel;
-- Andrej survives extraction but retains a permanent disabling lower-limb consequence class;
-- success does not refund the injury;
-- precursor coherence decays as response no longer forms one centrally legible route script; ontology remains UNKNOWN.
-
-### CH29 — WHAT WE DID WITH THE WARNING
-- casualty/decision accounting without perfect moral sorting;
-- OES doctrine amended and Morgen Pass concealment enters formal correction/review;
-- local authority resumes normal ownership;
-- Taren/Confederation advisory channel closes with no new Earth jurisdiction/permanent joint unit;
-- ordinary aftermath only after the main emergency/case closes.
-
-## P65–P67 stress-test results
-
-**Andrej consequence:** contingent but causally earned, not fate/punishment. Immediate withdrawal likely avoids exposure but leaves real conventional isolation/flood/debris risk unresolved.
-
-**Centralized predictive option:** genuinely attractive because it may reach Andrej faster, synchronize resources and reduce one local uncertainty. Its problem is not `centralization = bad`; using the interactive warning as controlling route architecture rebuilds a response surface implicated in the hazard and can silently convert precision into jurisdiction.
-
-**Distributed professional judgment:** preserves accountable local ownership and breaks route-script dependence but is slower, incomplete and can fail. Andrej's permanent injury is not erased by eventual success. `decentralization = magic good` is rejected.
-
-## Hard invariants
+## Hard invariants preserved
 
 - Local Slovenian rescue authority remains local.
 - Confederation knowledge does not confer Earth jurisdiction.
@@ -94,16 +44,32 @@ Fresh post-CH24 rebase supersedes stale Part V cards where they conflict with ac
 - Observable phenomenon precedes ontology; source origin/mechanism remain UNKNOWN.
 - Precursor evidence may be preserved/compared but does not own routes.
 - Taren provides bounded analysis/confidence only; no Earth switching plan, route assignment, casualty optimization or final strategy.
-- Smith cannot become a network engineer or single-handed physical solver.
-- Andrej is civilian hydro competence, not anomaly hero.
-- Tina remains an active competent worker, not only witness to harm.
-- Permanent disability is not moral punishment/inspirational reward.
-- Upper Gorge remains closed until actual geography changes.
+- Smith does not become a network engineer or single-handed physical solver.
+- Andrej remains civilian hydro competence, not anomaly hero.
+- Tina remains an active competent worker.
+- Andrej's lasting lower-limb consequence is not moral punishment or inspirational reward.
+- Successful rescue does not refund Davor or Andrej's human cost.
+- No CH30 / artificial cliffhanger is authorized by P72.
+
+## Lock-stage factual / line holds
+
+These are **not story blockers**, but they prevent final manuscript/Founder lock until checked:
+
+1. **MEDICAL:** verify CH25–29 severe lower-limb injury / expected lasting functional-loss language; preserve permanent consequence; do not add exact diagnosis, percentage, surgery/amputation status without evidence.
+2. **NETWORK:** technical terminology pass on CH23–29 relay/failover/segmentation; preserve Luka/Eva/local engineering ownership and the information-quarantine vs topology-change distinction.
+3. **CORPUS / LINE:** full CH01–29 pass for repeated binary/correction ladders, `Good/Yes/No` rhythms, status syntax, narrator explanation after action and recycled aphoristic contrast.
+4. **CONTINUITY:** final names/times/route/state ledger for Davor, Tina, Andrej, Nika, Maja, Luka/Eva, Morgen Pass and Taren authorization.
+5. **PERSONAL BEAT:** inspect CH29 daughter exchange for possible placeholder/typo `BIT?`; preserve no-invention boundary on daughter/mother/custody history.
 
 ## Exact next obligation
 
-**DRAFT CH25 — `CASCADE` FROM THE ACTUAL CH24 PASS FRONTIER AND THE FRESH P65–P72 REBASE.**
+**DO NOT WRITE CH30.**
 
-Entry state: Smith/local network technician have just left for relay; hydro has just begun one bounded manual-isolation attempt; precursor access sequence remains sealed; Maja/local cells continue owned objectives under an ordinary multi-site storm.
+Run the lock-stage verification sequence in this order:
 
-After draft: run CH25 local Story + Human Scene + continuity + injury-causality gate. Repair only real FATAL/BLOCKING MAJOR at the earliest failed layer; then continue causally to CH26 `THE RELAY`.
+1. medical/factual wording review;
+2. relay/network technical terminology review;
+3. full-manuscript CH01–29 line/corpus + continuity lock pass;
+4. Founder review / explicit lock decision.
+
+Only after explicit Founder Lock may downstream manuscript packaging/audio production be treated as authorized. P72 itself is story/Human Scene/continuity evidence; it is **not** specialist certification, copyedit, beta-reader response, market proof or Founder Lock.
