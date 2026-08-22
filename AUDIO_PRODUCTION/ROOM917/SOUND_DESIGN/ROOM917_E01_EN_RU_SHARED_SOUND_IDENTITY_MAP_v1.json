@@ -1,0 +1,103 @@
+{
+  "schema_version": "room917.e01_en_ru_shared_sound_identity_map/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "CURRENT_IDENTITY_CONTRACT_BINDINGS_PENDING_REAL_ASSET_BYTES",
+  "purpose": "Prevent English/Russian story-sound drift by mapping current-branch sound-design asset IDs to bilingual canonical identities. This file defines identity, not timing, gain, or repair authorization.",
+  "authority": {
+    "sound_asset_contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+    "sound_direction": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_DIRECTION_SCORE_v1.md",
+    "bilingual_control": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json",
+    "ru_assembly": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json"
+  },
+  "identity_classes": {
+    "BYTE_SHARED": "Once accepted, EN and RU reuse the same normalized production asset bytes/SHA-256. Locale timing and gain may differ after separate mix QC.",
+    "PARAMETER_SHARED": "EN and RU must preserve the same causal/acoustic parameters or pitch identity, but may use locale-specific performance/source audio where character identity requires it.",
+    "LOCALE_SPECIFIC": "Not shared by byte or performance; only dramatic function is shared."
+  },
+  "shared_identities": {
+    "NORMAL_916_SELECTOR_CLACK": {
+      "identity_class": "BYTE_SHARED",
+      "en_asset_id": "S10_SELECTOR_916",
+      "required_identity": "ONE_CLEAN_MECHANICAL_SELECTOR_CLACK",
+      "binding_status": "UNBOUND"
+    },
+    "NORMAL_916_GLASS_PING": {
+      "identity_class": "BYTE_SHARED",
+      "en_asset_id": "S11_GLASS_LAMP_916_PING",
+      "required_identity": "FAINT_DELICATE_GLASS_PING_NORMAL_916_REFERENCE",
+      "binding_status": "UNBOUND"
+    },
+    "TRANSFORMER_50HZ_IDENTITY": {
+      "identity_class": "BYTE_SHARED",
+      "en_asset_id": "S07_TRANSFORMER_WAKE",
+      "required_identity": "ORDINARY_50_HZ_ELECTRICAL_TRANSFORMER_FUNDAMENTAL_WITH_PHYSICAL_HARMONICS_NOT_HORROR_DRONE",
+      "frequency_identity_hz": 50.0,
+      "frequency_tolerance_hz": 0.5,
+      "binding_status": "UNBOUND"
+    },
+    "IMPOSSIBLE_INTERNAL_DOUBLE_RING": {
+      "identity_class": "BYTE_SHARED",
+      "en_asset_id": "S13_INTERNAL_DOUBLE_RING_OLD",
+      "required_identity": "OLD_INTERNAL_TELEPHONE_DOUBLE_RING_PHYSICAL_NOT_HORROR",
+      "binding_status": "UNBOUND"
+    },
+    "UNMARKED_LAMP_PING_BEYOND_916": {
+      "identity_class": "BYTE_SHARED",
+      "en_asset_id": "S14_UNMARKED_GLASS_LAMP_PING",
+      "required_identity": "SAME_MATERIAL_FAMILY_AS_NORMAL_916_GLASS_PING_BUT_DISTINCT_SOURCE_POSITION",
+      "binding_status": "UNBOUND"
+    },
+    "COPPER_HISS": {
+      "identity_class": "BYTE_SHARED",
+      "en_asset_id": "S17_COPPER_HISS",
+      "required_identity": "NARROW_LOW_VOLTAGE_OLD_COPPER_LINE_TEXTURE_NO_GHOST_PROCESSING",
+      "binding_status": "UNBOUND"
+    },
+    "TWO_PART_LINE_CUT": {
+      "identity_class": "BYTE_SHARED",
+      "en_asset_id": "S19_TWO_PART_LINE_CUT",
+      "required_identity": "TWO_MECHANICALLY_DISTINCT_INTERRUPTION_EVENTS_THEN_AUTHORED_SILENCE",
+      "binding_status": "UNBOUND"
+    },
+    "FOUR_NOTE_LULLABY_IDENTITY": {
+      "identity_class": "PARAMETER_SHARED",
+      "en_asset_id": null,
+      "required_identity": "ONE_LOCKED_FOUR_NOTE_PITCH_FAMILY; CALL_PRESENTS_FIRST_THREE_NOTES_AND_PROTECTS_THE_EXPECTED_FOURTH_SLOT; JULIAN_LATER_SUPPLIES_THE_EXACT_FOURTH_PITCH_AS_CHARACTER_PERFORMANCE",
+      "first_three_note_pitch_ids": ["N1", "N2", "N3"],
+      "fourth_pitch_id": "N4",
+      "pitch_values_hz": null,
+      "pitch_lock_status": "OPEN_RELEASE_GATE",
+      "call_fragment_audio_may_be_locale_specific": true,
+      "julian_performance_audio_must_be_locale_specific": true,
+      "shared_requirement": "N1_N2_N3_N4_PITCH_RELATIONSHIP_IDENTICAL_ACROSS_LOCALES",
+      "protected_silence_required": true,
+      "byte_sharing_forbidden_as_identity_substitute": true,
+      "binding_status": "UNRESOLVED_UNTIL_PITCH_LOCK"
+    }
+  },
+  "non_shared_character_audio": {
+    "CATE_CLEAN_HUMAN_PERFORMANCE": {
+      "identity_class": "LOCALE_SPECIFIC",
+      "rule": "EN and RU may use different actors. Each must sound like an ordinary human before transmission post; do not reuse EN Cate voice as a bilingual identity shortcut."
+    },
+    "THREE_SHALLOW_BREATHS": {
+      "identity_class": "LOCALE_SPECIFIC",
+      "rule": "Breaths belong to Cate performance identity and must remain credible for that locale's accepted actor; count/function remains three."
+    },
+    "JULIAN_FOURTH_NOTE_PERFORMANCE": {
+      "identity_class": "LOCALE_SPECIFIC",
+      "rule": "Performance source differs by locale but N4 pitch identity is shared exactly."
+    }
+  },
+  "binding_law": [
+    "BYTE_SHARED_IDENTITY_MUST_REFERENCE_ONE_ACCEPTED_SHA256_BEFORE_EITHER_LOCALE_RELEASE",
+    "RU_MAY_RECUT_TIMING_AND_GAIN_BUT_MAY_NOT_SUBSTITUTE_A_DIFFERENT_BYTE_SHARED_STORY_SOUND",
+    "PARAMETER_SHARED_LULLABY_MUST_PASS_PITCH_LOCK_BEFORE_RELEASE",
+    "NO_SHARED_IDENTITY_AUTHORIZES_REOPENING_PROTECTED_SCENE3_TECHNICAL_LINEAGE",
+    "NO_FILENAME_ONLY_BINDING",
+    "NO_CANDIDATE_BINDING_FROM_METADATA_OR_PROMPT_ONLY"
+  ],
+  "current_gate": "REAL_ASSET_BYTES_PLUS_BLIND_AUDITION_FOR_BYTE_SHARED_IDENTITIES; PITCH_LOCK_FOR_LULLABY"
+}
