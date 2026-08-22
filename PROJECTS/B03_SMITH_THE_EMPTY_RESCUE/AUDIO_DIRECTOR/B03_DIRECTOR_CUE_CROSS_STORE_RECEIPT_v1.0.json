@@ -3,8 +3,13 @@
   "generated": "2026-08-22",
   "project": "B03 — THE EMPTY RESCUE",
   "story_authority": "FOUNDER_LOCKED_CH01_29",
-  "status": "DRIVE_PERSISTED_GITHUB_MIRROR_STAGED",
+  "status": "CROSS_STORE_PERSISTED",
   "drive_parent_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+  "github": {
+    "repository": "Farada8/IVDIVO_GAME_MASTER",
+    "pull_request": 459,
+    "merge_commit": "becb0a259c56f8f2a4ac31becb79eb2c5cfc8f79"
+  },
   "artifacts": {
     "full_packet": {
       "file_name": "B03_DIRECTOR_CUE_PACKET_v1.0.json",
