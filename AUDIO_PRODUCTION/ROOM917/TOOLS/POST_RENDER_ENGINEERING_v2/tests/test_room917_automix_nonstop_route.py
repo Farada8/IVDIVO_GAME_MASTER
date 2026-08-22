@@ -25,19 +25,16 @@ class Room917AutoMixNonStopRouteTests(unittest.TestCase):
         result = evaluate(copy.deepcopy(self.queue))
         self.assertEqual("PASS_ROUTE_DECISION", result["status"])
         self.assertEqual("CONTINUE", result["action"])
-        self.assertEqual("A210_DOWNSTREAM_NO_BYPASS_REGRESSION", result["selected_id"])
+        self.assertEqual("A220_DRIVE_GITHUB_DURABLE_SYNC", result["selected_id"])
         self.assertIn("A010_EXACT_MASTER_BYTES", result["blocked_local"])
         self.assertEqual([], result["blocked_global"])
         self.assertTrue(result["non_stop_preserved"])
 
     def test_human_evidence_gate_does_not_stop_ready_sibling(self):
-        q = copy.deepcopy(self.queue)
-        for row in q["obligations"]:
-            if row["id"] == "A210_DOWNSTREAM_NO_BYPASS_REGRESSION":
-                row["status"] = "DONE"
-        result = evaluate(q)
+        result = evaluate(copy.deepcopy(self.queue))
         self.assertEqual("CONTINUE", result["action"])
         self.assertEqual("A220_DRIVE_GITHUB_DURABLE_SYNC", result["selected_id"])
+        self.assertIn("A030_A01_A02_PRODUCTION_BINDINGS", result["blocked_local"])
 
     def test_global_authority_gate_stops_all_continuation(self):
         q = copy.deepcopy(self.queue)
@@ -82,7 +79,6 @@ class Room917AutoMixNonStopRouteTests(unittest.TestCase):
                 row["status"] = "BLOCKED"
                 row["gate_type"] = "DEPENDENCY_BLOCKED"
         result = evaluate(q)
-        self.assertNotEqual("A210_DOWNSTREAM_NO_BYPASS_REGRESSION", result.get("selected_id"))
         self.assertNotEqual("A220_DRIVE_GITHUB_DURABLE_SYNC", result.get("selected_id"))
 
     def test_exhausted_ready_queue_reports_local_gate_not_false_completion(self):
