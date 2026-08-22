@@ -1,7 +1,7 @@
 # CURRENT AUDIO PRODUCTION AUTHORITY
 
 **Status:** CURRENT ROUTER  
-**Date:** 2026-08-20
+**Date:** 2026-08-22
 
 Use `studio/00_IVDIVO_AUDIO_STUDIO_INDEX_v3.3.md` as the current universal audio-studio operating router.
 
@@ -15,8 +15,8 @@ Current universal canon authority:
 - `studio/IVDIVO_AUDIO_STUDIO_CANON_PATCH_v3.2_AUDITED.md` — independent-audit blocker closure;
 - `studio/microphone_choreography/IVDIVO_MICROPHONE_CHOREOGRAPHY_ENGINE_v1.0.md` — current dedicated microphone-performance/spatial choreography authority.
 
-Current three-system production architecture:
-`PERFORMANCE ENGINE → MICROPHONE CHOREOGRAPHY / VIRTUAL RADIO STAGE ENGINE → WORLD SOUND ENGINE → EDIT/ALIGNMENT → MIX/MASTER/QC`.
+Current production architecture:
+`PERFORMANCE ENGINE → MICROPHONE CHOREOGRAPHY / VIRTUAL RADIO STAGE ENGINE → WORLD SOUND / SFX ASSET FACTORY → EDIT/ALIGNMENT → MIX/MASTER/QC`.
 
 Microphone Choreography authority includes:
 - `studio/microphone_choreography/IVDIVO_MICROPHONE_CHOREOGRAPHY_ENGINE_v1.0.md`;
@@ -25,6 +25,20 @@ Microphone Choreography authority includes:
 - `studio/microphone_choreography/IVDIVO_MICROPHONE_CHOREOGRAPHY_QC_v1.0.md`;
 - `studio/microphone_choreography/IVDIVO_AUDIO_REFERENCE_INTELLIGENCE_BATCH4_MICROPHONE_PERFORMANCE_v1.0.md`;
 - `studio/microphone_choreography/microphone_choreography.py`.
+
+ROOM 917 current SFX project overlay:
+- `studio/sfx_asset_factory/CURRENT_ROOM917_SFX_FACTORY.md` — current project pointer;
+- `studio/sfx_asset_factory/ROOM917_SFX_ASSET_MANIFEST_v5.json` — active candidate/hash registry;
+- `studio/sfx_asset_factory/sfx_registry_gate_v2.py` — fail-closed active-candidate + human-lock gate;
+- `studio/sfx_asset_factory/ROOM917_SFX_GATE_TEST_REPORT_v2.json` — registry regression evidence;
+- `studio/sfx_asset_factory/ROOM917_SFX_ALL_COMBINATIONS_QC_v1.json` — 30/30 critical candidate-combination QC PASS.
+
+SFX project law:
+- machine QC may reject/retire candidates but may never fabricate a human listening PASS;
+- recurring clue assets must preserve exact accepted bytes/hashes;
+- a retired candidate cannot return to production without a new explicit evidence cycle;
+- human blind X/Y/REJECT BOTH is required before `AUDIO_CANON_MASTER`;
+- 50 Hz transformer bed and authentic old-line hiss are separate causal domains and must not be conflated.
 
 Current studio operating/implementation authority also includes:
 - `studio/IVDIVO_AUDIO_STUDIO_OS_v3.0.md`;
@@ -45,10 +59,10 @@ Current consolidated review copy:
 - Drive/release artifact `IVDIVO_AUDIO_PRODUCTION_STUDIO_COMPLETE_CANON_v3.3_MICROPHONE_CHOREOGRAPHY.md`.
 
 Audit evidence:
-- Audio Reference Intelligence Batch 1–3;
+- Audio Reference Intelligence Batch 1–4;
 - independent v3.1 Red Team dispositioned into v3.2/v3.2.1;
-- Batch 4 microphone-performance/movement audit supporting the dedicated choreography engine.
+- ROOM 917 SFX factory cross-cue and hash-lock evidence under `studio/sfx_asset_factory/`.
 
 Project-specific overlays remain below universal authority and may not overwrite locked story canon.
 
-Provider implementations, including ElevenLabs, remain replaceable execution backends. Microphone choreography is provider-independent. Raw provider alignment may not bypass normalized internal schemas. API keys/secrets must never be committed. Real provider preflight/live render evidence remains a per-project runtime gate.
+Provider implementations, including ElevenLabs, remain replaceable execution backends. Microphone choreography and SFX asset identity are provider-independent. Raw provider alignment may not bypass normalized internal schemas. API keys/secrets must never be committed. Real provider preflight/live render evidence remains a per-project runtime gate.
