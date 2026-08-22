@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "cycle": "CYCLE9_REAL_INTERRUPTION_PROMOTION_CALIBRATION",
+  "evidence_capture_main_sha": "4d6dc7c5dc24ea77582327254d339e619173558f",
+  "publication_main_sha": "5e406a18cee325e5077af87beb4c69aaac7a2837",
+  "main_advanced_by_commits": 14,
+  "changed_surfaces": [
+    ".github/workflows/business-engineering-os-cycle7-readiness.yml",
+    "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_CROSS_LANE_READINESS_32_TO_64/**",
+    "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
+    "BUSINESS_ENGINEERING_OS/LIBRARY/00_START_HERE_CURRENT_LIBRARY.md"
+  ],
+  "self_improvement_overlap_detected": false,
+  "decision": "PUBLISH_ON_FRESH_MAIN_WITH_CAPTURE_SHA_PRESERVED",
+  "force_overwrite": false,
+  "note": "Run32 evidence remains bound to capture SHA; publication branch is cut from publication SHA."
+}
