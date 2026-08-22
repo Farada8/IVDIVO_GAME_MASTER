@@ -1,0 +1,72 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE6_CROSS_LANE_STATE_v2",
+  "fresh_main_base": "1239792fd733526d6b636dd6e7e88172d0197a07",
+  "current_authority_pointer": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
+  "procurement": {
+    "runs": "P33-P48",
+    "executed": 16,
+    "merge_sha": "a8776edcdee14ba67e9fa68c61b3e4f66c10cee3",
+    "status": "PA3_HOLD_FULL_PACK_AND_SUPPLIER_PROFILE"
+  },
+  "cross_lane": {
+    "runs": "P81-P96",
+    "executed": 16,
+    "branch": "business-engineering/cycle6-cross-lane-reconciled-2026-08-22",
+    "status": "ENGINEERING_PASS_MARKET_PROOF_HOLD"
+  },
+  "combined_unique_run32": {
+    "ranges": ["P33-P48", "P81-P96"],
+    "executed": 32
+  },
+  "parallel_public_art": {
+    "merge_sha": "1239792fd733526d6b636dd6e7e88172d0197a07",
+    "runs": 32,
+    "next64": 64,
+    "drive_folder": "1x5GiaYYyschwolooHw9fYH8xg8FjyyqH",
+    "status": "OFFICIAL_PUBLIC_BRIEF_VALIDATION_ONLY_NOT_MARKET_PROOF",
+    "counted_separately": true
+  },
+  "proof_frontier": {
+    "procurement": "PA3_HOLD_FULL_PACK_AND_SUPPLIER_PROFILE",
+    "retrofit": "PA3_HOLD_REAL_PROPERTY_PACKET",
+    "sme_ai": "PA3_HOLD_REAL_POST_DFB_WORKFLOW",
+    "public_art": "OFFICIAL_BRIEF_SOURCE_ARTIFACT_VALIDATED_APPLICANT_READINESS_HOLD",
+    "market_pa4": 0,
+    "pa5": 0,
+    "e3": 0,
+    "e4": 0
+  },
+  "public_evidence_ceiling": "E2+",
+  "wip": {
+    "primary": "PROCUREMENT",
+    "pilots": ["RETROFIT", "SME_AI"],
+    "limit": 3,
+    "public_art": "PARALLEL_BOUNDED_PILOT_NOT_ADDED_TO_MARKET_WIP_AUTHORITY"
+  },
+  "real_holds": [
+    "COMPLETE_OFFICIAL_TENDER_PACK",
+    "VERIFIED_SUPPLIER_PROFILE",
+    "INDEPENDENT_BLIND_PA4_REVIEW",
+    "REAL_PROPERTY_PACKET",
+    "REAL_POST_DFB_WORKFLOW",
+    "REAL_TARGET_USER_INTERACTION",
+    "PUBLIC_ART_APPLICANT_PORTFOLIO_AND_TECHNICAL_PACKAGE"
+  ],
+  "next64": {
+    "range": "P97-P160",
+    "designed": 64,
+    "executed": 0,
+    "parallel_public_art_next64_exists": true
+  },
+  "self_improvement": {
+    "current": "v2",
+    "candidate_rules": [
+      "MISSING_AUTHORITY_IS_A_FIRST_CLASS_RESULT",
+      "POLISH_CANNOT_UPGRADE_PROOF",
+      "PA4_MUST_BE_INDEPENDENT"
+    ],
+    "global_promotion": false
+  },
+  "authority_promotion": false,
+  "next_gate": "MERGE_RECONCILED_CROSS_LANE_THEN_BUILD_CYCLE7_CROSS_LANE_READINESS_COMPILER_FROM_PROCUREMENT_PLUS_PUBLIC_ART_WITHOUT_MARKET_PROOF_LAUNDERING"
+}
