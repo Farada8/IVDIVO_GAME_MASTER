@@ -28,7 +28,8 @@ jobs:
           p288 = (root/'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/00_P288_RECONCILIATION.md').read_text()
           machine = json.loads((root/'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/01_MACHINE_STATE.json').read_text())
           closure = (root/'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/02_CURRENT_ACCOUNTING_CLOSURE.md').read_text()
-          core_lower = core.lower()
+          core_plain = core.lower().replace('**','')
+          p288_plain = p288.lower().replace('**','')
           assert model['schema'] == 'ivdivo.business.current_read_model/1.2'
           assert model['core']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
           assert model['mandatory_evidence_overlay']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
@@ -54,12 +55,12 @@ jobs:
           assert model['proof_frontier'] == {'public_derived_ceiling':'E2_PLUS','artifact_plane':'PA3','PA4':False,'PA5':False,'E3':False,'E4':False}
           assert 'CORE_CURRENT + MANDATORY_EVIDENCE_OVERLAY = CURRENT_BUSINESS_READ_MODEL' in core
           assert 'P288' in core
-          assert 'total executed = **17**' in core_lower
-          assert 'remaining unexecuted = **47**' in core_lower
+          assert 'total executed = 17' in core_plain
+          assert 'remaining unexecuted = 47' in core_plain
           assert 'ROOT_A = TARGET_PACK_NOT_ACQUIRED' in core
           assert 'ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET' in core
           assert 'NOT_FOUND_IN_CONNECTED_SOURCES != DOCUMENT_DOES_NOT_EXIST' in overlay
-          assert 'total executed = **17**' in p288.lower()
+          assert 'total executed = 17' in p288_plain
           assert 'Post-merge closure only. No second P288 execution is created.' in closure
           print('CURRENT_BUSINESS_READ_MODEL_P288_CLOSURE: PASS')
           PY
