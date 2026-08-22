@@ -1,0 +1,38 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-08-22",
+  "counts":{"valid_physical":26,"resolved_canonical_works":24,"resolved_work_families":23,"unresolved_valid_entries":0},
+  "alias_groups":[
+    {"canonical_work_id":"PRESENCE_SENGE_SCHARMER_JAWORSKI_FLOWERS","relation":"SAME_WORK_DIFFERENT_FORMAT","drive_ids":["1mm5uE_neWnSoftq_lYb4WaNnK4sRmQtP","12ES_MAUfX4OwocsYMbzspNrzv3n6mML4"]},
+    {"canonical_work_id":"FIFTH_DISCIPLINE_FIELDBOOK_SENGE","relation":"SAME_WORK_DIFFERENT_FORMAT","drive_ids":["1eInaO5UZ1M04OoJCCvVQ58HPopCBTb5n","1xVxN3O32zH4XZ76wMqF2pH3We2jbhhsQ"]}
+  ],
+  "work_family_relations":[
+    {"work_family_id":"FIFTH_DISCIPLINE_SENGE","members":["FIFTH_DISCIPLINE_ENGLISH_SENGE","FIFTH_DISCIPLINE_SPANISH_EDITION_SENGE"],"relation":"SAME_UNDERLYING_WORK_FAMILY_DIFFERENT_LANGUAGE_EDITION","do_not_treat_as_byte_or_edition_identity":true}
+  ],
+  "canonical_works":[
+    {"id":"ACCELERATE_FORSGREN_HUMBLE_KIM_2018","family":"ACCELERATE_2018","title":"Accelerate","drive_ids":["1otiJyrSGoYFt-kV0twGgjjpwuGEAq3Zd"],"confidence":"HIGH"},
+    {"id":"AI_ENGINEERING_HUYEN","family":"AI_ENGINEERING_HUYEN","title":"AI Engineering","drive_ids":["1mvIPHdwb9fYFVmShZA_6Qk4c6PINDCZI"],"confidence":"HIGH"},
+    {"id":"BRAIN_OF_THE_FIRM_BEER","family":"BRAIN_OF_THE_FIRM_BEER","title":"Brain of the Firm","drive_ids":["1JTkGg0YLALoRvBEcEIGaVlp1Re03JsIH"],"confidence":"HIGH"},
+    {"id":"BUSINESS_DYNAMICS_STERMAN","family":"BUSINESS_DYNAMICS_STERMAN","title":"Business Dynamics","drive_ids":["11wlFso9_Kx2A6yWcPAC-QCqijvJCsF_M"],"confidence":"HIGH"},
+    {"id":"DECISION_AND_CONTROL_BEER","family":"DECISION_AND_CONTROL_BEER","title":"Decision and Control","drive_ids":["1pOlRyP_418NC1SeMy1qF2JNVm2rgvnlF"],"confidence":"MEDIUM","warning":"Embedded EPUB OPF metadata is junk test/test with unrelated identifier; identity normalized from filename/source context."},
+    {"id":"DIAGNOSING_SYSTEM_ORGANIZATIONS_BEER","family":"DIAGNOSING_SYSTEM_ORGANIZATIONS_BEER","title":"Diagnosing the System for Organizations","drive_ids":["1M9D3a4bQzyQynwGQCxCI2i1hSy4bR0AO"],"confidence":"HIGH"},
+    {"id":"FIFTH_DISCIPLINE_ENGLISH_SENGE","family":"FIFTH_DISCIPLINE_SENGE","title":"The Fifth Discipline","drive_ids":["1ATLyLoYZrJ5N8xBSpECcxA1_cu-1lATW"],"confidence":"HIGH"},
+    {"id":"FIFTH_DISCIPLINE_SPANISH_EDITION_SENGE","family":"FIFTH_DISCIPLINE_SENGE","title":"La Quinta Disciplina","drive_ids":["11vMrThypAvkoncHTcA2qhfk4vshXPlLz"],"confidence":"HIGH"},
+    {"id":"FIFTH_DISCIPLINE_FIELDBOOK_SENGE","family":"FIFTH_DISCIPLINE_FIELDBOOK_SENGE","title":"The Fifth Discipline Fieldbook","drive_ids":["1eInaO5UZ1M04OoJCCvVQ58HPopCBTb5n","1xVxN3O32zH4XZ76wMqF2pH3We2jbhhsQ"],"confidence":"HIGH"},
+    {"id":"PRESENCE_SENGE_SCHARMER_JAWORSKI_FLOWERS","family":"PRESENCE_SENGE_SCHARMER_JAWORSKI_FLOWERS","title":"Presence","drive_ids":["1mm5uE_neWnSoftq_lYb4WaNnK4sRmQtP","12ES_MAUfX4OwocsYMbzspNrzv3n6mML4"],"confidence":"HIGH"},
+    {"id":"NECESSARY_REVOLUTION_SENGE_ETAL","family":"NECESSARY_REVOLUTION_SENGE_ETAL","title":"The Necessary Revolution","drive_ids":["1egBg2TYufCD5qdcLrWMVjE5LrKAGbhiQ"],"confidence":"HIGH"},
+    {"id":"THINKING_IN_SYSTEMS_MEADOWS","family":"THINKING_IN_SYSTEMS_MEADOWS","title":"Thinking in Systems: A Primer","drive_ids":["1t9OS-6em6q5xYsaQXnKNmQ4Hum5fJw8t"],"confidence":"HIGH"},
+    {"id":"PRODUCT_DEVELOPMENT_FLOW_REINERTSEN","family":"PRODUCT_DEVELOPMENT_FLOW_REINERTSEN","title":"The Principles of Product Development Flow","drive_ids":["1xGPN2R3NwgQrfRQfz7kimI9Euj75Zbpe"],"confidence":"HIGH"},
+    {"id":"HOW_TO_MEASURE_ANYTHING_HUBBARD_2E","family":"HOW_TO_MEASURE_ANYTHING_HUBBARD","title":"How to Measure Anything, Second Edition","drive_ids":["1H0fTjaF_0cLRCVqK6H1KJSPk1yVAIbpW"],"confidence":"HIGH"},
+    {"id":"SITE_RELIABILITY_WORKBOOK_GOOGLE","family":"SITE_RELIABILITY_WORKBOOK_GOOGLE","title":"The Site Reliability Workbook","drive_ids":["1fBJ0f6HrKbxL0A-1oAGFuEpPV5lVBhAm"],"confidence":"HIGH"},
+    {"id":"SOFTWARE_ENGINEERING_AT_GOOGLE","family":"SOFTWARE_ENGINEERING_AT_GOOGLE","title":"Software Engineering at Google","drive_ids":["1UVGJOFaDVOtfTMNHjr0b_74dQ8cUZ312"],"confidence":"HIGH"},
+    {"id":"TOYOTA_KATA_ROTHER","family":"TOYOTA_KATA_ROTHER","title":"Toyota Kata","drive_ids":["1jHsHR3xoN0FZI71M0iQGCv4_5lornQi-"],"confidence":"HIGH"},
+    {"id":"REINFORCEMENT_LEARNING_SUTTON_BARTO_2E_DRAFT2018","family":"REINFORCEMENT_LEARNING_SUTTON_BARTO","title":"Reinforcement Learning: An Introduction, Second Edition — Complete Draft 2018","drive_ids":["177G9OHslhjHj-alyezSU1lfkmcjMjSfD"],"confidence":"HIGH"},
+    {"id":"LOGIC_OF_FAILURE_DORNER","family":"LOGIC_OF_FAILURE_DORNER","title":"The Logic of Failure","drive_ids":["114JNgB_z4AM_dlr-dlsp1j24B7mX0aft"],"confidence":"HIGH"},
+    {"id":"DECISIVE_HEATH_HEATH","family":"DECISIVE_HEATH_HEATH","title":"Decisive","drive_ids":["1CYIfgb-hSm2wIphH4XLCzfG3vbz2cs74"],"confidence":"HIGH"},
+    {"id":"MOM_TEST_FITZPATRICK","family":"MOM_TEST_FITZPATRICK","title":"The Mom Test","drive_ids":["1OTRIHoSRY_oQ0u4Mcj7BcIBjIEgzj0An"],"confidence":"HIGH"},
+    {"id":"MAKE_SENSE_ANY_MESS_COVERT","family":"MAKE_SENSE_ANY_MESS_COVERT","title":"How to Make Sense of Any Mess","drive_ids":["1x66j6PEVzDvsNyEf8H9Gboq5O_4aWVJQ"],"confidence":"HIGH"},
+    {"id":"DEVIL_TAKE_HINDMOST_CHANCELLOR","family":"DEVIL_TAKE_HINDMOST_CHANCELLOR","title":"Devil Take the Hindmost","drive_ids":["1PW0MvcA623VPYzKmCvD5M6w4Vpve4-s6"],"confidence":"HIGH"},
+    {"id":"WORRY_SOLUTION_ROSSMAN","family":"WORRY_SOLUTION_ROSSMAN","title":"The Worry Solution","drive_ids":["1v9oD0lqHoWW8GMVHq9YzRnwgQ4zNAqaw"],"confidence":"HIGH"}
+  ]
+}
