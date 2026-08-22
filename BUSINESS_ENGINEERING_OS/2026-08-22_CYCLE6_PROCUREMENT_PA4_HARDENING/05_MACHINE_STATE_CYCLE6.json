@@ -1,7 +1,7 @@
 {
-  "schema": "BUSINESS_ENGINEERING_OS_CYCLE6_PROCUREMENT_PA4_STATE_v1",
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE6_PROCUREMENT_PA4_STATE_v1.1",
   "date": "2026-08-22",
-  "status": "P33_P48_EXECUTED_FAIL_CLOSED_FEATURE_BRANCH",
+  "status": "P33_P48_EXECUTED_FAIL_CLOSED_CROSS_STORE_VERIFIED_PREMERGE",
   "parent_cycle5_merge_sha": "470a8aea93385ef8624b47688dbf4cf21090c058",
   "constraints": {
     "no_outreach": true,
@@ -20,10 +20,12 @@
     "requested_run32": "32/32_EXECUTED",
     "next64": "DESIGNED_P33_P96",
     "merge_sha": "470a8aea93385ef8624b47688dbf4cf21090c058",
+    "postmerge_main_closure": "7f57a3233a263a9c77cfa0e9a3c160f8a64049ef",
     "pa3_samples": ["PA-PROC-001", "PA-RETRO-001", "PA-AI-001"]
   },
   "cycle6": {
     "branch": "studio/business-engineering-cycle6-procurement-pa4-2026-08-22",
+    "pull_request": 191,
     "primary_lane": "procurement_decision_intelligence",
     "target_tender_resource_id": "8872468",
     "executed_prompts": "P33-P48",
@@ -34,7 +36,16 @@
     "contracts": "C6C01-C6C16",
     "proof_gates": "C6P01-C6P08",
     "protocols": "C6R01-C6R08",
-    "regression_tests_defined": 10
+    "regression_tests_defined": 10,
+    "ci_run": 32540303487,
+    "ci_before_state_bind": "SUCCESS"
+  },
+  "drive": {
+    "cycle6_folder_id": "1PVtwKAzHTYVKF9rpdqMt7FkcYEG9CACU",
+    "master_document_id": "1PpLAZyJwUXr82YJ1nQkrt-yFSs2m2tczKmRPf9dGzr8",
+    "execution_state_document_id": "1svv4PAR1qujSbbrw_tCzVfclp5QZtnXfJpcLWqdcLwU",
+    "folder_listing_readback": "PASS",
+    "direct_children_verified": 2
   },
   "proof": {
     "PA3": true,
@@ -52,6 +63,11 @@
     "v3": "CANDIDATE_ONLY",
     "cycle6_candidate": "MISSING_AUTHORITY_IS_A_FIRST_CLASS_RESULT",
     "promotion": "NOT_AUTHORIZED_FROM_SINGLE_PUBLIC_RUN"
+  },
+  "parallel_reconciliation": {
+    "cycle5_closure_discovered_after_cycle6_branch_start": true,
+    "fresh_main_authority_preserved": true,
+    "blind_overwrite": false
   },
   "current_gate": "ACQUIRE_COMPLETE_OFFICIAL_PACK_AND_VERIFIED_SUPPLIER_PROFILE_THEN_REQUIREMENT_JOIN_THEN_P47_THEN_PA4",
   "next_dependency_order": [
