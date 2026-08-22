@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.1",
+  "artifacts": [
+    {"name":"01_LIBRARY_MANIFEST_69.json","size_bytes":20149,"sha256":"1a591be2ad0a814c39c0c78f4e308223e77dd56ad107f52b2d02f5616823d0c4","role":"HISTORIC_LIBRARY_BASELINE","authority_effect":"NONE"},
+    {"name":"IVDIVO_BOOK_ENGINE_MILESTONE_H_v7_RUNTIME.zip","size_bytes":213941,"sha256":"9bc87a6d8280a4e817420a873fa0dbb2088b9c6d3dae5527ad57b4e3651e0ae7","role":"CROSS_DOMAIN_ENGINEERING_EVIDENCE","authority_effect":"NONE"},
+    {"name":"IVDIVO_BUSINESS_ENGINE_CYCLE5_V111.zip","size_bytes":41306,"sha256":"6414f72d169bb7dbf6cab746c97d8094efc09eae1922a04e6e9ac14940dab9ba","role":"CROSS_DOMAIN_ENGINEERING_EVIDENCE","authority_effect":"NONE"},
+    {"name":"IVDIVO_BUSINESS_ENGINE_V1_INTEGRATION_REBASE.zip","size_bytes":19588,"sha256":"d092bebde8fe62b3e00118d08c419a5ee3956c8c6ef011a366dc57c01ee39cf2","role":"CROSS_DOMAIN_ENGINEERING_EVIDENCE","authority_effect":"NONE"}
+  ],
+  "storage_policy":"Binary bytes are packaged in private Drive Cycle9 runtime; public GitHub stores content identities and derived evidence only."
+}
