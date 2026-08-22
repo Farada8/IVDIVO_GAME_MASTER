@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.sound_design_pointer/1.9",
+  "schema_version": "room917.sound_design_pointer/1.10",
   "project": "ROOM917",
   "episode": "E01",
   "status": "ACTIVE_POST_RENDER_SOUND_EXECUTION",
@@ -99,22 +99,26 @@
     "law": "CANARY_BYTES_OR_RECEIPT_DO_NOT_AUTHORIZE_D003_PATCH_OR_RELEASE"
   },
   "critical_sfx_canaries": {
-    "status": "24_CANDIDATES_CREATED_HOLD_NOT_PRODUCTION_BOUND",
+    "status": "V2_1_IDENTITY_AUTHORITY_24_CANDIDATES__BLIND_PACKAGE_READY__HOLD_HUMAN_AUDITION",
+    "current_pointer": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/CURRENT_CRITICAL_SFX_CANARY_POINTER.json",
+    "reconciliation": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_AUTHORITY_RECONCILIATION_v1.json",
     "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py",
-    "generator_commit": "306a7831c19c7122ab6012a1abb81d6d61b70cc1",
-    "receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json",
-    "receipt_commit": "d5adb9467511730f7d3ca23b1c76778571e4ae42",
-    "workflow": ".github/workflows/room917-critical-sfx-synth-canaries.yml",
-    "workflow_commit": "2a19d2e7a3ae3fc891d498b2de3d63cf7cc6fc3c",
+    "runtime_receipt_schema": "room917.critical_sfx_runtime_generation_receipt/1.0",
+    "identity_receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json",
+    "identity_receipt_commit": "26544e956ca9d3d5b023325156fd0a34d201d633",
+    "critical_workflow": ".github/workflows/room917-critical-sfx-synth-canaries.yml",
+    "blind_workflow": ".github/workflows/room917-sound-asset-blind-audition-packages.yml",
+    "stale_qc_reference_only": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_MACHINE_QC_SUMMARY_v2_2.json",
+    "stale_qc_reason": "TIED_TO_SUPERSEDED_V2_RECEIPT_AND_DIFFERENT_S14_HASHES",
     "seed": 91720260822,
     "provider_calls": 0,
     "paid_synthesis_calls": 0,
-    "machine_preflight": "ALL_24_HASH_AND_FORMAT_CHECKS_PASS_IN_SESSION",
+    "runtime_hash_law": "ALL_24_RUNTIME_SHA256_MUST_MATCH_STATIC_V2_1_IDENTITY_AUTHORITY",
     "assets": ["S07_TRANSFORMER_WAKE","S08_RELAY_RIPPLE","S10_SELECTOR_916","S11_GLASS_LAMP_916_PING","S13_INTERNAL_DOUBLE_RING_OLD","S14_UNMARKED_GLASS_LAMP_PING","S17_COPPER_HISS","S19_TWO_PART_LINE_CUT"],
     "variants_per_asset": 3,
     "audition_status": "WAITING_FOR_HUMAN_LISTEN",
     "pairing_gate": "S14_CANNOT_PASS_BEFORE_SELECTED_S11_MATERIAL_IDENTITY_EXISTS",
-    "law": "SYNTHETIC_CANARY_AUDIO_DOES_NOT_AUTHORIZE_PATCHING_OR_RELEASE"
+    "law": "SYNTHETIC_CANARY_AUDIO_OR_MACHINE_QC_DOES_NOT_AUTHORIZE PATCHING, MIXING OR RELEASE"
   },
   "derived_candidate_provenance": {
     "contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_DERIVED_MASTER_PROVENANCE_CONTRACT_v1.json",
@@ -181,7 +185,7 @@
     "policy": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/CONTINUATION_POLICY_v1.json",
     "universal_addendum": "IVDIVO_NARRATIVE_OS/13A_LOCAL_GATE_REROUTE_ADDENDUM_v1.0.md",
     "blocked_mainline_does_not_stop_project": true,
-    "latest_completed_safe_frontier": "A01_A02_CONTROLLED_BYTES_AND_BLIND_PACKAGE_READY"
+    "latest_completed_safe_frontier": "CRITICAL_SFX_RUNTIME_AUTHORITY_SPLIT_AND_BLIND_EXECUTION_LINE_REPAIRED"
   },
   "season_scale": "BLOCKED_UNTIL_E01_V2_QUALITY_GATE"
 }
