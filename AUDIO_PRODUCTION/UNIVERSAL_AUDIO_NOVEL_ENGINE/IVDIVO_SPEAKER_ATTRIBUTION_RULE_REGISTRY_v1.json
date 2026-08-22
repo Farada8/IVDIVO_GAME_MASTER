@@ -1,71 +1,208 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "updated": "2026-08-22",
   "authority": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/IVDIVO_SPEAKER_ATTRIBUTION_EVIDENCE_CONTRACT_v2.md",
   "runtime": "tools/ivdivo_speaker_attribution.py",
-  "default_promotion_gate": {"min_n":30,"min_precision":0.98,"min_wilson_95_lower":0.90},
+  "default_promotion_gate": {
+    "min_n": 30,
+    "min_precision": 0.98,
+    "min_wilson_95_lower": 0.90
+  },
   "rules": [
-    {"id":"PRE_DIRECT_TAG","scope":"UNIVERSAL_SYNTACTIC","mode":"AUTO_FAIL_CLOSED","basis":"explicit named/role grammatical speech tag"},
-    {"id":"POST_DIRECT_TAG","scope":"UNIVERSAL_SYNTACTIC","mode":"AUTO_FAIL_CLOSED","b03_validation":{"successes":99,"total":99,"precision":1.0,"wilson_95_lower":0.9626}},
-    {"id":"SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION","scope":"PROJECT_B03","mode":"AUTO_PROJECT_ONLY","b03_validation":{"successes":36,"total":36,"precision":1.0,"wilson_95_lower":0.9036},"universal_promotion":"HOLD_SECOND_BOOK_REPLICATION"},
-    {"id":"PRONOUN_GRAMMATICAL_SUBJECT_TRACKER","scope":"PROJECT_B03","mode":"AUTO_PROJECT_ONLY","b03_validation":{"successes":36,"total":36,"precision":1.0,"wilson_95_lower":0.9036},"universal_promotion":"HOLD_SECOND_BOOK_REPLICATION"},
-    {"id":"STANDALONE_PRIOR_PARAGRAPH_ATTRIBUTION","scope":"REVIEW_ONLY","mode":"NO_AUTO","b03_validation":{"successes":42,"total":43,"precision":0.9767,"wilson_95_lower":0.8794}},
-    {"id":"SINGLE_ACTION_SUBJECT","scope":"REVIEW_ONLY","mode":"NO_AUTO","b03_validation":{"successes":29,"total":49}},
-    {"id":"ALTERNATING_TURN","scope":"FORBIDDEN_AUTO","mode":"NO_AUTO","b03_validation":{"successes":5,"total":27}},
-    {"id":"SAME_SPEAKER_SANDWICH","scope":"FORBIDDEN_AUTO","mode":"NO_AUTO","b03_validation":{"successes":0,"total":5}},
-    {"id":"NEAREST_NAME_OR_GENDER_ONLY_PRONOUN","scope":"REVIEW_ONLY","mode":"NO_AUTO_ON_AMBIGUITY"}
+    {
+      "id": "PRE_DIRECT_TAG",
+      "scope": "UNIVERSAL_SYNTACTIC",
+      "mode": "AUTO_FAIL_CLOSED",
+      "basis": "explicit named/role grammatical speech tag"
+    },
+    {
+      "id": "POST_DIRECT_TAG",
+      "scope": "UNIVERSAL_SYNTACTIC",
+      "mode": "AUTO_FAIL_CLOSED",
+      "b03_validation": {
+        "successes": 99,
+        "total": 99,
+        "precision": 1.0,
+        "wilson_95_lower": 0.9626
+      }
+    },
+    {
+      "id": "SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION",
+      "scope": "PROJECT_B03",
+      "mode": "AUTO_PROJECT_ONLY",
+      "b03_validation": {
+        "successes": 36,
+        "total": 36,
+        "precision": 1.0,
+        "wilson_95_lower": 0.9036
+      },
+      "second_book_replication": {
+        "project": "LESSON_ZERO",
+        "scope": "CH01_LOCKED_SOURCE",
+        "source_authority": "03 LESSON ZERO — Book 1 Submission Master v1.0 CLEAN",
+        "ground_truth": "LESSON_ZERO_RU_AUDIO_DIRECTOR_SCORE_CH01_v1_1.json + LESSON_ZERO_RU_AUDIO_ADAPTATION_CH01_v1.md",
+        "triggered_examples": 2,
+        "successes": 2,
+        "precision": 1.0,
+        "wilson_95_lower": 0.3424,
+        "fixtures": [
+          "LZ_CH01_Q012",
+          "LZ_CH01_Q076"
+        ],
+        "status": "PARTIAL_EVIDENCE_HOLD_SAMPLE_SIZE",
+        "report": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/LESSON_ZERO_CH01_SPEAKER_RULE_REPLICATION_v1.md"
+      },
+      "universal_promotion": "HOLD_SECOND_BOOK_REPLICATION_INSUFFICIENT_N"
+    },
+    {
+      "id": "PRONOUN_GRAMMATICAL_SUBJECT_TRACKER",
+      "scope": "PROJECT_B03",
+      "mode": "AUTO_PROJECT_ONLY",
+      "b03_validation": {
+        "successes": 36,
+        "total": 36,
+        "precision": 1.0,
+        "wilson_95_lower": 0.9036
+      },
+      "second_book_replication": {
+        "project": "LESSON_ZERO",
+        "scope": "CH01_LOCKED_SOURCE",
+        "source_authority": "03 LESSON ZERO — Book 1 Submission Master v1.0 CLEAN",
+        "ground_truth": "LESSON_ZERO_RU_AUDIO_DIRECTOR_SCORE_CH01_v1_1.json + LESSON_ZERO_RU_AUDIO_ADAPTATION_CH01_v1.md",
+        "triggered_examples": 1,
+        "successes": 1,
+        "precision": 1.0,
+        "wilson_95_lower": 0.2065,
+        "fixtures": [
+          "LZ_CH01_Q001"
+        ],
+        "status": "PARTIAL_EVIDENCE_HOLD_SAMPLE_SIZE",
+        "report": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/LESSON_ZERO_CH01_SPEAKER_RULE_REPLICATION_v1.md"
+      },
+      "universal_promotion": "HOLD_SECOND_BOOK_REPLICATION_INSUFFICIENT_N"
+    },
+    {
+      "id": "STANDALONE_PRIOR_PARAGRAPH_ATTRIBUTION",
+      "scope": "REVIEW_ONLY",
+      "mode": "NO_AUTO",
+      "b03_validation": {
+        "successes": 42,
+        "total": 43,
+        "precision": 0.9767,
+        "wilson_95_lower": 0.8794
+      }
+    },
+    {
+      "id": "SINGLE_ACTION_SUBJECT",
+      "scope": "REVIEW_ONLY",
+      "mode": "NO_AUTO",
+      "b03_validation": {
+        "successes": 29,
+        "total": 49
+      }
+    },
+    {
+      "id": "ALTERNATING_TURN",
+      "scope": "FORBIDDEN_AUTO",
+      "mode": "NO_AUTO",
+      "b03_validation": {
+        "successes": 5,
+        "total": 27
+      }
+    },
+    {
+      "id": "SAME_SPEAKER_SANDWICH",
+      "scope": "FORBIDDEN_AUTO",
+      "mode": "NO_AUTO",
+      "b03_validation": {
+        "successes": 0,
+        "total": 5
+      }
+    },
+    {
+      "id": "NEAREST_NAME_OR_GENDER_ONLY_PRONOUN",
+      "scope": "REVIEW_ONLY",
+      "mode": "NO_AUTO_ON_AMBIGUITY"
+    }
   ],
   "engine_semantic_fixture": {
-    "law":"QUOTE_BOUNDARY_NEQ_SPOKEN_DIALOGUE",
-    "b03_quote_boundaries":3718,
-    "b03_non_spoken_overrides":3,
-    "b03_spoken_candidates":3715,
-    "note":"This is the deterministic engine validation fixture retained for reproducibility. It is not the later production cast-speech denominator."
+    "law": "QUOTE_BOUNDARY_NEQ_SPOKEN_DIALOGUE",
+    "b03_quote_boundaries": 3718,
+    "b03_non_spoken_overrides": 3,
+    "b03_spoken_candidates": 3715,
+    "note": "This is the deterministic engine validation fixture retained for reproducibility. It is not the later production cast-speech denominator."
   },
   "b03_engine_current": {
-    "base_corrected_v2":518,
-    "verified_engine_delta":81,
-    "corrected_existing_assignments":1,
-    "assigned":599,
-    "unknown":3116,
-    "coverage_pct":16.12,
-    "status":"VERIFIED_ENGINE_SUBSET_CURRENT",
-    "scaled_voice_map_authorized":false,
-    "story_text_changes":0,
-    "supersedes_working_candidate_661":true,
-    "claim_boundary":"599 assignments are deterministic engine-verified. Do not report 3714 as engine auto-verified."
+    "base_corrected_v2": 518,
+    "verified_engine_delta": 81,
+    "corrected_existing_assignments": 1,
+    "assigned": 599,
+    "unknown": 3116,
+    "coverage_pct": 16.12,
+    "status": "VERIFIED_ENGINE_SUBSET_CURRENT",
+    "scaled_voice_map_authorized": false,
+    "story_text_changes": 0,
+    "supersedes_working_candidate_661": true,
+    "claim_boundary": "599 assignments are deterministic engine-verified. Do not report 3714 as engine auto-verified."
   },
   "b03_production_authority": {
-    "method":"CHAPTER_LOCAL_CONTEXTUAL_REVIEW_PLUS_RED_TEAM_RECONCILIATION",
-    "source_quote_boundaries":3718,
-    "production_semantic_exceptions":4,
-    "actual_cast_speech":3714,
-    "assigned":3714,
-    "unknown_speaker_ownership":0,
-    "coverage_pct":100.0,
-    "full_speaker_gate_version":"v1.2_SOURCE_AND_CH29_RECONCILED",
-    "full_speaker_gate_drive_id":"1lFmVbEZJSMnCZMn65nAEV5U-rESC-qFX",
-    "authority_router_drive_id":"1SF30eK_uoJDFgeR6GyODfGUrIaig-ZWa",
-    "current_state_drive_id":"1JQViwpa83Mt8lSMcBbvjProiLPxR4_xZ",
-    "voice_ids_assigned":0,
-    "provider_dispatch_authorized":false,
-    "claim_boundary":"3714/3714 is production speaker ownership authority, not deterministic engine verification."
+    "method": "CHAPTER_LOCAL_CONTEXTUAL_REVIEW_PLUS_RED_TEAM_RECONCILIATION",
+    "source_quote_boundaries": 3718,
+    "production_semantic_exceptions": 4,
+    "actual_cast_speech": 3714,
+    "assigned": 3714,
+    "unknown_speaker_ownership": 0,
+    "coverage_pct": 100.0,
+    "full_speaker_gate_version": "v1.2_SOURCE_AND_CH29_RECONCILED",
+    "full_speaker_gate_drive_id": "1lFmVbEZJSMnCZMn65nAEV5U-rESC-qFX",
+    "authority_router_drive_id": "1SF30eK_uoJDFgeR6GyODfGUrIaig-ZWa",
+    "current_state_drive_id": "1JQViwpa83Mt8lSMcBbvjProiLPxR4_xZ",
+    "voice_ids_assigned": 0,
+    "provider_dispatch_authorized": false,
+    "claim_boundary": "3714/3714 is production speaker ownership authority, not deterministic engine verification."
   },
   "verification": {
-    "github_pr":436,
-    "tested_pr_head":"28645a167332cb978c6ce0dedffdbac78680cea0",
-    "tested_merge_ref":"d64d16579c653a131ee2decb105ac28ab6b82143",
-    "workflow_run_id":32572056461,
-    "job_id":97028799073,
-    "pytest":"22_PASSED_IN_0.05S",
-    "py_compile":"PASS",
-    "main_merge_commit":"c53e9c0923041183bc642363ad5d572c1bb2cf77",
-    "main_state_readback":"PASS",
-    "scope":"ENGINE_SUBSET_ONLY"
+    "github_pr": 436,
+    "tested_pr_head": "28645a167332cb978c6ce0dedffdbac78680cea0",
+    "tested_merge_ref": "d64d16579c653a131ee2decb105ac28ab6b82143",
+    "workflow_run_id": 32572056461,
+    "job_id": 97028799073,
+    "pytest": "22_PASSED_IN_0.05S",
+    "py_compile": "PASS",
+    "main_merge_commit": "c53e9c0923041183bc642363ad5d572c1bb2cf77",
+    "main_state_readback": "PASS",
+    "scope": "ENGINE_SUBSET_ONLY"
   },
   "new_regressions": [
-    {"id":"REPORTING_CLAUSE_MENTION_NEQ_REPORTING_SUBJECT","fixture":"B03_CH01_S0172","input":"The caller on Nika’s line said,","forbidden_assignment":"NIKA","expected_generic":"UNKNOWN","independent_authority":"CH01 REAL_COLLISION_CALLER"},
-    {"id":"PARAGRAPH_BREAK_NEQ_SPEAKER_TRANSFER","fixture":"B03_CH29_S0358","production_expected":"SMITH","superseded":"TAREN_SOR","scope":"PRODUCTION_REVIEW_REGRESSION","mode":"NO_GENERIC_AUTO_PROMOTION","basis":"Smith said introduces the prior speech; paragraph break has no transfer cue; Taren paused is listener reaction before Taren's next first-person response"}
+    {
+      "id": "REPORTING_CLAUSE_MENTION_NEQ_REPORTING_SUBJECT",
+      "fixture": "B03_CH01_S0172",
+      "input": "The caller on Nika’s line said,",
+      "forbidden_assignment": "NIKA",
+      "expected_generic": "UNKNOWN",
+      "independent_authority": "CH01 REAL_COLLISION_CALLER"
+    },
+    {
+      "id": "PARAGRAPH_BREAK_NEQ_SPEAKER_TRANSFER",
+      "fixture": "B03_CH29_S0358",
+      "production_expected": "SMITH",
+      "superseded": "TAREN_SOR",
+      "scope": "PRODUCTION_REVIEW_REGRESSION",
+      "mode": "NO_GENERIC_AUTO_PROMOTION",
+      "basis": "Smith said introduces the prior speech; paragraph break has no transfer cue; Taren paused is listener reaction before Taren's next first-person response"
+    }
   ],
-  "universal_promotion":"HOLD_SECOND_BOOK_REPLICATION"
+  "cross_project_replication": {
+    "second_project": "LESSON_ZERO",
+    "chapter": "CH01",
+    "source_quote_boundaries": 94,
+    "target_rule_triggers": 3,
+    "target_rule_successes": 3,
+    "status": "SECOND_BOOK_PARTIAL_EVIDENCE_HOLD_SAMPLE_SIZE",
+    "promotion_blocker": "MIN_N_30_NOT_MET_PER_RULE",
+    "ground_truth_independent_of_candidate_rules": true,
+    "synthetic_duplication_allowed": false,
+    "self_labelled_examples_allowed": false
+  },
+  "universal_promotion": "HOLD_SECOND_BOOK_REPLICATION_INSUFFICIENT_N"
 }
