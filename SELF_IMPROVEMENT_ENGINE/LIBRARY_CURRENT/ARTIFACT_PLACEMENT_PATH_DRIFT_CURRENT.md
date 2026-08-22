@@ -11,14 +11,13 @@ Failure classes covered:
 - `ARTIFACT_PLACEMENT_PATH_DRIFT`;
 - `TOOL_ROUTE_MISMATCH / RESOURCE_TYPE_MISMATCH`.
 
-Fail-closed state: `PERSISTED_BUT_MISPLACED`.
-
 Execution laws:
 `FILE_EXISTS != RESULT_IS_FINDABLE`.
 `RESOURCE_EXISTS != REQUEST_FULFILLED`.
 `DONE_WITHOUT_DURABLE_RECEIPT = INVALID_STATE`.
 `INTERCEPTION_CANDIDATE != REAL_PROVIDER_INTERCEPTION_PROOF`.
 `GUARD_IMPLEMENTED != GUARD_ADOPTED_BY_PRODUCTION_COMPLETION_PATHS`.
+`PROJECT_DONE != EXTERNAL_ARTIFACT_DONE`.
 
 ## Current merged authority
 - PR #388 — base placement convergence;
@@ -27,35 +26,37 @@ Execution laws:
 - PR #411 — durable live-interception evidence capture;
 - PR #417 — mandatory production completion-path adoption, merge `7f9f7c58d9febba0ac9585a81e318e9718d7454b`.
 
-PR #417 was reconciled against fresh main before merge. Reconciled head `5cd4c1493069b5da26e6df169e67a810a83f88cd` passed 14/14 triggered workflows, including artifact-placement-runtime #30, PL-05 Agent Executor, PL-01 Project State, PL-03 Source Evidence and PL-13 File Ingestion. Freshness check after reconciliation found no overlap with subsequent main changes.
+## Production completion-surface audit candidate
+A repository-wide audit of current `personal-ai` completion/persistence surfaces found no additional external-artifact DONE bypass after PR #417.
 
-## Production adoption now verified
-Artifact-producing tasks explicitly declare:
-`requires_artifact_placement_receipt = true`.
+One semantic ambiguity remains in registered PL-08 behavior: `BookProductionCore FINAL` intentionally sets the parent project status to `DONE`. Existing tests make that state route authoritative, so it is not renamed.
 
-For marked tasks:
-- direct `ProjectStateManager.complete_task()` refuses DONE;
-- compatibility `BoundedAgentExecutor.run()` routes FINISH through the artifact placement gate;
-- canonical strict `BoundedAgentExecutor.execute()` routes FINISH through the artifact placement gate;
-- missing receipt => BLOCKED, never DONE;
-- non-verified receipt => BLOCKED + durable append-only interception candidate;
-- PLACEMENT_VERIFIED receipt => DONE subject to normal functional gates;
-- CLI supports `agent run --require-artifact-placement-receipt` and later provider-backed `project complete-artifact <project> <task> <receipt.json>`;
-- PL-13 `ingest file` and PL-03 evidence functionality were preserved during run.py reconciliation.
+The bounded candidate instead makes its meaning machine-readable:
+- `completion_scope = INTERNAL_BOOK_PRODUCTION`;
+- `external_artifact_completion = NOT_ASSERTED`.
 
-Internal model/agent output existence does not authorize external artifact DONE. Placement receipts are provider-backed evidence and cannot be self-certified by an agent.
+Reaching PL-08 FINAL therefore never means that a manuscript/export/package was externally persisted, placement-verified, published or distributed, and it never completes a separate artifact-required task.
 
-Contract:
-`PRODUCTION_ADOPTION_CONTRACT_v1.md`.
+Current audit artifact:
+`PRODUCTION_COMPLETION_SURFACE_AUDIT_v1.md`.
+
+Candidate regression:
+`personal-ai/tests/test_project_completion_scope.py`.
+
+Current candidate status:
+`PROJECT_DONE_SCOPE_HARDENING_PENDING_CI`.
+
+## External artifact completion rule
+Artifact-producing tasks explicitly declare `requires_artifact_placement_receipt=true`. For marked tasks, direct completion is rejected and the placement gate controls DONE. Missing receipt => BLOCKED; non-verified receipt => BLOCKED + interception evidence; PLACEMENT_VERIFIED receipt => DONE subject to normal gates.
 
 ## Promotion boundary
-Self-Improvement v2 remains CURRENT. The bounded mechanism status is now:
-`HOLD_ARMED_FOR_LIVE_EVIDENCE`.
+Self-Improvement v2 remains CURRENT. No broader promotion is claimed.
 
-Exactly one non-simulatable requirement remains:
-`Observe future real traffic where the already-installed and production-adopted placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback.`
+Before returning to `HOLD_ARMED_FOR_LIVE_EVIDENCE`, the bounded scope-hardening candidate must pass its own exact-head CI and merge without changing the registered PL-08 route.
 
-Issue #395 does not satisfy this final gate because it triggered the resource-type repair. Tests, replays and synthetic fixtures cannot satisfy it. Do not manufacture a failure.
+After that, exactly one non-simulatable requirement remains: observe future real traffic where the installed and production-adopted placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback.
+
+Tests, replays and synthetic fixtures cannot satisfy that final gate. Do not manufacture a failure.
 
 Drive mirror authority:
 `06_SELF_IMPROVEMENT / INCIDENT — ARTIFACT_PLACEMENT_PATH_DRIFT — 2026-08-22`.

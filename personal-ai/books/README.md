@@ -28,6 +28,21 @@ Transitions are strictly one step at a time. Stage skipping is rejected.
 
 `CONTINUITY -> FINAL` is fail-closed: it is impossible unless the persisted continuity gate is `PASS`. A `FAIL` gate leaves the book at `CONTINUITY` and marks the parent project `BLOCKED`. A later explicit PASS may unblock it.
 
+## Project DONE scope
+
+PL-08 preserves its registered behavior of setting the parent project status to `DONE` when the internal book-production state reaches `FINAL`. That status is explicitly scoped as:
+
+- `completion_scope = INTERNAL_BOOK_PRODUCTION`
+- `external_artifact_completion = NOT_ASSERTED`
+
+Therefore:
+
+`PROJECT_DONE != EXTERNAL_ARTIFACT_DONE`.
+
+`FINAL` means the PL-08 internal state machine has completed after its continuity authorization. It does **not** mean a manuscript/export/package has been written to Google Drive, GitHub or another external provider; it does not mean canonical placement was verified; and it does not mean publishing/distribution occurred.
+
+Any task that claims an external artifact must separately declare `requires_artifact_placement_receipt=true` and pass the Artifact Placement completion gate before that task may become `DONE`. Reaching PL-08 `FINAL` never completes or overrides such a task.
+
 ## Hash-bound continuity authorization
 
 A PASS is not a timeless flag. When the gate is recorded, PL-08 computes a deterministic SHA-256 over the continuity-relevant book inputs:
