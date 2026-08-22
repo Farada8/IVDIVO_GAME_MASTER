@@ -14,11 +14,13 @@ def opp(signal=None, **kw):
     return Opportunity(**base)
 
 
-def test_01_library_69_plus_2_is_71():
-    assert validate_library_authority(69,["ster","hub"],71)["valid"]
+def test_01_library_69_plus_9_is_78():
+    delta=["mom2","ster","rein","hub","chancellor","rossman","covert","decisive","dorner"]
+    assert validate_library_authority(69,delta,78)["valid"]
 
 def test_02_duplicate_delta_not_double_counted():
-    assert validate_library_authority(69,["ster","ster","hub"],71)["valid"]
+    delta=["mom2","ster","rein","hub","chancellor","rossman","covert","decisive","dorner","dorner"]
+    assert validate_library_authority(69,delta,78)["valid"]
 
 def test_03_primary_eu_source_accepted():
     assert is_primary_source("https://digital-strategy.ec.europa.eu/en/x")
