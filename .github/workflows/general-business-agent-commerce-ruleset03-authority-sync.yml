@@ -20,17 +20,16 @@ jobs:
       - name: Assert runtime-state-spec agreement
         run: |
           python - <<'PY'
-          import importlib.util, json
+          import json, re
           from pathlib import Path
           root=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
-          scanner_path=root/'17_AGENT_COMMERCE_READINESS_SCANNER_V0/scanner.py'
-          spec=importlib.util.spec_from_file_location('scanner', scanner_path)
-          mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+          runtime=(root/'17_AGENT_COMMERCE_READINESS_SCANNER_V0/scanner.py').read_text()
+          match=re.search(r'RULESET_VERSION\s*=\s*"([^"]+)"', runtime)
           state=json.loads((root/'17_AGENT_COMMERCE_READINESS_SCANNER_V0/01_MACHINE_STATE.json').read_text())
           doc=(root/'17_AGENT_COMMERCE_READINESS_SCANNER_V0/00_SPEC.md').read_text()
           receipt=(root/'18_AGENT_COMMERCE_PEW02_BLIND10/05_RULESET_03_PUBLIC_EVIDENCE_CORRECTION.md').read_text()
-          assert mod.RULESET_VERSION=='2026-08-22.3'
-          assert state['ruleset_version']==mod.RULESET_VERSION
+          assert match and match.group(1)=='2026-08-22.3'
+          assert state['ruleset_version']==match.group(1)
           assert state['post_pew05_correction']['pr']==387
           assert state['post_pew05_correction']['p_ew05_route_changed'] is False
           assert state['current_public_evidence_policy']['order_capability_without_proven_webhook_flow_and_missing_signing_keys']=='UNKNOWN_NOT_FAIL'
