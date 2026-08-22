@@ -1,0 +1,13 @@
+{
+  "cycle": "Cycle9",
+  "run32": "30 PASS / 2 HOLD / 0 FAIL",
+  "ledger_sha256": "44eeb4f9184d1e7ac17c456ab240f7ab0bf4a2525e7552ef66a5d313b6d5468e",
+  "warm_tests": "33/33 PASS",
+  "cold_tests": "33/33 PASS",
+  "compileall": "PASS",
+  "package_v1_0_1": {"size_bytes":293420,"sha256":"8bfc852bd134c0d88f8d52abe616a7fe450d3d690856d1cb61ed55748fb361f3"},
+  "evidence_boundaries": {"human_signal":"NOT_CLAIMED","provider_live":"NOT_CLAIMED","market_effect":"NOT_CLAIMED","v3_current_promotion":"NOT_AUTHORIZED","si0014_promotion":"NOT_READY"},
+  "publication_freshness":"PASS_NO_SELF_IMPROVEMENT_PATH_OVERLAP",
+  "capture_main_sha":"4d6dc7c5dc24ea77582327254d339e619173558f",
+  "publication_main_sha":"5e406a18cee325e5077af87beb4c69aaac7a2837"
+}
