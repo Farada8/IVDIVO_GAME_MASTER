@@ -1,0 +1,25 @@
+{
+  "schema_version": "si0015.real_slice_calibration/0.1",
+  "corpus": "20 source-grounded project/router slices",
+  "projects": ["D01","D04","D09","D10"],
+  "total": 20,
+  "passed": 20,
+  "failed": 0,
+  "false_positives": [],
+  "false_negatives": [],
+  "false_positive_rate_bounded_corpus": 0.0,
+  "false_negative_rate_bounded_corpus": 0.0,
+  "fixture_sha256": "949ac3e819679de956305908b3ddff417aae4b538a47fb4dcd58eb86b235f209",
+  "result_sha256_local": "c5afeb12c86d0e1cdd2e9cc0f1eff6fd38f22a0a8558b258e9749a418f6e0362",
+  "real_findings": [
+    "D01 central CURRENT router slice is stale relative to Founder-locked E01-E120 controlling state",
+    "D01 old FINALIZATION_32_PASS CURRENT_EXECUTION_STATE is explicitly SUPERSEDED_ARCHIVE_POINTER",
+    "D09 Founder-lock approval event remains missing and must not be inferred from final story gate PASS",
+    "D10 and D04 current slices provide healthy CURRENT_MATCH controls",
+    "D01 historical/reference slices remain EXEMPT_HISTORICAL_SLICE controls"
+  ],
+  "evidence_boundary": "SOURCE_GROUNDED_ENGINEERING_PILOT_NOT_INDEPENDENT_HUMAN_ADJUDICATION_NOT_PROMOTION",
+  "promotion_authorized": false,
+  "candidate_status": "READY_FOR_PILOT",
+  "next_gate": "INDEPENDENT_MANUAL_EXPECTED_LABEL_REVIEW_PLUS_REAL_ROUTING_TELEMETRY_AND_BOUNDED_D01_STALE_ROUTER_REPAIR"
+}
