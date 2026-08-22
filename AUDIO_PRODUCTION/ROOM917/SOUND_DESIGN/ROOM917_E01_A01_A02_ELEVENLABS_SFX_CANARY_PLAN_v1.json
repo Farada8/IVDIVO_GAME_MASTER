@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_a01_a02_sfx_canary/1.0",
+  "schema_version": "ivdivo.room917_a01_a02_sfx_canary/1.1",
   "date": "2026-08-22",
   "project": "ROOM917",
   "episode": "E01",
@@ -8,9 +8,18 @@
   "problem": "D003 can only be repaired with current-branch room beds A01/A02, but real bytes for those asset identities are not recoverable from File Library, Drive or GitHub.",
   "authority": {
     "sound_asset_contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+    "generation_queue": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json",
     "candidate_template": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_CANDIDATES_TEMPLATE_v1.json",
     "binding_gate": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/sound_asset_binding_gate.py",
     "source_drive_id": "1Rz_Tv83fNhQIuPnMA4jRkESmgiu8xA-GZnctbQYDP_I"
+  },
+  "adapter_law": {
+    "provider_neutral_queue_is_prompt_semantic_authority": true,
+    "provider_prompt_may_be_compressed_only_for_provider_limit": true,
+    "source_variant_and_source_prompt_sha256_required": true,
+    "silent_semantic_prompt_rewrite_forbidden": true,
+    "provider_prompt_character_limit": 450,
+    "compression_must_preserve_required_room_identity_and_negative_story_constraints": true
   },
   "provider": {
     "name": "ElevenLabs",
@@ -31,11 +40,12 @@
     "policy": "BOUNDED_CANARY_FIRST__NO_AUTO_EXPANSION",
     "current_documented_api_credit_rate_when_duration_is_explicit": 11,
     "credit_rate_unit": "credits_per_second_per_api_generation",
-    "initial_seconds": 120,
-    "initial_estimated_credits_at_current_documented_rate": 1320,
+    "two_request_canary_seconds": 60,
+    "two_request_estimated_credits_at_current_documented_rate": 660,
+    "four_request_canary_seconds": 120,
+    "four_request_estimated_credits_at_current_documented_rate": 1320,
     "rate_is_volatile_not_contractual": true,
-    "must_recheck_provider_rate_before_paid_dispatch": true,
-    "website_multi-variation_generation_not_used_for_automation": true
+    "must_recheck_provider_rate_before_paid_dispatch": true
   },
   "output_handling": {
     "provider_loop_output_is_candidate_source_only": true,
@@ -54,7 +64,9 @@
       "request_id": "ROOM917_E01_A01_C01",
       "asset_id": "A01_GREYHAVEN_LOBBY_30S_LOOP",
       "candidate_id": "A01_C01",
-      "text": "Natural documentary ambience inside a large old upscale Atlantic seaside hotel lobby: steady rain pressing against tall windows, distant wind outside, subtle radiator ticks, sparse far-away staff and cutlery activity, heavy stone-room air and resonance. Seamless 30-second loop. No voices, no music, no horror drone, no knocks, no whispers, no supernatural or telephone-like clues.",
+      "source_variant": "A",
+      "source_prompt_sha256": "123af5aa95b36765f8abf5d7997b6a9afcc957278d566bdf54f4b2149fd6b944",
+      "text": "30-second seamless documentary ambience, ageing Atlantic seaside hotel lobby. Rain on tall old windows, distant exterior wind, one irregular radiator tick, sparse far-off staff/cutlery, restrained large-stone-room resonance. Low drama, real physical room. No intelligible voices, near footsteps, telephone, relay clicks, knocks, music, horror tone or supernatural texture.",
       "loop": true,
       "duration_seconds": 30.0,
       "prompt_influence": 0.55
@@ -63,7 +75,9 @@
       "request_id": "ROOM917_E01_A01_C02",
       "asset_id": "A01_GREYHAVEN_LOBBY_30S_LOOP",
       "candidate_id": "A01_C02",
-      "text": "Realistic room-tone loop for an occupied but quiet old coastal hotel lobby in Atlantic rain: broad stone reflections, rain on tall glass, low exterior wind pressure, occasional radiator tick and very sparse distant service/cutlery movement. Expensive, old, physically heavy building; neutral documentary realism. No speech, music, ominous drone, bangs, whispers, phone rings or clue-like rhythmic events.",
+      "source_variant": "B",
+      "source_prompt_sha256": "07f13a4d5377c5e681e3105acbdc23a6b16b3884e7c4ebe1f0697466f3a4886b",
+      "text": "30-second seamless interior room tone, large old coastal hotel lobby heard from inside. Diffuse Atlantic rain on high windows, soft building air pressure, occasional radiator tick, very sparse distant hotel activity, restrained stone-room tail. Low event density but never empty. No voices, clue-like sounds, telephone, music, ominous drone or cinematic storm hit.",
       "loop": true,
       "duration_seconds": 30.0,
       "prompt_influence": 0.55
@@ -72,7 +86,9 @@
       "request_id": "ROOM917_E01_A02_C01",
       "asset_id": "A02_SWITCHBOARD_ALCOVE_30S_LOOP",
       "candidate_id": "A02_C01",
-      "text": "Natural documentary ambience in a small carpeted switchboard alcove connected to an old seaside hotel lobby: Atlantic rain now muted and farther away, close old wood cabinet material, soft carpet absorption, faint non-tonal building resonance and air. Seamless 30-second loop, quiet but continuously physically present. No voices, music, horror tone, relays, telephone rings, selector clicks, electrical clue pulses or whispers.",
+      "source_variant": "A",
+      "source_prompt_sha256": "1da3bb08441b6554a629fc691bf0b26483313d6adc11920b13a368b9d2985f18",
+      "text": "30-second seamless realistic ambience, small carpeted switchboard alcove attached to an old seaside hotel lobby. Atlantic rain muted and farther away; old wood cabinet/wall material, dry close interior, faint building resonance. Clearly smaller and drier yet physically connected to lobby. No relay clicks, telephone ring, transformer event, voices, music or horror tone.",
       "loop": true,
       "duration_seconds": 30.0,
       "prompt_influence": 0.55
@@ -81,7 +97,9 @@
       "request_id": "ROOM917_E01_A02_C02",
       "asset_id": "A02_SWITCHBOARD_ALCOVE_30S_LOOP",
       "candidate_id": "A02_C02",
-      "text": "Realistic room-tone loop for a smaller carpeted service alcove beside an old hotel lobby: softened distant rain through multiple boundaries, dry close wooden switchboard cabinetry, carpeted absorption, faint structural settling and neutral building air. The room must feel smaller than the stone lobby, not eerie. No speech, score, drone, phone or relay sounds, rhythmic clicks, beeps, knocks, whispers or supernatural cues.",
+      "source_variant": "B",
+      "source_prompt_sha256": "00482e1a1b96b0f54d1edbf7fe5246d386b3f9eff626b9efc2c2424ffd8a0056",
+      "text": "30-second seamless restrained room tone, old carpeted hotel switchboard recess. Muted rain filtered through larger lobby, faint timber material settling only if non-clue-like, soft structural air/building resonance, close dry acoustic. No deliberate mechanical cue, ring, selector, relay burst, speech, score or ominous drone.",
       "loop": true,
       "duration_seconds": 30.0,
       "prompt_influence": 0.55
@@ -91,7 +109,8 @@
     "ELEVENLABS_API_KEY_PRESENT_AS_MANAGED_SECRET",
     "EXPLICIT_PAID_SOUND_CANARY_AUTHORIZATION",
     "CURRENT_PROVIDER_COST_RECHECK",
-    "REQUEST_TEXT_UNDER_PROVIDER_PROMPT_LIMIT",
+    "SOURCE_QUEUE_PROMPT_HASH_MATCH",
+    "PROVIDER_PROMPT_UNDER_450_CHARS",
     "MODEL_SUPPORTS_LOOP_TRUE",
     "NO_STORY_CRITICAL_CUE_EMBEDDED_IN_AMBIENCE_PROMPT",
     "OUTPUT_LOCATION_IS_DURABLE_AND_READBACK_CAPABLE"
@@ -102,28 +121,15 @@
     "LOOP_SEAM_MEASUREMENT_AND_LISTEN",
     "FALSE_CLUE_AUDIT",
     "ROOM_IDENTITY_BLIND_A_B",
+    "ROOM_CONTRAST_A01_VS_A02",
     "MONO_TRANSLATION",
     "PHONE_MOBILE_PROXY_TRANSLATION",
     "DIALOGUE_UNDERLAY_TEST_AT_AUDITION_GUIDE_LEVELS",
     "SELECT_AT_MOST_ONE_WINNER_PER_ASSET_OR_HOLD"
   ],
   "hard_rejects": {
-    "A01": [
-      "SOUNDS_LIKE_HORROR_BED",
-      "AUDIBLE_VOICE_OR_WHISPER",
-      "RHYTHMIC_KNOCK_OR_PHONE_LIKE_EVENT",
-      "RAIN_DOMINATES_DIALOGUE",
-      "LOOP_SEAM_AUDIBLE",
-      "ROOM_DOES_NOT_READ_AS_LARGE_STONE_LOBBY"
-    ],
-    "A02": [
-      "FALSE_RELAY_OR_TELEPHONE_CLUE",
-      "HUM_READS_AS_50HZ_CLUE",
-      "AUDIBLE_VOICE_OR_WHISPER",
-      "HORROR_OR_SUPERNATURAL_TONE",
-      "LOOP_SEAM_AUDIBLE",
-      "ROOM_NOT_CREDIBLY_SMALLER_AND_DRIER_THAN_A01"
-    ]
+    "A01": ["SOUNDS_LIKE_HORROR_BED","AUDIBLE_VOICE_OR_WHISPER","RHYTHMIC_KNOCK_OR_PHONE_LIKE_EVENT","RAIN_DOMINATES_DIALOGUE","LOOP_SEAM_AUDIBLE","ROOM_DOES_NOT_READ_AS_LARGE_STONE_LOBBY"],
+    "A02": ["FALSE_RELAY_OR_TELEPHONE_CLUE","HUM_READS_AS_50HZ_CLUE","AUDIBLE_VOICE_OR_WHISPER","HORROR_OR_SUPERNATURAL_TONE","LOOP_SEAM_AUDIBLE","ROOM_NOT_CREDIBLY_SMALLER_AND_DRIER_THAN_A01"]
   },
   "binding_law": "A GENERATED FILE REMAINS CANDIDATE_ONLY. Production binding is forbidden until the existing sound_asset_binding_gate re-hashes normalized bytes and all required audition/loop/false-clue/translation fields are PASS with an explicit tested gain_db.",
   "d003_law": "EVEN A01/A02 PASS DOES NOT AUTHORIZE A PATCH. Exact D003 interval evidence must independently authorize each repair range first."
