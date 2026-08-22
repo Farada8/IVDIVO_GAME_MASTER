@@ -1,18 +1,27 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "date": "2026-08-22",
-  "parent_authority": "CYCLE7_CROSS_LANE_READINESS_PLUS_MERGED_P97_P128_AUTHORITY_RECOVERY",
-  "delta": "CYCLE7_SUPPLIER_IDENTITY_AND_STATUS_EVIDENCE",
-  "status": "PR222_MERGED_DRIVE_READBACK_CLOSED",
+  "parent_authority": "CYCLE7_P129_P160_COMMERCIAL_RELIABILITY_PLUS_SUPPLIER_STATUS_V2",
+  "delta": "CYCLE7_AUTHORITY_SOURCE_PRECEDENCE_AND_DOCUMENT_ROUTE_GUARDS",
+  "status": "PR236_MERGED_PENDING_FINAL_READBACK",
   "case": "PROC-BALLYBUNION-8872468",
-  "authority_side": {"current_pack_complete": false, "benchmark_noncarryover_guard_reused": true, "historical_same_buyer_analog": "8176962", "historical_mechanism_owner": "MERGED_P97_P128_AUTHORITY"},
+  "authority_side": {
+    "current_pack_complete": false,
+    "official_documents_route_known": true,
+    "current_attachment_inventory_recovered": false,
+    "benchmark_noncarryover_guard_reused": true,
+    "historical_same_buyer_analog": "8176962",
+    "historical_mechanism_owner": "MERGED_P97_P128_AUTHORITY"
+  },
   "supplier_side": {
     "state": "PARTIAL_IDENTITY_PLUS_PUBLIC_REGISTRY_PRESENCE",
     "legal_name_verified": true,
     "legal_form_verified": true,
     "public_registry_presence_confirmed": true,
-    "public_registry_source_data_updated": "2026-08-13",
-    "formation_activity_versions": [{"submission_reference": "SR5869785", "nace": "6399"}, {"submission_reference": "SR6505561", "nace": "8559"}],
+    "formation_activity_versions": [
+      {"submission_reference": "SR5869785", "nace": "6399"},
+      {"submission_reference": "SR6505561", "nace": "8559"}
+    ],
     "formation_activity_current": null,
     "formation_activity_state": "CONFLICTING_FORMATION_VERSIONS_FINAL_AUTHORITY_REQUIRED",
     "company_number_verified": false,
@@ -23,23 +32,79 @@
     "delivery_capacity_verified": false,
     "similar_references_verified": false,
     "safety_competence_verified": false,
-    "roofing_insulation_capability_verified": false
+    "roofing_insulation_capability_verified": false,
+    "connected_source_company_status_search": "NOT_FOUND_IN_CONNECTED_SOURCES"
   },
-  "decision": {"typed_state": "HOLD_MISSING_AUTHORITY", "requirement_join_unlocked": false, "bid_hold_no_bid_authorized": false, "independent_pa4": false, "pa5": false, "e3": false, "e4": false},
-  "regression": {"supplier_legal_status_guards_pass": 8, "supplier_legal_status_guards_total": 8, "historical_noncarryover_not_recounted": true},
+  "source_precedence": {
+    "official_first_party_current_rank": 100,
+    "official_first_party_historical_rank": 80,
+    "private_primary_rank": 70,
+    "public_registry_index_rank": 60,
+    "third_party_aggregator_rank": 30,
+    "unverified_secondary_rank": 10,
+    "lower_rank_conflict_may_override": false,
+    "equal_top_rank_conflict": "FAIL_CLOSED_RECONCILE"
+  },
+  "decision": {
+    "typed_state": "HOLD_MISSING_AUTHORITY",
+    "requirement_join_unlocked": false,
+    "bid_hold_no_bid_authorized": false,
+    "independent_pa4": false,
+    "pa5": false,
+    "e3": false,
+    "e4": false
+  },
+  "regression": {
+    "authority_supplier_guards_pass": 11,
+    "authority_supplier_guards_total": 11,
+    "historical_noncarryover_not_recounted": true
+  },
   "github": {
     "identity_pr": 216,
     "identity_merge_sha": "41982f9938b46e4dcdc613a90169f1d1b614fe98",
     "status_v2_pr": 222,
     "status_v2_merge_sha": "eb300dcde872b7f3ab31eb2ad5463ce6b18ed0ae",
-    "status_v2_final_head": "681e548b35ccc455e85a6213e9f5e72ad6923344",
-    "status_v2_exact_head_ci_run": 32549722143,
-    "status_v2_exact_head_ci": "SUCCESS"
+    "superseded_source_precedence_pr": 233,
+    "superseded_source_precedence_merged": false,
+    "source_precedence_pr": 236,
+    "source_precedence_final_head": "8322f37a81203a043eaa7cf7cafc666a9edf9e22",
+    "source_precedence_merge_sha": "3a738950b02834addc67d8576a100c20f6d3133b",
+    "source_precedence_exact_head_ci_run": 32550331583,
+    "source_precedence_exact_head_ci": "SUCCESS"
   },
-  "drive": {"cycle7_authority_folder": "1J7NbU_m4Hz-Vz_5yH4a5ioZTTmN5nd2A", "evidence_delta_document": "1yjs4NorTtyK0KqgT5DBujEw8jlswNoQb9tlAAh7TJmQ", "semantic_readback": "PASS"},
-  "new_engineering_contracts": ["FORMATION_METADATA_IS_VERSIONED", "CONFLICTING_FORMATION_VERSIONS_REQUIRE_FINAL_AUTHORITY", "LATEST_RECOVERED_FORM_NEQ_FINAL_REGISTRY_RECORD", "PUBLIC_REGISTRY_PRESENCE_NEQ_ACTIVE_STATUS"],
-  "next_evidence_actions": ["RECOVER_CURRENT_AUTHORITATIVE_CRO_RECORD_OR_CERTIFICATE", "RECOVER_CURRENT_TAX_REGISTRATION_AND_CLEARANCE_EVIDENCE", "ACQUIRE_COMPLETE_CURRENT_OFFICIAL_TENDER_PACK", "ACQUIRE_TENDER_REQUIRED_SUPPLIER_CAPABILITY_EVIDENCE"],
+  "drive": {
+    "cycle7_authority_folder": "1J7NbU_m4Hz-Vz_5yH4a5ioZTTmN5nd2A",
+    "evidence_delta_document": "1yjs4NorTtyK0KqgT5DBujEw8jlswNoQb9tlAAh7TJmQ",
+    "semantic_readback": "PENDING_FINAL_POST_MERGE_READBACK"
+  },
+  "new_engineering_contracts": [
+    "OFFICIAL_CURRENT_FIRST_PARTY_GT_THIRD_PARTY_AGGREGATOR",
+    "LOWER_SOURCE_CONFLICT_RETAINED_NOT_PROMOTED",
+    "EQUAL_TOP_AUTHORITY_CONFLICT_FAILS_CLOSED",
+    "DOCUMENT_ROUTE_NEQ_ATTACHMENT_INVENTORY",
+    "NOT_FOUND_IN_CONNECTED_SOURCES_NEQ_DOCUMENT_DOES_NOT_EXIST"
+  ],
+  "next_evidence_actions": [
+    "RECOVER_CURRENT_ATTACHMENT_INVENTORY_AND_BYTES_FROM_OFFICIAL_DOCUMENT_ROUTE",
+    "RECOVER_CURRENT_AUTHORITATIVE_CRO_RECORD_OR_CERTIFICATE",
+    "RECOVER_CURRENT_CORPORATE_TAX_REGISTRATION_AND_CLEARANCE_EVIDENCE",
+    "ACQUIRE_TENDER_REQUIRED_SUPPLIER_CAPABILITY_EVIDENCE"
+  ],
   "market_proof_ceiling": "E2+",
-  "self_improvement": {"global_v2": "CURRENT", "v3": "CANDIDATE_ONLY", "promotion_from_this_delta": false},
-  "persistence": {"github": "MERGED_READBACK_PASS", "drive": "READBACK_VERIFIED", "readback": "CLOSED"}
+  "self_improvement": {
+    "global_v2": "CURRENT",
+    "v3": "CANDIDATE_ONLY",
+    "promotion_from_this_delta": false,
+    "scoped_candidates": [
+      "SOURCE_PRECEDENCE_MUST_BE_EXPLICIT",
+      "DOCUMENT_ROUTE_IS_NOT_DOCUMENT_INVENTORY",
+      "NONFINDING_IS_NOT_NONEXISTENCE",
+      "CONCURRENT_MAIN_ADVANCE_REQUIRES_FRESHMAIN_REPLAY_NOT_FORCE_MERGE"
+    ]
+  },
+  "persistence": {
+    "github": "PR236_MERGED",
+    "drive": "UPDATED_PENDING_FINAL_READBACK",
+    "readback": "PENDING"
+  }
 }
