@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.3",
   "cycle": "CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22",
   "drive_root": {
     "id": "1HExzpVUcs2z7ObkVPYiLRQIZ3N8le4eV",
@@ -12,48 +12,20 @@
     {"role":"NEXT64_AND_FRONTIER","id":"1rKR2n2hvIoqoaW9ZbbkGbyPrRFAM4a9-"}
   ],
   "documents": [
-    {
-      "role":"MASTER_AUTHORITY_LIBRARY_SYNTHESIS",
-      "id":"1ay68JgzYhxqhD4D3qaMlYZsgaOINHNBOAp3ol3YmmuQ",
-      "revision":"AIroW34VS3iZiSmqhNUxLeV0hKt7WJ0LS7TohCWV3N8sjTOZDiMo37-TliNviantdhxWXL4MDlnUnFGUCXvyzVBOtGr53MBuvUMTT2tpky0",
-      "parent":"1yhstMIUm7Gwo0B1GOYKYmxUOELCM3xOo",
-      "readback":"PASS"
-    },
-    {
-      "role":"ENGINEERING_32_MODULES_CONTRACTS_PROOFS_PROTOCOLS",
-      "id":"1ovrepHWcXqvDNq9wSCrr0sbuzb-pqHxDkQDXErcvowY",
-      "revision":"AIroW36mPq_Af89560vJeus8GZgvlkSWIXRlilTDEs9AWqX1q3fsgvDeEDCzl-XTHfVCoEmLFkKNMnlOrr6eXrO-W9lO-WTiTCy00bmA3Io",
-      "parent":"11iFW2B0lIWT1SiermmL0UqFFbYgEaZ1T",
-      "readback":"PASS"
-    },
-    {
-      "role":"RUN32_EXECUTION_CANARY_EVIDENCE",
-      "id":"175LdjP6nCpppyNPm29JQUNtngP-4324VyK46AsBzKDc",
-      "revision":"AIroW36j0o22BdCeG6f1npOSweVtbzMQQ5aMBEiB-UGFpoIhnvNjv2a-KrUGHNSO57YkjeiPr8rpYNjxgYHeNxazaR6kYU3Lq2p4ZMr-wog",
-      "parent":"1DE37xghNb6zHng5ysEety2UQE-t2jZat",
-      "readback":"PASS"
-    },
-    {
-      "role":"NEXT64_MACHINE_FRONTIER",
-      "id":"1y9rrpgRsQoelNXGml9eqJ2_2MmSMmsryrdSuQYjUH2g",
-      "revision":"AIroW36YSRgEVc6poiOwD-Z6P56iUqe0RmfRBabULcIFrBvICEf2aFlqImepJHCPRvne68k5K0iJILGmU9cuyCckjatpczcBqWen762mMtU",
-      "parent":"1rKR2n2hvIoqoaW9ZbbkGbyPrRFAM4a9-",
-      "readback":"PASS"
-    },
-    {
-      "role":"GENUINE_INTERRUPTION_RECOVERY_EVENT_001_SELF_IMPROVEMENT",
-      "id":"1HaEp8hyn-w_Ul5xdngKeh_TxIrg1CmAAd2QPO7dhS5o",
-      "revision":"AIroW34x1dW_Tx3ACdigDwHINw049G9KqzbaEU4AoHWN9h2A9RjOZkdIYxImc9MnCRYClP0cOAPTlffLcPONcdLWH4efbeYDZGndYyh8NX4",
-      "parent":"1DE37xghNb6zHng5ysEety2UQE-t2jZat",
-      "readback":"PASS",
-      "real_interruption":true,
-      "false_resume":false,
-      "qualifies_for_si0014_count":true
-    }
+    {"role":"MASTER_AUTHORITY_LIBRARY_SYNTHESIS","id":"1ay68JgzYhxqhD4D3qaMlYZsgaOINHNBOAp3ol3YmmuQ","revision":"AIroW34W-gKj_pzmJEYP4e5U_cW69k7P-ZsLeyL52VLoYUNnXTVkr0KUOkT_FoEy02LG-1FTd--zvSHP2HGKHtAha90wdlhT8V8ZC--TrOw","parent":"1yhstMIUm7Gwo0B1GOYKYmxUOELCM3xOo","readback":"PASS"},
+    {"role":"ENGINEERING_32_MODULES_CONTRACTS_PROOFS_PROTOCOLS","id":"1ovrepHWcXqvDNq9wSCrr0sbuzb-pqHxDkQDXErcvowY","revision":"AIroW36mPq_Af89560vJeus8GZgvlkSWIXRlilTDEs9AWqX1q3fsgvDeEDCzl-XTHfVCoEmLFkKNMnlOrr6eXrO-W9lO-WTiTCy00bmA3Io","parent":"11iFW2B0lIWT1SiermmL0UqFFbYgEaZ1T","readback":"PASS"},
+    {"role":"RUN32_EXECUTION_CANARY_EVIDENCE","id":"175LdjP6nCpppyNPm29JQUNtngP-4324VyK46AsBzKDc","revision":"AIroW36j0o22BdCeG6f1npOSweVtbzMQQ5aMBEiB-UGFpoIhnvNjv2a-KrUGHNSO57YkjeiPr8rpYNjxgYHeNxazaR6kYU3Lq2p4ZMr-wog","parent":"1DE37xghNb6zHng5ysEety2UQE-t2jZat","readback":"PASS"},
+    {"role":"NEXT64_MACHINE_FRONTIER","id":"1y9rrpgRsQoelNXGml9eqJ2_2MmSMmsryrdSuQYjUH2g","revision":"AIroW37pbbAKtVGDztzHklyv4DJ5pUinQDWtrTjR2l90UXdIieEeLZARsuHKwb-ybD3dCYHlZy_O4Iq8oTxsCOs_EE9Gx5gs4JgmVpR3SOA","parent":"1rKR2n2hvIoqoaW9ZbbkGbyPrRFAM4a9-","readback":"PASS"},
+    {"role":"GENUINE_INTERRUPTION_RECOVERY_EVENT_001_SELF_IMPROVEMENT","id":"1HaEp8hyn-w_Ul5xdngKeh_TxIrg1CmAAd2QPO7dhS5o","revision":"AIroW34x1dW_Tx3ACdigDwHINw049G9KqzbaEU4AoHWN9h2A9RjOZkdIYxImc9MnCRYClP0cOAPTlffLcPONcdLWH4efbeYDZGndYyh8NX4","parent":"1DE37xghNb6zHng5ysEety2UQE-t2jZat","readback":"PASS","real_interruption":true,"false_resume":false,"qualifies_for_si0014_count":true},
+    {"role":"RECOVERY_EVENT_001_BUSINESS_ENGINEERING_PROJECT_SLICE","id":"1nj2BTsfA16TDScCaUBGol5wbm7y6CUBrXV8US1tKW7k","revision":"AIroW34D18jGfjmbltIohNCwv0yjQ8icZJA6lXbgJA0Um5UMNnTXokJYIF8mc1nuNw4VoDXb_5N3u4zwTcjd4xHuOxAfsfV87eZ5bJOz3xM","parent":"1DE37xghNb6zHng5ysEety2UQE-t2jZat","readback":"PASS","counts_as_new_event":false,"counts_as_distinct_project":true,"false_resume":false}
+  ],
+  "external_project_authority_readbacks": [
+    {"project":"BUSINESS_ENGINEERING","drive_control_doc":"154NhUZFLsXGVE6l6oEubeb6fyctK8i7arD8z8CDiIQY","revision":"AIroW35FAr8IM79p6oCmBqZpsJDbr7g2ZQE4nCUAFcfwhl_JQpTyruYHzAoziwG_8yNKfqLb3-HO-VxP7F4TlxeqFAqlfucv0AyCaWtMTaM","readback":"PASS","github_merge":"f45f07cb6a78733fa1a123d5e11a35dfb43913c5"}
   ],
   "github_cycle9_merge_commit":"ee49be52766e2f70ae010281804ffdebd6538796",
-  "cross_store_status": "CYCLE9_MERGED_MAIN_DRIVE_READBACK_PASS_REAL_RECOVERY_EVENT_001_READBACK_PASS",
+  "github_recovery_event_001_merge_commit":"acb94116576cdc8409d8e48c83aa792810a5e098",
+  "cross_store_status": "CYCLE9_AND_EVENT001_TWO_PROJECT_SLICES_READBACK_PASS_MASTER_FRONTIER_REFRESHED",
   "authority_effect": "NONE_SELF_IMPROVEMENT_V2_REMAINS_CURRENT",
-  "si0014_progress":"1_OF_3_GENUINE_RECOVERIES_1_OF_2_PROJECTS_ZERO_FALSE_RESUME",
-  "next_gate": "TWO_MORE_GENUINE_RECOVERIES_TOTAL_MUST_SPAN_AT_LEAST_ONE_ADDITIONAL_PROJECT_WITH_ZERO_FALSE_RESUME"
+  "si0014_progress":"1_OF_3_GENUINE_EVENTS_2_OF_2_PROJECTS_ZERO_FALSE_RESUME",
+  "next_gate": "TWO_ADDITIONAL_GENUINE_INTERRUPTION_RECOVERY_EVENTS_WITH_ZERO_FALSE_RESUME"
 }
