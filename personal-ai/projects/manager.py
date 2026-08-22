@@ -126,7 +126,14 @@ class ProjectStateManager:
         _write_json(paths.state_json, state)
         return state
 
-    def add_task(self, project_id: str, title: str, task_id: str | None = None) -> dict[str, Any]:
+    def add_task(
+        self,
+        project_id: str,
+        title: str,
+        task_id: str | None = None,
+        *,
+        requires_artifact_placement_receipt: bool = False,
+    ) -> dict[str, Any]:
         paths = self.paths(project_id)
         tasks = _read_json(paths.tasks_json)
         if not isinstance(tasks, list):
@@ -142,12 +149,20 @@ class ProjectStateManager:
             "created_at": now,
             "updated_at": now,
             "block_reason": None,
+            "requires_artifact_placement_receipt": bool(requires_artifact_placement_receipt),
         }
         if not task["title"]:
             raise ValueError("task title cannot be empty")
         tasks.append(task)
         _write_json(paths.tasks_json, tasks)
         return task
+
+    def _task_by_id(self, project_id: str, task_id: str) -> dict[str, Any]:
+        tasks = self.load_project(project_id)["tasks"]
+        for task in tasks:
+            if task.get("id") == task_id:
+                return task
+        raise KeyError(f"task not found: {task_id}")
 
     def _set_task_status(self, project_id: str, task_id: str, status: str, block_reason: str | None = None) -> dict[str, Any]:
         if status not in TASK_STATUSES:
@@ -167,6 +182,12 @@ class ProjectStateManager:
         return self._set_task_status(project_id, task_id, "RUNNING")
 
     def complete_task(self, project_id: str, task_id: str) -> dict[str, Any]:
+        task = self._task_by_id(project_id, task_id)
+        if bool(task.get("requires_artifact_placement_receipt", False)):
+            raise RuntimeError(
+                "artifact-producing task cannot use direct complete_task; "
+                "route completion through complete_task_with_artifact_gate"
+            )
         return self._set_task_status(project_id, task_id, "DONE")
 
     def fail_task(self, project_id: str, task_id: str, reason: str) -> dict[str, Any]:

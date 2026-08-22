@@ -10,6 +10,7 @@ from typing import Any, Callable, Mapping
 from agents.base import AgentAction, AgentDefinition, AgentRunRequest, AgentRunResult, AgentStepRecord
 from agents.tools import ToolContext, ToolRegistry
 from memory.store import MemoryStore
+from projects.artifact_completion import complete_task_with_artifact_gate
 from projects.manager import ProjectStateManager
 from providers import ProviderRequest, ProviderUnavailableError, ProviderRegistry, default_registry
 
@@ -95,6 +96,23 @@ class BoundedAgentExecutor:
         if self.clock() >= deadline:
             raise TimeoutError("agent timeout exceeded")
 
+    def _complete_task(
+        self,
+        project_id: str,
+        task_id: str,
+        *,
+        requires_artifact_placement_receipt: bool,
+        artifact_placement_receipt: Mapping[str, Any] | None,
+    ) -> dict[str, Any]:
+        if requires_artifact_placement_receipt:
+            return complete_task_with_artifact_gate(
+                self.projects,
+                project_id,
+                task_id,
+                artifact_placement_receipt,
+            )
+        return self.projects.complete_task(project_id, task_id)
+
     def run(self, request: AgentRunRequest) -> AgentRunResult:
         """Compatibility provider-only bounded path retained from the PL-05 baseline."""
         self.projects.load_project(request.project_id)
@@ -108,7 +126,12 @@ class BoundedAgentExecutor:
         run_id = f"run-{uuid.uuid4().hex}"
         task_id = request.task_id or f"agent-{uuid.uuid4().hex[:12]}"
         log_path = self.projects.paths(request.project_id).root / "logs" / f"{run_id}.jsonl"
-        task = self.projects.add_task(request.project_id, request.prompt, task_id)
+        task = self.projects.add_task(
+            request.project_id,
+            request.prompt,
+            task_id,
+            requires_artifact_placement_receipt=request.requires_artifact_placement_receipt,
+        )
         self.projects.start_task(request.project_id, task["id"])
         deadline = self.clock() + request.timeout_seconds
         self._write_log(
@@ -121,6 +144,7 @@ class BoundedAgentExecutor:
             max_steps=request.max_steps,
             timeout_seconds=request.timeout_seconds,
             mode="compatibility",
+            requires_artifact_placement_receipt=request.requires_artifact_placement_receipt,
         )
 
         history: list[AgentStepRecord] = []
@@ -163,7 +187,35 @@ class BoundedAgentExecutor:
                             "mode": "compatibility",
                         },
                     )
-                    self.projects.complete_task(request.project_id, task_id)
+                    completion = self._complete_task(
+                        request.project_id,
+                        task_id,
+                        requires_artifact_placement_receipt=request.requires_artifact_placement_receipt,
+                        artifact_placement_receipt=request.artifact_placement_receipt,
+                    )
+                    if completion["status"] != "DONE":
+                        reason = completion.get("block_reason") or "artifact placement gate blocked DONE"
+                        self._write_log(
+                            log_path,
+                            "RUN_BLOCKED",
+                            run_id=run_id,
+                            task_id=task_id,
+                            output_memory_id=output_id,
+                            reason=reason,
+                            steps=step_number,
+                        )
+                        return AgentRunResult(
+                            run_id=run_id,
+                            project_id=request.project_id,
+                            task_id=task_id,
+                            status="BLOCKED",
+                            provider=descriptor.name,
+                            model=resolved_model,
+                            steps=tuple(history),
+                            output_memory_id=output_id,
+                            log_path=str(log_path),
+                            error=reason,
+                        )
                     self._write_log(
                         log_path,
                         "RUN_DONE",
@@ -278,10 +330,16 @@ class BoundedAgentExecutor:
         task_id: str | None = None,
         allow_network: bool = False,
         timeout_seconds: float = 30.0,
+        requires_artifact_placement_receipt: bool = False,
+        artifact_placement_receipt: Mapping[str, Any] | None = None,
     ) -> AgentRunResult:
         """Canonical strict PL-05 path: load -> propose -> call tool -> observe -> update -> stop."""
         if timeout_seconds <= 0:
             raise ValueError("timeout_seconds must be positive")
+        if artifact_placement_receipt is not None and not requires_artifact_placement_receipt:
+            raise ValueError(
+                "artifact_placement_receipt requires requires_artifact_placement_receipt=true"
+            )
         self.projects.load_project(project_id)
         provider = self.providers.get(provider_name)
         descriptor = provider.describe()
@@ -293,7 +351,12 @@ class BoundedAgentExecutor:
         run_id = f"run-{uuid.uuid4().hex}"
         task_id = task_id or f"agent-{uuid.uuid4().hex[:12]}"
         log_path = self.projects.paths(project_id).root / "logs" / f"{run_id}.jsonl"
-        task = self.projects.add_task(project_id, definition.goal, task_id)
+        task = self.projects.add_task(
+            project_id,
+            definition.goal,
+            task_id,
+            requires_artifact_placement_receipt=requires_artifact_placement_receipt,
+        )
         self.projects.start_task(project_id, task["id"])
         self.projects.update_state(
             project_id,
@@ -315,6 +378,7 @@ class BoundedAgentExecutor:
             max_steps=definition.max_steps,
             timeout_seconds=timeout_seconds,
             mode="strict",
+            requires_artifact_placement_receipt=requires_artifact_placement_receipt,
         )
         self._write_log(log_path, "LOAD_TASK", task_id=task_id, goal=definition.goal)
         self._write_log(log_path, "LOAD_CONTEXT", memory_count=len(memory_context))
@@ -425,7 +489,59 @@ class BoundedAgentExecutor:
                             "output_schema": dict(definition.output_schema),
                         },
                     )
-                    self.projects.complete_task(project_id, task_id)
+                    completion = self._complete_task(
+                        project_id,
+                        task_id,
+                        requires_artifact_placement_receipt=requires_artifact_placement_receipt,
+                        artifact_placement_receipt=artifact_placement_receipt,
+                    )
+                    if completion["status"] != "DONE":
+                        reason = completion.get("block_reason") or "artifact placement gate blocked DONE"
+                        self.projects.update_state(
+                            project_id,
+                            "BLOCKED",
+                            agent_run_id=run_id,
+                            agent_task_id=task_id,
+                            agent_mode="strict",
+                            agent_steps=step_number,
+                            agent_error=reason,
+                            agent_output_memory_id=output_id,
+                        )
+                        self._write_log(
+                            log_path,
+                            "UPDATE_STATE",
+                            step=step_number,
+                            project_status="BLOCKED",
+                        )
+                        self._write_log(
+                            log_path,
+                            "RUN_BLOCKED",
+                            run_id=run_id,
+                            task_id=task_id,
+                            output_memory_id=output_id,
+                            reason=reason,
+                            steps=step_number,
+                        )
+                        self.memory.store(
+                            reason,
+                            kind="EVENT",
+                            source=f"agent:{descriptor.name}",
+                            project_id=project_id,
+                            metadata={"run_id": run_id, "task_id": task_id, "status": "BLOCKED"},
+                        )
+                        return AgentRunResult(
+                            run_id=run_id,
+                            project_id=project_id,
+                            task_id=task_id,
+                            status="BLOCKED",
+                            provider=descriptor.name,
+                            model=resolved_model,
+                            steps=tuple(history),
+                            output_memory_id=output_id,
+                            log_path=str(log_path),
+                            error=reason,
+                        )
+
                     next_task = self.projects.get_next_task(project_id)
                     project_status = "READY" if next_task is not None else "DONE"
                     self.projects.update_state(

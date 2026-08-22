@@ -6,9 +6,16 @@ on:
       - 'personal-ai/core/artifact_placement.py'
       - 'personal-ai/core/artifact_placement_adapters.py'
       - 'personal-ai/projects/artifact_completion.py'
+      - 'personal-ai/projects/manager.py'
+      - 'personal-ai/agents/base.py'
+      - 'personal-ai/agents/executor.py'
+      - 'personal-ai/run.py'
       - 'personal-ai/tests/test_artifact_placement_runtime.py'
       - 'personal-ai/tests/test_artifact_placement_adapters.py'
       - 'personal-ai/tests/test_artifact_placement_prospective.py'
+      - 'personal-ai/tests/test_artifact_gate_production_adoption.py'
+      - 'personal-ai/tests/test_agent_executor.py'
+      - 'personal-ai/tests/test_agent_executor_contract.py'
       - 'SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/**'
       - 'SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_TOOL_ROUTE_MISMATCH/**'
       - 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/ARTIFACT_PLACEMENT_PATH_DRIFT_CURRENT.md'
@@ -32,6 +39,12 @@ jobs:
       - name: Prospective cross-project placement canaries
         working-directory: personal-ai
         run: python -m unittest -v tests.test_artifact_placement_prospective
+      - name: Production adoption regression
+        working-directory: personal-ai
+        run: python -m unittest -v tests.test_artifact_gate_production_adoption
+      - name: Agent executor compatibility regression
+        working-directory: personal-ai
+        run: python -m unittest -v tests.test_agent_executor tests.test_agent_executor_contract
       - name: Existing project-state regression
         working-directory: personal-ai
         run: python -m unittest -v tests.test_project_state
