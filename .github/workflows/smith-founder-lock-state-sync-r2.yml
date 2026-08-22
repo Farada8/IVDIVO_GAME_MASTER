@@ -1,0 +1,56 @@
+name: SMITH Founder Lock State Sync R2
+
+on:
+  push:
+    branches:
+      - self-improvement/smith-founder-lock-state-sync-r2-20260822
+  pull_request:
+    paths:
+      - 'PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json'
+      - 'CURRENT_IVDIVO_SYSTEM_STATE.json'
+      - 'CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json'
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_FOUNDER_LOCK_SYNC_2026-08-22/**'
+      - 'tools/ivdivo_preexecution_resume_guard.py'
+      - '.github/workflows/smith-founder-lock-state-sync-r2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply deterministic Founder-lock state synchronization
+        run: python SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_FOUNDER_LOCK_SYNC_2026-08-22/apply_sync.py
+
+      - name: Run fail-closed routing regression
+        run: python SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_FOUNDER_LOCK_SYNC_2026-08-22/test_sync.py
+
+      - name: Compile synchronization code
+        run: python -m py_compile SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_FOUNDER_LOCK_SYNC_2026-08-22/apply_sync.py SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_FOUNDER_LOCK_SYNC_2026-08-22/test_sync.py tools/ivdivo_preexecution_resume_guard.py
+
+      - name: Commit exact synchronized state to head branch
+        shell: bash
+        run: |
+          if git diff --quiet -- PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json CURRENT_IVDIVO_SYSTEM_STATE.json CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json; then
+            echo 'No synchronization diff required.'
+            exit 0
+          fi
+          git config user.name 'ivdivo-state-sync'
+          git config user.email 'actions@users.noreply.github.com'
+          git add PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json CURRENT_IVDIVO_SYSTEM_STATE.json CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json
+          git commit -m 'Synchronize SMITH Founder lock across machine routers [skip ci]'
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git push origin HEAD:${{ github.head_ref }}
+          else
+            git push
+          fi
