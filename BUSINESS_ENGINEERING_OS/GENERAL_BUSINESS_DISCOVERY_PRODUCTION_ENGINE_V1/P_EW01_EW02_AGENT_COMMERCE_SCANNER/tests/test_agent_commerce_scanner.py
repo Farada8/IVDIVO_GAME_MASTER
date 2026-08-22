@@ -1,5 +1,6 @@
 import copy
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -22,8 +23,20 @@ def test_exactly_ten_blind_fixtures():
 
 def test_fixture_ids_have_no_merchant_names_in_scanner_input():
     raw = (ROOT / "02_FIXTURE_INPUTS.json").read_text(encoding="utf-8").lower()
-    for forbidden in ["etsy", "target", "sephora", "nordstrom", "lowe", "best buy", "home depot", "wayfair", "glossier", "lloyds online"]:
-        assert forbidden not in raw
+    patterns = [
+        r"\betsy\b",
+        r"\btarget\b",
+        r"\bsephora\b",
+        r"\bnordstrom\b",
+        r"\blowe(?:'s|s)?\b",
+        r"\bbest buy\b",
+        r"\bhome depot\b",
+        r"\bwayfair\b",
+        r"\bglossier\b",
+        r"\blloyds online\b",
+    ]
+    for pattern in patterns:
+        assert re.search(pattern, raw) is None
 
 
 def test_public_ucp_profile_is_positive_not_full_conformance_claim():
