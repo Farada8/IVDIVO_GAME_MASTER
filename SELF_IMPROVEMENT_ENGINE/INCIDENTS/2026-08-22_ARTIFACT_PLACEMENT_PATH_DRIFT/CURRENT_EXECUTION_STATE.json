@@ -5,7 +5,7 @@
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "RECOVERY_HARDENING_VERIFIED_PENDING_MERGE",
+  "candidate_status": "RECOVERY_HARDENING_MERGED",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "runtime": {
@@ -26,25 +26,24 @@
     "prospective_canary_status": "2/2 PLACEMENT_VERIFIED",
     "real_post_merge_failure_issue": 395,
     "real_post_merge_failure_class": "TOOL_ROUTE_MISMATCH / RESOURCE_TYPE_MISMATCH",
-    "real_post_merge_failure_observation": "document persistence intent produced 18 Google Drive FOLDER objects; provider readback rejected them as successful document persistence",
     "real_post_merge_failure_repair_pr": 401,
     "real_post_merge_failure_repair_merge": "e277ecb7f91fd3b9ce55464758bc531e789e2be9",
     "real_post_merge_failure_qualifies_as_future_guard_interception": false,
-    "reason_not_promotion_evidence": "issue #395 triggered the resource-type repair; canonical PR401 receipt still requires observing future real traffic where the installed guard catches the next failure before false DONE",
+    "reason_not_promotion_evidence": "issue #395 triggered the resource-type repair; canonical PR401 receipt still requires future real traffic where the installed guard catches the next failure before false DONE",
     "resource_type_negative_canary": "PASS",
     "atomic_completion_defect_found": true,
-    "atomic_completion_defect": "previous completion gate could persist DONE/BLOCKED before receipt in a separate write",
     "atomic_completion_fix_pr": 409,
-    "atomic_completion_fix_branch": "self-improvement/artifact-placement-atomic-recovery-20260822",
-    "atomic_completion_validation_head": "53bbfbb94bcb14492a967ff8a961fe61cba4be6b",
-    "artifact_placement_runtime_ci_run": 32569720915,
+    "atomic_completion_validation_head": "9c3ec07e93786bb3a639ae616461068ea74ec9c8",
+    "atomic_completion_merge_commit": "654399a29324408cb0be75cae239587102090632",
+    "artifact_placement_runtime_ci_run": 32569759436,
     "artifact_placement_runtime_ci": "PASS",
     "current_project_state_regression": "PASS",
     "current_local_memory_regression": "PASS",
     "current_memory_contract_hardening_regression": "PASS",
     "current_provider_abstraction_regression": "PASS",
     "reopen_recovery_regression": "PASS",
-    "all_related_workflows": "10/10 PASS"
+    "all_related_workflows_exact_head": "10/10 PASS",
+    "main_runtime_readback": "PASS"
   },
   "required_sequence": [
     "CREATE_OR_IMPORT",
@@ -62,7 +61,7 @@
     "status": "HOLD",
     "completed_requirements": [
       "provider adapters construct receipts from Google Drive and GitHub provider observations with normalization and fail-closed regression coverage",
-      "atomic status+receipt persistence and restart/reopen regression passed against current ProjectState, Local Memory, Memory Contract Hardening and Provider Abstraction compatibility suites"
+      "atomic status+receipt persistence and restart/reopen regression passed against current ProjectState, Local Memory, Memory Contract Hardening and Provider Abstraction compatibility suites and merged through PR #409"
     ],
     "remaining_requirements": [
       "observe future real traffic where the installed placement/resource-type guard catches a new real persistence failure before any false DONE claim"
