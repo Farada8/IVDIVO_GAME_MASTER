@@ -1,0 +1,51 @@
+{
+  "schema": "artifact_placement_incident_state_v2",
+  "date": "2026-08-22",
+  "issue": 356,
+  "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
+  "authority_effect": "NONE",
+  "self_improvement_current": "v2 VERIFIED_CURRENT",
+  "candidate_status": "BOUNDED_RUNTIME_PILOT",
+  "trigger_project": "D09 THE MAN WHO CAME BACK",
+  "fail_closed_state": "PERSISTED_BUT_MISPLACED",
+  "runtime": {
+    "receipt_module": "personal-ai/core/artifact_placement.py",
+    "completion_gate": "personal-ai/projects/artifact_completion.py",
+    "ci_workflow": ".github/workflows/artifact-placement-runtime.yml",
+    "done_rule": "external-artifact task routed through artifact completion gate may become DONE only when placement receipt status is PLACEMENT_VERIFIED"
+  },
+  "proof": {
+    "real_d09_incident": true,
+    "drive_incident_parent_readback": "PASS",
+    "drive_start_here_readback": "PASS",
+    "runtime_ci_run_id": 32561883676,
+    "runtime_ci": "PASS",
+    "targeted_runtime_regression": "PASS",
+    "existing_project_state_regression": "PASS",
+    "prospective_cross_project_canaries": 2,
+    "prospective_projects": [
+      "D09 THE MAN WHO CAME BACK",
+      "WOMENS AUDIO BUSINESS CONTROL"
+    ],
+    "prospective_canary_status": "2/2 PLACEMENT_VERIFIED"
+  },
+  "required_sequence": [
+    "CREATE_OR_IMPORT",
+    "PLACE_IN_CANONICAL_PROJECT_LOCATION",
+    "READBACK_ACTUAL_PARENT",
+    "UPDATE_START_HERE_OR_CURRENT_INDEX",
+    "READBACK_INDEX",
+    "SCAN_DUPLICATE_OR_LEGACY_TITLE_CONFLICT",
+    "VERIFY_CROSS_STORE_POINTER_IF_REQUIRED",
+    "EMIT_PLACEMENT_RECEIPT",
+    "ALLOW_DONE_ONLY_IF_PLACEMENT_VERIFIED_AND_OTHER_GATES_PASS"
+  ],
+  "promotion_gate": {
+    "status": "HOLD",
+    "remaining_requirements": [
+      "provider adapters that construct receipts directly from provider metadata/index readback",
+      "prospective observation of at least one new real placement failure caught before a false completion claim",
+      "regression against future current persistence/recovery contracts"
+    ]
+  }
+}
