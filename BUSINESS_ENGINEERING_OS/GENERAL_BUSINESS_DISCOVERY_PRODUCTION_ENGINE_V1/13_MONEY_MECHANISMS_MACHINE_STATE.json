@@ -21,13 +21,14 @@
     "pod_cost_preflight_pr":415,
     "pod_cost_preflight_merge_sha":"b235084425cdb350352dfc8618b87aa364869d28",
     "pod_cost_preflight_ci_run":32570590343,
+    "local_service_reference_branch":"business-engineering/local-service-reference-economics-20260822",
     "local_service_reference_pr":421,
     "local_service_reference_merge_sha":"53bc77ce67bd2f8f2cf2fe2709fcdbd354229416",
     "local_service_reference_ci_run":32570895973,
     "p33_p40_branch":"business-engineering/money-mechanisms-p33-p40-trade-prequal-20260822",
-    "p33_p40_pr":null,
+    "p33_p40_pr":424,
     "p33_p40_merge_sha":null,
-    "p33_p40_ci_run":null
+    "p33_p40_ci_run":32573306378
   },
   "run32":{"mechanisms":32,"test_now":13,"test_or_test_after":10,"mutate":2,"watch_or_hold":6,"keep_vertical":1,"kill":0,"market_proof_created":false},
   "next64":{"created":64,"executed":40,"executed_ranges":["P01-P08","P09-P16","P17-P24","P25-P32","P33-P40"],"remaining":24,"unexecuted_ranges":["P41-P64"],"progress_is_internal_engineering_not_market_proof":true,"dependency_closures_do_not_increment_prompt_count":true},
@@ -40,7 +41,7 @@
     "digital_and_pod_art_commerce":{"status":"COST_PREFLIGHT_COMPLETE_3_REAL_DRIVE_ASSETS_PRINTMASTER_AND_PROVENANCE_OPEN","real_assets_inspected":3,"concept_boards_not_retail_masters":2,"standalone_artwork_candidates":1,"current_4x6_dpi":256.0,"current_5x7_crop_min_dpi":204.8,"current_8x12_dpi":128.0,"profitable_skus_proven":0,"pre_cac_synthetic_envelopes_only":true,"price_refresh_required_on_or_after":"2026-08-27","next_dependency":"CREATE_3_CLEAN_PRINT_MASTERS_PLUS_PROVENANCE_RECORD_PLUS_REFRESH_COSTS_AFTER_2026_08_27","preflight_state":"26_DIGITAL_POD_COST_PREFLIGHT_STATE.json"},
     "local_service_customer_acquisition":{"status":"REFERENCE_ECONOMICS_COMPLETE_REAL_QUOTES_AND_DIRECT_COST_SHEET_OPEN","public_retail_range_eur":[1800,3800],"public_rate_conflict_detected":true,"verified_scope_equivalent_subcontract_quotes":0,"direct_delivery_cost_sheet_verified":false,"observed_close_rate":null,"observed_acquisition_cost":null,"max_affordable_acquisition_cost":null,"profitable_route_proven":false,"routes":["REFERENCE_ONLY_HOLD","DIRECT_ELIGIBLE","SUBCONTRACT_ELIGIBLE","REFERRAL_ONLY_ELIGIBLE","HOLD_OR_DROP"],"next_dependency":"TWO_SCOPE_EQUIVALENT_SUBCONTRACT_QUOTES_PLUS_ONE_DIRECT_DELIVERY_COST_SHEET","reference_state":"29_LOCAL_SERVICE_REFERENCE_ECONOMICS_STATE.json"}
   },
-  "strategic_coexistence":{"current_general_business_pointer":"BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md","current_strategic_wip_overrides_mechanism_test_priority":true,"money_mechanisms_role":"COMPARISON_PORTFOLIO_PROVENANCE_AND_TEST_LIBRARY","mechanism_overlay_does_not_claim_market_superiority":true,"do_not_overwrite_current_early_wave_wip":true},
+  "strategic_coexistence":{"current_general_business_pointer":"BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md","current_strategic_wip_overrides_mechanism_test_priority":true,"eu_dropshipping_retired_as_strategic_primary":true,"money_mechanisms_role":"COMPARISON_PORTFOLIO_PROVENANCE_AND_TEST_LIBRARY","mechanism_overlay_does_not_claim_market_superiority":true,"do_not_overwrite_current_early_wave_wip":true},
   "evidence_boundary":{"wtp":null,"cac":null,"conversion":null,"transactions_created_by_run":0,"transactions_created_by_money_mechanisms":0,"repeatability":false,"businesses_proven":0,"profitable_skus_proven":0,"profitable_service_routes_proven":0,"external_action_authorized":false},
   "self_improvement":{"candidate":"DISCOVERY_SOURCE_BALANCE_GATE","status":"LOCAL_CANDIDATE_ONLY","global_promotion":false,"failure_mode":"PUBLIC_SIGNAL_EVIDENCE_AVAILABILITY_BIAS","new_rule":"MONEY_MECHANISM_LAB_NEQ_CURRENT_STRATEGIC_WIP","additional_laws":["ACCOUNT_GATED_COST_NEQ_NEGATIVE_ECONOMICS_AND_NEQ_PERMISSION_TO_INVENT_MARGIN","PRE_CAC_SYNTHETIC_ENVELOPE_NEQ_PROFIT_PROOF","PIXELS_EXIST_NEQ_PRINT_MASTER_READY","CATALOG_PRICE_REQUIRES_FRESHNESS_GATE","PUBLIC_DAY_RATE_NEQ_SUBCONTRACT_QUOTE","REFERENCE_CONTRIBUTION_NEQ_OBSERVED_CONTRIBUTION","SYNTHETIC_BASELINE_NEQ_OBSERVED_OPERATOR_TIME","GENERIC_CRM_POSITIONING_REQUIRES_FREE_NATIVE_SUBSTITUTION_CHECK","ONE_IMPLEMENTATION_NEQ_RECURRING_REVENUE"]},
   "drive":{"folder_id":"1QM7DKxwmEGDHUkcIqkxgGfaZi1NqoATV","run32_document_id":"1ZBUqsaePrslxPLIsfMC1B6FFrz4Rk2d-r0zZyzZo2q8","next64_document_id":"12pbEAq4LcuYpV50oSu5gXU8RYS9LG0clvxf0gG1rpAE","dropship_document_id":"1ZH8903zhPatnb2tm8Mi00jrg8Xlchr3AUgM6fNwH2W4","digital_pod_document_id":"15CKV1C6wO1Kt27urZfyZWUltAh3yVug92iYjx9AtXq0","local_service_document_id":"1Keze5PThvwNViwAj4rbPeqNVULEJYzPy9er1_K-HYJ4","closure_document_id":"15Uo28zfttHBMA6DuNj9Keo8SStlQ4AXrJ8_WDF0B688","dropship_p09_p16_document_id":"1rApEi78GqKC1hTSVywTCFYJXdWaOj7Ckt6EtjMz0FJY","pod_cost_preflight_document_id":"1e3Su14TZdY8aKN2bBzAkRxh2K_dqDIZdxJW4xN4u-fA","local_service_reference_document_id":"1jEg_92tHOpmR3iyvdQDazXSe9AIhQZdk529RYnNMMLw","p33_p40_document_id":"1rTpWAT5qi3GUeDkuQ_F6QN1kLpWDSFSTgpsiesN4B0o","p33_p40_readback_marker":"MONEY-MECHANISMS-P33-P40-TRADE-PREQUAL-RD-8OF8-NO-WTP-20260822","readback_status":"PASS_THROUGH_P33_P40"
