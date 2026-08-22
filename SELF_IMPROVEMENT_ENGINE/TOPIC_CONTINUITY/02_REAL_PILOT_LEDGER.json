@@ -1,5 +1,5 @@
 {
-  "schema": "ivdivo.self_improvement.thread_topic_continuity_real_pilot_ledger/0.1",
+  "schema": "ivdivo.self_improvement.thread_topic_continuity_real_pilot_ledger/0.2",
   "date": "2026-08-22",
   "candidate": "THREAD_TOPIC_CONTINUITY_GUARD",
   "global_si_id": null,
@@ -25,10 +25,31 @@
       "independence_note": "The user had just been informed of the guard, so this is real use but not an independent blind validation event.",
       "promotion_weight": "QUALIFYING_BUT_NONINDEPENDENT",
       "notes": "The continuation remained on the Self-Improvement topic and was used to advance the same guard pilot instead of pivoting to Business, ORBITAL, SIL, or another retrieved project."
+    },
+    {
+      "event_id": "TTG-REAL-002",
+      "observed_at_local": "2026-08-22T13:30:00+01:00",
+      "evidence_class": "REAL_HUMAN_CONTINUATION_EVENT",
+      "input_surface": "CURRENT_CHAT",
+      "user_input": "и",
+      "turn_class": "GENERIC_CONTINUATION",
+      "thread_topic_before": "SELF_IMPROVEMENT_THREAD_TOPIC_CONTINUITY_GUARD",
+      "project_type": "SELF_IMPROVEMENT_ENGINEERING",
+      "explicit_switch_evidence": false,
+      "expected_route": "KEEP_THREAD_TOPIC_AND_CONTINUE",
+      "observed_route": "KEEP_THREAD_TOPIC_AND_CONTINUE",
+      "false_project_switch": false,
+      "side_query": false,
+      "pending_switch_target": null,
+      "outcome": "PASS_REAL_ROUTING_EVENT",
+      "independent_blind_control": false,
+      "independence_note": "The Thread Topic Continuity mechanism was still the active and recently discussed topic, so this event is genuine human use but is not a blind or cross-project validation control.",
+      "promotion_weight": "QUALIFYING_BUT_NONINDEPENDENT",
+      "notes": "The second bare continuation inherited the active Self-Improvement thread topic. It increments total real continuation evidence but does not increase distinct project-type coverage and does not satisfy explicit-switch or side-query controls."
     }
   ],
   "counters": {
-    "real_continuation_events": 1,
+    "real_continuation_events": 2,
     "distinct_project_types": 1,
     "false_project_switches": 0,
     "healthy_explicit_switch_controls": 0,
@@ -42,6 +63,6 @@
     "side_query_return_controls_required": 1
   },
   "promotion_authorized": false,
-  "next_gate": "WAIT_FOR_TWO_MORE_NATURALLY_OCCURRING_CONTINUATION_EVENTS_WITH_AT_LEAST_ONE_OTHER_PROJECT_TYPE_PLUS_HEALTHY_SWITCH_AND_SIDE_QUERY_CONTROLS",
-  "readback_marker": "TTG-REAL-PILOT-001-CONTINUATION-KEPT-TOPIC-20260822"
+  "next_gate": "WAIT_FOR_ONE_MORE_NATURALLY_OCCURRING_CONTINUATION_EVENT_FROM_AT_LEAST_ONE_OTHER_PROJECT_TYPE_PLUS_TWO_HEALTHY_EXPLICIT_SWITCH_CONTROLS_AND_ONE_SIDE_QUERY_RETURN_CONTROL",
+  "readback_marker": "TTG-REAL-PILOT-002-CONTINUATION-KEPT-TOPIC-20260822"
 }
