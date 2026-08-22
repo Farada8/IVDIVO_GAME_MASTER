@@ -1,0 +1,52 @@
+{
+  "artifact": "B03_CH01_HARD_PILOT_ASSEMBLY_MANIFEST_v1",
+  "date": "2026-08-22",
+  "status": "ASSEMBLY_PLAN_COMPLETE / WAITING_LIVE_INPUTS",
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "absolute_timestamps_allowed": false,
+  "timeline_basis": "logical anchors until accepted dialogue alignment exists",
+  "sections": [
+    {
+      "section_id": "HP_A_FIRST_CALL",
+      "unit_range": "B03_CH01_U0040..B03_CH01_U0106",
+      "render_blocks": ["B03_CH01_RB003", "B03_CH01_RB004", "B03_CH01_RB005"],
+      "required_cues": ["B03_CH01_SFX003", "B03_CH01_SFX004", "B03_CH01_SFX005", "B03_CH01_SFX006"],
+      "focus_order": ["Nika/caller intelligibility", "reported facts", "four-impact clue", "verification competence"],
+      "music": "OFF"
+    },
+    {
+      "section_id": "HP_B_REAL_COLLISION",
+      "unit_range": "B03_CH01_U0134..B03_CH01_U0225",
+      "render_blocks": ["B03_CH01_RB007", "B03_CH01_RB008", "B03_CH01_RB009", "B03_CH01_RB010", "B03_CH01_RB011", "B03_CH01_RB012", "B03_CH01_RB013", "B03_CH01_RB014"],
+      "required_cues": ["B03_CH01_SFX007", "B03_CH01_SFX008", "B03_CH01_SFX009", "B03_CH01_SFX010"],
+      "focus_order": ["real rescue work", "matching casualty detail", "live four-impact clue", "same-source playback", "protected silence"],
+      "music": "OFF"
+    },
+    {
+      "section_id": "HP_C_EVIDENCE_REVIEW",
+      "unit_range": "B03_CH01_U0229..B03_CH01_U0264",
+      "render_blocks": ["B03_CH01_RB015", "B03_CH01_RB016"],
+      "required_cues": ["B03_CH01_SFX011", "B03_CH01_SFX012"],
+      "focus_order": ["timeline clarity", "alternative-explanation discipline", "evidence protection"],
+      "music": "OFF"
+    }
+  ],
+  "production_buses": [
+    "NARRATION",
+    "DIALOGUE_ROOM",
+    "DIALOGUE_MEDIATED",
+    "CLUE_SFX",
+    "SFX_FOLEY",
+    "AMBIENCE",
+    "MUSIC_RESERVED_UNUSED"
+  ],
+  "dependency_graph": [
+    "accepted spoken takes -> normalized alignment -> logical anchor resolution",
+    "accepted first-caller take -> SFX009 playback derivation",
+    "accepted SFX004/SFX008 identity pair -> clue placement",
+    "dialogue + clue assets -> protected-silence resolution -> mix",
+    "mix -> machine QC -> human listen -> repair or Hard Pilot PASS"
+  ],
+  "selective_repair_law": "Reopen the smallest failed take, asset, processing chain or mix region; do not regenerate upstream accepted work without demonstrated cause.",
+  "release_status": "NOT_RELEASE_CANDIDATE"
+}
