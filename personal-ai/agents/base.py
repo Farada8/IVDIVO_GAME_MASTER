@@ -15,6 +15,8 @@ class AgentRunRequest:
     allow_network: bool = False
     task_id: str | None = None
     timeout_seconds: float = 30.0
+    requires_artifact_placement_receipt: bool = False
+    artifact_placement_receipt: Mapping[str, Any] | None = None
 
     def __post_init__(self) -> None:
         if not self.project_id.strip():
@@ -27,6 +29,10 @@ class AgentRunRequest:
             raise ValueError("max_steps must be between 1 and 20")
         if self.timeout_seconds <= 0:
             raise ValueError("timeout_seconds must be positive")
+        if self.artifact_placement_receipt is not None and not self.requires_artifact_placement_receipt:
+            raise ValueError(
+                "artifact_placement_receipt requires requires_artifact_placement_receipt=true"
+            )
 
 
 @dataclass(frozen=True)
