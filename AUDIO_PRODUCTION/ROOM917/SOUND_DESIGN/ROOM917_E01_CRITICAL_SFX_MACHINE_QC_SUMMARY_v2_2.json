@@ -1,0 +1,66 @@
+{
+  "schema_version": "room917.critical_sfx_machine_qc_summary/2.2",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "generator_blob_sha": "b1dcf1a1dc196f5ceb3a66d10a7687d5d5bc869e",
+  "receipt_path": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json",
+  "receipt_sha256": "c1d6efa5a5d7c2a2a35d286f6970968132f747382202f42b4f1e3779c980b66e",
+  "machine_qc_status": "PASS",
+  "checks": {"total": 51, "failures": 0},
+  "measurement_fix": "LOG_ENVELOPE_POSITIVE_FLUX_CAUSAL_ONSET_DETECTOR prevents resonant oscillations from being miscounted as separate causal events.",
+  "required_relationship_gates": {
+    "S13": "exactly two causal ring onsets per candidate",
+    "S19": "exactly two mechanically distinct interruption onsets then hard silence",
+    "S10_vs_S08": "one selector event remains distinguishable from relay ripple",
+    "S11_vs_S14": "all 3x3 lamp candidate pairings remain machine-distinct",
+    "S13_vs_S19": "all 3x3 ring/cut pairings remain machine-distinct",
+    "S17": "no steady 50 Hz identity; phone intelligibility retained",
+    "S07": "50 Hz fundamental verified"
+  },
+  "candidate_hashes": {
+    "S07_TRANSFORMER_WAKE": [
+      {"candidate_id":"S07_TRANSFORMER_WAKE_CANDIDATE_SYNTH01","sha256":"22322cd62ff2fe0d1f3b2dee5b6a4480dcf452237bdb095ca4f5afb9299f7ce4","duration_seconds":3.5},
+      {"candidate_id":"S07_TRANSFORMER_WAKE_CANDIDATE_SYNTH02","sha256":"71348dfc99d0cf9500e5f6756defce901f943438035917a971565f1c8b5dc635","duration_seconds":3.5},
+      {"candidate_id":"S07_TRANSFORMER_WAKE_CANDIDATE_SYNTH03","sha256":"6a724fa7ee327371cb7bf736fd002401c995b5a5df55ec5f4e660fd4cc51ff29","duration_seconds":3.5}
+    ],
+    "S08_RELAY_RIPPLE": [
+      {"candidate_id":"S08_RELAY_RIPPLE_CANDIDATE_SYNTH01","sha256":"0cab169949fb40ea1dbb47689d29c20ddd509d250f1c3786c7c3874a557b8e3c","duration_seconds":1.8},
+      {"candidate_id":"S08_RELAY_RIPPLE_CANDIDATE_SYNTH02","sha256":"d3e8f5f479b2e3c0356c3271f9101b12a95659fa3bc481a212e913a0f4b07099","duration_seconds":1.8},
+      {"candidate_id":"S08_RELAY_RIPPLE_CANDIDATE_SYNTH03","sha256":"838d1ce43f0235f715778bcc0eac9ab153040cb3e4c89bd29c08338f756fe842","duration_seconds":1.8}
+    ],
+    "S10_SELECTOR_916": [
+      {"candidate_id":"S10_SELECTOR_916_CANDIDATE_SYNTH01","sha256":"29c27b85ad52b61eaf6476926feaf0a994d7ed1b8f5fd260fce4ec163473a581","duration_seconds":0.7},
+      {"candidate_id":"S10_SELECTOR_916_CANDIDATE_SYNTH02","sha256":"051b57e2840001f785163a927e763a0914a4b37b3866f8827ecee6391f4f4113","duration_seconds":0.7},
+      {"candidate_id":"S10_SELECTOR_916_CANDIDATE_SYNTH03","sha256":"ef96d9aa29085d7e1f9ec940c557a85a626997096ebf64731c8d288c49aa7d59","duration_seconds":0.7}
+    ],
+    "S11_GLASS_LAMP_916_PING": [
+      {"candidate_id":"S11_GLASS_LAMP_916_PING_CANDIDATE_SYNTH01","sha256":"726c8659e2db34e2aa975e96e6aeb63d981e5b91f4f69e19dad4ad47af87eafa","duration_seconds":0.55},
+      {"candidate_id":"S11_GLASS_LAMP_916_PING_CANDIDATE_SYNTH02","sha256":"65bdd203af5570dfe480e142e3ee59161aeda945bd5618b99c1bb59ba67c37c0","duration_seconds":0.55},
+      {"candidate_id":"S11_GLASS_LAMP_916_PING_CANDIDATE_SYNTH03","sha256":"0c4b6d544781c520a882622ccec8291a713f5f2a888c906735eaecc003966711","duration_seconds":0.55}
+    ],
+    "S13_INTERNAL_DOUBLE_RING_OLD": [
+      {"candidate_id":"S13_INTERNAL_DOUBLE_RING_OLD_CANDIDATE_SYNTH01","sha256":"2b0965124d84a03655213e5dccba15824fbd5d6ec33e03e12f95c28e7e408f66","duration_seconds":1.55},
+      {"candidate_id":"S13_INTERNAL_DOUBLE_RING_OLD_CANDIDATE_SYNTH02","sha256":"23f09c6a9b131eed27c3c45b0f84da0a27a3a3f3566059309958a995e006250c","duration_seconds":1.55},
+      {"candidate_id":"S13_INTERNAL_DOUBLE_RING_OLD_CANDIDATE_SYNTH03","sha256":"be2d59da6e4846d5154845bbc98401b05639b9a9b9275dc376ddefd5de04aab3","duration_seconds":1.55}
+    ],
+    "S14_UNMARKED_GLASS_LAMP_PING": [
+      {"candidate_id":"S14_UNMARKED_GLASS_LAMP_PING_CANDIDATE_SYNTH01","sha256":"5d3aa1e42ec4203ceab954edbaa336e5ca17f308b56e0b76dfaddbf2c733a3e3","duration_seconds":0.55},
+      {"candidate_id":"S14_UNMARKED_GLASS_LAMP_PING_CANDIDATE_SYNTH02","sha256":"25a60419494f64ad7ecd196e0bda7d6df47b53128d46a2c7fe70bf2633d70f99","duration_seconds":0.55},
+      {"candidate_id":"S14_UNMARKED_GLASS_LAMP_PING_CANDIDATE_SYNTH03","sha256":"232770a9c9fcaaec39e17658cb4c419b7f1f2d1fd14163a3495e9caedb02699b","duration_seconds":0.55}
+    ],
+    "S17_COPPER_HISS": [
+      {"candidate_id":"S17_COPPER_HISS_CANDIDATE_SYNTH01","sha256":"ff1031af24e13a4c4c68596e91c29ab43828521e66334cc7adfb3bb327103c08","duration_seconds":4.0},
+      {"candidate_id":"S17_COPPER_HISS_CANDIDATE_SYNTH02","sha256":"fe1d68ec588bc19af2482704c5d08a0f59dbad5bfbb97fa3e30fdfe6d26a3070","duration_seconds":4.0},
+      {"candidate_id":"S17_COPPER_HISS_CANDIDATE_SYNTH03","sha256":"1b2b059144ff70ad01925d1ecffe2df9cc088a84154298ab16eb0c5f76cd874b","duration_seconds":4.0}
+    ],
+    "S19_TWO_PART_LINE_CUT": [
+      {"candidate_id":"S19_TWO_PART_LINE_CUT_CANDIDATE_SYNTH01","sha256":"58e595c6371f52c5143b73b94944519a96581eff669f2d30e6e1e1e00ccad32d","duration_seconds":2.2999791666666667},
+      {"candidate_id":"S19_TWO_PART_LINE_CUT_CANDIDATE_SYNTH02","sha256":"2d78c6fff22937e057aa70708d9c63783a9f9f06693125444043de832a7c6a2f","duration_seconds":2.2999791666666667},
+      {"candidate_id":"S19_TWO_PART_LINE_CUT_CANDIDATE_SYNTH03","sha256":"d83bb880a66cdd66403cb6378a079d720d1d5bcef73d6939c91d063368cf181e","duration_seconds":2.2999791666666667}
+    ]
+  },
+  "binding_status": "HOLD_PENDING_BLIND_HUMAN_AUDITION",
+  "hard_law": "MACHINE_QC_PASS_DOES_NOT_AUTHORIZE_PRODUCTION_BINDING_OR_RELEASE"
+}
