@@ -6,10 +6,11 @@
 **Authority effect:** bounded engineering extension of Business Engineering OS Cycle3; no new top-level OS and no automatic Self-Improvement promotion.
 
 ## Upstream authority
-- Fresh-main anchor: `be100f75ef5c7136513cfe5a1a931d3beeb49d75`.
+- Original fresh-main anchor: `be100f75ef5c7136513cfe5a1a931d3beeb49d75`.
+- Freshness rebase after parallel library update: `416bf029e0b842b697a3eeeb107faae40e9a12cf`.
+- Current physical library authority: `BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_LIBRARY_AUTHORITY_78_2026-08-22.md`.
+- Raw Drive folder: `1X6mo94Qo103HheyDry4P3dcQkv5qZg6N` = 78 physical / 68 valid / 5 quarantined placeholders / 58 unique valid byte hashes / 8 exact-duplicate groups. Canonical unique intellectual works remain null/unresolved where edition-format-translation identity is not proven.
 - Cycle3 remains upstream authority for Source Passports, K/S/E evidence planes, LiveSignal, WhyNow, BuyerWorkload, OpportunityObject, VOI, cash timing and CREATE/BROKER/ACQUIRE routing.
-- Raw business library authority: Drive `1X6mo94Qo103HheyDry4P3dcQkv5qZg6N`, 69 reconciled raw files.
-- Business Engineering umbrella Drive: `1yiKVWme2ZvAQMi0g1zIOzA4G5V4LMAgc`.
 
 ## Cycle4 Drive topology
 - Cycle4 root: `1NwTEd1evWOw7c5N0Lh90hSdusNxGyWRY`
@@ -36,7 +37,7 @@ A reference library does not prove design quality; a render does not prove build
 - Runtime regression: 32/32 warm PASS.
 - Exact package cold regression: 32/32 PASS.
 - 64 next evidence-driven cards generated; not blind-auto-authorized.
-- Final package SHA-256: `eb51f1ae539ec888c694ba26c37271cd7804b6f938b28a8d96e12f46aed98346`.
+- Current final package SHA-256: `e0746bfe7357056cc0aa3235564d7dfbe4e3a2e7a3ed9be0b8b438ea42105c96`.
 
 ## Library policy
 Raw copyrighted books stay private in Drive. GitHub stores metadata, hashes, source passports, derived mechanisms, schemas, tests, provenance pointers and original engine outputs only.
