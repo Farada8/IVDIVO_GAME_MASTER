@@ -1,0 +1,51 @@
+{
+  "schema": "ivdivo.business.cycle10.pack_ingest_hardening/1.0",
+  "date": "2026-08-22",
+  "status": "RUN8_EXECUTED_CI_DRIVE_PENDING",
+  "executed": {
+    "range": "P257-P264",
+    "count": 8,
+    "pass_engineering": 8,
+    "hold_blocked": 0
+  },
+  "engineering": {
+    "modules": 8,
+    "contracts": 16,
+    "proof_gates": 8,
+    "protocols": 6,
+    "deterministic_canaries": 16
+  },
+  "target_case": {
+    "case_id": "PROC-BALLYBUNION-8872468",
+    "target_pack_acquired": false,
+    "explicit_bidder_designation": false,
+    "atomic_requirement_join": false,
+    "bid_decision_authorized": false,
+    "root_a": "TARGET_PACK_NOT_ACQUIRED",
+    "root_b": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_PACKET"
+  },
+  "proof": {
+    "public_derived_ceiling": "E2_PLUS",
+    "artifact_plane": "PA3",
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "E4": false,
+    "market_proof_delta": false
+  },
+  "backlog": {
+    "parent_range": "P225-P288",
+    "parent_count": 64,
+    "executed_subset": [257,258,259,260,261,262,263,264],
+    "remaining_count": 56,
+    "highest_value_blocked": [225,235],
+    "next_dependency_rule": "TARGET_PACK_OR_EXPLICIT_BIDDER_DESIGNATION_FIRST_WHEN_NEW_EVIDENCE_EXISTS"
+  },
+  "persistence": {
+    "github": "BRANCH_ONLY_PENDING_PR",
+    "ci": "PENDING",
+    "drive": "PENDING",
+    "current_authority_mutation": false
+  },
+  "stop_rule": "NO_NEW_ADMISSIBLE_EXTERNAL_EVIDENCE_THEN_ENGINEERING_ONLY_OR_PROTECT_NO_CHANGE"
+}

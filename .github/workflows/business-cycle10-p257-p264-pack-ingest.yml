@@ -1,0 +1,30 @@
+name: Business Cycle10 P257-P264 Pack Ingest Hardening
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE10_P257_P264_PACK_INGEST_HARDENING/**'
+      - '.github/workflows/business-cycle10-p257-p264-pack-ingest.yml'
+  push:
+    branches:
+      - 'business-engineering/cycle10-p257-p264-pack-ingest-hardening-20260822'
+
+permissions:
+  contents: read
+
+jobs:
+  pack-ingest-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run P257-P264 canaries
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE10_P257_P264_PACK_INGEST_HARDENING/tests/test_authenticated_pack_ingest.py
+      - name: Compile runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE10_P257_P264_PACK_INGEST_HARDENING/engine
+      - name: Parse machine state
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE10_P257_P264_PACK_INGEST_HARDENING/02_MACHINE_STATE.json >/dev/null
