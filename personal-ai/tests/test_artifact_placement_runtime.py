@@ -35,6 +35,23 @@ class ArtifactPlacementRuntimeTest(unittest.TestCase):
     def test_verified_receipt(self):
         self.assertEqual(ArtifactPlacementReceipt.from_mapping(good_receipt()).status, PLACEMENT_VERIFIED)
 
+    def test_backward_compatible_receipt_without_resource_type(self):
+        receipt = ArtifactPlacementReceipt.from_mapping(good_receipt())
+        self.assertIsNone(receipt.expected_resource_type)
+        self.assertEqual(receipt.status, PLACEMENT_VERIFIED)
+
+    def test_expected_document_observed_folder_fails_closed(self):
+        data = good_receipt(); data["expected_resource_type"] = "DOCUMENT"; data["observed_resource_type"] = "FOLDER"
+        receipt = ArtifactPlacementReceipt.from_mapping(data)
+        self.assertEqual(receipt.status, PERSISTED_BUT_MISPLACED)
+        self.assertIn("resource_type_mismatch", receipt.failures())
+
+    def test_expected_type_without_observation_fails_closed(self):
+        data = good_receipt(); data["expected_resource_type"] = "DOCUMENT"
+        receipt = ArtifactPlacementReceipt.from_mapping(data)
+        self.assertEqual(receipt.status, PERSISTED_BUT_MISPLACED)
+        self.assertIn("resource_type_unobserved", receipt.failures())
+
     def test_parent_mismatch(self):
         data = good_receipt(); data["actual_parent"] = "drive:wrong"
         receipt = ArtifactPlacementReceipt.from_mapping(data)
@@ -70,6 +87,14 @@ class ArtifactPlacementRuntimeTest(unittest.TestCase):
             task = complete_task_with_artifact_gate(manager, "p", "t1", data)
             self.assertEqual(task["status"], "BLOCKED")
             self.assertEqual(task["artifact_placement_receipt"]["status"], PERSISTED_BUT_MISPLACED)
+
+    def test_resource_type_mismatch_blocks_completion(self):
+        with tempfile.TemporaryDirectory() as td:
+            manager = ProjectStateManager(Path(td)); manager.create_project("p"); manager.add_task("p", "Persist document", "t1")
+            data = good_receipt(); data["expected_resource_type"] = "DOCUMENT"; data["observed_resource_type"] = "FOLDER"
+            task = complete_task_with_artifact_gate(manager, "p", "t1", data)
+            self.assertEqual(task["status"], "BLOCKED")
+            self.assertIn("resource_type_mismatch", task["artifact_placement_receipt"]["failures"])
 
     def test_good_receipt_completes_and_persists_receipt(self):
         with tempfile.TemporaryDirectory() as td:
