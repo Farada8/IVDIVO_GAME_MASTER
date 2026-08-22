@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_en_ru_audio_pointer/1.0",
+  "schema_version": "ivdivo.room917_en_ru_audio_pointer/1.1",
   "updated": "2026-08-22",
   "project": "ROOM917",
   "episode": "E01",
@@ -7,6 +7,7 @@
   "story_status": "LOCKED",
   "delivery_mode": "FULL_AUDIO_DRAMA",
   "bilingual_control": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json",
+  "bilingual_control_commit": "60696e0d61d329dd28cbfc36f31b53c16e34df9c",
   "parity_validator": "AUDIO_PRODUCTION/ROOM917/TOOLS/EN_RU_PARITY_v1/validate_en_ru_parity.py",
   "parity_workflow": ".github/workflows/room917-en-ru-parity.yml",
   "shared_law": "ONE_PHYSICAL_GREYHAVEN__LOCALE_SPECIFIC_ACTING__NO_CLUE_OR_SOUND_IDENTITY_DRIFT",
@@ -25,15 +26,18 @@
   },
   "russian": {
     "pointer": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/CURRENT_RU_PILOT_POINTER.json",
+    "assembly_authority_commit": "b8bce42eb967aa7f9be26ebeb76137b663e1063d",
     "status": "RU_NATIVE_DISCOVERY_ZERO_SPEND_PENDING_SNAPSHOT__PAID_S0_HARD_GATED",
     "cast_lock": false,
     "whole_episode_paid_render": "FORBIDDEN_BEFORE_CAST_GATE",
     "voice_discovery_workflow": ".github/workflows/room917-ru-voice-discovery.yml",
     "zero_spend_retrigger_commit": "3d969b2e012c5dd9702b1b653d33a17f41e2b5ff",
+    "recovery_hardening_commit": "b3d69f8b6d8ecaf6e14df7434422596796eb23e3",
     "provider_snapshot": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json",
     "provider_snapshot_current_presence": "NOT_YET_PRESENT_IN_MAIN_AT_LAST_READBACK",
+    "provider_evidence_recovery": "WORKFLOW_NOW_UPLOADS_30_DAY_ARTIFACT_AND_PUSHES_DETERMINISTIC_EVIDENCE_BRANCH_BEFORE_OPTIONAL_MAIN_PUBLICATION",
     "paid_canary": "REQUIRES_NATIVE_BINDINGS_PLUS_EXPLICIT_confirm_spend_YES",
-    "next": "READ_FRESH_NATIVE_RU_PROVIDER_SNAPSHOT__PREVIEW_TOP_CANDIDATES__SHORTLIST_UP_TO_3_PER_ROLE__THEN_BOUNDED_S0"
+    "next": "READ_FRESH_NATIVE_RU_PROVIDER_SNAPSHOT_OR_RECOVERABLE_WORKFLOW_ARTIFACT__PREVIEW_TOP_CANDIDATES__SHORTLIST_UP_TO_3_PER_ROLE__THEN_BOUNDED_S0"
   },
   "shared_story_sound_ids": [
     "NORMAL_916_SELECTOR_CLACK",
@@ -45,10 +49,23 @@
     "TWO_PART_LINE_CUT",
     "FOUR_NOTE_LULLABY_IDENTITY"
   ],
-  "scene3_machine_id_repairs_this_pass": [
-    "ACTORS_ORIENT_TO_PANEL -> ORIENT_TO_PANEL",
-    "CATE_CLEAN_HUMAN_SOURCE_THROUGH_TRANSMISSION_POST -> CATE_CLEAN_HUMAN_SOURCE_THROUGH_POST_CHAIN"
+  "current_scene3_causal_ids": [
+    "IMPOSSIBLE_INTERNAL_DOUBLE_RING",
+    "ACTORS_ORIENT_TO_PANEL",
+    "FIELD_RECORDER_START",
+    "TIME_01_17_12",
+    "EXTERNAL_TRUNK_PHYSICALLY_OPEN",
+    "UNMARKED_LAMP_ACTIVE_BEYOND_916",
+    "MINA_INDEPENDENT_CONFIRMATION",
+    "COPPER_LINE_MEDIUM",
+    "CATE_CLEAN_HUMAN_SOURCE_THROUGH_TRANSMISSION_POST",
+    "LENI_BIRD_EXACT",
+    "FOUR_NOTE_LULLABY_DAMAGED_AFTER_NOTE_3",
+    "TWO_PART_LINE_CUT",
+    "JULIAN_LAST_NOTE_KNOWLEDGE",
+    "ELENA_FINAL_QUESTION"
   ],
+  "concurrent_edit_law": "WHEN_RU_ASSEMBLY_AUTHORITY_ADVANCES_ON_MAIN_BILINGUAL_CONTROL_MUST_FOLLOW_CURRENT_MACHINE_IDS; DO_NOT_REWRITE_RU_AUTHORITY_FROM_STALE_READBACK",
   "listener_qc_questions_both_locales": [
     "DO_I_BELIEVE_THE_ACTOR",
     "WHERE_DO_I_HEAR_AI",
