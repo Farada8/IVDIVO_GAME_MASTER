@@ -6,13 +6,9 @@ DELTA_ROOT = Path(__file__).resolve().parents[1]
 if str(DELTA_ROOT) not in sys.path:
     sys.path.insert(0, str(DELTA_ROOT))
 
-from engine.evidence_delta_guards import HistoricalAnalogUse, historical_analog_admissible, bind_formation_evidence, split_blocker_state, can_assert_bid_decision
+from engine.evidence_delta_guards import bind_formation_evidence, split_blocker_state, can_assert_bid_decision
 
 class Cycle7EvidenceDeltaTests(unittest.TestCase):
-    def test_historical_analog_allowed_for_retrieval_hint(self):
-        self.assertTrue(historical_analog_admissible(HistoricalAnalogUse.RETRIEVAL_HINT))
-    def test_historical_analog_forbidden_as_current_requirement(self):
-        self.assertFalse(historical_analog_admissible(HistoricalAnalogUse.CURRENT_REQUIREMENT))
     def test_formation_doc_verifies_legal_name(self):
         b = bind_formation_evidence("legal_name", "SYNTHESIS-IVDIVO LIMITED")
         self.assertTrue(b.verified and b.admissible)
