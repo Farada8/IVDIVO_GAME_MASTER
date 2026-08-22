@@ -1,12 +1,13 @@
 {
   "schema": "IVDIVO_SELF_IMPROVEMENT_CYCLE10R_STATE_v1",
   "date": "2026-08-22",
-  "status": "RUN32_COMPLETE_RUNTIME_COMMITTED_CI_DRIVE_CLOSURE_PENDING",
+  "status": "MERGED_CROSS_STORE_COMPLETE_RETURN_TO_PRODUCTION",
   "authority": {
     "global_self_improvement": "V2_VERIFIED_CURRENT",
     "cycle10r_authority_effect": "NONE_AUTOMATIC",
     "new_global_si_id": null,
-    "branch_base_main": "d919a680dea76ce74c6fa99113a1fe36d85f1e81"
+    "branch_base_main": "d919a680dea76ce74c6fa99113a1fe36d85f1e81",
+    "merge_commit": "e13996f0d345f5c8fca401c01ed72ea58a0647a5"
   },
   "run32": {
     "executed_or_dispositioned": 32,
@@ -17,7 +18,13 @@
   "runtime": {
     "module": "engine/recovery_persistence_engine.py",
     "canaries_defined": 32,
-    "ci_status": "PENDING_PR_MERGE_REF"
+    "ci_status": "PASS",
+    "workflow": "Self-Improvement Cycle10R Recovery Persistence",
+    "run_id": 32550134102,
+    "job_id": 96975408858,
+    "cycle10r_canaries": "32_OF_32_PASS",
+    "compileall": "PASS",
+    "inherited_run33_regression": "PASS"
   },
   "si0014": {
     "status": "READY_FOR_PILOT",
@@ -42,7 +49,6 @@
   },
   "business_recovery": {
     "project": "BUSINESS_ENGINEERING",
-    "github_latest_branch_cut": "d919a680dea76ce74c6fa99113a1fe36d85f1e81",
     "drive_control_doc": "154NhUZFLsXGVE6l6oEubeb6fyctK8i7arD8z8CDiIQY",
     "latest_merged_frontier": "P97_P128_COMPLETE_NEXT_P129_P192",
     "target": "8872468",
@@ -70,14 +76,17 @@
   "parallel": {
     "cycle9": "MERGED_EVIDENCE_LAYER",
     "parallel_cycle10_decision_evidence_yield": "SUPPORTING_NOT_AUTHORITY",
-    "cycle32d_pr206": "OPEN_DRAFT_SALVAGE_UNIQUE_ONLY",
-    "observability_pr211": "OPEN_DRAFT_RECONCILE_BEFORE_ANY_MERGE",
+    "cycle32d_pr206": "SALVAGE_UNIQUE_ONLY",
+    "observability_pr211": "RECONCILE_BEFORE_ANY_MERGE",
     "saga100_pr147_si0016": "ACTIVE_RESERVATION_BLOCKS_DUPLICATE_ID",
     "business_pr209": "CLOSED_SUPERSEDED_PROVENANCE_ONLY"
   },
   "drive_cycle10r": {
     "root": "19BbmeqbZpQWfhvMgymblOb1GEGzCOho-",
-    "status": "FOLDERS_CREATED_DOCUMENT_PERSISTENCE_PENDING"
+    "documents": 6,
+    "content_readback": "PASS_6_OF_6",
+    "byte_exact_mirror_claimed": false,
+    "status": "COMPLETE"
   },
   "external_evidence": {
     "human": null,
@@ -89,6 +98,14 @@
     "count": 64,
     "file": "06_NEXT64_CYCLE11.md",
     "auto_authorized": false
+  },
+  "closure": {
+    "pull_request": 221,
+    "merged": true,
+    "merge_commit": "e13996f0d345f5c8fca401c01ed72ea58a0647a5",
+    "post_merge_main_readback": "PASS",
+    "cross_store_state": "COMPLETE",
+    "production_return": "REQUIRED_NOW"
   },
   "production_return_required": true
 }
