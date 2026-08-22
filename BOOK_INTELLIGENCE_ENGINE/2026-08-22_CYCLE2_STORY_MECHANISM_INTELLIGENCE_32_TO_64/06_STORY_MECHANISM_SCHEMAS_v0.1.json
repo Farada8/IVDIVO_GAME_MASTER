@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ivdivo.story_mechanism_intelligence.schemas/0.1",
+  "title": "IVDIVO Story Mechanism Intelligence schema pack v0.1",
+  "$defs": {
+    "StoryProblemSignature": {
+      "type": "object",
+      "required": ["project_id", "stage", "problem_tags", "desired_effects", "hard_constraints"],
+      "properties": {
+        "project_id": {"type": "string", "minLength": 1},
+        "stage": {"enum": ["DISCOVERY", "ARCHITECTURE", "CHAPTER_MAP", "SCENE", "DRAFT", "DEVELOPMENT", "RED_TEAM", "REVISION", "LOCKED_SHADOW"]},
+        "genre_tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "problem_tags": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+        "desired_effects": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+        "hard_constraints": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "available_conditions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "protected_facts": {"type": "array", "items": {"type": "string"}},
+        "forbidden_moves": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "max_mechanisms": {"type": "integer", "minimum": 1, "maximum": 3},
+        "locked": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "StoryMechanismCardExtension": {
+      "type": "object",
+      "required": ["mechanism_id", "statement", "project_specific_expression_removed"],
+      "properties": {
+        "mechanism_id": {"type": "string", "minLength": 1},
+        "statement": {"type": "string", "minLength": 1},
+        "disposition": {"enum": ["CURRENT", "PROMOTABLE", "PILOT_READY", "LOCAL_TEST", "REFERENCE_ONLY", "HOLD", "REJECT"]},
+        "problem_tags": {"type": "array", "items": {"type": "string"}},
+        "effect_vector": {"type": "array", "items": {"type": "string"}},
+        "prerequisites": {"type": "array", "items": {"type": "string"}},
+        "contraindications": {"type": "array", "items": {"type": "string"}},
+        "required_moves": {"type": "array", "items": {"type": "string"}},
+        "incompatible_with": {"type": "array", "items": {"type": "string"}},
+        "forbids_effects": {"type": "array", "items": {"type": "string"}},
+        "source_ids": {"type": "array", "items": {"type": "string"}},
+        "independent_source_groups": {"type": "array", "items": {"type": "string"}},
+        "evidence_locators": {"type": "array", "items": {"type": "string"}},
+        "failure_modes": {"type": "array", "items": {"type": "string"}},
+        "project_specific_expression_removed": {"type": "boolean"},
+        "portability": {"enum": ["PROJECT_NEUTRAL", "PROJECT_ONLY", "GENRE_ONLY"]},
+        "requires_text_mutation": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "StoryMechanismPacket": {
+      "type": "object",
+      "required": ["status", "problem_signature_hash", "constraints"],
+      "properties": {
+        "status": {"enum": ["CANDIDATE_PACKET", "SHADOW_ONLY", "HOLD"]},
+        "problem_signature_hash": {"type": "string", "minLength": 8},
+        "mechanisms": {"type": "array", "maxItems": 3, "items": {"type": "object"}},
+        "predicted_effects": {"type": "array", "items": {"type": "string"}},
+        "prediction_status": {"const": "PREDICTION_ONLY_NOT_OBSERVED_RESULT"},
+        "constraints": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    }
+  }
+}
