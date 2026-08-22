@@ -1,0 +1,41 @@
+name: General Business POD Cost Preflight
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/25_DIGITAL_POD_COST_PREFLIGHT.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/26_DIGITAL_POD_COST_PREFLIGHT_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime/pod_cost_preflight.py'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_pod_cost_preflight.py'
+      - '.github/workflows/general-business-pod-cost-preflight.yml'
+  workflow_dispatch:
+
+jobs:
+  pod-cost-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run POD preflight canaries
+        run: |
+          python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_pod_cost_preflight.py
+      - name: Verify fail-closed state
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/26_DIGITAL_POD_COST_PREFLIGHT_STATE.json')
+          s=json.loads(p.read_text())
+          assert s['evidence']['listings_published']==0
+          assert s['evidence']['paid_orders']==0
+          assert s['evidence']['wtp'] is None
+          assert s['evidence']['cac'] is None
+          assert s['evidence']['conversion'] is None
+          assert s['evidence']['profitable_skus_proven']==0
+          assert s['evidence']['external_action_authorized'] is False
+          assert s['routes']['wall_art_8x12_plus']=='HOLD_RESOLUTION'
+          assert s['freshness']['must_refresh_before_external_test_after_date'] is True
+          print('POD cost preflight fail-closed state: PASS')
+          PY
