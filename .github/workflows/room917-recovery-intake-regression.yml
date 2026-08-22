@@ -1,0 +1,54 @@
+name: ROOM917 Recovery Intake Regression
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/recovery_intake_gate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/post_render_router.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/authority_hygiene_guard.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/tests/test_recovery_intake_gate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/tests/test_post_render_router_recovery_intake.py'
+      - '.github/workflows/room917-recovery-intake-regression.yml'
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/recovery_intake_gate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/post_render_router.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/authority_hygiene_guard.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/tests/test_recovery_intake_gate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/tests/test_post_render_router_recovery_intake.py'
+      - '.github/workflows/room917-recovery-intake-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fail-closed-recovery-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Recovery intake tests
+        run: >-
+          python -m unittest -v
+          AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/tests/test_recovery_intake_gate.py
+
+      - name: Router recovery-intake regression tests
+        run: >-
+          python -m unittest -v
+          AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/tests/test_post_render_router_recovery_intake.py
+
+      - name: Compile fail-closed modules
+        run: >-
+          python -m py_compile
+          AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/recovery_intake_gate.py
+          AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/post_render_router.py
+          AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/authority_hygiene_guard.py
