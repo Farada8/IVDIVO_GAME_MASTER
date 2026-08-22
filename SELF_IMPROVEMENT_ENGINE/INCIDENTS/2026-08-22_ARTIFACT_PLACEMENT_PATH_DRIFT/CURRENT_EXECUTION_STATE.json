@@ -1,0 +1,39 @@
+{
+  "schema": "artifact_placement_incident_state_v1",
+  "date": "2026-08-22",
+  "issue": 356,
+  "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
+  "authority_effect": "NONE",
+  "self_improvement_current": "v2 VERIFIED_CURRENT",
+  "candidate_status": "BOUNDED_PILOT",
+  "trigger_project": "D09 THE MAN WHO CAME BACK",
+  "new_state": "PERSISTED_BUT_MISPLACED",
+  "required_sequence": [
+    "CREATE_OR_IMPORT",
+    "PLACE_IN_CANONICAL_PROJECT_LOCATION",
+    "READBACK_ACTUAL_PARENT",
+    "UPDATE_START_HERE_OR_CURRENT_INDEX",
+    "READBACK_INDEX",
+    "SCAN_DUPLICATE_OR_LEGACY_TITLE_CONFLICT",
+    "VERIFY_CROSS_STORE_POINTER_IF_REQUIRED",
+    "EMIT_PLACEMENT_RECEIPT",
+    "ALLOW_DONE_VERIFIED_ONLY_IF_ALL_PASS"
+  ],
+  "proof": {
+    "real_d09_incident": true,
+    "drive_incident_parent_readback": "PASS",
+    "drive_start_here_readback": "PASS",
+    "deterministic_tests_defined": 7,
+    "equivalent_local_smoke": "PASS",
+    "github_ci": "NOT_RUN"
+  },
+  "promotion_gate": {
+    "status": "HOLD",
+    "requirements": [
+      "prospective use on two independent projects",
+      "provider adapter integration",
+      "zero false DONE_VERIFIED on misplaced fixtures",
+      "regression against current recovery/persistence contracts"
+    ]
+  }
+}
