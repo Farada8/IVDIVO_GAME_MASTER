@@ -1,1 +1,0 @@
-PL-07 closure package complete for review. No runtime changes in this branch; only verification/control-plane state.
