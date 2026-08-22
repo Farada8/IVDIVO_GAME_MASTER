@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "updated": "2026-08-22",
-  "status": "V1_1_IMPLEMENTED_PROTOTYPE_9_9_PASS_EXACT_REPO_CI_GATE_OPEN_PROJECT_VALIDATION_PENDING",
+  "status": "V1_1_ENGINEERING_VERIFIED_CURRENT_PROJECT_VALIDATION_PENDING",
   "authority": "BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.1.md",
   "runtime": "tools/ivdivo_book_intelligence.py",
   "runtime_version": "1.1",
@@ -14,9 +14,10 @@
   "pilot2_report": "BOOK_INTELLIGENCE_ENGINE/07_PILOT2_BUSINESS_CONSTRAINT_AND_EVIDENCE_FIREWALL_v1.0.md",
   "nasa_deep_source_report": "BOOK_INTELLIGENCE_ENGINE/08_NASA_SYSTEMS_ENGINEERING_DEEP_SOURCE_PASS_v1.0.md",
   "v1_1_upgrade_contract": "BOOK_INTELLIGENCE_ENGINE/09_ORTHOGONAL_SOURCE_LIFECYCLE_AND_TRACEABILITY_UPGRADE_v1.1.md",
+  "pilot1_trace_bundle": "BOOK_INTELLIGENCE_ENGINE/11_PILOT1_B03_TRACEABILITY_BUNDLE_v1.1.json",
+  "pilot2_trace_bundle": "BOOK_INTELLIGENCE_ENGINE/12_PILOT2_BUSINESS_TRACEABILITY_BUNDLE_v1.1.json",
   "regression_tests": "BOOK_INTELLIGENCE_ENGINE/tests/test_book_intelligence_v1_1.py",
   "ci_workflow": ".github/workflows/book-intelligence-v1-1.yml",
-  "exact_repo_ci_gate_pr": 360,
   "engine_role": "UNIVERSAL_GATEWAY_FOR_MATERIAL_BOOK_REFERENCE_USE",
   "raw_book_binary_policy": "KEEP_IN_DRIVE_OR_LEGAL_EXTERNAL_SOURCE; NO_RAW_COPYRIGHTED_BINARIES_IN_GITHUB",
   "current_source_register_count": 13,
@@ -38,31 +39,43 @@
     "real_validation_classes": ["REAL_PROJECT_VALIDATION", "HUMAN_VALIDATION", "PROVIDER_VALIDATION", "MARKET_VALIDATION", "FACTUAL_SPECIALIST_VALIDATION"],
     "promotion_requires_bidirectional_traceability": true
   },
+  "engineering_verification": {
+    "v1_0_local_contract_tests": "13/13 PASS",
+    "v1_1_prototype_regression": "9/9 PASS",
+    "v1_1_exact_repository_ci": "PASS",
+    "workflow_run_id": 32558498711,
+    "workflow_run_number": 8,
+    "workflow_conclusion": "SUCCESS",
+    "workflow_job_id": 96996329281,
+    "pytest_step": "SUCCESS",
+    "runtime_compile_step": "SUCCESS",
+    "ci_gate_pr": 360,
+    "ci_gate_pr_merged": true,
+    "ci_gate_merge_sha": "cc64ab36128cf87005a60311b45d84d845951980",
+    "engineering_status": "VERIFIED_CURRENT"
+  },
+  "traceability_verification": {
+    "pilot1_retrospective_trace_audit": "PASS_10_NODES_9_EDGES_0_ERRORS",
+    "pilot2_retrospective_trace_audit": "PASS_10_NODES_9_EDGES_0_ERRORS",
+    "pilot1_change_impact_fixture": "PASS",
+    "pilot2_change_impact_fixture": "PASS",
+    "classification_guard": "RETROSPECTIVE_TRACE_AUDIT_NEQ_CAUSAL_V1_1_PROJECT_VALIDATION"
+  },
   "drive_mirror": {
     "folder_id": "1YaCto6NxrRRsbgUI1PoySLNBdna9xq6r",
     "authority_doc_id": "1HHQ4Lcq0p3R5KFHbfzXemv5tMctOCNGt4CFYdXaV__Y",
     "source_manifest_doc_id": "1GvKeoaB8DdLEZEAJ6CJAKI2N1EvQlOkt3iq5BIhhgUk",
     "cycle1_and_adapter_doc_id": "1o7daILw9ebuj2RYtQY7b3eLF3667rYH1agXV5lX4xTM",
     "pilot2_doc_id": "1q-sPR6UbYcYGEJS5nE5wU3RO5igAZzsZUaU1fSSdaPM",
-    "readback_status": "PASS_CORE_3_DOCS_AND_PILOT2"
-  },
-  "engineering_verification": {
-    "v1_0_local_contract_tests": "13/13 PASS",
-    "v1_1_prototype_regression": "9/9 PASS",
-    "v1_1_exact_repository_ci": "NOT_YET_OBSERVED",
-    "v1_1_ci_gate_pr": 360,
-    "v1_1_ci_gate_head": "290bf55f4839ad9472a6cfb9a645856568f53359",
-    "runtime_source_persisted": true,
-    "schema_persisted": true,
-    "tests_persisted": true,
-    "workflow_persisted": true,
-    "drive_pilot2_readback": "PASS"
+    "v1_1_nasa_traceability_doc_id": "1-_50VgvTD3Qh86bhiXW7FNTzFFlaPEm61_xODLDZRl4",
+    "readback_status": "PASS_CORE_3_PILOT2_AND_V1_1_NASA_TRACEABILITY_DOC"
   },
   "pilot1": {
     "project_id": "IVDIVO_BOOK_3_SMITH",
     "domain": "STORY",
     "result": "PASS_REAL_PRODUCTION_BENEFIT",
     "evidence_class_for_v1_0_architecture": "REAL_PROJECT_VALIDATION",
+    "v1_1_relation": "RETROSPECTIVE_TRACE_AUDIT_ONLY",
     "observed_gain": ["DETECTED_STALE_FRONTIER", "RECOVERED_CURRENT_CH25_CH29_LINEAGE", "PREVENTED_DUPLICATE_PROSE", "RESTORED_P72_v0_2_FRONTIER"]
   },
   "pilot2": {
@@ -73,6 +86,7 @@
     "incremental_decision_gain": "NONE_OBSERVED_BUSINESS_ALREADY_ENCODED_CORRECT_STOP",
     "proof_grade_change": "NONE",
     "external_action_authorized": false,
+    "v1_1_relation": "RETROSPECTIVE_TRACE_AUDIT_ONLY",
     "drive_readback": "PASS"
   },
   "nasa_source_pass": {
@@ -83,17 +97,18 @@
     "official_source_pointer_preserved": true
   },
   "promotion": {
+    "v1_1_engineering_status": "VERIFIED_CURRENT",
+    "v1_1_project_validation": "PENDING_PROSPECTIVE_APPLICATION",
     "universal_new_architecture_mechanism_promotion": "HOLD",
-    "reason": "V1_1_EXACT_REPO_CI_AND_REAL_PROJECT_TRACEABILITY_VALIDATION_NOT_YET_CLOSED",
-    "do_not_claim": ["VERIFIED_CURRENT_V1_1", "FULL_NASA_READ", "NASA_PDF_DOWNLOADED_TO_DRIVE", "UNIVERSAL_PROMOTION"]
+    "reason": "ENGINEERING_VERIFICATION_CLOSED_BUT_PROSPECTIVE_REAL_PROJECT_GAIN_FOR_V1_1_NOT_YET_PROVEN",
+    "do_not_claim": ["FULL_NASA_READ", "NASA_PDF_DOWNLOADED_TO_DRIVE", "UNIVERSAL_PROMOTION", "RETROSPECTIVE_AUDIT_AS_CAUSAL_VALIDATION"]
   },
   "next_obligations": [
-    "OBSERVE_EXACT_REPO_CI_PR360_IF_AVAILABLE",
-    "BUILD_V1_1_TRACEABILITY_BUNDLE_FOR_PILOT1_B03_AND_AUDIT",
-    "BUILD_V1_1_TRACEABILITY_BUNDLE_FOR_PILOT2_BUSINESS_AND_AUDIT",
-    "RUN_CHANGE_IMPACT_CHECK_ON_CURRENT_BOOK_INTELLIGENCE_ROUTER_SURFACES",
-    "CREATE_DRIVE_V1_1_NASA_AND_TRACEABILITY_UPGRADE_MIRROR_WITH_READBACK",
-    "ONLY_THEN_DECIDE_ENGINEERING_CURRENT_V1_1_VS_HOLD"
+    "UPDATE_DRIVE_CURRENT_AUTHORITY_AND_SOURCE_MANIFEST_WITH_V1_1_SUPERSEDING_DELTA",
+    "ROUTE_OLD_V1_0_COMPATIBILITY_ENTRY_TO_V1_1",
+    "RUN_FIRST_PROSPECTIVE_REAL_PROJECT_APPLICATION_OF_V1_1_TRACEABILITY_OR_CHANGE_IMPACT",
+    "MEASURE_INCREMENTAL_GAIN_OR_HOLD",
+    "CONTINUE_PROBLEM_TARGETED_OPEN_SOURCE_EXTRACTION_WITH_NO_FALSE_FULL_READ"
   ],
   "stop_laws": [
     "DO_NOT_REREAD_WHOLE_LIBRARY_BY_DEFAULT",
