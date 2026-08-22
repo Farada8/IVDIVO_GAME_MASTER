@@ -37,43 +37,49 @@ jobs:
           visual = (root / 'VISUAL_SELECTION_RECOVERY_MANIFEST_20260822.md').read_text(encoding='utf-8')
           painters = (root / 'PAINTERS_DUBLIN_RECOVERY_HANDOFF_20260822.md').read_text(encoding='utf-8')
 
-          assert state['schema'] == 'ivdivo.master_recovery_state/1.1'
-          assert state['state_is_recovery_pointer_not_frozen_project_frontier'] is True
-          assert state['global_state']['browser_tabs_may_be_closed'] is True
-          assert state['global_state']['delete_all_chats_authorized'] is False
-          assert state['global_state']['delete_all_chats_gate'].startswith('BLOCKED_')
-          assert state['global_state']['recovered_context_auto_canon'] is False
-          assert state['global_state']['remaining_blocker_class_count'] == 3
+          def check(condition, name):
+              if not condition:
+                  raise AssertionError(f'RECOVERY_GUARD_FAIL:{name}')
+
+          check(state['schema'] == 'ivdivo.master_recovery_state/1.1', 'schema')
+          check(state['state_is_recovery_pointer_not_frozen_project_frontier'] is True, 'pointer_semantics')
+          check(state['global_state']['browser_tabs_may_be_closed'] is True, 'tabs_close_safe')
+          check(state['global_state']['delete_all_chats_authorized'] is False, 'delete_all_must_remain_false')
+          check(state['global_state']['delete_all_chats_gate'].startswith('BLOCKED_'), 'delete_gate_blocked')
+          check(state['global_state']['recovered_context_auto_canon'] is False, 'no_auto_canon')
+          check(state['global_state']['remaining_blocker_class_count'] == 3, 'three_blocker_count')
 
           projects = state['projects']
           ids = [p['id'] for p in projects]
-          assert len(ids) == len(set(ids)), 'duplicate project id'
+          check(len(ids) == len(set(ids)), 'duplicate_project_id')
           required = {
               'BUS-01','BUS-02','BOOK-B03','DORAMA-BB','DORAMA-WIFE',
               'AUDIO-R917','AUDIO-D01','SI-01','PAI-01','GAME-PORTALS','ART-IRELAND',
               'BUILD-FARADA','WEB-PAINTERS','MATH-ORDERS','RESEARCH-IVDIVO','WRITE-ENGINE'
           }
-          assert required.issubset(set(ids))
-
+          check(required.issubset(set(ids)), 'required_projects')
           by_id = {p['id']: p for p in projects}
 
-          # Resolved false/stale blockers must stay resolved unless new evidence reopens them.
-          assert by_id['GAME-PORTALS']['known_chat_only_material_gap'] is False
-          assert by_id['GAME-PORTALS']['deletion_safety'] == 'SAFE_FOR_CURRENT_WORK_AUTHORITY'
-          assert by_id['GAME-PORTALS']['place_verbs_status'] == 'RECOVERED_DURABLE_FOUR_FILE_CORPUS'
-          assert by_id['GAME-PORTALS']['old_24_plus_40_and_64_location_state'] == 'SUPERSEDED_ARCHIVE_PROVENANCE_ONLY'
+          # Closed stale blockers must remain closed from structured current authority.
+          portals = by_id['GAME-PORTALS']
+          check(portals['known_chat_only_material_gap'] is False, 'portals_no_chat_gap')
+          check(portals['deletion_safety'] == 'SAFE_FOR_CURRENT_WORK_AUTHORITY', 'portals_safe_current')
+          check(portals['place_verbs_status'] == 'RECOVERED_DURABLE_FOUR_FILE_CORPUS', 'place_verbs_recovered')
+          check(portals['old_24_plus_40_and_64_location_state'] == 'SUPERSEDED_ARCHIVE_PROVENANCE_ONLY', 'old_portals_superseded')
 
-          assert by_id['MATH-ORDERS']['deletion_safety'] == 'SAFE_FOR_CURRENT_RESEARCH_AUTHORITY'
-          assert by_id['MATH-ORDERS']['drive_current'] == '1aLjhfQGupMOWmtYgeuqwFInfzhwqbBgL'
+          math = by_id['MATH-ORDERS']
+          check(math['deletion_safety'] == 'SAFE_FOR_CURRENT_RESEARCH_AUTHORITY', 'math_safe_current')
+          check(math['drive_current'] == '1aLjhfQGupMOWmtYgeuqwFInfzhwqbBgL', 'math_drive_pointer')
+          check(math['evidence_ceiling'] == 'NO_NOVELTY_OR_NEW_PHYSICS_CLAIM', 'math_evidence_ceiling')
 
-          assert by_id['AUDIO-D01']['audio_binary_disposition'] == 'NO_LIVE_AUDIO_GENERATED_NOT_A_MISSING_BINARY'
-          assert by_id['BOOK-B03']['audio_binary_disposition'].startswith('PRE_LIVE_')
+          check(by_id['AUDIO-D01']['audio_binary_disposition'] == 'NO_LIVE_AUDIO_GENERATED_NOT_A_MISSING_BINARY', 'd01_not_missing')
+          check(by_id['BOOK-B03']['audio_binary_disposition'].startswith('PRE_LIVE_'), 'b03_pre_live')
 
-          # Real residual blockers must remain explicit and evidence-backed.
-          assert by_id['WEB-PAINTERS']['deletion_safety'] == 'NOT_SAFE_TO_DELETE_SOURCE_CHAT'
-          assert by_id['ART-IRELAND']['deletion_safety'] == 'ARCHIVE_CHECK_REQUIRED'
-          assert by_id['AUDIO-R917']['deletion_safety'] == 'ARCHIVE_CHECK_REQUIRED'
-          assert len(by_id['AUDIO-R917']['real_binary_blockers']) >= 2
+          # Residual blockers: exact three classes, all still explicit.
+          check(by_id['WEB-PAINTERS']['deletion_safety'] == 'NOT_SAFE_TO_DELETE_SOURCE_CHAT', 'painters_still_blocked')
+          check(by_id['ART-IRELAND']['deletion_safety'] == 'ARCHIVE_CHECK_REQUIRED', 'visual_still_blocked')
+          check(by_id['AUDIO-R917']['deletion_safety'] == 'ARCHIVE_CHECK_REQUIRED', 'room917_still_blocked')
+          check(len(by_id['AUDIO-R917']['real_binary_blockers']) >= 2, 'room917_two_real_binary_entries')
 
           blockers = state['known_global_blockers']
           expected_blockers = {
@@ -81,45 +87,54 @@ jobs:
               'VISUAL_FINAL_SELECTION_ROUTING_NOT_COMPLETE',
               'PAINTERS_DUBLIN_CURRENT_EXPORT_HANDOFF_NOT_VERIFIED',
           }
-          assert set(blockers) == expected_blockers
-          assert len(blockers) == 3
+          check(set(blockers) == expected_blockers, 'exact_blocker_set')
+          check(len(blockers) == 3, 'exact_blocker_count')
 
-          # Closed blocker classes must not silently return to the active blocker list.
           forbidden_stale = {
               'PORTALS_CHAT_ONLY_AND_NOT_RECORDED_ITEMS',
               'PORTALS_PLACE_VERBS_RAW_DICTIONARY_MISSING',
               'AUDIO_FINAL_BINARY_INVENTORY_NOT_PROVEN_FOR_ALL_PROJECTS',
               'NUMERICAL_ORDER_LATEST_RESEARCH_NOTE_NOT_YET_SINGLE_CURRENT_AUTHORITY',
           }
-          assert not (set(blockers) & forbidden_stale)
+          check(not (set(blockers) & forbidden_stale), 'stale_blocker_not_reintroduced')
 
-          # Cross-file semantic/readback markers.
-          assert state['readback_markers']['master'] in master
-          assert state['readback_markers']['chat_only'] in ledger
-          assert state['readback_markers']['math'] in math_note
-          assert state['readback_markers']['binary'] in binary
-          assert 'RECOVERED_CONTEXT != CANON' in ledger
-          assert 'NUMBER != NUMERAL_REPRESENTATION' in ledger
-          assert 'Do not delete all conversations yet' in master
-          assert 'RECOVERY-DELTA-20260822-1332-PLACEVERBS-MATH-CLOSED-AUDIO-REFINED-VISUAL-PARTIAL-3-BLOCKERS-REMAIN' in delta
-          assert 'VISUAL-RECOVERY-20260822-SHILLELAGH-CLASSIFIED-PRELIMINARY-DUBLIN-PORTALS-FINALITY-ROUTING-OPEN' in visual
-          assert 'PAINTERS-DUBLIN-RECOVERY-20260822-NONSECRET-HANDOFF-PERSISTED-EXACT-EXPORT-NOT-FOUND' in painters
+          # Durable semantic markers across control-plane artifacts.
+          check(state['readback_markers']['master'] in master, 'master_marker')
+          check(state['readback_markers']['chat_only'] in ledger, 'ledger_marker')
+          check(state['readback_markers']['math'] in math_note, 'math_marker')
+          check(state['readback_markers']['binary'] in binary, 'binary_marker')
+          check(state['readback_markers']['visual'] in visual, 'visual_marker')
+          check(state['readback_markers']['painters'] in painters, 'painters_marker')
+          check('RECOVERED_CONTEXT != CANON' in ledger, 'recovered_context_rule')
+          check('NUMBER != NUMERAL_REPRESENTATION' in ledger, 'number_representation_rule')
+          check('Do not delete all conversations yet' in master, 'human_delete_warning')
+          check('RECOVERY-DELTA-20260822-1332-PLACEVERBS-MATH-CLOSED-AUDIO-REFINED-VISUAL-PARTIAL-3-BLOCKERS-REMAIN' in delta, 'delta_marker')
 
-          # Evidence-ceiling checks.
-          assert 'NO novelty claim' in math_note or 'no novelty claim' in math_note
-          assert 'NO_LIVE_BINARY_CREATED != MISSING_BINARY' in binary
-          assert 'CONTROLLED_DRIVE_DUPLICATE_NOT_VERIFIED' in binary
-          assert 'PRIOR_REACQUISITION_HTTP403_CONFIRMED' in binary
-          assert 'PRELIMINARY_APPLICATION_STUDY' in visual
-          assert 'PAINTERS_DUBLIN_CURRENT_EXPORT_HANDOFF_VERIFIED = FALSE' in painters
+          # Evidence is checked from structured fields, not wording-sensitive prose.
+          room = by_id['AUDIO-R917']['real_binary_blockers'][0]
+          check(room['asset'] == 'ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav', 'room917_expected_master_name')
+          check(room['sha256'] == '231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8', 'room917_expected_hash')
+          check(room['size_bytes'] == 189558764, 'room917_expected_size')
+          check('CONTROLLED_DRIVE_DUPLICATE_NOT_VERIFIED' in room['status'], 'room917_drive_unverified')
+          check('HTTP403' in room['status'], 'room917_prior_http403')
+
+          art = by_id['ART-IRELAND']
+          check(art['verified_shillelagh_png_count'] == 7, 'shillelagh_seven_png')
+          check(art['shillelagh_png_class'] == 'PRELIMINARY_APPLICATION_STUDY_NOT_FINAL_MURAL', 'shillelagh_not_final')
+          check(art['drive_visual_manifest'] == '1vkwwnISf95_NQJue4Bohem-MchY2Tvwf2qvq81w3zYc', 'visual_drive_pointer')
+
+          web = by_id['WEB-PAINTERS']
+          check(web['current_export_verified'] is False, 'painters_export_unverified')
+          check(web['reconstruction_handoff_exists'] is True, 'painters_handoff_exists')
+          check(web['drive_reconstruction_handoff'] == '1mr3b0r-5BvRziiYJwnr_-kr7cyPj2BY_lNP07cD7FFI', 'painters_drive_pointer')
 
           for p in projects:
               if p.get('known_chat_only_material_gap') is True:
-                  assert p.get('deletion_safety') not in {
+                  check(p.get('deletion_safety') not in {
                       'SAFE_FOR_WORK_AUTHORITY',
                       'SAFE_FOR_CURRENT_WORK_AUTHORITY',
                       'SAFE_FOR_CURRENT_RESEARCH_AUTHORITY',
-                  }, p['id']
+                  }, f'unsafe_chat_gap_marked_safe:{p["id"]}')
 
           print(f"MASTER_RECOVERY_GUARD_PASS schema={state['schema']} projects={len(projects)} blockers={len(blockers)}")
           PY
