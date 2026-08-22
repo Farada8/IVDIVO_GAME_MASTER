@@ -1,0 +1,89 @@
+name: ROOM917 Room Bed Synth Canaries
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/room917-room-bed-synth-canaries.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py'
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deterministic audio dependencies
+        run: |
+          python -m pip install --disable-pip-version-check numpy scipy soundfile
+
+      - name: Generate A01/A02 synthetic listening canaries
+        run: |
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py
+
+      - name: Machine format and seam preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import numpy as np
+          import soundfile as sf
+
+          root=Path('ROOM917_ROOM_BED_SYNTH_CANARIES')
+          receipt=json.loads((root/'ROOM917_E01_ROOM_BED_SYNTHETIC_CANARY_RECEIPT_v2.json').read_text(encoding='utf-8'))
+          if len(receipt.get('assets') or []) != 2:
+              raise SystemExit('Expected exactly two canary assets')
+          for row in receipt['assets']:
+              p=Path(row['path'])
+              if not p.exists():
+                  raise SystemExit(f'Missing {p}')
+              y,sr=sf.read(p,always_2d=True)
+              if sr != 48000 or y.shape[1] != 2:
+                  raise SystemExit(f'Format failure {p}: sr={sr} channels={y.shape[1]}')
+              if abs(len(y)/sr - 30.0) > 1e-6:
+                  raise SystemExit(f'Duration failure {p}')
+              d=np.diff(y,axis=0)
+              seam=y[0]-y[-1]
+              dr=np.sqrt(np.mean(d*d,axis=0))
+              ratio=20*np.log10((np.abs(seam)+1e-12)/(dr+1e-12))
+              # Hard click guard only. Human loop audition is still mandatory.
+              if np.max(ratio) > 10.0:
+                  raise SystemExit(f'Hard seam risk {p}: {ratio.tolist()} dB vs diff RMS')
+          print('PASS: 48k stereo 30s and no hard seam spike. Human audition remains required.')
+          PY
+
+      - name: Upload listening artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_E01_A01_A02_SYNTH_CANARIES
+          path: ROOM917_ROOM_BED_SYNTH_CANARIES/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Summary
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## ROOM917 E01 room-bed canaries
+          - A01 Greyhaven lobby: generated
+          - A02 switchboard alcove: generated
+          - 48 kHz / 24-bit / stereo / 30 s
+          - provider calls: 0
+          - paid synthesis: 0
+          - story changes: 0
+          - status: CANDIDATE / HOLD
+          - production binding: forbidden until human audition + identity gate + D003 timing/master recovery
+          EOF
