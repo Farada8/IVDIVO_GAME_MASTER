@@ -29,4 +29,26 @@ assert len(mod.QUESTIONS) == 6
 joined = " ".join(mod.QUESTIONS).lower()
 for token in FORBIDDEN:
     assert token not in joined, f"non-P003B question leaked into blind package: {token}"
-print("PASS P003B six-question contract")
+
+stereo = {"file":"R917_BLIND_E01_TARGET.wav","sha256":"0"*64,"playback":"PASS_A_FIRST"}
+public = mod.build_public_manifest("TEST_PACKAGE", stereo)
+assert set(public["files"]) == {"stereo_target"}, public["files"]
+assert "machine_qc_status" not in public
+serialized_public = str(public).lower()
+assert "phone_proxy.wav" not in serialized_public
+assert "mono.wav" not in serialized_public
+assert "pass_b_candidate" not in serialized_public
+assert public["question_classes"] == EXPECTED_CLASSES
+assert public["questions"] == EXPECTED_QUESTIONS
+
+pass_c = mod.build_pass_c_manifest(
+    "TEST_PACKAGE",
+    {"mono_folddown":{"file":"R917_BLIND_E01_MONO.wav"},"phone_band_mono":{"file":"R917_BLIND_E01_PHONE_PROXY.wav"}},
+    "PASS_MACHINE_QC",
+)
+assert pass_c["status"] == "SEALED_UNTIL_PASS_A_NOTES_FROZEN"
+assert pass_c["open_only_after"] == "PASS_A_NOTES_FROZEN"
+assert pass_c["machine_qc_status"] == "PASS_MACHINE_QC"
+assert "mono_folddown" in pass_c["files"] and "phone_band_mono" in pass_c["files"]
+
+print("PASS P003B six-question contract and blind firewall")
