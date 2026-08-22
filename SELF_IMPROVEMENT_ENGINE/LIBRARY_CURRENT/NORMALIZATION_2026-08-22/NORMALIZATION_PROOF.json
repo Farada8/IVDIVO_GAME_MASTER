@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-08-22",
+  "status":"N09_N15_COMPLETED_EVIDENCE_READY_FOR_CROSS_STORE_PERSISTENCE",
+  "inputs":{"drive_folder_id":"1F_21NJ9YXB63ctOS5KPrkeDlcYKkUTVv","physical_entries_observed":35},
+  "checks":[
+    {"gate":"N09_MANIFEST_COVERAGE","result":"PASS","evidence":"35 Drive IDs mapped to 35 authenticated raw fetches"},
+    {"gate":"N10_HASH_COVERAGE","result":"PASS","evidence":"SHA-256 computed for 35/35 raw byte streams"},
+    {"gate":"N11_EXACT_DUPLICATE_DETECTION","result":"PASS","evidence":"2 SHA-256 duplicate groups; no filename-only duplicate inference"},
+    {"gate":"N12_QUARANTINE","result":"PASS","evidence":"9 broken/placeholder physical entries; 4 unique broken payload hashes"},
+    {"gate":"N13_CANONICAL_ALIAS_MAP","result":"PASS","evidence":"26 valid physical -> 24 canonical works -> 23 work families; explicit format/translation relations"},
+    {"gate":"N14_SOURCE_PASSPORTS","result":"PASS_DERIVED_REFERENCE_ONLY","evidence":"8 high-decision-value passport groups plus secondary references"},
+    {"gate":"N15_CONCENTRATION_RISK","result":"PASS","evidence":"Mechanism support counted by canonical work/work family, not physical file"},
+    {"gate":"N16_CURRENT_REGISTRY_UPDATE","result":"PENDING_CROSS_STORE_READBACK","evidence":null}
+  ],
+  "evidence_ceiling":"BYTE_INTEGRITY_BIBLIOGRAPHIC_NORMALIZATION_AND_DERIVED_REFERENCE_MECHANISMS_ONLY",
+  "not_proven":["Human Signal","literary superiority","provider behavior","legal validity","market performance","generic causal truth of source theories"],
+  "raw_copyrighted_bytes_published_to_github":false
+}
