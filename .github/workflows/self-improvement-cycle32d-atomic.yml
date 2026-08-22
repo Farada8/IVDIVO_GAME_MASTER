@@ -1,0 +1,25 @@
+name: self-improvement-cycle32d-atomic
+
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_preexecution_resume_guard.py'
+      - 'tests/test_ivdivo_preexecution_resume_guard.py'
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE32D_ATOMIC_REBASE_2026-08-22/**'
+      - '.github/workflows/self-improvement-cycle32d-atomic.yml'
+  workflow_dispatch:
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install pytest
+      - name: Run atomic resume-guard regression
+        env:
+          PYTHONPATH: .
+        run: pytest -q tests/test_ivdivo_preexecution_resume_guard.py
