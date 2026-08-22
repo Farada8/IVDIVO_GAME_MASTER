@@ -1,0 +1,42 @@
+name: ROOM917 RU Cast Lock Gate
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/**'
+      - '.github/workflows/room917-ru-cast-lock.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/**'
+      - '.github/workflows/room917-ru-cast-lock.yml'
+
+jobs:
+  validator-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run fail-closed validator tests
+        run: python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/test_validate_ru_cast_lock.py
+
+  validate-live-receipt-if-present:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate live receipt only when it exists
+        shell: bash
+        run: |
+          set -euo pipefail
+          RECEIPT='AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_CAST_LOCK_RECEIPT.json'
+          if [[ -f "$RECEIPT" ]]; then
+            python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/validate_ru_cast_lock.py "$RECEIPT"
+          else
+            echo 'No live cast-lock receipt yet; CAST remains UNLOCKED.'
+          fi

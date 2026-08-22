@@ -1,18 +1,25 @@
 {
-  "schema_version": "ivdivo.room917_ru_s0_canary_bundle/1.1",
+  "schema_version": "ivdivo.room917_ru_s0_canary_bundle/1.2",
   "date": "2026-08-22",
   "project_id": "ROOM917",
   "locale": "ru-RU",
   "model_id": "eleven_v3",
   "language_code": "ru",
   "cast_source": "ROOM917_RU_S0_PUBLIC_CANARY_CAST_v1.0.json",
-  "status": "BOUNDED_PAID_CANARY_READY_AFTER_FRESH_PROVIDER_SNAPSHOT",
+  "cast_source_policy": "TEXT_TEST_GEOMETRY_ONLY__DIAGNOSTIC_IDS_MUST_BE_REBOUND_BY_NATIVE_COMPILER_BEFORE_ANY_PAID_S0",
+  "status": "BOUNDED_PAID_CANARY_READY_AFTER_FRESH_PROVIDER_SNAPSHOT_AND_NATIVE_REBIND",
+  "eleven_v3_setting_policy": {
+    "allowed_for_this_canary": ["stability", "style"],
+    "style_fixed": 0.0,
+    "unavailable_removed": ["similarity_boost", "use_speaker_boost", "speed"],
+    "comparison_rule": "same meaningful settings within each A/B/C comparison round"
+  },
   "audition_format_policy": {
     "output_format": "mp3_44100_128",
     "purpose": "CAST_AND_PERFORMANCE_AUDITION_ONLY",
     "not_final_master": true,
     "final_production_master_remains": "48K_24BIT_WAV_AFTER_CAST_LOCK_AND_ASSEMBLY",
-    "reason": "Use an ElevenLabs-supported broadly available MP3 canary format; do not request invalid mp3_48000_192 or confuse audition files with final mastering format."
+    "reason": "Use an ElevenLabs-supported broadly available MP3 canary format; audition files are not final masters."
   },
   "blocks": [
     {
@@ -25,7 +32,7 @@
       "exact_text": "Привидений я не сертифицирую. Я подтверждаю, что система может делать, а чего не может. Если ответы кому-то не нравятся — пусть спорят с измерениями.",
       "unit_id": "E01:ELENA:BOUNDARY",
       "text_ref": "RU_E01_SCENE1_ELENA_PROFESSIONAL_BOUNDARY",
-      "voice_settings": {"stability": 0.38, "similarity_boost": 0.75, "style": 0.0, "use_speaker_boost": true, "speed": 0.98}
+      "voice_settings": {"stability": 0.38, "style": 0.0}
     },
     {
       "block_id": "RU_S0_JULIAN_72",
@@ -37,7 +44,7 @@
       "exact_text": "Семьдесят два человека узнают, насколько надолго принципов хватает, чтобы в ноябре сохранить работу в приморском городке.",
       "unit_id": "E01:JULIAN:72_STAFF",
       "text_ref": "RU_E01_SCENE1_JULIAN_ECONOMIC_STAKES",
-      "voice_settings": {"stability": 0.46, "similarity_boost": 0.78, "style": 0.0, "use_speaker_boost": true, "speed": 0.97}
+      "voice_settings": {"stability": 0.46, "style": 0.0}
     },
     {
       "block_id": "RU_S0_MINA_INTRO",
@@ -49,7 +56,7 @@
       "exact_text": "Ну конечно. Мина Шах. Ночной менеджер, переговорщик по вопросам завтрака и сейчас единственный человек, который знает, какое ведро ставить под какую протечку. В Грейхейвене ведра выше по должности, чем большинство из нас.",
       "unit_id": "E01:MINA:INTRO",
       "text_ref": "RU_E01_SCENE1_MINA_ORDINARY_HUMOR",
-      "voice_settings": {"stability": 0.34, "similarity_boost": 0.72, "style": 0.0, "use_speaker_boost": true, "speed": 1.03}
+      "voice_settings": {"stability": 0.34, "style": 0.0}
     },
     {
       "block_id": "RU_S0_CATE_LENI_BIRD",
@@ -61,7 +68,7 @@
       "exact_text": "Лени-бёрд... Если это дойдёт—",
       "unit_id": "E01:CATE:LENI_BIRD",
       "text_ref": "RU_E01_SCENE3_CATE_CLEAN_HUMAN_SOURCE",
-      "voice_settings": {"stability": 0.32, "similarity_boost": 0.8, "style": 0.0, "use_speaker_boost": true, "speed": 0.94}
+      "voice_settings": {"stability": 0.32, "style": 0.0}
     },
     {
       "block_id": "RU_S0_ELENA_MINA_RELATION",
@@ -101,5 +108,11 @@
     "max_blocks_this_stage": 6,
     "rerender_policy": "FAILED_BLOCKS_ONLY_AFTER_LISTENING",
     "voice_lock": false
-  }
+  },
+  "hard_rules": [
+    "DIAGNOSTIC_TEMPLATE_IDS_MUST_NOT_REACH_PAID_PROVIDER_CALL",
+    "NATIVE_BINDING_COMPILER_REQUIRED",
+    "ELEVEN_V3_UNAVAILABLE_SETTINGS_REMOVED",
+    "NO_FULL_E01_BEFORE_CAST_LOCK"
+  ]
 }

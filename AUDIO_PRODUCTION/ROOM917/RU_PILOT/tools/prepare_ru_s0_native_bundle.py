@@ -85,7 +85,7 @@ def main() -> int:
         bound[role] = voice_id
 
     runtime = json.loads(json.dumps(template, ensure_ascii=False))
-    runtime["schema_version"] = "ivdivo.room917_ru_s0_native_runtime_bundle/1.1"
+    runtime["schema_version"] = "ivdivo.room917_ru_s0_native_runtime_bundle/1.2"
     runtime["status"] = "NATIVE_RU_BOUND_PAID_S0_RUNTIME"
     runtime["cast_source"] = str(args.bindings)
     runtime["provider_snapshot"] = {
@@ -113,16 +113,23 @@ def main() -> int:
             require(role is not None, f"{block.get('block_id')}: unknown turn template voice ID {old}")
             turn["voice_id"] = bound[role]
 
-        # Eleven v3: Similarity and Speaker Boost are not available.
-        # Keep only settings that remain meaningful for this v3 audition experiment.
+        # Eleven v3 product guidance: Similarity, Speaker Boost, and Speed are not available.
+        # Keep only settings meaningful for v3 audition evidence; style remains fixed at 0.
         if isinstance(block.get("voice_settings"), dict):
             vs = block["voice_settings"]
             vs.pop("similarity_boost", None)
             vs.pop("use_speaker_boost", None)
+            vs.pop("speed", None)
             if "style" in vs:
                 vs["style"] = 0.0
 
     runtime["runtime_voice_bindings"] = bound
+    runtime["eleven_v3_setting_policy"] = {
+        "allowed_for_this_canary": ["stability", "style"],
+        "style_fixed": 0.0,
+        "removed_as_unavailable_for_v3": ["similarity_boost", "use_speaker_boost", "speed"],
+        "comparison_rule": "same meaningful settings within each A/B/C round"
+    }
     runtime["audition_output_policy"] = {
         "allowed_formats": sorted(S0_ALLOWED_OUTPUT_FORMATS),
         "default": S0_DEFAULT_OUTPUT_FORMAT,
@@ -133,6 +140,7 @@ def main() -> int:
         "NATIVE_RU_PROVIDER_SNAPSHOT_MATCH_REQUIRED",
         "DIAGNOSTIC_PUBLIC_IDS_FORBIDDEN",
         "S0_AUDITION_OUTPUT_FORMAT_ALLOWLIST_REQUIRED",
+        "ELEVEN_V3_UNAVAILABLE_SETTINGS_STRIPPED",
         "HUMAN_LISTEN_REQUIRED_BEFORE_CAST_LOCK",
         "FULL_E01_RENDER_FORBIDDEN_AT_S0",
     ]
@@ -145,6 +153,7 @@ def main() -> int:
         "roles": bound,
         "provider_snapshot_sha256": runtime["provider_snapshot"]["sha256"],
         "audition_formats": sorted(S0_ALLOWED_OUTPUT_FORMATS),
+        "v3_removed_settings": runtime["eleven_v3_setting_policy"]["removed_as_unavailable_for_v3"],
     }, ensure_ascii=False))
     return 0
 

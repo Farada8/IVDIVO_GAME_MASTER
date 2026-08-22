@@ -1,0 +1,63 @@
+{
+  "schema_version": "ivdivo.room917_ru_blind_listen_scorecard/1.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "purpose": "BLIND_ACTOR_CREDIBILITY_COMPARISON_ONLY",
+  "candidate_identity_visible_during_listen": false,
+  "allowed_labels": ["A", "B", "C"],
+  "preconditions": [
+    "same_exact_text",
+    "same_model_within_round",
+    "same_settings_within_round",
+    "no_sfx",
+    "no_music",
+    "no_room_processing",
+    "audition_loudness_matched"
+  ],
+  "per_take_questions": [
+    {"id":"Q1_REAL_ACTOR","score":"0-5","prompt":"Звучит ли это как живой русский актёр, а не TTS?"},
+    {"id":"Q2_CHARACTER","score":"0-5","prompt":"Верю ли я именно этому персонажу, а не просто красивому голосу?"},
+    {"id":"Q3_SUBTEXT","score":"0-5","prompt":"Есть ли подтекст без подчёркивания каждой эмоции?"},
+    {"id":"Q4_RHYTHM","score":"0-5","prompt":"Есть ли человеческие паузы, сбои и темп без дикторской ровности?"},
+    {"id":"Q5_PRONUNCIATION","score":"0-5","prompt":"Русское произношение и ударения естественны и не отвлекают?"},
+    {"id":"Q6_AI_AUDIBLE","score":"0-5_inverse","prompt":"Насколько слышно ИИ? 0 = не слышно, 5 = очевидно слышно."}
+  ],
+  "hard_reject_flags": [
+    "FOREIGN_ACCENT_DISTRACTS",
+    "AUDIOBOOK_CADENCE",
+    "TRAILER_CADENCE",
+    "OVERACTED_GENRE",
+    "SYNTHETIC_ENDINGS",
+    "UNNATURAL_MICRO_PAUSES",
+    "CRITICAL_TOKEN_ERROR",
+    "IDENTITY_DRIFT_BETWEEN_TAKES"
+  ],
+  "decision_fields": [
+    "role",
+    "canary_id",
+    "candidate_label",
+    "take_id",
+    "q1_real_actor",
+    "q2_character",
+    "q3_subtext",
+    "q4_rhythm",
+    "q5_pronunciation",
+    "q6_ai_audible",
+    "hard_reject_flags",
+    "best_of_round",
+    "why_in_one_sentence"
+  ],
+  "comparison_rule": {
+    "primary": "REAL_ACTOR_CREDIBILITY",
+    "secondary": "CHARACTER_FIT",
+    "tertiary": "LOW_AI_AUDIBILITY",
+    "do_not_select_for": ["prettiest_voice", "deepest_voice", "most_dramatic_voice", "closest_to_trailer_expectation"]
+  },
+  "founder_gate": {
+    "required_question": "Я верю этому актёру?",
+    "allowed_answers": ["YES", "NO", "BORDERLINE"],
+    "lock_requires": "YES",
+    "borderline_action": "SELECTIVE_FINALIST_RERENDER_OR_RECAST_ROLE_ONLY"
+  }
+}
