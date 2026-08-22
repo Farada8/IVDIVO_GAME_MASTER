@@ -8,6 +8,7 @@ on:
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/prepare_a01_a02_candidate_qc.py'
       - '.github/workflows/room917-e01-a01-a02-sfx-preflight.yml'
       - '.github/workflows/room917-e01-a01-a02-sfx-canary.yml'
   pull_request:
@@ -15,6 +16,7 @@ on:
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/prepare_a01_a02_candidate_qc.py'
       - '.github/workflows/room917-e01-a01-a02-sfx-preflight.yml'
       - '.github/workflows/room917-e01-a01-a02-sfx-canary.yml'
   workflow_dispatch:
@@ -35,11 +37,14 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Python syntax
+      - name: Python and audio toolchain syntax
         shell: bash
         run: |
           set -euo pipefail
-          python -m py_compile AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py
+          python -m py_compile \
+            AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py \
+            AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/prepare_a01_a02_candidate_qc.py
+          ffmpeg -version >/dev/null
 
       - name: Validate queue-to-provider adapter
         shell: bash
@@ -87,6 +92,103 @@ jobs:
           print('SFX_PREFLIGHT_PASS_NO_PROVIDER_CALLS')
           PY
 
+      - name: Synthetic zero-spend QC fixture
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=_room917_sfx_preflight_fixture
+          rm -rf "$root"
+          mkdir -p "$root/qc"
+
+          # Deliberately synthetic audio: proves byte handling/QC derivatives only.
+          # It is not a ROOM917 sound candidate and can never become production authority.
+          ffmpeg -hide_banner -loglevel error -y \
+            -f lavfi -i 'sine=frequency=317:sample_rate=44100:duration=3' \
+            -ac 2 -c:a mp3 "$root/A01_SYNTH.mp3"
+          ffmpeg -hide_banner -loglevel error -y \
+            -f lavfi -i 'sine=frequency=463:sample_rate=44100:duration=3' \
+            -ac 2 -c:a mp3 "$root/A02_SYNTH.mp3"
+
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root=Path('_room917_sfx_preflight_fixture')
+          rows=[]
+          for asset,cid,name in [
+              ('A01_GREYHAVEN_LOBBY_30S_LOOP','A01_SYNTHETIC_FIXTURE','A01_SYNTH.mp3'),
+              ('A02_SWITCHBOARD_ALCOVE_30S_LOOP','A02_SYNTHETIC_FIXTURE','A02_SYNTH.mp3'),
+          ]:
+              p=root/name
+              rows.append({
+                  'asset_id':asset,
+                  'candidate_id':cid,
+                  'provider_source_filename':name,
+                  'provider_source_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),
+                  'provider_source_size_bytes':p.stat().st_size,
+                  'audition_status':'HOLD_PENDING_LISTEN',
+                  'production_binding_authorized':False,
+              })
+          evidence={
+              'schema_version':'room917.synthetic_zero_spend_fixture/1.0',
+              'fixture_only':True,
+              'provider_calls':0,
+              'production_binding_authorized':False,
+              'candidates':rows,
+          }
+          (root/'ROOM917_E01_A01_A02_SFX_CANARY_EVIDENCE.json').write_text(
+              json.dumps(evidence,indent=2)+'\n',encoding='utf-8')
+          PY
+
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/prepare_a01_a02_candidate_qc.py \
+            --evidence "$root/ROOM917_E01_A01_A02_SFX_CANARY_EVIDENCE.json" \
+            --outdir "$root/qc"
+
+      - name: Verify synthetic QC outputs fail closed
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, wave
+          from pathlib import Path
+          root=Path('_room917_sfx_preflight_fixture/qc')
+          report=json.loads((root/'ROOM917_E01_A01_A02_MACHINE_QC.json').read_text(encoding='utf-8'))
+          pending=json.loads((root/'ROOM917_E01_A01_A02_PENDING_HUMAN_CANDIDATES.json').read_text(encoding='utf-8'))
+
+          assert report['status']=='PREPARED_FOR_HUMAN_AUDITION_NOT_BOUND'
+          assert report['candidate_count']==2
+          assert report['machine_may_award_artistic_pass'] is False
+          assert report['production_binding_authorized'] is False
+          assert pending['status']=='MULTIPLE_CANDIDATES_PENDING_HUMAN_SELECTION_NOT_BINDABLE'
+
+          required_human={
+              'ROOM_IDENTITY','LOOP_SEAM','FALSE_CLUE_AUDIT',
+              'MONO_TRANSLATION','PHONE_PROXY_TRANSLATION','DIALOGUE_UNDERLAY'
+          }
+          for row in report['rows']:
+              assert row['machine_status']=='PREPARED_FOR_HUMAN_AUDITION'
+              assert row['production_binding_authorized'] is False
+              assert set(row['human_required'])==required_human
+              n=Path(row['normalized']['path'])
+              assert n.is_file()
+              assert row['normalized']['sample_rate_hz']==48000
+              assert row['normalized']['bit_depth']==24
+              assert row['normalized']['channels']==2
+              for preview in row['previews'].values():
+                  assert Path(preview['path']).is_file()
+
+          for candidates in pending['candidates_by_asset'].values():
+              assert len(candidates)==1
+              c=candidates[0]
+              assert c['gain_db'] is None
+              assert c['audition_status']=='HOLD'
+              assert c['mono_status']=='HOLD'
+              assert c['phone_proxy_status']=='HOLD'
+              assert c['loop_seam_status']=='HOLD'
+              assert c['false_clue_audit_status']=='HOLD'
+              assert c['binding_status']=='FORBIDDEN_PENDING_HUMAN_AND_CONTEXT_GATES'
+          print('SYNTHETIC_QC_PIPELINE_FAIL_CLOSED_PASS_NO_PROVIDER_CALLS')
+          PY
+
       - name: Verify paid canary remains manual-only
         shell: bash
         run: |
@@ -113,7 +215,11 @@ jobs:
           - TTS/SFX credits: 0
           - queue -> provider prompt hashes: checked
           - provider prompt length: checked
-          - runner Python syntax: checked
+          - renderer + QC packer Python syntax: checked
+          - QC packer exercised on two synthetic MP3 fixtures
+          - 48k/24-bit/stereo normalization: checked
+          - seam/mono/phone preview generation: checked
+          - artistic PASS and production binding remain human-gated: checked
           - paid workflow manual-only + confirm_spend guard: checked
           - production binding or D003 patch authorization: not granted
           EOF
