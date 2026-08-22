@@ -1,0 +1,26 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-22",
+  "book":"SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+  "master_drive_id":"1UHGfjuZ_6aJF5Fkh1pHGwjgU219cPBmDD5owIVyIlXs",
+  "master_version":"v0.5_ENGINEERING_PASS",
+  "drive_gate_id":"1a3KoDacqm2qrTGip4ZzbsD4Mim6o2KNJ68RFdTRhfrw",
+  "raw_snapshot_drive_id":"1RM2awWTfYezgI-uCr5HKIsewY67mLqxX",
+  "result":{"fatal":0,"major":0,"status":"PASS_AFTER_2_REPAIRS"},
+  "repairs":[
+    "CH26 resource attribution changed from mountain-rescue vehicle to technical-rescue support vehicle; Mountain Two retains rope/casualty package role.",
+    "CH28 explicitly rejects scoured drain side as stabilization support and uses intact wall-side concrete before block/hydraulic loading."
+  ],
+  "validated":[
+    "selective relay segmentation preserves local voice/hazard/resource traffic while degrading aggregation",
+    "source-blind field change sheet keeps Luka Marin away from precursor vocabulary",
+    "old fixed rungs rejected after inspection",
+    "protected wall-side rope transfer built from current field geometry",
+    "carrier independently stabilized before limited hydraulic clearance",
+    "normal stretcher rejected for hatch; compact rescue litter clearance verified before raise",
+    "manual coordination cost remains visible after segmentation"
+  ],
+  "boundary":"B7/SYNC A/SYNC B/AUTO-RESTORE are fictionalized OT abstractions, not claims about a real Slovenian vendor or deployed protocol.",
+  "watch":"03:44 first landing to 04:01 trailhead is aggressive but acceptable given pre-verified short route and compact equipment; do not shorten further.",
+  "next":"COMPILED_PACING_AND_CH29_RESOLUTION_DENSITY_PASS"
+}
