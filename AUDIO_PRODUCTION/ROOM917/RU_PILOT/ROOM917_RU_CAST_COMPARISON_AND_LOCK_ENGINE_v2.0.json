@@ -1,0 +1,152 @@
+{
+  "schema_version": "ivdivo.room917_ru_cast_comparison_lock_engine/2.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "scope": "PROVIDER_DISCOVERY_TO_CANARY_TO_BLIND_COMPARISON_TO_CAST_LOCK_ONLY",
+  "story_edit": false,
+  "mix_edit": false,
+  "full_episode_render_before_lock": false,
+  "pipeline": [
+    "AUTHENTICATED_ZERO_SPEND_DISCOVERY",
+    "ROLE_RANKED_PREVIEW_SHORTLIST",
+    "PROVIDER_IDENTITY_AND_DURABILITY_GATE",
+    "INDIVIDUAL_CANARY_TWO_TAKES",
+    "PRONUNCIATION_GATE",
+    "BLIND_A_B_COMPARISON",
+    "PAIR_CHEMISTRY_TESTS",
+    "FINALIST_EXTRA_TAKE",
+    "FOUNDER_CREDIBILITY_LISTEN",
+    "CAST_LOCK"
+  ],
+  "roles": {
+    "ELENA": {
+      "target": "adult female 32; intelligent grounded documentary precision; dry edge; fear remains inside professional control",
+      "anti_patterns": ["foreign_accent", "audiobook_narrator", "trailer_cadence", "generic_horror_fear", "tearful_default", "over_articulated_tts"]
+    },
+    "JULIAN": {
+      "target": "adult male 36; restrained operational authority; personal weight; intelligent pressure without alpha growl or seduction-first delivery",
+      "anti_patterns": ["alpha_growl", "overt_flirt", "villain_color", "foreign_accent", "melodramatic_stress", "trailer_cadence"]
+    },
+    "MINA": {
+      "target": "adult female; practical warm socially quick; ordinary humor; credible witness under pressure",
+      "anti_patterns": ["sitcom_cadence", "hysteria", "cartoon_warmth", "foreign_accent", "loss_of_literal_precision", "presenter_voice"]
+    },
+    "CATE": {
+      "target": "adult female mother; ordinary exhausted human; intimate domestic warmth; identity stable across clean source and degraded-medium context",
+      "anti_patterns": ["ghost_voice", "theatrical_pleading", "ethereal_preset", "child_like_voice", "identity_drift", "horror_whisper"]
+    }
+  },
+  "provider_gate": {
+    "must_pass": [
+      "authenticated_snapshot",
+      "ru_verified_true",
+      "professional_preferred",
+      "notice_period_days_ge_365",
+      "voice_id_resolves_to_self",
+      "disable_at_null_or_beyond_production_horizon"
+    ],
+    "reject": ["legacy_default_voice_for_production", "known_expiry_inside_horizon", "identity_mismatch", "unverified_language"]
+  },
+  "individual_scoring": {
+    "scale": "0-5",
+    "dimensions": {
+      "native_ru_pronunciation": 1.0,
+      "age_character_fit": 1.0,
+      "naturalism_no_tts_performance": 1.5,
+      "microemotion_subtext": 1.25,
+      "precision_under_pressure": 1.0,
+      "repeat_take_identity_consistency": 0.75
+    },
+    "raw_max": 30,
+    "weighted_max": 32.5,
+    "minimum_raw_pass": 24,
+    "minimum_naturalism": 4,
+    "minimum_pronunciation": 4,
+    "hard_reject_overrides_score": true
+  },
+  "blind_comparison": {
+    "identity_masking": "candidate labels A/B/C only during human listen",
+    "same_text_required": true,
+    "same_model_required_within_round": true,
+    "same_voice_settings_required_within_round": true,
+    "loudness_normalize_for_audition_only": true,
+    "no_sfx_music_or_room_processing": true,
+    "questions": [
+      "WHICH_ONE_SOUNDS_MOST_LIKE_A_REAL_RUSSIAN_ACTOR_NOT_TTS",
+      "WHICH_ONE_FITS_THE_CHARACTER_WITHOUT_PERFORMING_THE_GENRE",
+      "WHICH_ONE_RETAINS_SUBTEXT_WITHOUT_OVERACTING",
+      "WHICH_ONE_REMains_CREDIBLE_ON_SECOND_TAKE",
+      "WHERE_IS_AI_AUDIBLE"
+    ],
+    "tie_break": ["naturalism", "pronunciation", "pair_chemistry", "identity_consistency", "age_fit"]
+  },
+  "take_policy": {
+    "initial_takes_per_canary": 2,
+    "finalist_extra_take": 1,
+    "two_failed_correctly_directed_attempts": "FAIL_CANDIDATE_OR_VOICE_CLASS_FOR_ROLE",
+    "rerender": "FAILED_UNIT_ONLY",
+    "full_episode_for_cast_testing": false,
+    "tag_rescue_limit": "ONE_MINIMAL_PERFORMANCE_TAG_AFTER_CLEAN_BASELINE_ONLY"
+  },
+  "pronunciation_gate": {
+    "critical_tokens": {
+      "Greyhaven": "Грейхейвен",
+      "Ashcroft": "Эшкрофт",
+      "Leni-bird": "Лени-бёрд",
+      "916": "девятьсот шестнадцать",
+      "917": "девятьсот семнадцать",
+      "1:17": "один семнадцать",
+      "50 Hz": "пятьдесят герц",
+      "38 ms": "тридцать восемь миллисекунд"
+    },
+    "fail_action": "DICTIONARY_OR_LOCKED_SPELLING_THEN_SELECTIVE_RERENDER",
+    "story_rewrite": false
+  },
+  "pair_gates": {
+    "ELENA_MINA": "dry immediate compatibility; ordinary human rhythm; no exposition cadence; no instant-best-friend rhythm",
+    "ELENA_JULIAN_1": "competence friction; both intelligent; no overt flirt; no alpha dynamic",
+    "ELENA_JULIAN_2": "status conflict changes rhythm without caricature",
+    "CATE_IDENTITY": "same woman across clean fragment and cassette-context performance; degradation belongs to post not acting"
+  },
+  "lock_contract": {
+    "all_required": [
+      "provider_identity_pass",
+      "provider_durability_pass",
+      "individual_raw_score_ge_24",
+      "naturalism_ge_4",
+      "pronunciation_ge_4",
+      "all_required_pair_tests_pass",
+      "accepted_finalist_extra_take",
+      "founder_credibility_listen_pass"
+    ],
+    "lock_payload": [
+      "role",
+      "provider",
+      "voice_id",
+      "provider_voice_name",
+      "verified_language",
+      "category",
+      "notice_period_days",
+      "model_id",
+      "accepted_voice_settings",
+      "accepted_canary_ids",
+      "accepted_canary_sha256",
+      "pronunciation_gate_receipt",
+      "pair_gate_receipt",
+      "founder_decision",
+      "locked_at"
+    ],
+    "status_before_all_required": "UNLOCKED",
+    "status_after_all_required": "LOCKED"
+  },
+  "fail_closed_rules": [
+    "NO_PROVIDER_EVIDENCE_SIMULATION",
+    "NO_HUMAN_LISTEN_SIMULATION",
+    "NO_CAST_LOCK_FROM_METADATA_ONLY",
+    "NO_CAST_LOCK_FROM_SINGLE_LUCKY_TAKE",
+    "NO_FULL_E01_BEFORE_ALL_FOUR_ROLES_LOCKED",
+    "NO_STORY_REWRITE_TO_HIDE_CAST_FAILURE",
+    "NO_MIX_PROCESSING_TO_HIDE_CAST_FAILURE"
+  ]
+}
