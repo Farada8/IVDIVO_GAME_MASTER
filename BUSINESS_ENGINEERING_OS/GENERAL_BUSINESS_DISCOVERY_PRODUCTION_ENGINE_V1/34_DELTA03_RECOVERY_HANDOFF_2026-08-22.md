@@ -54,7 +54,8 @@ This rule was promoted locally after two separate valid forward-progress events 
 Existing Drive authority was found and semantically read back:
 
 - folder: `1OmItqAQOC1_LZa-Uds3GsClMKW_DXXR4`
-- document: `17KiIi-_3HXa78HH_Ll4UuX_P3P-GUNXJl5oX5FYTXXU`
+- source document: `17KiIi-_3HXa78HH_Ll4UuX_P3P-GUNXJl5oX5FYTXXU`
+- recovery handoff mirror: `1zvebb_3VfCAP60wqnfHHBezg9je--CKt3QaOkLbjZ_s`
 - decision: `DELTA03_DISPOSITION = PROTECT_NO_CHANGE`
 - advance: `DELTA03_ADVANCE_TO_SMALLEST_PROOF = NONE`
 - WIP promotion: `FALSE`
