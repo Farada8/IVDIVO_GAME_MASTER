@@ -1,0 +1,29 @@
+name: SI-0015 SMITH Router Repair Proof
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_ROUTER_REPAIR_2026-08-22/**'
+      - 'CURRENT_IVDIVO_SYSTEM_STATE.json'
+      - 'CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json'
+      - 'PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json'
+      - 'tools/ivdivo_preexecution_resume_guard.py'
+      - '.github/workflows/si0015-smith-router-repair.yml'
+  workflow_dispatch:
+jobs:
+  proof:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test bounded repair and pre/post guard behavior
+        run: python SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_ROUTER_REPAIR_2026-08-22/test_repair.py -v
+      - name: Generate exact patched routers
+        run: python SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_SMITH_ROUTER_REPAIR_2026-08-22/apply_repair.py --out-dir patched
+      - uses: actions/upload-artifact@v4
+        with:
+          name: smith-router-patched-json
+          path: |
+            patched/CURRENT_IVDIVO_SYSTEM_STATE.json
+            patched/CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json
