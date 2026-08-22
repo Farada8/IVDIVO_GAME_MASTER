@@ -1,0 +1,24 @@
+{
+  "schema": "ivdivo.general_business.tokenomics_fixture/1.0",
+  "synthetic": true,
+  "real_provider_prices_used": false,
+  "currency": "EUR",
+  "decision_context": {
+    "segment": "BETA",
+    "revenue_eur": 100,
+    "non_ai_variable_cost_eur": 80,
+    "decision_ready_outcome_coverage_threshold_pct": 95
+  },
+  "records": [
+    {"record_id":"r1","provider":"P1","model":"m1","cost_eur":12,"work_unit_id":"wu1","outcome_id":"o1","observed_segment":"ALPHA","fixture_ground_truth_segment":"ALPHA"},
+    {"record_id":"r2","provider":"P1","model":"m1","cost_eur":8,"work_unit_id":"wu2","outcome_id":"o2","observed_segment":"ALPHA","fixture_ground_truth_segment":"ALPHA"},
+    {"record_id":"r3","provider":"P2","model":"m2","cost_eur":15,"work_unit_id":"wu3","outcome_id":"o3","observed_segment":"ALPHA","fixture_ground_truth_segment":"ALPHA"},
+    {"record_id":"r4","provider":"P2","model":"m2","cost_eur":10,"work_unit_id":"wu4","outcome_id":"o4","observed_segment":"ALPHA","fixture_ground_truth_segment":"ALPHA"},
+    {"record_id":"r5","provider":"P3","model":"m3","cost_eur":20,"work_unit_id":"wu5","outcome_id":"o5","observed_segment":"ALPHA","fixture_ground_truth_segment":"ALPHA"},
+    {"record_id":"r6","provider":"P3","model":"m3","cost_eur":10,"work_unit_id":"wu6","outcome_id":null,"observed_segment":null,"fixture_ground_truth_segment":"BETA"},
+    {"record_id":"r7","provider":"P1","model":"m1","cost_eur":5,"work_unit_id":null,"outcome_id":null,"observed_segment":null,"fixture_ground_truth_segment":"BETA"},
+    {"record_id":"r8","provider":"P2","model":"m2","cost_eur":8,"work_unit_id":"wu8","outcome_id":"o8","observed_segment":"BETA","fixture_ground_truth_segment":"BETA"},
+    {"record_id":"r9","provider":"P3","model":"m3","cost_eur":7,"work_unit_id":"wu9","outcome_id":null,"observed_segment":null,"fixture_ground_truth_segment":"BETA"},
+    {"record_id":"r10","provider":"P1","model":"m1","cost_eur":5,"work_unit_id":"wu10","outcome_id":"o10","observed_segment":"BETA","fixture_ground_truth_segment":"BETA"}
+  ]
+}
