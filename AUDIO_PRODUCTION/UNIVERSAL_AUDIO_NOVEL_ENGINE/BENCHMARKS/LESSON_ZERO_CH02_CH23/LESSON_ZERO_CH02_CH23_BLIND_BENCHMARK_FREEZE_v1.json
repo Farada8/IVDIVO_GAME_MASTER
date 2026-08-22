@@ -1,0 +1,99 @@
+{
+  "schema_version": "ivdivo.cross_project_speaker_freeze/1.0",
+  "created": "2026-08-22",
+  "project": "LESSON_ZERO",
+  "source_authority": "03 LESSON ZERO — Book 1 Submission Master v1.0 CLEAN",
+  "source_sha256": "b90ca3786f94911fbedf3fa776fe8b67101e42cc10a9a91af9088959a0fd6b5c",
+  "frozen_scope": {
+    "start_chapter": 2,
+    "end_chapter": 23,
+    "whole_chapters_only": true
+  },
+  "alias_surface": {
+    "ETHAN": ["Ethan"],
+    "SAMIR": ["Samir"],
+    "AOIFE": ["Aoife"],
+    "MAYA": ["Maya"],
+    "OLLIE": ["Ollie"],
+    "TAAL": ["Taal"],
+    "ROWE": ["Rowe"],
+    "SEYA": ["Seya"],
+    "CALDER": ["Calder"],
+    "AARON": ["Aaron"],
+    "ORTEGA": ["Ortega"],
+    "PRIYA": ["Priya"],
+    "RACHEL": ["Rachel"],
+    "NHARU": ["Nharu"],
+    "NATE": ["Nate"],
+    "SINGH": ["Singh"],
+    "FARAH": ["Farah"],
+    "IMRAN": ["Imran"],
+    "AIDEN": ["Aiden"],
+    "CHEN": ["Chen"],
+    "VOSS": ["Voss"],
+    "RUTH": ["Ruth"],
+    "MIRA": ["Mira"],
+    "DELGADO": ["Delgado"]
+  },
+  "ground_truth_status": "PENDING_INDEPENDENT_BLIND_ANNOTATION",
+  "blindness_guarantee": {
+    "annotation_packet_contains_engine_predicted_speaker": false,
+    "annotation_packet_contains_rule_bucket": false,
+    "candidate_ids_frozen_before_scoring": true,
+    "candidate_set_contains_all_current_runtime_triggers_in_frozen_scope_for_frozen_alias_surface": true
+  },
+  "candidate_counts": {
+    "PRONOUN_GRAMMATICAL_SUBJECT_TRACKER": 86,
+    "SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION": 53,
+    "unique_candidates": 139
+  },
+  "candidate_ids_by_rule": {
+    "PRONOUN_GRAMMATICAL_SUBJECT_TRACKER": [
+      "LZ_CH02_Q032", "LZ_CH02_Q049", "LZ_CH03_Q020", "LZ_CH03_Q029", "LZ_CH03_Q089", "LZ_CH03_Q106", "LZ_CH04_Q010", "LZ_CH04_Q018", "LZ_CH04_Q024", "LZ_CH04_Q050", "LZ_CH05_Q037", "LZ_CH05_Q064", "LZ_CH05_Q082", "LZ_CH06_Q001", "LZ_CH06_Q027", "LZ_CH06_Q087", "LZ_CH06_Q093", "LZ_CH06_Q116", "LZ_CH06_Q132", "LZ_CH06_Q172", "LZ_CH06_Q193", "LZ_CH06_Q216", "LZ_CH06_Q218", "LZ_CH07_Q031", "LZ_CH07_Q084", "LZ_CH07_Q107", "LZ_CH07_Q163", "LZ_CH08_Q068", "LZ_CH08_Q106", "LZ_CH08_Q125", "LZ_CH08_Q130", "LZ_CH08_Q162", "LZ_CH09_Q056", "LZ_CH09_Q063", "LZ_CH09_Q076", "LZ_CH09_Q165", "LZ_CH10_Q079", "LZ_CH11_Q008", "LZ_CH11_Q071", "LZ_CH11_Q092", "LZ_CH12_Q017", "LZ_CH12_Q021", "LZ_CH13_Q001", "LZ_CH13_Q087", "LZ_CH14_Q029", "LZ_CH14_Q030", "LZ_CH14_Q051", "LZ_CH16_Q064", "LZ_CH17_Q138", "LZ_CH17_Q156", "LZ_CH17_Q162", "LZ_CH18_Q001", "LZ_CH18_Q029", "LZ_CH19_Q059", "LZ_CH19_Q080", "LZ_CH20_Q001", "LZ_CH20_Q102", "LZ_CH20_Q180", "LZ_CH21_Q001", "LZ_CH21_Q018", "LZ_CH21_Q030", "LZ_CH21_Q048", "LZ_CH21_Q080", "LZ_CH21_Q153", "LZ_CH21_Q172", "LZ_CH21_Q180", "LZ_CH21_Q209", "LZ_CH21_Q228", "LZ_CH22_Q032", "LZ_CH22_Q045", "LZ_CH22_Q057", "LZ_CH22_Q131", "LZ_CH22_Q132", "LZ_CH22_Q138", "LZ_CH22_Q167", "LZ_CH22_Q219", "LZ_CH22_Q227", "LZ_CH23_Q029", "LZ_CH23_Q062", "LZ_CH23_Q088", "LZ_CH23_Q095", "LZ_CH23_Q103", "LZ_CH23_Q107", "LZ_CH23_Q116", "LZ_CH23_Q125", "LZ_CH23_Q128"
+    ],
+    "SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION": [
+      "LZ_CH03_Q030", "LZ_CH03_Q052", "LZ_CH03_Q061", "LZ_CH03_Q090", "LZ_CH04_Q025", "LZ_CH04_Q049", "LZ_CH05_Q012", "LZ_CH05_Q038", "LZ_CH05_Q065", "LZ_CH06_Q058", "LZ_CH06_Q133", "LZ_CH07_Q005", "LZ_CH07_Q038", "LZ_CH07_Q106", "LZ_CH07_Q108", "LZ_CH07_Q124", "LZ_CH07_Q160", "LZ_CH08_Q069", "LZ_CH08_Q131", "LZ_CH09_Q077", "LZ_CH09_Q116", "LZ_CH09_Q127", "LZ_CH09_Q166", "LZ_CH10_Q160", "LZ_CH10_Q178", "LZ_CH12_Q034", "LZ_CH12_Q038", "LZ_CH12_Q079", "LZ_CH14_Q052", "LZ_CH14_Q082", "LZ_CH16_Q065", "LZ_CH17_Q010", "LZ_CH17_Q113", "LZ_CH17_Q157", "LZ_CH18_Q002", "LZ_CH18_Q089", "LZ_CH20_Q186", "LZ_CH20_Q216", "LZ_CH21_Q029", "LZ_CH21_Q049", "LZ_CH21_Q068", "LZ_CH21_Q088", "LZ_CH21_Q139", "LZ_CH21_Q173", "LZ_CH21_Q182", "LZ_CH21_Q197", "LZ_CH22_Q112", "LZ_CH23_Q089", "LZ_CH23_Q096", "LZ_CH23_Q104", "LZ_CH23_Q117", "LZ_CH23_Q126", "LZ_CH23_Q129"
+    ]
+  },
+  "chapter_counts": {
+    "CH02": {"quote_boundaries": 89, "pronoun": 2, "same_paragraph": 0},
+    "CH03": {"quote_boundaries": 120, "pronoun": 4, "same_paragraph": 4},
+    "CH04": {"quote_boundaries": 67, "pronoun": 4, "same_paragraph": 2},
+    "CH05": {"quote_boundaries": 86, "pronoun": 3, "same_paragraph": 3},
+    "CH06": {"quote_boundaries": 218, "pronoun": 10, "same_paragraph": 2},
+    "CH07": {"quote_boundaries": 163, "pronoun": 4, "same_paragraph": 6},
+    "CH08": {"quote_boundaries": 162, "pronoun": 5, "same_paragraph": 2},
+    "CH09": {"quote_boundaries": 167, "pronoun": 4, "same_paragraph": 4},
+    "CH10": {"quote_boundaries": 185, "pronoun": 1, "same_paragraph": 2},
+    "CH11": {"quote_boundaries": 141, "pronoun": 3, "same_paragraph": 0},
+    "CH12": {"quote_boundaries": 97, "pronoun": 2, "same_paragraph": 3},
+    "CH13": {"quote_boundaries": 124, "pronoun": 2, "same_paragraph": 0},
+    "CH14": {"quote_boundaries": 92, "pronoun": 3, "same_paragraph": 2},
+    "CH15": {"quote_boundaries": 150, "pronoun": 0, "same_paragraph": 0},
+    "CH16": {"quote_boundaries": 169, "pronoun": 1, "same_paragraph": 1},
+    "CH17": {"quote_boundaries": 170, "pronoun": 3, "same_paragraph": 3},
+    "CH18": {"quote_boundaries": 130, "pronoun": 2, "same_paragraph": 2},
+    "CH19": {"quote_boundaries": 177, "pronoun": 2, "same_paragraph": 0},
+    "CH20": {"quote_boundaries": 221, "pronoun": 3, "same_paragraph": 2},
+    "CH21": {"quote_boundaries": 231, "pronoun": 10, "same_paragraph": 8},
+    "CH22": {"quote_boundaries": 230, "pronoun": 9, "same_paragraph": 1},
+    "CH23": {"quote_boundaries": 160, "pronoun": 9, "same_paragraph": 6}
+  },
+  "promotion_gate": {
+    "nominal_min_n": 30,
+    "min_precision": 0.98,
+    "min_wilson_95_lower": 0.9,
+    "perfect_first_possible_pass_n": 35,
+    "one_error_first_possible_pass_n": 53
+  },
+  "annotation_fields": ["ground_truth_speaker", "disposition", "notes"],
+  "allowed_dispositions": [
+    "SCORABLE_MATCH",
+    "EXCLUDE_MAPPING_AMBIGUOUS",
+    "EXCLUDE_NON_SPOKEN",
+    "EXCLUDE_SOURCE_MISMATCH",
+    "EXCLUDE_GROUND_TRUTH_NOT_INDEPENDENT"
+  ],
+  "scoring_status": "BLOCKED_UNTIL_INDEPENDENT_ANNOTATION_COMPLETE",
+  "universal_promotion_authorized": false
+}
