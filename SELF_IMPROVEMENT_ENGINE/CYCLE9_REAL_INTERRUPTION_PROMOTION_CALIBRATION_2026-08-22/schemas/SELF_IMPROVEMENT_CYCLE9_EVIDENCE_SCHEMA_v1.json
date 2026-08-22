@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"SelfImprovementCycle9Evidence",
+  "type":"object",
+  "required":["event_id","evidence_class","source_ref","claim_ceiling","decision_effect"],
+  "properties":{
+    "event_id":{"type":"string","minLength":1},
+    "evidence_class":{"enum":["SOURCE_INSPECTED","TEST_EXECUTED","CONTROLLED_INTEGRATION","REAL_INTERRUPTION","REAL_PROJECT_PILOT","HUMAN_VALIDATED","PROVIDER_LIVE","MARKET_OBSERVED"]},
+    "source_ref":{"type":"string","minLength":1},
+    "claim_ceiling":{"type":"string","minLength":1},
+    "decision_effect":{"enum":["NONE","HOLD","PILOT","PROMOTION_REVIEW","ROLLBACK","PRUNE"]}
+  },
+  "additionalProperties":false
+}
