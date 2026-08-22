@@ -1,34 +1,7 @@
 from dataclasses import dataclass
-from enum import Enum
 from typing import Optional
 
 IDENTITY_FIELDS = {"legal_name", "legal_form", "formation_activity_code"}
-
-
-class HistoricalAnalogUse(str, Enum):
-    """Permitted/forbidden uses of a historical same-buyer tender pack."""
-
-    RETRIEVAL_HINT = "RETRIEVAL_HINT"
-    BENCHMARK_FIXTURE = "BENCHMARK_FIXTURE"
-    DOCUMENT_CATEGORY_HINT = "DOCUMENT_CATEGORY_HINT"
-    CURRENT_REQUIREMENT = "CURRENT_REQUIREMENT"
-    CURRENT_THRESHOLD = "CURRENT_THRESHOLD"
-    CURRENT_ELIGIBILITY = "CURRENT_ELIGIBILITY"
-    CURRENT_FINANCE_TERM = "CURRENT_FINANCE_TERM"
-
-
-def historical_analog_admissible(use: HistoricalAnalogUse | str) -> bool:
-    """Historical analogs can guide retrieval/parsing only, never fill current authority gaps."""
-
-    try:
-        resolved = HistoricalAnalogUse(use)
-    except ValueError:
-        return False
-    return resolved in {
-        HistoricalAnalogUse.RETRIEVAL_HINT,
-        HistoricalAnalogUse.BENCHMARK_FIXTURE,
-        HistoricalAnalogUse.DOCUMENT_CATEGORY_HINT,
-    }
 
 
 @dataclass(frozen=True)
