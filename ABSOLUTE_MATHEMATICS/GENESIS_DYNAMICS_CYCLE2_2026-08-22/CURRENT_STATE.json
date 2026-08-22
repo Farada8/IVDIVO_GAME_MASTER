@@ -1,0 +1,45 @@
+{
+  "project": "GENESIS DYNAMICS",
+  "cycle": "CYCLE2_OPERATOR_SEARCH",
+  "date": "2026-08-22",
+  "status": "DRAFT_PR_CI_GREEN_PRE_FINAL_STATE_COMMIT",
+  "claim_ceiling": "ENGINEERING_SYNTHESIS_NOVELTY_UNVERIFIED",
+  "github": {
+    "branch": "genesis-dynamics-cycle2-operator-search-fresh-20260822",
+    "pr": 354,
+    "draft": true,
+    "merge": "NOT_REQUESTED",
+    "known_ci_run_before_state_commit": 32558104750,
+    "known_ci_conclusion": "success",
+    "main_drift_observed": "branch diverged; 8 ahead / 41 behind at closure check"
+  },
+  "drive": {
+    "folder_id": "1qkGEhuohDR8mwNDfpZP-npfqB8QaELlY",
+    "zip_id": "1Q-XyjSUJBRxvUAq_pGRnQj_TWej70BQu",
+    "synthesis_id": "1cDFzDsSlaqsWJg4SOlh8Lsz5oehKmWsh",
+    "proof_id": "187SXytYoTLiJ4sTyiNyKV9y7NTCNQCcv",
+    "results32_id": "1dG6ToXh9TtLKCzV4f0GfOfS14E4n79AS",
+    "next64_id": "1fTVHJDTXXXh-T0l2NPx9vcTQU39sTx-g"
+  },
+  "run32": 32,
+  "next64": 64,
+  "tests": {
+    "local_warm": "32/32 PASS",
+    "local_cold": "32/32 PASS",
+    "github_ci": "PASS on afe75854c1f8821b25e237433f07d10372b21e4c"
+  },
+  "core_results": [
+    "finite associative peer-genesis eventually periodic",
+    "cyclic-group squaring tail=v2(m), period=ord_q(2)",
+    "diagonal D(x)=x∘x does not identify full operation",
+    "mixed probes required for operation identification",
+    "Aczel-class peer promotion doubles in additive-generator coordinate",
+    "idempotent operations form distinct fixed-point regime"
+  ],
+  "self_improvement": {
+    "policy": "MIXED_PROBE_BEFORE_OPERATION_ID",
+    "status": "LOCAL_KEEP",
+    "global_promotion": false
+  },
+  "next_front": ["GEN3-001","GEN3-009","GEN3-017","GEN3-025","GEN3-033","GEN3-041","GEN3-049","GEN3-057"]
+}

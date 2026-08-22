@@ -1,0 +1,24 @@
+name: Genesis Dynamics Cycle2
+
+on:
+  push:
+    branches:
+      - genesis-dynamics-cycle2-operator-search-fresh-20260822
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Genesis Dynamics Cycle2 tests
+        run: |
+          python -m unittest discover \
+            -s ABSOLUTE_MATHEMATICS/GENESIS_DYNAMICS_CYCLE2_2026-08-22/tests \
+            -p 'test_*.py' -v
