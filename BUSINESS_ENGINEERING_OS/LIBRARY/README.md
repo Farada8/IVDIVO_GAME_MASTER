@@ -2,12 +2,20 @@
 
 ## Current authority
 - Raw private Google Drive folder: `1X6mo94Qo103HheyDry4P3dcQkv5qZg6N`
-- Current raw-file authority: **71 files** as of 2026-08-22.
-- Current pointer: `CURRENT_LIBRARY_AUTHORITY_71_2026-08-22.md`.
+- Current physical raw-file authority: **78 files** as of 2026-08-22.
+- Current pointer: `CURRENT_LIBRARY_AUTHORITY_78_2026-08-22.md`.
 - Previous full 69-file manifest: `../2026-08-21_CYCLE2_LIBRARY_NORMALIZATION_32_TO_64/01_LIBRARY_AUTHORITY_69.md`.
+- `CURRENT_LIBRARY_AUTHORITY_71_2026-08-22.md` is retained only as a superseded intermediate snapshot.
+
+## Reconciled state
+- 69 prior physical files + 9 later physical files = 78.
+- 8 of the later files add new unique valid byte hashes.
+- the later `The Mom Test` is an exact byte duplicate and adds no evidence weight.
+- reconciled audit: 58 unique valid byte hashes, 8 exact duplicate groups, 5 broken placeholders retained/quarantined.
+- canonical unique intellectual works remain `null` until edition/format/translation resolution.
 
 ## Storage policy
-The raw copyrighted books/files remain in private Google Drive. This public repository stores only derived metadata, source passports, hashes already measured, canonical aliases, mechanism claims, engineering contracts, tests and Drive provenance pointers.
+The raw copyrighted books/files remain in private Google Drive. This public repository stores only derived metadata, byte hashes, source passports, canonical aliases, mechanism claims, engineering contracts, tests, machine state and Drive provenance pointers.
 
 ## Identity law
 `physical_file_id != byte_hash != edition_alias != canonical_work_id`.
@@ -19,9 +27,5 @@ A raw-file count is not a unique-work count. Exact byte duplicates receive one e
 
 Knowledge K0-K5, public-signal S0-S4 and market E0-E7 proof are non-substitutable.
 
-## Current deltas
-The 69-file Cycle2 authority remains complete and immutable as historical evidence. Cycle4 adds only the two confirmed later files:
-- `Business_Dynamics_John_Sterman.pdf` — Drive `1QFxl2X1u_lmh_PXf-ZedNdlSXvRhv8ta`.
-- `How_to_Measure_Anything_Douglas_Hubbard.pdf` — Drive `1trJV8PiV5gBc2C03znMqc5IM7BCyg5ES`.
-
-Both are currently `K1_METADATA_ONLY`; their contents must be grounded before mechanism promotion.
+## New-wave source priority
+Content-grounded passports are next required for: Sterman, Reinertsen, Hubbard, Covert, Heath/Heath and Dörner before book-derived mechanism promotion. Chancellor remains reference-only; Rossman noncore unless a bounded decision mechanism justifies promotion.
