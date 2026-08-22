@@ -1,0 +1,18 @@
+{
+  "schema_version":"ivdivo.business.procurement_evidence_recovery/1.0",
+  "date":"2026-08-22",
+  "base_main":"4d6dc7c5dc24ea77582327254d339e619173558f",
+  "run":{"range":"P97-P128","count":32,"executed":32},
+  "library":{"raw_drive":"1X6mo94Qo103HheyDry4P3dcQkv5qZg6N","physical":78,"valid":68,"unique_valid_hashes":58},
+  "tender":{"resource_id":8872468,"buyer":"St Joseph's Secondary School (Ballybunion)","estimated_value_eur":1600000,"publication":"2026-08-19","clarification_deadline":"2026-08-31T14:00:00+01:00","submission_deadline":"2026-09-02T17:00:00+01:00","opening":"2026-09-02T17:30:00+01:00","complete_pack_acquired":false},
+  "supplier":{"verified_packet_found":false,"insurance":null,"tax":null,"turnover":null,"references":null,"staff":null,"safety":null,"certifications":null,"capacity":null,"geography":null},
+  "proof":{"PA4":false,"PA5":false,"E3":false,"E4":false,"public_evidence_ceiling":"E2+"},
+  "constraints":{"no_outreach":true,"new_founder_cash_eur":0,"max_primary":1,"max_pilots":2},
+  "parallel":{"pr191_merged":true,"pr202_merged":true,"pr202_merge_sha":"2238eb296c09bc49523724fd5c15cf0e45a6fcc9"},
+  "local_tests":"24/24 PASS",
+  "self_improvement_candidate":"AUTHENTICATED_EVIDENCE_DEPENDENCY_SHOULD_STOP_META_EXPANSION",
+  "next_prompts":{"range":"P161-P224","count":64,"executed":0,"status":"DESIGNED_NOT_EXECUTED"},
+  "drive":{"folder_id":"1au403z349CmJSDuQY16CVkEfVD6XIwGI","master":"1nJDE6kzBB1Tl_Gb0ZdqXck1nkF0Xw3C_UfBl7L322gE","run32":"1z2uCut9ciRyKcXxe4TXyg_zhC_lkRFttO10lJnj1zlg","engineering":"1Zw64f7ydBuyygT5gWyTQ12vfgg-EuQKqGCxo7Bp6nd4","analysis":"1yi2EYbeEgok3wp3NVX-WLreKMRXvVCd-8a_J6OqwX5k","next64":"13yskuADyGiF-ktHpn6iRLXo7rzHAwUpT_wmSw01QW_E","machine":"17CZGN5WQgMTDZYdG_KCbax06caWY8ZNnsyU76RFAoUI","readback":true},
+  "github":{"branch":"business-engineering/cycle7-procurement-evidence-recovery-p97-p128-v2-20260822","pr":null,"ci":"PENDING"},
+  "next_gate":"COMPLETE_OFFICIAL_PACK_AND_VERIFIED_SUPPLIER_PACKET_OR_PROTECT_NO_CHANGE"
+}
