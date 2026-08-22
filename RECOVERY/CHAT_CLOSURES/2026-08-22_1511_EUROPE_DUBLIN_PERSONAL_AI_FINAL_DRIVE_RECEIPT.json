@@ -1,0 +1,25 @@
+{
+  "schema": "ivdivo.chat_closure.final_drive_receipt/0.1",
+  "timestamp_local": "2026-08-22T15:11:00+01:00",
+  "closure_marker": "CHAT-CLOSURE-FINAL-20260822-1511-DUBLIN-PERSONAL-AI-PL10-CURRENT",
+  "github": {
+    "final_markdown_path": "RECOVERY/CHAT_CLOSURES/2026-08-22_1511_EUROPE_DUBLIN_PERSONAL_AI_FINAL_CONVERSATION_CLOSURE.md",
+    "final_state_path": "RECOVERY/CHAT_CLOSURES/2026-08-22_1511_EUROPE_DUBLIN_PERSONAL_AI_FINAL_CONVERSATION_STATE.json"
+  },
+  "google_drive": {
+    "folder_id": "1vUjaz0iaU07vKtOldHbBInTSGVjlJX_O",
+    "folder_title": "CHAT CLOSURE — FINAL 2026-08-22 15-11 DUBLIN — PERSONAL AI PL10",
+    "document_id": "1f8p4-4-0douHrGXAVJAZ-uykBY4sXP242aQRXbLjrCU",
+    "document_title": "FINAL CONVERSATION CLOSURE — 2026-08-22 15:11 Dublin — Personal AI / Production Launch",
+    "document_revision_readback": "AIroW378yFUxMNiQzSPrpvVpINxsvMcUERLcvOOUeZydZiSEzfptwzHJJiSDOC3U5kkCXnB2rDlha2sQSFmkiBOaahwgZ4Qfnq3VD40chpo",
+    "marker_readback": true
+  },
+  "live_state_at_snapshot": {
+    "observed_main": "96683e0fc97b016b1cad09b00f940971fd62fb7f",
+    "current_frontier": "PL-10",
+    "pl10_branch_ahead_by": 10,
+    "pl10_branch_behind_by": 110,
+    "direct_old_branch_merge_forbidden": true
+  },
+  "resume_rule": "Read live CURRENT_PRODUCTION_LAUNCH_STATE.json first. If frontier remains PL-10, reconcile/fresh-replay the minimal PL-10 delta on current main; run dedicated CI + full regression + Red Team; merge, Drive-readback and advance only after evidence."
+}
