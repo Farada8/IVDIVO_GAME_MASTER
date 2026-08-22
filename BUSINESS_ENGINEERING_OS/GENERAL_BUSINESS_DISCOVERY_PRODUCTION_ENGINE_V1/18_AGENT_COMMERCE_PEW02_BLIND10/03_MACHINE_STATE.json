@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.agent_commerce.pew02_blind10/0.2",
+  "schema": "ivdivo.agent_commerce.pew02_blind10/0.3",
   "date": "2026-08-22",
-  "status": "P_EW02_BLIND10_PASS_REAL_FIXTURE_SCANNER_PATCH_PENDING_FINAL_CI",
+  "status": "P_EW02_BLIND10_PASS_REAL_FIXTURE_SCANNER_PATCH_DRIVE_READBACK_PENDING_FINAL_CI",
   "parent": "OW-01_AGENTIC_COMMERCE_MERCHANT_READINESS",
   "dependency": {
     "p_ew01_pr": 348,
@@ -87,8 +87,9 @@
     "merge_sha": null
   },
   "drive": {
-    "document_id": null,
-    "readback_marker": null,
-    "readback_status": "PENDING"
+    "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
+    "document_id": "1DFWMaKoQVVceCv7rRViz_Or7sxAN_pG4azV9O0iLzJE",
+    "readback_marker": "AGENT-COMMERCE-P-EW02-BLIND10-PASS-4UCP200-8FALSEFAILS-CORRECTED-NO-DEMAND-PROOF",
+    "readback_status": "PASS"
   }
 }
