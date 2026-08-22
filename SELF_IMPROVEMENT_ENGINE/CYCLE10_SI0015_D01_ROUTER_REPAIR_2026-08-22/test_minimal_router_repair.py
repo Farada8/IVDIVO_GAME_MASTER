@@ -14,27 +14,19 @@ class D01MinimalRouterRepair(unittest.TestCase):
         self.system = json.loads(self.system_text)
         self.portfolio = json.loads(self.portfolio_text)
 
-    def test_system_routes_to_smith(self):
+    def test_system_preserves_d01_lock_and_does_not_resume_d01(self):
         pf = self.system["portfolio_frontier"]
         self.assertIn(
             "D01_THE_WIFE_AT_HIS_WEDDING_FOUNDER_LOCKED_E01_E120_RECORDING_AUTHORITY_ISSUED",
             pf["text_locked_or_text_complete"],
         )
-        self.assertEqual(pf["active_project"]["title"], "SMITH")
-        self.assertEqual(
-            pf["active_project"]["mode"],
-            "FRESH_AUTHORITY_AND_CONTINUITY_RECONCILIATION_BEFORE_PROSE",
-        )
-        self.assertIn("NO_SMITH_PROSE", pf["active_project"]["authority_boundary"])
+        self.assertNotEqual(pf["active_project"].get("project_id"), "D01")
+        self.assertNotEqual(pf["active_project"].get("title"), "THE WIFE AT HIS WEDDING")
 
-    def test_portfolio_routes_to_smith_and_records_d01_lock(self):
+    def test_portfolio_preserves_d01_founder_lock_after_downstream_progress(self):
         self.assertEqual(self.portfolio["d01_founder_lock"]["status"], "FOUNDER_LOCKED")
         self.assertEqual(self.portfolio["d01_founder_lock"]["recording_authority"], "ISSUED")
-        self.assertEqual(self.portfolio["active_project"]["title"], "SMITH")
-        self.assertEqual(
-            self.portfolio["active_project"]["mode"],
-            "FRESH_AUTHORITY_AND_CONTINUITY_RECONCILIATION_BEFORE_PROSE",
-        )
+        self.assertNotEqual(self.portfolio["active_project"].get("project_id"), "D01")
 
     def test_stale_d01_resume_tokens_are_absent(self):
         stale = [
