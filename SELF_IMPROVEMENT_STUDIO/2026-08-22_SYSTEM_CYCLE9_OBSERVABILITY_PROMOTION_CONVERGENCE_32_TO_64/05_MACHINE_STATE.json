@@ -1,0 +1,66 @@
+{
+  "schema": "ivdivo.self_improvement.cycle9/1.0",
+  "date": "2026-08-22",
+  "status": "RUN32_COMPLETE_CANDIDATE_PACKAGE_CI_DRIVE_CLOSURE_PENDING",
+  "base_main_sha": "4d6dc7c5dc24ea77582327254d339e619173558f",
+  "governing_authority": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
+  "governing_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+  "global_promotion": false,
+  "new_si_id": null,
+  "new_top_level_engine": false,
+  "run32": {
+    "total": 32,
+    "executed_or_dispositioned": 32,
+    "pending": 0,
+    "mutate": [29],
+    "rejected_duplicate_runtime": [10]
+  },
+  "bounded_modules": [
+    "AuthoritySurfaceSnapshot",
+    "SourceSurfaceIndex",
+    "CandidateSemanticDedupe",
+    "PromotionEligibilityGate",
+    "EvidenceClassFirewall",
+    "EvidenceFamilyNormalizer",
+    "NegativeEvidenceRetentionGate",
+    "MissingAuthorityRouter",
+    "ImprovementEventCompiler",
+    "DefectRepairLifecycle",
+    "CanaryEvidenceCompiler",
+    "ReplicationMatrix",
+    "EngineWorthinessGate",
+    "MetaWorkBudgetGovernor",
+    "CompactionPlanner",
+    "SupersessionPlanner",
+    "PromptIRSemanticParityGate",
+    "SelfReferencePromotionGuard",
+    "PromotionPacketCompiler"
+  ],
+  "reused_owners": {
+    "durable_transactions": "SI-0014 / Cycle7 durable convergence",
+    "project_slice_freshness": "SI-0015 / Cycle8 integrated canaries",
+    "registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+    "learning_ledger": "CURRENT_IVDIVO_LEARNING_LEDGER.json"
+  },
+  "evidence_boundaries": {
+    "machine_is_human": false,
+    "source_is_provider": false,
+    "public_is_buyer": false,
+    "test_pass_is_promotion": false,
+    "multiple_model_summaries_are_independent_if_same_root": false
+  },
+  "next64_count": 64,
+  "next_gate": "EXACT_HEAD_REGRESSION_PLUS_DRIVE_READBACK_PLUS_FRESH_MAIN_COMPARE",
+  "drive_mirror": null,
+  "ci": "PENDING",
+  "forbidden": [
+    "AUTO_PROMOTE_CYCLE9",
+    "ALLOCATE_NEW_SI_ID_FOR_ALIAS",
+    "DUPLICATE_DURABLE_TRANSACTION_RUNTIME",
+    "DUPLICATE_REGISTRY_ALLOCATOR",
+    "DELETE_UNSUPERSEDED_NEGATIVE_EVIDENCE",
+    "COUNT_PROMPTS_TESTS_DOCS_AS_PRODUCT_PROGRESS",
+    "FABRICATE_HUMAN_PROVIDER_MARKET_EVIDENCE",
+    "META_WORK_STARVES_HIGHER_PRIORITY_PRODUCT"
+  ]
+}
