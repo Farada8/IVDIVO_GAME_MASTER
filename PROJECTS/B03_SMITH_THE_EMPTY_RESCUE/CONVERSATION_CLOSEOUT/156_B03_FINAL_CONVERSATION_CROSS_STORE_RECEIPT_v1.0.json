@@ -1,0 +1,47 @@
+{
+  "schema": "ivdivo.b03.final_conversation_cross_store_receipt/1.0",
+  "date": "2026-08-22",
+  "status": "CROSS_STORE_FINAL_CHAT_CLOSE_PASS",
+  "scope": "authority and continuity record for this conversation; not a verbatim ChatGPT UI transcript export",
+  "google_drive": {
+    "production_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+    "full_handoff_153_id": "19yCaEzPYMe-4AlyqH5W-LgtKGPnGZ4utLYSeYOkc07w",
+    "closeout_receipt_154_id": "1UkmIvcZW6Ut7dkbnAlOXFzctMB2VvvrzZvrd8tuFPak",
+    "final_addendum_155_id": "1sPxyxijzU6JqKabe6twMUgGgnR9TWNWoh3yoi2QaWKE",
+    "final_receipt_156_id": "1I23I5aUoSlFSMnXBVXOlRnl2ALw2_sA_t1JxJof2Ifs",
+    "addendum_readback": "PASS"
+  },
+  "github": {
+    "repository": "Farada8/IVDIVO_GAME_MASTER",
+    "closeout_153_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CONVERSATION_CLOSEOUT/153_B03_CONVERSATION_CLOSEOUT_HANDOFF_2026-08-22.md",
+    "closeout_153_merge_sha": "8fe0ef71c68f9753be6cd778fae52c6876e7124e",
+    "addendum_155_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CONVERSATION_CLOSEOUT/155_B03_FINAL_CONVERSATION_ADDENDUM_2026-08-22.md",
+    "addendum_155_pr": 498,
+    "addendum_155_merge_sha": "2f783285d311da982f447cb06044786c2cbd7f68",
+    "addendum_155_blob_sha": "c922958dc354d0990ae80b886d713b6b08c906c3",
+    "post_merge_main_observed": "d4d525e718c3e3b9adc12e05ea0bde9ea6deba6a",
+    "addendum_readback": "PASS"
+  },
+  "explicit_final_addendum_coverage": [
+    "FOUNDER_F1_SMITH_HAS_TEENAGE_DAUGHTER_OTHER_FAMILY_SPECIFICS_UNKNOWN",
+    "B03_RELEASE_READY_62300_WORDS_236_PAGES_CH01_29_LOCKED_CH30_PROHIBITED",
+    "EXPANSION_AUDIT_DEFICIT_0_NO_UNLOCK_RECOMMENDED",
+    "SELF_IMPROVEMENT_N09_N16_CROSS_STORE_PASS_V2_REMAINS_CURRENT",
+    "PR471_STALE_AUDIO_DEPENDENCY_REPAIR_HISTORY",
+    "CURRENT_SPEAKER_AUDIO_AUTHORITY_7465_SEGMENTS_3714_SPEECH_UNKNOWN_0",
+    "FINAL_SCENE_BED_V1_2_101_BLOCKS",
+    "PR485_PROVIDER_NEUTRAL_4_JOB_S0_PREPARATION_NO_DISPATCH"
+  ],
+  "hard_stops": {
+    "CH30": "PROHIBITED",
+    "locked_story_mutation_without_founder_unlock": false,
+    "provider_voice_ids_claimed": false,
+    "provider_dispatch_claimed": false,
+    "human_cast_lock_claimed": false,
+    "slovenian_pronunciation_adjudication_claimed": false,
+    "live_s0_claimed": false,
+    "bulk_render_allowed": false
+  },
+  "next_resume_rule": "FRESHNESS_CHECK_DRIVE_AND_GITHUB_THEN_CH01_HARD_PILOT_REBIND_TO_FINAL_SCENE_BED_V1_2_UNLESS_NEWER_AUTHORITY_EXISTS",
+  "marker": "B03-CHAT-CLOSE-156-PASS-DRIVE155-GITHUBPR498-F1-EXPANSION-N16-AUDIO"
+}
