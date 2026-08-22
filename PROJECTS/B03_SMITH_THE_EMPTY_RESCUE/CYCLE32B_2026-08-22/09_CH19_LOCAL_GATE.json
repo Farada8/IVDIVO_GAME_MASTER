@@ -1,0 +1,31 @@
+{
+  "schema_version":"1.0",
+  "chapter":"CH19",
+  "title":"THE REAL STORM",
+  "status":"PASS_AFTER_TARGETED_NARRATOR_REPAIR",
+  "drive_manuscript_id":"1ngQwNpSTTawUxz7DkWMiYOdM4DBRL49QpCT_HqOMfXw",
+  "drive_gate_id":"1msrexw4D6Vu_hViQDHkdcm8J7emER6KUgMAaaNSAG24",
+  "red_team":{"fatal":0,"blocking_major":0},
+  "proofs":{
+    "conventional_emergency_first":true,
+    "local_authority_intact":true,
+    "andrej_tina_continuity":true,
+    "sara_non_hostage_function":true,
+    "normal_failover_seeded":true,
+    "precursor_is_unverified_observation":true,
+    "no_response_change_from_flagged_source":true,
+    "ontology_ceiling_preserved":true,
+    "resource_scarcity_dramatized":true
+  },
+  "targeted_repairs":"Removed narrator abstractions that restated already-demonstrated meaning; replaced with logs, physical evidence or actions.",
+  "exit_state":{
+    "time_frontier":"approximately 02:11",
+    "hydro":"upper screen crossed first intervention threshold; Andrej/Tina request local isolation objective; safe access still open at chapter end",
+    "medical":"lower valley again has no true ambulance reserve",
+    "underpass":"volunteer pump requires manual clearing and relief",
+    "bridge":"low approach flooding; businesses closed; uphill buildings not evacuated",
+    "communications":"mountain repeater fallback has repeatedly restored hydro connectivity; cross-link restoration exists as normal redundancy",
+    "precursor":"new hydro-adjacent warning preserved but did not change response; another flagged-source indicator flashes at chapter end"
+  },
+  "next":"CH20 BLACKOUT"
+}
