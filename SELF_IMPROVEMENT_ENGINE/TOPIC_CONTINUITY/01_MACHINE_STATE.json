@@ -1,0 +1,58 @@
+{
+  "schema": "ivdivo.self_improvement.thread_topic_continuity_guard/0.1",
+  "date": "2026-08-22",
+  "status": "DEVELOPMENT_CONTRACT_READY_REAL_DEFECT_OBSERVED_NOT_PROMOTED",
+  "authority_effect": "NONE",
+  "global_si_id": null,
+  "parent_authority": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
+  "related_candidate": {
+    "name": "ACTIVE_FRONTIER_HIJACK_GUARD",
+    "pr": 278,
+    "relationship": "THREAD_LEVEL_EXTENSION_AND_POTENTIAL_SUPERSET"
+  },
+  "observed_defect": {
+    "evidence_class": "REAL_HUMAN_CORRECTION",
+    "event_count": 1,
+    "active_project_before_drift": "ORBITAL_YOUTH_BOOK",
+    "incorrect_assistant_pivot": "SYNTHESIS_IVDIVO_BUSINESS",
+    "user_switch_evidence": false,
+    "trigger_turn_class": "GENERIC_CONTINUATION",
+    "user_correction_received": true,
+    "successful_repaired_pilot_count": 0
+  },
+  "core_laws": [
+    "SHORT_CONTINUATION_INHERITS_THREAD_TOPIC",
+    "GENERIC_CONTINUATION_NEQ_PROJECT_SWITCH",
+    "ASSISTANT_PIVOT_NEQ_USER_SWITCH",
+    "MENTION_OF_OTHER_PROJECT_NEQ_THREAD_REBIND",
+    "SIDE_QUERY_NEQ_THREAD_REBIND",
+    "DISCOVERED_CONTEXT_NEQ_THREAD_REBIND",
+    "FRESHER_SIBLING_AUTHORITY_NEQ_THREAD_SWITCH_AUTHORITY",
+    "GLOBAL_CURRENT_NEQ_THREAD_CURRENT",
+    "BOUND_CONFIRMATION_ONLY_FOR_EXACT_SWITCH_TARGET",
+    "REQUIRED_CROSS_PROJECT_DEPENDENCY_REQUIRES_RETURN_TOKEN",
+    "THREAD_SWITCH_AUTHORITY_PRECEDES_FRONTIER_SWITCH_AUTHORITY"
+  ],
+  "runtime": "tools/ivdivo_thread_topic_guard.py",
+  "contract": "ENGINEERING_CONTRACTS/THREAD_TOPIC_CONTINUITY_GUARD_v0.1.md",
+  "tests": "tests/test_thread_topic_guard.py",
+  "workflow": ".github/workflows/si-thread-topic-continuity-guard.yml",
+  "pending_candidate": "31_IDEAS/PENDING/UNASSIGNED_THREAD_TOPIC_CONTINUITY_GUARD_2026-08-22.json",
+  "canary_plan": {
+    "deterministic_canaries_expected": 16,
+    "real_continuation_events_required": 3,
+    "distinct_project_types_required": 2,
+    "healthy_explicit_switch_controls_required": 2,
+    "side_query_return_controls_required": 1,
+    "allowed_false_project_switches": 0
+  },
+  "proof_boundary": {
+    "real_defect_observed": true,
+    "engineering_tests_pending": true,
+    "real_repaired_pilot": false,
+    "verified_current": false,
+    "v3_promoted": false
+  },
+  "next_gate": "EXACT_HEAD_CI_THEN_NATURALLY_OCCURRING_REAL_TOPIC_ROUTING_PILOT",
+  "readback_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-REAL-DEFECT-20260822"
+}
