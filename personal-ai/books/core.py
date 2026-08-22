@@ -21,6 +21,9 @@ BOOK_STAGES = (
     "FINAL",
 )
 
+BOOK_COMPLETION_SCOPE = "INTERNAL_BOOK_PRODUCTION"
+EXTERNAL_ARTIFACT_COMPLETION_NOT_ASSERTED = "NOT_ASSERTED"
+
 _REQUIRED_FILES = (
     "book.yaml",
     "state.json",
@@ -114,6 +117,23 @@ def _continuity_content_sha256(root: Path) -> str:
     return digest.hexdigest()
 
 
+def _book_project_state_fields(*, stage: str, continuity_gate_status: str) -> dict[str, Any]:
+    """Make internal book-state completion semantics explicit at the project layer.
+
+    PL-08 uses parent project status DONE when the internal book state reaches FINAL.
+    That status does not assert that an external manuscript/export/publish artifact was
+    persisted or placement-verified. External artifact completion is authorized only
+    by the separate artifact-placement task gate.
+    """
+    return {
+        "domain": "BOOK",
+        "book_stage": stage,
+        "continuity_gate_status": continuity_gate_status,
+        "completion_scope": BOOK_COMPLETION_SCOPE,
+        "external_artifact_completion": EXTERNAL_ARTIFACT_COMPLETION_NOT_ASSERTED,
+    }
+
+
 class BookProductionCore:
     """Persisted PL-08 book state machine with a fail-closed FINAL gate."""
 
@@ -177,9 +197,7 @@ class BookProductionCore:
         self.projects.update_state(
             project_id,
             "READY",
-            domain="BOOK",
-            book_stage="IDEA",
-            continuity_gate_status="NOT_RUN",
+            **_book_project_state_fields(stage="IDEA", continuity_gate_status="NOT_RUN"),
         )
         return self.load(project_id)
 
@@ -266,9 +284,10 @@ class BookProductionCore:
         self.projects.update_state(
             project_id,
             project_status,
-            domain="BOOK",
-            book_stage=target,
-            continuity_gate_status=state["continuity_gate"]["status"],
+            **_book_project_state_fields(
+                stage=target,
+                continuity_gate_status=state["continuity_gate"]["status"],
+            ),
         )
         return self.load(project_id)
 
@@ -313,8 +332,6 @@ class BookProductionCore:
         self.projects.update_state(
             project_id,
             "RUNNING" if passed else "BLOCKED",
-            domain="BOOK",
-            book_stage="CONTINUITY",
-            continuity_gate_status=status,
+            **_book_project_state_fields(stage="CONTINUITY", continuity_gate_status=status),
         )
         return self.load(project_id)
