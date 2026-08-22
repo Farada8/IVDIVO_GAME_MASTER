@@ -15,6 +15,7 @@ Evidence overlay:
 ## Contract
 - Core owns causal frontier, completed Run32 history, proof frontier, WIP, current gate and stop rules.
 - Evidence overlay owns fresh bounded supplier/source facts and non-findings inside its declared scope.
+- Cycle machine state owns additive current-case guards that do not change the root cut set.
 - Overlay can supersede stale evidence fields but cannot silently change causal frontier, proof grade, WIP, market authority or Self-Improvement authority.
 - Any evidence delta that changes a root blocker must trigger explicit core reconciliation.
 - A new evidence delta that does not change a root blocker should update the overlay only.
@@ -28,6 +29,13 @@ Merged evidence through PR #259 is preserved in the overlay:
 - Revenue account evidence kept separate from Tax Clearance;
 - EWI invoices kept separate from payment/revenue;
 - connected-source TCC/insurance non-findings kept as nonexistence-neutral.
+
+Merged PR #261 is preserved through the Cycle9 case/machine layer:
+- public workspace snapshot fixture;
+- `PLANNED_AWARD_DATE_NEQ_AWARDED_CONTRACT` fail-closed guard;
+- planned award/workspace metadata still does not satisfy P225;
+- attachment inventory/full target pack remains unacquired;
+- no bidder designation or proof-grade transition occurs.
 
 Current root blockers remain:
 `ROOT_A_TARGET_PACK_NOT_ACQUIRED`
@@ -45,4 +53,4 @@ No new global SI ID. No v3 promotion.
 ## Concurrency disposition
 Older competing CURRENT rewrite PRs that do not contain unique evidence should be closed as superseded after this architecture is merged. Their unique evidence, if any, must be salvaged into the overlay before closure.
 
-READBACK MARKER: BUSINESS-C9-CORE-PLUS-EVIDENCE-OVERLAY-CLOSURE
+READBACK MARKER: BUSINESS-C9-CORE-PLUS-EVIDENCE-OVERLAY-CLOSURE-AWARD-GUARD
