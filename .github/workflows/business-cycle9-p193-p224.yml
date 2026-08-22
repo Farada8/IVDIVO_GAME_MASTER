@@ -1,0 +1,27 @@
+name: Business Cycle9 P193-P224 Decision Proof
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE9_P193_P224_DECISION_PROOF/**'
+      - '.github/workflows/business-cycle9-p193-p224.yml'
+  push:
+    branches:
+      - 'business-engineering/cycle9-p193-p224-decision-proof-20260822'
+
+jobs:
+  decision-proof-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Cycle8 inherited evidence-acquisition regression
+        env:
+          PYTHONPATH: BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_P161_P192_EVIDENCE_ACQUISITION/engine
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE8_P161_P192_EVIDENCE_ACQUISITION/tests/test_evidence_acquisition.py
+      - name: Cycle9 exact 32 decision-proof canaries
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE9_P193_P224_DECISION_PROOF/tests/test_decision_proof_guard.py
+      - name: Compile Cycle9 runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE9_P193_P224_DECISION_PROOF/engine
