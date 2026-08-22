@@ -1,14 +1,19 @@
 {
-  "schema": "BUSINESS_ENGINEERING_CYCLE9_P193_P224_v1",
+  "schema": "BUSINESS_ENGINEERING_CYCLE9_P193_P224_v1.1",
   "date": "2026-08-22",
-  "status": "RUN32_EXECUTED_CI_GREEN_DRIVE_READBACK_PASS",
+  "status": "RUN32_EXECUTED_CI_GREEN_DRIVE_READBACK_PASS_PLUS_AWARD_STATE_RECONCILIATION_PENDING_PR",
   "target": {
     "resource_id": "8872468",
     "official_workspace_reachable": true,
     "official_document_route_known": true,
     "attachment_inventory_acquired": false,
     "full_current_pack_acquired": false,
-    "root_blocker": "ROOT_A_TARGET_PACK_NOT_ACQUIRED"
+    "root_blocker": "ROOT_A_TARGET_PACK_NOT_ACQUIRED",
+    "public_workspace_snapshot_recorded": true,
+    "workspace_status": "Tender Submission",
+    "workspace_contract_award_date_field": "2026-09-04T17:00:00+01:00",
+    "award_proven": false,
+    "award_state": "PLANNED_AWARD_DATE_NEQ_AWARDED_CONTRACT"
   },
   "bidder": {
     "explicit_case_specific_designation_found": false,
@@ -26,14 +31,18 @@
     "e3_events": 0,
     "e4_transactions": 0,
     "bid_no_bid_decisions": 0,
-    "external_outreach_events": 0
+    "external_outreach_events": 0,
+    "exact32_preserved": true
   },
   "engineering": {
     "modules": 16,
     "contracts": 24,
     "proof_gates": 12,
     "protocols": 8,
-    "deterministic_canaries": 32
+    "deterministic_canaries": 32,
+    "additive_workspace_state_guards": 3,
+    "new_runtime_guard": "planned_award_date_guard",
+    "new_contract": "PLANNED_AWARD_DATE_NEQ_AWARDED_CONTRACT"
   },
   "proof_boundary": {
     "public_evidence_ceiling": "E2_PLUS",
@@ -53,7 +62,8 @@
     "count": 64,
     "executed": 0,
     "inherited_exact_from_cycle8": "P225-P256",
-    "newly_derived": "P257-P288"
+    "newly_derived": "P257-P288",
+    "p225_state": "BLOCKED_AUTHENTICATED_OR_USER_PROVIDED_OFFICIAL_EXPORT_REQUIRED"
   },
   "self_improvement": {
     "candidate_only": true,
@@ -63,13 +73,14 @@
       "EXTERNAL_ACTION_PERMISSION_IS_A_SEPARATE_CONTROL_PLANE",
       "PROOF_LAUNDERING_REGRESSION_REQUIRED",
       "NO_DIVERGENCE_NO_SCHEMA_CHURN",
-      "ROOT_BLOCKER_STABILITY_CAN_TRIGGER_PROTECT_NO_CHANGE"
+      "ROOT_BLOCKER_STABILITY_CAN_TRIGGER_PROTECT_NO_CHANGE",
+      "SCHEDULE_FIELD_NEQ_COMPLETED_EVENT_WITHOUT_EVENT_PROVENANCE"
     ]
   },
   "persistence": {
-    "github_pr": 247,
-    "ci_run": 32550774027,
-    "ci": "SUCCESS",
+    "cycle9_original_pr": 247,
+    "cycle9_original_ci_run": 32550774027,
+    "cycle9_original_ci": "SUCCESS",
     "cycle8_regression": "SUCCESS",
     "cycle9_exact32": "SUCCESS",
     "compileall": "SUCCESS",
@@ -79,9 +90,12 @@
       "run32": "1TRxVo_vJPxHu3zVbgBjv9EpX1C_xdwnGjW1L-EQNUow",
       "engineering": "1_qs716b8JdCqV4KCIqKA0UZCAkNK1C8o5YKOJM81Zok",
       "next64": "1QncwOrBANab7fAor5yUzU32gu3u5KUF3jERsBkXyQ54",
-      "machine_state": "1NYYT9jICFy9EtIu5gn8NzferVYJEuTCQ0iQDDjTfPBQ"
+      "machine_state": "1NYYT9jICFy9EtIu5gn8NzferVYJEuTCQ0iQDDjTfPBQ",
+      "workspace_award_state_reconciliation": "18hkedKmDrL-apCzw-JbgVnahNhTgbG9DOdQlLJbTz4M"
     },
-    "drive_readback": "PASS_5_OF_5_SEMANTIC_MARKERS"
+    "drive_readback": "PASS_6TH_ADDITIVE_DOCUMENT",
+    "award_state_reconciliation_pr": null,
+    "award_state_reconciliation_ci": "PENDING"
   },
   "current_gate": "ACQUIRE_TARGET_PACK_OR_EXPLICIT_BIDDER_PACKET",
   "authority_mutation": false
