@@ -86,7 +86,7 @@ def validate_event(raw: dict[str, Any]) -> dict[str, Any]:
         if key in raw and not isinstance(raw[key], bool):
             raise ValueError(f"{key} must be bool")
 
-    normalized: dict[str, int] = {}
+    normalized: dict[str, int | None] = {}
     for key in (
         "duplicate_work_units_avoided",
         "writes_reconciled",
@@ -94,17 +94,15 @@ def validate_event(raw: dict[str, Any]) -> dict[str, Any]:
         "checkpoint_tool_calls",
         "recovery_tool_calls",
     ):
-        value = raw.get(key, 0)
-        if not isinstance(value, int) or value < 0:
-            raise ValueError(f"{key} must be non-negative int")
+        value = raw.get(key)
+        if value is not None and (not isinstance(value, int) or value < 0):
+            raise ValueError(f"{key} must be null or non-negative int")
         normalized[key] = value
 
     real_interruption = raw.get("real_interruption", False)
     false_resume = raw.get("false_resume", False)
     false_stop = raw.get("false_stop", False)
 
-    # Legacy real rows had no readback flag. Preserve their old semantics while
-    # newer evidence can explicitly fail closed with readback_complete=False.
     project_slice_readback_complete = raw.get(
         "project_slice_readback_complete", real_interruption
     )
@@ -124,7 +122,6 @@ def validate_event(raw: dict[str, Any]) -> dict[str, Any]:
     else:
         qualifying_recovery = bool(explicit_qualification)
 
-    # Explicit qualification may never override hard safety prerequisites.
     if not real_interruption or not project_slice_readback_complete or false_resume:
         qualifying_recovery = False
 
@@ -150,7 +147,6 @@ def validate_event(raw: dict[str, Any]) -> dict[str, Any]:
 
 
 def _validate_incident_consistency(rows: list[dict[str, Any]]) -> None:
-    """Reject one incident_id being described as both real and synthetic."""
     flags: dict[str, set[bool]] = {}
     for row in rows:
         flags.setdefault(row["incident_id"], set()).add(row["real_interruption"])
@@ -181,9 +177,7 @@ def _incident_rollup(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "projects": sorted({row["project_id"] for row in qualifying}),
                 "recovery_ids": sorted(row["recovery_id"] for row in group),
                 "false_resume_present": any(row["false_resume"] for row in group),
-                "false_stop_present": any(
-                    row["false_stop"] for row in qualifying
-                ),
+                "false_stop_present": any(row["false_stop"] for row in qualifying),
             }
         )
     return result
@@ -217,11 +211,18 @@ def summarize_events(events: list[dict[str, Any]]) -> dict[str, Any]:
         1 for row in qualifying_rows if row["false_stop"]
     )
 
-    duplicate_avoided = sum(row["duplicate_work_units_avoided"] for row in rows)
-    writes_reconciled = sum(row["writes_reconciled"] for row in rows)
-    checkpoint_tool_calls = sum(row["checkpoint_tool_calls"] for row in rows)
-    recovery_tool_calls = sum(row["recovery_tool_calls"] for row in rows)
-    checkpoint_bytes = sum(row["checkpoint_bytes"] for row in rows)
+    def sum_known(key: str) -> int | None:
+        values = [row[key] for row in rows if row[key] is not None]
+        return sum(values) if values else None
+
+    duplicate_avoided = sum_known("duplicate_work_units_avoided")
+    writes_reconciled = sum_known("writes_reconciled")
+    checkpoint_tool_calls = sum_known("checkpoint_tool_calls")
+    recovery_tool_calls = sum_known("recovery_tool_calls")
+    checkpoint_bytes = sum_known("checkpoint_bytes")
+    checkpoint_bytes_known_rows = sum(
+        1 for row in rows if row["checkpoint_bytes"] is not None
+    )
 
     qualifying_false_stop_rate = (
         qualifying_false_stop_count / len(qualifying_rows)
@@ -229,9 +230,6 @@ def summarize_events(events: list[dict[str, Any]]) -> dict[str, Any]:
         else 0.0
     )
 
-    # Any false resume, even synthetic, is a safety regression signal and blocks
-    # promotion. Synthetic/controlled rows may block for safety but can never
-    # satisfy the genuine incident threshold.
     if false_resume_count:
         recommendation, reason = "HOLD", "FALSE_RESUME_PRESENT"
     elif len(qualifying_incidents) < 1:
@@ -253,12 +251,10 @@ def summarize_events(events: list[dict[str, Any]]) -> dict[str, Any]:
         )
 
     metrics = {
-        # Backward-compatible field names with corrected incident semantics.
         "event_count": total_rows,
         "real_interruption_count": len(qualifying_incidents),
         "real_project_count": len(projects),
         "projects": projects,
-        # Explicit 1.1 metrics.
         "recovery_slice_count": total_rows,
         "real_interruption_row_count": len(real_rows),
         "qualifying_recovery_slice_count": len(qualifying_rows),
@@ -277,8 +273,20 @@ def summarize_events(events: list[dict[str, Any]]) -> dict[str, Any]:
         "recovery_tool_calls": recovery_tool_calls,
         "checkpoint_bytes_total": checkpoint_bytes,
         "checkpoint_bytes_mean": (
-            checkpoint_bytes / total_rows if total_rows else 0.0
+            checkpoint_bytes / checkpoint_bytes_known_rows
+            if checkpoint_bytes is not None and checkpoint_bytes_known_rows
+            else None
         ),
+        "telemetry_known_rows": {
+            key: sum(1 for row in rows if row[key] is not None)
+            for key in (
+                "duplicate_work_units_avoided",
+                "writes_reconciled",
+                "checkpoint_bytes",
+                "checkpoint_tool_calls",
+                "recovery_tool_calls",
+            )
+        },
     }
 
     return {
@@ -302,6 +310,7 @@ def summarize_events(events: list[dict[str, Any]]) -> dict[str, Any]:
             "NO_FOUNDER_APPROVAL_INFERRED",
             "NO_HUMAN_QUALITY_EVIDENCE_INFERRED",
             "ONE_PHYSICAL_INTERRUPTION_COUNTS_ONCE_EVEN_WITH_MULTIPLE_PROJECT_SLICES",
+            "UNKNOWN_TELEMETRY_REMAINS_NULL_NOT_ZERO",
             "SYNTHETIC_EVENTS_MAY_BLOCK_FOR_SAFETY_BUT_CANNOT_SATISFY_REAL_EVIDENCE_THRESHOLD",
         ],
     }
