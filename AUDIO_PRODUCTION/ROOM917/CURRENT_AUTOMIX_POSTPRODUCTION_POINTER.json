@@ -1,11 +1,11 @@
 {
-  "schema_version": "ivdivo.room917_current_automix_postproduction_pointer/1.3",
+  "schema_version": "ivdivo.room917_current_automix_postproduction_pointer/1.4",
   "updated": "2026-08-22",
   "project": "ROOM917",
   "episode": "E01",
   "active_branch": "THE_INSURABLE_FIRE",
   "scope": "AUTOMIX_POSTPRODUCTION_ONLY",
-  "status": "PREFLIGHT__PLAN__RENDER_QC__P003B_IDENTITY_HANDOFF_READY__PRODUCTION_RENDER_HOLD_ON_REAL_INPUTS",
+  "status": "PREFLIGHT__PLAN__RENDER_QC__P003B_IDENTITY__AUTOMIX_ELIGIBILITY_READY__PRODUCTION_RENDER_HOLD_ON_REAL_INPUTS",
   "release_authority": false,
   "execution_contract": "AUDIO_PRODUCTION/ROOM917/AUTOMIX/ROOM917_E01_AUTOMIX_POSTPRODUCTION_EXECUTION_CONTRACT_v1.json",
   "preflight": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/automix_postproduction_preflight.py",
@@ -14,12 +14,15 @@
   "render_qc_contract": "AUDIO_PRODUCTION/ROOM917/AUTOMIX/ROOM917_E01_RENDER_MANIFEST_AND_RECEIPT_QC_CONTRACT_v1.json",
   "render_manifest_and_receipt_qc": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/render_manifest_and_receipt_qc.py",
   "p003b_render_qc_handoff_gate": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_render_qc_handoff_gate.py",
-  "existing_p003b_package_builder": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_listener_package_builder.py",
+  "p003b_automix_eligibility_gate": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_automix_eligibility_gate.py",
+  "legacy_p003b_package_builder": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_listener_package_builder.py",
+  "automix_package_authority_law": "AUTOMIX_V1_AUDIO_MUST_HAVE_PASS_P003B_AUTOMIX_ELIGIBILITY_BEFORE_ANY_LISTENER_PACKAGE_BUILD; LEGACY_BUILDER_ALONE_IS_NOT_AUTHORITY_FOR_AUTOMIX_V1",
   "ci_bridges": [
     "audio/studio/tests/test_room917_automix_postproduction_preflight.py",
     "audio/studio/tests/test_room917_automix_automation_plan.py",
     "audio/studio/tests/test_room917_render_manifest_and_receipt_qc.py",
-    "audio/studio/tests/test_room917_p003b_render_qc_handoff.py"
+    "audio/studio/tests/test_room917_p003b_render_qc_handoff.py",
+    "audio/studio/tests/test_room917_p003b_automix_eligibility.py"
   ],
   "ci_workflow": ".github/workflows/audio-studio-runtime-tests.yml",
   "pipeline": [
@@ -29,39 +32,19 @@
     "4_REAL_RENDER_BYTES",
     "5_RENDER_RECEIPT_MACHINE_QC",
     "6_BIND_EXACT_FULL_MIX_SHA256_TO_P003B_HANDOFF",
-    "7_BUILD_BLIND_P003B_PACKAGE",
-    "8_P003B_LISTENER_QC_RED_TEAM",
-    "9_ONLY_THEN_RELEASE_DECISION"
+    "7_COMPILE_PASS_P003B_AUTOMIX_ELIGIBILITY",
+    "8_BUILD_BLIND_P003B_PACKAGE",
+    "9_CRYPTOGRAPHICALLY_FREEZE_PASS_A_NOTES",
+    "10_P003B_TARGETED_PASS_B_AND_SEALED_PASS_C",
+    "11_ONLY_THEN_RELEASE_DECISION"
   ],
   "identity_law": "THE_AUDIO_BYTES_HEARD_IN_P003B_MUST_HAVE_THE_SAME_SHA256_AS_THE_FULL_MIX_RECORD_REVALIDATED_FROM_THE_SAME_RENDER_MANIFEST_AND_RECEIPT",
+  "eligibility_law": "MANIFEST_SHA256__RECEIPT_SHA256__HANDOFF_SHA256__AND_ACTUAL_AUDIO_SHA256_ARE_BOUND_IN_ONE_AUTOMIX_ELIGIBILITY_RECEIPT",
   "render_outputs_required": {
     "full_mix": 1,
     "stems": ["DIALOGUE", "CLUE_SFX", "SFX", "FOLEY", "AMBIENCE", "MUSIC"],
     "format": "48kHz_24bit_stereo"
   },
-  "render_receipt_machine_gates": [
-    "EXACT_OUTPUT_SET_NO_MISSING_OR_EXTRA_STEMS",
-    "SHA256_PER_OUTPUT",
-    "SAME_SAMPLE_COUNT_FULL_MIX_AND_ALL_STEMS",
-    "ZERO_SAMPLE_OFFSET",
-    "STEM_SUM_NULL_MAX_ABS_1_LSB",
-    "PROTECTED_SILENCE_POST_FX_SAMPLE_EXACT_PASS",
-    "CLUE_SFX_SURVIVAL_PASS",
-    "SCENE3_LINEAGE_PRESERVED",
-    "INTEGRATED_LUFS_MINUS16_PLUS_MINUS0_5",
-    "TRUE_PEAK_LE_MINUS1_DBTP",
-    "LRA_LE_11_LU",
-    "MONO_SURVIVAL_PASS",
-    "PHONE_PROXY_SURVIVAL_PASS",
-    "MEASUREMENTS_FROM_REAL_RENDER_BYTES_ONLY"
-  ],
-  "p003b_handoff_gates": [
-    "RE_RUN_RENDER_RECEIPT_MACHINE_QC_FROM_SAME_MANIFEST_AND_RECEIPT",
-    "EXACTLY_ONE_FULL_MIX_RECEIPT_RECORD",
-    "LISTENER_AUDIO_SHA256_EQUALS_QC_FULL_MIX_SHA256",
-    "MANIFEST_AND_RECEIPT_SHA256_CAPTURED_IN_HANDOFF_RECEIPT",
-    "HANDOFF_GATE_NEVER_GRANTS_RELEASE"
-  ],
   "current_known_holds": [
     "EXACT_CURRENT_MASTER_BYTES_NOT_REACQUIRED_FOR_POST_RENDER_PATCH",
     "TRUSTED_EXACT_PRE_SCENE3_TIMING_NOT_YET_AVAILABLE_FOR_D003_LOCALIZATION",
@@ -71,12 +54,14 @@
   ],
   "protected_rules": [
     "NO_SYNTHETIC_TIMING_AS_PRODUCTION_AUTHORITY",
+    "NO_PARTIAL_SEMANTIC_TIMING_AS_PRODUCTION_OUTPUT",
     "NO_HOLD_ASSET_TO_RENDERER",
     "NO_UNLOCKED_VOICE_TO_RENDERER",
     "NO_DUCKING_DIALOGUE_OR_CLUE_SFX",
     "NO_NON_CATE_TELEPHONE_CHAIN",
     "NO_PROTECTED_SILENCE_OVERLAP",
     "NO_P003B_AUDIO_IDENTITY_GAP",
+    "NO_AUTOMIX_V1_LISTENER_PACKAGE_WITHOUT_AUTOMIX_ELIGIBILITY_PASS",
     "NO_MACHINE_RELEASE_PASS",
     "HUMAN_P003B_REQUIRED"
   ],
@@ -88,6 +73,6 @@
   "non_stop": {
     "policy": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/CONTINUATION_POLICY_v1.json",
     "blocked_mainline_does_not_stop_project": true,
-    "current_safe_frontier": "P003B_RENDER_QC_IDENTITY_BINDING__CI_REGRESSION__STATE_RECONCILIATION"
+    "current_safe_frontier": "AUTOMIX_P003B_ELIGIBILITY__CI_REGRESSION__DRIVE_STATE_UPDATE__DOWNSTREAM_NO_BYPASS_ENFORCEMENT"
   }
 }
