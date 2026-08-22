@@ -42,10 +42,10 @@ jobs:
       - name: Build critical SFX A/B/C blind package
         run: |
           python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py \
-            --receipt ROOM917_CRITICAL_SFX_CANARIES/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json \
+            --receipt ROOM917_CRITICAL_SFX_CANARIES/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json \
             --canary-dir ROOM917_CRITICAL_SFX_CANARIES \
             --outdir ROOM917_BLIND_CRITICAL_SFX \
-            --package-id ROOM917_E01_CRITICAL_SFX_BLIND_002 \
+            --package-id ROOM917_E01_CRITICAL_SFX_BLIND_003 \
             --seed 91720260822
       - name: Build support SFX/music A/B/C blind package
         run: |
@@ -67,22 +67,19 @@ jobs:
             fi
           done
           echo 'PASS: public blind packages contain no identity key file.'
-      - name: Upload public room-bed blind package
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: ROOM917_E01_PUBLIC_BLIND_ROOM_BEDS
           path: ROOM917_BLIND_ROOM_BEDS/PUBLIC_BLIND/
           if-no-files-found: error
           retention-days: 30
-      - name: Upload public critical-SFX blind package v2
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: ROOM917_E01_PUBLIC_BLIND_CRITICAL_SFX_V2
+          name: ROOM917_E01_PUBLIC_BLIND_CRITICAL_SFX_V2_1
           path: ROOM917_BLIND_CRITICAL_SFX/PUBLIC_BLIND/
           if-no-files-found: error
           retention-days: 30
-      - name: Upload public support-SFX blind package
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: ROOM917_E01_PUBLIC_BLIND_SUPPORT_SFX
           path: ROOM917_BLIND_SUPPORT_SFX/PUBLIC_BLIND/
@@ -102,11 +99,11 @@ jobs:
         run: |
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
           ## ROOM917 E01 blind sound-asset audition
-          - room beds: blind X/Y package
-          - critical SFX: corrected v2, 8 functions x 3 blinded variants
-          - support SFX/music: 13 functions x 3 blinded variants
-          - public artifacts exclude identity key files
-          - identity keys uploaded as separate sealed artifact
-          - S18 breathing remains outside this workflow in the ElevenLabs/cast stream
-          - no candidate is production-bound by this workflow
+          - room beds: blind X/Y
+          - critical SFX: corrected v2.1, 8 functions x 3 variants
+          - support SFX/music: 13 functions x 3 variants
+          - public artifacts contain no identity key file
+          - sealed identity keys are separate
+          - S18 breathing remains in ElevenLabs/cast stream
+          - no candidate becomes production-bound here
           EOF
