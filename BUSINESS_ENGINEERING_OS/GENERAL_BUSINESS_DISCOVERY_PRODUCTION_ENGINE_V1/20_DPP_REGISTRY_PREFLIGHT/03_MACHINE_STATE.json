@@ -1,0 +1,32 @@
+{
+  "schema": "ivdivo.general_business.pew04_dpp_preflight/1.0",
+  "date": "2026-08-22",
+  "gate": "P-EW04",
+  "lane": "CF-03",
+  "status": "SYNTHETIC_PREFLIGHT_BUILT_CI_PENDING",
+  "registry_live_since": "2026-07-20",
+  "first_known_mandatory_fixture": {
+    "product_group": "certain_batteries",
+    "date": "2027-02-18"
+  },
+  "synthetic_cases": 6,
+  "live_registry_actions": 0,
+  "architecture_guards": [
+    "REGISTRY_METADATA_NEQ_FULL_DPP_PAYLOAD",
+    "PRODUCT_PRIORITY_NEQ_CURRENT_APPLICABILITY",
+    "TEST_PREFLIGHT_NEQ_REGISTRY_ACCEPTANCE",
+    "FIXTURE_REQUIRED_POINTS_NEQ_UNIVERSAL_FIELDS",
+    "MISSING_SUPPLIER_EVIDENCE_NEQ_NONCOMPLIANCE",
+    "REGISTRY_GENERATED_IDENTIFIER_IS_OUTPUT"
+  ],
+  "proof_boundary": {
+    "legal_compliance_proven": false,
+    "registry_acceptance_proven": false,
+    "buyer_demand_proven": false,
+    "wtp_proven": false,
+    "transaction_proven": false,
+    "profitability_proven": false
+  },
+  "external_action_authorized": false,
+  "next_if_ci_passes": "P-EW04_ENGINEERING_PASS_THEN_P-EW05_COMPARE_IMPLEMENTATION_AND_MONETIZATION_DELTA"
+}
