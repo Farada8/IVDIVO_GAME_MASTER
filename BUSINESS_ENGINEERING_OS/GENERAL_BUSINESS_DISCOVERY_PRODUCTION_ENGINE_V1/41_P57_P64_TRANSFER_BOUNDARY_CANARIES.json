@@ -1,0 +1,95 @@
+{
+  "schema": "ivdivo.business.portfolio_transfer_canaries/1.0",
+  "cases": [
+    {
+      "id": "T01",
+      "mechanism": "PROVENANCE_MANIFEST_PLUS_UNKNOWN_HOLD",
+      "target_lane": "OW-01",
+      "proposed_transfer": "PRESERVE_SOURCE_CLASS_AND_UNKNOWN",
+      "expected": "ACCEPT_LOCAL_TRANSFER"
+    },
+    {
+      "id": "T02",
+      "mechanism": "PROVENANCE_MANIFEST_PLUS_UNKNOWN_HOLD",
+      "target_lane": "CF-01",
+      "proposed_transfer": "UNKNOWN_TO_COMPLIANCE_PASS",
+      "expected": "REJECT_BOUNDARY_VIOLATION"
+    },
+    {
+      "id": "T03",
+      "mechanism": "DETERMINISTIC_QA_GATE",
+      "target_lane": "CF-01",
+      "proposed_transfer": "QA_PASS_TO_LEGAL_CERTIFICATION",
+      "expected": "REJECT_BOUNDARY_VIOLATION"
+    },
+    {
+      "id": "T04",
+      "mechanism": "DETERMINISTIC_QA_GATE",
+      "target_lane": "CF-03",
+      "proposed_transfer": "PREFLIGHT_READY_TO_REGISTRY_ACCEPTANCE",
+      "expected": "REJECT_BOUNDARY_VIOLATION"
+    },
+    {
+      "id": "T05",
+      "mechanism": "VERSION_PINNING_AND_FRESHNESS",
+      "target_lane": "OW-01",
+      "proposed_transfer": "PIN_PROTOCOL_RULESET_AND_SURFACE_DRIFT",
+      "expected": "ACCEPT_LOCAL_TRANSFER"
+    },
+    {
+      "id": "T06",
+      "mechanism": "VERSION_PINNING_AND_FRESHNESS",
+      "target_lane": "CF-01",
+      "proposed_transfer": "PIN_SOURCE_BASELINE_WITHOUT_REPLACING_LEGAL_REVIEW",
+      "expected": "ACCEPT_LOCAL_TRANSFER"
+    },
+    {
+      "id": "T07",
+      "mechanism": "NATIVE_OR_INCUMBENT_SUBSTITUTION_CHECK",
+      "target_lane": "CF-03",
+      "proposed_transfer": "CHECK_EXISTING_DPP_ERP_PIM_NATIVE_CAPABILITY_BEFORE_BUILD",
+      "expected": "ACCEPT_LOCAL_TRANSFER"
+    },
+    {
+      "id": "T08",
+      "mechanism": "NATIVE_OR_INCUMBENT_SUBSTITUTION_CHECK",
+      "target_lane": "CF-01",
+      "proposed_transfer": "ASSUME_PLATFORM_DEFAULT_ERASES_STATUTORY_OBLIGATION",
+      "expected": "REJECT_BOUNDARY_VIOLATION"
+    },
+    {
+      "id": "T09",
+      "mechanism": "EVIDENCE_LADDER_NO_PROOF_PROMOTION",
+      "target_lane": "OW-01",
+      "proposed_transfer": "REPLY_TO_WTP",
+      "expected": "REJECT_BOUNDARY_VIOLATION"
+    },
+    {
+      "id": "T10",
+      "mechanism": "EVIDENCE_LADDER_NO_PROOF_PROMOTION",
+      "target_lane": "CF-03",
+      "proposed_transfer": "PAYMENT_TO_REPEATABILITY",
+      "expected": "REJECT_BOUNDARY_VIOLATION"
+    }
+  ],
+  "progress_guard_canaries": [
+    {
+      "id": "G01",
+      "milestone": 32,
+      "executed": 40,
+      "remaining": 24,
+      "monotonic_expected": true,
+      "frozen_exact_counter_expected": false,
+      "observed_failure_class": "LEGACY_DROPSHIP_CI_BLOCKED_VALID_FORWARD_PROGRESS"
+    },
+    {
+      "id": "G02",
+      "milestone": 48,
+      "executed": 50,
+      "remaining": 14,
+      "monotonic_expected": true,
+      "frozen_exact_counter_expected": false,
+      "observed_failure_class": "P41_P48_CI_BLOCKED_VALID_FORWARD_PROGRESS"
+    }
+  ]
+}
