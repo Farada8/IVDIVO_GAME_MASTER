@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install --disable-pip-version-check pytest
       - name: Run monetization regression
         run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_monetization_ladder.py
       - name: Run P-EW05 transition regression
