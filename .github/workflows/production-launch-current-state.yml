@@ -1,0 +1,74 @@
+name: Production Launch Current State Guard
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_PRODUCTION_LAUNCH_STATE.json'
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_HANDOFF.md'
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/PL03_VERIFICATION_RECEIPT.json'
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/PL09_VERIFICATION_RECEIPT.json'
+      - 'SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/PRODUCTION_LAUNCH_QUEUE_v0.1.json'
+      - '.github/workflows/production-launch-current-state.yml'
+
+jobs:
+  current-state:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate overlay, dependency closure and receipts
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22')
+          base = json.loads((root / 'PRODUCTION_LAUNCH_QUEUE_v0.1.json').read_text())
+          current = json.loads((root / 'CURRENT_PRODUCTION_LAUNCH_STATE.json').read_text())
+
+          assert current['authority_effect'] == 'NONE'
+          assert current['self_improvement_authority'] == 'V2_VERIFIED_CURRENT'
+          assert current['base_queue'] == 'PRODUCTION_LAUNCH_QUEUE_v0.1.json'
+
+          cards = {card['id']: dict(card) for card in base['cards']}
+          allowed = set(base['statuses'])
+          for card_id, status in current['status_overrides'].items():
+              assert card_id in cards, f'unknown overlay card: {card_id}'
+              assert status in allowed, f'invalid status: {status}'
+              cards[card_id]['status'] = status
+
+          done = {cid for cid, card in cards.items() if card['status'] == 'DONE_VERIFIED'}
+          for cid, card in cards.items():
+              deps = set(card.get('depends_on') or [])
+              if card['status'] in {'READY', 'RUNNING'}:
+                  missing = deps - done
+                  assert not missing, f'{cid} is {card["status"]} with missing dependencies {sorted(missing)}'
+              if card['status'] == 'WAITING_DEPENDENCY':
+                  assert deps - done, f'{cid} is WAITING_DEPENDENCY but all dependencies are DONE_VERIFIED'
+
+          frontier = current['current_frontier']
+          assert frontier in cards
+          assert cards[frontier]['status'] == 'READY', f'frontier {frontier} is not READY'
+          assert frontier == 'PL-07'
+          assert {'PL-03', 'PL-09'} <= done
+          assert cards['PL-07']['status'] == 'READY'
+
+          for card_id, receipt_name in {
+              'PL-03': 'PL03_VERIFICATION_RECEIPT.json',
+              'PL-09': 'PL09_VERIFICATION_RECEIPT.json',
+          }.items():
+              receipt = json.loads((root / receipt_name).read_text())
+              assert receipt['card'] == card_id
+              assert receipt['status'] == 'DONE_VERIFIED'
+              assert receipt['exact_head_ci']['all_success'] is True
+              assert receipt['drive']['verified_marker']
+              assert current['proof'][card_id]['merge_sha'] == receipt['implementation']['merge_sha']
+
+          handoff = (root / 'CURRENT_HANDOFF.md').read_text()
+          assert 'PL-07 BUSINESS RESEARCH = READY' in handoff
+          assert 'PL-09 CONTINUITY CHECKER = DONE_VERIFIED' in handoff
+          assert 'PL-03 SOURCE / EVIDENCE LAYER = DONE_VERIFIED' in handoff
+          print('Production Launch CURRENT overlay valid; frontier=PL-07')
+          PY
