@@ -6,6 +6,15 @@
 ## Canonical start rule
 Read this file first. Completed Run32/subset work must not be repeated because an older chat, branch, handoff or Drive document still calls it future work.
 
+### Mandatory current read model
+After this core causal authority, read `BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md` before making any evidence-dependent decision.
+
+Machine-readable contract: `BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json`.
+
+`CORE_CURRENT + MANDATORY_EVIDENCE_OVERLAY = CURRENT_BUSINESS_READ_MODEL`.
+
+The core owns causal frontier, completed execution, proof frontier, WIP, decisive gates and stop rules. The evidence overlay owns fresher bounded supplier/source evidence and connected-source non-findings inside its declared scope. The overlay may supersede stale evidence fields in that scope but may **not** silently change completed execution, root blockers, proof grade, market authority or external-action authorization. Any evidence delta that actually closes or changes a root blocker requires explicit core reconciliation.
+
 ## Current relevant merge lineage
 - Cycle5 Public Artifact Validation: PR #185 -> `470a8aea93385ef8624b47688dbf4cf21090c058`.
 - Cycle6 Procurement PA4 Hardening: PR #191 -> `a8776edcdee14ba67e9fa68c61b3e4f66c10cee3`.
