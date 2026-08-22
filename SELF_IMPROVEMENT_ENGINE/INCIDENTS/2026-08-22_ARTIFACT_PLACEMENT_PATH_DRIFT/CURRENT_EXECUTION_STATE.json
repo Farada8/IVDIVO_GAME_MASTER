@@ -27,7 +27,12 @@
       "D09 THE MAN WHO CAME BACK",
       "WOMENS AUDIO BUSINESS CONTROL"
     ],
-    "prospective_canary_status": "2/2 PLACEMENT_VERIFIED"
+    "prospective_canary_status": "2/2 PLACEMENT_VERIFIED",
+    "baseline_regression_incident": 379,
+    "baseline_regression_root_cause": "Cycle10 privacy guard used brittle pre-WORK_FAMILY identity-law grep against SOURCE_REGISTRY v1.5",
+    "baseline_regression_fix_pr": 380,
+    "baseline_regression_fix_merge": "a07499eed8ebc4d2aa494b923244d64083db9544",
+    "baseline_regression_fix_ci": "PASS"
   },
   "required_sequence": [
     "CREATE_OR_IMPORT",
