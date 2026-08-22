@@ -8,6 +8,13 @@ PERSISTED_BUT_MISPLACED = "PERSISTED_BUT_MISPLACED"
 PLACEMENT_VERIFIED = "PLACEMENT_VERIFIED"
 
 
+def _resource_type(value: Any) -> str | None:
+    if value is None:
+        return None
+    normalized = str(value).strip().upper()
+    return normalized or None
+
+
 @dataclass(frozen=True)
 class ArtifactPlacementReceipt:
     artifact_id: str
@@ -22,6 +29,8 @@ class ArtifactPlacementReceipt:
     cross_store_required: bool = False
     cross_store_pointer_present: bool = False
     provider: str = "UNKNOWN"
+    expected_resource_type: str | None = None
+    observed_resource_type: str | None = None
 
     @classmethod
     def from_mapping(cls, value: Mapping[str, Any]) -> "ArtifactPlacementReceipt":
@@ -43,6 +52,8 @@ class ArtifactPlacementReceipt:
             cross_store_required=bool(value.get("cross_store_required", False)),
             cross_store_pointer_present=bool(value.get("cross_store_pointer_present", False)),
             provider=str(value.get("provider", "UNKNOWN")).strip() or "UNKNOWN",
+            expected_resource_type=_resource_type(value.get("expected_resource_type")),
+            observed_resource_type=_resource_type(value.get("observed_resource_type")),
         )
 
     def failures(self) -> list[str]:
@@ -56,6 +67,11 @@ class ArtifactPlacementReceipt:
             failures.append("expected_parent_unresolved")
         if self.actual_parent != self.expected_parent:
             failures.append("parent_mismatch")
+        if self.expected_resource_type:
+            if not self.observed_resource_type:
+                failures.append("resource_type_unobserved")
+            elif self.observed_resource_type != self.expected_resource_type:
+                failures.append("resource_type_mismatch")
         if not self.start_here_ref:
             failures.append("start_here_missing")
         if not self.start_here_readback_ok:

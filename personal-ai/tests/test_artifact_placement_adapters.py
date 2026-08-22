@@ -21,6 +21,40 @@ class ArtifactPlacementAdapterTest(unittest.TestCase):
         self.assertEqual(receipt.actual_parent, "drive:PARENT")
         self.assertEqual(receipt.provider, "GOOGLE_DRIVE")
 
+    def test_drive_document_type_matches_intent(self):
+        intent = PlacementIntent("drive:ROOT", "drive:PARENT", "drive:START", expected_resource_type="DOCUMENT")
+        receipt = receipt_from_drive_observation(
+            intent=intent,
+            artifact_metadata={"id": "FILE", "parent_ids": ["PARENT"], "mime_type": "application/vnd.google-apps.document"},
+            start_here_readback_ok=True,
+            start_here_mentions_artifact=True,
+        )
+        self.assertEqual(receipt.observed_resource_type, "DOCUMENT")
+        self.assertEqual(receipt.status, PLACEMENT_VERIFIED)
+
+    def test_real_failure_shape_document_intent_observed_folder_fails_closed(self):
+        intent = PlacementIntent("drive:CYCLE10", "drive:ARCHIVE", "drive:START", expected_resource_type="DOCUMENT")
+        receipt = receipt_from_drive_observation(
+            intent=intent,
+            artifact_metadata={"id": "1eFZ_v5QlEGJ9xkXEzJApNDHNi7y5InWu", "parent_ids": ["ARCHIVE"], "mime_type": "application/vnd.google-apps.folder"},
+            start_here_readback_ok=True,
+            start_here_mentions_artifact=True,
+        )
+        self.assertEqual(receipt.observed_resource_type, "FOLDER")
+        self.assertEqual(receipt.status, PERSISTED_BUT_MISPLACED)
+        self.assertIn("resource_type_mismatch", receipt.failures())
+
+    def test_drive_expected_type_missing_provider_mime_fails_closed(self):
+        intent = PlacementIntent("drive:ROOT", "drive:PARENT", "drive:START", expected_resource_type="DOCUMENT")
+        receipt = receipt_from_drive_observation(
+            intent=intent,
+            artifact_metadata={"id": "FILE", "parent_ids": ["PARENT"]},
+            start_here_readback_ok=True,
+            start_here_mentions_artifact=True,
+        )
+        self.assertEqual(receipt.status, PERSISTED_BUT_MISPLACED)
+        self.assertIn("resource_type_unobserved", receipt.failures())
+
     def test_drive_prefixed_ids_do_not_double_prefix(self):
         intent = PlacementIntent("drive:ROOT", "drive:PARENT", "drive:START")
         receipt = receipt_from_drive_observation(intent=intent, artifact_metadata={"id": "drive:FILE", "parent_ids": ["drive:PARENT"]}, start_here_readback_ok=True, start_here_mentions_artifact=True)
@@ -40,10 +74,11 @@ class ArtifactPlacementAdapterTest(unittest.TestCase):
         self.assertEqual(receipt.status, PERSISTED_BUT_MISPLACED)
 
     def test_github_provider_observation_passes(self):
-        intent = PlacementIntent("github:Farada8/IVDIVO_GAME_MASTER:PROJECTS/D09", "github:Farada8/IVDIVO_GAME_MASTER:PROJECTS/D09/current", "github:Farada8/IVDIVO_GAME_MASTER:PROJECTS/D09/README.md")
+        intent = PlacementIntent("github:Farada8/IVDIVO_GAME_MASTER:PROJECTS/D09", "github:Farada8/IVDIVO_GAME_MASTER:PROJECTS/D09/current", "github:Farada8/IVDIVO_GAME_MASTER:PROJECTS/D09/README.md", expected_resource_type="FILE")
         receipt = receipt_from_github_observation(intent=intent, repository_full_name="Farada8/IVDIVO_GAME_MASTER", path="PROJECTS/D09/current/master.md", file_observed=True, current_index_readback_ok=True, current_index_mentions_artifact=True)
         self.assertEqual(receipt.status, PLACEMENT_VERIFIED)
         self.assertEqual(receipt.provider, "GITHUB")
+        self.assertEqual(receipt.observed_resource_type, "FILE")
 
     def test_github_missing_file_is_not_persisted(self):
         intent = PlacementIntent("github:repo:root", "github:repo:root/current", "github:repo:root/README.md")
