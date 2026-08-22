@@ -1,0 +1,21 @@
+name: Business Engineering OS Cycle7 Authority Proof
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P97_P128_AUTHORITY_PROOF/**'
+      - '.github/workflows/business-engineering-os-cycle7-authority-proof.yml'
+  workflow_dispatch:
+
+jobs:
+  cycle7-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile runtime
+        run: python -m py_compile BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P97_P128_AUTHORITY_PROOF/engine/proof_transition_engine.py
+      - name: Run 32 deterministic tests
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P97_P128_AUTHORITY_PROOF/tests/test_proof_transition_engine.py
