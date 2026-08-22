@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.1",
-  "updated": "2026-08-21",
+  "schema_version": "2.2",
+  "updated": "2026-08-22",
   "status": "CURRENT_ROUTING_STATE_NOT_STORY_CANON",
   "purpose": "Machine-readable resume pointer for cross-conversation and cross-model IVDIVO work. This file routes work; it never overrides Founder authority, locked project canon, project-specific source-of-truth or stronger terminal gates.",
   "authority_order": [
@@ -30,6 +30,10 @@
     "cross_ai_handoff": "CURRENT_IVDIVO_CROSS_AI_HANDOFF.md",
     "engine_machine_execution": "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json",
     "runtime_craft_addendum": "IVDIVO_NARRATIVE_OS/14_RUNTIME_CRAFT_MECHANISM_ADDENDUM_v1.0.md",
+    "book_intelligence": "BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.0.md",
+    "book_intelligence_state": "CURRENT_BOOK_INTELLIGENCE_ENGINE_STATE.json",
+    "book_intelligence_sources": "BOOK_INTELLIGENCE_ENGINE/01_SOURCE_LIBRARY_MANIFEST_v1.0.json",
+    "book_intelligence_prompts": "BOOK_INTELLIGENCE_ENGINE/03_BOOK_INTELLIGENCE_PROMPT_STACK_32_v1.0.md",
     "reference_mechanism_upgrade": "IVDIVO_NARRATIVE_OS/15_REFERENCE_MECHANISM_UPGRADE_PACK_v1.0.md",
     "audio": "CURRENT_IVDIVO_AUDIO_PRODUCTION_AUTHORITY.md"
   },
@@ -39,6 +43,7 @@
     "IF_PASTED_PRIOR_CHAT_THEN_FULL_CHAT_RECOVERY",
     "PROJECT_SPECIFIC_SOURCE_OF_TRUTH_AND_TERMINAL_GATE_CHECK",
     "CHAT_ONLY_DISCOVERY_AND_INGESTION_GATE",
+    "BOOK_INTELLIGENCE_GATE_IF_MATERIAL_REFERENCE_USE",
     "IMPROVEMENT_REGISTRY_AND_LEARNING_LEDGER_SWEEP",
     "STALE_WORK_GATE",
     "RECOMPUTE_DEPENDENCY_DAG",
@@ -70,6 +75,24 @@
       "FOUNDER_STOP_OR_HOLD"
     ]
   },
+  "book_intelligence": {
+    "status": "ENGINEERING_CURRENT_AWAITING_REAL_DOMAIN_PILOT",
+    "role": "UNIVERSAL_GATEWAY_FOR_MATERIAL_BOOK_REFERENCE_USE",
+    "authority": "BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.0.md",
+    "state": "CURRENT_BOOK_INTELLIGENCE_ENGINE_STATE.json",
+    "runtime": "tools/ivdivo_book_intelligence.py",
+    "schemas": "BOOK_INTELLIGENCE_ENGINE/02_BOOK_INTELLIGENCE_SCHEMAS_v1.0.json",
+    "prompt_stack": "BOOK_INTELLIGENCE_ENGINE/03_BOOK_INTELLIGENCE_PROMPT_STACK_32_v1.0.md",
+    "cycle1_report": "BOOK_INTELLIGENCE_ENGINE/04_CYCLE1_32_PROMPTS_EXECUTION_REPORT_v1.0.md",
+    "integration_contract": "BOOK_INTELLIGENCE_ENGINE/05_ALL_ENGINE_ADAPTER_AND_INTEGRATION_CONTRACT_v1.0.md",
+    "local_contract_tests": "13_13_PASS",
+    "cycle1_prompt_execution": "32_32_EXECUTED_26_PASS_ENGINEERING_6_EVIDENCE_HOLD",
+    "full_read_claims_created_by_cycle1": 0,
+    "real_project_validation": "NOT_YET_RUN",
+    "default_path": "SOURCE_TO_CLAIM_TO_MECHANISM_TO_DOMAIN_ADAPTER_TO_REAL_PROJECT_TEST_TO_LEARNING",
+    "raw_book_policy": "USER_PROVIDED_COPYRIGHTED_BOOKS_MAY_BE_ANALYZED_BUT_NOT_REDISTRIBUTED_BY_DEFAULT",
+    "universal_promotion_gate": "REAL_PROJECT_PASS_PLUS_SECOND_INDEPENDENT_PROJECT_OR_STRONGER_EXPLICIT_EVIDENCE_PLUS_FATAL0_MAJOR0"
+  },
   "self_improvement": {
     "engine_status": "V2_VERIFIED_CURRENT",
     "authority_router": "CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md",
@@ -77,6 +100,8 @@
     "engine_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
     "machine_registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
     "learning_ledger": "CURRENT_IVDIVO_LEARNING_LEDGER.json",
+    "book_learning_gateway": "BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.0.md",
+    "book_architecture_change_rule": "BOOK_DERIVED_IDEA_REQUIRES_PROVENANCE_BOUNDED_PILOT_AND_REAL_PROJECT_VALIDATION_BEFORE_PROMOTION",
     "priority_order": [
       "P0_AUTHORITY_SAFETY_INTEGRITY",
       "P1_WRITE_STRONG_COMPLETE_BOOKS",
@@ -197,7 +222,8 @@
     "machine_execution_pointer": "CURRENT_IVDIVO_ENGINE_MACHINE_EXECUTION.json",
     "provider_canary_contract": "AUDIO_PRODUCTION/IVDIVO_AUDIO_LIVE_PROVIDER_CANARY_AND_CASTING_CASCADE_v1.0.md",
     "shared_musical_fact_contract": "AUDIO_PRODUCTION/IVDIVO_AUDIO_SHARED_MUSICAL_FACT_AND_MOTIF_CONTRACT_v1.0.md",
-    "live_provider_or_human_evidence_must_not_be_simulated": true
+    "live_provider_or_human_evidence_must_not_be_simulated": true,
+    "book_reference_gateway": "BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.0.md"
   },
   "multi_ai": {
     "one_shared_state": true,
@@ -206,9 +232,13 @@
     "canonical_prompt_pack_version": "1.2",
     "same_source_comparison_required_when_claiming_model_comparison": true,
     "diagnosis_and_fix_separated": true,
-    "system_learning_return_contract": true
+    "system_learning_return_contract": true,
+    "book_reference_rule": "ALL_MODELS_USING_MATERIAL_BOOK_EVIDENCE_MUST_RETURN_SOURCE_IDS_LOCATORS_MECHANISM_DISPOSITION_AND_DOMAIN_ADAPTER_CONTEXT"
   },
   "recent_verified_main_integration": [
+    "BOOK_INTELLIGENCE_ENGINE_v1_ENGINEERING_CURRENT_13_13_LOCAL_CONTRACT_PASS",
+    "BOOK_INTELLIGENCE_32_PASS_CYCLE1_26_ENGINEERING_PASS_6_EVIDENCE_HOLD",
+    "NARRATIVE_REFERENCE_ROUTED_THROUGH_BOOK_INTELLIGENCE_STORY_ADAPTER",
     "D10_FOUNDER_STORY_LOCK_AND_RECORDING_AUTHORITY",
     "D10_PROJECT_STATE_v1_2_FOUNDER_LOCKED",
     "D01_FOUNDER_STORY_LOCK_AND_RECORDING_AUTHORITY",
@@ -222,5 +252,5 @@
     "name": "RECONCILED_RECOVERY_STATE_v2",
     "status": "WORKING_CANDIDATE_AWAITING_REAL_LARGE_TRANSCRIPT_PILOT_AND_INTEGRATION_REGRESSION"
   },
-  "state_status": "D10_FOUNDER_LOCKED; D01_FOUNDER_LOCKED_E01_E120; SMITH_NEXT_FRESH_AUTHORITY_RECONCILIATION_BEFORE_PROSE; D09_PENDING_FOUNDER_LOCK; NO_D10_E25; ENGINE_V11_2_MACHINE_EXECUTION_ROUTED_VERIFIED"
+  "state_status": "BOOK_INTELLIGENCE_v1_ENGINEERING_CURRENT_AWAITING_REAL_DOMAIN_PILOT; D10_FOUNDER_LOCKED; D01_FOUNDER_LOCKED_E01_E120; SMITH_NEXT_FRESH_AUTHORITY_RECONCILIATION_BEFORE_PROSE; D09_PENDING_FOUNDER_LOCK; NO_D10_E25; ENGINE_V11_2_MACHINE_EXECUTION_ROUTED_VERIFIED"
 }
