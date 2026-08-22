@@ -1,0 +1,65 @@
+{
+  "schema": "ivdivo.dpp.synthetic_supplier_fixture/0.1",
+  "fixture_id": "SYN-FURN-001",
+  "product_group": "furniture",
+  "fixture_note": "Fictional EU-made wooden side table. No real product, operator or identifier is represented.",
+  "legal_applicability": "UNKNOWN",
+  "registry_test_environment_available": true,
+  "initial": {
+    "source_records": [
+      {"source_ref": "SYN-PIM-001", "source_kind": "SYNTHETIC_PIM", "description": "internal product master"},
+      {"source_ref": "SYN-SUP-001", "source_kind": "SYNTHETIC_SUPPLIER_SHEET", "description": "wood supplier sheet"}
+    ],
+    "candidate_fields": {
+      "unique_product_identifier": {"value": "SYN-FURN-001", "source_ref": "SYN-PIM-001", "synthetic": true},
+      "product_name": {"value": "Oak Side Table 45", "source_ref": "SYN-PIM-001", "synthetic": true},
+      "manufacturer_name": {"value": "Synthetic Furniture Works EU", "source_ref": "SYN-PIM-001", "synthetic": true},
+      "manufacturer_unique_operator_identifier": {"value": null, "source_ref": null, "synthetic": false},
+      "gtin_or_equivalent": {"value": null, "source_ref": null, "synthetic": false},
+      "commodity_code": {"value": null, "source_ref": null, "synthetic": false},
+      "compliance_document_refs": {"value": [], "source_ref": null, "synthetic": false},
+      "facility_identifier": {"value": null, "source_ref": null, "synthetic": false},
+      "dpp_service_provider_ref": {"value": null, "source_ref": null, "synthetic": false},
+      "dpp_data_location": {"value": "https://example.invalid/dpp/SYN-FURN-001", "source_ref": "SYN-PIM-001", "synthetic": true},
+      "data_carrier_type": {"value": "QR", "source_ref": "SYN-PIM-001", "synthetic": true},
+      "dimensions_mm": {"value": null, "source_ref": null, "synthetic": false},
+      "material_composition": {"value": {"primary": "oak", "finish": null}, "source_ref": "SYN-SUP-001", "synthetic": true},
+      "country_of_manufacture": {"value": "IE", "source_ref": "SYN-PIM-001", "synthetic": true}
+    },
+    "registry_metadata": {
+      "unique_product_identifier": "SYN-FURN-001",
+      "dpp_data_location": "https://example.invalid/dpp/SYN-FURN-001",
+      "full_dpp_payload": null
+    }
+  },
+  "corrected": {
+    "source_records": [
+      {"source_ref": "SYN-PIM-001", "source_kind": "SYNTHETIC_PIM", "description": "internal product master"},
+      {"source_ref": "SYN-SUP-001", "source_kind": "SYNTHETIC_SUPPLIER_SHEET", "description": "wood supplier sheet"},
+      {"source_ref": "SYN-DRAW-001", "source_kind": "SYNTHETIC_TECH_DRAWING", "description": "approved dimension drawing"},
+      {"source_ref": "SYN-FIN-001", "source_kind": "SYNTHETIC_FINISH_SHEET", "description": "finish composition sheet"},
+      {"source_ref": "SYN-COMP-001", "source_kind": "SYNTHETIC_INTERNAL_COMPLIANCE_INDEX", "description": "internal evidence index; not a conformity certificate"}
+    ],
+    "candidate_fields": {
+      "unique_product_identifier": {"value": "SYN-FURN-001", "source_ref": "SYN-PIM-001", "synthetic": true},
+      "product_name": {"value": "Oak Side Table 45", "source_ref": "SYN-PIM-001", "synthetic": true},
+      "manufacturer_name": {"value": "Synthetic Furniture Works EU", "source_ref": "SYN-PIM-001", "synthetic": true},
+      "manufacturer_unique_operator_identifier": {"value": null, "source_ref": null, "synthetic": false},
+      "gtin_or_equivalent": {"value": null, "source_ref": null, "synthetic": false},
+      "commodity_code": {"value": null, "source_ref": null, "synthetic": false},
+      "compliance_document_refs": {"value": ["SYN-COMP-001"], "source_ref": "SYN-COMP-001", "synthetic": true},
+      "facility_identifier": {"value": null, "source_ref": null, "synthetic": false},
+      "dpp_service_provider_ref": {"value": null, "source_ref": null, "synthetic": false},
+      "dpp_data_location": {"value": "https://example.invalid/dpp/SYN-FURN-001", "source_ref": "SYN-PIM-001", "synthetic": true},
+      "data_carrier_type": {"value": "QR", "source_ref": "SYN-PIM-001", "synthetic": true},
+      "dimensions_mm": {"value": {"width": 450, "depth": 450, "height": 520}, "source_ref": "SYN-DRAW-001", "synthetic": true},
+      "material_composition": {"value": {"primary": "oak", "finish": "waterborne_clear_coat"}, "source_ref": "SYN-FIN-001", "synthetic": true},
+      "country_of_manufacture": {"value": "IE", "source_ref": "SYN-PIM-001", "synthetic": true}
+    },
+    "registry_metadata": {
+      "unique_product_identifier": "SYN-FURN-001",
+      "dpp_data_location": "https://example.invalid/dpp/SYN-FURN-001",
+      "full_dpp_payload": null
+    }
+  }
+}
