@@ -1,0 +1,47 @@
+name: General Business Money Mechanisms Run32
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/09_MONEY_MECHANISMS_RUN32.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/10_MONEY_MECHANISMS_TOP10_TEST_PORTFOLIO.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/11_MONEY_MECHANISMS_NEXT64.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/12_MONEY_MECHANISMS_SOURCE_LEDGER.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/13_MONEY_MECHANISMS_MACHINE_STATE.json'
+      - '.github/workflows/general-business-money-mechanisms-run32.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Run32 / Next64 / evidence boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          run = (root/'09_MONEY_MECHANISMS_RUN32.md').read_text()
+          top = (root/'10_MONEY_MECHANISMS_TOP10_TEST_PORTFOLIO.md').read_text()
+          nxt = (root/'11_MONEY_MECHANISMS_NEXT64.md').read_text()
+          src = (root/'12_MONEY_MECHANISMS_SOURCE_LEDGER.md').read_text()
+          state = json.loads((root/'13_MONEY_MECHANISMS_MACHINE_STATE.json').read_text())
+          assert all(f'| {i:02d} |' in run for i in range(1,33))
+          assert all(f'P{i:02d}' in nxt for i in range(1,65))
+          assert len(state['top10']) == 10
+          assert len(state['bounded_wip3']) == 4
+          assert state['run32']['mechanisms'] == 32
+          assert state['next64']['created'] == 64
+          assert state['bounded_wip3']['businesses_proven'] == 0
+          assert state['evidence_boundary']['wtp'] is None
+          assert state['evidence_boundary']['cac'] is None
+          assert state['evidence_boundary']['transactions_created_by_run'] == 0
+          assert state['evidence_boundary']['external_action_authorized'] is False
+          assert 'PUBLIC_SIGNAL_DENSITY != BUSINESS_ATTRACTIVENESS' in run
+          assert 'Generic non-EU dropshipping' in top
+          assert 'SRC-MM-04' in src
+          print('GENERAL_BUSINESS_MONEY_MECHANISMS_RUN32: PASS')
+          PY
