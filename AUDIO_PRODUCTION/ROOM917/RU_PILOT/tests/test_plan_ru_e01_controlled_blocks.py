@@ -52,6 +52,17 @@ class BlockPlannerTests(unittest.TestCase):
         self.assertEqual(p[0]["unit_ids"],["U2"])
         self.assertEqual(p[0]["status"],"PROTECTED_SHORT_BLOCK")
 
+    def test_rebalances_short_final_edge_when_possible(self):
+        units=[
+            unit("U1",1,1,"A",20),unit("U2",1,2,"B",20),unit("U3",1,3,"C",20),
+            unit("U4",1,4,"D",20),unit("U5",1,5,"E",20)
+        ]
+        plan=plan_blocks(self.doc(units),self.policy())
+        durations=[b["estimated_seconds_reference_only"] for b in plan["blocks"]]
+        self.assertEqual(len(durations),2)
+        self.assertTrue(all(30 <= d <= 80 for d in durations))
+        self.assertEqual(plan["ordinary_short_edge_block_count"],0)
+
     def test_multi_character_block_is_editorial_not_single_tts(self):
         units=[unit("U1",1,1,"A",18,"ELENA"),unit("U2",1,2,"B",18,"JULIAN")]
         plan=plan_blocks(self.doc(units),self.policy())
