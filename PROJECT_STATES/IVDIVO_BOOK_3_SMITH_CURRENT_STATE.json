@@ -1,29 +1,68 @@
 {
-  "schema_version":"3.6-feature-audio",
-  "updated":"2026-08-22",
-  "project_id":"IVDIVO_BOOK_3_SMITH",
-  "title":"SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
-  "status":"FOUNDER_LOCKED_RELEASE_READY_FULL_SPEAKER_PASS_VOICE_MAP_ARCHITECTURE_PASS_PERFORMANCE_DIRECTION_FRONTIER",
-  "authority_branch":"main_for_story_lock_feature_for_new_audio_metadata",
-  "founder_lock":true,
-  "story_lock":true,
-  "locked_scope":"CH01_CH29",
-  "ch30_authorized":false,
-  "audio":{
-    "segmentation_gate":"PASS",
-    "full_speaker_gate":"PASS_3714_OF_3714_UNKNOWN_0",
-    "full_speaker_gate_drive_id":"1FFWJ2ru560zxfEtF-FT3cXqLiUfL203b",
-    "full_speaker_manifest_drive_id":"1Z8ATM6OyDlABS7KuXdwe26fa6dc2Utiw",
-    "voice_map_architecture_gate":"PASS_PROVIDER_AGNOSTIC",
-    "voice_map_drive_id":"1JsWpwwtxdZb0CD3mGRB248zhH8bwxiN2",
-    "voice_map_gate_drive_id":"17-qqoV4qutXRMV6SlxUqJFhO55VK3r9d",
-    "textual_speaker_ids":120,
-    "cast_slots_max":28,
-    "same_chapter_ensemble_collisions":0,
-    "provider_voice_ids_assigned":0
+  "schema_version": "3.7-feature-audio-reconciled",
+  "updated": "2026-08-22",
+  "project_id": "IVDIVO_BOOK_3_SMITH",
+  "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+  "status": "FOUNDER_LOCKED_RELEASE_READY_AUDIO_ACOUSTIC_BRANCH_RECONCILIATION_OPEN",
+  "authority_policy": "MAIN_FOR_STORY_LOCK_DRIVE_140_FOR_CURRENT_AUDIO_ACOUSTIC_STATE_FEATURE_FOR_NEW_AUDIO_METADATA",
+  "founder_lock": true,
+  "story_lock": true,
+  "locked_scope": "CH01_CH29",
+  "ch30_authorized": false,
+  "exact_text_mutation_bytes": 0,
+  "drive_current_authority": {
+    "production_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+    "cross_store_receipt_151_id": "1XYrjVenrooqmejsFXBB4t91oM9qmKVgtniNWlX6cHwQ",
+    "current_audio_acoustic_state_md_id": "1dWCDDkwFRmbP5uTBUQmzw2FSbS_EEWKH",
+    "current_audio_acoustic_state_json_id": "1d5PzbnVnlFJzWUQbE8Oy5ibJ3QGcL-Te",
+    "working_scene_bed_v1_1_json_id": "1LvDp0jq2cdmRBgu0AczGRtlF1ohW6cLq",
+    "working_scene_bed_v1_1_gate_id": "1OMQJQeGsegmf_gF-uUwIyA0ncWveJtTQ",
+    "predecessor_full_book_scene_bed_v1_0_json_id": "1moQeFzhH5u7XfeMMduJWeg8axJHbSNIY",
+    "predecessor_full_book_scene_bed_v1_0_gate_id": "1EJm6hG81a3a4MXebpDtro-8o0-II2hEc",
+    "ch25_29_count_reconciled_json_id": "1_kuToOxY9Hq9m64IC8J9MZIeum4nxMTN",
+    "ch25_29_count_reconciliation_gate_id": "1KcGwcJNGpsyLDjEy0QIxHrEVae2KlZk9"
   },
-  "story_change_control":"NO_STORY_REWRITE_WITHOUT_FOUNDER_UNLOCK_OR_CHANGE_ORDER",
-  "do_not":["DO_NOT_CHANGE_EXACT_TEXT","DO_NOT_REOPEN_STORY","DO_NOT_DRAFT_CH30","DO_NOT_INVENT_ACCENTS","DO_NOT_INVENT_PROVIDER_VOICE_IDS"],
-  "next_obligation":"Build provider-independent performance-direction contracts and regression fixtures for high-pressure story blocks; keep exact_text immutable and provider voice IDs null.",
-  "next_prompt_pointer":"PERFORMANCE_DIRECTION_GATE"
+  "github_main_mirror": {
+    "path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/AUDIO_ACOUSTIC_DRIVE_MIRROR_POINTERS_2026-08-22.json",
+    "commit_recorded_by_drive_receipt": "76aec545eae22988c9b076a495b36f2415a31fc7",
+    "authority_status": "WORKING_BRANCH_RECONCILIATION_OPEN"
+  },
+  "audio": {
+    "speaker_ownership": "PASS_3714_OF_3714_UNKNOWN_0",
+    "textual_source_speaker_ids": 121,
+    "cast_slots_max": 28,
+    "provider_voice_ids_assigned": 0,
+    "audition_requests_dry_run": 111,
+    "live_s0_synthesis": "NOT_RUN",
+    "wav_evidence": "NONE",
+    "human_cast_lock": "NOT_RUN",
+    "slovenian_pronunciation_lock": "NOT_RUN",
+    "bulk_render_allowed": false,
+    "acoustic_routing": {
+      "status": "WORKING_NOT_FINAL",
+      "segments_structurally_covered": "7465/7465",
+      "current_candidate_blocks_after_ch01_repair": 95,
+      "validator_errors": 0,
+      "ch01_false_field_bed_repaired": true,
+      "ch19_29_parallel_exact_anchor_conflict": true
+    }
+  },
+  "engineering_law": [
+    "CHANNEL_PROCESSING != PHYSICAL_SCENE_BED",
+    "RADIO_FIELD_CHANNEL != FIELD_SCENE_BED",
+    "SOURCE_AUTHOR != ACOUSTIC_SPEAKER",
+    "SAME_PACKET_CLASS != SAME_SOURCE_IDENTITY"
+  ],
+  "local_133_disposition": "SUPPORTING_SUPERSEDED_ONLY_DO_NOT_PROMOTE_OVER_DRIVE_139_140",
+  "story_change_control": "NO_STORY_REWRITE_WITHOUT_FOUNDER_UNLOCK_OR_CHANGE_ORDER",
+  "do_not": [
+    "DO_NOT_CHANGE_EXACT_TEXT",
+    "DO_NOT_REOPEN_STORY",
+    "DO_NOT_DRAFT_CH30",
+    "DO_NOT_PROMOTE_133_AS_CURRENT",
+    "DO_NOT_DECLARE_ACOUSTIC_ROUTING_FINAL_BEFORE_CH19_29_EXACT_ANCHOR_RECONCILIATION",
+    "DO_NOT_BULK_RENDER_BEFORE_PROVIDER_CAST_PRONUNCIATION_EVIDENCE"
+  ],
+  "next_obligation": "Reconcile CH19-29 exact-anchor routing branch against current 139 working map, emit final scene-bed authority, then rebind CH01 Hard Pilot.",
+  "next_prompt_pointer": "EXACT_ANCHOR_BRANCH_RECONCILIATION_CH19_29"
 }
