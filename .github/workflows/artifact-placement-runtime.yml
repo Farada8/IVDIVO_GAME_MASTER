@@ -5,6 +5,7 @@ on:
     paths:
       - 'personal-ai/core/artifact_placement.py'
       - 'personal-ai/core/artifact_placement_adapters.py'
+      - 'personal-ai/core/connector_placement_capture.py'
       - 'personal-ai/projects/artifact_completion.py'
       - 'personal-ai/projects/manager.py'
       - 'personal-ai/agents/base.py'
@@ -17,6 +18,7 @@ on:
       - 'personal-ai/tests/test_artifact_placement_prospective.py'
       - 'personal-ai/tests/test_artifact_gate_production_adoption.py'
       - 'personal-ai/tests/test_project_completion_scope.py'
+      - 'personal-ai/tests/test_connector_placement_capture.py'
       - 'personal-ai/tests/test_agent_executor.py'
       - 'personal-ai/tests/test_agent_executor_contract.py'
       - 'SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/**'
@@ -48,6 +50,9 @@ jobs:
       - name: Internal project DONE scope regression
         working-directory: personal-ai
         run: python -m unittest -v tests.test_project_completion_scope
+      - name: ChatGPT connector deployment-boundary regression
+        working-directory: personal-ai
+        run: python -m unittest -v tests.test_connector_placement_capture
       - name: Agent executor compatibility regression
         working-directory: personal-ai
         run: python -m unittest -v tests.test_agent_executor tests.test_agent_executor_contract
