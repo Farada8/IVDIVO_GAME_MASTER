@@ -1,0 +1,142 @@
+name: ROOM917 RU Cast Lock Receipt Compiler
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/room917-ru-cast-lock-receipt-compiler.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_CAST_REVIEW_TEMPLATE_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_cast_lock_receipt.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_compile_ru_cast_lock_receipt.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/validate_ru_cast_lock.py'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/room917-ru-cast-lock-receipt-compiler.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_CAST_REVIEW_TEMPLATE_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_cast_lock_receipt.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_compile_ru_cast_lock_receipt.py'
+
+permissions:
+  contents: read
+
+jobs:
+  compile-and-validate-lock-receipt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_compile_ru_cast_lock_receipt.py -v
+
+      - name: Build synthetic proved evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _room917_ru_cast_lock_ci
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          roles=['ELENA','JULIAN','MINA','CATE']
+          snapshot={
+              'status':'PASS_CANDIDATES_FOUND',
+              'generated_at':'2026-08-22T17:00:00Z',
+              'candidates':[
+                  {'voice_id':f'voice_{r.lower()}','name':r.title(),'ru_verified':True,'category':'professional','notice_period':365,'disable_at_unix':None}
+                  for r in roles
+              ]
+          }
+          review={
+              'status':'REVIEW_COMPLETE',
+              'pronunciation_gate':'PASS',
+              'all_selected_voice_ids_unique':'PASS',
+              'paid_s0_authorized':False,
+              'cast_lock':False,
+              'pair_tests':{
+                  'RU_PAIR_01_ELENA_MINA_LOBBY':'PASS',
+                  'RU_PAIR_02_ELENA_JULIAN_DOORS':'PASS',
+                  'RU_PAIR_03_ELENA_JULIAN_STATUS':'PASS',
+                  'RU_PAIR_04_CATE_LINE_VS_CASSETTE':'PASS'
+              },
+              'roles':{}
+          }
+          registry={'records':[]}
+          for r in roles:
+              review['roles'][r]={
+                  'selected_voice_id':f'voice_{r.lower()}',
+                  'provider_name':r.title(),
+                  'preview_listen':'PASS',
+                  'provider_identity_check':'PASS',
+                  'native_ru_pronunciation':'PASS',
+                  'age_character_fit':'PASS',
+                  'naturalism':'PASS',
+                  'microemotion_subtext':'PASS',
+                  'precision_under_pressure':'PASS',
+                  'repeat_take_identity_consistency':'PASS',
+                  'founder_credibility':'PASS',
+                  'score_0_30':27,
+                  'naturalism_score_0_5':4.5,
+                  'pronunciation_score_0_5':4.5,
+                  'hard_reject':False
+              }
+              for n,ch in [(1,'a'),(2,'b')]:
+                  registry['records'].append({
+                      'take_id':f'{r}_{n}','unit_id':f'RU_{r}_{n}','character':r,'voice_id':f'voice_{r.lower()}',
+                      'model_id':'eleven_v3','language_code':'ru','voice_settings':{'stability':0.45},
+                      'output_sha256':ch*64,'selected':True,
+                      'qc':{'pronunciation':'PASS','technical_artifact':'PASS'}
+                  })
+          out=Path('_room917_ru_cast_lock_ci')
+          (out/'snapshot.json').write_text(json.dumps(snapshot,indent=2)+'\n',encoding='utf-8')
+          (out/'review.json').write_text(json.dumps(review,indent=2)+'\n',encoding='utf-8')
+          (out/'registry.json').write_text(json.dumps(registry,indent=2)+'\n',encoding='utf-8')
+          PY
+
+      - name: Compile receipt
+        shell: bash
+        run: |
+          set -euo pipefail
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_cast_lock_receipt.py \
+            --provider-snapshot _room917_ru_cast_lock_ci/snapshot.json \
+            --review _room917_ru_cast_lock_ci/review.json \
+            --take-registry _room917_ru_cast_lock_ci/registry.json \
+            --out _room917_ru_cast_lock_ci/receipt.json
+
+      - name: Validate compiled receipt with existing production validator
+        shell: bash
+        run: |
+          set -euo pipefail
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/validate_ru_cast_lock.py \
+            _room917_ru_cast_lock_ci/receipt.json
+
+      - name: Verify execution boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          row=json.loads(Path('_room917_ru_cast_lock_ci/receipt.json').read_text(encoding='utf-8'))
+          b=row['execution_boundary']
+          assert b['provider_calls_made_by_compiler']==0
+          assert b['paid_synthesis_calls_made_by_compiler']==0
+          assert b['paid_authorization_created_by_compiler'] is False
+          assert b['human_listening_simulated'] is False
+          assert b['story_or_dialogue_changed'] is False
+          print('ROOM917 RU CAST LOCK receipt compiler boundary: PASS')
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_RU_CAST_LOCK_RECEIPT_COMPILER_CI
+          path: _room917_ru_cast_lock_ci/
+          if-no-files-found: error
+          retention-days: 14
