@@ -1,0 +1,40 @@
+{
+  "artifact": "B03_SPEAKER_AUTHORITY_ROUTER_CH01_03_v4",
+  "date": "2026-08-22",
+  "story_authority": "FOUNDER_LOCKED_CH01-29",
+  "full_book_gate": "OPEN",
+  "chapter_authority": {
+    "CH01": {
+      "status": "PASS_142_OF_142",
+      "authority": "77_B03_AUDIO_EXACT_TEXT_SEGMENTATION_CH01_v1.json",
+      "drive_id": "1aw17696W4KOLVgCcnOkKxpaOJE15YRMg"
+    },
+    "CH02": {
+      "status": "PASS_107_OF_107",
+      "authority": "B03_CH02_SPEAKER_ATTRIBUTION_CONTEXTUAL_AUTHORITY_v3.json",
+      "drive_id": null
+    },
+    "CH03": {
+      "status": "PASS_127_OF_127",
+      "authority": "B03_CH03_SPEAKER_ATTRIBUTION_CONTEXTUAL_AUTHORITY_v1.json",
+      "drive_id": null
+    },
+    "CH04_CH29": {
+      "status": "OPEN_REAUDIT"
+    }
+  },
+  "batch_ch01_03": {
+    "dialogue_turns": 376,
+    "assigned": 376,
+    "unknown": 0,
+    "coverage_pct": 100.0,
+    "exact_text_changes": 0
+  },
+  "diagnostic_only": {
+    "83_B03_SPEAKER_ATTRIBUTION_REBUILD_STRONG_v1.json": "nearest-name pronoun defect proven",
+    "85_B03_SPEAKER_ATTRIBUTION_REBUILD_STRONG_v1_2.json": "still contains CH01 S0108 and CH03 S0252 wrong at time of readback; 113 repair exists separately, so do not use unsynchronized map",
+    "112_B03_CH02_SPEAKER_ATTRIBUTION_TIER3_CONTEXTUAL_PILOT_REBASED_v2.json": "superseded by v3 after 5 wrong assignments + 1 UNKNOWN corrected",
+    "83_B03_SPEAKER_CONTEXT_BATCH_CH01_03_v0.3.zip": "superseded; 2 CH01 swaps + 5 CH02 swaps + 3 CH03 resolvable unknowns"
+  },
+  "next_exact_action": "RE_AUDIT_CH04_06_CONTEXT_BATCH_v0_3_AGAINST_IMMUTABLE_TEXT_AND_EVIDENCE_CONTRACT_V2"
+}
