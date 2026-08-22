@@ -1,7 +1,7 @@
 # CURRENT — BUSINESS ENGINEERING OS AUTHORITY
 
 **DATE:** 2026-08-22  
-**STATUS:** CYCLE10 P257–P272 ENGINEERING MERGED / P225–P288 PARTIALLY EXECUTED / REAL GATES P225 + P235 / FAIL-CLOSED
+**STATUS:** CYCLE10 P257–P272 ENGINEERING + P288 RECONCILIATION MERGED / P225–P288 = 17 OF 64 EXECUTED / REAL GATES P225 + P235 / FAIL-CLOSED
 
 ## 0. Normative restore order
 Restore Business Engineering in this order:
@@ -36,7 +36,9 @@ Do not repeat completed work because an older chat, branch, handoff or Drive doc
 - Workspace/award-state guard: PR #261 — merged; `PLANNED_AWARD_DATE != AWARDED_CONTRACT`.
 - Pre-P235 designation control: PR #263 — merged; `TEST_FIXTURE_ONLY != ACTUAL_BIDDER`.
 - Cycle10 P257–P264 Pack Ingest Hardening: PR #264 -> `3d9b5d900518ad2b05554e57c92f330883cf993e`; authority closure PR #265 -> `90053f57e88dfd1280593498a0b5b87aff1af22b`; final machine closure `75aaff273c677a6a9f6207b216657b8c96f49d8d`.
-- **Cycle10 P265–P272 Bidder Evidence Hardening: PR #267 -> `261b85072493e442c7c3854b284eb8a18d46d3ea`; persistence closure `79e9cdeadfb0f0aaed5eef37803a80226ea93917`.**
+- Cycle10 P265–P272 Bidder Evidence Hardening: PR #267 -> `261b85072493e442c7c3854b284eb8a18d46d3ea`; persistence closure `79e9cdeadfb0f0aaed5eef37803a80226ea93917`.
+- Current read-model r2 through P272: PR #269 -> `81fa685dc0e85e85972ae00d9a1ee0d90b4cfed4`; CI `32552120605` SUCCESS.
+- **P288 Fresh-Read Reconciliation: PR #270 -> `751ed2ecb2a85da35de70b50952f49ff86d7cbe3`; exact-head CI `32552767006` SUCCESS; disposition `PROTECT_NO_CHANGE`.**
 
 Duplicate/superseded replay branches do not create a second execution count.
 
@@ -56,7 +58,12 @@ Completed full Run32 layers:
 Completed Cycle10 engineering subsets inside parent backlog P225–P288:
 - `P257–P264`: **8/8 PASS_ENGINEERING**.
 - `P265–P272`: **8/8 PASS_ENGINEERING**.
-- combined hardening execution `P257–P272`: **16 cards**.
+- combined engineering hardening `P257–P272`: **16 cards**.
+
+Completed dependency-independent reconciliation inside the same parent backlog:
+- `P288`: **1/1 PASS_RECONCILIATION / PROTECT_NO_CHANGE**.
+
+Total executed inside `P225–P288` is therefore **17/64**: 16 engineering cards + 1 reconciliation card.
 
 Cycle9 P193–P224 disposition remains 13 PASS-class / 19 HOLD-BLOCKED; real PA4=0, PA5=0, E3=0, E4=0, BID/NO-BID=0, outreach=0.
 
@@ -76,7 +83,16 @@ Drive folder `1j2T1jO0yZmYXkMW8-8f8AUpzzDJXhXx2`; Run8/engineering `19ftjXkmMxAW
 
 Engineering adds BidderDesignationV2, legal-identity reconciliation, credential-expiry registry, evidence-bound CapabilityClaim, target-specific negative controls, dimensional reference lookback, workforce/capacity separation and privacy-minimized bidder packets.
 
-Neither Cycle10 subset acquired target files or created real bidder intent/capability evidence. Engineering readiness is not market proof.
+### P288 authority
+Path: `BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/`.
+
+PR #270 merge `751ed2ecb2a85da35de70b50952f49ff86d7cbe3`; head `e13376fccfea66b71e0db4f4b5d2e8d6859ff3bd`; exact-head CI `32552767006` SUCCESS.
+
+P288 was executed **exactly once** after reading core CURRENT, mandatory evidence overlay, current read model, current Drive closure and open Business PR state. Neither root blocker was closed, so the correct result was `PROTECT_NO_CHANGE`.
+
+Drive mirror: folder `1HhmHgOcpjb9_ZQtOHiV9K06lvIotCGyb`; document `1UQ3lh_hm9a0XtB3hO7AjbLK4y6prfnRNsjhlZYErmZQ`; semantic marker `BUSINESS-P288-FRESH-READ-PROTECT-NO-CHANGE-17OF64-47REMAIN`.
+
+Neither Cycle10 engineering subset nor P288 acquired target files or created real bidder intent/capability evidence. Engineering/reconciliation readiness is not market proof.
 
 ## 4. Current case frontier
 Case `PROC-BALLYBUNION-8872468`.
@@ -120,36 +136,44 @@ Procurement artifact maturity = **PA3**.
 PA4=false; PA5=false; E3=false; E4=false.
 WTP / price / profitability / paid revenue / procurement eligibility / legal clearance / finance approval remain null or unproven.
 
-Engineering CI/persistence does not raise this frontier.
+Engineering CI, persistence and P288 reconciliation do not raise this frontier.
 
 ## 7. Parent backlog — precise accounting
 Parent bank `P225–P288` = **64 cards**.
 
 Executed inside that bank:
-- `P257–P264` = 8;
-- `P265–P272` = 8;
-- total executed = **16**.
+- `P257–P264` = 8 engineering cards;
+- `P265–P272` = 8 engineering cards;
+- `P288` = 1 reconciliation card;
+- total executed = **17**.
 
-Remaining unexecuted = **48**:
+Remaining unexecuted = **47**:
 - `P225–P256` = 32;
-- `P273–P288` = 16.
+- `P273–P287` = 15.
 
 Dependencies override numbering.
 
+Dependency state after P288:
+- `P225–P234`: require authentic current target-pack acquisition.
+- `P235–P251`: require explicit case-specific actual bidder designation and authoritative bidder evidence.
+- `P252–P280`: require frozen target and bidder packets before downstream join/decision work can claim completion.
+- `P281–P283`: require a real independent reviewer and identical packet hashes.
+- `P284–P287`: require explicit external-action authorization and real external use/behavior.
+
+Therefore `P273–P287` are **BLOCKED_BY_EXTERNAL_EVIDENCE_OR_CONTROL_PLANE**, not failed and not executed.
+
 Highest-information real gates remain:
 1. **P225** — acquire authenticated/user-provided complete current official target export.
-2. P226–P234 — receipt/manifest/completeness/revisions/addenda -> exact TenderRequirementRegistry.
-3. **P235** — obtain an actual case-specific BidderDesignationObject from an authorized actor, or remain UNDESIGNATED.
-4. P237–P249 — acquire only target-required missing bidder evidence, reusing merged evidence instead of re-searching it.
-5. P250–P251 — build/freeze `SupplierCapabilityProfile v2` with UNKNOWN defaults.
-6. P252–P254 — atomic join and `MET / UNKNOWN / CURABLE / NONCURABLE / N/A` routing.
-7. P255 — bounded BID/HOLD/NO-BID candidate only after all preconditions.
-8. P273–P288 may execute only where dependency-independent and may not pretend missing external evidence exists.
+2. **P235** — obtain an actual case-specific `BidderDesignationObject` from an authorized actor plus complete authoritative bidder packet, or remain UNDESIGNATED.
+3. P226–P234 and P236–P255 execute only as their authority prerequisites become real.
+4. P273–P287 execute only when their frozen-packet/reviewer/external-use prerequisites become real.
 
 ## 8. Current decisive gate
 `ACQUIRE_COMPLETE_CURRENT_TARGET_PACK OR OBTAIN_EXPLICIT_CASE_SPECIFIC_BIDDER_DESIGNATION_AND_COMPLETE_AUTHORITATIVE_PACKET`.
 
 Progress on either independent root is admissible. Downstream requirement join and bounded decision require both.
+
+If neither root receives new admissible evidence, the procurement lane returns `PROTECT_NO_CHANGE`; it must not loop generic public search or invent requirements/capability.
 
 ## 9. Market WIP
 PRIMARY: tender/procurement decision intelligence.
@@ -160,13 +184,17 @@ Maximum WIP = 3.
 ## 10. Self-Improvement boundary
 Global Self-Improvement v2 remains CURRENT; v3 remains CANDIDATE/HOLD.
 
-Business-local reliability rule:
-`CORE_AUTHORITY_PLUS_MANDATORY_EVIDENCE_OVERLAY`.
+Business-local reliability rules retained:
+`CORE_AUTHORITY_PLUS_MANDATORY_EVIDENCE_OVERLAY`
+`FRESH_PR_RECONCILIATION_BEFORE_CURRENT_PROMOTION`
+`DEPENDENCY_BLOCKED_PROMPTS_ARE_NOT_FAILED_OR_EXECUTED`
+`NO_NEW_ADMISSIBLE_EVIDENCE_THEN_PROTECT_NO_CHANGE`.
 
-This is a local read-model/concurrency improvement, not a new global SI ID or global promotion.
+These are local read-model/reliability improvements, not a new global SI ID or global promotion.
 
 ## 11. Stop rules
-- Do not repeat P193–P224, P257–P264 or P265–P272.
+- Do not repeat P193–P224, P257–P264, P265–P272 or **P288**.
+- Do not mark P273–P287 executed merely to exhaust the numeric backlog.
 - Do not loop the same unauthenticated public document route after blocker localization.
 - Do not infer bidder designation from company identity, invoices, profile context or test fixtures.
 - Do not infer target requirements from historical/benchmark packs.
