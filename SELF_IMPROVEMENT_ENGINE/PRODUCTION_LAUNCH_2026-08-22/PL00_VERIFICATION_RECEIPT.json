@@ -1,0 +1,29 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.1",
+  "card": "PL-00",
+  "status": "DONE_VERIFIED",
+  "implementation_path": "personal-ai/",
+  "pr": 287,
+  "merge_sha": "2264d7b17ce08811f0037c1ce9fd0ca622442064",
+  "candidate_head": "6d8aae5912567b052580b0ca0aac62e3904aa5a1",
+  "exact_head_ci": {
+    "workflow": "Personal AI PL-00 Bootstrap",
+    "run_id": 32553543536,
+    "conclusion": "success"
+  },
+  "acceptance": {
+    "real_cli_smoke": true,
+    "sqlite_persisted": true,
+    "demo_project_task_readback": true,
+    "bootstrap_log_written": true,
+    "idempotence_test": true,
+    "paid_api_required": false
+  },
+  "drive": {
+    "folder_id": "1NY73gon6bWJRWhmxnJ9MLildINutKLLO",
+    "document_id": "1I57M5T5QakHvncL5oYluN54qvOtGFq1CSLdvOnkNwA0",
+    "initial_marker": "PERSONAL-AI-PL00-IMPLEMENTED-AWAITING-CI-PR287"
+  },
+  "new_ready_cards": ["PL-01", "PL-02", "PL-04", "PL-11"],
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION"
+}
