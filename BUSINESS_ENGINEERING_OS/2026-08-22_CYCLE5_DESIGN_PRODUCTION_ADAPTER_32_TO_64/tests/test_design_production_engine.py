@@ -1,0 +1,40 @@
+import unittest
+from engine.business_design_engine import *
+class T(unittest.TestCase):
+ def test01(self): self.assertEqual(source_state(False),"PLANNED_NOT_CONFIRMED_UPLOADED")
+ def test02(self): self.assertEqual(source_state(True),"CONFIRMED_RAW")
+ def test03(self): self.assertEqual(source_state(False,False,True),"QUARANTINED")
+ def test04(self): self.assertEqual(site_context_gate({"site_id":"x","source_role":"EARLY_BRIEF"})["status"],"INSUFFICIENT_SOURCE_NOT_PROJECT_DEFECT")
+ def test05(self):
+  p={"site_id":"x","location":"Galway","site_type":"wall","dimensions_state":"CONFIRMED","ownership_or_access_state":"PERMISSION_PENDING","climate_exposure":"COASTAL","heritage_state":"NOT_LISTED_CONFIRMED","public_access":"PUBLIC","stakeholders":["owner"],"source_role":"SITE_SURVEY"};self.assertEqual(site_context_gate(p)["status"],"SITE_CONTEXT_READY")
+ def test06(self): self.assertEqual(design_brief_gate({"objective":"o","users":["u"],"site_ref":"s","programme":["p"],"constraints":["c"],"deliverables":["d"],"exclusions":["e"],"unknowns":[]})["status"],"BRIEF_READY")
+ def test07(self): self.assertEqual(composition_gate({"dominant":"same","subordinate":"same","focal_path":"x","value_structure":"x","distance":"x"})["status"],"FLAT_HIERARCHY_RISK")
+ def test08(self): self.assertEqual(distance_readability({})["status"],"DISTANCE_DATA_REQUIRED")
+ def test09(self): self.assertEqual(distance_readability({"distance_m":10,"critical_feature_size_mm":30})["status"],"READABILITY_PROXY_PASS")
+ def test10(self): self.assertIn("DO_NOT_INVENT:exact_dimensions",prompt_compile({"objective":"mural","protected_unknowns":["exact_dimensions"]})["prompt"])
+ def test11(self): self.assertEqual(mural_surface_gate({"substrate":"render","source_role":"TECHNICAL_SURVEY"})["status"],"MISSING_REQUIRED_PROJECT_DATA")
+ def test12(self):
+  p={"substrate":"render","moisture_state":"UNRESOLVED","uv_exposure":"HIGH","wind_exposure":"HIGH","prep_system":"mineral-compatible prep","access_method":"scaffold","coating_system":"specified exterior system","maintenance_plan":"annual inspection","source_role":"TECHNICAL_SURVEY"};self.assertEqual(mural_surface_gate(p)["status"],"MURAL_TECHNICAL_HOLD")
+ def test13(self):
+  p={"material":"steel","height_or_mass_state":"ESTIMATE","foundation_state":"concept defined","structural_review_state":"NOT_RUN","public_contact":True,"maintenance_plan":"annual inspection","source_role":"TECHNICAL_SURVEY"};self.assertEqual(sculpture_gate(p)["status"],"STRUCTURAL_REVIEW_REQUIRED")
+ def test14(self): self.assertEqual(hospitality_flow({"guest_path":["door","corridor"],"service_path":["yard","corridor"],"delivery_path":["yard"],"waste_path":["yard"],"accessible_path":["door","corridor"],"capacity_state":"KNOWN"})["status"],"FLOW_CONFLICT")
+ def test15(self): self.assertEqual(hospitality_flow({"guest_path":["door","corridor"],"service_path":["yard","corridor"],"delivery_path":["yard"],"waste_path":["yard"],"accessible_path":["door","corridor"],"capacity_state":"KNOWN","shared_allowed":["corridor"]})["status"],"FLOW_READY")
+ def test16(self): self.assertEqual(material_lifecycle({"material":"mosaic","environment":"exterior","maintenance_interval":"annual","replacement_method":"local repair","failure_modes":["grout loss"]})["status"],"LIFECYCLE_REGISTERED")
+ def test17(self): self.assertEqual(buildability_gate({"fabrication":"shop","source_role":"TECHNICAL_PACKAGE"})["status"],"MISSING_REQUIRED_PROJECT_DATA")
+ def test18(self): self.assertEqual(buildability_gate({"fabrication":"shop","transport":"van","site_access":"scaffold","installation":"bolted","inspection":"engineer","maintenance_access":"MEWP"})["status"],"BUILDABILITY_READY_FOR_SPECIALIST_REVIEW")
+ def test19(self): self.assertEqual(cost_band({"quantity_basis":10})["status"],"MISSING_REQUIRED_PROJECT_DATA")
+ def test20(self):
+  r=cost_band({"quantity_basis":10,"unit_cost_low":100,"unit_cost_high":200,"contingency_pct":10});self.assertEqual((r["low"],r["high"]),(1100.0,2200.0))
+ def test21(self): self.assertFalse(commission_route({"buyer_class":"hotel","procurement_route":"direct","approval_chain":["owner"],"required_evidence":["site","cost"]})["buyer_intent_claimed"])
+ def test22(self): self.assertEqual(public_signal_gate({"e_grade":"E4","direct_buyer_or_money_evidence":False})["status"],"EVIDENCE_LAUNDERING_BLOCKED")
+ def test23(self): self.assertEqual(public_signal_gate({"e_grade":"E2","direct_buyer_or_money_evidence":False})["status"],"PUBLIC_SIGNAL_ACCEPTED")
+ def test24(self): self.assertEqual(offer_package({"scope":"concept","deliverables":["render"],"assumptions":["site TBD"],"exclusions":["engineering"],"price_basis_state":"RANGE","evidence_state":"E2"})["status"],"OFFER_READY_FOR_REVIEW")
+ def test25(self): self.assertEqual(red_team({"site_authority":False})["status"],"NO_GO")
+ def test26(self): self.assertIn("FAKE_COST_PRECISION",red_team({"site_authority":True,"cost_point_estimate":1000,"maintenance_path":True})["major"])
+ def test27(self): self.assertIn("BUYER_EVIDENCE_MISSING",red_team({"site_authority":True,"buyer_demand_claimed":True,"buyer_evidence":False,"maintenance_path":True})["major"])
+ def test28(self): self.assertEqual(red_team({"site_authority":True,"technical_maturity_claimed":False,"buyer_demand_claimed":False,"maintenance_path":True})["status"],"PASS_WITH_WATCHES")
+ def test29(self): self.assertEqual(self_improvement_observation({"project_id":"p","defect_or_success":"x","root_cause":"y","evidence_ref":"z","repeat_count":1,"proposed_mechanism":"m"})["status"],"CAPTURE_ONLY_NOT_ENGINE_CANDIDATE")
+ def test30(self): self.assertEqual(self_improvement_observation({"project_id":"p","defect_or_success":"x","root_cause":"y","evidence_ref":"z","repeat_count":2,"proposed_mechanism":"m"})["status"],"CANDIDATE_FOR_SELF_IMPROVEMENT_REVIEW")
+ def test31(self): self.assertFalse(self_improvement_observation({"project_id":"p","defect_or_success":"x","root_cause":"y","evidence_ref":"z","repeat_count":2,"proposed_mechanism":"m"})["auto_promote"])
+ def test32(self): self.assertNotEqual(cost_band({"quantity_basis":0})["status"],"ASSUMPTION_BANDED_COST")
+if __name__=="__main__": unittest.main()
