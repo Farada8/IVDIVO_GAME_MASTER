@@ -1,0 +1,62 @@
+{
+  "schema": "ivdivo.business.cycle11.bidder_capability_hardening/1.0",
+  "date": "2026-08-22",
+  "status": "RUN8_EXECUTED_CI_DRIVE_PENDING",
+  "executed": {
+    "range": "P265-P272",
+    "count": 8,
+    "pass_engineering": 8,
+    "hold_blocked": 0
+  },
+  "engineering": {
+    "modules": 8,
+    "contracts": 18,
+    "proof_gates": 8,
+    "protocols": 6,
+    "deterministic_canaries": 20
+  },
+  "target_case": {
+    "case_id": "PROC-BALLYBUNION-8872468",
+    "target_pack_acquired": false,
+    "real_bidder_designation": false,
+    "test_fixture_designation_only": true,
+    "atomic_requirement_join": false,
+    "bid_decision_authorized": false,
+    "root_a": "TARGET_PACK_NOT_ACQUIRED",
+    "root_b": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_PACKET"
+  },
+  "proof": {
+    "public_derived_ceiling": "E2_PLUS",
+    "artifact_plane": "PA3",
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "E4": false,
+    "market_proof_delta": false
+  },
+  "parent_backlog": {
+    "range": "P225-P288",
+    "count": 64,
+    "previously_executed_subset": "P257-P264",
+    "new_executed_subset": "P265-P272",
+    "engineering_executed_total": 16,
+    "remaining_unexecuted": 48,
+    "highest_value_evidence_blockers": [225, 235]
+  },
+  "current_real_states": {
+    "P225": "BLOCKED_AUTHENTICATED_OR_USER_PROVIDED_OFFICIAL_EXPORT_REQUIRED",
+    "P235": "HOLD_NO_EXPLICIT_BIDDER_DESIGNATION",
+    "P237": "PARTIAL_OFFICIAL_SCREEN_REG_NUMBER_CURRENT_CERTIFIED_EXTRACT_MISSING",
+    "P243": "PARTIAL_TAX_REGISTRATION_AND_HISTORICAL_ACCOUNT_EVIDENCE_CLEARANCE_MISSING",
+    "P244": "HOLD_NO_INSURANCE_CERTIFICATE",
+    "P248": "PARTIAL_SELF_ISSUED_EWI_RECORDS_THIRD_PARTY_REFERENCE_UNPROVEN",
+    "P250_P255": "BLOCKED_PRECONDITIONS"
+  },
+  "persistence": {
+    "github": "BRANCH_ONLY_PENDING_PR",
+    "ci": "PENDING",
+    "drive": "PENDING",
+    "current_authority_mutation": false
+  },
+  "stop_rule": "NO_REAL_TARGET_OR_BIDDER_AUTHORITY_MEANS_ENGINEERING_ONLY_OR_PROTECT_NO_CHANGE"
+}
