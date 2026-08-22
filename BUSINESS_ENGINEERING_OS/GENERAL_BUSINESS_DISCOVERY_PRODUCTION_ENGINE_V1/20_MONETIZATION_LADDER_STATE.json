@@ -1,12 +1,14 @@
 {
-  "schema": "ivdivo.business.early_wave_monetization_bridge/1.1",
+  "schema": "ivdivo.business.early_wave_monetization_bridge/1.2",
   "date": "2026-08-22",
-  "status": "INTERNAL_MONETIZATION_ROUTING_COMPLETE_NO_MARKET_PROOF",
+  "status": "WIP3_REROUTED_TO_M1_PEW05_CI_PENDING_NO_MARKET_PROOF",
   "inputs": {
     "strategic_wip": ["OW-01", "CF-01", "CF-03"],
     "money_mechanisms_state": "13_MONEY_MECHANISMS_MACHINE_STATE.json",
     "agent_commerce_scanner_state": "17_AGENT_COMMERCE_READINESS_SCANNER_V0/01_MACHINE_STATE.json",
-    "agent_commerce_p_ew02_merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db"
+    "agent_commerce_p_ew02_merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db",
+    "article50_p_ew03": {"pr":367,"merge_sha":"3f65b522c59a7cdc988cbae893c1d54651eab6e6","verified_head":"5a2db19731aeb23eac7c15c2da374cdaea3023a5","dedicated_ci":32561576738},
+    "dpp_p_ew04": {"pr":375,"merge_sha":"8797476c45ac38bc9eb9bfbe8a3b1d9c27f1a7d7","verified_head":"4e4e3bff14b9d9cb33b2292046b072667ff05298","dedicated_ci":32562001036}
   },
   "ladder": [
     "M0_INTERNAL_PROOF_ARTIFACT",
@@ -29,7 +31,8 @@
     "MMB-09_SOFTWARE_CANDIDATE_NEQ_SAAS_PROFITABILITY",
     "MMB-10_COMPLIANCE_TECHNICAL_PACK_NEQ_LEGAL_OPINION_CERTIFICATION",
     "MMB-11_PLATFORM_READINESS_NEQ_PLATFORM_APPROVAL",
-    "MMB-12_INTERNAL_ENGINEERING_NEQ_EXTERNAL_ACTION_AUTHORIZATION"
+    "MMB-12_INTERNAL_ENGINEERING_NEQ_EXTERNAL_ACTION_AUTHORIZATION",
+    "MMB-13_EQUAL_MONETIZATION_ROUTE_NEQ_EQUAL_EVIDENCE_STRENGTH"
   ],
   "current_routes": {
     "OW-01": {
@@ -38,31 +41,49 @@
       "nontrivial_delta": true,
       "buyer_role_plausible": true,
       "paid_diagnostic_transactions": 0,
+      "fixture_plane": "REAL_PUBLIC_PLUS_INTERNAL_ENGINEERING",
       "route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN",
+      "portfolio_role": "PRIMARY",
       "offer_spec": "AGENT_COMMERCE_READINESS_DIAGNOSTIC",
       "price": null,
       "wtp": null
     },
     "CF-01": {
       "opportunity": "AI Act Article 50 Technical Transparency Pack",
-      "technical_artifact": false,
-      "nontrivial_delta": false,
+      "technical_artifact": true,
+      "nontrivial_delta": true,
       "buyer_role_plausible": true,
-      "route": "M0_INTERNAL_PROOF_ARTIFACT_REQUIRED",
-      "next_gate": "P-EW03",
+      "paid_diagnostic_transactions": 0,
+      "fixture_plane": "SYNTHETIC_INTERNAL_ENGINEERING",
+      "route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN",
+      "portfolio_role": "PILOT_A",
+      "next_gate": "P-EW06_FIXED_SCOPE_DIAGNOSTIC_DELIVERY_SPEC",
       "price": null,
       "wtp": null
     },
     "CF-03": {
       "opportunity": "DPP Supplier-Data / Registry Readiness",
-      "technical_artifact": false,
-      "nontrivial_delta": false,
+      "technical_artifact": true,
+      "nontrivial_delta": true,
       "buyer_role_plausible": true,
-      "route": "M0_INTERNAL_PROOF_ARTIFACT_REQUIRED",
-      "next_gate": "P-EW04",
+      "paid_diagnostic_transactions": 0,
+      "fixture_plane": "SYNTHETIC_INTERNAL_ENGINEERING",
+      "route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN",
+      "portfolio_role": "PILOT_B",
+      "next_gate": "P-EW06_FIXED_SCOPE_DIAGNOSTIC_DELIVERY_SPEC",
       "price": null,
       "wtp": null
     }
+  },
+  "wip3_comparison": {
+    "all_route_m1": true,
+    "evidence_strength_equal": false,
+    "keep_primary": "OW-01",
+    "keep_pilot_a": "CF-01",
+    "keep_pilot_b": "CF-03",
+    "add_fourth_opportunity": false,
+    "p_ew05_drive_document_id": "1fcJgo4GKoGuXzYE-HAKANxYTt9tIhkDUwpN51W1mAQw",
+    "p_ew05_drive_readback": "PASS"
   },
   "agent_commerce_blind10": {
     "p_ew01_executed": true,
@@ -83,25 +104,22 @@
     "requires_recurring_paid_cycles": 2,
     "software_candidate_is_saas_proven": false
   },
-  "external_action": {
-    "authorized": false,
-    "outreach": false,
-    "spend": false,
-    "contracting": false
-  },
+  "external_action": {"authorized":false,"outreach":false,"spend":false,"contracting":false},
   "drive": {
-    "document_id": "1leMlNJPcaMCUtCes-9wftPpp4LnCFh_9V79YhBkuTi8",
-    "parent_folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
-    "semantic_readback": true,
-    "readback_marker": "EARLY-WAVE-MONETIZATION-BRIDGE-M0-M6-OW01-M1-CF01-M0-CF03-M0-20260822"
+    "original_bridge_document_id": "1leMlNJPcaMCUtCes-9wftPpp4LnCFh_9V79YhBkuTi8",
+    "p_ew05_folder_id": "1wBeN1p_a83AQYpZhjTJ-FCqoeLsgwRAk",
+    "p_ew05_document_id": "1fcJgo4GKoGuXzYE-HAKANxYTt9tIhkDUwpN51W1mAQw",
+    "p_ew05_readback_marker": "P-EW05-WIP3-ALL-M1-OW01-PRIMARY-CF01-PILOT-CF03-PILOT-PEW06-NEXT-NO-MARKET-PROOF"
   },
-  "next_internal_sequence": ["P-EW03", "P-EW04", "RUN_MONETIZATION_ROUTER_ON_WIP3", "P-EW05"],
+  "next_internal_sequence": ["P-EW05_VERIFY", "P-EW06_FIXED_SCOPE_DIAGNOSTIC_DELIVERY_SPECS_CF01_CF03"],
   "proof_boundary": {
     "buyer_demand": "UNPROVEN",
     "wtp": null,
     "price": null,
+    "paid_diagnostic_transactions": 0,
     "transactions_from_bridge": 0,
     "recurring_revenue": "UNPROVEN",
-    "saas_demand": "UNPROVEN"
+    "saas_demand": "UNPROVEN",
+    "profitability": "UNPROVEN"
   }
 }
