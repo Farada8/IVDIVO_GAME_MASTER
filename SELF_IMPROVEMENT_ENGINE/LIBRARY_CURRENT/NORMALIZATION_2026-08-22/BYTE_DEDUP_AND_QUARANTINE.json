@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-08-22",
+  "source_folder_id":"1F_21NJ9YXB63ctOS5KPrkeDlcYKkUTVv",
+  "summary":{"physical_entries":35,"valid_physical":26,"quarantined_physical":9,"unique_byte_hashes_all":30,"unique_valid_byte_hashes":26,"unique_broken_byte_hashes":4,"exact_duplicate_groups":2,"redundant_duplicate_physical_copies_inside_quarantine":5},
+  "exact_duplicate_groups":[
+    {"sha256":"d270647fddfae45384549eb30859994d27d660e2d84a7e268e9889c902514300","drive_ids":["1mgzhlUwlzGhzirG02nNqT9qYZ2M_M66l","1iBkA73z-VLeq7iXcD75lUB80Zr50iPHA","12grAxsM82iQwNGg2FO_3A-BRNaMKGapj","1kGx6hwuz5k3NjTZaDSS-X8oZdBDFGKkQ"],"classification":"BROKEN_PLACEHOLDER_DUPLICATE","evidence":"DOCX containers open but document body is only File not found !!!159.69.211.88"},
+    {"sha256":"31d6f4c94cd6e21364bd9697b621fc8d4c1a2dc37de775e19db8243ae7258350","drive_ids":["1CXpd6YrX9IYFaCLLEa_LOX9_Wa4M8EYe","1lqGeZj4IaOoBtbghfFi8WoNwxayHyZWA","14y7Rs8UNur9HGbJ-QuuVydDdiaeOpQ_R"],"classification":"BROKEN_ERROR_PAGE_DUPLICATE","evidence":"Named PDF but raw bytes have no %PDF signature and contain the same PHP readfile/filesize error page"}
+  ],
+  "unique_broken_payloads":[
+    {"drive_id":"16gg_WuuP4iqLGG2PWYBUah9A0u60SIyO","sha256":"6c28099b15826135229eb7b6751f4a78a6b8add6dcd1c22061d3ded943cc044d","reason":"Structurally valid one-page PDF whose extracted content is only File not found !!!159.69.211.88"},
+    {"drive_id":"1uavd1CghmTCXHCnTX0uKus6VbDnlhHcI","sha256":"c5d9daeaee6e160cbb038b45d1bda9ac368a37f6c718e849cdbb6cd944ec9157","reason":"DOCX opens but document body is only File not found !!!159.69.211.88"}
+  ],
+  "quarantine_drive_ids":["16gg_WuuP4iqLGG2PWYBUah9A0u60SIyO","1uavd1CghmTCXHCnTX0uKus6VbDnlhHcI","1mgzhlUwlzGhzirG02nNqT9qYZ2M_M66l","1iBkA73z-VLeq7iXcD75lUB80Zr50iPHA","12grAxsM82iQwNGg2FO_3A-BRNaMKGapj","1kGx6hwuz5k3NjTZaDSS-X8oZdBDFGKkQ","1CXpd6YrX9IYFaCLLEa_LOX9_Wa4M8EYe","1lqGeZj4IaOoBtbghfFi8WoNwxayHyZWA","14y7Rs8UNur9HGbJ-QuuVydDdiaeOpQ_R"],
+  "rule":"EXACT_DUPLICATE_REQUIRES_BYTE_HASH_EQUALITY; similar filename/title alone is not duplicate proof. Quarantine is evidence state, not deletion authorization."
+}

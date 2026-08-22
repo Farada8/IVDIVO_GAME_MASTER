@@ -1,0 +1,24 @@
+name: Self-Improvement Systems Library Normalization
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/NORMALIZATION_2026-08-22/**'
+      - 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/SOURCE_REGISTRY.json'
+      - '.github/workflows/self-improvement-systems-library-normalization.yml'
+
+jobs:
+  normalization:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate normalization metadata
+        run: python SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/NORMALIZATION_2026-08-22/validate_normalization.py
+      - name: Privacy guard
+        run: |
+          test ! -e 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/NORMALIZATION_2026-08-22/raw'
+          test ! -e 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/NORMALIZATION_2026-08-22/books'
+          grep -q 'raw_copyrighted_bytes_published_to_github.*false' SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/NORMALIZATION_2026-08-22/NORMALIZATION_PROOF.json
