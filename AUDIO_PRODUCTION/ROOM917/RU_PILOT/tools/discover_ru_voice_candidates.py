@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """Discover durable native-Russian ElevenLabs Voice Library candidates for ROOM917.
 
-No TTS generation and no credit-bearing speech request. The script queries the
-shared Voice Library, filters for Russian professional voices and a durable
-notice period, then writes a secret-free discovery snapshot with metadata-only
-role rankings for Elena, Julian, Mina and Cate.
+Production discovery requires an authenticated filtered Voice Library request.
+Live provider probes on 2026-08-22 showed that unauthenticated requests cannot
+use filters and cannot be relied on for pagination. Therefore, when
+ELEVENLABS_API_KEY is absent, this script writes a zero-spend HOLD receipt and
+exits successfully instead of attempting misleading public discovery.
 
-The shared-voices endpoint documents xi-api-key as optional. If an API key is
-present it may be sent, but native discovery must not depend on it.
-
-No ranking result is a cast lock. Human Russian listening and pair tests remain
-mandatory before production use.
+No TTS synthesis endpoint is called. No API key is persisted or printed.
+Metadata ranking is pre-audition only; preview listening, bounded canary, pair
+tests and Founder credibility listen remain mandatory before CAST LOCK.
 """
 from __future__ import annotations
 
@@ -32,31 +31,20 @@ def utc_now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-def _norm(value: object) -> str:
+def norm(value: object) -> str:
     return str(value or "").strip().lower().replace("-", "_").replace(" ", "_")
 
 
 def is_ru_voice(voice: dict) -> bool:
-    if _norm(voice.get("language")) == "ru":
+    if norm(voice.get("language")) == "ru":
         return True
     for item in voice.get("verified_languages") or []:
-        if _norm(item.get("language")) == "ru" or _norm(item.get("locale")).startswith("ru_"):
+        if norm(item.get("language")) == "ru" or norm(item.get("locale")).startswith("ru_"):
             return True
     return False
 
 
 def sanitized_voice(voice: dict) -> dict:
-    verified = []
-    for item in voice.get("verified_languages") or []:
-        verified.append(
-            {
-                "language": item.get("language"),
-                "locale": item.get("locale"),
-                "accent": item.get("accent"),
-                "model_id": item.get("model_id"),
-                "preview_url": item.get("preview_url"),
-            }
-        )
     return {
         "voice_id": voice.get("voice_id"),
         "public_owner_id": voice.get("public_owner_id"),
@@ -70,7 +58,7 @@ def sanitized_voice(voice: dict) -> dict:
         "use_case": voice.get("use_case"),
         "description": voice.get("description"),
         "preview_url": voice.get("preview_url"),
-        "verified_languages": verified,
+        "verified_languages": voice.get("verified_languages") or [],
         "notice_period": voice.get("notice_period"),
         "disable_at_unix": voice.get("disable_at_unix"),
         "live_moderation_enabled": voice.get("live_moderation_enabled"),
@@ -81,59 +69,21 @@ def sanitized_voice(voice: dict) -> dict:
     }
 
 
-def fetch_page(page: int, page_size: int, min_notice_days: int, api_key: str | None) -> dict:
-    query = urllib.parse.urlencode(
-        {
-            "page": page,
-            "page_size": page_size,
-            "category": "professional",
-            "language": "ru",
-            "min_notice_period_days": min_notice_days,
-            "include_custom_rates": "false",
-            "include_live_moderated": "false",
-            "sort": "trending",
-        }
-    )
-    req = urllib.request.Request(
-        API_URL + "?" + query,
-        headers={"Accept": "application/json", **({"xi-api-key": api_key} if api_key else {})},
-        method="GET",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=60) as response:
-            return json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"ElevenLabs shared-voices HTTP {exc.code}: {detail}") from exc
-
-
 def searchable_text(voice: dict) -> str:
-    parts = [
-        voice.get("name"),
-        voice.get("accent"),
-        voice.get("gender"),
-        voice.get("age"),
-        voice.get("descriptive"),
-        voice.get("use_case"),
-        voice.get("description"),
-    ]
-    return " ".join(_norm(part) for part in parts if part)
-
-
-def _apply_keywords(text: str, weights: dict[str, int], reasons: list[str]) -> int:
-    score = 0
-    for keyword, weight in weights.items():
-        token = _norm(keyword)
-        if token and token in text:
-            score += weight
-            reasons.append(f"keyword:{token}:{weight:+d}")
-    return score
+    return " ".join(
+        norm(x)
+        for x in [
+            voice.get("name"), voice.get("accent"), voice.get("gender"), voice.get("age"),
+            voice.get("descriptive"), voice.get("use_case"), voice.get("description"),
+        ]
+        if x
+    )
 
 
 def role_score(voice: dict, role: str) -> tuple[int, list[str]]:
     text = searchable_text(voice)
-    gender = _norm(voice.get("gender"))
-    age = _norm(voice.get("age"))
+    gender = norm(voice.get("gender"))
+    age = norm(voice.get("age"))
     score = 0
     reasons: list[str] = []
 
@@ -149,72 +99,23 @@ def role_score(voice: dict, role: str) -> tuple[int, list[str]]:
         score -= 60
         reasons.append("gender_mismatch:-60")
 
-    if role in {"ELENA", "JULIAN", "MINA"} and age in {"young", "middle_aged", "middle-aged", "adult"}:
+    if age in {"young", "middle_aged", "middle-aged", "adult"}:
         score += 5
         reasons.append("age_band_fit:+5")
-    if role == "CATE" and age in {"middle_aged", "middle-aged", "adult", "young"}:
-        score += 4
-        reasons.append("age_band_fit:+4")
-
     if voice.get("preview_url"):
         score += 2
         reasons.append("preview_available:+2")
 
-    if role == "ELENA":
-        weights = {
-            "grounded": 10,
-            "calm": 8,
-            "conversational": 8,
-            "professional": 6,
-            "confident": 3,
-            "natural": 4,
-            "character": 2,
-            "narration": -4,
-            "storyteller": -3,
-            "dramatic": -5,
-            "seductive": -10,
-        }
-    elif role == "JULIAN":
-        weights = {
-            "calm": 7,
-            "professional": 7,
-            "conversational": 6,
-            "confident": 5,
-            "authoritative": 4,
-            "grounded": 6,
-            "natural": 3,
-            "deep": 2,
-            "character": 2,
-            "dramatic": -4,
-            "seductive": -8,
-        }
-    elif role == "MINA":
-        weights = {
-            "conversational": 10,
-            "warm": 7,
-            "friendly": 6,
-            "natural": 5,
-            "expressive": 4,
-            "energetic": 2,
-            "character": 3,
-            "narration": -4,
-            "dramatic": -4,
-        }
-    else:
-        weights = {
-            "warm": 10,
-            "gentle": 8,
-            "calm": 7,
-            "conversational": 6,
-            "soft": 5,
-            "natural": 4,
-            "character": 2,
-            "narration": -3,
-            "dramatic": -5,
-            "ethereal": -10,
-        }
-
-    score += _apply_keywords(text, weights, reasons)
+    weights = {
+        "ELENA": {"grounded":10,"calm":8,"conversational":8,"professional":6,"natural":4,"narration":-4,"dramatic":-5,"seductive":-10},
+        "JULIAN": {"grounded":7,"calm":7,"professional":7,"conversational":6,"confident":5,"authoritative":4,"deep":2,"dramatic":-4,"seductive":-8},
+        "MINA": {"conversational":10,"warm":7,"friendly":6,"natural":5,"expressive":4,"energetic":2,"narration":-4,"dramatic":-4},
+        "CATE": {"warm":10,"gentle":8,"calm":7,"conversational":6,"soft":5,"natural":4,"narration":-3,"dramatic":-5,"ethereal":-10},
+    }[role]
+    for keyword, weight in weights.items():
+        if norm(keyword) in text:
+            score += weight
+            reasons.append(f"keyword:{keyword}:{weight:+d}")
     return score, reasons
 
 
@@ -222,24 +123,79 @@ def rank_for_role(candidates: list[dict], role: str, limit: int = 12) -> list[di
     rows = []
     for voice in candidates:
         score, reasons = role_score(voice, role)
-        rows.append(
-            {
-                "voice_id": voice.get("voice_id"),
-                "name": voice.get("name"),
-                "score": score,
-                "gender": voice.get("gender"),
-                "age": voice.get("age"),
-                "accent": voice.get("accent"),
-                "descriptive": voice.get("descriptive"),
-                "use_case": voice.get("use_case"),
-                "preview_url": voice.get("preview_url"),
-                "notice_period": voice.get("notice_period"),
-                "disable_at_unix": voice.get("disable_at_unix"),
-                "reasons": reasons,
-            }
-        )
+        rows.append({
+            "voice_id": voice.get("voice_id"), "name": voice.get("name"), "score": score,
+            "gender": voice.get("gender"), "age": voice.get("age"), "accent": voice.get("accent"),
+            "descriptive": voice.get("descriptive"), "use_case": voice.get("use_case"),
+            "preview_url": voice.get("preview_url"), "notice_period": voice.get("notice_period"),
+            "disable_at_unix": voice.get("disable_at_unix"), "reasons": reasons,
+        })
     rows.sort(key=lambda row: (int(row["score"]), str(row.get("name") or "").lower()), reverse=True)
     return rows[:limit]
+
+
+def write_hold(out_path: Path, min_notice_days: int) -> int:
+    hold = {
+        "schema_version": "ivdivo.room917_ru_voice_discovery_snapshot/1.3",
+        "generated_at": utc_now(),
+        "provider": "ElevenLabs",
+        "endpoint": "/v1/shared-voices",
+        "project_id": "ROOM917",
+        "locale": "ru-RU",
+        "status": "HOLD_PROVIDER_AUTH_REQUIRED",
+        "paid_synthesis_calls": 0,
+        "candidate_count": 0,
+        "candidates": [],
+        "ranked_role_candidates": {role: [] for role in ROLES},
+        "query_policy": {
+            "category": "professional",
+            "language": "ru",
+            "min_notice_period_days": min_notice_days,
+            "include_custom_rates": False,
+            "include_live_moderated": False,
+            "sort": "trending"
+        },
+        "provider_access_evidence": {
+            "date": "2026-08-22",
+            "live_probe_filtered_without_auth": "401_YOU_MUST_BE_LOGGED_IN_TO_USE_FILTERS",
+            "live_probe_unfiltered_over_three": "401_YOU_MUST_BE_LOGGED_IN_TO_FETCH_MORE_THAN_3_VOICES",
+            "live_probe_page_size_three_pagination": "401_UNAUTHORIZED",
+            "conclusion": "AUTHENTICATED_PROVIDER_ACCESS_REQUIRED_FOR_RELIABLE_PRODUCTION_DISCOVERY"
+        },
+        "selection_policy": {
+            "auto_cast": False,
+            "metadata_ranking_is_cast_evidence": False,
+            "preview_listen_required_before_paid_canary": True,
+            "paid_canary_required_before_cast_lock": True,
+            "founder_credibility_listen_required": True,
+            "full_e01_render_allowed": False,
+            "next": "CONFIGURE_ELEVENLABS_API_KEY_OR_OBTAIN_AUTHENTICATED_PROVIDER_EXPORT"
+        }
+    }
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(hold, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"status": hold["status"], "candidate_count": 0, "out": str(out_path)}))
+    return 0
+
+
+def fetch_page(page: int, page_size: int, min_notice_days: int, api_key: str) -> dict:
+    query = urllib.parse.urlencode({
+        "page": page,
+        "page_size": page_size,
+        "category": "professional",
+        "language": "ru",
+        "min_notice_period_days": min_notice_days,
+        "include_custom_rates": "false",
+        "include_live_moderated": "false",
+        "sort": "trending"
+    })
+    req = urllib.request.Request(API_URL + "?" + query, headers={"Accept": "application/json", "xi-api-key": api_key})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"ElevenLabs shared-voices HTTP {exc.code}: {detail}") from exc
 
 
 def main() -> int:
@@ -251,16 +207,18 @@ def main() -> int:
     args = ap.parse_args()
 
     if not 1 <= args.page_size <= 100:
-        ap.error("--page-size must be between 1 and 100")
+        ap.error("--page-size must be 1..100")
     if args.max_pages < 1:
-        ap.error("--max-pages must be >= 1")
+        ap.error("--max-pages must be >=1")
     if not 90 <= args.min_notice_days <= 730:
-        ap.error("--min-notice-days must be between 90 and 730")
+        ap.error("--min-notice-days must be 90..730")
 
     api_key = os.getenv(KEY_ENV)
+    if not api_key:
+        return write_hold(args.out, args.min_notice_days)
+
     collected: list[dict] = []
     provider_total = None
-
     for page in range(args.max_pages):
         payload = fetch_page(page, args.page_size, args.min_notice_days, api_key)
         if provider_total is None:
@@ -272,53 +230,44 @@ def main() -> int:
             break
 
     seen: set[str] = set()
-    unique = []
+    candidates = []
     for voice in collected:
         voice_id = str(voice.get("voice_id") or "")
-        if not voice_id or voice_id in seen:
-            continue
-        seen.add(voice_id)
-        unique.append(voice)
+        if voice_id and voice_id not in seen:
+            seen.add(voice_id)
+            candidates.append(voice)
 
-    rankings = {role: rank_for_role(unique, role) for role in ROLES}
-    status = "PASS_CANDIDATES_FOUND" if unique else "HOLD_NO_NATIVE_DURABLE_CANDIDATES"
-
+    status = "PASS_CANDIDATES_FOUND" if candidates else "HOLD_NO_NATIVE_DURABLE_CANDIDATES"
     snapshot = {
-        "schema_version": "ivdivo.room917_ru_voice_discovery_snapshot/1.1",
+        "schema_version": "ivdivo.room917_ru_voice_discovery_snapshot/1.3",
         "generated_at": utc_now(),
         "provider": "ElevenLabs",
         "endpoint": "/v1/shared-voices",
         "project_id": "ROOM917",
         "locale": "ru-RU",
         "status": status,
-        "query_policy": {
-            "category": "professional",
-            "language": "ru",
-            "min_notice_period_days": args.min_notice_days,
-            "include_custom_rates": False,
-            "include_live_moderated": False,
-            "sort": "trending",
-        },
-        "api_key_optional_for_endpoint": True,
-        "authenticated_request_used": bool(api_key),
+        "authenticated_request_used": True,
         "paid_synthesis_calls": 0,
         "provider_total_count": provider_total,
-        "candidate_count": len(unique),
-        "candidates": unique,
-        "ranked_role_candidates": rankings,
+        "candidate_count": len(candidates),
+        "candidates": candidates,
+        "ranked_role_candidates": {role: rank_for_role(candidates, role) for role in ROLES},
+        "query_policy": {
+            "category": "professional", "language": "ru", "min_notice_period_days": args.min_notice_days,
+            "include_custom_rates": False, "include_live_moderated": False, "sort": "trending"
+        },
         "selection_policy": {
             "auto_cast": False,
             "metadata_ranking_is_cast_evidence": False,
             "preview_listen_required_before_paid_canary": True,
             "paid_canary_required_before_cast_lock": True,
             "founder_credibility_listen_required": True,
-            "next": "PREVIEW_TOP_ROLE_CANDIDATES_THEN_BIND_3_PER_ROLE_TO_ROOM917_RU_CAST_AUDITION_GATE_v1.0",
-        },
+            "next": "PREVIEW_TOP_ROLE_CANDIDATES_THEN_BIND_UP_TO_3_PER_ROLE"
+        }
     }
-
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"status": status, "candidate_count": len(unique), "out": str(args.out)}, ensure_ascii=False))
+    print(json.dumps({"status": status, "candidate_count": len(candidates), "out": str(args.out)}))
     return 0
 
 
