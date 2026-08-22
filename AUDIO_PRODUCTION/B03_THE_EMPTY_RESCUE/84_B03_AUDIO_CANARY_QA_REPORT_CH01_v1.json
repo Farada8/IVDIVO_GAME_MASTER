@@ -1,0 +1,15 @@
+{
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "source_reconstruction_pass": true,
+  "source_reconstruction_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "quoted_turns": 142,
+  "spoken_units": 281,
+  "render_blocks": 16,
+  "requests": 16,
+  "units_mapped_exactly_once": true,
+  "max_block_chars": 1409,
+  "all_voice_ids_null": true,
+  "all_requests_fail_closed": true,
+  "room917_story_hardcodes_imported": false,
+  "private_payload_policy": "Full exact-text/source-bearing artifacts are held in the authoritative Google Drive B03 production folder; public GitHub mirrors hashes and execution state only."
+}

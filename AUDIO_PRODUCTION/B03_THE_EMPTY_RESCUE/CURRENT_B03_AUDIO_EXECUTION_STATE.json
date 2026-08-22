@@ -1,0 +1,65 @@
+{
+  "artifact": "CURRENT_B03_AUDIO_EXECUTION_STATE",
+  "updated": "2026-08-22",
+  "project": "B03 — THE EMPTY RESCUE",
+  "story_authority": "FOUNDER_LOCKED_CH01-29",
+  "delivery_mode": "MULTI_VOICE_AUDIO_NOVEL_CANARY",
+  "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
+  "locked_book_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
+  "ch01_source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "last_completed_artifact": "B03_CH01_BOUNDED_LIVE_CANARY_SELECTION_v1",
+  "current_stage": "ZERO_COST_PREFLIGHT_READY_FOR_CASTING_CASCADE",
+  "dry_compile": {
+    "spoken_units": 281,
+    "quoted_turns": 142,
+    "scenes": 6,
+    "render_blocks": 16,
+    "provider_dry_requests": 16,
+    "source_reconstruction_pass": true,
+    "all_voice_ids_null": true,
+    "all_requests_fail_closed": true
+  },
+  "bounded_canary": {
+    "selected_blocks": 6,
+    "selected_characters": 2811,
+    "selected_voice_roles": 6,
+    "allowed_to_dispatch": false
+  },
+  "casting_cascade": {
+    "zero_cost_preflight": "PASS_PLAN / LIVE PROVIDER ACCESS NOT TESTED",
+    "S0_technical_canary": "NOT_RUN",
+    "S1_fair_anchor_comparison": "NOT_RUN",
+    "S2_secondary_discrimination": "NOT_RUN",
+    "S3_forbidden_mode_stress": "NOT_RUN",
+    "S4_pair_ensemble_test": "NOT_RUN",
+    "provisional_voice_lock": "NOT_REACHED",
+    "hard_pilot": "NOT_REACHED",
+    "scaled_render": "BLOCKED"
+  },
+  "open_gates": [
+    "REAL_PROVIDER_VOICE_CANDIDATE_IDS",
+    "SLOVENIAN_PRONUNCIATION_AUDITION_AND_LOCK",
+    "HUMAN_CAST_APPROVAL",
+    "PROVIDER_CREDENTIALS_AVAILABLE_IN_EXECUTION_ENVIRONMENT",
+    "EXPLICIT_PROVIDER_SPEND_AUTHORIZATION",
+    "IMMEDIATE_PRE_DISPATCH_EXACT_TEXT_HASH_RECHECK"
+  ],
+  "prohibited_actions": [
+    "STORY_REWRITE",
+    "CH30_CREATION",
+    "GUESSED_DIAGNOSIS_OR_PROGNOSIS_FOR_ANDREJ",
+    "PRECURSOR_ONTOLOGY_INVENTION",
+    "OES_OR_CONFEDERATION_COMMAND_TAKEOVER_OF_LOCAL_SLOVENIAN_RESCUE",
+    "BULK_CH01_29_PROVIDER_RENDER_BEFORE_CANARY_EVIDENCE",
+    "CLAIMING_RENDER_VOICE_LOCK_ALIGNMENT_OR_LISTEN_WITHOUT_REAL_EVIDENCE",
+    "STORING_API_KEYS_OR_SECRETS"
+  ],
+  "private_payload_authority": {
+    "drive_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+    "drive_locked_master_id": "141BOyku8VX8WXehH05rZnQGZirMOP-3iCs-5_yMJbGU",
+    "drive_ch01_audio_canary_zip_id": "1d6MhjJ6XUjy4duN1am8H-ETCAv3NtCJJ",
+    "drive_ch01_execution_pack_zip_id": "1Acu_vzczRnj29ylbVbDJ1wpRwZoFDWYM",
+    "policy": "Full exact-text segmentation/director/provider payload remains in Drive; public GitHub mirrors contracts, hashes and execution state only."
+  },
+  "next_unblocked_obligation": "DISCOVER/SELECT REAL VOICE CANDIDATES AND RUN ZERO-COST PROVIDER PREFLIGHT; THEN S0 ONLY AFTER PROVIDER/SPEND AUTHORIZATION."
+}

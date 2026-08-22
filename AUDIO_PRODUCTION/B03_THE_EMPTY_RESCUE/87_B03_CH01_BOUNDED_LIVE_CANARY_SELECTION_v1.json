@@ -1,0 +1,50 @@
+{
+  "artifact": "B03_CH01_BOUNDED_LIVE_CANARY_SELECTION_v1",
+  "date": "2026-08-22",
+  "status": "SELECTED / NOT_AUTHORIZED_TO_DISPATCH",
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "selected_render_blocks": [
+    "B03_CH01_RB003",
+    "B03_CH01_RB006",
+    "B03_CH01_RB009",
+    "B03_CH01_RB010",
+    "B03_CH01_RB011",
+    "B03_CH01_RB013"
+  ],
+  "selected_request_count": 6,
+  "selected_character_count": 2811,
+  "selected_speakers": [
+    "ANDREJ_KOSIR",
+    "JANA_KOVAC",
+    "NARRATOR",
+    "NIKA_ZUPAN",
+    "RESCUER_FIELD_RADIO",
+    "UNKNOWN_PRECURSOR_CALLER"
+  ],
+  "coverage_objectives": [
+    "narrator + lead + anomaly caller interaction",
+    "ordinary dry Nika/Andrej relationship and pronunciation risk",
+    "live clue recurrence + Jana + field rescuer radio",
+    "same unknown caller reused as stored playback without recasting",
+    "protected clue relationship"
+  ],
+  "provider_spend_authorized": false,
+  "allowed_to_dispatch": false,
+  "dispatch_blockers": [
+    "VOICE_IDS_UNBOUND",
+    "PRONUNCIATION_GATE_OPEN",
+    "HUMAN_CAST_APPROVAL_OPEN",
+    "PROVIDER_SPEND_NOT_AUTHORIZED"
+  ],
+  "post_render_required_if_authorized": [
+    "alignment ingest",
+    "same-voice identity check for unknown caller live/playback",
+    "logical clue anchor resolution",
+    "protected-silence insertion",
+    "per-stem stereo integrity",
+    "stem-null/internal consistency",
+    "mono/mobile/low-volume QC",
+    "human artistic listen"
+  ],
+  "stop_rule": "If any exact_text hash, speaker identity, pronunciation, clue rhythm, or authority invariant fails, stop at the smallest failed block; do not rerender the whole chapter."
+}

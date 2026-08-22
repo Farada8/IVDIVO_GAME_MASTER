@@ -1,0 +1,33 @@
+{
+  "artifact": "B03_AUDIO_SOURCE_AUTHORITY_CH01_v1",
+  "date": "2026-08-22",
+  "status": "PASS_DRY_AUTHORITY",
+  "project": "B03 — THE EMPTY RESCUE",
+  "story_status": "FOUNDER_LOCKED_CH01-29",
+  "audio_scope": "CH01 provider-dry canary; no story rewrite",
+  "locked_book_text_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
+  "source_chapter_file": "CH01.txt",
+  "source_chapter_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "source_chapter_characters": 13726,
+  "source_chapter_words": 2252,
+  "lock_invariants": [
+    "No CH30",
+    "Andrej consequence remains severe/lasting without invented exact diagnosis/prognosis/amputation status",
+    "Precursor origin/mechanism remains UNKNOWN",
+    "Slovenian local rescue authority remains local; no OES/Confederation command transfer",
+    "Final BIT? callback remains preserved in book master"
+  ],
+  "audio_engine_mechanisms_imported": [
+    "authority_hash",
+    "exact_text_units",
+    "performance_state",
+    "render_blocks",
+    "voice_pronunciation_binding",
+    "provider_dry_requests",
+    "logical_sound_anchors",
+    "protected_silence",
+    "selective_regeneration",
+    "fail_closed_dispatch"
+  ],
+  "room917_story_hardcodes_imported": false
+}
