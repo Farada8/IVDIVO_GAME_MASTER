@@ -1,0 +1,134 @@
+name: ROOM917 E01 A01-A02 SFX Canary
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_spend:
+        description: 'Type YES to authorize this bounded paid SFX canary only'
+        required: true
+        type: string
+      max_requests:
+        description: '2 = one candidate per room bed; 4 = two candidates per room bed'
+        required: true
+        default: '2'
+        type: choice
+        options:
+          - '2'
+          - '4'
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-sfx-canary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Spend gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.confirm_spend }}" != "YES" ]; then
+            echo '::error::Paid SFX canary blocked. confirm_spend must be exactly YES.'
+            exit 20
+          fi
+          case "${{ inputs.max_requests }}" in
+            2|4) ;;
+            *) echo '::error::max_requests must be 2 or 4'; exit 21 ;;
+          esac
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Provider secret gate
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${ELEVENLABS_API_KEY:-}" ]; then
+            echo '::error::ELEVENLABS_API_KEY repository secret is absent. Do not paste the key into logs or workflow inputs.'
+            exit 22
+          fi
+
+      - name: Validate bounded plan without spending
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json')
+          data=json.loads(p.read_text(encoding='utf-8'))
+          assert data['project']=='ROOM917' and data['episode']=='E01'
+          assert data['provider']['model_id']=='eleven_text_to_sound_v2'
+          assert data['provider']['loop'] is True
+          assert float(data['provider']['duration_seconds'])==30.0
+          assert data['provider']['dispatch'] is False
+          assert len(data['requests'])==4
+          assert {r['asset_id'] for r in data['requests']}=={'A01_GREYHAVEN_LOBBY_30S_LOOP','A02_SWITCHBOARD_ALCOVE_30S_LOOP'}
+          for r in data['requests']:
+              assert len(r['text']) <= 450
+              assert r['loop'] is True
+              assert float(r['duration_seconds'])==30.0
+          print('PLAN_VALIDATED_NO_SPEND')
+          PY
+
+      - name: Render only bounded canary candidates
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _room917_a01_a02_sfx_canary
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py \
+            --plan AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json \
+            --outdir _room917_a01_a02_sfx_canary \
+            --max-requests "${{ inputs.max_requests }}" \
+            --confirm-spend "${{ inputs.confirm_spend }}" \
+            --output-format mp3_44100_128
+
+      - name: Verify evidence is not a production binding
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('_room917_a01_a02_sfx_canary/ROOM917_E01_A01_A02_SFX_CANARY_EVIDENCE.json')
+          r=json.loads(p.read_text(encoding='utf-8'))
+          assert r['production_binding_authorized'] is False
+          assert r['secret_persisted'] is False
+          assert r['requested_count'] in (2,4)
+          assert all(c['production_binding_authorized'] is False for c in r['candidates'])
+          assert all(c['audition_status']=='HOLD_PENDING_LISTEN' for c in r['candidates'])
+          print('EVIDENCE_FAIL_CLOSED_PASS')
+          PY
+
+      - name: Upload canary evidence and source candidates
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_E01_A01_A02_SFX_CANARY_${{ github.run_id }}
+          path: _room917_a01_a02_sfx_canary/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Summary
+        shell: bash
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## ROOM917 E01 A01/A02 Sound Effects Canary
+          - paid execution occurred only after explicit `confirm_spend=YES`
+          - requested candidate count is bounded to 2 or 4
+          - provider model: `eleven_text_to_sound_v2`
+          - each candidate: 30-second loop request
+          - output is audition source evidence only
+          - production binding: FORBIDDEN until normalization + loop/false-clue/mono/phone + human audition + existing identity binding gate
+          - D003 patch authority: NOT granted by candidate generation
+          - full E01 render: NOT part of this workflow
+          EOF
