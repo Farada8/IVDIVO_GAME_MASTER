@@ -1,0 +1,179 @@
+{
+  "schema_version": "room917.e01_utility_foley_choreography_en_ru_identity/1.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "SEMANTIC_BINDING_READY__TIMING_UNRESOLVED__HUMAN_ASSET_AUDITION_PENDING",
+  "authorities": {
+    "sound_direction": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_DIRECTION_SCORE_v1.md",
+    "microphone_choreography_engine": "audio/studio/microphone_choreography/IVDIVO_MICROPHONE_CHOREOGRAPHY_ENGINE_v1.0.md",
+    "sound_asset_contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+    "utility_foley_canary_pointer": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/CURRENT_UTILITY_FOLEY_CANARY_POINTER.json",
+    "critical_sfx_pointer": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/CURRENT_CRITICAL_SFX_CANARY_POINTER.json"
+  },
+  "mode": "HYBRID_STAGE",
+  "capture_topology": "VIRTUAL_STEREO_WITH_MONO_FALLBACK",
+  "timing_law": "SEMANTIC_ANCHORS_ONLY_UNTIL_ACCEPTED_DIALOGUE_ALIGNMENT_EXISTS",
+  "byte_share_law": "Accepted non-character Foley may reuse the same normalized asset bytes in EN and RU; locale mixes may recut timing/gain but may not substitute a different accepted identity silently.",
+  "bindings": [
+    {
+      "asset_id": "S01_REVOLVING_DOOR_GROAN",
+      "block": "BLOCK_01_GREYHAVEN_ESTABLISHMENT",
+      "zone": "LOBBY_ENTRY",
+      "actor_or_source": "ARCHITECTURE_FRONT_ENTRANCE",
+      "semantic_anchor": "ELENA_ENTERS_GREYHAVEN",
+      "movement": "ENTER",
+      "why_now": "The building receives Elena physically before any anomaly; establishes mass and material reality.",
+      "voice_foley_rule": "Door perspective must agree with Elena entry distance; no dramatic groan after she is already stationary.",
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S02_JULIAN_MEASURED_STEPS_STONE",
+      "block": "BLOCK_01_GREYHAVEN_ESTABLISHMENT",
+      "zone": "LOBBY_STONE_APPROACH",
+      "actor_or_source": "JULIAN",
+      "semantic_anchor": "BEFORE_JULIAN_FIRST_WORKING_EXCHANGE",
+      "movement": "APPROACH",
+      "why_now": "Julian arrives as operational authority without announcing dominance through voice.",
+      "trajectory_rule": "Farther stone approach -> stop in working conversational zone; footsteps and voice distance must describe one body.",
+      "status_rule": "Measured, not threatening; no alpha-coded heavy stomp.",
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S03_KEYRING_PLACED_ON_DESK",
+      "block": "BLOCK_01_GREYHAVEN_ESTABLISHMENT",
+      "zone": "LOBBY_WORK_SURFACE",
+      "actor_or_source": "JULIAN",
+      "semantic_anchor": "AFTER_JULIAN_REACHES_WORK_POSITION_BEFORE_CONTINUED_EXCHANGE",
+      "movement": "MOVE_TO_OBJECT",
+      "why_now": "Shows controlled familiarity with the hotel and keeps his hands occupied in practical work.",
+      "object_rule": "PLACED_NOT_TOSSED; no airborne scatter geography.",
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S04_FLIGHT_CASE_OPEN",
+      "block": "BLOCK_01_GREYHAVEN_ESTABLISHMENT",
+      "zone": "ELENA_WORK_POSITION",
+      "actor_or_source": "ELENA",
+      "semantic_anchor": "ELENA_PREPARES_ACOUSTIC_EQUIPMENT",
+      "movement": "MOVE_TO_OBJECT",
+      "why_now": "Establishes Elena as a working technician through tactile procedure rather than exposition.",
+      "object_chain": ["LATCH_1", "LATCH_2", "LID_OPEN", "FOAM_OR_LEAD_CONTACT"],
+      "voice_foley_rule": "If dialogue overlaps, performance remains task-focused; Foley must not become comic business.",
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S05_WOOD_SWITCHBOARD_CABINET_OPEN",
+      "block": "BLOCK_02_SWITCHBOARD_IMPOSSIBLE_CALL",
+      "zone": "ZONE_A_SWITCHBOARD_ALCOVE",
+      "actor_or_source": "ELENA_AND_SWITCHBOARD",
+      "semantic_anchor": "BEFORE_NORMAL_SYSTEM_ACTIVATION_CHAIN",
+      "movement": "MOVE_TO_OBJECT",
+      "why_now": "Physical access to the system precedes technical inference.",
+      "geometry_rule": "Cabinet source remains co-located with later toggle, transformer, relay and indicator cues.",
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S06_DRY_TOGGLE_CLICKS",
+      "block": "BLOCK_02_SWITCHBOARD_IMPOSSIBLE_CALL",
+      "zone": "ZONE_A_SWITCHBOARD_ALCOVE",
+      "actor_or_source": "ELENA_HAND_AT_SWITCHBOARD",
+      "semantic_anchor": "NORMAL_SWITCHBOARD_OPERATION_BEFORE_VIOLATION",
+      "movement": "MOVE_TO_OBJECT",
+      "why_now": "Teaches ordinary switch grammar before the impossible indicator/call.",
+      "causal_order": "TOGGLE -> TRANSFORMER_WAKE -> RELAY_RIPPLE -> CABLE_WEATHER_SIGNATURE",
+      "critical_translation": ["STEREO", "MONO", "PHONE_PROXY"],
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S09_CONDUIT_WIND_SCRATCH",
+      "block": "BLOCK_02_SWITCHBOARD_IMPOSSIBLE_CALL",
+      "zone": "ZONE_A_SWITCHBOARD_ALCOVE_WEST_CABLE_PATH",
+      "actor_or_source": "BUILDING_CABLE_WEATHER_PATH",
+      "semantic_anchor": "AFTER_RELAY_RIPPLE_IN_NORMAL_CAUSAL_CHAIN",
+      "movement": "NONE_SOURCE_IS_INFRASTRUCTURE",
+      "why_now": "Makes the ordinary cable/weather route physically audible before later routing impossibility.",
+      "false_clue_rule": "No knocks, whispers, speech-like rhythm or supernatural scrape.",
+      "critical_translation": ["STEREO", "MONO", "PHONE_PROXY"],
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S12_PROBE_CONTACT_CLICKS",
+      "block": "BLOCK_02_SWITCHBOARD_IMPOSSIBLE_CALL",
+      "zone": "ZONE_A_SWITCHBOARD_ALCOVE_PANEL",
+      "actor_or_source": "ELENA",
+      "semantic_anchor": "PHYSICAL_PROBE_SCAN",
+      "movement": "MOVE_TO_OBJECT",
+      "why_now": "Elena tests the board physically rather than accepting an interpretation.",
+      "trajectory_rule": "Small left-to-right hand/probe sequence; no teleporting stereo points.",
+      "voice_foley_rule": "If Elena speaks during scan, head/voice may remain toward Mina/Julian while hand trajectory crosses panel.",
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S15_FIELD_RECORDER_START",
+      "block": "BLOCK_02_SWITCHBOARD_IMPOSSIBLE_CALL",
+      "zone": "ZONE_A_SWITCHBOARD_ALCOVE",
+      "actor_or_source": "ELENA",
+      "semantic_anchor": "IMMEDIATELY_BEFORE_CHAIN_OF_EVIDENCE_DECLARATION",
+      "movement": "MOVE_TO_OBJECT",
+      "why_now": "Transforms the event from conversation into recorded evidence.",
+      "voice_foley_rule": "Recorder start must precede Elena's evidence declaration; never added after the fact as decoration.",
+      "critical_translation": ["STEREO", "MONO", "PHONE_PROXY"],
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S16_HEADSET_PLUG_SEAT",
+      "block": "BLOCK_02_SWITCHBOARD_IMPOSSIBLE_CALL",
+      "zone": "ZONE_A_SWITCHBOARD_ALCOVE",
+      "actor_or_source": "ELENA_AND_SWITCHBOARD",
+      "semantic_anchor": "BEFORE_COPPER_LINE_MONITORING",
+      "movement": "LEAN_IN_AND_MOVE_TO_OBJECT",
+      "why_now": "Establishes a real physical monitoring path before impossible voice content arrives.",
+      "geometry_rule": "Elena may lean closer to hardware, but no near-ear listener effect is implied.",
+      "critical_translation": ["STEREO", "MONO", "PHONE_PROXY"],
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S20_FAST_JULIAN_STEPS_AND_DOOR",
+      "block": "BLOCK_02_SWITCHBOARD_IMPOSSIBLE_CALL",
+      "zone": "CORRIDOR_TO_ALCOVE_ENTRY",
+      "actor_or_source": "JULIAN",
+      "semantic_anchor": "JULIAN_RETURNS_BECAUSE_BOARD_IS_LIVE",
+      "movement": "APPROACH_FAST_THEN_ENTER",
+      "why_now": "His pace changes because the system is actively doing something impossible, not because the scene wants more energy.",
+      "trajectory_rule": "Five fast steps + door/entry action aggregate; voice distance must resolve from corridor to room if speech follows.",
+      "status_rule": "Urgent operational movement, not action-hero entrance.",
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    },
+    {
+      "asset_id": "S21_DEAD_LINE_HISS",
+      "block": "BLOCK_02_SWITCHBOARD_IMPOSSIBLE_CALL",
+      "zone": "ZONE_A_SWITCHBOARD_ALCOVE_LINE_PATH",
+      "actor_or_source": "TELEPHONE_LINE_AFTERSTATE",
+      "semantic_anchor": "AFTER_TWO_PART_LINE_CUT",
+      "movement": "NONE_SOURCE_IS_LINE_AFTERSTATE",
+      "why_now": "Proves the route changed state after the call without inventing a supernatural residue.",
+      "false_clue_rule": "No whisper, hidden speech, 50 Hz transformer identity, music or digital glitch signature.",
+      "critical_translation": ["STEREO", "MONO", "PHONE_PROXY"],
+      "en_ru_identity": "BYTE_SHARED_ELIGIBLE_AFTER_HUMAN_PASS"
+    }
+  ],
+  "global_choreography_rules": [
+    "VOICE_FOLEY_AND_OBJECT_GEOGRAPHY_MUST_DESCRIBE_ONE_CONTINUOUS_BODY",
+    "NO_RANDOM_PANNING",
+    "NO_ABSOLUTE_TIMESTAMPS_BEFORE_REAL_ALIGNMENT",
+    "NO_FOLEY_EVENT_MAY_CREATE_A_STORY_FACT",
+    "MOVEMENT_REQUIRES_DRAMATIC_CAUSE",
+    "CRITICAL_MEANING_MUST_SURVIVE_MONO",
+    "PHONE_PROXY_REQUIRED_FOR_STORY_CRITICAL_UTILITY_ASSETS",
+    "TTS_PERFORMANCE_CARRIES_PHYSICAL_INTENT_EXACT_GEOMETRY_IS_POST"
+  ],
+  "assembly_interface": {
+    "pre_alignment": "SEMANTIC_ANCHORS_ONLY",
+    "post_alignment": "RESOLVE_ANCHORS_TO_TIMECODE_AND_BUILD_CONTINUOUS_SOURCE_TRAJECTORIES",
+    "output": ["MOVEMENT_FOLEY_LINKS", "SPATIAL_AUTOMATION_MANIFEST", "ROOM_SEND_AUTOMATION", "MONO_FALLBACK_RULES"]
+  },
+  "production_binding_authorized": false,
+  "human_audition_required": true
+}
