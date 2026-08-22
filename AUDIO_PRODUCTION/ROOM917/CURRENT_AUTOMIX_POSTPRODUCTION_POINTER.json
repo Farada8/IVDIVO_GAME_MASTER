@@ -1,0 +1,62 @@
+{
+  "schema_version": "ivdivo.room917_current_automix_postproduction_pointer/1.0",
+  "updated": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "active_branch": "THE_INSURABLE_FIRE",
+  "scope": "AUTOMIX_POSTPRODUCTION_ONLY",
+  "status": "ENGINEERING_PREFLIGHT_READY__PRODUCTION_AUTOMIX_HOLD_ON_REAL_INPUTS",
+  "release_authority": false,
+  "contract": "AUDIO_PRODUCTION/ROOM917/AUTOMIX/ROOM917_E01_AUTOMIX_POSTPRODUCTION_EXECUTION_CONTRACT_v1.json",
+  "preflight": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/automix_postproduction_preflight.py",
+  "tests": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/tests/test_automix_postproduction_preflight.py",
+  "ci_bridge": "audio/studio/tests/test_room917_automix_postproduction_preflight.py",
+  "ci_workflow": ".github/workflows/audio-studio-runtime-tests.yml",
+  "dedicated_workflow_write": "NOT_CREATED__CONNECTOR_BLOCKED_WRITE_TO_.github/workflows__REUSED_EXISTING_AUDIO_STUDIO_CI_INSTEAD",
+  "execution_law": "ONLY_APPROVED_VOICES_AND_PASS_BOUND_SOUND_ASSETS_WITH_ACCEPTED_OR_LIVE_TIMING_MAY_ENTER_PRODUCTION_AUTOMIX",
+  "current_known_holds": [
+    "EXACT_CURRENT_MASTER_BYTES_NOT_REACQUIRED_FOR_POST_RENDER_PATCH",
+    "TRUSTED_EXACT_PRE_SCENE3_TIMING_NOT_YET_AVAILABLE_FOR_D003_LOCALIZATION",
+    "A01_A02_PRODUCTION_ROOM_BED_BINDINGS_NOT_PASS_ACCEPTED_YET",
+    "CRITICAL_SFX_CANARIES_REMAIN_HOLD_UNTIL_HUMAN_AUDITION",
+    "RU_NATIVE_CAST_NOT_LOCKED_SO_RU_PRODUCTION_AUTOMIX_IS_HOLD"
+  ],
+  "en_policy": {
+    "voice": "PRESERVE_ACCEPTED_EXISTING_CAST_TAKES_EXCEPT_EVIDENCE_SUPPORTED_SELECTIVE_REPAIR",
+    "whole_episode_rerender": "FORBIDDEN_BY_DEFAULT",
+    "next_when_real_evidence_arrives": "RUN_AUTOMIX_PREFLIGHT_THEN_EXISTING_SMALLEST_AUTHORIZED_SELECTIVE_POST_RENDER_CHAIN"
+  },
+  "ru_policy": {
+    "voice": "NATIVE_RU_CAST_MUST_LOCK_BEFORE_PRODUCTION_AUTOMIX",
+    "whole_episode_paid_render_before_cast_gate": false,
+    "next": "CAST_CANARY_AND_HUMAN_CREDIBILITY_GATE_THEN_CAST_LOCK_THEN_AUTOMIX_PREFLIGHT"
+  },
+  "protected_rules": [
+    "SYNTHETIC_OR_FIXTURE_TIMING_NEVER_BECOMES_PRODUCTION_AUTHORITY",
+    "HOLD_OR_CANDIDATE_SOUND_ASSET_NEVER_REACHES_RENDERER",
+    "VOICE_SOURCE_MUST_BE_PASS_OR_LOCKED_WITH_SHA256",
+    "CATE_ONLY_RECEIVES_TELEPHONE_CHAIN",
+    "CATE_SOURCE_IS_CLEAN_HUMAN_FIRST__TRANSMISSION_DAMAGE_IS_POST",
+    "DIALOGUE_AND_CLUE_SFX_ARE_DUCKING_IMMUNE",
+    "PROTECTED_SILENCE_REQUIRES_SAME_LIVE_TIMING_AND_POST_FX_SAMPLE_EXACT_MASK",
+    "SCENE3_V1_3E_LINEAGE_REMAINS_PROTECTED",
+    "MACHINE_PREFLIGHT_CAN_AUTHORIZE_RENDER_HANDOFF_BUT_CAN_NEVER_AUTHORIZE_RELEASE",
+    "HUMAN_P003B_REMAINS_REQUIRED"
+  ],
+  "required_buses": ["DIALOGUE", "CLUE_SFX", "SFX", "FOLEY", "AMBIENCE", "MUSIC"],
+  "master_targets": {
+    "sample_rate_hz": 48000,
+    "bit_depth": 24,
+    "integrated_lufs": -16.0,
+    "tolerance_lu": 0.5,
+    "max_true_peak_dbtp": -1.0,
+    "max_lra_lu": 11.0,
+    "mono_survival": true,
+    "phone_mobile_survival": true
+  },
+  "non_stop": {
+    "policy": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/CONTINUATION_POLICY_v1.json",
+    "blocked_mainline_does_not_stop_project": true,
+    "current_safe_frontier": "AUTOMIX_PREFLIGHT_NEGATIVE_GATES_AND_CI_REGRESSION"
+  }
+}
