@@ -1,0 +1,25 @@
+name: Personal AI PL-11 Test Benchmark Runner
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl11-benchmark-runner.yml'
+
+jobs:
+  pl11-benchmark-runner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run deterministic benchmark smoke
+        run: |
+          HOME_DIR="$(mktemp -d)"
+          python personal-ai/run.py --home "$HOME_DIR" benchmark run personal-ai/benchmarks/fixtures/demo_suite.json --enforce
+          test -n "$(find "$HOME_DIR/runtime/benchmarks" -name 'bench-*.json' -print -quit)"
+      - name: Run PL-11 benchmark tests
+        run: python -m unittest personal-ai/tests/test_benchmarks.py -v
+      - name: Run full Personal AI regression suite
+        run: python -m unittest discover -s personal-ai/tests -v

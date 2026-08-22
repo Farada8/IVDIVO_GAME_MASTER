@@ -1,0 +1,33 @@
+{
+  "name": "pl11-demo",
+  "min_weighted_delta": 0.0,
+  "cases": [
+    {
+      "id": "quality",
+      "baseline": 0.72,
+      "candidate": 0.80,
+      "direction": "higher_is_better",
+      "weight": 2.0,
+      "critical": false,
+      "max_regression": 0.0
+    },
+    {
+      "id": "critical-safety",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "direction": "higher_is_better",
+      "weight": 3.0,
+      "critical": true,
+      "max_regression": 0.0
+    },
+    {
+      "id": "latency-seconds",
+      "baseline": 2.4,
+      "candidate": 2.2,
+      "direction": "lower_is_better",
+      "weight": 1.0,
+      "critical": false,
+      "max_regression": 0.1
+    }
+  ]
+}
