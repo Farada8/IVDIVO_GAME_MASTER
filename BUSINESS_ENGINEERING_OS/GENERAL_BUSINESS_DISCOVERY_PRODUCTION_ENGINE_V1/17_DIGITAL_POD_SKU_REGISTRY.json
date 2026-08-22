@@ -1,0 +1,14 @@
+{
+  "schema":"ivdivo.business.digital_pod_skus/1.0",
+  "date":"2026-08-22",
+  "status":"INTERNAL_HYPOTHESES_ONLY",
+  "families":[{"id":"FAM_A","name":"IRELAND_REIMAGINED_LOCAL_MEMORY"},{"id":"FAM_B","name":"METAPHYSICAL_RENAISSANCE_ARCHITECTURAL_IMAGINATION"}],
+  "digital_skus":["House of Many Windows","River of Time","Great Irish Loggia","Wicklow Land Memory Weather Triptych","33 Gates Plate I","Emigrant Letter","Old Railway Road Between Worlds","Irish Arcades","Atlantic Cartouche","IVDIVO Composition Study Pack"],
+  "pod_skus":["House_of_Many_Windows_Poster","River_of_Time_Poster","Great_Irish_Loggia_Poster","Atlantic_Cartouche_Framed_Print","Old_Railway_Framed_Print","Wicklow_Triptych_Poster_Set","Shillelagh_Art_Postcard_Set","Ireland_Reimagined_Art_Card_Set","Canvas_HOLD_COST_CHECK","Tote_HOLD_MARGIN_AND_FIT"],
+  "market_negative_control":{"generic_vintage_ireland_poster":"MUTATE_REJECT_PRIMARY_POSITIONING"},
+  "platform_rules":{"seller_original_digital_downloads_allowed":true,"seller_original_design_with_disclosed_production_partner_allowed":true,"seller_prompted_ai_requires_disclosure":true,"ai_prompt_bundles_allowed":false},
+  "etsy_fee_inputs":{"listing_fee_usd":0.20,"transaction_fee_percent":6.5,"ireland_payment_processing_percent":4.0,"ireland_payment_processing_flat_eur":0.30},
+  "printful":{"eu_facilities":["Riga, Latvia","Barcelona, Spain"],"exact_product_cost":null,"exact_shipping_to_ireland":null},
+  "evidence":{"listings_published":0,"orders":0,"wtp":null,"conversion":null,"cac":null,"profitable_skus_proven":0},
+  "next_gate":"SELECT_3_EXISTING_ORIGINAL_ASSETS_WITH_PROVENANCE_RESOLUTION_THEN_EXACT_COSTING"
+}

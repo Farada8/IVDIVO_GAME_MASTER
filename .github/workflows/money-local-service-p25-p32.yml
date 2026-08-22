@@ -1,0 +1,34 @@
+name: Money Local Service P25-P32
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_LOCAL_SERVICE_P25_P32_EXECUTION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_LOCAL_SERVICE_ROUTING.json'
+      - '.github/workflows/money-local-service-p25-p32.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          d=json.loads((r/'19_LOCAL_SERVICE_ROUTING.json').read_text())
+          t=(r/'18_LOCAL_SERVICE_P25_P32_EXECUTION.md').read_text()
+          assert len(d['packages'])==3
+          assert d['current_route'].startswith('HOLD')
+          assert d['economics']['direct_labour_cost'] is None
+          assert d['economics']['subcontract_quote'] is None
+          assert d['economics']['observed_close_rate'] is None
+          assert d['economics']['observed_acquisition_cost'] is None
+          assert d['economics']['max_affordable_acquisition_cost'] is None
+          assert d['economics']['profitable_route_proven'] is False
+          assert d['external_evidence']=={'outreach':0,'spend_eur':0,'jobs_created':0,'wtp':None,'transactions':0}
+          assert set(d['routes'])=={'DIRECT','SUBCONTRACT','REFERRAL_ONLY','HOLD'}
+          assert 'MONEY-LOCAL-SERVICE-P25-P32-ROUTER-HOLD-COSTS-NULL-0-SPEND' in t
+          print('MONEY_LOCAL_SERVICE_P25_P32: PASS')
+          PY

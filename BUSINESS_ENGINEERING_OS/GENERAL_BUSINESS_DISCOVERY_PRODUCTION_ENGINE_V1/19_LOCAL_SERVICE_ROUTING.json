@@ -1,0 +1,13 @@
+{
+  "schema":"ivdivo.business.local_service_routing/1.0",
+  "date":"2026-08-22",
+  "status":"INTERNAL_ROUTER_ONLY",
+  "micro_market":"DUBLIN_HOMEOWNER_EXTERIOR_REPAINT",
+  "packages":["EXTERIOR_WALLS_REFRESH","EXTERIOR_FULL_SHELL_PAINT","PREP_HEAVY_EXTERIOR_RECOVERY"],
+  "economics":{"direct_labour_cost":null,"subcontract_quote":null,"materials_reference_job":null,"observed_rework":null,"observed_close_rate":null,"observed_acquisition_cost":null,"max_affordable_acquisition_cost":null,"profitable_route_proven":false},
+  "experiment_guards":{"min_qualified_paid_inquiries_before_channel_judgment":20,"pause_if_quote_to_job_below_percent":10,"hold_if_acquisition_cost_above_pre_acquisition_contribution_percent":20,"audit_if_invalid_inquiry_rate_above_percent":25,"fail_delivery_if_rework_cost_above_revenue_percent_after_10_jobs":10},
+  "routes":{"DIRECT":"requires known costs, capability/capacity and positive contribution","SUBCONTRACT":"requires verified quote, documented responsibilities and positive contribution","REFERRAL_ONLY":"requires real paying partner arrangement and verified positive referral economics","HOLD":"default while required evidence is missing"},
+  "current_route":"HOLD_FOR_REAL_COST_AND_CLOSE_RATE_INPUTS",
+  "external_evidence":{"outreach":0,"spend_eur":0,"jobs_created":0,"wtp":null,"transactions":0},
+  "next_gate":"REFERENCE_JOB_COST_SHEET_PLUS_TWO_SCOPE_EQUIVALENT_SUBCONTRACT_COST_INPUTS"
+}

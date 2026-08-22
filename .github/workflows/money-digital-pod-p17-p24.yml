@@ -1,0 +1,29 @@
+name: Money Digital POD P17-P24
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/16_DIGITAL_POD_P17_P24_EXECUTION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_DIGITAL_POD_SKU_REGISTRY.json'
+      - '.github/workflows/money-digital-pod-p17-p24.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          d=json.loads((r/'17_DIGITAL_POD_SKU_REGISTRY.json').read_text())
+          t=(r/'16_DIGITAL_POD_P17_P24_EXECUTION.md').read_text()
+          assert len(d['families'])==2 and len(d['digital_skus'])==10 and len(d['pod_skus'])==10
+          assert d['evidence']['listings_published']==0 and d['evidence']['orders']==0
+          assert d['evidence']['wtp'] is None and d['evidence']['conversion'] is None and d['evidence']['cac'] is None
+          assert d['evidence']['profitable_skus_proven']==0
+          assert d['platform_rules']['ai_prompt_bundles_allowed'] is False
+          assert 'NO_ORDER_DATA -> NO_SCALE_CLAIM' in t
+          print('MONEY_DIGITAL_POD_P17_P24: PASS')
+          PY
