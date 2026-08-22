@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.self_improvement.thread_topic_continuity_guard/0.3",
+  "schema": "ivdivo.self_improvement.thread_topic_continuity_guard/0.4",
   "date": "2026-08-22",
-  "status": "MERGED_CANDIDATE_CI_GREEN_REAL_PILOT_1_OF_3_NOT_PROMOTED",
+  "status": "MERGED_CANDIDATE_CI_GREEN_REAL_PILOT_2_OF_3_NOT_PROMOTED",
   "authority_effect": "NONE",
   "global_si_id": null,
   "parent_authority": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
@@ -18,7 +18,7 @@
     "user_switch_evidence": false,
     "trigger_turn_class": "GENERIC_CONTINUATION",
     "user_correction_received": true,
-    "successful_repaired_pilot_count": 1
+    "successful_repaired_pilot_count": 2
   },
   "core_laws": [
     "SHORT_CONTINUATION_INHERITS_THREAD_TOPIC",
@@ -54,7 +54,7 @@
     "drive_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-MERGED-CANDIDATE-CI-GREEN-20260822"
   },
   "real_pilot_progress": {
-    "real_continuation_events": 1,
+    "real_continuation_events": 2,
     "real_continuation_events_required": 3,
     "distinct_project_types": 1,
     "distinct_project_types_required": 2,
@@ -72,6 +72,15 @@
       "outcome": "PASS_REAL_ROUTING_EVENT",
       "false_project_switch": false,
       "independent_blind_control": false
+    },
+    "event_002": {
+      "event_id": "TTG-REAL-002",
+      "turn_class": "GENERIC_CONTINUATION",
+      "user_input": "и",
+      "project_type": "SELF_IMPROVEMENT_ENGINEERING",
+      "outcome": "PASS_REAL_ROUTING_EVENT",
+      "false_project_switch": false,
+      "independent_blind_control": false
     }
   },
   "proof_boundary": {
@@ -83,6 +92,6 @@
     "verified_current": false,
     "v3_promoted": false
   },
-  "next_gate": "TWO_MORE_NATURALLY_OCCURRING_CONTINUATION_EVENTS_ACROSS_AT_LEAST_ONE_OTHER_PROJECT_TYPE_PLUS_HEALTHY_SWITCH_AND_SIDE_QUERY_CONTROLS",
-  "readback_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-REAL-PILOT-1OF3-20260822"
+  "next_gate": "ONE_MORE_NATURALLY_OCCURRING_CONTINUATION_EVENT_FROM_AT_LEAST_ONE_OTHER_PROJECT_TYPE_PLUS_TWO_HEALTHY_EXPLICIT_SWITCH_CONTROLS_AND_ONE_SIDE_QUERY_RETURN_CONTROL",
+  "readback_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-REAL-PILOT-2OF3-20260822"
 }
