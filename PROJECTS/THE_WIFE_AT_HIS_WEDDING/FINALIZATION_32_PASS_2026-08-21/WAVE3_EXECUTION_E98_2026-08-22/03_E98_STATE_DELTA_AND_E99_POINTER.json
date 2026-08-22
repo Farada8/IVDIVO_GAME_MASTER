@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "project": "THE WIFE AT HIS WEDDING",
+  "project_id": "D01",
+  "date": "2026-08-22",
+  "authority_effect": "WORKING_FRONTIER_ONLY_NOT_FOUNDER_LOCK",
+  "parent_state_path": "PROJECTS/THE_WIFE_AT_HIS_WEDDING/FINALIZATION_32_PASS_2026-08-21/CURRENT_EXECUTION_STATE.json",
+  "parent_state_blob_before_e98": "8782267e1067cd08f27d6bb4f1ea726cdbcabbc1",
+  "episode": {
+    "id": "E98",
+    "title": "NO MORE DIRECT SUBSTITUTIONS",
+    "status": "WORKING_COMPLETE",
+    "runtime_spoken_words": 1156,
+    "runtime_gate": "PASS_1100_1550",
+    "red_team": {"fatal": 0, "major": 0, "medium": 2},
+    "github_script": "WAVE3_EXECUTION_E98_2026-08-22/01_E98_NO_MORE_DIRECT_SUBSTITUTIONS_v1.0.md",
+    "github_gate": "WAVE3_EXECUTION_E98_2026-08-22/02_E98_CONSENT_CONTINUITY_SOURCE_NATURALISM_GATE_v1.0.md",
+    "github_script_commit": "fff5b67692f7b903933dd85fd370430e29827edd",
+    "github_gate_commit": "c78d7ff90f2527704a5181d792f5ca609b5bac1a",
+    "drive_folder_id": "1YbxVNfjypWxRRFvKPjqBNcOpi0RNgYVe",
+    "drive_script_id": "1zBMxSFxVQKOFTMkcrSyeMGF7lu_iN1URwrLiUA1TBs4",
+    "drive_script_revision": "AIroW34Nj4e0gQFb5ABjTI_yROqZkZ8n9qpGRFDrKzO18NwQHnu0wk_nKD9m1q6dIDlPj7gLMEJb0TQFDLnaUJe1TSXFay2n1NqCVJI76ik",
+    "drive_gate_id": "14lMe1YIwuP20K53t7nvIp2oLfmGKK7HdsSQbJXufyTs",
+    "drive_gate_revision": "AIroW372Ukjpl5liNG19-SrbJLzNmI0ZyY-L8ZLHDXdolu0-tGcIRTzKMEuqVBI-INLSKmiqRdMztXIxheWym1D8aCr6U4V0YQ2zZTwpeF8"
+  },
+  "story_answer": "AUDITED_DOWNSTREAM_RECORDS_SUPPORT_COMPLIANCE_WITH_NO_DIRECT_ADRIAN_SUBSTITUTIONS_AFTER_GREENHOUSE; LATER_PRIVATE_AND_MARITAL_INTERACTIONS_REMAIN_WITH_HISTORICAL_EVELYN; LATER_MARA_ROTATIONS_ARE_PUBLIC_MEDICAL_OR_CONTROLLED",
+  "epistemic_limits": [
+    "VICTORIA_ORDER_PROVES_ORDER_NOT_COMPLIANCE",
+    "ABSENCE_OF_CONTRADICTORY_RECORD_DOES_NOT_PROVE_EVERY_MINUTE",
+    "ADRIAN_MEMORY_IS_CORROBORATIVE_NOT_IDENTITY_AUTHORITY",
+    "PRE_WEDDING_PACKET_IS_CLIFF_ONLY_UNVERIFIED_IN_E98"
+  ],
+  "relationship_boundaries": [
+    "NO_POST_MARRIAGE_SEXUAL_OR_INTIMATE_SISTER_SUBSTITUTION",
+    "EVELYN_RETAINS_CONTINUOUS_PRIVATE_AND_MARITAL_CHAIN_UNLESS_NEW_INDEPENDENT_EVIDENCE_DISPROVES",
+    "MARA_GREENHOUSE_MEMORY_CREATES_NO_ROMANTIC_ENTITLEMENT",
+    "MARA_IS_NOT_A_SECRET_CLAIMANT_TO_EVELYN_MARRIAGE"
+  ],
+  "ordinary_life_delta": "MARA_CLIENT_SITE_PACKAGE_PARTIALLY_RESUMES_WHILE_CREDENTIAL_REVIEW_REMAINS_ACTIVE",
+  "external_gates": {
+    "human_signal": "NOT_RUN",
+    "jurisdiction_specific_legal_review": "NOT_RUN",
+    "real_listener_audio_validation": "NOT_RUN",
+    "market_validation": "NOT_CLAIMED"
+  },
+  "episode_frontier": "E98",
+  "highest_unblocked_obligation": "E99_LEGAL_BRIDE_EVIDENCE_CONTRACT_THEN_DRAFT_THE_BRIDE",
+  "next_episode_contract": {
+    "episode": "E99",
+    "title": "THE BRIDE",
+    "required_question": "WHO_PHYSICALLY_AND_LEGALLY_STOOD_AS_THE_CEREMONY_BRIDE",
+    "required_evidence_minimum": "AT_LEAST_TWO_INDEPENDENT_CLASSES_BEYOND_MEMORY",
+    "required_sources": [
+      "CEREMONY_OR_SECURITY_BIOMETRIC_CONTINUITY",
+      "REGISTRAR_LIAISON_OR_CEREMONY_RECORD_CONTINUITY",
+      "AUTHENTICATED_PRE_WEDDING_SOURCE_GUARDIAN_PACKET"
+    ],
+    "required_answer": "HISTORICAL_EVELYN_SUPPORTED_AS_LEGAL_CEREMONY_BRIDE",
+    "required_boundary": "LEGAL_BRIDE_FINDING_DOES_NOT_DECIDE_PRESENT_ROMANTIC_RESTORATION_OR_DIMINISH_MARA",
+    "required_cliff": "LILY_DELIVERY_IDENTITY_SECURITY_RECORD_OPENS_E100_WITHOUT_USING_LILY_AS_EVIDENCE"
+  },
+  "do_not_repeat": ["E96", "E97", "E98"],
+  "next_action": "FRESHNESS_GATE_THEN_EXECUTE_E99_CONTRACT_AND_DRAFT",
+  "readback": "DRIVE_SCRIPT_PASS_DRIVE_GATE_PASS_GITHUB_SCRIPT_WRITTEN_GITHUB_GATE_WRITTEN"
+}
