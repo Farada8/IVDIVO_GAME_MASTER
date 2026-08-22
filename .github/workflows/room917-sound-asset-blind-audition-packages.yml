@@ -42,10 +42,10 @@ jobs:
       - name: Build critical SFX A/B/C blind package
         run: |
           python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py \
-            --receipt ROOM917_CRITICAL_SFX_CANARIES/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json \
+            --receipt ROOM917_CRITICAL_SFX_CANARIES/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json \
             --canary-dir ROOM917_CRITICAL_SFX_CANARIES \
             --outdir ROOM917_BLIND_CRITICAL_SFX \
-            --package-id ROOM917_E01_CRITICAL_SFX_BLIND_001 \
+            --package-id ROOM917_E01_CRITICAL_SFX_BLIND_002 \
             --seed 91720260822
       - name: Build support SFX/music A/B/C blind package
         run: |
@@ -74,10 +74,10 @@ jobs:
           path: ROOM917_BLIND_ROOM_BEDS/PUBLIC_BLIND/
           if-no-files-found: error
           retention-days: 30
-      - name: Upload public critical-SFX blind package
+      - name: Upload public critical-SFX blind package v2
         uses: actions/upload-artifact@v4
         with:
-          name: ROOM917_E01_PUBLIC_BLIND_CRITICAL_SFX
+          name: ROOM917_E01_PUBLIC_BLIND_CRITICAL_SFX_V2
           path: ROOM917_BLIND_CRITICAL_SFX/PUBLIC_BLIND/
           if-no-files-found: error
           retention-days: 30
@@ -103,7 +103,7 @@ jobs:
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
           ## ROOM917 E01 blind sound-asset audition
           - room beds: blind X/Y package
-          - critical SFX: 8 functions x 3 blinded variants
+          - critical SFX: corrected v2, 8 functions x 3 blinded variants
           - support SFX/music: 13 functions x 3 blinded variants
           - public artifacts exclude identity key files
           - identity keys uploaded as separate sealed artifact
