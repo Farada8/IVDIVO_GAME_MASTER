@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-22",
+  "cycle": "CYCLE11_V3_MECHANISM_TRIBUNAL",
+  "cards": {
+    "C41": "COMPLETE",
+    "C42": "MERGE_NO_OP_NO_TRUE_UNIVERSAL_GAP_SELECTED",
+    "C43": "RUN_NO_OP_COMPARISON_BOOK",
+    "C44": "RUN_NO_OP_COMPARISON_BUSINESS",
+    "C45": "PASS_HEALTHY_NO_CHANGE_CONTROL",
+    "C46": "NET_GAIN_NOT_DEMONSTRATED_NULL_METRICS",
+    "C47": "PASS_NO_AUTHORITY_MUTATION",
+    "C48": "MERGE_WITH_V2_DIAGNOSTIC_WORDING_ONLY"
+  },
+  "candidate_examined": "POLICY_RESISTANCE_GATE",
+  "universal_novelty": false,
+  "book_canary": {
+    "project": "B03_SMITH_THE_EMPTY_RESCUE",
+    "fresh_evidence_store": "GOOGLE_DRIVE_CYCLE32B",
+    "decision_before": "KEEP_CURRENT_CAUSAL_ARCHITECTURE_AND_CONTINUE_FROM_FRESH_FRONTIER",
+    "decision_after": "KEEP_CURRENT_CAUSAL_ARCHITECTURE_AND_CONTINUE_FROM_FRESH_FRONTIER",
+    "decision_delta": false,
+    "existing_equivalent": "CH23_NORMAL_FAILOVER_RECENTRALIZES_GRAPH_PLUS_P66_P67_TWO_STRATEGY_STRESS_TEST"
+  },
+  "business_canary": {
+    "authority": "BUSINESS_ENGINEERING_OS_CYCLE8_P161_P192",
+    "decision_before": "HOLD_NO_NEW_ADMISSIBLE_EVIDENCE_PROTECT_NO_CHANGE",
+    "decision_after": "HOLD_NO_NEW_ADMISSIBLE_EVIDENCE_PROTECT_NO_CHANGE",
+    "decision_delta": false,
+    "existing_equivalent": "NO_LOOP_AFTER_NAVIGATION_BLOCKER_IS_LOCALIZED"
+  },
+  "healthy_control": {
+    "project": "D01_THE_WIFE_AT_HIS_WEDDING",
+    "expected": "NO_REOPEN",
+    "observed": "NO_REOPEN",
+    "false_positive": false
+  },
+  "observed_metrics": {
+    "time_saved": null,
+    "rework_saved": null,
+    "product_quality_delta": null,
+    "human_signal_delta": null,
+    "market_delta": null,
+    "provider_delta": null
+  },
+  "disposition": "MERGE_WITH_V2_AS_RED_TEAM_DIAGNOSTIC_NOT_NEW_ENGINE",
+  "v3_status": "CANDIDATE_HOLD",
+  "v2_status": "VERIFIED_CURRENT",
+  "authority_effect": "NONE",
+  "new_si_id": null,
+  "next_action": "RETURN_TO_PRODUCTION_AND_RECONCILE_B03_DURABLE_STATE_BEFORE_MORE_META_WORK"
+}
