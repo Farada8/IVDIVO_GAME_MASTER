@@ -137,6 +137,12 @@ jobs:
           print(f'audio_files={len(audio)}')
           PY
 
+      - name: Machine-QC artifact and build listening index
+        shell: bash
+        run: |
+          set -euo pipefail
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/validate_ru_s0_artifact.py _room917_ru_s0_canary
+
       - name: Upload S0 listening artifact
         uses: actions/upload-artifact@v4
         with:
@@ -153,5 +159,7 @@ jobs:
           - bounded canary only; no full episode
           - voice IDs remain CANARY_ONLY, not cast lock
           - generated audio includes provider timestamps/alignment evidence
+          - machine QC must pass before artifact upload
+          - artifact includes S0_QC_REPORT.json and S0_LISTENING_INDEX.json
           - next gate: human credibility listen, then selective replacement or cast lock
           EOF
