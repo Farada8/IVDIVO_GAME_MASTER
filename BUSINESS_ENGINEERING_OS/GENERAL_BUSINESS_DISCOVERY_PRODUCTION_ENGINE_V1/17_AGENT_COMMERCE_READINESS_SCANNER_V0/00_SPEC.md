@@ -1,173 +1,112 @@
-# AGENT COMMERCE READINESS SCANNER v0 — P-EW01
+# AGENT COMMERCE READINESS SCANNER v0 — P-EW01 + P-EW02 CALIBRATION
 
 **Date:** 2026-08-22  
-**Status:** ENGINEERING CANDIDATE / DETERMINISTIC READINESS CHECKER / NO PLATFORM APPROVAL  
+**Status:** DETERMINISTIC READINESS CHECKER / REAL-FIXTURE CALIBRATED / NO PLATFORM APPROVAL  
 **Parent:** `OW-01 Agentic Commerce Merchant Readiness`  
-**Ruleset:** `2026-08-22.1`
+**Ruleset:** `2026-08-22.2`
 
 ## Purpose
 Convert current public agentic-commerce technical requirements into deterministic merchant-readiness findings. The scanner is deliberately narrower than an SEO audit or consultancy checklist.
 
 It answers: **given a normalized, provenance-labelled merchant snapshot, which current feed/UCP requirements are satisfied, broken, unknown or not applicable?**
 
-It does not crawl arbitrary sites by itself in v0 and it does not infer hidden merchant systems.
+It does not infer hidden merchant systems. Acquisition and evaluation remain separate.
 
 ## Core contracts
-
-`READINESS != PLATFORM_APPROVAL`
-
-`MACHINE_READABLE != AGENTIC_CHECKOUT_READY`
-
-`PRODUCT_FEED_READY != UCP_READY`
-
-`UCP_PROFILE_PRESENT != ENDPOINT_VALID`
-
-`CHECKOUT_ENDPOINT_PRESENT != SAFE_TRANSACTION`
-
-`PUBLIC_PAGE_OBSERVATION != MERCHANT_DECLARATION`
-
-`UNKNOWN != FAIL`
-
-`UNKNOWN != PASS`
-
-`PROTOCOL_SPEC_CHANGE -> VERSIONED_RULESET`
-
+`READINESS != PLATFORM_APPROVAL`  
+`MACHINE_READABLE != AGENTIC_CHECKOUT_READY`  
+`PRODUCT_FEED_READY != UCP_READY`  
+`UCP_PROFILE_PRESENT != ENDPOINT_VALID`  
+`CHECKOUT_ENDPOINT_PRESENT != SAFE_TRANSACTION`  
+`PUBLIC_PAGE_OBSERVATION != MERCHANT_DECLARATION`  
+`UNKNOWN != FAIL`  
+`UNKNOWN != PASS`  
+`PROTOCOL_SPEC_CHANGE -> VERSIONED_RULESET`  
 `GENERIC_ADVICE_OUTPUT = SCANNER_FAILURE`
 
 ## Evidence states
-Every input lane must be labelled:
-- `OBSERVED_PUBLIC`
-- `PROBED_PUBLIC`
-- `MERCHANT_DECLARED`
-- `UNKNOWN`
-- `NOT_APPLICABLE`
-
-The scanner never upgrades one state into another. In particular, a public webpage cannot prove a private checkout implementation.
+Every input lane is labelled `OBSERVED_PUBLIC`, `PROBED_PUBLIC`, `MERCHANT_DECLARED`, `UNKNOWN`, or `NOT_APPLICABLE`. The scanner never silently upgrades one evidence state into another. A public product page does not prove a private OpenAI feed or private checkout implementation.
 
 ## Output states
-Each rule emits exactly one:
-- `PASS`
-- `FAIL`
-- `UNKNOWN`
-- `NOT_APPLICABLE`
+Every rule emits exactly one of `PASS`, `FAIL`, `UNKNOWN`, `NOT_APPLICABLE`.
 
-Overall disposition is fail-closed but not a magic score:
+Overall disposition is fail-closed without a magic score:
 - any deterministic defect -> `BLOCKED_BY_DETERMINISTIC_DEFECT`;
-- no defect but unresolved critical evidence -> `HOLD_UNRESOLVED_EVIDENCE`;
+- no deterministic defect but unresolved critical evidence -> `HOLD_UNRESOLVED_EVIDENCE`;
 - all applicable checks pass -> `READY_FOR_PLATFORM_CONFORMANCE_TEST_NOT_APPROVAL`;
 - no applicable evidence -> `NO_APPLICABLE_EVIDENCE`.
 
-## Current source-derived rules
+## OpenAI Agentic Commerce feed lane
+For the pinned non-Ads file-upload product-feed path, the scanner checks required product identity, descriptive, URL/image, price/currency, availability, seller, return-policy and geo fields plus search/checkout eligibility dependencies and checkout seller-policy links.
 
-### OpenAI Agentic Commerce file-upload product feed
-Current OpenAI product schema marks the following as required for the non-Ads feed path used by this scanner:
-- `is_eligible_search`
-- `is_eligible_checkout`
-- `item_id`
-- `title`
-- `description`
-- `url`
-- `brand`
-- `image_url`
-- `price` with currency
-- `availability`
-- `seller_name`
-- `seller_url`
-- `return_policy`
-- `target_countries`
-- `store_country`
+A public product page is never promoted into evidence that an OpenAI upload feed exists. If an admissible feed observation/declaration is absent, this lane remains `UNKNOWN`.
 
-Conditional dependencies implemented:
-- `is_eligible_checkout=true` requires `is_eligible_search=true`;
-- checkout-eligible rows require seller privacy-policy and terms links;
-- `pre_order` availability requires `availability_date`;
-- price syntax includes a three-letter currency and must be positive in the scanner's normal physical-product path.
+## UCP lane — ruleset 2026-08-22.2
+The public discovery surface is `/.well-known/ucp`. The profile can declare protocol version, services, capabilities and public signing material.
 
-The scanner does not claim the schema above is complete for every vertical or Ads feed. Optional/recommended media, shipping, variant, review and compliance fields remain outside the v0 fatal core unless a later version promotes them with evidence.
+Supported shopping-service transports in the pinned ruleset are:
+- `rest`
+- `mcp`
+- `a2a`
+- `embedded`
 
-### Google Universal Commerce Protocol (UCP)
-Current Google UCP integration guidance provides an independently testable discovery surface:
-- merchant publishes a public unauthenticated JSON profile at `/.well-known/ucp`;
-- profile declares protocol version, services, capabilities, endpoints, payment handling and public keys;
-- current Google guide exposes stable versions including `2026-04-08` and `2026-01-23`;
-- native checkout requires core REST create/update/complete flows;
-- identity path is guest checkout or identity linking; identity linking requires OAuth 2.0 metadata/endpoints;
-- order integration requires lifecycle updates, including created/shipped/delivered, and signed webhook handling.
+Transport-specific validation is binding-aware:
+- REST/MCP/A2A service entries require a discoverable endpoint plus version/spec/schema where applicable;
+- an embedded service declaration does not require its own separate service endpoint;
+- an unknown future transport yields `UNKNOWN`, not a stale-code FAIL.
 
-The v0 scanner accepts only versions known to the pinned ruleset. An unknown newer version yields `UNKNOWN` rather than FAIL so stale code cannot falsely reject a future valid merchant implementation.
+Known pinned UCP versions remain `2026-04-08` and `2026-01-23`; a newer unknown version yields `UNKNOWN` pending ruleset refresh.
 
-## Normalized snapshot boundary
-`scanner.py` consumes JSON. It intentionally separates acquisition from evaluation.
-
-Example top-level shape:
-```json
-{
-  "merchant_id": "merchant-01",
-  "openai_feed": {
-    "evidence_state": "MERCHANT_DECLARED",
-    "products": []
-  },
-  "ucp": {
-    "evidence_state": "PROBED_PUBLIC",
-    "well_known_http_status": 200,
-    "authentication_required": false,
-    "profile": {},
-    "checkout_endpoints": {"create": null, "update": null, "complete": null},
-    "identity_path": "guest",
-    "order_events": [],
-    "order_request_signing": null
-  }
-}
-```
-
-`null` endpoint/signing values mean unproven, not failed.
+### Order evidence discipline
+When Order capability is declared:
+- explicit observed/declaration event coverage can be checked for required lifecycle behavior;
+- **unprobed** order lifecycle implementation is `UNKNOWN`, not missing-event FAIL;
+- public `signing_keys` are checked at profile level because the pinned UCP Order spec requires signed webhooks and verification against the business profile;
+- request-signing execution itself remains `UNKNOWN` unless observed or declared.
 
 ## Rule families
 ### OAI-FEED
-- `OAI-FEED-00` evidence/admissibility
-- `OAI-FEED-01` non-empty observed/declared feed
-- `OAI-FEED-02` required fields
-- `OAI-FEED-03` search/checkout eligibility dependency
-- `OAI-FEED-04` price/currency syntax
-- `OAI-FEED-05` availability dependency
-- `OAI-FEED-06` checkout seller policy links
+`OAI-FEED-00..06`: admissibility, non-empty feed, required fields, eligibility dependency, price/currency, availability dependency, checkout seller policy.
 
 ### UCP
-- `UCP-00` evidence/admissibility
-- `UCP-01` public `/.well-known/ucp` HTTP 200
-- `UCP-02` no authentication on public profile
-- `UCP-03` parseable profile after HTTP 200
-- `UCP-04` pinned protocol version
-- `UCP-05` shopping service metadata/endpoint
-- `UCP-06` checkout capability
-- `UCP-07` create/update/complete endpoint probe state
-- `UCP-08` guest vs identity-linking/OAuth path
-- `UCP-09` order lifecycle event coverage
-- `UCP-10` signing key declaration when order capability is used
-- `UCP-11` order request-signing state
+`UCP-00` evidence/admissibility  
+`UCP-01` public discovery HTTP 200  
+`UCP-02` no authentication on public profile  
+`UCP-03` parseable profile  
+`UCP-04` pinned protocol version  
+`UCP-05` shopping service/binding validity  
+`UCP-06` checkout capability  
+`UCP-07` checkout endpoint probe state  
+`UCP-08` guest vs identity-linking/OAuth state  
+`UCP-09` order lifecycle evidence state  
+`UCP-10` profile signing-key declaration when Order is declared  
+`UCP-11` order request-signing evidence state
+
+## Real-fixture calibration — P-EW02
+P-EW02 was executed on a frozen 10-merchant public sample and merged via PR #353. Four merchants exposed valid UCP `2026-04-08` public profiles with `mcp + embedded` shopping transports.
+
+That test falsified two scanner-v0.1 assumptions:
+1. REST-only service validation was wrong; MCP/embedded are valid UCP bindings.
+2. Unprobed order events were incorrectly collapsed to an empty observed set.
+
+Ruleset `2026-08-22.2` repairs both. Across the four UCP-200 fixtures, eight false-negative findings were removed (`UCP-05` and `UCP-09` on each merchant).
+
+The captured profiles declared Order capability but did not expose `signing_keys`; under the pinned Order specification the scanner therefore retains a profile-level `UCP-10 FAIL`. This finding is bounded to the public profile and is not a global merchant-compliance claim.
+
+P-EW02 evidence receipt:
+`../18_AGENT_COMMERCE_PEW02_BLIND10/02_BLIND10_RESULTS_AND_SCANNER_PATCH.md`
 
 ## Source authority
-First-party / specification sources used for v0:
-- OpenAI Developers — Agentic Commerce, `Products – File Upload` product schema, current crawl 2026-08.
-- Google for Developers — UCP profile guide, last updated 2026-08-19.
-- Google for Developers — UCP overview / production integration; public profile + 3 core native checkout endpoints + identity path + order sync.
-- Google for Developers — Native checkout REST API version 2026-04-08.
-- Google for Developers — Order lifecycle / signed updates.
-- Universal Commerce Protocol GitHub/specification — open standard and current `2026-04-08` release.
+Primary current sources include:
+- OpenAI Developers — Agentic Commerce product-feed schema;
+- Universal Commerce Protocol — overview/service discovery, including REST/MCP/A2A/embedded;
+- Universal Commerce Protocol — Order capability and signed webhook requirements.
 
-## P-EW01 acceptance gate
-P-EW01 is complete only if:
-1. deterministic code exists;
-2. UNKNOWN is preserved separately from FAIL;
-3. at least one fully ready synthetic fixture reaches conformance-test readiness but never platform approval;
-4. missing required feed fields fail;
-5. UCP 404 fails;
-6. identity-linking without OAuth metadata fails;
-7. unknown future UCP version yields UNKNOWN, not FAIL;
-8. missing mandatory order lifecycle event fails;
-9. regression CI passes on exact PR head;
-10. Drive mirror and semantic readback close.
+Pinned references:
+- `https://ucp.dev/latest/`
+- `https://ucp.dev/specification/order/`
 
-P-EW01 does **not** execute P-EW02. Synthetic canaries are engineering evidence only; the 10-real-public-merchant blind test remains a separate gate.
+## Evidence boundary
+Synthetic and real-fixture scanner tests are engineering evidence only. They do not prove merchant demand, WTP, platform approval, transaction readiness, transactions, profitability or an early-wave winner.
 
-READBACK_MARKER: `AGENT-COMMERCE-SCANNER-V0-P-EW01-SPEC-20260822`
+READBACK_MARKER: `AGENT-COMMERCE-SCANNER-V0-RULESET-20260822-2-PEW02-CALIBRATED`
