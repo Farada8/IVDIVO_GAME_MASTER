@@ -1,5 +1,5 @@
 {
-  "schema": "ivdivo.business.current_read_model/1.3",
+  "schema": "ivdivo.business.current_read_model/1.4",
   "date": "2026-08-22",
   "status": "CURRENT_LOCAL_RELIABILITY_CONTRACT",
   "authority_effect": "RESTORE_AND_PRECEDENCE_RULES_ONLY",
@@ -58,6 +58,23 @@
   "resume_control": {
     "status": "CURRENT_BUSINESS_LOCAL_CONTROL_PLANE",
     "unlock_intake_path": "BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/PROC_BALLYBUNION_8872468_P225_P235_UNLOCK.md",
+    "input_validation": {
+      "status": "CURRENT_BUSINESS_LOCAL_INPUT_ADMISSIBILITY_GATE",
+      "runtime_path": "BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/engine/unlock_validator.py",
+      "state_path": "BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/VALIDATOR_STATE.json",
+      "readme_path": "BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/README.md",
+      "pr": 295,
+      "merge_sha": "301326537269ac97451d70b07a3f6455dc52c175",
+      "exact_head": "fc5de451fb20c96db06066d73c62737596b89d07",
+      "input_validator_ci_run": 32554003798,
+      "read_model_guard_ci_run": 32554003796,
+      "drive_document_id": "1Z3vLd000-gVY0w3SPivvTM4wCqPL2wHqa0HDdXb8BEE",
+      "deterministic_suite": "PASS_15_OF_15",
+      "real_positive_root_event_count": 0,
+      "current_public_first_party_status_is_pack_event": false,
+      "validated_input_is_authority": false,
+      "must_precede_resume_gate_for_new_root_events": true
+    },
     "resume_gate_contract": "BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/00_CONTRACT.md",
     "resume_gate_runtime": "BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/runtime/business_resume_gate.py",
     "resume_gate_fixture": "BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/fixtures/CURRENT_PROC_BALLYBUNION_8872468_RESUME_STATE.json",
@@ -74,7 +91,8 @@
     "route_may_authorize_external_action": false,
     "route_may_promote_proof_grade": false,
     "calibration": {
-      "synthetic_deterministic_suite": "PASS_16_OF_16",
+      "resume_gate_synthetic_deterministic_suite": "PASS_16_OF_16",
+      "input_validator_synthetic_deterministic_suite": "PASS_15_OF_15",
       "real_negative_control_count": 1,
       "real_positive_root_event_count": 0,
       "latest_negative_control": "BUSINESS_ENGINEERING_OS/2026-08-22_P225_BOUNDED_ACQUISITION_NONFINDING/00_NO_LOOP_ACQUISITION_CERTIFICATE.md",
@@ -111,7 +129,9 @@
     "NO_NEW_ADMISSIBLE_EVIDENCE_THEN_PROTECT_NO_CHANGE",
     "UNLOCK_INTAKE_TEXT_DOES_NOT_EQUAL_UNLOCK_EVENT",
     "CONTINUE_TEXT_DOES_NOT_EQUAL_NEW_EVIDENCE_EVENT",
-    "BOUNDED_NONFINDING_DOES_NOT_EQUAL_ROOT_UNLOCK_EVENT"
+    "BOUNDED_NONFINDING_DOES_NOT_EQUAL_ROOT_UNLOCK_EVENT",
+    "INPUT_VALIDATOR_PRECEDES_RESUME_GATE_FOR_NEW_ROOT_EVENTS",
+    "VALIDATED_INPUT_DOES_NOT_EQUAL_AUTHORITY_UNTIL_PERSISTENCE_READBACK_AND_CORE_RECONCILIATION"
   ],
   "self_improvement": {
     "scope": "BUSINESS_LOCAL_RELIABILITY_IMPROVEMENT",
