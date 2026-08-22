@@ -1,7 +1,7 @@
 import unittest
-from BUSINESS_ENGINEERING_OS.2026_08_22_CYCLE7_P97_P128_AUTHORITY_PROOF.engine.proof_transition_engine import *
-
-# Import path fallback for direct script/workflow execution is handled by CI via PYTHONPATH.
+import pathlib, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "engine"))
+from proof_transition_engine import *
 
 class Cycle7EngineTests(unittest.TestCase):
     def test_01_pack_non_authority_blocks(self):
