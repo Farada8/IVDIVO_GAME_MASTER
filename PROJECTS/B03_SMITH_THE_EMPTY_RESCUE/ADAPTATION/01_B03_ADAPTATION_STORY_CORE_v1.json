@@ -1,0 +1,67 @@
+{
+  "schema": "ivdivo.b03.screen_adaptation_story_core/1.0",
+  "date": "2026-08-22",
+  "status": "WORKING_ADAPTATION_ONLY",
+  "source": {
+    "title": "THE EMPTY RESCUE",
+    "authority": "FOUNDER_LOCKED_CH01_29",
+    "locked_novel_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
+    "novel_mutation_authorized": false,
+    "primary_current_summary_drive_id": "1cvz0NwFB1ShqF4uxXrV_W9RdMcDeoEBF",
+    "older_story_rebase_usage": "REFERENCE_ONLY_WHERE_CONSISTENT_WITH_LOCKED_FINAL"
+  },
+  "format": {
+    "recommended": "LIMITED_SERIES",
+    "episodes": 4,
+    "target_minutes_each": "50-55",
+    "format_status": "WORKING_RECOMMENDATION_NOT_CANON"
+  },
+  "story_core": {
+    "hero": "SMITH",
+    "pilot_hook_carrier": "NIKA_ZUPAN",
+    "local_command_counter_axis": "JANA_KOVAC",
+    "want": "Stop deadly precursor-driven rescue deployments while preserving real rescue capability during a worsening storm.",
+    "why_now": "Warnings are arriving before incidents, contain details affected by response decisions, and an ordinary multi-site storm emergency is becoming unavoidable.",
+    "opposition": [
+      "response-coupled precursor phenomenon",
+      "legitimate rescue duty under time pressure",
+      "sanitized/incomplete OES doctrine",
+      "temptation to treat superior Confederation modeling as command",
+      "human evidence that acting on warnings can genuinely save lives"
+    ],
+    "wrong_strategy": "Treat precursor content as an external input that can be made safe primarily through isolation/suppression; later risk replacing OES certainty with predictive-model certainty.",
+    "price": "People die under both intervention and suppression-influenced decision chains; OES credibility is damaged when Morgen Pass omissions are exposed; Nika pays professional consequences for an unauthorized life-safety disclosure.",
+    "midpoint": "A bounded dummy response element appears inside precursor content, proving that response architecture can enter the warning state.",
+    "point_of_no_return": "Different legitimate response architectures generate different credible warning states while a real storm emergency requires action regardless of the anomaly.",
+    "climax_choice": "Recover centralized prediction-driven control, or accept bounded loss of central control and trust distributed professional judgment using verified present evidence.",
+    "climax_action": "Smith and local communications specialists isolate selected relay relationships while Jana keeps lawful operational authority and delegates bounded objectives; local hydro/rescue crews verify a source-blind route to Andrej rather than treating the strongest warning as command.",
+    "resolution": "Andrej is extracted alive with lasting functional consequence; the storm is contained; OES doctrine is amended; Morgen Pass is reopened; Nika’s breach is recorded with a revised override path; Confederation advisory closes without jurisdiction; precursor origin remains unknown; Smith returns to Dublin and makes an ordinary promise to his teenage daughter.",
+    "series_hook": "Only after resolution: precursor origin remains unknown and Smith’s OES work continues. No cliffhanger may replace the completed case resolution."
+  },
+  "character_arc_constraints": {
+    "SMITH": "From doctrine-as-safety to accountable uncertainty and bounded distributed judgment; accepts that his own rules belong inside the causal chain.",
+    "JANA_KOVAC": "From carrying central responsibility personally to delegating objectives/limits while retaining lawful command accountability.",
+    "NIKA_ZUPAN": "From disciplined dispatcher preserving anomalous evidence to unauthorized life-safety disclosure, then formal accountability and a better escalation/override path.",
+    "TAREN_SOR": "Useful scientific advisory knowledge without Earth jurisdiction; learns that how knowledge enters a decision system is itself part of safety.",
+    "ANDREJ_KOSIR": "Human operational continuity, humor and competence; eventual severe injury creates lasting price without reducing him to a casualty device.",
+    "SMITH_DAUGHTER": "F1 only: teenage daughter. Preserve existing source relationship beats; invent no mother/custody/household facts."
+  },
+  "screen_language": {
+    "observable_first": [
+      "rain and changing road visibility",
+      "dispatch screens and map state",
+      "field radio traffic",
+      "four-impact acoustic clue",
+      "road/hydro access constraints",
+      "relay connectivity changing what teams can coordinate"
+    ],
+    "avoid": [
+      "cosmic VFX explaining precursor ontology",
+      "supernatural voice treatment",
+      "hologram exposition replacing action",
+      "generic evil-agency framing",
+      "Confederation lore dump",
+      "heroic score proving a tactical choice was right"
+    ]
+  }
+}
