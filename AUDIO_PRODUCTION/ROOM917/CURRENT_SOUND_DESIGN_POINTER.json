@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.sound_design_pointer/1.7",
+  "schema_version": "room917.sound_design_pointer/1.8",
   "project": "ROOM917",
   "episode": "E01",
   "status": "ACTIVE_POST_RENDER_SOUND_EXECUTION",
@@ -27,6 +27,7 @@
     "contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
     "candidate_template": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_CANDIDATES_TEMPLATE_v1.json",
     "generation_and_audition_queue": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json",
+    "blind_audition_result_contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_BLIND_AUDITION_RESULT_CONTRACT_v1.json",
     "binding_gate": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/sound_asset_binding_gate.py",
     "identity_gated_runner": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/RUN_P004A_IDENTITY_GATED_PATCH_AND_REGRESSION.ps1",
     "renderer": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/room_bed_patch_renderer.py",
@@ -43,6 +44,7 @@
     "workflow": ".github/workflows/room917-room-bed-synth-canaries.yml",
     "provider_calls": 0,
     "paid_synthesis_calls": 0,
+    "reproducibility": "BYTE_FOR_BYTE_REPRODUCED_IN_SESSION_2026_08_22",
     "a01": {
       "candidate_id": "A01_GREYHAVEN_LOBBY_30S_LOOP_CANDIDATE_SYNTH02",
       "sha256": "9ca06999c727571f18ac8003a61f69a1d18bb46072713f45c7aab3deb86828b3",
@@ -50,6 +52,11 @@
       "sample_rate_hz": 48000,
       "bit_depth": 24,
       "channels": 2,
+      "measured_lufs": -28.06,
+      "stereo_correlation": -0.0109,
+      "side_relative_to_mid_db": 0.095,
+      "mono_lufs": -34.07,
+      "machine_note": "VERY_WIDE_DIAGNOSTIC_REQUIRES_HUMAN_MONO_CHECK",
       "audition_status": "HOLD"
     },
     "a02": {
@@ -59,10 +66,33 @@
       "sample_rate_hz": 48000,
       "bit_depth": 24,
       "channels": 2,
+      "measured_lufs": -38.47,
+      "stereo_correlation": 0.8616,
+      "side_relative_to_mid_db": -11.269,
+      "mono_lufs": -41.76,
+      "machine_note": "NARROWER_THAN_A01_HUMAN_ROOM_CONTRAST_CHECK_REQUIRED",
       "audition_status": "HOLD"
     },
     "required_before_binding": ["FOUNDER_OR_BLIND_LISTENER_AUDITION","FALSE_CLUE_AUDIT","LOOP_SEAM_AUDITION","MONO_CHECK","PHONE_PROXY_CHECK","IDENTITY_GATE_PASS"],
     "law": "CANARY_BYTES_OR_RECEIPT_DO_NOT_AUTHORIZE_D003_PATCH_OR_RELEASE"
+  },
+  "critical_sfx_canaries": {
+    "status": "24_CANDIDATES_CREATED_HOLD_NOT_PRODUCTION_BOUND",
+    "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py",
+    "generator_commit": "306a7831c19c7122ab6012a1abb81d6d61b70cc1",
+    "receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v1.json",
+    "receipt_commit": "d5adb9467511730f7d3ca23b1c76778571e4ae42",
+    "workflow": ".github/workflows/room917-critical-sfx-synth-canaries.yml",
+    "workflow_commit": "2a19d2e7a3ae3fc891d498b2de3d63cf7cc6fc3c",
+    "seed": 91720260822,
+    "provider_calls": 0,
+    "paid_synthesis_calls": 0,
+    "machine_preflight": "ALL_24_HASH_AND_FORMAT_CHECKS_PASS_IN_SESSION",
+    "assets": ["S07_TRANSFORMER_WAKE","S08_RELAY_RIPPLE","S10_SELECTOR_916","S11_GLASS_LAMP_916_PING","S13_INTERNAL_DOUBLE_RING_OLD","S14_UNMARKED_GLASS_LAMP_PING","S17_COPPER_HISS","S19_TWO_PART_LINE_CUT"],
+    "variants_per_asset": 3,
+    "audition_status": "WAITING_FOR_HUMAN_LISTEN",
+    "pairing_gate": "S14_CANNOT_PASS_BEFORE_SELECTED_S11_MATERIAL_IDENTITY_EXISTS",
+    "law": "SYNTHETIC_CANARY_AUDIO_DOES_NOT_AUTHORIZE_PATCHING_OR_RELEASE"
   },
   "derived_candidate_provenance": {
     "contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_DERIVED_MASTER_PROVENANCE_CONTRACT_v1.json",
