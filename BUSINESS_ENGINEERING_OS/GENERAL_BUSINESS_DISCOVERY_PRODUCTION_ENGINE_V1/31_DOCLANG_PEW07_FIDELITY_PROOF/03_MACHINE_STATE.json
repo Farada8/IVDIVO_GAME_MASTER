@@ -3,7 +3,7 @@
   "date": "2026-08-22",
   "gate": "P-EW07",
   "candidate": "DOCLANG_FIDELITY_REGRESSION_QA",
-  "status": "BUILT_CI_PENDING",
+  "status": "BUILT_DRIVE_VERIFIED_CI_PENDING",
   "fresh_replay": {
     "stale_branch": "business-engineering/pew07-doclang-fidelity-proof-20260822",
     "stale_branch_disposition": "PROVENANCE_ONLY_NO_DUPLICATE_EXECUTION",
@@ -32,6 +32,13 @@
     "docling_issue_3864": "DISCLOSED_FAILURE_CLASS_ONLY_CLOSED",
     "docling_issue_3780": "DISCLOSED_FAILURE_CLASS_ONLY_OPEN_WHEN_INSPECTED",
     "prevalence_proven": false
+  },
+  "drive": {
+    "folder_id": "1FyYsogdwV8mAnEwQMyHHgBdXqgu71hMD",
+    "document_id": "1hVCyR1rnyjgYwvGXK5nQu_t4G09xdJr9CcjmMHMvFAk",
+    "revision_id": "AIroW358-ZJjDkRVNfYS2InlahNDKJP8kWyPfGQnpbr-PWOxPmSTlTYy34kJl1lC61Fg609PwavdlW6VU59fbaX7aZhWcsBSVviCTWjjy2Q",
+    "readback_marker": "P-EW07-DOCLANG-SCHEMA-VALID-SEMANTIC-DRIFT-ORTHOGONALITY-CI-PENDING-NO-WIP-NO-MARKET-PROOF",
+    "readback_status": "PASS"
   },
   "proof_boundary": {
     "buyer_demand_proven": false,
