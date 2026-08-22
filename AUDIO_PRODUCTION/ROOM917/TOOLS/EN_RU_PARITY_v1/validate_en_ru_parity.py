@@ -28,7 +28,7 @@ def main() -> int:
     ru = load(Path(args.ru_contract))
 
     report: dict[str, Any] = {
-        "schema_version": "ivdivo.room917_en_ru_parity_report/1.0",
+        "schema_version": "ivdivo.room917_en_ru_parity_report/1.1",
         "project": "ROOM917",
         "episode": "E01",
         "status": "FAIL",
@@ -106,12 +106,39 @@ def main() -> int:
     if not any(f["code"] in {"SCENE1_MUSIC", "SCENE2_MUSIC", "RU_SCENE1_MUSIC", "RU_SCENE2_MUSIC"} for f in report["failures"]):
         report["checks"].append("EARLY_MUSIC_EXCLUSION_PASS")
 
+    scene2_order = control.get("shared_scene_rules", {}).get("scene_2", {}).get("required_sound_order") or []
+    ru_scene2_order = ru.get("scene_contracts", {}).get("SCENE_2", {}).get("locked_sound_order") or []
+    if scene2_order != ru_scene2_order:
+        fail(report, "SCENE2_CAUSAL_ORDER", "RU Scene 2 sound order drifted from shared bilingual control")
+    else:
+        report["checks"].append("SCENE2_CAUSAL_ORDER_PASS")
+
     evidence_order = control.get("shared_scene_rules", {}).get("scene_3", {}).get("required_evidence_order") or []
     ru_order = ru.get("scene_contracts", {}).get("SCENE_3", {}).get("locked_evidence_order") or []
     if evidence_order != ru_order:
         fail(report, "SCENE3_CAUSAL_ORDER", "RU Scene 3 evidence order drifted from shared bilingual control")
     else:
         report["checks"].append("SCENE3_CAUSAL_ORDER_PASS")
+
+    listener_scope = control.get("listener_qc_scope", {})
+    expected_questions = [
+        "DO_I_BELIEVE_THE_ACTOR",
+        "WHERE_DO_I_HEAR_AI",
+        "WHERE_DOES_THE_SCENE_DIE",
+        "IS_SPATIAL_GEOGRAPHY_CLEAR",
+        "DOES_THE_MYSTERY_WORK_ON_ONE_LISTEN",
+        "DO_SFX_OR_MUSIC_MASK_WORDS_OR_CLUES",
+    ]
+    actual_questions = listener_scope.get("same_questions_both_locales") or []
+    if listener_scope.get("question_count") != 6 or listener_scope.get("only_these_questions") is not True or actual_questions != expected_questions:
+        fail(report, "LISTENER_QC_SCOPE", f"Listener QC must contain exactly the six Founder-authorized questions; actual={actual_questions}")
+    else:
+        report["checks"].append("LISTENER_QC_SIX_QUESTIONS_PASS")
+
+    if control.get("shared_world_invariants", {}).get("locale_specific_dialogue_timing_allowed") is not True:
+        fail(report, "LOCALE_TIMING_FREEDOM", "Locale-specific dialogue timing must remain allowed")
+    else:
+        report["checks"].append("LOCALE_TIMING_FREEDOM_PASS")
 
     if control.get("shared_sound_policy", {}).get("pitch_or_signature_drift_for_locale") is not False:
         fail(report, "LOCALE_SOUND_DRIFT", "Language-neutral clue signature drift must remain forbidden")
