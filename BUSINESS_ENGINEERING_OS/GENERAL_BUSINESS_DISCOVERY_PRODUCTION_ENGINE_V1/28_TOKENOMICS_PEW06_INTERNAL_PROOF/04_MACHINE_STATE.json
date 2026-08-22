@@ -1,7 +1,7 @@
 {
   "schema": "ivdivo.general_business.tokenomics_pew06/1.0",
   "date": "2026-08-22",
-  "status": "INTERNAL_PROOF_COMPLETE_CI_PENDING_AT_AUTHORING_TIME",
+  "status": "INTERNAL_PROOF_COMPLETE_CI_SUCCESS_6_OF_6",
   "route": "HOLD_NOT_PROMOTE_TECHNICAL_GAP_REAL_COMMERCIAL_DIFFERENTIATION_UNPROVEN",
   "fixture": {
     "synthetic": true,
@@ -40,6 +40,20 @@
   "profitability": "UNPROVEN",
   "wip_promotion": false,
   "external_action_authorized": false,
+  "ci": {
+    "status": "SUCCESS_6_OF_6",
+    "p_ew06_proof_run": 32571651550,
+    "general_business_discovery_run": 32571651513,
+    "p17_p24_fatal_run": 32571651517,
+    "p09_p16_buyer_evidence_run": 32571651523,
+    "opp37_offer_run": 32571651553,
+    "opp37_ai_vs_seo_run": 32571651515
+  },
+  "drive": {
+    "document_id": "1ireUrcBkfynCzh3VNPO6SVI8xKtA3LXVjeQMEGJCdt8",
+    "semantic_readback": true,
+    "readback_marker": "PEW06-TOKENOMICS-TECHNICAL-GAP-PASS-COMMERCIAL-HOLD-NO-WIP-20260822"
+  },
   "next_evidence_required": "REAL_BUYER_EVIDENCE_OF_INDEPENDENT_OUTCOME_ATTRIBUTION_OR_EVIDENCE_QUALITY_GAP",
   "readback_marker": "PEW06-TOKENOMICS-TECHNICAL-GAP-PASS-COMMERCIAL-HOLD-NO-WIP-20260822"
 }
