@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_en_ru_parallel_production/1.0",
+  "schema_version": "ivdivo.room917_en_ru_parallel_production/1.1",
   "date": "2026-08-22",
   "project": "ROOM917",
   "episode": "E01",
@@ -12,7 +12,8 @@
     "russian_assembly": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json",
     "russian_recording_script": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md",
     "russian_pointer": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/CURRENT_RU_PILOT_POINTER.json",
-    "english_pointer": "AUDIO_PRODUCTION/ROOM917/CURRENT_SOUND_DESIGN_POINTER.json"
+    "english_pointer": "AUDIO_PRODUCTION/ROOM917/CURRENT_SOUND_DESIGN_POINTER.json",
+    "listener_qc_pointer": "AUDIO_PRODUCTION/ROOM917/CURRENT_LISTENER_QC_POINTER.json"
   },
   "locale_frontiers": {
     "en": {
@@ -156,15 +157,19 @@
       "пятьдесят герц"
     ]
   },
-  "listener_qc_same_questions_both_locales": [
-    "DO_I_BELIEVE_THE_ACTOR",
-    "WHERE_DO_I_HEAR_AI",
-    "WHERE_DOES_THE_SCENE_DIE",
-    "IS_SPATIAL_GEOGRAPHY_CLEAR",
-    "DOES_THE_MYSTERY_WORK_ON_ONE_LISTEN",
-    "DO_SFX_OR_MUSIC_MASK_WORDS_OR_CLUES",
-    "DO_I_WANT_THE_NEXT_EPISODE"
-  ],
+  "listener_qc_scope": {
+    "question_count": 6,
+    "only_these_questions": true,
+    "same_questions_both_locales": [
+      "DO_I_BELIEVE_THE_ACTOR",
+      "WHERE_DO_I_HEAR_AI",
+      "WHERE_DOES_THE_SCENE_DIE",
+      "IS_SPATIAL_GEOGRAPHY_CLEAR",
+      "DOES_THE_MYSTERY_WORK_ON_ONE_LISTEN",
+      "DO_SFX_OR_MUSIC_MASK_WORDS_OR_CLUES"
+    ],
+    "market_retention_questions_belong_outside_listener_qc": true
+  },
   "repair_law": {
     "smallest_failed_layer_only": true,
     "whole_episode_rerender_default": false,
