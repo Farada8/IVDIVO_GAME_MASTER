@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.1",
+  "status": "RUN32_COMPLETE_NEXT64_READY_WORKING_CANDIDATE",
+  "scope": "POST_N46_SELF_IMPROVEMENT_CONVERGENCE_CYCLE",
+  "working_branch": "codex/run32-cycle-v2-final-2026-08-21",
+  "original_branch": "codex/run32-cycle-v2-2026-08-21",
+  "source_main_sha_at_boot": "30db21eaba4c76bacc5e71d45349176f5e629dd1",
+  "rebased_parent_sha": "42d1d86bafc01646bd67a10c00f578712f2c1949",
+  "prompts": {
+    "planned": 32,
+    "executed": 32,
+    "blocks": 4
+  },
+  "findings": {
+    "fatal": 0,
+    "major": 3,
+    "major_items": [
+      "BOOK2_STATUS_POINTER_STALE_VS_FINAL_STORY_GATE",
+      "ENGINE_MACHINE_POINTER_CONTINUATION_CONTRACT_DRIFT_VS_RESOLVER",
+      "ENGINE_V11_2_ZIP_LAGS_VERIFIED_POST_PACKAGE_GITHUB_EXTENSION"
+    ]
+  },
+  "protected_actions": [
+    "NO_D09_AUTO_LOCK",
+    "NO_BOOK2_SPECULATIVE_REWRITE",
+    "NO_LESSON_ZERO_SPECULATIVE_REWRITE",
+    "NO_D10_SIBLING_PROSE_DUPLICATION",
+    "NO_PROVIDER_HUMAN_MARKET_EVIDENCE_FABRICATION"
+  ],
+  "selected_next_pilot": {
+    "id": "STATE_CONVERGENCE_ROUTING_PILOT",
+    "status": "READY_FOR_BOUNDED_IMPLEMENTATION",
+    "cases": [
+      "BOOK2_DRAFT_STATUS_VS_FINAL_GATE",
+      "D09_FOUNDER_DECISION_GATE",
+      "D10_SIBLING_FRONTIER",
+      "D04_PROVIDER_BLOCK",
+      "ENGINE_PACKAGE_POST_PACKAGE_DRIFT",
+      "SELF_IMPROVEMENT_REGISTRY_FRONTIER"
+    ]
+  },
+  "next_prompt_pack": {
+    "count": 64,
+    "file": "NEXT_64_RUN_CARDS_v4.0.md",
+    "status": "WORKING_CANDIDATE_FUTURE_EXECUTION"
+  },
+  "promotion_rule": "NO_AUTO_PROMOTION_FROM_RUN_COUNT_OR_MODEL_REVIEW",
+  "concurrency_note": "MAIN_CONTINUES_TO_ADVANCE_IN_SIBLING_DIALOGS; UNIQUE_PATH_DIFF_ONLY; REBASE_OR_GITHUB_MERGE_BASE_REFRESH_REQUIRED_BEFORE_ANY_MERGE",
+  "next_gate": "DRAFT_PR_REVIEW_THEN_OPTIONAL_BOUNDED_STATE_CONVERGENCE_PILOT"
+}
