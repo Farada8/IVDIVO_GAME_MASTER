@@ -7,6 +7,7 @@ from pathlib import Path
 
 from agents import AgentRunRequest, BoundedAgentExecutor
 from benchmarks import run_suite
+from books import BOOK_STAGES, BookProductionCore
 from business import BusinessQuoteService
 from core.bootstrap import bootstrap
 from memory.store import MemoryStore
@@ -131,6 +132,29 @@ def build_parser() -> argparse.ArgumentParser:
     )
     business_quote.add_argument("project_id")
     business_quote.add_argument("request_json", help="Path to quote request JSON")
+
+    book = sub.add_parser("book", help="Book production state operations")
+    book_sub = book.add_subparsers(dest="book_command", required=True)
+
+    book_init = book_sub.add_parser("init", help="Initialize the persisted PL-08 book structure")
+    book_init.add_argument("project_id")
+    book_init.add_argument("--title")
+
+    book_status = book_sub.add_parser("status", help="Read the persisted book production state")
+    book_status.add_argument("project_id")
+
+    book_advance = book_sub.add_parser("advance", help="Advance exactly one production stage")
+    book_advance.add_argument("project_id")
+    book_advance.add_argument("--to", dest="to_stage", choices=BOOK_STAGES)
+
+    book_continuity = book_sub.add_parser(
+        "continuity", help="Record the explicit continuity gate at CONTINUITY stage"
+    )
+    book_continuity.add_argument("project_id")
+    gate = book_continuity.add_mutually_exclusive_group(required=True)
+    gate.add_argument("--pass-gate", action="store_true")
+    gate.add_argument("--fail-gate", action="store_true")
+    book_continuity.add_argument("--evidence", required=True)
 
     return parser
 
@@ -269,6 +293,22 @@ def main() -> int:
             )
         else:  # pragma: no cover - argparse enforces choices
             raise RuntimeError("unsupported business command")
+    elif args.command == "book":
+        core = BookProductionCore(home)
+        if args.book_command == "init":
+            result = core.initialize(args.project_id, args.title)
+        elif args.book_command == "status":
+            result = core.load(args.project_id)
+        elif args.book_command == "advance":
+            result = core.advance(args.project_id, args.to_stage)
+        elif args.book_command == "continuity":
+            result = core.set_continuity_gate(
+                args.project_id,
+                passed=args.pass_gate,
+                evidence=args.evidence,
+            )
+        else:  # pragma: no cover - argparse enforces choices
+            raise RuntimeError("unsupported book command")
     else:  # pragma: no cover - argparse enforces choices
         raise RuntimeError("unsupported command")
 
