@@ -20,6 +20,7 @@
   "next64": {"created":64,"executed":24,"executed_ranges":["P01-P08","P17-P24","P25-P32"],"remaining":40,"unexecuted_ranges":["P09-P16","P33-P64"],"progress_is_internal_engineering_not_market_proof":true},
   "top10": ["LOCAL_SKILLED_PRODUCTIZED_SERVICE","SERVICE_ARBITRAGE_SUBCONTRACTING","LOCAL_LEAD_GENERATION","HIGH_TICKET_B2B_BROKERAGE","EU_SUPPLIER_DROPSHIPPING","PRINT_ON_DEMAND","ETSY_DIGITAL_TEMPLATES","AI_WORKFLOW_IMPLEMENTATION","PAID_INTELLIGENCE_PACK","USED_GOODS_EQUIPMENT_ARBITRAGE"],
   "bounded_wip3": {"primary_experiment":"EU_SUPPLIER_ECOMMERCE_DROPSHIPPING","pilot_1":"DIGITAL_AND_POD_ART_COMMERCE","pilot_2":"LOCAL_SERVICE_ARBITRAGE_AND_LEADGEN","businesses_proven":0},
+  "coexistence": {"old_opportunity_wip_engineering_progress":"P01-P24_COMPLETE_ON_OPP33_OPP36_OPP37","old_wip_invalidated":false,"money_mechanisms_role":"DISCOVERY_BIAS_CORRECTION_AND_COMPARISON_TEST_LIBRARY","mechanism_overlay_does_not_claim_market_superiority":true},
   "mechanism_test_portfolio": {
     "eu_supplier_ecommerce_dropshipping": {"status":"SCREENED_20_CANDIDATES_11_ADVANCE_PRICE_SHIP_CHECK","profitable_skus_proven":0,"next_dependency":"PRODUCT_LEVEL_WHOLESALE_PLUS_IRELAND_SHIPPING"},
     "digital_and_pod_art_commerce": {"status":"2_FAMILIES_10_DIGITAL_10_POD_INTERNAL_ONLY","generic_vintage_ireland":"MUTATE","profitable_skus_proven":0,"next_dependency":"SELECT_3_PROVENANCE_RESOLUTION_READY_ASSETS_AND_EXACT_COSTING"},
