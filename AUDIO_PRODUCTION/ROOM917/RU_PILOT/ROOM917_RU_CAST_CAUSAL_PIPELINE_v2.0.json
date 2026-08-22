@@ -1,0 +1,37 @@
+{
+  "schema_version": "ivdivo.room917_ru_cast_causal_pipeline/2.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "story_edit": false,
+  "pipeline": [
+    {"order":1,"stage":"AUTHENTICATED_ZERO_SPEND_PROVIDER_DISCOVERY","spend":false,"output":"RU_NATIVE_VOICE_DISCOVERY.json","pass":"PASS_CANDIDATES_FOUND"},
+    {"order":2,"stage":"NON_BINDING_ROLE_SHORTLIST","spend":false,"output":"ROOM917_RU_CAST_SHORTLIST_PROPOSAL.json","pass":"READY_FOR_PREVIEW_LISTEN_NOT_BINDINGS"},
+    {"order":3,"stage":"PRE_CANARY_PROVIDER_PREVIEW_REVIEW","spend":false,"output":"PRE_CANARY_REVIEW_COMPLETE","proves":["provider_identity","provider_durability","preview_plausibility"],"does_not_prove":["acting","script_pronunciation","chemistry","repeat_take","founder_cast_credibility"]},
+    {"order":4,"stage":"CANARY_ONLY_BINDING_CANDIDATE","spend":false,"output":"READY_FOR_PAID_CANARY_AUTHORIZATION","cast_lock":false},
+    {"order":5,"stage":"EXPLICIT_S0_SPEND_AUTHORIZATION","spend":false,"authorization_scope":"ROOM917_RU_S0_CANARY_ONLY","allowed_blocks":[4,6],"automatic_execution":false},
+    {"order":6,"stage":"BOUNDED_S0_PROVIDER_RENDER","spend":true,"manual_dispatch":true,"proves":"first_take_screening_evidence","cast_lock":false},
+    {"order":7,"stage":"MACHINE_QC_PLUS_HUMAN_S0_SCREENING","spend":false,"outcomes":["PASS_TO_FINALIST","SELECTIVE_REPAIR","RECAST","STOP"],"cast_lock":false},
+    {"order":8,"stage":"COVERAGE_MINIMAL_FINALIST_PLAN","spend":false,"required_blocks":"6_TO_8_BASED_ON_ACCEPTED_S0_PAIR_EVIDENCE","no_duplicate_paid_pair":true},
+    {"order":9,"stage":"EXPLICIT_FINALIST_SPEND_AUTHORIZATION","spend":false,"authorization_scope":"ROOM917_RU_FINALIST_VERIFICATION_ONLY","authorized_count":"EXACTLY_PLAN_REQUIRED_COUNT","automatic_execution":false},
+    {"order":10,"stage":"FINALIST_PROVIDER_RENDER","spend":true,"manual_dispatch":true,"proves":["second_take_identity","missing_pair_evidence","elena_julian_status","cate_identity_range"],"cast_lock":false},
+    {"order":11,"stage":"POST_CANARY_HUMAN_REVIEW","spend":false,"requires_real_audio_hashes":true,"founder_final_credibility_required":true},
+    {"order":12,"stage":"CAST_LOCK_RECEIPT_COMPILER","spend":false,"requires_sealed_provenance":true,"output":"ROOM917_RU_CAST_LOCK_RECEIPT.json"},
+    {"order":13,"stage":"INDEPENDENT_CAST_LOCK_VALIDATOR","spend":false,"pass":"LOCKED","opens":"CONTROLLED_RU_E01_DIALOGUE_RENDER_ONLY"}
+  ],
+  "causality_invariants": [
+    "NO_POST_CANARY_EVIDENCE_REQUIRED_BEFORE_CANARY_EXISTS",
+    "NO_ACTING_PASS_FROM_PROVIDER_METADATA_OR_PREVIEW_ONLY",
+    "NO_PAIR_PASS_WITHOUT_REAL_PAIR_AUDIO_HASH",
+    "NO_CAST_LOCK_FROM_SINGLE_TAKE",
+    "NO_SPEND_ABOVE_SEALED_AUTHORIZATION",
+    "NO_DUPLICATE_PAID_PAIR_RENDER_WHEN_ACCEPTED_EVIDENCE_EXISTS",
+    "NO_AUTOMATIC_PROVIDER_SPEND",
+    "NO_FULL_E01_BEFORE_VALIDATED_CAST_LOCK"
+  ],
+  "external_block_behavior": {
+    "provider_auth_missing": "BLOCK_PROVIDER_CALL_ONLY__CONTINUE_ALL_NON_PROVIDER_ENGINEERING",
+    "spend_not_authorized": "BLOCK_PAID_RENDER_ONLY__CONTINUE_ALL_ZERO_SPEND_ENGINEERING",
+    "human_listen_missing": "BLOCK_CAST_PROMOTION_ONLY__DO_NOT_SIMULATE_HUMAN_EVIDENCE"
+  }
+}
