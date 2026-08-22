@@ -20,6 +20,11 @@ DIAGNOSTIC_IDS = {
     "XrExE9yKIg1WjnnlVkGX": "MINA",
     "EXAVITQu4vr4xnSDxMaL": "CATE",
 }
+S0_ALLOWED_OUTPUT_FORMATS = {
+    "mp3_44100_128",
+    "mp3_44100_192",
+}
+S0_DEFAULT_OUTPUT_FORMAT = "mp3_44100_128"
 
 
 def load(path: Path) -> dict[str, Any]:
@@ -80,7 +85,7 @@ def main() -> int:
         bound[role] = voice_id
 
     runtime = json.loads(json.dumps(template, ensure_ascii=False))
-    runtime["schema_version"] = "ivdivo.room917_ru_s0_native_runtime_bundle/1.0"
+    runtime["schema_version"] = "ivdivo.room917_ru_s0_native_runtime_bundle/1.1"
     runtime["status"] = "NATIVE_RU_BOUND_PAID_S0_RUNTIME"
     runtime["cast_source"] = str(args.bindings)
     runtime["provider_snapshot"] = {
@@ -89,8 +94,14 @@ def main() -> int:
         "query_policy": query,
     }
 
-    # Replace every historical diagnostic voice ID by role-bound native voice ID.
     for block in runtime.get("blocks") or []:
+        fmt = str(block.get("output_format") or S0_DEFAULT_OUTPUT_FORMAT)
+        require(
+            fmt in S0_ALLOWED_OUTPUT_FORMATS,
+            f"{block.get('block_id')}: unsupported S0 audition output_format={fmt}; allowed={sorted(S0_ALLOWED_OUTPUT_FORMATS)}",
+        )
+        block["output_format"] = fmt
+
         if block.get("voice_id"):
             old = str(block["voice_id"])
             role = DIAGNOSTIC_IDS.get(old)
@@ -102,8 +113,8 @@ def main() -> int:
             require(role is not None, f"{block.get('block_id')}: unknown turn template voice ID {old}")
             turn["voice_id"] = bound[role]
 
-        # Eleven v3 product guide: Similarity and Speaker Boost are not available.
-        # Keep only settings that are meaningful for this v3 experiment.
+        # Eleven v3: Similarity and Speaker Boost are not available.
+        # Keep only settings that remain meaningful for this v3 audition experiment.
         if isinstance(block.get("voice_settings"), dict):
             vs = block["voice_settings"]
             vs.pop("similarity_boost", None)
@@ -112,11 +123,18 @@ def main() -> int:
                 vs["style"] = 0.0
 
     runtime["runtime_voice_bindings"] = bound
+    runtime["audition_output_policy"] = {
+        "allowed_formats": sorted(S0_ALLOWED_OUTPUT_FORMATS),
+        "default": S0_DEFAULT_OUTPUT_FORMAT,
+        "final_master_format_is_separate": True,
+        "final_master_target": "48K_24BIT_WAV_AFTER_CAST_LOCK_AND_ASSEMBLY",
+    }
     runtime["hard_rules"] = list(runtime.get("hard_rules") or []) + [
         "NATIVE_RU_PROVIDER_SNAPSHOT_MATCH_REQUIRED",
         "DIAGNOSTIC_PUBLIC_IDS_FORBIDDEN",
+        "S0_AUDITION_OUTPUT_FORMAT_ALLOWLIST_REQUIRED",
         "HUMAN_LISTEN_REQUIRED_BEFORE_CAST_LOCK",
-        "FULL_E01_RENDER_FORBIDDEN_AT_S0"
+        "FULL_E01_RENDER_FORBIDDEN_AT_S0",
     ]
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
@@ -125,7 +143,8 @@ def main() -> int:
         "status": "PASS_NATIVE_BINDING_GATE",
         "out": str(args.out),
         "roles": bound,
-        "provider_snapshot_sha256": runtime["provider_snapshot"]["sha256"]
+        "provider_snapshot_sha256": runtime["provider_snapshot"]["sha256"],
+        "audition_formats": sorted(S0_ALLOWED_OUTPUT_FORMATS),
     }, ensure_ascii=False))
     return 0
 
