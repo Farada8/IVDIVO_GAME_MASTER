@@ -2,7 +2,7 @@
   "schema": "ivdivo.general_business.agent_commerce_scanner/0.2",
   "date": "2026-08-22",
   "prompt": "P-EW02_CALIBRATION_PATCH",
-  "status": "RULESET_2026_08_22_2_PENDING_EXACT_HEAD_CI",
+  "status": "RULESET_2026_08_22_2_CALIBRATED_PEW02_MERCHANT_TEST_NOT_EXECUTED",
   "parent_candidate": "OW-01_AGENTIC_COMMERCE_MERCHANT_READINESS",
   "ruleset_version": "2026-08-22.2",
   "prior_ruleset": "2026-08-22.1",
@@ -20,7 +20,13 @@
   },
   "supported_ucp_transports": ["rest", "mcp", "a2a", "embedded"],
   "canary_count": 14,
-  "canary_result": "PENDING_EXACT_HEAD_CI",
+  "canary_result": "PASS_14_OF_14",
+  "exact_head_ci": {
+    "scanner_workflow_run": 32558222381,
+    "scanner_workflow_conclusion": "success",
+    "inherited_general_business_runs": [32558222378,32558222406,32558222385,32558222377,32558222358],
+    "inherited_general_business_conclusion": "success"
+  },
   "p_ew01_executed": true,
   "p_ew02_executed": false,
   "p_ew02_calibration_patch": true,
@@ -33,5 +39,5 @@
     "scanner_patch_is_market_validation": false
   },
   "external_action_authorized": false,
-  "next_gate": "EXACT_HEAD_CI_THEN_RESUME_PREDECLARED_TEN_REAL_PUBLIC_MERCHANT_BLIND_TEST"
+  "next_gate": "PREDECLARED_TEN_REAL_PUBLIC_MERCHANT_BLIND_TEST"
 }
