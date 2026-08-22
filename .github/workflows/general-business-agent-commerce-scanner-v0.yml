@@ -1,0 +1,23 @@
+name: General Business Agent Commerce Scanner v0
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/**'
+      - '.github/workflows/general-business-agent-commerce-scanner-v0.yml'
+  push:
+    branches:
+      - 'business-engineering/agent-commerce-readiness-scanner-v0-20260822'
+
+jobs:
+  scanner-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile scanner
+        run: python -m py_compile BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/scanner.py
+      - name: Run deterministic scanner canaries
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/tests/test_scanner.py
