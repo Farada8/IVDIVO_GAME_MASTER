@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.self_improvement.thread_frontier_two_level_routing/0.1",
+  "schema": "ivdivo.self_improvement.thread_frontier_two_level_routing/0.2",
   "date": "2026-08-22",
-  "status": "TWO_LEVEL_CONVERGENCE_PENDING_CI",
+  "status": "TWO_LEVEL_CONVERGENCE_VERIFIED_MERGED_NOT_PROMOTED",
   "authority_effect": "NONE",
   "global_si_id": null,
   "parent_authority": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
@@ -11,13 +11,36 @@
     "runtime": "tools/ivdivo_thread_topic_guard.py",
     "role": "SOLE_PROJECT_SWITCH_AUTHORITY"
   },
-  "frontier_predecessor": {
-    "pr": 278,
-    "state": "OPEN_DRAFT_NOT_MERGED",
-    "useful_scope": "DISCOVERED_MATERIAL_RELATION_TO_ACTIVE_NEXT_GATE",
-    "rejected_behavior": "FRONTIER_LAYER_DUPLICATES_EXPLICIT_PROJECT_SWITCH_AND_CAN_RETAIN_OLD_PROJECT_GATE"
+  "frontier_runtime": {
+    "runtime": "tools/ivdivo_active_frontier_guard.py",
+    "role": "SUBORDINATE_ACTIVE_NEXT_GATE_CLASSIFIER",
+    "project_switch_authority": false
   },
-  "frontier_candidate_runtime": "tools/ivdivo_active_frontier_guard.py",
+  "convergence_receipt": {
+    "merged_pr": 464,
+    "tested_head_sha": "29864e0084a349e8e681d5ca775bc9332ea55081",
+    "merge_sha": "4e21e26f2bcb2424a1582a306fccb839d6febe5c",
+    "thread_topic_ci_run": 32573915416,
+    "thread_topic_ci": "SUCCESS",
+    "two_level_ci_run": 32573915385,
+    "two_level_ci": "SUCCESS",
+    "freshness_checked_main": "b3c998eeb135df0b4920351e18ad542ab4a36c0a",
+    "same_path_overlap": "NONE",
+    "raw_github_mergeable": true,
+    "raw_github_mergeable_state": "clean"
+  },
+  "superseded_predecessors": [
+    {
+      "pr": 278,
+      "state": "CLOSED_NOT_MERGED_SUPERSEDED_PROVENANCE_ONLY",
+      "useful_scope_preserved": "DISCOVERED_MATERIAL_RELATION_TO_ACTIVE_NEXT_GATE",
+      "rejected_behavior": "FRONTIER_LAYER_DUPLICATES_EXPLICIT_PROJECT_SWITCH_AND_CAN_RETAIN_OLD_PROJECT_GATE"
+    },
+    {
+      "pr": 460,
+      "state": "CLOSED_NOT_MERGED_MECHANICALLY_SUPERSEDED_BY_PR464"
+    }
+  ],
   "integration_test": "tests/test_thread_frontier_two_level_routing.py",
   "contract": "ENGINEERING_CONTRACTS/THREAD_FRONTIER_TWO_LEVEL_ROUTING_v0.1.md",
   "core_laws": [
@@ -42,6 +65,6 @@
     "side_query_return_controls_required": 1
   },
   "promotion_authorized": false,
-  "next_gate": "PASS_EXACT_HEAD_TWO_LEVEL_CI_THEN_FRESH_MAIN_OVERLAP_CHECK; IF_MERGED_CLOSE_PR278_AS_SUPERSEDED_PROVENANCE_ONLY_WITHOUT_CHANGING_REAL_PILOT_REQUIREMENTS",
-  "readback_marker": "SI-THREAD-FRONTIER-TWO-LEVEL-CONVERGENCE-PENDING-CI-20260822"
+  "next_gate": "WAIT_FOR_NATURAL_REAL_PILOT_EVIDENCE: ONE_CONTINUATION_EVENT_FROM_ANOTHER_PROJECT_TYPE_PLUS_TWO_HEALTHY_EXPLICIT_SWITCH_CONTROLS_PLUS_ONE_SIDE_QUERY_RETURN_CONTROL",
+  "readback_marker": "SI-THREAD-FRONTIER-TWO-LEVEL-CONVERGENCE-MERGED-PR464-20260822"
 }
