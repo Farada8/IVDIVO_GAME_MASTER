@@ -1,0 +1,50 @@
+{
+  "schema": "ivdivo.general_business.pew05_wip3_decision/1.1",
+  "date": "2026-08-22",
+  "status": "INTERNAL_WIP3_ENGINEERING_COMPLETE_ALL_M1_NO_MARKET_PROOF",
+  "gates": {
+    "P-EW01": {"status": "PASS_ENGINEERING", "pr": 348, "merge_sha": "926964d791f41fbd133a5d7e2247c1226365e15b"},
+    "P-EW02": {"status": "PASS_TEST_ENGINEERING", "pr": 353, "merge_sha": "0f83a4b223b8355b7163616d2a2cec527ec228db", "evaluated": 10, "generic_advice_outputs": 0, "false_promotions": 0},
+    "P-EW03": {"status": "PASS_ENGINEERING", "pr": 367, "merge_sha": "3f65b522c59a7cdc988cbae893c1d54651eab6e6", "ci_run": 32561576738, "synthetic_cases": 6, "canaries": 14},
+    "P-EW04": {"status": "PASS_ENGINEERING", "controlling_pr": 375, "merge_sha": "8797476c45ac38bc9eb9bfbe8a3b1d9c27f1a7d7", "ci_run": 32562001036, "synthetic_cases": 6, "canaries": 16, "superseded_provenance_pr": 376}
+  },
+  "routes": {
+    "OW-01": {"route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN", "next_test_sequence": "A", "buyer_role": "HYPOTHESIS_ONLY", "wtp": null, "transactions": 0},
+    "CF-01": {"route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN", "next_test_sequence": "B", "scope_guard": "LEGAL_APPLICABILITY_OPINION_CERTIFICATION_EXTERNAL", "wtp": null, "transactions": 0},
+    "CF-03": {"route": "M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN", "next_test_sequence": "C", "scope_guard": "PRODUCT_SPECIFIC_APPLICABILITY_AND_REQUIRED_FIELDS_UNKNOWN_UNTIL_AUTHORITY", "wtp": null, "transactions": 0}
+  },
+  "decision": {
+    "all_three_m1": true,
+    "any_m2": false,
+    "market_winner_proven": false,
+    "next_bounded_wtp_test_candidate": "OW-01",
+    "next_sequence_is_market_ranking": false,
+    "reason_for_ow01_first": "REAL_PUBLIC_FIXTURE_DIAGNOSTIC_DISCRIMINATION_PLUS_NO_LEGAL_SCOPE_DETERMINATION_REQUIRED_FOR_BOUNDED_TECHNICAL_DIAGNOSTIC"
+  },
+  "self_improvement": [
+    "ENGINEERING_PASS_ALL_NEQ_MARKET_WINNER",
+    "REGULATORY_FORCING_FUNCTION_NEQ_BUYER_BUDGET",
+    "SYNTHETIC_IMPLEMENTATION_DELTA_NEQ_PAID_DEMAND",
+    "REAL_FIXTURE_DISCRIMINATION_NEQ_WTP",
+    "LEGAL_SCOPE_DEPENDENCY_AFFECTS_TESTABILITY_NOT_INTRINSIC_VALUE",
+    "P-EW05_PRIORITY_IS_NEXT_TEST_SEQUENCE_NOT_MARKET_RANKING",
+    "M1_NEQ_M2"
+  ],
+  "drive": {
+    "document_id": "1BkxxRD8slnZtakhzYFuz8pQ8zTdXDoXm_PEU5MOaVr0",
+    "parent_folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
+    "semantic_readback": true,
+    "readback_marker": "P-EW05-WIP3-ALL-M1-NO-MARKET-WINNER-OW01-NEXT-WTP-SEQUENCE-20260822"
+  },
+  "proof_boundary": {
+    "wtp": null,
+    "price": null,
+    "cac": null,
+    "conversion": null,
+    "transactions": 0,
+    "profitability": "UNPROVEN",
+    "early_wave_winner": "UNPROVEN",
+    "external_action_authorized": false
+  },
+  "next_gate": "WRITE_PREDECLARED_BUYER_WTP_TEST_CONTRACT_ONLY_IF_EXTERNAL_TESTING_IS_EXPLICITLY_AUTHORIZED"
+}
