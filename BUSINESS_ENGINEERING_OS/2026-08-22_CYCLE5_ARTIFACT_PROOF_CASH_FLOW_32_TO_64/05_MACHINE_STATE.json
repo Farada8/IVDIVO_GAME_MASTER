@@ -1,0 +1,20 @@
+{
+  "schema": "ivdivo.business_engineering_state/5.0-candidate",
+  "date": "2026-08-22",
+  "base_authority": "BUSINESS_ENGINEERING_OS_CYCLE4_MAIN",
+  "cycle": "CYCLE5_P65_P96_ARTIFACT_PROOF_CASH_FLOW",
+  "run32": "EXECUTED_32_OF_32_WITH_HOLD_STATES_PRESERVED",
+  "deterministic_tests": {"passed": 21, "failed": 0},
+  "knowledge_library_physical_files": 78,
+  "owned_asset_registry": ["D01_THE_WIFE_AT_HIS_WEDDING_E01_E05"],
+  "active_wip": {"primary": "OP01", "pilots": ["OP03", "OP19"], "limit": 3},
+  "public_artifacts": {"OP01": "BUILT_HOLD_EXTERNAL_VALUE", "OP03": "BUILT_HOLD_REAL_WORKLOAD", "OP19": "BUILT_HOLD_DIFFERENTIATION"},
+  "evidence_ceiling": "E2+",
+  "e3_buyer_conversations": 0,
+  "e4_payment_proofs": 0,
+  "validated_price_points": 0,
+  "human_manual_delivery_minutes": null,
+  "next_gate": "OP01_E3_COMPARATOR_AND_BUYER_BEHAVIOUR_OR_AUTHORIZED_EQUIVALENT",
+  "self_improvement": "SCOPED_CANARY_ONLY_NO_NEW_GLOBAL_VERSION",
+  "next64": "07_NEXT64_P97_P160.md"
+}
