@@ -1,34 +1,51 @@
 {
-  "schema": "ivdivo.business.general_discovery_production_engine/1.3",
+  "schema": "ivdivo.business.general_discovery_production_engine/1.6",
   "date": "2026-08-22",
-  "status": "P01_P24_ENGINEERING_CURRENT_TEST37_INTERNAL_PASS_CI_VALIDATED_PREMERGE",
+  "status": "P01_P32_ENGINEERING_CURRENT_FOUNDER_RESCREEN_PASS_S5_INTERNAL_CI5OF5_PREMERGE",
   "github": {
     "base_engine_pr": 303,
     "base_engine_merge_sha": "b579c7e0359b5c242b718866c2c2488a2dda1434",
-    "base_engine_ci_run": 32554671258,
     "discovery_refresh_pr": 307,
     "discovery_refresh_merge_sha": "5551929cb5873dc6198247affe9b7e77738b5c41",
-    "discovery_refresh_exact_head": "888bde71957a440e3532c01cac0e6f69d95f0bae",
-    "discovery_refresh_ci_run": 32555010120,
     "fatal_test_pr": 315,
     "fatal_test_merge_sha": "01c7e12bf8b24ab1469e6723aba375e06ccf30f3",
-    "fatal_test_exact_head": "f66a8deddc067e9f15e3e5ad105e4d0cab90aaa4",
-    "fatal_test_ci_run": 32555453377,
     "buyer_problem_pr": 322,
     "buyer_problem_merge_sha": "110e37869b1a733be653d5e504f14a25209ba916",
     "test37_pr": 329,
-    "test37_preclosure_verified_head": "824e61d2de6ab6d9e0fe8581f94da8709ed76930",
-    "test37_preclosure_ci_status": "SUCCESS_4_OF_4"
+    "test37_exact_head": "4d90880953b2303c05e83b433cfd121d760e45d4",
+    "test37_merge_sha": "8a75f6abe2c4b82b0d673ad7a1a1280a99ecc02a",
+    "test37_final_ci": [32556941919, 32556941918, 32556941915, 32556941910],
+    "founder_profile_pr": 334,
+    "p25_p32_pr": 339,
+    "p25_p32_verified_preclosure_head": "801f86f2e24daffa59e9e28c0040aa1537642050",
+    "p25_p32_verified_preclosure_ci": [32557639736, 32557639702, 32557639733, 32557639721, 32557639730],
+    "p25_p32_verified_preclosure_ci_status": "SUCCESS_5_OF_5"
   },
   "namespace": {"modules": "BDP01-BDP32", "contracts": "CDP01-CDP32", "proof_gates": "PG01-PG12", "protocols": "P-BDP-01-P-BDP-12"},
   "run32": {"executed": 32, "keep_or_keep_with_ordering": 21, "mutate": 11, "kill": 0, "market_proof_created": false},
   "next64": {
     "created": 64,
-    "executed": 24,
-    "executed_ranges": ["P01-P08", "P09-P16", "P17-P24"],
-    "remaining": 40,
+    "executed": 32,
+    "executed_ranges": ["P01-P08", "P09-P16", "P17-P24", "P25-P32"],
+    "remaining": 32,
     "priority_rule": "DEPENDENCIES_AND_DECISION_VALUE_OVERRIDE_PROMPT_ORDER",
-    "next_admissible_block": "P25-P32_OPP37_INTERNAL_OFFER_ENGINEERING"
+    "next_admissible_block": "P33-P40_OPP37_NULL_SAFE_ECONOMICS_AND_MANUAL_DELIVERY_TIMING"
+  },
+  "founder_profile_rescreen": {
+    "authority": "PR334_MANDATORY_BEFORE_DEEP_DIVE",
+    "opportunity_id": "OPP-37",
+    "remote_first_pass": true,
+    "founder_cash_at_risk_eur_current_phase": 0,
+    "founder_physical_load": "NONE_LOW",
+    "test_before_build_spend": true,
+    "wave_stage": "EXPANDING",
+    "generic_ai_audit_competition": "HIGH",
+    "disposition": "NORMAL_CASHFLOW_CANDIDATE",
+    "early_wave_priority": false,
+    "optionality_next_primary": false,
+    "portfolio_primary": false,
+    "grandfathered": false,
+    "rescreen_completed": true
   },
   "discovery_refresh": {
     "fresh_non_procurement_signals": 10,
@@ -37,6 +54,7 @@
     "candidate_pilot_1": "OPP-36_AI_TRANSPARENCY_IMPLEMENTATION_PACK",
     "candidate_pilot_2": "OPP-37_TOURISM_AI_DISCOVERABILITY_BOOKABILITY",
     "wip_count": 3,
+    "historical_wip_not_strategic_priority_without_profile_rescreen": true,
     "willingness_to_pay": null,
     "unit_economics": null,
     "transaction_evidence": false,
@@ -46,9 +64,9 @@
     "status": "S3_FATAL_TEST_READY_WITH_OPP37_INTERNAL_DIFFERENTIAL_PASS",
     "active_lanes": ["OPP-33", "OPP-36", "OPP-37"],
     "tests": {
-      "OPP-33": {"fatal_1": "BUYER_COORDINATION_GAP_EXISTS", "test": "TEST-33", "status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION", "negative_control": "OFFICIAL_SEAI_SELF_NAVIGATION_PLUS_DIRECT_INSTALLER"},
-      "OPP-36": {"fatal_1": "IN_SCOPE_UNRESOLVED_OPERATIONAL_GAP_EXISTS", "test": "TEST-36", "status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION", "negative_control": "COMMISSION_GUIDANCE_PLUS_VENDOR_DOCUMENTATION_ONLY"},
-      "OPP-37": {"fatal_1": "AI_SPECIFIC_INCREMENTAL_GAP_BEYOND_ORDINARY_SEO", "test": "TEST-37", "status": "INTERNAL_DIFFERENTIAL_PASS_2_OF_3_EXTERNAL_BEHAVIOR_STAGE_GATED", "negative_control": "ORDINARY_SEO_WEB_AUDIT_SAME_SITE_SAME_WINDOW"}
+      "OPP-33": {"fatal_1": "BUYER_COORDINATION_GAP_EXISTS", "test": "TEST-33", "status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION"},
+      "OPP-36": {"fatal_1": "IN_SCOPE_UNRESOLVED_OPERATIONAL_GAP_EXISTS", "test": "TEST-36", "status": "READY_REQUIRES_EXPLICIT_EXTERNAL_ACTION_AUTHORIZATION"},
+      "OPP-37": {"fatal_1": "AI_SPECIFIC_INCREMENTAL_GAP_BEYOND_ORDINARY_SEO", "test": "TEST-37", "status": "MERGED_INTERNAL_DIFFERENTIAL_PASS_2_OF_3_EXTERNAL_BEHAVIOR_STAGE_GATED"}
     },
     "thresholds_predeclared": true,
     "negative_controls_required": true,
@@ -59,7 +77,7 @@
     "proof_promotion": false
   },
   "test37_internal": {
-    "status": "PASS_2_OF_3_CI_VALIDATED_PREMERGE",
+    "status": "MERGED_PASS_2_OF_3_CI4OF4",
     "sample": 3,
     "count": 2,
     "counted_sites": ["PALLAS", "CLISSMANN"],
@@ -75,37 +93,48 @@
     "status": "P09_P16_INTERNAL_SCHEMA_AND_SCREENING_COMPLETE",
     "active_lanes": ["OPP-33", "OPP-36", "OPP-37"],
     "user_buyer_budget_owner_separated": true,
-    "jtbd_and_workarounds_mapped": true,
-    "cost_of_delay_formulas_defined_inputs_null": true,
-    "incumbent_and_substitutes_mapped": true,
     "screening_slots_per_lane": 10,
     "public_screening_candidate_is_buyer": false,
-    "non_leading_observation_protocol_defined": true,
     "behavior_ladder": ["E0", "E1", "E2", "E3", "E4", "E5", "E6"],
-    "fatal_behavior_floor": "E2_OR_HIGHER_REVIEW_REQUIRED",
-    "ledger_schema_defined": true,
     "contradiction_policy": "CONTRADICTION_NEVER_AVERAGES_AWAY",
     "buyer_behavior_observed": false
+  },
+  "offer_engineering": {
+    "status": "P25_P32_INTERNAL_COMPLETE_FOUNDER_RESCREEN_PASS_CI5OF5_PREMERGE",
+    "opportunity_id": "OPP-37",
+    "working_offer": "FIRST_PARTY_FACT_CONSISTENCY_AND_ANSWERABILITY_DECISION_PACK",
+    "generic_ai_seo_audit": "KILL_AS_DIFFERENTIATED_CORE",
+    "disposition": "MUTATE_AND_TEST",
+    "preferred_architecture": "PRODUCTIZED_ONE_SITE_DECISION_PACK",
+    "coordinator": "HOLD_BUYER_BEHAVIOR_REQUIRED",
+    "saas": "HOLD_REPEATED_MANUAL_NEED_REQUIRED",
+    "pricing_test_points_ex_vat_eur": [249, 349, 490],
+    "central_price_hypothesis_eur": 349,
+    "price_is_wtp_proof": false,
+    "delivery_cost_measured": false,
+    "minimum_viable_price": null,
+    "internal_decision_test": "PASS_2_OF_3_PLUS_1_NEGATIVE_CONTROL",
+    "buyer_value_proven": false,
+    "state": "S5_OFFER_TESTABLE_INTERNAL_ONLY"
   },
   "state_machine": ["S0_RESTORE", "S1_DISCOVERED", "S2_QUALIFIED", "S3_FATAL_TEST_READY", "S4_VALUE_BOUNDED", "S5_OFFER_TESTABLE", "S6_ECONOMICS_BOUNDED", "S7_SALES_TEST_READY", "S8_EXTERNAL_SIGNAL", "S9_TRANSACTION", "S10_DELIVERY_PROVEN", "S11_REPEATABILITY", "S12_SCALE_READY"],
   "portfolio_policy": {"max_wip": 3, "primary": 1, "pilots_max": 2},
   "evidence_laws": [
-    "K_NEQ_S_NEQ_E_NEQ_CASH", "SIGNAL_NEQ_DEMAND", "PUBLIC_SCREENING_CANDIDATE_NEQ_BUYER", "USER_NEQ_BUYER_NEQ_BUDGET_OWNER", "OFFICIAL_SUPPORT_EXISTENCE_NEQ_BUYER_WTP", "PROGRAMME_STRATEGY_NEQ_PRIVATE_DEMAND_PROOF", "GRANT_AVAILABLE_NEQ_CLIENT_ELIGIBLE", "INTERVIEW_NEQ_BEHAVIOR", "E1_VERBAL_ONLY_CANNOT_PASS_FATAL_TEST", "INTEREST_NEQ_TRANSACTION", "PAYMENT_NEQ_REPEATABILITY", "E5_TRANSACTION_NEQ_REPEATABILITY", "PRICE_HYPOTHESIS_NEQ_WTP", "FATAL_ASSUMPTION_BEFORE_BUILD", "CHEAPEST_DECISIVE_TEST_FIRST", "THRESHOLD_BEFORE_TEST", "NEGATIVE_CONTROL_REQUIRED", "ORDINARY_SEO_DEFECT_NEQ_INCREMENTAL_AI_DEFECT", "BOUNDED_TECHNICAL_DIFFERENTIAL_NEQ_BUYER_DEMAND", "CONTRADICTION_NEVER_AVERAGES_AWAY", "MISSING_EVIDENCE_STAYS_NULL", "VENDOR_MARKETING_NEQ_END_CUSTOMER_OUTCOME", "NO_NEW_BEHAVIOR_EVIDENCE_NO_PROOF_PROMOTION", "PROMPT_COUNT_NEQ_PROGRESS"
+    "FOUNDER_PROFILE_BEFORE_DEEP_DIVE", "EXISTING_WIP_NOT_GRANDFATHERED", "REMOTE_FIT_NEQ_DEMAND", "WAVE_STAGE_NEQ_WTP", "NORMAL_CASHFLOW_CANDIDATE_NEQ_PORTFOLIO_PRIMARY", "K_NEQ_S_NEQ_E_NEQ_CASH", "SIGNAL_NEQ_DEMAND", "PUBLIC_SCREENING_CANDIDATE_NEQ_BUYER", "USER_NEQ_BUYER_NEQ_BUDGET_OWNER", "INTERVIEW_NEQ_BEHAVIOR", "E1_VERBAL_ONLY_CANNOT_PASS_FATAL_TEST", "PAYMENT_NEQ_REPEATABILITY", "PRICE_HYPOTHESIS_NEQ_WTP", "COMPETITOR_PRICE_NEQ_OUR_WTP", "FREE_SCAN_SUBSTITUTES_GENERIC_AUDIT", "ORDINARY_SEO_DEFECT_NEQ_INCREMENTAL_AI_DEFECT", "BOUNDED_TECHNICAL_DIFFERENTIAL_NEQ_BUYER_DEMAND", "INTERNAL_DECISION_CHANGE_NEQ_BUYER_VALUE", "DELIVERY_COST_UNKNOWN_IMPLIES_PRICE_FLOOR_NULL", "GENERIC_AI_SEO_AUDIT_COMMODITY_PRESSURE", "NO_SOFTWARE_BUILD_BEFORE_REPEATED_MANUAL_NEED", "CONTRADICTION_NEVER_AVERAGES_AWAY", "MISSING_EVIDENCE_STAYS_NULL", "NO_NEW_BEHAVIOR_EVIDENCE_NO_PROOF_PROMOTION", "PROMPT_COUNT_NEQ_PROGRESS"
   ],
-  "external_action": {"authorized": false, "autonomous_outreach": false, "autonomous_spend": false, "autonomous_contracting": false},
+  "evidence": {"buyer_behavior": false, "willingness_to_pay": null, "transaction": null, "unit_economics": null, "profitability": null, "repeatability": false, "proof_promotion": false},
+  "external_action": {"authorized": false, "autonomous_outreach": false, "autonomous_spend": false, "autonomous_contracting": false, "third_party_implementation": false},
   "parallel_overlays": {
-    "money_mechanisms_run32": {"state_path": "13_MONEY_MECHANISMS_MACHINE_STATE.json", "old_wip_invalidated": false, "mutated_by_test37": false}
+    "money_mechanisms_run32": {"state_path": "13_MONEY_MECHANISMS_MACHINE_STATE.json", "old_wip_invalidated": false, "mutated_by_opp37_offer_engineering": false},
+    "portfolio_router": {"current_read_model_integrated": true, "opp37_offer_engineering_overrides_portfolio_selection": false}
   },
   "drive": {
     "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
-    "master_document_id": "1bR19b7uSN6dCP1msK9hAatILkFqJpXUcOyLImxaJx8s",
-    "run32_next64_document_id": "1IHywe-oHrJwd_o_rhEeOi2ynAAnYDM_GgnX2hBtOgHk",
-    "p01_p08_document_id": "10ned4n-eciCkyv1qa5VKT5UZPBm1cgauwxWGG34m-bU",
-    "p17_p24_document_id": "1mm9gzE8koltTCA77LvA61rQ2Zhu8slNUkXqtZNDcvVU",
-    "p09_p16_document_id": "1BExI8RPSIAMBTukf9vC3ksOnu89H3EwbpQ3ym4n52xo",
     "test37_document_id": "1vpPVwqT1R11Siviqjgd1UWOqwkIWfUomszW8CgYl0Ec",
-    "test37_readback_marker": "GENERAL-BUSINESS-OPP37-TEST37-INTERNAL-PASS-2OF3-NO-BUYER-PROOF",
-    "readback_status": "PASS_TEST37_PLUS_PRIOR"
+    "p25_p32_document_id": "1R4R3gWsPwD7ipXdIgt1H-JTX58Rblp-nhuDt1lac71s",
+    "p25_p32_readback_marker": "GENERAL-BUSINESS-OPP37-P25-P32-OFFER-ENGINEERING-32OF64-NO-MARKET-PROOF",
+    "founder_rescreen_readback_marker": "GENERAL-BUSINESS-OPP37-FOUNDER-RESCREEN-NORMAL-CASHFLOW-REMOTE0-PASS",
+    "readback_status": "PASS"
   },
   "self_improvement": {"candidate": "EVIDENCE_GATED_BUSINESS_PRODUCTION_ROUTER", "scope": "BUSINESS_LOCAL", "global_promotion": false, "promotion_requires": "REAL_MULTI_LANE_CONTROL_COMPARISON"}
 }

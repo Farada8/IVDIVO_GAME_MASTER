@@ -1,0 +1,88 @@
+{
+  "schema": "ivdivo.business.opp37_offer_engineering/1.3",
+  "date": "2026-08-22",
+  "status": "P25_P32_INTERNAL_ENGINEERING_COMPLETE_FOUNDER_RESCREEN_CI5OF5_PREMERGE",
+  "opportunity_id": "OPP-37",
+  "dependency": {
+    "test37": "MERGED_PASS_2_OF_3",
+    "test37_pr": 329,
+    "test37_merge_sha": "8a75f6abe2c4b82b0d673ad7a1a1280a99ecc02a",
+    "founder_profile_authority": "PR334_MERGED_MANDATORY_RESCREEN"
+  },
+  "founder_profile_rescreen": {
+    "remote_first_pass": true,
+    "founder_cash_at_risk_eur_current_phase": 0,
+    "founder_cash_default_ceiling_eur": 3000,
+    "founder_physical_load": "NONE_LOW",
+    "test_before_build_spend": true,
+    "wave_stage": "EXPANDING",
+    "competition_density_generic_ai_audit": "HIGH",
+    "early_wave_priority": false,
+    "optionality_next_primary": false,
+    "portfolio_primary": false,
+    "disposition": "NORMAL_CASHFLOW_CANDIDATE",
+    "cheapest_way_to_be_wrong": "MANUAL_BOUNDED_PACK_BEFORE_SAAS_OR_INFRASTRUCTURE",
+    "rescreen_marker": "GENERAL-BUSINESS-OPP37-FOUNDER-RESCREEN-NORMAL-CASHFLOW-REMOTE0-PASS"
+  },
+  "offer": {
+    "generic_ai_seo_audit": "KILL_AS_DIFFERENTIATED_CORE",
+    "working_name": "FIRST_PARTY_FACT_CONSISTENCY_AND_ANSWERABILITY_DECISION_PACK",
+    "preferred_architecture": "PRODUCTIZED_SERVICE",
+    "implementation_coordinator": "HOLD_UNTIL_BUYER_BEHAVIOR_AND_SCOPE",
+    "saas_tool": "HOLD_UNTIL_REPEATED_MANUAL_NEED",
+    "disposition": "MUTATE_AND_TEST"
+  },
+  "p25_value_hypothesis": {
+    "type": "DECISION_CLARITY_AND_REWORK_REDUCTION",
+    "revenue_uplift_claimed": false,
+    "measurable_internal_fields": ["contradictions_found", "ambiguous_canonical_facts", "affected_first_party_surfaces", "facts_resolved_to_one_canonical_rule", "specific_decisions_created", "generic_recommendations_rejected", "pre_vs_post_answer_consistency_test_cases"]
+  },
+  "p26_artifact": {"components": 7, "score_only_output_rejected": true, "negative_findings_allowed": true, "source_provenance_required": true},
+  "p27_scope": {"public_first_party_default": true, "private_analytics_default": false, "ranking_guarantee": false, "ai_citation_guarantee": false, "revenue_forecast": false, "external_implementation_default": false},
+  "p28_architectures": ["PRODUCTIZED_ONE_SITE_DECISION_PACK", "IMPLEMENTATION_COORDINATOR_CONDITIONAL", "SAAS_TOOL_HOLD"],
+  "p29_pricing_hypothesis": {
+    "currency": "EUR",
+    "vat_basis": "EX_VAT_HYPOTHESIS",
+    "test_points": [249, 349, 490],
+    "central_hypothesis": 349,
+    "wtp_proven": false,
+    "delivery_cost_measured": false,
+    "minimum_viable_price": null,
+    "profitability_proven": false
+  },
+  "p31_internal_decision_test": {
+    "threshold": ">=2_OF_3_SPECIFIC_DECISIONS_AND_>=1_NEGATIVE_CONTROL_PROTECTED",
+    "specific_decisions": ["PALLAS", "CLISSMANN"],
+    "protected_negative": ["TOWNSEND"],
+    "result": "PASS_2_OF_3_PLUS_1_NEGATIVE_CONTROL",
+    "buyer_value_proven": false
+  },
+  "p32_red_team": {
+    "free_substitution_real": true,
+    "commodity_pressure_real": true,
+    "proprietary_method_claim": false,
+    "generic_ai_seo_audit_disposition": "KILL",
+    "narrow_offer_disposition": "MUTATE_AND_TEST",
+    "software_build_authorized": false
+  },
+  "next64": {"total": 64, "executed": 32, "remaining": 32, "executed_ranges": ["P01-P08", "P09-P16", "P17-P24", "P25-P32"], "next_internal_block": "P33-P40_OPP37_NULL_SAFE_ECONOMICS_AND_MANUAL_DELIVERY_TIMING"},
+  "evidence": {"buyer_behavior": false, "willingness_to_pay": null, "transaction": null, "unit_economics": null, "profitability": null, "repeatability": false, "proof_promotion": false},
+  "external_action": {"authorized": false, "outreach_performed": false, "spend": false, "contracting": false, "third_party_implementation": false},
+  "market_controls": {"free_audits_exist": true, "low_paid_anchor_eur": 149, "irish_ai_visibility_anchor_from_eur": 299, "competitor_prices_are_wtp_proof": false},
+  "drive": {
+    "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
+    "document_id": "1R4R3gWsPwD7ipXdIgt1H-JTX58Rblp-nhuDt1lac71s",
+    "readback_marker": "GENERAL-BUSINESS-OPP37-P25-P32-OFFER-ENGINEERING-32OF64-NO-MARKET-PROOF",
+    "founder_rescreen_readback_marker": "GENERAL-BUSINESS-OPP37-FOUNDER-RESCREEN-NORMAL-CASHFLOW-REMOTE0-PASS",
+    "readback_status": "PASS"
+  },
+  "github": {
+    "pr": 339,
+    "verified_preclosure_head": "801f86f2e24daffa59e9e28c0040aa1537642050",
+    "verified_preclosure_ci_runs": [32557639736, 32557639702, 32557639733, 32557639721, 32557639730],
+    "verified_preclosure_ci_status": "SUCCESS_5_OF_5",
+    "final_exact_head": null,
+    "final_exact_head_ci_runs": [],
+    "merge_sha": null
+  }
+}

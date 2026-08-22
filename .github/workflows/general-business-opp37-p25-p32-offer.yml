@@ -1,0 +1,85 @@
+name: General Business OPP37 P25-P32 Offer Engineering
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/**'
+      - '.github/workflows/general-business-opp37-p25-p32-offer.yml'
+
+jobs:
+  offer-engineering:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offer and founder-profile canaries
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_opp37_offer_router.py
+      - name: Preserve TEST37 buyer fatal regressions
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_test37_ai_vs_seo.py
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_buyer_evidence_router.py
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_fatal_test_router.py
+      - name: Compile runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
+      - name: Validate P25-P32, founder rescreen, evidence boundaries and accounting
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          doc = (root/'17_OPP37_P25_P32_OFFER_ENGINEERING.md').read_text()
+          rescreen = (root/'19_OPP37_FOUNDER_PROFILE_RESCREEN.md').read_text()
+          founder_authority = (root/'14_FOUNDER_OPPORTUNITY_PROFILE_AND_EARLY_WAVE_GATE.md').read_text()
+          st = json.loads((root/'18_OPP37_P25_P32_MACHINE_STATE.json').read_text())
+          current = json.loads((root/'06_MACHINE_STATE.json').read_text())
+          money = json.loads((root/'13_MONEY_MECHANISMS_MACHINE_STATE.json').read_text())
+          assert all(f'P{i}' in doc for i in range(25,33))
+          assert 'GENERIC_AI_SEO_AUDIT -> FIRST_PARTY_FACT_CONSISTENCY_ANSWERABILITY_DIRECT_BOOKING_DECISION_PACK' in doc
+          assert 'P31_INTERNAL_DECISION_CHANGE = PASS_2_OF_3_PLUS_1_NEGATIVE_CONTROL' in doc
+          assert 'MUTATE_AND_TEST' in doc
+          assert 'GENERAL-BUSINESS-OPP37-P25-P32-OFFER-ENGINEERING-32OF64-NO-MARKET-PROOF' in doc
+          assert 'Existing General Business WIP is **not grandfathered**' in founder_authority
+          assert '## Disposition' in rescreen and 'NORMAL_CASHFLOW_CANDIDATE' in rescreen
+          assert 'Not:' in rescreen and '`EARLY_WAVE_PRIORITY`' in rescreen
+          assert 'GENERAL-BUSINESS-OPP37-FOUNDER-RESCREEN-NORMAL-CASHFLOW-REMOTE0-PASS' in rescreen
+          assert st['founder_profile_rescreen']['remote_first_pass'] is True
+          assert st['founder_profile_rescreen']['founder_cash_at_risk_eur_current_phase'] == 0
+          assert st['founder_profile_rescreen']['founder_physical_load'] == 'NONE_LOW'
+          assert st['founder_profile_rescreen']['wave_stage'] == 'EXPANDING'
+          assert st['founder_profile_rescreen']['disposition'] == 'NORMAL_CASHFLOW_CANDIDATE'
+          assert st['founder_profile_rescreen']['early_wave_priority'] is False
+          assert st['founder_profile_rescreen']['portfolio_primary'] is False
+          assert st['next64']['executed'] == 32
+          assert st['next64']['remaining'] == 32
+          assert st['offer']['generic_ai_seo_audit'] == 'KILL_AS_DIFFERENTIATED_CORE'
+          assert st['offer']['disposition'] == 'MUTATE_AND_TEST'
+          assert st['p29_pricing_hypothesis']['test_points'] == [249,349,490]
+          assert st['p29_pricing_hypothesis']['wtp_proven'] is False
+          assert st['p29_pricing_hypothesis']['delivery_cost_measured'] is False
+          assert st['p29_pricing_hypothesis']['minimum_viable_price'] is None
+          assert st['p29_pricing_hypothesis']['profitability_proven'] is False
+          assert st['p31_internal_decision_test']['result'] == 'PASS_2_OF_3_PLUS_1_NEGATIVE_CONTROL'
+          assert st['p31_internal_decision_test']['buyer_value_proven'] is False
+          assert st['p32_red_team']['software_build_authorized'] is False
+          assert st['evidence']['buyer_behavior'] is False
+          assert st['evidence']['willingness_to_pay'] is None
+          assert st['evidence']['transaction'] is None
+          assert st['evidence']['unit_economics'] is None
+          assert st['evidence']['profitability'] is None
+          assert st['external_action']['authorized'] is False
+          assert st['drive']['readback_status'] == 'PASS'
+          assert current['founder_profile_rescreen']['rescreen_completed'] is True
+          assert current['founder_profile_rescreen']['disposition'] == 'NORMAL_CASHFLOW_CANDIDATE'
+          assert current['next64']['executed'] == 32
+          assert current['next64']['remaining'] == 32
+          assert current['next64']['next_admissible_block'] == 'P33-P40_OPP37_NULL_SAFE_ECONOMICS_AND_MANUAL_DELIVERY_TIMING'
+          assert current['offer_engineering']['central_price_hypothesis_eur'] == 349
+          assert current['offer_engineering']['price_is_wtp_proof'] is False
+          assert current['offer_engineering']['minimum_viable_price'] is None
+          assert current['offer_engineering']['buyer_value_proven'] is False
+          assert current['external_action']['authorized'] is False
+          assert money['coexistence']['old_wip_invalidated'] is False
+          print('OPP37_P25_P32: PASS — founder rescreen PASS as NORMAL_CASHFLOW; 32/64; no market/economic promotion')
+          PY
