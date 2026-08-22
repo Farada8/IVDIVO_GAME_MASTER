@@ -1,0 +1,41 @@
+{
+  "schema_version": "2.0",
+  "status": "INTERNAL_SCORING_KEY_DO_NOT_INCLUDE_IN_LISTENER_PACKS",
+  "project": "SEVEN NIGHTS BEFORE CODE BLUE",
+  "protocol": "AUDIO_PRODUCTION/SEVEN_NIGHTS/SEVEN_NIGHTS_TRANSFER_BLIND_LISTENER_PROTOCOL_v2.json",
+  "source_asset_policy": "DRIVE_COPIES_OF_EXISTING_V1_BLIND_WAVS_NO_AUDIO_BYTE_EDIT_INTENDED",
+  "listeners": {
+    "LISTENER_01": {
+      "folder_id": "1jKvaK2xWq4D5c7FGzLJn3fmpuLnVjSX2",
+      "trials": {
+        "T01": {"modality": "MONO", "correct": "A", "A_id": "1ZT4aJ_Vla4_hXlqITOfmiTpO3r0oDEG7", "B_id": "1zy_tkUk2N0MrUSxFKfGgS51lyIVY_27Y"},
+        "T02": {"modality": "PHONE", "correct": "B", "A_id": "1rzCWL1f2kXCFUx-821cU06cZk4vlIm0N", "B_id": "1nUPQu-e2JRBEa6JKu4xka-KlSx1s40dB"},
+        "T03": {"modality": "STEREO", "correct": "B", "A_id": "1J9hVMraaZlt-wujTbRbZV-6huWqD1tXJ", "B_id": "1koCZJKLD0VWbUebft0jZK4T7mykKuAw7"}
+      }
+    },
+    "LISTENER_02": {
+      "folder_id": "17dmI6pUznDgVDRGF_vgE0EiZcsvPY5Xn",
+      "trials": {
+        "T01": {"modality": "PHONE", "correct": "A", "A_id": "1JFy3F438cY13cr9YceD5vI9uedF8ewO9", "B_id": "1jx3CmhVG_sy6PsAeQtBUfIOULUztRllM"},
+        "T02": {"modality": "STEREO", "correct": "A", "A_id": "1LZSSnnJMsYA9hBQlvmhfqU6hAvJ1gzjD", "B_id": "1WrLyAH-rQJltKnRynHLVcd55YUnpcxzO"},
+        "T03": {"modality": "MONO", "correct": "B", "A_id": "10Swc0Y0YOU5rA0cMbPDHND5btKBgATTk", "B_id": "1pyIk3HSGKoeiOcem0ibWZvdPrcRhQtso"}
+      }
+    },
+    "LISTENER_03": {
+      "folder_id": "1lahjeVPpjDJM9UcnxZlhvrWDLjnZgbyq",
+      "trials": {
+        "T01": {"modality": "STEREO", "correct": "B", "A_id": "1BfAWaed7Id-SfFffYimcOzEaAYb9BGr9", "B_id": "1WopAJOdPg1Pc_yNZWhNJliaOG_RS3MpG"},
+        "T02": {"modality": "MONO", "correct": "A", "A_id": "1B5XWOTIS79IG498QnVuB584Kd-ueHdaL", "B_id": "1x-1CAu-v4x9qCSlZyN3IoSrjgn_JY0_f"},
+        "T03": {"modality": "PHONE", "correct": "B", "A_id": "13WJgBKGKyJjyEryL69_VOoRr-oybeMvK", "B_id": "1kHqVmEtFEjnThFLEq8tXYtRkivK8u0oD"}
+      }
+    }
+  },
+  "scoring": {
+    "correct": 1,
+    "wrong": 0,
+    "cant_tell": 0,
+    "pass": "At least 2/3 listeners perfect 3/3; each modality at least 2/3 correct; no primary cinematic/horror interpretation.",
+    "scope": "INTERNAL_REPLICATED_PRODUCTION_SCREEN_NOT_FORMAL_STATISTICAL_VALIDATION"
+  },
+  "human_result": "PENDING"
+}
