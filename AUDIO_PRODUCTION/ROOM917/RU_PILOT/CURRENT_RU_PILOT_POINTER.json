@@ -1,0 +1,108 @@
+{
+  "schema_version": "ivdivo.room917_ru_pilot_pointer/1.0",
+  "updated": "2026-08-22",
+  "project": "ROOM 917 CALLS AT MIDNIGHT",
+  "project_id": "ROOM917",
+  "active_branch": "THE_INSURABLE_FIRE",
+  "delivery_mode": "FULL_AUDIO_DRAMA",
+  "story_status": "LOCKED",
+  "scope": "PARALLEL_RUSSIAN_LOCALIZATION_AND_PERFORMANCE_CREDIBILITY_PILOT",
+  "does_not_supersede": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
+  "status": "RU_E01_E02_RECORDING_SCRIPTS_AND_PROVIDER_AUDITION_TOOLCHAIN_READY",
+  "github": {
+    "authority": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PILOT_AUTHORITY_AND_EXECUTION_v1.0.md",
+      "commit": "a8cf4fe597d48c77cab2c6236e8f2a576dee32f8"
+    },
+    "e01_ru_script": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md",
+      "commit": "ff2de4aa6f664742ec958e959ad3ecca54e899ca"
+    },
+    "e02_ru_script": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E02_LENI_BIRD_RECORDING_SCRIPT_v1.0.md",
+      "commit": "8d6ee1fd3096b96e218418c5d24e0d73c12c82d0"
+    },
+    "elevenlabs_manifest": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_E02_ELEVENLABS_V3_MANIFEST_v1.0.json",
+      "commit": "6fd2345e661b759d290fdb8200240d31c40f09c6"
+    },
+    "audition_renderer": {
+      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/render_ru_pilot.py",
+      "commit": "f077bbd993dc8a63a0a8f9a035cc0b88f4794219"
+    }
+  },
+  "drive": {
+    "folder": {
+      "title": "12_RUSSIAN_PILOT_E01_E02",
+      "id": "1UIJGRzuNkAYTMfFxjso2lwfyNzqBuvc8"
+    },
+    "authority_doc": {
+      "title": "ROOM917 RU PILOT — AUTHORITY + EXECUTION v1.0 — 2026-08-22",
+      "id": "17SDu7cwabVJypl2dAeOrfy6hKOQ7ajGIvMIpj6GB660"
+    },
+    "e01_ru_script_doc": {
+      "title": "ROOM917 RU E01 — ЛАМПА ПОСЛЕ 916 — RECORDING SCRIPT v1.0",
+      "id": "19qoiFoZgyaqcXVh1I9rfxq_J-o7TMaj1E63ZM0Lrnh8"
+    },
+    "e02_ru_script_doc": {
+      "title": "ROOM917 RU E02 — ЛЕНИ-БЁРД — RECORDING SCRIPT v1.0",
+      "id": "1LdwOJbPRHHWKVCoP3giK-WdwaiauEOIEPdNkXuGIlp4"
+    }
+  },
+  "provider": {
+    "name": "ElevenLabs",
+    "primary_model": "eleven_v3",
+    "current_ru_voice_bindings": "NOT_YET_LOCKED",
+    "required_env": [
+      "ELEVENLABS_API_KEY",
+      "ROOM917_RU_VOICE_ELENA",
+      "ROOM917_RU_VOICE_JULIAN",
+      "ROOM917_RU_VOICE_MINA",
+      "ROOM917_RU_VOICE_CATE"
+    ],
+    "current_session_direct_provider_connector": "UNAVAILABLE",
+    "executable_path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/render_ru_pilot.py",
+    "dry_run_default": true,
+    "paid_full_episode_autorender": false
+  },
+  "protected_ru_facts": {
+    "nickname": "Лени-бёрд",
+    "nickname_semantic_translation_forbidden": true,
+    "e01_event_time": "01:17:12",
+    "public_trunk_at_e01_call": "PHYSICALLY_OPEN",
+    "e02_local_return_volts": 12,
+    "e02_acoustic_return_ms": 38,
+    "e02_contact_events_per_minute": 12,
+    "lullaby": "FOUR_NOTES_DAMAGED_AFTER_NOTE_3",
+    "line_cut": "TWO_PART",
+    "ontology": "UNKNOWN_NOT_GHOST_PROOF"
+  },
+  "sound_strategy": {
+    "reuse_language_neutral_english_assets_first": true,
+    "critical_story_sfx_must_not_drift_between_languages": true,
+    "new_sfx_generation": "CANDIDATE_ONLY_BLIND_SELECT_AND_LOCK",
+    "foley": "CAUSAL_BODY_OBJECT_ACTION_NOT_BLANKET_DENSITY",
+    "cate": "CLEAN_HUMAN_PERFORMANCE_THEN_TRANSMISSION_POST",
+    "music_e01": "NO_SCORE_UNTIL_FINAL_LOW_PIANO_BUTTON",
+    "music_e02": "END_MUTED_4_NOTE_FIGURE_STOPS_BEFORE_LAST_NOTE"
+  },
+  "next_action": {
+    "stage": "RU_CAST_AUDITION",
+    "action": "Select current Russian candidate voices for Elena, Julian, Mina and Cate; populate voice IDs; render the manifest canary auditions; evaluate individual and pair credibility before any full E01 paid render.",
+    "blocker": "CURRENT_RU_VOICE_IDS_NOT_SELECTED_AND_NO_DIRECT_ELEVENLABS_CONNECTOR_IN_THIS_SESSION",
+    "safe_without_provider_spend": true
+  },
+  "after_cast_lock": [
+    "RU_E01_CONTROLLED_DIALOGUE_BLOCK_RENDER",
+    "DIALOGUE_EDIT_AND_LISTENING_TIMING",
+    "REUSE_OR_LOCK_CRITICAL_EN_RU_SFX",
+    "CAUSAL_FOLEY_AND_ROOM_BED",
+    "CATE_TRANSMISSION_POST",
+    "AUTHORIZED_END_MUSIC_ONLY",
+    "MIX_MONO_PHONE_QC",
+    "FOUNDER_CREDIBILITY_LISTEN",
+    "SELECTIVE_REPAIR",
+    "RU_E02_RENDER_IF_E01_PASSES_OR_FOUNDER_OVERRIDES"
+  ],
+  "secret_policy": "API_KEYS_NEVER_IN_GITHUB_OR_DRIVE"
+}
