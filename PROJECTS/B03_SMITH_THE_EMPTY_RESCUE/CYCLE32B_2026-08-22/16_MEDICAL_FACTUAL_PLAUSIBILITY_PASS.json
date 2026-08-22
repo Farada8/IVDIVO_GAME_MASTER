@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-22",
+  "book":"SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+  "master_drive_id":"1UHGfjuZ_6aJF5Fkh1pHGwjgU219cPBmDD5owIVyIlXs",
+  "master_version":"v0.4_MEDICAL_PASS",
+  "drive_gate_id":"1BptpZZEKolgxnK7FTI9qtwSfiz5Syxs0aEA4ffhRuyQ",
+  "result":{"fatal":0,"major":0,"medium_repair":0,"status":"PASS_NO_PROSE_REPAIR_REQUIRED"},
+  "reviewed":["lower-leg entrapment mechanism","~34 minute pin duration","field observation/monitoring","controlled technical release","post-release packaging/transport","next-day functional prognosis"],
+  "conclusions":[
+    "Severe local lower-limb injury is plausible from direct carrier-to-concrete compression without naming a fracture/nerve/vascular diagnosis.",
+    "The manuscript does not need to assert systemic crush syndrome for an isolated approximately 34-minute compression with no systemic signs.",
+    "Technical rescue stabilization and controlled clearance followed by non-weight-bearing extraction is medically compatible with cautious field management.",
+    "Long rehabilitation and expected lasting functional loss can remain story consequence while exact diagnosis and exact mobility outcome stay UNKNOWN."
+  ],
+  "do_not_invent":["exact fracture pattern","compartment syndrome diagnosis","named nerve injury","vascular transection","fasciotomy","rhabdomyolysis/crush syndrome","dialysis","amputation","exact disability percentage","exact mobility aid"],
+  "next":"RELAY_RESCUE_ENGINEERING_PLAUSIBILITY_PASS"
+}
