@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import copy
 import json
 import sys
 import unittest
@@ -14,6 +13,47 @@ sys.path.insert(0, str(TOOL_DIR))
 from automix_postproduction_preflight import HOLD, PASS, evaluate  # noqa: E402
 
 CONTRACT_PATH = ROOM917_DIR / "AUTOMIX" / "ROOM917_E01_AUTOMIX_POSTPRODUCTION_EXECUTION_CONTRACT_v1.json"
+A01 = "A01_GREYHAVEN_LOBBY_30S_LOOP"
+A02 = "A02_SWITCHBOARD_ALCOVE_30S_LOOP"
+
+
+def valid_sound_binding_report():
+    requested = [A01, A02]
+    return {
+        "schema_version": "room917.sound_asset_binding_gate/1.1",
+        "status": "PASS",
+        "contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+        "requested_asset_ids": requested.copy(),
+        "declared_requested_asset_ids": requested.copy(),
+        "request_set_errors": [],
+        "rows": [
+            {"asset_id": A01, "candidate_id": "A01_TEST", "status": "PASS", "errors": []},
+            {"asset_id": A02, "candidate_id": "A02_TEST", "status": "PASS", "errors": []},
+        ],
+        "renderer_bindings_atomic": True,
+        "renderer_bindings_complete_for_requested_set": True,
+        "renderer_bindings_emitted": requested.copy(),
+        "renderer_bindings_suppressed_on_hold": False,
+    }
+
+
+def valid_timing_report():
+    return {
+        "schema_version": "room917.e01_sound_asset_resolved_timing/1.1",
+        "status": "PASS",
+        "production_timing_ready": True,
+        "requested_asset_ids": [A01, A02],
+        "resolved": {
+            A01: {"events": [{"start_seconds": 1.0, "end_seconds": 10.0, "source_status": "LIVE_TIMELINE", "source_ref": "test"}]},
+            A02: {"events": [{"start_seconds": 10.0, "end_seconds": 20.0, "source_status": "ACCEPTED_ALIGNMENT", "source_ref": "test"}]},
+        },
+        "production_resolved": {
+            A01: {"events": [{"start_seconds": 1.0, "end_seconds": 10.0, "source_status": "LIVE_TIMELINE", "source_ref": "test"}]},
+            A02: {"events": [{"start_seconds": 10.0, "end_seconds": 20.0, "source_status": "ACCEPTED_ALIGNMENT", "source_ref": "test"}]},
+        },
+        "holds": [],
+        "errors": [],
+    }
 
 
 def valid_candidate():
@@ -30,19 +70,8 @@ def valid_candidate():
                 {"role": "CATE", "approval_status": "LOCKED", "sha256": "c" * 64},
             ],
         },
-        "sound_binding_report": {
-            "status": "PASS",
-            "bindings": [
-                {"asset_id": "A01_LOBBY_BED", "status": "PASS"},
-                {"asset_id": "A02_SWITCHBOARD_ALCOVE_BED", "status": "PASS"},
-                {"asset_id": "S13_INTERNAL_DOUBLE_RING_OLD", "status": "PASS"},
-            ],
-        },
-        "timing": {
-            "grade": "LIVE_TIMELINE",
-            "fixture_only": False,
-            "production_timestamps": True,
-        },
+        "sound_binding_report": valid_sound_binding_report(),
+        "timing": valid_timing_report(),
         "protected_silence": {
             "resolved_from_same_live_timing": True,
             "post_fx_sample_exact_mask": True,
@@ -94,7 +123,34 @@ class AutoMixPostproductionPreflightTests(unittest.TestCase):
         self.assertFalse(result["release_authority"])
         self.assertEqual([], result["failed_gates"])
 
-    def test_synthetic_or_fixture_timing_is_rejected(self):
+    def test_old_handmade_sound_summary_is_rejected(self):
+        candidate = valid_candidate()
+        candidate["sound_binding_report"] = {
+            "status": "PASS",
+            "bindings": [{"asset_id": A01, "status": "PASS"}],
+        }
+        self.assert_hold_gate(candidate, "SOUND_ASSET_BINDING")
+
+    def test_missing_a02_current_patch_asset_is_rejected(self):
+        candidate = valid_candidate()
+        report = candidate["sound_binding_report"]
+        report["requested_asset_ids"] = [A01]
+        report["declared_requested_asset_ids"] = [A01]
+        report["rows"] = [report["rows"][0]]
+        report["renderer_bindings_emitted"] = [A01]
+        self.assert_hold_gate(candidate, "SOUND_ASSET_BINDING")
+
+    def test_partial_binding_set_is_rejected_even_if_status_says_pass(self):
+        candidate = valid_candidate()
+        candidate["sound_binding_report"]["renderer_bindings_emitted"] = [A01]
+        self.assert_hold_gate(candidate, "SOUND_ASSET_BINDING")
+
+    def test_hold_sound_binding_row_is_rejected_even_when_report_says_pass(self):
+        candidate = valid_candidate()
+        candidate["sound_binding_report"]["rows"][0]["status"] = "HOLD"
+        self.assert_hold_gate(candidate, "SOUND_ASSET_BINDING")
+
+    def test_synthetic_or_legacy_timing_summary_is_rejected(self):
         candidate = valid_candidate()
         candidate["timing"] = {
             "grade": "SYNTHETIC_ALIGNMENT",
@@ -103,10 +159,19 @@ class AutoMixPostproductionPreflightTests(unittest.TestCase):
         }
         self.assert_hold_gate(candidate, "LIVE_TIMING")
 
-    def test_hold_sound_binding_is_rejected_even_when_report_says_pass(self):
+    def test_partial_semantic_timing_is_rejected(self):
         candidate = valid_candidate()
-        candidate["sound_binding_report"]["bindings"][0]["status"] = "HOLD"
-        self.assert_hold_gate(candidate, "SOUND_ASSET_BINDING")
+        timing = candidate["timing"]
+        timing["status"] = "HOLD"
+        timing["production_timing_ready"] = False
+        timing["production_resolved"] = {}
+        timing["holds"] = [{"asset_id": A02, "reason": "ANCHOR_NOT_FOUND"}]
+        self.assert_hold_gate(candidate, "LIVE_TIMING")
+
+    def test_semantic_timing_missing_one_requested_asset_is_rejected(self):
+        candidate = valid_candidate()
+        del candidate["timing"]["production_resolved"][A02]
+        self.assert_hold_gate(candidate, "LIVE_TIMING")
 
     def test_unlocked_voice_source_is_rejected(self):
         candidate = valid_candidate()
