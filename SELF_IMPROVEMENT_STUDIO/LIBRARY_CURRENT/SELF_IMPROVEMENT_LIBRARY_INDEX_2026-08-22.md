@@ -1,0 +1,67 @@
+# IVDIVO SELF-IMPROVEMENT — CURRENT LIBRARY / SOURCE SURFACE INDEX
+
+**Date:** 2026-08-22  
+**Status:** CURRENT INDEX CANDIDATE / DOES NOT REPLACE `CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md`
+
+## 1. Governing authority
+1. `CURRENT_IVDIVO_SELF_IMPROVEMENT_AUTHORITY.md` — v2 VERIFIED_CURRENT router.
+2. `IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md` — governing architecture.
+3. `IVDIVO_NARRATIVE_OS/18A_SELF_IMPROVEMENT_CORE_KERNELS_v1.0.md`.
+4. `IVDIVO_NARRATIVE_OS/18B_FULL_CHAT_TRANSCRIPT_RECOVERY_AND_INGESTION_PROTOCOL_v1.0.md`.
+5. `SELF_IMPROVEMENT_ENGINE_CONFIG_v2.json`.
+6. `SELF_IMPROVEMENT_EVALUATION_MATRIX_v1.json`.
+7. `CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json` — state surface requiring freshness comparison before mutation.
+8. `31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json` + schema.
+9. `CURRENT_IVDIVO_LEARNING_LEDGER.json` + schema.
+10. `tools/ivdivo_self_improvement.py`.
+
+## 2. Main persisted development surfaces
+GitHub `SELF_IMPROVEMENT_STUDIO/` includes System Cycle2, Cycle3 Selected32, Cycle5 Proofs/Protocols, Cycle6 Real Integration, Cycle7 Durable Convergence, Cycle8 Writing Production Convergence, Cycle8 Story Adapter Real Pilot, Cycle8 N01–N32 Integrated Story Contracts, MF-C03 third replication / Orbital Youth, SI0012 compatibility runtime and SI0015 freshness canaries.
+
+These are development/evidence surfaces. Only explicit CURRENT/VERIFIED pointers govern globally.
+
+## 3. Current Drive mirrors
+- v2 engine: `1TamY1cuiCUGP5zgheF-1nM2LaRt2f5vtZLwfJTJeSaY`.
+- current SI authority: `1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0`.
+- Learning Ledger: `1Qi-MhGcoup3o5YPy0vKutw7ZWZ0J3UKs2A7nInhaYXE`.
+- improvement registry mirror: `1CWdubaIWF4-T3aQxwGSGdXw5pmHVD4W6-USvlNunUzs`.
+- Cycle8 master/synthesis: `1ixd-4igxqbOQ4SLxpzbpMhF3_Mgo2HHvNp-ToWjRTxg`.
+- pre-existing Cycle9 evidence queue: `1-uozypLc2sNRuKN6xPmZUY4pqhInuYrTkHaKD06v_BE`.
+- canonical Cycle9 engineering mirror/readback: folder `1MbZ4-kRIl4dSEEhCMmf6jx72XV5pkhA5`.
+- later duplicate/supporting persistence mirror: `1IWrQhyJUdcfWaSVKIt-N6bxOIT-PyJNf` — SUPPORTING ONLY, not a second authority.
+
+## 4. Uploaded/File-Library source index
+When byte-addressable Drive/GitHub persistence is not proven, status remains `FILE_LIBRARY_REFERENCE_ONLY`.
+
+| Source | Status | Use |
+|---|---|---|
+| `01_RUNS_01_32_CONSOLIDATED.md` | FILE_LIBRARY_REFERENCE_ONLY | Earlier whole-system run evidence; promotion/compaction lessons. |
+| `02_32_EXECUTION_RESULTS.md` | FILE_LIBRARY_REFERENCE_ONLY + GITHUB_EQUIVALENT_EXISTS | Cycle6 real integration evidence. |
+| `ROOM917_E01_POST_RENDER_ENGINEERING_v2_SOURCE_AND_RUNBOOK.txt` | FILE_LIBRARY_REFERENCE_ONLY | Project-pilot/domain-promotion boundary. |
+| `03_NEXT64_CYCLE6_v11.md` | FILE_LIBRARY_REFERENCE_ONLY | Business calibration/pruning backlog. |
+| `02_CYCLE5_CONCLUSIONS_v11.md` | FILE_LIBRARY_REFERENCE_ONLY | Decision-delta/selective invalidation; public artifact != buyer proof. |
+| `01_SYNTHESIS_PATH_TO_GOAL.md` | FILE_LIBRARY_REFERENCE_ONLY | Discovery negative-evidence discipline. |
+| `Вставленный текст.txt` | FILE_LIBRARY_REFERENCE_ONLY | Universal-module worthiness/dependency-aware execution reference. |
+| `Вставленная уценка.md` summaries | FILE_LIBRARY_REFERENCE_ONLY / DERIVED_SUMMARY | Claims require direct artifact readback. |
+| `04_NEXT64_PROMPTS.md` | FILE_LIBRARY_REFERENCE_ONLY | Later-cycle promotion/calibration tests. |
+| `The Art of Subtext` / `Such Stuff as Dreams` | REFERENCE_ONLY | Writing/reader cognition references only. |
+
+## 5. Parallel domain evidence relevant to Self-Improvement
+- Business Engineering: stale-main/rebase events, null/evidence firewalls, `MISSING_AUTHORITY_IS_A_FIRST_CLASS_RESULT`, source-weight normalization.
+- Audio Studio/ROOM917/NMM: provider/human separation, exact source identity, second-project promotion gates, paid replay quarantine.
+- Discovery Engine: adversarial novelty false positives and counterexample retention.
+- Absolute Mathematics: negative transfer of a synthetic self-improvement heuristic to an objective Max-Cut benchmark.
+- CPMRP: reuse of SI-0014 durable transaction reconciler; no second durable runtime.
+- Story adapters: source-adequacy gate, healthy no-change controls, cross-project replication, MF-C03 scoped sensor.
+
+## 6. Identity and evidence law
+`SOURCE_REFERENCE != PERSISTED_BYTES != AUTHORITY != CANDIDATE != PILOT != VERIFIED_CURRENT`.
+
+`ENGINEERING_TEST != HUMAN_SIGNAL != PROVIDER_EVIDENCE != MARKET_EVIDENCE`.
+
+Multiple model summaries rooted in the same raw evidence are one evidence family for independence counting.
+
+## 7. Library ingestion rule
+`DISCOVER -> CLASSIFY LOCATION -> VERIFY PERSISTENCE -> HASH/REVISION IF AVAILABLE -> SEMANTIC DEDUPE -> EVIDENCE CLASS -> AUTHORITY RELATION -> APPLICATION PATH`.
+
+Never copy raw copyrighted source corpora into public GitHub. Never mark File-Library-only objects `DRIVE_PERSISTED` without connector readback.
