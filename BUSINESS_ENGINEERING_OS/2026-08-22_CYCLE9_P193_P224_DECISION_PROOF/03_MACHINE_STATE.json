@@ -1,0 +1,88 @@
+{
+  "schema": "BUSINESS_ENGINEERING_CYCLE9_P193_P224_v1",
+  "date": "2026-08-22",
+  "status": "RUN32_EXECUTED_CI_GREEN_DRIVE_READBACK_PASS",
+  "target": {
+    "resource_id": "8872468",
+    "official_workspace_reachable": true,
+    "official_document_route_known": true,
+    "attachment_inventory_acquired": false,
+    "full_current_pack_acquired": false,
+    "root_blocker": "ROOT_A_TARGET_PACK_NOT_ACQUIRED"
+  },
+  "bidder": {
+    "explicit_case_specific_designation_found": false,
+    "complete_bidder_packet": false,
+    "supplier_capability_profile_v2_frozen": false,
+    "root_blocker": "ROOT_B_NO_EXPLICIT_BIDDER_DESIGNATION_AND_PACKET"
+  },
+  "run32": {
+    "range": "P193-P224",
+    "executed": 32,
+    "pass_schema_policy_engineering_protect": 13,
+    "hold_blocked": 19,
+    "real_pa4_events": 0,
+    "real_pa5_events": 0,
+    "e3_events": 0,
+    "e4_transactions": 0,
+    "bid_no_bid_decisions": 0,
+    "external_outreach_events": 0
+  },
+  "engineering": {
+    "modules": 16,
+    "contracts": 24,
+    "proof_gates": 12,
+    "protocols": 8,
+    "deterministic_canaries": 32
+  },
+  "proof_boundary": {
+    "public_evidence_ceiling": "E2_PLUS",
+    "artifact_plane": "PA3",
+    "pa4": false,
+    "pa5": false,
+    "e3": false,
+    "e4": false,
+    "wtp": null,
+    "price": null,
+    "profitability": null,
+    "procurement_eligibility": null,
+    "legal_clearance": null
+  },
+  "next64": {
+    "range": "P225-P288",
+    "count": 64,
+    "executed": 0,
+    "inherited_exact_from_cycle8": "P225-P256",
+    "newly_derived": "P257-P288"
+  },
+  "self_improvement": {
+    "candidate_only": true,
+    "global_promotion": false,
+    "candidates": [
+      "AUTHORITY_CUT_SET_BEFORE_DOWNSTREAM_PROMPTS",
+      "EXTERNAL_ACTION_PERMISSION_IS_A_SEPARATE_CONTROL_PLANE",
+      "PROOF_LAUNDERING_REGRESSION_REQUIRED",
+      "NO_DIVERGENCE_NO_SCHEMA_CHURN",
+      "ROOT_BLOCKER_STABILITY_CAN_TRIGGER_PROTECT_NO_CHANGE"
+    ]
+  },
+  "persistence": {
+    "github_pr": 247,
+    "ci_run": 32550774027,
+    "ci": "SUCCESS",
+    "cycle8_regression": "SUCCESS",
+    "cycle9_exact32": "SUCCESS",
+    "compileall": "SUCCESS",
+    "drive_folder_id": "1s7R6TkVYl1k8zXcAPG3baSNyLlkUjunm",
+    "drive_documents": {
+      "start_here": "17yKF-lJwPFUG1l7b4YUeghiZWUvLxrWGpDrMs6rIWl8",
+      "run32": "1TRxVo_vJPxHu3zVbgBjv9EpX1C_xdwnGjW1L-EQNUow",
+      "engineering": "1_qs716b8JdCqV4KCIqKA0UZCAkNK1C8o5YKOJM81Zok",
+      "next64": "1QncwOrBANab7fAor5yUzU32gu3u5KUF3jERsBkXyQ54",
+      "machine_state": "1NYYT9jICFy9EtIu5gn8NzferVYJEuTCQ0iQDDjTfPBQ"
+    },
+    "drive_readback": "PASS_5_OF_5_SEMANTIC_MARKERS"
+  },
+  "current_gate": "ACQUIRE_TARGET_PACK_OR_EXPLICIT_BIDDER_PACKET",
+  "authority_mutation": false
+}
