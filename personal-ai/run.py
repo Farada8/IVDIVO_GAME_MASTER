@@ -15,6 +15,7 @@ from memory.store import MemoryStore
 from projects.artifact_completion import complete_task_with_artifact_gate
 from projects.manager import ProjectStateManager
 from providers import ProviderRequest, ProviderUnavailableError, default_registry
+from research import BusinessResearchService
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -151,6 +152,12 @@ def build_parser() -> argparse.ArgumentParser:
     )
     business_quote.add_argument("project_id")
     business_quote.add_argument("request_json", help="Path to quote request JSON")
+
+    business_research = business_sub.add_parser(
+        "research", help="Create a provenance-first persisted research packet from supplied evidence"
+    )
+    business_research.add_argument("project_id")
+    business_research.add_argument("request_json", help="Path to business research request JSON")
 
     ingest = sub.add_parser("ingest", help="Bounded file ingestion operations")
     ingest_sub = ingest.add_subparsers(dest="ingest_command", required=True)
@@ -358,6 +365,10 @@ def main() -> int:
     elif args.command == "business":
         if args.business_command == "quote":
             result = BusinessQuoteService(home).create_quote(
+                args.project_id, _json_file(args.request_json)
+            )
+        elif args.business_command == "research":
+            result = BusinessResearchService(home).create_research(
                 args.project_id, _json_file(args.request_json)
             )
         else:
