@@ -51,6 +51,16 @@ def candidate_utility(decision_delta: bool, duplicate: bool, trigger_live: bool,
     if overhead is not None and avoided_rework is not None and overhead>avoided_rework: return "PRUNE_OVERHEAD_DOMINATES"
     return "KEEP_BOUNDED"
 
+def meta_wip_limiter(primary_meta:int, pilots:int, founder_switched:bool=False, prerequisite:bool=False, production_blocked:bool=False):
+    """Bound meta/self-improvement WIP so production is not displaced by unlimited meta-work."""
+    allowed = founder_switched or prerequisite or production_blocked
+    if primary_meta <= 1 and pilots <= 2:
+        return {"status":"PASS_WIP_BOUNDED","exception_used":False}
+    if allowed:
+        reason = "FOUNDER_SWITCH" if founder_switched else "PREREQUISITE" if prerequisite else "PRODUCTION_BLOCKED"
+        return {"status":"PASS_WIP_EXCEPTION","exception_used":True,"reason":reason}
+    return {"status":"STOP_WIP_LIMIT","exception_used":False}
+
 def production_return(meta_authorized: bool, production_target: str|None):
     if not meta_authorized: return "RETURN_TO_PRODUCTION"
     if not production_target: return "HOLD_NO_RETURN_TARGET"
