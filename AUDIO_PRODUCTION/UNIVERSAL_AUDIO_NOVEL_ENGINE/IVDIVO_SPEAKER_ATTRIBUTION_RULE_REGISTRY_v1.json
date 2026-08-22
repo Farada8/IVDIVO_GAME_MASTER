@@ -13,7 +13,7 @@
   },
   "benchmark_contract": {
     "path": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/CROSS_PROJECT_SPEAKER_BENCHMARK_CONTRACT_v1.md",
-    "status": "WORKING_PENDING_EXACT_HEAD_CI",
+    "status": "VERIFIED_EXACT_HEAD_CI_PASS",
     "requires_immutable_source": true,
     "requires_independent_ground_truth": true,
     "requires_all_rule_triggers_in_frozen_scope": true,
@@ -32,23 +32,13 @@
       "id": "POST_DIRECT_TAG",
       "scope": "UNIVERSAL_SYNTACTIC",
       "mode": "AUTO_FAIL_CLOSED",
-      "b03_validation": {
-        "successes": 99,
-        "total": 99,
-        "precision": 1.0,
-        "wilson_95_lower": 0.9626
-      }
+      "b03_validation": {"successes": 99, "total": 99, "precision": 1.0, "wilson_95_lower": 0.9626}
     },
     {
       "id": "SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION",
       "scope": "PROJECT_B03",
       "mode": "AUTO_PROJECT_ONLY",
-      "b03_validation": {
-        "successes": 36,
-        "total": 36,
-        "precision": 1.0,
-        "wilson_95_lower": 0.9036
-      },
+      "b03_validation": {"successes": 36, "total": 36, "precision": 1.0, "wilson_95_lower": 0.9036},
       "second_book_replication": {
         "project": "LESSON_ZERO",
         "scope": "CH01_LOCKED_SOURCE",
@@ -68,12 +58,7 @@
       "id": "PRONOUN_GRAMMATICAL_SUBJECT_TRACKER",
       "scope": "PROJECT_B03",
       "mode": "AUTO_PROJECT_ONLY",
-      "b03_validation": {
-        "successes": 36,
-        "total": 36,
-        "precision": 1.0,
-        "wilson_95_lower": 0.9036
-      },
+      "b03_validation": {"successes": 36, "total": 36, "precision": 1.0, "wilson_95_lower": 0.9036},
       "second_book_replication": {
         "project": "LESSON_ZERO",
         "scope": "CH01_LOCKED_SOURCE",
@@ -178,6 +163,16 @@
     "main_merge_commit": "f734457457f644414182db79ae39b11c26806121",
     "main_readback": "PASS",
     "scope": "SECOND_BOOK_PARTIAL_EVIDENCE_ONLY"
+  },
+  "benchmark_contract_verification": {
+    "github_pr": 468,
+    "tested_pr_head": "5330e106d14cbd0e8ee8b438ea2b01ae9d1c6776",
+    "tested_merge_ref": "7f15fec76bad4907088a5a741ad589a5ed33f9a4",
+    "workflow_run_id": 32574122534,
+    "job_id": 97033835314,
+    "pytest": "26_PASSED_IN_0.07S",
+    "py_compile": "PASS",
+    "scope": "BENCHMARK_CONTRACT_AND_WILSON_BOUNDARY"
   },
   "new_regressions": [
     {
