@@ -1,8 +1,13 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "date": "2026-08-22",
   "cycle": "CYCLE5_PUBLIC_ARTIFACT_VALIDATION_32_TO_64",
   "branch": "studio/business-engineering-cycle5-artifact-validation-2026-08-22",
+  "pull_request": {
+    "number": 185,
+    "url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/185",
+    "state": "OPEN_DRAFT"
+  },
   "upstream_main_at_start": "e41408aec56839585bfcff9a0fbfb0224cada25d",
   "library": {
     "private_raw_drive_folder": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
@@ -14,7 +19,10 @@
   "portfolio": {
     "wip_limit": 3,
     "primary": "tender_procurement_decision_intelligence",
-    "pilots": ["retrofit_qualification_orchestration", "sme_ai_workflow_implementation"]
+    "pilots": [
+      "retrofit_route_qualification_exceptions_document_readiness",
+      "post_digital_for_business_sme_workflow_implementation"
+    ]
   },
   "proof_planes": {
     "knowledge": "K",
@@ -24,13 +32,25 @@
     "public_market_ceiling": "E2+",
     "non_substitution": true
   },
+  "engineering": {
+    "modules": "C5M01-C5M32",
+    "contracts": "C5C01-C5C24",
+    "proof_gates": "C5P01-C5P12",
+    "protocols": "C5R01-C5R10"
+  },
   "run32": {
     "executed": 32,
-    "keep": 30,
-    "mutate": 2,
-    "kill": 0,
-    "deterministic_regression_pass": 32,
-    "deterministic_regression_total": 32
+    "extended_disposition": {
+      "keep": 30,
+      "mutate": 2,
+      "kill": 0
+    }
+  },
+  "tests": {
+    "baseline_suite": {"pass": 14, "total": 14},
+    "extended_suite": {"pass": 32, "total": 32},
+    "independent_proof_count": "NOT_ADDITIVE",
+    "interpretation": "overlapping suites converge on critical invariants"
   },
   "artifacts": [
     {
@@ -57,15 +77,18 @@
       "paid_demand": "NOT_PROVEN"
     }
   ],
-  "pa4": 0,
-  "pa5": 0,
-  "e3_or_higher": 0,
+  "proof_frontier": {
+    "pa3": 3,
+    "pa4": 0,
+    "pa5": 0,
+    "e3_or_higher": 0
+  },
   "new_founder_cash_eur": 0,
   "next64": {
     "designed": 64,
     "executed": 0,
     "range": "P33-P96",
-    "preferred_first_block": "P33-P48 procurement full-pack and PA4 validation"
+    "preferred_first_block": "P33-P48 procurement full-pack qualification and PA4 validation"
   },
   "self_improvement": {
     "v2": "CURRENT",
@@ -79,10 +102,20 @@
     ],
     "authority_promotion": false
   },
+  "drive": {
+    "cycle5_folder": "1WQBjFu6wIYcrxs3QnPOeUHtZnMVkNwDf",
+    "baseline_start_here": "1gpLccMhFpmmcmX-NoGfDRqe9GdQv_7iiRYuaDTLEYj4",
+    "baseline_engineering": "1B6ooAjoFWpvKQj0RIi8vysq21_1SIa_L_uSK3fHbr8A",
+    "baseline_run32_tests": "1fgM0Swe5Kafo-1tscFKq4G0C0fljlaRjN75cu0Ckqgo",
+    "baseline_synthesis_next64_state": "1AzRbOkqfFSbo2ehJGPPfUIpHBnia6kVbUTXrRFanHgE",
+    "extended_pa_reconciliation": "1Ah-PpsKewTzWFYu4yzqSLzdRMdy7CsZfOp-SLg1paEI",
+    "extended_source_populated_samples": "1GTj-BYfs_hiMFV54gogTrawvRoIZ_VR7VU6DygFrWvs",
+    "extended_run32_next64": "1kFu8gWdi3rJr6Yc6phAXcUUYstLebFNc7b585R00XNw"
+  },
   "current_gate": "PA3 -> PA4 independent validation -> real target-user decision use -> PA5/E3 only on real interaction",
   "persistence": {
-    "github": "IN_PROGRESS",
-    "drive": "IN_PROGRESS",
-    "readback_required": true
+    "github": "VERIFIED_BRANCH_AND_PR",
+    "drive": "VERIFIED_FOLDER_READBACK",
+    "readback_required": false
   }
 }
