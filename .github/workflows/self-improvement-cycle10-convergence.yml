@@ -29,5 +29,41 @@ jobs:
         run: |
           test ! -f 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/NINETY_MISSING_MINUTES_PHASE_A_B_v1.0.md'
           test ! -f 'SELF_IMPROVEMENT_STUDIO/LIBRARY/NINETY_MISSING_MINUTES_PHASE_A_B_v1.0.md'
-          grep -q '"github_raw": false' SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/SOURCE_REGISTRY.json
-          grep -q 'PHYSICAL_FILE != BYTE_HASH != CANONICAL_WORK != DERIVED_MECHANISM != AUTHORITY' SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/SOURCE_REGISTRY.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/SOURCE_REGISTRY.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+
+          # Privacy boundary: the known private NMM source must remain pointer-only in GitHub.
+          assets = data.get('known_private_and_generated_assets')
+          if not isinstance(assets, list):
+              raise SystemExit('known_private_and_generated_assets missing or not a list')
+          nmm = [x for x in assets if isinstance(x, dict) and x.get('name') == 'NINETY_MISSING_MINUTES_PHASE_A_B_v1.0.md']
+          if len(nmm) != 1:
+              raise SystemExit(f'expected exactly one NMM private asset record, got {len(nmm)}')
+          if nmm[0].get('github_raw') is not False:
+              raise SystemExit('NMM github_raw must be exactly false')
+
+          # Identity boundary: validate the current orthogonal dimensions semantically.
+          law = data.get('identity_law')
+          expected = [
+              'PHYSICAL_FILE',
+              'BYTE_HASH',
+              'CANONICAL_WORK',
+              'WORK_FAMILY',
+              'DERIVED_MECHANISM',
+              'AUTHORITY',
+          ]
+          if not isinstance(law, str):
+              raise SystemExit('identity_law missing or not a string')
+          actual = [part.strip() for part in law.split('!=')]
+          if actual != expected:
+              raise SystemExit(f'identity_law mismatch: expected {expected!r}, got {actual!r}')
+
+          # Copyright boundary itself must remain explicit.
+          boundary = data.get('copyright_boundary')
+          if not isinstance(boundary, str) or 'Do not copy raw copyrighted book binaries into public GitHub' not in boundary:
+              raise SystemExit('copyright boundary missing or weakened')
+          PY
