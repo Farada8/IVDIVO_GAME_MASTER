@@ -33,6 +33,36 @@ def verify_ref(ref,label,errors):
     if sha256_file(p)!=str(ref["sha256"]).lower(): errors.append(label+"_SHA_MISMATCH"); return None
     return p
 
+def build_public_manifest(package_id:str, stereo_record:dict)->dict:
+    return {
+        "schema_version":"room917.p003b_blind_listener_package/1.2",
+        "package_id":package_id,
+        "status":"READY_FOR_PASS_A",
+        "listener_rules":[
+            "LISTEN_ONCE_WITHOUT_STORY_NOTES",
+            "DO_NOT_OPEN_INTERNAL_IDENTITY_KEY",
+            "FREEZE_PASS_A_NOTES_BEFORE_TARGETED_PASS_B",
+            "DO_NOT_OPEN_SEALED_PASS_C_BEFORE_PASS_A_NOTES_FROZEN",
+            "ANSWER_ONLY_THE_SIX_LOCKED_LISTENER_QC_QUESTIONS"
+        ],
+        "files":{"stereo_target":stereo_record},
+        "question_classes":QUESTION_CLASSES,
+        "questions":QUESTIONS,
+        "sealed_material_present":True,
+        "warning":"Pass A must not reveal machine-QC status, target identity, Pass-B candidates, mono/phone results, retention, market appeal or next-episode intent."
+    }
+
+def build_pass_c_manifest(package_id:str, files:dict, qc_status:str|None)->dict:
+    return {
+        "schema_version":"room917.p003b_pass_c_sealed/1.0",
+        "package_id":package_id,
+        "status":"SEALED_UNTIL_PASS_A_NOTES_FROZEN",
+        "open_only_after":"PASS_A_NOTES_FROZEN",
+        "files":files,
+        "machine_qc_status":qc_status,
+        "purpose":"Stereo/mono/phone translation playback only after blind Pass A notes are frozen."
+    }
+
 def main()->int:
     ap=argparse.ArgumentParser(description="Build blind P003B listener package only from identity-verified ROOM917 E01 audio")
     ap.add_argument("--audio",required=True,type=Path); ap.add_argument("--machine-qc",required=True,type=Path); ap.add_argument("--outdir",required=True,type=Path); ap.add_argument("--derived-provenance",type=Path); ap.add_argument("--package-id",default="R917_E01_LISTEN_001"); a=ap.parse_args()
@@ -64,31 +94,18 @@ def main()->int:
 
     a.outdir.mkdir(parents=True,exist_ok=True)
     blind=a.outdir/"R917_BLIND_E01_TARGET.wav"; shutil.copy2(a.audio,blind)
-    files={"stereo_target":{"file":blind.name,"sha256":sha256_file(blind),"playback":"PASS_A_FIRST"}}
+    stereo_record={"file":blind.name,"sha256":sha256_file(blind),"playback":"PASS_A_FIRST"}
+
+    sealed_pass_c=a.outdir/"SEALED_PASS_C"; sealed_pass_c.mkdir(parents=True,exist_ok=True)
+    pass_c_files={}
     proxies=qc.get("translation_proxies",{})
     for key,outname in (("mono_folddown","R917_BLIND_E01_MONO.wav"),("phone_band_mono","R917_BLIND_E01_PHONE_PROXY.wav")):
         src=proxies.get(key)
         if src and Path(src).is_file():
-            dst=a.outdir/outname; shutil.copy2(src,dst); files[key]={"file":dst.name,"sha256":sha256_file(dst),"playback":"PASS_C_ONLY_AFTER_PASS_A_NOTES_FROZEN"}
+            dst=sealed_pass_c/outname; shutil.copy2(src,dst); pass_c_files[key]={"file":dst.name,"sha256":sha256_file(dst),"playback":"PASS_C_ONLY_AFTER_PASS_A_NOTES_FROZEN"}
+    (sealed_pass_c/"PASS_C_MANIFEST_SEALED.json").write_text(json.dumps(build_pass_c_manifest(a.package_id,pass_c_files,qc.get("status")),indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
 
-    public_manifest={
-        "schema_version":"room917.p003b_blind_listener_package/1.1",
-        "package_id":a.package_id,
-        "status":"READY_FOR_PASS_A",
-        "listener_rules":[
-            "LISTEN_ONCE_WITHOUT_STORY_NOTES",
-            "DO_NOT_OPEN_INTERNAL_IDENTITY_KEY",
-            "FREEZE_PASS_A_NOTES_BEFORE_TARGETED_PASS_B",
-            "TRANSLATION_FILES_ARE_PASS_C_ONLY",
-            "ANSWER_ONLY_THE_SIX_LOCKED_LISTENER_QC_QUESTIONS"
-        ],
-        "files":files,
-        "question_classes":QUESTION_CLASSES,
-        "questions":QUESTIONS,
-        "machine_qc_status":qc.get("status"),
-        "warning":"Machine QC status is not a human listening verdict. Retention, market appeal and next-episode intent are outside P003B Listener QC."
-    }
-    (a.outdir/"LISTENER_MANIFEST.json").write_text(json.dumps(public_manifest,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
+    (a.outdir/"LISTENER_MANIFEST.json").write_text(json.dumps(build_public_manifest(a.package_id,stereo_record),indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     internal={"schema_version":"room917.p003b_internal_identity_key/1.0","package_id":a.package_id,"identity_mode":mode,"target_original_path":str(a.audio.resolve()),"target_sha256":audio_sha,"target_wav_meta":meta,"machine_qc":{"path":str(a.machine_qc.resolve()),"sha256":sha256_file(a.machine_qc),"status":qc.get("status")},"derived_provenance":provenance_summary,"law":"Keep sealed from Pass A listener until notes are frozen."}
     (a.outdir/"INTERNAL_IDENTITY_KEY_SEALED.json").write_text(json.dumps(internal,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print("PASS package="+a.package_id+" mode="+mode); return 0
