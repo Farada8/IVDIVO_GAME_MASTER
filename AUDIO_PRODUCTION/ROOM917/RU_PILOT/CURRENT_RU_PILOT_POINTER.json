@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_ru_pilot_pointer/1.1",
+  "schema_version": "ivdivo.room917_ru_pilot_pointer/1.2",
   "updated": "2026-08-22",
   "project": "ROOM 917 CALLS AT MIDNIGHT",
   "project_id": "ROOM917",
@@ -10,81 +10,25 @@
   "does_not_supersede": "AUDIO_PRODUCTION/ROOM917/CURRENT_EXECUTION_STATE.json",
   "status": "RU_S0_CANARY_AND_E01_SOUND_ASSEMBLY_PREPARED_HUMAN_LISTEN_PENDING",
   "github": {
-    "authority": {
-      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PILOT_AUTHORITY_AND_EXECUTION_v1.0.md",
-      "commit": "a8cf4fe597d48c77cab2c6236e8f2a576dee32f8"
-    },
-    "e01_ru_script": {
-      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md",
-      "commit": "ff2de4aa6f664742ec958e959ad3ecca54e899ca"
-    },
-    "e02_ru_script": {
-      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E02_LENI_BIRD_RECORDING_SCRIPT_v1.0.md",
-      "commit": "8d6ee1fd3096b96e218418c5d24e0d73c12c82d0"
-    },
-    "elevenlabs_manifest": {
-      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_E02_ELEVENLABS_V3_MANIFEST_v1.0.json",
-      "commit": "6fd2345e661b759d290fdb8200240d31c40f09c6"
-    },
-    "audition_renderer": {
-      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/render_ru_pilot.py",
-      "commit": "f077bbd993dc8a63a0a8f9a035cc0b88f4794219"
-    },
-    "public_canary_cast": {
-      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_PUBLIC_CANARY_CAST_v1.0.json",
-      "commit": "7eec83b3679c36963a3cde68f30872875d91516e",
-      "status": "CANARY_ONLY_NOT_CAST_LOCK"
-    },
-    "s0_canary_bundle": {
-      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_CANARY_BLOCK_BUNDLE_v1.0.json",
-      "commit": "681814aa10125c4d5e159fbe37b02c68b8789c96",
-      "blocks": 6
-    },
-    "e01_director_sound_map": {
-      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_DIRECTOR_SOUND_MAP_v1.0.md",
-      "commit": "113d5c52a27b6284c15da9da25e2173197c6814b"
-    },
-    "e01_assembly_contract": {
-      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json",
-      "commit": "7d0d35120842826520b20e8b40786b0819bbc3b9"
-    },
-    "s0_listen_gate": {
-      "path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_LISTEN_GATE_v1.0.json",
-      "commit": "ec064917ad57efcf7c4ab298186df6eb40b2968a"
-    },
-    "s0_canary_workflow": {
-      "path": ".github/workflows/room917-ru-s0-canary.yml",
-      "commit": "6f5798ee7886a5ce38cdaf523133bc9bd06b81c6",
-      "trigger": "workflow_dispatch",
-      "paid_guard": "confirm_spend=YES",
-      "max_blocks": [4, 6],
-      "full_episode_render_forbidden": true
-    },
-    "voice_discovery_workflow": {
-      "path": ".github/workflows/room917-ru-voice-discovery.yml",
-      "paid_synthesis_calls": 0
-    }
+    "authority": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PILOT_AUTHORITY_AND_EXECUTION_v1.0.md", "commit": "a8cf4fe597d48c77cab2c6236e8f2a576dee32f8"},
+    "e01_ru_script": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md", "commit": "ff2de4aa6f664742ec958e959ad3ecca54e899ca"},
+    "e02_ru_script": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E02_LENI_BIRD_RECORDING_SCRIPT_v1.0.md", "commit": "8d6ee1fd3096b96e218418c5d24e0d73c12c82d0"},
+    "elevenlabs_manifest": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_E02_ELEVENLABS_V3_MANIFEST_v1.0.json", "commit": "6fd2345e661b759d290fdb8200240d31c40f09c6"},
+    "audition_renderer": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/render_ru_pilot.py", "commit": "f077bbd993dc8a63a0a8f9a035cc0b88f4794219"},
+    "public_canary_cast": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_PUBLIC_CANARY_CAST_v1.0.json", "commit": "7eec83b3679c36963a3cde68f30872875d91516e", "status": "CANARY_ONLY_NOT_CAST_LOCK"},
+    "s0_canary_bundle": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_CANARY_BLOCK_BUNDLE_v1.0.json", "commit": "681814aa10125c4d5e159fbe37b02c68b8789c96", "blocks": 6},
+    "e01_director_sound_map": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_DIRECTOR_SOUND_MAP_v1.0.md", "commit": "113d5c52a27b6284c15da9da25e2173197c6814b"},
+    "e01_assembly_contract": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json", "commit": "7d0d35120842826520b20e8b40786b0819bbc3b9"},
+    "s0_listen_gate": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_LISTEN_GATE_v1.0.json", "commit": "ec064917ad57efcf7c4ab298186df6eb40b2968a"},
+    "s0_canary_workflow": {"path": ".github/workflows/room917-ru-s0-canary.yml", "commit": "6f5798ee7886a5ce38cdaf523133bc9bd06b81c6", "trigger": "workflow_dispatch", "paid_guard": "confirm_spend=YES", "max_blocks": [4, 6], "full_episode_render_forbidden": true},
+    "voice_discovery_workflow": {"path": ".github/workflows/room917-ru-voice-discovery.yml", "paid_synthesis_calls": 0}
   },
   "drive": {
-    "folder": {
-      "title": "12_RUSSIAN_PILOT_E01_E02",
-      "id": "1UIJGRzuNkAYTMfFxjso2lwfyNzqBuvc8"
-    },
-    "authority_doc": {
-      "title": "ROOM917 RU PILOT — AUTHORITY + EXECUTION v1.0 — 2026-08-22",
-      "id": "17SDu7cwabVJypl2dAeOrfy6hKOQ7ajGIvMIpj6GB660"
-    },
-    "e01_ru_script_doc": {
-      "title": "ROOM917 RU E01 — ЛАМПА ПОСЛЕ 916 — RECORDING SCRIPT v1.0",
-      "id": "19qoiFoZgyaqcXVh1I9rfxq_J-o7TMaj1E63ZM0Lrnh8"
-    },
-    "e02_ru_script_doc": {
-      "title": "ROOM917 RU E02 — ЛЕНИ-БЁРД — RECORDING SCRIPT v1.0",
-      "id": "1LdwOJbPRHHWKVCoP3giK-WdwaiauEOIEPdNkXuGIlp4"
-    },
-    "production_update_doc": {
-      "status": "TO_BE_MIRRORED_THIS_PASS"
-    }
+    "folder": {"title": "12_RUSSIAN_PILOT_E01_E02", "id": "1UIJGRzuNkAYTMfFxjso2lwfyNzqBuvc8"},
+    "authority_doc": {"title": "ROOM917 RU PILOT — AUTHORITY + EXECUTION v1.0 — 2026-08-22", "id": "17SDu7cwabVJypl2dAeOrfy6hKOQ7ajGIvMIpj6GB660"},
+    "e01_ru_script_doc": {"title": "ROOM917 RU E01 — ЛАМПА ПОСЛЕ 916 — RECORDING SCRIPT v1.0", "id": "19qoiFoZgyaqcXVh1I9rfxq_J-o7TMaj1E63ZM0Lrnh8"},
+    "e02_ru_script_doc": {"title": "ROOM917 RU E02 — ЛЕНИ-БЁРД — RECORDING SCRIPT v1.0", "id": "1LdwOJbPRHHWKVCoP3giK-WdwaiauEOIEPdNkXuGIlp4"},
+    "production_update_doc": {"title": "ROOM917 RU PILOT — S0 CANARY + E01 SOUND PRODUCTION UPDATE — 2026-08-22", "id": "1_O5KB093CGI80idkAY7_3Eo2RbWK9Dy_TBXHZ7ggXTo", "readback": "PASS"}
   },
   "provider": {
     "name": "ElevenLabs",
