@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Mapping, Optional, Sequence
+from typing import Mapping, Sequence
 
 
 REQUIRED_ARTIFACT_COMPONENTS = (
@@ -20,6 +20,10 @@ ALLOWED_ARCHITECTURES = (
     "SAAS_TOOL_HOLD",
 )
 
+WAVE_STAGES = (
+    "PRE_WAVE", "EMERGING", "EARLY_COMMERCIAL", "EXPANDING", "CROWDED", "LATE_COMMODITIZED"
+)
+
 
 @dataclass(frozen=True)
 class OfferEvidence:
@@ -32,6 +36,32 @@ class OfferEvidence:
     claims_wtp: bool = False
     claims_profitability: bool = False
     external_action_authorized: bool = False
+
+
+def founder_profile_gate(*, remote_first: bool, founder_cash_at_risk_eur: float, founder_physical_load: str,
+                         test_before_build_spend: bool, wave_stage: str) -> Mapping[str, object]:
+    if wave_stage not in WAVE_STAGES:
+        return {"status": "HOLD_UNKNOWN_WAVE_STAGE", "deep_dive_allowed": False}
+    if not remote_first:
+        return {"status": "OUT_OF_PROFILE_REMOTE", "deep_dive_allowed": False}
+    if founder_cash_at_risk_eur > 3000:
+        return {"status": "OUT_OF_PROFILE_CAPITAL", "deep_dive_allowed": False}
+    if founder_physical_load not in ("NONE", "LOW"):
+        return {"status": "OUT_OF_PROFILE_PHYSICAL", "deep_dive_allowed": False}
+    if not test_before_build_spend:
+        return {"status": "HOLD_TEST_BEFORE_BUILD_REQUIRED", "deep_dive_allowed": False}
+
+    early = wave_stage in ("PRE_WAVE", "EMERGING", "EARLY_COMMERCIAL")
+    return {
+        "status": "FOUNDER_PROFILE_PASS",
+        "deep_dive_allowed": True,
+        "remote_first": True,
+        "cash_within_default_ceiling": True,
+        "early_wave_priority_eligible": early,
+        "normal_cashflow_candidate": not early,
+        "demand_proof": False,
+        "proof_promotion": False,
+    }
 
 
 def validate_offer(evidence: OfferEvidence, *, offer_name: str) -> Mapping[str, object]:
@@ -100,7 +130,9 @@ def architecture_route(architecture: str, *, repeated_manual_need: bool = False,
     return {"status": "READY_ONLY_AFTER_REPEATED_MANUAL_NEED" if repeated_manual_need else "HOLD_REPEATED_MANUAL_NEED_REQUIRED", "build": False}
 
 
-def next_route(*, p25_p32_complete: bool, ci_verified: bool) -> Mapping[str, object]:
+def next_route(*, founder_profile_pass: bool, p25_p32_complete: bool, ci_verified: bool) -> Mapping[str, object]:
+    if not founder_profile_pass:
+        return {"state": "HOLD_FOUNDER_PROFILE_RESREEN_REQUIRED", "next": "APPLY_FOUNDER_PROFILE", "external_action": False}
     if not p25_p32_complete:
         return {"state": "S3_FATAL_TEST_READY_WITH_INTERNAL_DIFFERENTIAL", "next": "COMPLETE_P25_P32", "external_action": False}
     if not ci_verified:
@@ -110,6 +142,8 @@ def next_route(*, p25_p32_complete: bool, ci_verified: bool) -> Mapping[str, obj
         "executed_next64": 32,
         "remaining_next64": 32,
         "next": "P33-P40_OPP37_NULL_SAFE_ECONOMICS_AND_MANUAL_DELIVERY_TIMING",
+        "portfolio_disposition": "NORMAL_CASHFLOW_CANDIDATE",
+        "early_wave_priority": False,
         "buyer_behavior": False,
         "willingness_to_pay": None,
         "transaction": None,
