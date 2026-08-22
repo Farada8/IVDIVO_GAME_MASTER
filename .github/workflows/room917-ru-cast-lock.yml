@@ -13,8 +13,9 @@ on:
       - '.github/workflows/room917-ru-cast-lock.yml'
 
 jobs:
-  validator-tests:
+  validator-and-compiler-tests:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -22,9 +23,12 @@ jobs:
           python-version: '3.12'
       - name: Run fail-closed validator tests
         run: python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/test_validate_ru_cast_lock.py
+      - name: Run sealed-evidence cast-lock compiler tests
+        run: python -m unittest AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_prepare_ru_cast_lock_receipt.py -v
 
   validate-live-receipt-if-present:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
