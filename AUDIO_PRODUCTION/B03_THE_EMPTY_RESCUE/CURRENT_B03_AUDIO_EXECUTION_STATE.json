@@ -7,8 +7,8 @@
   "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
   "locked_book_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
   "ch01_source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
-  "last_completed_artifact": "95_B03_AUDIO_EXECUTION_STATE_AFTER_PREFLIGHT_v1",
-  "current_stage": "PRELIVE_PREPARATION_COMPLETE / ELEVENLABS_ACCOUNT_EXECUTION_CONTEXT_REQUIRED",
+  "last_completed_artifact": "104_B03_AUDIO_EXECUTION_STATE_PRELIVE_COMPLETE_v1",
+  "current_stage": "PRELIVE_DESIGN_COMPLETE / WAITING_LIVE_S0_AND_ASSET_CANARIES",
   "dry_compile": {
     "spoken_units": 281,
     "quoted_turns": 142,
@@ -31,12 +31,6 @@
     "provider_account_access_verified": false,
     "live_call_performed": false
   },
-  "bounded_canary": {
-    "selected_blocks": 6,
-    "selected_characters": 2811,
-    "selected_voice_roles": 6,
-    "allowed_to_dispatch": false
-  },
   "casting_cascade": {
     "zero_cost_preflight": "API_CONTRACT_PASS / ACCOUNT_AUTH_AND_VOICE_ENUMERATION_OPEN",
     "S0_technical_canary": "DRY_MANIFEST_READY_4_JOBS / NOT_RUN",
@@ -45,45 +39,76 @@
     "S3_forbidden_mode_stress": "PLAN_READY / NOT_RUN",
     "S4_pair_ensemble_test": "PLAN_READY / NOT_RUN",
     "provisional_voice_lock": "NOT_REACHED",
-    "hard_pilot": "NOT_REACHED",
+    "hard_pilot": "ASSEMBLY+QC CONTRACT READY / NOT_RUN",
     "scaled_render": "BLOCKED"
+  },
+  "independent_audio_branches": {
+    "project_overlay": "PASS_PLAN",
+    "listener_contract": "PASS_PLAN",
+    "acoustic_passports": "PASS_PLAN",
+    "acoustic_identity_ledger": "PASS_PLAN",
+    "microphone_choreography": "PASS_PLAN",
+    "sound_asset_plan": "PASS_PLAN_12_CUES",
+    "music_law": "PASS_PLAN_DEFAULT_NO_MUSIC_IN_CLUE_WINDOWS",
+    "sound_asset_canary": "READY_NOT_RUN",
+    "asset_acceptance_ledger": "READY_EMPTY",
+    "hard_pilot_assembly": "READY_WAITING_LIVE_INPUTS",
+    "hard_pilot_qc": "READY_WAITING_LIVE_INPUTS"
+  },
+  "critical_identity_locks": {
+    "ID_DRAINAGE_FLAP_FOUR_IMPACTS": "three uneven hollow impacts + longer pause + fourth; same physical/rhythmic family with natural variation; no musicalization or perfect-copy artifact",
+    "ID_UNKNOWN_CALLER_SOURCE_VOICE": "later playback must derive from the same accepted first-caller source/take; filtering allowed, independent regeneration forbidden"
   },
   "pronunciation_gate": {
     "protocol_ready": true,
     "phonetic_locks": 0,
     "status": "OPEN_FAIL_CLOSED"
   },
+  "live_evidence": {
+    "provider_access_tested": false,
+    "voices_enumerated_from_user_workspace": false,
+    "S0_run": false,
+    "voice_lock": false,
+    "audio_assets_generated_or_recorded": false,
+    "alignment_received": false,
+    "mix_created": false,
+    "human_listen": false
+  },
   "open_gates": [
-    "ELEVENLABS_ACCOUNT_EXECUTION_CONTEXT",
+    "ELEVENLABS_OR_OTHER_PROVIDER_EXECUTION_CONTEXT",
     "REAL_PROVIDER_VOICE_CANDIDATE_IDS",
-    "SLOVENIAN_PRONUNCIATION_LISTENING_OR_LOCAL_REFERENCE",
-    "HUMAN_CAST_APPROVAL",
-    "EXPLICIT_PROVIDER_SPEND_AUTHORIZATION",
-    "IMMEDIATE_PRE_DISPATCH_EXACT_TEXT_HASH_RECHECK"
+    "SLOVENIAN_PRONUNCIATION_EVIDENCE",
+    "EXPLICIT_PAID_PROVIDER_DISPATCH_AUTHORIZATION_IF_REQUIRED",
+    "LIVE_S0_PASS",
+    "S1-S4_CASTING_EVIDENCE",
+    "ASSET_CANARY_C0-C2_EVIDENCE",
+    "ACCEPTED_UNKNOWN_CALLER_TAKE_FOR_ASSET_C3",
+    "HARD_PILOT_PASS"
   ],
+  "private_payload_authority": {
+    "drive_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+    "drive_locked_master_id": "141BOyku8VX8WXehH05rZnQGZirMOP-3iCs-5_yMJbGU",
+    "drive_overlay_96_id": "1YLBx2fGWoZj9HESc7sf60MyC_3FF5h9U",
+    "drive_acoustic_97_id": "10cPcqOACeqgzOx-EEho9ku39EDhM9f0I",
+    "drive_microphone_98_id": "1AvbxH3fNoP-hXugyXqmQLvaGXfq-6Gqt",
+    "drive_sound_plan_99_id": "1Xrn_sRZDZQp5TkKl-cK86UwBmEceazIa",
+    "drive_hard_pilot_qc_100_id": "1pvbo520DrFPCM48vqfOsvjULf0T-6dnV",
+    "drive_asset_canary_101_id": "1MqRRuQ3iu0SBJE9TCThjL1g9XD4WJlHu",
+    "drive_asset_ledger_102_id": "1saLYcrdymgjk7x0G9XuKQGwAvL4oYcG1",
+    "drive_hard_pilot_assembly_103_id": "1TGWOWe3ol5Do6tK5ZMeRVMzkhHb_cmVR",
+    "drive_prelive_state_104_id": "1VXZ8bUEJBQ7NXOGvyNJFm2QMjykO3tGu",
+    "policy": "Full exact-text segmentation/director/provider payload remains in Drive; public GitHub mirrors contracts, hashes and execution state only."
+  },
   "prohibited_actions": [
+    "MORE_GENERIC_ENGINE_REDESIGN_WITHOUT_DEMONSTRATED_DEFECT",
     "STORY_REWRITE",
     "CH30_CREATION",
     "GUESSED_DIAGNOSIS_OR_PROGNOSIS_FOR_ANDREJ",
     "PRECURSOR_ONTOLOGY_INVENTION",
     "OES_OR_CONFEDERATION_COMMAND_TAKEOVER_OF_LOCAL_SLOVENIAN_RESCUE",
     "BULK_CH01_29_PROVIDER_RENDER_BEFORE_CANARY_EVIDENCE",
-    "HARDCODING_RETIRING_DEFAULT_VOICES_AS_DURABLE_AUTHORITY",
-    "CLAIMING_RENDER_VOICE_LOCK_ALIGNMENT_OR_LISTEN_WITHOUT_REAL_EVIDENCE",
+    "CLAIMING_RENDER_VOICE_LOCK_ALIGNMENT_MIX_OR_LISTEN_WITHOUT_REAL_EVIDENCE",
     "STORING_API_KEYS_OR_SECRETS"
   ],
-  "private_payload_authority": {
-    "drive_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
-    "drive_locked_master_id": "141BOyku8VX8WXehH05rZnQGZirMOP-3iCs-5_yMJbGU",
-    "drive_ch01_audio_canary_zip_id": "1d6MhjJ6XUjy4duN1am8H-ETCAv3NtCJJ",
-    "drive_ch01_execution_pack_zip_id": "1Acu_vzczRnj29ylbVbDJ1wpRwZoFDWYM",
-    "drive_zero_cost_preflight_id": "1cNHAb89jYe7GYpBkUh3TuCYBrFgqtMCZ",
-    "drive_casting_cascade_plan_id": "1aNmcN6LwMo2htV2wMDzrTNk_TCjH4I0r",
-    "drive_s0_dry_manifest_id": "1mLZrrYqEJEDHdMWPDndJ4BTPmGg-wtlR",
-    "drive_pronunciation_protocol_id": "1LguuPXSj361nRsYsh6jbIbXQauMY2KNB",
-    "drive_casting_scorecard_id": "1TGmEEgnrq55VE0NZB6Sz0D2ugA5Fabds",
-    "drive_current_state_id": "1kJtyuL6SmXpq_k1TlyG-d7TO3SV50Z8C",
-    "policy": "Full exact-text segmentation/director/provider payload remains in Drive; public GitHub mirrors contracts, hashes and execution state only."
-  },
-  "next_unblocked_obligation": "WHEN ELEVENLABS ACCOUNT EXECUTION CONTEXT EXISTS: ENUMERATE ACTUAL VOICES -> BIND TEMPORARY S0 IDS -> REHASH EXACT_TEXT -> RUN FOUR S0 CALLS -> RECORD PROVENANCE/ALIGNMENT -> PASS/FAIL TO S1A."
+  "next_exact_action": "Obtain live provider execution context. Enumerate actual workspace voices -> bind temporary S0 candidates -> immediate source/exact-text hash recheck -> execute only four S0 jobs -> record provenance/alignment -> PASS/FAIL. In parallel bind asset generation/recording path -> execute only C0-C2 asset canaries; C3 waits for accepted first-caller take. No new abstract design work unless a demonstrated defect appears."
 }
