@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.3",
+  "schema_version": "1.4",
   "updated": "2026-08-22",
   "authority": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/IVDIVO_SPEAKER_ATTRIBUTION_EVIDENCE_CONTRACT_v2.md",
   "runtime": "tools/ivdivo_speaker_attribution.py",
@@ -15,18 +15,41 @@
     {"id":"SAME_SPEAKER_SANDWICH","scope":"FORBIDDEN_AUTO","mode":"NO_AUTO","b03_validation":{"successes":0,"total":5}},
     {"id":"NEAREST_NAME_OR_GENDER_ONLY_PRONOUN","scope":"REVIEW_ONLY","mode":"NO_AUTO_ON_AMBIGUITY"}
   ],
-  "semantic_gate": {"law":"QUOTE_BOUNDARY_NEQ_SPOKEN_DIALOGUE","b03_quote_boundaries":3718,"b03_non_spoken_overrides":3,"b03_spoken_candidates":3715},
-  "b03_current": {
+  "engine_semantic_fixture": {
+    "law":"QUOTE_BOUNDARY_NEQ_SPOKEN_DIALOGUE",
+    "b03_quote_boundaries":3718,
+    "b03_non_spoken_overrides":3,
+    "b03_spoken_candidates":3715,
+    "note":"This is the deterministic engine validation fixture retained for reproducibility. It is not the later production cast-speech denominator."
+  },
+  "b03_engine_current": {
     "base_corrected_v2":518,
     "verified_engine_delta":81,
     "corrected_existing_assignments":1,
     "assigned":599,
     "unknown":3116,
     "coverage_pct":16.12,
-    "status":"VERIFIED_CURRENT_MAIN_READBACK_PASS",
-    "voice_map_authorized":false,
+    "status":"VERIFIED_ENGINE_SUBSET_CURRENT",
+    "scaled_voice_map_authorized":false,
     "story_text_changes":0,
-    "supersedes_working_candidate_661":true
+    "supersedes_working_candidate_661":true,
+    "claim_boundary":"599 assignments are deterministic engine-verified. Do not report 3714 as engine auto-verified."
+  },
+  "b03_production_authority": {
+    "method":"CHAPTER_LOCAL_CONTEXTUAL_REVIEW_PLUS_RED_TEAM_RECONCILIATION",
+    "source_quote_boundaries":3718,
+    "production_semantic_exceptions":4,
+    "actual_cast_speech":3714,
+    "assigned":3714,
+    "unknown_speaker_ownership":0,
+    "coverage_pct":100.0,
+    "full_speaker_gate_version":"v1.2_SOURCE_AND_CH29_RECONCILED",
+    "full_speaker_gate_drive_id":"1lFmVbEZJSMnCZMn65nAEV5U-rESC-qFX",
+    "authority_router_drive_id":"1SF30eK_uoJDFgeR6GyODfGUrIaig-ZWa",
+    "current_state_drive_id":"1JQViwpa83Mt8lSMcBbvjProiLPxR4_xZ",
+    "voice_ids_assigned":0,
+    "provider_dispatch_authorized":false,
+    "claim_boundary":"3714/3714 is production speaker ownership authority, not deterministic engine verification."
   },
   "verification": {
     "github_pr":436,
@@ -37,9 +60,12 @@
     "pytest":"22_PASSED_IN_0.05S",
     "py_compile":"PASS",
     "main_merge_commit":"c53e9c0923041183bc642363ad5d572c1bb2cf77",
-    "main_state_readback":"PASS"
+    "main_state_readback":"PASS",
+    "scope":"ENGINE_SUBSET_ONLY"
   },
   "new_regressions": [
-    {"id":"REPORTING_CLAUSE_MENTION_NEQ_REPORTING_SUBJECT","fixture":"B03_CH01_S0172","input":"The caller on Nika’s line said,","forbidden_assignment":"NIKA","expected_generic":"UNKNOWN","independent_authority":"CH01 REAL_COLLISION_CALLER"}
-  ]
+    {"id":"REPORTING_CLAUSE_MENTION_NEQ_REPORTING_SUBJECT","fixture":"B03_CH01_S0172","input":"The caller on Nika’s line said,","forbidden_assignment":"NIKA","expected_generic":"UNKNOWN","independent_authority":"CH01 REAL_COLLISION_CALLER"},
+    {"id":"PARAGRAPH_BREAK_NEQ_SPEAKER_TRANSFER","fixture":"B03_CH29_S0358","production_expected":"SMITH","superseded":"TAREN_SOR","scope":"PRODUCTION_REVIEW_REGRESSION","mode":"NO_GENERIC_AUTO_PROMOTION","basis":"Smith said introduces the prior speech; paragraph break has no transfer cue; Taren paused is listener reaction before Taren's next first-person response"}
+  ],
+  "universal_promotion":"HOLD_SECOND_BOOK_REPLICATION"
 }
