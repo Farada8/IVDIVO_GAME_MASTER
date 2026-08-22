@@ -1,0 +1,6 @@
+{
+  "schema":"NMM_ASSET_EVIDENCE_CONTRACT_v1",
+  "canonical":{"container":"WAV","codec":"PCM_INTEGER","sample_rate_hz":48000,"channels":[1,2],"sample_width_bytes":[2,3,4]},
+  "states":["CANDIDATE","ENGINEERING_PASS","HUMAN_TEST_PENDING","ACCEPTED_MASTER","REJECTED"],
+  "law":"Machine technical PASS never locks a story clue asset; human/device evidence is required."
+}

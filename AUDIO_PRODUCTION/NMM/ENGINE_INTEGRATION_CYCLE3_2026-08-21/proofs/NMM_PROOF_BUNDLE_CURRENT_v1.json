@@ -1,0 +1,7 @@
+{
+  "schema":"NMM_PROOF_BUNDLE_v1",
+  "classes":{"DETERMINISTIC":{"source":true,"mutation":true,"asset_ingest":true},"PROVIDER":{"snapshot":false,"bindings":false,"live_canary":false},"HUMAN":{"blind_listener":false},"SPECIALIST":{"medical":false,"legal":false},"ECONOMICS":{"measured_cost":false}},
+  "missing":["PROVIDER:snapshot","PROVIDER:bindings","PROVIDER:live_canary","HUMAN:blind_listener","SPECIALIST:medical","SPECIALIST:legal","ECONOMICS:measured_cost"],
+  "release":"NO_GO",
+  "bundle_sha256":"40a237c76e58e30b68759a38d58d077e8d88ecd98c9f41fbd12875de741d402a"
+}

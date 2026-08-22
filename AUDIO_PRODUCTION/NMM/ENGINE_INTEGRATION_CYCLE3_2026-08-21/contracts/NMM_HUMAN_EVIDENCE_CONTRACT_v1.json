@@ -1,0 +1,6 @@
+{
+  "schema":"NMM_HUMAN_EVIDENCE_CONTRACT_v1",
+  "evidence_classes":["BLIND_COMPREHENSION","SPEAKER_DIFFERENTIATION","SPOILER_NEUTRALITY","CLUE_DISCRIMINATION","FATIGUE","WANT_TO_CONTINUE"],
+  "required":["protocol_id","stimulus_hashes","listener_id_pseudonymous","playback_mode","raw_answers","scoring_rule_predeclared","result"],
+  "prohibited":["machine_generated_listener_answer","retroactive_threshold","ratings_only_without_raw_answers"]
+}

@@ -1,0 +1,12 @@
+test_assets_canonical (test_nmm_cycle3.T.test_assets_canonical) ... ok
+test_frontier (test_nmm_cycle3.T.test_frontier) ... ok
+test_human_not_faked (test_nmm_cycle3.T.test_human_not_faked) ... ok
+test_learning_one_project_discovery_only (test_nmm_cycle3.T.test_learning_one_project_discovery_only) ... ok
+test_mutations_fail (test_nmm_cycle3.T.test_mutations_fail) ... ok
+test_proof_bundle_no_go (test_nmm_cycle3.T.test_proof_bundle_no_go) ... ok
+test_source_baseline (test_nmm_cycle3.T.test_source_baseline) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+OK

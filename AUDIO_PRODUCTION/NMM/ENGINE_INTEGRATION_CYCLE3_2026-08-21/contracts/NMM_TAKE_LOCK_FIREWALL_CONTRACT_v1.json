@@ -1,0 +1,6 @@
+{
+  "schema":"NMM_TAKE_LOCK_FIREWALL_CONTRACT_v1",
+  "states":["GENERATED","REVIEW_PENDING","ACCEPTED","LOCKED","REJECTED"],
+  "law":"PROVIDER_ACCEPTED != PRODUCTION_ACCEPTED != TAKE_LOCKED != VOICE_LOCKED",
+  "lock_requires":["source_hash_match","voice_id_verified","performance_review","device_qc","no_hard_fail","explicit_lock_decision"]
+}

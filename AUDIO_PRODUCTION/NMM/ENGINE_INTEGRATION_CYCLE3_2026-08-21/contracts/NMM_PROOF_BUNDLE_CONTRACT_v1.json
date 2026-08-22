@@ -1,0 +1,5 @@
+{
+  "schema":"NMM_PROOF_BUNDLE_CONTRACT_v1",
+  "classes":["DETERMINISTIC","PROVIDER","AUDIO_TECHNICAL","HUMAN","SPECIALIST","ECONOMICS"],
+  "release_law":"Unknown/missing required proof remains OPEN; deterministic proof cannot substitute for provider/human/specialist evidence."
+}
