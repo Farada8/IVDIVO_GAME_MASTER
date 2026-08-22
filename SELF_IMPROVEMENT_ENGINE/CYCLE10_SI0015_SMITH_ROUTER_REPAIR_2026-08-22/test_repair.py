@@ -28,6 +28,21 @@ def flatten(x, p=''):
     return out
 
 
+def historical_stale_system(current: dict) -> dict:
+    out = copy.deepcopy(current)
+    out['portfolio_frontier']['active_project'] = {
+        'project_id': 'IVDIVO_BOOK_3_SMITH_FULL_NOVEL',
+        'title': 'SMITH',
+        'mode': 'FRESH_AUTHORITY_AND_CONTINUITY_RECONCILIATION_BEFORE_PROSE',
+        'project_state_path': None,
+        'source_transition_from': 'PROJECTS/THE_WIFE_AT_HIS_WEDDING/CURRENT_STATE.md',
+        'next_unblocked_obligation': 'FRESH_AUTHORITY_RECONCILIATION_THEN_PREVIOUS_BOOK_CONSEQUENCE_CONTINUITY_CHECK_THEN_STORY_CORE_THEN_HUMAN_SCENE_DIALOGUE_CALIBRATION_THEN_CAUSAL_ARCHITECTURE_THEN_PRE_PROSE_STORY_GATE',
+        'authority_boundary': 'NO_SMITH_PROSE_UNTIL_FRESH_AUTHORITY_AND_PRE_PROSE_STORY_GATE',
+        'do_not_repeat': [],
+    }
+    return out
+
+
 class SmithRouterRepair(unittest.TestCase):
     def setUp(self):
         self.repair = load_module(DIR / 'apply_repair.py', 'smith_router_repair')
@@ -36,15 +51,23 @@ class SmithRouterRepair(unittest.TestCase):
         self.portfolio = json.loads((ROOT / 'CURRENT_IVDIVO_PORTFOLIO_FRONTIER_DELTA_2026-08-21.json').read_text(encoding='utf-8'))
         self.project = json.loads((ROOT / 'PROJECT_STATES' / 'IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json').read_text(encoding='utf-8'))
 
-    def test_pre_repair_guard_fails_closed(self):
-        self.assertIn(self.guard.guard_resume(self.system, self.project)['decision'], {'PROJECT_NOT_ACTIVE', 'STOP_REBASE_REQUIRED'})
+    def test_historical_pre_repair_fixture_fails_closed(self):
+        historical = historical_stale_system(self.system)
+        self.assertEqual(self.guard.guard_resume(historical, self.project)['decision'], 'PROJECT_NOT_ACTIVE')
+        historical['portfolio_frontier']['active_project']['project_id'] = self.project['project_id']
+        self.assertEqual(self.guard.guard_resume(historical, self.project)['decision'], 'STOP_REBASE_REQUIRED')
 
-    def test_post_repair_guard_executes_exact_project_frontier(self):
+    def test_current_router_executes_exact_project_frontier(self):
+        result = self.guard.guard_resume(self.system, self.project)
+        self.assertEqual(result['decision'], 'EXECUTE', result)
+        self.assertEqual(result['project_id'], self.project['project_id'])
+        self.assertEqual(result['selected_next_action'], self.project['next_obligation'])
+
+    def test_repair_is_idempotent_on_current_router(self):
         patched = self.repair.patch_system(self.system, self.project)
         result = self.guard.guard_resume(patched, self.project)
         self.assertEqual(result['decision'], 'EXECUTE', result)
-        self.assertEqual(result['project_id'], 'IVDIVO_BOOK_3_SMITH')
-        self.assertEqual(result['selected_next_action'], self.project['next_obligation'])
+        self.assertEqual(patched['portfolio_frontier']['active_project'], self.system['portfolio_frontier']['active_project'])
 
     def test_system_patch_is_bounded(self):
         after = self.repair.patch_system(self.system, self.project)
