@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.1",
+  "cycle": "CYCLE9_REAL_INTERRUPTION_PROMOTION_CALIBRATION",
+  "authority_effect": "NONE_CANDIDATE_EVIDENCE_ONLY",
+  "current_engine": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
+  "candidate_focus": {
+    "SI-0014": "READY_FOR_PILOT",
+    "SI-0015": "READY_FOR_PILOT",
+    "V3_REFERENCE_INGEST": "CANDIDATE_HOLD"
+  },
+  "real_incident": {
+    "observed": true,
+    "qualifying_si0014_event": true,
+    "genuine_events": 1,
+    "required_events": 3,
+    "distinct_projects_recovered": 2,
+    "required_projects": 2,
+    "zero_false_resume": true,
+    "promotion_authorized": false
+  },
+  "run32": {
+    "complete": true,
+    "pass": 31,
+    "hold": 1,
+    "fail": 0,
+    "ledger_sha256": "42904e011c8e1ab98c4254e58d7469b968e41c68411b2a7892fd835c4610b4ff"
+  },
+  "regression": {
+    "warm_tests": 33,
+    "warm_status": "PASS",
+    "cold_tests": 33,
+    "cold_status": "PASS",
+    "compileall": "PASS"
+  },
+  "publication_main_sha": "7718de5b1b02a408414e0a566565d5e5b34b8f86",
+  "next64": "docs/03_NEXT64_CYCLE10.md",
+  "next64_count": 64,
+  "promotion_decision": "NO_NEW_TOP_LEVEL_ENGINE_NO_NEW_SI_ID",
+  "next_gate": "TWO_MORE_GENUINE_SI0014_EVENTS_PLUS_SI0015_REAL_SLICE_CALIBRATION_PLUS_SCOPED_V3_PRODUCTION_PILOT"
+}
