@@ -1,0 +1,36 @@
+{
+  "schema_version": "ivdivo.room917_ru_pre_canary_binding_review/1.0",
+  "date": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "status": "PRE_CANARY_REVIEW_PENDING",
+  "classification": "HUMAN_PROVIDER_PREVIEW_REVIEW_NOT_ACTING_EVIDENCE",
+  "purpose": "Select durable native-RU provider voices for bounded canary generation only. This artifact cannot evaluate canary acting and cannot lock cast.",
+  "shortlist_proposal_path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/ROOM917_RU_CAST_SHORTLIST_PROPOSAL.json",
+  "shortlist_proposal_sha256": "",
+  "provider_snapshot_path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json",
+  "provider_snapshot_sha256": "",
+  "roles": {
+    "ELENA": {"selected_voice_id":"","provider_name":"","preview_listen":"PENDING","provider_identity_check":"PENDING","provider_durability_check":"PENDING","plausible_for_canary":"PENDING","notes":""},
+    "JULIAN": {"selected_voice_id":"","provider_name":"","preview_listen":"PENDING","provider_identity_check":"PENDING","provider_durability_check":"PENDING","plausible_for_canary":"PENDING","notes":""},
+    "MINA": {"selected_voice_id":"","provider_name":"","preview_listen":"PENDING","provider_identity_check":"PENDING","provider_durability_check":"PENDING","plausible_for_canary":"PENDING","notes":""},
+    "CATE": {"selected_voice_id":"","provider_name":"","preview_listen":"PENDING","provider_identity_check":"PENDING","provider_durability_check":"PENDING","plausible_for_canary":"PENDING","notes":""}
+  },
+  "all_selected_voice_ids_unique": "PENDING",
+  "pre_canary_review_complete_rule": "Set PRE_CANARY_REVIEW_COMPLETE only when each selected voice exists in the sealed shortlist, preview listen PASS, provider identity PASS, durability PASS, plausible_for_canary PASS, and selected voice IDs are unique.",
+  "acting_evidence_complete": false,
+  "pronunciation_canary_gate": "NOT_RUN_YET",
+  "pair_tests": "NOT_RUN_YET",
+  "repeat_take_identity_consistency": "NOT_RUN_YET",
+  "founder_cast_credibility": "NOT_RUN_YET",
+  "paid_s0_authorized": false,
+  "cast_lock": false,
+  "full_e01_render_allowed": false,
+  "hard_rules": [
+    "PROVIDER_PREVIEW_IS_NOT_CANARY_ACTING_EVIDENCE",
+    "NO_PRONUNCIATION_PASS_FROM_METADATA_ONLY",
+    "NO_PAIR_CHEMISTRY_PASS_BEFORE_PAIR_AUDIO_EXISTS",
+    "NO_FOUNDER_CAST_PASS_BEFORE_CANARY_LISTEN",
+    "NO_CAST_LOCK_FROM_THIS_ARTIFACT"
+  ]
+}
