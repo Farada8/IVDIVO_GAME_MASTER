@@ -1,0 +1,79 @@
+{
+  "schema": "ivdivo.conversation_closure/1.0",
+  "timestamp_local": "2026-08-22T15:00:00+01:00",
+  "purpose": "Durable restart state for the substantive work completed in this ChatGPT conversation before the chat is closed.",
+  "source_basis": [
+    "current conversation",
+    "GitHub main/current files and PR evidence read during the conversation",
+    "Google Drive semantic readbacks performed during the conversation"
+  ],
+  "authority_law": {
+    "chat_only_state": "DISCOVERY_ONLY unless persisted and read back",
+    "unknowns": "UNKNOWN/TBD/HOLD must remain explicit; never synthesize missing evidence",
+    "proof_planes": "PA != K != S != E; one proof plane cannot silently substitute for another",
+    "current_pointer_rule": "CURRENT pointers/overlays supersede stale queue/frontier text; immutable base files retain dependencies/acceptance",
+    "artifact_rule": "significant work must be persisted to GitHub and/or Drive with readback/CI where applicable",
+    "copyright_rule": "private raw copyrighted books remain Drive/private; GitHub stores derived mechanisms/contracts/tests/provenance only"
+  },
+  "repo": {
+    "name": "Farada8/IVDIVO_GAME_MASTER",
+    "main_sha_at_snapshot": "73dcdf741a51e2c0c764af34efd52b0dad828201",
+    "production_launch_current_path": "SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_PRODUCTION_LAUNCH_STATE.json",
+    "production_launch_current_frontier": "PL-10",
+    "production_launch_current_verified": ["PL-00","PL-01","PL-02","PL-03","PL-04","PL-05","PL-06","PL-07","PL-08","PL-09","PL-11","PL-13","PL-14"]
+  },
+  "production_launch": {
+    "PL-00": {"state":"DONE_VERIFIED","implementation_pr":287,"merge_sha_prefix":"2264d7b1"},
+    "PL-01": {"state":"DONE_VERIFIED","implementation_pr":294,"merge_sha_prefix":"566fbc00"},
+    "PL-02": {"state":"DONE_VERIFIED","corrective_pr":309,"note":"r4 versioned memory/source-trace hardening; earlier weaker variants superseded"},
+    "PL-03": {"state":"DONE_VERIFIED","implementation_pr":416,"merge_sha":"8ef8195cb4d3d3d7562aa9d85812dc6d2244a720","ci":"11/11 SUCCESS"},
+    "PL-04": {"state":"DONE_VERIFIED","baseline_pr":321,"corrective_pr":328,"corrective_merge_sha_prefix":"268a7d33","note":"four-method provider contract generate/analyze/classify/extract"},
+    "PL-05": {"state":"DONE_VERIFIED","baseline_pr":336,"corrective_pr":366,"corrective_merge_sha_prefix":"a3a199e9","closure_pr":371,"note":"bounded AgentDefinition, allowlisted tools, CALL_TOOL/OBSERVE, timeout, max_steps, output schema"},
+    "PL-06": {"state":"DONE_VERIFIED","implementation_pr":378,"merge_sha":"2d4cb04a9349bf5114d3718107ff4caba8db0b0c","ci":"8/8 SUCCESS","note":"fail-closed Business Core; missing price/rate/margin => TBD, never fabricated zero"},
+    "PL-07": {"state":"DONE_VERIFIED","implementation_pr":432,"merge_sha":"94af23c089d209677c7a3076be76b80eaab42050","closure_pr":445,"closure_merge_sha_prefix":"fb9cd849","ci":"14/14 SUCCESS","note":"Business Research with evidence ceiling + future-source firewall"},
+    "PL-08": {"state":"DONE_VERIFIED","implementation_pr":386,"merge_sha_prefix":"0fde6da5","hardening_pr":393,"closure_pr":402,"closure_merge_sha_prefix":"7212a158","note":"book state machine; continuity PASS hash-bound to content; stale PASS cannot authorize FINAL"},
+    "PL-09": {"state":"DONE_VERIFIED","implementation_pr":408,"merge_sha":"dc4ade0a99ce42c541a21c79a4d3326368ade2e1","ci":"10/10 SUCCESS","note":"deterministic continuity checker; zero issues never auto-writes PASS"},
+    "PL-11": {"state":"DONE_VERIFIED","note":"Test Benchmark Runner was already integrated in parallel and participates in cumulative CI"},
+    "PL-13": {"state":"DONE_VERIFIED","implementation_pr":423,"merge_sha":"b5cd70364b0b17c040bd8263a33e872c9819264e","closure_pr":426,"ci":"12/12 SUCCESS","note":"bounded .txt/.md/.json/.csv ingestion, raw/content hashes, dedupe, provenance"},
+    "PL-14": {"state":"DONE_VERIFIED","implementation_pr":462,"merge_sha":"74c4440c3d2fed9ea23369b3301a25b0fb2762fa","verified_head":"c51ced26517d16dbda79d16472059c6609454504","ci":"14/14 SUCCESS","drive_folder_id":"14T9TeOQ0BzoRm3N3eLz0YlL9rsz0xKma","drive_document_id":"19PVWtr35YRgKGwyO7alDNKymOC6Hy2ODYeMQ77XGxQI","drive_marker":"PERSONAL-AI-PL14-DONE-VERIFIED-PR462-CI14OF14-SOURCE-SEPARATED-NO-FABRICATION","note":"project-local source-separated literal retrieval; NO_HIT => UNKNOWN; retrieval != truth"},
+    "PL-10": {
+      "state":"IN_PROGRESS_NOT_VERIFIED",
+      "branch":"production-launch/pl10-multi-model-review-20260822",
+      "last_observed_delta":"4 commits ahead of then-current main, no PR yet",
+      "implemented_files":["personal-ai/review/README.md","personal-ai/review/__init__.py","personal-ai/review/service.py","personal-ai/review_cli.py"],
+      "implemented_mechanisms":["frozen input","separate immutable critic artifacts","network authorization gate","aggregation after terminal critic results","hash verification","consensus_claimed=false","truth_claimed=false"],
+      "mandatory_next_audit":["verify required review dimensions correctness/completeness/consistency/usefulness/risk","verify machine test proving Critic A/B/C cannot see each other's responses before aggregation","do not mark DONE_VERIFIED until tests/CI/Drive readback close these invariants"]
+    }
+  },
+  "business_engineering": {
+    "last_directly_reconciled_cycle_state":"P97-P224 executed; later P257-P272 and P288 reconciliation also executed; do not repeat previously closed runs",
+    "ballybunion_target":"eTenders resource 8872468",
+    "root_blockers":["TARGET_PACK_NOT_ACQUIRED","NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET"],
+    "supplier_state":"PARTIAL evidence only; company identity/CORE screen, Revenue account evidence and self-issued EWI delivery records exist; tax clearance, insurance, independent payment/completion proof and tender eligibility remain unproven",
+    "critical_laws":["TARGET_WORKSPACE != TARGET_FULL_PACK","PRIOR_PACK != CURRENT_REQUIREMENTS","BENCHMARK_PACK != TARGET_PACK","invoice amount != received payment","registry presence/status screen != fresh CRO certificate unless dated/proven","Revenue correspondence/statement != Tax Clearance Certificate","company existence != bidder designation"]
+  },
+  "public_art_cluain": {
+    "case":"Cluain na Coillte / PAC8",
+    "authority":"official Roscommon brief; budget ceiling EUR112,500 incl VAT; deadline 2026-09-07 16:00",
+    "case_state":"KEEP_PREPARE_CONDITIONAL_SUBMISSION_PACK; GO_TO_SUBMIT=false",
+    "merged_case_pr":212,
+    "merged_project_evidence_replay_pr":226,
+    "primary_concept":"THE LIVING THRESHOLD / THE MEADOW OPENS",
+    "fallback":"ROOTS / ROUTES / HOME",
+    "community_variant":"THE COMMON MEADOW / 51 SIGNS OF BELONGING",
+    "real_blocker":"0/3 submission-ready Class-A prior-project records at last project-evidence recovery; project-level provenance remains priority over visual polish",
+    "evidence_rules":["PORTFOLIO_WORK != PUBLIC_ART_DELIVERY_CASE","EMPLOYMENT_HISTORY != THREE_NAMED_PROJECTS","UNKNOWN_PROJECT_BUDGET_STAYS_UNKNOWN","working titles remain labeled working titles","archive loss explains gaps but does not prove missing fields"]
+  },
+  "restart": {
+    "first_reads":[
+      "SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_PRODUCTION_LAUNCH_STATE.json",
+      "SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22/CURRENT_HANDOFF.md",
+      "RECOVERY/CONVERSATION_CLOSURES/2026-08-22_1500_FULL_SESSION_CLOSURE.md",
+      "this JSON file"
+    ],
+    "production_launch_next":"Continue PL-10 Multi-Model Review from existing branch; audit isolation + required dimensions before tests/PR/CI/Drive closure.",
+    "business_next":"Do not run gated tender cards until real target pack and explicit bidder designation/packet exist; acquisition beats meta-analysis.",
+    "cluain_next":"Recover three real named project records with client/context/timeframe/budget-or-authoritative-NA/photos/role/delivery context before spending more time on final jury visuals.",
+    "do_not_repeat":["closed PL-00..PL-09/PL-11/PL-13/PL-14 work","P288 fresh-read reconciliation","stale/superseded PRs","research that only reproduces already-known HOLDs"]
+  }
+}
