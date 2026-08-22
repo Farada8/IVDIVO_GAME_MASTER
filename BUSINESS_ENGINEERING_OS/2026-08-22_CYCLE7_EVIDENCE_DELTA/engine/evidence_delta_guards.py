@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Optional
+from typing import Optional, Sequence
 
 IDENTITY_FIELDS = {"legal_name", "legal_form", "formation_activity_code"}
 
@@ -33,6 +33,37 @@ def bind_formation_evidence(field: str, value: Optional[str]) -> EvidenceBinding
         False,
         "FORMATION_DOC_NOT_CAPABILITY_EVIDENCE",
     )
+
+
+def resolve_versioned_formation_field(values: Sequence[str]) -> dict:
+    """Never collapse conflicting formation-form versions into a current registry fact."""
+    distinct = sorted({v for v in values if v})
+    if not distinct:
+        return {"value": None, "status": "UNKNOWN_NO_FORMATION_VERSION"}
+    if len(distinct) == 1:
+        return {
+            "value": distinct[0],
+            "status": "SINGLE_FORMATION_VERSION_NOT_CURRENT_REGISTRY_PROOF",
+        }
+    return {
+        "value": None,
+        "status": "CONFLICTING_FORMATION_VERSIONS_FINAL_AUTHORITY_REQUIRED",
+        "observed_versions": distinct,
+    }
+
+
+def registry_presence_state(*, listed: bool, active_status_proven: bool = False) -> dict:
+    """A public registry/index listing proves presence, not active/inactive legal status."""
+    if not listed:
+        return {"presence": False, "status": "NOT_OBSERVED"}
+    return {
+        "presence": True,
+        "status": (
+            "ACTIVE_STATUS_PROVEN"
+            if active_status_proven
+            else "PUBLIC_REGISTRY_PRESENCE_ONLY_ACTIVE_STATUS_UNKNOWN"
+        ),
+    }
 
 
 def split_blocker_state(
