@@ -1,0 +1,66 @@
+{
+  "schema_version": "ivdivo.room917_en_ru_audio_pointer/1.0",
+  "updated": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "active_branch": "THE_INSURABLE_FIRE",
+  "story_status": "LOCKED",
+  "delivery_mode": "FULL_AUDIO_DRAMA",
+  "bilingual_control": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json",
+  "parity_validator": "AUDIO_PRODUCTION/ROOM917/TOOLS/EN_RU_PARITY_v1/validate_en_ru_parity.py",
+  "parity_workflow": ".github/workflows/room917-en-ru-parity.yml",
+  "shared_law": "ONE_PHYSICAL_GREYHAVEN__LOCALE_SPECIFIC_ACTING__NO_CLUE_OR_SOUND_IDENTITY_DRIFT",
+  "english": {
+    "pointer": "AUDIO_PRODUCTION/ROOM917/CURRENT_SOUND_DESIGN_POINTER.json",
+    "status": "POST_RENDER_EVALUATION_AND_SELECTIVE_REPAIR",
+    "existing_master": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "expected_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "expected_duration_seconds": 658.190,
+    "whole_episode_rerender": "FORBIDDEN",
+    "current_proven_failure": "D003_PRE_SCENE3_ROOM_BED_CONTINUITY_UNDERCOVERAGE_AGGREGATE_ONLY",
+    "current_blocker": "EXACT_MASTER_BYTES_OR_TRUSTED_EXACT_PRE_SCENE3_INTERVAL_TIMING_REQUIRED",
+    "file_library_exact_master_search_2026_08_22": "NOT_FOUND_AS_REACQUIRABLE_EXACT_WAV",
+    "listener_qc": "READY_WAITING_FOR_IDENTIFIED_AUDIO",
+    "next": "RECOVER_EXACT_MASTER_BYTES_OR_ACCEPTED_TIMING_THEN_P003A2_AND_SMALLEST_AUTHORIZED_REPAIR"
+  },
+  "russian": {
+    "pointer": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/CURRENT_RU_PILOT_POINTER.json",
+    "status": "RU_NATIVE_DISCOVERY_ZERO_SPEND_PENDING_SNAPSHOT__PAID_S0_HARD_GATED",
+    "cast_lock": false,
+    "whole_episode_paid_render": "FORBIDDEN_BEFORE_CAST_GATE",
+    "voice_discovery_workflow": ".github/workflows/room917-ru-voice-discovery.yml",
+    "zero_spend_retrigger_commit": "3d969b2e012c5dd9702b1b653d33a17f41e2b5ff",
+    "provider_snapshot": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json",
+    "provider_snapshot_current_presence": "NOT_YET_PRESENT_IN_MAIN_AT_LAST_READBACK",
+    "paid_canary": "REQUIRES_NATIVE_BINDINGS_PLUS_EXPLICIT_confirm_spend_YES",
+    "next": "READ_FRESH_NATIVE_RU_PROVIDER_SNAPSHOT__PREVIEW_TOP_CANDIDATES__SHORTLIST_UP_TO_3_PER_ROLE__THEN_BOUNDED_S0"
+  },
+  "shared_story_sound_ids": [
+    "NORMAL_916_SELECTOR_CLACK",
+    "NORMAL_916_GLASS_PING",
+    "TRANSFORMER_50HZ_IDENTITY",
+    "IMPOSSIBLE_INTERNAL_DOUBLE_RING",
+    "UNMARKED_LAMP_PING_BEYOND_916",
+    "COPPER_HISS",
+    "TWO_PART_LINE_CUT",
+    "FOUR_NOTE_LULLABY_IDENTITY"
+  ],
+  "scene3_machine_id_repairs_this_pass": [
+    "ACTORS_ORIENT_TO_PANEL -> ORIENT_TO_PANEL",
+    "CATE_CLEAN_HUMAN_SOURCE_THROUGH_TRANSMISSION_POST -> CATE_CLEAN_HUMAN_SOURCE_THROUGH_POST_CHAIN"
+  ],
+  "listener_qc_questions_both_locales": [
+    "DO_I_BELIEVE_THE_ACTOR",
+    "WHERE_DO_I_HEAR_AI",
+    "WHERE_DOES_THE_SCENE_DIE",
+    "IS_SPATIAL_GEOGRAPHY_CLEAR",
+    "DOES_THE_MYSTERY_WORK_ON_ONE_LISTEN",
+    "DO_SFX_OR_MUSIC_MASK_WORDS_OR_CLUES"
+  ],
+  "release_policy": {
+    "repair_smallest_failed_layer_only": true,
+    "human_listen_not_simulated": true,
+    "paid_provider_evidence_not_simulated": true,
+    "scale_e02_e24_before_e01_quality_proof": false
+  }
+}
