@@ -1,43 +1,37 @@
 {
-  "schema": "ivdivo.general_business.agent_commerce_scanner/0.1",
+  "schema": "ivdivo.general_business.agent_commerce_scanner/0.2",
   "date": "2026-08-22",
-  "prompt": "P-EW01",
-  "status": "CLOSED_ENGINEERING_GATE_P_EW02_NOT_EXECUTED",
+  "prompt": "P-EW02_CALIBRATION_PATCH",
+  "status": "RULESET_2026_08_22_2_PENDING_EXACT_HEAD_CI",
   "parent_candidate": "OW-01_AGENTIC_COMMERCE_MERCHANT_READINESS",
-  "ruleset_version": "2026-08-22.1",
+  "ruleset_version": "2026-08-22.2",
+  "prior_ruleset": "2026-08-22.1",
+  "reproducible_divergence": "REST_ONLY_ASSUMPTION_COULD_FALSE_FAIL_VALID_MCP_A2A_EMBEDDED_AND_PUBLIC_ORDER_UNKNOWN",
   "deliverables": {
     "spec": "00_SPEC.md",
     "runtime": "scanner.py",
     "tests": "tests/test_scanner.py",
+    "patch_note": "02_PEW02_RULESET_FALSE_POSITIVE_PATCH.md",
     "workflow": ".github/workflows/general-business-agent-commerce-scanner-v0.yml"
   },
   "rule_families": {
     "openai_feed": ["OAI-FEED-00", "OAI-FEED-01", "OAI-FEED-02", "OAI-FEED-03", "OAI-FEED-04", "OAI-FEED-05", "OAI-FEED-06"],
-    "ucp": ["UCP-00", "UCP-01", "UCP-02", "UCP-03", "UCP-04", "UCP-05", "UCP-06", "UCP-07", "UCP-08", "UCP-09", "UCP-10", "UCP-11"]
+    "ucp": ["UCP-00", "UCP-01", "UCP-02", "UCP-03", "UCP-04", "UCP-05", "UCP-05P", "UCP-06", "UCP-07", "UCP-08", "UCP-09", "UCP-10", "UCP-11"]
   },
-  "canary_count": 8,
-  "canary_result": "PASS_8_OF_8",
-  "exact_head_ci": {
-    "scanner_workflow_run": 32557818333,
-    "scanner_workflow_conclusion": "success",
-    "inherited_general_business_runs": [32557818320, 32557818307, 32557818255, 32557818300],
-    "inherited_general_business_conclusion": "success"
-  },
-  "drive": {
-    "document_id": "1jQWbGb57Fh9pRlbsQexlKzqJGsle7NMACWGN8HxOyso",
-    "parent_folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
-    "semantic_readback": true,
-    "readback_marker": "AGENT-COMMERCE-SCANNER-V0-P-EW01-DRIVE-20260822"
-  },
+  "supported_ucp_transports": ["rest", "mcp", "a2a", "embedded"],
+  "canary_count": 14,
+  "canary_result": "PENDING_EXACT_HEAD_CI",
   "p_ew01_executed": true,
   "p_ew02_executed": false,
+  "p_ew02_calibration_patch": true,
   "proof_boundary": {
     "public_evidence_ceiling": "E2_PLUS",
     "platform_approval": false,
     "wtp": "UNKNOWN",
     "transaction": "NONE",
-    "profitability": "UNPROVEN"
+    "profitability": "UNPROVEN",
+    "scanner_patch_is_market_validation": false
   },
   "external_action_authorized": false,
-  "next_gate": "P-EW02_TEN_REAL_PUBLIC_MERCHANT_BLIND_TEST"
+  "next_gate": "EXACT_HEAD_CI_THEN_RESUME_PREDECLARED_TEN_REAL_PUBLIC_MERCHANT_BLIND_TEST"
 }
