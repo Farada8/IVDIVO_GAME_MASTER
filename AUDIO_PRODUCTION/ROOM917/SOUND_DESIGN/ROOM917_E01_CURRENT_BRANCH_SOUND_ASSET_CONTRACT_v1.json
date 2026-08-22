@@ -1,0 +1,97 @@
+{
+  "schema_version": "room917.e01_sound_asset_contract/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "SPEC_READY_AUDIO_BYTES_NOT_YET_VERIFIED",
+  "source_authority": {
+    "drive_id": "1Rz_Tv83fNhQIuPnMA4jRkESmgiu8xA-GZnctbQYDP_I",
+    "revision_id": "AIroW35akh5K-jiaYRt8MsVE766IodPxPzb_8ueRhxFW36LZv5aJP_vTzTR7KZhJULqdCk5aTTiDvO4ncVEn0z521VzUp_jLDbvK_V7Fa50",
+    "title": "ROOM 917 — E01 ELEVENLABS ACTOR + SOUND DIRECTOR MASTER v1.0"
+  },
+  "laws": [
+    "DIALOGUE_IS_REFERENCE_LAYER",
+    "SOUND_MUST_NOT_MANUFACTURE_FEAR",
+    "NO_ASSET_MAY_CREATE_A_FACT_NOT_PRESENT_IN_AUTHORITY",
+    "NO_GENERIC_FOLEY_SPAM",
+    "NO_BLANKET_MUSIC_BED",
+    "NO_FINAL_PRODUCTION_GAIN_MAY_BE_INFERRED_FROM_THIS_SPEC",
+    "PATCH_BINDING_REQUIRES_EXPLICIT_CANDIDATE_ID_SHA256_AND_GAIN_DB",
+    "STORY_CRITICAL_CUES_MUST_SURVIVE_MONO_AND_PHONE_PROXY",
+    "SCENE3_ASSETS_DO_NOT_AUTHORIZE_REOPENING_PROTECTED_SCENE3_LINEAGE"
+  ],
+  "audition_offset_guides_db_below_dialogue": {
+    "normal_ambience": [18, 26],
+    "ordinary_foley": [12, 20],
+    "clue_sfx": [6, 12],
+    "music_typical_minimum": 20,
+    "note": "Starting audition guides only; every production binding must carry an explicit tested gain_db."
+  },
+  "delivery_normalization_target": {
+    "sample_rate_hz": 48000,
+    "bit_depth": 24,
+    "channels": 2,
+    "pcm_uncompressed_preferred": true,
+    "law": "Candidate source may originate elsewhere, but a production-bound asset must be normalized and identity-checked before use."
+  },
+  "assets": {
+    "A01_GREYHAVEN_LOBBY_30S_LOOP": {
+      "class": "AMBIENCE_BED",
+      "scope": "SCENE1_LOBBY",
+      "repair_eligible_layer": "ROOM_WEATHER_MATERIAL_BED",
+      "bed_expectation": "CONTINUOUS_MATERIAL_PRESENCE",
+      "required_features": ["ATLANTIC_RAIN_AT_TALL_WINDOWS", "DISTANT_WIND", "RADIATOR_TICK", "SPARSE_DISTANT_STAFF_OR_CUTLERY", "LARGE_STONE_ROOM_RESONANCE", "SEAMLESS_LOOP"],
+      "prohibited": ["VOICES", "MUSIC", "HORROR_DRONE", "SUPERNATURAL_SIGNIFIER", "CLUE_LIKE_KNOCKS_OR_WHISPERS"],
+      "audition_role": "NORMAL_AMBIENCE",
+      "production_candidate_status": "UNBOUND"
+    },
+    "A02_SWITCHBOARD_ALCOVE_30S_LOOP": {
+      "class": "AMBIENCE_BED",
+      "scope": "SCENE1_TO_SCENE2_SWITCHBOARD_ALCOVE",
+      "repair_eligible_layer": "ROOM_WEATHER_MATERIAL_BED",
+      "bed_expectation": "CONTINUOUS_BUT_CHANGED_MATERIAL_PRESENCE",
+      "required_features": ["SMALLER_CARPETED_ALCOVE", "RAIN_MUTED_BY_DISTANCE", "OLD_WOOD_CABINET_MATERIAL", "FAINT_BUILDING_RESONANCE", "SEAMLESS_LOOP"],
+      "prohibited": ["VOICES", "MUSIC", "HORROR_TONE", "SUPERNATURAL_SIGNIFIER", "FALSE_RELAY_OR_TELEPHONE_CLUE"],
+      "audition_role": "NORMAL_AMBIENCE",
+      "production_candidate_status": "UNBOUND"
+    },
+    "A03_0117_NIGHT_ROOMTONE_30S_LOOP": {
+      "class": "AMBIENCE_BED",
+      "scope": "SCENE3_PROTECTED",
+      "repair_eligible_layer": "NONE_WITHOUT_NEW_DIRECT_REGRESSION_EVIDENCE",
+      "required_features": ["NEAR_SILENT_OLD_HOTEL", "SMALL_CLOCK_MECHANISM", "FAINT_TRANSFORMER_HUM", "RECORDER_MECHANICS", "DISTANT_BUILDING_SETTLING"],
+      "prohibited": ["OMINOUS_DRONE", "Horror_SCORE", "GHOST_EFFECT"],
+      "audition_role": "NORMAL_AMBIENCE",
+      "production_candidate_status": "PROTECTED_SCENE3_DO_NOT_REBIND_FROM_D003"
+    },
+    "S01_REVOLVING_DOOR_GROAN": {"class":"CAUSAL_SFX","function":"ARRIVAL_GEOGRAPHY","story_critical":false,"production_candidate_status":"UNBOUND"},
+    "S02_JULIAN_MEASURED_STEPS_STONE": {"class":"FOLEY","function":"CHARACTER_APPROACH_AND_STATUS_WITHOUT_DOMINANCE","story_critical":false,"prohibited":["ALPHA_GROWL_EQUIVALENT_STAGING"],"production_candidate_status":"UNBOUND"},
+    "S03_KEYRING_PLACED_ON_DESK": {"class":"FOLEY","function":"CONTROLLED_OBJECT_ACTION","story_critical":false,"required_features":["PLACED_NOT_TOSSED"],"production_candidate_status":"UNBOUND"},
+    "S04_FLIGHT_CASE_OPEN": {"class":"FOLEY","function":"PROFESSIONAL_TOOL_REALITY","story_critical":false,"required_features":["LATCHES","FOAM","COILED_LEADS"],"production_candidate_status":"UNBOUND"},
+    "S05_WOOD_SWITCHBOARD_CABINET_OPEN": {"class":"CAUSAL_SFX","function":"SWITCHBOARD_MATERIAL_IDENTITY","story_critical":false,"production_candidate_status":"UNBOUND"},
+    "S06_DRY_TOGGLE_CLICKS": {"class":"CAUSAL_SFX","function":"NORMAL_SWITCHBOARD_GRAMMAR","story_critical":true,"production_candidate_status":"UNBOUND"},
+    "S07_TRANSFORMER_WAKE": {"class":"CLUE_CONTEXT_SFX","function":"NORMAL_50HZ_SYSTEM_IDENTITY","story_critical":true,"required_features":["SOFT_ORDINARY_ELECTRICAL_HUM"],"prohibited":["HORROR_DRONE"],"production_candidate_status":"UNBOUND"},
+    "S08_RELAY_RIPPLE": {"class":"CLUE_CONTEXT_SFX","function":"NORMAL_CAUSAL_CHAIN","story_critical":true,"required_features":["SEVERAL_NEAT_OLD_MECHANICAL_RELAY_CLICKS"],"production_candidate_status":"UNBOUND"},
+    "S09_CONDUIT_WIND_SCRATCH": {"class":"CLUE_CONTEXT_SFX","function":"CABLE_WEATHER_SIGNATURE","story_critical":true,"required_features":["SUBTLE_CABLE_OR_WEATHER_SIGNATURE"],"production_candidate_status":"UNBOUND"},
+    "S10_SELECTOR_916": {"class":"CLUE_SFX","function":"TEACH_NORMAL_916_GRAMMAR","story_critical":true,"required_features":["ONE_CLEAN_MECHANICAL_SELECTOR_CLACK"],"production_candidate_status":"UNBOUND"},
+    "S11_GLASS_LAMP_916_PING": {"class":"CLUE_SFX","function":"TEACH_NORMAL_916_GRAMMAR","story_critical":true,"required_features":["FAINT_DELICATE_GLASS_PING"],"production_candidate_status":"UNBOUND"},
+    "S12_PROBE_CONTACT_CLICKS": {"class":"CAUSAL_SFX","function":"PHYSICAL_PROBE_SCAN","story_critical":false,"required_features":["SMALL_LEFT_TO_RIGHT_SEQUENCE"],"production_candidate_status":"UNBOUND"},
+    "S13_INTERNAL_DOUBLE_RING_OLD": {"class":"CLUE_SFX","function":"IMPOSSIBLE_EVENT_RING","story_critical":true,"required_features":["SHARP","ORDINARY_OLD_INTERNAL_TELEPHONE","DOUBLE_RING"],"prohibited":["HORROR_PROCESSING","SUB_BASS_HIT"],"minimum_blind_variants":3,"selection_criterion":"COMPREHENSION_PLUS_MEMORABILITY_WITHOUT_HORROR_CLICHE","production_candidate_status":"UNBOUND"},
+    "S14_UNMARKED_GLASS_LAMP_PING": {"class":"CLUE_SFX","function":"IMPOSSIBLE_LAMP_BEYOND_916","story_critical":true,"required_features":["SAME_MATERIAL_FAMILY_AS_S11","SPATIALLY_DISTINCT_FROM_916"],"prohibited":["HORROR_STING"],"minimum_blind_variants":3,"selection_criterion":"COMPREHENSION_PLUS_MEMORABILITY_WITHOUT_HORROR_CLICHE","production_candidate_status":"UNBOUND"},
+    "S15_FIELD_RECORDER_START": {"class":"CAUSAL_SFX","function":"CHAIN_OF_EVIDENCE","story_critical":true,"production_candidate_status":"UNBOUND"},
+    "S16_HEADSET_PLUG_SEAT": {"class":"CAUSAL_SFX","function":"TELEPHONE_ROUTE_PHYSICALITY","story_critical":true,"production_candidate_status":"UNBOUND"},
+    "S17_COPPER_HISS": {"class":"CLUE_SFX","function":"IMPOSSIBLE_ROUTE_LINE_TEXTURE","story_critical":true,"required_features":["NARROW","INTIMATE","LOW_VOLTAGE_OLD_LINE_TEXTURE"],"prohibited":["SUPERNATURAL_REVERB"],"minimum_blind_variants":3,"selection_criterion":"COMPREHENSION_PLUS_MEMORABILITY_WITHOUT_HORROR_CLICHE","production_candidate_status":"UNBOUND"},
+    "S18_THREE_SHALLOW_BREATHS": {"class":"CLUE_PERFORMANCE_LAYER","function":"HUMAN_CALLER_PRESENCE","story_critical":true,"required_features":["HUMAN","DAMAGED_MEDIUM_NOT_SPECTRAL","THREE_COUNTABLE_BREATHS"],"prohibited":["GHOST_WHISPER"],"production_candidate_status":"UNBOUND"},
+    "S19_TWO_PART_LINE_CUT": {"class":"CLUE_SFX","function":"SIGNAL_GRAMMAR","story_critical":true,"required_features":["TWO_MECHANICALLY_DISTINCT_INTERRUPTION_EVENTS","THEN_SILENCE"],"minimum_blind_variants":3,"selection_criterion":"COMPREHENSION_PLUS_MEMORABILITY_WITHOUT_HORROR_CLICHE","production_candidate_status":"UNBOUND"},
+    "S20_FAST_JULIAN_STEPS_AND_DOOR": {"class":"FOLEY_CAUSAL_SFX","function":"JULIAN_RETURNS_BECAUSE_BOARD_IS_LIVE","story_critical":false,"production_candidate_status":"UNBOUND"},
+    "S21_DEAD_LINE_HISS": {"class":"CLUE_AFTERSTATE_SFX","function":"POST_CALL_LINE_STATE","story_critical":true,"production_candidate_status":"UNBOUND"},
+    "M01_END_LOW_PIANO_CHORD": {"class":"MUSIC_BUTTON","function":"FINAL_BUTTON_ONLY","story_critical":false,"required_features":["ONE_RESTRAINED_LOW_PIANO_CHORD"],"prohibited":["GOTHIC_STING","RESOLUTION_SWELL","EARLY_ENTRY_BEFORE_FINAL_SPOKEN_LINE"],"production_candidate_status":"UNBOUND"}
+  },
+  "binding_acceptance": {
+    "required_candidate_fields": ["asset_id","candidate_id","path","sha256","size_bytes","sample_rate_hz","bit_depth","channels","gain_db","audition_status","mono_status","phone_proxy_status"],
+    "allowed_audition_status": ["PASS","HOLD","REJECT"],
+    "production_bindable_status": "PASS",
+    "story_critical_extra_rule": "mono_status and phone_proxy_status must both be PASS before production binding",
+    "room_bed_extra_rule": "loop seam and false-clue audit must PASS before D003 repair binding"
+  }
+}
