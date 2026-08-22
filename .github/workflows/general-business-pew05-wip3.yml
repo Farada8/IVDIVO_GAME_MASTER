@@ -1,0 +1,48 @@
+name: General Business P-EW05 WIP3 Monetization Decision
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_MONETIZATION_LADDER_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/21_PEW05_WIP3_MONETIZATION_DECISION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_pew05_wip3.py'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime/monetization_ladder.py'
+      - '.github/workflows/general-business-pew05-wip3.yml'
+  push:
+    branches:
+      - 'business-engineering/pew05-wip3-monetization-decision-20260822'
+
+jobs:
+  wip3-decision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Run P-EW05 decision tests
+        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_pew05_wip3.py
+      - name: Preserve monetization ladder regression
+        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_monetization_ladder.py
+      - name: Validate current monetization state JSON
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_MONETIZATION_LADDER_STATE.json >/dev/null
+      - name: Assert WIP3 M1 ceiling and proof boundary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_MONETIZATION_LADDER_STATE.json')
+          s=json.loads(p.read_text(encoding='utf-8'))
+          assert s['p_ew05']['decision']=='NO_COMMERCIAL_WINNER_YET'
+          assert s['p_ew05']['m1_count']==3
+          assert s['p_ew05']['m2_or_higher_count']==0
+          assert s['proof_boundary']['wtp'] is None
+          assert s['proof_boundary']['transactions_from_bridge']==0
+          assert s['external_action']['authorized'] is False
+          assert all(s['current_routes'][x]['route']=='M1_FIXED_SCOPE_DIAGNOSTIC_SPEC_READY_NOT_WTP_PROVEN' for x in ('OW-01','CF-01','CF-03'))
+          print('P-EW05 WIP3 decision PASS: all M1, zero M2+, no WTP')
+          PY
+      - name: Compile monetization runtime
+        run: python -m compileall BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
