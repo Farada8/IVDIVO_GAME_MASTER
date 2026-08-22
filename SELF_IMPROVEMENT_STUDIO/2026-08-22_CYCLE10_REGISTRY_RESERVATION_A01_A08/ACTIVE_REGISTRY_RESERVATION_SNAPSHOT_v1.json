@@ -1,0 +1,58 @@
+{
+  "schema": "IVDIVO_ACTIVE_SI_REGISTRY_RESERVATION_SNAPSHOT_v1",
+  "captured_at": "2026-08-22",
+  "repository": "Farada8/IVDIVO_GAME_MASTER",
+  "main_sha": "d4d380c02a43fdc6ebe78f240cb3304a5e442882",
+  "committed_registry": {
+    "family_path": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json",
+    "highest_committed": "SI-0015",
+    "committed_ids": ["SI-0001","SI-0002","SI-0003","SI-0004","SI-0005","SI-0006","SI-0007","SI-0008","SI-0009","SI-0010","SI-0011","SI-0012","SI-0013","SI-0014","SI-0015"],
+    "family_extensions_verified": ["SI-0008","SI-0009","SI-0010","SI-0011","SI-0012","SI-0013","SI-0014","SI-0015"]
+  },
+  "open_pr_metadata_coverage": {
+    "github_search_total_count": 106,
+    "pages_read": 2,
+    "per_page": 100,
+    "incomplete_results": false,
+    "metadata_complete": true
+  },
+  "diff_coverage": {
+    "bulk_diff_attempt": "FAILED_PROVIDER_LIMIT_GT_20000_LINES",
+    "inspected_prs": [147,242,218,206,104,80,245,241,240,228,227,110,251],
+    "all_open_pr_diffs_path_scanned": false,
+    "visibility_complete": false,
+    "hold_reason": "GitHub connector cannot prove that the remaining open PR diffs contain no hidden registry/candidate shard changes without per-PR path scan."
+  },
+  "reservations": [{
+    "candidate_id": "SI-0016",
+    "status": "RESERVED_OPEN_PR",
+    "pr": 147,
+    "branch": "studio/saga100-engineering-cycle32-2026-08-21",
+    "candidate_path": "31_IDEAS/REGISTRY_EXTENSIONS/SI-0016_STRATEGIC_AUTHORITY_DISCOVERABILITY_SCOPE_BOOT.json",
+    "candidate_blob_sha": "8d17f683d42411aad3da6e2a83350781b0575ec1",
+    "candidate_status": "READY_FOR_PILOT",
+    "promotion_level": "NONE_YET",
+    "mechanism": "Scope-aware strategic authority discoverability for long-horizon work",
+    "reservation_basis": "Dedicated SI shard + PR modifies CURRENT_IMPROVEMENT_REGISTRY_FAMILY.json"
+  }],
+  "historical_or_nonreserving": [
+    {"pr":104,"ids":["SI-0012"],"status":"HISTORICAL_PROVENANCE_ONLY","reason":"SI-0012 is already committed on main."},
+    {"pr":80,"ids":["SI-0012","SI-0013"],"status":"CANDIDATE_RECORDS_ONLY_NOT_REGISTRY_WRITE_THROUGH","reason":"File explicitly forbids central registry write-through; IDs are already committed on main."},
+    {"pr":242,"status":"NO_ALLOCATION_EXPLICIT","reason":"Read-only collision guard; PR states no new SI ID and not transactional reservation."},
+    {"pr":218,"status":"NO_ALLOCATION_EXPLICIT","reason":"Cycle32D utility surface; no registry-family/shard path in diff."},
+    {"pr":206,"status":"NO_ALLOCATION_EXPLICIT","reason":"Cycle32D utility surface; no registry-family/shard path in diff."},
+    {"pr":245,"status":"NO_NEW_ID_OBSERVED","reason":"SI-0014 evidence calibration paths only."},
+    {"pr":241,"status":"NO_ALLOCATION_EXPLICIT","reason":"Reuses SI-0015; no new ID."},
+    {"pr":240,"status":"NO_NEW_ID_OBSERVED","reason":"SI-0014 evidence calibration paths only."},
+    {"pr":228,"status":"NO_ALLOCATION_EXPLICIT","reason":"PR states no new SI ID."},
+    {"pr":227,"status":"NO_ALLOCATION_EXPLICIT","reason":"PR states no new SI ID; diff has no registry shard."},
+    {"pr":110,"status":"NO_NEW_ID_OBSERVED","reason":"Cycle5 controls only; diff has no registry shard."},
+    {"pr":251,"status":"NO_ALLOCATION_EXPLICIT","reason":"Uses 31_IDEAS/PENDING/UNASSIGNED_* and explicitly states no global SI ID because PR #147 reserves SI-0016."}
+  ],
+  "allocation_result": {
+    "status": "HOLD_PARTIAL_VISIBILITY",
+    "next_unreserved": null,
+    "allocation_authorized": false,
+    "important": "SI-0017 is NOT declared free."
+  }
+}
