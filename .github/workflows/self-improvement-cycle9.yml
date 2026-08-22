@@ -1,0 +1,22 @@
+name: Self-Improvement Cycle9
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE9_REAL_INTERRUPTION_PROMOTION_CALIBRATION_2026-08-22/**'
+      - 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/**'
+      - '.github/workflows/self-improvement-cycle9.yml'
+  workflow_dispatch:
+jobs:
+  regression:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Cycle9 deterministic suite + sequential executor
+        run: |
+          cd SELF_IMPROVEMENT_ENGINE/CYCLE9_REAL_INTERRUPTION_PROMOTION_CALIBRATION_2026-08-22
+          PYTHONPATH=. python -m unittest discover -s tests -v
+          PYTHONPATH=. python engine/run_cycle9.py
+          python -m compileall -q engine
