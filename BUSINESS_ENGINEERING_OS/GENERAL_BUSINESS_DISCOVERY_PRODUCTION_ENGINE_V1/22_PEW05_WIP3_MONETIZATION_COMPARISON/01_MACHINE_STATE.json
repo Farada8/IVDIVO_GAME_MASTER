@@ -2,7 +2,7 @@
   "schema": "ivdivo.general_business.pew05_wip3_comparison/1.0",
   "date": "2026-08-22",
   "gate": "P-EW05",
-  "status": "COMPARISON_BUILT_CI_PENDING",
+  "status": "COMPARISON_BUILT_DRIVE_VERIFIED_CI_PENDING",
   "authority": {
     "pew03": {
       "controlling_pr": 367,
@@ -35,8 +35,9 @@
   "drive": {
     "folder_id": "1wBeN1p_a83AQYpZhjTJ-FCqoeLsgwRAk",
     "document_id": "1fcJgo4GKoGuXzYE-HAKANxYTt9tIhkDUwpN51W1mAQw",
+    "readback_revision_id": "AIroW37bp08E8vZXoXiDt73XuEG1ECb5Ez-zQQWox177oSDLsKh10wt_rqh08vUh73awY1PseaZMZhKKidpiK6DBcqN2xPNFtIshkwZh7hk",
     "expected_marker": "P-EW05-WIP3-ALL-M1-OW01-PRIMARY-CF01-PILOT-CF03-PILOT-PEW06-NEXT-NO-MARKET-PROOF",
-    "readback_status": "PENDING"
+    "readback_status": "PASS"
   },
   "proof_boundary": {
     "public_evidence_ceiling": "E2_PLUS_ENGINEERING",
