@@ -1,0 +1,21 @@
+{
+  "schema_version": "ivdivo.room917_ru_s0_native_bindings/1.0",
+  "date": "2026-08-22",
+  "status": "UNBOUND_TEMPLATE",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "provider": "ElevenLabs",
+  "model_id": "eleven_v3",
+  "provider_snapshot_path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json",
+  "provider_snapshot_sha256": "",
+  "founder_paid_canary_authorized": false,
+  "roles": {
+    "ELENA": {"voice_id": "", "provider_name": "", "preview_listen": "PENDING", "provider_identity_check": "PENDING", "selection_note": "grounded adult female; documentary precision; no horror/audiobook cadence"},
+    "JULIAN": {"voice_id": "", "provider_name": "", "preview_listen": "PENDING", "provider_identity_check": "PENDING", "selection_note": "adult male; restrained operational authority; no alpha growl"},
+    "MINA": {"voice_id": "", "provider_name": "", "preview_listen": "PENDING", "provider_identity_check": "PENDING", "selection_note": "adult female; practical warm socially quick; no sitcom cadence"},
+    "CATE": {"voice_id": "", "provider_name": "", "preview_listen": "PENDING", "provider_identity_check": "PENDING", "selection_note": "adult female/mother; ordinary human warmth; no ghost treatment"}
+  },
+  "authorization_rule": "Change status to PAID_S0_AUTHORIZED and founder_paid_canary_authorized=true only after the selected four IDs are present in the sealed native-RU provider snapshot and their previews/identity checks pass.",
+  "cast_lock": false,
+  "full_episode_render_allowed": false
+}
