@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.self_improvement.thread_topic_continuity_guard/0.2",
+  "schema": "ivdivo.self_improvement.thread_topic_continuity_guard/0.3",
   "date": "2026-08-22",
-  "status": "MERGED_CANDIDATE_CI_GREEN_REAL_PILOT_PENDING_NOT_PROMOTED",
+  "status": "MERGED_CANDIDATE_CI_GREEN_REAL_PILOT_1_OF_3_NOT_PROMOTED",
   "authority_effect": "NONE",
   "global_si_id": null,
   "parent_authority": "SELF_IMPROVEMENT_META_ENGINE_V2_VERIFIED_CURRENT",
@@ -18,7 +18,7 @@
     "user_switch_evidence": false,
     "trigger_turn_class": "GENERIC_CONTINUATION",
     "user_correction_received": true,
-    "successful_repaired_pilot_count": 0
+    "successful_repaired_pilot_count": 1
   },
   "core_laws": [
     "SHORT_CONTINUATION_INHERITS_THREAD_TOPIC",
@@ -38,6 +38,7 @@
   "tests": "tests/test_thread_topic_guard.py",
   "workflow": ".github/workflows/si-thread-topic-continuity-guard.yml",
   "pending_candidate": "31_IDEAS/PENDING/UNASSIGNED_THREAD_TOPIC_CONTINUITY_GUARD_2026-08-22.json",
+  "real_pilot_ledger": "SELF_IMPROVEMENT_ENGINE/TOPIC_CONTINUITY/02_REAL_PILOT_LEDGER.json",
   "engineering_receipt": {
     "pr": 448,
     "tested_head_sha": "a30ab623e5a9e53475518fca673a467326357081",
@@ -52,22 +53,36 @@
     "drive_current_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
     "drive_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-MERGED-CANDIDATE-CI-GREEN-20260822"
   },
-  "canary_plan": {
-    "deterministic_canaries_expected": 16,
+  "real_pilot_progress": {
+    "real_continuation_events": 1,
     "real_continuation_events_required": 3,
+    "distinct_project_types": 1,
     "distinct_project_types_required": 2,
+    "false_project_switches": 0,
+    "allowed_false_project_switches": 0,
+    "healthy_explicit_switch_controls": 0,
     "healthy_explicit_switch_controls_required": 2,
+    "side_query_return_controls": 0,
     "side_query_return_controls_required": 1,
-    "allowed_false_project_switches": 0
+    "event_001": {
+      "event_id": "TTG-REAL-001",
+      "turn_class": "GENERIC_CONTINUATION",
+      "user_input": "и",
+      "project_type": "SELF_IMPROVEMENT_ENGINEERING",
+      "outcome": "PASS_REAL_ROUTING_EVENT",
+      "false_project_switch": false,
+      "independent_blind_control": false
+    }
   },
   "proof_boundary": {
     "real_defect_observed": true,
     "engineering_tests_pending": false,
     "engineering_ci_verified": true,
-    "real_repaired_pilot": false,
+    "real_repaired_pilot": true,
+    "real_repaired_pilot_complete": false,
     "verified_current": false,
     "v3_promoted": false
   },
-  "next_gate": "NATURALLY_OCCURRING_REAL_TOPIC_ROUTING_PILOT_AND_HEALTHY_SWITCH_CONTROLS",
-  "readback_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-MERGED-CANDIDATE-CI-GREEN-20260822"
+  "next_gate": "TWO_MORE_NATURALLY_OCCURRING_CONTINUATION_EVENTS_ACROSS_AT_LEAST_ONE_OTHER_PROJECT_TYPE_PLUS_HEALTHY_SWITCH_AND_SIDE_QUERY_CONTROLS",
+  "readback_marker": "SI-THREAD-TOPIC-CONTINUITY-GUARD-REAL-PILOT-1OF3-20260822"
 }
