@@ -30,4 +30,4 @@ jobs:
       - name: Compile Cycle10R runtime
         run: python -m compileall -q SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/engine
       - name: Inherited Run33 session-resilience regression
-        run: python tests/test_session_resilience_run33.py
+        run: PYTHONPATH=. python tests/test_session_resilience_run33.py
