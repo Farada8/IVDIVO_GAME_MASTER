@@ -1,0 +1,45 @@
+{
+  "$schema": "BUSINESS_ENGINEERING_OS_TenderQualificationObject_v1",
+  "tender": {
+    "resource_id": "8872468",
+    "ca_unique_id": "26-002",
+    "title": "Climate Summer Works: Roof replacements and energy efficiency upgrades at St. Joseph’s Secondary School and the adjacent former Convent Building in Ballybunion, Co. Kerry.",
+    "contracting_authority": "St Joseph's Secondary School (Ballybunion)",
+    "published_at": "2026-08-19T10:33:23+01:00",
+    "submission_deadline": "2026-09-02T17:00:00+01:00",
+    "estimated_value_eur": 1600000,
+    "evaluation_mechanism": "MEAT",
+    "official_pack_complete": false,
+    "official_pack_inventory": null
+  },
+  "requirement": {
+    "requirement_id": null,
+    "category": null,
+    "mandatory": null,
+    "requirement_text": null,
+    "evidence_required": null,
+    "supplier_evidence_state": "UNKNOWN",
+    "gap_state": "UNKNOWN",
+    "fatal_if_unmet": null,
+    "curable_before_deadline": null,
+    "source_document": null,
+    "source_revision": null,
+    "source_locator": null,
+    "freshness_checked_at": null,
+    "notes": null
+  },
+  "allowed_gap_states": [
+    "MET",
+    "UNKNOWN",
+    "CURABLE_BEFORE_DEADLINE",
+    "NONCURABLE",
+    "NOT_APPLICABLE"
+  ],
+  "decision_contract": {
+    "bid_decision_allowed": false,
+    "blocked_by": [
+      "INCOMPLETE_OFFICIAL_PACK",
+      "UNVERIFIED_SUPPLIER_PROFILE"
+    ]
+  }
+}
