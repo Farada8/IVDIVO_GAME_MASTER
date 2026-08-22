@@ -1,0 +1,89 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE8_P161_P192_EVIDENCE_ACQUISITION_v1",
+  "date": "2026-08-22",
+  "base_main": "4c656c447f825cad6f8e14f8dfa7797568c633cb",
+  "status": "RUN32_EXECUTED_EVIDENCE_ACQUISITION_FAIL_CLOSED",
+  "target": {
+    "resource_id": "8872468",
+    "document_route_known": true,
+    "attachment_inventory_acquired": false,
+    "full_current_pack": false,
+    "p161": "HOLD_PUBLIC_ROUTE_NO_ATTACHMENT_INVENTORY",
+    "authority_state": "DOCUMENT_ROUTE_KNOWN_ATTACHMENT_INVENTORY_NOT_ACQUIRED",
+    "existence_claim_from_index_absence": "UNKNOWN_NOT_NONEXISTENCE"
+  },
+  "bidder": {
+    "explicit_designation_found": false,
+    "p177": "HOLD_NO_EXPLICIT_BIDDER_DESIGNATION",
+    "company_context": "SYNTHESIS-IVDIVO_LIMITED_IDENTITY_EVIDENCE_EXISTS_BUT_NOT_CASE_BOUND",
+    "supplier_status_v2": "PARTIAL_IDENTITY_ONLY",
+    "company_number": null,
+    "active_status": null,
+    "tax_clearance": null,
+    "insurance": null,
+    "financial_capacity": null,
+    "hs_competence": null,
+    "personnel": null,
+    "references": null,
+    "current_capacity": null,
+    "procurement_eligibility": null
+  },
+  "root_cut_set": [
+    "ROOT_A_TARGET_PACK_NOT_ACQUIRED",
+    "ROOT_B_NO_EXPLICIT_BIDDER_DESIGNATION_AND_PACKET"
+  ],
+  "run32": {
+    "range": "P161-P192",
+    "executed": 32,
+    "pass_schema_engineering": 6,
+    "partial": 1,
+    "hold_blocked": 25,
+    "fabricated_target_requirements": 0,
+    "fabricated_bidder_designations": 0,
+    "fabricated_supplier_capability_claims": 0,
+    "bid_no_bid_assertions": 0,
+    "pa4_promotions": 0,
+    "pa5_promotions": 0,
+    "e3_promotions": 0,
+    "e4_promotions": 0,
+    "outreach": 0,
+    "founder_cash_eur": 0
+  },
+  "engineering": {
+    "modules": 16,
+    "contracts": 24,
+    "proof_gates": 12,
+    "protocols": 8,
+    "runtime": "engine/evidence_acquisition.py",
+    "deterministic_canaries": 32
+  },
+  "next64": {
+    "range": "P193-P256",
+    "count": 64,
+    "designed": true,
+    "executed": 0,
+    "path": "03_NEXT64_P193_P256.md"
+  },
+  "proof_frontier": {
+    "public_ceiling": "E2+",
+    "procurement_artifact": "PA3",
+    "independent_pa4": false,
+    "pa5": false,
+    "e3": false,
+    "e4": false,
+    "wtp": null,
+    "price": null,
+    "profitability": null,
+    "eligibility": null,
+    "legal_clearance": null
+  },
+  "scoped_si_candidates": [
+    "ROUTE_KNOWN_NEQ_AUTHORITY_ACQUIRED",
+    "CASE_IDENTITY_BINDING_REQUIRED_BEFORE_PROFILE_REUSE",
+    "EVIDENCE_DEPENDENCY_CUT_SET_BEFORE_PROMPT_EXPANSION",
+    "NO_LOOP_AFTER_NAVIGATION_BLOCKER_IS_LOCALIZED"
+  ],
+  "global_si_v2": "CURRENT",
+  "global_si_v3": "CANDIDATE_ONLY",
+  "current_gate": "CURRENT_PACK_RECEIPT + EXPLICIT_BIDDER_DESIGNATION + BIDDER_PRIMARY_EVIDENCE -> REQUIREMENT_REGISTRY -> SUPPLIER_PROFILE -> ATOMIC_JOIN -> GAP_ROUTING -> BOUNDED_DECISION -> BLIND_PA4 -> REAL_DECISION_USE"
+}
