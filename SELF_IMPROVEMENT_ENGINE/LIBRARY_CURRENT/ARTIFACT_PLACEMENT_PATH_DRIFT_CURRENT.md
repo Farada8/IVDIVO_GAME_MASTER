@@ -16,13 +16,15 @@ A substantial external artifact may not transition toward verified completion un
 
 Runtime candidate:
 - `personal-ai/core/artifact_placement.py`
+- `personal-ai/core/artifact_placement_adapters.py`
 - `personal-ai/projects/artifact_completion.py`
 - `.github/workflows/artifact-placement-runtime.yml`
 
 Evidence:
 - GitHub issue #356;
-- exact-head CI run 32561883676 = PASS;
+- provider adapters for Google Drive and GitHub implemented with fail-closed regression coverage;
+- exact-head candidate CI run 32568641421 = PASS before the subsequent main-branch freshness drift;
 - two real cross-project placement canaries = 2/2 PLACEMENT_VERIFIED;
 - Drive mirror: `06_SELF_IMPROVEMENT/INCIDENT — ARTIFACT_PLACEMENT_PATH_DRIFT — 2026-08-22`.
 
-Do not infer Self-Improvement promotion from this pointer. Provider-adapter integration and a prospective newly-caught real placement failure remain required before broader promotion.
+Do not infer Self-Improvement promotion from this pointer. Remaining promotion gates are: a prospective newly-caught real placement failure before any false completion claim, and regression against future current persistence/recovery contracts.
