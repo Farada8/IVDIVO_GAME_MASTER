@@ -1,0 +1,181 @@
+{
+  "schema_version": "ivdivo.room917_p003b_pass_b_verification_queue/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "scope": "SCENE3",
+  "status": "READY_AFTER_BLIND_PASS_A_ONLY",
+  "purpose": "Preserve measurable/candidate findings from the real-audio v1.4A naturalness audit for targeted Pass-B verification without contaminating blind Pass A.",
+  "blind_firewall": {
+    "pass_a_must_not_read_this_queue": true,
+    "open_queue_only_after_pass_a_notes_are_frozen": true,
+    "candidate_absence_from_pass_a_is_not_automatic_rejection": true,
+    "candidate_presence_is_not_a_proven_current_defect_until_verified_on_identified_candidate_audio": true
+  },
+  "provenance": {
+    "source_artifact": "ROOM917_E01_SCENE3_v1_4A_NATURALNESS_AUDIT.md",
+    "source_basis": "direct acoustic/timing analysis of uploaded/current v1.4A master, isolated stems, live ElevenLabs dialogue WAVs, provider alignment, remix implementation and cue assets",
+    "source_boundary": "objective measurements are direct; perceptual labels are production inferences, not a recruited human-listening panel",
+    "current_full_master_relationship": "UNPROVEN_VERSION_IDENTITY",
+    "current_full_master_scene3_lineage": "v1.3E_OR_DESCENDANT_TECHNICAL_LINEAGE_PROTECTED_PASS",
+    "rule": "Do not assume the v1.4A candidate list is present in the current full-master tail without direct identity/listen evidence."
+  },
+  "verification_candidates": [
+    {
+      "candidate_id": "S3B001",
+      "question_class": "AI_AUDIBLE",
+      "failure_layer_candidate": "EDIT",
+      "severity_if_confirmed": "MAJOR",
+      "evidence_type": "DIRECT_TIMING_MEASUREMENT",
+      "evidence": {
+        "turn_transitions_measured": 42,
+        "overlaps": 0,
+        "gap_lt_50ms": 27,
+        "gap_50_250ms": 2,
+        "gap_250_700ms": 6,
+        "gap_700_1000ms": 2,
+        "gap_ge_1000ms": 5,
+        "median_gap_ms": 0
+      },
+      "verify_by_ear": "Does dialogue feel turn-based/generated because many lines touch at zero gap while selected tagged lines suddenly wait more than one second?",
+      "minimal_fix_if_confirmed": "Retime only affected joins; create varied human reaction gaps and 2-4 causally justified overlaps/interruptions. Do not rerender all dialogue.",
+      "do_not_touch": ["story_text", "passed_takes_unrelated_to_flagged_joins"]
+    },
+    {
+      "candidate_id": "S3B002",
+      "question_class": "DEAD_SCENE",
+      "failure_layer_candidate": "EDIT",
+      "severity_if_confirmed": "MEDIUM_OR_MAJOR",
+      "evidence_type": "DIRECT_PROVIDER_ALIGNMENT_MEASUREMENT",
+      "anchors": ["MINA_D021", "ELENA_D022", "MINA_D025", "MINA_D029", "MINA_D031", "JULIAN_D047"],
+      "measured_prerolls_seconds": {
+        "MINA_D021": 1.161,
+        "ELENA_D022": 1.201,
+        "MINA_D025": 1.001,
+        "MINA_D029": 1.270,
+        "MINA_D031": 1.432,
+        "JULIAN_D047": 1.304
+      },
+      "verify_by_ear": "Do these waits read as motivated listening/hesitation, or as generated preparation gaps that drain pressure?",
+      "minimal_fix_if_confirmed": "Trim/retime only unmotivated pre-roll. Preserve authored recognition silences and protected silence masks.",
+      "do_not_touch": ["protected_silence", "meaningful_reaction_pauses"]
+    },
+    {
+      "candidate_id": "S3B003",
+      "question_class": "ACTOR_BELIEF",
+      "failure_layer_candidate": "PERFORMANCE_OR_EDIT",
+      "severity_if_confirmed": "MEDIUM_OR_MAJOR",
+      "character": "ELENA",
+      "anchors": ["D004", "D048", "D010", "D026", "D041", "D043", "D045"],
+      "evidence_type": "MEASURED_RATE_PITCH_OUTLIERS_PLUS_PRODUCTION_INFERENCE",
+      "verify_by_ear": "Check only for theatrical sentence-final emphasis, wrong onset, or line-level performance that breaks Elena's controlled professional behavior.",
+      "minimal_fix_if_confirmed": "Try timing/context edit first; selective line/phrase rerender only if the take itself fails.",
+      "do_not_touch": ["ELENA_CAST_IDENTITY_UNLESS_REPEATED_DIRECTIONAL_FAILURE_IS_PROVEN"]
+    },
+    {
+      "candidate_id": "S3B004",
+      "question_class": "ACTOR_BELIEF",
+      "failure_layer_candidate": "PERFORMANCE_OR_EDIT",
+      "severity_if_confirmed": "MEDIUM_OR_MAJOR",
+      "character": "JULIAN",
+      "anchors": ["D033", "D035", "D047", "D051"],
+      "evidence_type": "MEASURED_RATE_PITCH_OUTLIERS_PLUS_PRODUCTION_INFERENCE",
+      "verify_by_ear": "Does Julian remain restrained and operational, especially at the missing-note beat, or become trailer/romance/mystery performance?",
+      "minimal_fix_if_confirmed": "Retime D033/D035 where sufficient; selectively rerender only failed line(s). D047 must ultimately be a real pitched performance asset, not generic 'Hm.'.",
+      "do_not_touch": ["unrelated_Julian_takes"]
+    },
+    {
+      "candidate_id": "S3B005",
+      "question_class": "AI_AUDIBLE",
+      "failure_layer_candidate": "PERFORMANCE_DIRECTION",
+      "severity_if_confirmed": "MAJOR",
+      "character": "MINA",
+      "evidence_type": "DIRECT_TAG_AND_RATE_MEASUREMENT",
+      "evidence": {
+        "warmly_tags": "9/16 lines",
+        "fast_wpm": {"D021": 240, "D023": 231, "D007": 211},
+        "slow_wpm": {"D017": 52, "D019": 42}
+      },
+      "verify_by_ear": "Does Mina sound uniformly 'warm' and generated instead of moving among teasing, practical confirmation, alarm, witness precision, gentleness and protective firmness?",
+      "minimal_fix_if_confirmed": "Change direction/tactic only on failed Mina lines; do not polish temporary voice into canon before cast lock.",
+      "do_not_touch": ["passed_non_Mina_material"]
+    },
+    {
+      "candidate_id": "S3B006",
+      "question_class": "ACTOR_BELIEF",
+      "failure_layer_candidate": "PERFORMANCE_PLUS_MEDIA_POST",
+      "severity_if_confirmed": "MAJOR",
+      "character": "CATE",
+      "anchors": ["LENI_BIRD", "IF_THIS_REACHES"],
+      "evidence_type": "DIRECT_DURATION_RATE_AND_POST_CHAIN_ANALYSIS",
+      "evidence": {
+        "Leni-bird_duration_seconds": 1.008,
+        "Leni-bird_approx_wpm": 60,
+        "If_this_reaches_duration_seconds": 1.211,
+        "If_this_reaches_approx_wpm": 149,
+        "post_chain": "mono ~300-3400 Hz bandpass + saturation/compression-like coloration"
+      },
+      "verify_by_ear": "Does Cate first sound like an ordinary tired human, with the old copper route failing around her, rather than a ghost or generic telephone filter?",
+      "minimal_fix_if_confirmed": "Keep clean-human base take if credible; repair line-medium behavior in post. Recast/rerender only if human performance itself fails.",
+      "do_not_touch": ["no_horror_reverb", "no_spectral_ghost_effects"]
+    },
+    {
+      "candidate_id": "S3B007",
+      "question_class": "GEOGRAPHY",
+      "failure_layer_candidate": "MIX",
+      "severity_if_confirmed": "MAJOR",
+      "evidence_type": "DIRECT_MIX_IMPLEMENTATION_ANALYSIS",
+      "evidence": {
+        "dialogue_space": "actor pan + gain/distance trim + low early reflections near 21/34/58 ms; ~65 ms reflection tail",
+        "foley_space": "panned/leveled but not consistently passed through same acoustic passport"
+      },
+      "verify_by_ear": "Do actors, footsteps and door sound like bodies/actions inside one old switchboard room, and is Julian's approach/recede physically legible without sounding intimate or threatening?",
+      "minimal_fix_if_confirmed": "Apply one coherent switchboard-room acoustic passport with distance-dependent HF loss/direct-reverberant ratio and sends to dialogue/Foley/relevant SFX.",
+      "do_not_touch": ["mono_compatibility", "dialogue_intelligibility", "clue_identity"]
+    },
+    {
+      "candidate_id": "S3B008",
+      "question_class": "SFX_MASKING",
+      "failure_layer_candidate": "MIX",
+      "severity_if_confirmed": "MAJOR",
+      "evidence_type": "DIRECT_CUE_WINDOW_PEAK_MEASUREMENT",
+      "cue_candidates": {
+        "UNMARKED_LAMP_PING": {"dialogue_peak_dbfs": -6.0, "clue_peak_dbfs": -18.0},
+        "RING_STOP_LINE_TRANSITION": {"dialogue_peak_dbfs": -7.0, "clue_peak_dbfs": -15.5},
+        "TWO_PART_LINE_CUT": {"dialogue_peak_dbfs": -6.7, "clue_peak_dbfs": -17.9}
+      },
+      "verify_by_ear": "Are these clue transients actually perceived on headphones, mono and phone/mobile without obscuring words?",
+      "minimal_fix_if_confirmed": "Create ~80-180 ms dialogue micro-space or frequency-selective sidechain around only the clue transient; do not globally raise all SFX.",
+      "do_not_touch": ["clear_first_ring", "global_clue_bus_gain_unless_independently_proven"]
+    },
+    {
+      "candidate_id": "S3B009",
+      "question_class": "AI_AUDIBLE",
+      "failure_layer_candidate": "MIX_SOUND_ASSET",
+      "severity_if_confirmed": "MEDIUM",
+      "evidence_type": "DIRECT_LOOP_IMPLEMENTATION_ANALYSIS",
+      "evidence": {
+        "room_source_seconds": 8,
+        "effective_room_composite_period_seconds": 32,
+        "estimated_room_repeats": "6-7 across 213 s",
+        "clock_source_seconds": 6,
+        "estimated_clock_repeats": 35
+      },
+      "verify_by_ear": "Does repeated room/clock pattern become consciously detectable and expose construction?",
+      "minimal_fix_if_confirmed": "Replace only repeating bed/clock with 60-120 s non-repeating or semi-procedural material and slow stochastic variation; retain accepted dialogue/clues.",
+      "do_not_touch": ["protected_silence", "accepted_dialogue"]
+    },
+    {
+      "candidate_id": "S3B010",
+      "question_class": "MYSTERY",
+      "failure_layer_candidate": "PERFORMANCE_SOUND_PLUS_MUSIC",
+      "severity_if_confirmed": "FATAL_FOR_RELEASE",
+      "evidence_type": "OPEN_RELEASE_GATE",
+      "anchors": ["ELENA_THREE_NOTES", "JULIAN_D047_FOURTH_NOTE", "FINAL_MUSIC_BUTTON"],
+      "verify_by_ear": "Can a listener perceive that Julian involuntarily supplies the exact missing fourth note, and does the final music follow from that material without explaining the mystery?",
+      "minimal_fix_if_confirmed": "Lock shared pitch identity for three-note fragment/fourth note; isolate and rerender only Julian's performance sound if necessary; derive final music button from accepted pitch material only after clue passes.",
+      "do_not_touch": ["story_text", "unrelated_dialogue", "do_not_substitute_generic_hum"]
+    }
+  ],
+  "pass_b_output_rule": "Each candidate becomes VERIFIED_DEFECT, REJECTED_CANDIDATE, or HOLD. Only VERIFIED_DEFECT may compile a repair.",
+  "current_release_effect": "NONE_UNTIL_CURRENT_AUDIO_IDENTITY_AND_LISTEN"
+}
