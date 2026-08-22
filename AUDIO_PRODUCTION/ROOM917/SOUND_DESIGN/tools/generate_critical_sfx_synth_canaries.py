@@ -48,11 +48,11 @@ def old_double_ring(v):
 
 def lamp_ping(v,unmarked=False):
     base=[[(2280,1.0),(3420,0.38),(4910,0.20)],[(2390,1.0),(3560,0.36),(5050,0.18)],[(2180,1.0),(3320,0.42),(4760,0.18)]][v]
-    pan=[-0.05,0.0,0.06][v]; delay=0.0
-    if unmarked: pan=[0.32,0.42,0.26][v]; delay=[0.18,0.25,0.12][v]
-    y=metal_ping(0.55,base,0.105+0.01*v,attack_ms=0.25,pan=pan,delay_ms=delay,peak=0.15)
+    pan=[-0.05,0.0,0.06][v]
+    if unmarked: pan=[0.32,0.42,0.26][v]
+    y=metal_ping(0.55,base,0.105+0.01*v,attack_ms=0.25,pan=pan,delay_ms=0.0,peak=0.15)
     if unmarked:
-        n=len(y); t=np.arange(n)/SR; mount=np.sin(2*np.pi*(760+40*v)*t)*np.exp(-t/0.045)*0.012; y += stereo_pan(mount,pan*0.8,delay*0.5)
+        n=len(y); t=np.arange(n)/SR; mount=np.sin(2*np.pi*(760+40*v)*t)*np.exp(-t/0.045)*0.012; y += stereo_pan(mount,pan*0.8,0.0)
     return norm(y,0.16)
 
 def copper_hiss(v):
@@ -95,9 +95,9 @@ makers={
  'S17_COPPER_HISS':copper_hiss,
  'S19_TWO_PART_LINE_CUT':line_cut,
 }
-receipt={'schema_version':'room917.critical_sfx_synthetic_canary_receipt/2.0','date':'2026-08-22','seed':SEED,'rng_policy':'PER_CANDIDATE_SHA256_DERIVED_SEED','status':'CANDIDATE_HOLD_NOT_PRODUCTION_BOUND','assets':[],'machine_design_fixes':['S13_EXACTLY_TWO_COUNTABLE_RING_PULSES','S19_TARGET_EVENTS_ABOVE_LINE_BED_WITH_MECHANICALLY_DISTINCT_FINAL_DISCONNECT'],'laws':['NO_STORY_CHANGE','NO_PROVIDER_SPEND','HUMAN_AUDITION_REQUIRED','IDENTITY_GATE_REQUIRED_BEFORE_BINDING']}
+receipt={'schema_version':'room917.critical_sfx_synthetic_canary_receipt/2.1','date':'2026-08-22','seed':SEED,'rng_policy':'PER_CANDIDATE_SHA256_DERIVED_SEED','status':'CANDIDATE_HOLD_NOT_PRODUCTION_BOUND','assets':[],'machine_design_fixes':['S13_EXACTLY_TWO_COUNTABLE_RING_PULSES','S19_TARGET_EVENTS_ABOVE_LINE_BED_WITH_MECHANICALLY_DISTINCT_FINAL_DISCONNECT','S14_NO_HAAS_DELAY_MONO_SAFE_POSITIONAL_PAN_ONLY'],'laws':['NO_STORY_CHANGE','NO_PROVIDER_SPEND','HUMAN_AUDITION_REQUIRED','IDENTITY_GATE_REQUIRED_BEFORE_BINDING']}
 for aid,maker in makers.items():
     for v in range(3):
         rng=np.random.default_rng(candidate_seed(aid,v)); y=maker(v); name=f'{aid}_CANDIDATE_SYNTH0{v+1}'; p=OUT/f'{name}.wav'; sf.write(p,y,SR,subtype='PCM_24'); data=p.read_bytes(); receipt['assets'].append({'contract_asset_id':aid,'candidate_id':name,'filename':p.name,'sha256':hashlib.sha256(data).hexdigest(),'size_bytes':len(data),'duration_seconds':len(y)/SR,'sample_rate_hz':SR,'bit_depth':24,'channels':2,'origin':'PROCEDURAL_SYNTHETIC_REFERENCE_ONLY','audition_status':'HOLD','production_binding':False})
-(OUT/'ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json').write_text(json.dumps(receipt,indent=2)+'\n')
+(OUT/'ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json').write_text(json.dumps(receipt,indent=2)+'\n')
 print(json.dumps(receipt,indent=2))
