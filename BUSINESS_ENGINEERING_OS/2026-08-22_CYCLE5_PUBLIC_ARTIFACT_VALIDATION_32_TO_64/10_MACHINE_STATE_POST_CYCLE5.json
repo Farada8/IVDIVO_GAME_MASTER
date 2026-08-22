@@ -1,14 +1,16 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "date": "2026-08-22",
   "cycle": "CYCLE5_PUBLIC_ARTIFACT_VALIDATION_32_TO_64",
-  "branch": "studio/business-engineering-cycle5-artifact-validation-2026-08-22",
-  "pull_request": {
-    "number": 185,
-    "url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/185",
-    "state": "OPEN_DRAFT"
+  "authority_state": "MERGED_TO_MAIN",
+  "merge": {
+    "pull_request": 185,
+    "pull_request_url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/185",
+    "merged": true,
+    "merge_commit": "470a8aea93385ef8624b47688dbf4cf21090c058",
+    "merged_at": "2026-08-22T00:20:54+01:00"
   },
-  "upstream_main_at_start": "e41408aec56839585bfcff9a0fbfb0224cada25d",
+  "upstream_main_before_cycle": "e41408aec56839585bfcff9a0fbfb0224cada25d",
   "library": {
     "private_raw_drive_folder": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
     "physical_files": 78,
@@ -40,11 +42,7 @@
   },
   "run32": {
     "executed": 32,
-    "extended_disposition": {
-      "keep": 30,
-      "mutate": 2,
-      "kill": 0
-    }
+    "extended_disposition": {"keep": 30, "mutate": 2, "kill": 0}
   },
   "tests": {
     "baseline_suite": {"pass": 14, "total": 14},
@@ -53,36 +51,11 @@
     "interpretation": "overlapping suites converge on critical invariants"
   },
   "artifacts": [
-    {
-      "id": "PA-PROC-001",
-      "lane": "procurement",
-      "pa_grade": "PA3",
-      "sample_source": "eTenders resource 8872468",
-      "decision": "PROCEED_TO_FULL_DOCUMENT_REVIEW",
-      "eligibility": "NOT_PROVEN"
-    },
-    {
-      "id": "PA-RETRO-001",
-      "lane": "retrofit",
-      "pa_grade": "PA3",
-      "decision": "INPUTS_REQUIRED_BEFORE_ROUTE",
-      "property_eligibility": "NOT_PROVEN"
-    },
-    {
-      "id": "PA-AI-001",
-      "lane": "sme_ai",
-      "pa_grade": "PA3",
-      "decision": "POST_DFB_IMPLEMENTATION_HYPOTHESIS",
-      "leo_approval": "NOT_PROVEN",
-      "paid_demand": "NOT_PROVEN"
-    }
+    {"id": "PA-PROC-001", "lane": "procurement", "pa_grade": "PA3", "decision": "PROCEED_TO_FULL_DOCUMENT_REVIEW", "eligibility": "NOT_PROVEN"},
+    {"id": "PA-RETRO-001", "lane": "retrofit", "pa_grade": "PA3", "decision": "INPUTS_REQUIRED_BEFORE_ROUTE", "property_eligibility": "NOT_PROVEN"},
+    {"id": "PA-AI-001", "lane": "sme_ai", "pa_grade": "PA3", "decision": "POST_DFB_IMPLEMENTATION_HYPOTHESIS", "leo_approval": "NOT_PROVEN", "paid_demand": "NOT_PROVEN"}
   ],
-  "proof_frontier": {
-    "pa3": 3,
-    "pa4": 0,
-    "pa5": 0,
-    "e3_or_higher": 0
-  },
+  "proof_frontier": {"pa3": 3, "pa4": 0, "pa5": 0, "e3_or_higher": 0},
   "new_founder_cash_eur": 0,
   "next64": {
     "designed": 64,
@@ -105,17 +78,20 @@
   "drive": {
     "cycle5_folder": "1WQBjFu6wIYcrxs3QnPOeUHtZnMVkNwDf",
     "baseline_start_here": "1gpLccMhFpmmcmX-NoGfDRqe9GdQv_7iiRYuaDTLEYj4",
+    "baseline_master": "1xATMfOsZTayJF_IlrOrZ74chLimoE9BdbVeIASBm2qc",
     "baseline_engineering": "1B6ooAjoFWpvKQj0RIi8vysq21_1SIa_L_uSK3fHbr8A",
     "baseline_run32_tests": "1fgM0Swe5Kafo-1tscFKq4G0C0fljlaRjN75cu0Ckqgo",
     "baseline_synthesis_next64_state": "1AzRbOkqfFSbo2ehJGPPfUIpHBnia6kVbUTXrRFanHgE",
     "extended_pa_reconciliation": "1Ah-PpsKewTzWFYu4yzqSLzdRMdy7CsZfOp-SLg1paEI",
     "extended_source_populated_samples": "1GTj-BYfs_hiMFV54gogTrawvRoIZ_VR7VU6DygFrWvs",
-    "extended_run32_next64": "1kFu8gWdi3rJr6Yc6phAXcUUYstLebFNc7b585R00XNw"
+    "extended_run32_next64": "1kFu8gWdi3rJr6Yc6phAXcUUYstLebFNc7b585R00XNw",
+    "final_handoff": "1pqQnjeIZQYdSktb_b_q2gCY64X4cN4UraMcQLyE5kH0"
   },
   "current_gate": "PA3 -> PA4 independent validation -> real target-user decision use -> PA5/E3 only on real interaction",
   "persistence": {
-    "github": "VERIFIED_BRANCH_AND_PR",
+    "github_main": "MERGED_VERIFIED",
     "drive": "VERIFIED_FOLDER_READBACK",
-    "readback_required": false
+    "postmerge_closure_repair": "IN_PROGRESS",
+    "readback_required": true
   }
 }
