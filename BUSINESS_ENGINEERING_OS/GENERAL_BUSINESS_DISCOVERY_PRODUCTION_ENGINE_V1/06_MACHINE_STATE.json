@@ -1,11 +1,16 @@
 {
   "schema": "ivdivo.business.general_discovery_production_engine/1.0",
   "date": "2026-08-22",
-  "status": "P01_P08_DISCOVERY_REFRESH_COMPLETE_PENDING_CI",
+  "status": "P01_P08_DISCOVERY_REFRESH_MERGED_CURRENT",
   "github": {
     "base_engine_pr": 303,
     "base_engine_merge_sha": "b579c7e0359b5c242b718866c2c2488a2dda1434",
-    "base_engine_ci_run": 32554671258
+    "base_engine_ci_run": 32554671258,
+    "discovery_refresh_pr": 307,
+    "discovery_refresh_merge_sha": "5551929cb5873dc6198247affe9b7e77738b5c41",
+    "discovery_refresh_exact_head": "888bde71957a440e3532c01cac0e6f69d95f0bae",
+    "discovery_refresh_ci_run": 32555010120,
+    "discovery_refresh_ci_status": "SUCCESS"
   },
   "namespace": {
     "modules": "BDP01-BDP32",
