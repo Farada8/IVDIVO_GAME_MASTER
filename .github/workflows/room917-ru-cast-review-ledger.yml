@@ -1,0 +1,55 @@
+name: ROOM917 RU Cast Review Ledger
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/room917-ru-cast-review-ledger.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_CAST_REVIEW_TEMPLATE_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_bindings_candidate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_prepare_ru_bindings_candidate.py'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/room917-ru-cast-review-ledger.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_CAST_REVIEW_TEMPLATE_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_bindings_candidate.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_prepare_ru_bindings_candidate.py'
+
+permissions:
+  contents: read
+
+jobs:
+  test-review-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run RU bindings candidate tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_prepare_ru_bindings_candidate.py -v
+
+      - name: Assert review template itself is non-paid
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_CAST_REVIEW_TEMPLATE_v1.0.json')
+          row=json.loads(p.read_text(encoding='utf-8'))
+          if row.get('status') != 'REVIEW_PENDING':
+              raise SystemExit('template must remain REVIEW_PENDING')
+          for field in ('paid_s0_authorized','cast_lock','full_e01_render_allowed'):
+              if row.get(field) is not False:
+                  raise SystemExit(f'{field} must be false in checked-in template')
+          if any((r.get('selected_voice_id') or '') for r in (row.get('roles') or {}).values()):
+              raise SystemExit('checked-in review template must not contain selected voice IDs')
+          print('PASS_REVIEW_TEMPLATE_NON_PAID')
+          PY
