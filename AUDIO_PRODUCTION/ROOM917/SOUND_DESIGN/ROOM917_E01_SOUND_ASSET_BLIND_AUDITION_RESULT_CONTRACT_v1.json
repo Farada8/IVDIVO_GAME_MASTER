@@ -1,0 +1,42 @@
+{
+  "schema_version": "room917.e01_sound_asset_blind_audition_result/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "branch": "THE_INSURABLE_FIRE",
+  "status": "WAITING_FOR_HUMAN_LISTEN",
+  "room_bed_pass": {
+    "package": "ROOM917_A01_A02_BLIND_AUDITION",
+    "first_pass_notes_frozen": false,
+    "X": {"verdict": null, "realism": null, "false_clue": null, "loop_seam": null, "mono_survival": null, "phone_survival": null, "notes": null},
+    "Y": {"verdict": null, "realism": null, "false_clue": null, "loop_seam": null, "mono_survival": null, "phone_survival": null, "notes": null},
+    "machine_warning": {
+      "X": "VERY_WIDE_DIAGNOSTIC_ONLY_CORR_APPROX_NEG_0_01_SIDE_APPROX_MID_MONO_LOSS_APPROX_6_LU",
+      "Y": "NARROWER_CORR_APPROX_0_86_MONO_LOSS_APPROX_3_3_LU"
+    },
+    "allowed_verdict": ["PASS_CANDIDATE", "REJECT", "HOLD"]
+  },
+  "critical_sfx_pass": {
+    "package": "ROOM917_CRITICAL_SFX_BLIND_AUDITION",
+    "first_pass_notes_frozen": false,
+    "functions": {
+      "S07_TRANSFORMER_WAKE": {"selected_variant": null, "ordinary_technical": null, "not_music_or_horror": null, "notes": null},
+      "S08_RELAY_RIPPLE": {"selected_variant": null, "mechanical_causality": null, "not_rhythmic_or_scifi": null, "notes": null},
+      "S10_SELECTOR_916": {"selected_variant": null, "single_action_clear": null, "repeatable_normal_grammar": null, "notes": null},
+      "S11_GLASS_LAMP_916_PING": {"selected_variant": null, "small_real_hardware": null, "material_identity_lock": null, "notes": null},
+      "S13_INTERNAL_DOUBLE_RING_OLD": {"selected_variant": null, "double_ring_countable": null, "ordinary_not_horror": null, "notes": null},
+      "S14_UNMARKED_GLASS_LAMP_PING": {"selected_variant": null, "same_material_family_as_selected_s11": null, "spatially_distinct": null, "notes": null},
+      "S17_COPPER_HISS": {"selected_variant": null, "human_voice_compatible": null, "not_spectral_or_vocal_like": null, "notes": null},
+      "S19_TWO_PART_LINE_CUT": {"selected_variant": null, "exactly_two_events_clear": null, "second_event_leads_to_absence": null, "notes": null}
+    },
+    "allowed_selected_variant": ["A", "B", "C", "NONE", "HOLD"]
+  },
+  "promotion_law": [
+    "FIRST_LISTEN_NOTES_MUST_BE_FROZEN_BEFORE_REVEALING_INTERNAL_IDENTITY_KEY",
+    "MACHINE_METRICS_DO_NOT_OVERRIDE_HUMAN_FALSE_CLUE_OR_REALISM_FAILURE",
+    "HUMAN_PREFERENCE_DOES_NOT_OVERRIDE_HASH_FORMAT_OR_IDENTITY_GATE_FAILURE",
+    "S14_CANNOT_PASS_BEFORE_SELECTED_S11_MATERIAL_REFERENCE_EXISTS",
+    "NO_CANDIDATE_BECOMES_PRODUCTION_BOUND_FROM_THIS RESULT_ALONE",
+    "PRODUCTION_BINDING_REQUIRES_SOUND_ASSET_BINDING_GATE_WITH_REAL_BYTES_AND_EXPLICIT_GAIN"
+  ],
+  "final_asset_lock": "OPEN"
+}
