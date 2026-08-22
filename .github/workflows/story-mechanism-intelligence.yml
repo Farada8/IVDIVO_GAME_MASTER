@@ -1,0 +1,19 @@
+name: Story Mechanism Intelligence Candidate
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_story_mechanism_intelligence.py'
+      - 'tests/test_story_mechanism_intelligence.py'
+      - 'BOOK_INTELLIGENCE_ENGINE/2026-08-22_CYCLE2_STORY_MECHANISM_INTELLIGENCE_32_TO_64/**'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pytest
+      - run: pytest -q tests/test_story_mechanism_intelligence.py
+      - run: python -m json.tool BOOK_INTELLIGENCE_ENGINE/2026-08-22_CYCLE2_STORY_MECHANISM_INTELLIGENCE_32_TO_64/06_STORY_MECHANISM_SCHEMAS_v0.1.json >/dev/null
