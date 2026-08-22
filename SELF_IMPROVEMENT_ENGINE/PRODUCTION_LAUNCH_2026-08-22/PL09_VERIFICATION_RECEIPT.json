@@ -1,0 +1,33 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.1",
+  "card": "PL-09",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 408,
+    "merge_sha": "dc4ade0a99ce42c541a21c79a4d3326368ade2e1",
+    "verified_head": "ae6b905357d3c64940825be9e553c7b3b5279b9e"
+  },
+  "exact_head_ci": {
+    "count": 10,
+    "all_success": true,
+    "runs": [32569790834,32569790805,32569790807,32569790868,32569790803,32569790839,32569790801,32569790809,32569790797,32569790802]
+  },
+  "acceptance": {
+    "ten_registered_domains": true,
+    "severity_schema": ["FATAL","MAJOR","MINOR","STYLE"],
+    "deterministic_issue_id": true,
+    "two_item_evidence_pair": true,
+    "json_markdown_persistence": true,
+    "pl02_output_memory": true,
+    "book_content_hash_binding": true,
+    "input_hash_binding": true,
+    "no_gate_mutation": true,
+    "automatic_pass_allowed": false
+  },
+  "drive": {
+    "folder_id": "1X2oAc8aR7T8TqPPkg40dN2jhzq9q-AuM",
+    "document_id": "1InysDSD8w0U5STMo2rk6CcqFh9Q_UXDYMbmRmNuLqpM",
+    "verified_marker": "PERSONAL-AI-PL09-DONE-VERIFIED-PR408-CI10OF10-EVIDENCE-PAIRS-NO-AUTO-PASS"
+  },
+  "evidence_boundary": "PL-09 proves deterministic contradiction detection over supplied normalized evidence only; it does not prove exhaustive extraction or authorize automatic PASS."
+}
