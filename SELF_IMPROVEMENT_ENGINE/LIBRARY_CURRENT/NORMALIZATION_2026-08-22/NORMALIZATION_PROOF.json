@@ -1,7 +1,7 @@
 {
-  "schema_version":"1.0",
+  "schema_version":"1.1",
   "date":"2026-08-22",
-  "status":"N09_N15_COMPLETED_EVIDENCE_READY_FOR_CROSS_STORE_PERSISTENCE",
+  "status":"N09_N16_CROSS_STORE_PASS",
   "inputs":{"drive_folder_id":"1F_21NJ9YXB63ctOS5KPrkeDlcYKkUTVv","physical_entries_observed":35},
   "checks":[
     {"gate":"N09_MANIFEST_COVERAGE","result":"PASS","evidence":"35 Drive IDs mapped to 35 authenticated raw fetches"},
@@ -11,8 +11,10 @@
     {"gate":"N13_CANONICAL_ALIAS_MAP","result":"PASS","evidence":"26 valid physical -> 24 canonical works -> 23 work families; explicit format/translation relations"},
     {"gate":"N14_SOURCE_PASSPORTS","result":"PASS_DERIVED_REFERENCE_ONLY","evidence":"8 high-decision-value passport groups plus secondary references"},
     {"gate":"N15_CONCENTRATION_RISK","result":"PASS","evidence":"Mechanism support counted by canonical work/work family, not physical file"},
-    {"gate":"N16_CURRENT_REGISTRY_UPDATE","result":"PENDING_CROSS_STORE_READBACK","evidence":null}
+    {"gate":"N16_CURRENT_REGISTRY_UPDATE","result":"PASS","evidence":{"github_pr":292,"merge_commit":"8302d10c67b1f43f8f5f97c975d720e8fc352bda","github_source_registry_schema":"1.5","github_source_registry_commit":"64b318f7a24ebea3b793763d58e1590a1f818979","drive_normalization_folder_id":"1RaXEX2fWWNPXNs434esrRcZfrnvGTCLa","drive_normalization_current_id":"19TcsY9TkEPrhN2AElaMwgjvmNXBW7T-9OIQ1HkBEEAQ","drive_current_library_index_id":"1-2Qpt0TFq2dQiH7LzXJHD89SdCsVVbz3z9HbhwAWH_M","drive_readback_marker":"SI-CURRENT-SYSTEMS-N16-PASS-35-26-9-24-23-MERGE8302D10"}}
   ],
+  "closure":"PERSISTENCE_CLOSURE_PASS",
+  "authority_effect":"NONE_SELF_IMPROVEMENT_V2_REMAINS_VERIFIED_CURRENT",
   "evidence_ceiling":"BYTE_INTEGRITY_BIBLIOGRAPHIC_NORMALIZATION_AND_DERIVED_REFERENCE_MECHANISMS_ONLY",
   "not_proven":["Human Signal","literary superiority","provider behavior","legal validity","market performance","generic causal truth of source theories"],
   "raw_copyrighted_bytes_published_to_github":false
