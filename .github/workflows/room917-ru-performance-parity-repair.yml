@@ -1,0 +1,92 @@
+name: ROOM917 RU Performance Parity + Repair Gate
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/room917-ru-performance-parity-repair.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PERFORMANCE_PARITY_CONTRACT_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_selective_repair_plan.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_compile_ru_selective_repair_plan.py'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/room917-ru-performance-parity-repair.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PERFORMANCE_PARITY_CONTRACT_v1.0.json'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_selective_repair_plan.py'
+      - 'AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_compile_ru_selective_repair_plan.py'
+
+permissions:
+  contents: read
+
+jobs:
+  zero-spend-repair-routing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest AUDIO_PRODUCTION/ROOM917/RU_PILOT/tests/test_compile_ru_selective_repair_plan.py -v
+
+      - name: Validate performance parity invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PERFORMANCE_PARITY_CONTRACT_v1.0.json')
+          row=json.loads(p.read_text(encoding='utf-8'))
+          law=row['parity_law']
+          if row.get('story_status') != 'LOCKED':
+              raise SystemExit('story must stay locked')
+          for key in ['literal_voice_match_forbidden','literal_pitch_match_forbidden','literal_tempo_match_forbidden','literal_pause_map_match_forbidden','literal_dialogue_duration_match_forbidden']:
+              if law.get(key) is not True:
+                  raise SystemExit(f'parity freedom guard missing: {key}')
+          if law.get('passing_locale_must_not_be_repaired_to_imitate_failed_locale') is not True:
+              raise SystemExit('passing locale protection missing')
+          if row.get('release_rule',{}).get('human_listen_must_not_be_simulated') is not True:
+              raise SystemExit('human listen simulation guard missing')
+          roles=set(row.get('role_invariants',{}))
+          if roles != {'ELENA','JULIAN','MINA','CATE'}:
+              raise SystemExit(f'role coverage mismatch: {roles}')
+          print('ROOM917 EN/RU performance parity invariants: PASS')
+          PY
+
+      - name: Compile current empty Listener-QC contract as zero-spend HOLD
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _room917_ru_repair_gate
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_selective_repair_plan.py \
+            --result AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json \
+            --out _room917_ru_repair_gate/CURRENT_EMPTY_RESULT_PLAN.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          row=json.loads(Path('_room917_ru_repair_gate/CURRENT_EMPTY_RESULT_PLAN.json').read_text(encoding='utf-8'))
+          if row.get('provider_calls_made') != 0 or row.get('paid_synthesis_calls_made') != 0:
+              raise SystemExit('repair compiler must be zero-spend')
+          if row.get('story_or_dialogue_changed') is not False:
+              raise SystemExit('repair compiler must not alter locked text')
+          if row.get('whole_episode_rerender_allowed') is not False:
+              raise SystemExit('whole episode rerender guard failed')
+          if row.get('status') not in {'PASS_PLAN_COMPILED','HOLD_EVIDENCE_GATE'}:
+              raise SystemExit(f'unexpected current empty plan status: {row.get("status")}')
+          print(f"current_listener_contract_plan={row.get('status')}")
+          PY
+
+      - name: Upload zero-spend repair evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_RU_PERFORMANCE_PARITY_REPAIR_GATE
+          path: _room917_ru_repair_gate/
+          if-no-files-found: error
+          retention-days: 14
