@@ -1,0 +1,26 @@
+name: Discovery Engine Cycle1
+
+on:
+  push:
+    branches:
+      - discovery-engine-cycle1-math-to-application-fresh-20260822
+    paths:
+      - 'DISCOVERY_ENGINE_OS/2026-08-22_CYCLE1_MATH_TO_APPLICATION_32_TO_64/**'
+      - '.github/workflows/discovery_engine_cycle1.yml'
+  pull_request:
+    paths:
+      - 'DISCOVERY_ENGINE_OS/2026-08-22_CYCLE1_MATH_TO_APPLICATION_32_TO_64/**'
+      - '.github/workflows/discovery_engine_cycle1.yml'
+  workflow_dispatch:
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run 32 discovery regression tests
+        run: |
+          python -m unittest -v DISCOVERY_ENGINE_OS/2026-08-22_CYCLE1_MATH_TO_APPLICATION_32_TO_64/tests/test_cycle1.py
