@@ -1,0 +1,23 @@
+name: Self-Improvement Cycle10 WIP Governor
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64/runtime/cycle10_governance.py'
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64/tests/**'
+      - '.github/workflows/self-improvement-cycle10-wip-governor.yml'
+
+jobs:
+  wip-governor-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Run current Cycle10 regression and WIP governor tests
+        run: |
+          python SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64/tests/test_cycle10.py
+          python -m pytest -q SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64/tests/test_cycle10_wip_governor.py
