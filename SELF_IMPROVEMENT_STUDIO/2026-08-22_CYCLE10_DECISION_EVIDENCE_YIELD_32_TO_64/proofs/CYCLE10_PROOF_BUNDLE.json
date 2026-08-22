@@ -1,0 +1,9 @@
+{
+  "schema":"CYCLE10_PROOF_BUNDLE_v1.1",
+  "deterministic_tests":"32/32_PASS",
+  "zip":{"name":"IVDIVO_SELF_IMPROVEMENT_CYCLE10_DECISION_EVIDENCE_YIELD_32X64_2026-08-22.zip","sha256":"d419de55b033d82a1233a7740d86af6dbcfd49de87442ed95da0fc6e2550127e","bytes":18020,"entries":13,"integrity":"PASS","drive_raw_readback":"PASS","drive_file_id":"1itgymyI1G29JbvixYW7wPEctDmjB-aYJ"},
+  "real_evidence_used":["current SI v2 authority","Cycle9B 32/32 ledger","GitHub current SI state 2.7","open PR #147 reservation SI-0016","SI-0014/0015 persisted lifecycle evidence","actual current-conversation user upload hash"],
+  "evidence_not_claimed":["Human Signal","provider live","market behavior","literary superiority","v3 promotion"],
+  "new_si_id_allocated":false,
+  "persistence":{"drive":"PASS","github":"BRANCH_WRITTEN_PR_PENDING"}
+}
