@@ -16,20 +16,46 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate frozen blind protocol
+      - name: Validate frozen blind protocol and immutable evidence receipt
         run: |
           python - <<'PY'
+          import json
           from pathlib import Path
-          p = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_AGENT_COMMERCE_PEW02_BLIND10/00_BLIND_PROTOCOL.md').read_text()
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_AGENT_COMMERCE_PEW02_BLIND10')
+          p = (root/'00_BLIND_PROTOCOL.md').read_text()
+          result = (root/'02_BLIND10_RESULTS_AND_SCANNER_PATCH.md').read_text()
+          st = json.loads((root/'03_MACHINE_STATE.json').read_text())
+          obs = json.loads((root/'04_OBSERVATIONS_COMPACT.json').read_text())
           domains = ['decathlon.ie','brownthomas.com','arnotts.ie','elverys.ie','ikea.com','lego.com','patagonia.com','allbirds.com','glossier.com','gymshark.com']
           assert all(d in p for d in domains)
           assert 'before' in p.lower() and 'frozen' in p.lower()
           assert 'do not create carts/orders/accounts' in p
-          print('P-EW02 blind protocol: 10/10 frozen before probe')
+          assert st['blind_protocol']['domains'] == domains
+          assert st['blind_protocol']['sample_substitution'] is False
+          assert st['evidence_run']['artifact_digest'] == 'sha256:7a9a413460d1f2f154b10a15ce0746bd1d07f7df57975641288aa4e09349dcf9'
+          assert st['evidence_run']['decision'] == 'PASS_TEST'
+          assert st['public_ucp']['http_200_profiles'] == 4
+          assert st['scanner_learning']['false_negative_findings_corrected'] == 8
+          assert st['proof_boundary']['buyer_demand'] is False
+          assert st['proof_boundary']['willingness_to_pay'] is None
+          assert st['proof_boundary']['proof_promotion'] is False
+          assert len(obs['observations']) == 10
+          assert [x['merchant_id'] for x in obs['observations']] == domains
+          assert sum(x['http_status'] == 200 for x in obs['observations']) == 4
+          assert all(x['oai_feed_evidence'] == 'UNKNOWN' for x in obs['observations'])
+          ucp200 = [x for x in obs['observations'] if x['http_status'] == 200]
+          assert all(x['transports'] == ['mcp','embedded'] for x in ucp200)
+          assert all(x['order_capability_declared'] is True for x in ucp200)
+          assert all(x['signing_keys_observed'] is False for x in ucp200)
+          assert '8 false-negative findings' in result
+          assert 'AGENT-COMMERCE-P-EW02-BLIND10-PASS-4UCP200-8FALSEFAILS-CORRECTED-NO-DEMAND-PROOF' in result
+          print('P-EW02 frozen receipt: PASS — 10 merchants, 4 UCP200, 8 scanner false-fails corrected')
           PY
-      - name: Run read-only public probes and merged scanner
+      - name: Run scanner regression canaries
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_AGENT_COMMERCE_READINESS_SCANNER_V0/tests/test_scanner.py
+      - name: Run read-only public drift probe and scanner
         run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_AGENT_COMMERCE_PEW02_BLIND10/01_probe_and_scan.py
-      - name: Validate no proof overreach
+      - name: Validate live probe proof boundary
         run: |
           python - <<'PY'
           import json
@@ -47,9 +73,9 @@ jobs:
           assert s['proof_boundary']['transaction_changing_checkout_probes_performed'] is False
           assert all(x['proof_boundary']['unknown_not_fail'] is True for x in scans)
           assert all(x['proof_boundary']['unknown_not_pass'] is True for x in scans)
-          print('P-EW02 evidence boundary: PASS')
+          print('P-EW02 live drift probe evidence boundary: PASS')
           PY
-      - name: Upload P-EW02 public-probe evidence
+      - name: Upload P-EW02 live public-probe evidence
         uses: actions/upload-artifact@v4
         with:
           name: agent-commerce-pew02-blind10-evidence
