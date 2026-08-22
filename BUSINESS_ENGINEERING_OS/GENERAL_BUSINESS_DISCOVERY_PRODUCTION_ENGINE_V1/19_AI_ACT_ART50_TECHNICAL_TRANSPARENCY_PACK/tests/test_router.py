@@ -40,6 +40,36 @@ def test_provider_generator_routes_a50_2():
     assert result["code_route"] == "DOCUMENT_ALTERNATIVE_EQUIVALENTLY_ADEQUATE_MEASURES"
 
 
+def test_legacy_generator_gets_narrow_a50_2_transition_before_deadline():
+    case = copy.deepcopy(cases()[1])
+    case["placed_on_market_before_2026_08_02"] = True
+    case["assessment_date"] = "2026-08-22"
+    result = router.route_case(case)
+    d = decision(result, "A50_2")
+    assert d["status"] == router.APPLIES_TRANSITIONAL
+    assert "LegacyMarketPlacementEvidence" in d["required_evidence"]
+    assert result["status"] == "TRANSITIONAL_IMPLEMENTATION_DEADLINE_ACTIVE"
+    assert result["legal_compliance_proven"] is False
+
+
+def test_legacy_generator_transition_expires_on_2026_12_02():
+    case = copy.deepcopy(cases()[1])
+    case["placed_on_market_before_2026_08_02"] = True
+    case["assessment_date"] = "2026-12-02"
+    result = router.route_case(case)
+    assert decision(result, "A50_2")["status"] == router.APPLIES
+    assert result["status"] == "IMPLEMENTATION_EVIDENCE_REQUIRED"
+
+
+def test_transition_claim_without_assessment_date_fails_closed():
+    case = copy.deepcopy(cases()[1])
+    case["placed_on_market_before_2026_08_02"] = True
+    case.pop("assessment_date", None)
+    result = router.route_case(case)
+    assert decision(result, "A50_2")["status"] == router.UNKNOWN
+    assert result["status"] == "HOLD_UNRESOLVED_SCOPE_OR_EXCEPTION"
+
+
 def test_marking_exception_claim_is_pending_review():
     case = copy.deepcopy(cases()[1])
     case["standard_editing_only"] = True
