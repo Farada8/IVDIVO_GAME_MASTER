@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "status": "CANDIDATE_ONLY_NO_AUTO_PROMOTION",
+  "cycle": "BUSINESS_ENGINE_V1.1_CYCLE5",
+  "global_authority": "IVDIVO Self-Improvement v2 CURRENT",
+  "candidates": [
+    {"candidate_id":"BIZ-C5-SI-001","problem_family":"OUTPUT_DIRECTORY_IDEMPOTENCY","observation":"GitHub CI tests passed but sequential executor failed because reports/ did not exist on a clean checkout.","earliest_failure_layer":"PACKAGE_RUNTIME","patch":"Executor creates output parent directory before write.","evidence":["GitHub Actions run 32540557229","runner fix commit 59804e88ffad2b21032416ad0a92dfc71f59bfcc"],"status":"PILOTING","promotion_authorized":false},
+    {"candidate_id":"BIZ-C5-SI-002","problem_family":"STALE_VALUE_LAUNDERING","observation":"Superseded Skerries notice had EUR245k while current reissue has current estimated value null.","earliest_failure_layer":"SOURCE_LINEAGE","mechanism":"OLD_VALUE_NEQ_CURRENT_NULL_FILL + explicit current/superseded lineage.","status":"PROJECT_KEEP_REPLICATION_NEEDED","promotion_authorized":false},
+    {"candidate_id":"BIZ-C5-SI-003","problem_family":"MEASUREMENT_EVIDENCE_FIREWALL","observation":"Artifact utility cannot claim time saved without paired observed manual/engine timing.","earliest_failure_layer":"EVIDENCE_CLASS","mechanism":"BASELINE_MINUTES_REQUIRE_OBSERVATION + ENGINE_MINUTES_REQUIRE_OBSERVATION.","status":"PROTECT_NO_CHANGE","promotion_authorized":false}
+  ],
+  "hard_boundary": "Engineering regression does not create buyer, payment, market, legal, finance or human evidence."
+}

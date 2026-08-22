@@ -1,0 +1,11 @@
+{
+  "authority": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
+  "primary": {"opportunity_id":"OPP-01","name":"Tender / Opportunity Intelligence + Bid/No-Bid","route":"CREATE"},
+  "pilots": [
+    {"opportunity_id":"OPP-12","name":"Small Works Tender Pack / Quote Document Automation","route":"CREATE"},
+    {"opportunity_id":"OPP-19","name":"Roof/Insulation Retrofit Bid Intelligence","route":"CREATE"}
+  ],
+  "watch": {"opportunity_id":"OPP-29","name":"SME AI Workflow Audit + Bounded Implementation","route":"CREATE"},
+  "proof_boundary": "PUBLIC_EVIDENCE_ONLY_E2_PLUS",
+  "no_outreach": true
+}

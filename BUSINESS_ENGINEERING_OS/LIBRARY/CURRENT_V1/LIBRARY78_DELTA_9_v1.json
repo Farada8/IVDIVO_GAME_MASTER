@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "base_physical_count": 69,
+  "delta_physical_count": 9,
+  "delta": [
+    {"name":"The_Mom_Test_Rob_Fitzpatrick.epub","drive_id":"1hWMQTM_L0AY36ZrV3LkAol6anKxo5vMN","status":"EXACT_BYTE_DUPLICATE_EXISTING_ZERO_NEW_EVIDENCE"},
+    {"name":"Business_Dynamics_John_Sterman.pdf","drive_id":"1QFxl2X1u_lmh_PXf-ZedNdlSXvRhv8ta","status":"VALID"},
+    {"name":"The_Principles_of_Product_Development_Flow_Donald_Reinertsen.epub","drive_id":"1TKqFhhdzyJsV9hb-AEZAKtyaTxSzsMug","status":"VALID"},
+    {"name":"How_to_Measure_Anything_Douglas_Hubbard.pdf","drive_id":"1trJV8PiV5gBc2C03znMqc5IM7BCyg5ES","status":"VALID"},
+    {"name":"Devil_Take_the_Hindmost_Edward_Chancellor.epub","drive_id":"1qamhz7_cGvUqvIH78vBBXPLmgwLRSTnF","status":"REFERENCE_ONLY"},
+    {"name":"The_Worry_Solution_Martin_Rossman.epub","drive_id":"1e6H5N_MLXj910VBfPul7k7NywK8h63NF","status":"NONCORE_REFERENCE_ONLY"},
+    {"name":"How_to_Make_Sense_of_Any_Mess_Abby_Covert.epub","drive_id":"1Sg1c0XilNpecvnbKlCSAbvs7kuYJtKUF","status":"VALID"},
+    {"name":"Decisive_Chip_Heath_Dan_Heath.epub","drive_id":"1uNMbLoFihpRaT-8_NcxPOueUgmRrrjrH","status":"VALID"},
+    {"name":"The_Logic_of_Failure_Dietrich_Dorner.epub","drive_id":"1lNQdw9g44KnTQBsO8mrVCzE36qvZcNwN","status":"VALID"}
+  ]
+}

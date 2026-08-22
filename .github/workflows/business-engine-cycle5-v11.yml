@@ -1,0 +1,30 @@
+name: Business Engine Cycle5 v1.1
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_BUSINESS_ENGINE_V1_INTEGRATION_REBASE/**'
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_BUSINESS_ENGINE_V11_PUBLIC_ARTIFACTS_RUN32_TO_64/**'
+      - 'BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_V1/**'
+      - '.github/workflows/business-engine-cycle5-v11.yml'
+  workflow_dispatch:
+
+jobs:
+  regression:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run inherited Business Engine v1 integration tests
+        run: |
+          cd BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_BUSINESS_ENGINE_V1_INTEGRATION_REBASE
+          PYTHONPATH=. python -m unittest discover -s tests -v
+          python -m compileall -q engine
+      - name: Run Cycle5 tests and sequential executor
+        run: |
+          cd BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE5_BUSINESS_ENGINE_V11_PUBLIC_ARTIFACTS_RUN32_TO_64
+          PYTHONPATH=. python -m unittest discover -s tests -v
+          PYTHONPATH=. python engine/run_cycle5_v11.py
+          python -m compileall -q engine

@@ -1,0 +1,15 @@
+{
+  "cycle": "BUSINESS_ENGINE_V1.1_CYCLE5_PUBLIC_ARTIFACTS",
+  "executed": 32,
+  "status_counts": {"PASS": 29, "HOLD_EXTERNAL_MEASUREMENT": 2, "HOLD_PERSISTENCE": 1},
+  "persistence_state": "PRE_PERSISTENCE",
+  "evidence_boundary": {"no_outreach": true, "public_ceiling": "E2_PLUS", "buyer_e3": "NOT_RUN", "payment_e4": "NOT_RUN", "observed_unit_economics": null},
+  "holds": [
+    {"run_id":"C5-082","reason":"No real analyst baseline timing has been observed."},
+    {"run_id":"C5-083","reason":"No paired operator-observed engine timing has been captured."},
+    {"run_id":"C5-095","reason":"Closes only after GitHub Actions success and Drive exact ZIP readback SHA match."}
+  ],
+  "package": {"name":"IVDIVO_BUSINESS_ENGINE_CYCLE5_V11.zip","size_bytes":31844,"sha256":"be1ec3a72aecc486b501a6baab38f26b8483bdd903d30f866dc8da28fa338d9b"},
+  "run_range": "C5-065..C5-096",
+  "next64": "docs/03_NEXT64_CYCLE6_v11.md"
+}
