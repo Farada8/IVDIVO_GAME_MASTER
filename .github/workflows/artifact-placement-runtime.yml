@@ -1,0 +1,36 @@
+name: artifact-placement-runtime
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/core/artifact_placement.py'
+      - 'personal-ai/core/artifact_placement_adapters.py'
+      - 'personal-ai/projects/artifact_completion.py'
+      - 'personal-ai/tests/test_artifact_placement_runtime.py'
+      - 'personal-ai/tests/test_artifact_placement_adapters.py'
+      - 'personal-ai/tests/test_artifact_placement_prospective.py'
+      - 'SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/**'
+      - 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/ARTIFACT_PLACEMENT_PATH_DRIFT_CURRENT.md'
+      - '.github/workflows/artifact-placement-runtime.yml'
+  workflow_dispatch:
+
+jobs:
+  artifact-placement-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Targeted artifact placement regression
+        working-directory: personal-ai
+        run: python -m unittest -v tests.test_artifact_placement_runtime
+      - name: Provider observation adapter regression
+        working-directory: personal-ai
+        run: python -m unittest -v tests.test_artifact_placement_adapters
+      - name: Prospective cross-project placement canaries
+        working-directory: personal-ai
+        run: python -m unittest -v tests.test_artifact_placement_prospective
+      - name: Existing project-state regression
+        working-directory: personal-ai
+        run: python -m unittest -v tests.test_project_state
