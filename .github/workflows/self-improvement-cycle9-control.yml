@@ -1,0 +1,25 @@
+name: Self-Improvement Cycle9 Control
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_SYSTEM_CYCLE9_OBSERVABILITY_PROMOTION_CONVERGENCE_32_TO_64/**'
+      - 'SELF_IMPROVEMENT_STUDIO/LIBRARY_CURRENT/**'
+      - '.github/workflows/self-improvement-cycle9-control.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cycle9-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Cycle9 bounded control canaries
+        run: python -m unittest discover -s SELF_IMPROVEMENT_STUDIO/2026-08-22_SYSTEM_CYCLE9_OBSERVABILITY_PROMOTION_CONVERGENCE_32_TO_64/tests -p 'test_*.py' -v
+      - name: Compile runtime
+        run: python -m compileall -q SELF_IMPROVEMENT_STUDIO/2026-08-22_SYSTEM_CYCLE9_OBSERVABILITY_PROMOTION_CONVERGENCE_32_TO_64/runtime
