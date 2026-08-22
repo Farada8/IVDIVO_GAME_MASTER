@@ -1,11 +1,11 @@
 {
-  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.5",
-  "updated": "2026-08-22T18:22:00+01:00",
+  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.6",
+  "updated": "2026-08-22T18:30:00+01:00",
   "project": "ROOM917",
   "episode": "E01",
   "authority": "THE_INSURABLE_FIRE",
-  "status": "P003B_READY_WAITING_FOR_IDENTIFIED_AUDIO",
-  "purpose": "Single current pointer for ROOM917 Listener QC / Red Team. Do not restart old Scene3 diagnosis or simulate human listening.",
+  "status": "P003B_PIPELINE_ENGINEERED__WAITING_FOR_IDENTIFIED_ASSEMBLED_AUDIO",
+  "purpose": "Single current pointer for ROOM917 Listener QC / Red Team. Human listening is never simulated; historical Scene3 evidence may nominate Pass-B checks but cannot replace a new blind Pass A.",
   "github": {
     "protocol": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RED_TEAM_PROTOCOL_v1.0.md",
     "result_contract": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json",
@@ -13,17 +13,11 @@
     "en_ru_parallel_control": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json",
     "en_ru_parity_validator": "AUDIO_PRODUCTION/ROOM917/TOOLS/EN_RU_PARITY_v1/validate_en_ru_parity.py",
     "shared_sound_identity_map": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_EN_RU_SHARED_SOUND_IDENTITY_MAP_v1.json",
-    "sound_binding_regression": {
-      "merge_sha": "2b8e5aab952e4e4ddc7a3853d2b132b7e98d540d",
-      "workflow": "ROOM917 Sound Binding Regression",
-      "run_id": 32586169680,
-      "result": "PASS",
-      "proved": [
-        "REQUESTED_BINDING_SET_ATOMIC_NO_PARTIAL_RENDERER_BINDINGS_ON_HOLD",
-        "BYTE_SHARED_CANONICAL_IDENTITIES_EMIT_ONLY_AFTER_ATOMIC_PASS",
-        "BYTE_SHARED_SHA256_PRESERVED_FROM_ACCEPTED_SOURCE_BINDING"
-      ],
-      "does_not_prove": "NO_PRODUCTION_SOUND_ASSET_OR_HUMAN_LISTEN_WAS_APPROVED_BY_THIS_TEST"
+    "automix_p003b_eligibility": {
+      "path": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_automix_eligibility_gate.py",
+      "merge_sha": "8a390824d9b411cd54702994c58d81369fc59c51",
+      "result": "CI_PASS_TOOLING_READY_PRODUCTION_INPUTS_HOLD",
+      "law": "AUTOMIX_V1_AUDIO_MUST_BIND_RENDER_MANIFEST__MACHINE_QC_RECEIPT__P003B_HANDOFF__ACTUAL_LISTENER_AUDIO_SHA_BEFORE_BLIND_PACKAGE"
     },
     "p003b_question_scope_gate": {
       "merge_sha": "86546aaf9751f550ba8139b2a13ec44e5a47a6a2",
@@ -35,8 +29,16 @@
       "workflow_run_id": 32586536547,
       "result": "PASS",
       "pass_a_visible": ["OPAQUE_STEREO_TARGET", "SIX_LOCKED_LISTENER_QC_QUESTIONS"],
-      "sealed_until_pass_a_notes_frozen": ["MACHINE_QC_STATUS", "MONO_FOLDDOWN", "PHONE_PROXY", "PASS_B_TARGETED_CANDIDATES", "TARGET_IDENTITY_KEY"],
+      "sealed_from_pass_a": ["MACHINE_QC_STATUS", "MONO_FOLDDOWN", "PHONE_PROXY", "PASS_B_TARGETED_CANDIDATES", "TARGET_IDENTITY_KEY"],
       "forbidden_pass_a_contamination": ["RETENTION", "MARKET_APPEAL", "NEXT_EPISODE_INTENT", "KNOWN_DEFECT_HINTS"]
+    },
+    "p003b_pass_a_cryptographic_freeze": {
+      "path": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_pass_a_freeze.py",
+      "merge_sha": "c678697efeb5ef4f21a135b7e726193ec2765f57",
+      "workflow_run_id": 32587604535,
+      "result": "PASS",
+      "law": "PASS_B_MAY_OPEN_ONLY_WHILE_PUBLIC_BLIND_MANIFEST_AND_COMPLETED_PASS_A_NOTES_STILL_MATCH_FROZEN_SHA256_RECEIPT",
+      "pass_c_preauthorization": false
     },
     "p003b_selective_repair_compiler": {
       "path": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_repair_compiler.py",
@@ -54,13 +56,27 @@
       "hard_guards": ["NO_FATAL_AUTO_PATCH", "NO_WHOLE_OR_FULL_SCENE_EPISODE_RERENDER", "NO_STORY_REWRITE_AUTHORITY", "NO_RELEASE_AUTHORITY"],
       "ru_performance_downstream": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_selective_repair_plan.py"
     },
-    "sfx_blind_machine_preflight": {
+    "p003b_pass_c_unseal": {
+      "path": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_pass_c_unseal.py",
+      "listener_package_builder": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_listener_package_builder.py",
+      "merge_sha": "034959f116224cef8497ab6c10d1109852de7122",
+      "workflow_run_id": 32587804251,
+      "six_question_regression_run_id": 32587804228,
+      "result": "PASS",
+      "law": "PASS_C_MONO_PHONE_PROXIES_OPEN_ONLY_AFTER_VALID_PASS_A_FREEZE__PASS_B_COMPLETE__SAME_TARGET_SHA__CLEAN_NO_REPAIR_PLAN__MACHINE_QC_PASS__PROXY_HASH_MATCH",
+      "repair_rule": "ANY_REPAIR_OR_HOLD_KEEPS_PASS_C_SEALED_UNTIL_POST_REPAIR_HUMAN_RELISTEN",
+      "release_authority": false
+    },
+    "historical_sfx_blind_machine_preflight": {
       "path": "AUDIO_PRODUCTION/ROOM917/ROOM917_SFX_BLIND_PACK_MACHINE_PREFLIGHT_v1.json",
       "commit_sha": "41eeb5c8631a7460dcb9fcd5667a6343b4e30863",
-      "status": "PASS_WITH_OBSERVATIONS_NO_HUMAN_SELECTION",
-      "blind_pack_drive_file_id": "1f_CyKbptuLinX35fln6sB8klZOEpO7Lc",
-      "blind_pack_sha256": "8b66af4cf3a3fe728e476d83a9227be1d4bd1e3576f748212acaafefe80ebfdc",
-      "law": "MACHINE_PREFLIGHT_MAY_REJECT_IMPOSSIBLE_CANDIDATE_BUT_MAY_NOT_CHOOSE_X_Y_OR_APPROVE_AUDIO_CANON"
+      "status": "SUPERSEDED_FOR_CURRENT_PRODUCTION_CANDIDATES__HISTORICAL_MACHINE_PREFLIGHT_ONLY",
+      "old_blind_pack_drive_file_id": "1f_CyKbptuLinX35fln6sB8klZOEpO7Lc",
+      "old_blind_pack_sha256": "8b66af4cf3a3fe728e476d83a9227be1d4bd1e3576f748212acaafefe80ebfdc",
+      "superseded_reason": "CRITICAL_SFX_S13_AND_S19_WERE_REGENERATED_AND_RETUNED_AFTER_THIS_PACK; CURRENT_V2_PLUS_RECEIPTS_HAVE_NEW_IDENTITIES_AND_COUNTABILITY_RULES",
+      "current_receipt_anchor": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2.json",
+      "current_receipt_commit": "4db56709f053ccb20eb687f5de23105c6d3955b9",
+      "law": "DO_NOT_USE_OLD_X_Y_PACK_TO_SELECT_CURRENT_PRODUCTION_SFX"
     }
   },
   "drive": {
@@ -75,12 +91,13 @@
     "expected_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
     "expected_duration_seconds": 658.190,
     "expected_file_library_id": "file_000000002c8081f58d0e656cdc0e7267",
-    "allowed_target_identity_modes": ["IMMUTABLE_SOURCE_MASTER", "PROVENANCE_VERIFIED_DERIVED_CANDIDATE"],
+    "allowed_target_identity_modes": ["IMMUTABLE_SOURCE_MASTER", "PROVENANCE_VERIFIED_DERIVED_CANDIDATE", "AUTOMIX_V1_ELIGIBILITY_VERIFIED_FULL_MIX"],
     "derived_candidate_parent_rule": "MUST_READ_EXACT_SOURCE_MASTER_BYTES_AND_VERIFY_IMMUTABLE_SOURCE_SHA_BEFORE_PROVENANCE_CAN_PASS",
-    "current_byte_access": "UNVERIFIED_UNAVAILABLE_IN_CONTROLLED_DRIVE_FILE_LIBRARY_NAV_SEARCH",
+    "automix_candidate_rule": "MUST_PRESENT_PASS_P003B_AUTOMIX_ELIGIBILITY_BINDING_ACTUAL_AUDIO_SHA_TO_RENDER_MANIFEST_RECEIPT_AND_HANDOFF",
+    "current_byte_access": "NO_CURRENT_IDENTIFIABLE_ASSEMBLED_LISTENER_AUDIO_RETURNED",
     "current_ready_for_pass_a_package": "NOT_FOUND",
     "hard_blocker": "ACCESSIBLE_IDENTIFIABLE_ASSEMBLED_AUDIO_BYTES_REQUIRED",
-    "rule": "No P003B execution without identifiable accessible assembled audio or provenance-verified derived audition audio."
+    "rule": "No P003B execution without identifiable accessible assembled audio whose exact bytes pass the applicable identity/eligibility gate."
   },
   "scene3_audio_recovery": {
     "accepted_recovery_target": {
@@ -97,39 +114,26 @@
     "older_forensic_package": "ROOM917_E01_SCENE3_FINAL_PILOT_v1_FULL.zip",
     "older_named_master": "ROOM917_E01_SCENE3_MASTER_24BIT_48K.wav",
     "historical_binary_analysis_proven": true,
-    "current_drive_audio_mime_search": "NO_ROOM917_AUDIO_FILES_FOUND",
-    "current_drive_zip_search": "NO_ROOM917_ZIP_FILES_FOUND_FOR_SCENE3_OR_FULL_MASTER",
+    "current_drive_audio_mime_search": "NO_ROOM917_ASSEMBLED_AUDIO_FILES_FOUND",
     "current_file_library_pointer_search": "POINTER_METADATA_FOUND_IN_TOOLKIT_BUT_BINARY_OBJECT_NOT_RETURNED",
-    "authority_documents": [
-      "RED_TEAM_SCENE3_FORENSIC (1).md",
-      "ROOM917_E01_SCENE3_MASTER_REVIEW_v1.md",
-      "ROOM917_E01_SCENE3_v1_4A_NATURALNESS_AUDIT.md",
-      "SCENE3_REAL_SMOKE_VALIDATION_v1.json"
-    ],
+    "authority_documents": ["RED_TEAM_SCENE3_FORENSIC (1).md", "ROOM917_E01_SCENE3_MASTER_REVIEW_v1.md", "ROOM917_E01_SCENE3_v1_4A_NATURALNESS_AUDIT.md", "SCENE3_REAL_SMOKE_VALIDATION_v1.json"],
     "law": "Historical direct binary analysis may nominate Pass-B verification targets but cannot substitute for a new blind Pass-A listen; recovery should prefer accepted v1.3E identity over older v1 names."
   },
   "procedure": [
-    "VERIFY_AUDIO_IDENTITY",
+    "VERIFY_AUDIO_IDENTITY_OR_AUTOMIX_ELIGIBILITY",
     "BUILD_BLIND_PACKAGE",
     "PASS_A_BLIND_STORY_FREE",
-    "FREEZE_PASS_A_NOTES",
+    "CRYPTOGRAPHICALLY_FREEZE_PASS_A_MANIFEST_AND_NOTES",
     "OPEN_PASS_B_VERIFICATION_QUEUE",
     "CLASSIFY_FAILURE_LAYER",
     "VERIFY_OR_REJECT_CANDIDATES",
-    "COMPILE_SMALLEST_SELECTIVE_REPAIRS",
-    "LOCAL_REGRESSION",
-    "OPEN_SEALED_PASS_C",
+    "COMPILE_SMALLEST_SELECTIVE_REPAIRS_OR_NO_REPAIR",
+    "IF_REPAIR__LOCAL_REGRESSION_AND_NEW_HUMAN_RELISTEN_BEFORE_TRANSLATION",
+    "IF_CLEAN__RUN_PASS_C_UNSEAL_GATE",
     "PASS_C_STEREO_MONO_MOBILE",
-    "GO_NO_GO"
+    "FINAL_LISTENER_GO_NO_GO"
   ],
-  "six_questions": [
-    "ACTOR_BELIEF",
-    "AI_AUDIBLE",
-    "DEAD_SCENE",
-    "GEOGRAPHY",
-    "MYSTERY",
-    "SFX_MASKING"
-  ],
+  "six_questions": ["ACTOR_BELIEF", "AI_AUDIBLE", "DEAD_SCENE", "GEOGRAPHY", "MYSTERY", "SFX_MASKING"],
   "locale_listener_policy": {
     "evaluate_en_and_ru_independently": true,
     "same_six_questions_each_locale": true,
@@ -137,16 +141,7 @@
     "literal_dialogue_timing_match_forbidden": true,
     "locale_specific_cast_required": true,
     "locale_specific_reply_timing_allowed": true,
-    "compare_only_functional_and_language_neutral_invariants": [
-      "SAME_PHYSICAL_GREYHAVEN",
-      "SAME_ROOM_IDENTITY",
-      "SAME_CLUE_CAUSALITY",
-      "SAME_MECHANICAL_SIGNATURES",
-      "SAME_FOUR_NOTE_LULLABY_IDENTITY",
-      "SAME_PROTECTED_SILENCE_FUNCTION",
-      "SAME_SCENE3_EVIDENCE_ORDER",
-      "MONO_MOBILE_CLUE_SURVIVAL"
-    ],
+    "compare_only_functional_and_language_neutral_invariants": ["SAME_PHYSICAL_GREYHAVEN", "SAME_ROOM_IDENTITY", "SAME_CLUE_CAUSALITY", "SAME_MECHANICAL_SIGNATURES", "SAME_FOUR_NOTE_LULLABY_IDENTITY", "SAME_PROTECTED_SILENCE_FUNCTION", "SAME_SCENE3_EVIDENCE_ORDER", "MONO_MOBILE_CLUE_SURVIVAL"],
     "cross_locale_failure_rule": "A locale may fail acting/naturalism while the other passes; do not repair the passing locale to imitate the failed locale.",
     "shared_sound_failure_rule": "If the same language-neutral clue or geography failure appears in both locales, investigate the shared asset/mix layer before touching either performance."
   },
@@ -155,11 +150,7 @@
     "old_v1_2_2_repair_campaign": "SUPERSEDED_DO_NOT_REAPPLY",
     "v1_4a_naturalness_audit": "REAL_AUDIO_MEASURED_EVIDENCE_AND_PRODUCTION_INFERENCE_NOT_HUMAN_PANEL",
     "pass_b_candidate_count": 10,
-    "open_release_gates": [
-      "FOURTH_NOTE_PERCEPTUAL_LOCK",
-      "MINA_HUMAN_CAST_APPROVAL",
-      "CATE_HUMAN_CAST_APPROVAL"
-    ]
+    "open_release_gates": ["FOURTH_NOTE_PERCEPTUAL_LOCK", "MINA_HUMAN_CAST_APPROVAL", "CATE_HUMAN_CAST_APPROVAL"]
   },
   "pre_scene3": {
     "D003": "PROVEN_AGGREGATE_MAJOR_EXACT_INTERVALS_UNRESOLVED",
@@ -175,6 +166,6 @@
     "selective_repair_downstream": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/compile_ru_selective_repair_plan.py",
     "routing": "GENERIC_P003B_PERFORMANCE_DEFECT_THEN_RU_SPECIFIC_MAPPING_AND_SEPARATE_SPEND_GATE"
   },
-  "repair_law": "NO_PATCH_FROM_TASTE_OR_METRICS_ALONE; ONLY VERIFIED_AUDIBLE_DEFECT -> SMALLEST_REPAIR -> REGRESSION",
+  "repair_law": "NO_PATCH_FROM_TASTE_OR_METRICS_ALONE; ONLY VERIFIED_AUDIBLE_DEFECT -> SMALLEST_REPAIR -> REGRESSION -> HUMAN_RELISTEN",
   "story_rewrite": "FORBIDDEN_UNLESS_REAL_STORY_CONTINUITY_ERROR_AND_FOUNDER_REOPENS"
 }
