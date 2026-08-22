@@ -51,9 +51,9 @@
   "drive": {
     "folder_id": "1FyYsogdwV8mAnEwQMyHHgBdXqgu71hMD",
     "document_id": "1hVCyR1rnyjgYwvGXK5nQu_t4G09xdJr9CcjmMHMvFAk",
-    "premerge_revision_id": "AIroW358-ZJjDkRVNfYS2InlahNDKJP8kWyPfGQnpbr-PWOxPmSTlTYy34kJl1lC61Fg609PwavdlW6VU59fbaX7aZhWcsBSVviCTWjjy2Q",
-    "premerge_readback_status": "PASS",
-    "closure_marker_expected": "P-EW07-PASS-ORTHOGONAL-PR447-CI32572489009-MERGE907BF7-NO-WIP-NO-MARKET-PROOF"
+    "closure_revision_id": "AIroW37V7oGtzDghbfFfD9_X7tK8qo85aIYmIez4jKU6zr0rPN6rsDEHZ62Po-Rc4hKxqlJsar8G9EEAnIhAZtZCSSiamSAK1MGmwti743E",
+    "closure_marker": "P-EW07-PASS-ORTHOGONAL-PR447-CI32572489009-MERGE907BF7-NO-WIP-NO-MARKET-PROOF",
+    "closure_readback_status": "PASS"
   },
   "proof_boundary": {
     "buyer_demand_proven": false,
