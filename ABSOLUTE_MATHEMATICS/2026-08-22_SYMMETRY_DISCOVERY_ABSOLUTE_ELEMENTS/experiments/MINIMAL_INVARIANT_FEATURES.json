@@ -1,0 +1,83 @@
+{
+  "minimal_task_sufficient": {
+    "S4_SYMMETRIC": {
+      "group_size": 24,
+      "relation_type_count": 4,
+      "minimal_task_sufficient": {
+        "min_dim": 2,
+        "indices": [0, 1],
+        "train_rmse": 1.09545130679642e-15,
+        "hidden_rmse": 1.067287600034544e-15,
+        "all_minimal_count": 1
+      },
+      "state_generator_hint": {
+        "count": 4,
+        "generators": ["e1", "e2", "e3", "e4"],
+        "status": "KNOWN_INVARIANT_RING_GENERATORS"
+      }
+    },
+    "BLOCK_S2xS2": {
+      "group_size": 4,
+      "relation_type_count": 8,
+      "minimal_task_sufficient": {
+        "min_dim": 4,
+        "indices": [0, 1, 2, 4],
+        "train_rmse": 7.205226575807594e-16,
+        "hidden_rmse": 7.141530371313438e-16,
+        "all_minimal_count": 1
+      },
+      "state_generator_hint": {
+        "count": 4,
+        "generators": ["sA=x1+x2", "pA=x1*x2", "sB=x3+x4", "pB=x3*x4"],
+        "status": "KNOWN_BLOCK_GENERATORS"
+      }
+    },
+    "IDENTITY_ROLE": {
+      "group_size": 1,
+      "relation_type_count": 15,
+      "minimal_task_sufficient": {
+        "min_dim": 4,
+        "indices": [0, 1, 2, 3],
+        "train_rmse": 5.948341588498513e-16,
+        "hidden_rmse": 5.996990189679648e-16,
+        "all_minimal_count": 1
+      },
+      "state_generator_hint": {
+        "count": 4,
+        "generators": ["x1", "x2", "x3", "x4"],
+        "status": "TRIVIAL_LABELED_COORDINATES"
+      }
+    },
+    "CYCLE_GRAPH": {
+      "group_size": 8,
+      "relation_type_count": 5,
+      "minimal_task_sufficient": {
+        "min_dim": 1,
+        "indices": [1],
+        "train_rmse": 1.7886791900502053e-16,
+        "hidden_rmse": 1.7546865591142676e-16,
+        "all_minimal_count": 1
+      },
+      "state_generator_hint": {
+        "count": null,
+        "generators": [],
+        "status": "NOT_DERIVED_HERE"
+      }
+    }
+  },
+  "multitask_S4": {
+    "min_dim": 3,
+    "indices": [0, 1, 2],
+    "reports": [
+      {"train_rmse": 1.1938368559845586e-15, "hidden_rmse": 1.0147359137273044e-15},
+      {"train_rmse": 3.2879548582994405e-16, "hidden_rmse": 3.836150453632481e-16}
+    ]
+  },
+  "hierarchy": [
+    "formal relation count",
+    "relation-type count under G",
+    "invariant-ring/separating generator count",
+    "task/intervention-sufficient feature count",
+    "intrinsic state dimension"
+  ]
+}
