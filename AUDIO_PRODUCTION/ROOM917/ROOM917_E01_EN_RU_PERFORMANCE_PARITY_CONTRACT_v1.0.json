@@ -1,0 +1,212 @@
+{
+  "schema_version": "ivdivo.room917_en_ru_performance_parity/1.0",
+  "created": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "active_branch": "THE_INSURABLE_FIRE",
+  "story_status": "LOCKED",
+  "status": "ACTIVE_ZERO_SPEND_CONTROL",
+  "purpose": "Preserve dramatic-function parity between accepted English performance and Russian performance without forcing literal voice, tempo, pitch, pause or acoustic imitation.",
+  "authorities": {
+    "bilingual_physical_control": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json",
+    "listener_qc": "AUDIO_PRODUCTION/ROOM917/CURRENT_LISTENER_QC_POINTER.json",
+    "ru_manifest": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_E02_ELEVENLABS_V3_MANIFEST_v1.0.json",
+    "ru_assembly": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_ASSEMBLY_CONTRACT_v1.0.json"
+  },
+  "parity_law": {
+    "functional_equivalence_required": true,
+    "literal_voice_match_forbidden": true,
+    "literal_pitch_match_forbidden": true,
+    "literal_tempo_match_forbidden": true,
+    "literal_pause_map_match_forbidden": true,
+    "literal_dialogue_duration_match_forbidden": true,
+    "locale_specific_actor_choices_allowed": true,
+    "passing_locale_must_not_be_repaired_to_imitate_failed_locale": true,
+    "shared_story_sound_failure_in_both_locales_routes_to_shared_asset_or_mix_layer_first": true
+  },
+  "score_scale": {
+    "min": 0,
+    "max": 5,
+    "independent_locale_pass_min": 4,
+    "ai_audibility": "LOWER_IS_BETTER",
+    "ai_audibility_reject_threshold": 3,
+    "cross_locale_score_difference_is_not_failure_by_itself": true
+  },
+  "role_invariants": {
+    "ELENA": {
+      "core": "PROFESSIONAL_PRECISION_BEFORE_MYSTERY_AFFECT",
+      "must_preserve": [
+        "competence",
+        "dry_boundary_setting",
+        "fear_narrows_control_instead_of_causing_trailer_panic",
+        "personal_vulnerability_stays_small_and_factual",
+        "final_question_is_precise_human_attention_not_horror_performance"
+      ],
+      "forbidden": [
+        "MECHANICAL_TECHNICAL_READ",
+        "TRAILER_HORROR",
+        "TEARFUL_AUDIOBOOK_DECLAMATION",
+        "MYSTICAL_PREKNOWLEDGE"
+      ]
+    },
+    "JULIAN": {
+      "core": "OPERATIONAL_PRESSURE_WITH_PERSONAL_WEIGHT_NOT_ALPHA_CONTROL",
+      "must_preserve": [
+        "economic_stakes_are_real_not_manipulative",
+        "status_pressure_without_threat_display",
+        "competence_friction_with_elena",
+        "no_premature_guilt_signal"
+      ],
+      "forbidden": [
+        "ALPHA_BILLIONAIRE_CADENCE",
+        "VILLAIN_GROWL",
+        "PREPLAYED_GUILT",
+        "OVERT_FLIRT_BEFORE_STORY_EARNS_IT"
+      ]
+    },
+    "MINA": {
+      "core": "ORDINARY_SOCIAL_SPEED_PRACTICAL_HUMOR_AND_CAREFUL_WITNESSING",
+      "must_preserve": [
+        "warm_practical_social_intelligence",
+        "humor_is_embedded_in_work_not_comedy_performance",
+        "witness_precision_replaces_humor_under_pressure"
+      ],
+      "forbidden": [
+        "COMIC_SIDEKICK",
+        "EXPOSITION_MACHINE",
+        "HYSTERICAL_WITNESS"
+      ]
+    },
+    "CATE": {
+      "core": "ORDINARY_HUMAN_IDENTITY_BEFORE_TRANSMISSION_DAMAGE",
+      "must_preserve": [
+        "human_maternal_identity",
+        "same_person_across_line_fragment_and_e02_cassette",
+        "medium_damage_belongs_to_post_not_actor"
+      ],
+      "forbidden": [
+        "GHOST_VOICE",
+        "THEATRICAL_PLEADING",
+        "HORROR_WHISPER",
+        "ACTED_TRANSMISSION_DISTORTION"
+      ]
+    }
+  },
+  "semantic_checkpoints": [
+    {
+      "id": "ELENA_PROFESSIONAL_WORLDVIEW",
+      "role": "ELENA",
+      "ru_unit_ids": ["RU_E01_AUD_ELENA_01"],
+      "function": "Professional worldview and competence; mystery affect remains absent.",
+      "required_dimensions": ["BELIEVABILITY", "PROFESSIONAL_AUTHORITY", "RESTRAINT", "NATURALNESS"]
+    },
+    {
+      "id": "ELENA_BOUNDARY",
+      "role": "ELENA",
+      "ru_unit_ids": ["RU_E01_AUD_ELENA_02"],
+      "function": "Boundary through measurement and procedure, not swagger.",
+      "required_dimensions": ["BELIEVABILITY", "STATUS_CLARITY", "DRYNESS", "NO_TRAILER_TELL"]
+    },
+    {
+      "id": "ELENA_FEAR_INSIDE_PRECISION",
+      "role": "ELENA",
+      "ru_unit_ids": ["RU_E01_AUD_ELENA_03"],
+      "function": "Fear is audible only as tightened measurement and command discipline.",
+      "required_dimensions": ["BELIEVABILITY", "FEAR_RESTRAINT", "CLUE_INTELLIGIBILITY", "NO_PANIC"]
+    },
+    {
+      "id": "ELENA_SMALL_VULNERABILITY",
+      "role": "ELENA",
+      "ru_unit_ids": ["RU_E01_AUD_ELENA_04", "RU_E01_AUD_ELENA_05"],
+      "function": "Personal history lands as a small factual fracture rather than performed grief.",
+      "required_dimensions": ["BELIEVABILITY", "EMOTIONAL_GRANULARITY", "RESTRAINT"]
+    },
+    {
+      "id": "ELENA_FINAL_QUESTION",
+      "role": "ELENA",
+      "ru_unit_ids": ["RU_E01_AUD_ELENA_06"],
+      "function": "Attention snaps to Julian; quiet precise question is the strongest exit.",
+      "required_dimensions": ["BELIEVABILITY", "ATTENTION_SHIFT", "MYSTERY_CHARGE", "NO_HORROR_PUSH"]
+    },
+    {
+      "id": "JULIAN_ECONOMIC_STAKES",
+      "role": "JULIAN",
+      "ru_unit_ids": ["RU_E01_AUD_JULIAN_01"],
+      "function": "Operational truth with personal weight; no plea or manipulation.",
+      "required_dimensions": ["BELIEVABILITY", "WEIGHT", "RESTRAINT", "NO_ALPHA_TELL"]
+    },
+    {
+      "id": "JULIAN_STATUS_PRESSURE",
+      "role": "JULIAN",
+      "ru_unit_ids": ["RU_E01_AUD_JULIAN_02"],
+      "function": "Manager under stress, concise and credible; not threat display.",
+      "required_dimensions": ["BELIEVABILITY", "STATUS", "STRESS_CONTROL", "NO_GROWL"]
+    },
+    {
+      "id": "MINA_ORDINARY_HUMOR",
+      "role": "MINA",
+      "ru_unit_ids": ["RU_E01_AUD_MINA_01"],
+      "function": "Practical social humor embedded in hotel work.",
+      "required_dimensions": ["BELIEVABILITY", "SOCIAL_SPEED", "WARMTH", "NO_COMEDY_CADENCE"]
+    },
+    {
+      "id": "MINA_WITNESS_PRESSURE",
+      "role": "MINA",
+      "ru_unit_ids": ["RU_E01_AUD_MINA_02"],
+      "function": "Careful independent witness; humor disappears without hysteria.",
+      "required_dimensions": ["BELIEVABILITY", "WITNESS_PRECISION", "RESTRAINT", "CLUE_INTELLIGIBILITY"]
+    },
+    {
+      "id": "CATE_HUMAN_FRAGMENT",
+      "role": "CATE",
+      "ru_unit_ids": ["RU_E01_AUD_CATE_01", "RU_E01_AUD_CATE_02"],
+      "function": "Ordinary exhausted human source; transmission damage belongs to post.",
+      "required_dimensions": ["BELIEVABILITY", "HUMANITY", "IDENTITY", "NO_GHOST_PERFORMANCE"]
+    },
+    {
+      "id": "CATE_CASSETTE_IDENTITY",
+      "role": "CATE",
+      "ru_unit_ids": ["RU_E02_AUD_CATE_03"],
+      "function": "Domestic mother must plausibly be same human identity as E01 fragment.",
+      "required_dimensions": ["BELIEVABILITY", "MATERNAL_WARMTH", "IDENTITY_CONTINUITY"]
+    }
+  ],
+  "listener_qc": {
+    "same_six_questions_each_locale": [
+      "ACTOR_BELIEF",
+      "AI_AUDIBLE",
+      "DEAD_SCENE",
+      "GEOGRAPHY",
+      "MYSTERY",
+      "SFX_MASKING"
+    ],
+    "performance_specific_questions": ["ACTOR_BELIEF", "AI_AUDIBLE", "DEAD_SCENE"],
+    "shared_system_suspect_when_both_locales_fail": ["GEOGRAPHY", "MYSTERY", "SFX_MASKING"]
+  },
+  "performance_review_record": {
+    "checkpoint_id": "",
+    "locale": "en-or-ru",
+    "actor_or_voice_id": "",
+    "take_id": "",
+    "scores_0_5": {
+      "BELIEVABILITY": null,
+      "AI_AUDIBILITY": null,
+      "EMOTIONAL_TRUTH": null,
+      "RESTRAINT": null,
+      "CLUE_INTELLIGIBILITY": null,
+      "IDENTITY_CONTINUITY": null
+    },
+    "functional_pass": null,
+    "notes": "",
+    "repair_layer_if_fail": null
+  },
+  "release_rule": {
+    "ru_may_pass_without_matching_en_acoustically": true,
+    "en_may_pass_without_matching_ru_acoustically": true,
+    "each_locale_actor_belief_must_pass": true,
+    "each_locale_ai_audibility_must_pass": true,
+    "shared_clue_causality_must_match": true,
+    "founder_credibility_listen_required_for_ru_cast_lock": true,
+    "human_listen_must_not_be_simulated": true
+  }
+}
