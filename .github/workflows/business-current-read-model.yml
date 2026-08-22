@@ -1,0 +1,43 @@
+name: Business Current Read Model Guard
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json'
+      - '.github/workflows/business-current-read-model.yml'
+
+jobs:
+  read-model-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate JSON and core-overlay contract
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('.')
+          model = json.loads((root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json').read_text())
+          core = (root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md').read_text()
+          overlay = (root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md').read_text()
+          assert model['core']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
+          assert model['mandatory_evidence_overlay']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
+          assert model['mandatory_evidence_overlay']['may_change_root_blockers_silently'] is False
+          assert model['mandatory_evidence_overlay']['may_promote_proof_grade'] is False
+          assert model['mandatory_evidence_overlay']['may_authorize_external_action'] is False
+          assert model['current_roots']['ROOT_A'] == 'TARGET_PACK_NOT_ACQUIRED'
+          assert model['current_roots']['ROOT_B'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_PACKET'
+          assert model['current_execution']['completed_engineering_subset'] == 'P257-P264'
+          assert model['current_execution']['remaining_unexecuted_count'] == 56
+          assert model['proof_frontier'] == {'public_derived_ceiling':'E2_PLUS','artifact_plane':'PA3','PA4':False,'PA5':False,'E3':False,'E4':False}
+          assert 'CORE_CURRENT + MANDATORY_EVIDENCE_OVERLAY = CURRENT_BUSINESS_READ_MODEL' in core
+          assert 'CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md' in core
+          assert 'ROOT_A = TARGET_PACK_NOT_ACQUIRED' in core
+          assert 'ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_PACKET' in core
+          assert 'NOT_FOUND_IN_CONNECTED_SOURCES != DOCUMENT_DOES_NOT_EXIST' in overlay
+          print('CURRENT_BUSINESS_READ_MODEL: PASS')
+          PY
