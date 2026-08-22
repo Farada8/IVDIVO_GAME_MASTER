@@ -1,0 +1,49 @@
+{
+  "schema": "CYCLE32D_FRESH_REPLAY_STATE_v1",
+  "date": "2026-08-22",
+  "authority": "SELF_IMPROVEMENT_V2_VERIFIED_CURRENT",
+  "cycle32d": "BOUNDED_LOCAL_EXTENSION_CANDIDATE",
+  "v3": "CANDIDATE_HOLD",
+  "fresh_base": "be23512b715f587d8d3511f9640722491e1b5214",
+  "fresh_replay_commit": "d2a2f7fd753e2e6dfccb97fa3d2c4c892b4841a2",
+  "fresh_branch": "self-improvement/cycle32d-fresh-main-convergence-20260822",
+  "old_prs": {
+    "206": "SUPERSEDED_BY_FRESH_REPLAY_PROVENANCE_ONLY",
+    "218": "SUPERSEDED_BY_FRESH_REPLAY_PROVENANCE_ONLY"
+  },
+  "run32": {
+    "executed": 32,
+    "counted_once": true,
+    "rerun_for_replay": false
+  },
+  "next64": {
+    "designed": 64,
+    "autoplay_authorized": false
+  },
+  "si0014": {
+    "genuine_incidents": 1,
+    "required_genuine_incidents": 3,
+    "distinct_projects": 2,
+    "required_distinct_projects": 2,
+    "zero_false_resume": true,
+    "promotion_authorized": false
+  },
+  "unique_mechanisms": [
+    "VERIFIED_PERSISTENCE_TRANSACTION",
+    "PROJECT_SOURCE_OF_TRUTH_PRECEDENCE",
+    "STALE_ROUTER_QUARANTINE",
+    "PRE_EXECUTION_RESUME_GUARD",
+    "ACTIVE_SURFACE_SI_ID_COLLISION_GUARD",
+    "NO_ALLOCATION",
+    "MULTI_SURFACE_FRESHNESS_VECTOR",
+    "PROMPT_FUNCTIONAL_FINGERPRINT_DEDUPE",
+    "DECISION_EVIDENCE_YIELD",
+    "REJECT_NO_EFFECT",
+    "EVIDENCE_CLASS_CEILING",
+    "SELECTIVE_ROLLBACK",
+    "INPUT_ASSET_REGISTRY_VALIDATION"
+  ],
+  "evidence_ceiling": "ENGINEERING_ONLY_UNLESS_SEPARATE_REAL_EVIDENCE_EXISTS",
+  "global_promotion": false,
+  "next_primary": "RUN_FRESH_PR_CI_AND_REVIEW; THEN SELECT ONLY MECHANISMS WITH PROSPECTIVE PRODUCTION NET-GAIN EVIDENCE"
+}
