@@ -1,0 +1,6 @@
+{
+  "schema_version": "room917.sfx_human_lock/1.0",
+  "status": "PENDING_HUMAN_BLIND_LISTEN",
+  "selections": [],
+  "rule": "Do not populate selections until blind X/Y listening is completed. Each accepted row must copy asset_id, candidate and sha256 from the manifest and set human_blind_result=ACCEPT."
+}
