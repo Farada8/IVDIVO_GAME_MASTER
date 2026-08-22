@@ -1,0 +1,23 @@
+{
+  "schema_version": "room917.e01_context_gain_lock/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "status": "TEMPLATE_ONLY",
+  "law": "NO_PRODUCTION_GAIN_IS_INFERRED_FROM_ASSET_FILE_LOUDNESS_OR_PROMPT. Gain must be auditioned in actual dialogue/mix context.",
+  "source_selected_compilation_sha256": "TODO",
+  "entries": {
+    "ASSET_ID": {
+      "candidate_id": "TODO",
+      "gain_db": null,
+      "context_status": "HOLD",
+      "dialogue_intelligibility": "HOLD",
+      "function_readability": "HOLD",
+      "no_overstatement": "HOLD",
+      "mono_context": "HOLD",
+      "phone_context": "HOLD",
+      "notes": null
+    }
+  },
+  "allowed_status": ["PASS", "HOLD", "REJECT"],
+  "promotion_rule": "Only entries with numeric gain_db and PASS on all context gates may be emitted to sound_asset_binding_gate."
+}
