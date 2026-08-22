@@ -1,0 +1,36 @@
+{
+  "schema_version": "ivdivo.audio.authority_hygiene_contract/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "scope": "CUE_LINEAGE_AND_POST_RENDER_SOUND_SOURCE_INGEST",
+  "law": "Search discovery is not authority. Production sound lineage must be pinned to an explicitly approved source identity before compilation, timing resolution, interval classification or repair planning.",
+  "pass_requirements": [
+    "EXACT_DRIVE_ID_MATCH",
+    "EXACT_REVISION_ID_MATCH",
+    "EXACT_TITLE_MATCH"
+  ],
+  "content_bearing_discovery_additional_requirements": [
+    "CURRENT_ENGINE_MARKER_PRESENT",
+    "CURRENT_CAST_MARKER_PRESENT",
+    "EXPLICIT_OBSOLETE_BRANCH_PROHIBITION_PRESENT"
+  ],
+  "legacy_conflict_result": "QUARANTINE_LEGACY_CONFLICT",
+  "unknown_or_changed_result": "HOLD_UNVERIFIED_AUTHORITY",
+  "revision_change_policy": "FAIL_CLOSED_UNTIL_EXPLICIT_REVALIDATION",
+  "current_authority": {
+    "drive_id": "1Rz_Tv83fNhQIuPnMA4jRkESmgiu8xA-GZnctbQYDP_I",
+    "revision_id": "AIroW35akh5K-jiaYRt8MsVE766IodPxPzb_8ueRhxFW36LZv5aJP_vTzTR7KZhJULqdCk5aTTiDvO4ncVEn0z521VzUp_jLDbvK_V7Fa50",
+    "title": "ROOM 917 — E01 ELEVENLABS ACTOR + SOUND DIRECTOR MASTER v1.0",
+    "active_engine": "THE INSURABLE FIRE"
+  },
+  "known_quarantine": {
+    "drive_id": "16fdc16IHn6YXtJCcmfd5Ft4r4Mt0Jyep",
+    "title": "ROOM_917_E01_STUDIO_SFX_CUE_SHEET",
+    "reason": "MARA_BRANCH_AND_50HZ_POLICY_CONFLICT"
+  },
+  "integration_points": [
+    "cue_lineage_compiler.py",
+    "post_render_pipeline.py"
+  ],
+  "regression_rule": "A source rejected by authority hygiene must produce no resolved timing, interval classification or repair plan."
+}
