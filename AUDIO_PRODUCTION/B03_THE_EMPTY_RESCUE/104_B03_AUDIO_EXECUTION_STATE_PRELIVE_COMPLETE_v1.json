@@ -1,0 +1,61 @@
+{
+  "artifact": "B03_AUDIO_EXECUTION_STATE_PRELIVE_COMPLETE_v1",
+  "updated": "2026-08-22",
+  "project": "B03 — THE EMPTY RESCUE",
+  "story_authority": "FOUNDER_LOCKED_CH01-29",
+  "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
+  "locked_book_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
+  "ch01_source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "current_stage": "PRELIVE_DESIGN_COMPLETE / WAITING_LIVE_S0_AND_ASSET_CANARIES",
+  "completed": [
+    "exact-text segmentation 281 units",
+    "speaker/director score",
+    "16 render blocks",
+    "16 fail-closed dry provider requests",
+    "voice map template",
+    "bounded live canary selection",
+    "provider zero-cost contract preflight",
+    "S0-S4 casting cascade plan",
+    "4 S0 technical dry jobs",
+    "pronunciation validation protocol",
+    "casting scorecard",
+    "project audio overlay",
+    "acoustic passport + identity ledger",
+    "microphone choreography",
+    "12-cue sound asset plan",
+    "Hard Pilot QC contract",
+    "sound-asset canary manifest",
+    "asset acceptance ledger template",
+    "Hard Pilot assembly manifest"
+  ],
+  "live_evidence": {
+    "provider_access_tested": false,
+    "voices_enumerated_from_user_workspace": false,
+    "S0_run": false,
+    "voice_lock": false,
+    "audio_assets_generated_or_recorded": false,
+    "alignment_received": false,
+    "mix_created": false,
+    "human_listen": false
+  },
+  "open_gates": [
+    "REAL_ELEVENLABS_OR_OTHER_PROVIDER_EXECUTION_CONTEXT",
+    "ACTUAL_VOICE_CANDIDATE_IDS",
+    "SLOVENIAN_PRONUNCIATION_EVIDENCE",
+    "EXPLICIT_PAID_PROVIDER_DISPATCH_AUTHORIZATION_IF_REQUIRED",
+    "LIVE_S0_PASS",
+    "S1-S4_CASTING_EVIDENCE",
+    "ASSET_CANARY_EVIDENCE",
+    "HARD_PILOT_PASS"
+  ],
+  "next_exact_action": "When live provider context exists: enumerate actual workspace voices -> bind temporary S0 candidates -> immediate exact-text/source-hash recheck -> execute only 4 S0 jobs -> record provenance/alignment -> PASS/FAIL. In parallel, bind an asset generation/recording path and execute only asset canaries C0-C2; C3 waits for accepted caller take.",
+  "prohibited": [
+    "more generic engine redesign without demonstrated defect",
+    "bulk CH01 or book render before canary evidence",
+    "claiming audio/listen/cast/alignment without real evidence",
+    "story rewrite or CH30 creation",
+    "precursor ontology invention",
+    "Andrej diagnosis/prognosis invention",
+    "API keys or secrets in GitHub/Drive"
+  ]
+}
