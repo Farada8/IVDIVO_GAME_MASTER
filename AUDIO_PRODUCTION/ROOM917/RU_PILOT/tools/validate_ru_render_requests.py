@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Validate ROOM917 RU Eleven v3 render requests before any provider call.
 
-This validator is zero-spend. It protects locked dialogue while permitting
-bounded Eleven v3 performance-tag experiments and punctuation-only variants.
-It never calls ElevenLabs.
+Zero-spend. Supports both audition manifests (`audition_units`) and production
+immutable dialogue-unit manifests (`units`). Protects locked dialogue while
+allowing bounded v3 tags, punctuation-only variants, adjacent previous/next text
+context, and request-ID stitching for selective rerenders.
 """
 from __future__ import annotations
 
@@ -17,6 +18,8 @@ from typing import Any
 
 TAG_RE = re.compile(r"\[[^\[\]]+\]")
 WORD_RE = re.compile(r"[\wЁёА-Яа-я]+", re.UNICODE)
+MAX_CONTEXT_REQUEST_IDS = 3
+MAX_SEED = 4294967295
 
 
 def sha256_text(text: str) -> str:
@@ -50,9 +53,107 @@ def policy_sets(policy: dict[str, Any]) -> tuple[set[str], set[str], set[str]]:
     return allowed, conditional, forbidden
 
 
+def manifest_units(manifest: dict[str, Any]) -> tuple[list[dict[str, Any]], str]:
+    if isinstance(manifest.get("audition_units"), list) and manifest.get("audition_units"):
+        return manifest["audition_units"], "AUDITION"
+    if isinstance(manifest.get("units"), list) and manifest.get("units"):
+        return manifest["units"], "PRODUCTION_DIALOGUE_UNITS"
+    return [], "UNKNOWN"
+
+
+def unit_id_of(unit: dict[str, Any]) -> str:
+    return str(unit.get("id") or unit.get("unit_id") or "")
+
+
+def build_unit_maps(manifest: dict[str, Any]) -> tuple[dict[str, dict[str, Any]], list[str], str]:
+    units, kind = manifest_units(manifest)
+    unit_map = {unit_id_of(u): u for u in units if unit_id_of(u)}
+    order = [unit_id_of(u) for u in units if unit_id_of(u)]
+    return unit_map, order, kind
+
+
+def validate_request_id_list(value: object, field: str, errors: list[str]) -> list[str]:
+    if value is None:
+        return []
+    if not isinstance(value, list):
+        errors.append(f"{field.upper()}_NOT_LIST")
+        return []
+    if len(value) > MAX_CONTEXT_REQUEST_IDS:
+        errors.append(f"{field.upper()}_MORE_THAN_3")
+    out=[]
+    for item in value:
+        text=str(item or "").strip()
+        if not text:
+            errors.append(f"{field.upper()}_EMPTY_ID")
+        else:
+            out.append(text)
+    return out
+
+
+def validate_continuity_context(
+    req: dict[str, Any],
+    unit_id: str,
+    unit_map: dict[str, dict[str, Any]],
+    order: list[str],
+    manifest_kind: str,
+    errors: list[str],
+) -> None:
+    prev_text = req.get("previous_text")
+    next_text = req.get("next_text")
+    prev_ids = validate_request_id_list(req.get("previous_request_ids"), "previous_request_ids", errors)
+    next_ids = validate_request_id_list(req.get("next_request_ids"), "next_request_ids", errors)
+
+    if prev_ids and prev_text not in (None, ""):
+        errors.append("PREVIOUS_TEXT_AND_REQUEST_IDS_AMBIGUOUS")
+    if next_ids and next_text not in (None, ""):
+        errors.append("NEXT_TEXT_AND_REQUEST_IDS_AMBIGUOUS")
+
+    if manifest_kind != "PRODUCTION_DIALOGUE_UNITS":
+        return
+
+    try:
+        idx = order.index(unit_id)
+    except ValueError:
+        errors.append("UNIT_ORDER_LOOKUP_FAILED")
+        return
+
+    current = unit_map[unit_id]
+    current_scene = current.get("scene")
+    expected_prev = None
+    expected_next = None
+    if idx > 0:
+        prev_unit = unit_map[order[idx - 1]]
+        if prev_unit.get("scene") == current_scene:
+            expected_prev = str(prev_unit.get("text") or "")
+    if idx + 1 < len(order):
+        next_unit = unit_map[order[idx + 1]]
+        if next_unit.get("scene") == current_scene:
+            expected_next = str(next_unit.get("text") or "")
+
+    # Text context is only legal when it is the exact immediate adjacent
+    # dialogue unit in the same scene. Request-ID context is validated by count
+    # and non-emptiness here; semantic lineage is checked in the rerender stage.
+    if prev_text not in (None, "") and str(prev_text) != expected_prev:
+        errors.append("PREVIOUS_TEXT_NOT_EXACT_ADJACENT_UNIT")
+    if next_text not in (None, "") and str(next_text) != expected_next:
+        errors.append("NEXT_TEXT_NOT_EXACT_ADJACENT_UNIT")
+
+    context_mode = str(req.get("continuity_context_mode") or "NONE")
+    if prev_ids or next_ids:
+        if context_mode != "REQUEST_ID_STITCHING":
+            errors.append("REQUEST_ID_CONTEXT_MODE_REQUIRED")
+    elif prev_text not in (None, "") or next_text not in (None, ""):
+        if context_mode != "ADJACENT_TEXT":
+            errors.append("ADJACENT_TEXT_CONTEXT_MODE_REQUIRED")
+    elif context_mode not in {"NONE", ""}:
+        errors.append("CONTEXT_MODE_WITHOUT_CONTEXT")
+
+
 def validate_request(
     req: dict[str, Any],
     unit_map: dict[str, dict[str, Any]],
+    order: list[str],
+    manifest_kind: str,
     allowed: set[str],
     conditional: set[str],
     forbidden: set[str],
@@ -70,6 +171,8 @@ def validate_request(
         errors.append(f"CHARACTER_MISMATCH:{req.get('character')}!={character}")
 
     expected_source_hash = sha256_text(source_text)
+    if unit.get("text_sha256") not in (None, "") and unit.get("text_sha256") != expected_source_hash:
+        errors.append("MANIFEST_UNIT_TEXT_HASH_INVALID")
     if req.get("source_text_sha256") != expected_source_hash:
         errors.append("SOURCE_TEXT_HASH_MISMATCH")
 
@@ -82,6 +185,15 @@ def validate_request(
 
     if req.get("language_code") != "ru":
         errors.append("LANGUAGE_CODE_MUST_BE_RU")
+
+    output_format = str(req.get("output_format") or "")
+    if output_format and output_format != "pcm_48000":
+        errors.append("PRODUCTION_OUTPUT_FORMAT_MUST_BE_PCM_48000")
+
+    seed = req.get("seed")
+    if seed is not None:
+        if not isinstance(seed, int) or isinstance(seed, bool) or not (0 <= seed <= MAX_SEED):
+            errors.append("SEED_OUT_OF_RANGE")
 
     text = str(req.get("text") or "")
     if not text:
@@ -135,19 +247,18 @@ def validate_request(
     if req.get("request_text_sha256") != sha256_text(text):
         errors.append("REQUEST_TEXT_HASH_MISMATCH")
 
+    validate_continuity_context(req, unit_id, unit_map, order, manifest_kind, errors)
     return errors
 
 
-def validate_bundle(
-    manifest: dict[str, Any],
-    policy: dict[str, Any],
-    bundle: dict[str, Any],
-) -> dict[str, Any]:
-    units = manifest.get("audition_units") or []
-    unit_map = {str(u.get("id")): u for u in units if u.get("id")}
+def validate_bundle(manifest: dict[str, Any], policy: dict[str, Any], bundle: dict[str, Any]) -> dict[str, Any]:
+    unit_map, order, manifest_kind = build_unit_maps(manifest)
     allowed, conditional, forbidden = policy_sets(policy)
 
     errors: list[dict[str, Any]] = []
+    if not unit_map:
+        errors.append({"request_index": None, "unit_id": None, "errors": ["MANIFEST_HAS_NO_SUPPORTED_UNITS"]})
+
     requests = bundle.get("requests") or []
     if not isinstance(requests, list) or not requests:
         errors.append({"request_index": None, "unit_id": None, "errors": ["REQUESTS_EMPTY"]})
@@ -166,14 +277,15 @@ def validate_bundle(
         else:
             seen_ids.add(request_id)
             req_errors = []
-        req_errors.extend(validate_request(req, unit_map, allowed, conditional, forbidden))
+        req_errors.extend(validate_request(req, unit_map, order, manifest_kind, allowed, conditional, forbidden))
         if req_errors:
             errors.append({"request_index": idx, "request_id": request_id, "unit_id": req.get("unit_id"), "errors": req_errors})
 
     result = {
-        "schema_version": "ivdivo.room917_ru_render_request_validation/1.0",
+        "schema_version": "ivdivo.room917_ru_render_request_validation/1.1",
         "project_id": "ROOM917",
         "locale": "ru-RU",
+        "manifest_kind": manifest_kind,
         "provider_calls": 0,
         "paid_synthesis_calls": 0,
         "request_count": len(requests),
