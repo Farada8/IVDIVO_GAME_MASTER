@@ -6,6 +6,7 @@ on:
       - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
       - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
       - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json'
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/**'
       - '.github/workflows/business-current-read-model.yml'
 
 jobs:
@@ -24,8 +25,11 @@ jobs:
           model = json.loads((root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json').read_text())
           core = (root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md').read_text()
           overlay = (root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md').read_text()
+          p288 = (root/'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/00_P288_RECONCILIATION.md').read_text()
+          machine = json.loads((root/'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/01_MACHINE_STATE.json').read_text())
+          closure = (root/'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/02_CURRENT_ACCOUNTING_CLOSURE.md').read_text()
           core_lower = core.lower()
-          assert model['schema'] == 'ivdivo.business.current_read_model/1.1'
+          assert model['schema'] == 'ivdivo.business.current_read_model/1.2'
           assert model['core']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
           assert model['mandatory_evidence_overlay']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
           assert model['mandatory_evidence_overlay']['may_change_root_blockers_silently'] is False
@@ -34,15 +38,28 @@ jobs:
           assert model['current_roots']['ROOT_A'] == 'TARGET_PACK_NOT_ACQUIRED'
           assert model['current_roots']['ROOT_B'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
           assert model['current_execution']['completed_engineering_subsets'] == ['P257-P264','P265-P272']
-          assert model['current_execution']['completed_engineering_cards_inside_parent_backlog'] == 16
-          assert model['current_execution']['remaining_unexecuted_count'] == 48
-          assert model['current_execution']['remaining_ranges'] == ['P225-P256','P273-P288']
+          assert model['current_execution']['completed_reconciliation_cards'] == ['P288']
+          assert model['current_execution']['completed_cards_inside_parent_backlog'] == 17
+          assert model['current_execution']['remaining_unexecuted_count'] == 47
+          assert model['current_execution']['remaining_ranges'] == ['P225-P256','P273-P287']
+          assert model['current_execution']['dependency_blocked_not_executed_ranges'] == ['P273-P287']
+          assert model['p288']['status'] == 'PROTECT_NO_CHANGE'
+          assert model['p288']['executed_exactly_once'] is True
+          assert model['p288']['root_change'] is False
+          assert model['p288']['proof_promotion'] is False
+          assert machine['executed'] is True
+          assert machine['prompt'] == 288
+          assert machine['parent_backlog']['executed_total'] == 17
+          assert machine['parent_backlog']['remaining_unexecuted'] == 47
           assert model['proof_frontier'] == {'public_derived_ceiling':'E2_PLUS','artifact_plane':'PA3','PA4':False,'PA5':False,'E3':False,'E4':False}
           assert 'CORE_CURRENT + MANDATORY_EVIDENCE_OVERLAY = CURRENT_BUSINESS_READ_MODEL' in core
-          assert 'P265–P272' in core
-          assert 'remaining unexecuted = **48**' in core_lower
+          assert 'P288' in core
+          assert 'total executed = **17**' in core_lower
+          assert 'remaining unexecuted = **47**' in core_lower
           assert 'ROOT_A = TARGET_PACK_NOT_ACQUIRED' in core
           assert 'ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET' in core
           assert 'NOT_FOUND_IN_CONNECTED_SOURCES != DOCUMENT_DOES_NOT_EXIST' in overlay
-          print('CURRENT_BUSINESS_READ_MODEL: PASS')
+          assert 'total executed = **17**' in p288.lower()
+          assert 'Post-merge closure only. No second P288 execution is created.' in closure
+          print('CURRENT_BUSINESS_READ_MODEL_P288_CLOSURE: PASS')
           PY
