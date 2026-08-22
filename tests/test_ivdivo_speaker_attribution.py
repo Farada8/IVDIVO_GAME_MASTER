@@ -70,6 +70,13 @@ def test_high_precision_large_sample_can_promote():
 def test_low_precision_rejected():
     assert not sa.rule_auto_promotable(29,49); assert not sa.rule_auto_promotable(5,27)
 
+def test_wilson_gate_is_stricter_than_nominal_min_n_for_perfect_samples():
+    assert sa.wilson_lower_bound(30,30) < 0.90
+    assert not sa.rule_auto_promotable(30,30)
+    assert sa.wilson_lower_bound(34,34) < 0.90
+    assert sa.wilson_lower_bound(35,35) >= 0.90
+    assert sa.rule_auto_promotable(35,35)
+
 def test_subject_tracker_prefers_grammatical_subject_over_object_name():
     aliases={'JANA':['Jana'],'NIKA':['Nika']}; genders={'JANA':'F','NIKA':'F'}
     xs=[seg('n1','NARRATION','\n\nJana stood behind Nika now, arms folded.\n\n'),seg('d1','DIALOGUE','“Walk the gallery,”'),seg('n2','NARRATION',' she said.\n\n')]
