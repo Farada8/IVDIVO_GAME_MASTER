@@ -130,8 +130,7 @@ def main() -> int:
         payload = fetch_page(page, args.page_size, args.min_notice_days, api_key)
         if provider_total is None:
             provider_total = payload.get("total_count")
-        voices = payload.get("voices") or []
-        for voice in voices:
+        for voice in payload.get("voices") or []:
             if is_ru_voice(voice):
                 collected.append(sanitized_voice(voice))
         if not payload.get("has_more"):
@@ -157,8 +156,8 @@ def main() -> int:
             "category": "professional",
             "language": "ru",
             "min_notice_period_days": args.min_notice_days,
-            "include_custom_rates": false,
-            "include_live_moderated": false,
+            "include_custom_rates": False,
+            "include_live_moderated": False,
             "sort": "trending",
         },
         "authenticated": bool(api_key),
@@ -166,17 +165,11 @@ def main() -> int:
         "candidate_count": len(unique),
         "candidates": unique,
         "selection_policy": {
-            "auto_cast": false,
+            "auto_cast": False,
             "next": "LISTEN_TO_PREVIEWS_THEN_RUN_ROOM917_RU_CAST_AUDITION_GATE_v1.0",
-            "production_lock_requires_paid_canary_and_founder_listen": true,
+            "production_lock_requires_paid_canary_and_founder_listen": True,
         },
     }
-
-    # JSON booleans above are represented through Python here.
-    snapshot["query_policy"]["include_custom_rates"] = False
-    snapshot["query_policy"]["include_live_moderated"] = False
-    snapshot["selection_policy"]["auto_cast"] = False
-    snapshot["selection_policy"]["production_lock_requires_paid_canary_and_founder_listen"] = True
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
