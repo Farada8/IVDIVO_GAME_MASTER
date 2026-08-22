@@ -1,0 +1,19 @@
+{
+  "schema":"ivdivo.business.eu_dropship_p09_p16/1.0",
+  "date":"2026-08-22",
+  "status":"P09_P16_EXECUTED_INTERNAL_ENGINEERING_NO_SKU_PROMOTION",
+  "parent_state":"13_MONEY_MECHANISMS_MACHINE_STATE.json",
+  "input_candidate_file":"15_EU_DROPSHIP_CANDIDATES.json",
+  "input_candidate_count":20,
+  "advance_price_ship_check_count":11,
+  "execution":{"P09":"PASS_ENGINEERING_SMALL_BATCH_PROOF_GATE_DEFINED","P10":"PASS_ENGINEERING_PRIVATE_LABEL_PROOF_GATE_DEFINED","P11":"PASS_ENGINEERING_500_2000_5000_NULL_SAFE_SCENARIOS","P12":"PASS_ENGINEERING_CASH_CONVERSION_STOCKOUT_MARKDOWN_MODEL","P13":"PASS_ENGINEERING_DIFFERENTIATION_HYPOTHESES_ONLY","P14":"PASS_ENGINEERING_SUPPLIER_CONCENTRATION_QC_RISK","P15":"PASS_ENGINEERING_NEGATIVE_CONTRIBUTION_KILL_RULE","P16":"PASS_ENGINEERING_DROP_DROPSHIP_SMALL_BATCH_PRIVATE_LABEL_ROUTER"},
+  "predeclared_thresholds":{"small_batch_min_paid_orders":20,"small_batch_min_independent_buyers":10,"small_batch_max_return_rate":0.10,"small_batch_min_delivery_sla_rate":0.90,"private_label_min_paid_orders":50,"private_label_min_weeks_observed":6,"private_label_max_largest_week_share":0.40},
+  "current_observed_economics":{"wholesale_cost":null,"ireland_shipping":null,"landed_unit_cost":null,"cac":null,"conversion":null,"wtp":null,"profitable_skus_proven":0},
+  "public_supplier_observation":{"platform":"Hertwill","wholesale_surface":"LOGIN_TO_SEE_PRICES","shipping_surface":"PUBLIC_PRODUCT_PAGE_DID_NOT_RETURN_DESTINATION_PRICE_LIST","account_gated":true,"interpretation":"DATA_ACCESS_BLOCKER_NOT_NEGATIVE_ECONOMICS_PROOF"},
+  "current_route_for_all_11_advance_candidates":"DROPSHIP_SCREENING_ECONOMICS_UNRESOLVED",
+  "inventory_scenarios":{"500":{"inventory_share":0.70,"freight_pack_share":0.15,"contingency_share":0.15,"units":null},"2000":{"inventory_share":0.70,"freight_pack_share":0.15,"contingency_share":0.15,"units":null},"5000":{"inventory_share":0.70,"freight_pack_share":0.15,"contingency_share":0.15,"units":null}},
+  "proof_boundary":{"inventory_purchase_authorized":false,"supplier_signup_authorized":false,"listing_authorized":false,"advertising_authorized":false,"sales_observed":0,"profitability_proven":false,"private_label_proven":false},
+  "drive":{"document_id":"1rApEi78GqKC1hTSVywTCFYJXdWaOj7Ckt6EtjMz0FJY","folder_id":"1QM7DKxwmEGDHUkcIqkxgGfaZi1NqoATV","semantic_readback":true},
+  "next_dependency":"ACCOUNT_LEVEL_WHOLESALE_PLUS_SKU_LEVEL_IRELAND_SHIPPING_PLUS_REAL_ORDER_COHORT",
+  "readback_marker":"MONEY-MECHANISMS-DROPSHIP-P09-P16-ENGINEERING-32OF64-CANDIDATE-ECONOMICS-UNRESOLVED"
+}
