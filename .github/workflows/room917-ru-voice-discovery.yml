@@ -1,6 +1,6 @@
 name: ROOM917 RU Voice Discovery
 
-# v1.6 zero-spend retrigger 2026-08-22; public native discovery; concurrency-safe main publication
+# v1.7 zero-spend discovery; durable artifact + evidence branch before optional main publication
 on:
   push:
     branches:
@@ -83,7 +83,17 @@ jobs:
           print(f"native_status={n.get('status')} candidates={n.get('candidate_count')} account_status={a.get('status')}")
           PY
 
-      - name: Commit and publish provider inventory safely
+      - name: Upload recoverable zero-spend discovery evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ROOM917_RU_NATIVE_VOICE_DISCOVERY
+          path: |
+            AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json
+            AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_VOICE_DISCOVERY.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Commit provider inventory locally
         shell: bash
         run: |
           set -euo pipefail
@@ -94,10 +104,28 @@ jobs:
             AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json
           if git diff --cached --quiet; then
             echo 'No inventory change.'
+            echo 'ROOM917_PROVIDER_LOCAL_COMMIT=0' >> "$GITHUB_ENV"
             exit 0
           fi
           git commit -m 'ROOM917: refresh RU ElevenLabs voice inventory [skip ci]'
+          echo 'ROOM917_PROVIDER_LOCAL_COMMIT=1' >> "$GITHUB_ENV"
 
+      - name: Publish deterministic evidence branch
+        if: env.ROOM917_PROVIDER_LOCAL_COMMIT == '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+          short_sha="${GITHUB_SHA:0:12}"
+          evidence_branch="room917-ru-provider-${short_sha}"
+          echo "ROOM917_PROVIDER_EVIDENCE_BRANCH=${evidence_branch}" >> "$GITHUB_ENV"
+          git push origin "HEAD:refs/heads/${evidence_branch}"
+          echo "Provider snapshot published to evidence branch ${evidence_branch}."
+
+      - name: Publish provider inventory to main when permitted
+        if: env.ROOM917_PROVIDER_LOCAL_COMMIT == '1'
+        shell: bash
+        run: |
+          set -euo pipefail
           if [ "${GITHUB_REF}" != "refs/heads/main" ]; then
             echo "Discovery built on ${GITHUB_REF}; publication to main intentionally skipped."
             exit 0
@@ -112,12 +140,12 @@ jobs:
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo '::error::Provider snapshot rebase conflict; refusing to overwrite concurrent main work.'
-              exit 7
+              echo '::warning::Provider snapshot rebase conflict; evidence branch remains authoritative for this run.'
+              exit 0
             fi
           done
-          echo '::error::Provider snapshot could not be published after 4 non-fast-forward retries.'
-          exit 8
+          echo '::warning::Provider snapshot could not be published to main; evidence branch remains recoverable.'
+          exit 0
 
       - name: Summary
         shell: bash
@@ -136,6 +164,6 @@ jobs:
               f.write(f"- models returned: {len(a.get('models') or [])}\n")
               f.write('- paid synthesis calls: 0\n')
               f.write('- provider key persisted: false\n')
-              f.write('- publication: concurrency-safe fetch/rebase/retry; never force-push\n')
-              f.write('- next: preview native role-ranked candidates, bind 3 per role, then bounded Russian canary + pair tests\n')
+              f.write(f"- recoverable evidence branch: {os.environ.get('ROOM917_PROVIDER_EVIDENCE_BRANCH','NO_NEW_COMMIT')}\n")
+              f.write('- next: preview native role-ranked candidates, bind up to 3 per role, then bounded Russian canary + pair tests\n')
           PY
