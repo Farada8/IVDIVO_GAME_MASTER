@@ -35,12 +35,15 @@ Date: 2026-08-22
 - hardening Drive folder `1MhVtyPF89UPpvLvPcBeQis4wdBXmeN6C`, document `1IYlQfZOt7yI4GaQVBjDuL36yuIjvIPe9GFEO8HsAt5w`, marker `PERSONAL-AI-PL02-DONE-VERIFIED-PR309-CI4OF4`.
 
 `PL-04 AI PROVIDER ABSTRACTION = DONE_VERIFIED`.
-- PR #321 merge `d5e17a9ed75b724b4e6920e71bce4388ff804196`.
-- verified head `abf25bf1d259686208672925b05b3a4001e2433e`.
-- exact-head workflows all SUCCESS: PL-00 `32555953501`, PL-01 `32555953480`, PL-02 `32555953481`, PL-02 hardening `32555953486`, PL-04 `32555953494`.
-- common ProviderRequest/ProviderResponse/ProviderRegistry contract, deterministic offline mock, stdlib adapters for OpenAI Responses / Anthropic Messages / Ollama Chat, explicit `--allow-network` gate and secret-leakage regressions.
-- no live provider request or API spend is claimed by PL-04 acceptance.
-- Drive folder `1NB6hVQVjUlK6wiSMsyrRgk0pX6bFkjgy`, document `1m9vfHsbMgrC_7hvIL2t9A1RUvTE7OdhhMImIxkwqQww`, marker `PERSONAL-AI-PL04-DONE-VERIFIED-PR321-CI5OF5`.
+- baseline provider implementation: PR #321 merge `d5e17a9ed75b724b4e6920e71bce4388ff804196`.
+- post-merge audit found a real original-contract gap: #321 exposed `generate()` but the registered PL-04 card requires `generate()`, `analyze()`, `classify()`, `extract()` and canonical provider class surfaces.
+- mandatory contract-completion delta: PR #328 merge `268a7d33c83d5551b9276b1a7a3551c76eb584fd`, corrective head `1a0de28f75585ee6693d68e7bbc436c2df0848df`.
+- PL-04 authority therefore means **#321 + #328 together**, not #321 alone.
+- four-operation `AIProvider` + `ProviderRegistry` dispatch; `ProviderConfig`; canonical `OpenAIProvider`, `AnthropicProvider`, `OllamaProvider`; deterministic offline MockProvider; existing stdlib OpenAI Responses / Anthropic Messages / Ollama Chat adapters retained.
+- corrective exact-head workflows all SUCCESS: PL-00 `32556833749`, PL-01 `32556833763`, PL-02 `32556833754`, PL-02 hardening `32556833779`, PL-04 `32556833757`.
+- configured credentials still do not authorize spending; existing explicit `--allow-network` gate remains in the CLI path.
+- no live OpenAI/Anthropic/Ollama request or API spend is claimed by PL-04 acceptance.
+- Drive folder `1NB6hVQVjUlK6wiSMsyrRgk0pX6bFkjgy`, document `1m9vfHsbMgrC_7hvIL2t9A1RUvTE7OdhhMImIxkwqQww`, marker `PERSONAL-AI-PL04-DONE-VERIFIED-PR321-PR328-CI5OF5-CONTRACT4OPS`.
 
 ## Current READY graph
 
@@ -71,4 +74,4 @@ Stop and mark `BLOCKED` instead of inventing a pass when:
 
 ## Handoff sentence for a new session
 
-`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00, PL-01, hardened PL-02 and PL-04 are DONE_VERIFIED. Continue from PL-05 Agent Executor; PL-03/06/08/11/13/15/16/18 are dependency-admissible READY alternatives. Persist code/state/tests/readback; do not treat configured provider credentials as live-provider evidence; preserve v2 authority unless a separate promotion gate passes.`
+`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00, PL-01, hardened PL-02 and corrected PL-04 (#321 + #328) are DONE_VERIFIED. Continue from PL-05 Agent Executor; PL-03/06/08/11/13/15/16/18 are dependency-admissible READY alternatives. Persist code/state/tests/readback; do not treat configured provider credentials as live-provider evidence; preserve v2 authority unless a separate promotion gate passes.`
