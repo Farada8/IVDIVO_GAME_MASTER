@@ -7,7 +7,11 @@ on:
       - '.github/workflows/master-recovery-audit.yml'
   push:
     branches:
+      - main
       - 'recovery/master-recovery-audit-fresh-20260822'
+    paths:
+      - 'RECOVERY/**'
+      - '.github/workflows/master-recovery-audit.yml'
 
 jobs:
   recovery-guard:
@@ -27,49 +31,90 @@ jobs:
           state = json.loads((root / 'MASTER_RECOVERY_STATE.json').read_text(encoding='utf-8'))
           master = (root / 'MASTER_RECOVERY_INDEX.md').read_text(encoding='utf-8')
           ledger = (root / 'CHAT_ONLY_RECOVERY_LEDGER.md').read_text(encoding='utf-8')
+          math_note = (root / 'MATH_CURRENT_RESEARCH_NOTE_20260822.md').read_text(encoding='utf-8')
+          binary = (root / 'BINARY_ASSET_RECOVERY_MANIFEST_20260822.md').read_text(encoding='utf-8')
+          delta = (root / 'RECOVERY_AUDIT_DELTA_20260822_1332.md').read_text(encoding='utf-8')
 
-          assert state['schema'] == 'ivdivo.master_recovery_state/1.0'
+          assert state['schema'] == 'ivdivo.master_recovery_state/1.1'
           assert state['state_is_recovery_pointer_not_frozen_project_frontier'] is True
           assert state['global_state']['browser_tabs_may_be_closed'] is True
           assert state['global_state']['delete_all_chats_authorized'] is False
           assert state['global_state']['delete_all_chats_gate'].startswith('BLOCKED_')
           assert state['global_state']['recovered_context_auto_canon'] is False
+          assert state['global_state']['remaining_blocker_class_count'] == 3
 
           projects = state['projects']
           ids = [p['id'] for p in projects]
           assert len(ids) == len(set(ids)), 'duplicate project id'
           required = {
               'BUS-01','BUS-02','BOOK-B03','DORAMA-BB','DORAMA-WIFE',
-              'AUDIO-R917','SI-01','PAI-01','GAME-PORTALS','ART-IRELAND',
+              'AUDIO-R917','AUDIO-D01','SI-01','PAI-01','GAME-PORTALS','ART-IRELAND',
               'BUILD-FARADA','WEB-PAINTERS','MATH-ORDERS','RESEARCH-IVDIVO','WRITE-ENGINE'
           }
           assert required.issubset(set(ids))
 
           by_id = {p['id']: p for p in projects}
-          assert by_id['GAME-PORTALS']['known_chat_only_material_gap'] is True
-          assert by_id['GAME-PORTALS']['deletion_safety'] == 'NOT_SAFE_TO_DELETE_SOURCE_CHAT'
-          assert by_id['MATH-ORDERS']['deletion_safety'] == 'NOT_SAFE_TO_DELETE_SOURCE_CHAT'
+
+          # Resolved false/stale blockers must stay resolved unless new evidence reopens them.
+          assert by_id['GAME-PORTALS']['known_chat_only_material_gap'] is False
+          assert by_id['GAME-PORTALS']['deletion_safety'] == 'SAFE_FOR_CURRENT_WORK_AUTHORITY'
+          assert by_id['GAME-PORTALS']['place_verbs_status'] == 'RECOVERED_DURABLE_FOUR_FILE_CORPUS'
+          assert by_id['GAME-PORTALS']['old_24_plus_40_and_64_location_state'] == 'SUPERSEDED_ARCHIVE_PROVENANCE_ONLY'
+
+          assert by_id['MATH-ORDERS']['deletion_safety'] == 'SAFE_FOR_CURRENT_RESEARCH_AUTHORITY'
+          assert by_id['MATH-ORDERS']['drive_current'] == '1aLjhfQGupMOWmtYgeuqwFInfzhwqbBgL'
+
+          assert by_id['AUDIO-D01']['audio_binary_disposition'] == 'NO_LIVE_AUDIO_GENERATED_NOT_A_MISSING_BINARY'
+          assert by_id['BOOK-B03']['audio_binary_disposition'].startswith('PRE_LIVE_')
+
+          # Real residual blockers must remain explicit and evidence-backed.
           assert by_id['WEB-PAINTERS']['deletion_safety'] == 'NOT_SAFE_TO_DELETE_SOURCE_CHAT'
           assert by_id['ART-IRELAND']['deletion_safety'] == 'ARCHIVE_CHECK_REQUIRED'
-          assert by_id['AUDIO-R917']['binary_archive_check'] == 'REQUIRED'
+          assert by_id['AUDIO-R917']['deletion_safety'] == 'ARCHIVE_CHECK_REQUIRED'
+          assert len(by_id['AUDIO-R917']['real_binary_blockers']) >= 2
 
           blockers = state['known_global_blockers']
-          assert len(blockers) >= 6
-          assert 'PORTALS_CHAT_ONLY_AND_NOT_RECORDED_ITEMS' in blockers
-          assert 'VISUAL_FINAL_BINARY_INVENTORY_NOT_PROVEN' in blockers
-          assert 'AUDIO_FINAL_BINARY_INVENTORY_NOT_PROVEN_FOR_ALL_PROJECTS' in blockers
+          expected_blockers = {
+              'ROOM917_REAL_AUDIO_BYTES_NOT_DURABLY_VERIFIED',
+              'VISUAL_FINAL_SELECTION_ROUTING_NOT_COMPLETE',
+              'PAINTERS_DUBLIN_CURRENT_EXPORT_HANDOFF_NOT_VERIFIED',
+          }
+          assert set(blockers) == expected_blockers
+          assert len(blockers) == 3
 
+          # Closed blocker classes must not silently return to the active blocker list.
+          forbidden_stale = {
+              'PORTALS_CHAT_ONLY_AND_NOT_RECORDED_ITEMS',
+              'PORTALS_PLACE_VERBS_RAW_DICTIONARY_MISSING',
+              'AUDIO_FINAL_BINARY_INVENTORY_NOT_PROVEN_FOR_ALL_PROJECTS',
+              'NUMERICAL_ORDER_LATEST_RESEARCH_NOTE_NOT_YET_SINGLE_CURRENT_AUTHORITY',
+          }
+          assert not (set(blockers) & forbidden_stale)
+
+          # Cross-file semantic/readback markers.
           assert state['readback_markers']['master'] in master
           assert state['readback_markers']['chat_only'] in ledger
+          assert state['readback_markers']['math'] in math_note
+          assert state['readback_markers']['binary'] in binary
           assert 'RECOVERED_CONTEXT != CANON' in ledger
           assert 'NUMBER != NUMERAL_REPRESENTATION' in ledger
-          assert 'Do not yet delete all conversations' in master
+          assert 'Do not delete all conversations yet' in master
+          assert 'Three remaining global blocker classes' in delta
+
+          # Evidence-ceiling checks.
+          assert 'NO novelty claim' in math_note or 'no novelty claim' in math_note
+          assert 'NO_LIVE_BINARY_CREATED != MISSING_BINARY' in binary
+          assert 'CONTROLLED_DRIVE_DUPLICATE_NOT_VERIFIED' in binary
 
           for p in projects:
               if p.get('known_chat_only_material_gap') is True:
-                  assert p.get('deletion_safety') != 'SAFE_FOR_WORK_AUTHORITY', p['id']
+                  assert p.get('deletion_safety') not in {
+                      'SAFE_FOR_WORK_AUTHORITY',
+                      'SAFE_FOR_CURRENT_WORK_AUTHORITY',
+                      'SAFE_FOR_CURRENT_RESEARCH_AUTHORITY',
+                  }, p['id']
 
-          print(f"MASTER_RECOVERY_GUARD_PASS projects={len(projects)} blockers={len(blockers)}")
+          print(f"MASTER_RECOVERY_GUARD_PASS schema={state['schema']} projects={len(projects)} blockers={len(blockers)}")
           PY
       - name: Validate JSON syntax
         run: python -m json.tool RECOVERY/MASTER_RECOVERY_STATE.json >/dev/null
