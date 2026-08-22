@@ -1,0 +1,26 @@
+name: Public Art Applicant Fit
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/PUBLIC_ART_APPLICANT_EVIDENCE/**'
+      - '.github/workflows/public-art-applicant-fit.yml'
+  push:
+    branches:
+      - 'public-art/applicant-fit-cluain-inis-20260822'
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/PUBLIC_ART_APPLICANT_EVIDENCE/**'
+      - '.github/workflows/public-art-applicant-fit.yml'
+
+jobs:
+  applicant-fit-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run applicant-fit guards
+        run: python BUSINESS_ENGINEERING_OS/PUBLIC_ART_APPLICANT_EVIDENCE/2026-08-22_CLUAIN_INIS_FIT/tests/test_applicant_fit_guard.py
+      - name: Parse applicant-fit state
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/PUBLIC_ART_APPLICANT_EVIDENCE/2026-08-22_CLUAIN_INIS_FIT/APPLICANT_FIT_STATE.json >/dev/null
