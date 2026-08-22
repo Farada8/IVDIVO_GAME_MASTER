@@ -7,6 +7,8 @@ on:
     paths:
       - '.github/workflows/room917-critical-sfx-synth-canaries.yml'
       - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/CURRENT_CRITICAL_SFX_CANARY_POINTER.json'
 
 permissions:
   contents: read
@@ -22,44 +24,94 @@ jobs:
           python-version: '3.11'
       - name: Install deterministic audio dependencies
         run: python -m pip install --disable-pip-version-check numpy scipy soundfile
-      - name: Generate 24 critical SFX canaries
+      - name: Generate 24 critical SFX runtime canaries
         run: python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_critical_sfx_synth_canaries.py
-      - name: Machine identity/format/countability preflight
+      - name: Verify runtime bytes against authoritative v2.1 identity receipt
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
           import json,hashlib,soundfile as sf,numpy as np
+
           root=Path('ROOM917_CRITICAL_SFX_CANARIES')
-          rec=json.loads((root/'ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json').read_text())
-          rows=rec['assets']
-          if len(rows)!=24: raise SystemExit(f'expected 24 assets, got {len(rows)}')
+          runtime_path=root/'ROOM917_E01_CRITICAL_SFX_RUNTIME_GENERATION_RECEIPT_v1.json'
+          authority_path=Path('AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json')
+          runtime=json.loads(runtime_path.read_text())
+          authority=json.loads(authority_path.read_text())
+
+          if runtime.get('schema_version')!='room917.critical_sfx_runtime_generation_receipt/1.0':
+              raise SystemExit('runtime receipt schema mismatch')
+          if authority.get('schema_version')!='room917.critical_sfx_synthetic_canary_receipt/2.1':
+              raise SystemExit('authoritative receipt schema mismatch')
+          if runtime.get('authoritative_identity_receipt')!=str(authority_path):
+              raise SystemExit('runtime receipt does not name current identity authority')
+
+          expected={}
+          for aid,variants in authority['assets'].items():
+              for item in variants:
+                  cid,expected_sha,duration=item
+                  expected[cid]={
+                      'contract_asset_id':aid,
+                      'sha256':expected_sha,
+                      'duration_seconds':float(duration),
+                  }
+          rows=runtime.get('assets') or []
+          if len(rows)!=24 or len(expected)!=24:
+              raise SystemExit(f'expected 24 runtime + authority identities, got runtime={len(rows)} authority={len(expected)}')
+          if {r['candidate_id'] for r in rows}!=set(expected):
+              raise SystemExit('runtime candidate-id set differs from authoritative v2.1')
+
           for row in rows:
+              cid=row['candidate_id']; exp=expected[cid]
+              if row['contract_asset_id']!=exp['contract_asset_id']:
+                  raise SystemExit(f'asset identity drift {cid}')
               p=root/row['filename']
               if not p.is_file(): raise SystemExit(f'missing {p}')
-              if hashlib.sha256(p.read_bytes()).hexdigest()!=row['sha256']: raise SystemExit(f'hash drift {p}')
+              observed_sha=hashlib.sha256(p.read_bytes()).hexdigest()
+              if observed_sha!=row['sha256']: raise SystemExit(f'runtime receipt hash drift {p}')
+              if observed_sha!=exp['sha256']: raise SystemExit(f'authoritative v2.1 hash drift {p}')
+              if abs(float(row['duration_seconds'])-exp['duration_seconds'])>1e-6:
+                  raise SystemExit(f'duration drift {cid}')
               y,sr=sf.read(p,always_2d=True)
-              if sr!=48000 or y.shape[1]!=2 or not np.isfinite(y).all(): raise SystemExit(f'format/finite fail {p}')
-          print('PASS: 24 v2.1 hashes + 48k stereo finite PCM decoded. Human audition remains mandatory.')
+              if sr!=48000 or y.shape[1]!=2 or not np.isfinite(y).all():
+                  raise SystemExit(f'format/finite fail {p}')
+          print('PASS: all 24 runtime WAV identities exactly match authoritative v2.1 hashes and 48k stereo decode.')
           PY
-      - name: Upload listening artifact
+      - name: Assert human and production gates remain closed
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          runtime=json.loads(Path('ROOM917_CRITICAL_SFX_CANARIES/ROOM917_E01_CRITICAL_SFX_RUNTIME_GENERATION_RECEIPT_v1.json').read_text())
+          authority=json.loads(Path('AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json').read_text())
+          assert all(r['audition_status']=='HOLD' for r in runtime['assets'])
+          assert all(r['production_binding'] is False for r in runtime['assets'])
+          assert 'BLIND_HUMAN_AUDITION' in authority['required_before_binding']
+          assert 'IDENTITY_GATE_PASS' in authority['required_before_binding']
+          print('PASS: generation cannot invent human audition or production binding authority.')
+          PY
+      - name: Upload listening and identity evidence
         uses: actions/upload-artifact@v4
         with:
           name: ROOM917_E01_CRITICAL_SFX_SYNTH_CANARIES_V2_1
-          path: ROOM917_CRITICAL_SFX_CANARIES/
+          path: |
+            ROOM917_CRITICAL_SFX_CANARIES/
+            AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json
+            AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/CURRENT_CRITICAL_SFX_CANARY_POINTER.json
           if-no-files-found: error
           retention-days: 30
       - name: Summary
         run: |
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
-          ## ROOM917 E01 critical SFX canaries v2.1
-          - S13: exactly two countable bell pulses
-          - S19: two target interruption events machine-distinct above line bed
-          - S14: Haas delay removed; mono loss under 0.21 dB in precheck
-          - per-candidate RNG prevents unrelated asset hash drift
+          ## ROOM917 E01 critical SFX canaries — current v2.1 identity line
+          - runtime generation receipt is separate from authoritative identity receipt
+          - all 24 generated WAV SHA-256 identities must exactly match static v2.1 authority
           - S07/S08/S10/S11/S13/S14/S17/S19: 3 variants each
-          - 48 kHz / 24-bit / stereo; provider calls 0; paid synthesis 0
-          - status: CANDIDATE / HOLD
-          - binding forbidden until human audition + translation + identity gates
+          - 48 kHz / 24-bit source write / stereo; provider calls 0; paid synthesis 0
+          - v2.1 authority records S13 two-pulse, S19 two-part and S14 mono/phone machine prechecks
+          - this workflow itself grants no human PASS and no production binding
+          - binding remains forbidden until blind human audition + relationship/translation/context + identity gates
           EOF
