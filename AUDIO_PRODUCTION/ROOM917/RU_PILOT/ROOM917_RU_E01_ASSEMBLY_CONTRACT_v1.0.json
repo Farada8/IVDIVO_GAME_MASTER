@@ -1,0 +1,173 @@
+{
+  "schema_version": "ivdivo.room917_ru_e01_assembly_contract/1.0",
+  "date": "2026-08-22",
+  "status": "WORKING_PRODUCTION_AUTHORITY_STORY_LOCKED",
+  "episode": "E01",
+  "locale": "ru-RU",
+  "source_script": "ROOM917_RU_E01_THE_LAMP_AFTER_916_RECORDING_SCRIPT_v1.0.md",
+  "director_map": "ROOM917_RU_E01_DIRECTOR_SOUND_MAP_v1.0.md",
+  "audio_architecture": "AUDIO_STUDIO_V3_3_HYBRID_STAGE",
+  "production_order": [
+    "S0_RU_CAST_CANARY",
+    "CAST_LOCK",
+    "CONTROLLED_DIALOGUE_BLOCK_RENDER",
+    "DIALOGUE_EDIT_AND_ALIGNMENT",
+    "RESOLVE_MICROPHONE_CHOREOGRAPHY_TIMING",
+    "REUSE_OR_LOCK_LANGUAGE_NEUTRAL_CLUE_SFX",
+    "CAUSAL_FOLEY",
+    "ROOM_AMBIENCE",
+    "CATE_TRANSMISSION_POST",
+    "AUTHORIZED_END_MUSIC_ONLY",
+    "SPATIAL_AUTOMATION",
+    "MIX_MASTER_QC",
+    "FOUNDER_CREDIBILITY_LISTEN",
+    "SELECTIVE_REPAIR"
+  ],
+  "buses": [
+    "DIALOGUE",
+    "CLUE_SFX",
+    "SFX",
+    "FOLEY",
+    "AMBIENCE",
+    "MUSIC"
+  ],
+  "dialogue": {
+    "provider": "ElevenLabs",
+    "model": "eleven_v3",
+    "full_episode_single_pass_forbidden": true,
+    "target_block_seconds": [30, 80],
+    "critical_lines_isolated": true,
+    "pair_blocks_allowed": true,
+    "selective_regeneration_only": true,
+    "clean_dialogue_before_post": true,
+    "final_spatial_geometry_in_post": true,
+    "performance_failures": [
+      "AUDIOBOOK_DECLAMATION",
+      "TRAILER_OR_ALPHA_VOICE",
+      "COMEDY_SIDEKICK_MINA",
+      "GHOST_CATE",
+      "PREPLAYED_GUILT_JULIAN",
+      "MECHANICAL_TECHNICAL_READ_ELENA"
+    ]
+  },
+  "protected_pronunciation": [
+    {"token": "Greyhaven", "ru": "Грейхейвен"},
+    {"token": "Ashcroft", "ru": "Эшкрофт"},
+    {"token": "Leni-bird", "ru": "Лени-бёрд", "semantic_translation_forbidden": true},
+    {"token": "916", "ru": "девятьсот шестнадцать"},
+    {"token": "917", "ru": "девятьсот семнадцать"},
+    {"token": "01:17", "ru": "один семнадцать"},
+    {"token": "50 Hz", "ru": "пятьдесят герц"}
+  ],
+  "shared_language_neutral_assets": [
+    "NORMAL_916_SELECTOR_CLACK",
+    "NORMAL_916_GLASS_PING",
+    "IMPOSSIBLE_INTERNAL_DOUBLE_RING",
+    "UNMARKED_LAMP_PING_BEYOND_916",
+    "COPPER_HISS",
+    "TWO_PART_LINE_CUT",
+    "FOUR_NOTE_LULLABY_IDENTITY",
+    "TRANSFORMER_50HZ_IDENTITY"
+  ],
+  "shared_asset_rule": "REUSE_ACCEPTED_ENGLISH_IDENTITY_FIRST; TIMING_EDIT_BEFORE_REPLACEMENT; NEW_REPLACEMENT_REQUIRES_BLIND_SELECT_AND_NEW_LOCK",
+  "scene_contracts": {
+    "SCENE_1": {
+      "room": "GREYHAVEN_STONE_LOBBY_TO_DRY_SWITCHBOARD_ALCOVE",
+      "dramatic_function": "PROFESSIONAL_ARRIVAL_SOCIAL_WORLD_ECONOMIC_PRESSURE",
+      "music": "NONE",
+      "critical_actions": [
+        "REVOLVING_DOOR_CLOSE_ONCE",
+        "JULIAN_APPROACH_FOOTSTEPS_BEFORE_FIRST_LINE",
+        "KEYS_PLACED_NOT_THROWN",
+        "ELENA_CASE_OPEN_CAUSALLY",
+        "STONE_TO_CARPET_ACOUSTIC_TRANSITION"
+      ],
+      "protected_lines": [
+        "JULIAN_72_STAFF",
+        "ELENA_GHOSTS_NOT_CERTIFIED",
+        "ELENA_916_NO_917_PANEL_POSITION"
+      ]
+    },
+    "SCENE_2": {
+      "room": "DRY_SWITCHBOARD_ALCOVE",
+      "dramatic_function": "METHOD_CONTROL_WITNESS_CHAIN_NORMAL_SYSTEM_REFERENCE",
+      "music": "NONE",
+      "locked_sound_order": [
+        "SINGLE_SWITCH",
+        "TRANSFORMER_50HZ_IDENTITY",
+        "RECOGNITION_SPACE",
+        "OLD_RELAY_WAVE",
+        "WEST_CABLE_RUSTLE"
+      ],
+      "required_control_sample": "NORMAL_916_REFERENCE_BEFORE_SCENE_3"
+    },
+    "SCENE_3": {
+      "room": "QUIET_SWITCHBOARD_ALCOVE_0117",
+      "dramatic_function": "ORDINARY_SYSTEM_RULE_BREAK_PERSONAL_STAKES_FINAL_HUMAN_MYSTERY_TURN",
+      "music": "NONE_UNTIL_AUTHORIZED_FINAL_BUTTON",
+      "locked_evidence_order": [
+        "IMPOSSIBLE_INTERNAL_DOUBLE_RING",
+        "ORIENT_TO_PANEL",
+        "FIELD_RECORDER_START",
+        "TIME_01_17_12",
+        "EXTERNAL_TRUNK_PHYSICALLY_OPEN",
+        "UNMARKED_LAMP_ACTIVE_BEYOND_916",
+        "MINA_INDEPENDENT_CONFIRMATION",
+        "COPPER_LINE_MEDIUM",
+        "CATE_CLEAN_HUMAN_SOURCE_THROUGH_POST_CHAIN",
+        "LENI_BIRD_EXACT",
+        "FOUR_NOTE_LULLABY_DAMAGED_AFTER_NOTE_3",
+        "TWO_PART_LINE_CUT",
+        "JULIAN_LAST_NOTE_KNOWLEDGE",
+        "ELENA_FINAL_QUESTION"
+      ],
+      "final_line": "Тогда откуда вы знаете последнюю ноту?"
+    }
+  },
+  "cate_post": {
+    "source_performance": "CLEAN_ORDINARY_HUMAN",
+    "allowed_post": [
+      "LIMITED_BAND_TELEPHONE_RESPONSE",
+      "COPPER_LINE_NOISE",
+      "CONTROLLED_INSTABILITY",
+      "SCRIPT_REQUIRED_DAMAGE"
+    ],
+    "forbidden_post": [
+      "GHOST_PITCH",
+      "HORROR_REVERB",
+      "INVENTED_WHISPERS",
+      "LEXICAL_DAMAGE_TO_LENI_BIRD"
+    ],
+    "identity_match_required_with_e02_cassette": true
+  },
+  "mix_qc": {
+    "master_source": "48K_24BIT_WAV",
+    "must_pass": [
+      "STEREO_INTELLIGIBILITY",
+      "MONO_CLUE_SEPARATION",
+      "PHONE_CLASS_SPEAKER_INTELLIGIBILITY",
+      "NO_CLUE_MASKING",
+      "NO_FALSE_MOVEMENT",
+      "NO_INVENTED_STORY_SOUND",
+      "PROTECTED_SILENCE_PRESERVED"
+    ],
+    "mono_must_distinguish": [
+      "NORMAL_916_VS_IMPOSSIBLE_DOUBLE_RING",
+      "TRANSFORMER_VS_COPPER_ANOMALY",
+      "CATE_LINE_VS_ROOM_DIALOGUE",
+      "THREE_COMPLETE_NOTES_PLUS_DAMAGED_OR_MISSING_FOURTH_INFORMATION",
+      "TWO_PART_LINE_CUT"
+    ]
+  },
+  "release_gate": {
+    "founder_question": "ВЕРЮ ЛИ Я ЭТИМ ЛЮДЯМ И ЭТОМУ ПРОСТРАНСТВУ?",
+    "pass_requires": [
+      "CAST_CREDIBILITY",
+      "BODY_ROOM_COHERENCE",
+      "CLUE_CAUSALITY",
+      "NO_AI_TELL_IN_CRITICAL_BEATS",
+      "FINAL_QUESTION_IS_STRONGEST_EXIT"
+    ],
+    "repair_policy": "FAILED_BLOCK_OR_LAYER_ONLY"
+  }
+}
