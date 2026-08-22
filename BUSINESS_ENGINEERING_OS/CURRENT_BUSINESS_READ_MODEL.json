@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.business.current_read_model/1.0",
+  "schema": "ivdivo.business.current_read_model/1.1",
   "date": "2026-08-22",
-  "status": "CURRENT_LOCAL_RELIABILITY_CONTRACT",
+  "status": "CURRENT_LOCAL_RELIABILITY_CONTRACT_P288_RECONCILED",
   "authority_effect": "NONE_BEYOND_EXPLICIT_RESTORE_AND_PRECEDENCE_RULES",
   "restore_order": [
     "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
@@ -44,12 +44,23 @@
   },
   "current_execution": {
     "full_completed_run32_ranges": ["P97-P128", "P129-P160", "P161-P192", "P193-P224"],
-    "completed_engineering_subset": "P257-P264",
-    "completed_engineering_subset_count": 8,
+    "completed_engineering_subsets": ["P257-P264", "P265-P272"],
+    "completed_engineering_subset_count": 16,
+    "completed_reconciliation_cards": ["P288"],
+    "completed_reconciliation_count": 1,
     "parent_backlog": "P225-P288",
     "parent_backlog_count": 64,
-    "remaining_unexecuted_count": 56,
+    "executed_count": 17,
+    "remaining_unexecuted_count": 47,
+    "remaining_ranges": ["P225-P256", "P273-P287"],
     "highest_information_real_gates": [225, 235]
+  },
+  "dependency_gates": {
+    "P225-P234": "AUTHENTIC_CURRENT_TARGET_PACK_REQUIRED",
+    "P235-P251": "EXPLICIT_CASE_SPECIFIC_BIDDER_DESIGNATION_AND_AUTHORITATIVE_BIDDER_EVIDENCE_REQUIRED",
+    "P252-P280": "FROZEN_TARGET_AND_BIDDER_PACKETS_REQUIRED",
+    "P281-P283": "REAL_INDEPENDENT_REVIEWER_AND_IDENTICAL_PACKET_HASHES_REQUIRED",
+    "P284-P287": "EXPLICIT_INTERACTION_AUTHORIZATION_AND_REAL_EXTERNAL_BEHAVIOR_REQUIRED"
   },
   "proof_frontier": {
     "public_derived_ceiling": "E2_PLUS",
@@ -59,6 +70,17 @@
     "E3": false,
     "E4": false
   },
+  "next_frontier": {
+    "primary": "P225_AUTHENTIC_CURRENT_TARGET_EXPORT",
+    "secondary_if_actual_bid_intent_exists": "P235_EXPLICIT_ACTUAL_BIDDER_DESIGNATION",
+    "otherwise": "PROTECT_NO_CHANGE"
+  },
+  "drive": {
+    "p257_p264_folder": "1R4VVl1oFNmILpb-mZYL6EpMuaYweW13e",
+    "p265_p272_folder": "1j2T1jO0yZmYXkMW8-8f8AUpzzDJXhXx2",
+    "p288_reconciliation_document": "1zIQDq5J3tKVjfXySfwzjJ_oNqxeM1fUUxlEPBuuuY4c",
+    "p288_semantic_readback": "PASS"
+  },
   "guards": [
     "CORE_CURRENT_PLUS_MANDATORY_EVIDENCE_OVERLAY_EQUALS_CURRENT_BUSINESS_READ_MODEL",
     "OVERLAY_SCOPE_DOES_NOT_EQUAL_CAUSAL_AUTHORITY",
@@ -66,7 +88,9 @@
     "ROOT_BLOCKER_CHANGE_REQUIRES_CORE_RECONCILIATION",
     "TEST_FIXTURE_DOES_NOT_EQUAL_ACTUAL_BIDDER",
     "NOT_FOUND_IN_CONNECTED_SOURCES_DOES_NOT_EQUAL_DOCUMENT_DOES_NOT_EXIST",
-    "ENGINEERING_READINESS_DOES_NOT_EQUAL_MARKET_PROOF"
+    "ENGINEERING_READINESS_DOES_NOT_EQUAL_MARKET_PROOF",
+    "DEPENDENCY_BLOCKED_PROMPTS_ARE_NOT_FAILED_OR_EXECUTED",
+    "FRESH_PR_RECONCILIATION_REQUIRED_BEFORE_CURRENT_PROMOTION"
   ],
   "self_improvement": {
     "scope": "BUSINESS_LOCAL_RELIABILITY_IMPROVEMENT",
