@@ -1,0 +1,47 @@
+{
+  "project": "B03_THE_EMPTY_RESCUE",
+  "date": "2026-08-22",
+  "story_authority": "FOUNDER_LOCKED_CH01_29",
+  "text_mutation_bytes": 0,
+  "speaker_gate": {
+    "status": "PASS",
+    "speech_turns": "3714/3714",
+    "unknown_speaker_ownership": 0,
+    "current_version": "v1.2_SOURCE_AND_CH29_RECONCILED"
+  },
+  "casting": {
+    "roster_normalization": "PASS",
+    "textual_source_ids": 121,
+    "max_cast_slots": 28,
+    "provider_voice_ids": 0,
+    "voice_lock": false,
+    "pronunciation_gate": "OPEN"
+  },
+  "provider": {
+    "preferred_candidate": "ElevenLabs",
+    "audition_requests_dry_run": 111,
+    "cast_slots_represented": "28/28",
+    "executable_requests": 0,
+    "live_access_verified": false
+  },
+  "acoustic_routing": {
+    "status": "WORKING_BRANCH_RECONCILIATION_OPEN",
+    "segments_structurally_covered": "7465/7465",
+    "candidate_blocks_after_ch01_repair": 95,
+    "validator_errors": 0,
+    "ch01_false_field_cut_repaired": true,
+    "ch19_29_parallel_branch_conflict": true
+  },
+  "recorded_drive_artifacts": {
+    "ch01_09_reconciliation": "1BWG0WrpxBqXm1-YndpquDttYY0TyTUO6",
+    "ch10_18_reconciliation": "1LQwXFPg6s1Bg2E5xXK_N2zCUegnakXQd",
+    "ch25_29_count_reconciliation": "1KcGwcJNGpsyLDjEy0QIxHrEVae2KlZk9",
+    "parallel_ch19_29_gate": "1-mwt8NfyFF51w1F81kMn-EI_4nNbidPgODtbFF3PhNc"
+  },
+  "hard_pilot": {
+    "existing_manifest_drive_id": "1TGWOWe3ol5Do6tK5ZMeRVMzkhHb_cmVR",
+    "status": "PRESERVE_REBIND_AFTER_FINAL_ROUTING"
+  },
+  "bulk_render_allowed": false,
+  "next_exact_action": "EXACT_ANCHOR_BRANCH_RECONCILIATION_CH19_29 -> FINAL_SCENE_BED_AUTHORITY -> CH01_HARD_PILOT_REBIND -> LIVE_S0_ONLY_AFTER_CASTING_PRONUNCIATION"
+}
