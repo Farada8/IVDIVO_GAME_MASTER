@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.1",
+  "library": "IVDIVO_SELF_IMPROVEMENT_ENGINEERING_LIBRARY",
+  "authority": {
+    "github_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
+    "github_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
+    "registry": "31_IDEAS/CURRENT_IMPROVEMENT_REGISTRY.json",
+    "learning_ledger": "CURRENT_IVDIVO_LEARNING_LEDGER.json",
+    "drive_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0"
+  },
+  "private_source_pointers": [
+    {"title":"Systems analysis books","drive_folder_id":"1F_21NJ9YXB63ctOS5KPrkeDlcYKkUTVv","handling":"PRIVATE_RAW_REFERENCE"},
+    {"title":"Business books RAW","drive_folder_id":"1X6mo94Qo103HheyDry4P3dcQkv5qZg6N","handling":"PRIVATE_RAW_REFERENCE"},
+    {"title":"Self-Improvement Reference Ingest Wave2","drive_folder_id":"1RdYaeSJtim_Bvu6U57QpMjJzIvkuOQ0-","handling":"DERIVED_REFERENCE_INGEST"}
+  ],
+  "evidence_cycles": [
+    {"cycle":"Cycle7 Durable Convergence","drive_id":"1tjsajMhfa_-GjuuiUnysbTBMrhk944Dq","authority_effect":"NONE"},
+    {"cycle":"Cycle8 Story Adapter Real Pilot","drive_id":"1UpkOWRDj1XOYEHS9toyBMJwm5Aq6lLqL","authority_effect":"NONE"},
+    {"cycle":"Cycle8 Writing Production Convergence","drive_id":"1x_zlMvfftZ0JYL4Yfzid7umNwXBmnW1n","authority_effect":"NONE"},
+    {"cycle":"Cycle8 32 Evidence Executions","drive_id":"1LiRGoNIUkIz88MKQ_wljW3vAzZFK3bdj","authority_effect":"NONE"},
+    {"cycle":"Cycle9 Real Interruption Convergence","drive_id":"1HExzpVUcs2z7ObkVPYiLRQIZ3N8le4eV","authority_effect":"NONE_PENDING_CLOSURE"}
+  ],
+  "conversation_generated_artifacts": [
+    {"name":"IVDIVO_BUSINESS_ENGINE_CYCLE5_V111.zip","file_id":"file_000000007bf08210a1c7699f5faaf9aa","role":"CROSS_DOMAIN_ENGINEERING_EVIDENCE"},
+    {"name":"IVDIVO_BUSINESS_ENGINE_V1_INTEGRATION_REBASE.zip","file_id":"file_00000000d7848210860b2ae26cb80567","role":"CROSS_DOMAIN_ENGINEERING_EVIDENCE"},
+    {"name":"01_LIBRARY_MANIFEST_69.json","file_id":"file_0000000091d481f4b4c05e28a627fbf0","role":"HISTORIC_LIBRARY_BASELINE"},
+    {"name":"IVDIVO_BOOK_ENGINE_MILESTONE_H_v7_RUNTIME.zip","file_id":"file_00000000c3f0824683886060e196b6c1","role":"CROSS_DOMAIN_ENGINEERING_EVIDENCE"}
+  ],
+  "copyright_boundary": "Raw copyrighted books/binaries remain private; public GitHub stores metadata, derived mechanisms, contracts, tests and evidence only."
+}
