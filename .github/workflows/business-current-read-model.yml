@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate current Business read model v1.3
+      - name: Validate current Business read model v1.4
         run: |
           python - <<'PY'
           import json, pathlib, importlib.util
@@ -30,6 +30,8 @@ jobs:
           overlay = (root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md').read_text()
           p288 = json.loads((root/'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/01_MACHINE_STATE.json').read_text())
           rc = model['resume_control']
+          iv = rc['input_validation']
+          validator_state = json.loads((root/iv['state_path']).read_text())
           intake = (root/rc['unlock_intake_path']).read_text()
           fixture = json.loads((root/rc['resume_gate_fixture']).read_text())
           negative_control = (root/rc['calibration']['latest_negative_control']).read_text()
@@ -39,7 +41,7 @@ jobs:
           spec.loader.exec_module(gate)
           core_lower = core.lower()
 
-          assert model['schema'] == 'ivdivo.business.current_read_model/1.3'
+          assert model['schema'] == 'ivdivo.business.current_read_model/1.4'
           assert model['restore_order'][2] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json::resume_control'
           assert model['core']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
           assert model['mandatory_evidence_overlay']['path'] == 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md'
@@ -69,6 +71,27 @@ jobs:
           assert p288['parent_backlog']['remaining_unexecuted'] == 47
 
           assert rc['status'] == 'CURRENT_BUSINESS_LOCAL_CONTROL_PLANE'
+          assert iv['status'] == 'CURRENT_BUSINESS_LOCAL_INPUT_ADMISSIBILITY_GATE'
+          assert iv['runtime_path'] == 'BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/engine/unlock_validator.py'
+          assert iv['state_path'] == 'BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/VALIDATOR_STATE.json'
+          assert iv['pr'] == 295
+          assert iv['merge_sha'] == '301326537269ac97451d70b07a3f6455dc52c175'
+          assert iv['exact_head'] == 'fc5de451fb20c96db06066d73c62737596b89d07'
+          assert iv['input_validator_ci_run'] == 32554003798
+          assert iv['read_model_guard_ci_run'] == 32554003796
+          assert iv['deterministic_suite'] == 'PASS_15_OF_15'
+          assert iv['real_positive_root_event_count'] == 0
+          assert iv['current_public_first_party_status_is_pack_event'] is False
+          assert iv['validated_input_is_authority'] is False
+          assert iv['must_precede_resume_gate_for_new_root_events'] is True
+          assert (root/iv['runtime_path']).exists()
+          assert validator_state['schema'] == 'ivdivo.business.unlock_input_validator/1.2'
+          assert validator_state['deterministic_canaries'] == 15
+          assert validator_state['parent_execution_count_after'] == 17
+          assert validator_state['current_resume_route'] == 'PROTECT_NO_CHANGE'
+          assert validator_state['current_public_first_party_status_is_pack_event'] is False
+          assert validator_state['external_action_authorized'] is False
+
           assert rc['resume_gate_pr'] == 282
           assert rc['resume_gate_merge_sha'] == '75306d65cf01eb1bcfb0db2e05bc50c174c5c0bf'
           assert rc['resume_gate_exact_head'] == 'aca35c463ce09e3a491bcb7634a891dfdf4ffe37'
@@ -79,7 +102,8 @@ jobs:
           assert rc['route_may_authorize_external_action'] is False
           assert rc['route_may_promote_proof_grade'] is False
           cal = rc['calibration']
-          assert cal['synthetic_deterministic_suite'] == 'PASS_16_OF_16'
+          assert cal['resume_gate_synthetic_deterministic_suite'] == 'PASS_16_OF_16'
+          assert cal['input_validator_synthetic_deterministic_suite'] == 'PASS_15_OF_15'
           assert cal['real_negative_control_count'] == 1
           assert cal['real_positive_root_event_count'] == 0
           assert cal['latest_negative_control_result'] == 'PASS_ROOT_UNCHANGED_ROUTE_PROTECT_NO_CHANGE'
@@ -112,6 +136,7 @@ jobs:
           assert model['dependency_state']['P281_P283'] == 'BLOCKED_REAL_INDEPENDENT_REVIEW_REQUIRED'
           assert model['dependency_state']['P284_P287'] == 'BLOCKED_EXPLICIT_EXTERNAL_AUTHORIZATION_AND_REAL_USE_REQUIRED'
           assert model['proof_frontier'] == {'public_derived_ceiling':'E2_PLUS','artifact_plane':'PA3','PA4':False,'PA5':False,'E3':False,'E4':False}
+          assert 'INPUT_VALIDATOR_PRECEDES_RESUME_GATE_FOR_NEW_ROOT_EVENTS' in model['guards']
 
           assert 'CORE_CURRENT + MANDATORY_EVIDENCE_OVERLAY = CURRENT_BUSINESS_READ_MODEL' in core
           assert 'total executed = **17**' in core_lower
@@ -119,5 +144,5 @@ jobs:
           assert 'ROOT_A = TARGET_PACK_NOT_ACQUIRED' in core
           assert 'ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET' in core
           assert 'NOT_FOUND_IN_CONNECTED_SOURCES != DOCUMENT_DOES_NOT_EXIST' in overlay
-          print('CURRENT_BUSINESS_READ_MODEL 1.3: PASS — resume control + real negative control, 17/64 executed, 47 remaining')
+          print('CURRENT_BUSINESS_READ_MODEL 1.4: PASS — input validator -> persistence/readback -> ResumeGate; 17/64 unchanged')
           PY
