@@ -1,11 +1,11 @@
 {
-  "schema": "artifact_placement_incident_state_v3",
+  "schema": "artifact_placement_incident_state_v4",
   "date": "2026-08-22",
   "issue": 356,
   "failure_class": "ARTIFACT_PLACEMENT_PATH_DRIFT",
   "authority_effect": "NONE",
   "self_improvement_current": "v2 VERIFIED_CURRENT",
-  "candidate_status": "RECOVERY_HARDENING_MERGED",
+  "candidate_status": "LIVE_INTERCEPTION_CAPTURE_ARMED_PENDING_CI",
   "trigger_project": "D09 THE MAN WHO CAME BACK",
   "fail_closed_state": "PERSISTED_BUT_MISPLACED",
   "runtime": {
@@ -13,6 +13,7 @@
     "provider_adapter_module": "personal-ai/core/artifact_placement_adapters.py",
     "completion_gate": "personal-ai/projects/artifact_completion.py",
     "atomic_recovery_contract": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/ATOMIC_COMPLETION_RECOVERY_CONTRACT_v1.md",
+    "live_interception_contract": "SELF_IMPROVEMENT_ENGINE/INCIDENTS/2026-08-22_ARTIFACT_PLACEMENT_PATH_DRIFT/LIVE_INTERCEPTION_EVIDENCE_CONTRACT_v1.md",
     "ci_workflow": ".github/workflows/artifact-placement-runtime.yml",
     "done_rule": "external-artifact task routed through artifact completion gate may become DONE only when placement receipt status is PLACEMENT_VERIFIED and status+receipt are persisted atomically"
   },
@@ -31,19 +32,18 @@
     "real_post_merge_failure_qualifies_as_future_guard_interception": false,
     "reason_not_promotion_evidence": "issue #395 triggered the resource-type repair; canonical PR401 receipt still requires future real traffic where the installed guard catches the next failure before false DONE",
     "resource_type_negative_canary": "PASS",
-    "atomic_completion_defect_found": true,
     "atomic_completion_fix_pr": 409,
-    "atomic_completion_validation_head": "9c3ec07e93786bb3a639ae616461068ea74ec9c8",
     "atomic_completion_merge_commit": "654399a29324408cb0be75cae239587102090632",
     "artifact_placement_runtime_ci_run": 32569759436,
-    "artifact_placement_runtime_ci": "PASS",
-    "current_project_state_regression": "PASS",
-    "current_local_memory_regression": "PASS",
-    "current_memory_contract_hardening_regression": "PASS",
-    "current_provider_abstraction_regression": "PASS",
     "reopen_recovery_regression": "PASS",
-    "all_related_workflows_exact_head": "10/10 PASS",
-    "main_runtime_readback": "PASS"
+    "atomic_recovery_all_related_workflows": "10/10 PASS",
+    "live_interception_capture_branch": "self-improvement/live-interception-evidence-20260822",
+    "live_interception_capture_armed": true,
+    "live_interception_history_mode": "APPEND_ONLY_PER_TASK",
+    "live_interception_atomic_with_blocked_state": true,
+    "live_interception_auto_promotion": false,
+    "live_interception_provider_confirmation_required": true,
+    "live_interception_regression": "PENDING_EXACT_HEAD_CI"
   },
   "required_sequence": [
     "CREATE_OR_IMPORT",
@@ -55,6 +55,7 @@
     "VERIFY_CROSS_STORE_POINTER_IF_REQUIRED",
     "EMIT_PLACEMENT_RECEIPT",
     "ATOMICALLY_PERSIST_STATUS_AND_RECEIPT",
+    "IF_BLOCKED_WITH_RECEIPT_APPEND_INTERCEPTION_CANDIDATE_ATOMICALLY",
     "ALLOW_DONE_ONLY_IF_PLACEMENT_VERIFIED_AND_OTHER_GATES_PASS"
   ],
   "promotion_gate": {
@@ -64,7 +65,7 @@
       "atomic status+receipt persistence and restart/reopen regression passed against current ProjectState, Local Memory, Memory Contract Hardening and Provider Abstraction compatibility suites and merged through PR #409"
     ],
     "remaining_requirements": [
-      "observe future real traffic where the installed placement/resource-type guard catches a new real persistence failure before any false DONE claim"
+      "observe future real traffic where the installed placement/resource-type guard catches a new real persistence failure before any false DONE claim, then independently confirm provider origin/readback; runtime interception candidates never self-certify as promotion proof"
     ]
   }
 }
