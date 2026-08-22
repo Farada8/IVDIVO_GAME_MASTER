@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.sound_design_pointer/1.5",
+  "schema_version": "room917.sound_design_pointer/1.6",
   "project": "ROOM917",
   "episode": "E01",
   "status": "ACTIVE_POST_RENDER_SOUND_EXECUTION",
@@ -7,7 +7,10 @@
   "execution_contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_POST_RENDER_SOUND_EXECUTION_CONTRACT_v1.json",
   "current_phase": "POST_RENDER_EVALUATION_AND_SELECTIVE_REPAIR",
   "current_proven_sound_failure": "D003_PRE_SCENE3_ROOM_BED_CONTINUITY_UNDERCOVERAGE_AGGREGATE_ONLY",
-  "current_blocker": "EXACT_MASTER_BYTES_OR_TRUSTED_EXACT_PRE_SCENE3_INTERVAL_TIMING_REQUIRED",
+  "current_blockers": [
+    "EXACT_MASTER_BYTES_OR_TRUSTED_EXACT_PRE_SCENE3_INTERVAL_TIMING_REQUIRED",
+    "REAL_A01_A02_ROOM_BED_CANDIDATE_BYTES_REQUIRED_FOR_D003_REPAIR"
+  ],
   "scene3_policy": "PRESERVE_V1_3E_TECHNICAL_LINEAGE_UNLESS_NEW_DIRECT_REGRESSION_EVIDENCE",
   "next_machine_stage": "P003A2_PRE_SCENE3_INTERVAL_LOCALIZATION",
   "authority_hygiene": {
@@ -17,33 +20,59 @@
     "contract": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/AUTHORITY_HYGIENE_CONTRACT_v1.json",
     "current_source_drive_id": "1Rz_Tv83fNhQIuPnMA4jRkESmgiu8xA-GZnctbQYDP_I",
     "current_source_revision_id": "AIroW35akh5K-jiaYRt8MsVE766IodPxPzb_8ueRhxFW36LZv5aJP_vTzTR7KZhJULqdCk5aTTiDvO4ncVEn0z521VzUp_jLDbvK_V7Fa50",
-    "targeted_regression_tests": "5_PASS",
-    "pipeline_preflight": "ENFORCED_BEFORE_TIMING_RESOLUTION_AND_REPAIR_PLANNING"
+    "pipeline_preflight": "ENFORCED"
   },
   "sound_asset_identity": {
     "status": "SPEC_READY_REAL_ASSET_BYTES_UNBOUND",
     "contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
     "candidate_template": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_CANDIDATES_TEMPLATE_v1.json",
+    "generation_and_audition_queue": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json",
     "binding_gate": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/sound_asset_binding_gate.py",
     "identity_gated_runner": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/RUN_P004A_IDENTITY_GATED_PATCH_AND_REGRESSION.ps1",
     "renderer": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/room_bed_patch_renderer.py",
     "renderer_law": "REQUIRE_IDENTITY_GATE_PASS_AND_RECHECK_BOUND_ASSET_SHA256_BEFORE_MIX",
-    "synthetic_targeted_checks": "VALID_IDENTITY_PASS_AND_TAMPER_FALSE_CLUE_HOLD_BOTH_BEHAVED_AS_REQUIRED",
     "d003_bindable_beds": ["A01_GREYHAVEN_LOBBY_30S_LOOP","A02_SWITCHBOARD_ALCOVE_30S_LOOP"],
     "scene3_bed": "A03_0117_NIGHT_ROOMTONE_30S_LOOP_PROTECTED_NOT_D003_BINDABLE",
     "real_a01_drive_audio": "NOT_FOUND",
     "real_a02_drive_audio": "NOT_FOUND"
   },
+  "derived_candidate_provenance": {
+    "contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_DERIVED_MASTER_PROVENANCE_CONTRACT_v1.json",
+    "builder": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_derived_master_provenance.py",
+    "schema": "room917.derived_master_provenance/1.1",
+    "source_law": "BUILDER_MUST_READ_EXACT_SOURCE_BYTES_AND_VERIFY_EXPECTED_SHA",
+    "direct_regression": "BUILDER_REPEATS_BYTE_DIFF_INDEPENDENTLY_OF_REGRESSION_REPORT",
+    "scene3_start_seconds": 444.980
+  },
+  "release_translation_qc": {
+    "profile": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_RELEASE_TRANSLATION_QC_PROFILE_v1.json",
+    "tool": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/release_translation_qc.py",
+    "schema": "room917.release_translation_machine_qc/1.3",
+    "internal_profile": "AROUND_-16_LUFS_TRUE_PEAK_LE_-1_DBTP_LRA_LE_11_LU_TOLERANCE_0_5_LU",
+    "stereo_policy": "NO_HARD_FAIL_FROM_HIGH_CORRELATION_ALONE_COMPARE_TO_STEREO_INTENT",
+    "translation": ["HEADPHONES","EARBUDS","MONO","PHONE_PROXY","LOW_VOLUME","CASUAL_ATTENTION","1_25X_WHEN_APPLICABLE"],
+    "positive_real_master_run": "BLOCKED_ON_BYTES",
+    "negative_foreign_wav_test": "FAIL_AS_REQUIRED"
+  },
   "human_gate": {
     "stage": "P003B_LISTENER_QC_RED_TEAM",
     "status": "READY_WAITING_FOR_IDENTIFIED_AUDIO",
-    "law": "NO_HUMAN_LISTEN_CLAIM_WITHOUT_ACCESSIBLE_IDENTIFIABLE_AUDIO",
-    "protocol": {"github_path":"AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RED_TEAM_PROTOCOL_v1.0.md","drive_id":"1DE-eRwLtu7H6aZ_XiQ9OnrkwUIDLmBByVAbUzpIgBgU"},
-    "result_contract": {"github_path":"AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json","drive_id":"1DJdYhC9PRRe5iICFmC0UgOeCG4nCSmKSkIQa5rm-gw4","status":"WAITING_FOR_AUDIO"},
-    "scene3_pass_b_queue": {"github_path":"AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json","drive_id":"1HXg6KmpXGo7yJrDwDo3eLuptROi3h5ZexyRIMI23tlk","candidate_count":10,"status":"SEALED_UNTIL_BLIND_PASS_A_NOTES_FROZEN","historical_v1_4a_evidence":"REAL_AUDIO_MEASURED_CANDIDATES_PLUS_PRODUCTION_INFERENCE_NOT_CURRENT_HUMAN_PASS","current_master_version_identity":"UNPROVEN","release_effect":"NONE_UNTIL_CURRENT_AUDIO_DIRECTLY_VERIFIED"},
-    "blind_firewall": "PASS_A_FIRST_FREEZE_NOTES_THEN_OPEN_PASS_B_QUEUE",
-    "repair_authority": "VERIFIED_AUDIBLE_DEFECT_ONLY_SMALLEST_SCOPE",
-    "no_new_sound_patch_authorized_by_queue_existence": true
+    "result_contract": {
+      "github_path": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json",
+      "schema": "ivdivo.room917_p003b_listener_qc_result/1.2",
+      "drive_id": "1DJdYhC9PRRe5iICFmC0UgOeCG4nCSmKSkIQa5rm-gw4"
+    },
+    "blind_package_builder": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/p003b_listener_package_builder.py",
+    "identity_modes": ["IMMUTABLE_SOURCE_MASTER","PROVENANCE_VERIFIED_DERIVED_CANDIDATE"],
+    "negative_foreign_wav_test": "HOLD_AS_REQUIRED_NO_PACKAGE",
+    "blind_firewall": "OPAQUE_PASS_A_TARGET_AND_SEALED_IDENTITY_KEY; FREEZE_NOTES_BEFORE_PASS_B_AND_PASS_C",
+    "scene3_pass_b_queue": {
+      "github_path": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json",
+      "drive_id": "1HXg6KmpXGo7yJrDwDo3eLuptROi3h5ZexyRIMI23tlk",
+      "candidate_count": 10,
+      "status": "SEALED_UNTIL_BLIND_PASS_A_NOTES_FROZEN"
+    },
+    "repair_authority": "VERIFIED_AUDIBLE_DEFECT_ONLY_SMALLEST_SCOPE"
   },
   "binary_recovery": {
     "full_master_file_library_id": "file_000000002c8081f58d0e656cdc0e7267",
