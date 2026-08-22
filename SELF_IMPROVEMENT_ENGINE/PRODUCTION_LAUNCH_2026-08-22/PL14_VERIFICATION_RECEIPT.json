@@ -1,0 +1,33 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.2",
+  "card": "PL-14",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 462,
+    "merge_sha": "74c4440c3d2fed9ea23369b3301a25b0fb2762fa",
+    "verified_head": "c51ced26517d16dbda79d16472059c6609454504"
+  },
+  "cumulative_exact_head_ci": "14/14 SUCCESS",
+  "acceptance": {
+    "project_local_retrieval": true,
+    "source_separation": true,
+    "project_state_retrieval": true,
+    "document_source_retrieval": true,
+    "decision_retrieval": true,
+    "generic_memory_separate": true,
+    "invalidated_memory_excluded": true,
+    "cross_project_leakage_forbidden": true,
+    "no_hit_is_unknown": true,
+    "persisted_report_readback": true,
+    "standalone_cli_roundtrip": true,
+    "full_personal_ai_regression": true
+  },
+  "drive": {
+    "folder_id": "14T9TeOQ0BzoRm3N3eLz0YlL9rsz0xKma",
+    "document_id": "19PVWtr35YRgKGwyO7alDNKymOC6Hy2ODYeMQ77XGxQI",
+    "verified_marker": "PERSONAL-AI-PL14-DONE-VERIFIED-PR462-CI14OF14-SOURCE-SEPARATED-NO-FABRICATION"
+  },
+  "evidence_boundary": "PL-14 proves bounded project-local literal retrieval and source separation. It does not prove source correctness, semantic similarity, embeddings, arbitrary document understanding, web retrieval, model synthesis or cross-project/global knowledge search. Missing evidence remains UNKNOWN.",
+  "next_frontier": "PL-16",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION"
+}
