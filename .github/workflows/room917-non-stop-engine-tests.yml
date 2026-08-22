@@ -1,0 +1,40 @@
+name: ROOM917 Non-Stop Engine Tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/room917-non-stop-engine-tests.yml'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/CONTINUATION_POLICY_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/post_render_router.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/compile_sound_asset_audition_result.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_non_stop_continuation.py'
+
+permissions:
+  contents: read
+
+jobs:
+  targeted:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run targeted non-stop engine tests
+        working-directory: AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2
+        run: python test_non_stop_continuation.py
+      - name: Summary
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## ROOM917 fail-closed non-stop policy
+          Expected targeted result: 5/5 PASS.
+          - blocked mainline selects independent safe work
+          - exhausted secondary work returns to recovery search
+          - continuation policy is BLOCKED_IS_NOT_STOP
+          - blind package verifies byte hashes and rejects tamper
+          - audition compiler never invents production gain
+          EOF
