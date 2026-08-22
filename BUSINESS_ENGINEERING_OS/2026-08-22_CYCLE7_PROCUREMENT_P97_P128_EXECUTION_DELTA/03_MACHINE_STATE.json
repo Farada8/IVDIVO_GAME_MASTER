@@ -1,0 +1,17 @@
+{
+  "schema_version":"ivdivo.business.procurement_execution_delta/1.0",
+  "date":"2026-08-22",
+  "base_main":"ee49be52766e2f70ae010281804ffdebd6538796",
+  "controlling_generic_layer":"BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_CROSS_LANE_READINESS_32_TO_64",
+  "run":{"range":"P97-P128","executed":32,"count":32},
+  "library":{"raw_drive":"1X6mo94Qo103HheyDry4P3dcQkv5qZg6N","physical":78,"valid":68,"unique_valid_hashes":58},
+  "tender":{"resource_id":8872468,"complete_pack_acquired":false,"verified_supplier_packet":false},
+  "proof":{"PA4":false,"PA5":false,"E3":false,"E4":false,"public_evidence_ceiling":"E2+"},
+  "constraints":{"no_outreach":true,"new_founder_cash_eur":0,"wip":"1_PRIMARY_2_PILOTS"},
+  "residual_product":"VERIFIED_TENDER_QUALIFICATION_EVIDENCE_READINESS_GAP_ROUTING",
+  "self_improvement":{"candidate":"AUTHENTICATED_EVIDENCE_DEPENDENCY_SHOULD_STOP_META_EXPANSION","global_promotion":false},
+  "drive":{"folder_id":"1au403z349CmJSDuQY16CVkEfVD6XIwGI","readback":true,"local_full_package_tests":"24/24 PASS"},
+  "next64":{"range":"P161-P224","count":64,"executed":0,"status":"VERTICAL_SUPPORT_BACKLOG_NOT_GLOBAL_AUTHORITY"},
+  "github":{"branch":"business-engineering/cycle7-procurement-execution-delta-v2-20260822","pr":null,"ci":"PENDING"},
+  "next_gate":"AUTHENTICATED_COMPLETE_PACK_PLUS_VERIFIED_BIDDER_PACKET_OR_PROTECT_NO_CHANGE"
+}
