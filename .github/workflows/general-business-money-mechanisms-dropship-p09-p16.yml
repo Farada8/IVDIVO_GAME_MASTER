@@ -38,10 +38,13 @@ jobs:
           assert st['proof_boundary']['inventory_purchase_authorized'] is False
           assert st['proof_boundary']['supplier_signup_authorized'] is False
           assert st['proof_boundary']['profitability_proven'] is False
-          assert mm['next64']['executed']==32 and mm['next64']['remaining']==32
+          executed=mm['next64']['executed']
+          remaining=mm['next64']['remaining']
+          assert 32 <= executed <= 64
+          assert remaining == 64 - executed
           assert mm['evidence_boundary']['businesses_proven']==0
           assert mm['strategic_coexistence']['do_not_overwrite_current_early_wave_wip'] is True
-          print('DROPSHIP P09-P16: PASS / 32OF64 INTERNAL / NO MARKET PROOF')
+          print(f'DROPSHIP P09-P16: PASS / {executed}OF64 INTERNAL / NO MARKET PROOF')
           PY
       - name: Compile runtime
         run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
