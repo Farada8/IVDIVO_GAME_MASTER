@@ -1,0 +1,55 @@
+name: General Business P-EW05 Convergence
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_EARLY_WAVE_MONETIZATION_BRIDGE.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_MONETIZATION_LADDER_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/03_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_DPP_REGISTRY_PREFLIGHT/03_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/21_PEW05_WIP3_MONETIZATION_DECISION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/22_PEW05_WIP3_MACHINE_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_pew05_wip3.py'
+      - '.github/workflows/general-business-pew05-convergence.yml'
+
+jobs:
+  convergence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Run P-EW05 convergence regressions
+        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_pew05_wip3.py
+      - name: Preserve monetization ladder regression
+        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_monetization_ladder.py
+      - name: Validate machine JSON
+        run: |
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_MONETIZATION_LADDER_STATE.json >/dev/null
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/03_MACHINE_STATE.json >/dev/null
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_DPP_REGISTRY_PREFLIGHT/03_MACHINE_STATE.json >/dev/null
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/22_PEW05_WIP3_MACHINE_STATE.json >/dev/null
+      - name: Assert evidence ceiling and next gate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          state=json.loads((root/'20_MONETIZATION_LADDER_STATE.json').read_text())
+          p5=json.loads((root/'22_PEW05_WIP3_MACHINE_STATE.json').read_text())
+          current=Path('BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md').read_text()
+          assert state['p_ew05']['m1_count']==3
+          assert state['p_ew05']['m2_or_higher_count']==0
+          assert state['p_ew05']['decision']=='NO_COMMERCIAL_WINNER_YET'
+          assert state['proof_boundary']['wtp'] is None
+          assert state['proof_boundary']['transactions_from_bridge']==0
+          assert state['external_action']['authorized'] is False
+          assert p5['next_gate']=='WRITE_PREDECLARED_BUYER_WTP_TEST_CONTRACT_ONLY_IF_EXTERNAL_TESTING_IS_EXPLICITLY_AUTHORIZED'
+          assert 'P-EW05 = INTERNAL_DECISION_ALL_M1' in current
+          assert 'P-EW03 = NEXT' not in current
+          print('P-EW05 convergence PASS: all three M1, zero M2, no WTP, external action false')
+          PY
