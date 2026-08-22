@@ -18,7 +18,7 @@ jobs:
         run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/tests/test_fatal_test_router.py
       - name: Compile runtime
         run: python -m compileall -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/runtime
-      - name: Validate P17-P24 artifacts and accounting
+      - name: Validate P17-P24 historical artifact and forward-compatible current state
         run: |
           python - <<'PY'
           import json
@@ -29,6 +29,7 @@ jobs:
           current = json.loads((root/'06_MACHINE_STATE.json').read_text())
           assert all(f'P{i}' in doc for i in range(17,25))
           assert all(f'OPP-{i}' in doc for i in (33,36,37))
+          # Historical closure is immutable: it was exactly 16/64 at P17-P24 completion.
           assert st['next64']['executed_count'] == 16
           assert st['next64']['unexecuted_count'] == 48
           assert st['portfolio']['wip_count'] == 3
@@ -36,9 +37,12 @@ jobs:
           assert st['portfolio']['go_to_market'] is False
           assert st['external_action']['authorized'] is False
           assert st['evidence']['willingness_to_pay'] is None
-          assert current['next64']['executed'] == 16
-          assert current['next64']['remaining'] == 48
-          assert current['next64']['executed_ranges'] == ['P01-P08','P17-P24']
-          assert current['next64']['next_admissible_block'] == 'P09-P16_TARGETED_TO_CURRENT_3_WIP'
-          print('GENERAL_BUSINESS_P17_P24: PASS — 16/64 executed, 48 remaining, WIP=3')
+          # CURRENT may advance, but it must preserve P17-P24 and never regress below the closure.
+          assert current['next64']['executed'] >= st['next64']['executed_count']
+          assert current['next64']['remaining'] <= st['next64']['unexecuted_count']
+          assert 'P17-P24' in current['next64']['executed_ranges']
+          assert current['fatal_tests']['active_lanes'] == ['OPP-33','OPP-36','OPP-37']
+          assert current['fatal_tests']['go_to_market'] is False
+          assert current['external_action']['authorized'] is False
+          print(f"GENERAL_BUSINESS_P17_P24: PASS — historical 16/64 preserved; current={current['next64']['executed']}/64")
           PY
