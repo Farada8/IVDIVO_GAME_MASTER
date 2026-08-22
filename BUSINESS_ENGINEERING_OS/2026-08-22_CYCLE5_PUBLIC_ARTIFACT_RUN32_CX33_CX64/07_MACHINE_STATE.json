@@ -1,0 +1,22 @@
+{
+  "schema_version": "ivdivo.business.cycle5_public_artifact/1.0",
+  "date": "2026-08-22",
+  "status": "RUN32_EXECUTED_PERSISTENCE_AND_CI_PENDING",
+  "base_main": "e41408aec56839585bfcff9a0fbfb0224cada25d",
+  "branch": "business-engineering-os-cycle5-public-artifact-run32-20260822",
+  "raw_library_drive": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+  "library": {"physical":78,"valid":68,"unique_valid_hashes":58,"duplicate_groups":8,"broken_placeholders":5,"canonical_unique_works":null},
+  "constraints": {"no_outreach":true,"new_founder_cash_eur":0,"public_evidence_ceiling":"E2+","max_primary":1,"max_pilots":2},
+  "run": {"source_prompts":"CX33-CX64","executed":32,"next_prompts_designed":64,"local_tests":"24/24 PASS"},
+  "portfolio": {
+    "primary": "TENDER_QUALIFICATION_AND_EVIDENCE_READINESS",
+    "pilots": ["RETROFIT_ORCHESTRATION_AND_EVIDENCE_ADMIN","POST_DIGITAL_FOR_BUSINESS_AI_IMPLEMENTATION_AND_MEASUREMENT"]
+  },
+  "killed_or_mutated": ["GENERIC_TENDER_DISCOVERY","GENERIC_RETROFIT_TECHNICAL_ADVICE","GENERIC_AI_WORKFLOW_DIAGNOSTIC"],
+  "engine_layer": "CYCLE_LOCAL_PUBLIC_ARTIFACT_EVIDENCE_ADAPTER",
+  "new_global_business_os": false,
+  "new_si_id": false,
+  "external_proof": {"human_signal":false,"buyer_wtp":false,"payment":false,"profitability":false,"contract":false},
+  "drive_folder": "1BcgDRVluKjpU86EUZICZkj8VamWlcIo5",
+  "next_gate": "GITHUB_DRIVE_READBACK_CI_FRESH_MAIN_THEN_PREPARE_HUMAN_VALIDATION_PACKETS_NO_SEND"
+}
