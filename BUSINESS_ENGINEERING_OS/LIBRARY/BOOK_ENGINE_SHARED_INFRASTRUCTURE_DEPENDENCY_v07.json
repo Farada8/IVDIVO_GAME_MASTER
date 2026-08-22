@@ -1,0 +1,10 @@
+{
+  "artifact": "IVDIVO_BOOK_ENGINE_MILESTONE_H_v7_RUNTIME.zip",
+  "size_bytes": 213941,
+  "sha256": "9bc87a6d8280a4e817420a873fa0dbb2088b9c6d3dae5527ad57b4e3651e0ae7",
+  "drive_file_id": "1C-vfo_ARhfT90KFrOGXoXZp4v_c3_Dlx",
+  "role": "shared_infrastructure_dependency",
+  "story_semantics_imported": false,
+  "reuse": ["selective_invalidation", "evidence_value", "mechanism_dedupe", "cross_store_identity", "protected_project_guard", "failure_localisation", "bounded_self_improvement_bridge"],
+  "privacy": "raw dependency ZIP private Drive; public GitHub stores manifest/provenance only"
+}
