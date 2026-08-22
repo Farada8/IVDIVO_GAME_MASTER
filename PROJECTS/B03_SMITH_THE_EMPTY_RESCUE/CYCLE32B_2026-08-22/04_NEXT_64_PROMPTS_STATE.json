@@ -1,18 +1,20 @@
 {
-  "schema_version":"1.5",
+  "schema_version":"1.6",
   "date":"2026-08-22",
-  "status":"DESIGNED_64_PARTIAL_EXECUTION_P33_P71_COMPLETE_P72_BLOCKED_MANUSCRIPT_CH25_NEXT",
-  "law":"Execute dependency-first; manuscript production outranks business/meta work; do not relabel designed prompts as executed; P72 remains blocked until CH25-29 prose completes.",
+  "status":"DESIGNED_64_PARTIAL_EXECUTION_P33_P72_COMPLETE_DEVELOPMENT_DRAFT",
+  "law":"Execute dependency-first; manuscript production outranks business/meta work; do not relabel designed prompts as executed.",
   "groups":[
     {"id":"A","range":"P33-P40","status":"EXECUTED_8_OF_8_PASS"},
     {"id":"B","range":"P41-P48","status":"EXECUTED_8_OF_8_PASS_AFTER_MINIMAL_REPAIR","drive":"1OAzxho9Uxe9iOeq2XKp9m3hqGsWfLbrdNjd47MRS9DE"},
     {"id":"C","range":"P49-P56","status":"EXECUTED_8_OF_8_PASS_CH13_18_COMPLETE","drive_gate":"15VHNFSF5lBDoNnyJIeI_S9TNAawKlwJ0w4AK_vlCmxA"},
-    {"id":"D","range":"P57-P64","status":"EXECUTED_8_OF_8_PASS_CH19_24_COMPLETE","drive_gate":"1EZ0MaNRWiiXwcEznNV6fMoVkIfXPohkAOxxDSPbUQho","github":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/10_CH19_24_ESCALATION_PROSE_BLOCK_GATE.json"},
-    {"id":"E","range":"P65-P72","name":"CH25-29 CLIMAX/RESOLUTION","status":"P65_P71_EXECUTED_PASS_P72_BLOCKED_PENDING_CH25_29_PROSE","drive_rebase":"1Xz_x54rCplmFedu4pEqgWhGcl7rOW4t92h4PzYKz9oc","github":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/11_CH25_29_CLIMAX_REBASE_P65_P72.json","prompts":[["P65","EXECUTED_PASS","Andrej nonfatal permanent injury causal mechanism class; exact diagnosis held"],["P66","EXECUTED_PASS","centralized predictive control temptation stress test"],["P67","EXECUTED_PASS","distributed judgment / third-route stress test"],["P68","EXECUTED_PASS","Smith climax choice ownership"],["P69","EXECUTED_PASS","Luka/Eva physical containment design"],["P70","EXECUTED_PASS","institutional resolution design"],["P71","EXECUTED_PASS","personal/contact resolution design"],["P72","BLOCKED_NOT_EXECUTED","full-novel Story Gate requires actual CH25-29 prose"]]},
-    {"id":"F","range":"P73-P80","status":"DESIGNED_NOT_EXECUTED_DOWNSTREAM"},
+    {"id":"D","range":"P57-P64","status":"EXECUTED_8_OF_8_PASS_CH19_24_COMPLETE","drive_gate":"1EZ0MaNRWiiXwcEznNV6fMoVkIfXPohkAOxxDSPbUQho"},
+    {"id":"E","range":"P65-P72","name":"CH25-29 CLIMAX/RESOLUTION","status":"EXECUTED_8_OF_8_P72_PASS_COMPLETE_DEVELOPMENT_DRAFT","drive_rebase":"1Xz_x54rCplmFedu4pEqgWhGcl7rOW4t92h4PzYKz9oc","p72_drive":"1T8ib8QympAjVPC58EufvjfnmRFXSDthNUgghBq6hqwk","github":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CYCLE32B_2026-08-22/12_CH25_29_CLIMAX_RESOLUTION_P72_COMPLETE_DRAFT_GATE.json","prompts":[["P65","EXECUTED_PASS","Andrej nonfatal permanent injury causal mechanism"],["P66","EXECUTED_PASS","centralized predictive control stress test"],["P67","EXECUTED_PASS","distributed judgment / third-route stress test"],["P68","EXECUTED_PASS_IN_CH27","Smith climax choice"],["P69","EXECUTED_PASS_IN_CH26","physical relay containment"],["P70","EXECUTED_PASS_IN_CH29","institutional resolution"],["P71","EXECUTED_PASS_IN_CH29","personal/contact resolution"],["P72","EXECUTED_PASS_FATAL0_MAJOR0","full-novel Story Gate; complete development draft, not locked"]]},
+    {"id":"F","range":"P73-P80","status":"DESIGNED_NOT_EXECUTED_DOWNSTREAM_HOLD_UNTIL_PRIMARY_MANUSCRIPT_DEVELOPMENT_SAFE"},
     {"id":"G","range":"P81-P88","status":"DESIGNED_NOT_EXECUTED_EXCEPT_CURRENT_MANUAL_PERSISTENCE"},
     {"id":"H","range":"P89-P96","status":"DESIGNED_NOT_EXECUTED_DOWNSTREAM"}
   ],
-  "counts":{"designed":64,"executed":39,"remaining":25},
-  "current_pointer":"DRAFT_CH25_CASCADE_THROUGH_CH29_THEN_EXECUTE_P72_FULL_NOVEL_STORY_GATE"
+  "counts":{"designed":64,"executed":40,"remaining":24},
+  "primary_non_prompt_frontier":["ASSEMBLE_AUTHORITATIVE_CH01_29_MASTER_MANUSCRIPT","FULL_CH01_29_CORPUS_HUMAN_SCENE_REGRESSION","CONTINUITY_TIMELINE_KNOWLEDGE_PROVENANCE_REGRESSION","MEDICAL_FACTUAL_PLAUSIBILITY_PASS","RELAY_RESCUE_ENGINEERING_PLAUSIBILITY_PASS","COMPILED_PACING_AND_RESOLUTION_DENSITY_PASS"],
+  "current_pointer":"MASTER_ASSEMBLY_THEN_DEVELOPMENT_REGRESSION",
+  "business_meta_queue":"HOLD_UNTIL_PRIMARY_MANUSCRIPT_DEVELOPMENT_SAFE"
 }
