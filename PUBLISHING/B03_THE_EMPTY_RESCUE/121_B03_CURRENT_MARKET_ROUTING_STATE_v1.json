@@ -1,0 +1,42 @@
+{
+  "artifact": "121_B03_CURRENT_MARKET_ROUTING_STATE_v1",
+  "date": "2026-08-22",
+  "story_authority": "FOUNDER_LOCKED_CH01-29",
+  "source_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
+  "market_stage": "TARGET_MATRIX_COMPLETE / TWO_GO_PACKAGES_PREPARED / NOTHING_SENT",
+  "top_routes": [
+    {"target":"John Jarrold","state":"GO_TO_FINAL_PACKAGE","package":"first 6 chapters + project paragraph + 2–3 recent author comps"},
+    {"target":"Molly Jamieson / United Agents","state":"GO_TO_FINAL_PACKAGE","package":"cover letter + synopsis + first 3 chapters"},
+    {"target":"Marianne Gunn O'Connor","state":"WAIT_AND_RECHECK_2026-08-24"}
+  ],
+  "policy_holds": [
+    "RCW / Jon Wood — explicit no generated/co-written AI submission policy",
+    "Paper Literary — explicit no generative-AI-created work policy",
+    "Bell Lomax Moreton / Julie Gourinchas — closed + strict no AI-generated content"
+  ],
+  "closed_high_fit": ["Harry Illingworth / DHH", "Stevie Finegan / Zeno"],
+  "primary_comp_set": ["Nicholas Binge", "Sin Blaché & Helen Macdonald", "Scott Alexander Howard"],
+  "sample_integrity": {
+    "john_ch01_06_story_sha256": "f6ba49a08534247ca68cec97c6b5490c1ab7e99b7eeb73743bac2224bb71eb85",
+    "molly_ch01_03_story_sha256": "304e4ace766f4a30a6af93ea279a762ab6501db19e006b7d3f7b87452e2be517",
+    "exact_text_preservation": "PASS",
+    "render_qa": "PASS_49_PAGES_AND_22_PAGES"
+  },
+  "drive_authority": {
+    "production_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+    "target_matrix_id": "1Jt7geLr0AiGoVj2WitaNTcU5AkE3o98l",
+    "eligibility_gate_id": "1CGe4_r4JwlKSj0iW0CvPvzdYJWMFovpv",
+    "john_query_shell_id": "1_fHMiBmXVPrQb-3eBfJfo6zP3oXelm-I",
+    "molly_query_shell_id": "1CIPxNMqy98RgYm_MNzLCCfw53HeSEp0X",
+    "comps_brief_id": "18hnIrig1khWdBrbT-lRugFCi6Njn1zcr",
+    "agent_synopsis_id": "1NgEZk5Xq7cs79QfFvskKWl--pNiI1gmI",
+    "john_exact_sample_docx_id": "1EPO7i_lV4N5Y0XWC5W0gq3xfd1JGYvGI",
+    "molly_exact_sample_docx_id": "1zoaS3U-LBKTdkX3RhJnYreLpeG4rABHp",
+    "john_prep_zip_id": "1AoHaBKWlMUf_YbiPKcR9uN1BtJHCIql3",
+    "molly_prep_zip_id": "1jrukndcPXCJXD8BOGMg4gp8pSCdxZojg",
+    "full_routing_zip_id": "1uDlHVUFYJm5WXt2ZV3qx-Y9aMwqJp0Na",
+    "market_state_id": "15RWnRMgc3IleMcDZLuZRJSB0mrU13UT4"
+  },
+  "next_exact_action": "Recheck Marianne Gunn O'Connor on/after 2026-08-24. Before any send, add only verified author identity/bio, recheck official policies, and require explicit Founder authorization.",
+  "submission_sent": false
+}
