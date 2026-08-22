@@ -1,0 +1,55 @@
+{
+  "schema": "ivdivo.business.eu_dropship_candidates/1.0",
+  "date": "2026-08-22",
+  "market": "Ireland-first / EU-stock experiment",
+  "supplier_platform": "Hertwill",
+  "supplier_platform_facts": {
+    "legal_base": "Estonia, EU",
+    "inventory_required_upfront": false,
+    "free_plan_product_limit": 5,
+    "eu_delivery_guidance_business_days": "3-8",
+    "returns_supported": true,
+    "warranty_guidance_years": 2,
+    "specific_ireland_shipping_requires_sku_verification": true,
+    "wholesale_price_public": false,
+    "destination_shipping_public_for_candidates": false
+  },
+  "candidates": [
+    {"id":"EU01","niche":"work_carry","brand":"Craftory","product":"Slim Note Sack","made_in":"Estonia","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/slim-note-sack"},
+    {"id":"EU02","niche":"work_carry","brand":"Craftory","product":"Briefcase Model Brief","made_in":"Estonia","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/briefcase-model-brief-black/"},
+    {"id":"EU03","niche":"work_carry","brand":"Tairi Roosve","product":"Leather Phone Bag","made_in":"Estonia","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/leather-phone-bag-black"},
+    {"id":"EU04","niche":"work_carry","brand":"NOEL","product":"Multifunctional 3in1 Bag Triple","made_in":"Estonia","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/multifunctional-3in1-bag-triple-beige"},
+    {"id":"EU05","niche":"work_carry","brand":"eleriinseim","product":"Crossbody Leather Bag TOURIST","made_in":"Estonia","stock":"IN_STOCK","lead_time":"5-10 working days","status":"HOLD_LONG_LEAD","url":"https://hertwill.com/product/crossbody-leather-bag-tourist"},
+    {"id":"EU06","niche":"design_handbags","brand":"Gerda Retter Design","product":"FACET shoulder bag","made_in":"Estonia","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/facet-shoulder-bag/"},
+    {"id":"EU07","niche":"design_handbags","brand":"Craftory","product":"Leather Handbag Half Moon","made_in":"Estonia","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/leather-handbag-half-moon-black"},
+    {"id":"EU08","niche":"design_handbags","brand":"RR","product":"BOX Bag","made_in":"Latvia","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/box-bag"},
+    {"id":"EU09","niche":"design_handbags","brand":"Zelma Kraft","product":"Small Briefcase Handbag","made_in":"Latvia","stock":"IN_STOCK","lead_time":"14 working days","status":"HOLD_LONG_LEAD","url":"https://hertwill.com/product/small-briefcase-handbag-black"},
+    {"id":"EU10","niche":"design_handbags","brand":"RR","product":"Structured Tote Bag","made_in":"Latvia","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/structured-tote-bag"},
+    {"id":"EU11","niche":"home_textiles","brand":"LOKO","product":"Kitchen Towel Pärnumaa","made_in":"Estonia","stock":"IN_STOCK","status":"HOLD_LOW_AOV","url":"https://hertwill.com/product/kitchen-towel-parnumaa"},
+    {"id":"EU12","niche":"home_textiles","brand":"LOKO","product":"Kitchen Towel Harjumaa","made_in":"Estonia","stock":"IN_STOCK","status":"HOLD_LOW_AOV","url":"https://hertwill.com/product/kitchen-towel-harjumaa"},
+    {"id":"EU13","niche":"home_textiles","brand":"LOKO","product":"Kitchen Towel Hiiumaa Kaheksakanna","made_in":"Estonia","stock":"IN_STOCK","status":"HOLD_LOW_AOV","url":"https://hertwill.com/product/kitchen-towel-hiiumaa-kaheksakanna"},
+    {"id":"EU14","niche":"home_textiles","brand":"RÄTT","product":"Hair Wrap Cotton Terry","made_in":"Estonia","stock":"PARTIAL_COLORS_IN_STOCK","status":"HOLD_LOW_AOV","url":"https://hertwill.com/product/hair-wrap-for-women-cotton-terry"},
+    {"id":"EU15","niche":"home_textiles","brand":"RÄTT","product":"Hair Wrap Cotton Waffle","made_in":"Estonia","stock":"PARTIAL_COLORS_IN_STOCK","status":"HOLD_LOW_AOV","url":"https://hertwill.com/product/hair-wrap-for-women-cotton-waffle"},
+    {"id":"EU16","niche":"design_pet_home","brand":"Labbvenn","product":"Rico Cat/Dog Feeder","made_in":"Europe","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/rico-catdog-feeder-white"},
+    {"id":"EU17","niche":"design_pet_home","brand":"Labbvenn","product":"Rino Blanket","made_in":"Europe","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/rino-blanket-grayish"},
+    {"id":"EU18","niche":"design_pet_home","brand":"Labbvenn","product":"Finno Cushion","made_in":"Europe","stock":"IN_STOCK","status":"HOLD_BULK_SHIPPING","url":"https://hertwill.com/product/finno-cushion-anthracite"},
+    {"id":"EU19","niche":"design_pet_home","brand":"Labbvenn","product":"Oslo Cushion","made_in":"Europe","stock":"IN_STOCK","status":"HOLD_BULK_SHIPPING","url":"https://hertwill.com/product/oslo-cushion-cloud"},
+    {"id":"EU20","niche":"design_pet_home","brand":"Labbvenn","product":"Elva Dog Carrier & Personal Bag","made_in":"Europe","stock":"IN_STOCK","status":"ADVANCE_PRICE_SHIP_CHECK","url":"https://hertwill.com/product/elva-dog-carrieright-grey"}
+  ],
+  "counts": {
+    "total": 20,
+    "niches": 4,
+    "advance_price_ship_check": 11,
+    "hold_low_aov": 5,
+    "hold_bulk_shipping": 2,
+    "hold_long_lead": 2,
+    "profit_proven": 0
+  },
+  "economics": {
+    "wholesale_cost": null,
+    "shipping_to_ireland": null,
+    "cac": null,
+    "conversion": null,
+    "wtp": null
+  }
+}
