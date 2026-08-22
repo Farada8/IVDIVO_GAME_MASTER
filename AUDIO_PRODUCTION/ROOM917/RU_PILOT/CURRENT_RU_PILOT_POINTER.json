@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_ru_pilot_pointer/1.5",
+  "schema_version": "ivdivo.room917_ru_pilot_pointer/1.6",
   "updated": "2026-08-22",
   "project": "ROOM 917 CALLS AT MIDNIGHT",
   "project_id": "ROOM917",
@@ -29,7 +29,7 @@
     "native_s0_bindings_template": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_NATIVE_BINDINGS_TEMPLATE_v1.0.json", "commit": "a9b5c9720b9cc6d4a2af2d81e16b700670a1603e", "actual_binding_file": "NOT_CREATED_UNTIL_PROVIDER_SNAPSHOT_AND_PREVIEW_EVIDENCE"},
     "native_s0_bundle_compiler": {"path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/prepare_ru_s0_native_bundle.py", "commit": "af21b1f4fc2d0a1e4bd8bf1cbd5c88daab6330d8", "hard_rejects_historical_ids": true, "snapshot_sha_match_required": true},
     "s0_canary_workflow": {"path": ".github/workflows/room917-ru-s0-canary.yml", "commit": "6c7c9e99042ab0e341dff167750691cced4e4f4e", "trigger": "workflow_dispatch", "paid_guard": "confirm_spend=YES", "max_blocks": [4, 6], "native_binding_hard_gate": true, "machine_qc_before_artifact": true, "full_episode_render_forbidden": true},
-    "native_discovery_pr_probe": {"path": ".github/workflows/room917-ru-native-discovery-pr-probe.yml", "commit": "0b3265fcf2169a5ef46e1d6eddeb4c5dfa0c27e1", "paid_synthesis_calls": 0, "status": "AVAILABLE_DIAGNOSTIC_PATH_BUT_PR_RUN_NOT_OBSERVED_IN_CONNECTOR"},
+    "native_discovery_pr_probe": {"path": ".github/workflows/room917-ru-native-discovery-pr-probe.yml", "commit": "0b3265fcf2169a5ef46e1d6eddeb4c5dfa0c27e1", "paid_synthesis_calls": 0, "status": "AVAILABLE_DIAGNOSTIC_PATH_PR504_CLOSED_NO_OBSERVED_RUN"},
     "english_sound_design_pointer": {"path": "AUDIO_PRODUCTION/ROOM917/CURRENT_SOUND_DESIGN_POINTER.json", "commit": "8e274f7313f5744c16df44fa02719828618616ad", "status": "ACTIVE_POST_RENDER_SOUND_EXECUTION", "note": "EN/master sound-design lineage remains separate authority and must not be overwritten by RU localization work"}
   },
   "drive": {
@@ -39,7 +39,7 @@
     "e02_ru_script_doc": {"title": "ROOM917 RU E02 — ЛЕНИ-БЁРД — RECORDING SCRIPT v1.0", "id": "1LdwOJbPRHHWKVCoP3giK-WdwaiauEOIEPdNkXuGIlp4"},
     "production_update_doc": {"title": "ROOM917 RU PILOT — S0 CANARY + E01 SOUND PRODUCTION UPDATE — 2026-08-22", "id": "1_O5KB093CGI80idkAY7_3Eo2RbWK9Dy_TBXHZ7ggXTo", "readback": "PASS"},
     "cast_provider_refresh_doc": {"title": "ROOM917 RU CAST — PROVIDER FRESHNESS + NATIVE DISCOVERY GATE — 2026-08-22", "id": "1Fpyt35njISP8a8Iq3NOJs8_KGww-qy4KcC8uyYy7RP8", "parent_folder": "1UIJGRzuNkAYTMfFxjso2lwfyNzqBuvc8", "readback": "PASS_2026_08_22"},
-    "current_frontier_doc": {"status": "TO_BE_CREATED_FOR_POINTER_V1_5"}
+    "current_frontier_doc": {"title": "ROOM917 RU PILOT — CURRENT FRONTIER v1.5 — 2026-08-22", "id": "1Z-tMYDZQY2b61moqrl4gpsvDsRXlSr9ApXrFsU4WGmY", "parent_folder": "1UIJGRzuNkAYTMfFxjso2lwfyNzqBuvc8", "readback": "PASS"}
   },
   "provider": {
     "name": "ElevenLabs",
