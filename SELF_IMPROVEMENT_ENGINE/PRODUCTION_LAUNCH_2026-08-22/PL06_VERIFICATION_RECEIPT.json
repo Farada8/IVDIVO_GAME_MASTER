@@ -1,0 +1,55 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.1",
+  "card": "PL-06",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 378,
+    "verified_head": "561ed6ff086788601e0924cf57ddb6dbd9212d86",
+    "merge_sha": "2d4cb04a9349bf5114d3718107ff4caba8db0b0c"
+  },
+  "exact_head_ci": [
+    {"workflow":"Personal AI PL-00 Bootstrap","run_id":32562243815,"conclusion":"success"},
+    {"workflow":"Personal AI PL-01 Project State","run_id":32562243807,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Local Memory","run_id":32562243839,"conclusion":"success"},
+    {"workflow":"Personal AI PL-02 Memory Contract Hardening","run_id":32562243809,"conclusion":"success"},
+    {"workflow":"Personal AI PL-04 Provider Abstraction","run_id":32562243814,"conclusion":"success"},
+    {"workflow":"Personal AI PL-05 Agent Executor","run_id":32562243808,"conclusion":"success"},
+    {"workflow":"Personal AI PL-11 Test Benchmark Runner","run_id":32562243802,"conclusion":"success"},
+    {"workflow":"Personal AI PL-06 Business Core","run_id":32562243828,"conclusion":"success"}
+  ],
+  "acceptance": {
+    "minimum_entities_9": true,
+    "client_request_to_quote_workflow": true,
+    "decimal_money_math": true,
+    "known_tbd_state_model": true,
+    "missing_labour_not_zero": true,
+    "missing_material_not_zero": true,
+    "explicit_no_material_known_zero": true,
+    "missing_margin_blocks_total": true,
+    "area_does_not_imply_price": true,
+    "structured_quote_json": true,
+    "readable_quote_markdown": true,
+    "job_quote_entity_persistence": true,
+    "pl02_output_memory_persistence": true,
+    "cli_roundtrip": true,
+    "full_personal_ai_regression": true,
+    "drive_readback": true
+  },
+  "evidence_boundary": {
+    "synthetic_fixture_prices_only": true,
+    "current_market_price_proven": false,
+    "customer_acceptance_proven": false,
+    "wtp_proven": false,
+    "payment_proven": false,
+    "profitability_proven": false,
+    "supplier_availability_proven": false,
+    "vat_or_tax_treatment_proven": false
+  },
+  "drive": {
+    "folder_id": "1O1aMj-hr25SraFiDSgv6tCrj81eVq2Ya",
+    "document_id": "1HDvohC8AGTglq8wom_vjC3viUNweaLUfgrlw3tedEDM",
+    "verified_marker": "PERSONAL-AI-PL06-DONE-VERIFIED-PR378-CI8OF8-NO-INVENTED-PRICES"
+  },
+  "current_frontier_after_closure": "PL-08",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION"
+}

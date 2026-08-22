@@ -53,6 +53,17 @@ Date: 2026-08-22
 - Drive folder `1hhgo94czLN6Qz4p9qNdMjxcZvf0ih0G3`, document `1Y0Zww7H003dYjlF-CsCV9vINt76mYZPkTLizcjF7764`, marker `PERSONAL-AI-PL05-DONE-VERIFIED-PR336-PR366-CI7OF7-STRICT-AGENT-CONTRACT`.
 - bounded explicitly allowlisted local tool execution is proven; unrestricted/autonomous tool use, background work, shell/code/destructive execution and live-provider success are not implied.
 
+`PL-06 BUSINESS CORE = DONE_VERIFIED`.
+- PR #378 merge `2d4cb04a9349bf5114d3718107ff4caba8db0b0c`; verified head `561ed6ff086788601e0924cf57ddb6dbd9212d86`.
+- minimum entities exist: Lead, Customer, Job, Quote, Invoice, Supplier, Expense, Payment, FollowUp.
+- first persisted route implements CLIENT REQUEST -> JOB DESCRIPTION -> COST ESTIMATE -> LABOUR -> MATERIAL -> MARGIN -> QUOTE -> SAVE.
+- money arithmetic uses Decimal and explicit KNOWN/TBD states; missing hours/rates/material quantities/material prices/margin never become zero.
+- `materials_not_required=true` is the explicit known-zero material path; area/quantity does not imply a price.
+- structured JSON and readable Markdown quote artifacts, Job/Quote entities and PL-02 OUTPUT memory persist and read back.
+- exact-head cumulative workflows all SUCCESS: PL-00 `32562243815`, PL-01 `32562243807`, PL-02 `32562243839`, PL-02 hardening `32562243809`, PL-04 `32562243814`, PL-05 `32562243808`, PL-11 `32562243802`, PL-06 `32562243828`.
+- Drive folder `1O1aMj-hr25SraFiDSgv6tCrj81eVq2Ya`, document `1HDvohC8AGTglq8wom_vjC3viUNweaLUfgrlw3tedEDM`, marker `PERSONAL-AI-PL06-DONE-VERIFIED-PR378-CI8OF8-NO-INVENTED-PRICES`.
+- all test prices/rates/margins are synthetic fixture inputs; current market price, customer acceptance, WTP, payment, profitability, supplier availability and tax/VAT treatment remain unproven.
+
 `PL-11 TEST BENCHMARK RUNNER = DONE_VERIFIED`.
 - PR #345 merge `7480f261e26bd2be58c10f814aa1ea27056e8a69`; refreshed verified head `8d09d5d9171a21cff9e7b8958e6496d0796ba900`.
 - executable JSON baseline/candidate runner supports higher/lower-is-better metrics, positive weights, per-case regression tolerance and suite aggregate threshold.
@@ -68,11 +79,12 @@ All Wave-1 cards are DONE_VERIFIED: `PL-00`, `PL-01`, `PL-02`, `PL-04`, `PL-05`,
 
 ## Current READY graph
 
-Canonical next frontier: `PL-06 Business Core = READY` — first Wave-2 real-production card.
+Canonical next frontier: `PL-08 Book Production Core = READY`.
+
+PL-07 Business Research remains `WAITING_DEPENDENCY` because PL-03 Source Evidence Layer is not yet verified.
 
 Also READY:
 - `PL-03 Source Evidence Layer`;
-- `PL-08 Book Production Core`;
 - `PL-10 Multi-Model Review`;
 - `PL-12 Change Control`;
 - `PL-13 File Ingestion`;
@@ -81,7 +93,7 @@ Also READY:
 - `PL-17 Security`;
 - `PL-18 Cost Control`.
 
-Reason for PL-06 priority: foundation execution, memory, providers, bounded agents and benchmark rejection are now verified. PL-06 is the first ready Wave-2 card and must prove a real business request can become a persisted estimate/quote without invented prices. PL-08 remains the parallel ready book-production path.
+Reason for PL-08 priority: PL-06 is now verified; the next Wave-2 card PL-07 cannot run until PL-03 exists, while PL-08 already has all dependencies PL-01/02/04 verified. PL-08 must now establish a persisted book state machine and a fail-closed FINAL gate before PL-09 continuity checking can unlock.
 
 Do not re-execute DONE_VERIFIED layers unless a regression or explicit PL-12-style change-control event requires it. Preserve cumulative regression coverage.
 
@@ -96,4 +108,4 @@ Stop and mark `BLOCKED` instead of inventing a pass when:
 
 ## Handoff sentence for a new session
 
-`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. Wave-1 foundation PL-00/01/02/04/05/11 is DONE_VERIFIED. Continue from PL-06 Business Core; PL-03/08/10/12/13/15/16/17/18 remain dependency-admissible READY alternatives. Persist code/state/tests/readback, never invent business prices or evidence, and preserve v2 authority unless a separate promotion gate passes.`
+`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. Wave-1 foundation PL-00/01/02/04/05/11 plus PL-06 Business Core are DONE_VERIFIED. Continue from PL-08 Book Production Core; PL-07 remains blocked on PL-03. PL-03/10/12/13/15/16/17/18 are dependency-admissible READY alternatives. Persist code/state/tests/readback, never invent business prices or evidence, and preserve v2 authority unless a separate promotion gate passes.`
