@@ -1,0 +1,17 @@
+{
+  "schema": "CYCLE32D_STATE_v0.2",
+  "date": "2026-08-22",
+  "authority": "SELF_IMPROVEMENT_V2_VERIFIED_CURRENT",
+  "v3": "CANDIDATE_HOLD_FOR_REAL_PRODUCTION_PILOT",
+  "cycle32d": "LOCAL_EXTENSION_CANDIDATE",
+  "run32": {"executed":32,"fatal":0,"global_promotion":"NO_GO"},
+  "new_engine": false,
+  "new_global_si_id": false,
+  "primary_new_mechanism": "VERIFIED_PERSISTENCE_TRANSACTION",
+  "known_defects": [
+    "Cycle32C claimed Next64 artifact had empty content on readback",
+    "Cycle32C claimed GitHub mirror path was not found at inspection time",
+    "Cross-branch SI identifier reservation remains unresolved"
+  ],
+  "next_primary": "run one real production canary using decision-yield + verified-persistence profile"
+}
