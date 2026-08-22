@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-08-22",
+  "source_passport": {
+    "required": ["source_id", "title", "provenance", "rights_status", "independent_source_group", "lifecycle_stage"],
+    "rights_status": ["USER_PROVIDED", "OPEN_LICENSE", "PUBLIC_DOMAIN", "ACCESS_ONLY", "UNKNOWN"],
+    "lifecycle_stage": ["REGISTERED", "INTEGRITY_VERIFIED", "STRUCTURE_MAPPED", "FULL_READ", "CLAIMS_EXTRACTED", "MECHANISMS_EXTRACTED", "FAILURE_MODES_MAPPED", "CROSS_SOURCE_COMPARED", "OPERATIONALIZED", "PROJECT_VALIDATED", "SYNTHESIZED"],
+    "optional": ["author", "edition", "year", "source_kind", "content_locator", "license", "domain_targets", "integrity_notes", "duplicate_of", "source_hash_or_revision", "structure_map_id", "claim_ids", "mechanism_ids"]
+  },
+  "claim_card": {
+    "required": ["claim_id", "source_id", "claim", "locator", "claim_type", "scope", "extraction_confidence"],
+    "claim_type": ["DESCRIPTIVE", "NORMATIVE", "CAUSAL", "EMPIRICAL", "FORMAL", "ANECDOTAL", "INTERPRETIVE"],
+    "optional": ["evidence_strength", "assumptions", "counterevidence", "alternative_interpretation", "notes"]
+  },
+  "mechanism_card": {
+    "required": ["mechanism_id", "semantic_key", "statement", "source_ids", "evidence_locators", "failure_modes", "domain_targets", "abstraction_level", "project_specific_expression_removed", "pilot_evidence", "disposition"],
+    "disposition": ["REFERENCE_ONLY", "LOCAL_TEST", "PILOT_READY", "PROMOTABLE", "HOLD", "REJECT"],
+    "abstraction_level": ["SOURCE_SPECIFIC", "PROJECT_SPECIFIC", "PROJECT_NEUTRAL"],
+    "optional": ["assumptions", "contraindications", "contradiction_set_ids", "application_contract", "rollback"]
+  },
+  "pilot_evidence": {
+    "required": ["project_id", "status"],
+    "status": ["PASS", "FAIL", "REGRESSION", "INCONCLUSIVE"],
+    "optional": ["metric", "baseline", "treatment", "result", "measurable_gain", "severity", "artifact", "date"]
+  },
+  "adapter_packet": {
+    "required": ["domain", "task", "mechanisms", "constraints"],
+    "domain": ["STORY", "AUDIO", "BUSINESS", "SELF_IMPROVEMENT", "RESEARCH", "GAME", "VISUAL", "OPERATIONS", "GENERAL"],
+    "constraints": ["NO_SOURCE_EXPRESSION_COPY", "NO_REFERENCE_AS_CANON", "NO_LOCKED_PROJECT_REOPEN_WITHOUT_NEW_FAILURE_EVIDENCE", "MAX_3_MECHANISMS_PER_LOCAL_APPLICATION_UNLESS_EXPLICITLY_JUSTIFIED"]
+  },
+  "contradiction_set": {
+    "required": ["contradiction_id", "claims", "same_scope", "resolution"],
+    "resolution": ["A_DOMINATES", "B_DOMINATES", "BOTH_CONDITIONAL", "UNRESOLVED"],
+    "optional": ["boundary_conditions", "evidence_comparison", "decision"]
+  },
+  "provenance_edge": {
+    "required": ["from_id", "to_id", "relation", "locator"],
+    "relation": ["SOURCE_HAS_SECTION", "SECTION_SUPPORTS_CLAIM", "CLAIM_ABSTRACTS_TO_MECHANISM", "MECHANISM_PACKED_FOR_DOMAIN", "ADAPTER_APPLIED_TO_PROJECT", "PROJECT_APPLICATION_TESTED_BY", "TEST_PRODUCED_RESULT", "RESULT_PROMOTED_TO_LEARNING", "LEARNING_CHANGED_ENGINE_RULE"]
+  }
+}
