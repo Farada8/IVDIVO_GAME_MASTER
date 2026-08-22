@@ -1,17 +1,38 @@
 {
-  "schema": "CYCLE32D_STATE_v0.2",
+  "schema": "CYCLE32D_STATE_v0.3",
   "date": "2026-08-22",
   "authority": "SELF_IMPROVEMENT_V2_VERIFIED_CURRENT",
   "v3": "CANDIDATE_HOLD_FOR_REAL_PRODUCTION_PILOT",
-  "cycle32d": "LOCAL_EXTENSION_CANDIDATE",
+  "cycle32d": "LOCAL_EXTENSION_CANDIDATE_KEEP",
   "run32": {"executed":32,"fatal":0,"global_promotion":"NO_GO"},
   "new_engine": false,
   "new_global_si_id": false,
-  "primary_new_mechanism": "VERIFIED_PERSISTENCE_TRANSACTION",
+  "primary_new_mechanisms": [
+    "VERIFIED_PERSISTENCE_TRANSACTION",
+    "MULTI_SURFACE_FRESHNESS_VECTOR",
+    "PROJECT_SOURCE_OF_TRUTH_PRECEDENCE",
+    "STALE_ROUTER_QUARANTINE"
+  ],
+  "real_canaries": {
+    "D01": "POSITIVE_DEFECT_CATCH_STALE_AGGREGATE_ROUTER_VS_E01_E120_TERMINAL_PROJECT_STATE",
+    "D10": "NEGATIVE_REGRESSION_CANARY_NO_FALSE_STORY_REOPEN_OR_FAKE_PROVIDER_EVIDENCE"
+  },
+  "runtime_validator": {
+    "tool": "SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/tools/cycle32d_stale_router_validator.py",
+    "tests": "SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/tests/test_cycle32d_stale_router_validator.py",
+    "pytest": {"passed":3,"failed":0,"status":"PASS"},
+    "runtime_proof": "SELF_IMPROVEMENT_DELTAS/CYCLE32D_2026-08-22/09_EXECUTABLE_STALE_ROUTER_VALIDATOR_RUNTIME_PROOF.md"
+  },
   "known_defects": [
     "Cycle32C claimed Next64 artifact had empty content on readback",
     "Cycle32C claimed GitHub mirror path was not found at inspection time",
-    "Cross-branch SI identifier reservation remains unresolved"
+    "Cross-branch SI identifier reservation remains unresolved",
+    "aggregate system router can lag fresher project-specific terminal state"
   ],
-  "next_primary": "run one real production canary using decision-yield + verified-persistence profile"
+  "promotion_blockers": [
+    "additional heterogeneous prospective project canaries",
+    "integration regression against current v2 router behavior",
+    "cross-branch registry reservation still not transactional"
+  ],
+  "next_primary": "run validator across additional heterogeneous project states and classify true-positive false-positive and not-applicable outcomes"
 }
