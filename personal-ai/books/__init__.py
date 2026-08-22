@@ -8,9 +8,9 @@ from .continuity import (
     BLOCKING_SEVERITIES,
     SEVERITIES,
     SUPPORTED_DOMAINS,
-    ContinuityChecker,
     ContinuityInputError,
 )
+from .continuity_contract import ContinuityChecker
 
 __all__ = [
     "BOOK_STAGES",
