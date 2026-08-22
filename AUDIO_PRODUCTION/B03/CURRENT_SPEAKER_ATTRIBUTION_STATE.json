@@ -1,103 +1,86 @@
 {
   "artifact": "CURRENT_B03_SPEAKER_ATTRIBUTION_STATE",
+  "schema_version": "2.0",
   "updated": "2026-08-22",
   "project": "B03 — THE EMPTY RESCUE",
   "story_authority": "FOUNDER_LOCKED_CH01-29",
   "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
   "source_segmentation_package_sha256": "4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac",
-  "status": "RECONCILED_PARTIAL_MAP_599_VERIFIED_CURRENT",
+  "status": "FULL_BOOK_SPEAKER_GATE_V1_2_PASS_VOICE_ROSTER_V1_1_NORMALIZED",
   "segmentation": {
     "total_exact_text_segments": 7465,
     "original_curly_quote_spans": 3718,
-    "narrator_inline_semantic_quote_exceptions": 3,
-    "actual_dialogue_spans": 3715,
-    "narration_segments": 3747,
+    "narrator_inline_or_written_semantic_exceptions": 4,
+    "actual_dialogue_spans": 3714,
+    "narrator_delivery_segments": 3751,
     "byte_exact_text_mutations": 0
   },
   "current_attribution": {
-    "corrected_v2_base": 518,
-    "verified_engine_delta": 81,
-    "corrected_existing_assignments": 1,
-    "cumulative_assigned": 599,
-    "residual_unknown": 3116,
-    "coverage_percent": 16.12,
-    "full_speaker_gate": "OPEN",
-    "voice_map_authorized": false
-  },
-  "verification": {
-    "github_pr": 436,
-    "tested_pr_head": "28645a167332cb978c6ce0dedffdbac78680cea0",
-    "tested_merge_ref": "d64d16579c653a131ee2decb105ac28ab6b82143",
-    "workflow_run_id": 32572056461,
-    "workflow_job_id": 97028799073,
-    "pytest": "22_PASSED_IN_0.05S",
-    "py_compile": "PASS",
-    "main_merge_commit": "c53e9c0923041183bc642363ad5d572c1bb2cf77",
-    "main_readback": "PASS",
-    "main_readback_required_after_merge": false
+    "cumulative_assigned": 3714,
+    "residual_unknown": 0,
+    "coverage_percent": 100.0,
+    "full_speaker_gate": "PASS",
+    "full_speaker_gate_version": "v1.2_SOURCE_AND_CH29_RECONCILED",
+    "voice_roster_normalization": "PASS_V1_1",
+    "voice_ids_assigned": 0,
+    "voice_lock": false
   },
   "current_drive_authority": {
-    "tier2_rebased_map_id": "1px9HoDaBujFK1iJ0NiyQ1bRgvI5GHoS1",
-    "tier2_rebased_gate_id": "1W6TluQh58BDju0C5-IMSVJETiBJLvoJS",
-    "engine_repair_package_id": "19xGz0Orm86-MMfTlbzwIRX0RXp-vXydA",
-    "engine_repair_gate_id": "1Xv_Ys0a7AnHHJMNl0pgoA90t8iE5FVU_",
-    "tier1_reconciliation_json_id": "1QtSTOAOgeQ4zJU4dM8S7LuKDk1gJIPD8",
-    "tier1_reconciliation_md_id": "1PpM6Fo2sGGAO6YxDDrmIDMFHAiQJ22ye",
-    "note": "No Drive ID is claimed yet for the v3 599 reconciliation artifacts."
+    "full_speaker_gate_md": "1lFmVbEZJSMnCZMn65nAEV5U-rESC-qFX",
+    "full_speaker_gate_json": "1NtrTdRlAEBr67ZwoqWVfAvdVpBHFAPn8",
+    "authority_router": "1SF30eK_uoJDFgeR6GyODfGUrIaig-ZWa",
+    "speaker_state_receipt": "1JQViwpa83Mt8lSMcBbvjProiLPxR4_xZ",
+    "full_authority_package": "1qA2DzFdlg-N6v_Wc104PIYDNfQJ5bS00",
+    "normalized_voice_roster": "1FB_3rqk4ax4HMFykTli6focbZmz6dH-o",
+    "voice_roster_gate": "1RzwTzmagtVHHDEVrm-4gcphCjDBKQO_2au1kovDhKvo",
+    "acoustic_architecture_gate": "1p6LgfJfTv8qG-HouwqqLFk6zQrg7y6uSdGpG3fwqoUM"
   },
-  "rejected_or_superseded_provenance": {
-    "whole_book_autopass_v0_1": [
-      "1L2SMW9aUc_8dOgRiuHm2S-sRz-eza7d4",
-      "1bqNI7qFqCwcM9gGntHIhSmsYHg1eaJ0t",
-      "1LOvd1J5FAvdQ1Zsc8om4ywXBgpO4hDSk"
+  "required_repairs_in_current_authority": [
+    "B03_CH06_S0038_SMITH_NOT_JANA",
+    "B03_CH22_S0216_ROAD_CONTROL_NOT_MAJA",
+    "CH24_PACKET_1_AND_PACKET_2_SOURCE_IDENTITIES_SEPARATE",
+    "B03_CH26_S0024_NETWORK_TECHNICIAN_NOT_SMITH",
+    "TAREN_SOR_MESSAGE_CH27_SOURCE_TAREN_ACOUSTIC_SMITH",
+    "B03_CH29_S0312_OES_SUPERVISOR_NOT_SMITH",
+    "B03_CH29_S0358_SMITH_NOT_TAREN"
+  ],
+  "voice_roster": {
+    "textual_source_or_speaker_ids": 121,
+    "dedicated_character_slots": 15,
+    "ensemble_reuse_slots": 12,
+    "narrator_slots": 1,
+    "max_cast_slots": 28,
+    "same_chapter_ensemble_collisions": 0,
+    "provider_voice_ids_nonnull": 0
+  },
+  "historical_engine_provenance": {
+    "partial_599_state": "SUPERSEDED_AS_PROJECT_FRONTIER_KEEP_FOR_ENGINE_REPLICATION_EVIDENCE",
+    "partial_599_verified_pr": 436,
+    "partial_599_workflow_run_id": 32572056461,
+    "project_promoted_rules": [
+      "SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION",
+      "PRONOUN_GRAMMATICAL_SUBJECT_TRACKER"
     ],
-    "tier1_v1_map_id": "1jC_88TFKo6OvSWfF3Nayey4xRt48gkDZ",
-    "tier1_v1_reason": "70_DIRECT_SPEAKER_CONFLICTS_BIDIRECTIONAL_BOUNDARY_OWNERSHIP",
-    "tier2_v1_cumulative_map_id": "1D9ZVwn1VQxqv4zQ2ZjrMENhH4qy023ix",
-    "tier2_v1_disposition": "CUMULATIVE_REJECTED_47_DELTA_SALVAGED",
-    "corrected_v2_518": "BASE_PROVENANCE_SUPERSEDED_BY_RECONCILED_599",
-    "working_661": "SUPERSEDED_NONCANONICAL_WORKING_CANDIDATE"
+    "universal_promotion": "HOLD_SECOND_BOOK_REPLICATION",
+    "note": "Historical parser/heuristic validation remains useful engineering evidence but must not route B03 back to partial attribution."
   },
-  "ch01_separate_production_lane": {
-    "status": "PASS_142_OF_142_PROVIDER_BRIDGE_PRESERVED",
-    "private_segmentation_and_speaker_map_id": "1aw17696W4KOLVgCcnOkKxpaOJE15YRMg",
-    "reconciliation_json_id": "10WMtxygCb24N2XnBZeL6z0-B0PJUZZFY",
-    "reconciliation_md_id": "1ofWRzJoeWpidY0BkOGJsOqQKHMMnygLC",
-    "speaker_conflicts_after_runtime_fix": 0,
-    "provider_bridge_quarantine_required": false
+  "provider_state": {
+    "access_verified": false,
+    "voice_ids_assigned": 0,
+    "pronunciation_gate": "OPEN",
+    "human_cast_approval": false,
+    "bulk_render_allowed": false
   },
-  "verified_correction": {
-    "segment_id": "B03_CH29_S0312",
-    "from": "SMITH",
-    "to": "SUPERVISOR",
-    "reason": "local grammatical/discourse subject before quote plus post-quote he said"
-  },
-  "project_promoted_rules": [
-    "SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION",
-    "PRONOUN_GRAMMATICAL_SUBJECT_TRACKER"
-  ],
-  "universal_promotion": "HOLD_SECOND_BOOK_REPLICATION",
-  "next_stage": "SECOND_BOOK_REPLICATION_PLUS_HIGH_INFORMATION_UNKNOWN_REVIEW_FROM_599",
-  "allowed_evidence": [
-    "DIRECT_GRAMMATICAL_SPEECH_TAG",
-    "PROJECT_VALIDATED_SAME_PARAGRAPH_PROPAGATION",
-    "PROJECT_VALIDATED_GRAMMATICAL_SUBJECT_TRACKER",
-    "BOUNDED_SCENE_PARTICIPANTS",
-    "VOCATIVE",
-    "ACTION_BEAT_OWNERSHIP_REVIEW_ONLY_UNLESS_VALIDATED",
-    "CHANNEL_ROLE",
-    "DIRECT_ADDRESSEE",
-    "STABLE_CALL_CONTEXT",
-    "EXPLICIT_LOCAL_DIALOGUE_CHAIN_WITH_AUDIT_OBJECT"
-  ],
+  "next_stage": "CASTING_PRONUNCIATION_LIVE_S0_PLUS_CH01_PROVIDER_INDEPENDENT_ACOUSTIC_PASSPORT_CUE_BINDING",
   "forbidden": [
     "NAIVE_ALTERNATING_TURN_AUTOFILL",
     "SEMANTIC_VOICE_GUESSING",
     "GENDER_ONLY_GUESSING",
-    "REPORTING_CLAUSE_MODIFIER_ALIAS_AS_SUBJECT",
-    "REUSE_REJECTED_V1_ASSIGNMENTS_AS_AUTHORITY",
     "ROLE_GRANULARITY_COMPATIBILITY_AS_VOICE_IDENTITY_PROOF",
+    "SAME_PACKET_CLASS_AS_SOURCE_IDENTITY_PROOF",
+    "SOURCE_AUTHOR_AS_ACOUSTIC_SPEAKER_WITHOUT_DELIVERY_EVIDENCE",
     "STORY_OR_PROSE_REWRITE",
-    "SCALED_VOICE_MAP_FROM_PARTIAL_ATTRIBUTION"
+    "FINAL_VOICE_IDS_WITHOUT_CASTING_EVIDENCE",
+    "BULK_RENDER_BEFORE_S0_AND_HARD_PILOT_PASS"
   ]
 }
