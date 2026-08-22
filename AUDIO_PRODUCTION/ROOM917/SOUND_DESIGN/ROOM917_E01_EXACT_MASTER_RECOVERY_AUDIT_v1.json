@@ -1,0 +1,70 @@
+{
+  "schema_version": "ivdivo.room917_exact_master_recovery_audit/1.0",
+  "date": "2026-08-22",
+  "project": "ROOM917",
+  "episode": "E01",
+  "asset": {
+    "filename": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+    "expected_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "expected_size_bytes": 189558764,
+    "expected_duration_seconds": 658.190,
+    "expected_sample_rate_hz": 48000,
+    "expected_bit_depth": 24,
+    "expected_channels": 2,
+    "recorded_file_library_pointer": "file_000000002c8081f58d0e656cdc0e7267",
+    "recorded_library_path": "/IVDIVO — SAGA WRITERS' STUDIO/ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav"
+  },
+  "searches_2026_08_22": [
+    {
+      "surface": "CHATGPT_FILE_LIBRARY",
+      "queries": [
+        "exact filename + expected sha256",
+        "filename + 658.190 + 189558764",
+        "recorded file library pointer + ROOM917 master",
+        "ROOM917 E01 full evaluation master 10:58.190"
+      ],
+      "result": "EXACT_MASTER_WAV_NOT_RETURNED",
+      "closest_results": [
+        "ROOM917_E01_P003A2_MASTER_ESCROW_TOOLKIT_v1.txt",
+        "ROOM917_E01_POST_RENDER_ENGINEERING_v2_SOURCE_AND_RUNBOOK.txt",
+        "ROOM917_E01_SCENE3_MASTER_REVIEW_v1.md"
+      ]
+    },
+    {
+      "surface": "GOOGLE_DRIVE_NAME_SEARCH",
+      "queries": [
+        "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
+        "ROOM917_E01",
+        "ROOM917 with mimeType contains audio/"
+      ],
+      "result": "NO_EXACT_AUDIO_FILE_FOUND"
+    },
+    {
+      "surface": "GOOGLE_DRIVE_05_APPROVED_REFERENCE_MASTERS",
+      "folder_id": "1TiC3vOTcbDN1fs0MiUuWNRgXlISCuDCc",
+      "result": "EMPTY"
+    },
+    {
+      "surface": "GOOGLE_DRIVE_06_INCOMING_AUDIO_INGEST",
+      "folder_id": "1JXfbdauI-ouBRr_e8XLT99lD52TBZeTG",
+      "result": "FOLDER_STRUCTURE_AND_REGISTER_PRESENT__EXACT_FULL_MASTER_BYTES_NOT_PRESENT_IN_ROOT_LISTING"
+    }
+  ],
+  "prior_recovery_evidence": {
+    "drive_binary_provenance_addendum_id": "1bhvEEuOQoqMy1w-7XTyUvQdJIPDty9MRhuWM9OENC3Q",
+    "drive_ingest_register_id": "1v_A25N-fxI097TqxQh4hgp7db5gdJFaInczUSNWYktY",
+    "two_prior_full_master_materialization_attempts": "HTTP_403_CONFIRMED",
+    "scene3_materialization": "PREVIOUSLY_SUCCEEDED_BUT_NOT_A_SUBSTITUTE_FOR_FULL_MASTER",
+    "controlled_drive_duplicate": "NOT_CONFIRMED"
+  },
+  "conclusion": {
+    "status": "EXACT_MASTER_BYTES_NOT_REACQUIRED",
+    "p003a2_production_analysis": "BLOCKED",
+    "selective_patch_authorized": false,
+    "whole_episode_rerender_authorized": false,
+    "substitute_scene3_or_other_master_authorized": false,
+    "human_listener_qc_on_current_full_master": "BLOCKED_UNTIL_IDENTIFIED_AUDIO_ACCESS",
+    "next_valid_input": "IDENTICAL_MASTER_BYTES_MATCHING_EXPECTED_SHA256_OR_TRUSTED_EXACT_PRE_SCENE3_TIMING_FROM_THE_SAME_MASTER_LINEAGE"
+  },
+  "hard_law": "DO_NOT_INVENT_TIMECODES__DO_NOT_RERENDER_TO_REPLACE_MISSING_BYTES__DO_NOT_PATCH_FROM_AGGREGATE_LEVEL_ONLY"
+}
