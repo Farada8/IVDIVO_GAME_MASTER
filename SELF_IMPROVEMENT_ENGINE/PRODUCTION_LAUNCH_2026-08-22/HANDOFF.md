@@ -45,23 +45,34 @@ Date: 2026-08-22
 - no live OpenAI/Anthropic/Ollama request or API spend is claimed by PL-04 acceptance.
 - Drive folder `1NB6hVQVjUlK6wiSMsyrRgk0pX6bFkjgy`, document `1m9vfHsbMgrC_7hvIL2t9A1RUvTE7OdhhMImIxkwqQww`, marker `PERSONAL-AI-PL04-DONE-VERIFIED-PR321-PR328-CI5OF5-CONTRACT4OPS`.
 
+`PL-05 AGENT EXECUTOR = DONE_VERIFIED`.
+- implementation PR #336 merge `876d0e4ca7f581be40f88b9be86f4a4da1894928`; verified head `d20b104e93e61cc87e1e180d4ea879a5e23f75c5`.
+- executor is explicitly bounded: `max_steps` 1..20; only `CONTINUE:` requests another step; no background/unbounded loop.
+- task lifecycle is persisted `READY -> RUNNING -> DONE/FAILED`; final text is persisted as PL-02 `OUTPUT`; every run writes project-local JSONL audit events.
+- network-backed providers require explicit authorization before task creation; offline mock is the acceptance path.
+- initial CI found a faulty new test that called `MemoryStore.search("")`; PL-02 correctly rejected the empty query. The test was repaired without weakening production code.
+- second exact-head/merge-ref workflows all SUCCESS: PL-00 `32557296842`, PL-01 `32557296835`, PL-02 `32557296948`, PL-02 hardening `32557296930`, PL-04 `32557296830`, PL-05 `32557296781`.
+- Drive folder `1hhgo94czLN6Qz4p9qNdMjxcZvf0ih0G3`, document `1Y0Zww7H003dYjlF-CsCV9vINt76mYZPkTLizcjF7764`, marker `PERSONAL-AI-PL05-DONE-VERIFIED-PR336-CI6OF6`.
+- no autonomous tool use, live-provider success, background work, self-modifying code or model-weight training is implied.
+
 ## Current READY graph
 
-Canonical next frontier: `PL-05 Agent Executor = READY`.
+Canonical next frontier: `PL-11 Test Benchmark Engine = READY`.
 
 Also READY:
 - `PL-03 Source Evidence Layer`;
 - `PL-06 Business Core`;
 - `PL-08 Book Production Core`;
-- `PL-11 Test Benchmark Engine`;
+- `PL-10 Multi-Model Review`;
 - `PL-13 File Ingestion`;
 - `PL-15 Daily Control Panel`;
 - `PL-16 Backup Recovery`;
+- `PL-17 Security`;
 - `PL-18 Cost Control`.
 
-Reason for PL-05 priority: it is the remaining Wave-1 integration card that must bind project state + persistent memory + provider abstraction into one bounded executable task. PL-05 verification unlocks PL-10 Multi-Model Review and PL-17 Security and is required by the later Production Gate. PL-11 remains the other unverified Wave-1 foundation card.
+Reason for PL-11 priority: it is the last unverified Wave-1 foundation card and supplies the baseline/candidate/delta regression decision needed by PL-12 Change Control and later production-readiness gates. A critical regression must be rejectable even when aggregate metrics look better.
 
-Do not re-execute PL-00/01/02/04 unless a regression or explicit change-control event requires it. Reuse merged code and preserve cumulative regression coverage.
+Do not re-execute PL-00/01/02/04/05 unless a regression or explicit change-control event requires it. Reuse merged code and preserve cumulative regression coverage.
 
 ## Stop conditions
 
@@ -74,4 +85,4 @@ Stop and mark `BLOCKED` instead of inventing a pass when:
 
 ## Handoff sentence for a new session
 
-`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00, PL-01, hardened PL-02 and corrected PL-04 (#321 + #328) are DONE_VERIFIED. Continue from PL-05 Agent Executor; PL-03/06/08/11/13/15/16/18 are dependency-admissible READY alternatives. Persist code/state/tests/readback; do not treat configured provider credentials as live-provider evidence; preserve v2 authority unless a separate promotion gate passes.`
+`Restore CURRENT Self-Improvement authority, then restore SELF_IMPROVEMENT_ENGINE/PRODUCTION_LAUNCH_2026-08-22. PL-00, PL-01, hardened PL-02, corrected PL-04 (#321 + #328) and bounded PL-05 are DONE_VERIFIED. Continue from PL-11 Test Benchmark Engine; PL-03/06/08/10/13/15/16/17/18 are dependency-admissible READY alternatives. Persist code/state/tests/readback, reject critical regressions, and preserve v2 authority unless a separate promotion gate passes.`
