@@ -1,0 +1,193 @@
+name: ROOM917 E01 A01-A02 Blind Bridge Preflight
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/build_a01_a02_blind_receipt.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_BLIND_AUDITION_RESULT_CONTRACT_v1.json'
+      - '.github/workflows/room917-e01-a01-a02-blind-bridge-preflight.yml'
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/build_a01_a02_blind_receipt.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_BLIND_AUDITION_RESULT_CONTRACT_v1.json'
+      - '.github/workflows/room917-e01-a01-a02-blind-bridge-preflight.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  zero-spend-bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Syntax gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile \
+            AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/build_a01_a02_blind_receipt.py \
+            AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py
+
+      - name: Create synthetic normalized machine-QC fixture
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf _room917_a01_a02_blind_bridge_fixture
+          mkdir -p _room917_a01_a02_blind_bridge_fixture/qc
+          python - <<'PY'
+          import hashlib, json, wave
+          from pathlib import Path
+          root=Path('_room917_a01_a02_blind_bridge_fixture/qc')
+          rows=[]
+          for aid,cid in [
+              ('A01_GREYHAVEN_LOBBY_30S_LOOP','A01_BLIND_BRIDGE_SYNTH'),
+              ('A02_SWITCHBOARD_ALCOVE_30S_LOOP','A02_BLIND_BRIDGE_SYNTH'),
+          ]:
+              p=root/f'{cid}_48K24_STEREO.wav'
+              with wave.open(str(p),'wb') as w:
+                  w.setnchannels(2)
+                  w.setsampwidth(3)
+                  w.setframerate(48000)
+                  w.writeframes(b'\x00'*(2*3*4800))
+              h=hashlib.sha256(p.read_bytes()).hexdigest()
+              rows.append({
+                  'asset_id':aid,
+                  'candidate_id':cid,
+                  'normalized':{
+                      'path':str(p),
+                      'sha256':h,
+                      'size_bytes':p.stat().st_size,
+                      'sample_rate_hz':48000,
+                      'bit_depth':24,
+                      'channels':2,
+                      'duration_seconds':0.1,
+                      'compression':'NONE',
+                  },
+                  'machine_status':'PREPARED_FOR_HUMAN_AUDITION',
+                  'human_required':['ROOM_IDENTITY','LOOP_SEAM','FALSE_CLUE_AUDIT','MONO_TRANSLATION','PHONE_PROXY_TRANSLATION','DIALOGUE_UNDERLAY'],
+                  'production_binding_authorized':False,
+              })
+          qc={
+              'schema_version':'ivdivo.room917_a01_a02_machine_qc/1.1',
+              'project':'ROOM917','episode':'E01',
+              'status':'PREPARED_FOR_HUMAN_AUDITION_NOT_BOUND',
+              'candidate_count':2,
+              'rows':rows,
+              'machine_may_award_artistic_pass':False,
+              'production_binding_authorized':False,
+          }
+          (root/'ROOM917_E01_A01_A02_MACHINE_QC.json').write_text(json.dumps(qc,indent=2)+'\n',encoding='utf-8')
+          PY
+
+      - name: Bridge verified machine QC into blind-builder receipt
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=_room917_a01_a02_blind_bridge_fixture/qc
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/build_a01_a02_blind_receipt.py \
+            --machine-qc "$root/ROOM917_E01_A01_A02_MACHINE_QC.json" \
+            --out "$root/ROOM917_E01_A01_A02_BLIND_RECEIPT.json" \
+            --require-one-per-asset
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('_room917_a01_a02_blind_bridge_fixture/qc/ROOM917_E01_A01_A02_BLIND_RECEIPT.json')
+          r=json.loads(p.read_text(encoding='utf-8'))
+          assert r['status']=='READY_FOR_BLIND_PACKAGE_BUILDER'
+          assert r['human_audition_status']=='NOT_PERFORMED'
+          assert r['production_binding_authorized'] is False
+          assert len(r['assets'])==2
+          assert {x['contract_asset_id'] for x in r['assets']}=={
+              'A01_GREYHAVEN_LOBBY_30S_LOOP','A02_SWITCHBOARD_ALCOVE_30S_LOOP'
+          }
+          print('A01_A02_BLIND_RECEIPT_PASS_NO_HUMAN_OR_BINDING_AUTHORITY')
+          PY
+
+      - name: Build deterministic blind X-Y listening package
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=_room917_a01_a02_blind_bridge_fixture/qc
+          out=_room917_a01_a02_blind_bridge_fixture/blind
+          python AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py \
+            --receipt "$root/ROOM917_E01_A01_A02_BLIND_RECEIPT.json" \
+            --canary-dir "$root" \
+            --outdir "$out" \
+            --package-id ROOM917_A01_A02_SYNTHETIC_PREFLIGHT \
+            --room-bed-mode
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          out=Path('_room917_a01_a02_blind_bridge_fixture/blind')
+          pub=out/'PUBLIC_BLIND'
+          assert (pub/'ROOM_BED_X.wav').is_file()
+          assert (pub/'ROOM_BED_Y.wav').is_file()
+          manifest=json.loads((pub/'LISTENER_MANIFEST.json').read_text(encoding='utf-8'))
+          key=json.loads((out/'INTERNAL_IDENTITY_KEY_SEALED.json').read_text(encoding='utf-8'))
+          assert manifest['status']=='READY_FOR_HUMAN_LISTEN'
+          assert 'LISTEN_BEFORE_OPENING_INTERNAL_KEY' in manifest['rules']
+          assert set(manifest['groups'])=={'X','Y'}
+          assert key['package_id']=='ROOM917_A01_A02_SYNTHETIC_PREFLIGHT'
+          assert set(key['mapping'])=={'X','Y'}
+          assert {v['contract_asset_id'] for v in key['mapping'].values()}=={
+              'A01_GREYHAVEN_LOBBY_30S_LOOP','A02_SWITCHBOARD_ALCOVE_30S_LOOP'
+          }
+          print('BLIND_XY_PACKAGE_PASS_IDENTITY_KEY_SEALED')
+          PY
+
+      - name: Prove tampered normalized bytes cannot cross bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=_room917_a01_a02_blind_bridge_fixture/qc
+          printf 'tamper' >> "$root/A02_BLIND_BRIDGE_SYNTH_48K24_STEREO.wav"
+          set +e
+          python AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/build_a01_a02_blind_receipt.py \
+            --machine-qc "$root/ROOM917_E01_A01_A02_MACHINE_QC.json" \
+            --out "$root/TAMPERED_RECEIPT.json" \
+            --require-one-per-asset
+          rc=$?
+          set -e
+          if [ "$rc" -ne 4 ]; then
+            echo "::error::Expected tamper rejection exit 4, got $rc"
+            exit 42
+          fi
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('_room917_a01_a02_blind_bridge_fixture/qc/TAMPERED_RECEIPT.json').read_text(encoding='utf-8'))
+          assert r['status']=='HOLD'
+          assert r['assets']==[]
+          assert any('NORMALIZED_SHA_MISMATCH' in e for e in r['errors'])
+          print('TAMPER_FAIL_CLOSED_PASS')
+          PY
+
+      - name: Summary
+        shell: bash
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## ROOM917 A01/A02 blind bridge preflight
+          - provider calls: 0
+          - credits: 0
+          - synthetic 48k/24-bit/stereo candidate bytes: verified
+          - machine-QC -> generic blind-builder receipt: verified
+          - deterministic public X/Y package: verified
+          - sealed internal identity key: verified
+          - tamper rejection: verified
+          - human PASS: not invented
+          - production binding: not granted
+          - D003 patch authority: not granted
+          EOF
