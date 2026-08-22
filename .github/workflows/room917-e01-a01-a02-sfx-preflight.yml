@@ -1,0 +1,119 @@
+name: ROOM917 E01 A01-A02 SFX Preflight
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py'
+      - '.github/workflows/room917-e01-a01-a02-sfx-preflight.yml'
+      - '.github/workflows/room917-e01-a01-a02-sfx-canary.yml'
+  pull_request:
+    paths:
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json'
+      - 'AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py'
+      - '.github/workflows/room917-e01-a01-a02-sfx-preflight.yml'
+      - '.github/workflows/room917-e01-a01-a02-sfx-canary.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Python syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/render_a01_a02_sfx_canary.py
+
+      - name: Validate queue-to-provider adapter
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          plan_path=Path('AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_A01_A02_ELEVENLABS_SFX_CANARY_PLAN_v1.json')
+          queue_path=Path('AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json')
+          plan=json.loads(plan_path.read_text(encoding='utf-8'))
+          queue=json.loads(queue_path.read_text(encoding='utf-8'))
+
+          assert plan['status']=='DRY_PLAN_ONLY__NO_PROVIDER_DISPATCH_AUTHORIZED'
+          assert plan['provider']['dispatch'] is False
+          assert plan['provider']['model_id']=='eleven_text_to_sound_v2'
+          assert plan['authority']['generation_queue'].endswith(queue_path.name)
+          assert plan['adapter_law']['provider_neutral_queue_is_prompt_semantic_authority'] is True
+          assert plan['adapter_law']['silent_semantic_prompt_rewrite_forbidden'] is True
+          assert len(plan['requests'])==4
+
+          qmap={row['asset_id']:{v['variant']:v['prompt'] for v in row['variants']} for row in queue['queue']}
+          expected_assets={'A01_GREYHAVEN_LOBBY_30S_LOOP','A02_SWITCHBOARD_ALCOVE_30S_LOOP'}
+          assert {r['asset_id'] for r in plan['requests']}==expected_assets
+          seen=set()
+          for r in plan['requests']:
+              key=(r['asset_id'],r['source_variant'])
+              assert key not in seen
+              seen.add(key)
+              source=qmap[r['asset_id']][r['source_variant']]
+              source_sha=hashlib.sha256(source.encode('utf-8')).hexdigest()
+              assert source_sha==r['source_prompt_sha256']
+              assert len(r['text']) <= plan['adapter_law']['provider_prompt_character_limit']
+              assert len(r['text']) > 0
+              assert r['loop'] is True
+              assert float(r['duration_seconds'])==30.0
+              assert 0.0 <= float(r['prompt_influence']) <= 1.0
+          assert seen=={
+              ('A01_GREYHAVEN_LOBBY_30S_LOOP','A'),
+              ('A01_GREYHAVEN_LOBBY_30S_LOOP','B'),
+              ('A02_SWITCHBOARD_ALCOVE_30S_LOOP','A'),
+              ('A02_SWITCHBOARD_ALCOVE_30S_LOOP','B'),
+          }
+          print('SFX_PREFLIGHT_PASS_NO_PROVIDER_CALLS')
+          PY
+
+      - name: Verify paid canary remains manual-only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          text=Path('.github/workflows/room917-e01-a01-a02-sfx-canary.yml').read_text(encoding='utf-8')
+          assert 'workflow_dispatch:' in text
+          assert 'confirm_spend' in text
+          assert 'ELEVENLABS_API_KEY' in text
+          assert 'push:' not in text
+          assert 'pull_request:' not in text
+          assert '--confirm-spend' in text
+          assert 'production binding: FORBIDDEN' in text
+          print('PAID_WORKFLOW_MANUAL_ONLY_PASS')
+          PY
+
+      - name: Summary
+        shell: bash
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## ROOM917 A01/A02 zero-spend preflight
+          - provider calls: 0
+          - TTS/SFX credits: 0
+          - queue -> provider prompt hashes: checked
+          - provider prompt length: checked
+          - runner Python syntax: checked
+          - paid workflow manual-only + confirm_spend guard: checked
+          - production binding or D003 patch authorization: not granted
+          EOF
