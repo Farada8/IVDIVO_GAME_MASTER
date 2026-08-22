@@ -1,0 +1,18 @@
+name: Business Cycle7 Procurement Execution Delta
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_PROCUREMENT_P97_P128_EXECUTION_DELTA/**'
+      - '.github/workflows/business-cycle7-procurement-execution-delta.yml'
+jobs:
+  procurement-delta-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate current readiness compiler against procurement execution evidence
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_PROCUREMENT_P97_P128_EXECUTION_DELTA/tests/test_procurement_execution_delta.py
+      - name: Validate delta machine state
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_PROCUREMENT_P97_P128_EXECUTION_DELTA/03_MACHINE_STATE.json >/dev/null
