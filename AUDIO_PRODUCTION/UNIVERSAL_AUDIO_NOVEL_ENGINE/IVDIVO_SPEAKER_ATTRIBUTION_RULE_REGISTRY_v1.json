@@ -1,12 +1,25 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "updated": "2026-08-22",
   "authority": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/IVDIVO_SPEAKER_ATTRIBUTION_EVIDENCE_CONTRACT_v2.md",
   "runtime": "tools/ivdivo_speaker_attribution.py",
   "default_promotion_gate": {
-    "min_n": 30,
+    "nominal_min_n": 30,
     "min_precision": 0.98,
-    "min_wilson_95_lower": 0.90
+    "min_wilson_95_lower": 0.90,
+    "perfect_sample_min_n_for_current_wilson_gate": 35,
+    "law": "ALL_CONDITIONS_CONJUNCTIVE",
+    "note": "30/30 is not promotable because Wilson lower is below 0.90; under current thresholds the first perfect-sample PASS is 35/35."
+  },
+  "benchmark_contract": {
+    "path": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/CROSS_PROJECT_SPEAKER_BENCHMARK_CONTRACT_v1.md",
+    "status": "VERIFIED_EXACT_HEAD_CI_PASS",
+    "requires_immutable_source": true,
+    "requires_independent_ground_truth": true,
+    "requires_all_rule_triggers_in_frozen_scope": true,
+    "synthetic_duplication_allowed": false,
+    "self_labelled_examples_allowed": false,
+    "post_hoc_cherry_pick_allowed": false
   },
   "rules": [
     {
@@ -19,23 +32,13 @@
       "id": "POST_DIRECT_TAG",
       "scope": "UNIVERSAL_SYNTACTIC",
       "mode": "AUTO_FAIL_CLOSED",
-      "b03_validation": {
-        "successes": 99,
-        "total": 99,
-        "precision": 1.0,
-        "wilson_95_lower": 0.9626
-      }
+      "b03_validation": {"successes": 99, "total": 99, "precision": 1.0, "wilson_95_lower": 0.9626}
     },
     {
       "id": "SAME_PARAGRAPH_KNOWN_SPEAKER_PROPAGATION",
       "scope": "PROJECT_B03",
       "mode": "AUTO_PROJECT_ONLY",
-      "b03_validation": {
-        "successes": 36,
-        "total": 36,
-        "precision": 1.0,
-        "wilson_95_lower": 0.9036
-      },
+      "b03_validation": {"successes": 36, "total": 36, "precision": 1.0, "wilson_95_lower": 0.9036},
       "second_book_replication": {
         "project": "LESSON_ZERO",
         "scope": "CH01_LOCKED_SOURCE",
@@ -45,10 +48,7 @@
         "successes": 2,
         "precision": 1.0,
         "wilson_95_lower": 0.3424,
-        "fixtures": [
-          "LZ_CH01_Q012",
-          "LZ_CH01_Q076"
-        ],
+        "fixtures": ["LZ_CH01_Q012", "LZ_CH01_Q076"],
         "status": "PARTIAL_EVIDENCE_HOLD_SAMPLE_SIZE",
         "report": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/LESSON_ZERO_CH01_SPEAKER_RULE_REPLICATION_v1.md"
       },
@@ -58,12 +58,7 @@
       "id": "PRONOUN_GRAMMATICAL_SUBJECT_TRACKER",
       "scope": "PROJECT_B03",
       "mode": "AUTO_PROJECT_ONLY",
-      "b03_validation": {
-        "successes": 36,
-        "total": 36,
-        "precision": 1.0,
-        "wilson_95_lower": 0.9036
-      },
+      "b03_validation": {"successes": 36, "total": 36, "precision": 1.0, "wilson_95_lower": 0.9036},
       "second_book_replication": {
         "project": "LESSON_ZERO",
         "scope": "CH01_LOCKED_SOURCE",
@@ -73,9 +68,7 @@
         "successes": 1,
         "precision": 1.0,
         "wilson_95_lower": 0.2065,
-        "fixtures": [
-          "LZ_CH01_Q001"
-        ],
+        "fixtures": ["LZ_CH01_Q001"],
         "status": "PARTIAL_EVIDENCE_HOLD_SAMPLE_SIZE",
         "report": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/LESSON_ZERO_CH01_SPEAKER_RULE_REPLICATION_v1.md"
       },
@@ -85,39 +78,25 @@
       "id": "STANDALONE_PRIOR_PARAGRAPH_ATTRIBUTION",
       "scope": "REVIEW_ONLY",
       "mode": "NO_AUTO",
-      "b03_validation": {
-        "successes": 42,
-        "total": 43,
-        "precision": 0.9767,
-        "wilson_95_lower": 0.8794
-      }
+      "b03_validation": {"successes": 42, "total": 43, "precision": 0.9767, "wilson_95_lower": 0.8794}
     },
     {
       "id": "SINGLE_ACTION_SUBJECT",
       "scope": "REVIEW_ONLY",
       "mode": "NO_AUTO",
-      "b03_validation": {
-        "successes": 29,
-        "total": 49
-      }
+      "b03_validation": {"successes": 29, "total": 49}
     },
     {
       "id": "ALTERNATING_TURN",
       "scope": "FORBIDDEN_AUTO",
       "mode": "NO_AUTO",
-      "b03_validation": {
-        "successes": 5,
-        "total": 27
-      }
+      "b03_validation": {"successes": 5, "total": 27}
     },
     {
       "id": "SAME_SPEAKER_SANDWICH",
       "scope": "FORBIDDEN_AUTO",
       "mode": "NO_AUTO",
-      "b03_validation": {
-        "successes": 0,
-        "total": 5
-      }
+      "b03_validation": {"successes": 0, "total": 5}
     },
     {
       "id": "NEAREST_NAME_OR_GENDER_ONLY_PRONOUN",
@@ -130,7 +109,7 @@
     "b03_quote_boundaries": 3718,
     "b03_non_spoken_overrides": 3,
     "b03_spoken_candidates": 3715,
-    "note": "This is the deterministic engine validation fixture retained for reproducibility. It is not the later production cast-speech denominator."
+    "note": "Deterministic engine validation fixture retained for reproducibility; not the later production cast-speech denominator."
   },
   "b03_engine_current": {
     "base_corrected_v2": 518,
@@ -161,7 +140,7 @@
     "provider_dispatch_authorized": false,
     "claim_boundary": "3714/3714 is production speaker ownership authority, not deterministic engine verification."
   },
-  "verification": {
+  "engine_verification": {
     "github_pr": 436,
     "tested_pr_head": "28645a167332cb978c6ce0dedffdbac78680cea0",
     "tested_merge_ref": "d64d16579c653a131ee2decb105ac28ab6b82143",
@@ -172,6 +151,28 @@
     "main_merge_commit": "c53e9c0923041183bc642363ad5d572c1bb2cf77",
     "main_state_readback": "PASS",
     "scope": "ENGINE_SUBSET_ONLY"
+  },
+  "lesson_zero_replication_verification": {
+    "github_pr": 456,
+    "tested_pr_head": "004282060fc8cbc49202850f28c033bb6881338e",
+    "tested_merge_ref": "7c1e61c934242310f31150817e3c8305a8462d9b",
+    "workflow_run_id": 32573733889,
+    "job_id": 97032901492,
+    "pytest": "25_PASSED_IN_0.07S",
+    "py_compile": "PASS",
+    "main_merge_commit": "f734457457f644414182db79ae39b11c26806121",
+    "main_readback": "PASS",
+    "scope": "SECOND_BOOK_PARTIAL_EVIDENCE_ONLY"
+  },
+  "benchmark_contract_verification": {
+    "github_pr": 468,
+    "tested_pr_head": "5330e106d14cbd0e8ee8b438ea2b01ae9d1c6776",
+    "tested_merge_ref": "7f15fec76bad4907088a5a741ad589a5ed33f9a4",
+    "workflow_run_id": 32574122534,
+    "job_id": 97033835314,
+    "pytest": "26_PASSED_IN_0.07S",
+    "py_compile": "PASS",
+    "scope": "BENCHMARK_CONTRACT_AND_WILSON_BOUNDARY"
   },
   "new_regressions": [
     {
@@ -188,21 +189,27 @@
       "production_expected": "SMITH",
       "superseded": "TAREN_SOR",
       "scope": "PRODUCTION_REVIEW_REGRESSION",
-      "mode": "NO_GENERIC_AUTO_PROMOTION",
-      "basis": "Smith said introduces the prior speech; paragraph break has no transfer cue; Taren paused is listener reaction before Taren's next first-person response"
+      "mode": "NO_GENERIC_AUTO_PROMOTION"
+    },
+    {
+      "id": "WILSON_GATE_STRICTER_THAN_NOMINAL_MIN_N",
+      "expected": {"30_of_30": "FAIL", "34_of_34": "FAIL", "35_of_35": "PASS"},
+      "scope": "PROMOTION_STATISTICS"
     }
   ],
   "cross_project_replication": {
+    "required_benchmark_contract": "AUDIO_PRODUCTION/UNIVERSAL_AUDIO_NOVEL_ENGINE/CROSS_PROJECT_SPEAKER_BENCHMARK_CONTRACT_v1.md",
     "second_project": "LESSON_ZERO",
     "chapter": "CH01",
     "source_quote_boundaries": 94,
     "target_rule_triggers": 3,
     "target_rule_successes": 3,
     "status": "SECOND_BOOK_PARTIAL_EVIDENCE_HOLD_SAMPLE_SIZE",
-    "promotion_blocker": "MIN_N_30_NOT_MET_PER_RULE",
+    "promotion_blocker": "PER_RULE_SAMPLE_AND_WILSON_GATES_NOT_MET",
     "ground_truth_independent_of_candidate_rules": true,
     "synthetic_duplication_allowed": false,
-    "self_labelled_examples_allowed": false
+    "self_labelled_examples_allowed": false,
+    "next_admissible_evidence": "FROZEN_MATERIALLY_INDEPENDENT_NATURAL_PROSE_CORPUS_WITH_INDEPENDENT_SPEAKER_TRUTH_AND_ALL_TRIGGERS_ENUMERATED"
   },
-  "universal_promotion": "HOLD_SECOND_BOOK_REPLICATION_INSUFFICIENT_N"
+  "universal_promotion": "HOLD_SECOND_BOOK_REPLICATION_INSUFFICIENT_N_AND_CONFIDENCE"
 }
