@@ -1,9 +1,9 @@
 {
-  "schema_version": "2.7",
+  "schema_version": "2.8",
   "updated": "2026-08-22",
   "project_id": "IVDIVO_BOOK_3_SMITH",
   "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
-  "status": "FOUNDER_LOCKED_CH01_CH29_RELEASE_READY_COPY_FORMAT_EXPORT_PASS",
+  "status": "FOUNDER_LOCKED_RELEASE_READY_AUDIO_EXACT_TEXT_SEGMENTATION_PASS",
   "story_lock": true,
   "founder_lock": true,
   "release_ready": true,
@@ -14,26 +14,16 @@
   "founder_f1": {
     "canon": "SMITH_HAS_A_TEENAGE_DAUGHTER_IN_CURRENT_SAGA_PERIOD",
     "working_age": "16_17_PENDING_TIMELINE_NORMALIZATION",
-    "unknown_do_not_invent": [
-      "DAUGHTER_NAME",
-      "MOTHER_NAME",
-      "EXACT_MARITAL_HISTORY",
-      "CUSTODY_OR_HOUSEHOLD_STRUCTURE",
-      "OCCUPATIONS",
-      "CONTACT_SCHEDULE"
-    ]
+    "unknown_do_not_invent": ["DAUGHTER_NAME","MOTHER_NAME","EXACT_MARITAL_HISTORY","CUSTODY_OR_HOUSEHOLD_STRUCTURE","OCCUPATIONS","CONTACT_SCHEDULE"]
   },
   "drive": {
     "cycle32b_story_production_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
     "founder_lock_receipt_id": "1W79fscqMrLvveg5gJzXpDWfhMArcH9UNZ1JDIV0Cn5U",
-    "ch19_ch24_rebase_id": "1GsELpV6PqpKKKguLzOAzDCouOYxhOIWVsSdf9K9rk-4",
-    "ch25_ch29_climax_rebase_id": "1YamdStR6xEifvZFb1KFRPUrUWoSzlb4CMs5uTNg_Cfk",
     "current_ch25_id": "19uzwlXgRXZ8l8p-BuD1KpcXyK3SUF_WoCSt7uySKRUI",
     "current_ch26_id": "1Q_1QM5Y5SExp6clbk_EJW9J6m5T_Gjec4Uuux0njCPY",
     "current_ch27_id": "18bdNCKq1FaT1lrAreL1ec5VMuyDLWeU3L6UlHfeIWwo",
     "current_ch28_id": "1EzrMOjPldszs-iEl3pCUuEKnyN17yUniMvnDrZWIExw",
     "current_ch29_id": "1LZPRkR89wAkdcWJqUOv6dYdUUSimtDm3b1PpxEUydpM",
-    "current_ch29_gate_id": "1fkyOoczhhRKVI8u9WP5naAtcFINnEgfD6Tn5jTjtp0s",
     "current_ch19_ch29_corpus_gate_id": "1-sWl1c5U0ahyEteteAmr8_1d_9th602JVMpKTY6ySXY",
     "current_p72_full_novel_gate_id": "1FW7GVQGk-StW6VmySA4MPFbZxsADFn_T1TrZKydtLtw",
     "locked_authority_manifest_doc_id": "1IHCr_gPSfzUjaC5TTb2OMUn3hCpmIvOShsjQ7NOp93U",
@@ -43,55 +33,57 @@
     "locked_pdf_id": "16VsrU2BFMHeM-0qwMH8RTWfMLmLG4kJ4",
     "locked_txt_id": "1Sjmz5Vb8azDwB6maAU4pRe2vUhL8NKKl",
     "audio_adaptation_package_id": "1aYILch6u5HWLxxm5s2sMC7t3Bho5ph8_",
-    "production_release_zip_id": "1t22g7PqQmp0Nj2qedCH9JSIFdgOhmYom"
+    "production_release_zip_id": "1t22g7PqQmp0Nj2qedCH9JSIFdgOhmYom",
+    "audio_exact_text_segmentation_package_id": "1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB",
+    "audio_exact_text_segmentation_gate_id": "15LBarVV2mFt0SNgbii-ld827DgfNxc8P",
+    "audio_exact_text_segmentation_manifest_id": "1Lx3kIFeFzwGajwoHfaYFEkHUqpwfC5sD"
   },
   "provenance_reconciliation": {
     "performed_by": "BOOK_INTELLIGENCE_ENGINE_PILOT1_PLUS_RELEASE_SYNC",
-    "finding": "PREVIOUS_GITHUB_STATE_RECORDED_FOUNDER_LOCK_BUT_LAGGED_BEHIND_DRIVE_RELEASE_ASSEMBLY_AND_EXPORT_GATE",
-    "current_resolution": "DRIVE_LOCKED_MANIFEST_AND_COPY_FORMAT_EXPORT_GATE_ARE_NOW_RECORDED_AS_CURRENT_PRODUCTION_AUTHORITY",
+    "finding": "GITHUB_RELEASE_STATE_NOW_MATCHES_DRIVE_LOCKED_RELEASE_AUTHORITY",
     "duplicate_or_older_versions": "PROVENANCE_ONLY_NOT_EXPORT_AUTHORITY",
-    "explicit_stale_reference_ids": [
-      "1-HhzlNBdNISaYqWe3fK0I4Ppl16AlYIyS7FTDa_z3jo",
-      "1f5WQ_zxlVO_rVQwVAIsqLjCOqJPpy0xwTzncKaJtosI"
-    ],
+    "explicit_stale_reference_ids": ["1-HhzlNBdNISaYqWe3fK0I4Ppl16AlYIyS7FTDa_z3jo","1f5WQ_zxlVO_rVQwVAIsqLjCOqJPpy0xwTzncKaJtosI"],
     "current_locked_ch27_id": "18bdNCKq1FaT1lrAreL1ec5VMuyDLWeU3L6UlHfeIWwo"
   },
   "verified_block_state": {
-    "ch01_ch12": {"status": "PASS_AFTER_MINIMAL_REPAIR", "fatal": 0, "blocking_major": 0},
-    "ch13_ch18": {"status": "PASS", "fatal": 0, "blocking_major": 0},
-    "ch19_ch24": {"status": "PASS", "fatal": 0, "blocking_major": 0},
-    "ch25_ch28_local_gates": {"status": "PASS_CURRENT_RECONCILED_BY_LATER_CORPUS_GATE"},
-    "ch29_gate": {"status": "PASS_MAIN_BOOK_CONFLICT_CLOSED_IN_PROSE", "fatal": 0, "blocking_major": 0},
-    "ch19_ch29_corpus_gate": {"status": "PASS_AFTER_TARGETED_REPAIR", "fatal": 0, "blocking_major": 0},
-    "p72_full_novel_gate_v0_2": {"status": "PASS_POST_CORPUS_RECONCILED", "fatal": 0, "blocking_major": 0, "book_story_development": "COMPLETE", "prose_expansion": "STOP_NO_CH30"},
-    "medical_factual_hold": {"status": "PASS_BLOCKER_CLOSED", "specialist_certification_claimed": false},
-    "network_relay_factual_hold": {"status": "PASS_AFTER_MINIMAL_TERMINOLOGY_REPAIR_BLOCKER_CLOSED"},
-    "copy_format_export_gate": {"status": "PASS_LOCKED_MANUSCRIPT_RELEASE_READY", "authoritative_chapters": "29_29", "canonical_text_hash_identity": "29_29", "locked_word_count_including_headings": 62300, "pdf_pages": 236, "blank_page_scan": "PASS", "edge_clip_scan": "PASS", "pdf_preflight": "PASS", "chapter_30": "ABSENT", "intentional_BIT_callback_count": 1}
+    "ch01_ch12": {"status":"PASS_AFTER_MINIMAL_REPAIR","fatal":0,"blocking_major":0},
+    "ch13_ch18": {"status":"PASS","fatal":0,"blocking_major":0},
+    "ch19_ch24": {"status":"PASS","fatal":0,"blocking_major":0},
+    "ch25_ch28_local_gates": {"status":"PASS_CURRENT_RECONCILED_BY_LATER_CORPUS_GATE"},
+    "ch29_gate": {"status":"PASS_MAIN_BOOK_CONFLICT_CLOSED_IN_PROSE","fatal":0,"blocking_major":0},
+    "ch19_ch29_corpus_gate": {"status":"PASS_AFTER_TARGETED_REPAIR","fatal":0,"blocking_major":0},
+    "p72_full_novel_gate_v0_2": {"status":"PASS_POST_CORPUS_RECONCILED","fatal":0,"blocking_major":0,"book_story_development":"COMPLETE","prose_expansion":"STOP_NO_CH30"},
+    "medical_factual_hold": {"status":"PASS_BLOCKER_CLOSED","specialist_certification_claimed":false},
+    "network_relay_factual_hold": {"status":"PASS_AFTER_MINIMAL_TERMINOLOGY_REPAIR_BLOCKER_CLOSED"},
+    "copy_format_export_gate": {"status":"PASS_LOCKED_MANUSCRIPT_RELEASE_READY","authoritative_chapters":"29_29","canonical_text_hash_identity":"29_29","locked_word_count_including_headings":62300,"pdf_pages":236,"blank_page_scan":"PASS","edge_clip_scan":"PASS","pdf_preflight":"PASS","chapter_30":"ABSENT","intentional_BIT_callback_count":1},
+    "audio_exact_text_segmentation_gate": {"status":"PASS","chapters":"29_29","byte_exact_reassembly":"29_29","total_segments":7465,"dialogue_segments":3718,"narration_segments":3747,"story_prose_changes":0,"speaker_attribution":"DEFERRED_TO_NEXT_GATE"}
   },
   "release_artifacts": {
-    "docx": {"drive_id": "1doIynZBHGX5OSUXmjrFF3l6B3ZxXAMFg", "sha256": "c317fc1917daf0ab9b97815fb6b61f9ea3c9df4e9192a0185a9af14824976bb6"},
-    "pdf": {"drive_id": "16VsrU2BFMHeM-0qwMH8RTWfMLmLG4kJ4", "sha256": "1595d39fb49ea06c68f1e491359dfc8b516d4b225d74e172c5a4e968db544ce3", "pages": 236},
-    "locked_text": {"drive_id": "1Sjmz5Vb8azDwB6maAU4pRe2vUhL8NKKl", "sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8"},
-    "audio_package": {"drive_id": "1aYILch6u5HWLxxm5s2sMC7t3Bho5ph8_", "sha256": "b04437a88bf540ba9a7142606e17886f59da7607e0332cca3b9df72b0d2481d2"}
+    "docx": {"drive_id":"1doIynZBHGX5OSUXmjrFF3l6B3ZxXAMFg","sha256":"c317fc1917daf0ab9b97815fb6b61f9ea3c9df4e9192a0185a9af14824976bb6"},
+    "pdf": {"drive_id":"16VsrU2BFMHeM-0qwMH8RTWfMLmLG4kJ4","sha256":"1595d39fb49ea06c68f1e491359dfc8b516d4b225d74e172c5a4e968db544ce3","pages":236},
+    "locked_text": {"drive_id":"1Sjmz5Vb8azDwB6maAU4pRe2vUhL8NKKl","sha256":"97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8"},
+    "audio_package": {"drive_id":"1aYILch6u5HWLxxm5s2sMC7t3Bho5ph8_","sha256":"b04437a88bf540ba9a7142606e17886f59da7607e0332cca3b9df72b0d2481d2"},
+    "audio_exact_text_segmentation": {"drive_id":"1FuDJDUGNjgsNITpNmfQV_d8N4oIrs5HB","sha256":"4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac"}
   },
   "manuscript_frontier": {
-    "completed_with_drive_evidence": "CH01_CH29",
-    "latest_chapter": "CH29_WHAT_WE_DID_WITH_THE_WARNING",
-    "development_complete": true,
-    "prose_expansion_authorized": false,
-    "ch30_authorized": false,
-    "founder_locked": true,
-    "locked_scope": "CH01_CH29",
-    "release_manifest_complete": true,
-    "locked_manuscript_assembled": true,
-    "copy_format_export_pass": true,
-    "release_ready": true,
-    "current_lock_authority": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_LOCK_RECEIPT_2026-08-22.md"
+    "completed_with_drive_evidence":"CH01_CH29",
+    "latest_chapter":"CH29_WHAT_WE_DID_WITH_THE_WARNING",
+    "development_complete":true,
+    "prose_expansion_authorized":false,
+    "ch30_authorized":false,
+    "founder_locked":true,
+    "locked_scope":"CH01_CH29",
+    "release_manifest_complete":true,
+    "locked_manuscript_assembled":true,
+    "copy_format_export_pass":true,
+    "release_ready":true,
+    "audio_exact_text_segmentation_pass":true,
+    "current_lock_authority":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_LOCK_RECEIPT_2026-08-22.md"
   },
   "climax_consequence": {
-    "andrej": "SURVIVES_WITH_LASTING_DISABLING_LOWER_LIMB_FUNCTIONAL_LOSS_CLASS",
-    "exact_diagnosis": "UNSPECIFIED_BY_LOCK",
-    "causal_requirement": "ORDINARY_STORM_ROUTE_DAMAGE_DURING_WITHDRAWAL_AFTER_DEFENSIBLE_BOUNDED_MANUAL_ATTEMPT"
+    "andrej":"SURVIVES_WITH_LASTING_DISABLING_LOWER_LIMB_FUNCTIONAL_LOSS_CLASS",
+    "exact_diagnosis":"UNSPECIFIED_BY_LOCK",
+    "causal_requirement":"ORDINARY_STORM_ROUTE_DAMAGE_DURING_WITHDRAWAL_AFTER_DEFENSIBLE_BOUNDED_MANUAL_ATTEMPT"
   },
   "hard_invariants": [
     "LOCAL_SLOVENIAN_RESCUE_AUTHORITY_REMAINS_LOCAL",
@@ -101,44 +93,38 @@
     "LOCAL_NETWORK_TECHNICIAN_OWNS_RELAY_ENGINEERING",
     "SMITH_OWNS_OES_EVIDENCE_BOUNDARY_NOT_RELAY_SWITCHING",
     "TAREN_ANALYSIS_ONLY_NO_EARTH_PLAN",
-    "UPPER_GORGE_REMAINS_CLOSED",
     "ANDREJ_INJURY_IS_CONTINGENT_CAUSALLY_EARNED_NOT_PUNISHMENT",
     "TINA_REMAINS_MOBILE_COMPETENT_AGENT",
-    "CENTRALIZED_OPTION_NOT_STRAW_MAN",
-    "DISTRIBUTED_OPTION_NOT_MAGIC_GOOD",
     "NO_FAKE_COSMOLOGICAL_ANSWER_IN_BOOK_ONE"
   ],
+  "audio_production": {
+    "source_policy":"EXACT_LOCKED_PROSE_NO_PARAPHRASE",
+    "chapter_heading_policy":"METADATA_ONLY_UNLESS_DOWNSTREAM_DIRECTOR_EXPLICITLY_VOICES",
+    "segmentation_rule":"SPLIT_ONLY_AT_CURLY_QUOTED_DIALOGUE_BOUNDARIES_AND_PRESERVE_ALL_INTERVENING_UTF8_BYTES",
+    "speaker_assignment_policy":"DO_NOT_GUESS_AMBIGUOUS_SPEAKERS_USE_UNKNOWN",
+    "segmentation_status":"PASS",
+    "speaker_voice_map_status":"NEXT"
+  },
   "next_obligations": [
-    "USE_ONLY_LOCKED_EXACT_TEXT_FOR_DOWNSTREAM_AUDIO_ADAPTATION",
-    "EXACT_TEXT_SEGMENTATION_GATE",
-    "SPEAKER_VOICE_MAP_GATE",
+    "SPEAKER_ATTRIBUTION_GATE",
+    "VOICE_MAP_GATE",
     "PERFORMANCE_DIRECTION_GATE",
     "SFX_AMBIENCE_MUSIC_GATE",
     "TTS_TTD_RENDER_MANIFEST_GATE",
     "ALIGNMENT_MIX_MASTER_QC"
   ],
-  "next_obligation": "AUDIO_ADAPTATION_PRODUCTION_GATES_FROM_LOCKED_EXACT_TEXT_PACKAGE",
+  "next_obligation": "SPEAKER_ATTRIBUTION_AND_VOICE_MAP_GATE_FROM_IMMUTABLE_EXACT_TEXT_SEGMENTS",
   "do_not": [
-    "DO_NOT_DRAFT_CH25_AGAIN",
-    "DO_NOT_DRAFT_CH26_AGAIN",
-    "DO_NOT_DRAFT_CH27_AGAIN",
-    "DO_NOT_DRAFT_CH28_AGAIN",
-    "DO_NOT_DRAFT_CH29_AGAIN",
-    "DO_NOT_DRAFT_CH30",
+    "DO_NOT_DRAFT_CH25_AGAIN","DO_NOT_DRAFT_CH26_AGAIN","DO_NOT_DRAFT_CH27_AGAIN","DO_NOT_DRAFT_CH28_AGAIN","DO_NOT_DRAFT_CH29_AGAIN","DO_NOT_DRAFT_CH30",
     "DO_NOT_REOPEN_STORY_DEVELOPMENT_WITHOUT_FOUNDER_UNLOCK_OR_CHANGE_ORDER",
     "DO_NOT_REVERT_TO_PRE_LOCK_OR_PRE_RELEASE_FRONTIER",
     "DO_NOT_TREAT_STALE_REFERENCE_DRIVE_IDS_AS_EXPORT_AUTHORITY",
+    "DO_NOT_PARAPHRASE_AUDIO_EXACT_TEXT",
+    "DO_NOT_GUESS_AMBIGUOUS_SPEAKERS",
     "DO_NOT_INVENT_EXACT_ANDREJ_DIAGNOSIS_OR_AMPUTATION_STATUS",
     "DO_NOT_INVENT_DAUGHTER_NAME_MOTHER_OR_CUSTODY_HISTORY"
   ],
   "founder_lock_decision": {
-    "decision": "GRANTED",
-    "date": "2026-08-22",
-    "authority_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_LOCK_RECEIPT_2026-08-22.md",
-    "human_current_state": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CURRENT_STATE.md",
-    "locked_scope": "CH01_CH29",
-    "ch30_authorized": false,
-    "substantive_change_control": "FOUNDER_UNLOCK_OR_CHANGE_ORDER_REQUIRED",
-    "next_production_frontier": "AUDIO_ADAPTATION_PRODUCTION_GATES"
+    "decision":"GRANTED","date":"2026-08-22","authority_path":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_LOCK_RECEIPT_2026-08-22.md","human_current_state":"PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/CURRENT_STATE.md","locked_scope":"CH01_CH29","ch30_authorized":false,"substantive_change_control":"FOUNDER_UNLOCK_OR_CHANGE_ORDER_REQUIRED","next_production_frontier":"SPEAKER_ATTRIBUTION_AND_VOICE_MAP_GATE"
   }
 }
