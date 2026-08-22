@@ -24,8 +24,8 @@ Stale→current diff: `142_B03_STALE_120_TO_CURRENT_MANIFEST_DIFF_v1.1.json` —
 - **121 — REPLACE.** Old routing is superseded; `143 v1.1` is current roster/cast architecture.
 - **122 — SALVAGE + PATCH.** Global contracts and Narrator + 15 dedicated performance profiles survive. Repair two fixture bindings: `CH24 S0380 → PRECURSOR_SOURCE_CH24_PACKET_2`; `CH27 S0202 → REGIONAL_DUTY_OFFICER`.
 - **123 — PARTIAL REBUILD.** 291 rows require speaker/slot rebind; **81 class-crossing rows require full performance recomputation**. The other 210 require local performance revalidation after rebinding; no automatic carry-forward claim.
-- **124 — KEEP CONTENT / REVALIDATE PROVENANCE.** Sound architecture contains no speaker/voice routing fields except its source-performance pointer.
-- **125 — KEEP CONTENT.** Asset/acoustic requirement model contains no speaker/voice/performance-routing dependency.
+- **124 — KEEP CUE/MIX LAW; REBIND PHYSICAL ROUTING.** Speaker/voice dependency is absent except its source-performance pointer, but physical scene-bed routing is now controlled by `FULL_BOOK_SCENE_BED_ROUTING_GATE_v1.0` — manifest `1moQeFzhH5u7XfeMMduJWeg8axJHbSNIY`, gate `1EJm6hG81a3a4MXebpDtro-8o0-II2hEc`. Conflicting older location assumptions must yield to 137.
+- **125 — KEEP CONTENT.** Asset/acoustic requirement model contains no speaker/voice/performance-routing dependency; route physical-location-dependent requirements through current scene-bed authority.
 - **126 — PARTIAL REBUILD.** 291 speech render units have stale speaker routing; 287 change voice slot; 81 require full performance recomputation. Provider IDs remain null.
 
 ## Drive proof artifacts
@@ -42,4 +42,4 @@ Stale→current diff: `142_B03_STALE_120_TO_CURRENT_MANIFEST_DIFF_v1.1.json` —
 `TEXT-INDEPENDENT_METADATA MAY SURVIVE; SPEAKER/VOICE ROUTING MAY NOT CROSS AN AUTHORITY CHANGE WITHOUT ROW-LEVEL REVALIDATION.`
 
 ## Next
-Rebuild/revalidate affected 123 rows → refresh 124 provenance → retain 125 → rebuild affected 126 units → only then audit 127–132 transitively. No live-provider claim is permitted before real provider evidence.
+Rebuild/revalidate affected 123 rows → refresh 124 provenance to 137 → retain 125 → rebuild affected 126 units → only then audit 127–132 transitively. No live-provider claim is permitted before real provider evidence.
