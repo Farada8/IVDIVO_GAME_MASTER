@@ -3,7 +3,7 @@
   "date": "2026-08-22",
   "parent_authority": "CYCLE7_P129_P160_COMMERCIAL_RELIABILITY_PLUS_SUPPLIER_STATUS_V2",
   "delta": "CYCLE7_AUTHORITY_SOURCE_PRECEDENCE_AND_DOCUMENT_ROUTE_GUARDS",
-  "status": "PR236_MERGED_PENDING_FINAL_READBACK",
+  "status": "PR236_MERGED_DRIVE_READBACK_CLOSED",
   "case": "PROC-BALLYBUNION-8872468",
   "authority_side": {
     "current_pack_complete": false,
@@ -70,12 +70,14 @@
     "source_precedence_final_head": "8322f37a81203a043eaa7cf7cafc666a9edf9e22",
     "source_precedence_merge_sha": "3a738950b02834addc67d8576a100c20f6d3133b",
     "source_precedence_exact_head_ci_run": 32550331583,
-    "source_precedence_exact_head_ci": "SUCCESS"
+    "source_precedence_exact_head_ci": "SUCCESS",
+    "post_merge_closure_commit": "7a9491109bfc02e8320eda58294971285236ddf6"
   },
   "drive": {
     "cycle7_authority_folder": "1J7NbU_m4Hz-Vz_5yH4a5ioZTTmN5nd2A",
     "evidence_delta_document": "1yjs4NorTtyK0KqgT5DBujEw8jlswNoQb9tlAAh7TJmQ",
-    "semantic_readback": "PENDING_FINAL_POST_MERGE_READBACK"
+    "semantic_readback": "PASS",
+    "readback_revision": "AIroW36FeE1iiLg7v8L6kxY4hhAVzehzyxJGhuZ-rDyvTsliladw6DGezr07uzPJlRI1wF1jNkT2_i8oMfTrfvsZZNawf7vpknVQlNZJoio"
   },
   "new_engineering_contracts": [
     "OFFICIAL_CURRENT_FIRST_PARTY_GT_THIRD_PARTY_AGGREGATOR",
@@ -103,8 +105,8 @@
     ]
   },
   "persistence": {
-    "github": "PR236_MERGED",
-    "drive": "UPDATED_PENDING_FINAL_READBACK",
-    "readback": "PENDING"
+    "github": "MERGED_READBACK_PASS",
+    "drive": "READBACK_VERIFIED",
+    "readback": "CLOSED"
   }
 }
