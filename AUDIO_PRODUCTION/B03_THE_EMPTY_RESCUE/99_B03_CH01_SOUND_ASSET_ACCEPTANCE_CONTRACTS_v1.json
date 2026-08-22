@@ -1,0 +1,360 @@
+{
+  "artifact": "B03_CH01_SOUND_ASSET_ACCEPTANCE_CONTRACTS_v1",
+  "date": "2026-08-22",
+  "status": "CONTRACTS_READY / REAL_ASSETS_PENDING / NO_ASSET_LOCK_CLAIMED",
+  "project": "B03 — THE EMPTY RESCUE",
+  "chapter": "CH01 — WRONG ADDRESS",
+  "story_authority": "FOUNDER_LOCKED_CH01-29",
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "authority_inputs": [
+    "79_B03_AUDIO_DIRECTOR_SCORE_CH01_v1.json",
+    "97_B03_CH01_ACOUSTIC_PASSPORT_AND_IDENTITY_LEDGER_v1.json",
+    "98_B03_CH01_MICROPHONE_CHOREOGRAPHY_v1.json"
+  ],
+  "global_contract": {
+    "exact_text": "IMMUTABLE",
+    "cue_policy": "ADDITIVE_ONLY_NO_TEXT_SUBSTITUTION",
+    "absolute_timestamps": "FORBIDDEN_UNTIL_REAL_ALIGNMENT",
+    "critical_clues_must_be_mono_safe": true,
+    "provider_voice_ids_required_for_asset_contracts": false,
+    "asset_lock_requires_real_audible_evidence": true,
+    "no_fake_evidence_rule": "PENDING assets remain PENDING; a plan/filename is not an accepted sound."
+  },
+  "identity_dependencies": {
+    "ID_DRAINAGE_FLAP_FOUR_IMPACTS": [
+      "B03_CH01_SFX004",
+      "B03_CH01_SFX008",
+      "B03_CH01_SFX010"
+    ],
+    "ID_UNKNOWN_CALLER_SOURCE_VOICE": [
+      "UNKNOWN_PRECURSOR_CALLER live render",
+      "B03_CH01_SFX009 playback treatment"
+    ],
+    "ID_MEDIATED_CHANNEL_GRAMMAR": [
+      "B03_CH01_SFX003",
+      "B03_CH01_SFX006",
+      "B03_CH01_SFX007",
+      "B03_CH01_SFX009"
+    ]
+  },
+  "cue_contracts": [
+    {
+      "cue_id": "B03_CH01_SFX001",
+      "scene_id": "B03_CH01_S01",
+      "type": "AMBIENCE",
+      "logical_anchor": "chapter_open",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "audible speech clarity at normal level",
+        "mono fold check",
+        "no false-clue tonal bed",
+        "loop/seam check if looped"
+      ],
+      "reject_if": [
+        "masks dialogue",
+        "adds ominous/supernatural implication",
+        "contains conspicuous loop or unrelated signature event",
+        "critical information depends on stereo width"
+      ],
+      "notes": "Steady heavy rain against the dispatch-centre exterior / distant weather wash. Keep low enough for procedural clarity."
+    },
+    {
+      "cue_id": "B03_CH01_SFX002",
+      "scene_id": "B03_CH01_S01",
+      "type": "FOLEY",
+      "logical_anchor": "tea_reached_for",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "sync against logical anchor after alignment",
+        "level check under dialogue/narration"
+      ],
+      "reject_if": [
+        "draws comic or dramatic attention not supported by text",
+        "obscures spoken text",
+        "becomes causal clue accidentally"
+      ],
+      "notes": "Small cup handling; no comic emphasis."
+    },
+    {
+      "cue_id": "B03_CH01_SFX003",
+      "scene_id": "B03_CH01_S03",
+      "type": "LINE_TEXTURE",
+      "logical_anchor": "first_unknown_call_opens",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "100% lexical intelligibility of protected spoken text",
+        "channel identity A/B check",
+        "mono check",
+        "no ontology/villain/horror implication"
+      ],
+      "reject_if": [
+        "words obscured",
+        "channel indistinguishable where story requires distinction",
+        "stereo-only distinction",
+        "ghost/glitch/military-cliche overprocessing"
+      ],
+      "notes": "Sharper uneven static with clipped gaps, distinct from ordinary weak-mobile hiss."
+    },
+    {
+      "cue_id": "B03_CH01_SFX004",
+      "scene_id": "B03_CH01_S03",
+      "type": "CLUE_SFX",
+      "logical_anchor": "first_four_metal_impacts",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "impact-count audit = four",
+        "rhythm-family A/B check SFX004 vs SFX008",
+        "natural-variation check",
+        "mono recognizability",
+        "blind-listener clue-family test after story setup"
+      ],
+      "reject_if": [
+        "impact count changes",
+        "pattern reordered",
+        "perfect duplicated-sample feel",
+        "musicalized motif",
+        "supernatural resonance",
+        "identity depends on stereo"
+      ],
+      "notes": "Three hollow metal knocks, unevenly spaced, then a fourth after a longer pause: Tok. Tok-tok. [pause] Tok. Must later match live drainage-flap pattern.",
+      "identity_lock": "ID_DRAINAGE_FLAP_FOUR_IMPACTS"
+    },
+    {
+      "cue_id": "B03_CH01_SFX005",
+      "scene_id": "B03_CH01_S03",
+      "type": "LINE_EVENT",
+      "logical_anchor": "unknown_call_disconnects",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "logical-anchor timing after alignment",
+        "realism check",
+        "no speech masking"
+      ],
+      "reject_if": [
+        "overdramatic disconnect sting",
+        "false emergency cue",
+        "overlaps protected speech"
+      ],
+      "notes": "Connection closure / dead line; restrained, realistic."
+    },
+    {
+      "cue_id": "B03_CH01_SFX006",
+      "scene_id": "B03_CH01_S03",
+      "type": "FIELD_RADIO_TEXTURE",
+      "logical_anchor": "first_firefighter_report",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "100% lexical intelligibility of protected spoken text",
+        "channel identity A/B check",
+        "mono check",
+        "no ontology/villain/horror implication"
+      ],
+      "reject_if": [
+        "words obscured",
+        "channel indistinguishable where story requires distinction",
+        "stereo-only distinction",
+        "ghost/glitch/military-cliche overprocessing"
+      ],
+      "notes": "Clean public-safety field radio texture; do not obscure words."
+    },
+    {
+      "cue_id": "B03_CH01_SFX007",
+      "scene_id": "B03_CH01_S05",
+      "type": "PHONE_SCENE_TEXTURE",
+      "logical_anchor": "real_collision_caller",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "100% lexical intelligibility of protected spoken text",
+        "channel identity A/B check",
+        "mono check",
+        "no ontology/villain/horror implication"
+      ],
+      "reject_if": [
+        "words obscured",
+        "channel indistinguishable where story requires distinction",
+        "stereo-only distinction",
+        "ghost/glitch/military-cliche overprocessing"
+      ],
+      "notes": "Live witness mobile call; stress and real gallery environment without invented signature sounds."
+    },
+    {
+      "cue_id": "B03_CH01_SFX008",
+      "scene_id": "B03_CH01_S05",
+      "type": "CLUE_SFX",
+      "logical_anchor": "live_field_four_impacts",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "impact-count audit = four",
+        "rhythm-family A/B check SFX004 vs SFX008",
+        "natural-variation check",
+        "mono recognizability",
+        "blind-listener clue-family test after story setup"
+      ],
+      "reject_if": [
+        "impact count changes",
+        "pattern reordered",
+        "perfect duplicated-sample feel",
+        "musicalized motif",
+        "supernatural resonance",
+        "identity depends on stereo"
+      ],
+      "notes": "Live drainage flap reproduces the same audible rhythm as SFX004. Relationship must be perceptible but not artificially perfect.",
+      "identity_lock": "ID_DRAINAGE_FLAP_FOUR_IMPACTS"
+    },
+    {
+      "cue_id": "B03_CH01_SFX009",
+      "scene_id": "B03_CH01_S05",
+      "type": "PLAYBACK_TEXTURE",
+      "logical_anchor": "play_first_recording",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "100% lexical intelligibility of protected spoken text",
+        "channel identity A/B check",
+        "mono check",
+        "no ontology/villain/horror implication",
+        "same accepted source take/voice identity as first unknown-caller call",
+        "only storage/playback filtering differs",
+        "A/B identity audit"
+      ],
+      "reject_if": [
+        "words obscured",
+        "channel indistinguishable where story requires distinction",
+        "stereo-only distinction",
+        "ghost/glitch/military-cliche overprocessing",
+        "new independent acting take presented as same recording",
+        "identity-changing pitch/time manipulation"
+      ],
+      "notes": "Playback of first call from dispatch system; same voice/take identity as UNKNOWN_PRECURSOR_CALLER, filtered as stored recording rather than newly acted variant.",
+      "identity_lock": "ID_UNKNOWN_CALLER_SOURCE_VOICE"
+    },
+    {
+      "cue_id": "B03_CH01_SFX010",
+      "scene_id": "B03_CH01_S05",
+      "type": "PROTECTED_SILENCE",
+      "logical_anchor": "after_live_and_recorded_knocks_overlap",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "duration inside allowed window after alignment",
+        "silence/presence does not hide required room continuity",
+        "human listen confirms dramatic function without added score"
+      ],
+      "reject_if": [
+        "music swell inserted",
+        "dialogue overlap",
+        "duration outside allowed window without director change order",
+        "silence edited into supernatural sting"
+      ],
+      "notes": "Several seconds in centre after matched sound; no music swell.",
+      "duration_ms": {
+        "min": 1800,
+        "target": 2800,
+        "max": 4500
+      },
+      "can_overlap_dialogue": false
+    },
+    {
+      "cue_id": "B03_CH01_SFX011",
+      "scene_id": "B03_CH01_S06",
+      "type": "AMBIENCE",
+      "logical_anchor": "post_incident_debrief",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "audible speech clarity at normal level",
+        "mono fold check",
+        "no false-clue tonal bed",
+        "loop/seam check if looped"
+      ],
+      "reject_if": [
+        "masks dialogue",
+        "adds ominous/supernatural implication",
+        "contains conspicuous loop or unrelated signature event",
+        "critical information depends on stereo width"
+      ],
+      "notes": "Dispatch room settles back to low operational bed; no ominous drone."
+    },
+    {
+      "cue_id": "B03_CH01_SFX012",
+      "scene_id": "B03_CH01_S06",
+      "type": "PROTECTED_SILENCE",
+      "logical_anchor": "Nika_does_not_answer_could_all_be_coincidence",
+      "asset_id": null,
+      "asset_sha256": null,
+      "asset_status": "PENDING_REAL_ASSET",
+      "source_substitution_authorized": false,
+      "absolute_timestamp_authorized": false,
+      "acceptance_evidence_required": [
+        "duration inside allowed window after alignment",
+        "silence/presence does not hide required room continuity",
+        "human listen confirms dramatic function without added score"
+      ],
+      "reject_if": [
+        "music swell inserted",
+        "dialogue overlap",
+        "duration outside allowed window without director change order",
+        "silence edited into supernatural sting"
+      ],
+      "notes": "Hold Nika’s non-answer as action. Do not fill with score.",
+      "duration_ms": {
+        "min": 800,
+        "target": 1500,
+        "max": 2600
+      },
+      "can_overlap_dialogue": false
+    }
+  ],
+  "acceptance_gate": {
+    "pass_requires": [
+      "12/12 cues either ACCEPTED or explicitly NOT_REQUIRED_BY_FINAL_ASSEMBLY_CHANGE_ORDER",
+      "0 protected-clue identity failures",
+      "0 text substitutions",
+      "0 critical mono failures",
+      "0 ontology-signalling sound decisions",
+      "real asset hashes recorded for every used non-silence cue"
+    ],
+    "current_result": "NOT_RUN_REAL_ASSETS_PENDING"
+  }
+}
