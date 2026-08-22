@@ -84,7 +84,7 @@ Executable canaries/readback exist; VERIFIED_CURRENT still requires real project
 
 ## C10-21 — Review SI-0014 promotion state
 **Disposition:** `HOLD_AT_READY_FOR_PILOT`
-Controlled partial-write recovery exists, but cited recovery pilot explicitly records real_interruption=false.
+Fresh main records genuine recovery event 1/3, two recovered project slices, project-diversity gate satisfied and zero false resume so far; SI-0014 remains READY_FOR_PILOT because two additional genuine events are still required.
 
 ## C10-22 — Review SI-0016 concurrent candidate
 **Disposition:** `HOLD_OPEN_PR`
