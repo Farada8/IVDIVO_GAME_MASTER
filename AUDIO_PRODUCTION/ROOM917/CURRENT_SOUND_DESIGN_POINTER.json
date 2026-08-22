@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.sound_design_pointer/1.8",
+  "schema_version": "room917.sound_design_pointer/1.9",
   "project": "ROOM917",
   "episode": "E01",
   "status": "ACTIVE_POST_RENDER_SOUND_EXECUTION",
@@ -23,7 +23,7 @@
     "pipeline_preflight": "ENFORCED"
   },
   "sound_asset_identity": {
-    "status": "SPEC_READY_CANARY_EVIDENCE_EXISTS_PRODUCTION_BINDING_OPEN",
+    "status": "SPEC_READY_CONTROLLED_CANARY_BYTES_PRESENT_PRODUCTION_BINDING_OPEN",
     "contract": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
     "candidate_template": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_CANDIDATES_TEMPLATE_v1.json",
     "generation_and_audition_queue": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_GENERATION_AND_AUDITION_QUEUE_v1.json",
@@ -34,17 +34,39 @@
     "renderer_law": "REQUIRE_IDENTITY_GATE_PASS_AND_RECHECK_BOUND_ASSET_SHA256_BEFORE_MIX",
     "d003_bindable_beds": ["A01_GREYHAVEN_LOBBY_30S_LOOP","A02_SWITCHBOARD_ALCOVE_30S_LOOP"],
     "scene3_bed": "A03_0117_NIGHT_ROOMTONE_30S_LOOP_PROTECTED_NOT_D003_BINDABLE",
-    "controlled_drive_a01_audio": "NOT_FOUND",
-    "controlled_drive_a02_audio": "NOT_FOUND"
+    "controlled_drive_canary_folder_id": "1iIhPuTIWBFtwWEb4ViMO5NzjNtoTide0",
+    "controlled_drive_a01_audio": {
+      "file_id": "1HW3prKgRZeGgx8mmp8B2Gsv-w9dFAmc9",
+      "sha256": "9ca06999c727571f18ac8003a61f69a1d18bb46072713f45c7aab3deb86828b3",
+      "readback_hash_verified": true,
+      "status": "CANDIDATE_HOLD_NOT_PRODUCTION_BOUND"
+    },
+    "controlled_drive_a02_audio": {
+      "file_id": "1xBjzXmK9TfqACXDXzkiTInO0GJnn3JOE",
+      "sha256": "f977e467ba9dd915a46956523045b87ffd0f40063a22630d9de84728b327edc0",
+      "readback_hash_verified": true,
+      "status": "CANDIDATE_HOLD_NOT_PRODUCTION_BOUND"
+    }
   },
   "synthetic_room_bed_canaries": {
-    "status": "CANDIDATE_HOLD_NOT_PRODUCTION_BOUND",
+    "status": "CONTROLLED_BYTES_PRESENT_BLIND_PACKAGE_READY_HOLD_NOT_PRODUCTION_BOUND",
+    "pointer": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_ROOM_BED_CANARY_POINTER_v1.json",
     "receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_ROOM_BED_SYNTHETIC_CANARY_RECEIPT_v2.json",
     "generator": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/tools/generate_room_bed_synth_canaries.py",
     "workflow": ".github/workflows/room917-room-bed-synth-canaries.yml",
     "provider_calls": 0,
     "paid_synthesis_calls": 0,
     "reproducibility": "BYTE_FOR_BYTE_REPRODUCED_IN_SESSION_2026_08_22",
+    "drive_readback_hash_verified": true,
+    "blind_package": {
+      "drive_file_id": "1V48Ubi75Qzo-kvO5J1oCmciTVsqGiFLn",
+      "filename": "ROOM917_E01_A01_A02_ROOM_BED_BLIND_v1.zip",
+      "sha256": "0cd9041cf5638a8a15e0ace3e6b831f1fabf3bbe668bb6cb733ec28804a81804",
+      "size_bytes": 15366112,
+      "readback_hash_verified": true,
+      "status": "READY_FOR_HUMAN_BLIND_AUDITION",
+      "production_binding": false
+    },
     "a01": {
       "candidate_id": "A01_GREYHAVEN_LOBBY_30S_LOOP_CANDIDATE_SYNTH02",
       "sha256": "9ca06999c727571f18ac8003a61f69a1d18bb46072713f45c7aab3deb86828b3",
@@ -154,6 +176,12 @@
     "accepted_alignment_full_e01": "NOT_FOUND",
     "live_timeline_full_e01": "NOT_FOUND",
     "legacy_studio_sfx_cue_sheet": "FOUND_BUT_QUARANTINED_NOT_TIMING_AUTHORITY"
+  },
+  "non_stop": {
+    "policy": "AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/CONTINUATION_POLICY_v1.json",
+    "universal_addendum": "IVDIVO_NARRATIVE_OS/13A_LOCAL_GATE_REROUTE_ADDENDUM_v1.0.md",
+    "blocked_mainline_does_not_stop_project": true,
+    "latest_completed_safe_frontier": "A01_A02_CONTROLLED_BYTES_AND_BLIND_PACKAGE_READY"
   },
   "season_scale": "BLOCKED_UNTIL_E01_V2_QUALITY_GATE"
 }
