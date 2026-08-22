@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.business.cycle10.pack_ingest_hardening/1.0",
+  "schema": "ivdivo.business.cycle10.pack_ingest_hardening/1.1",
   "date": "2026-08-22",
-  "status": "RUN8_EXECUTED_CI_DRIVE_PENDING",
+  "status": "RUN8_EXECUTED_MERGED_CI_DRIVE_READBACK_PASS",
   "executed": {
     "range": "P257-P264",
     "count": 8,
@@ -38,14 +38,26 @@
     "parent_count": 64,
     "executed_subset": [257,258,259,260,261,262,263,264],
     "remaining_count": 56,
+    "remaining_ranges": ["P225-P256", "P265-P288"],
     "highest_value_blocked": [225,235],
     "next_dependency_rule": "TARGET_PACK_OR_EXPLICIT_BIDDER_DESIGNATION_FIRST_WHEN_NEW_EVIDENCE_EXISTS"
   },
   "persistence": {
-    "github": "BRANCH_ONLY_PENDING_PR",
-    "ci": "PENDING",
-    "drive": "PENDING",
-    "current_authority_mutation": false
+    "github_pr": 264,
+    "github_merge_commit": "3d9b5d900518ad2b05554e57c92f330883cf993e",
+    "ci_run_id": 32551674086,
+    "ci_result": "SUCCESS_CANARIES_COMPILE_MACHINE_PARSE",
+    "drive_folder": "1R4VVl1oFNmILpb-mZYL6EpMuaYweW13e",
+    "drive_run8_engineering_doc": "1lKYrj_QwvkGlEhFQN72rBjKfnnFyKaBf8LM_bbwQWXo",
+    "drive_machine_doc": "1d6rLTZdIR_17wh5KjeULhwci_WbVgwy0Y1ED5k9AwPs",
+    "drive_semantic_readback": "PASS_2_OF_2",
+    "current_authority_mutation": "POST_MERGE_CLOSURE_PENDING"
   },
-  "stop_rule": "NO_NEW_ADMISSIBLE_EXTERNAL_EVIDENCE_THEN_ENGINEERING_ONLY_OR_PROTECT_NO_CHANGE"
+  "nonproof_boundary": [
+    "CI_NEQ_TARGET_PACK",
+    "CI_NEQ_BIDDER_DESIGNATION",
+    "CI_NEQ_PA4_PA5_E3_E4",
+    "ENGINEERING_PASS_NEQ_BID_DECISION"
+  ],
+  "stop_rule": "NO_NEW_ADMISSIBLE_EXTERNAL_EVIDENCE_THEN_PROTECT_NO_CHANGE_OR_ONLY_DEPENDENCY_RELEVANT_ENGINEERING"
 }
