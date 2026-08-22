@@ -1,0 +1,39 @@
+name: Money Digital POD P17-P24
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/16_DIGITAL_POD_P17_P24_EXECUTION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/17_DIGITAL_POD_SKU_REGISTRY.json'
+      - '.github/workflows/money-digital-pod-p17-p24.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate digital/POD evidence boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          doc = (root/'16_DIGITAL_POD_P17_P24_EXECUTION.md').read_text()
+          data = json.loads((root/'17_DIGITAL_POD_SKU_REGISTRY.json').read_text())
+          assert len(data['families']) == 2
+          assert len(data['digital_skus']) == 10
+          assert len(data['pod_skus']) == 10
+          assert data['evidence']['listings_published'] == 0
+          assert data['evidence']['orders'] == 0
+          assert data['evidence']['wtp'] is None
+          assert data['evidence']['conversion'] is None
+          assert data['evidence']['cac'] is None
+          assert data['evidence']['profitable_skus_proven'] == 0
+          assert data['market_negative_control']['generic_vintage_ireland_poster'].startswith('MUTATE')
+          assert data['platform_rules']['ai_prompt_bundles_allowed'] is False
+          assert 'NO_ORDER_DATA -> NO_SCALE_CLAIM' in doc
+          print('MONEY_DIGITAL_POD_P17_P24: PASS')
+          PY
