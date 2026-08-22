@@ -1,0 +1,48 @@
+{
+  "project": "CPMRP",
+  "full_name": "Creative Provenance & Micro-Royalty Protocol",
+  "cycle": 1,
+  "date": "2026-08-21",
+  "status": "BOUNDED_RND_ENGINEERING_PROTOTYPE",
+  "not_legal_authority": true,
+  "not_si_promoted": true,
+  "prompts_executed": 32,
+  "next_prompts_designed": 64,
+  "deterministic_tests": {
+    "pass": 10,
+    "fail": 0
+  },
+  "core_price_example": {
+    "eur": "0.10",
+    "amount_micro_eur": 100000
+  },
+  "core_invariants": [
+    "IDEA_STYLE_TROPE_NO_DEBT",
+    "RIGHTS_BASIS_REQUIRED",
+    "ACCEPTANCE_BEFORE_VOLUNTARY_DEBT",
+    "SIMILARITY_NEVER_DIRECTLY_CREATES_DEBT",
+    "NO_AUTOMATIC_INFRINGEMENT_FINDING",
+    "INTEGER_ACCOUNTING",
+    "IDEMPOTENT_USAGE",
+    "POLICY_VERSION_RECEIPT_BINDING",
+    "UPSTREAM_LICENSE_SUPREMACY",
+    "SETTLEMENT_SEPARATION"
+  ],
+  "external_interop": [
+    "TDMRep",
+    "ODRL 2.2",
+    "C2PA training-mining",
+    "future EU TDM registry adapter"
+  ],
+  "evidence_not_run": [
+    "legal_counsel_validation",
+    "creator_user_testing",
+    "platform_adopter_testing",
+    "real_money_settlement",
+    "kyc_tax_design",
+    "market_willingness_to_pay",
+    "production_cryptographic_signing",
+    "public_dispute_adjudication"
+  ],
+  "next_gate": "CYCLE2_SCHEMA_INTEROP_ADVERSARIAL_PILOT"
+}

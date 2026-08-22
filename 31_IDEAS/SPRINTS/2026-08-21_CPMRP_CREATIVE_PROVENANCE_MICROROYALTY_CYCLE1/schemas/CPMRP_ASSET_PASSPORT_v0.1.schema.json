@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/cpmrp/CPMRP_ASSET_PASSPORT_v0.1.schema.json",
+  "title": "CPMRP Asset Passport v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["asset_id", "claimant_id", "rights_basis", "policy_version", "status"],
+  "properties": {
+    "asset_id": {"type": "string", "pattern": "^cpmrp:"},
+    "claimant_id": {"type": "string", "minLength": 1},
+    "rights_basis": {"enum": ["COPYRIGHT_ASSERTED", "CONTRACT_LICENSE", "TDM_RESERVATION", "OPEN_LICENSE", "PUBLIC_DOMAIN", "VOLUNTARY_TIP", "UNKNOWN"]},
+    "policy_version": {"type": "string", "minLength": 1},
+    "status": {"enum": ["ACTIVE", "HELD", "DISPUTED", "REVOKED", "SUPERSEDED"]},
+    "parent_asset_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "upstream_license": {"type": ["string", "null"]},
+    "evidence_ceiling": {"type": ["string", "null"]}
+  }
+}

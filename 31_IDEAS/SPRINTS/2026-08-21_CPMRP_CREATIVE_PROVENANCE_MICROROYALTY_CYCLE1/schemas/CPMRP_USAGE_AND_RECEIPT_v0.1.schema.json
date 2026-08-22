@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/cpmrp/CPMRP_USAGE_AND_RECEIPT_v0.1.schema.json",
+  "title": "CPMRP Usage + Receipt v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["usage_event_id", "idempotency_key", "payer_id", "payee_id", "asset_id", "action", "amount_micro_eur", "policy_version", "accepted"],
+  "properties": {
+    "usage_event_id": {"type": "string", "minLength": 1},
+    "idempotency_key": {"type": "string", "minLength": 1},
+    "payer_id": {"type": "string", "minLength": 1},
+    "payee_id": {"type": "string", "minLength": 1},
+    "asset_id": {"type": "string", "pattern": "^cpmrp:"},
+    "action": {"enum": ["READ", "INDEX", "TDM", "TRAIN", "INFERENCE_REFERENCE", "REPRODUCE", "ADAPT", "DISTRIBUTE", "COMMERCIALIZE"]},
+    "amount_micro_eur": {"type": "integer", "minimum": 0},
+    "policy_version": {"type": "string", "minLength": 1},
+    "accepted": {"type": "boolean"},
+    "receipt_id": {"type": ["string", "null"]}
+  }
+}
