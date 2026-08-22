@@ -1,0 +1,23 @@
+{
+  "schema": "ivdivo.business.resume_state/1.0",
+  "date": "2026-08-22",
+  "case": "PROC-BALLYBUNION-8872468",
+  "authority_source": "CURRENT_BUSINESS_ENGINEERING_AUTHORITY + CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA + CURRENT_BUSINESS_READ_MODEL",
+  "target_pack_acquired": false,
+  "target_requirement_registry_ready": false,
+  "actual_bidder_designation": false,
+  "authoritative_bidder_packet_ready": false,
+  "frozen_target_manifest": false,
+  "frozen_bidder_manifest": false,
+  "bounded_decision_packet_ready": false,
+  "independent_reviewer_ready": false,
+  "external_interaction_authorized": false,
+  "real_decision_use_ready": false,
+  "expected_route": "PROTECT_NO_CHANGE",
+  "expected_reason": "NO_NEW_ADMISSIBLE_ROOT_EVENT; WAIT_FOR_P225_OR_P235_AUTHORITY",
+  "root_a": "TARGET_PACK_NOT_ACQUIRED",
+  "root_b": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET",
+  "parent_backlog_executed": 17,
+  "parent_backlog_remaining": 47,
+  "p288_replay_forbidden": true
+}
