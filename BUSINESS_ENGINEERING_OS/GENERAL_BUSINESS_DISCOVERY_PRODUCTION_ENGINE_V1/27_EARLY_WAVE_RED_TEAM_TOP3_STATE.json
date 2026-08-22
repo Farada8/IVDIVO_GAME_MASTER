@@ -1,0 +1,80 @@
+{
+  "schema": "ivdivo.general_business.early_wave_red_team/1.0",
+  "date": "2026-08-22",
+  "parent": "25_EARLY_WAVE_RADAR_DELTA02_2026-08-22.md",
+  "status": "INTERNAL_RED_TEAM_COMPLETE_NO_WIP_PROMOTION",
+  "proof_boundary": {
+    "buyer_demand": "UNPROVEN",
+    "wtp": "UNKNOWN",
+    "price": null,
+    "transactions": 0,
+    "profitability": "UNPROVEN",
+    "market_winner": null,
+    "wip_promoted": false,
+    "external_action_authorized": false
+  },
+  "candidates": [
+    {
+      "id": "EW-D02-01",
+      "name": "AGENT_IDENTITY_DISCOVERY_TRUST",
+      "radar_score": 89,
+      "red_team_score": 79,
+      "decision": "KEEP_OPTIONALITY_MUTATE_WEDGE",
+      "killed_wedges": [
+        "GENERIC_AGENT_REGISTRATION",
+        "GENERIC_DNS_AID_PUBLISHING",
+        "GENERIC_ANS_ONBOARDING",
+        "GENERIC_AGENT_INVENTORY_DASHBOARD",
+        "GENERIC_MCP_IDENTITY_GATEWAY",
+        "GENERIC_ENTERPRISE_AGENT_IAM"
+      ],
+      "surviving_wedge": "CROSS_STANDARD_AGENT_IDENTITY_DISCOVERY_INTEROP_AND_DRIFT",
+      "next_internal_test": "T-ID01",
+      "wip": "RADAR_ONLY"
+    },
+    {
+      "id": "EW-D02-02",
+      "name": "AI_TOKENOMICS_COST_TO_VALUE",
+      "radar_score": 87,
+      "red_team_score": 73,
+      "decision": "KEEP_WATCH_KILL_GENERIC_DASHBOARD",
+      "killed_wedges": [
+        "GENERIC_TOKEN_DASHBOARD",
+        "GENERIC_MULTI_PROVIDER_AI_SPEND_MONITOR",
+        "GENERIC_BUDGET_ALERTS",
+        "GENERIC_COST_ALLOCATION",
+        "NARRATIVE_AI_FINOPS_CONSULTING"
+      ],
+      "surviving_wedge": "FOCUS_ALIGNED_AI_COST_TO_OUTCOME_NORMALIZATION_AND_REGRESSION",
+      "next_internal_test": "T-TOK01",
+      "wip": "RADAR_ONLY"
+    },
+    {
+      "id": "EW-D02-03",
+      "name": "APPIA_CONFORMITY_EVIDENCE",
+      "radar_score": 87,
+      "red_team_score": 62,
+      "decision": "HOLD_UNTIL_PUBLIC_MODULES_AND_ROLE_BOUNDARY",
+      "killed_wedges": [
+        "CERTIFICATION_CLAIM",
+        "ACCREDITED_CONFORMITY_ASSESSMENT_CLAIM",
+        "LEGAL_COMPLIANCE_DETERMINATION",
+        "ANNOUNCEMENT_LEVEL_GENERIC_CHECKLIST_CONSULTING"
+      ],
+      "surviving_wedge": "PUBLIC_APPIA_MODULE_TO_TECHNICAL_EVIDENCE_GRAPH_PREFLIGHT",
+      "next_internal_test": null,
+      "wip": "RADAR_ONLY_HOLD"
+    }
+  ],
+  "portfolio_decision": {
+    "long_horizon_leader": "CROSS_STANDARD_AGENT_IDENTITY_DISCOVERY_INTEROP_AND_DRIFT",
+    "cashflow_hypothesis_leader": "FOCUS_ALIGNED_AI_COST_TO_OUTCOME_NORMALIZATION_AND_REGRESSION",
+    "hold": "PUBLIC_APPIA_MODULE_TO_TECHNICAL_EVIDENCE_GRAPH_PREFLIGHT",
+    "new_wip_promotion": false
+  },
+  "next_tests": {
+    "T-ID01": "READ_ONLY_CROSS_STANDARD_COMPATIBILITY_CORPUS_3PLUS_PROTOCOL_FAMILIES",
+    "T-TOK01": "COST_TO_ACCEPTED_WORK_LEDGER_2PLUS_PROVIDERS_MODELS"
+  },
+  "readback_marker": "EARLY-WAVE-REDTEAM-TOP3-IDENTITY79-TOKENOMICS73-APPIA62-NO-WIP-20260822"
+}
