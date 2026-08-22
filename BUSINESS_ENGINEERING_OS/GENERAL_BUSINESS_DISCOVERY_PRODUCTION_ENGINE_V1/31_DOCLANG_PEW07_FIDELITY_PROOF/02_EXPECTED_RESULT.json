@@ -1,0 +1,26 @@
+{
+  "schema": "ivdivo.general_business.doclang_pew07_expected/1.0",
+  "official_xsd_validation": {
+    "good.dclg.xml": "PASS_EXPECTED",
+    "semantic_drift.dclg.xml": "PASS_EXPECTED"
+  },
+  "independent_fidelity": {
+    "good.dclg.xml": {
+      "fidelity_pass": true,
+      "mismatch_count": 0
+    },
+    "semantic_drift.dclg.xml": {
+      "fidelity_pass": false,
+      "mismatch_count": 1,
+      "expected": "Peter Thomas & Christian Johnston",
+      "actual": "Peter Thomas and Christian Johnston"
+    }
+  },
+  "pass_condition": "BOTH_OFFICIAL_XSD_PASS_AND_ONLY_DRIFT_FIXTURE_FAILS_FIDELITY",
+  "maximum_allowed_conclusion": "PASS_MECHANISM_ORTHOGONAL_TO_SCHEMA",
+  "commercial_result": "HOLD_COMMERCIAL_UNPROVEN",
+  "wip_promotion": false,
+  "buyer_demand": "UNPROVEN",
+  "wtp": "UNKNOWN",
+  "external_action_authorized": false
+}
