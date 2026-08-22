@@ -1,7 +1,7 @@
 {
-  "schema": "ivdivo.agent_commerce.pew02_blind10/0.5",
+  "schema": "ivdivo.agent_commerce.pew02_blind10/0.6",
   "date": "2026-08-22",
-  "status": "P_EW02_DONE_VERIFIED_POSTMERGE_CLOSURE_PENDING_EXACT_HEAD_CI",
+  "status": "P_EW02_DONE_VERIFIED_POSTMERGE_CLOSURE_PRECLOSURE_CI8OF8",
   "parent": "OW-01_AGENTIC_COMMERCE_MERCHANT_READINESS",
   "authority": {
     "implementation_pr": 353,
@@ -55,5 +55,12 @@
     "readback_status": "PASS"
   },
   "next_gate": "P-EW03_ARTICLE50_TECHNICAL_TRANSPARENCY_SAMPLE_PACK_UNLESS_CURRENT_AUTHORITY_CHANGES",
-  "closure": {"pr":363,"exact_head":null,"ci_runs":[],"merge_sha":null}
+  "closure": {
+    "pr": 363,
+    "verified_preclosure_head": "eba26fc4de7662402b3991bd74e13cee1c4e7dfc",
+    "verified_preclosure_ci_runs": [32558639703,32558639710,32558639700,32558639742,32558639743,32558639736,32558639732,32558639753],
+    "verified_preclosure_ci_status": "SUCCESS_8_OF_8",
+    "final_exact_head": null,
+    "merge_sha": null
+  }
 }
