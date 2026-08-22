@@ -1,0 +1,133 @@
+{
+  "schema_version": "ivdivo.room917_ru_v3_performance_tag_policy/1.0",
+  "created": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "model_id": "eleven_v3",
+  "status": "ACTIVE_FOR_CANARY_COMPILATION",
+  "story_or_dialogue_change": false,
+  "principle": "VOICE_AND_ACTING_FIRST__TAGS_ARE_BOUNDED_EXPERIMENTAL_CONTROLS_NOT_SCRIPT",
+  "provider_facts": {
+    "audio_tags_supported": true,
+    "ssml_break_tags_supported": false,
+    "punctuation_and_text_structure_affect_pacing": true,
+    "voice_selection_is_primary": true
+  },
+  "request_text_law": {
+    "canonical_dialogue_must_remain_recoverable_after_tag_strip": true,
+    "tags_are_stored_only_in_render_request_metadata_or_request_text": true,
+    "production_recording_script_must_not_be_edited_to_store_tags": true,
+    "one_control_family_per_ab_test": true,
+    "critical_clue_wording_change": "FORBIDDEN",
+    "semantic_paraphrase": "FORBIDDEN"
+  },
+  "tag_classes": {
+    "ALLOW_FOR_BOUNDED_CANARY": [
+      "[whispers]",
+      "[sighs]",
+      "[curious]",
+      "[clears throat]"
+    ],
+    "CONDITIONAL_SOURCE_ACTION_REQUIRED": [
+      "[laughs]",
+      "[crying]",
+      "[shouts]"
+    ],
+    "ROOM917_DEFAULT_FORBIDDEN": [
+      "[mischievously]",
+      "[seductively]",
+      "[dramatically]",
+      "[terrified]",
+      "[screams]"
+    ],
+    "reason": "ROOM917 credibility target favors restrained human behavior. Tags that pre-bias horror, seduction, trailer drama or comedy are excluded unless a locked source action explicitly requires them."
+  },
+  "critical_function_defaults": {
+    "worldview_professional_not_horror": "NO_TAG_BASELINE_FIRST",
+    "professional_boundary": "NO_TAG_BASELINE_FIRST",
+    "fear_inside_precision": "NO_TAG_BASELINE_FIRST",
+    "small_vulnerability": "NO_TAG_BASELINE_FIRST",
+    "mother_reveal": "NO_TAG_BASELINE_FIRST",
+    "final_cliff": "NO_TAG_BASELINE_FIRST",
+    "economic_stakes": "NO_TAG_BASELINE_FIRST",
+    "status_pressure": "NO_TAG_BASELINE_FIRST",
+    "ordinary_humor_and_material_reality": "NO_TAG_BASELINE_FIRST",
+    "witness_under_pressure": "NO_TAG_BASELINE_FIRST",
+    "clean_human_fragment": "NO_TAG_BASELINE_FIRST",
+    "clean_human_fragment_2": "NO_TAG_BASELINE_FIRST",
+    "cassette_identity_match": "NO_TAG_BASELINE_FIRST",
+    "restrained_personal_history": "NO_TAG_BASELINE_FIRST",
+    "hard_38ms_fact_and_cliff": "NO_TAG_BASELINE_FIRST"
+  },
+  "allowed_experiments": [
+    {
+      "id": "TAG_EXP_WHISPER",
+      "tag": "[whispers]",
+      "allowed_when": "Locked direction genuinely requires lower vocal energy or intimate distance and baseline fails to produce it.",
+      "never_use_to_signal_supernatural_ontology": true
+    },
+    {
+      "id": "TAG_EXP_SIGH",
+      "tag": "[sighs]",
+      "allowed_when": "Source beat contains an audible release or fatigue that the actor needs to externalize.",
+      "never_insert_before_clue_number_or_name": true
+    },
+    {
+      "id": "TAG_EXP_CURIOUS",
+      "tag": "[curious]",
+      "allowed_when": "Question line becomes dead/flat and curiosity is already the locked dramatic action.",
+      "never_use_as_exposition_emphasis": true
+    },
+    {
+      "id": "TAG_EXP_CLEAR_THROAT",
+      "tag": "[clears throat]",
+      "allowed_when": "Locked source action requires it or a naturalism test explicitly calls for it.",
+      "never_add_as_decorative_humanization": true
+    }
+  ],
+  "ab_protocol": {
+    "A": "BASELINE_NO_TAGS_EXACT_TEXT",
+    "B": "ONE_APPROVED_TAG_OR_ONE_PERFORMANCE_CONTROL_ONLY",
+    "C": "SEGMENTATION_OR_PUNCTUATION_ONLY__NO_NEW_WORDS",
+    "same_voice_required": true,
+    "same_model_required": true,
+    "same_pronunciation_dictionary_version_required": true,
+    "same_source_text_hash_required": true,
+    "compare_dimensions": [
+      "BELIEVABILITY",
+      "AI_AUDIBILITY",
+      "EMOTIONAL_TRUTH",
+      "RESTRAINT",
+      "DICTION",
+      "PAUSE_RECOVERY",
+      "CLUE_INTELLIGIBILITY",
+      "VOICE_IDENTITY_CONTINUITY"
+    ]
+  },
+  "critical_clue_protection": {
+    "tokens_or_facts": [
+      "Лени-бёрд",
+      "01:17:12",
+      "девятьсот шестнадцать",
+      "девятьсот семнадцать",
+      "тридцать восемь миллисекунд",
+      "пятьдесят герц",
+      "двенадцать вольт"
+    ],
+    "tag_immediately_inside_critical_token": "FORBIDDEN",
+    "reaction_tag_that_masks_or_interrupts_critical_token": "FORBIDDEN",
+    "tag_that_creates_new_story_evidence": "FORBIDDEN"
+  },
+  "pause_policy": {
+    "ssml_break": "FORBIDDEN_IN_ELEVEN_V3",
+    "preferred_controls": ["NATURAL_PUNCTUATION", "ELLIPSIS_WHEN_ALREADY_DRAMATICALLY_TRUE", "SEGMENT_BOUNDARY", "POST_TIMING_AFTER_ALIGNMENT"],
+    "lexical_change_for_pause": false
+  },
+  "production_gate": {
+    "tagged_take_can_win": true,
+    "tagged_take_must_beat_untagged_baseline": true,
+    "founder_listen_required_for_cast_lock": true,
+    "selected_take_reason_required": true,
+    "tag_obedience_alone_is_not_success": true
+  }
+}

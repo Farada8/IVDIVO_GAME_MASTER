@@ -1,0 +1,48 @@
+{
+  "schema_version": "ivdivo.room917_ru_render_request_bundle/1.0",
+  "created": "2026-08-22",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "provider": "ElevenLabs",
+  "model_id": "eleven_v3",
+  "status": "EMPTY_TEMPLATE__VOICE_BINDINGS_REQUIRED",
+  "provider_calls": 0,
+  "paid_synthesis_calls": 0,
+  "source_manifest": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_E01_E02_ELEVENLABS_V3_MANIFEST_v1.0.json",
+  "pronunciation_contract": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_PRONUNCIATION_CONTRACT_v1.0.json",
+  "performance_tag_policy": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_V3_PERFORMANCE_TAG_POLICY_v1.0.json",
+  "validation_tool": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/validate_ru_render_requests.py",
+  "request_schema": {
+    "request_id": "UNIQUE_ID",
+    "unit_id": "EXACT_AUDITION_UNIT_ID_FROM_MANIFEST",
+    "character": "ELENA_OR_JULIAN_OR_MINA_OR_CATE",
+    "voice_id": "AUTHENTICATED_PROVIDER_SELECTED_ID",
+    "model_id": "eleven_v3",
+    "language_code": "ru",
+    "source_text_sha256": "SHA256_OF_LOCKED_SOURCE_TEXT",
+    "text": "LOCKED_SOURCE_TEXT_WITH_OPTIONAL_APPROVED_V3_TAGS",
+    "request_text_sha256": "SHA256_OF_ACTUAL_REQUEST_TEXT",
+    "text_variant_mode": "EXACT_PLUS_TAGS",
+    "variant_reason": null,
+    "performance_tags": [],
+    "conditional_tag_authorized": false,
+    "pronunciation_dictionary_locators": [],
+    "output_format": "pcm_48000",
+    "take_number": 1,
+    "take_registry_id": ""
+  },
+  "allowed_text_variant_modes": [
+    "EXACT_PLUS_TAGS",
+    "PUNCTUATION_ONLY"
+  ],
+  "generation_law": {
+    "source_dialogue_hash_required": true,
+    "actual_request_hash_required": true,
+    "voice_id_must_come_from_approved_bindings": true,
+    "no_full_episode_single_pass": true,
+    "selective_regeneration_only": true,
+    "no_provider_call_before_validator_pass": true,
+    "no_paid_s0_without_separate_authorization_artifact": true
+  },
+  "requests": []
+}
