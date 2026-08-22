@@ -1,0 +1,20 @@
+name: Personal AI PL-02 Memory Contract Hardening
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl02-memory-contract-hardening.yml'
+
+jobs:
+  pl02-memory-contract-hardening:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run PL-02 contract hardening tests
+        run: python -m unittest personal-ai/tests/test_memory_contract.py -v
+      - name: Run full Personal AI regression suite
+        run: python -m unittest discover -s personal-ai/tests -v

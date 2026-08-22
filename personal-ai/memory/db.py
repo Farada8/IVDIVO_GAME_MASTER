@@ -36,6 +36,30 @@ class SQLiteStore:
     def initialize(self) -> None:
         with self.connect() as conn:
             conn.executescript(SCHEMA)
+            # Compatibility preflight for the PL-02 baseline schema.  The
+            # hardened MemoryStore creates indexes on these columns, so legacy
+            # databases must receive the additive columns before that schema
+            # is executed.  No content rows are rewritten here.
+            exists = conn.execute(
+                "SELECT 1 FROM sqlite_master WHERE type='table' AND name='memory_records'"
+            ).fetchone()
+            if exists:
+                columns = {
+                    row[1]
+                    for row in conn.execute("PRAGMA table_info(memory_records)").fetchall()
+                }
+                additions = {
+                    "project_id": "TEXT",
+                    "source_id": "TEXT",
+                    "confidence": "REAL",
+                    "content_hash": "TEXT",
+                    "version": "INTEGER NOT NULL DEFAULT 1",
+                }
+                for name, sql_type in additions.items():
+                    if name not in columns:
+                        conn.execute(
+                            f"ALTER TABLE memory_records ADD COLUMN {name} {sql_type}"
+                        )
 
     def ensure_demo(self, created_at: str) -> None:
         with self.connect() as conn:
