@@ -1,0 +1,37 @@
+name: General Business P-EW06 Tokenomics Proof
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/28_TOKENOMICS_PEW06_INTERNAL_PROOF/**'
+      - '.github/workflows/general-business-pew06-tokenomics-proof.yml'
+
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run P-EW06 deterministic proof tests
+        run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/28_TOKENOMICS_PEW06_INTERNAL_PROOF/tests/test_proof.py
+      - name: Verify runtime output equals predeclared expected result
+        run: |
+          python - <<'PY'
+          import importlib.util, json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/28_TOKENOMICS_PEW06_INTERNAL_PROOF')
+          spec = importlib.util.spec_from_file_location('pew06', root/'proof.py')
+          mod = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(mod)
+          payload = json.loads((root/'01_FIXTURES.json').read_text())
+          expected = json.loads((root/'02_EXPECTED_RESULT.json').read_text())
+          actual = mod.compute(payload)
+          assert actual == expected, (actual, expected)
+          assert actual['technical_result'] == 'PASS_TECHNICAL_GAP_ONLY'
+          assert actual['commercial_result'] == 'HOLD_COMMERCIAL_DIFFERENTIATION_UNPROVEN'
+          assert actual['wip_promotion'] is False
+          assert actual['external_action_authorized'] is False
+          print('P-EW06 PASS: technical decision-error gap demonstrated; commercial differentiation remains HOLD')
+          PY
