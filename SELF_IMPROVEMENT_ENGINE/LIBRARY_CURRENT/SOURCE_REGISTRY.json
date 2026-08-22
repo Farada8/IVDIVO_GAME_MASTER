@@ -1,44 +1,142 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.2",
+  "updated": "2026-08-22",
   "library": "IVDIVO_SELF_IMPROVEMENT_ENGINEERING_LIBRARY",
+  "status": "CURRENT_INDEX_WITH_PRIVATE_RAW_POINTERS_AND_CANDIDATE_EVIDENCE",
   "current_authority": {
     "github_engine": "IVDIVO_NARRATIVE_OS/18_SELF_IMPROVEMENT_META_ENGINE_v2.0.md",
     "github_state": "CURRENT_IVDIVO_SELF_IMPROVEMENT_STATE.json",
-    "drive_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0"
+    "drive_authority_id": "1xare6Mz0FG6fDsY5QWx-hirI9D4A4BPtSG6vXY4sPa0",
+    "authority_effect_of_this_registry_update": "NONE"
   },
+  "identity_law": "PHYSICAL_FILE != BYTE_HASH != CANONICAL_WORK != DERIVED_MECHANISM != AUTHORITY",
   "private_uploaded_source_pointers": [
     {
-      "title": "systems analysis books",
+      "title": "systems / self-improvement books",
       "drive_folder_id": "1F_21NJ9YXB63ctOS5KPrkeDlcYKkUTVv",
-      "handling": "PRIVATE_RAW_REFERENCE"
+      "handling": "PRIVATE_RAW_REFERENCE",
+      "physical_entries_observed": 35,
+      "unique_work_count": null,
+      "byte_hash_dedup_complete": false,
+      "note": "35 is a physical-entry observation only; duplicates, alternate formats and small/broken placeholders are not silently treated as unique valid works."
     },
     {
       "title": "business books",
       "drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
-      "handling": "PRIVATE_RAW_REFERENCE"
+      "handling": "PRIVATE_RAW_REFERENCE",
+      "physical_entries_reported": 78,
+      "valid_entries_reported": 68,
+      "unique_valid_byte_hashes_reported": 58,
+      "broken_quarantined_reported": 5,
+      "exact_duplicate_groups_reported": 8,
+      "note": "Counts are inherited from current Business Engineering evidence and remain distinct from canonical-work count."
     },
     {
       "title": "Self-Improvement Reference Ingest Wave2",
       "drive_folder_id": "1RdYaeSJtim_Bvu6U57QpMjJzIvkuOQ0-",
-      "handling": "DERIVED_REFERENCE_INGEST"
+      "handling": "DERIVED_REFERENCE_INGEST_CANDIDATE_ONLY"
+    },
+    {
+      "title": "Cycle10 consolidated private/index library",
+      "drive_folder_id": "1NUe4Ge-A2DAqa-1BeF6dETLpUiq7mqgQ",
+      "handling": "DERIVED_INDEX_AND_PRIVATE_UPLOAD_POINTER_LIBRARY",
+      "raw_user_upload_folder_id": "1zppqxY_YD2fnWdhWM89sUrXYtduBrEZd",
+      "engineering_reference_folder_id": "1quQTeBsTaskht1eGmnYQSNm6FSJpRZNE",
+      "authority_effect": "NONE"
     }
   ],
   "evidence_cycles": [
     {
       "cycle": "Cycle7 Durable Convergence",
       "drive_id": "1tjsajMhfa_-GjuuiUnysbTBMrhk944Dq",
+      "status": "HISTORICAL_EVIDENCE_LAYER",
       "authority_effect": "NONE"
     },
     {
       "cycle": "Cycle8 Story Adapter Real Pilot",
       "drive_id": "1UpkOWRDj1XOYEHS9toyBMJwm5Aq6lLqL",
+      "status": "HISTORICAL_EVIDENCE_LAYER",
       "authority_effect": "NONE"
     },
     {
       "cycle": "Cycle9 Real Interruption + Convergence",
       "drive_id": "1HExzpVUcs2z7ObkVPYiLRQIZ3N8le4eV",
-      "authority_effect": "NONE_PENDING_CLOSURE"
+      "status": "MERGED_EVIDENCE_LAYER_WITH_GENUINE_RECOVERY_EVENT_001",
+      "merge_commit": "ee49be52766e2f70ae010281804ffdebd6538796",
+      "original_recovery_state_commit": "25980c93bbcd43ecea6bed80585e12050db88263",
+      "si_0014_ledger_v1_1_merge_commit": "1998ec605d72889d4d2fd11e270298833b846400",
+      "physical_interruption_incidents": "1_of_3",
+      "project_recovery_slices": "2_projects_satisfied",
+      "false_resume_observed": 0,
+      "telemetry_unknowns_remain_null": true,
+      "authority_effect": "NONE_V2_REMAINS_CURRENT"
+    },
+    {
+      "cycle": "Cycle10 Decision / Evidence Yield",
+      "drive_library_root": "1NUe4Ge-A2DAqa-1BeF6dETLpUiq7mqgQ",
+      "drive_cycle_id": "1l99ycTCvdP1HLwMkAoTTW3qPePUEUObd",
+      "github_pr": 217,
+      "status": "CANDIDATE_ONLY_SUPPORTING",
+      "run32": "EXECUTED_32_OF_32",
+      "tests": "32_OF_32_LOCAL_DETERMINISTIC_PASS_REPORTED",
+      "next64": "DESIGNED_NOT_BLINDLY_AUTHORIZED",
+      "authority_effect": "NONE"
+    },
+    {
+      "cycle": "Cycle10R Recovery / Persistence Convergence",
+      "drive_id": "19BbmeqbZpQWfhvMgymblOb1GEGzCOho-",
+      "github_pr": 221,
+      "status": "CANDIDATE_ONLY_RESIDUAL_RECOVERY_PERSISTENCE",
+      "run32": "EXECUTED_32_OF_32",
+      "next64": "DESIGNED_NOT_BLINDLY_AUTHORIZED",
+      "closure_doc_id": "1AtUY1e1TdYB7HW-5gsr9R5VBt-Qk2ZT5OQP_TQq4Lx4",
+      "closure_state": "NOT_CLOSED_EMPTY_AT_LAST_READBACK",
+      "authority_effect": "NONE"
+    },
+    {
+      "cycle": "Cycle32D Decision Yield / Verified Persistence",
+      "drive_id": "1vhdWdbtNeAnMGW9mxmwqwU3w75mHgM_y",
+      "github_prs": [206, 218],
+      "status": "REFERENCE_ONLY_SALVAGE_UNIQUE_MECHANISMS",
+      "accepted_mechanism": "WRITE_CLAIM_NEQ_PERSISTED_ARTIFACT",
+      "authority_effect": "NONE"
     }
   ],
-  "copyright_boundary": "Do not copy raw copyrighted book binaries into public GitHub; store metadata/pointers/derived mechanisms only."
+  "known_private_and_generated_assets": [
+    {
+      "name": "NINETY_MISSING_MINUTES_PHASE_A_B_v1.0.md",
+      "drive_file_id": "1UKoGOlHyoFc8G2E9lfJ_BYZZwBYQJH-h",
+      "classification": "PRIVATE_USER_UPLOAD_REFERENCE",
+      "github_raw": false
+    },
+    {
+      "name": "NMM_CYCLE6_SOURCE_PROVIDER_32X64_2026-08-21_v2.zip",
+      "drive_file_id": "1bXSWliYu1mUfuNij7MfAtBtQC3Mx-bNP",
+      "classification": "GENERATED_ENGINEERING_REFERENCE"
+    },
+    {
+      "name": "BUSINESS_ENGINEERING_OS_CYCLE5_N129_N160_2026-08-22.zip",
+      "drive_file_id": "1ru82QRrdOqFf06M2s7LC3n9OdlfsbBJV",
+      "classification": "GENERATED_ENGINEERING_REFERENCE"
+    },
+    {
+      "name": "IVDIVO_SELF_IMPROVEMENT_CYCLE10_DECISION_EVIDENCE_YIELD_32X64_2026-08-22_v2.zip",
+      "drive_file_id": "17yQ1oHd9zOFAJ8q1ckDmNebPCx_asppA",
+      "classification": "CYCLE10_CANDIDATE_ENGINEERING_PACKAGE"
+    }
+  ],
+  "file_library_layer": {
+    "handling": "REFERENCE_ONLY_UNLESS_BYTES_OR_PERSISTED_ID_ARE_RESOLVED",
+    "known_cycle32d_artifacts": [
+      "00_MASTER_CYCLE32D.md",
+      "01_RUN32_EXECUTION_REGISTRY.md",
+      "02_ENGINEERING_CONTRACTS_v0_2.json",
+      "03_PROOFS_CANARIES_PROTOCOLS.md",
+      "04_PARALLEL_DEVELOPMENT_ANALYSIS.md",
+      "05_MACHINE_STATE.json",
+      "06_NEXT64_PROMPTS.md"
+    ]
+  },
+  "copyright_boundary": "Do not copy raw copyrighted book binaries into public GitHub; store metadata/pointers/provenance/derived mechanisms only.",
+  "persistence_law": "WRITE_CLAIM != PERSISTED_ARTIFACT; material persistence requires destination plus non-empty semantic readback."
 }
