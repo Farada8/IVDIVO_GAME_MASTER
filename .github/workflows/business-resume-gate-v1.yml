@@ -1,0 +1,62 @@
+name: Business Resume Gate v1
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/**'
+      - 'BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/PROC_BALLYBUNION_8872468_P225_P235_UNLOCK.md'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json'
+      - '.github/workflows/business-resume-gate-v1.yml'
+
+jobs:
+  resume-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run deterministic resume-gate suite
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/tests/test_business_resume_gate.py
+      - name: Validate current fixture, unlock intake and canonical read model
+        run: |
+          python - <<'PY'
+          import json, importlib.util
+          from pathlib import Path
+          root = Path('.')
+          base = root/'BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1'
+          model = json.loads((root/'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json').read_text())
+          fixture = json.loads((base/'fixtures/CURRENT_PROC_BALLYBUNION_8872468_RESUME_STATE.json').read_text())
+          intake_path = root/fixture['unlock_intake_path']
+          assert intake_path.exists(), intake_path
+          intake = intake_path.read_text()
+          spec = importlib.util.spec_from_file_location('business_resume_gate', base/'runtime/business_resume_gate.py')
+          mod = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(mod)
+          state_keys = {
+              'target_pack_acquired', 'target_requirement_registry_ready', 'actual_bidder_designation',
+              'authoritative_bidder_packet_ready', 'frozen_target_manifest', 'frozen_bidder_manifest',
+              'bounded_decision_packet_ready', 'independent_reviewer_ready',
+              'external_interaction_authorized', 'real_decision_use_ready'
+          }
+          state = mod.BusinessResumeState(**{k: fixture[k] for k in state_keys})
+          out = mod.route_business_resume(state)
+          assert fixture['schema'] == 'ivdivo.business.resume_state/1.1'
+          assert model['current_execution']['completed_total_cards_inside_parent_backlog'] == 17
+          assert model['current_execution']['remaining_unexecuted_count'] == 47
+          assert model['current_roots']['ROOT_A'] == fixture['root_a']
+          assert model['current_roots']['ROOT_B'] == fixture['root_b']
+          assert fixture['unlock_intake_expected_status'] in intake
+          assert 'ROOT_A = TARGET_PACK_NOT_ACQUIRED' in intake
+          assert 'ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET' in intake
+          assert 'Authority effect:** none until the specified input is actually supplied and read back' in intake
+          assert '`PROTECT_NO_CHANGE`' in intake
+          assert out['route'] == fixture['expected_route'] == 'PROTECT_NO_CHANGE'
+          assert out['reason'] == fixture['expected_reason']
+          assert out['external_action_authorized'] is False
+          assert out['proof_promotion'] is False
+          assert fixture['p288_replay_forbidden'] is True
+          print('BUSINESS_RESUME_GATE_CURRENT_FIXTURE_AND_INTAKE: PASS')
+          PY
+      - name: Compile runtime
+        run: python -m compileall -q BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/runtime
