@@ -1,0 +1,42 @@
+name: Money Local Service P25-P32
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/18_LOCAL_SERVICE_P25_P32_EXECUTION.md'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_LOCAL_SERVICE_ROUTING.json'
+      - '.github/workflows/money-local-service-p25-p32.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate local service evidence boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1')
+          doc = (root/'18_LOCAL_SERVICE_P25_P32_EXECUTION.md').read_text()
+          data = json.loads((root/'19_LOCAL_SERVICE_ROUTING.json').read_text())
+          assert len(data['packages']) == 3
+          assert data['current_route'].startswith('HOLD')
+          assert data['economics']['direct_labour_cost'] is None
+          assert data['economics']['subcontract_quote'] is None
+          assert data['economics']['observed_close_rate'] is None
+          assert data['economics']['observed_acquisition_cost'] is None
+          assert data['economics']['max_affordable_acquisition_cost'] is None
+          assert data['economics']['profitable_route_proven'] is False
+          assert data['external_evidence']['outreach'] == 0
+          assert data['external_evidence']['spend_eur'] == 0
+          assert data['external_evidence']['jobs_created'] == 0
+          assert data['external_evidence']['transactions'] == 0
+          assert data['external_evidence']['wtp'] is None
+          assert set(data['routes']) == {'DIRECT','SUBCONTRACT','REFERRAL_ONLY','HOLD'}
+          assert 'READBACK_MARKER: MONEY-LOCAL-SERVICE-P25-P32-ROUTER-HOLD-COSTS-NULL-0-SPEND' in doc
+          print('MONEY_LOCAL_SERVICE_P25_P32: PASS')
+          PY
