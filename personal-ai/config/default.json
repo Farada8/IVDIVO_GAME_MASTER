@@ -1,0 +1,8 @@
+{
+  "schema": "ivdivo.personal_ai.config/0.1",
+  "runtime_dir": "runtime",
+  "database": "runtime/state.db",
+  "log_file": "logs/bootstrap.log",
+  "provider": "mock_or_none",
+  "paid_api_required": false
+}
