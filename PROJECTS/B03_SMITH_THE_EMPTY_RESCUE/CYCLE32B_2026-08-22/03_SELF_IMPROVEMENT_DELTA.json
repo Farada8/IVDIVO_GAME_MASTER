@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-08-22",
+  "source_project":"IVDIVO_BOOK_3_SMITH_THE_EMPTY_RESCUE",
+  "cycle":"CYCLE32B_2026-08-22",
+  "status":"PROJECT_EVIDENCE_DELTA_NO_AUTOMATIC_UNIVERSAL_PROMOTION",
+  "registry_freshness":{"family_schema":"1.5","known_ids":"SI-0001..SI-0015","new_id_allocated":false,"reason":"Business engine has no real product pilot and Cycle32B discoveries largely dedupe to existing current mechanisms."},
+  "observations":[
+    {"id":"C32B-L01","type":"CONCURRENCY_STATE_RISK","evidence":"B03 branch measured 28 commits ahead and 338 behind main.","learning":"Project-state freshness and shared-engine freshness are separate dimensions; use semantic rebase before project writes on long-lived branches.","disposition":"KEEP_PROJECT_RULE_REUSE_EXISTING_SI_0015_SI_0007"},
+    {"id":"C32B-L02","type":"LIVE_MANUSCRIPT_DEFECT","severity":"MAJOR","evidence":"CH08 gave Davor knowledge of Miha inside quarantined predictive content without a transmission event.","learning":"Source provenance must gate actual possession of knowledge: who knows this, from which version, when, and by what path.","disposition":"PATCH_EXISTING_C3M04_KNOWLEDGE_BOUNDARY_APPLICATION","status":"REPAIRED"},
+    {"id":"C32B-L03","type":"CORPUS_CALIBRATION_RESULT","severity":"MAJOR_CORPUS_RISK","evidence":"CH07-09 repeated correction/reframe grammar across Enia, Davor, Jana, Smith and narrator despite local scene viability.","learning":"Scene-level Human Scene pass does not certify corpus rhetorical ownership.","disposition":"VALIDATES_EXISTING_C3M12_NO_DUPLICATE_CANDIDATE","status":"TARGETED_REPAIRS_APPLIED"},
+    {"id":"C32B-L04","type":"PRODUCTION_ARCHITECTURE","evidence":"Founder requested business engineering while B03 manuscript production is active.","learning":"Business/productization must be downstream of authorized story state and may not become a competing optimization objective.","disposition":"LOCAL_BUSINESS_ENGINE_CANDIDATE_HOLD_FOR_PILOT"},
+    {"id":"C32B-L05","type":"EVIDENCE_FIREWALL","evidence":"Business decisions can conflate story, rights/legal, provider, cost, Human Signal and market evidence.","learning":"These evidence classes must remain separate through release and learning gates.","disposition":"KEEP_IN_LOCAL_BUSINESS_ENGINE_COMPATIBLE_WITH_SELF_IMPROVEMENT_V2"}
+  ],
+  "promotion_decisions":{"semantic_rebase":"KEEP_EXISTING","knowledge_boundary_gate":"PATCH_LOCAL_WATCH_FOR_RECURRENCE","contrastive_syntax_fingerprint":"KEEP_EXISTING_CURRENT_C3M12","business_production_engine":"HOLD_FOR_REAL_LOCKED_PRODUCT_PILOT","new_si_candidate":"NOT_CREATED"},
+  "evidence_firewall":"No Human Signal, market, provider execution or jurisdiction-specific legal proof is claimed.",
+  "drive_delta_id":"1DH1hCsNdUVY8d0PGClrnfr6H6Fq6SEYL94X7SenOQ5s",
+  "next_action":"Persist B03 state to CH10, draft CH10-12 through gates, then select a locked product for bounded Business Engine pilot."
+}
