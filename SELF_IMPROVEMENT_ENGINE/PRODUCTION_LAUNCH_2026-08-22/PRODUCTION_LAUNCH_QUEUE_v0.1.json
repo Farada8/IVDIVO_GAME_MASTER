@@ -3,8 +3,8 @@
   "date": "2026-08-22",
   "authority_effect": "NONE",
   "self_improvement_authority": "V2_VERIFIED_CURRENT",
-  "queue_status": "FOUNDATION_ACTIVE",
-  "current_frontier": "PL-11",
+  "queue_status": "REAL_PRODUCTION_ACTIVE",
+  "current_frontier": "PL-06",
   "completion_rule": "DONE_VERIFIED requires persisted implementation plus required tests/readback; prompt execution alone is insufficient",
   "statuses": ["READY", "WAITING_DEPENDENCY", "RUNNING", "BLOCKED", "DONE_VERIFIED", "DESIGN_ONLY", "FAILED"],
   "waves": [
@@ -26,8 +26,8 @@
     {"id":"PL-08","title":"Book Production Core","wave":2,"status":"READY","depends_on":["PL-01","PL-02","PL-04"],"acceptance":"book state machine blocks FINAL until continuity gate passes"},
     {"id":"PL-09","title":"Continuity Checker","wave":2,"status":"WAITING_DEPENDENCY","depends_on":["PL-08"],"acceptance":"known continuity fixtures yield severity-tagged evidence pairs"},
     {"id":"PL-10","title":"Multi-Model Review","wave":3,"status":"READY","depends_on":["PL-04","PL-05"],"acceptance":"independent critics remain isolated until aggregation"},
-    {"id":"PL-11","title":"Test Benchmark Engine","wave":1,"status":"READY","depends_on":["PL-00"],"acceptance":"baseline/candidate/delta PASS-FAIL runner rejects critical regression"},
-    {"id":"PL-12","title":"Change Control","wave":3,"status":"WAITING_DEPENDENCY","depends_on":["PL-11"],"acceptance":"patch lifecycle records tests/benchmark/decision and supports rollback"},
+    {"id":"PL-11","title":"Test Benchmark Engine","wave":1,"status":"DONE_VERIFIED","depends_on":["PL-00"],"acceptance":"baseline/candidate/delta PASS-FAIL runner rejects critical regression"},
+    {"id":"PL-12","title":"Change Control","wave":3,"status":"READY","depends_on":["PL-11"],"acceptance":"patch lifecycle records tests/benchmark/decision and supports rollback"},
     {"id":"PL-13","title":"File Ingestion","wave":2,"status":"READY","depends_on":["PL-02"],"acceptance":"supported inputs are hashed, represented and deduplicated"},
     {"id":"PL-14","title":"Personal Knowledge Search","wave":2,"status":"WAITING_DEPENDENCY","depends_on":["PL-02","PL-13"],"acceptance":"ask command retrieves project/docs/decisions/state with source separation"},
     {"id":"PL-15","title":"Daily Control Panel","wave":4,"status":"READY","depends_on":["PL-01","PL-02"],"acceptance":"today command reports real stored projects/tasks/failures only"},
@@ -48,6 +48,7 @@
     "PL-01 verified by PR #294 merge 566fbc00dea63e89257fe6eb4abc26e130e0a663; PL-00 regression + PL-01 CI SUCCESS; Drive readback folder 1kNuZY2ivHEkXHFn9D7HLujQxZf7EvGUO.",
     "PL-02 baseline verified by PR #299 merge 5a9337f2a416edbacdf4a85f02efdc1e27511bf9; contract hardening verified by PR #309 merge d82020c7967c2c3dc1b22e4469974757d7aaf0bc; exact-head PL-00/01/02/hardening CI 4/4 SUCCESS; hardening Drive readback folder 1MhVtyPF89UPpvLvPcBeQis4wdBXmeN6C, document 1IYlQfZOt7yI4GaQVBjDuL36yuIjvIPe9GFEO8HsAt5w, marker PERSONAL-AI-PL02-DONE-VERIFIED-PR309-CI4OF4.",
     "PL-04 baseline verified by PR #321 merge d5e17a9ed75b724b4e6920e71bce4388ff804196; original four-operation contract completed by PR #328 merge 268a7d33c83d5551b9276b1a7a3551c76eb584fd with generate/analyze/classify/extract, ProviderConfig and canonical OpenAIProvider/AnthropicProvider/OllamaProvider; corrective exact-head PL-00/01/02/02-hardening/04 CI 5/5 SUCCESS (32556833749, 32556833763, 32556833754, 32556833779, 32556833757); Drive folder 1NB6hVQVjUlK6wiSMsyrRgk0pX6bFkjgy, document 1m9vfHsbMgrC_7hvIL2t9A1RUvTE7OdhhMImIxkwqQww, marker PERSONAL-AI-PL04-DONE-VERIFIED-PR321-PR328-CI5OF5-CONTRACT4OPS. Live provider calls remain unverified and were not required for PL-04 acceptance.",
-    "PL-05 verified by PR #336 merge 876d0e4ca7f581be40f88b9be86f4a4da1894928; verified head d20b104e93e61cc87e1e180d4ea879a5e23f75c5; exact-head/merge-ref PL-00/01/02/02-hardening/04/05 CI 6/6 SUCCESS (32557296842, 32557296835, 32557296948, 32557296930, 32557296830, 32557296781); bounded executor persists task lifecycle, OUTPUT memory and JSONL logs; Drive folder 1hhgo94czLN6Qz4p9qNdMjxcZvf0ih0G3, document 1Y0Zww7H003dYjlF-CsCV9vINt76mYZPkTLizcjF7764, marker PERSONAL-AI-PL05-DONE-VERIFIED-PR336-CI6OF6. No live provider or autonomous-tool evidence is inferred."
+    "PL-05 verified by PR #336 merge 876d0e4ca7f581be40f88b9be86f4a4da1894928; verified head d20b104e93e61cc87e1e180d4ea879a5e23f75c5; exact-head/merge-ref PL-00/01/02/02-hardening/04/05 CI 6/6 SUCCESS (32557296842, 32557296835, 32557296948, 32557296930, 32557296830, 32557296781); bounded executor persists task lifecycle, OUTPUT memory and JSONL logs; Drive folder 1hhgo94czLN6Qz4p9qNdMjxcZvf0ih0G3, document 1Y0Zww7H003dYjlF-CsCV9vINt76mYZPkTLizcjF7764, marker PERSONAL-AI-PL05-DONE-VERIFIED-PR336-CI6OF6. No live provider or autonomous-tool evidence is inferred.",
+    "PL-11 verified by PR #345 merge 7480f261e26bd2be58c10f814aa1ea27056e8a69; verified refreshed head 8d09d5d9171a21cff9e7b8958e6496d0796ba900; exact-head PL-00/01/02/02-hardening/04/05/11 CI 7/7 SUCCESS (32557771235, 32557771273, 32557771252, 32557771152, 32557771137, 32557771211, 32557771276); critical regression overrides aggregate gains and --enforce produces a non-zero FAIL gate; Drive folder 1XAsNDfR3VZtUCkQRpUT2vqV9k_-lwwbL, document 1NhxssgezKnsKrcameuzM62q3Rde7nuazNBPNTmf_aqQ, marker PERSONAL-AI-PL11-DONE-VERIFIED-PR345-CI7OF7. Wave-1 foundation is complete."
   ]
 }
