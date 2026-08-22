@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "updated": "2026-08-22",
   "status": "ENGINEERING_CURRENT_AWAITING_REAL_DOMAIN_PILOT",
   "authority": "BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.0.md",
@@ -18,6 +18,13 @@
     "official_open_or_access_only_web": 8
   },
   "full_read_claims_created_by_cycle1": 0,
+  "drive_mirror": {
+    "folder_id": "1YaCto6NxrRRsbgUI1PoySLNBdna9xq6r",
+    "authority_doc_id": "1HHQ4Lcq0p3R5KFHbfzXemv5tMctOCNGt4CFYdXaV__Y",
+    "source_manifest_doc_id": "1GvKeoaB8DdLEZEAJ6CJAKI2N1EvQlOkt3iq5BIhhgUk",
+    "cycle1_and_adapter_doc_id": "1o7daILw9ebuj2RYtQY7b3eLF3667rYH1agXV5lX4xTM",
+    "readback_status": "AUTHORITY_DOC_READBACK_PASS; OTHER_DOCS_PENDING_FINAL_READBACK_AT_STATE_UPDATE"
+  },
   "key_guards": [
     "NO_FALSE_FULL_READ",
     "SOURCE_PASSPORT_REQUIRED",
@@ -32,8 +39,10 @@
   "domain_adapters": ["STORY", "AUDIO", "BUSINESS", "SELF_IMPROVEMENT", "RESEARCH", "GAME", "VISUAL", "OPERATIONS", "GENERAL"],
   "engineering_verification": {
     "local_contract_tests": "13/13 PASS",
-    "github_ci": "NOT_YET_OBSERVED_AT_STATE_CREATION",
+    "github_ci": "NOT_YET_OBSERVED",
     "runtime_source_inspection": "PASS",
+    "narrative_router_integration": "PASS",
+    "aggregate_system_state_integration": "PASS",
     "real_project_validation": "NOT_YET_RUN"
   },
   "next_obligations": [
