@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "updated": "2026-08-22",
-  "status": "V1_1_ENGINEERING_VERIFIED_CURRENT_PROJECT_VALIDATION_PENDING",
+  "status": "V1_1_ENGINEERING_VERIFIED_CURRENT_ONE_PROSPECTIVE_REAL_PROJECT_VALIDATION_SECOND_REQUIRED",
   "authority": "BOOK_INTELLIGENCE_ENGINE/00_BOOK_INTELLIGENCE_ENGINE_CANON_v1.1.md",
   "runtime": "tools/ivdivo_book_intelligence.py",
   "runtime_version": "1.1",
@@ -23,7 +23,11 @@
   "current_source_register_count": 13,
   "full_read_claims_created_by_cycle1": 0,
   "v1_1_source_model": {
-    "dimensions": ["integrity_status", "read_coverage", "extraction_stage"],
+    "dimensions": [
+      "integrity_status",
+      "read_coverage",
+      "extraction_stage"
+    ],
     "law": "EXTRACTION_STAGE_DOES_NOT_IMPLY_FULL_READ",
     "legacy_lifecycle_stage": "COMPATIBILITY_ONLY",
     "nasa_state": {
@@ -36,7 +40,13 @@
   "v1_1_evidence_model": {
     "engineering_verification_counts_as_real_validation": false,
     "legacy_unclassified_counts_as_real_validation": false,
-    "real_validation_classes": ["REAL_PROJECT_VALIDATION", "HUMAN_VALIDATION", "PROVIDER_VALIDATION", "MARKET_VALIDATION", "FACTUAL_SPECIALIST_VALIDATION"],
+    "real_validation_classes": [
+      "REAL_PROJECT_VALIDATION",
+      "HUMAN_VALIDATION",
+      "PROVIDER_VALIDATION",
+      "MARKET_VALIDATION",
+      "FACTUAL_SPECIALIST_VALIDATION"
+    ],
     "promotion_requires_bidirectional_traceability": true
   },
   "engineering_verification": {
@@ -76,7 +86,12 @@
     "result": "PASS_REAL_PRODUCTION_BENEFIT",
     "evidence_class_for_v1_0_architecture": "REAL_PROJECT_VALIDATION",
     "v1_1_relation": "RETROSPECTIVE_TRACE_AUDIT_ONLY",
-    "observed_gain": ["DETECTED_STALE_FRONTIER", "RECOVERED_CURRENT_CH25_CH29_LINEAGE", "PREVENTED_DUPLICATE_PROSE", "RESTORED_P72_v0_2_FRONTIER"]
+    "observed_gain": [
+      "DETECTED_STALE_FRONTIER",
+      "RECOVERED_CURRENT_CH25_CH29_LINEAGE",
+      "PREVENTED_DUPLICATE_PROSE",
+      "RESTORED_P72_v0_2_FRONTIER"
+    ]
   },
   "pilot2": {
     "project_id": "PROC-BALLYBUNION-8872468",
@@ -92,23 +107,34 @@
   "nasa_source_pass": {
     "source_id": "OPEN-NASA-SE-HANDBOOK",
     "status": "PARTIAL_TARGETED_MECHANISMS_EXTRACTED_NOT_FULL_READ",
-    "mechanisms": ["VERIFY_VALIDATE_SPLIT", "BIDIRECTIONAL_TRACEABILITY_GRAPH", "CHANGE_IMPACT_SET", "DECISION_FIRST_RESEARCH_DEPTH"],
+    "mechanisms": [
+      "VERIFY_VALIDATE_SPLIT",
+      "BIDIRECTIONAL_TRACEABILITY_GRAPH",
+      "CHANGE_IMPACT_SET",
+      "DECISION_FIRST_RESEARCH_DEPTH"
+    ],
     "raw_pdf_drive_copy": "NOT_ACQUIRED_BINARY_TRANSFER_FAILED",
     "official_source_pointer_preserved": true
   },
   "promotion": {
     "v1_1_engineering_status": "VERIFIED_CURRENT",
-    "v1_1_project_validation": "PENDING_PROSPECTIVE_APPLICATION",
+    "v1_1_project_validation": "ONE_PROSPECTIVE_REAL_PROJECT_PASS",
     "universal_new_architecture_mechanism_promotion": "HOLD",
-    "reason": "ENGINEERING_VERIFICATION_CLOSED_BUT_PROSPECTIVE_REAL_PROJECT_GAIN_FOR_V1_1_NOT_YET_PROVEN",
-    "do_not_claim": ["FULL_NASA_READ", "NASA_PDF_DOWNLOADED_TO_DRIVE", "UNIVERSAL_PROMOTION", "RETROSPECTIVE_AUDIT_AS_CAUSAL_VALIDATION"]
+    "reason": "ONE_PROSPECTIVE_REAL_PROJECT_WITH_OBSERVABLE_GAIN_COMPLETE_SECOND_INDEPENDENT_PROSPECTIVE_PROJECT_STILL_REQUIRED",
+    "do_not_claim": [
+      "FULL_NASA_READ",
+      "NASA_PDF_DOWNLOADED_TO_DRIVE",
+      "UNIVERSAL_PROMOTION",
+      "RETROSPECTIVE_AUDIT_AS_CAUSAL_VALIDATION",
+      "B03_STORY_REOPENED_AFTER_FOUNDER_LOCK"
+    ]
   },
   "next_obligations": [
-    "UPDATE_DRIVE_CURRENT_AUTHORITY_AND_SOURCE_MANIFEST_WITH_V1_1_SUPERSEDING_DELTA",
-    "ROUTE_OLD_V1_0_COMPATIBILITY_ENTRY_TO_V1_1",
-    "RUN_FIRST_PROSPECTIVE_REAL_PROJECT_APPLICATION_OF_V1_1_TRACEABILITY_OR_CHANGE_IMPACT",
-    "MEASURE_INCREMENTAL_GAIN_OR_HOLD",
-    "CONTINUE_PROBLEM_TARGETED_OPEN_SOURCE_EXTRACTION_WITH_NO_FALSE_FULL_READ"
+    "RUN_SECOND_INDEPENDENT_PROSPECTIVE_REAL_PROJECT_PILOT_WITH_OBSERVABLE_INCREMENTAL_GAIN",
+    "PREFER_NON_STORY_DOMAIN_TO_TEST_CROSS_DOMAIN_PORTABILITY",
+    "UPDATE_SOURCE_MANIFEST_FOR_TARGETED_GOOGLE_SRE_EXTRACTION_AND_NEXT_PILOT_SOURCE",
+    "WRITE_THROUGH_PILOT3_AND_SECOND_PILOT_TO_DRIVE_MIRROR_WITH_READBACK",
+    "PROMOTE_V1_1_UNIVERSALLY_ONLY_IF_SECOND_PILOT_GAIN_AND_FATAL_MAJOR_0"
   ],
   "stop_laws": [
     "DO_NOT_REREAD_WHOLE_LIBRARY_BY_DEFAULT",
@@ -118,5 +144,22 @@
     "DO_NOT_PROMOTE_ENGINE_JUST_BECAUSE_TESTS_EXIST",
     "DO_NOT_INFER_FULL_READ_FROM_MECHANISM_EXTRACTION",
     "DO_NOT_COUNT_ENGINEERING_VERIFICATION_AS_REAL_PROJECT_VALIDATION"
-  ]
+  ],
+  "pilot3_report": "BOOK_INTELLIGENCE_ENGINE/14_PILOT3_B03_NETWORK_FACTUAL_PROSPECTIVE_v1.1.md",
+  "pilot3_trace_bundle": "BOOK_INTELLIGENCE_ENGINE/15_PILOT3_B03_NETWORK_TRACEABILITY_BUNDLE_v1.1.json",
+  "pilot3": {
+    "project_id": "IVDIVO_BOOK_3_SMITH",
+    "domain": "STORY_FACTUAL_TECHNICAL_REVIEW",
+    "mode": "PROSPECTIVE_REAL_PROJECT_APPLICATION",
+    "result": "PASS_REAL_PROJECT_VALIDATION_WITH_TARGETED_REPAIR",
+    "observed_gain": {
+      "factual_defect_classes_found": 1,
+      "textual_occurrences_repaired": "3/3",
+      "dependent_chapters_rewritten": 0,
+      "story_regression": 0,
+      "closed_gate": "P72_M2_NETWORK_RELAY_TERMINOLOGY"
+    },
+    "current_project_reconciliation": "B03_NOW_FOUNDER_LOCKED_RELEASE_READY_AND_NETWORK_RELAY_FACTUAL_HOLD_PASS_AFTER_MINIMAL_TERMINOLOGY_REPAIR",
+    "further_story_changes_authorized": false
+  }
 }
