@@ -1,0 +1,1 @@
+GitHub publication branch: `business-engineering/design-production-adapter-v02-rebase-20260822`. Draft PR: #190. The branch is intentionally fail-closed: no force merge, no current-authority promotion, and no raw copyrighted source binaries. Drive contains the exact packaged artifact and cold-regression evidence.
