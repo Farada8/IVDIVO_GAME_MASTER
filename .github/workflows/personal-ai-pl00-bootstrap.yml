@@ -1,0 +1,23 @@
+name: Personal AI PL-00 Bootstrap
+
+on:
+  pull_request:
+    paths:
+      - 'personal-ai/**'
+      - '.github/workflows/personal-ai-pl00-bootstrap.yml'
+
+jobs:
+  pl00-bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run real persisted bootstrap smoke
+        run: |
+          python personal-ai/run.py --home "$RUNNER_TEMP/personal-ai-smoke"
+          test -f "$RUNNER_TEMP/personal-ai-smoke/runtime/state.db"
+          test -f "$RUNNER_TEMP/personal-ai-smoke/logs/bootstrap.log"
+      - name: Run PL-00 tests
+        run: python -m unittest discover -s personal-ai/tests -v
