@@ -1,0 +1,29 @@
+{
+  "schema": "chat_connector_live_interception_ledger_v1",
+  "date": "2026-08-22",
+  "parent_issue": 356,
+  "deployment_boundary_issue": 444,
+  "execution_surface": "CHAT_CONNECTOR",
+  "middleware_installed": false,
+  "enforcement_mode": "SYNCHRONOUS_OPERATIONAL_READBACK_GATE",
+  "required_sequence": [
+    "WRITE_OR_UPDATE_VIA_CHAT_CONNECTOR",
+    "READBACK_PROVIDER_METADATA_OR_CONTENT",
+    "READBACK_CANONICAL_INDEX_OR_CURRENT_POINTER",
+    "BUILD_CONNECTOR_PLACEMENT_CAPTURE",
+    "IF_FAILURE_BLOCK_COMPLETION_CLAIM_AND_PERSIST_EVENT",
+    "IF_VERIFIED_ONLY_THEN_ALLOW_COMPLETION_CLAIM"
+  ],
+  "admission_rule": {
+    "eligible_review_status": "ELIGIBLE_FOR_INDEPENDENT_LIVE_REVIEW",
+    "required_evidence_origin": "REAL_PROVIDER_READBACK",
+    "provider_readback_ref_required": true,
+    "captured_before_completion_claim_required": true,
+    "completion_claim_emitted_must_be": false,
+    "runtime_candidates_auto_promote": false,
+    "independent_review_required": true
+  },
+  "real_live_event_count": 0,
+  "events": [],
+  "note": "Append only with concurrency-safe GitHub update/readback. TEST_FIXTURE, REPLAY, UNKNOWN origin and post-claim incidents never increment real_live_event_count. An eligible event is still not promotion proof until independent provider-origin/readback review."
+}
