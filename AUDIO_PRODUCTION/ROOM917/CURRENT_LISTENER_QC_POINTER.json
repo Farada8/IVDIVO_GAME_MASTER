@@ -1,6 +1,6 @@
 {
-  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.2",
-  "updated": "2026-08-22T17:53:00+01:00",
+  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.3",
+  "updated": "2026-08-22T18:04:00+01:00",
   "project": "ROOM917",
   "episode": "E01",
   "authority": "THE_INSURABLE_FIRE",
@@ -24,6 +24,19 @@
         "BYTE_SHARED_SHA256_PRESERVED_FROM_ACCEPTED_SOURCE_BINDING"
       ],
       "does_not_prove": "NO_PRODUCTION_SOUND_ASSET_OR_HUMAN_LISTEN_WAS_APPROVED_BY_THIS_TEST"
+    },
+    "p003b_question_scope_gate": {
+      "merge_sha": "86546aaf9751f550ba8139b2a13ec44e5a47a6a2",
+      "result": "PASS",
+      "law": "BLIND_PACKAGE_EXPOSES_EXACTLY_SIX_FOUNDER_LOCKED_LISTENER_QC_QUESTIONS"
+    },
+    "p003b_blind_firewall_gate": {
+      "merge_sha": "376f6f71e8a30c8b1b6b8da938ecbdc83b55a4d2",
+      "workflow_run_id": 32586536547,
+      "result": "PASS",
+      "pass_a_visible": ["OPAQUE_STEREO_TARGET", "SIX_LOCKED_LISTENER_QC_QUESTIONS"],
+      "sealed_until_pass_a_notes_frozen": ["MACHINE_QC_STATUS", "MONO_FOLDDOWN", "PHONE_PROXY", "PASS_B_TARGETED_CANDIDATES", "TARGET_IDENTITY_KEY"],
+      "forbidden_pass_a_contamination": ["RETENTION", "MARKET_APPEAL", "NEXT_EPISODE_INTENT", "KNOWN_DEFECT_HINTS"]
     }
   },
   "drive": {
@@ -36,8 +49,12 @@
     "expected_full_master": "ROOM917_E01_FULL_EVALUATION_MASTER_24BIT_48K.wav",
     "expected_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
     "expected_duration_seconds": 658.190,
+    "allowed_target_identity_modes": ["IMMUTABLE_SOURCE_MASTER", "PROVENANCE_VERIFIED_DERIVED_CANDIDATE"],
+    "derived_candidate_parent_rule": "MUST_READ_EXACT_SOURCE_MASTER_BYTES_AND_VERIFY_IMMUTABLE_SOURCE_SHA_BEFORE_PROVENANCE_CAN_PASS",
     "current_byte_access": "UNVERIFIED_UNAVAILABLE_IN_CONTROLLED_DRIVE_FILE_LIBRARY_NAV_SEARCH",
-    "rule": "No P003B execution without identifiable accessible assembled audio or trustworthy derived audition audio."
+    "current_ready_for_pass_a_package": "NOT_FOUND",
+    "hard_blocker": "ACCESSIBLE_IDENTIFIABLE_ASSEMBLED_AUDIO_BYTES_REQUIRED",
+    "rule": "No P003B execution without identifiable accessible assembled audio or provenance-verified derived audition audio."
   },
   "scene3_audio_recovery": {
     "known_master_filename": "ROOM917_E01_SCENE3_MASTER_24BIT_48K.wav",
@@ -55,6 +72,7 @@
   },
   "procedure": [
     "VERIFY_AUDIO_IDENTITY",
+    "BUILD_BLIND_PACKAGE",
     "PASS_A_BLIND_STORY_FREE",
     "FREEZE_PASS_A_NOTES",
     "OPEN_PASS_B_VERIFICATION_QUEUE",
@@ -62,6 +80,7 @@
     "VERIFY_OR_REJECT_CANDIDATES",
     "COMPILE_SMALLEST_SELECTIVE_REPAIRS",
     "LOCAL_REGRESSION",
+    "OPEN_SEALED_PASS_C",
     "PASS_C_STEREO_MONO_MOBILE",
     "GO_NO_GO"
   ],
