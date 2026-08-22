@@ -1,0 +1,1 @@
+Fresh-main rebase branch created from the then-current `main`. If GitHub reports a transient or concurrent mergeability issue, do not force-merge; re-read current main and preserve only the unique Design Production Adapter delta. This branch contains no raw copyrighted source binaries and no current-authority promotion.
