@@ -1,0 +1,45 @@
+{
+  "artifact": "B03_CH01_SOUND_ASSET_CANARY_MANIFEST_v1",
+  "date": "2026-08-22",
+  "status": "READY_FOR_ASSET_CANARY / NO_GENERATION_CLAIMED",
+  "source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
+  "principle": "Buy/record only the smallest assets that can invalidate the Hard Pilot sound grammar before full CH01 asset production.",
+  "jobs": [
+    {
+      "job_id": "ASSET_C0_DRAINAGE_FLAP_IDENTITY_PAIR",
+      "targets": ["B03_CH01_SFX004", "B03_CH01_SFX008"],
+      "identity_ref": "ID_DRAINAGE_FLAP_FOUR_IMPACTS",
+      "goal": "prove same physical/rhythmic family with natural live-vs-mediated variation",
+      "required_outputs": ["first-call source candidate", "live-field source candidate", "comparison sidecar"],
+      "hard_fails": ["wrong impact count", "musicalized pattern", "supernatural ring", "sample-identical copy feel", "relationship lost in mono"],
+      "dispatch_allowed": false,
+      "blockers": ["ASSET_PROVIDER_OR_RECORDING_PATH_NOT_BOUND", "HUMAN_ACCEPTANCE_PENDING"]
+    },
+    {
+      "job_id": "ASSET_C1_UNKNOWN_CALL_TEXTURE",
+      "targets": ["B03_CH01_SFX003"],
+      "goal": "distinguish malformed call from ordinary phone while preserving every word",
+      "hard_fails": ["ghost coding", "synthetic monster glitch", "masked consonants", "effect becomes stronger clue than text"],
+      "dispatch_allowed": false,
+      "blockers": ["ASSET_PROVIDER_OR_PROCESSOR_PATH_NOT_BOUND"]
+    },
+    {
+      "job_id": "ASSET_C2_FIELD_RADIO_TEXTURE",
+      "targets": ["B03_CH01_SFX006"],
+      "goal": "credible public-safety radio mediation with clean verification/casualty intelligibility",
+      "hard_fails": ["military cliché", "excessive squelch", "word loss", "heroic responder coding"],
+      "dispatch_allowed": false,
+      "blockers": ["PROCESSOR_OR_REFERENCE_ASSET_PATH_NOT_BOUND"]
+    },
+    {
+      "job_id": "ASSET_C3_PLAYBACK_CHAIN",
+      "targets": ["B03_CH01_SFX009"],
+      "identity_ref": "ID_UNKNOWN_CALLER_SOURCE_VOICE",
+      "goal": "prove same accepted first-call take survives credible stored-playback treatment",
+      "hard_fails": ["new regenerated caller take", "identity drift", "pitch-shift identity change", "horror filter"],
+      "dispatch_allowed": false,
+      "blockers": ["ACCEPTED_UNKNOWN_CALLER_SOURCE_TAKE_REQUIRED"]
+    }
+  ],
+  "promotion_rule": "Only accepted canary assets/processing chains may seed Hard Pilot assembly. Full asset library generation remains blocked."
+}
