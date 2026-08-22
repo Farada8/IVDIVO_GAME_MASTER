@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "cycle": "CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22",
   "drive_root": {
     "id": "1HExzpVUcs2z7ObkVPYiLRQIZ3N8le4eV",
@@ -39,9 +39,21 @@
       "revision":"AIroW36YSRgEVc6poiOwD-Z6P56iUqe0RmfRBabULcIFrBvICEf2aFlqImepJHCPRvne68k5K0iJILGmU9cuyCckjatpczcBqWen762mMtU",
       "parent":"1rKR2n2hvIoqoaW9ZbbkGbyPrRFAM4a9-",
       "readback":"PASS"
+    },
+    {
+      "role":"GENUINE_INTERRUPTION_RECOVERY_EVENT_001_SELF_IMPROVEMENT",
+      "id":"1HaEp8hyn-w_Ul5xdngKeh_TxIrg1CmAAd2QPO7dhS5o",
+      "revision":"AIroW34x1dW_Tx3ACdigDwHINw049G9KqzbaEU4AoHWN9h2A9RjOZkdIYxImc9MnCRYClP0cOAPTlffLcPONcdLWH4efbeYDZGndYyh8NX4",
+      "parent":"1DE37xghNb6zHng5ysEety2UQE-t2jZat",
+      "readback":"PASS",
+      "real_interruption":true,
+      "false_resume":false,
+      "qualifies_for_si0014_count":true
     }
   ],
-  "cross_store_status": "DRIVE_WRITTEN_MOVED_AND_READBACK_PASS",
-  "authority_effect": "NONE",
-  "next_gate": "FRESH_MAIN_COMPARE_BEFORE_PR_MERGE"
+  "github_cycle9_merge_commit":"ee49be52766e2f70ae010281804ffdebd6538796",
+  "cross_store_status": "CYCLE9_MERGED_MAIN_DRIVE_READBACK_PASS_REAL_RECOVERY_EVENT_001_READBACK_PASS",
+  "authority_effect": "NONE_SELF_IMPROVEMENT_V2_REMAINS_CURRENT",
+  "si0014_progress":"1_OF_3_GENUINE_RECOVERIES_1_OF_2_PROJECTS_ZERO_FALSE_RESUME",
+  "next_gate": "TWO_MORE_GENUINE_RECOVERIES_TOTAL_MUST_SPAN_AT_LEAST_ONE_ADDITIONAL_PROJECT_WITH_ZERO_FALSE_RESUME"
 }
