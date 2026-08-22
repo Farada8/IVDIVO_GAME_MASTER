@@ -1,9 +1,10 @@
 {
-  "schema":"CYCLE10_PROOF_BUNDLE_v1.3",
+  "schema":"CYCLE10_PROOF_BUNDLE_v1.5",
   "deterministic_tests":"32/32_PASS",
-  "zip":{"name":"IVDIVO_SELF_IMPROVEMENT_CYCLE10_DECISION_EVIDENCE_YIELD_32X64_2026-08-22_v2.zip","sha256":"245f799bdbb16971eb5781433fba2c7f23a5600c5217908793845880a3068ded","bytes":18939,"entries":14,"integrity":"PASS","drive_raw_readback":"PASS","drive_file_id":"17yQ1oHd9zOFAJ8q1ckDmNebPCx_asppA"},
-  "real_evidence_used":["current SI v2 authority","Cycle9B 32/32 ledger","GitHub current SI state 2.7","open PR #147 reservation SI-0016","SI-0014 genuine recovery event 1/3 with 2 project slices and zero false resume so far","SI-0015 persisted READY_FOR_PILOT evidence","actual current-conversation user upload hash"],
+  "zip":{"name":"IVDIVO_SELF_IMPROVEMENT_CYCLE10_DECISION_EVIDENCE_YIELD_32X64_2026-08-22_v2.zip","sha256":"245f799bdbb16971eb5781433fba2c7f23a5600c5217908793845880a3068ded","bytes":18939,"entries":14,"integrity":"PASS","drive_raw_readback":"PASS","drive_file_id":"17yQ1oHd9zOFAJ8q1ckDmNebPCx_asppA","immutability_note":"ZIP is preserved as evidence package; live GitHub machine state is freshness-reconciled separately."},
+  "real_evidence_used":["current SI v2 authority","Cycle9B 32/32 ledger","GitHub current SI state 2.7","open PR #147 reservation SI-0016","CURRENT_SI0014_PROMOTION_COUNTER.json: genuine incidents 1/3, distinct projects 2/2, zero_false_resume=true, promotion_authorized=false","SI-0015 persisted READY_FOR_PILOT evidence","actual current-conversation user upload hash"],
   "evidence_not_claimed":["Human Signal","provider live","market behavior","literary superiority","v3 promotion"],
   "new_si_id_allocated":false,
-  "persistence":{"drive":"PASS_V2_RAW_READBACK","github":"PR217_REBASE_PENDING"}
+  "fresh_rebase":{"rebase_parent_main":"f24239281577ae7709efc597ce0b91c6c440123b","latest_main_reviewed":"86b2e07f04dde80956d371da87c33941c549741b","concurrent_delta_review":"PASS_NO_CYCLE10_PATH_OVERLAP_SI0014_COUNTS_UNCHANGED","method":"IMMUTABLE_SUBTREE_REUSE_PLUS_FRESHNESS_SENSITIVE_BLOB_OVERRIDE","cycle10_tree_sha":"0b8ca33b2ad5d6825972040a2d162ebe9afbeb6f","library_tree_sha":"2853bb3561c3fefc42bcfa7f7b3ced17eab155fc"},
+  "persistence":{"drive":"PASS_V2_RAW_READBACK","github":"PR217_CI_RECHECK_PENDING_AFTER_FRESH_DELTA_REVIEW"}
 }

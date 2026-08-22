@@ -1,15 +1,15 @@
 {
-  "schema":"IVDIVO_SELF_IMPROVEMENT_CYCLE10_STATE_v1.4",
+  "schema":"IVDIVO_SELF_IMPROVEMENT_CYCLE10_STATE_v1.6",
   "date":"2026-08-22",
-  "status":"ENGINEERING_COMPLETE_DRIVE_V2_RAW_READBACK_PASS_GITHUB_REBASE_PENDING",
+  "status":"ENGINEERING_COMPLETE_DRIVE_V2_RAW_READBACK_PASS_GITHUB_FRESH_DELTA_REVIEWED_CI_RECHECK_PENDING",
   "authority_effect":"NONE",
   "current_authority":"Self-Improvement v2 VERIFIED_CURRENT",
   "execution":{"prompts":32,"modules":16,"contracts":16,"proof_obligations":16,"protocols":8,"tests":"32/32_PASS","next_prompts":64},
   "parallel":{"cycle9b":"32/32 EXECUTED","si_0014":"READY_FOR_PILOT / genuine recovery 1/3; 2/2 project diversity satisfied; zero false resume so far","si_0015":"READY_FOR_PILOT","si_0016":"OPEN_DRAFT_PR_147_RESERVATION","v3":"HOLD"},
   "new_si_id_allocated":false,
-  "fresh_main_reconciled":"0da038c3460c58ad4d712f907e3ce65b207018f6",
+  "freshness":{"rebase_parent_main":"f24239281577ae7709efc597ce0b91c6c440123b","latest_main_reviewed":"86b2e07f04dde80956d371da87c33941c549741b","concurrent_commits_reviewed":14,"material_delta":"SI0014 genuine interruption ledger/counter added plus business/public-art work","cycle10_path_overlap":false,"semantic_effect":"SI0014 evidence source strengthened; promotion counts remain 1/3 genuine incidents, 2/2 projects, zero false resume; no Cycle10 disposition change"},
   "drive":{"root_folder_id":"1NUe4Ge-A2DAqa-1BeF6dETLpUiq7mqgQ","cycle10_folder_id":"1l99ycTCvdP1HLwMkAoTTW3qPePUEUObd","v1_zip_file_id":"1itgymyI1G29JbvixYW7wPEctDmjB-aYJ","v1_zip_sha256":"d419de55b033d82a1233a7740d86af6dbcfd49de87442ed95da0fc6e2550127e","v1_raw_readback":"PASS","v2_zip_file_id":"17yQ1oHd9zOFAJ8q1ckDmNebPCx_asppA","v2_zip_sha256":"245f799bdbb16971eb5781433fba2c7f23a5600c5217908793845880a3068ded","v2_bytes":18939,"v2_entries":14,"v2_integrity":"PASS","v2_raw_readback":"PASS"},
-  "github":{"branch":"self-improvement/cycle10-decision-evidence-yield-20260822-r1","pr":217,"semantic_rebase_target":"0da038c3460c58ad4d712f907e3ce65b207018f6","ci":"PENDING_AFTER_REBASE"},
+  "github":{"branch":"self-improvement/cycle10-decision-evidence-yield-20260822-r1","pr":217,"rebase_commit":"33070f78fc56064230f1c04b332ef3244a7239fc","rebase_method":"IMMUTABLE_SUBTREE_REUSE_PLUS_FRESHNESS_SENSITIVE_BLOB_OVERRIDE","previous_ci":"SUCCESS","ci":"PENDING_AFTER_FRESH_DELTA_STATE_UPDATE"},
   "external_evidence":{"human":"NOT_RUN","provider":"NOT_RUN","market":"NOT_RUN"},
   "production_return":{"required":true,"frontier":"prospective book/audio/business Decision-Evidence-Yield pilots after closure"}
 }

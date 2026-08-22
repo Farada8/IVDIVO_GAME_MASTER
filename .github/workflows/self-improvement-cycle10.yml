@@ -1,0 +1,31 @@
+name: Self-Improvement Cycle10
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64/**'
+      - 'SELF_IMPROVEMENT_STUDIO/LIBRARY/**'
+      - '.github/workflows/self-improvement-cycle10.yml'
+  push:
+    branches:
+      - self-improvement/cycle10-decision-evidence-yield-20260822-r1
+    paths:
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64/**'
+      - 'SELF_IMPROVEMENT_STUDIO/LIBRARY/**'
+      - '.github/workflows/self-improvement-cycle10.yml'
+
+jobs:
+  cycle10:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Cycle10 deterministic suite
+        working-directory: SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64
+        run: python -m unittest tests.test_cycle10 -v
+      - name: Privacy guard
+        run: |
+          test ! -f 'SELF_IMPROVEMENT_STUDIO/LIBRARY/NINETY_MISSING_MINUTES_PHASE_A_B_v1.0.md'
+          grep -q '"github_raw":false' SELF_IMPROVEMENT_STUDIO/LIBRARY/CURRENT_REFERENCE_MANIFEST.json
