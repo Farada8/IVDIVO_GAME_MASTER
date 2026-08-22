@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "status": "CURRENT_PHYSICAL_LIBRARY_AUTHORITY",
+  "date": "2026-08-22",
+  "raw_drive_folder_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+  "raw_drive_folder_url": "https://drive.google.com/drive/folders/1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+  "composition": {
+    "base_manifest": "01_LIBRARY_MANIFEST_69.json",
+    "base_physical_files": 69,
+    "delta_manifest": "LIBRARY78_DELTA_9_v1.json",
+    "delta_physical_files": 9,
+    "physical_files": 78
+  },
+  "reconciled_counts": {
+    "physical_files": 78,
+    "valid_physical_files": 68,
+    "broken_or_quarantined": 5,
+    "unique_valid_byte_hashes": 58,
+    "exact_duplicate_hash_groups": 8,
+    "canonical_unique_intellectual_works": null
+  },
+  "laws": [
+    "RAW_COPYRIGHTED_BINARIES_PRIVATE_DRIVE_ONLY",
+    "PHYSICAL_FILE_ID_NEQ_BYTE_HASH_NEQ_EDITION_ALIAS_NEQ_CANONICAL_WORK_ID",
+    "EXACT_DUPLICATE_BYTES_ONE_EVIDENCE_WEIGHT",
+    "BROKEN_PLACEHOLDER_ZERO_EVIDENCE",
+    "K_NEQ_S_NEQ_E",
+    "BOOK_MECHANISM_NEQ_CURRENT_MARKET_FACT"
+  ],
+  "github_authority_path": "BUSINESS_ENGINEERING_OS/LIBRARY/CURRENT_LIBRARY_AUTHORITY_78_2026-08-22.md",
+  "note": "Registry is complete by composition of the persisted 69-file manifest plus the reconciled nine-file delta; raw binaries are not duplicated into GitHub."
+}
