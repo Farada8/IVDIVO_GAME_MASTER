@@ -26,17 +26,18 @@ Fresh recovered frontier:
 - PA4/PA5/E3/E4 remain false;
 - BID/NO-BID remains unasserted.
 
-Business post-merge closure: `BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P97_P128_AUTHORITY_RECOVERY/06_POST_MERGE_AUTHORITY_RECOVERY_CLOSURE.json`.
+While this recovery branch was being written, main advanced again with `d919a680dea76ce74c6fa99113a1fe36d85f1e81`, which added the stronger canonical post-merge closure `BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P97_P128_AUTHORITY_RECOVERY/06_POST_MERGE_CLOSURE.md`. The local duplicate closure was therefore deleted rather than merged. This is a second live proof of semantic salvage over blind parallel duplication.
+
 Business recovery slice: `10_REAL_RECOVERY_EVENT_001_BUSINESS_ENGINEERING_SLICE.json`.
 Drive Business control doc: `154NhUZFLsXGVE6l6oEubeb6fyctK8i7arD8z8CDiIQY`.
 Cycle9 Business slice doc: `1nj2BTsfA16TDScCaUBGol5wbm7y6CUBrXV8US1tKW7k`.
 
 ## Self-improvement conclusion
-The live Business recovery supplied direct evidence that `CURRENT` human-readable pointers may lag a newer merged typed closure. Recovery must therefore use:
+The live Business recovery supplied direct evidence that `CURRENT` human-readable pointers may lag a newer merged closure and that parallel branches may independently close the same defect while recovery work is in progress. Recovery must therefore use:
 
-`BASELINE CURRENT -> FRESH MAIN SWEEP -> NEWER MERGED TYPED CLOSURE -> SOURCE ADEQUACY -> FALSE-RESUME CHECK -> READBACK -> QUALIFY/HOLD`.
+`BASELINE CURRENT -> FRESH MAIN SWEEP -> NEWER MERGED CLOSURE -> SEMANTIC DEDUPE/SALVAGE -> SOURCE ADEQUACY -> FALSE-RESUME CHECK -> READBACK -> QUALIFY/HOLD`.
 
-A newer artifact does not automatically replace authority, but a merged, provenance-bound closure that explicitly extends the same project surface must be reconciled before resume. Silent use of the older pointer is forbidden.
+A newer artifact does not automatically replace authority, but a merged, provenance-bound closure that explicitly extends the same project surface must be reconciled before resume. If main already contains a stronger equivalent closure, local duplicates must be dropped and only unique evidence retained.
 
 ## Exact next gate
 Project diversity is already satisfied. Two additional genuine interruption/recovery events are still required, each with exact authority/store identity and zero false resume. Do not manufacture outages to satisfy the gate.
