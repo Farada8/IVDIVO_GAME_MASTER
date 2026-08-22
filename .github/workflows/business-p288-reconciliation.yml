@@ -4,10 +4,12 @@ on:
   pull_request:
     paths:
       - 'BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/**'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json'
       - '.github/workflows/business-p288-reconciliation.yml'
   push:
     branches:
-      - 'business-engineering/p288-fresh-read-reconciliation-20260822'
+      - 'business-engineering/p288-authority-closure-20260822'
 
 permissions:
   contents: read
@@ -22,24 +24,40 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate P288 machine state
+      - name: Validate P288 machine state and canonical accounting
         run: |
           python - <<'PY'
           import json
+          from pathlib import Path
           p='BUSINESS_ENGINEERING_OS/2026-08-22_P288_FRESH_READ_RECONCILIATION/01_MACHINE_STATE.json'
           with open(p, encoding='utf-8') as f: s=json.load(f)
           assert s['prompt'] == 288 and s['executed'] is True
           assert s['disposition'] == 'PROTECT_NO_CHANGE'
           assert s['roots']['ROOT_A'] == 'TARGET_PACK_NOT_ACQUIRED'
           assert s['roots']['ROOT_B'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
-          assert s['parent_backlog']['count'] == 64
-          assert s['parent_backlog']['previous_executed'] == 16
           assert s['parent_backlog']['executed_total'] == 17
           assert s['parent_backlog']['remaining_unexecuted'] == 47
-          assert s['parent_backlog']['remaining_ranges'] == ['P225-P256','P273-P287']
-          assert s['proof'] == {
-              'public_derived_ceiling':'E2_PLUS','artifact_plane':'PA3',
-              'PA4':False,'PA5':False,'E3':False,'E4':False,'market_proof_delta':False}
           assert s['next_frontier'] == [225,235]
-          print('P288 reconciliation invariants PASS')
+
+          with open('BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json', encoding='utf-8') as f:
+              r=json.load(f)
+          ce=r['current_execution']
+          assert ce['completed_cards_inside_parent_backlog'] == 17
+          assert ce['remaining_unexecuted_count'] == 47
+          assert ce['remaining_ranges'] == ['P225-P256','P273-P287']
+          assert ce['completed_reconciliation_cards'] == [288]
+          assert r['current_roots']['ROOT_A'] == 'TARGET_PACK_NOT_ACQUIRED'
+          assert r['current_roots']['ROOT_B'] == 'NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET'
+          assert r['proof_frontier'] == {
+              'public_derived_ceiling':'E2_PLUS','artifact_plane':'PA3',
+              'PA4':False,'PA5':False,'E3':False,'E4':False}
+
+          text=Path('BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md').read_text(encoding='utf-8')
+          assert 'P288 Fresh-Read Reconciliation' in text
+          assert 'total executed = **17**' in text
+          assert 'Remaining unexecuted = **47**' in text
+          assert 'ROOT_A = TARGET_PACK_NOT_ACQUIRED' in text
+          assert 'ROOT_B = NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET' in text
+          assert 'PA4=false; PA5=false; E3=false; E4=false.' in text
+          print('P288 authority closure invariants PASS')
           PY

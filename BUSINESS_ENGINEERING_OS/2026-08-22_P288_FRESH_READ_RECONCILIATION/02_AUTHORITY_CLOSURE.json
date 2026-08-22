@@ -1,0 +1,34 @@
+{
+  "schema": "ivdivo.business.p288_authority_closure/1.0",
+  "date": "2026-08-22",
+  "core_pr": 270,
+  "core_merge_sha": "751ed2ecb2a85da35de70b50952f49ff86d7cbe3",
+  "core_ci_run": 32552767006,
+  "core_ci": "SUCCESS",
+  "drive_folder": "1HhmHgOcpjb9_ZQtOHiV9K06lvIotCGyb",
+  "drive_doc": "1UQ3lh_hm9a0XtB3hO7AjbLK4y6prfnRNsjhlZYErmZQ",
+  "drive_readback": "PASS",
+  "execution_accounting": {
+    "parent": "P225-P288",
+    "count": 64,
+    "executed_total": 17,
+    "remaining_unexecuted": 47,
+    "executed": ["P257-P264", "P265-P272", "P288"],
+    "remaining_ranges": ["P225-P256", "P273-P287"]
+  },
+  "roots": {
+    "ROOT_A": "TARGET_PACK_NOT_ACQUIRED",
+    "ROOT_B": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET"
+  },
+  "proof": {
+    "public_derived_ceiling": "E2_PLUS",
+    "artifact_plane": "PA3",
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "E4": false
+  },
+  "disposition": "PROTECT_NO_CHANGE",
+  "next_real_gates": [225, 235],
+  "authority_mutation": "PENDING_CLOSURE_PR"
+}
