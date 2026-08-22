@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.post_render_engineering_manifest/2.1",
+  "schema_version": "room917.post_render_engineering_manifest/2.2",
   "status": "PROJECT_PILOT_PASS_DOMAIN_PROMOTION_HOLD",
   "project": "ROOM917",
   "episode": "E01",
@@ -9,6 +9,7 @@
     "lineage_timing_resolver.py",
     "interval_classifier.py",
     "selective_repair_planner.py",
+    "sound_asset_binding_gate.py",
     "room_bed_patch_renderer.py",
     "regression_gate.py",
     "post_render_pipeline.py",
@@ -18,10 +19,7 @@
   "authority_hygiene": {
     "rules": "AUTHORITY_HYGIENE_RULES_v1.json",
     "contract": "AUTHORITY_HYGIENE_CONTRACT_v1.json",
-    "integration": [
-      "cue_lineage_compiler.py",
-      "post_render_pipeline.py"
-    ],
+    "integration": ["cue_lineage_compiler.py","post_render_pipeline.py"],
     "targeted_tests": "5 PASS",
     "tested_cases": [
       "CURRENT_EXACT_ID_REVISION_TITLE_PASS",
@@ -31,10 +29,20 @@
       "UNKNOWN_SOURCE_HOLD"
     ]
   },
+  "sound_asset_identity": {
+    "contract": "../../SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
+    "candidate_template": "../../SOUND_DESIGN/ROOM917_E01_SOUND_ASSET_CANDIDATES_TEMPLATE_v1.json",
+    "gate": "sound_asset_binding_gate.py",
+    "renderer": "room_bed_patch_renderer.py",
+    "recommended_runner": "RUN_P004A_IDENTITY_GATED_PATCH_AND_REGRESSION.ps1",
+    "renderer_defense_in_depth": "REQUIRES_IDENTITY_GATE_PASS_AND_RECHECKS_SHA256",
+    "synthetic_targeted_checks": "2 EXPECTED OUTCOMES PASS: VALID_48K_24BIT_STEREO_IDENTITY=>PASS; SHA_OR_FALSE_CLUE_AUDIT_FAILURE=>HOLD",
+    "current_production_assets": "UNBOUND_UNTIL_REAL_CANDIDATE_BYTES_AUDITIONED"
+  },
   "dependency": "AUDIO_PRODUCTION/ROOM917/TOOLS/P003A2_MASTER_ESCROW_v1/p003a2_interval_analyzer.py",
   "real_production_frontier": "P003A2_BLOCKED_ON_EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP",
   "unit_tests": "5 PASS (existing validated core suite)",
-  "synthetic_selective_repair_chain": "PASS",
+  "synthetic_selective_repair_chain": "PASS_PRE_ASSET_IDENTITY_UPGRADE; REVALIDATE_FULL_CHAIN_WHEN_REAL_OR_SYNTHETIC_IDENTITY_GATED_BINDING_IS_SUPPLIED",
   "negative_unauthorized_change_gate": "FAIL_AS_REQUIRED",
   "domain_promotion_gate": "SECOND_PROJECT_REPLICATION",
   "prohibited": [
@@ -42,6 +50,8 @@
     "AUTO_FILL_LOW_LEVEL_WINDOWS",
     "SIMULATE_HUMAN_PASS",
     "INGEST_UNVERIFIED_SEARCH_RESULT_AS_AUTHORITY",
+    "BIND_SOUND_ASSET_BY_FILENAME_ONLY",
+    "RENDER_PATCH_FROM_UNVERIFIED_ASSET_BYTES",
     "SCALE_E02_E24"
   ]
 }
