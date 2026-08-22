@@ -1,0 +1,36 @@
+{
+  "schema": "BUSINESS_ENGINEERING_OS_CYCLE6_POST_MERGE_CLOSURE_v1",
+  "date": "2026-08-22",
+  "status": "PERSISTENCE_CLOSURE_PENDING_CLOSURE_PR",
+  "core": {
+    "pr": 191,
+    "merge_sha": "a8776edcdee14ba67e9fa68c61b3e4f66c10cee3",
+    "ci_run": 32540433092,
+    "ci": "SUCCESS"
+  },
+  "drive": {
+    "folder_id": "1PVtwKAzHTYVKF9rpdqMt7FkcYEG9CACU",
+    "master_document_id": "1PpLAZyJwUXr82YJ1nQkrt-yFSs2m2tczKmRPf9dGzr8",
+    "execution_state_document_id": "1svv4PAR1qujSbbrw_tCzVfclp5QZtnXfJpcLWqdcLwU",
+    "post_merge_closure_document_id": "1mpHWsE6eY-DnK5E4OfAtDJ-edDdg1FR_Uvyb4gpHt3E",
+    "uploaded_handoff_document_id": "12mnDFWMFxfMsd5sioDDDtbwj-5LrgN32h1ChGSK87aI",
+    "readback": "PASS"
+  },
+  "uploaded_handoff_sha256": "ad4a0b44b0c35dbed4697bc98b66e8e1ad03f7ebb8c3c774ca7e86fd393dc3f8",
+  "run32_requirement": "SATISFIED_IN_CYCLE5_32_OF_32",
+  "next64_requirement": "SATISFIED_IN_CYCLE5_P33_P96",
+  "cycle6_executed_dependency": "P33-P48",
+  "proof": {
+    "PA4": false,
+    "PA5": false,
+    "E3": false,
+    "public_ceiling": "E2+"
+  },
+  "current_gate": "COMPLETE_OFFICIAL_PACK_AND_VERIFIED_SUPPLIER_PROFILE_THEN_REQUIREMENT_JOIN_THEN_P47_THEN_PA4",
+  "self_improvement": {
+    "v2": "CURRENT",
+    "v3": "CANDIDATE_ONLY",
+    "candidate": "MISSING_AUTHORITY_IS_A_FIRST_CLASS_RESULT",
+    "promoted": false
+  }
+}
