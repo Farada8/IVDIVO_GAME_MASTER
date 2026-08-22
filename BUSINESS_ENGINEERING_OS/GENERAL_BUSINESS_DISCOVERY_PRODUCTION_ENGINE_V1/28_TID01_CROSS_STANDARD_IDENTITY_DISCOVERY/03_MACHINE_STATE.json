@@ -1,0 +1,50 @@
+{
+  "schema": "ivdivo.general_business.tid01_cross_standard_interop/1.0",
+  "date": "2026-08-22",
+  "status": "PASS_INTERNAL_ENGINEERING_DISCRIMINATION",
+  "candidate": "CROSS_STANDARD_AGENT_IDENTITY_DISCOVERY_INTEROP_AND_DRIFT",
+  "corpus": {
+    "families": ["DNS_AID", "ANS", "A2A", "MCP_REGISTRY"],
+    "fixture_count": 4,
+    "fixture_type": "DOCUMENTATION_DERIVED_MINIMAL_PUBLIC_FIXTURES",
+    "production_access": false,
+    "external_credentials": false
+  },
+  "test": {
+    "predeclared_finding_classes": 6,
+    "finding_classes_detected": 6,
+    "canaries": 10,
+    "canaries_status": "PASS_10_OF_10",
+    "dedicated_ci_run": 32571774671,
+    "dedicated_ci_status": "SUCCESS",
+    "same_head_neighbor_regressions": "SUCCESS_5_OF_5"
+  },
+  "findings": [
+    {"id": "F001", "type": "WELL_KNOWN_PATH_DRIFT", "severity": "REAL_COMPATIBILITY_BREAK"},
+    {"id": "F002", "type": "VERSION_SEMANTICS_COLLISION", "severity": "LOSSY_IF_FLATTENED"},
+    {"id": "F003", "type": "TRUST_ASSURANCE_NON_EQUIVALENCE", "severity": "UNSAFE_BOOLEAN_COLLAPSE"},
+    {"id": "F004", "type": "CAPABILITY_FRESHNESS_MISMATCH", "severity": "STATIC_METADATA_CANNOT_PROVE_RUNTIME_TOOLS"},
+    {"id": "F005", "type": "ENDPOINT_ROLE_COLLISION", "severity": "REMOTE_URL_CANNOT_REPRESENT_INSTALLABLE_PACKAGE"},
+    {"id": "F006", "type": "GLOBAL_IDENTITY_SCOPE_MISMATCH", "severity": "IDENTIFIER_SYNTHESIS_WOULD_BE_INVENTED_DATA"}
+  ],
+  "decision": {
+    "engineering_problem_demonstrated": true,
+    "candidate_killed": false,
+    "candidate_promoted_to_wip": false,
+    "market_proof_created": false,
+    "next_gate": "T-ID02_REAL_PUBLIC_FIXTURE_DRIFT_5",
+    "next_gate_success_condition": "AT_LEAST_2_NON_SYNTHETIC_EXTERNALLY_AUTHORED_DRIFT_OR_INCOMPATIBILITY_FINDINGS_ACROSS_5PLUS_INDEPENDENT_PUBLIC_FIXTURES"
+  },
+  "proof_boundary": {
+    "real_external_fixture_findings": "NOT_YET_PROVEN",
+    "buyer_demand": "UNPROVEN",
+    "wtp": "UNKNOWN",
+    "price": null,
+    "transactions": 0,
+    "profitability": "UNPROVEN",
+    "market_winner": null,
+    "wip_promoted": false,
+    "external_action_authorized": false
+  },
+  "readback_marker": "TID01-PASS-6OF6-GAPS-CI32571774671-NO-WTP-NO-WIP-20260822"
+}

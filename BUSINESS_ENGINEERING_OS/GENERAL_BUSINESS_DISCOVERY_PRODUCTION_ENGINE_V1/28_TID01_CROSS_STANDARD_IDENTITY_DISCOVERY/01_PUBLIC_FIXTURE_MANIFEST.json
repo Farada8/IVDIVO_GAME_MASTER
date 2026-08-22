@@ -1,0 +1,78 @@
+{
+  "schema": "ivdivo.general_business.tid01_public_fixture_manifest/1.0",
+  "date": "2026-08-22",
+  "fixture_policy": "DOCUMENTATION_DERIVED_MINIMAL_FIXTURES_NOT_COMPLETE_PROTOCOL_IMPLEMENTATIONS",
+  "a2a_paths": {
+    "0.2.6": "/.well-known/agent.json",
+    "0.3.0": "/.well-known/agent-card.json"
+  },
+  "fixtures": {
+    "a2a_0_3": {
+      "source": "https://a2a-protocol.org/v0.3.0/specification/",
+      "data": {
+        "protocolVersion": "0.3.0",
+        "name": "Route Planner",
+        "description": "Documentation-derived minimal fixture",
+        "url": "https://agent.example.com/a2a/v1",
+        "preferredTransport": "JSONRPC",
+        "additionalInterfaces": [
+          {"url": "https://agent.example.com/a2a/grpc", "transport": "GRPC"}
+        ],
+        "provider": {"organization": "Example Provider", "url": "https://example.com"},
+        "version": "1.2.0",
+        "capabilities": {"streaming": true},
+        "securitySchemes": {"oidc": {"type": "openIdConnect"}},
+        "security": [{"oidc": ["openid"]}],
+        "defaultInputModes": ["application/json"],
+        "defaultOutputModes": ["application/json"],
+        "skills": [{"id": "route", "name": "Route Planning"}],
+        "signatures": [{"protected": "fixture", "signature": "fixture"}]
+      }
+    },
+    "ans": {
+      "source": "https://github.com/agentnameservice/ans-registry",
+      "data": {
+        "spec_version": "0.2.0",
+        "ansName": "ans://v1.2.0.route.example.com",
+        "agentHost": "route.example.com",
+        "agent": {"name": "Route Planner", "host": "route.example.com", "version": "1.2.0"},
+        "metadataHashes": {"a2a": "sha256:fixture"},
+        "identityCerts": [{"fingerprint": "fixture"}],
+        "receipt": {"type": "SCITT_COSE_SIGN1_FIXTURE"},
+        "domainValidation": "ACME-DNS-01"
+      }
+    },
+    "dns_aid": {
+      "source": "https://github.com/dns-aid/dns-aid-core",
+      "data": {
+        "aid_version": "1.0",
+        "fqdn": "route.example.com",
+        "identity": {"name": "route", "version": "1.2.0", "deprecated": false},
+        "connection": {"protocol": "mcp", "transport": "streamable-http"},
+        "endpoint_url": "https://route.example.com/mcp",
+        "capability_source": "cap_uri",
+        "capabilities": {"actions": [{"name": "route", "intent": "query", "semantics": "read"}]},
+        "cap_sha256": "fixture",
+        "domain_control": "DCV_AVAILABLE"
+      }
+    },
+    "mcp_registry": {
+      "source": "https://github.com/modelcontextprotocol/registry",
+      "data": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "io.example/route",
+        "title": "Route MCP",
+        "description": "Documentation-derived minimal fixture",
+        "version": "1.2.0",
+        "remotes": [{"type": "streamable-http", "url": "https://route.example.com/mcp"}],
+        "packages": [{
+          "registryType": "npm",
+          "identifier": "@example/route-mcp",
+          "version": "1.2.0",
+          "transport": {"type": "stdio"},
+          "fileSha256": "fixture"
+        }]
+      }
+    }
+  }
+}
