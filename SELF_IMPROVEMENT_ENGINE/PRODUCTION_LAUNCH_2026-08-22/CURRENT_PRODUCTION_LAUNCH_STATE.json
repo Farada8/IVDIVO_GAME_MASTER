@@ -9,12 +9,12 @@
     "PL-03": "DONE_VERIFIED",
     "PL-07": "DONE_VERIFIED",
     "PL-13": "DONE_VERIFIED",
-    "PL-14": "READY"
+    "PL-14": "DONE_VERIFIED"
   },
-  "current_frontier": "PL-14",
-  "newly_closed": ["PL-07"],
+  "current_frontier": "PL-16",
+  "newly_closed": ["PL-14"],
   "newly_unlocked": [],
-  "inherited_verified": ["PL-00","PL-01","PL-02","PL-03","PL-04","PL-05","PL-06","PL-07","PL-08","PL-09","PL-11","PL-13"],
+  "inherited_verified": ["PL-00","PL-01","PL-02","PL-03","PL-04","PL-05","PL-06","PL-07","PL-08","PL-09","PL-11","PL-13","PL-14"],
   "proof": {
     "PL-03": {
       "implementation_pr": 416,
@@ -47,6 +47,15 @@
       "drive_folder_id": "1JG1GPNMmf-MhF4GhFpuSnb5rHeqqaFVq",
       "drive_document_id": "1oVGGn5VeApDxq-g5aZIhC3oBcVmtfcv3d0ingH8lKWc",
       "drive_marker": "PERSONAL-AI-PL13-DONE-VERIFIED-PR423-CI12OF12-HASH-REPRESENT-DEDUPE"
+    },
+    "PL-14": {
+      "implementation_pr": 462,
+      "merge_sha": "74c4440c3d2fed9ea23369b3301a25b0fb2762fa",
+      "verified_head": "c51ced26517d16dbda79d16472059c6609454504",
+      "cumulative_ci": "14/14 SUCCESS",
+      "drive_folder_id": "14T9TeOQ0BzoRm3N3eLz0YlL9rsz0xKma",
+      "drive_document_id": "19PVWtr35YRgKGwyO7alDNKymOC6Hy2ODYeMQ77XGxQI",
+      "drive_marker": "PERSONAL-AI-PL14-DONE-VERIFIED-PR462-CI14OF14-SOURCE-SEPARATED-NO-FABRICATION"
     }
   },
   "evidence_boundaries": [
@@ -54,6 +63,7 @@
     "PL-07 organizes supplied evidence and bounded calculations but does not perform independent source verification, web acquisition, market truth discovery, willingness-to-pay measurement or emit VERIFIED_FACT.",
     "PL-09 zero detected issues is not automatic continuity PASS; manual/independent review remains required.",
     "PL-13 ingestion proves identity/persistence/provenance for supported files, not truth, completeness, OCR, embeddings or semantic understanding/search.",
+    "PL-14 retrieval is project-local literal search with source separation; retrieval does not prove source correctness or semantic understanding.",
     "No card in this overlay promotes global Self-Improvement version authority."
   ]
 }
