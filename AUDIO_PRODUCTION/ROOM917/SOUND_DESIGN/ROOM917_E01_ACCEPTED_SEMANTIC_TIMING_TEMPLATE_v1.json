@@ -1,0 +1,17 @@
+{
+  "schema_version": "room917.accepted_semantic_timing/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "authority_status": "HOLD_UNTIL_REAL_TIMING_IMPORTED",
+  "source_master_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+  "events": [
+    {
+      "anchor_id": "TODO_REAL_SEMANTIC_ANCHOR",
+      "start_seconds": null,
+      "end_seconds": null,
+      "source_status": "TODO_ACCEPTED_ALIGNMENT_OR_LIVE_TIMELINE_OR_FOUNDER_LOCKED_TIMING",
+      "source_ref": "TODO"
+    }
+  ],
+  "law": "Template only. Never fill by inference from script order, legacy cue sheet, RMS valleys, or synthetic alignment."
+}
