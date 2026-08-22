@@ -1,0 +1,18 @@
+name: SI-0015 Real20 Calibration
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE10_SI0015_REAL_SLICE_CALIBRATION_2026-08-22/**'
+      - 'tools/si0015_project_slice_freshness_canary.py'
+      - '.github/workflows/si0015-real20-calibration.yml'
+  workflow_dispatch:
+jobs:
+  real20:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run real20 SI-0015 calibration
+        run: python -m unittest SELF_IMPROVEMENT_ENGINE.CYCLE10_SI0015_REAL_SLICE_CALIBRATION_2026-08-22.test_real20 -v
