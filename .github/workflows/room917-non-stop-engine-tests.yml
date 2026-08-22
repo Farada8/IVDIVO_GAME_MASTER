@@ -11,8 +11,10 @@ on:
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/build_sound_asset_blind_package.py'
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/compile_sound_asset_audition_result.py'
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/apply_context_gain_lock.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/resolve_sound_asset_semantic_timing.py'
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_non_stop_continuation.py'
       - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_context_gain_lock.py'
+      - 'AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2/test_semantic_timing_resolver.py'
 
 permissions:
   contents: read
@@ -32,16 +34,18 @@ jobs:
       - name: Run context gain lock tests
         working-directory: AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2
         run: python test_context_gain_lock.py
+      - name: Run semantic timing resolver tests
+        working-directory: AUDIO_PRODUCTION/ROOM917/TOOLS/POST_RENDER_ENGINEERING_v2
+        run: python test_semantic_timing_resolver.py
       - name: Summary
         run: |
           cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
           ## ROOM917 fail-closed non-stop policy
-          Expected targeted results: 5/5 non-stop tests + 3/3 context-gain tests.
+          Expected targeted results: 5/5 non-stop + 3/3 context-gain + 3/3 semantic-timing tests.
           - blocked mainline selects independent safe work
           - exhausted secondary work returns to recovery search
-          - continuation policy is BLOCKED_IS_NOT_STOP
           - blind package verifies byte hashes and rejects tamper
           - audition compiler never invents production gain
-          - context gain is numeric and explicit or HOLD
-          - dialogue/function/mono/phone context failures block promotion
+          - context gain is explicit or HOLD
+          - accepted timing resolves; ambiguous timing HOLD; unaccepted timing FAIL
           EOF
