@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.sound_design_pointer/1.4",
+  "schema_version": "room917.sound_design_pointer/1.5",
   "project": "ROOM917",
   "episode": "E01",
   "status": "ACTIVE_POST_RENDER_SOUND_EXECUTION",
@@ -30,30 +30,17 @@
     "renderer_law": "REQUIRE_IDENTITY_GATE_PASS_AND_RECHECK_BOUND_ASSET_SHA256_BEFORE_MIX",
     "synthetic_targeted_checks": "VALID_IDENTITY_PASS_AND_TAMPER_FALSE_CLUE_HOLD_BOTH_BEHAVED_AS_REQUIRED",
     "d003_bindable_beds": ["A01_GREYHAVEN_LOBBY_30S_LOOP","A02_SWITCHBOARD_ALCOVE_30S_LOOP"],
-    "scene3_bed": "A03_0117_NIGHT_ROOMTONE_30S_LOOP_PROTECTED_NOT_D003_BINDABLE"
+    "scene3_bed": "A03_0117_NIGHT_ROOMTONE_30S_LOOP_PROTECTED_NOT_D003_BINDABLE",
+    "real_a01_drive_audio": "NOT_FOUND",
+    "real_a02_drive_audio": "NOT_FOUND"
   },
   "human_gate": {
     "stage": "P003B_LISTENER_QC_RED_TEAM",
     "status": "READY_WAITING_FOR_IDENTIFIED_AUDIO",
     "law": "NO_HUMAN_LISTEN_CLAIM_WITHOUT_ACCESSIBLE_IDENTIFIABLE_AUDIO",
-    "protocol": {
-      "github_path": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RED_TEAM_PROTOCOL_v1.0.md",
-      "drive_id": "1DE-eRwLtu7H6aZ_XiQ9OnrkwUIDLmBByVAbUzpIgBgU"
-    },
-    "result_contract": {
-      "github_path": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json",
-      "drive_id": "1DJdYhC9PRRe5iICFmC0UgOeCG4nCSmKSkIQa5rm-gw4",
-      "status": "WAITING_FOR_AUDIO"
-    },
-    "scene3_pass_b_queue": {
-      "github_path": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json",
-      "drive_id": "1HXg6KmpXGo7yJrDwDo3eLuptROi3h5ZexyRIMI23tlk",
-      "candidate_count": 10,
-      "status": "SEALED_UNTIL_BLIND_PASS_A_NOTES_FROZEN",
-      "historical_v1_4a_evidence": "REAL_AUDIO_MEASURED_CANDIDATES_PLUS_PRODUCTION_INFERENCE_NOT_CURRENT_HUMAN_PASS",
-      "current_master_version_identity": "UNPROVEN",
-      "release_effect": "NONE_UNTIL_CURRENT_AUDIO_DIRECTLY_VERIFIED"
-    },
+    "protocol": {"github_path":"AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RED_TEAM_PROTOCOL_v1.0.md","drive_id":"1DE-eRwLtu7H6aZ_XiQ9OnrkwUIDLmBByVAbUzpIgBgU"},
+    "result_contract": {"github_path":"AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json","drive_id":"1DJdYhC9PRRe5iICFmC0UgOeCG4nCSmKSkIQa5rm-gw4","status":"WAITING_FOR_AUDIO"},
+    "scene3_pass_b_queue": {"github_path":"AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json","drive_id":"1HXg6KmpXGo7yJrDwDo3eLuptROi3h5ZexyRIMI23tlk","candidate_count":10,"status":"SEALED_UNTIL_BLIND_PASS_A_NOTES_FROZEN","historical_v1_4a_evidence":"REAL_AUDIO_MEASURED_CANDIDATES_PLUS_PRODUCTION_INFERENCE_NOT_CURRENT_HUMAN_PASS","current_master_version_identity":"UNPROVEN","release_effect":"NONE_UNTIL_CURRENT_AUDIO_DIRECTLY_VERIFIED"},
     "blind_firewall": "PASS_A_FIRST_FREEZE_NOTES_THEN_OPEN_PASS_B_QUEUE",
     "repair_authority": "VERIFIED_AUDIBLE_DEFECT_ONLY_SMALLEST_SCOPE",
     "no_new_sound_patch_authorized_by_queue_existence": true
@@ -71,12 +58,8 @@
     "originating_conversation_recovery": "NO_MATCH_FOUND"
   },
   "quarantined_legacy_authority": [
-    {
-      "drive_id": "16fdc16IHn6YXtJCcmfd5Ft4r4Mt0Jyep",
-      "title": "ROOM_917_E01_STUDIO_SFX_CUE_SHEET",
-      "reason": "MARA_BRANCH_AND_50HZ_POLICY_CONFLICT_WITH_CURRENT_THE_INSURABLE_FIRE_AUTHORITY",
-      "quarantine_record": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/QUARANTINE/ROOM917_LEGACY_MARA_SFX_CUE_SHEET_QUARANTINE_v1.md"
-    }
+    {"drive_id":"16fdc16IHn6YXtJCcmfd5Ft4r4Mt0Jyep","title":"ROOM_917_E01_STUDIO_SFX_CUE_SHEET","reason":"MARA_BRANCH_AND_50HZ_POLICY_CONFLICT_WITH_CURRENT_THE_INSURABLE_FIRE_AUTHORITY","quarantine_record":"AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/QUARANTINE/ROOM917_LEGACY_MARA_SFX_CUE_SHEET_QUARANTINE_v1.md"},
+    {"drive_id":"174RMh1Ae5McyBhGmT_MO7SWeBUKgUo9pUZYO1CAesSg","title":"01_ROOM_917_ELEVENLABS_ASSET_PROMPT_LIBRARY_v1.0","reason":"QUIET_REGISTER_MARA_AND_LEGACY_50HZ_POLICY_CONFLICT","quarantine_record":"AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/QUARANTINE/ROOM917_LEGACY_QUIET_REGISTER_ASSET_PROMPT_LIBRARY_QUARANTINE_v1.md"}
   ],
   "recovered_timing_search": {
     "room917_e01_timeline_json": "NOT_FOUND",
