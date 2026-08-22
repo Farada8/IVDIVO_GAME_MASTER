@@ -1,7 +1,7 @@
 # IVDIVO — Batch 197 Application Gate
 ## Linda Seger — Subtext / Inference / Relationship / Evidence
 
-**Pass:** 162  
+**Pass:** 163  
 **Source:** Linda Seger — *Hidden Meaning / Creating Subtext*  
 **Purpose:** apply only where a current text demonstrates a subtext/directness, exposition-ownership, inference or paragraph-rhythm defect.
 
