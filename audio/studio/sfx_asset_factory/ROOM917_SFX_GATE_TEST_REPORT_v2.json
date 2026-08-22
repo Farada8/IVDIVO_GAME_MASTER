@@ -1,0 +1,10 @@
+{
+  "overall":"PASS",
+  "tests":{
+    "manifest_v5":{"exit_code":0,"expected":0,"pass":true,"output":{"status":"PASS","errors":[]}},
+    "pending_human":{"exit_code":2,"expected":2,"pass":true,"output":{"status":"HOLD","errors":["HUMAN_BLIND_SELECTIONS_PENDING"]}},
+    "positive_active_lock":{"exit_code":0,"expected":0,"pass":true,"output":{"status":"PASS","errors":[]}},
+    "inactive_retired_candidate":{"exit_code":1,"expected":1,"pass":true,"output":{"status":"FAIL","errors":["LOCK_SELECTION_NOT_ACTIVE:S19_TWO_PART_LINE_CUT:5"]}},
+    "tampered_hash":{"exit_code":1,"expected":1,"pass":true,"output":{"status":"FAIL","errors":["LOCK_HASH_MISMATCH:S13_INTERNAL_DOUBLE_RING_OLD:1"]}}
+  }
+}
