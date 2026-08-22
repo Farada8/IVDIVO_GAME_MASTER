@@ -1,7 +1,7 @@
 {
   "schema": "BUSINESS_ENGINEERING_CYCLE10_P265_P272_v1",
   "date": "2026-08-22",
-  "status": "RUN8_EXECUTED_DRIVE_READBACK_PASS_PENDING_GITHUB_CI",
+  "status": "RUN8_EXECUTED_CI_GREEN_DRIVE_READBACK_CLOSED",
   "parent_backlog": "P225-P288",
   "run": {
     "range": "P265-P272",
@@ -51,10 +51,12 @@
     "semantic_readback": "PASS_2_OF_2"
   },
   "github": {
-    "pr": null,
-    "head": null,
-    "ci_run": null,
-    "ci": "PENDING"
+    "pr": 267,
+    "head": "9759a646b5bdf13eb0f277514c0633bd0f30ce5f",
+    "merge_sha": "261b85072493e442c7c3854b284eb8a18d46d3ea",
+    "ci_run": 32551907086,
+    "ci": "SUCCESS",
+    "post_merge_state_closed": true
   },
   "current_gate": "ACQUIRE_AUTHENTIC_CURRENT_TARGET_PACK_OR_EXPLICIT_REAL_BIDDER_DESIGNATION_AND_EVIDENCE_PACKET",
   "authority_mutation": false
