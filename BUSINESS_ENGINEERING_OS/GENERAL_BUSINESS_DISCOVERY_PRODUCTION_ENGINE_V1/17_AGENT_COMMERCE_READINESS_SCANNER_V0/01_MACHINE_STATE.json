@@ -13,10 +13,6 @@
     "blind_protocol": "../18_AGENT_COMMERCE_PEW02_BLIND10/00_BLIND_PROTOCOL.md",
     "wedge_correction": "../23_OW01_AGENTIC_COMMERCE_WEDGE_CORRECTION.md"
   },
-  "rule_families": {
-    "openai_feed": ["OAI-FEED-00", "OAI-FEED-01", "OAI-FEED-02", "OAI-FEED-03", "OAI-FEED-04", "OAI-FEED-05", "OAI-FEED-06"],
-    "ucp": ["UCP-00", "UCP-01", "UCP-02", "UCP-03", "UCP-04", "UCP-05", "UCP-05P", "UCP-06", "UCP-07", "UCP-08", "UCP-09", "UCP-10", "UCP-11"]
-  },
   "p_ew01": {
     "executed": true,
     "implementation_pr": 348,
@@ -64,6 +60,12 @@
     "woocommerce_transition_tooling": "WATCH_AND_RECHECK_BEFORE_OFFER",
     "product_data_agent_discovery_quality": "KEEP_TESTABLE",
     "developer_regression_tooling": "KEEP_TESTABLE"
+  },
+  "drive": {
+    "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
+    "wedge_correction_document_id": "1GWGxroh4L8MQQOTf3xyX_M_pDHz3brTfmabURJHCd2w",
+    "semantic_readback": true,
+    "readback_marker": "OW01-WEDGE-CORRECTION-RULESET03-KILL-GENERIC-UCP-SETUP-KEEP-CROSS-PROTOCOL-20260822"
   },
   "proof_boundary": {
     "public_evidence_ceiling": "E2_PLUS_ENGINEERING",
