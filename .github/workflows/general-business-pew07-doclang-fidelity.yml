@@ -14,32 +14,53 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install pinned official DocLang reference toolkit
-        run: python -m pip install 'doclang==0.7.0'
-      - name: Official DocLang XSD structural validation — control
-        run: doclang validate BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/fixtures/good.dclg.xml --xsd-only --quiet
-      - name: Official DocLang XSD structural validation — semantic drift
-        run: doclang validate BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/fixtures/semantic_drift.dclg.xml --xsd-only --quiet
-      - name: Run independent fidelity tests
+      - name: Install pinned DocLang validator and current Docling runtime
+        run: python -m pip install 'doclang==0.7.0' 'docling==2.121.0'
+
+      - name: Orthogonality control — official XSD validation
+        run: |
+          doclang validate BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/fixtures/good.dclg.xml --xsd-only --quiet
+          doclang validate BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/fixtures/semantic_drift.dclg.xml --xsd-only --quiet
+
+      - name: Orthogonality control — independent fidelity tests
         run: python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/tests/test_fidelity.py
-      - name: Verify orthogonality result
+
+      - name: Actual converter-generated round-trip
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/roundtrip.py \
+            --source BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/fixtures/roundtrip_stress.html \
+            --out BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/runtime
+
+      - name: Official XSD validation — generated DocLang
+        run: doclang validate BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/runtime/generated_roundtrip.dclg.xml --xsd-only --quiet
+
+      - name: Enforce data-dependent proof boundary
         run: |
           python - <<'PY'
-          import importlib.util
+          import json
           from pathlib import Path
-          root = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF')
-          spec = importlib.util.spec_from_file_location('fidelity', root/'fidelity.py')
-          mod = importlib.util.module_from_spec(spec)
-          spec.loader.exec_module(mod)
-          good = mod.evaluate(root/'fixtures/good.dclg.xml')
-          drift = mod.evaluate(root/'fixtures/semantic_drift.dclg.xml')
-          assert good['fidelity_pass'] is True
-          assert good['mismatch_count'] == 0
-          assert drift['fidelity_pass'] is False
-          assert drift['mismatch_count'] == 1
-          assert drift['mismatches'][0]['expected'] == 'Peter Thomas & Christian Johnston'
-          assert drift['mismatches'][0]['actual'] == 'Peter Thomas and Christian Johnston'
-          assert drift['wip_promotion'] is False
-          assert drift['wtp'] == 'UNKNOWN'
-          print('P-EW07 PASS CANDIDATE: both fixtures passed official XSD gates; independent fidelity detects semantic drift')
+          p = Path('BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/runtime/roundtrip_result.json')
+          r = json.loads(p.read_text(encoding='utf-8'))
+          allowed = {
+              'PASS_REAL_FIDELITY_GAP_TECHNICAL_ONLY',
+              'HOLD_NO_REAL_GAP_IN_BOUNDED_FIXTURES',
+          }
+          assert r['technical_route'] in allowed
+          assert r['wip_promotion'] is False
+          assert r['wtp'] == 'UNKNOWN'
+          assert r['transactions'] == 0
+          assert r['external_action_authorized'] is False
+          if r['technical_route'] == 'PASS_REAL_FIDELITY_GAP_TECHNICAL_ONLY':
+              assert r['real_converter_generated_gap'] is True
+              assert r['mismatch_count'] >= 1
+          else:
+              assert r['real_converter_generated_gap'] is False
+              assert r['mismatch_count'] == 0
+          print(json.dumps(r, ensure_ascii=False, sort_keys=True))
           PY
+
+      - name: Upload round-trip evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: pew07-doclang-roundtrip-evidence
+          path: BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/31_DOCLANG_PEW07_FIDELITY_PROOF/runtime/
