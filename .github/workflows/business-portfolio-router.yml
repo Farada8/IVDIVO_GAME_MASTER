@@ -1,0 +1,23 @@
+name: Business Portfolio Router
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_PORTFOLIO_ROUTER_RESET/**'
+      - '.github/workflows/business-portfolio-router.yml'
+  push:
+    branches:
+      - 'business-engineering/portfolio-router-reset-20260822'
+
+jobs:
+  portfolio-router-canaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run portfolio router canaries
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_PORTFOLIO_ROUTER_RESET/tests/test_portfolio_router.py
+      - name: Parse portfolio schema
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/2026-08-22_PORTFOLIO_ROUTER_RESET/01_PORTFOLIO_ROUTER_SCHEMA.json >/dev/null
