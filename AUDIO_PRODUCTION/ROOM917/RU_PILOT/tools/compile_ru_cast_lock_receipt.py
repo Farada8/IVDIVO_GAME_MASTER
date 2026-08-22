@@ -2,8 +2,9 @@
 """Compile a ROOM917 RU CAST LOCK receipt from proved provider/review/take evidence.
 
 This tool performs no listening, no provider calls, no TTS synthesis and no spend
-authorization. It cannot infer missing human judgments. It only converts already
-proved inputs into the lock receipt consumed by validate_ru_cast_lock.py.
+authorization. It cannot infer missing human judgments or numeric scores. It only
+converts already proved inputs into the lock receipt consumed by
+validate_ru_cast_lock.py.
 """
 from __future__ import annotations
 
@@ -20,6 +21,12 @@ PAIR_BY_ROLE = {
     "JULIAN": ("RU_PAIR_02_ELENA_JULIAN_DOORS", "RU_PAIR_03_ELENA_JULIAN_STATUS"),
     "MINA": ("RU_PAIR_01_ELENA_MINA_LOBBY",),
     "CATE": ("RU_PAIR_04_CATE_LINE_VS_CASSETTE",),
+}
+PAIR_SHORT = {
+    "RU_PAIR_01_ELENA_MINA_LOBBY": "ELENA_MINA",
+    "RU_PAIR_02_ELENA_JULIAN_DOORS": "ELENA_JULIAN_1",
+    "RU_PAIR_03_ELENA_JULIAN_STATUS": "ELENA_JULIAN_2",
+    "RU_PAIR_04_CATE_LINE_VS_CASSETTE": "CATE_IDENTITY",
 }
 REVIEW_PASS_FIELDS = (
     "preview_listen",
@@ -53,6 +60,14 @@ def require(cond: bool, msg: str) -> None:
 def valid_sha(value: object) -> bool:
     text = str(value or "")
     return len(text) == 64 and all(c in "0123456789abcdefABCDEF" for c in text)
+
+
+def numeric_score(row: dict[str, Any], key: str, minimum: float, maximum: float, role: str) -> float:
+    value = row.get(key)
+    require(isinstance(value, (int, float)) and not isinstance(value, bool), f"{role}: {key} missing")
+    score = float(value)
+    require(minimum <= score <= maximum, f"{role}: {key} must be {minimum}..{maximum}")
+    return score
 
 
 def notice_days(row: dict[str, Any]) -> int:
@@ -103,19 +118,15 @@ def compile_receipt(snapshot: dict[str, Any], review: dict[str, Any], registry: 
     require(review.get("cast_lock") is False, "review must not pre-claim CAST LOCK")
 
     pairs = review.get("pair_tests") or {}
-    for pair_id in (
-        "RU_PAIR_01_ELENA_MINA_LOBBY",
-        "RU_PAIR_02_ELENA_JULIAN_DOORS",
-        "RU_PAIR_03_ELENA_JULIAN_STATUS",
-        "RU_PAIR_04_CATE_LINE_VS_CASSETTE",
-    ):
+    for pair_id in PAIR_SHORT:
         require(pairs.get(pair_id) == "PASS", f"pair test {pair_id} must PASS")
 
     candidates = candidate_index(snapshot)
     out_roles: dict[str, Any] = {}
     used_ids: list[str] = []
     locked_at = utc_now()
-    provider_verified_at = str(snapshot.get("generated_at") or snapshot.get("created") or locked_at)
+    provider_verified_at = str(snapshot.get("generated_at") or snapshot.get("created") or "")
+    require(bool(provider_verified_at), "provider snapshot timestamp missing")
 
     for role in ROLES:
         rr = (review.get("roles") or {}).get(role) or {}
@@ -130,9 +141,9 @@ def compile_receipt(snapshot: dict[str, Any], review: dict[str, Any], registry: 
 
         for field in REVIEW_PASS_FIELDS:
             require(rr.get(field) == "PASS", f"{role}: {field} must PASS")
-        score = rr.get("score_0_30")
-        require(isinstance(score, (int, float)) and not isinstance(score, bool), f"{role}: score_0_30 missing")
-        require(float(score) >= 24.0, f"{role}: score below 24/30")
+        score = numeric_score(rr, "score_0_30", 24.0, 30.0, role)
+        naturalism_score = numeric_score(rr, "naturalism_score_0_5", 4.0, 5.0, role)
+        pronunciation_score = numeric_score(rr, "pronunciation_score_0_5", 4.0, 5.0, role)
         require(rr.get("hard_reject") is False, f"{role}: hard reject present")
 
         takes = selected_take_rows(registry, role, voice_id)
@@ -157,16 +168,7 @@ def compile_receipt(snapshot: dict[str, Any], review: dict[str, Any], registry: 
         require(len(settings_signatures) == 1, f"{role}: selected take voice_settings drift")
 
         used_ids.append(voice_id)
-        pair_payload = {}
-        for pair_id in PAIR_BY_ROLE[role]:
-            short = {
-                "RU_PAIR_01_ELENA_MINA_LOBBY": "ELENA_MINA",
-                "RU_PAIR_02_ELENA_JULIAN_DOORS": "ELENA_JULIAN_1",
-                "RU_PAIR_03_ELENA_JULIAN_STATUS": "ELENA_JULIAN_2",
-                "RU_PAIR_04_CATE_LINE_VS_CASSETTE": "CATE_IDENTITY",
-            }[pair_id]
-            pair_payload[short] = "PASS"
-
+        pair_payload = {PAIR_SHORT[pair_id]: "PASS" for pair_id in PAIR_BY_ROLE[role]}
         out_roles[role] = {
             "role": role,
             "provider": "ElevenLabs",
@@ -180,9 +182,9 @@ def compile_receipt(snapshot: dict[str, Any], review: dict[str, Any], registry: 
             "voice_settings": json.loads(next(iter(settings_signatures))),
             "accepted_canary_ids": unit_ids,
             "accepted_canary_sha256": hashes,
-            "individual_score_raw": float(score),
-            "naturalism_score": float(rr.get("naturalism_score_0_5", 4.0)),
-            "pronunciation_score": float(rr.get("pronunciation_score_0_5", 4.0)),
+            "individual_score_raw": score,
+            "naturalism_score": naturalism_score,
+            "pronunciation_score": pronunciation_score,
             "pair_tests": pair_payload,
             "hard_reject_flags": [],
             "founder_credibility": "YES",
