@@ -1,7 +1,7 @@
 # SOURCE REGISTRATION — URSULA K. LE GUIN — *STEERING THE CRAFT* (2015)
 
 **Date:** 2026-08-22  
-**Pass:** 167  
+**Pass:** 168  
 **Class:** WIDER writing-craft source  
 **Status:** `STRICT_LIFECYCLE_SYNTHESIZED_v1.0`
 
@@ -69,3 +69,6 @@ This is a high-value practitioner craft source for narrative prose, not a scient
 
 ## Core accounting
 WIDER source. Does **not** change the authoritative Core strict-complete count.
+
+## Concurrency note
+Pass 167 was concurrently occupied by Zirker/Winter-Froemel. Le Guin was therefore normalized to Pass 168 and Batch 203; transient misnumbered Batch 202 artifacts were deleted rather than allowed to create a ledger collision.
