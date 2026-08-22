@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-22  
 **Lane:** CF-01 / P-EW03  
-**Classification:** `PATCH_REQUIRED / NO_ROUTE_CHANGE / NO_MARKET_PROMOTION`
+**Classification:** `PATCH_VERIFIED / NO_ROUTE_CHANGE / NO_MARKET_PROMOTION`
 
 ## Trigger
 The original P-EW03 pack correctly modeled Article 50 provider/deployer obligations, exceptions and technical evidence, but it did not encode the later binding transition added by Regulation (EU) 2026/1744.
@@ -42,8 +42,25 @@ Three transition canaries added:
 
 The frozen six synthetic sample cases are not rewritten; derived test variants preserve the original P-EW03 evidence history.
 
+## Verified implementation authority
+- implementation PR: `#412`;
+- implementation head: `0fc63534eceba746d0ef43cc93552905d2c6b38e`;
+- merge SHA: `e340213a88b9a59513209819ba966aa3cb7faad6`;
+- review threads at merge gate: `0`;
+- fresh-main overlap across the six Article 50 paths: `0`;
+- exact-head Business CI: `7/7 SUCCESS`.
+
+CI runs:
+- Article 50 pack: `32570316435`;
+- P-EW05 compatibility: `32570316420`;
+- Discovery engine: `32570316412`;
+- Buyer Evidence: `32570316384`;
+- Fatal Tests: `32570316398`;
+- Offer Engineering: `32570316408`;
+- OPP37 AI-vs-SEO: `32570316421`.
+
 ## Authority effect
-`P-EW03 = ENGINEERING_PASS + REGULATORY_DRIFT_PATCH`
+`P-EW03 = ENGINEERING_PASS + VERIFIED_REGULATORY_DRIFT_PATCH`
 
 `P-EW05 = UNCHANGED`
 
@@ -64,4 +81,4 @@ The frozen six synthetic sample cases are not rewritten; derived test variants p
 - European Commission Article 50 FAQ.
 - European Commission announcement that the AI Omnibus entered into force on 27 July 2026.
 
-READBACK_MARKER: `ARTICLE50-REGULATORY-DRIFT-EU2026-1744-A50_2-TRANSITION-NO-MARKET-PROMOTION-20260822`
+READBACK_MARKER: `ARTICLE50-REGULATORY-DRIFT-EU2026-1744-PR412-E340213A-7OF7-VERIFIED-NO-MARKET-PROMOTION`
