@@ -1,0 +1,75 @@
+{
+  "schema_version": "ivdivo.room917_automix_automation_plan/1.0",
+  "project": "ROOM917",
+  "episode": "E01",
+  "active_branch": "THE_INSURABLE_FIRE",
+  "scope": "DETERMINISTIC_AUTOMATION_PLAN_COMPILATION",
+  "law": "NO_PRODUCTION_AUTOMATION_PLAN_EXISTS_UNLESS_AUTOMIX_PREFLIGHT_PASSED_AND_EVERY_OPERATION_HAS_LIVE_TIMING_AND_PROVENANCE",
+  "preflight_status_required": "PASS_AUTOMIX_EXECUTION_READY",
+  "release_authority": false,
+  "timebase": {
+    "sample_rate_hz": 48000,
+    "canonical_unit": "samples",
+    "seconds_may_be_derived": true,
+    "invented_or_synthetic_time_forbidden": true
+  },
+  "required_buses": ["DIALOGUE", "CLUE_SFX", "SFX", "FOLEY", "AMBIENCE", "MUSIC"],
+  "allowed_operations": {
+    "PLACE_ASSET": {
+      "required": ["operation_id", "type", "bus", "start_sample", "end_sample", "source_sha256", "binding_status", "timing_grade"],
+      "binding_status_required": "PASS",
+      "timing_grade_allowed": ["ACCEPTED_ALIGNMENT", "LIVE_TIMELINE"]
+    },
+    "GAIN_ENVELOPE": {
+      "required": ["operation_id", "type", "bus", "start_sample", "end_sample", "gain_db", "timing_grade"]
+    },
+    "DUCK_WINDOW": {
+      "required": ["operation_id", "type", "bus", "start_sample", "end_sample", "gain_db", "trigger", "timing_grade"],
+      "allowed_buses": ["AMBIENCE", "MUSIC"],
+      "forbidden_buses": ["DIALOGUE", "CLUE_SFX", "SFX", "FOLEY"]
+    },
+    "SPATIAL_EVENT": {
+      "required": ["operation_id", "type", "bus", "start_sample", "end_sample", "speaker_or_source", "pan_start", "pan_end", "timing_grade"],
+      "pan_min": -1.0,
+      "pan_max": 1.0
+    },
+    "CATE_TELEPHONE_CHAIN": {
+      "required": ["operation_id", "type", "bus", "start_sample", "end_sample", "speaker", "hpf_hz", "lpf_hz", "reverb", "mono_core", "pitch_shift", "stereo_widening", "ghost_processing", "timing_grade"],
+      "speaker_required": "CATE",
+      "bus_required": "DIALOGUE",
+      "hpf_hz": 300,
+      "lpf_hz": 3400,
+      "reverb": "NONE",
+      "mono_core": true,
+      "pitch_shift": false,
+      "stereo_widening": false,
+      "ghost_processing": false
+    },
+    "PROTECTED_SILENCE": {
+      "required": ["operation_id", "type", "start_sample", "end_sample", "timing_grade", "post_fx_sample_exact_mask"],
+      "post_fx_sample_exact_mask_required": true
+    }
+  },
+  "global_rules": {
+    "start_sample_must_be_nonnegative_integer": true,
+    "end_sample_must_be_greater_than_start_sample": true,
+    "operation_ids_unique": true,
+    "asset_sha256_required_for_PLACE_ASSET": true,
+    "synthetic_timing_forbidden": true,
+    "unbound_or_hold_assets_forbidden": true,
+    "ducking_dialogue_or_clue_sfx_forbidden": true,
+    "telephone_chain_non_cate_forbidden": true,
+    "protected_silence_overlap_policy": "NO_NON_SILENCE_OPERATION_MAY_OVERLAP_PROTECTED_SILENCE_UNLESS_EXPLICITLY_MARKED_AS_PROTECTED_SOURCE_AND_ALLOWED_BY_FUTURE_CANONICAL_RULE",
+    "current_default_protected_overlap_exceptions": []
+  },
+  "output": {
+    "status_pass": "PASS_AUTOMATION_PLAN_COMPILED",
+    "status_hold": "HOLD_AUTOMATION_PLAN",
+    "sort_order": ["start_sample", "end_sample", "operation_id"],
+    "include_input_sha256": true,
+    "include_preflight_sha256": true,
+    "include_operation_count": true,
+    "include_bus_counts": true,
+    "release_authority": false
+  }
+}
