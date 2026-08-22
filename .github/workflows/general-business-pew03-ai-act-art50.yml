@@ -4,10 +4,8 @@ on:
   pull_request:
     paths:
       - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/**'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md'
       - '.github/workflows/general-business-pew03-ai-act-art50.yml'
-  push:
-    branches:
-      - 'business-engineering/pew03-ai-act-art50-pack-fresh-20260822'
 
 jobs:
   art50-pack:
@@ -19,13 +17,17 @@ jobs:
           python-version: '3.12'
       - name: Install pytest
         run: python -m pip install --disable-pip-version-check pytest
-      - name: Run P-EW03 regression suite
-        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/tests/test_router.py
-      - name: Validate synthetic sample and machine state JSON
+      - name: Run P-EW03 routing and control-verification regressions
+        run: |
+          python -m pytest -q \
+            BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/tests/test_router.py \
+            BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/tests/test_control_verifier.py
+      - name: Validate P-EW03 JSON state and fixtures
         run: |
           python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/02_SYNTHETIC_SAMPLE_PACKET.json >/dev/null
           python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/03_MACHINE_STATE.json >/dev/null
-      - name: Execute deterministic six-case router smoke test
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/05_CONTROL_VERIFICATION_FIXTURES.json >/dev/null
+      - name: Execute deterministic router smoke test
         run: |
           python - <<'PY'
           import json, sys
@@ -41,6 +43,23 @@ jobs:
           assert all(x['legal_compliance_proven'] is False for x in results)
           assert any(any(d['status'] in {router.APPLIES, router.APPLIES_SPECIAL_PRESENTATION} for d in x['decisions']) for x in results)
           print('P-EW03 six-case router PASS')
+          PY
+      - name: Execute control-verification hardening smoke test
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK/control_verifier.py > /tmp/pew03_control_results.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('/tmp/pew03_control_results.json').read_text())
+          assert len(data['results']) == 8
+          assert data['legal_compliance_proven'] is False
+          assert data['customer_demand_proven'] is False
+          assert data['wtp_proven'] is False
+          by_id = {x['case_id']: x for x in data['results']}
+          assert by_id['CV_DEEPFAKE_MACHINE_MARK_ONLY']['overall'] == 'CONTROL_GAPS_FOUND'
+          assert by_id['CV_CLOSED_LOOP_SCOPE_REVIEW']['overall'] == 'REVIEW_REQUIRED'
+          assert any(x['type'] == 'LEGISLATIVE_REVIEW_REQUIRED' for x in by_id['CV_LEGACY_TRANSITION_CLAIM']['review_items'])
+          print('P-EW03 control verification PASS')
           PY
       - name: Compile P-EW03 runtime
         run: python -m compileall BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/19_AI_ACT_ART50_TECHNICAL_TRANSPARENCY_PACK
