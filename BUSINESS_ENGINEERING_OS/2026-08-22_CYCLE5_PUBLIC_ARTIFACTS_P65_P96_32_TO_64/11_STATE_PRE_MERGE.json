@@ -1,0 +1,16 @@
+{
+  "schema_version":"0.1",
+  "status":"PRE_MERGE_ENGINEERING_PASS",
+  "cycle":"BUSINESS_OS_CYCLE5_P65_P96",
+  "prompts":{"executed":32,"range":"P65-P96"},
+  "tests":{"passed":19,"failed":0},
+  "artifacts":{"OP01":"PASS_PUBLIC_ARTIFACT","OP03":"PASS_PUBLIC_ARTIFACT","OP19":"PASS_PUBLIC_ARTIFACT"},
+  "p83_human_delivery_time_minutes":null,
+  "e3_buyer_conversations":0,
+  "e4_transaction_proofs":0,
+  "active_wip":["OP01_PRIMARY","OP03_PILOT","OP19_PILOT"],
+  "new_global_si_id":null,
+  "evidence_ceiling":"PUBLIC_E2_PLUS_AND_ENGINEERING_ONLY",
+  "market_proof":"NOT_PROVEN",
+  "founder_cash_spent_eur":0
+}
