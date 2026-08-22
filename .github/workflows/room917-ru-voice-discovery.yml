@@ -1,6 +1,6 @@
 name: ROOM917 RU Voice Discovery
 
-# v1.2 native/durable zero-spend refresh 2026-08-22
+# v1.3 public native/durable zero-spend discovery 2026-08-22
 on:
   push:
     paths:
@@ -25,24 +25,50 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Fail closed if ElevenLabs secret missing
-        env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [ -z "${ELEVENLABS_API_KEY:-}" ]; then
-            echo "::error::Repository secret ELEVENLABS_API_KEY is not configured."
-            exit 2
-          fi
-
-      - name: Acquire secret-free account voice and model inventory
+      - name: Discover durable native-Russian professional shared voices
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider
+          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/discover_ru_voice_candidates.py \
+            --out AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json \
+            --min-notice-days 365 \
+            --page-size 100 \
+            --max-pages 3
+
+      - name: Acquire account voice and model inventory when secret exists
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider
+          if [ -z "${ELEVENLABS_API_KEY:-}" ]; then
+            python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          out={
+              'schema_version':'ivdivo.room917_ru_account_voice_inventory/1.1',
+              'generated_at':datetime.now(timezone.utc).isoformat().replace('+00:00','Z'),
+              'provider':'ElevenLabs',
+              'status':'SKIPPED_NO_REPOSITORY_SECRET',
+              'secret_persisted':False,
+              'paid_synthesis_calls':0,
+              'voice_count':None,
+              'voices':[],
+              'models':[],
+              'ranked_role_candidates':{},
+              'note':'Native shared-voice discovery is independent and still runs because /v1/shared-voices documents xi-api-key as optional.'
+          }
+          Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_VOICE_DISCOVERY.json').write_text(
+              json.dumps(out,ensure_ascii=False,indent=2)+'\n', encoding='utf-8')
+          PY
+            exit 0
+          fi
+
           python - <<'PY'
           import json, os, urllib.parse, urllib.request
           from datetime import datetime, timezone
@@ -66,11 +92,11 @@ jobs:
               for v in data.get('voices',[]):
                   labels=v.get('labels') or {}
                   voices.append({
-                      'voice_id': v.get('voice_id'),
-                      'name': v.get('name'),
-                      'category': v.get('category'),
-                      'description': v.get('description'),
-                      'labels': labels,
+                      'voice_id':v.get('voice_id'),
+                      'name':v.get('name'),
+                      'category':v.get('category'),
+                      'description':v.get('description'),
+                      'labels':labels,
                   })
               if not data.get('has_more'):
                   break
@@ -126,33 +152,44 @@ jobs:
               ]
 
           out={
-              'schema_version':'ivdivo.room917_ru_voice_discovery/1.0',
+              'schema_version':'ivdivo.room917_ru_account_voice_inventory/1.1',
               'generated_at':datetime.now(timezone.utc).isoformat().replace('+00:00','Z'),
               'provider':'ElevenLabs',
+              'status':'PASS_AUTHENTICATED_ACCOUNT_INVENTORY',
               'secret_persisted':False,
               'paid_synthesis_calls':0,
               'voice_count':len(voices),
               'voices':voices,
               'models':model_rows,
               'ranked_role_candidates':ranked,
-              'warning':'Metadata ranking is pre-audition only. No voice is locked until Russian canary and pair tests are heard.'
+              'warning':'Account metadata ranking is pre-audition only. Native RU shared-voice discovery is the production casting frontier.'
           }
           Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_VOICE_DISCOVERY.json').write_text(
               json.dumps(out,ensure_ascii=False,indent=2)+'\n', encoding='utf-8')
-          print(f"voices={len(voices)} models={len(model_rows)}")
+          print(f"account voices={len(voices)} models={len(model_rows)}")
           PY
 
-      - name: Discover durable native-Russian professional shared voices
-        env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      - name: Validate discovery artifacts
         shell: bash
         run: |
           set -euo pipefail
-          python AUDIO_PRODUCTION/ROOM917/RU_PILOT/tools/discover_ru_voice_candidates.py \
-            --out AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json \
-            --min-notice-days 365 \
-            --page-size 100 \
-            --max-pages 3
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          native=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json')
+          account=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_VOICE_DISCOVERY.json')
+          if not native.exists():
+              raise SystemExit('native discovery artifact missing')
+          if not account.exists():
+              raise SystemExit('account inventory artifact missing')
+          n=json.loads(native.read_text(encoding='utf-8'))
+          a=json.loads(account.read_text(encoding='utf-8'))
+          if n.get('paid_synthesis_calls') != 0:
+              raise SystemExit('native discovery unexpectedly reports paid synthesis')
+          if n.get('selection_policy',{}).get('auto_cast') is not False:
+              raise SystemExit('native discovery must not auto-cast')
+          print(f"native_status={n.get('status')} candidates={n.get('candidate_count')} account_status={a.get('status')}")
+          PY
 
       - name: Commit provider inventory if changed
         shell: bash
@@ -176,16 +213,16 @@ jobs:
           python - <<'PY'
           import json, os
           from pathlib import Path
-          account=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_VOICE_DISCOVERY.json')
-          native=Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json')
-          a=json.loads(account.read_text(encoding='utf-8'))
-          n=json.loads(native.read_text(encoding='utf-8'))
+          a=json.loads(Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_VOICE_DISCOVERY.json').read_text(encoding='utf-8'))
+          n=json.loads(Path('AUDIO_PRODUCTION/ROOM917/RU_PILOT/provider/RU_NATIVE_VOICE_DISCOVERY.json').read_text(encoding='utf-8'))
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
               f.write('## ROOM917 RU voice discovery\n')
-              f.write(f"- account voices available: {a['voice_count']}\n")
-              f.write(f"- native RU professional voices (>=365-day notice): {n['candidate_count']}\n")
-              f.write(f"- models returned: {len(a['models'])}\n")
+              f.write(f"- native discovery status: {n.get('status')}\n")
+              f.write(f"- native RU professional voices (>=365-day notice): {n.get('candidate_count')}\n")
+              f.write(f"- account inventory status: {a.get('status')}\n")
+              f.write(f"- account voices available: {a.get('voice_count')}\n")
+              f.write(f"- models returned: {len(a.get('models') or [])}\n")
               f.write('- paid synthesis calls: 0\n')
               f.write('- provider key persisted: false\n')
-              f.write('- next: preview native candidates, shortlist 3 per role, then bounded Russian canary + pair tests\n')
+              f.write('- next: preview native role-ranked candidates, bind 3 per role, then bounded Russian canary + pair tests\n')
           PY
