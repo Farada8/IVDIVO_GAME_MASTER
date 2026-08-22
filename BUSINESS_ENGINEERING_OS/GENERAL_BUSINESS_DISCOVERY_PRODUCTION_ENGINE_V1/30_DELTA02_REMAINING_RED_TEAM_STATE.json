@@ -1,0 +1,126 @@
+{
+  "schema": "ivdivo.general_business.delta02_remaining_red_team/1.0",
+  "date": "2026-08-22",
+  "status": "INTERNAL_RED_TEAM_COMPLETE_NO_WIP_PROMOTION",
+  "parent_radar": "25_EARLY_WAVE_RADAR_DELTA02_2026-08-22.md",
+  "report": "29_DELTA02_REMAINING_RED_TEAM_2026-08-22.md",
+  "evidence_ceiling": "E2_PLUS_PUBLIC",
+  "external_action_authorized": false,
+  "market_winner": null,
+  "buyer_demand": "UNPROVEN",
+  "wtp": "UNKNOWN",
+  "price": null,
+  "transactions": 0,
+  "profitability": "UNPROVEN",
+  "wip_promoted": false,
+  "rank_after_red_team": [
+    {
+      "rank": 1,
+      "candidate": "EW-D02-05_DOCLANG_AI_NATIVE_DOCUMENTS",
+      "prior_score": 80,
+      "red_team_score": 76,
+      "route": "ADVANCE_TO_SMALLEST_INTERNAL_FIDELITY_PROOF_ONLY",
+      "wip": "RADAR_ONLY",
+      "generic_wedges_killed": [
+        "GENERIC_DOCLANG_VALIDATOR",
+        "GENERIC_DOCLANG_PACKER",
+        "BASIC_PDF_WORD_TO_DOCLANG_WRAPPER",
+        "BASIC_DOCLING_SETUP",
+        "NARRATIVE_AI_NATIVE_DOCUMENT_CONVERSION_SERVICE"
+      ],
+      "surviving_hypothesis": "DOCLANG_CROSS_CONVERTER_ROUNDTRIP_FIDELITY_AND_REGRESSION_QA",
+      "next_gate": "P-EW07_DOCLANG_FIDELITY_PROOF"
+    },
+    {
+      "rank": 2,
+      "candidate": "EW-D02-07_EU_AGE_VERIFICATION_RELYING_PARTY",
+      "prior_score": 76,
+      "red_team_score": 72,
+      "route": "HOLD_STRONG_FORCING_FUNCTION_NO_GENERIC_INTEGRATION",
+      "wip": "RADAR_ONLY_HOLD",
+      "generic_wedges_killed": [
+        "GENERIC_EU_AGE_VERIFICATION_SETUP",
+        "OFFICIAL_VERIFIER_UI_BACKEND_CLONE",
+        "GENERIC_QR_VERIFIER_DEMO",
+        "LEGAL_COMPLIANCE_CERTIFICATION"
+      ],
+      "surviving_hypothesis": "EU_AV_RELYING_PARTY_PROFILE_VERSION_AND_DEPLOYMENT_EVIDENCE_QA",
+      "next_gate": "REAL_IRELAND_OR_NATIONAL_PROFILE_OR_VERIFIED_INTEGRATION_GAP"
+    },
+    {
+      "rank": 3,
+      "candidate": "EW-D02-04_X402",
+      "prior_score": 82,
+      "red_team_score": 65,
+      "route": "HOLD_WAVE_REAL_GENERIC_INTEGRATION_COMMODITIZED",
+      "wip": "RADAR_ONLY_HOLD",
+      "generic_wedges_killed": [
+        "BASIC_X402_MIDDLEWARE_SETUP",
+        "GENERIC_SELLER_INTEGRATION",
+        "GENERIC_FACILITATOR_DIRECTORY",
+        "SDK_WRAPPER",
+        "WALLET_OR_PAYMENT_CUSTODY",
+        "TOKEN_OR_CRYPTO_SPECULATION"
+      ],
+      "surviving_hypothesis": "X402_CROSS_TRANSPORT_SCHEME_VERSION_CONFORMANCE_AND_RECEIPT_EVIDENCE_QA"
+    },
+    {
+      "rank": 4,
+      "candidate": "EW-D02-06_OPENSHARING",
+      "prior_score": 76,
+      "red_team_score": 60,
+      "route": "HOLD_PLATFORM_NATIVE_BETA_WATCH_CROSS_PLATFORM",
+      "wip": "RADAR_ONLY_HOLD",
+      "generic_wedges_killed": [
+        "GENERIC_DATABRICKS_OPENSHARING_SETUP",
+        "GENERIC_PROVIDER_RECIPIENT_WALKTHROUGH",
+        "DUPLICATE_MARKETPLACE_UI",
+        "BASIC_DATABRICKS_AGENT_SHARE_PACKAGING"
+      ],
+      "surviving_hypothesis": "OPENSHARING_CROSS_PLATFORM_RECIPIENT_COMPATIBILITY_AND_ASSET_FIDELITY_QA",
+      "next_gate": "AT_LEAST_2_MATERIALLY_INDEPENDENT_NON_DATABRICKS_IMPLEMENTATIONS"
+    },
+    {
+      "rank": 5,
+      "candidate": "EW-D02-08_EUROPEAN_BUSINESS_WALLET",
+      "prior_score": 64,
+      "red_team_score": 56,
+      "route": "WATCH_PRE_SPEC_DO_NOT_BUILD",
+      "wip": "RADAR_ONLY_WATCH",
+      "generic_wedges_killed": [
+        "EBW_CONNECTOR_BEFORE_STABLE_REQUIREMENTS",
+        "DIRECTORY_CLIENT_AGAINST_GUESSED_APIS",
+        "COMPLIANCE_PRODUCT_FROM_PROPOSAL_TEXT",
+        "AGENTIC_BUSINESS_WALLET_BEFORE_PROTOCOL_SURFACES"
+      ],
+      "surviving_hypothesis": "EBW_TECHNICAL_STANDARD_AND_EUROPEAN_DIGITAL_DIRECTORY_WATCH"
+    }
+  ],
+  "portfolio_decision": {
+    "only_candidate_allowed_one_internal_step": "DOCLANG_CROSS_CONVERTER_ROUNDTRIP_FIDELITY_AND_REGRESSION_QA",
+    "next_internal_gate": "P-EW07_DOCLANG_FIDELITY_PROOF",
+    "new_wip_promotion": false,
+    "active_external_testing": false
+  },
+  "p_ew07_contract": {
+    "scope": "INTERNAL_SYNTHETIC_OR_PUBLIC_SAFE_FIDELITY_PROOF_ONLY",
+    "stress_cases": [
+      "NESTED_HEADINGS_AND_LISTS",
+      "MERGED_OR_RICH_TABLE_CELLS",
+      "FORMULAS_AND_CODE",
+      "INLINE_FORMATTING_AND_LINKS",
+      "PAGE_GEOMETRY_AND_IMAGE_REFERENCES",
+      "XML_SENSITIVE_OR_BOUNDARY_TEXT"
+    ],
+    "success_condition": "AT_LEAST_ONE_REPRODUCIBLE_INFORMATION_LOSS_OR_VERSION_REGRESSION_CLASS_BEYOND_SCHEMA_VALIDATION",
+    "kill_condition": "RESULT_REDUCES_TO_OFFICIAL_VALIDATOR_FUNCTIONALITY_OR_NO_DECISION_RELEVANT_FIDELITY_LOSS",
+    "forbidden": [
+      "EXTERNAL_OUTREACH",
+      "CUSTOMER_DOCUMENTS",
+      "PAID_TOOLING",
+      "PRODUCTION_INTEGRATION",
+      "WIP_PROMOTION"
+    ]
+  },
+  "readback_marker": "DELTA02-REMAINING-REDTEAM-DOCLANG76-EUAV72-X40265-OPENSHARING60-EBW56-NO-WIP-20260822"
+}
