@@ -2,14 +2,32 @@
   "project": "GENESIS DYNAMICS",
   "cycle": "CYCLE3_HIGH_PRIORITY_8",
   "date": "2026-08-22",
-  "status": "DRAFT_RESEARCH_CANDIDATE",
-  "base_main_sha": "8c5ec9b743857f095f49f0ce80e1eaa26645ab4e",
-  "branch": "genesis-dynamics-cycle3-high-priority-20260822",
+  "status": "CROSS_STORE_PERSISTED_DRAFT_PR_NO_MERGE",
+  "github": {
+    "base_main_sha_at_branch_creation": "8c5ec9b743857f095f49f0ce80e1eaa26645ab4e",
+    "branch": "genesis-dynamics-cycle3-high-priority-20260822",
+    "pr_number": 369,
+    "pr_url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/369",
+    "pr_draft": true,
+    "pr_mergeable_observed": false,
+    "pr_head_before_state_update": "dcf0e2a5bb0242d7ea24c7d5210cb11e60814384",
+    "main_at_pr_open": "2194c72cdca99ce41e5fc940df686c0004f4b5ee",
+    "merge": "NOT_REQUESTED"
+  },
+  "drive": {
+    "folder_id": "1iYjDT_B20W9YKn73_N4NNskHTcNjlQCh",
+    "zip_id": "163iHUsnzcbuiX5JK974MoHsQDQmv8JOq",
+    "proof_id": "1ZSL_wXn598OwNEKwd5LchG7w1fZ831Zm",
+    "results_id": "1vXGynJ4KsOrX6nu7fyHkzau3JsDmnB2b",
+    "cold_id": "1mrmQJGgdB99sUBB_h-HfEWfL5V6R-JwT",
+    "state_id": "1R0tB_YbyQobWgaNeD1TIemOQaFjb0WUW",
+    "readback": "PASS"
+  },
   "executed": ["GEN3-001","GEN3-009","GEN3-017","GEN3-025","GEN3-033","GEN3-041","GEN3-049","GEN3-057"],
-  "tests_local": "16/16 PASS",
-  "cold_replay": "16/16 PASS",
+  "tests": {"warm":"16/16 PASS","cold":"16/16 PASS"},
   "novelty": "ENGINEERING_SYNTHESIS_NOVELTY_UNVERIFIED",
   "lean": "DESIGN_PREPARED_NOT_KERNEL_VERIFIED",
   "next": ["GEN3-020","GEN3-023","GEN3-026","GEN3-035","GEN3-038","GEN3-039","GEN3-053","GEN3-063"],
-  "hard_rule": "DIAGONAL_IDENTIFICATION_RELATIVE_TO_FAMILY != UNRESTRICTED_OPERATION_IDENTIFICATION"
+  "hard_rule": "DIAGONAL_IDENTIFICATION_RELATIVE_TO_FAMILY != UNRESTRICTED_OPERATION_IDENTIFICATION",
+  "package_sha256": "738da8931203c4717fdef945dd69e46000e5a8cc5c432dab7ba565909ecb9950"
 }
