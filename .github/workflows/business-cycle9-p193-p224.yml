@@ -9,6 +9,7 @@ on:
     branches:
       - 'business-engineering/cycle9-p193-p224-decision-proof-20260822'
       - 'business-engineering/cycle9-award-state-freshmain-20260822'
+      - 'business-engineering/pre-p235-test-fixture-designation-20260822'
 
 jobs:
   decision-proof-regression:
@@ -26,5 +27,7 @@ jobs:
         run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE9_P193_P224_DECISION_PROOF/tests/test_decision_proof_guard.py
       - name: Cycle9 workspace award-state guards
         run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE9_P193_P224_DECISION_PROOF/tests/test_workspace_snapshot_guard.py
+      - name: Cycle9 pre-P235 bidder designation guards
+        run: python BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE9_P193_P224_DECISION_PROOF/tests/test_bidder_designation_guard.py
       - name: Compile Cycle9 runtime
         run: python -m compileall -q BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE9_P193_P224_DECISION_PROOF/engine
