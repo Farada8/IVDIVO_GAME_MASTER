@@ -12,6 +12,7 @@ class PlacementIntent:
     expected_parent: str
     start_here_ref: str
     cross_store_required: bool = False
+    expected_resource_type: str | None = None
 
 
 def _single_parent(parents: Sequence[str] | None) -> str | None:
@@ -30,6 +31,22 @@ def _drive_locator(value: str | None) -> str | None:
     if not value:
         return None
     return value if value.startswith("drive:") else f"drive:{value}"
+
+
+def _drive_resource_type(metadata: Mapping[str, Any]) -> str | None:
+    mime = metadata.get("mime_type")
+    if mime is None:
+        mime = metadata.get("mimeType")
+    if mime is None:
+        return None
+    value = str(mime).strip().lower()
+    mapping = {
+        "application/vnd.google-apps.folder": "FOLDER",
+        "application/vnd.google-apps.document": "DOCUMENT",
+        "application/vnd.google-apps.spreadsheet": "SPREADSHEET",
+        "application/vnd.google-apps.presentation": "PRESENTATION",
+    }
+    return mapping.get(value, "FILE") if value else None
 
 
 def receipt_from_drive_observation(
@@ -59,6 +76,8 @@ def receipt_from_drive_observation(
         legacy_conflicts=tuple(str(x) for x in legacy_conflicts if str(x).strip()),
         cross_store_required=intent.cross_store_required,
         cross_store_pointer_present=cross_store_pointer_present,
+        expected_resource_type=intent.expected_resource_type,
+        observed_resource_type=_drive_resource_type(artifact_metadata),
     )
 
 
@@ -91,4 +110,6 @@ def receipt_from_github_observation(
         legacy_conflicts=tuple(str(x) for x in legacy_conflicts if str(x).strip()),
         cross_store_required=intent.cross_store_required,
         cross_store_pointer_present=cross_store_pointer_present,
+        expected_resource_type=intent.expected_resource_type,
+        observed_resource_type="FILE" if file_observed else None,
     )
