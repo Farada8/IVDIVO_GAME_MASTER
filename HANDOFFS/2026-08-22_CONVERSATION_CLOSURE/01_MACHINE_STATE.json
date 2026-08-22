@@ -1,0 +1,100 @@
+{
+  "schema": "ivdivo.conversation_closure/1.0",
+  "closed_at": "2026-08-22T14:49:00+01:00",
+  "source": "THIS_PROJECT_CONVERSATION_MATERIAL_HANDOFF",
+  "verbatim_transcript": false,
+  "authority_rule": "FOUNDER_NEWEST > LOCKED_CANON > CURRENT_DOMAIN_PROJECT_AUTHORITY > CURRENT_STATE > THIS_HANDOFF",
+  "github": {
+    "repo": "Farada8/IVDIVO_GAME_MASTER",
+    "main_at_closure": "0dad06fdf172844b7540e807ef36d638e1cf98db",
+    "handoff_branch": "handoff/conversation-closure-20260822-1449"
+  },
+  "current_writing": {
+    "project": "IVDIVO_BOOK_3_SMITH",
+    "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+    "status": "FOUNDER_LOCKED",
+    "locked_frontier": "CH01_CH29",
+    "mode": "FOUNDER_LOCKED_MANUSCRIPT_ASSEMBLY_COPY_FORMAT_EXPORT",
+    "ch30_authorized": false,
+    "next": "ASSEMBLE_LOCKED_CH01_CH29_MANUSCRIPT_FROM_CURRENT_AUTHORITY_FILES_THEN_RUN_FINAL_COPY_FORMAT_EXPORT_GATE",
+    "project_state": "PROJECT_STATES/IVDIVO_BOOK_3_SMITH_CURRENT_STATE.json",
+    "founder_lock_authority": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_LOCK_RECEIPT_2026-08-22.md"
+  },
+  "portfolio": {
+    "d01": "FOUNDER_LOCKED_E01_E120_RECORDING_AUTHORITY_ISSUED",
+    "d09": "TEXT_COMPLETE_FINAL_STORY_GATE_PASS_FOUNDER_LOCK_PENDING",
+    "b03": "FOUNDER_LOCKED_CH01_CH29_MANUSCRIPT_AUTHORITY"
+  },
+  "self_improvement": {
+    "current_engine": "V2_VERIFIED_CURRENT",
+    "si0014": {
+      "observed_genuine_recovery_events_at_conversation_stage": 1,
+      "required_genuine_events_noted": 3,
+      "false_resume": 0,
+      "note": "fresh authority may have advanced after this stage; re-read CURRENT state"
+    },
+    "si0015": {
+      "engineering_corpus": "20_SOURCE_GROUNDED_SLICES",
+      "result": "20_20_PASS_FP0_FN0",
+      "independent_human_review": false,
+      "promotion": false
+    },
+    "lessons": [
+      "TEST_PASS_NEQ_ACCEPTABLE_PATCH",
+      "FRESHNESS_CAN_SUPERSEDE_A_VALID_REPAIR_BEFORE_MERGE",
+      "WRITE_CLAIM_NEQ_PERSISTED_ARTIFACT",
+      "HASH_NEQ_EXTERNAL_TRUTH",
+      "POINTER_NEQ_DURABLE_RECOVERY",
+      "DATASET_NEQ_ENGINE",
+      "DUPLICATE_SOURCE_WEIGHT_ZERO"
+    ]
+  },
+  "business_engineering": {
+    "raw_library_drive_id": "1X6mo94Qo103HheyDry4P3dcQkv5qZg6N",
+    "physical_files": 78,
+    "valid_physical_files": 68,
+    "unique_valid_byte_hashes": 58,
+    "exact_duplicate_groups": 8,
+    "broken_placeholders": 5,
+    "canonical_unique_works": null,
+    "root_workloads_from_64_public_rows": 16,
+    "conversation_stage_active_roots": ["R01", "R02", "R05"],
+    "rule": "FRESH_READ_CURRENT_BUSINESS_AUTHORITY_BEFORE_RESUMING_OLD_PROMPT_BANKS"
+  },
+  "room917_audio": {
+    "season_episodes": 24,
+    "story_locked": true,
+    "e25_authorized": false,
+    "rule": "RESUME_LATEST_AUDIO_AUTHORITY_NOT_PRE_RENDER_PLANNING",
+    "external_provider_human_evidence_must_not_be_simulated": true
+  },
+  "process": {
+    "short_resume_commands": ["и", "дальше", "продолжай", "делай", "работай", "действуй"],
+    "resume_loop": [
+      "FRESHNESS_SWEEP",
+      "PARALLEL_GITHUB_DRIVE_CHECK",
+      "AUTHORITY_RECONCILIATION",
+      "HIGHEST_UNBLOCKED_OBLIGATION",
+      "EXECUTE",
+      "VERIFY",
+      "PERSIST",
+      "READBACK"
+    ],
+    "forbidden": [
+      "ASK_FOUNDER_TO_REPEAT_KNOWN_CONTEXT",
+      "BLINDLY_REPEAT_32_TO_64_CYCLE",
+      "SECOND_TOP_LEVEL_ENGINE_WITHOUT_UNIQUE_CONTRACT",
+      "SIMULATE_HUMAN_PROVIDER_MARKET_EVIDENCE",
+      "CH30_WITHOUT_FOUNDER_UNLOCK",
+      "REOPEN_LOCKED_STORY_FOR_TOOL_OR_STYLE_NOVELTY"
+    ]
+  },
+  "drive_pointers": {
+    "business_convergence_folder": "1WOebAGwimZjYXJKvrjS2_vpcojRlaSHw",
+    "cycle10_post_merge_receipt": "1ziur4GRSzPHEcBvkY6QFWm9Fuf8xQTwTVshPEfiB8_4",
+    "d01_router_hold_readback": "13wPmVg7zFqlrxA5B_JZcihl_BHneiMcTpK3KwbqO8Cg"
+  },
+  "stale_or_provenance_only_prs": [111, 162, 173, 180, 241, 246, 275],
+  "important_merged_or_controlling_prs_seen": [137, 159, 245, 486],
+  "closure_rule": "RE_READ_CURRENT_MAIN_AND_PROJECT_STATE_BEFORE_EXECUTION"
+}
