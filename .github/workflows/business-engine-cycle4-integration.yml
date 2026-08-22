@@ -1,0 +1,26 @@
+name: Business Engineering OS Cycle4 Integration
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_CANONICAL_MECHANISM_HARDENING_32_TO_64/**'
+      - 'BUSINESS_ENGINEERING_OS/LIBRARY/BOOK_ENGINE_SHARED_INFRASTRUCTURE_DEPENDENCY_v07.json'
+      - '.github/workflows/business-engine-cycle4-integration.yml'
+  workflow_dispatch:
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Canonical Cycle4 regression
+        run: |
+          cd BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_CANONICAL_MECHANISM_HARDENING_32_TO_64/engine
+          python -m unittest test_cycle4_business_engine.py -v
+          python -m compileall -q cycle4_business_engine.py
+      - name: Business Engine integration regression
+        run: |
+          cd BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE4_CANONICAL_MECHANISM_HARDENING_32_TO_64
+          PYTHONPATH=. python -m unittest tests.test_business_engine_integration_v1 -v
+          python -m compileall -q engine/business_engine_integration_v1.py
