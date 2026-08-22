@@ -1,10 +1,10 @@
 {
-  "schema_version": "room917.current_critical_sfx_controlled_pointer/1.0",
-  "updated": "2026-08-22T18:36:00+01:00",
+  "schema_version": "room917.current_critical_sfx_controlled_pointer/1.1",
+  "updated": "2026-08-22T18:38:00+01:00",
   "project": "ROOM917",
   "episode": "E01",
   "branch": "THE_INSURABLE_FIRE",
-  "status": "CONTROLLED_RECOVERY_BYTES_PRESENT_24_OF_24_HASH_MATCH_HUMAN_BINDING_OPEN",
+  "status": "CONTROLLED_RECOVERY_BYTES_PRESENT_24_OF_24_HASH_MATCH_ALL_CRITICAL_SFX_BLIND_PACKAGES_READY_HUMAN_BINDING_OPEN",
   "authority": {
     "receipt": "AUDIO_PRODUCTION/ROOM917/SOUND_DESIGN/ROOM917_E01_CRITICAL_SFX_SYNTHETIC_CANARY_RECEIPT_v2_1.json",
     "receipt_schema": "room917.critical_sfx_synthetic_canary_receipt/2.1",
@@ -35,11 +35,33 @@
     "manifest_file_id": "1e5UQZx9zl1s7bm78pTaKaD5aSxKUkKXg",
     "manifest_filename": "ROOM917_E01_CRITICAL_SFX_CONTROLLED_RECOVERY_MANIFEST_v1.json"
   },
-  "existing_blind_subset": {
-    "drive_file_id": "1f_CyKbptuLinX35fln6sB8klZOEpO7Lc",
-    "filename": "ROOM917_SFX_S13_S14_S17_S19_BLIND_v2.zip",
-    "sha256": "8b66af4cf3a3fe728e476d83a9227be1d4bd1e3576f748212acaafefe80ebfdc",
-    "machine_preflight": "PASS_WITH_OBSERVATIONS_NO_HUMAN_SELECTION"
+  "blind_packages": {
+    "ordinary_technical_reference_set": {
+      "scope": ["S07_TRANSFORMER_WAKE","S08_RELAY_RIPPLE","S10_SELECTOR_916","S11_GLASS_LAMP_916_PING"],
+      "drive_file_id": "1snqKOQDilRhDfeK2qFQhUUGVZw5SGzI-",
+      "filename": "ROOM917_SFX_S07_S08_S10_S11_BLIND_v1.zip",
+      "sha256": "2550dcccb9f01339e31dc95c6b04a3403fa070ee41432a10c0c3910c8c610201",
+      "size_bytes": 2090645,
+      "wav_count": 12,
+      "drive_readback_sha256_verified": true,
+      "crc": "PASS",
+      "blind_law": "PASS_A_AUDIO_ONLY_NOTES_FREEZE_THEN_PASS_B_FUNCTION_ASSIGNMENT",
+      "human_status": "READY_NOT_EXECUTED"
+    },
+    "impossible_event_set": {
+      "scope": ["S13_INTERNAL_DOUBLE_RING_OLD","S14_UNMARKED_GLASS_LAMP_PING","S17_COPPER_HISS","S19_TWO_PART_LINE_CUT"],
+      "drive_file_id": "1f_CyKbptuLinX35fln6sB8klZOEpO7Lc",
+      "filename": "ROOM917_SFX_S13_S14_S17_S19_BLIND_v2.zip",
+      "sha256": "8b66af4cf3a3fe728e476d83a9227be1d4bd1e3576f748212acaafefe80ebfdc",
+      "machine_preflight": "PASS_WITH_OBSERVATIONS_NO_HUMAN_SELECTION",
+      "human_status": "READY_NOT_EXECUTED"
+    }
+  },
+  "blind_coverage": {
+    "contract_asset_groups": 8,
+    "covered_groups": 8,
+    "coverage": "COMPLETE_FOR_CURRENT_CRITICAL_SFX_CANARY_SET",
+    "human_decisions_recorded": 0
   },
   "required_before_binding": [
     "BLIND_HUMAN_AUDITION",
@@ -51,7 +73,7 @@
     "PHONE_PROXY_CHECK",
     "IDENTITY_GATE_PASS"
   ],
-  "human_firewall": "BYTE_RECOVERY_AND_MACHINE_QC_DO_NOT_COUNT_AS_HUMAN_LISTEN_OR_AUDIO_CANON_APPROVAL",
+  "human_firewall": "BYTE_RECOVERY_MACHINE_QC_AND_BLIND_PACKAGING_DO_NOT_COUNT_AS_HUMAN_LISTEN_OR_AUDIO_CANON_APPROVAL",
   "hard_law": "CONTROLLED_BYTES_EXISTENCE_DOES_NOT_AUTHORIZE_PATCHING_RELEASE_OR_SEASON_SCALE",
-  "next": "USE_CONTROLLED_BUNDLE_FOR_BLIND_AUDITION_AND_IDENTITY_GATE_WHEN_HUMAN_EVIDENCE_IS_AVAILABLE; CONTINUE_INDEPENDENT_READY_FRONTIERS meanwhile"
+  "next": "HUMAN_BLIND_AUDITION_WHEN_AVAILABLE; WHILE BLOCKED CONTINUE_OTHER_INDEPENDENT_READY_ROOM917_FRONTIERS"
 }
