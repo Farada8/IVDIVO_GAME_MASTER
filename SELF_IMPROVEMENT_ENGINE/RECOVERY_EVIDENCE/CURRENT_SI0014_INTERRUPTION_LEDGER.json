@@ -1,0 +1,57 @@
+{
+  "schema_version": "ivdivo.interruption_ledger/1.0",
+  "candidate_id": "SI-0014",
+  "status": "READY_FOR_PILOT",
+  "authority_effect": "NONE",
+  "events": [
+    {
+      "event_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
+      "incident_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
+      "recovery_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001::IVDIVO_SELF_IMPROVEMENT",
+      "project_id": "IVDIVO_SELF_IMPROVEMENT",
+      "work_unit": "CYCLE9_REAL_INTERRUPTION_CONVERGENCE",
+      "recovery_decision": "RECOVER_PERSISTED_AUTHORITY_FIRST",
+      "real_interruption": true,
+      "project_slice_readback_complete": true,
+      "qualifying_recovery": true,
+      "false_resume": false,
+      "false_stop": false,
+      "duplicate_work_units_avoided": null,
+      "writes_reconciled": null,
+      "checkpoint_bytes": null,
+      "checkpoint_tool_calls": null,
+      "recovery_tool_calls": null,
+      "notes": [
+        "GitHub evidence: SELF_IMPROVEMENT_ENGINE/CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22/09_REAL_RECOVERY_EVENT_001_SELF_IMPROVEMENT.json",
+        "Drive evidence: 1HaEp8hyn-w_Ul5xdngKeh_TxIrg1CmAAd2QPO7dhS5o"
+      ]
+    },
+    {
+      "event_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
+      "incident_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
+      "recovery_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001::BUSINESS_ENGINEERING",
+      "project_id": "BUSINESS_ENGINEERING",
+      "work_unit": "CYCLE7_P97_P128_AUTHORITY_RECOVERY",
+      "recovery_decision": "RECOVER_PERSISTED_AUTHORITY_THEN_APPLY_SI0015_FRESHNESS",
+      "real_interruption": true,
+      "project_slice_readback_complete": true,
+      "qualifying_recovery": true,
+      "false_resume": false,
+      "false_stop": false,
+      "duplicate_work_units_avoided": null,
+      "writes_reconciled": null,
+      "checkpoint_bytes": null,
+      "checkpoint_tool_calls": null,
+      "recovery_tool_calls": null,
+      "notes": [
+        "GitHub evidence: SELF_IMPROVEMENT_ENGINE/CYCLE9_REAL_INTERRUPTION_CONVERGENCE_2026-08-22/10_REAL_RECOVERY_EVENT_001_BUSINESS_ENGINEERING_SLICE.json",
+        "Drive evidence: 1nj2BTsfA16TDScCaUBGol5wbm7y6CUBrXV8US1tKW7k",
+        "Freshness rebase caught main merge f45f07cb6a78733fa1a123d5e11a35dfb43913c5 and later stronger closure d919a680dea76ce74c6fa99113a1fe36d85f1e81"
+      ]
+    }
+  ],
+  "counting_law": "COUNT_DISTINCT_QUALIFIED_INCIDENT_ID_NOT_RECOVERY_ROWS",
+  "required_genuine_incidents": 3,
+  "required_distinct_projects": 2,
+  "next_gate": "TWO_ADDITIONAL_GENUINE_INTERRUPTION_INCIDENTS_WITH_ZERO_FALSE_RESUME"
+}

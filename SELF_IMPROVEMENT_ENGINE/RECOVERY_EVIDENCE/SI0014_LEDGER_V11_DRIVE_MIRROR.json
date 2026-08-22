@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "artifact": "SI0014_GENUINE_INTERRUPTION_LEDGER_V1_1",
+  "drive_document": {
+    "id": "1l0LZnRJhZsQ-jodnNXMHmVlFMoWCurVlP4EGwdTHlgo",
+    "title": "06 — SI-0014 INCIDENT LEDGER v1.1 + PROMOTION COUNTER",
+    "revision": "AIroW37s0af5wRi6YNkuNMZy8Lj951PiDyRHYDEUgW0nwfxKgwMmWQizHLeruApyLBYNExeTmTfKaOo2rbF-rjFff_XZssr66EDnCbYFAfY",
+    "parent_folder": "11iFW2B0lIWT1SiermmL0UqFFbYgEaZ1T",
+    "readback": "PASS"
+  },
+  "github_runtime": "tools/ivdivo_interruption_learning.py",
+  "github_contract": "ENGINEERING_CONTRACTS/SI0014_GENUINE_INTERRUPTION_LEDGER_CONTRACT_v1.0.md",
+  "github_ledger": "SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/CURRENT_SI0014_INTERRUPTION_LEDGER.json",
+  "github_counter": "SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/CURRENT_SI0014_PROMOTION_COUNTER.json",
+  "expected_events_sha256": "d2dfa0d208a6b0c1d2dc48db781f85071bc634b1a6260459bbf1307fc8d87362",
+  "cross_store_status": "DRIVE_WRITTEN_MOVED_READBACK_PASS_GITHUB_PENDING_MERGE",
+  "authority_effect": "NONE",
+  "next_gate": "CI_PLUS_FRESH_MAIN_COMPARE_PLUS_MERGE_READBACK"
+}

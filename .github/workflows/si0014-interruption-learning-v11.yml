@@ -1,0 +1,42 @@
+name: SI-0014 Interruption Learning v1.1
+
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_interruption_learning.py'
+      - 'tests/test_interruption_learning_v11.py'
+      - 'tests/test_interruption_learning_null_telemetry.py'
+      - 'tests/test_session_resilience_run33.py'
+      - 'SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/**'
+      - 'ENGINEERING_CONTRACTS/SI0014_GENUINE_INTERRUPTION_LEDGER_CONTRACT_v1.0.md'
+      - '.github/workflows/si0014-interruption-learning-v11.yml'
+  push:
+    branches:
+      - 'self-improvement/si0014-incident-ledger-v11-20260822'
+    paths:
+      - 'tools/ivdivo_interruption_learning.py'
+      - 'tests/test_interruption_learning_v11.py'
+      - 'tests/test_interruption_learning_null_telemetry.py'
+      - 'tests/test_session_resilience_run33.py'
+      - 'SELF_IMPROVEMENT_ENGINE/RECOVERY_EVIDENCE/**'
+      - 'ENGINEERING_CONTRACTS/SI0014_GENUINE_INTERRUPTION_LEDGER_CONTRACT_v1.0.md'
+      - '.github/workflows/si0014-interruption-learning-v11.yml'
+
+jobs:
+  si0014-interruption-learning:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile interruption learning runtime
+        run: python -m py_compile tools/ivdivo_interruption_learning.py
+      - name: Run v1.1 incident-versus-slice regressions
+        run: python tests/test_interruption_learning_v11.py
+      - name: Run null-safe telemetry regressions
+        run: python tests/test_interruption_learning_null_telemetry.py
+      - name: Run inherited Run33 regression suite
+        run: python tests/test_session_resilience_run33.py
