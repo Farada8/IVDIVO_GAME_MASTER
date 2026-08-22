@@ -1,0 +1,33 @@
+{
+  "schema_version": "ivdivo.room917_ru_s0_screening_receipt/1.0",
+  "date": null,
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "status": "S0_SCREENING_PENDING",
+  "s0_canary_receipt_path": "",
+  "s0_canary_receipt_sha256": "",
+  "pre_canary_bindings_path": "AUDIO_PRODUCTION/ROOM917/RU_PILOT/ROOM917_RU_S0_NATIVE_BINDINGS.json",
+  "pre_canary_bindings_sha256": "",
+  "roles": {
+    "ELENA": {"voice_id":"","individual_block_id":"RU_S0_ELENA_BOUNDARY","audio_sha256":"","screening":"PENDING","believability_0_5":null,"russian_naturalness_0_5":null,"character_fit_0_5":null,"subtext_0_5":null,"micro_rhythm_0_5":null,"ai_audible_0_5_inverse":null,"hard_reject_flags":[],"founder_screening":"PENDING"},
+    "JULIAN": {"voice_id":"","individual_block_id":"RU_S0_JULIAN_72","audio_sha256":"","screening":"PENDING","believability_0_5":null,"russian_naturalness_0_5":null,"character_fit_0_5":null,"subtext_0_5":null,"micro_rhythm_0_5":null,"ai_audible_0_5_inverse":null,"hard_reject_flags":[],"founder_screening":"PENDING"},
+    "MINA": {"voice_id":"","individual_block_id":"RU_S0_MINA_INTRO","audio_sha256":"","screening":"PENDING","believability_0_5":null,"russian_naturalness_0_5":null,"character_fit_0_5":null,"subtext_0_5":null,"micro_rhythm_0_5":null,"ai_audible_0_5_inverse":null,"hard_reject_flags":[],"founder_screening":"PENDING"},
+    "CATE": {"voice_id":"","individual_block_id":"RU_S0_CATE_LENI_BIRD","audio_sha256":"","screening":"PENDING","believability_0_5":null,"russian_naturalness_0_5":null,"character_fit_0_5":null,"subtext_0_5":null,"micro_rhythm_0_5":null,"ai_audible_0_5_inverse":null,"hard_reject_flags":[],"founder_screening":"PENDING"}
+  },
+  "pair_evidence": {
+    "ELENA_MINA": {"s0_block_id":"RU_S0_ELENA_MINA_RELATION","rendered":false,"audio_sha256":"","screening":"NOT_RENDERED"},
+    "ELENA_JULIAN_1": {"s0_block_id":"RU_S0_ELENA_JULIAN_FRICTION","rendered":false,"audio_sha256":"","screening":"NOT_RENDERED"}
+  },
+  "screening_pass_rule": "S0_SCREENING_PASS_TO_FINALIST_VERIFICATION requires all four individual roles PASS with no hard reject and Founder screening YES. Pair evidence, when rendered, may be accepted and reused downstream; missing pair evidence is not fabricated and is added to finalist verification plan.",
+  "acting_evidence_complete": false,
+  "repeat_take_identity_complete": false,
+  "all_final_pair_tests_complete": false,
+  "cast_lock": false,
+  "full_e01_render_allowed": false,
+  "hard_rules": [
+    "REAL_S0_AUDIO_HASH_REQUIRED_FOR_EACH_PASS_ROLE",
+    "NO_FAKE_PAIR_PASS_WHEN_PAIR_BLOCK_NOT_RENDERED",
+    "NO_CAST_LOCK_FROM_S0_SCREENING",
+    "NO_FULL_E01_FROM_S0_SCREENING"
+  ]
+}
