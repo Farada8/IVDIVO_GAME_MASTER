@@ -16,54 +16,26 @@
     "digital_pod_ci_run": 32557762312,
     "local_service_ci_run": 32557762306
   },
-  "run32": {
-    "mechanisms": 32,
-    "test_now": 13,
-    "test_or_test_after": 10,
-    "mutate": 2,
-    "watch_or_hold": 6,
-    "keep_vertical": 1,
-    "kill": 0,
-    "market_proof_created": false
-  },
+  "run32": {"mechanisms":32,"test_now":13,"test_or_test_after":10,"mutate":2,"watch_or_hold":6,"keep_vertical":1,"kill":0,"market_proof_created":false},
   "next64": {
     "created": 64,
     "executed": 24,
-    "executed_ranges": ["P01-P08", "P17-P24", "P25-P32"],
+    "executed_ranges": ["P01-P08","P17-P24","P25-P32"],
     "remaining": 40,
-    "unexecuted_ranges": ["P09-P16", "P33-P64"],
+    "unexecuted_ranges": ["P09-P16","P33-P64"],
     "progress_is_internal_engineering_not_market_proof": true
   },
-  "top10": [
-    "LOCAL_SKILLED_PRODUCTIZED_SERVICE",
-    "SERVICE_ARBITRAGE_SUBCONTRACTING",
-    "LOCAL_LEAD_GENERATION",
-    "HIGH_TICKET_B2B_BROKERAGE",
-    "EU_SUPPLIER_DROPSHIPPING",
-    "PRINT_ON_DEMAND",
-    "ETSY_DIGITAL_TEMPLATES",
-    "AI_WORKFLOW_IMPLEMENTATION",
-    "PAID_INTELLIGENCE_PACK",
-    "USED_GOODS_EQUIPMENT_ARBITRAGE"
-  ],
+  "top10": ["LOCAL_SKILLED_PRODUCTIZED_SERVICE","SERVICE_ARBITRAGE_SUBCONTRACTING","LOCAL_LEAD_GENERATION","HIGH_TICKET_B2B_BROKERAGE","EU_SUPPLIER_DROPSHIPPING","PRINT_ON_DEMAND","ETSY_DIGITAL_TEMPLATES","AI_WORKFLOW_IMPLEMENTATION","PAID_INTELLIGENCE_PACK","USED_GOODS_EQUIPMENT_ARBITRAGE"],
+  "bounded_wip3": {
+    "primary_experiment": "EU_SUPPLIER_ECOMMERCE_DROPSHIPPING",
+    "pilot_1": "DIGITAL_AND_POD_ART_COMMERCE",
+    "pilot_2": "LOCAL_SERVICE_ARBITRAGE_AND_LEADGEN",
+    "businesses_proven": 0
+  },
   "mechanism_test_portfolio": {
-    "eu_supplier_ecommerce_dropshipping": {
-      "status": "SCREENED_20_CANDIDATES_11_ADVANCE_PRICE_SHIP_CHECK",
-      "profitable_skus_proven": 0,
-      "next_dependency": "PRODUCT_LEVEL_WHOLESALE_PLUS_IRELAND_SHIPPING"
-    },
-    "digital_and_pod_art_commerce": {
-      "status": "2_FAMILIES_10_DIGITAL_10_POD_INTERNAL_ONLY",
-      "generic_vintage_ireland": "MUTATE",
-      "profitable_skus_proven": 0,
-      "next_dependency": "SELECT_3_PROVENANCE_RESOLUTION_READY_ASSETS_AND_EXACT_COSTING"
-    },
-    "local_service_customer_acquisition": {
-      "status": "ROUTER_BUILT_CURRENT_HOLD",
-      "routes": ["DIRECT", "SUBCONTRACT", "REFERRAL_ONLY", "HOLD"],
-      "profitable_route_proven": false,
-      "next_dependency": "REFERENCE_JOB_COST_SHEET_PLUS_TWO_SCOPE_EQUIVALENT_SUBCONTRACT_COST_INPUTS"
-    }
+    "eu_supplier_ecommerce_dropshipping": {"status":"SCREENED_20_CANDIDATES_11_ADVANCE_PRICE_SHIP_CHECK","profitable_skus_proven":0,"next_dependency":"PRODUCT_LEVEL_WHOLESALE_PLUS_IRELAND_SHIPPING"},
+    "digital_and_pod_art_commerce": {"status":"2_FAMILIES_10_DIGITAL_10_POD_INTERNAL_ONLY","generic_vintage_ireland":"MUTATE","profitable_skus_proven":0,"next_dependency":"SELECT_3_PROVENANCE_RESOLUTION_READY_ASSETS_AND_EXACT_COSTING"},
+    "local_service_customer_acquisition": {"status":"ROUTER_BUILT_CURRENT_HOLD","routes":["DIRECT","SUBCONTRACT","REFERRAL_ONLY","HOLD"],"profitable_route_proven":false,"next_dependency":"REFERENCE_JOB_COST_SHEET_PLUS_TWO_SCOPE_EQUIVALENT_SUBCONTRACT_COST_INPUTS"}
   },
   "strategic_coexistence": {
     "current_general_business_pointer": "BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md",
@@ -77,25 +49,20 @@
     "wtp": null,
     "cac": null,
     "conversion": null,
+    "transactions_created_by_run": 0,
     "transactions_created_by_money_mechanisms": 0,
     "repeatability": false,
     "businesses_proven": 0,
     "external_action_authorized": false
   },
-  "self_improvement": {
-    "candidate": "DISCOVERY_SOURCE_BALANCE_GATE",
-    "status": "LOCAL_CANDIDATE_ONLY",
-    "global_promotion": false,
-    "failure_mode": "PUBLIC_SIGNAL_EVIDENCE_AVAILABILITY_BIAS",
-    "new_rule": "MONEY_MECHANISM_LAB_NEQ_CURRENT_STRATEGIC_WIP"
-  },
+  "self_improvement": {"candidate":"DISCOVERY_SOURCE_BALANCE_GATE","status":"LOCAL_CANDIDATE_ONLY","global_promotion":false,"failure_mode":"PUBLIC_SIGNAL_EVIDENCE_AVAILABILITY_BIAS","new_rule":"MONEY_MECHANISM_LAB_NEQ_CURRENT_STRATEGIC_WIP"},
   "drive": {
-    "folder_id": "1QM7DKxwmEGDHUkcIqkxgGfaZi1NqoATV",
-    "run32_document_id": "1ZBUqsaePrslxPLIsfMC1B6FFrz4Rk2d-r0zZyzZo2q8",
-    "next64_document_id": "12pbEAq4LcuYpV50oSu5gXU8RYS9LG0clvxf0gG1rpAE",
-    "dropship_document_id": "1ZH8903zhPatnb2tm8Mi00jrg8Xlchr3AUgM6fNwH2W4",
-    "digital_pod_document_id": "15CKV1C6wO1Kt27urZfyZWUltAh3yVug92iYjx9AtXq0",
-    "local_service_document_id": "1Keze5PThvwNViwAj4rbPeqNVULEJYzPy9er1_K-HYJ4",
-    "readback_status": "PASS_5_OF_5"
+    "folder_id":"1QM7DKxwmEGDHUkcIqkxgGfaZi1NqoATV",
+    "run32_document_id":"1ZBUqsaePrslxPLIsfMC1B6FFrz4Rk2d-r0zZyzZo2q8",
+    "next64_document_id":"12pbEAq4LcuYpV50oSu5gXU8RYS9LG0clvxf0gG1rpAE",
+    "dropship_document_id":"1ZH8903zhPatnb2tm8Mi00jrg8Xlchr3AUgM6fNwH2W4",
+    "digital_pod_document_id":"15CKV1C6wO1Kt27urZfyZWUltAh3yVug92iYjx9AtXq0",
+    "local_service_document_id":"1Keze5PThvwNViwAj4rbPeqNVULEJYzPy9er1_K-HYJ4",
+    "readback_status":"PASS_5_OF_5"
   }
 }
