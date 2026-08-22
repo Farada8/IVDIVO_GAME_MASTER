@@ -1,0 +1,40 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.1",
+  "card": "PL-07",
+  "status": "DONE_VERIFIED",
+  "implementation": {
+    "pr": 432,
+    "merge_sha": "94af23c089d209677c7a3076be76b80eaab42050",
+    "verified_head": "fbaab4aca67c22d639862df99345333d69297f49"
+  },
+  "exact_head_ci": {
+    "count": 14,
+    "all_success": true,
+    "runs": [32572063713,32572063733,32572063740,32572063712,32572063722,32572063734,32572063717,32572063737,32572063739,32572063718,32572063741,32572063751,32572063752,32572063759]
+  },
+  "acceptance": {
+    "registered_outputs_persisted": true,
+    "statuses_observed_calculated_inferred_unknown": true,
+    "pl03_provenance_reused": true,
+    "observed_not_verified_fact": true,
+    "inferred_remains_ai_inference": true,
+    "bounded_decimal_calculations": true,
+    "missing_operand_unknown_null": true,
+    "division_by_zero_fails_closed": true,
+    "comparison_null_not_zero_false": true,
+    "future_source_evidence_firewall": true,
+    "conclusion_evidence_ceiling": true,
+    "unknown_not_laundered_upward": true,
+    "deterministic_idempotence": true,
+    "cli_roundtrip": true,
+    "red_team_major_repaired": true
+  },
+  "drive": {
+    "folder_id": "1tjh4nArbbsnY-kNKFtmYsze-Zkzimuzm",
+    "document_id": "1r0xrEkztYPXkRxVcK-zgzyHVby55Zc422V0dcQRXPRY",
+    "verified_marker": "PL07-BUSINESS-RESEARCH-REDTEAM-HARDENED-EVIDENCE-CEILING-NO-LAUNDERING-20260822"
+  },
+  "current_frontier_after_closure": "PL-14",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION",
+  "evidence_boundary": "PL-07 organizes supplied evidence and bounded calculations with freshness and epistemic ceilings. It does not independently verify sources, acquire web evidence, prove market truth/WTP/payment/profitability, or emit VERIFIED_FACT."
+}
