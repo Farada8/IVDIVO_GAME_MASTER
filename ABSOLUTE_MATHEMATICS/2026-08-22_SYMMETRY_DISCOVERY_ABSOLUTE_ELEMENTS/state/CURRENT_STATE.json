@@ -5,7 +5,11 @@
     "repo": "Farada8/IVDIVO_GAME_MASTER",
     "base_main_sha": "366cb172ef94a670df820af7e01889470e720ee4",
     "branch": "symmetry-discovery-absolute-elements-cycle3-20260822",
-    "head_after_test_write": "82c3346a5b3998ee7765cdac0d842ffd5f4df612"
+    "pr_number": 478,
+    "pr_url": "https://github.com/Farada8/IVDIVO_GAME_MASTER/pull/478",
+    "pr_draft": true,
+    "pr_mergeable_observed": false,
+    "merge": "NOT_REQUESTED"
   },
   "drive": {
     "folder_id": "1Hjc01p7Lq4cGWVWmtugHOTVWsXXXiu_h",
