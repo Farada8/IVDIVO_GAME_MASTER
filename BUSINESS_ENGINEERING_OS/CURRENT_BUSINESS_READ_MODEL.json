@@ -1,35 +1,23 @@
 {
-  "schema": "ivdivo.business.current_read_model/1.2",
+  "schema": "ivdivo.business.current_read_model/1.3",
   "date": "2026-08-22",
   "status": "CURRENT_LOCAL_RELIABILITY_CONTRACT",
   "authority_effect": "RESTORE_AND_PRECEDENCE_RULES_ONLY",
   "restore_order": [
     "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
     "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md",
+    "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_READ_MODEL.json::resume_control",
     "RELEVANT_CURRENT_CYCLE_MACHINE_STATE",
     "CURRENT_DRIVE_EVIDENCE_AND_READBACK",
     "FRESH_GITHUB_MAIN_AND_OPEN_BUSINESS_PR_RECONCILIATION"
   ],
   "core": {
     "path": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_AUTHORITY.md",
-    "owns": [
-      "CAUSAL_FRONTIER",
-      "COMPLETED_EXECUTION",
-      "PROOF_FRONTIER",
-      "WIP",
-      "DECISIVE_GATES",
-      "STOP_RULES",
-      "EXTERNAL_ACTION_AUTHORIZATION"
-    ]
+    "owns": ["CAUSAL_FRONTIER", "COMPLETED_EXECUTION", "PROOF_FRONTIER", "WIP", "DECISIVE_GATES", "STOP_RULES", "EXTERNAL_ACTION_AUTHORIZATION"]
   },
   "mandatory_evidence_overlay": {
     "path": "BUSINESS_ENGINEERING_OS/CURRENT_BUSINESS_ENGINEERING_EVIDENCE_DELTA.md",
-    "owns": [
-      "FRESH_BOUNDED_SUPPLIER_EVIDENCE",
-      "FRESH_SOURCE_EVIDENCE",
-      "CONNECTED_SOURCE_NONFINDINGS",
-      "EVIDENCE_FIELD_DISPOSITIONS_WITHIN_DECLARED_SCOPE"
-    ],
+    "owns": ["FRESH_BOUNDED_SUPPLIER_EVIDENCE", "FRESH_SOURCE_EVIDENCE", "CONNECTED_SOURCE_NONFINDINGS", "EVIDENCE_FIELD_DISPOSITIONS_WITHIN_DECLARED_SCOPE"],
     "may_supersede_stale_evidence_fields_within_scope": true,
     "may_change_completed_execution": false,
     "may_change_root_blockers_silently": false,
@@ -43,16 +31,8 @@
     "ROOT_B": "NO_EXPLICIT_BIDDER_DESIGNATION_AND_COMPLETE_PACKET"
   },
   "current_execution": {
-    "full_completed_run32_ranges": [
-      "P97-P128",
-      "P129-P160",
-      "P161-P192",
-      "P193-P224"
-    ],
-    "completed_engineering_subsets": [
-      "P257-P264",
-      "P265-P272"
-    ],
+    "full_completed_run32_ranges": ["P97-P128", "P129-P160", "P161-P192", "P193-P224"],
+    "completed_engineering_subsets": ["P257-P264", "P265-P272"],
     "completed_engineering_cards_inside_parent_backlog": 16,
     "completed_reconciliation_cards_inside_parent_backlog": [288],
     "completed_reconciliation_count_inside_parent_backlog": 1,
@@ -60,10 +40,7 @@
     "parent_backlog": "P225-P288",
     "parent_backlog_count": 64,
     "remaining_unexecuted_count": 47,
-    "remaining_ranges": [
-      "P225-P256",
-      "P273-P287"
-    ],
+    "remaining_ranges": ["P225-P256", "P273-P287"],
     "highest_information_real_gates": [225, 235]
   },
   "latest_reconciliation": {
@@ -77,6 +54,34 @@
     "drive_folder_id": "1HhmHgOcpjb9_ZQtOHiV9K06lvIotCGyb",
     "drive_document_id": "1UQ3lh_hm9a0XtB3hO7AjbLK4y6prfnRNsjhlZYErmZQ",
     "drive_readback_marker": "BUSINESS-P288-FRESH-READ-PROTECT-NO-CHANGE-17OF64-47REMAIN"
+  },
+  "resume_control": {
+    "status": "CURRENT_BUSINESS_LOCAL_CONTROL_PLANE",
+    "unlock_intake_path": "BUSINESS_ENGINEERING_OS/UNLOCK_INTAKE/PROC_BALLYBUNION_8872468_P225_P235_UNLOCK.md",
+    "resume_gate_contract": "BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/00_CONTRACT.md",
+    "resume_gate_runtime": "BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/runtime/business_resume_gate.py",
+    "resume_gate_fixture": "BUSINESS_ENGINEERING_OS/2026-08-22_BUSINESS_RESUME_GATE_V1/fixtures/CURRENT_PROC_BALLYBUNION_8872468_RESUME_STATE.json",
+    "resume_gate_pr": 282,
+    "resume_gate_merge_sha": "75306d65cf01eb1bcfb0db2e05bc50c174c5c0bf",
+    "resume_gate_exact_head": "aca35c463ce09e3a491bcb7634a891dfdf4ffe37",
+    "resume_gate_ci_run": 32553370924,
+    "drive_folder_id": "1hrNJJOxDV0MrogLtJGWwj-jxekUS_jZp",
+    "drive_document_id": "1LAjn4dFmEICCQEpgGArdyIffFiIfkqoFjF2CBDPU7cg",
+    "current_route": "PROTECT_NO_CHANGE",
+    "current_reason": "NO_NEW_ADMISSIBLE_ROOT_EVENT; WAIT_FOR_P225_OR_P235_AUTHORITY",
+    "unlock_intake_text_is_not_unlock_event": true,
+    "generic_continuation_is_not_evidence_event": true,
+    "route_may_authorize_external_action": false,
+    "route_may_promote_proof_grade": false,
+    "calibration": {
+      "synthetic_deterministic_suite": "PASS_16_OF_16",
+      "real_negative_control_count": 1,
+      "real_positive_root_event_count": 0,
+      "latest_negative_control": "BUSINESS_ENGINEERING_OS/2026-08-22_P225_BOUNDED_ACQUISITION_NONFINDING/00_NO_LOOP_ACQUISITION_CERTIFICATE.md",
+      "latest_negative_control_result": "PASS_ROOT_UNCHANGED_ROUTE_PROTECT_NO_CHANGE",
+      "local_promotion_state": "NEGATIVE_CONTROL_PASS_POSITIVE_ROOT_EVENT_PENDING",
+      "broader_or_global_promotion": false
+    }
   },
   "dependency_state": {
     "P225_P234": "BLOCKED_AUTHENTIC_CURRENT_TARGET_PACK_REQUIRED",
@@ -103,7 +108,10 @@
     "ENGINEERING_READINESS_DOES_NOT_EQUAL_MARKET_PROOF",
     "RECONCILIATION_CARD_DOES_NOT_EQUAL_ENGINEERING_SUBSET",
     "DEPENDENCY_BLOCKED_PROMPTS_ARE_NOT_FAILED_OR_EXECUTED",
-    "NO_NEW_ADMISSIBLE_EVIDENCE_THEN_PROTECT_NO_CHANGE"
+    "NO_NEW_ADMISSIBLE_EVIDENCE_THEN_PROTECT_NO_CHANGE",
+    "UNLOCK_INTAKE_TEXT_DOES_NOT_EQUAL_UNLOCK_EVENT",
+    "CONTINUE_TEXT_DOES_NOT_EQUAL_NEW_EVIDENCE_EVENT",
+    "BOUNDED_NONFINDING_DOES_NOT_EQUAL_ROOT_UNLOCK_EVENT"
   ],
   "self_improvement": {
     "scope": "BUSINESS_LOCAL_RELIABILITY_IMPROVEMENT",
