@@ -1,1 +1,71 @@
-{"schema_version":"1.1","updated":"2026-08-21","project_id":"IVDIVO_BOOK_3_SMITH","title":"SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE","status":"PREPARED_PRE_PROSE_NOT_ACTIVE_UNTIL_D01_FOUNDER_LOCK","portfolio_precondition":{"active_project":"D01_THE_WIFE_AT_HIS_WEDDING","required_event":"FOUNDER_EXPLICIT_LOCK_FOR_D01_PLUS_PERSISTENCE_READBACK"},"prepared_frontier":"WORKING_SCENE_CARDS_CH1_CH29_PLUS_CYCLE32_ENGINEERING","cycle32":{"drive_folder_id":"1faAfasqcsYCgHCOHAla7tKrpDCgoK9Rp","prompts_executed":32,"modules":32,"contracts":32,"proofs":32,"protocols":32,"next_prompts_designed":64},"prepared_red_team":{"fatal":0,"blocking_major":1,"open_major":"SMITH_PERSONAL_FAMILY_CONTINUITY_AFTER_B03_ACTIVATION"},"prose_authorized":false,"next_obligation":"WAIT_FOR_D01_FOUNDER_LOCK. After D01 lock persistence closure, fresh-rebase B03; resolve remaining Founder gate; rerun N24-N47; CH1 only if FATAL=0 and MAJOR=0."}
+{
+  "schema_version": "2.3",
+  "updated": "2026-08-22",
+  "project_id": "IVDIVO_BOOK_3_SMITH",
+  "title": "SMITH I / OLD EARTH SECURITY — THE EMPTY RESCUE",
+  "status": "ACTIVE_WORKING_PROSE_CH21_PASS_CH22_AUTHORIZED",
+  "story_lock": false,
+  "activation": {
+    "d01_founder_lock_precondition": "CLOSED",
+    "d01_state": "FOUNDER_LOCKED_E01_E120_RECORDING_AUTHORITY_ISSUED"
+  },
+  "founder_f1": {
+    "authority_path": "PROJECTS/B03_SMITH_THE_EMPTY_RESCUE/FOUNDER_F1_CANON_LOCK_AND_PREPROSE_GATE_v1.0.md",
+    "drive_id": "1EkmIwNmE9kkZ6RBfeMZzQ6L-AbLKaPIcT5r8mU_PsU0",
+    "canon": "SMITH_HAS_A_TEENAGE_DAUGHTER_IN_CURRENT_SAGA_PERIOD",
+    "working_age": "16_17_PENDING_TIMELINE_NORMALIZATION"
+  },
+  "drive": {
+    "cycle32b_story_production_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+    "ch19_ch24_rebase_gate_id": "1GsELpV6PqpKKKguLzOAzDCouOYxhOIWVsSdf9K9rk-4",
+    "ch19_manuscript_id": "1ngQwNpSTTawUxz7DkWMiYOdM4DBRL49QpCT_HqOMfXw",
+    "ch19_local_gate_id": "1XCid-Pzagb0oV9V0ljs4kVy9e3Vfph-pQlvGxFNzf50",
+    "ch20_manuscript_id": "1ri8PM0NfYEgveuN0LDlyK-gLWaUacTFQ2tjllZ3Y-Cc",
+    "ch20_local_gate_id": "1objKIzc2G2O34P40bnsypcv7VKn8C1BUHCOBXiFzNik",
+    "ch21_manuscript_id": "1ogpC4Aw9qwvUET8v7Zc3ns9STj7eEz7go9DZJ5v6Y60",
+    "ch21_local_gate_id": "1yTvQpIqg4cStGG8akXH_Wp84Rdxf_58b3THDWObYi8k"
+  },
+  "verified_block_state": {
+    "ch19_local_gate": {"status":"PASS_AFTER_TARGETED_CAUSAL_FUNCTION_REPAIR","fatal":0,"blocking_major":0},
+    "ch20_local_gate": {"status":"PASS_AFTER_TARGETED_LINE_LEVEL_REPAIR","fatal":0,"blocking_major":0},
+    "ch21_local_gate": {"status":"PASS_AFTER_TARGETED_CAUSAL_FUNCTION_AND_LINE_LEVEL_REPAIR","initial_blocking_major":1,"repaired_major":"CH22_PAYOFF_SPENT_EARLY","fatal":0,"blocking_major":0}
+  },
+  "manuscript_frontier": {
+    "completed_with_drive_evidence": "CH01_CH21",
+    "latest_passed": "CH21_OBJECTIVES_NOT_SCRIPTS",
+    "latest_passed_drive_id": "1ogpC4Aw9qwvUET8v7Zc3ns9STj7eEz7go9DZJ5v6Y60",
+    "ch22_authorized": true,
+    "ch22_title": "FIRST_DISTRIBUTED_RUN",
+    "entry_time_approx": "02:19"
+  },
+  "hard_invariants": [
+    "LOCAL_SLOVENIAN_RESCUE_AUTHORITY_REMAINS_LOCAL",
+    "CONFEDERATION_KNOWLEDGE_NEQ_EARTH_JURISDICTION",
+    "ONTOLOGY_REMAINS_UNKNOWN",
+    "PRECURSOR_ROUTE_CONTENT_NEVER_OWNS_LOCAL_TACTICS",
+    "CH22_MUST_SHOW_LOCAL_SUCCESS_AND_REAL_PRICE",
+    "UPPER_GORGE_GEOGRAPHY_KEEPS_CENTRAL_HEAVY_RESOURCE_UNAVAILABLE",
+    "FAILOVER_RECENTRALIZATION_AND_RENEWED_SPECIFICITY_RESERVED_FOR_CH23",
+    "ANDREJ_TINA_MAJA_REMAIN_HUMAN_CONTINUITY_NOT_SYSTEM_COMPONENTS",
+    "SMITH_DAUGHTER_CONTINUITY_OBEYS_F1_LIMITS"
+  ],
+  "ch22_hard_conditions": [
+    "ONE_LOCAL_CHOICE_SOLVES_OR_STABILIZES_REAL_PROBLEM",
+    "LOCAL_TEAM_DOES_NOT_KNOW_HELD_PRECURSOR_ROUTE",
+    "ANY_SOURCE_WEAKENING_IS_NOISY_PARTIAL_OBSERVATION_NOT_PROOF",
+    "ANOTHER_TASK_PAYS_TIME_OR_CONVENIENCE_COST",
+    "NO_FAKE_CASUALTY_TO_PUNISH_DELEGATION",
+    "ANDREJ_TINA_MANUAL_WORKAROUND_INCREASES_EXPOSURE_TIME",
+    "NORTH_MOBILE_PUMP_REMAINS_INACCESSIBLE",
+    "DO_NOT_SPEND_CH23_PAYOFF"
+  ],
+  "next_obligation": "DRAFT_CH22_FIRST_DISTRIBUTED_RUN_FROM_ACTUAL_CH21_PASS_FRONTIER",
+  "next_after_draft": "RUN_CH22_LOCAL_STORY_HUMAN_SCENE_CONTINUITY_GATE",
+  "do_not": [
+    "DO_NOT_REVERT_TO_WAIT_FOR_D01_LOCK",
+    "DO_NOT_REOPEN_F1_WITHOUT_NEWER_FOUNDER_INSTRUCTION",
+    "DO_NOT_MAKE_DISTRIBUTED_CONTROL_MAGIC_GOOD",
+    "DO_NOT_TURN_PACKET_SPECIFICITY_INTO_A_PERFECT_METER",
+    "DO_NOT_SPEND_CH23_FAILOVER_RECENTRALIZATION_EARLY"
+  ]
+}
