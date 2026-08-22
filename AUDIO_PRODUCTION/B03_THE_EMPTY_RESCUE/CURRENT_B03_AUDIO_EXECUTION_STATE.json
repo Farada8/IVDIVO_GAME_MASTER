@@ -3,12 +3,23 @@
   "updated": "2026-08-22",
   "project": "B03 — THE EMPTY RESCUE",
   "story_authority": "FOUNDER_LOCKED_CH01-29",
-  "delivery_mode": "MULTI_VOICE_AUDIO_NOVEL_CANARY",
   "text_protection_mode": "IMMUTABLE_EXACT_TEXT",
   "locked_book_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
   "ch01_source_sha256": "bf92a22bf42e00a75fd9d5247b95748e463975947909eb102308800b01d50b7d",
-  "last_completed_artifact": "104_B03_AUDIO_EXECUTION_STATE_PRELIVE_COMPLETE_v1",
-  "current_stage": "PRELIVE_DESIGN_COMPLETE / WAITING_LIVE_S0_AND_ASSET_CANARIES",
+  "last_completed_artifact": "107_B03_AUDIO_EXECUTION_STATE_PROVIDER_BRIDGE_READY_v1",
+  "current_stage": "PROVIDER_BRIDGE_READY / LIVE EVIDENCE REQUIRED",
+  "prelive_design": "COMPLETE",
+  "provider": {
+    "name": "ElevenLabs",
+    "voices": "GET /v2/voices",
+    "models": "GET /v1/models",
+    "tts_with_alignment": "POST /v1/text-to-speech/{voice_id}/with-timestamps",
+    "sfx": "POST /v1/sound-generation",
+    "sfx_model_candidate": "eleven_text_to_sound_v2",
+    "hosted_mcp_option": "https://api.elevenlabs.io/v1/mcp",
+    "account_access_in_this_execution_context": false,
+    "live_calls_performed": false
+  },
   "dry_compile": {
     "spoken_units": 281,
     "quoted_turns": 142,
@@ -19,96 +30,48 @@
     "all_voice_ids_null": true,
     "all_requests_fail_closed": true
   },
-  "provider_contract": {
-    "provider": "ElevenLabs",
-    "voices_endpoint": "GET /v2/voices",
-    "models_endpoint": "GET /v1/models",
-    "tts_alignment_endpoint": "POST /v1/text-to-speech/{voice_id}/with-timestamps",
-    "production_model_candidate": "eleven_v3",
-    "model_candidate_max_chars": 5000,
-    "b03_max_dry_block_chars": 1409,
-    "api_contract_verified": true,
-    "provider_account_access_verified": false,
-    "live_call_performed": false
-  },
-  "casting_cascade": {
-    "zero_cost_preflight": "API_CONTRACT_PASS / ACCOUNT_AUTH_AND_VOICE_ENUMERATION_OPEN",
-    "S0_technical_canary": "DRY_MANIFEST_READY_4_JOBS / NOT_RUN",
-    "S1_fair_anchor_comparison": "PLAN+SCORECARD_READY / NOT_RUN",
-    "S2_secondary_discrimination": "PLAN_READY / NOT_RUN",
-    "S3_forbidden_mode_stress": "PLAN_READY / NOT_RUN",
-    "S4_pair_ensemble_test": "PLAN_READY / NOT_RUN",
-    "provisional_voice_lock": "NOT_REACHED",
-    "hard_pilot": "ASSEMBLY+QC CONTRACT READY / NOT_RUN",
-    "scaled_render": "BLOCKED"
-  },
-  "independent_audio_branches": {
-    "project_overlay": "PASS_PLAN",
-    "listener_contract": "PASS_PLAN",
-    "acoustic_passports": "PASS_PLAN",
-    "acoustic_identity_ledger": "PASS_PLAN",
-    "microphone_choreography": "PASS_PLAN",
-    "sound_asset_plan": "PASS_PLAN_12_CUES",
-    "music_law": "PASS_PLAN_DEFAULT_NO_MUSIC_IN_CLUE_WINDOWS",
-    "sound_asset_canary": "READY_NOT_RUN",
-    "asset_acceptance_ledger": "READY_EMPTY",
-    "hard_pilot_assembly": "READY_WAITING_LIVE_INPUTS",
-    "hard_pilot_qc": "READY_WAITING_LIVE_INPUTS"
-  },
+  "prelive_artifacts_complete": [
+    "voice/casting/pronunciation/S0 dry stack",
+    "project overlay/listener contract",
+    "acoustic passport + identity ledger",
+    "microphone choreography",
+    "12-cue sound asset plan",
+    "sound-asset canary + acceptance ledger",
+    "Hard Pilot assembly + QC contract",
+    "provider execution bridge"
+  ],
   "critical_identity_locks": {
-    "ID_DRAINAGE_FLAP_FOUR_IMPACTS": "three uneven hollow impacts + longer pause + fourth; same physical/rhythmic family with natural variation; no musicalization or perfect-copy artifact",
-    "ID_UNKNOWN_CALLER_SOURCE_VOICE": "later playback must derive from the same accepted first-caller source/take; filtering allowed, independent regeneration forbidden"
-  },
-  "pronunciation_gate": {
-    "protocol_ready": true,
-    "phonetic_locks": 0,
-    "status": "OPEN_FAIL_CLOSED"
+    "drainage_flap": "same four-impact physical/rhythmic family with natural variation; never musicalized or sample-perfect",
+    "unknown_caller_playback": "must derive from same accepted first-call source/take; filtering allowed; independent regeneration forbidden"
   },
   "live_evidence": {
-    "provider_access_tested": false,
-    "voices_enumerated_from_user_workspace": false,
-    "S0_run": false,
-    "voice_lock": false,
-    "audio_assets_generated_or_recorded": false,
-    "alignment_received": false,
-    "mix_created": false,
-    "human_listen": false
+    "voice_ids": "NONE",
+    "pronunciation_locks": 0,
+    "S0": "NOT_RUN",
+    "S1_S4": "NOT_RUN",
+    "sound_asset_canaries": "NOT_RUN",
+    "accepted_takes": 0,
+    "accepted_assets": 0,
+    "alignment": "NONE",
+    "mix": "NONE",
+    "human_listen": "NONE"
   },
-  "open_gates": [
-    "ELEVENLABS_OR_OTHER_PROVIDER_EXECUTION_CONTEXT",
-    "REAL_PROVIDER_VOICE_CANDIDATE_IDS",
-    "SLOVENIAN_PRONUNCIATION_EVIDENCE",
-    "EXPLICIT_PAID_PROVIDER_DISPATCH_AUTHORIZATION_IF_REQUIRED",
-    "LIVE_S0_PASS",
-    "S1-S4_CASTING_EVIDENCE",
-    "ASSET_CANARY_C0-C2_EVIDENCE",
-    "ACCEPTED_UNKNOWN_CALLER_TAKE_FOR_ASSET_C3",
-    "HARD_PILOT_PASS"
-  ],
-  "private_payload_authority": {
-    "drive_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
-    "drive_locked_master_id": "141BOyku8VX8WXehH05rZnQGZirMOP-3iCs-5_yMJbGU",
-    "drive_overlay_96_id": "1YLBx2fGWoZj9HESc7sf60MyC_3FF5h9U",
-    "drive_acoustic_97_id": "10cPcqOACeqgzOx-EEho9ku39EDhM9f0I",
-    "drive_microphone_98_id": "1AvbxH3fNoP-hXugyXqmQLvaGXfq-6Gqt",
-    "drive_sound_plan_99_id": "1Xrn_sRZDZQp5TkKl-cK86UwBmEceazIa",
-    "drive_hard_pilot_qc_100_id": "1pvbo520DrFPCM48vqfOsvjULf0T-6dnV",
-    "drive_asset_canary_101_id": "1MqRRuQ3iu0SBJE9TCThjL1g9XD4WJlHu",
-    "drive_asset_ledger_102_id": "1saLYcrdymgjk7x0G9XuKQGwAvL4oYcG1",
-    "drive_hard_pilot_assembly_103_id": "1TGWOWe3ol5Do6tK5ZMeRVMzkhHb_cmVR",
-    "drive_prelive_state_104_id": "1VXZ8bUEJBQ7NXOGvyNJFm2QMjykO3tGu",
-    "policy": "Full exact-text segmentation/director/provider payload remains in Drive; public GitHub mirrors contracts, hashes and execution state only."
+  "drive_authority": {
+    "folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+    "prelive_bundle_106_id": "164d9_qtXnkSr7fxMMJ6PHB21d3flbQ3Z",
+    "provider_bridge_105_id": "1sIQNV0p12f1XRtwSRQCnps2kBMB6DTTl",
+    "provider_ready_state_107_id": "10S56-gNk4Z2S9gZrTbJB4q2KGPQNs7vW",
+    "policy": "Full exact-text payload remains in Drive; public GitHub mirrors contracts/hashes/state only."
   },
-  "prohibited_actions": [
-    "MORE_GENERIC_ENGINE_REDESIGN_WITHOUT_DEMONSTRATED_DEFECT",
-    "STORY_REWRITE",
-    "CH30_CREATION",
-    "GUESSED_DIAGNOSIS_OR_PROGNOSIS_FOR_ANDREJ",
-    "PRECURSOR_ONTOLOGY_INVENTION",
-    "OES_OR_CONFEDERATION_COMMAND_TAKEOVER_OF_LOCAL_SLOVENIAN_RESCUE",
-    "BULK_CH01_29_PROVIDER_RENDER_BEFORE_CANARY_EVIDENCE",
-    "CLAIMING_RENDER_VOICE_LOCK_ALIGNMENT_MIX_OR_LISTEN_WITHOUT_REAL_EVIDENCE",
-    "STORING_API_KEYS_OR_SECRETS"
-  ],
-  "next_exact_action": "Obtain live provider execution context. Enumerate actual workspace voices -> bind temporary S0 candidates -> immediate source/exact-text hash recheck -> execute only four S0 jobs -> record provenance/alignment -> PASS/FAIL. In parallel bind asset generation/recording path -> execute only C0-C2 asset canaries; C3 waits for accepted first-caller take. No new abstract design work unless a demonstrated defect appears."
+  "next_exact_action": "Connect/authorize a real ElevenLabs execution context without storing secrets in project files. Enumerate actual workspace voices/models -> bind temporary S0 candidates -> immediate source/exact-text hash recheck -> execute only four S0 TTS jobs -> persist raw audio+alignment+provenance -> PASS/FAIL. In parallel execute only SFX canaries C0-C2 through /v1/sound-generation; C3 waits for the accepted first-caller take.",
+  "stop_rule": "Do not create more abstract audio-engine design until live S0/asset evidence exposes a concrete defect.",
+  "prohibited": [
+    "story rewrite",
+    "CH30",
+    "precursor ontology invention",
+    "Andrej diagnosis/prognosis invention",
+    "bulk render before canary evidence",
+    "fabricated provider/listen/alignment claims",
+    "API keys or secrets in GitHub/Drive"
+  ]
 }
