@@ -1,0 +1,33 @@
+name: Self-Improvement Cycle10 Convergence
+
+on:
+  pull_request:
+    paths:
+      - 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/**'
+      - 'SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64/**'
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22/**'
+      - 'SELF_IMPROVEMENT_ENGINE/CYCLE10_CONVERGENCE_2026-08-22/**'
+      - '.github/workflows/self-improvement-cycle10-convergence.yml'
+
+jobs:
+  convergence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate current library registry
+        run: python -m json.tool SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/SOURCE_REGISTRY.json >/dev/null
+      - name: Run Cycle10 deterministic suite
+        working-directory: SELF_IMPROVEMENT_STUDIO/2026-08-22_CYCLE10_DECISION_EVIDENCE_YIELD_32_TO_64
+        run: python -m unittest tests.test_cycle10 -v
+      - name: Run Cycle10R deterministic suite
+        working-directory: SELF_IMPROVEMENT_ENGINE/CYCLE10R_RECOVERY_PERSISTENCE_CONVERGENCE_2026-08-22
+        run: python -m unittest tests.test_recovery_persistence_engine -v
+      - name: Privacy and single-library guard
+        run: |
+          test ! -f 'SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/NINETY_MISSING_MINUTES_PHASE_A_B_v1.0.md'
+          test ! -f 'SELF_IMPROVEMENT_STUDIO/LIBRARY/NINETY_MISSING_MINUTES_PHASE_A_B_v1.0.md'
+          grep -q '"github_raw": false' SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/SOURCE_REGISTRY.json
+          grep -q 'PHYSICAL_FILE != BYTE_HASH != CANONICAL_WORK != DERIVED_MECHANISM != AUTHORITY' SELF_IMPROVEMENT_ENGINE/LIBRARY_CURRENT/SOURCE_REGISTRY.json
