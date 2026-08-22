@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.0",
+  "schema_version": "ivdivo.room917_current_listener_qc_pointer/1.1",
   "updated": "2026-08-22T17:19:00+01:00",
   "project": "ROOM917",
   "episode": "E01",
@@ -9,7 +9,9 @@
   "github": {
     "protocol": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RED_TEAM_PROTOCOL_v1.0.md",
     "result_contract": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_LISTENER_QC_RESULT_CONTRACT_v1.json",
-    "scene3_pass_b_queue": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json"
+    "scene3_pass_b_queue": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_P003B_PASS_B_SCENE3_VERIFICATION_QUEUE_v1.json",
+    "en_ru_parallel_control": "AUDIO_PRODUCTION/ROOM917/ROOM917_E01_EN_RU_PARALLEL_PRODUCTION_CONTROL_v1.json",
+    "en_ru_parity_validator": "AUDIO_PRODUCTION/ROOM917/TOOLS/EN_RU_PARITY_v1/validate_en_ru_parity.py"
   },
   "drive": {
     "folder_id": "1P2mavegKiziTOcdNoRQvHvgEHzySY3OA",
@@ -44,6 +46,26 @@
     "MYSTERY",
     "SFX_MASKING"
   ],
+  "locale_listener_policy": {
+    "evaluate_en_and_ru_independently": true,
+    "same_six_questions_each_locale": true,
+    "literal_voice_match_forbidden": true,
+    "literal_dialogue_timing_match_forbidden": true,
+    "locale_specific_cast_required": true,
+    "locale_specific_reply_timing_allowed": true,
+    "compare_only_functional_and_language_neutral_invariants": [
+      "SAME_PHYSICAL_GREYHAVEN",
+      "SAME_ROOM_IDENTITY",
+      "SAME_CLUE_CAUSALITY",
+      "SAME_MECHANICAL_SIGNATURES",
+      "SAME_FOUR_NOTE_LULLABY_IDENTITY",
+      "SAME_PROTECTED_SILENCE_FUNCTION",
+      "SAME_SCENE3_EVIDENCE_ORDER",
+      "MONO_MOBILE_CLUE_SURVIVAL"
+    ],
+    "cross_locale_failure_rule": "A locale may fail acting/naturalism while the other passes; do not repair the passing locale to imitate the failed locale.",
+    "shared_sound_failure_rule": "If the same language-neutral clue or geography failure appears in both locales, investigate the shared asset/mix layer before touching either performance."
+  },
   "scene3": {
     "technical_lineage": "v1.3E_OR_DESCENDANT_PROTECTED_PASS",
     "old_v1_2_2_repair_campaign": "SUPERSEDED_DO_NOT_REAPPLY",
