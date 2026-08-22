@@ -1,0 +1,50 @@
+name: General Business P-EW05 WIP3 Monetization Comparison
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/22_PEW05_WIP3_MONETIZATION_COMPARISON/**'
+      - 'BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_MONETIZATION_LADDER_STATE.json'
+      - 'BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md'
+      - '.github/workflows/general-business-pew05-wip3-comparison.yml'
+
+jobs:
+  pew05:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pytest
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Run P-EW05 tests
+        run: python -m pytest -q BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/22_PEW05_WIP3_MONETIZATION_COMPARISON/tests/test_compare.py
+      - name: Validate P-EW05 and monetization JSON
+        run: |
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/22_PEW05_WIP3_MONETIZATION_COMPARISON/01_MACHINE_STATE.json >/dev/null
+          python -m json.tool BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/20_MONETIZATION_LADDER_STATE.json >/dev/null
+      - name: Run deterministic WIP3 reroute
+        run: |
+          python BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/22_PEW05_WIP3_MONETIZATION_COMPARISON/02_compare.py > /tmp/pew05.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('/tmp/pew05.json').read_text())
+          assert data['all_three_route_m1'] is True
+          assert data['portfolio_decision']['PRIMARY'] == 'OW-01'
+          assert data['portfolio_decision']['PILOT_A'] == 'CF-01'
+          assert data['portfolio_decision']['PILOT_B'] == 'CF-03'
+          assert data['portfolio_decision']['wip_count'] == 3
+          assert data['portfolio_decision']['add_fourth_opportunity'] is False
+          assert data['evidence_strength_equal'] is False
+          assert data['proof_boundary']['wtp'] is None
+          assert data['proof_boundary']['transactions'] == 0
+          assert data['proof_boundary']['external_action_authorized'] is False
+          print('P-EW05 WIP3 reroute PASS')
+          PY
+      - name: Guard stale frontier
+        run: |
+          grep -q 'P-EW06' BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md
+          ! grep -q 'P-EW03 = NEXT' BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md
+          ! grep -q 'P-EW04 = NEXT' BUSINESS_ENGINEERING_OS/CURRENT_GENERAL_BUSINESS_ENGINE.md
