@@ -85,3 +85,27 @@ def test_subject_tracker_does_not_cross_post_quote_paragraph_break():
     aliases={'SMITH':['Smith']}; genders={'SMITH':'M'}
     xs=[seg('n1','NARRATION','\n\nSmith turned back. '),seg('d1','DIALOGUE','“Field.”'),seg('n2','NARRATION','\n\nHe added a short line.')]
     assert sa.classify_and_attribute(xs,aliases,genders,project_pronoun_subject_tracker_promoted=True)==[]
+
+def test_reporting_clause_prepositional_name_is_not_subject():
+    aliases={'NIKA':['Nika']}
+    aps=sa.compile_aliases(aliases)
+    assert sa.direct_pre_tag('\n\nThe caller on Nika’s line said, ', aps) is None
+
+def test_reporting_clause_possessive_name_is_not_subject():
+    aliases={'NIKA':['Nika']}
+    aps=sa.compile_aliases(aliases)
+    assert sa.direct_pre_tag('\n\nNika’s caller said, ', aps) is None
+
+def test_ch01_real_collision_caller_regression_fails_closed():
+    aliases={'NIKA':['Nika']}
+    xs=[
+        seg('B03_CH01_S0171','NARRATION','\n\nThe caller on Nika’s line said, '),
+        seg('B03_CH01_S0172','DIALOGUE','“The passenger door’s jammed.”'),
+        seg('B03_CH01_S0173','NARRATION','\n\nThe hair on Nika’s forearms lifted.\n\n'),
+    ]
+    assert sa.classify_and_attribute(xs,aliases,{'NIKA':'F'})==[]
+
+def test_subject_tracker_possessive_name_not_grammatical_subject():
+    aliases={'NIKA':['Nika']}
+    aps=sa.compile_aliases(aliases)
+    assert sa._alias_subject_at_sentence_start('Nika’s line went dead.', aps) is None
