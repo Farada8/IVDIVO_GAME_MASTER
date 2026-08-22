@@ -1,0 +1,45 @@
+{
+  "schema": "ivdivo.production_launch_verification_receipt/0.2",
+  "card": "PL-02",
+  "status": "DONE_VERIFIED",
+  "baseline": {
+    "pr": 299,
+    "merge_sha": "5a9337f2a416edbacdf4a85f02efdc1e27511bf9"
+  },
+  "hardening": {
+    "pr": 309,
+    "merge_sha": "d82020c7967c2c3dc1b22e4469974757d7aaf0bc",
+    "verified_head": "7e947cee84fefb5467aa154546f648077aec0bbe"
+  },
+  "exact_head_ci": [
+    {"workflow": "Personal AI PL-00 Bootstrap", "run_id": 32555281797, "conclusion": "success"},
+    {"workflow": "Personal AI PL-01 Project State", "run_id": 32555281872, "conclusion": "success"},
+    {"workflow": "Personal AI PL-02 Local Memory", "run_id": 32555281799, "conclusion": "success"},
+    {"workflow": "Personal AI PL-02 Memory Contract Hardening", "run_id": 32555281777, "conclusion": "success"}
+  ],
+  "acceptance": {
+    "store": true,
+    "search": true,
+    "update": true,
+    "invalidate": true,
+    "trace": true,
+    "named_typed_tables": true,
+    "sha256_content_hash": true,
+    "confidence_guard": true,
+    "immutable_versions": true,
+    "source_trace": true,
+    "legacy_migration": true,
+    "cli_round_trip": true,
+    "db_reopen_persistence": true,
+    "drive_readback": true
+  },
+  "drive": {
+    "baseline_folder_id": "1mH8SQPfR9IPjAltLGVa8EPALkB3s07n2",
+    "hardening_folder_id": "1MhVtyPF89UPpvLvPcBeQis4wdBXmeN6C",
+    "hardening_document_id": "1IYlQfZOt7yI4GaQVBjDuL36yuIjvIPe9GFEO8HsAt5w",
+    "verified_marker": "PERSONAL-AI-PL02-DONE-VERIFIED-PR309-CI4OF4"
+  },
+  "new_ready_cards": ["PL-03", "PL-06", "PL-13", "PL-15", "PL-16"],
+  "current_frontier_after_closure": "PL-04",
+  "authority_effect": "NO_GLOBAL_SI_PROMOTION"
+}
