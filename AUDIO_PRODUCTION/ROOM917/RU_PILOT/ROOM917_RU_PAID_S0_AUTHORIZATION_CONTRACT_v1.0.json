@@ -1,5 +1,5 @@
 {
-  "schema_version": "ivdivo.room917_ru_paid_s0_authorization_contract/1.0",
+  "schema_version": "ivdivo.room917_ru_paid_s0_authorization_contract/2.0",
   "date": "2026-08-22",
   "project_id": "ROOM917",
   "locale": "ru-RU",
@@ -13,13 +13,21 @@
   "requirements_before_authorization": [
     "AUTHENTICATED_PROVIDER_SNAPSHOT_PASS",
     "NON_BINDING_SHORTLIST_PASS",
-    "HUMAN_REVIEW_COMPLETE",
-    "ALL_ROLE_SCORES_AT_LEAST_24_OF_30",
-    "NO_HARD_REJECTS",
-    "ALL_PAIR_TESTS_PASS",
-    "PRONUNCIATION_GATE_PASS",
-    "FOUNDER_CREDIBILITY_PASS",
+    "PRE_CANARY_PROVIDER_PREVIEW_REVIEW_COMPLETE",
+    "ALL_SELECTED_VOICE_IDS_UNIQUE",
+    "ALL_SELECTED_VOICES_PROVIDER_IDENTITY_PASS",
+    "ALL_SELECTED_VOICES_PROVIDER_DURABILITY_PASS",
+    "ALL_SELECTED_VOICES_PREVIEW_LISTEN_PASS",
+    "ALL_SELECTED_VOICES_PLAUSIBLE_FOR_CANARY_PASS",
     "BINDINGS_CANDIDATE_STATUS_READY_FOR_PAID_CANARY_AUTHORIZATION"
+  ],
+  "explicitly_not_required_before_canary_because_causally_downstream": [
+    "ACTING_SCORE_24_OF_30",
+    "SCRIPT_PRONUNCIATION_GATE_PASS",
+    "PAIR_CHEMISTRY_PASS",
+    "REPEAT_TAKE_IDENTITY_PASS",
+    "FOUNDER_CAST_CREDIBILITY_PASS",
+    "CAST_LOCK"
   ],
   "explicit_authorization_inputs": {
     "confirm_spend": "YES",
@@ -29,12 +37,15 @@
   },
   "resulting_artifact_status": "PAID_S0_AUTHORIZED",
   "resulting_founder_paid_canary_authorized": true,
+  "resulting_semantics": "CANARY_BINDING_ONLY_NOT_CAST_LOCK",
   "provider_call_made_by_authorization_compiler": false,
   "provider_spend_made_by_authorization_compiler": false,
   "next_after_authorization": "MANUAL_GITHUB_ACTIONS_DISPATCH_OF_ROOM917_RU_S0_CANARY_WITH_confirm_spend_EQUALS_YES_AND_MAX_BLOCKS_MATCHING_AUTHORIZATION",
+  "next_after_s0_audio": "HUMAN_S0_SCREENING_THEN_SEPARATELY_AUTHORIZED_FINALIST_VERIFICATION",
   "hard_rules": [
     "DO_NOT_AUTHORIZE_FROM_CHAT_IMPLICATION_OR_SILENCE",
     "DO_NOT_AUTORUN_PAID_WORKFLOW_AFTER_CREATING_AUTHORIZATION_ARTIFACT",
+    "DO_NOT_PREPASS_POST_CANARY_EVIDENCE",
     "DO_NOT_RENDER_FULL_E01",
     "DO_NOT_CAST_LOCK",
     "DO_NOT_CHANGE_STORY_OR_DIALOGUE"
