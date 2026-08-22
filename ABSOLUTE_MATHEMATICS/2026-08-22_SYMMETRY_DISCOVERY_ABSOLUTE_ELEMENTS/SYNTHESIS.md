@@ -18,15 +18,17 @@ For four peers the same 15 formal relations can mean very different numbers of s
 
 The underlying scalar state can still have only four independent degrees of freedom.
 
-The cycle-adjacency task is especially informative: although written using cyclic adjacency, the discovered symmetry is larger than C4 because reflection also preserves a 4-cycle. The engine is therefore allowed to discover more symmetry than the designer initially assumed.
+The cycle-adjacency task is especially informative: although written using cyclic adjacency, automatic black-box symmetry discovery returned a group of size 8 because reflections also preserve the four-cycle. The engine is therefore allowed to discover more symmetry than the designer initially assumed.
 
 ## Strongest correction
 
 15 relations does not mean 15 new substances or 15 independent dimensions.
 
-For four scalar peers: 15 formal relation coordinates, but 4 intrinsic state dimensions.
+For four labeled scalar peers, the full 15 square-free relation coordinates have Jacobian rank 4 because the singleton coordinates already retain the original state. Therefore:
 
-A genuine new physical/ontological tier therefore needs more than a combinatorial increase in relation count. It must show a new primitive, new external information, new intervention/capability, or a residual outside the old closure.
+FORMAL RELATION COUNT != SYMMETRY RELATION-TYPE COUNT != INTRINSIC STATE DIMENSION.
+
+A genuine new physical/ontological tier needs more than a combinatorial increase in relation count. It must show a new primitive, new external information, new intervention/capability, or a residual outside the old closure.
 
 ## Next target
 
