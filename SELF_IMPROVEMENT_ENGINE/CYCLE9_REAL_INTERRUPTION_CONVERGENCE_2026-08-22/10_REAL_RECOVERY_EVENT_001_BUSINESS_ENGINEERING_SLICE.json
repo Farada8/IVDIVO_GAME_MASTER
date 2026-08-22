@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "event_id": "REAL-INTERRUPTION-2026-08-22-BROWSER-CLOSURE-001",
   "project_slice_id": "BUSINESS_ENGINEERING",
   "counts_as_new_interruption_event": false,
@@ -12,7 +12,12 @@
     "pr": 207,
     "action": "REBASE_FRONTIER_BEFORE_QUALIFICATION"
   },
-  "newer_authority_overlay": "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P97_P128_AUTHORITY_RECOVERY/06_POST_MERGE_AUTHORITY_RECOVERY_CLOSURE.json",
+  "parallel_closure_reconciliation": {
+    "new_main_closure_detected": "d919a680dea76ce74c6fa99113a1fe36d85f1e81",
+    "main_closure_path": "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P97_P128_AUTHORITY_RECOVERY/06_POST_MERGE_CLOSURE.md",
+    "local_duplicate_closure_removed": true,
+    "salvage_policy": "KEEP_STRONGER_MAIN_CLOSURE_AND_PRESERVE_ONLY_UNIQUE_RECOVERY_EVIDENCE"
+  },
   "recovered_frontier": {
     "p97_p128_executed": 32,
     "current_target": "8872468",
@@ -39,7 +44,8 @@
     "p97_p128_package_readback": "PASS",
     "final_head_ci_run": 32548973081,
     "final_head_ci_conclusion": "success",
-    "post_merge_closure": "06_POST_MERGE_AUTHORITY_RECOVERY_CLOSURE.json"
+    "post_merge_closure_commit": "d919a680dea76ce74c6fa99113a1fe36d85f1e81",
+    "post_merge_closure_path": "BUSINESS_ENGINEERING_OS/2026-08-22_CYCLE7_P97_P128_AUTHORITY_RECOVERY/06_POST_MERGE_CLOSURE.md"
   },
   "drive_evidence": {
     "business_p97_p128_control_doc": "154NhUZFLsXGVE6l6oEubeb6fyctK8i7arD8z8CDiIQY",
