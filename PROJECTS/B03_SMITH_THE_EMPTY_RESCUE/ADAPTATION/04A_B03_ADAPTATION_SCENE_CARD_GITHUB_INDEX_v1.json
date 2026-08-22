@@ -1,0 +1,110 @@
+{
+  "schema": "ivdivo.b03.screen_adaptation_scene_card_index/1.0",
+  "status": "GITHUB_CONTROL_INDEX_FULL_PAYLOAD_IN_DRIVE",
+  "date": "2026-08-22",
+  "source_authority": "FOUNDER_LOCKED_CH01_29",
+  "locked_novel_sha256": "97aa61898f0c8bee3e327b7198cd9a511976258961dd99a8eb9885cda250a7b8",
+  "working_format": "4x50-55_MIN_LIMITED_SERIES_WORKING_NOT_CANON",
+  "full_drive_payload": {
+    "drive_id": "1HDj_ePUHtN2_w13oXMuEkQbQ9syXeYBx",
+    "sha256": "805e9704a242beafdd65618932b6d188e24c862077449bb6645a5b1c66c9e805",
+    "scene_count": 54
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "title": "WRONG ADDRESS",
+      "source_chapters": "CH01–CH05 edge",
+      "scenes": [
+        {"scene_id":"E01_S01","source_anchor":"CH01","axis":"NIKA","change":"The audience learns competence, relationships and baseline operations before anything impossible occurs."},
+        {"scene_id":"E01_S02","source_anchor":"CH01","axis":"NIKA","change":"The call is treated as evidence, not prophecy; real resources are nevertheless moved."},
+        {"scene_id":"E01_S03","source_anchor":"CH01","axis":"JANA_NIKA","change":"The first call becomes a protected oddity rather than a belief system."},
+        {"scene_id":"E01_S04","source_anchor":"CH01","axis":"NIKA","change":"The earlier call now matches several independent details of a real later scene."},
+        {"scene_id":"E01_S05","source_anchor":"CH01","axis":"JANA","change":"The anomaly becomes an evidence problem with response effects already attached."},
+        {"scene_id":"E01_S06","source_anchor":"CH02","axis":"NIKA_JANA","change":"The bus is kept out of the area while ordinary road evidence is sought."},
+        {"scene_id":"E01_S07","source_anchor":"CH02","axis":"JANA_NIKA","change":"The warning appears operationally useful while becoming counterfactually unprovable."},
+        {"scene_id":"E01_S08","source_anchor":"CH03","axis":"NIKA_JANA","change":"Unit Four is positioned early enough to matter."},
+        {"scene_id":"E01_S09","source_anchor":"CH03","axis":"LUKA_JANA_NIKA","change":"The precursor-driven deployment produces an undeniable benefit."},
+        {"scene_id":"E01_S10","source_anchor":"CH03","axis":"JANA_NIKA","change":"The same information chain now contains a life saved and a responder killed."},
+        {"scene_id":"E01_S11","source_anchor":"CH03","axis":"JANA","change":"Personal grief is subordinated to work without disappearing."},
+        {"scene_id":"E01_S12","source_anchor":"CH04","axis":"SMITH","change":"The governing protagonist enters because the local system has already earned the need for him."},
+        {"scene_id":"E01_S13","source_anchor":"CH04-CH05","axis":"SMITH_JANA","change":"Forced cooperation is established without institutional dominance."}
+      ]
+    },
+    {
+      "episode": 2,
+      "title": "WE ARE IN THE RECORDING",
+      "source_chapters": "CH05–CH15",
+      "scenes": [
+        {"scene_id":"E02_S01","source_anchor":"CH05","axis":"SMITH","change":"The case is reframed as warning-plus-response causality."},
+        {"scene_id":"E02_S02","source_anchor":"CH06","axis":"SMITH_JANA","change":"A concrete rule replaces improvisation."},
+        {"scene_id":"E02_S03","source_anchor":"CH07","axis":"SMITH","change":"The audience sees what the job costs before the next escalation."},
+        {"scene_id":"E02_S04","source_anchor":"CH08","axis":"NIKA_JANA","change":"The rule is obeyed in good faith under uncertainty."},
+        {"scene_id":"E02_S05","source_anchor":"CH09","axis":"JANA_SMITH_NIKA","change":"Suppression is no longer emotionally or operationally neutral."},
+        {"scene_id":"E02_S06","source_anchor":"CH10","axis":"JANA_SMITH","change":"Neither side gets moral victory; the rule remains provisional and accountable."},
+        {"scene_id":"E02_S07","source_anchor":"CH11","axis":"NIKA","change":"Nika crosses the procedural line deliberately for immediate life safety."},
+        {"scene_id":"E02_S08","source_anchor":"CH11","axis":"ANDREJ_TINA","change":"The unauthorized disclosure materially changes the rescue path and may have saved Tina."},
+        {"scene_id":"E02_S09","source_anchor":"CH12","axis":"SMITH_JANA_NIKA","change":"Nika’s action becomes accountable evidence, not theme proof."},
+        {"scene_id":"E02_S10","source_anchor":"CH13","axis":"SMITH_TAREN_JANA","change":"A second explanatory model enters the case under explicit jurisdictional limits."},
+        {"scene_id":"E02_S11","source_anchor":"CH13-CH14","axis":"SMITH_JANA","change":"The MOSS discriminant enters a real response record after the source exists."},
+        {"scene_id":"E02_S12","source_anchor":"CH14","axis":"MULTI","change":"Science remains embedded in real emergency labor."},
+        {"scene_id":"E02_S13","source_anchor":"CH15","axis":"SMITH_JANA","change":"External-prophecy-as-independent-input is no longer sufficient: response information can enter precursor content."},
+        {"scene_id":"E02_S14","source_anchor":"CH15","axis":"SMITH","change":"The protagonist abandons his wrong strategy at midpoint rather than defending it."}
+      ]
+    },
+    {
+      "episode": 3,
+      "title": "MORGEN PASS",
+      "source_chapters": "CH16–CH24",
+      "scenes": [
+        {"scene_id":"E03_S01","source_anchor":"CH16","axis":"SMITH","change":"A supposedly settled precedent becomes an active evidence problem."},
+        {"scene_id":"E03_S02","source_anchor":"CH16-CH17","axis":"SMITH","change":"The truth is double: suppression plausibly prevented a larger cascade and specific people were excluded from the later success story."},
+        {"scene_id":"E03_S03","source_anchor":"CH17","axis":"SMITH_JANA","change":"He gives up secrecy advantage before asking her to trust any new recommendation."},
+        {"scene_id":"E03_S04","source_anchor":"CH17","axis":"TAREN_JANA","change":"Confederation science is shown superior in one dimension and incomplete in another."},
+        {"scene_id":"E03_S05","source_anchor":"CH18","axis":"JANA_SMITH_TAREN","change":"The system creates a controlled comparison rather than a quest for the one true future."},
+        {"scene_id":"E03_S06","source_anchor":"CH18","axis":"SMITH_JANA","change":"No unique future remains available as command authority."},
+        {"scene_id":"E03_S07","source_anchor":"CH19","axis":"TINA_JANA","change":"The storm becomes its own causal engine."},
+        {"scene_id":"E03_S08","source_anchor":"CH19","axis":"JANA","change":"Distributed-command behavior begins before it is philosophically comfortable."},
+        {"scene_id":"E03_S09","source_anchor":"CH20","axis":"SMITH_TAREN_JANA","change":"The acceptance criterion shifts from controlling the anomaly to preserving operational resilience."},
+        {"scene_id":"E03_S10","source_anchor":"CH21","axis":"SMITH_JANA","change":"A third strategy replaces obey/suppress: bounded information plus distributed judgment."},
+        {"scene_id":"E03_S11","source_anchor":"CH22","axis":"MAJA_JANA","change":"One local cell solves a problem differently from any central script while accepting its own delay/risk."},
+        {"scene_id":"E03_S12","source_anchor":"CH22","axis":"SMITH","change":"The strategy remains evidence, not ideology."},
+        {"scene_id":"E03_S13","source_anchor":"CH23","axis":"NETWORK_TECHNICIAN_SMITH","change":"The response graph becomes more centralized without anyone choosing doctrine."},
+        {"scene_id":"E03_S14","source_anchor":"CH23-CH24","axis":"SMITH_JANA_NETWORK_TECH","change":"The climax path becomes physical and accountable: segment relationships, not turn off the network."}
+      ]
+    },
+    {
+      "episode": 4,
+      "title": "WHAT WE DID WITH THE WARNING",
+      "source_chapters": "CH24–CH29",
+      "scenes": [
+        {"scene_id":"E04_S01","source_anchor":"CH24-CH25","axis":"SMITH_JANA","change":"The climax is already distributed; Smith is not the only person acting."},
+        {"scene_id":"E04_S02","source_anchor":"CH25","axis":"MULTI_LOCAL","change":"Human agency produces states outside a single central script."},
+        {"scene_id":"E04_S03","source_anchor":"CH26","axis":"SMITH_NETWORK_TECH","change":"The unified graph breaks into bounded cells; central visibility degrades sharply."},
+        {"scene_id":"E04_S04","source_anchor":"CH26","axis":"SMITH_JANA","change":"They pay the real price of the chosen strategy: less central knowledge."},
+        {"scene_id":"E04_S05","source_anchor":"CH27","axis":"HYDRO_JANA","change":"The human cost of reduced central knowledge becomes immediate and personal."},
+        {"scene_id":"E04_S06","source_anchor":"CH27","axis":"SMITH_TAREN","change":"Knowledge and authority are separated under maximum pressure."},
+        {"scene_id":"E04_S07","source_anchor":"CH27","axis":"JANA","change":"A lawful source-blind search begins."},
+        {"scene_id":"E04_S08","source_anchor":"CH28","axis":"LOCAL_RESCUE","change":"The third route exists because professionals adapt, not because the story rewards disobedience."},
+        {"scene_id":"E04_S09","source_anchor":"CH28","axis":"ANDREJ_LOCAL_RESCUE","change":"ANDREJ KOŠIR — EXTRACTED / ALIVE / TRANSPORTING."},
+        {"scene_id":"E04_S10","source_anchor":"CH28-CH29","axis":"SMITH_JANA","change":"The conventional emergency reaches containment without cosmological resolution."},
+        {"scene_id":"E04_S11","source_anchor":"CH29","axis":"JANA_NIKA_SMITH","change":"Consequences become institutional records rather than speeches."},
+        {"scene_id":"E04_S12","source_anchor":"CH29","axis":"SMITH_TAREN_JANA","change":"The world is permanently changed by the completed case."},
+        {"scene_id":"E04_S13","source_anchor":"CH29","axis":"SMITH","change":"Smith’s change lands in ordinary behavior rather than a doctrine speech."}
+      ]
+    }
+  ],
+  "hard_constraints": [
+    "No novel text mutation.",
+    "No CH30.",
+    "Smith remains HERO; Nika remains pilot hook carrier.",
+    "Jana retains lawful local operational authority.",
+    "Luka and Davor remain distinct causal losses.",
+    "Nika-to-Andrej/Tina disclosure remains unauthorized and causally meaningful.",
+    "MOSS midpoint proves response-information coupling without proving precursor origin.",
+    "Taren has advisory knowledge and zero Earth command jurisdiction.",
+    "Final Andrej route is source-blind verified; precursor route remains unused and counterfactual UNKNOWN.",
+    "F1 only: Smith has teenage daughter; no extra family facts.",
+    "Series hook only after CH29-equivalent resolution."
+  ]
+}
