@@ -6,19 +6,21 @@
 
 ## Current baseline inspected
 
-Drive `89_B03_SPEAKER_ATTRIBUTION_CURRENT_BASELINE_v1_3.json` — `1zAoXqX_mMsQNpMf4K2GeOEmwU_gzv1A2`
+Drive `92_B03_SPEAKER_ATTRIBUTION_CURRENT_BASELINE_v1_4.json` — `1YtLq1LWMqusgipHkwzbzD18XgslMk0O0`
 
 Baseline before repair:
 - spoken candidates: 3715
-- assigned: 517
-- UNKNOWN: 3198
-- coverage: 13.92%
+- assigned: 544
+- UNKNOWN: 3171
+- coverage: 14.64%
+
+The 27 Batch-02 manual adjudications are preserved. This repair changes only two existing labels.
 
 ## Defect class
 
 The `POST_PRONOUN_RESOLVED` path may resolve a post-quote pronoun from a named character that appears only **after** the pronoun in the evidence window. This is backward coreference and can bind the preceding quote to the wrong voice.
 
-A complete audit of the 42 current `POST_PRONOUN_RESOLVED` assignments found two such cases.
+A complete audit of the 42 inherited `POST_PRONOUN_RESOLVED` assignments found two such cases. Both remain present in current baseline v1.4.
 
 ## Repairs
 
@@ -46,11 +48,9 @@ The later text `Nika looked at the three recordings` cannot resolve the precedin
 
 `PRONOUN_ANTECEDENT_MUST_PRECEDE_PRONOUN`
 
-Supporting invariant:
+Supporting invariants:
 
 `FORWARD_NAMED_TOKEN != VALID_BACKWARD_ANTECEDENT`
-
-and:
 
 `ANTECEDENT_TOKEN_PROXIMITY != GRAMMATICAL_SPEAKER_OWNERSHIP`
 
@@ -62,12 +62,12 @@ The repair does not disable valid post-pronoun attribution. Known valid controls
 
 ## Effective state after repair
 
-- assigned: **517 / 3715**
-- UNKNOWN: **3198**
-- coverage: **13.92%**
+- assigned: **544 / 3715**
+- UNKNOWN: **3171**
+- coverage: **14.64%**
 - labels corrected: **2**
 - assignment-count change: **0**
 - story/prose byte changes: **0**
 - voice map: **BLOCKED** until the attribution authority is provenance-clean
 
-This repair is a narrow overlay on the current v1.3 baseline. It does not promote any contextual heuristic and does not consume the earlier 216 CH02–CH03 speaker proposals as authority.
+This is a narrow repair overlay on v1.4. It does not promote any contextual heuristic and does not consume the earlier 216 CH02–CH03 proposals as authority.
