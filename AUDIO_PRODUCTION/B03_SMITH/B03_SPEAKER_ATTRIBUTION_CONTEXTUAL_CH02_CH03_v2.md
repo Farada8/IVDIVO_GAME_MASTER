@@ -1,103 +1,96 @@
-# B03 — SPEAKER ATTRIBUTION CONTEXTUAL PASS CH02–CH03 v2
+# B03 — SPEAKER ATTRIBUTION CONTEXTUAL CH02–CH03 — FRESH-MAIN RECONCILIATION v2.1
 
 **Date:** 2026-08-22  
 **Project:** B03 / THE EMPTY RESCUE  
 **Story state:** FOUNDER LOCKED / CH01–29  
 **Text mutation:** 0  
-**Source package SHA256:** `4f7f779fc42007f384512cb1e1cef84a98ef0c0756f010404a835e204e05c0ac`
+**Voice-map lock:** NOT AUTHORIZED
 
-## Why this pass exists
+## Fresh-main authority
 
-The fresh strong-local rebuild correctly rejected the earlier Tier1–Tier4 speaker maps, but its `POST_PRONOUN_RESOLVED` rule still admitted a directional error: a pronoun could be assigned from a named character that appears **after** the pronoun in the evidence window.
+While the CH02–CH03 contextual review was being prepared, `main` advanced to a newer strong baseline:
 
-A full audit of all **42** strong-map post-pronoun assignments found **2 forward-antecedent violations**:
+- spoken dialogue candidates: **3,715**
+- strong assignments: **512**
+- UNKNOWN: **3,203**
+- coverage: **13.78%**
+- strong conflicts: **0**
+- prior Tier-4 contradictions detected: **79**
+- Drive strong baseline: `85_B03_SPEAKER_ATTRIBUTION_REBUILD_STRONG_v1_2.json` — `1qX0_z-d_S-VuA18eos2nk3T0IGTNWoeN`
 
-- `B03_CH01_S0108`: base `NIKA` → corrected `JANA`.
-- `B03_CH03_S0252`: base `NIKA` → corrected `JANA`.
+The associated contextual-heuristic validation promoted **no automatic contextual rule**. Alternation and same-speaker-sandwich inference are rejected for automatic use; single-action-subject is review-only; small perfect samples remain HOLD rather than PASS.
 
-CH01 is independently adjudicated by the existing 142/142 production speaker map, so the first correction has an external-in-project ground truth. The CH03 correction is explicit in local narration. No story text changes were made.
+Drive validation: `86_B03_SPEAKER_CONTEXT_HEURISTIC_VALIDATION_v1.json` — `1BkUn_5tN6YnpVna40auSMePcwV3i7Lec`.
 
-New safeguard:
+Therefore the earlier 502-base composition must not be promoted.
+
+## New defect found inside the fresh 512 baseline
+
+A complete audit of all **42** `POST_PRONOUN_RESOLVED` assignments found **2 directional antecedent violations**.
+
+### `B03_CH01_S0108`
+Current strong baseline: `NIKA`  
+Corrected speaker: `JANA`
+
+The local evidence is `Jana stood behind Nika now...` followed by the quote and `she said.` The strong rule incorrectly resolves `she` to the later `Nika` mention. The existing independently adjudicated CH01 production map also assigns this turn to JANA.
+
+### `B03_CH03_S0252`
+Current strong baseline: `NIKA`  
+Corrected speaker: `JANA`
+
+The local narration explicitly places Jana as the acting speaker before the quote. The later Nika mention cannot serve as a backward antecedent for the preceding `she asked`.
+
+New generic safeguard:
 
 `PRONOUN_ANTECEDENT_MUST_PRECEDE_PRONOUN`
 
-and additionally:
+Supporting law:
 
 `ANTECEDENT_TOKEN_PROXIMITY != GRAMMATICAL_SPEAKER_OWNERSHIP`
 
-## Contextual review law
+These are label corrections only. Strong assignment count remains **512**; story/prose bytes remain unchanged.
 
-This pass does **not** use automatic alternating-turn fill.
+## CH02–CH03 contextual work: disposition changed
 
-A line is assigned only when local evidence makes the speaker unique through a bounded combination of:
-- named entry into a call/radio exchange;
-- closed two-party channel;
-- explicitly anchored scene role;
-- direct question/answer ownership;
-- uninterrupted same-speaker continuation;
-- operational role ownership supported by narration.
+The earlier contextual review generated **216 candidate speaker proposals** from the current UNKNOWN pool. Fresh-main heuristic validation requires a stricter disposition:
 
-If two present speakers could plausibly own a line, it remains `UNKNOWN`.
+- candidate proposals: **216**
+- automatically promoted: **0**
+- status: **REVIEW_QUEUE_ONLY / NOT SPEAKER AUTHORITY**
+- four deliberately unresolved lines remain unproposed:
+  - `B03_CH02_S0100`
+  - `B03_CH02_S0108`
+  - `B03_CH02_S0214`
+  - `B03_CH03_S0140`
 
-## CH02 — THE CALL THAT WORKS
+The proposed labels are useful as a review queue, not as a voice map. Each candidate must acquire independent per-line evidence before promotion. Closed-channel membership or apparent turn alternation alone is insufficient.
 
-- raw quote segments: 108
-- inline non-spoken semantic quote: `B03_CH02_S0200`
-- spoken candidates: **107**
-- contextually assigned: **104**
-- residual UNKNOWN: **3**
-- same as corrected strong base: 5
-- new contextual assignments: **99**
-- conflicts with corrected strong base: **0**
+## Current working state
 
-Residual UNKNOWN:
-- `B03_CH02_S0100`
-- `B03_CH02_S0108`
-- `B03_CH02_S0214`
+After applying only the two proof-backed corrections:
 
-These are deliberately not guessed because multiple locally present speakers can plausibly own them.
-
-## CH03 — THE THIRD DEPLOYMENT
-
-- spoken candidates: **127**
-- contextually assigned: **126**
-- residual UNKNOWN: **1**
-- strong-base same after correction: 8
-- corrected strong-base conflict: 1
-- new contextual assignments: **117**
-
-Residual UNKNOWN:
-- `B03_CH03_S0140`
-
-The line is operationally plausible for more than one locally active command speaker, so it remains unresolved.
-
-## Whole-book composed state
-
-Current strong base before this pass:
-- assigned: 502
-- UNKNOWN: 3213
-- coverage: 13.51%
-
-After the 2 bounded corrections and 216 new CH02/CH03 contextual assignments:
-- assigned: **718 / 3715**
-- UNKNOWN: **2997**
-- coverage: **19.33%**
-- story/prose byte changes: **0**
-
-The count remains 502 across the two corrections because they replace wrong speaker labels rather than add lines.
-
-## Authority disposition
-
-- exact-text segmentation: unchanged / authority preserved
-- earlier Tier1–Tier4 maps: superseded
-- strong-local rebuild: retained as **base layer**, but must be composed with the pronoun-direction corrections
-- CH02 contextual pass: PASS
-- CH03 contextual pass: PASS
+- assigned: **512 / 3,715**
+- UNKNOWN: **3,203**
+- coverage: **13.78%**
+- text mutation: **0**
+- contextual auto-promotion from this pass: **0**
 - full speaker-attribution gate: **OPEN**
-- voice-map lock: **NOT AUTHORIZED**
+- voice map: **BLOCKED**
 
 ## Next gate
 
+`ADJUDICATE_CONTEXTUAL_QUEUE_WITH_PER_LINE_EVIDENCE_CH02_CH03`
+
+Then continue:
+
 `CONTEXTUAL_SPEAKER_ATTRIBUTION_CH04_CH29`
 
-Do not start whole-book voice locking until residual attribution has a provenance-clean disposition. Preserve `UNKNOWN` instead of forcing complete coverage.
+Promotion law:
+
+`PROPOSED_SPEAKER != AUTHORITATIVE_SPEAKER`
+
+and:
+
+`UNKNOWN > UNSUPPORTED_COMPLETENESS`
+
+No whole-book voice locking until speaker attribution has a provenance-clean disposition.
