@@ -1,4 +1,3 @@
-import copy
 import json
 import unittest
 from pathlib import Path
@@ -38,6 +37,12 @@ class DppPreflightTests(unittest.TestCase):
         f = {x["field"]: x for x in r["corrected"]["findings"]}
         self.assertEqual(f["gtin_or_equivalent"]["outcome"], "HOLD")
         self.assertEqual(f["gtin_or_equivalent"]["requiredness_state"], "LEGAL_REQUIREDNESS_UNKNOWN")
+
+    def test_in_scope_still_fails_closed_when_requiredness_unresolved(self):
+        x = fixture()
+        r = validate_record(x["corrected"], "IN_SCOPE_VERIFIED")
+        self.assertEqual(r["disposition"], "IN_SCOPE_PRODUCT_RULE_REQUIREDNESS_UNRESOLVED")
+        self.assertGreater(r["counts"]["HOLD"], 0)
 
     def test_registry_does_not_embed_full_dpp_payload(self):
         r = compare_correction(fixture())
