@@ -1,0 +1,23 @@
+{
+  "schema_version":"1.0",
+  "project":"B03_SMITH_THE_EMPTY_RESCUE",
+  "drive_id":"1Xz_x54rCplmFedu4pEqgWhGcl7rOW4t92h4PzYKz9oc",
+  "status":"P65_P71_EXECUTED_ARCHITECTURE_PASS_P72_BLOCKED_UNTIL_CH29",
+  "prompts":{
+    "P65":"EXECUTED_PASS_ANDREJ_PERMANENT_INJURY_CAUSAL_MECHANISM_CLASS_NO_EXACT_DIAGNOSIS",
+    "P66":"EXECUTED_PASS_CENTRALIZED_PREDICTIVE_CONTROL_TEMPTATION_MUST_BE_GENUINELY_USEFUL",
+    "P67":"EXECUTED_PASS_DISTRIBUTED_JUDGMENT_REQUIRES_SEEDED_THIRD_ROUTE_AND_REAL_COST",
+    "P68":"EXECUTED_PASS_SMITH_OWNS_REFUSAL_TO_REBUILD_UNIFIED_PREDICTIVE_SCRIPT",
+    "P69":"EXECUTED_PASS_LUKA_EVA_EXECUTE_RELAY_SEGMENTATION_SMITH_DECIDES_RECORDS",
+    "P70":"EXECUTED_PASS_OES_MORGEN_PASS_LOCAL_AUTHORITY_INSTITUTIONAL_RESOLUTION",
+    "P71":"EXECUTED_PASS_TAREN_JANA_NIKA_ANDREJ_SMITH_PERSONAL_RESOLUTION_DESIGN",
+    "P72":"BLOCKED_NOT_EXECUTED_FULL_NOVEL_GATE_REQUIRES_CH25_29_PROSE"
+  },
+  "injury_boundary":"Andrej survives; permanent disabling lower-limb injury class. During active withdrawal, conventional storm debris/water pulse at hydro service access shifts ordinary maintenance vehicle/equipment against fixed concrete edge and pins/crushes lower limb; Tina remains mobile. Exact medical diagnosis/amputation status unknown until factual pass. No sacrificial shove/prophecy punishment.",
+  "relay_boundary":"CH26 Luka verifies B-seven local labels/revision and performs physical synchronization-interface isolation using Eva change sheet; preserve local voice/hazards/resource updates; source DO NOT CUT BLUE PAIR ignored as engineering instruction; Smith owns go/no-go/provenance only.",
+  "climax_choice":"After segmentation, CH27 high-value warning offers potentially faster centralized route to injured Andrej; temporary resync technically possible. Smith refuses OES request to rebuild unified predictive script while Jana continues lawful rescue using independently verified facts/local tactics.",
+  "third_route":"CH28 Tina/local responders use a physically seeded older inspection/service approach absent from warning set; route partly succeeds and Andrej survives; permanent consequence remains.",
+  "resolution":"CH29 closes case, accounts casualties/choices, amends OES doctrine, reopens Morgen Pass sanitization correction, closes Contact advisory channel, restores ordinary local authority, then Dublin ordinary-life aftermath. No hook before closure.",
+  "red_team":{"fatal":0,"blocking_major":0,"P72":"FAIL_CLOSED_PENDING_MANUSCRIPT"},
+  "next":"Draft/gate CH25 CASCADE; then CH26-29; only then run P72."
+}
