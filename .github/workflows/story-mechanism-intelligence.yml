@@ -1,0 +1,24 @@
+name: Story Mechanism Intelligence Candidate
+on:
+  pull_request:
+    paths:
+      - 'tools/ivdivo_story_mechanism_intelligence.py'
+      - 'tests/test_story_mechanism_intelligence.py'
+      - 'BOOK_INTELLIGENCE_ENGINE/2026-08-22_CYCLE2_STORY_MECHANISM_INTELLIGENCE_32_TO_64/**'
+      - '.github/workflows/story-mechanism-intelligence.yml'
+  workflow_dispatch:
+
+jobs:
+  candidate-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependency
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Compile runtime
+        run: python -m py_compile tools/ivdivo_story_mechanism_intelligence.py
+      - name: Run Story Mechanism candidate tests
+        run: python -m pytest -q tests/test_story_mechanism_intelligence.py
