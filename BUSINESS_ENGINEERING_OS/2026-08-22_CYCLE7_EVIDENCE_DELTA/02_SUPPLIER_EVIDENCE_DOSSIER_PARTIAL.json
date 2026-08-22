@@ -1,0 +1,29 @@
+{
+  "$schema": "BUSINESS_ENGINEERING_OS_SupplierEvidenceDossier_v1",
+  "evidence_state": "PARTIAL_IDENTITY_ONLY",
+  "supplier_identity": {
+    "legal_name": {"value": "SYNTHESIS-IVDIVO LIMITED", "status": "VERIFIED_PRIVATE_PRIMARY_FORMATION_DOC"},
+    "legal_form": {"value": "private company limited by shares", "status": "VERIFIED_PRIVATE_PRIMARY_FORMATION_DOC"},
+    "formation_activity_code": {"value": "NACE 6399 — Other information service activities n.e.c.", "status": "FORMATION_DECLARATION_ONLY_NOT_CURRENT_CAPABILITY_PROOF"},
+    "company_number": {"value": null, "status": "UNKNOWN_NOT_VERIFIED"},
+    "current_cro_status": {"value": null, "status": "UNKNOWN_NOT_VERIFIED"},
+    "tax_clearance_verified_at": {"value": null, "status": "UNKNOWN_NOT_VERIFIED"}
+  },
+  "financial_capacity": {"turnover_periods": null, "turnover_evidence": null, "working_capital_available_eur": null, "credit_facilities": null, "cash_timing_constraints": null, "status": "UNKNOWN_NO_DOCUMENT_PROVENANCE"},
+  "insurance": {"employers_liability": null, "public_liability": null, "professional_indemnity": null, "other": null, "verified_at": null, "status": "UNKNOWN_NO_DOCUMENT_PROVENANCE"},
+  "delivery_capacity": {"direct_personnel": null, "subcontractors": null, "current_committed_capacity": null, "programme_constraints": null, "school_live_site_experience": null, "status": "UNKNOWN_NO_DOCUMENT_PROVENANCE"},
+  "references": {"similar_projects": null, "reference_contacts": null, "completion_evidence": null, "status": "UNKNOWN_NO_DOCUMENT_PROVENANCE"},
+  "safety_and_competence": {"safety_statement": null, "pscs_capability": null, "psdp_dependency": null, "competence_declarations": null, "certifications": null, "status": "UNKNOWN_NO_DOCUMENT_PROVENANCE"},
+  "specialist_scope": {"roofing_system_capability": null, "insulation_capability": null, "rooflight_ceiling_capability": null, "rainwater_goods_capability": null, "protected_or_traditional_fabric_capability": null, "status": "UNKNOWN_NO_DOCUMENT_PROVENANCE"},
+  "evidence_sources": [
+    {"class": "PRIVATE_PRIMARY_FORMATION_DOC", "artifact": "company constitution", "use": "identity and legal-form evidence only", "capability_use_forbidden": true},
+    {"class": "PRIVATE_PRIMARY_FORMATION_DOC", "artifact": "A1 declaration/consent pages", "use": "formation declaration and identity corroboration only", "capability_use_forbidden": true}
+  ],
+  "current_case_effect": {"before": "UNVERIFIED_SUPPLIER_PACKET", "after": "PARTIAL_IDENTITY_ONLY", "bid_decision_unlocked": false, "pa4_unlocked": false},
+  "rules": [
+    "PRIVATE_PRIMARY_IDENTITY_EVIDENCE_NEQ_CAPABILITY_EVIDENCE",
+    "FORMATION_ACTIVITY_CODE_NEQ_CURRENT_DELIVERY_CAPABILITY",
+    "UNKNOWN_SUPPLIER_FIELDS_STAY_NULL",
+    "CURRENT_TENDER_REQUIREMENT_JOIN_REQUIRES_COMPLETE_CURRENT_PACK"
+  ]
+}
