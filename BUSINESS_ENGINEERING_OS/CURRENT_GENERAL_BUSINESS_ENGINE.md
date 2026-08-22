@@ -2,69 +2,82 @@
 
 **Date:** 2026-08-22  
 **Authority:** `BUSINESS_ENGINEERING_OS/GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/`  
-**Status:** GENERAL ENGINE MERGED + P01–P08 DISCOVERY REFRESH MERGED / 8 OF NEXT64 EXECUTED
+**Status:** GENERAL ENGINE MERGED / OLD OPPORTUNITY WIP P01–P24 COMPLETE / MONEY MECHANISMS RUN32 MERGED
 
 ## Restore order
 1. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/00_MASTER.md`
 2. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/01_ENGINEERING_SPEC.md`
 3. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/06_MACHINE_STATE.json`
-4. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/07_P01_P08_DISCOVERY_REFRESH.md`
-5. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/08_P01_P08_SOURCE_LEDGER.md`
-6. Existing current Business evidence authority + relevant vertical state.
-7. Fresh GitHub/Drive reconciliation before mutating authority.
+4. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/13_MONEY_MECHANISMS_MACHINE_STATE.json`
+5. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/09_MONEY_MECHANISMS_RUN32.md`
+6. `GENERAL_BUSINESS_DISCOVERY_PRODUCTION_ENGINE_V1/10_MONEY_MECHANISMS_TOP10_TEST_PORTFOLIO.md`
+7. Existing current Business evidence authority + relevant vertical state.
+8. Fresh GitHub/Drive reconciliation before mutating authority.
 
 ## Meaning
-This is the top-level business production orchestrator. Procurement/tendering, retrofit, AI implementation, design/creative, hospitality, digital products/services, acquisitions and future lanes are verticals beneath it.
+This is the top-level business production orchestrator. Procurement/tendering is one vertical beneath it, alongside ecommerce/dropshipping, services, brokerage, digital/IP, AI/software, assets, acquisitions, retrofit, design/creative, hospitality and future lanes.
 
 Canonical path:
 `RESTORE -> DISCOVER -> QUALIFY -> FATAL TEST -> VALUE -> OFFER -> ECONOMICS -> SALES TEST -> EXTERNAL EVIDENCE -> TRANSACTION -> DELIVERY -> REPEATABILITY -> SCALE -> LEARN`.
 
-## Engine authority
+## Base engine authority
 - BDP01–BDP32 modules.
 - CDP01–CDP32 contracts.
 - PG01–PG12 proof gates.
-- Run32: 21 KEEP/ordered, 11 MUTATE, 0 KILL.
-- Next64 created.
-- executable router + regression suite.
+- Base Run32: 21 KEEP/ordered, 11 MUTATE, 0 KILL.
 - Base engine PR #303 -> `b579c7e0359b5c242b718866c2c2488a2dda1434`; CI `32554671258` SUCCESS.
 
-## Discovery refresh authority
-P01–P08 completed and merged.
-- PR #307 -> `5551929cb5873dc6198247affe9b7e77738b5c41`.
-- exact head `888bde71957a440e3532c01cac0e6f69d95f0bae`.
-- CI `32555010120` SUCCESS.
-- 10 fresh non-procurement signals examined.
-- dedupe/merge applied against old 32-opportunity register.
-- Next64 accounting: **8 executed / 56 remaining**.
-- Drive P01–P08 readback document `10ned4n-eciCkyv1qa5VKT5UZPBm1cgauwxWGG34m-bU`.
+## Existing opportunity-WIP engineering
+The first official-signal discovery line is preserved, not deleted.
+- P01–P08 discovery refresh merged via PR #307.
+- P09–P16 buyer/problem evidence merged on current main.
+- P17–P24 fatal-test portfolio merged on current main.
+- Accounting on that parent Next64: **24/64 engineering cards complete, 40 remain**.
+- Active old lanes: OPP-33 retrofit, OPP-36 AI transparency, OPP-37 tourism AI.
+- They have internal engineering/fatal-test work only; no WTP/transaction/repeatability proof.
 
-## Current bounded candidate WIP
-**PRIMARY candidate:** OPP-33 — SME Business Retrofit Grant-Ready Delivery / Partner Network.  
-**PILOT candidate:** OPP-36 — AI Transparency Implementation Pack.  
-**PILOT candidate:** OPP-37 — Tourism AI Discoverability & Bookability.
+## Money Mechanisms discovery overlay
+PR #324 merged -> `c127ca7b08d5e1d19fade91b3987fb0cba770e6b`; exact-head CI `32556318791` SUCCESS.
 
-These are candidates for decisive testing, not proven winning businesses.
+Run32 compared 32 distinct legal money mechanisms. Procurement/tenders occupy only one slot.
 
-Current evidence boundary:
+Top10 mechanisms:
+1. local skilled/productized service;
+2. service arbitrage/subcontracting;
+3. local lead generation;
+4. high-ticket B2B brokerage;
+5. EU-supplier dropshipping;
+6. print-on-demand;
+7. Etsy digital/templates;
+8. AI workflow implementation;
+9. paid intelligence/decision packs;
+10. used-goods/equipment arbitrage.
+
+Bounded experimental WIP=3 for the mechanism overlay:
+**PRIMARY experiment:** EU-supplier ecommerce / dropshipping.  
+**PILOT:** Digital/POD art commerce.  
+**PILOT:** Local service arbitrage + lead generation.
+
+Generic non-EU dropshipping is `MUTATE`, not KILL: current Irish customs/VAT/delivery/returns friction makes EU-stock fulfilment the cleaner first experiment.
+
+## Coexistence rule
+The Money Mechanisms overlay corrects discovery bias; it does **not** erase P01–P24 work on OPP-33/36/37 and does not prove the new WIP is commercially superior. The two lines coexist until evidence allows portfolio replacement.
+
+## Current evidence boundary
 `WILLINGNESS_TO_PAY = UNKNOWN`  
-`UNIT_ECONOMICS = UNKNOWN`  
-`TRANSACTION_EVIDENCE = NONE`  
+`CAC = UNKNOWN`  
+`CONVERSION = UNKNOWN`  
+`TRANSACTION_EVIDENCE = NONE FROM MONEY RUN`  
 `REPEATABILITY = UNPROVEN`
 
-## Watch / hold
-OPP-38 Hospitality Workflow Optimisation — WATCH_TO_TEST.  
-OPP-39 Export Market Evidence Pack — WATCH_TO_TEST.  
-OPP-40 US Tariff Exposure / Diversification — WATCH / strong free-support substitution risk.  
-OPP-41 Creative Maker Retail Scale — WATCH / urgency lower.  
-OPP-34 Energy Design Coordination — HOLD specialist partner.  
-OPP-35 Green-to-Grant — merge/test inside energy lane.  
-Tourism accessibility — merge into existing OPP-22 rather than duplicate.
+## Self-improvement candidate
+`DISCOVERY_SOURCE_BALANCE_GATE` — local candidate only. Broad discovery must include service, commerce, digital/IP, software/AI, brokerage, asset and acquisition mechanisms. Public procurement cannot dominate solely because it is easier to verify.
 
 ## Next causal frontier
-Do not widen WIP. Run `P09–P24` only to the degree necessary for the current three candidates:
-1. sharpen buyer/job/problem and evidence ladder;
-2. identify the single fatal assumption per candidate;
-3. design cheapest decisive test + negative control + pass/fail threshold;
-4. kill/park any candidate that fails and promote a WATCH candidate only as replacement.
+For Money Mechanisms execute internal evidence work only:
+- `P01–P08` EU-supplier ecommerce/dropshipping;
+- `P17–P24` digital/POD commerce;
+- `P25–P32` local service arbitrage/leadgen.
 
-No autonomous outreach, spend, contract acceptance or proof promotion is authorized by this pointer.
+Dependencies and decision value override prompt order. WIP remains 3.
+No autonomous outreach, listings, ads, inventory purchases, spend, contracts or proof promotion are authorized by this pointer.
