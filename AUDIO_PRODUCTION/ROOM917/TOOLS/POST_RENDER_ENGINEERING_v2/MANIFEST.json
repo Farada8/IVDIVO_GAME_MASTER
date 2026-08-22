@@ -1,5 +1,5 @@
 {
-  "schema_version": "room917.post_render_engineering_manifest/2.5",
+  "schema_version": "room917.post_render_engineering_manifest/2.6",
   "status": "PROJECT_PILOT_PASS_DOMAIN_PROMOTION_HOLD",
   "project": "ROOM917",
   "episode": "E01",
@@ -7,6 +7,7 @@
     "authority_hygiene_guard.py",
     "cue_lineage_compiler.py",
     "lineage_timing_resolver.py",
+    "recovery_intake_gate.py",
     "interval_classifier.py",
     "selective_repair_planner.py",
     "sound_asset_binding_gate.py",
@@ -37,8 +38,30 @@
   "authority_hygiene": {
     "rules": "AUTHORITY_HYGIENE_RULES_v1.json",
     "contract": "AUTHORITY_HYGIENE_CONTRACT_v1.json",
-    "integration": ["cue_lineage_compiler.py","post_render_pipeline.py"],
+    "integration": [
+      "cue_lineage_compiler.py",
+      "post_render_pipeline.py"
+    ],
     "targeted_tests": "5 PASS"
+  },
+  "recovery_intake": {
+    "gate": "recovery_intake_gate.py",
+    "schema": "room917.recovery_intake_gate/1.0",
+    "purpose": "VALIDATE_AND_ROUTE_RECOVERED_MASTER_BYTES_ACCEPTED_LIVE_TIMING_OR_TRUSTED_EXACT_P003A2_INTERVAL_OUTPUT_WITHOUT_INFERENCE",
+    "exact_master_sha256": "231c501e839e8f7f6ab72e3b556da43cae495913c172f6b7648b15a2ca3f88a8",
+    "master_route": "P003A2_SIGNAL_INTERVALS",
+    "accepted_live_timing_route": "LINEAGE_TIMING_RESOLUTION__P003A2_STILL_WAITS_FOR_MASTER_BYTES",
+    "trusted_exact_interval_route": "EVIDENCE_CLASSIFICATION",
+    "trusted_timing_grades": [
+      "ACCEPTED_ALIGNMENT",
+      "LIVE_TIMELINE"
+    ],
+    "trusted_interval_provenance_grades": [
+      "P003A2_ORIGINAL_OUTPUT",
+      "FOUNDER_LOCKED_EXACT_SIGNAL_ANALYSIS"
+    ],
+    "local_unit_validation_2026_08_22": "5_PASS",
+    "patch_authority": "NEVER_GRANTED_BY_INTAKE_GATE"
   },
   "sound_asset_identity": {
     "contract": "../../SOUND_DESIGN/ROOM917_E01_CURRENT_BRANCH_SOUND_ASSET_CONTRACT_v1.json",
@@ -95,7 +118,10 @@
     "schema": "room917.release_translation_machine_qc/1.3",
     "source_mode": "EXACT_SOURCE_SHA_REQUIRED",
     "derived_mode": "PROVENANCE_1_1_PLUS_ACCESSIBLE_EXACT_SOURCE_PLUS_DIRECT_BYTE_REGRESSION_REQUIRED",
-    "translation_outputs": ["MONO_FOLDDOWN_QC_PROXY","PHONE_BAND_MONO_QC_PROXY"],
+    "translation_outputs": [
+      "MONO_FOLDDOWN_QC_PROXY",
+      "PHONE_BAND_MONO_QC_PROXY"
+    ],
     "human_substitution_forbidden": true
   },
   "p003b_human_gate": {
