@@ -1,1 +1,47 @@
-{"schema_version":"room917.post_render_engineering_manifest/2.0","status":"PROJECT_PILOT_PASS_DOMAIN_PROMOTION_HOLD","project":"ROOM917","episode":"E01","core_modules":["cue_lineage_compiler.py","lineage_timing_resolver.py","interval_classifier.py","selective_repair_planner.py","room_bed_patch_renderer.py","regression_gate.py","post_render_pipeline.py","post_render_router.py","self_improvement_adapter.py"],"dependency":"AUDIO_PRODUCTION/ROOM917/TOOLS/P003A2_MASTER_ESCROW_v1/p003a2_interval_analyzer.py","real_production_frontier":"P003A2_BLOCKED_ON_EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP","unit_tests":"5 PASS","synthetic_selective_repair_chain":"PASS","negative_unauthorized_change_gate":"FAIL_AS_REQUIRED","domain_promotion_gate":"SECOND_PROJECT_REPLICATION","prohibited":["INVENT_PRODUCTION_TIMECODES","AUTO_FILL_LOW_LEVEL_WINDOWS","SIMULATE_HUMAN_PASS","SCALE_E02_E24"]}
+{
+  "schema_version": "room917.post_render_engineering_manifest/2.1",
+  "status": "PROJECT_PILOT_PASS_DOMAIN_PROMOTION_HOLD",
+  "project": "ROOM917",
+  "episode": "E01",
+  "core_modules": [
+    "authority_hygiene_guard.py",
+    "cue_lineage_compiler.py",
+    "lineage_timing_resolver.py",
+    "interval_classifier.py",
+    "selective_repair_planner.py",
+    "room_bed_patch_renderer.py",
+    "regression_gate.py",
+    "post_render_pipeline.py",
+    "post_render_router.py",
+    "self_improvement_adapter.py"
+  ],
+  "authority_hygiene": {
+    "rules": "AUTHORITY_HYGIENE_RULES_v1.json",
+    "contract": "AUTHORITY_HYGIENE_CONTRACT_v1.json",
+    "integration": [
+      "cue_lineage_compiler.py",
+      "post_render_pipeline.py"
+    ],
+    "targeted_tests": "5 PASS",
+    "tested_cases": [
+      "CURRENT_EXACT_ID_REVISION_TITLE_PASS",
+      "CURRENT_CONTENT_MARKERS_PASS",
+      "LEGACY_MARA_50HZ_CONFLICT_QUARANTINE",
+      "SAME_ID_CHANGED_REVISION_HOLD",
+      "UNKNOWN_SOURCE_HOLD"
+    ]
+  },
+  "dependency": "AUDIO_PRODUCTION/ROOM917/TOOLS/P003A2_MASTER_ESCROW_v1/p003a2_interval_analyzer.py",
+  "real_production_frontier": "P003A2_BLOCKED_ON_EXACT_FULL_MASTER_BYTES_OR_TRUSTED_EXACT_INTERVAL_MAP",
+  "unit_tests": "5 PASS (existing validated core suite)",
+  "synthetic_selective_repair_chain": "PASS",
+  "negative_unauthorized_change_gate": "FAIL_AS_REQUIRED",
+  "domain_promotion_gate": "SECOND_PROJECT_REPLICATION",
+  "prohibited": [
+    "INVENT_PRODUCTION_TIMECODES",
+    "AUTO_FILL_LOW_LEVEL_WINDOWS",
+    "SIMULATE_HUMAN_PASS",
+    "INGEST_UNVERIFIED_SEARCH_RESULT_AS_AUTHORITY",
+    "SCALE_E02_E24"
+  ]
+}
