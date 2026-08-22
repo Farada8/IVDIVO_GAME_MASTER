@@ -1,0 +1,28 @@
+name: Public Art PAC8 Project Evidence
+
+on:
+  pull_request:
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/PUBLIC_ART_CASES/2026-08-22_CLUAIN_CAPABILITY_TECHNICAL/**'
+      - '.github/workflows/public-art-pac8-project-evidence.yml'
+  push:
+    branches:
+      - 'public-art/pac8-project-evidence-fresh-20260822'
+    paths:
+      - 'BUSINESS_ENGINEERING_OS/PUBLIC_ART_CASES/2026-08-22_CLUAIN_CAPABILITY_TECHNICAL/**'
+      - '.github/workflows/public-art-pac8-project-evidence.yml'
+
+jobs:
+  project-evidence-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run exact PAC8 project-evidence guards
+        run: python BUSINESS_ENGINEERING_OS/PUBLIC_ART_CASES/2026-08-22_CLUAIN_CAPABILITY_TECHNICAL/tests/test_project_evidence_guard.py
+      - name: Compile PAC8 evidence runtime
+        run: python -m compileall BUSINESS_ENGINEERING_OS/PUBLIC_ART_CASES/2026-08-22_CLUAIN_CAPABILITY_TECHNICAL/engine
+      - name: Parse project evidence state
+        run: python -m json.tool BUSINESS_ENGINEERING_OS/PUBLIC_ART_CASES/2026-08-22_CLUAIN_CAPABILITY_TECHNICAL/PAC8_PROJECT_EVIDENCE_STATE.json >/dev/null
