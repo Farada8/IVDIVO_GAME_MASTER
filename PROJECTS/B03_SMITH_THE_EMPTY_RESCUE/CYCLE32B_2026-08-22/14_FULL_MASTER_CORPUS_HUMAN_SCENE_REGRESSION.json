@@ -1,0 +1,26 @@
+{
+  "schema_version":"1.0",
+  "updated":"2026-08-22",
+  "status":"PASS_AFTER_MINIMAL_EVIDENCE_BACKED_REPAIR",
+  "fatal":0,
+  "blocking_major":0,
+  "scope":"authoritative master CH01-29",
+  "master_google_doc_id":"1UHGfjuZ_6aJF5Fkh1pHGwjgU219cPBmDD5owIVyIlXs",
+  "master_version":"v0.2_CORPUS_PASS",
+  "post_corpus_raw_txt_drive_id":"1l6I7K3fWG_eAfS-Wtp_cGApdG9cja7lB",
+  "drive_report_id":"1VlXJxjimqe8C_sDrrjZhIPyTyh9gUpREDJHeIOFThaE",
+  "chapters":29,
+  "approx_words":62562,
+  "post_repair_google_export_raw_sha256":"55dbf78c6842d6dbdf7316260bd1a39ec5c40f4da995ea0333c22a9bbb5e00af",
+  "post_repair_semantic_sha256":"3492c595264bf3380f2544cabf693d203e107d4f99ad86967463e38599c5bcf2",
+  "evidence":{
+    "generated_signature_phrases_removed_to_zero":["That helped.","That was all.","That changed the room before anyone answered it.","That order changed the road again.","That got Andrej’s attention.","That stopped her for a moment.","That brought her across the room.","The weather had not become a disaster; it had become work.","One prediction had become true.","The other had failed because they listened.","There it was","That mattered","That was worse"],
+    "jana_looked_at_smith":{"before":13,"after":6,"rule":"changed only service-function repetitions; preserved status/emotional beats"},
+    "smith_looked_at_her":{"before":7,"after":5,"rule":"changed clustered CH21 service gestures only"},
+    "retained_character_signature":{"phrase":"That is not what I asked.","count":3,"owner":"Jana only"}
+  },
+  "story_change":false,
+  "protected_unchanged":["clues","timestamps","casualties","routes","lawful authority","knowledge boundaries","rescue results","precursor claims","ontology ceiling","climax consequences"],
+  "medium_watches":["CH07 unusually short; evaluate in compiled pacing pass","CH29 procedural/review density and acknowledgement rhythm","professional Yes/No/Good/Copy/Understood density is functional but later line-edit watch","recording/line-ended repeated source closure phrasing is POLISH only"],
+  "next":"CONTINUITY_TIMELINE_KNOWLEDGE_PROVENANCE_REGRESSION"
+}
