@@ -1,0 +1,61 @@
+{
+  "schema": "ivdivo.business.general_discovery_production_engine/1.0",
+  "date": "2026-08-22",
+  "status": "ENGINEERING_CANDIDATE_DRIVE_READBACK_PASS_PENDING_CI",
+  "namespace": {
+    "modules": "BDP01-BDP32",
+    "contracts": "CDP01-CDP32",
+    "proof_gates": "PG01-PG12",
+    "protocols": "P-BDP-01-P-BDP-12"
+  },
+  "run32": {
+    "executed": 32,
+    "keep_or_keep_with_ordering": 21,
+    "mutate": 11,
+    "kill": 0,
+    "market_proof_created": false
+  },
+  "next64": {
+    "created": 64,
+    "executed": 0,
+    "priority_rule": "DEPENDENCIES_AND_DECISION_VALUE_OVERRIDE_PROMPT_ORDER",
+    "next_admissible_block": "P01-P08_DISCOVERY_AND_AUTHORITY"
+  },
+  "state_machine": [
+    "S0_RESTORE", "S1_DISCOVERED", "S2_QUALIFIED", "S3_FATAL_TEST_READY",
+    "S4_VALUE_BOUNDED", "S5_OFFER_TESTABLE", "S6_ECONOMICS_BOUNDED",
+    "S7_SALES_TEST_READY", "S8_EXTERNAL_SIGNAL", "S9_TRANSACTION",
+    "S10_DELIVERY_PROVEN", "S11_REPEATABILITY", "S12_SCALE_READY"
+  ],
+  "portfolio_policy": {"max_wip": 3, "primary": 1, "pilots_max": 2},
+  "evidence_laws": [
+    "K_NEQ_S_NEQ_E_NEQ_CASH",
+    "SIGNAL_NEQ_DEMAND",
+    "INTERVIEW_NEQ_BEHAVIOR",
+    "INTEREST_NEQ_TRANSACTION",
+    "PAYMENT_NEQ_REPEATABILITY",
+    "PRICE_HYPOTHESIS_NEQ_WTP",
+    "PROMPT_COUNT_NEQ_PROGRESS"
+  ],
+  "external_action": {
+    "authorized": false,
+    "autonomous_outreach": false,
+    "autonomous_spend": false,
+    "autonomous_contracting": false
+  },
+  "drive": {
+    "folder_id": "16fvKMboBdMi5_wfv8KkR8njx-raNoZ-X",
+    "master_document_id": "1bR19b7uSN6dCP1msK9hAatILkFqJpXUcOyLImxaJx8s",
+    "run32_next64_document_id": "1IHywe-oHrJwd_o_rhEeOi2ynAAnYDM_GgnX2hBtOgHk",
+    "master_readback_marker": "GENERAL-BUSINESS-DISCOVERY-PRODUCTION-ENGINE-V1-MASTER",
+    "run32_next64_readback_marker": "GENERAL-BUSINESS-DISCOVERY-PRODUCTION-ENGINE-V1-RUN32-NEXT64",
+    "readback_pending": false,
+    "readback_status": "PASS_2_OF_2"
+  },
+  "self_improvement": {
+    "candidate": "EVIDENCE_GATED_BUSINESS_PRODUCTION_ROUTER",
+    "scope": "BUSINESS_LOCAL",
+    "global_promotion": false,
+    "promotion_requires": "REAL_MULTI_LANE_CONTROL_COMPARISON"
+  }
+}
