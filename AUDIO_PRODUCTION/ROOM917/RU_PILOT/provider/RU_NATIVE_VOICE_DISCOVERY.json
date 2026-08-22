@@ -1,0 +1,42 @@
+{
+  "schema_version": "ivdivo.room917_ru_voice_discovery_snapshot/1.3",
+  "generated_at": "2026-08-22T16:37:56.803284+00:00",
+  "provider": "ElevenLabs",
+  "endpoint": "/v1/shared-voices",
+  "project_id": "ROOM917",
+  "locale": "ru-RU",
+  "status": "HOLD_PROVIDER_AUTH_REQUIRED",
+  "paid_synthesis_calls": 0,
+  "candidate_count": 0,
+  "candidates": [],
+  "ranked_role_candidates": {
+    "ELENA": [],
+    "JULIAN": [],
+    "MINA": [],
+    "CATE": []
+  },
+  "query_policy": {
+    "category": "professional",
+    "language": "ru",
+    "min_notice_period_days": 365,
+    "include_custom_rates": false,
+    "include_live_moderated": false,
+    "sort": "trending"
+  },
+  "provider_access_evidence": {
+    "date": "2026-08-22",
+    "live_probe_filtered_without_auth": "401_YOU_MUST_BE_LOGGED_IN_TO_USE_FILTERS",
+    "live_probe_unfiltered_over_three": "401_YOU_MUST_BE_LOGGED_IN_TO_FETCH_MORE_THAN_3_VOICES",
+    "live_probe_page_size_three_pagination": "401_UNAUTHORIZED",
+    "conclusion": "AUTHENTICATED_PROVIDER_ACCESS_REQUIRED_FOR_RELIABLE_PRODUCTION_DISCOVERY"
+  },
+  "selection_policy": {
+    "auto_cast": false,
+    "metadata_ranking_is_cast_evidence": false,
+    "preview_listen_required_before_paid_canary": true,
+    "paid_canary_required_before_cast_lock": true,
+    "founder_credibility_listen_required": true,
+    "full_e01_render_allowed": false,
+    "next": "CONFIGURE_ELEVENLABS_API_KEY_OR_OBTAIN_AUTHENTICATED_PROVIDER_EXPORT"
+  }
+}

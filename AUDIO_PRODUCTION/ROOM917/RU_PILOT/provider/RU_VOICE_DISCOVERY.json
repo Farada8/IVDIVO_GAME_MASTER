@@ -1,0 +1,12 @@
+{
+  "schema_version": "ivdivo.room917_ru_account_voice_inventory/1.2",
+  "generated_at": "2026-08-22T16:37:56.862716Z",
+  "provider": "ElevenLabs",
+  "status": "SKIPPED_NO_REPOSITORY_SECRET",
+  "secret_persisted": false,
+  "paid_synthesis_calls": 0,
+  "voice_count": null,
+  "voices": [],
+  "models": [],
+  "note": "Native /v1/shared-voices discovery is independent and remains authoritative for the RU casting frontier."
+}
