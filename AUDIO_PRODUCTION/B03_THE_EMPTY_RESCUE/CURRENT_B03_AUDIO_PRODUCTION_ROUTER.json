@@ -1,0 +1,60 @@
+{
+  "schema": "ivdivo.b03.audio_production_router/1.1",
+  "updated": "2026-08-22",
+  "project": "B03 — THE EMPTY RESCUE",
+  "story_authority": "FOUNDER_LOCKED_CH01-29",
+  "text_policy": "IMMUTABLE_EXACT_TEXT",
+  "status": "OFFLINE_FULL_BOOK_AUDIO_ROUTING_RECONCILED_CASTING_PENDING",
+  "drive_folder_id": "1GKwKiCn4qLnl9Kq1Pf05LprNpsYUS3Gv",
+  "current": {
+    "speaker_gate_v1_2": "1lFmVbEZJSMnCZMn65nAEV5U-rESC-qFX",
+    "speaker_router_v1_2": "1SF30eK_uoJDFgeR6GyODfGUrIaig-ZWa",
+    "full_speaker_manifest_v1_1": "1qry9Pr2iW3qtlu19PAe-lm14tue4QC2T",
+    "voice_roster_architecture_v1_1": "13Go1HxW86AmYf7dfptH8o1QzihCqexSL",
+    "voice_roster_gate_v1_1": "1p2A29eLYryoAKE3DAOjNMbYj8DVGxDs9",
+    "performance_baseline_v1_1": "1GRn1qMGtRlXIh7U-ILkLQu2RbtqeB4CM",
+    "performance_manifest_v1_1": "1cagXHO9RYgClgb9J193tNl6vYQ_0OITh",
+    "performance_gate_v1_1": "1nH0qdcKr3l-ki5HT49pDuhzxwXEIYSbg",
+    "sfx_architecture_v1_1": "1anh7qx2GpVv5bNJaNl07hWop1SrBpizm",
+    "asset_acoustic_manifest_v1_1": "1E_qiZgVExCOdMt3HvhvON1EfRo2Zf8Dw",
+    "dry_render_manifest_v1_2": "16N5TX8c5NBOX7hC0F7zvX5QQKB5Rqr-b",
+    "dry_render_gate_v1_2": "1tL8pvpB_F6feFB4SoBTRyh_vDEJjIHk-",
+    "dry_render_package_v1_2": "1Y6t6QE0DTLGUDrLbKehy3TO7Lhz1piyE"
+  },
+  "metrics": {
+    "exact_text_units": 7465,
+    "speech_units": 3714,
+    "narration_units": 3751,
+    "unknown_speaker_ownership": 0,
+    "acoustic_speaker_ids": 119,
+    "cast_slots": 28,
+    "ensemble_slot_collisions": 0,
+    "provider_voice_ids_assigned": 0,
+    "dry_hash_mismatches": 0,
+    "dry_unmapped_cast_slots": 0
+  },
+  "evidence_layers": {
+    "engine_verified_subset": 599,
+    "production_speaker_authority": 3714,
+    "law": "ENGINE_VERIFIED_SUBSET_NEQ_PRODUCTION_CHAPTER_LOCAL_AUTHORITY"
+  },
+  "identity_locks": {
+    "ch24_packet_1": "PRECURSOR_SOURCE_CH24_PACKET_1",
+    "ch24_packet_2": "PRECURSOR_SOURCE_CH24_PACKET_2",
+    "inter_packet_identity": "UNKNOWN",
+    "ch27_s0136_source_author": "TAREN_SOR",
+    "ch27_s0136_acoustic_speaker": "SMITH",
+    "ch29_s0358_speaker": "SMITH"
+  },
+  "superseded_for_production_routing": [
+    "120_FULL_SPEAKER_MANIFEST_V1_0",
+    "121_VOICE_MAP_ARCHITECTURE_V1_0",
+    "122_PERFORMANCE_BASELINE_V1_0",
+    "123_SEGMENT_LEVEL_PERFORMANCE_V1_0",
+    "126_DRY_RENDER_MANIFEST_V1_1"
+  ],
+  "next_gate": "147_CASTING_MANIFEST_AND_SLOVENIAN_PRONUNCIATION_ADJUDICATION",
+  "live_provider_allowed": false,
+  "bulk_render_allowed": false,
+  "secrets_allowed_in_project_files": false
+}
